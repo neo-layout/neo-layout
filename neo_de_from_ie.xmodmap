@@ -1,0 +1,136 @@
+!! ~/.xmodmap
+!!
+!! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany> 
+!!
+!! The german NEO Layout Version 1.9.3
+!! see http://pebbles.schattenlauf.de/layout.php for details
+!!
+!! this Layout depends on a running Irish Layout
+!! mostly type "setxkbmap ie" to set a Irish Layout 
+!!
+!! To try the layout in this file, simply do xmodmap <file>.
+!! To load the layout in this file at X startup, simply store it as
+!! ~/.xmodmap (named .xmodmap in your home directory)
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Modifier definition
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th Level)
+keysym Caps_Lock = Mode_switch Mode_switch Caps_Lock Caps_Lock
+! Make AltGr to Mode_switch
+keysym ISO_Level3_Shift = Mode_switch Mode_switch
+!keysym ISO_Level3_Shift = y Y y Greek_upsilon
+
+! If the left win key should modify the 5th and 6th, comment this out
+!keysym Super_L = ISO_Level3_Shift
+! the right win key modifies the 5th and 6th
+!keysym Multi_key = ISO_Level3_Shift
+keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift
+keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift
+
+
+! force to learn the new Escape!
+!keysym Escape =
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The first row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keysym grave = asciicircum degree notsign paragraph 
+
+keysym 1 = 1 1 1 onesuperior
+keysym 2 = 2 2 2 twosuperior 
+keysym 3 = 3 section 3 threesuperior 
+keysym 4 = 4 dollar    yen cent Prior Prior
+keysym 5 = 5 EuroSign  sterling currency
+keysym 6 = 6 ordfeminine ae AE
+keysym 7 = 7 masculine oe OE
+keysym 8 = 8 doublelowquotemark singlelowquotemark guillemotright slash
+keysym 9 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
+keysym 0 = 0 rightdoublequotemark rightsinglequotemark U203A minus
+
+keysym minus = minus U2013 U2014 U2039 
+keysym equal = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keysym q = x X at Greek_xi Escape Greek_XI
+keysym w = v V underscore underscore BackSpace 
+keysym e = l L bracketleft Greek_lambda Up Up
+keysym r = c C bracketright Greek_chi copyright
+keysym t = w W asciitilde asciitilde Insert
+               
+keysym y = k K exclam Greek_kappa exclamdown
+keysym u = h H less Greek_psi 7 Greek_PSI
+keysym i = g G greater Greek_gamma 8 Greek_GAMMA
+keysym o = f F equal Greek_phi 9 Greek_PHI
+keysym p = j J semicolon semicolon plus
+keysym bracketleft  = ssharp 
+keysym bracketright = dead_tilde dead_diaeresis dead_abovering dead_abovering dead_circumflex dead_caron
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The middle row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keysym a = u U backslash  backslash     Home Home
+keysym s = i I slash      Greek_iota    Left Left  
+keysym d = a A braceleft  Greek_alpha   Down Down
+keysym f = e E braceright Greek_epsilon Right Right
+keysym g = o O asterisk   Greek_omega   End End
+              
+keysym h = s S question  Greek_sigma questiondown Greek_SIGMA
+keysym j = n N parenleft Greek_nu    4
+keysym k = r R parenright Greek_rho  5 registered
+keysym l = t T minus Greek_tau 6 trademark
+keysym semicolon  = d D colon Greek_delta comma Greek_DELTA
+keysym apostrophe = y Y y Greek_upsilon
+!comment the next line out, if you want to have a 3rd Level Modifier at the y
+!keysym apostrophe = Mode_switch
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keysym z = odiaeresis Odiaeresis 
+keysym x = udiaeresis Udiaeresis dollar Udiaeresis Delete
+keysym c = adiaeresis Adiaeresis bar Greek_eta Next Next
+keysym v = p P numbersign Greek_pi p Greek_PI
+keysym b = z Z grave Greek_zeta z Greek_OMEGA
+
+keysym n      = b B             plus Greek_beta 0 plusminus
+keysym m      = m M             percent mu 1
+keysym comma  = comma semicolon ampersand U03D1 2 
+keysym period = period colon    quotedbl Greek_theta 3 Greek_THETA
+keysym slash  = q Q             apostrophe apostrophe period
+
+! Keypad  
+!keysym <NMLK> 	 Num_Lock Pointer_EnableKeys 	
+ ! Ungrab cancels server/keyboard/pointer grabs
+!keysym <KPDV> KP_Divide KP_Divide division 
+ ! ClsGrb kills whichever client has a grab in effect
+!keysym <KPMU> KP_Multiply KP_Multiply periodcentered 
+ ! -VMode switches to the previous video mode
+!keysym <KPSU> KP_Subtract KP_Subtract notsign 
+
+ ! upper row
+!keysym <KP7> 	 KP_Home	KP_7 seveneighths oneeighth		
+!keysym <KP8> 	 KP_Up	KP_8 uparrow fiveeighths 	
+!keysym <KP9> 	 KP_Prior	KP_9 threeeighths threeeighths 
+ ! +VMode switches to the next video mode
+!keysym <KPAD> 	 KP_Add KP_Add plusminus 
+
+ ! middle row
+!keysym <KP4> 	 KP_Left	KP_4 leftarrow onequarter			
+!keysym <KP5> 	 KP_Begin	KP_5 dagger onehalf 				
+!keysym <KP6> 	 KP_Right	KP_6 rightarrow threequarters		
+
+ ! lower row
+!keysym <KP1> 	 KP_End	KP_1 onesuperior onesuperior			
+!keysym <KP2> 	 KP_Down	KP_2 downarrow twosuperior			
+!keysym <KP3> 	 KP_Next	KP_3 threesuperior threesuperior		
+!keysym <KPEN> 	 	KP_Enter		
+!keysym <KPEQ> 	 	KP_Equal		
+
+ ! lowest row
+!keysym <KP0> 	 KP_Insert	KP_0 percent degree				
+!keysym <KPDL> 	 KP_Delete	KP_Decimal periodcentered comma 	
