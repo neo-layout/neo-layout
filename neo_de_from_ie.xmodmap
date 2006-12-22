@@ -18,14 +18,14 @@
 ! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th Level)
 keysym Caps_Lock = Mode_switch Mode_switch Caps_Lock Caps_Lock
 ! Make AltGr to Mode_switch
-keysym ISO_Level3_Shift = Mode_switch Mode_switch
+keysym ISO_Level3_Shift = Mode_switch Mode_switch 
 !keysym ISO_Level3_Shift = y Y y Greek_upsilon
 
 ! If the left win key should modify the 5th and 6th, comment this out
 !keysym Super_L = ISO_Level3_Shift
 ! the right win key modifies the 5th and 6th
 !keysym Multi_key = ISO_Level3_Shift
-keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift
+keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift dead_breve
 keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift
 
 
@@ -49,7 +49,7 @@ keysym 9 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
 keysym 0 = 0 rightdoublequotemark rightsinglequotemark U203A minus
 
 keysym minus = minus U2013 U2014 U2039 
-keysym equal = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot
+keysym equal = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -66,8 +66,8 @@ keysym u = h H less Greek_psi 7 Greek_PSI
 keysym i = g G greater Greek_gamma 8 Greek_GAMMA
 keysym o = f F equal Greek_phi 9 Greek_PHI
 keysym p = j J semicolon semicolon plus
-keysym bracketleft  = ssharp 
-keysym bracketright = dead_tilde dead_diaeresis dead_abovering dead_abovering dead_circumflex dead_caron
+keysym bracketleft  = ssharp ssharp U0133 U0132 schwa SCHWA 
+keysym bracketright = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_circumflex dead_caron
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
@@ -83,7 +83,7 @@ keysym j = n N parenleft Greek_nu    4
 keysym k = r R parenright Greek_rho  5 registered
 keysym l = t T minus Greek_tau 6 trademark
 keysym semicolon  = d D colon Greek_delta comma Greek_DELTA
-keysym apostrophe = y Y y Greek_upsilon
+keysym apostrophe = y Y y Greek_upsilon thorn THORN
 !comment the next line out, if you want to have a 3rd Level Modifier at the y
 !keysym apostrophe = Mode_switch
 
@@ -91,7 +91,7 @@ keysym apostrophe = y Y y Greek_upsilon
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keysym z = odiaeresis Odiaeresis 
+keysym z = odiaeresis Odiaeresis asciicircum
 keysym x = udiaeresis Udiaeresis dollar Udiaeresis Delete
 keysym c = adiaeresis Adiaeresis bar Greek_eta Next Next
 keysym v = p P numbersign Greek_pi p Greek_PI
