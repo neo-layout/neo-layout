@@ -25,7 +25,7 @@ keysym ISO_Level3_Shift = Mode_switch Mode_switch
 !keysym Super_L = ISO_Level3_Shift
 ! the right win key modifies the 5th and 6th
 !keysym Multi_key = ISO_Level3_Shift
-keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift dead_breve
+keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift
 keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift
 
 
@@ -35,9 +35,9 @@ keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The first row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keysym grave = asciicircum degree notsign paragraph 
+keysym grave = dead_circumflex dead_caron dead_breve paragraph 
 
-keysym 1 = 1 1 1 onesuperior
+keysym 1 = 1 degree notsign onesuperior
 keysym 2 = 2 2 2 twosuperior 
 keysym 3 = 3 section 3 threesuperior 
 keysym 4 = 4 dollar    yen cent Prior Prior
@@ -67,7 +67,7 @@ keysym i = g G greater Greek_gamma 8 Greek_GAMMA
 keysym o = f F equal Greek_phi 9 Greek_PHI
 keysym p = j J semicolon semicolon plus
 keysym bracketleft  = ssharp ssharp U0133 U0132 schwa SCHWA 
-keysym bracketright = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_circumflex dead_caron
+keysym bracketright = dead_tilde dead_macron dead_diaeresis dead_doubleacute
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
