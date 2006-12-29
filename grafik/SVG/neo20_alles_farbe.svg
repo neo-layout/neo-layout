@@ -14,7 +14,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.44.1"
    version="1.0"
-   sodipodi:docbase="/home/wicking/programmieren/Projekt/NEO/grafik"
+   sodipodi:docbase="/home/wicking/programmieren/Projekt/NEO/svn-neo/svn/grafik/SVG"
    sodipodi:docname="neo20_alles_farbe.svg"
    inkscape:export-filename="/home/wicking/programmieren/Projekt/NEO/grafik/neo20_ebene3_und_4.png"
    inkscape:export-xdpi="90"
@@ -32,7 +32,7 @@
      inkscape:cx="422.71008"
      inkscape:cy="150"
      inkscape:document-units="px"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer4"
      width="900px"
      height="300px"
      showgrid="true"
@@ -1630,7 +1630,7 @@
          sodipodi:role="line"
          id="tspan2268"
          x="690.06738"
-         y="173">:\</tspan></text>
+         y="173">:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:black;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
