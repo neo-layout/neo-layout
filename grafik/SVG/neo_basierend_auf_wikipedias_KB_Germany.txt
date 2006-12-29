@@ -1,0 +1,68 @@
+== Quelle ==
+Die Datei wurde vom Wikipedia-Bild „KB_Germany.svg“ mit Inkscape angepasst.
+Angepasst von Erik Streb (mail (at) erikstreb.de)
+
+== Dokumenteneinstellungen  ==
+=== Einrasten ===
+- Umrandungsboxen am Gitter einrasten
+- Einrastempfindlichkeit ca. 10
+
+=== Gitter/Führungslinien ===
+Die Tasten sind auf einem Raster von 60 mal 60 Pixeln erstellt. Daher Abstand
+X und Abstand Y = 60.
+
+Die Startpositionen des Rasters (Ursprung X und Ursprung Y) für die Beschriftung der
+einzelnen Tasten sind unten angegeben als Ux und Uy.
+
+Immer (außer bei Ausnahmen) muss die Beschriftung von oben rechts aus
+angepasst werden.
+
+== Schrift ==
+Was		Schrift			Größe		Fett
+Buchstaben	DejaVu LGC Sans		22		Ja
+Modifikatoren	DejaVu LGC Sans		14		Ja
+
+== Gitterursprung ==
+=== Für die einzelnen Reihen und Ebenen ===
+Tastatur Position	Ebene	Zeichen		Ux	Uy	Ax	Ay
+0. Reihe		1.	X		9	7	60	60
+1. Reihe		1.	X		39	7	60	60
+3. Reihe		1.	X		24	7	60	60
+
+0. Reihe		2.	X		9	37	60	60
+1. Reihe		2.	X		39	37	60	60
+2. Reihe		2.	X		54	37	60	60
+3. Reihe		2.	X		24	37	60	60
+
+0. Reihe		3.	X		37	7	60	60
+1. Reihe		3.	X		7	7	60	60
+2. Reihe		3.	X		22	7	60	60
+3. Reihe		3.	X		52	7	60	60
+
+0. Reihe		4.	X		37	37	60	60
+1. Reihe		4.	X		7	37	60	60
+2. Reihe		4.	X		22	37	60	60
+3. Reihe		4.	X		52	37	60	60
+
+=== Für die Modifier ===
+Bei Strg für Positionierung das „g“ wegnehmen und links ausrichten.
+
+Modifier ganz links und auch rechtes AltGr:
+Ux 9
+Uy 25 oder 40 (linkes Shift)
+
+Alt, rechte Strg und Menü:
+Ux 39
+Uy 25
+
+Alt Option:
+Ux 35
+Uy 15
+
+Enter (rechts ausrichten, von oben links anpassen):
+Ux 51
+Uy 40
+
+Backspace (von unten rechts anpassen):
+Ux 9
+Uy 25
