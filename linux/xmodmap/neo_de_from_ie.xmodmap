@@ -1,6 +1,7 @@
 !! ~/.xmodmap
 !!
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany> 
+!! and Erik Streb <mail@erikstreb.de>
 !!
 !! The german NEO Layout Version 1.9.3
 !! see http://pebbles.schattenlauf.de/layout.php for details
@@ -58,7 +59,7 @@ keysym equal = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead
 keysym q = x X at Greek_xi Escape Greek_XI
 keysym w = v V underscore underscore BackSpace 
 keysym e = l L bracketleft Greek_lambda Up Up
-keysym r = c C bracketright Greek_chi copyright
+keysym r = c C bracketright Greek_chi c copyright
 keysym t = w W asciitilde asciitilde Insert
                
 keysym y = k K exclam Greek_kappa exclamdown
