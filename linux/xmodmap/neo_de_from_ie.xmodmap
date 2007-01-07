@@ -16,18 +16,19 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th Level)
+! Make caps lock and the numbersign an additional Alt_Gr (Mode_switch is for 3rd and 4th Level)
 keysym Caps_Lock = Mode_switch Mode_switch Caps_Lock Caps_Lock
+keysym numbersign = Mode_switch Mode_switch Mode_switch Mode_switch Mode_switch Mode_switch 
+! Make the former <>-key to Mod5 (ISO_Level3_Shift)
+keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift
 ! Make AltGr to Mode_switch
-keysym ISO_Level3_Shift = Mode_switch Mode_switch 
+!keysym ISO_Level3_Shift = Mode_switch Mode_switch 
 !keysym ISO_Level3_Shift = y Y y Greek_upsilon
 
 ! If the left win key should modify the 5th and 6th, comment this out
 !keysym Super_L = ISO_Level3_Shift
 ! the right win key modifies the 5th and 6th
 !keysym Multi_key = ISO_Level3_Shift
-keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift
-keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift
 
 
 ! force to learn the new Escape!
