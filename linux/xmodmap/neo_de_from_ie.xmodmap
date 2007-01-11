@@ -16,18 +16,22 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th Level)
+! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th level)
 keysym Caps_Lock = Mode_switch Mode_switch Caps_Lock Caps_Lock
 
-! Make AltGr and apostrophe to Mode_switch
+! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
 keysym ISO_Level3_Shift = Mode_switch Mode_switch 
-keysym apostrophe = Mode_switch Mode_switch thorn THORN thorn THORN
+keysym apostrophe = Mode_switch Mode_switch U0133 U0132 thorn THORN
 
 ! If the left win key should modify the 5th and 6th, comment this out
 !keysym Super_L = ISO_Level3_Shift
 ! the right win key modifies the 5th and 6th
 !keysym Multi_key = ISO_Level3_Shift
+
+! Make the former qwertz-# to Mod5 (ISO_Level3_Shift)
 keysym numbersign = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift
+
+! Make the former qwertz-< to Mod5 (ISO_Level3_Shift)
 keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift
 
 ! force to learn the new Escape!
@@ -39,7 +43,7 @@ keysym backslash  = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level
 keysym grave = dead_circumflex dead_caron dead_breve paragraph 
 
 keysym 1 = 1 degree notsign onesuperior
-keysym 2 = 2 ssharp 2 twosuperior 
+keysym 2 = 2 2 2 twosuperior 
 keysym 3 = 3 section 3 threesuperior 
 keysym 4 = 4 dollar    yen cent Prior Prior
 keysym 5 = 5 EuroSign  sterling currency
@@ -56,7 +60,7 @@ keysym equal = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead
 ! The upper row 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keysym q = x X at Greek_xi Escape Greek_XI
-keysym w = v V underscore Greek_upsilon BackSpace 
+keysym w = v V underscore v BackSpace 
 keysym e = l L bracketleft Greek_lambda Up Up
 keysym r = c C bracketright Greek_chi c copyright
 keysym t = w W asciitilde asciitilde Insert
@@ -66,7 +70,7 @@ keysym u = h H less Greek_psi 7 Greek_PSI
 keysym i = g G greater Greek_gamma 8 Greek_GAMMA
 keysym o = f F equal Greek_phi 9 Greek_PHI
 keysym p = j J semicolon semicolon plus
-keysym bracketleft  = y Y U0133 U0132 schwa SCHWA 
+keysym bracketleft  = y Y y Greek_upsilon schwa SCHWA 
 keysym bracketright = dead_tilde dead_macron dead_diaeresis dead_doubleacute
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -96,8 +100,8 @@ keysym b = z Z grave Greek_zeta z Greek_OMEGA
 
 keysym n      = b B             plus Greek_beta 0 plusminus
 keysym m      = m M             percent mu 1
-keysym comma  = comma semicolon ampersand U03D1 2 
-keysym period = period colon    quotedbl Greek_theta 3 Greek_THETA
+keysym comma  = comma ssharp ampersand U03D1 2 
+keysym period = period colon quotedbl Greek_theta 3 Greek_THETA
 keysym slash  = q Q             apostrophe apostrophe period
 
 ! Keypad  
