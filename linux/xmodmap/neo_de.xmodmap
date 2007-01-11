@@ -1,0 +1,150 @@
+!! ~/.xmodmap
+!!
+!! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany> 
+!! and Erik Streb <mail@erikstreb.de>
+!!
+!! The german NEO Layout Version 1.9.3
+!! see http://pebbles.schattenlauf.de/layout.php for details
+!!
+!! To try the layout in this file, simply do xmodmap <file>.
+!! To load the layout in this file at X startup, simply store it as
+!! ~/.xmodmap (named .xmodmap in your home directory)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Modifier definition
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th level)
+remove Lock = Caps_Lock
+remove Mod3 = ISO_Level3_Shift
+keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock
+
+! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
+keycode 113 = Mode_switch Mode_switch Mode_switch Mode_switch KP_Decimal
+keycode 48 = Mode_switch Mode_switch U0133 U0132 thorn THORN
+add Mod5 = Mode_switch
+
+! If the left win key should modify the 5th and 6th, comment this out
+!keycode 115 = ISO_Level3_Shift
+! the right win key modifies the 5th and 6th
+!keycode 116 = ISO_Level3_Shift
+
+! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
+keycode 51 = ISO_Level3_Shift ISO_Level3_Shift
+keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
+add Mod3 = ISO_Level3_Shift
+
+! force to learn the new Escape!
+!keycode 9 =
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The first row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 49 = dead_circumflex dead_caron dead_breve paragraph 
+
+keycode 10 = 1 degree notsign onesuperior
+keycode 11 = 2 2 2 twosuperior 
+keycode 12 = 3 section 3 threesuperior 
+keycode 13 = 4 dollar    yen cent Prior Prior
+keycode 14 = 5 EuroSign  sterling currency
+keycode 15 = 6 ordfeminine ae AE
+
+keycode 16 = 7 masculine oe OE
+keycode 17 = 8 doublelowquotemark singlelowquotemark guillemotright slash
+keycode 18 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
+keycode 19 = 0 rightdoublequotemark rightsinglequotemark U203A minus
+
+keycode 20 = minus U2013 U2014 U2039 
+keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 24 = x X at Greek_xi Escape Greek_XI
+keycode 25 = v V underscore underscore BackSpace 
+keycode 26 = l L bracketleft Greek_lambda Up Up
+keycode 27 = c C bracketright Greek_chi c copyright
+keycode 28 = w W asciitilde asciitilde Insert
+
+keycode 29 = k K exclam Greek_kappa exclamdown
+keycode 30 = h H less Greek_psi 7 Greek_PSI
+keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
+keycode 32 = f F equal Greek_phi 9 Greek_PHI
+keycode 33 = j J semicolon semicolon plus
+keycode 34 = y Y y Greek_upsilon schwa SCHWA 
+keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The middle row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 38 = u U backslash  backslash     Home Home
+keycode 39 = i I slash      Greek_iota    Left Left  
+keycode 40 = a A braceleft  Greek_alpha   Down Down
+keycode 41 = e E braceright Greek_epsilon Right Right
+keycode 42 = o O asterisk   Greek_omega   End End
+
+keycode 43 = s S question  Greek_sigma questiondown Greek_SIGMA
+keycode 44 = n N parenleft Greek_nu    4
+keycode 45 = r R parenright Greek_rho  5 registered
+keycode 46 = t T minus Greek_tau 6 trademark
+keycode 47 = d D colon Greek_delta comma Greek_DELTA
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 52 = odiaeresis Odiaeresis asciicircum asciicircum Tab Tab
+keycode 53 = udiaeresis Udiaeresis dollar Udiaeresis Delete
+keycode 54 = adiaeresis Adiaeresis bar Greek_eta Next Next
+keycode 55 = p P numbersign Greek_pi p Greek_PI
+keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
+
+keycode 57 = b B plus Greek_beta plusminus
+keycode 58 = m M percent mu 1
+keycode 59 = comma ssharp ampersand U03D1 2 
+keycode 60 = period colon quotedbl Greek_theta 3 Greek_THETA
+keycode 61 = q Q apostrophe apostrophe period
+
+keycode 65 = space space space space 0 space
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Keypad  
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The uppest row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!keycode 77 = Num_Lock Pointer_EnableKeys 	
+keycode 112 = KP_Divide KP_Divide division 
+keycode 63  = KP_Multiply KP_Multiply multiply U22C5 U2217 
+keycode 82  = KP_Subtract KP_Subtract U2212
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 79 = KP_Home	KP_7 seveneighths oneeighth		
+keycode 80 = KP_Up KP_8 uparrow fiveeighths 	
+keycode 81 = KP_Prior	KP_9 threeeighths threeeighths 
+keycode 86 = KP_Add plusminus plusminus U2213
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The middle row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 83 = KP_Left  KP_4 leftarrow onequarter			
+keycode 84 = KP_Begin KP_5 dagger onehalf 				
+keycode 85 = KP_Right KP_6 rightarrow threequarters		
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 87 = KP_End  KP_1 onesuperior onesuperior			
+keycode 88 = KP_Down KP_2 downarrow twosuperior			
+keycode 89 = KP_Next KP_3 threesuperior threesuperior		
+!keycode 77 = KP_Enter		
+!keysym <KPEQ> 	 	KP_Equal		
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lowest row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 90 = KP_Insert	KP_0 percent	
+keycode 91 = KP_Delete	KP_Decimal period comma 	
