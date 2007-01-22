@@ -10,35 +10,8 @@
 !! To load the layout in this file at X startup, simply store it as
 !! ~/.xmodmap (named .xmodmap in your home directory)
 
-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Modifier definition
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Make caps lock an additional Alt_Gr (Mode_switch is for 3rd and 4th level)
-remove Lock = Caps_Lock
-remove Mod3 = ISO_Level3_Shift
-keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock
-
-! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
-keycode 113 = Mode_switch Mode_switch Mode_switch Mode_switch KP_Decimal
-keycode 48 = Mode_switch Mode_switch U0133 U0132 thorn THORN
-add Mod5 = Mode_switch
-
-! If the left win key should modify the 5th and 6th, comment this out
-!keycode 115 = ISO_Level3_Shift
-! the right win key modifies the 5th and 6th
-!keycode 116 = ISO_Level3_Shift
-
-! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
-keycode 51 = ISO_Level3_Shift ISO_Level3_Shift
-keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
-add Mod3 = ISO_Level3_Shift
-
-! force to learn the new Escape!
-!keycode 9 =
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! The first row
+! The first row (number Row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 49 = dead_circumflex dead_caron dead_breve paragraph 
 
@@ -55,6 +28,7 @@ keycode 18 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
 keycode 19 = 0 rightdoublequotemark rightsinglequotemark U203A minus
 
 keycode 20 = minus U2013 U2014 U2039 
+!keycode 20 = ssharp minus U2013 U2039 U2014 
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -71,11 +45,12 @@ keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
 keycode 33 = j J semicolon semicolon plus
-keycode 34 = y Y y Greek_upsilon schwa SCHWA 
+keycode 34 = ssharp ssharp U0133 U0132 schwa SCHWA 
+!keycode 34 = y Y y Greek_upsilon thorn THORN
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! The middle row
+! The home row (middle row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 38 = u U backslash  backslash     Home Home
 keycode 39 = i I slash      Greek_iota    Left Left  
@@ -88,6 +63,7 @@ keycode 44 = n N parenleft Greek_nu    4
 keycode 45 = r R parenright Greek_rho  5 registered
 keycode 46 = t T minus Greek_tau 6 trademark
 keycode 47 = d D colon Greek_delta comma Greek_DELTA
+keycode 48 = y Y y Greek_upsilon thorn THORN
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
@@ -100,9 +76,35 @@ keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
 
 keycode 57 = b B plus Greek_beta plusminus
 keycode 58 = m M percent mu 1
-keycode 59 = comma ssharp ampersand U03D1 2 
+keycode 59 = comma semicolon ampersand U03D1 2 
 keycode 60 = period colon quotedbl Greek_theta 3 Greek_THETA
 keycode 61 = q Q apostrophe apostrophe period
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Modifier definition
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Make CapsLock an additional Alt_Gr (Mode_switch is for 3rd and 4th level)
+remove Lock = Caps_Lock
+remove Mod3 = ISO_Level3_Shift
+keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock
+
+! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
+keycode 113 = Mode_switch Mode_switch Mode_switch Mode_switch KP_Decimal
+!keycode 48 = Mode_switch Mode_switch U0133 U0132 schwa SCHWA
+add Mod5 = Mode_switch
+
+! If the left win key should modify the 5th and 6th, comment this out
+!keycode 115 = ISO_Level3_Shift
+! the right win key modifies the 5th and 6th
+!keycode 116 = ISO_Level3_Shift
+
+! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
+keycode 51 = ISO_Level3_Shift ISO_Level3_Shift
+keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
+add Mod3 = ISO_Level3_Shift
+
+! force to learn the new Escape!
+!keycode 9 =
 
 keycode 65 = space space space space 0 space
 
@@ -146,5 +148,5 @@ keycode 89 = KP_Next KP_3 threesuperior threesuperior
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = KP_Insert	KP_0 percent	
-keycode 91 = KP_Delete	KP_Decimal period comma 	
+keycode 90 = KP_Insert	KP_0 percent U2030
+keycode 91 = KP_Delete	KP_Decimal period comma	
