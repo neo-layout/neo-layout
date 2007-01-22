@@ -1,0 +1,105 @@
+!! ~/.xmodmap
+!!
+!! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
+!!
+!! The german NEO Layout Version 1.9.3
+!! see http://pebbles.schattenlauf.de/layout.php for details
+!!
+!! To try the layout in this file, simply do xmodmap <file>.
+!! To load the layout in this file at X startup, simply store it as
+!! ~/.xmodmap (named .xmodmap in your home directory)
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The first row (number Row)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 49 = dead_circumflex degree dead_circumflex degree notsign paragraph
+
+keycode 10 = 1 exclam     1 exclam    exclamdown onesuperior
+keycode 11 = 2 quotedbl   2 quotedbl  dead_diaeresis
+keycode 12 = 3 paragraph  3 paragraph sterling
+keycode 13 = 4 dollar     4 dollar    currency
+keycode 14 = 5 percent    5 percent   bar
+keycode 15 = 6 ampersand  6 ampersand brokenbar
+
+keycode 16 = 7 slash      7 slash      braceleft 
+keycode 17 = 8 parenleft  8 parenleft  bracketleft
+keycode 18 = 9 parenright 9 parenright bracketright
+keycode 19 = 0 equal      0 equal      braceright
+keycode 20 = minus underscore minus underscore
+keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 24 = x X x X at dead_diaeresis
+keycode 25 = v V v V masculine ordfeminine
+keycode 26 = l L l L lstroke Lstroke
+keycode 27 = c C c C ccedilla copyright
+keycode 28 = w W w W Greek_omega Greek_OMEGA
+
+keycode 29 = k K k K Greek_kappa Greek_KAPPA
+keycode 30 = h H h H Greek_epsilon Greek_EPSILON
+keycode 31 = g G g G Greek_gamma Greek_GAMMA
+keycode 32 = f F f F ordfeminine 
+keycode 33 = j J j J Greek_iota Greek_IOTA
+keycode 34 = ssharp question backslash questiondown
+keycode 35 = plus asterisk plus asterisk dead_tilde plusminus
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The home row (middle row)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 38 = u U u U Greek_delta Greek_DELTA
+keycode 39 = i I i I idotless Iabovedot
+keycode 40 = a A a A at Greek_alpha
+keycode 41 = e E e E EuroSign cent
+keycode 42 = o O o O oslash Ooblique
+
+keycode 43 = s S s S Greek_sigma Greek_SIGMA
+keycode 44 = n N n N Greek_nu Greek_NU
+keycode 45 = r R r R registered trademark
+keycode 46 = t T t T Greek_theta Greek_THETA
+keycode 47 = d D d D eth ETH
+keycode 48 = y Y y Y yen
+keycode 51 = numbersign apostrophe numbersign apostrophe grave dead_breve
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 94 = less greater less greater guillemotleft guillemotright
+keycode 52 = odiaeresis Odiaeresis odiaeresis Odiaeresis oe OE
+keycode 53 = udiaeresis Udiaeresis udiaeresis Udiaeresis apostrophe asciitilde
+keycode 54 = adiaeresis Adiaeresis adiaeresis Adiaeresis ae AE
+keycode 55 = p P p P thorn THORN
+keycode 56 = z Z z Z Greek_zeta Greek_ZETA
+
+keycode 57 = b B b B Greek_beta Greek_BETA
+keycode 58 = m M m M Greek_mu Greek_MU
+keycode 59 = comma semicolon comma semicolon dead_cedilla cedilla
+keycode 60 = period colon period colon periodcentered
+keycode 61 = q Q q Q multiply
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Modifier definition
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Make CapsLock an additional Alt_Gr (Mode_switch is for 3rd and 4th level)
+!remove Lock = Caps_Lock
+!remove Mod3 = ISO_Level3_Shift
+!keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock
+
+! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
+!keycode 113 = Mode_switch Mode_switch Mode_switch Mode_switch KP_Decimal
+!keycode 48 = Mode_switch Mode_switch U0133 U0132 schwa SCHWA
+!add Mod5 = Mode_switch
+
+! If the left win key should modify the 5th and 6th, comment this out
+!keycode 115 = ISO_Level3_Shift
+! the right win key modifies the 5th and 6th
+!keycode 116 = ISO_Level3_Shift
+
+! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
+!keycode 51 = ISO_Level3_Shift ISO_Level3_Shift
+!keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
+!add Mod3 = ISO_Level3_Shift
+
+! force to learn the new Escape!
+!keycode 9 =
