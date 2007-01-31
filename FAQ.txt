@@ -9,6 +9,18 @@ A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der
 Tastatur nehmen muss. Man drückt einfach die Mod5-Taste und schon hat man die 
 gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.
 Da die Mod5-Taste auf der amerikanischen Tastatur allerdings an einer anderen 
-(ungünstigeren) Stelle als bei der Deutschen liegt, sind diese Tasten auch auf 
+(ungünstigeren) Stelle als bei der deutschen liegt, sind diese Tasten auch auf 
 ihrer alten Position verfügbar.
 
+F: Wenn ich AltGr + n drücke, dann erscheint nicht die Klammer »(«. Wieso?
+A: Das Problem, was hier auftritt ist der Vielzitierte Bug, dass wenn man vom
+deutschen Layout ausgeht, xmodmap die 5. Ebene Über dem n nicht mapped. Deshalb
+geht je nach Version die Klammer oder die 4 nicht über dem n.
+Abhilfe dagegen schafft das Irische Layout. Das hat selbst diese Ebene über dem
+n definiert und daher ändert xmodmap auch die Belegung ordentlich.
+Also entweder für Version 1.1:
+	setxkbmap ie
+	xmodmap neo_de_from_ie.xmodmap
+oder für die Version im svn (2.0):
+	setxkbmap ie
+	xmodmap neo_de.xmodmap
