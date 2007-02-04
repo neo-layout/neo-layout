@@ -24,3 +24,12 @@ Also entweder für Version 1.1:
 oder für die Version im svn (2.0):
 	setxkbmap ie
 	xmodmap neo_de.xmodmap
+
+F: Warum wurde im Vergleich zur Version 1 von NEO das »x« mit dem »q«
+vertauscht?
+A: Aus 2 Gründen wurde die beiden Buchstaben getauscht:
+1. Das »q« tritt immer im Bigramm »qu« auf. Daher hat man bei dem alten »q«
+  immer einen „Worst case“. Dieser wurde mehrfach auf der Liste von
+  unterschiedlichen Leuten bemängelt.
+2. Ist das »x«, das »v« und das »c« nun in NEO 2 zusammen (benötigt für das
+  Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).
