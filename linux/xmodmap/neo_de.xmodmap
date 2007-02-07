@@ -59,7 +59,7 @@ keycode 41 = e E braceright Greek_epsilon Right Right
 keycode 42 = o O asterisk   Greek_omega   End End
 
 keycode 43 = s S question  Greek_sigma questiondown Greek_SIGMA
-keycode 44 = n N parenleft Greek_nu    4
+keycode 44 = n N parenleft Greek_nu    4 U2116
 keycode 45 = r R parenright Greek_rho  5 registered
 keycode 46 = t T minus Greek_tau 6 trademark
 keycode 47 = d D colon Greek_delta comma Greek_DELTA
@@ -117,7 +117,7 @@ keycode 65 = space space space space 0 space
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !keycode 77 = Num_Lock Pointer_EnableKeys 	
-keycode 112 = KP_Divide KP_Divide division 
+keycode 112 = KP_Divide KP_Divide division U2215 
 keycode 63  = KP_Multiply KP_Multiply multiply U22C5 U2217 
 keycode 82  = KP_Subtract KP_Subtract U2212
 
@@ -142,7 +142,7 @@ keycode 85 = KP_Right KP_6 rightarrow threequarters
 keycode 87 = KP_End  KP_1 onesuperior onesuperior			
 keycode 88 = KP_Down KP_2 downarrow twosuperior			
 keycode 89 = KP_Next KP_3 threesuperior threesuperior		
-!keycode 77 = KP_Enter		
+keycode 108 = KP_Enter KP_Enter U2260 U2248		
 !keysym <KPEQ> 	 	KP_Equal		
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
