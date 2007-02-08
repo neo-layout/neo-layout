@@ -1,3 +1,13 @@
+--------------------------------------------------------------------------------
+Gliederung
+1. Allgemeine Fragen
+2. Betriebssystemspeziefische Fragen
+2.1 Linux, Unix, BSD
+2.2 Apple Macintosh
+2.3 Windows
+--------------------------------------------------------------------------------
+1. Allgemeine Fragen
+--------------------------------------------------------------------------------
 F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?
 
 A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings
@@ -19,6 +29,38 @@ ihrer alten Position verfügbar.
 
 --------------------------------------------------------------------------------
 
+F: Warum wurde im Vergleich zur Version 1 von NEO das »x« mit dem »q«
+vertauscht?
+
+A: Aus 2 Gründen wurde die beiden Buchstaben getauscht:
+1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man bei dem alten »q«
+   immer einen „Worst case“. Dieser wurde mehrfach auf der Liste von
+   unterschiedlichen Leuten bemängelt.
+2. Hat man das »x«, das »v« und das »c« nun in NEO 2 zusammen (benötigt für das
+   Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).
+
+--------------------------------------------------------------------------------
+
+F: Wann wird eigentlich in der deutschen Sprache welcher Querstrich verwendet?
+
+A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw. »Shift« + »ß«) verwendet.
+Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout,
+Fußball-Fan, usw. Viele dieser Wörter kann man auch zusammen, das heißt ohne
+Bindestrich, schreiben.
+Der Gedankenstrich (momentan auf »AltGr« + »Taste-rechts-neben-der-Null«) wird
+verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiel:
+Ich schreibe mit NEO – meine Tastatur ist von Logitech und ist „ergonomisch“
+geformt – viel schneller, als früher mit QWERTZ.
+Der englische Gedankenstrich (auf »Mod5« + »Taste-rechts-neben-der-Null«) kommt
+nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen
+geschrieben.
+
+--------------------------------------------------------------------------------
+2. Betriebssystemspeziefische Fragen
+--------------------------------------------------------------------------------
+2.1 Linux, Unix, BSD
+--------------------------------------------------------------------------------
+
 F: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die Klammer »(«. Wieso?
 
 A: Das Problem, was hier auftritt ist der Vielzitierte Bug, dass wenn man vom
@@ -34,17 +76,7 @@ oder für die Version im svn (2.0):
 	xmodmap neo_de.xmodmap
 
 --------------------------------------------------------------------------------
-
-F: Warum wurde im Vergleich zur Version 1 von NEO das »x« mit dem »q«
-vertauscht?
-
-A: Aus 2 Gründen wurde die beiden Buchstaben getauscht:
-1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man bei dem alten »q«
-  immer einen „Worst case“. Dieser wurde mehrfach auf der Liste von
-  unterschiedlichen Leuten bemängelt.
-2. Hat man das »x«, das »v« und das »c« nun in NEO 2 zusammen (benötigt für das
-  Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).
-
+2.2 Apple Macintosh
 --------------------------------------------------------------------------------
 
 F: Warum wird auf meinem iBook »Caps-Lock« nicht zu »AltGr«?
@@ -71,17 +103,5 @@ Tastaturkürzeln erhalten. So ist unter NEO ein Drücken von »Apfel« + »r« f
 ein »Apfel« + »c« nötig.
 
 --------------------------------------------------------------------------------
-
-F: Wann wird eigentlich in der deutschen Sprache welcher Querstrich verwendet?
-
-A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw. »Shift« + »ß«) verwendet.
-Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout,
-Fußball-Fan, usw. Viele dieser Wörter kann man auch zusammen, das heißt ohne
-Bindestrich, schreiben.
-Der Gedankenstrich (momentan auf »AltGr« + »Taste-rechts-neben-der-Null«) wird
-verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiel:
-Ich schreibe mit NEO – meine Tastatur ist von Logitech und ist „ergonomisch“
-geformt – viel schneller, als früher mit QWERTZ.
-Der englische Gedankenstrich (auf »Mod5« + »Taste-rechts-neben-der-Null«) kommt
-nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen
-geschrieben.
+2.3 Windows
+--------------------------------------------------------------------------------
