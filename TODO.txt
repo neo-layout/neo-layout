@@ -1,3 +1,24 @@
+1) Umlerner-Version, Vollversion: Wie benennen?
+2) Gibt es einen „Wundervorschlag“ für das symmetrische AltGr , bei dem 
+   die deutschen Buchstaben trotzdem nicht unwürdig benachteiligt werden?
+3) Unter Windows sind die 5. und 6. Ebene nicht realisierbar?
+4) Unter Windows sind die ganzen toten Tasten nicht realisierbar?
+5) Lohnt es sich »j« und »q« tauschen?
+6) Soll noch ein »Enter« auf einer höheren Ebene dazu kommen? Wo?
+7) Fehlen noch irgendwelche Zeichen europäischer Sprachen?
+8) Sollen die Zahlen in der obersten Reihe auf die 2. Ebene und die
+   Sonderzeichen dort auf die erste wie es beim  belgischen, französischen,
+   ... Standardlayout der Fall ist?
+9) Sind »–« und »—« noch zu verwechseln? Sollten sie daher auf
+   unterschiedliche Tasten oder andere Ebenen? 
+10) Vietnamesisch mit lateinischen Buchstaben?
+11) letzte  offene Positionen auf den zweiter und dritter Ebene (z.B.
+    die   Zahlen   2  und 3; ferner bestand der Vorschlag, wichtigere
+    Zeichen  für   die  Belegung  der  Zahlen 6 und 7 auf den höheren
+    Ebenen zu finden; Ebene  2 von ß sowie Ebene 3 von y sind noch zu
+    belegen und hängen mit Topic #2 zusammen)
+12) War  schon  entschieden,  ob wir de_neo oder neo_de nehmen? 
+
 == Deadkey finden ==
 was jetzt noch fehlt:
 Rumänisch: ș Ș ț Ț
@@ -33,5 +54,4 @@ dead_stroke gehen, das andere müssen wir dann wahrscheinlich definieren.
 == Anleitung schreiben ==
 Eine kurze und außerdem eine ausführliche Anleitung für die Zeichen und
 deren Benutzung schreiben.
-
 
