@@ -1,11 +1,15 @@
 F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?
+
 A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings
 auf einer höheren Ebene (AltGr). Zum Ein- und Ausschalten, drückt man also 
 erst rechts »AltGr« und dann links die Taste auf der früher schon »CapsLock«
 war.
 
+--------------------------------------------------------------------------------
+
 F: Warum gibt es manche Tasten doppelt? Z. B. die Pfeiltasten, die Esc-Taste 
 usw.?
+
 A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der
 Tastatur nehmen muss. Man drückt einfach die Mod5-Taste und schon hat man die 
 gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.
@@ -13,7 +17,10 @@ Da die Mod5-Taste auf der amerikanischen Tastatur allerdings an einer anderen
 (ungünstigeren) Stelle als bei der deutschen liegt, sind diese Tasten auch auf 
 ihrer alten Position verfügbar.
 
+--------------------------------------------------------------------------------
+
 F: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die Klammer »(«. Wieso?
+
 A: Das Problem, was hier auftritt ist der Vielzitierte Bug, dass wenn man vom
 deutschen Layout ausgeht, xmodmap die 5. Ebene Über dem n nicht mapped. Deshalb
 geht je nach Version die Klammer oder die 4 nicht über dem n.
@@ -26,8 +33,11 @@ oder für die Version im svn (2.0):
 	setxkbmap ie
 	xmodmap neo_de.xmodmap
 
+--------------------------------------------------------------------------------
+
 F: Warum wurde im Vergleich zur Version 1 von NEO das »x« mit dem »q«
 vertauscht?
+
 A: Aus 2 Gründen wurde die beiden Buchstaben getauscht:
 1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man bei dem alten »q«
   immer einen „Worst case“. Dieser wurde mehrfach auf der Liste von
@@ -35,7 +45,10 @@ A: Aus 2 Gründen wurde die beiden Buchstaben getauscht:
 2. Hat man das »x«, das »v« und das »c« nun in NEO 2 zusammen (benötigt für das
   Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).
 
+--------------------------------------------------------------------------------
+
 F: Warum wird auf meinem iBook »Caps-Lock« nicht zu »AltGr«?
+
 A: Unter Mac OS X benötigt man entweder das Programm fKeys [1] oder
 uControl [2]. Unter Linux ist ein Patch
 (macintosh-mangle-caps-lock-events-on-adb-keyboards.patch), der einen
@@ -49,21 +62,26 @@ Zweig des Kernels [5].
 	[4] http://lists.debian.org/debian-powerpc/2005/12/msg00214.html
 	[5] http://kernel.org/pub/linux/kernel/people/akpm/patches/2.6/
 
+--------------------------------------------------------------------------------
 
 F: Warum ändern sich Tastaturkürzel wie »Apfel« + »c« usw. unter Mac OS nicht?
+
 A: Dies ist von Mac OS gewollt. Die ursprüngliche QWERTZ-Position bleibt bei
 Tastaturkürzeln erhalten. So ist unter NEO ein Drücken von »Apfel« + »r« für
 ein »Apfel« + »c« nötig.
 
+--------------------------------------------------------------------------------
 
 F: Wann wird eigentlich in der deutschen Sprache welcher Querstrich verwendet?
-A: Ist garnicht schwer. Meist wird der Bindestrich (auf »AltGr« + »t«)
-verwendet. Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger,
-NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann man auch zusammen, das
-heißt ohne Bindestrich schreiben.
+
+A: Ist garnicht schwer. Meist wird der Bindestrich (auf »AltGr« + »t« bzw.
+»Shift« + »ß«) verwendet. Und zwar für alle zusammen gesetzten Wörter:
+Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann man auch
+zusammen, das heißt ohne Bindestrich, schreiben.
 Den Gedankenstrich (momentan auf »Shift« + »Taste-rechts-neben-der-Null«) wird
 verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiel:
 Ich schreibe mit NEO – meine Tastatur ist von Logitech und ist „ergonomisch“
 geformt – viel schneller, als früher mit QWERTZ.
-Der englische Gedankenstrich kommt nur in englischen Texten vor und wird dort
-ohne umschließende Leerzeichen geschrieben.
+Der englische Gedankenstrich (auf »Mod5« + »Taste-rechts-neben-der-Null«) kommt
+nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen
+geschrieben.
