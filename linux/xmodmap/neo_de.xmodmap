@@ -27,8 +27,8 @@ keycode 17 = 8 doublelowquotemark singlelowquotemark guillemotright slash
 keycode 18 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
 keycode 19 = 0 rightdoublequotemark rightsinglequotemark U203A minus
 
-keycode 20 = minus U2013 U2014 U2039 
-!keycode 20 = ssharp minus U2013 U2039 U2014 
+!keycode 20 = minus U2013 U2014 U2039
+keycode 20 = y Y U2013 U2039 U2014
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -45,7 +45,7 @@ keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
 keycode 33 = j J semicolon semicolon plus
-keycode 34 = ssharp ssharp U0133 U0132 schwa SCHWA 
+keycode 34 = ssharp minus U0133 U0132 schwa SCHWA 
 !keycode 34 = y Y y Greek_upsilon thorn THORN
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
 
