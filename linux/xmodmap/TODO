@@ -1,0 +1,31 @@
+== Deadkey finden ==
+was jetzt noch fehlt: 
+Rumänisch: ș Ș ț Ț
+wo bitte ist dieser deadkey? hab in der keysymdef.h nix gefunden oder
+ist das der dead_belowdot ?
+
+== Bugreport an X.org ==
+folgendes sind meiner Meinung nach Bugs und sollten eigentlich schon mit
+den bisher definierten gehen:
+
+Walisisch: Ŵ ŵ ŷ Ŷ
+Esperanto: ĈĜĤĴŜŬ
+--> dead_circum
+
+Maltesisch: Ċ ċ ġ Ġ
+--> dead_abovedot
+
+Maltesisch: Ħ ħ
+Isländisch, Färöisch: Ð
+Kroatisch: Ð
+Polnisch, Sorbisch, Weißrussisch, Kaschubisch: ł Ł
+Dänisch, Färöisch, Norwegisch: Ø ø
+--> für diese gibt es meiner Meinung nach den dead_stroke. Der
+funktioniert allerdings bei mir nicht. Vielleicht kann das ja jemand auf
+einem anderen System mal ausprobieren.
+
+Isländisch, Färöisch: ð
+Kroatisch: đ
+--> das sind die kleinen Varianten zu Ð. Das eine müsste auch mit
+dead_stroke gehen, das andere müssen wir dann wahrscheinlich definieren.
+

@@ -1,6 +1,14 @@
-Neo 2.0 Windowstreiber, to do
+Neo 2.0 Windowstreiber, TODO 
 =============================
 
-- Deadkeys
-- Ebenen 5 und 6
 - an aktuelle Version anpassen (ß, y, rechtes AltGr, ...)
+- Ebenen 5 und 6 gibt es nicht. Für Bastelfreudige: das SGCaps ist einen
+  Versuch wert. Die Mod5 wird man dann wohl per Registry"hack" (wie linkes
+  AltGr) realisieren müssen.
+- viele Deadkeys gehen noch nicht: hier ist man sehr flexibel. 
+  Es muss nur JEDE Kombination aus Deadkey und Buchstabe einzeln erfasst 
+  werden. Freiwillige vor! ;-)
+- CapsLock über Tastenkombinationen scheint mit dem MS Layouteditor
+  nicht machbar.
+- Numpad geht in höheren Ebenen nicht. Hier gibt es im
+  Layouteditor offenbar keine Möglichkeit.

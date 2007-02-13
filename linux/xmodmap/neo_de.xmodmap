@@ -47,7 +47,7 @@ keycode 32 = f F equal Greek_phi 9 Greek_PHI
 keycode 33 = j J semicolon semicolon plus
 keycode 34 = ssharp minus U0133 U0132 schwa SCHWA 
 !keycode 34 = y Y y Greek_upsilon thorn THORN
-keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
+keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_stroke dead_belowdot
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The home row (middle row)
