@@ -45,7 +45,7 @@ keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
 keycode 33 = j J semicolon semicolon plus
-keycode 34 = ssharp minus U0133 U0132 schwa SCHWA 
+keycode 34 = ssharp minus U133 U132 schwa SCHWA 
 !keycode 34 = y Y y Greek_upsilon thorn THORN
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_stroke dead_belowdot
 
@@ -76,7 +76,7 @@ keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
 
 keycode 57 = b B plus Greek_beta plusminus
 keycode 58 = m M percent mu 1
-keycode 59 = comma semicolon ampersand U03D1 2 
+keycode 59 = comma semicolon ampersand U3D1 2 
 keycode 60 = period colon quotedbl Greek_theta 3 Greek_THETA
 keycode 61 = q Q apostrophe apostrophe period
 
@@ -90,7 +90,7 @@ keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock
 
 ! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
 keycode 113 = Mode_switch Mode_switch Mode_switch Mode_switch KP_Decimal
-!keycode 48 = Mode_switch Mode_switch U0133 U0132 schwa SCHWA
+!keycode 48 = Mode_switch Mode_switch U133 U132 schwa SCHWA
 add Mod5 = Mode_switch
 
 ! If the left win key should modify the 5th and 6th, comment this out
