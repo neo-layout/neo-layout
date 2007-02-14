@@ -63,7 +63,7 @@ geschrieben.
 
 F: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die Klammer »(«. Wieso?
 
-A: Das Problem, was hier auftritt ist der Vielzitierte Bug, dass wenn man vom
+A: Das Problem, was hier auftritt ist der Vielzitierte Bug*, dass wenn man vom
 deutschen Layout ausgeht, xmodmap die 5. Ebene Über dem n nicht mapped. Deshalb
 geht je nach Version die Klammer oder die 4 nicht über dem n.
 Abhilfe dagegen schafft das Irische Layout. Das hat selbst diese Ebene über dem
@@ -74,6 +74,10 @@ Also entweder für Version 1.1:
 oder für die Version im svn (2.0):
 	setxkbmap ie
 	xmodmap neo_de.xmodmap
+
+* Links zu den Bugreports:
+    https://bugs.freedesktop.org/show_bug.cgi?id=9254
+		https://bugs.freedesktop.org/show_bug.cgi?id=4535
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
