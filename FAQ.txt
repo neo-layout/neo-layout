@@ -156,3 +156,16 @@ F: Unter Windows Visa lässt sich das NEO-Layout nicht installieren. Wieso?
 A: Doch, man kann NEO auch unter Windows Vista benutzen. Man muss dazu die UAC
 („User Account Control“ = Rechte- und Benutzerkontenverwaltung) deaktivieren.
 
+--------------------------------------------------------------------------------
+
+F: Die Zeichen auf der 5. und 6. Ebene gehen nicht. Warum?
+
+A: Leider ist noch keine Möglichkeit bekannt, wie man das unter Windows
+implementieren kann.
+
+--------------------------------------------------------------------------------
+
+F: Warum funktionieren einige Deadkey-Kombinationen nicht (die unter Linux
+funktionieren)?
+
+A: Unter Windows muss JEDE Kombination aus Deadkey und Buchstabe einzeln erfasst werden. Freiwillige vor!
