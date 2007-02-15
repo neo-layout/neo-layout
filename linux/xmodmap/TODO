@@ -31,3 +31,14 @@ Kroatisch: đ
 --> das sind die kleinen Varianten zu Ð. Das eine müsste auch mit
 dead_stroke gehen, das andere müssen wir dann wahrscheinlich definieren.
 
+== Caps-Lock funktioniert nicht mit keycode ==
+F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
+vorgesehen erst rechts »AltGr« und dann gleichzeitig links die Taste auf der
+früher (bei QWERTZ) schon »CapsLock« war drücke, dann ändert sich überhaupt
+nichts.
+
+A: Das ist ein Fehler, der auftritt, seitdem die xmodmap-Datei von keysym auf
+keycode umgestellt wurde. Eventuell handelt es sich hierbei um einen Fehler im
+X-Server. Jedoch ist auch ein Missverständnis der Bedienung von xmodmap
+unsererseits noch nicht ausgeschlossen.
+
