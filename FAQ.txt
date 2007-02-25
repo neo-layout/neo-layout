@@ -121,6 +121,13 @@ X-Server. Jedoch ist auch ein Missverständnis der Bedienung von xmodmap
 unsererseits noch nicht ausgeschlossen.
 
 --------------------------------------------------------------------------------
+
+F: Wenn ich »Strg« + »b« oder »Strg« + »t« drücke, wird mein Terminal größer
+bzw. kleiner. Wieso? Ist das ein Fehler im Layout?
+A: Das ist wahrscheinlich ein Fehler in Gnome bzw. dem „gnome-terminal“. Den
+Fehler sollte man wohl mal den Gnome-Entwicklern melden.
+
+--------------------------------------------------------------------------------
 2.2 Apple Macintosh
 --------------------------------------------------------------------------------
 
