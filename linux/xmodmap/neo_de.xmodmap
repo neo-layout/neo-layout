@@ -27,8 +27,7 @@ keycode 17 = 8 doublelowquotemark singlelowquotemark guillemotright slash
 keycode 18 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
 keycode 19 = 0 rightdoublequotemark rightsinglequotemark U203A minus
 
-!keycode 20 = minus U2013 U2014 U2039
-keycode 20 = y Y U2013 U2039 U2014
+keycode 20 = minus U2013 U2014 U2039
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -44,10 +43,9 @@ keycode 29 = k K exclam Greek_kappa exclamdown
 keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
-keycode 33 = j J semicolon semicolon plus
+keycode 33 = q Q semicolon semicolon plus
 keycode 34 = ssharp minus U133 U132 schwa SCHWA 
-!keycode 34 = y Y y Greek_upsilon thorn THORN
-keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_stroke dead_belowdot
+keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_belowdot dead_belowdot
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The home row (middle row)
@@ -78,7 +76,7 @@ keycode 57 = b B plus Greek_beta plusminus
 keycode 58 = m M percent mu 1
 keycode 59 = comma semicolon ampersand U3D1 2 
 keycode 60 = period colon quotedbl Greek_theta 3 Greek_THETA
-keycode 61 = q Q apostrophe apostrophe period
+keycode 61 = j J apostrophe apostrophe period
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
