@@ -8,10 +8,11 @@ Gliederung
 --------------------------------------------------------------------------------
 1. Allgemeine Fragen
 --------------------------------------------------------------------------------
+
 F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?
 
 A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings auf
-einer höheren Ebene (AltGr). Zum Ein- und Ausschalten, drückt man also erst
+einer höheren Ebene (»AltGr«). Zum Ein- und Ausschalten, drückt man also erst
 rechts »AltGr« und dann gleichzeitig links die Taste auf der früher (bei
 QWERTZ) schon »CapsLock« war.
 
@@ -29,15 +30,30 @@ ihrer alten Position verfügbar.
 
 --------------------------------------------------------------------------------
 
-F: Warum wurde im Vergleich zur Version 1 von NEO das »x« mit dem »q«
+F: Wieso gibt es die Pfeiltasten auf den Tasten »i«, »a«, »e« und »l« auf der
+5. und auf der 6. Ebene?
+
+A: Ebene 6 ist »Shift« + »Mod5«. Da »Mod5« + »i« der Pfeil ist, ist
+»Shift« + »Mod5« + »i« der Pfeil zusammen mit »Shift« und das wird von vielen
+Anwendungen als „Markieren“ interpretiert.
+
+--------------------------------------------------------------------------------
+
+F: Warum wurde im Vergleich zur Version 1 von NEO das »x«, das »q« und das »j«
 vertauscht?
 
-A: Aus 2 Gründen wurde die beiden Buchstaben getauscht:
-1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man bei dem alten »q«
-   immer einen „Worst case“. Dieser wurde mehrfach auf der Liste von
-   unterschiedlichen Leuten bemängelt.
-2. Hat man das »x«, das »v« und das »c« nun in NEO 2 zusammen (benötigt für das
-   Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).
+A: Aus 3 Gründen wurde die drei Buchstaben vertauscht:
+1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man beim alten »q« immer
+   einen „Worst case“ (zweimal den gleichen Finger hintereinander). Dies wurde
+   mehrfach auf der Liste von unterschiedlichen Leuten bemängelt.
+2. Man hat das »x«, das »v« und das »c« nun in NEO 2 zusammen und neben einander
+   (benötigt für das Ausschneiden, Einfügen und Kopieren von Texten mittels der
+   Strg-Taste).
+3. Das »j« wurde nach unten verlegt, weil der kleine Finger wesentlich kürzer
+   als die anderen ist und daher besser an die untere Reihe kommt. Bei der
+   Erstellung von NEO 1 wurde noch davon ausgegangen, dass die Reihe über der
+   Grundreihe von allen Fingern besser zu erreichen ist, als die Reihe unter der
+   Grundreihe.
 
 --------------------------------------------------------------------------------
 
@@ -83,6 +99,35 @@ Zur Verwendung des Apostrophs siehe den Wikipedia Artikel:
 
 Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen.
 Dieses ist per »AltGr« + »q« erreichbar.
+
+--------------------------------------------------------------------------------
+
+F: Es fehlen ein paar griechische Buchstaben. Vor allem die Großbuchstaben.
+Wieso?
+
+A: Die griechischen Buchstaben sind nicht dafür da, um griechisch oder
+altgriechisch zu schreiben. NEO ist ein Layout für die deutsche Sprache.
+
+Aus genau diesem Grund gibt es auch keine kyrillischen, japanischen sowie
+chinesischen Buchstaben. Dafür gibt es Layouts der einzelnen Sprachen. Es wurde
+nur darauf geachtet, dass es möglich ist, alle lateinischen Buchstaben zu
+tippen. Gerade wenn man z. B. an der polnischen Grenze wohnt und immer mal den
+Ort in dem man selbst (in Deutschland) wohnt auf polnisch tippen muss oder für
+Namen europäischer Mitbürger oder ...
+
+Die vorhandenen griechischen Buchstaben sind vielmehr dazu da, mathematische
+Formeln tippen zu können, in denen entsprechende Buchstaben vorkommen. Das ist
+für Naturwissenschaftler interessant. Da die Naturwissenschaftler den größeren
+Anteil ausmachen (gegenüber den griechisch Schreibenden), macht diese
+Ausrichtung Sinn.
+
+Ein Layout, bei dem alle großen griechischen und alle großen lateinischen
+Buchstaben vertreten sind führt nur zu ungewollten Fehlern. Viele große
+griechische Buchstaben sehen genauso aus, wie die lateinischen (die lateinischen
+sind teilweise aus dem Griechischen übernommen). Für Formeln sind diese daher
+nicht interessant, da es nicht um den griechischen Buchstaben an sich geht,
+sondern darum, mehr Zeichen für mathematische Variablen, Funktionen usw. zu
+haben.
 
 --------------------------------------------------------------------------------
 2. Betriebssystemspeziefische Fragen
@@ -175,4 +220,5 @@ implementieren kann.
 F: Warum funktionieren einige Deadkey-Kombinationen nicht (die unter Linux
 funktionieren)?
 
-A: Unter Windows muss JEDE Kombination aus Deadkey und Buchstabe einzeln erfasst werden. Freiwillige vor!
+A: Unter Windows muss JEDE Kombination aus Deadkey und Buchstabe einzeln erfasst
+werden. Freiwillige vor!
