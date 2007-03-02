@@ -135,11 +135,14 @@ haben.
 2.1 Linux, Unix, BSD
 --------------------------------------------------------------------------------
 
-F: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die Klammer »(«. Wieso?
-
+F1: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die öffnende Klammer.
+F2: Wenn ich »Mod5« + »n« oder »Mod5« + »Leertaste« drücke, kommt nicht die 4
+oder die 0 sondern ein n oder Leerzeichen. Wieso?
+ 
 A: Das Problem, was hier auftritt ist der Vielzitierte Bug*, dass wenn man vom
 deutschen Layout ausgeht, xmodmap die 5. Ebene Über dem n nicht mapped. Deshalb
-geht je nach Version die Klammer oder die 4 nicht über dem n.
+geht je nach Version die Klammer oder die 4 nicht über dem n. Genau so mit
+der Leertaste.
 Abhilfe dagegen schafft das Irische Layout. Das hat selbst diese Ebene über dem
 n definiert und daher ändert xmodmap auch die Belegung ordentlich.
 Also entweder für Version 1.1:
