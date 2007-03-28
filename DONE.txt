@@ -1,4 +1,26 @@
-In dieser Datei stehen lang diskutierte sachen, die irgendwann mal fest 
+In dieser Datei stehen lang diskutierte Sachen, die irgendwann mal fest 
 beschlossen wurden.
 
 - ß bleibt auf Ebene 1
+
+- Der „Wundervorschlag“ für das symmetrische AltGr ist jetzt erfüllt, wenn man
+  das zweite AltGr auf die QWERTZ-#-Taste legt. Das zweite Mod5 kommt dann
+  auf QWERTZ-AltGr rechts neben der Leertaste.
+
+- j und q wurden getauscht, da der kleine Finger besser in die untere Reihe
+  kommt als in die obere und das j häufiger ist. Hier trifft das Paradigma,
+  dass die obere Reihe immer besser ist als die untere Reihe, nicht zu.
+
+- Die Zahlen bleiben wie sie sind und werden nicht wie das französische Layout
+  umgekehrt.
+
+- Die drei Striche »-«, »–« und »—« sind alle auf der Taste rechts neben der
+  Null. Eine Verwechslung sollte durch die FAQ, eine Anleitung und eine
+  Kurzanleitung ausgeschlossen werden.
+
+- Vietnamesisch mit lateinischen Buchstaben wird nicht aufgenommen. Nur
+  europäische Sprachen, da viel häufiger verwendet von deutschen Schreibern –
+  also NEO-Benutzern.
+
+- Der Name des Layouts sollte in den Treibern »de_neo« sein.
+
