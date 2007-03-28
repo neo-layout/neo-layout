@@ -16,7 +16,7 @@
 keycode 49 = dead_circumflex dead_caron dead_breve paragraph 
 
 keycode 10 = 1 degree notsign onesuperior
-keycode 11 = 2 2 2 twosuperior 
+keycode 11 = 2 2 asciicircum twosuperior 
 keycode 12 = 3 section 3 threesuperior 
 keycode 13 = 4 dollar    yen cent Prior Prior
 keycode 14 = 5 EuroSign  sterling currency
