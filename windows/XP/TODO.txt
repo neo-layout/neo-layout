@@ -1,12 +1,16 @@
 Neo 2.0 Windowstreiber, TODO 
 =============================
 
-- Ebenen 5 und 6 gibt es nicht. Für Bastelfreudige: das SGCaps ist einen
-  Versuch wert. Die Mod5 wird man dann wohl per Registry"hack" (wie linkes
-  AltGr) realisieren müssen. Anmerkung: Wie kann man SGCaps direkt nach 
-	Gebrauch wieder deaktivieren, sodass man nicht nochmal Shift zusätzlich 
-	drücken muss?
+- Ebenen 5 und 6 sind über SGCaps realisiert. Gibt es eine Möglichkeit, SGCaps direkt beim Loslassen der Taste wieder zu deaktivieren, ohne nochmal zusätzlich Shift zu drücken? Außerdem fehlt dadurch ein echtes Caps Lock, eine andere Realisierung wäre wünschenswert.
+
+- Ein „Hack“ für die aktuelle Belegung der Modifier fehlt noch.
+
 - CapsLock über Tastenkombinationen scheint mit dem MS Layouteditor
   nicht machbar.
+
 - Numpad geht in höheren Ebenen nicht. Hier gibt es im
   Layouteditor offenbar keine Möglichkeit.
+
+- Eine Belegung von Space in höheren Ebenen ist mit dem MS Layouteditor nicht möglich.
+
+- Sind alle Deadkeys richtig belegt? Fehlen noch bestimmte Zeichen?
