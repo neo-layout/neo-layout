@@ -1,4 +1,4 @@
---------------------------------------------------------------------------------
+﻿--------------------------------------------------------------------------------
 Gliederung
 1. Allgemeine Fragen
 2. Betriebssystemspeziefische Fragen
@@ -57,22 +57,19 @@ A: Aus 3 Gründen wurde die drei Buchstaben vertauscht:
 
 --------------------------------------------------------------------------------
 
-F: Wann wird eigentlich in der deutschen Sprache welcher Strich verwendet?
+F: Wann wird eigentlich in der deutschen Sprache welcher Querstrich verwendet?
 
-A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw.
-»Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten
-Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann
-man auch zusammen, das heißt ohne Bindestrich, schreiben.
-Der Gedankenstrich (momentan auf »Shift« + »Taste-rechts-neben-der-Null«) wird
+A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw. »Shift« + »ß«) verwendet.
+Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout,
+Fußball-Fan, usw. Viele dieser Wörter kann man auch zusammen, das heißt ohne
+Bindestrich, schreiben.
+Der Gedankenstrich (momentan auf »AltGr« + »Taste-rechts-neben-der-Null«) wird
 verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiel:
 Ich schreibe mit NEO – meine Tastatur ist von Logitech und ist „ergonomisch“
 geformt – viel schneller, als früher mit QWERTZ.
 Der englische Gedankenstrich (auf »Mod5« + »Taste-rechts-neben-der-Null«) kommt
 nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen
 geschrieben.
-Außerdem wird der erst genannte Bindestrich auch als „Minus“ verwendet. Es
-gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das
-Pluszeichen. Dieses befindet sich auf »AltGr« + »Numpad-Minus«.
 
 --------------------------------------------------------------------------------
 
@@ -216,15 +213,13 @@ A: Doch, man kann NEO auch unter Windows Vista benutzen. Man muss dazu die UAC
 
 --------------------------------------------------------------------------------
 
-F: Die Zeichen auf der 5. und 6. Ebene gehen nicht. Warum?
+F: Die Wie kann ich auf Zeichen der 5. und 6. Ebene zugreifen?
 
-A: Leider ist noch keine Möglichkeit bekannt, wie man das unter Windows
-implementieren kann.
+A: Diese Ebenen sind über die sogenannte SGCaps-Funktion realisiert. Für die 5. Ebene muss man Mod5 (der eigentlich Caps Lock ist) drücken, dann die Taste mit dem Zeichen, dann Mod5 wieder deaktivieren (Shift drücken oder nochmal Mod5. Für die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das Zeichen eingeben und dann Mod5 wieder deaktivieren. Es wird noch nach einer Möglichkeit gesucht, das weniger umständlich zu ermöglichen
 
 --------------------------------------------------------------------------------
 
-F: Warum funktionieren einige Deadkey-Kombinationen nicht (die unter Linux
-funktionieren)?
+F: Ein bestimmter Deadkey funktioniert nicht?
 
-A: Unter Windows muss JEDE Kombination aus Deadkey und Buchstabe einzeln erfasst
-werden. Freiwillige vor!
+A: 1. Das resultierende Zeichen gibt es nicht – es können nur Deadkey + Buchstabe eingegeben werden, deren Kombination auch Sinn ergibt.
+2. Die Deadkeys sind alle von Hand eingegeben, da kann schon mal ein Buchstabe vergessen werden. Falls dem so ist, bitte an die Mailinglist schreiben!
