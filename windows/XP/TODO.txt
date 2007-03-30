@@ -1,16 +1,18 @@
-Neo 2.0 Windowstreiber, TODO 
+Neo 2.0 Windowstreiber, TODO
 =============================
 
-- Ebenen 5 und 6 sind über SGCaps realisiert. Gibt es eine Möglichkeit, SGCaps direkt beim Loslassen der Taste wieder zu deaktivieren, ohne nochmal zusätzlich Shift zu drücken? Außerdem fehlt dadurch ein echtes Caps Lock, eine andere Realisierung wäre wünschenswert.
+1) Ebenen 5 und 6 sind Ã¼ber SGCaps realisiert. Gibt es eine MÃ¶glichkeit,
+   Caps-Lock, eine andere Realisierung wÃ¤re wÃ¼nschenswert.
 
-- Ein „Hack“ für die aktuelle Belegung der Modifier fehlt noch.
+2) Ein â€žHackâ€œ fÃ¼r die aktuelle Belegung der Modifier fehlt noch.
 
-- CapsLock über Tastenkombinationen scheint mit dem MS Layouteditor
-  nicht machbar.
+3) CapsLock Ã¼ber Tastenkombinationen scheint mit dem MS Layouteditor
+   nicht machbar.
 
-- Numpad geht in höheren Ebenen nicht. Hier gibt es im
-  Layouteditor offenbar keine Möglichkeit.
+4) Numpad geht in hÃ¶heren Ebenen nicht. Hier gibt es im Layouteditor
+   offenbar keine MÃ¶glichkeit.
 
-- Eine Belegung von Space in höheren Ebenen ist mit dem MS Layouteditor nicht möglich.
+5) Eine Belegung von Space in hÃ¶heren Ebenen ist mit dem MS Layouteditor
+   nicht mÃ¶glich.
 
-- Sind alle Deadkeys richtig belegt? Fehlen noch bestimmte Zeichen?
+6) Sind alle Deadkeys richtig belegt? Fehlen noch bestimmte Zeichen?
