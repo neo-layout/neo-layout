@@ -13,8 +13,11 @@ Achtung: NEO 2.0 befindet sich noch in Entwicklung. Falls eine neuere Version vo
 installiert werden soll, so muss evtl. die bereits installierte zunächst entfernt werden
 (wie oben beschrieben).
 
-Optional kann die CapsLock-Taste die Funktion einer zusätzlichen AltGr-Taste übernehmen.
-Dies wird durch die Datei "CapsLock_to_rightAlt.reg" (bzw. "CapsLock_to_rightAlt") erreicht.
+Um die Belegung der Modifier (AltGr, Mod5) zu erreichen, muss die Datei "AltGr_Mod5_neo20.reg"
+ (bzw. "AltGr_Mod5_neo20") runtergeladen und installiert werden. 
+
 Die Änderung wirkt sich erst nach einer Neuanmeldung des Benutzers aus!
-WARNUNG: Diese Änderung wirkt sich auf alle Benutzer und alle Tastaturlayouts aus
-         und ist nicht leicht rückgängig zu machen!
+WARNUNG: Diese Änderung (der Modifier) wirkt sich auf alle Benutzer und alle Tastaturlayouts aus!
+
+Rückgängig gemacht wird die Umstellung, indem die Datei "reset_CapsLock_AltGr.reg"
+(bzw. "reset_CapsLock_AltGr") installiert wird.
