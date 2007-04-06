@@ -22,5 +22,6 @@ beschlossen wurden.
   europäische Sprachen, da viel häufiger verwendet von deutschen Schreibern –
   also NEO-Benutzern.
 
-- Der Name des Layouts sollte in den Treibern »de_neo« sein.
+- Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server
+  „neo“ eine Option des Layouts „de“ sein.
 
