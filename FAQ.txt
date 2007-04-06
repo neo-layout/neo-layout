@@ -152,7 +152,7 @@ n definiert und daher ändert xmodmap auch die Belegung ordentlich.
 Also entweder für Version 1.1:
 	setxkbmap ie
 	xmodmap neo_de_from_ie.xmodmap
-oder für die Version im svn (2.0):
+oder für die Version im 2.0 im Subversion-Repository:
 	setxkbmap ie
 	xmodmap neo_de.xmodmap
 
