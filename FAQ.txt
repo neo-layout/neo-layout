@@ -5,6 +5,7 @@ Gliederung
 2.1 Linux, Unix, BSD
 2.2 Apple Macintosh
 2.3 Windows
+3. Entwicklerfragen
 --------------------------------------------------------------------------------
 1. Allgemeine Fragen
 --------------------------------------------------------------------------------
@@ -235,3 +236,24 @@ A: 1. Das resultierende Zeichen gibt es nicht – es können nur Deadkey + Buchs
 2. Die Deadkeys sind alle
 von Hand eingegeben, da kann schon mal ein Buchstabe vergessen werden. Falls dem
 so ist, bitte an die Mailinglist schreiben!
+
+--------------------------------------------------------------------------------
+3. Entwicklerfragen
+--------------------------------------------------------------------------------
+
+F: Wo finde ich die aktuellste Entwicklerversion von NEO?
+
+A: Auf https://neo.eigenheimstrasse.de/svn/grafik/neo20.ods, also im
+Verzeichnis „grafik“ in der Subversion-Versionsverwaltung. Diese Datei lässt
+sich mit allen aktuellen Tabellenkalkulationsprogrammen öffnen (OpenOffice,
+KOffice, Textmaker, Google Text & Tabellen, Mobile Office, AjaxXLS,
+IBM Workplace, Lotus Notes, EditGrid, Gnumeric, IRows, MS Office mit Plugin).
+
+--------------------------------------------------------------------------------
+
+F: Wie tausche ich rechts AltGr mit Mod5? Wie auf der linken Seite?
+
+A: Für die Linuxversion die Datei neo_de.xmodmap ab Zeile 81 lesen und
+speziell Zeile 87 und 90 muss man ISO_Level3_Shift mit Mode_switch tauschen
+(für die rechte Seite).
+
