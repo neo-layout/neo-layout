@@ -10,6 +10,15 @@ Gliederung
 1. Allgemeine Fragen
 --------------------------------------------------------------------------------
 
+F: Wo kann ich Fragen zu NEO stellen?
+
+A: Es gibt eine Mailingliste. Auf dieser werden Fragen beantwortet und NEO
+weiter entwickelt. Im Webbrowser ist diese per
+http://de.groups.yahoo.com/group/neo_layout/ erreichbar. Ansonsten erst mal
+die FAQ (häufigen Fragen) durchlesen.
+
+--------------------------------------------------------------------------------
+
 F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?
 
 A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings auf
@@ -256,4 +265,12 @@ F: Wie tausche ich rechts AltGr mit Mod5? Wie auf der linken Seite?
 A: Für die Linuxversion die Datei neo_de.xmodmap ab Zeile 81 lesen und
 speziell Zeile 87 und 90 muss man ISO_Level3_Shift mit Mode_switch tauschen
 (für die rechte Seite).
+
+--------------------------------------------------------------------------------
+
+F: Wie kann ich mich an der Entwicklung von NEO 2 beteiligen?
+
+A: Es gibt eine Mailingliste. Auf dieser wird alles ausdiskutiert und Fragen
+werden beantwortet. Im Webbrowser ist diese per
+http://de.groups.yahoo.com/group/neo_layout/ erreichbar.
 
