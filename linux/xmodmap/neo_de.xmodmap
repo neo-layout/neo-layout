@@ -34,7 +34,7 @@ keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_a
 ! The upper row 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 24 = x X at Greek_xi Escape Greek_XI
-keycode 25 = v V underscore underscore BackSpace 
+keycode 25 = v V underscore underscore BackSpace U039B
 keycode 26 = l L bracketleft Greek_lambda Up Up
 keycode 27 = c C bracketright Greek_chi c copyright
 keycode 28 = w W asciitilde asciitilde Insert
