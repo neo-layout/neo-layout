@@ -34,6 +34,14 @@ oder: NEO full --> das richtige und komplette NEO
 14) Position des ^ ändern oder zusätzlich über die 2 auf die dritte Ebene?
     Denn es wird in Tex auch häufig für Zahlen verwendet, z. B. ^2 oder ^3.
     Eine Idee war das ^ mit dem _ oder dem ~ zu tauschen.
+15) Weitere Zeichenkombinationen mit Deadkeys (unter Linux noch keine
+Möglichkeit) (siehe Mails vom 2. April 2007):
+Zum Thema Todo gehören ja auch die »Zeichen über die Nachzudenken ist«.
+Die Zeichen »ungleich«, »fast gleich« und »identisch« kann man doch
+einfach per Deadkey realisieren, also / ~ -(alle tot) und =, ebenso die
+»größer gleich« und »kleiner gleich« als Kombination aus -(tot) und <
+bzw. >.
+~= müsste meiner Meinung nach eher ≅ ergeben
 
 == Zeichen über die Nachzudenken ist ==
 № U+2116 Numero sign
