@@ -186,7 +186,7 @@ SC035::send j
 <^>!w::send _
 <^>!e::send [
 <^>!r::send ]
-<^>!t::send ~
+<^>!t::send {^}
 <^>!z::send {!}
 <^>!u::send {<}
 <^>!i::send {>}
@@ -208,7 +208,7 @@ SC035::send j
 <^>!ä::send y
 ;SC02B (#) wird zu Mod5
 
-<^>!y::send {^}
+<^>!y::send ~
 <^>!x::send $
 <^>!c::send |
 <^>!v::send {#}
