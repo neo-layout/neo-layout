@@ -37,7 +37,7 @@ keycode 24 = x X at Greek_xi Escape Greek_XI
 keycode 25 = v V underscore underscore BackSpace U039B
 keycode 26 = l L bracketleft Greek_lambda Up Up
 keycode 27 = c C bracketright Greek_chi c copyright
-keycode 28 = w W asciitilde asciitilde Insert
+keycode 28 = w W asciicircum asciicircum Insert
 
 keycode 29 = k K exclam Greek_kappa exclamdown
 keycode 30 = h H less Greek_psi 7 Greek_PSI
@@ -66,7 +66,7 @@ keycode 48 = y Y y Greek_upsilon thorn THORN
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 52 = odiaeresis Odiaeresis asciicircum asciicircum Tab Tab
+keycode 52 = odiaeresis Odiaeresis asciitilde asciitilde Tab Tab
 keycode 53 = udiaeresis Udiaeresis dollar Udiaeresis Delete
 keycode 54 = adiaeresis Adiaeresis bar Greek_eta Next Next
 keycode 55 = p P numbersign Greek_pi p Greek_PI
