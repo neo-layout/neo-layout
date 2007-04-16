@@ -1,7 +1,7 @@
 NEO Tastaturlayout 2.0 (Version für Windows XP)
 ===============================================
 
-== Installieren ==
+== Installieren (nur als Admin möglich!)  ==
 Zur Installation einfach Doppelklick auf die Datei „neo20.msi“ (ggf. nur als
 „neo20“ angezeigt). Anschließend in der Systemsteuerung
 (Start->Einstellungen->Systemsteuerung) unter „Regions- und Sprachoptionen“ im
