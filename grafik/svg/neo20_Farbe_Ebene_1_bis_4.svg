@@ -31,7 +31,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.32"
      inkscape:cx="446.44044"
-     inkscape:cy="149.62121"
+     inkscape:cy="148.48484"
      inkscape:document-units="px"
      inkscape:current-layer="layer8"
      width="900px"
@@ -59,7 +59,48 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+        <dc:title>NEO-Tastatur-Layout Version 2.0</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Erik Streb del Toro</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>http://upload.wikimedia.org/wikipedia/commons/3/36/KB_Germany.svg</dc:source>
+        <dc:language>Deutsch</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>neo</rdf:li>
+            <rdf:li>Tastatur</rdf:li>
+            <rdf:li>Layout</rdf:li>
+            <rdf:li>Tastatur-Layout</rdf:li>
+            <rdf:li>neo2</rdf:li>
+            <rdf:li>neo20</rdf:li>
+            <rdf:li>neo2.0</rdf:li>
+            <rdf:li>neo-layout.org</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Grafik der Tastaturbelegung „Neo 2.0“, angepasst mit Inkscape.</dc:description>
+        <dc:date>2007-04-17</dc:date>
+        <dc:relation>https://neo.eigenheimstrasse.de/svn/grafik/neo20.ods</dc:relation>
+        <dc:identifier>https://neo.eigenheimstrasse.de/svn/grafik/svg/neo20_Farbe_Ebene_1_bis_4.svg</dc:identifier>
       </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/SourceCode" />
+      </cc:License>
     </rdf:RDF>
   </metadata>
   <g
@@ -108,11 +149,11 @@
        d="M 600.49997,-0.500002 L 660.49997,-0.500002 L 660.49997,59.499988 L 600.49997,59.499988 L 600.49997,-0.500002 z "
        id="path3255" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 780.49997,-0.500002 L 900.49997,-0.500002 L 900.49997,59.499988 L 780.49997,59.499988 L 780.49997,-0.500002 z "
        id="path3257" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 0.50000024,59.499988 L 90.49999,59.499988 L 90.49999,119.49999 L 0.50000024,119.49999 L 0.50000024,59.499988 z "
        id="path3259" />
     <path
@@ -164,7 +205,7 @@
        d="M 750.49997,59.499988 L 810.49997,59.499988 L 810.49997,119.49999 L 750.49997,119.49999 L 750.49997,59.499988 z "
        id="path3283" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 0.50000024,119.49999 L 105.5,119.49999 L 105.5,179.49999 L 0.50000024,179.49999 L 0.50000024,119.49999 z "
        id="path3285" />
     <path
@@ -212,11 +253,11 @@
        d="M 705.49997,119.49999 L 765.49997,119.49999 L 765.49997,179.49999 L 705.49997,179.49999 L 705.49997,119.49999 z "
        id="path3307" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 825.49997,119.49999 L 810.49997,119.49999 L 810.49997,59.499988 L 900.49997,59.499988 L 900.50037,179.49999 L 825.38967,179.49999 L 825.49997,119.49999 z "
        id="path3309" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1.00000048;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 0.50000024,179.49999 L 75.5015,179.49999 L 75.5015,239.5 L 0.50000024,239.5 L 0.50000024,179.49999 z "
        id="path3311" />
     <path
@@ -260,39 +301,41 @@
        d="M 675.49997,179.49999 L 735.49997,179.49999 L 735.49997,239.5 L 675.49997,239.5 L 675.49997,179.49999 z "
        id="path3331" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 735.49997,179.49999 L 900.49997,179.49999 L 900.49997,239.5 L 735.49997,239.5 L 735.49997,179.49999 z "
        id="path3333" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 0.50000024,239.5 L 90.49999,239.5 L 90.49999,299.5 L 0.50000024,299.5 L 0.50000024,239.5 z "
        id="path3335" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 810.49997,239.5 L 900.49997,239.5 L 900.49997,299.5 L 810.49997,299.5 L 810.49997,239.5 z "
        id="path3337" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 150.5,239.5 L 240.49997,239.5 L 240.49997,299.5 L 150.5,299.5 L 150.5,239.5 z "
        id="path3339" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.1254902;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#dfffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 600.49997,239.5 L 690.49997,239.5 L 690.49997,299.5 L 600.49997,299.5 L 600.49997,239.5 z "
        id="path3341" />
     <path
-       style="opacity:1;fill:black;fill-opacity:0;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 240.49997,239.5 L 600.49997,239.5 L 600.49997,299.5 L 240.49997,299.5 L 240.49997,239.5 z "
-       id="path3343" />
+       id="path3343"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.0627451;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#efffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 90.49999,239.5 L 150.5,239.5 L 150.5,299.5 L 90.49999,299.5 L 90.49999,239.5 z "
        id="path3345" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.0627451;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#efffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 690.49997,239.5 L 750.49997,239.5 L 750.49997,299.5 L 690.49997,299.5 L 690.49997,239.5 z "
        id="path3347" />
     <path
-       style="opacity:1;fill:aqua;fill-opacity:0.0627451;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:1;fill:#efffff;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 750.49997,239.5 L 810.49997,239.5 L 810.49997,299.5 L 750.49997,299.5 L 750.49997,239.5 z "
        id="path3349" />
     <path

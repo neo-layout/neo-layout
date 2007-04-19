@@ -1,0 +1,46 @@
+== Mini-FAQ ==
+F: Wo kann ich Fragen zu NEO stellen?
+A: Es gibt eine Mailingliste. Auf dieser werden Fragen beantwortet und NEO weiter entwickelt. Im Webbrowser ist diese per http://de.groups.yahoo.com/group/neo_layout/ erreichbar. Ansonsten erst mal die FAQ (häufigen Fragen) durchlesen.
+
+F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?
+A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings auf einer höheren Ebene (»AltGr«). Zum Ein- und Ausschalten, drückt man also erst rechts »AltGr« und dann gleichzeitig links die Taste auf der früher (bei QWERTZ) schon »CapsLock« war.
+
+F: Warum gibt es manche Tasten doppelt? Z. B. die Pfeiltasten, die Esc-Taste usw. Außerdem auch ~ und ^?
+A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der Tastatur nehmen muss. Man drückt einfach die Mod5-Taste und schon hat man die gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.
+Da die Mod5-Taste nicht von Allen benutzt wird, sind diese Tasten auch auf ihrer alten Position verfügbar.
+Die Tilde (~) und der Zirkumflex (^) sind als tote und untote Tasten vorhanden. Mit den toten kann man Buchstaben wie â, ô, û und ñ schreiben, indem man nacheinander die tote Taste und den Buchstaben drückt. Bei der untoten Taste erscheint das Zeichen direkt.
+
+F: Wieso gibt es die Pfeiltasten auf den Tasten »i«, »a«, »e« und »l« auf der 5. und auf der 6. Ebene?
+A: Ebene 6 ist »Shift« + »Mod5«. Da »Mod5« + »i« der Pfeil ist, ist »Shift« + »Mod5« + »i« der Pfeil zusammen mit »Shift« und das wird von vielen Anwendungen als „Markieren“ interpretiert.
+
+F: Warum wurde im Vergleich zur Version 1 von NEO das »x«, das »q« und das »j« vertauscht?
+A: Aus 3 Gründen wurde die drei Buchstaben vertauscht:
+ 1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man beim alten »q« immer einen „Worst case“ (zweimal den gleichen Finger hintereinander). Dies wurde mehrfach auf der Liste von unterschiedlichen Leuten bemängelt.
+ 2. Man hat das »x«, das »v« und das »c« nun in NEO 2 zusammen und neben einander (benötigt für das Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).
+ 3. Das »j« wurde nach unten verlegt, weil der kleine Finger wesentlich kürzer als die anderen ist und daher besser an die untere Reihe kommt. Bei der Erstellung von NEO 1 wurde noch davon ausgegangen, dass die Reihe über der Grundreihe von allen Fingern besser zu erreichen ist, als die Reihe unter der Grundreihe.
+
+F: Wann wird eigentlich in der deutschen Sprache welcher Binde-/Gedanken-Strich verwendet?
+A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw. »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann man auch zusammen, das heißt ohne Bindestrich, schreiben.
+Der Gedankenstrich (momentan auf »Shift« + »Taste-rechts-neben-der-Null«) wird verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiel: Ich schreibe mit NEO – meine Tastatur ist von Logitech und ist „ergonomisch“ geformt – viel schneller, als früher mit QWERTZ.
+Der englische Gedankenstrich (auf »AltGr« + »Taste-rechts-neben-der-Null«) kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen geschrieben.
+Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das Pluszeichen. Dieses befindet sich auf »AltGr« + »Numpad-Minus«.
+
+F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?
+A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »AltGr« + »Shift-Taste« + »8« und »9« zu erreichen. Es sind die Zeichen » und «.
+Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Shift-Taste« auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.
+Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia:
+	http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
+Hinweis: Beim Programmieren muss man immer das Ersatzzeichen " benutzen. Dieses ist per »AltGr« + ».« erreichbar.
+
+F: Wo ist der Apostroph, um z. B. Felix’ Katze zu schreiben?
+A: Der echte Apostroph für Texte in deutscher und englischer Sprache befindet sich auf »AltGr« + »0«. Es ist das Zeichen ’.
+Zur Verwendung des Apostrophs siehe den Wikipedia Artikel:
+	http://de.wikipedia.org/wiki/Apostroph
+Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen. Dieses ist per »AltGr« + »q« erreichbar.
+
+F: Es fehlen ein paar griechische Buchstaben. Vor allem die Großbuchstaben. Wieso?
+A: Die griechischen Buchstaben sind nicht dafür da, um griechisch oder altgriechisch zu schreiben. NEO ist ein Layout für die deutsche Sprache.
+Aus genau diesem Grund gibt es auch keine kyrillischen, japanischen sowie chinesischen Buchstaben. Dafür gibt es Layouts der einzelnen Sprachen. Es wurde nur darauf geachtet, dass es möglich ist, alle lateinischen Buchstaben zu tippen. Gerade wenn man z. B. an der polnischen Grenze wohnt und immer mal den Ort in dem man selbst (in Deutschland) wohnt auf polnisch tippen muss oder für Namen europäischer Mitbürger oder ...
+Die vorhandenen griechischen Buchstaben sind vielmehr dazu da, mathematische Formeln tippen zu können, in denen entsprechende Buchstaben vorkommen. Das ist für Naturwissenschaftler interessant. Da die Naturwissenschaftler den größeren Anteil ausmachen (gegenüber den griechisch Schreibenden), macht diese Ausrichtung Sinn.
+Ein Layout, bei dem alle großen griechischen und alle großen lateinischen Buchstaben vertreten sind führt nur zu ungewollten Fehlern. Viele große griechische Buchstaben sehen genauso aus, wie die lateinischen (die lateinischen sind teilweise aus dem Griechischen übernommen). Für Formeln sind diese daher nicht interessant, da es nicht um den griechischen Buchstaben an sich geht, sondern darum, mehr Zeichen für mathematische Variablen, Funktionen usw. zu haben.
+
