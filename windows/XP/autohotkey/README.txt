@@ -1,30 +1,40 @@
 == Installation ==
-HierfÃ¼r braucht man keine Administratorrechte, es muss jedoch zuerst ein
-Programm namens â€autohotkeyâ€œ
+Hierfür braucht man keine Administratorrechte, es muss jedoch zuerst das
+Programm namens „autohotkey“
 (http://www.autohotkey.com/download/AutohotkeyInstall.exe) installiert werden.
-Dazu benÃ¶tigt man KEINE Administratorrechte, wenn man das Programm
-beispielsweise in das Verzeichnis â€Eigene Dateien/NEOâ€œ installiert.
+Dazu benötigt man KEINE Administratorrechte, wenn man das Programm
+beispielsweise in das Verzeichnis „Eigene Dateien/NEO“ installiert.
 
 === ahk-Dateien ===
-Danach kann man .ahk-Skripte mit einem Doppelklick starten. Man erhÃ¤lt dann ein Systray-Icon, mit dem man das Skript vorÃ¼bergehend deaktivieren (Suspend) oder
-komplett beenden kann.
-Wenn das Ã–ffnen nicht direkt funktioniert: Ã–ffnen mit -> Autohotkey.exe
-auswÃ¤hlen -> Immer mit diesem Programm Ã¶ffnen.
+Danach kann man .ahk-Skripte mit einem Doppelklick starten. Man erhält 
+dann ein Systray-Icon, mit dem man das Skript vorübergehend deaktivieren 
+(Suspend) oder komplett beenden kann.
+Wenn das Öffnen nicht direkt funktioniert: Öffnen mit -> Autohotkey.exe
+auswählen -> Immer mit diesem Programm öffnen.
 
 === Automatischer Start ===
-Bei Bedarf kann man sich eine VerknÃ¼pfung mit neo20.ahk in den Autostart-Ordner
-legen, dann hat man das Layout direkt bei der Anmeldung.
+Bei Bedarf kann man sich eine Verknüpfung mit neo20.ahk in den 
+Autostart-Ordner legen, dann hat man das Layout direkt bei der Anmeldung.
 
 == Wie es funktioniert ==
 Das Programm kann alle Tastendrucke abfangen und statt dessen andere Tasten
 simulieren. Die Zeile
   a::send b
-fÃ¤ngt z. B. die Taste a ab und sendet statt dessen ein b.
-Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss dann nur
-das Skript neu starten um die Ã„nderungen zu Ã¼bernehmen.
+fängt z. B. die Taste a ab und sendet statt dessen ein b.
+Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss dann 
+nur das Skript neu starten um die Änderungen zu übernehmen.
 
 == Bekannte Fehler ==
-AltGr scheint recht buggy zu sein, siehe
-http://www.autohotkey.com/forum/topic10169.html. Vielleicht hilft es, die
-Umbelegung von AltGr in eine Extra-Datei zu schreiben.
+Das Umbelegen der Funktionstasten ist etwas ‚buggy‘ (siehe
+http://www.autohotkey.com/forum/topic10169.html) und wurde deshalb in 
+eine Extradatei ausgelagert (neo20-remap.ahk). 
+Verwendung auf eigene Gefahr, einfach beide Skripte starten.
+Problem: besonders auf der 6. Ebene kommt oft nur Control Down an, 
+aber nicht das Up, dann bleibt Control aktiv - Lösung ist dann, einmal die 
+normale Controltaste zu drücken.
 
+Soll mehr als ein Buchstabe auf einer höheren Ebene geschrieben werden, 
+muss zwischendurch der Modifier losgelassen werden.
+
+Ohne die Remap-Datei kann die 5. Ebene mit Ctrl+Win erreicht werden
+(6. entsprechend mit Ctrl-Win-Shift).

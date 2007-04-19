@@ -5,17 +5,21 @@
    5./6. Ebene noch gar nicht
 */
 
-;#InstallKeybdHook
-;#singleinstance force
+#InstallKeybdHook
 ;#notrayicon
+#singleinstance force
 #hotkeyinterval 1024
 #maxhotkeysperinterval 64
-setstorecapslockmode, on
+#Hotstring C * ?
+;setstorecapslockmode, off
+	
+name    = NEO-Layout 2.0
+enable  = Aktiviere NEO
+disable = Deaktiviere NEO
 
-name    = &NEO-Layout
-enable  = Aktiviere &NEO
-disable = Deaktiviere &NEO
-;ctrls   = &Strg Standard	
+
+; Überprüfung auf deutsches Tastaturlayout 
+; ----------------------------------------
 
 regread, inputlocale, HKEY_CURRENT_USER, Keyboard Layout\Preload, 1
 regread, inputlocalealias, HKEY_CURRENT_USER, Keyboard Layout\Substitutes, %inputlocale%
@@ -29,81 +33,33 @@ if inputlocale <> 00000407
    exitapp
 }
 
-stringtrimright, inifile, a_scriptname, 4
-inifile = %inifile%.ini
-iniread, firstrun, %inifile%, environment, firstRun, on
-if firstrun <> off
-{
-   iniwrite, off, %inifile%, environment, firstRun
-   gosub help
-}
 
-;menu, tray, nostandard
+; Menü des Systray-Icons 
+; ----------------------
+
+menu, tray, nostandard
+menu, tray, add, Öffnen, open
+   menu, helpmenu, add, About, about
+   menu, helpmenu, add, Autohotkey-Hilfe, help
+   menu, helpmenu, add
+   menu, helpmenu, add, http://&autohotkey.com/, autohotkey
+   menu, helpmenu, add, http://www.neo-layout.org/, neo
+menu, tray, add, Hilfe, :helpmenu
 menu, tray, add
 menu, tray, add, %disable%, toggleneo
 menu, tray, default, %disable%
-;menu, tray, add, %ctrls%, togglectrl
-   menu, helpmenu, add, &Hilfe, help
-   menu, helpmenu, add
-   menu, helpmenu, add, http://&autohotkey.com/, autohotkey
-   menu, helpmenu, add, http://www.eigenheimstrasse.de:8668/space/Computerecke/NEO-Tastaturlayout, neo
-   ;menu, helpmenu, add, http://aoeu.&info/, aoeu
-menu, tray, add, &Dokumentation, :helpmenu
 menu, tray, add
-menu, tray, add, Nicht &im &Systray &anzeigen, hide
+menu, tray, add, Edit, edit
+menu, tray, add, Reload, reload
+menu, tray, add
+menu, tray, add, Nicht im Systray anzeigen, hide
 menu, tray, add, %name% beenden, exitprogram
 menu, tray, tip, %name%
 
-/*
-iniread, scc, %inifile%, environment, neoCtrlChars, on
-gosub, setctrl
-menu, tray, icon
-blockinput, send
-*/
 
-/*
-;Senden von Unicode:
-Hotkey::
-MyUTF_String = {ASC xy}
-Gosub Unicode
-return
-*/
-
-
-; Für 3. und 4. Ebene:
-; nach http://www.autohotkey.com/forum/topic5370.html
-; CapsLock und # werden zu AltGr:
-; [this didn't work: *CapsLock::Send {LCtrl} ]
-
-*CapsLock::
-*SC02B::
-Send {RAlt Down}
-Send {LControl Down}
-return
-
-*CapsLock Up::
-*SC02B Up::
-Send {RAlt Up} 
-Send {LControl Up} 
-return
-
-; Für 5. und 6. Ebene:
-; < und AltGr werden zu LCtrl + RCtrl:
-/*
-*SC056::
-*SC138::
-Send {LControl Down}
-Send {RControl Down}
-return
-
-*SC056 Up::
-*SC138 Up::
-Send {LControl Up} 
-Send {RControl Up} 
-return
-*/
 
 #usehook on
+
 
 ;1. Ebene
 ;---------
@@ -119,7 +75,7 @@ SC029::send {^} ;tot
 8::send 8
 9::send 9
 0::send 0
-ß::send - ; Bind, Unicode?
+ß::send - 
 SC00D::send {´} ;tot
 
 q::send x
@@ -163,9 +119,8 @@ SC035::send j
 ;2. Ebene (Shift)
 ;---------
 
-+SC029::  ;? 
-; 030C passiert bei mir nichts - 02C7 wäre untot, geht auch nicht
-MyUTF_String = {ASC 2C7} 
++SC029::  ; soll tot
+MyUTF_String = Ë‡
 Gosub Unicode
 return
 
@@ -175,12 +130,17 @@ return
 +4::send $
 +5::send €
 +6::send ª
-+7::send º ; wo ist Unterschied zu +1?
++7::send º
 +8::send „
 +9::send “
 +0::send ”
-+ß::send – ; Ged, Unicode?
-+SC00D::send `` 
+
++ß:: 
+MyUTF_String = â€“
+Gosub Unicode
+return
+
++SC00D::send `` ;tot
 
 +q::send X
 +w::send V
@@ -194,8 +154,8 @@ return
 +p::send Q
 +ü::send ß
 
-+SC01B::  ; Macron?? sollte tot sein...
-MyUTF_String = {ASC 0175} 
++SC01B::  ; sollte tot sein...
+MyUTF_String = Ë‰ 
 Gosub Unicode
 return
 
@@ -212,6 +172,7 @@ return
 +ä::send Y
 ;SC02B (#) wird zu AltGr
 
+;SC056 (<) wird zu Mod5
 +y::send Ö
 +x::send Ü
 +c::send Ä
@@ -226,39 +187,57 @@ return
 ;3. Ebene (AltGr)
 ;---------
 
-<^>!SC029::send ? ; Siehe 2. Ebene
-<^>!1:: ; ¬
-MyUTF_String = {ASC 172} 
+<^>!SC029:: ; soll tot
+MyUTF_String = Ë˜
 Gosub Unicode
 return
 
-<^>!2::send ^  ;
-<^>!3::send 3 ;
-<^>!4::send ¥ ;
-<^>!5::send £ ; 
-<^>!6::send æ ;
-<^>!7::send œ ;
+<^>!1:: 
+MyUTF_String = Â¬ 
+Gosub Unicode
+return
+
+<^>!2::send {^} 
+<^>!3::send 3 
+<^>!4::send ¥ 
+<^>!5::send £  
+<^>!6::send æ 
+<^>!7::send œ 
 <^>!8::send ‚
 <^>!9::send ‘
 <^>!0::send ’
-<^>!ß::send — ; soll ganz langer Strich sein
-<^>!SC00D::send ¸ ;
+
+<^>!ß::
+MyUTF_String = â€” 
+Gosub Unicode
+return
+
+<^>!SC00D::send ¸ ; soll tot
 
 <^>!q::send @ 
 <^>!w::send _
 <^>!e::send [
 <^>!r::send ]
-<^>!t::send {^}
-<^>!z::send {!}
+<^>!t::send {^} ; tot, soll der untot sein?
+<^>!z::sendraw !
 <^>!u::send <
 <^>!i::send >
 <^>!o::send `=
 <^>!p::send `;
-<^>!ü::send ? ;
-<^>!SC01B::send ? ;
+
+<^>!ü::
+MyUTF_String = Ä³
+Gosub Unicode
+return
+
+<^>!SC01B:: ; ??
+MyUTF_String = 
+Gosub Unicode
+return
+
 
 <^>!a::send \
-<^>!s::send /
+<^>!s::send `/
 <^>!d::sendraw { 
 <^>!f::sendraw } 
 <^>!g::send *
@@ -268,9 +247,9 @@ return
 <^>!l::send -
 <^>!ö::send :
 <^>!ä::send y
-;SC02B (#) wird zu AltGr
 
-<^>!y::send ~
+
+<^>!y::sendraw ~
 <^>!x::send $
 <^>!c::send |
 <^>!v::send {#}
@@ -285,237 +264,339 @@ return
 ;4. Ebene (AltGr+Shift)
 ;---------
 
-<^>!+SC029::send ¶ ;
-<^>!+1::send ¹ ;
+<^>!+SC029::send ¶ 
+<^>!+1::send ¹ 
 <^>!+2::send ²
 <^>!+3::send ³
-<^>!+4::send ¢ ;
-<^>!+5::send ¤ ;
-<^>!+6::send Æ ;
-<^>!+7::send Œ ;
-<^>!+8::send » ;
-<^>!+9::send « ;
-<^>!+0::send › ;
-<^>!+ß::send ‹ ;
-<^>!+SC00D::send ´ ;
+<^>!+4::send ¢ 
+<^>!+5::send ¤ 
+<^>!+6::send Æ 
+<^>!+7::send Œ 
+<^>!+8::send » 
+<^>!+9::send « 
+<^>!+0::send › 
+<^>!+ß::send ‹ 
 
-<^>!+q::send ?
+<^>!+SC00D:: ; nicht tot
+MyUTF_String = Ë›
+Gosub Unicode
+return
+
+
+<^>!+q::  ;xi
+MyUTF_String = Î¾ 
+Gosub Unicode
+return
+
 <^>!+w::send v
-<^>!+e::send ?
-<^>!+r::send ?
+
+<^>!+e::  ;lambda
+MyUTF_String = Î» 
+Gosub Unicode
+return
+
+<^>!+r::  ;chi 
+MyUTF_String = Ï‡
+Gosub Unicode
+return
+
 <^>!+t::send w
-<^>!+z::send ?
-<^>!+u::send ?
-<^>!+i::send ?
-<^>!+o::send ?
+
+<^>!+z:: ;kappa
+MyUTF_String = Îº
+Gosub Unicode
+return
+
+<^>!+u:: ;psi
+MyUTF_String = Ïˆ
+Gosub Unicode
+return
+
+<^>!+i:: ;gamma
+MyUTF_String = Î³
+Gosub Unicode
+return
+
+<^>!+o:: ;phi
+MyUTF_String = Ï†
+Gosub Unicode
+return
+
 <^>!+p::send q
-<^>!+ü::send ?
-<^>!+SC01B::send {~} ;
+
+<^>!+ü:: ;IJ
+MyUTF_String = Ä²
+Gosub Unicode
+return
+
+<^>!+SC01B::send " ;soll tot
 
 <^>!+a::send u
-<^>!+s::send ?
-<^>!+d::send ?
-<^>!+f::send ?
-<^>!+g::send ?
-<^>!+h::send ?
-<^>!+j::send ?
-<^>!+k::send ?
-<^>!+l::send ?
-<^>!+ö::send ?
-<^>!+ä::send ?
-;SC02B (#) wird zu AltGr
+
+<^>!+s:: ;iota
+MyUTF_String = Î¹
+Gosub Unicode
+return
+
+<^>!+d:: ;alpha
+MyUTF_String = Î±
+Gosub Unicode
+return
+
+<^>!+f:: ;epsilon
+MyUTF_String = Îµ
+Gosub Unicode
+return
+
+<^>!+g:: ;omega
+MyUTF_String = Ï‰
+Gosub Unicode
+return
+
+<^>!+h:: ;sigma
+MyUTF_String = Ïƒ
+Gosub Unicode
+return
+
+<^>!+j:: ;nu
+MyUTF_String = Î½
+Gosub Unicode
+return
+
+<^>!+k:: ;rho
+MyUTF_String = Ï
+Gosub Unicode
+return
+
+<^>!+l:: ;tau
+MyUTF_String = Ï„
+Gosub Unicode
+return
+
+<^>!+ö:: ;delta
+MyUTF_String = Î´
+Gosub Unicode
+return
+
+<^>!+ä:: ;upsilon
+MyUTF_String = Ï…
+Gosub Unicode
+return
+
+
 
 <^>!+y::send ö
 <^>!+x::send ü
-<^>!+c::send ?
-<^>!+v::send ?
-<^>!+b::send ?
-<^>!+n::send ?
-<^>!+m::send ?
-<^>!+SC033::send ?
-<^>!+SC034::send ?
+
+<^>!+c:: ;eta
+MyUTF_String = Î·
+Gosub Unicode
+return
+
+<^>!+v:: ;pi
+MyUTF_String = Ï€
+Gosub Unicode
+return
+
+<^>!+b:: ;zeta
+MyUTF_String = Î¶
+Gosub Unicode
+return
+
+<^>!+n:: ;beta
+MyUTF_String = Î²
+Gosub Unicode
+return
+
+<^>!+m:: ;mu
+MyUTF_String = Î¼
+Gosub Unicode
+return
+
+<^>!+SC033:: ;vartheta?
+MyUTF_String = 
+Gosub Unicode
+return
+
+<^>!+SC034:: ;theta
+MyUTF_String = Î¸
+Gosub Unicode
+return
+
 <^>!+SC035::send j
 
-;5. Ebene
+
+;5. Ebene (Win + Ctrl)
 ;---------
 
-<>^4::Send 5
+#^4::Send {PgUp} ;Prev
+#^8::Send /
+#^9::Send *
+#^0::Send -
 
-;SC056 & 8::
-;RAlt & 8::
-;Send {/}
-;return
-
-;SC056 & 9::
-;RAlt & 9::
-;Send {*}
-;return
-
-;SC056 & 0::
-;RAlt & 0::
-;Send {-}
-;return
+#^SC00D:: ;soll tot
+MyUTF_String = Ë™
+Gosub Unicode
+return
 
 
-;SC056 & q::
-;RAlt & q::
-;Send {Esc}
-;return
+#^q::Send {Esc}
+#^w::Send {Backspace}
+#^e::Send {Up}
+#^t::Send {Insert}
+#^z::Send ¡
+#^u::Send 7
+#^i::Send 8
+#^o::Send 9
+#^p::Send {+}
 
-;SC056 & w::
-;RAlt & w::
-;Send {Backspace}
-;return
+#^ü:: 
+MyUTF_String = É™
+Gosub Unicode
+return
 
-;SC056 & e::
-;RAlt & e::
-;Send {Up}
-;return
+#^SC01B:: ;soll tot
+MyUTF_String = /
+Gosub Unicode
+return
 
-;SC056 & t::
-;RAlt & t::
-;Send {Insert}
-;return
+#^a::Send {Home}
+#^s::Send {Left}
+#^d::Send {Down}
+#^f::Send {Right}
+#^g::Send {End}
+#^h::Send ¿
+#^j::Send 4
+#^k::Send 5
+#^l::Send 6
+#^ö::Send `,
 
-;SC056 & z::
-;RAlt & z::
-;Send {¡}
-;return
-
-;SC056 & u::
-;RAlt & u::
-;Send {7}
-;return
-
-;SC056 & i::
-;RAlt & i::
-;Send {8}
-;return
-
-;SC056 & o::
-;RAlt & o::
-;Send {9}
-;return
-
-;SC056 & p::
-;RAlt & p::
-;Send {+}
-;return
-;
-;SC056 & ü::
-;RAlt & ü::
-;Send {?}
-;return
+#^ä:: ; ş ( Ş? )
+MyUTF_String = Ã¾
+Gosub Unicode
+return
 
 
-;SC056 & a::
-;RAlt & a::
-;Send {Home}
-;return
+#^y::Send {Tab}
+#^x::Send {Del}
+#^c::Send {PgDn} ;Next
+#^n::Send ±
+#^m::Send 1
+#^SC033::Send 2
+#^SC034::Send 3
+#^SC035::Send .
 
-;SC056 & s::
-;RAlt & s::
-;Send {Left}
-;return
 
-;SC056 & d::
-;RAlt & d::
-;Send {Down}
-;return
-
-;SC056 & f::
-;RAlt & f::
-;Send {Right}
-;return
-
-;SC056 & g::
-;RAlt & g::
-;Send {End}
-;return
-
-;SC056 & h::
-;RAlt & h::
-;Send {¿}
-;return
-
-;SC056 & j::
-;RAlt & j::
-;Send {4}
-;return
-
-;SC056 & k::
-;RAlt & k::
-;Send {5}
-;return
-
-;SC056 & l::
-;RAlt & l::
-;Send {6}
-;return
-
-;SC056 & ö::
-;RAlt & ö::
-;Send {,}
-;return
-
-;SC056 & ä::
-;RAlt & ä::
-;Send {ş}
-;return
-
-;SC056 & y::
-;RAlt & y::
-;Send {Tab}
-;return
-
-;SC056 & x::
-;RAlt & x::
-;Send {Del}
-;return
-
-;SC056 & c::
-;RAlt & c::
-;Send {PgDn}
-;return
-
-;SC056 & n::
-;RAlt & n::
-;Send {±}
-;return
-
-;SC056 & m::
-;RAlt & m::
-;Send {1}
-;return
-
-;SC056 & SC033::
-;RAlt & SC033::
-;Send {2}
-;return
-
-;SC056 & SC034::
-;RAlt & SC034::
-;Send {3}
-;return
-
-;SC056 & SC035::
-;RAlt & SC035::
-;Send {.}
-;return
-
-;6. Ebene (Mod5 & Shift)
+;6. Ebene (Win + Ctrl & Shift)
 ;-----------------------
 
-;+SC056 & b::
-;+RAlt & b::
-;Send m
-;return
+#^+4::Send +{Prev}
+
+#^+SC00D:: ; soll tot
+MyUTF_String = Ëš
+Gosub Unicode
+return
+
+#^+q:: ; Xi?
+MyUTF_String = Î
+Gosub Unicode
+return
+ 
+#^+w:: ; Lambda
+MyUTF_String = Î›
+Gosub Unicode
+return
+
+#^+e::Send +{Up}
+#^+r::Send © 
+#^+t::Send +{Insert}
+
+#^+u:: ; Phi
+MyUTF_String = Î¨
+Gosub Unicode
+return
+
+#^+i:: ; Gamma
+MyUTF_String = Î“
+Gosub Unicode
+return
+
+#^+o:: ; Psi
+MyUTF_String = Î¦
+Gosub Unicode
+return
+
+#^+ü:: ; ?
+MyUTF_String = Æ
+Gosub Unicode
+return
+
+#^+SC01B::  ; soll tot 
+MyUTF_String = Ë
+Gosub Unicode
+return
+
+#^+a::Send +{Home}
+#^+s::Send +{Left}
+#^+d::Send +{Down}
+#^+f::Send +{Right}
+#^+g::Send +{End}
+#^+h:: ; Sigma
+MyUTF_String = 
+Gosub Unicode
+return
+
+#^+j:: ; No
+MyUTF_String = â„–
+Gosub Unicode
+return
+
+#^+k:: ; (R)
+MyUTF_String = Â®
+Gosub Unicode
+return
+
+#^+l:: ; TM
+MyUTF_String = â„¢
+Gosub Unicode
+return
+
+#^+ö:: ; Delta
+MyUTF_String = Î”
+Gosub Unicode
+return
+
+#^+ä:: ; Ş ( ş? )
+MyUTF_String = Ã
+Gosub Unicode
+return
 
 
+#^+y::Send +{Tab}
+
+#^+c::Send +{PgDn}
+
+#^+v:: ; Pi
+MyUTF_String = Î 
+Gosub Unicode
+return
+
+#^+b:: ; Omega
+MyUTF_String = Î©
+Gosub Unicode
+return
+
+#^+SC034:: ; Theta 
+MyUTF_String = Î˜
+Gosub Unicode
+return
+
+
+/*
 ;Strg/Ctrl
 ;---------
 
-^SC029::send ^^ ;
+;^SC029::send ^^ ;
 ^1::send ^1
 ^2::send ^2
 ^3::send ^3
@@ -527,7 +608,7 @@ return
 ^9::send ^9
 ^0::send ^0
 ^ß::send ^-
-^SC00D::send ^´ ;
+;^SC00D::send ^´ ;
 
 ^q::send ^x
 ^w::send ^v
@@ -540,7 +621,7 @@ return
 ^o::send ^f
 ^p::send ^q
 ^ü::send ^ß
-^SC01B::send ^~ ;
+;^SC01B::send ^~ ;
 
 ^a::send ^u
 ^s::send ^i
@@ -566,59 +647,60 @@ return
 ^SC034::send ^.
 ^SC035::send ^j
 
+
 ;Alt-Ebene
 ;---------
 
-!SC029::send {altdown}^ ;
-!1::send {altdown}1
-!2::send {altdown}2
-!3::send {altdown}3
-!4::send {altdown}4
-!5::send {altdown}5
-!6::send {altdown}6
-!7::send {altdown}7
-!8::send {altdown}8
-!9::send {altdown}9
-!0::send {altdown}0
-!ß::send {altdown}-
-!SC00D::send {altdown}´ ;
+<!SC029::send {altdown}^ ;
+<!1::send {altdown}1
+<!2::send {altdown}2
+<!3::send {altdown}3
+<!4::send {altdown}4
+<!5::send {altdown}5
+<!6::send {altdown}6
+<!7::send {altdown}7
+<!8::send {altdown}8
+<!9::send {altdown}9
+<!0::send {altdown}0
+<!ß::send {altdown}-
+<!SC00D::send {altdown}´ ;
 
-!q::send {altdown}x
-!w::send {altdown}v
-!e::send {altdown}l
-!r::send {altdown}c
-!t::send {altdown}w
-!z::send {altdown}k
-!u::send {altdown}h
-!i::send {altdown}g
-!o::send {altdown}f
-!p::send {altdown}q
-!ü::send {altdown}ß
-!SC01B::send {altdown}~ ;
+<!q::send {altdown}x
+<!w::send {altdown}v
+<!e::send {altdown}l
+<!r::send {altdown}c
+<!t::send {altdown}w
+<!z::send {altdown}k
+<!u::send {altdown}h
+<!i::send {altdown}g
+<!o::send {altdown}f
+<!p::send {altdown}q
+<!ü::send {altdown}ß
+<!SC01B::send {altdown}~ ;
 
-!a::send {altdown}u
-!s::send {altdown}i
-!d::send {altdown}a
-!f::send {altdown}e
-!g::send {altdown}o
-!h::send {altdown}s
-!j::send {altdown}n
-!k::send {altdown}r
-!l::send {altdown}t
-!ö::send {altdown}d
-!ä::send {altdown}y
+<!a::send {altdown}u
+<!s::send {altdown}i
+<!d::send {altdown}a
+<!f::send {altdown}e
+<!g::send {altdown}o
+<!h::send {altdown}s
+<!j::send {altdown}n
+<!k::send {altdown}r
+<!l::send {altdown}t
+<!ö::send {altdown}d
+<!ä::send {altdown}y
 ;SC02B (#) wird zu AltGr
 
-!y::send {altdown}ö
-!x::send {altdown}ü
-!c::send {altdown}ä
-!v::send {altdown}p
-!b::send {altdown}z
-!n::send {altdown}b
-!m::send {altdown}m
-!SC033::send {altdown},
-!SC034::send {altdown}.
-!SC035::send {altdown}j
+<!y::send {altdown}ö
+<!x::send {altdown}ü
+<!c::send {altdown}ä
+<!v::send {altdown}p
+<!b::send {altdown}z
+<!n::send {altdown}b
+<!m::send {altdown}m
+<!SC033::send {altdown},
+<!SC034::send {altdown}.
+<!SC035::send {altdown}j
 
 ;Win-Ebene
 ;---------
@@ -728,19 +810,24 @@ return
 ^+SC034::send ^+.
 ^+SC035::send ^+j
 
+*/
 
 
+; Definition der Deadkeys als Hotstrings:
+::°a::å
+::^o::ô
 
 
 #usehook off
-return
+
+
+
 
 Unicode:
 ; Place Unicode text onto the clipboard:
 Transform, Clipboard, Unicode, %MyUTF_String%  
-; Retrieve the clipboard's Unicode text as a UTF-8 string:
-Transform, OutputVar, Unicode  
-Send %OutputVar%
+; Paste the clipboard's Unicode text: 
+send ^v
 return
 
 toggleneo:
@@ -748,50 +835,51 @@ toggleneo:
    {
       state =
       menu, tray, rename, %enable%, %disable%
-      menu, tray, enable, %ctrls%
    }
    else
    {
-      state = : Inaktiverad
+      state = : Deaktiviert
       menu, tray, rename, %disable%, %enable%
-      menu, tray, disable, %ctrls%
    }
 
    menu, tray, tip, %name%%state%
    suspend
 return
 
-togglectrl:
-   if scc <> off
-      scc = off
-   else
-      scc = on
-   iniwrite, %scc%, %inifile%, environment, svorakCtrlChars
-   gosub, setctrl
-return
-
-setctrl:
-   if scc <> off
-      menu, tray, uncheck, %ctrls%
-   else
-      menu, tray, check, %ctrls%
-return
 
 
 help:
-   msgbox, 64, name, NEO-Layout ohne Administratorrechte.   `n`n%name% ersetzt das übliche deutsche   `nTastaturlayout mit der Alternative NEO,   `nbeschrieben auf http://www.de.   `n`nWenn Autohotkey aktiviert ist, werden alle Tastendrucke `nabgefangen und statt dessen eine Übersetzung weitergeschickt. `nDies geschieht transparent für den Anwender,  `nes muss nichts installiert werden.   `n`nDie Zeichenübersetzung kann leicht über ein Icon im `nSystemtray deaktiviert werden.  `nAußerdem kann dort ausgewählt werden, ob die Strg-Tasten `nebenfalls übersetzt werden sollen. `n`n`nSimon Griph, 2004-10-25   `n
+   Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
 return
 
-aoeu:
-   run http://aoeu.info/
+
+about:
+   msgbox, 64, %name%, %name% `n`nDas NEO-Layout ersetzt das übliche deutsche Tastaturlayout `nmit der Alternative NEO, beschrieben auf `nhttp://www.neo-layout.org/. `nDazu sind keine Administratorrechte nötig. `n`nWenn Autohotkey aktiviert ist, werden alle Tastendrucke `nabgefangen und statt dessen eine Übersetzung weitergeschickt. `nDies geschieht transparent für den Anwender, `nes muss nichts installiert werden. `n`nDie Zeichenübersetzung kann leicht über ein Icon im `nSystemtray deaktiviert werden.  `n
 return
+
 
 neo:
-   run http://www.eigenheimstrasse.de:8668/space/Computerecke/NEO-Tastaturlayout
+   run http://www.neo-layout.org/
 return
 
 autohotkey:
    run http://autohotkey.com/
+return
+
+open:
+   ListLines ; shows the Autohotkey window
+return
+
+edit:
+   edit
+return
+
+reload:
+   Reload
+   Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
+   MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
+   IfMsgBox, Yes, Edit
+   return
 return
 
 hide:
