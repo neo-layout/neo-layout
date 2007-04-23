@@ -273,6 +273,24 @@ return
 <^>!SC034::send "
 <^>!SC035::send '
 
+<^>!NumpadDiv::send ?
+<^>!NumpadMult::send ?
+<^>!NumpadSub::send ?
+<^>!Numpad8::send ?
+<^>!Numpad9::send ?
+<^>!NumpadAdd::send ?
+<^>!Numpad4::send ?
+<^>!Numpad5::send ?
+<^>!Numpad6::send ?
+<^>!Numpad1::send ?
+<^>!Numpad2::send ?
+<^>!Numpad3::send ?
+<^>!NumpadEnter::send ?
+<^>!Numpad0::send `%
+<^>!NumpadDot::send .
+<^>!Numpad7::send ?
+
+
 
 ;4. Ebene (AltGr+Shift)
 ;---------
@@ -437,6 +455,24 @@ Gosub Unicode
 return
 
 <^>!+SC035::send j
+
+<^>!+NumpadDiv::send /
+<^>!+NumpadMult::send ?
+<^>!+NumpadSub::send ?
+<^>!+Numpad8::send ?
+<^>!+Numpad9::send ?
+<^>!+NumpadAdd::send ?
+<^>!+Numpad4::send ?
+<^>!+Numpad5::send ?
+<^>!+Numpad6::send ?
+<^>!+Numpad1::send ?
+<^>!+Numpad2::send ?
+<^>!+Numpad3::send ?
+<^>!+NumpadEnter::send ?
+<^>!+Numpad0::send ?
+<^>!+NumpadDot::send `,
+<^>!+Numpad7::send ?
+
 
 
 ;5. Ebene (Win + Ctrl)
