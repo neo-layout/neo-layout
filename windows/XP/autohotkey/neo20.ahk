@@ -1,35 +1,51 @@
 /*
    NEO-Layout
-   nach NoAdmin-Svorak von Simon Griph, 2004
-   3./4. Ebene funktioniert nur über AltGr, nicht über CapsLock
-   5./6. Ebene noch gar nicht
+    nach NoAdmin-Svorak von Simon Griph, 2004
+   3./4. Ebene funktioniert über AltGr, 
+    5./6. Ebene über Win+Ctrl
+   Zur Umbelegung auf CapsLock und AltGr 
+    verwende neo20-remap.ahk
 */
 
-#InstallKeybdHook
-;#notrayicon
+;#InstallKeybdHook
+#usehook on
 #singleinstance force
-#hotkeyinterval 1024
-#maxhotkeysperinterval 64
-#Hotstring C * ?
-;setstorecapslockmode, off
-	
+#LTrim 
+  ; Quelltext kann eingerückt werden, msgbox ist trotzdem linksbündig
+
+SendMode InputThenPlay	
+
 name    = NEO-Layout 2.0
-enable  = Aktiviere NEO
-disable = Deaktiviere NEO
+enable  = Aktiviere %name%
+disable = Deaktiviere %name%
 
 
 ; Überprüfung auf deutsches Tastaturlayout 
 ; ----------------------------------------
 
 regread, inputlocale, HKEY_CURRENT_USER, Keyboard Layout\Preload, 1
-regread, inputlocalealias, HKEY_CURRENT_USER, Keyboard Layout\Substitutes, %inputlocale%
+regread, inputlocalealias, HKEY_CURRENT_USER
+     , Keyboard Layout\Substitutes, %inputlocale%
 if inputlocalealias <>
    inputlocale = %inputlocalealias%
 if inputlocale <> 00000407
 {
    suspend   
-   regread, inputlocale, HKEY_LOCAL_MACHINE, SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%, Layout Text
-   msgbox, 48, Warning!, Incompatible keybord layout:   `n`n      "inputlocale"   `n`nGerman QWERTZ has to be the standardlayout for   `n%name% works as expected.   `n`nChange the standard layout under control panel   `n-> Local and language settings   `n-> Language -> Information...   `n
+   regread, inputlocale, HKEY_LOCAL_MACHINE
+     , SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%
+     , Layout Text
+   msgbox, 48, Warnung!, 
+     (
+     Nicht kompatibles Tastaturlayout:   
+     `t%inputlocale%   
+     `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
+     sein, damit %name% wie erwartet funktioniert.   
+     `nÄndere die Tastatureinstellung unter 
+     `tSystemsteuerung   
+     `t-> Regions- und Sprachoptionen   
+     `t-> Sprachen 
+     `t-> Details...   `n
+     )
    exitapp
 }
 
@@ -56,9 +72,6 @@ menu, tray, add, Nicht im Systray anzeigen, hide
 menu, tray, add, %name% beenden, exitprogram
 menu, tray, tip, %name%
 
-
-
-#usehook on
 
 
 ;1. Ebene
@@ -218,7 +231,7 @@ return
 <^>!w::send _
 <^>!e::send [
 <^>!r::send ]
-<^>!t::send {^} ; tot, soll der untot sein?
+<^>!t::send {^} ; tot, soll untot sein
 <^>!z::sendraw !
 <^>!u::send <
 <^>!i::send >
@@ -249,11 +262,11 @@ return
 <^>!ä::send y
 
 
-<^>!y::sendraw ~
+<^>!y::sendraw ~ 
 <^>!x::send $
 <^>!c::send |
 <^>!v::send {#}
-<^>!b::send `` ; tot, soll der untot sein?
+<^>!b::send `` ; tot, soll untot sein
 <^>!n::send {+}
 <^>!m::send `% 
 <^>!SC033::send {&}
@@ -592,11 +605,10 @@ Gosub Unicode
 return
 
 
-/*
+
 ;Strg/Ctrl
 ;---------
 
-;^SC029::send ^^ ;
 ^1::send ^1
 ^2::send ^2
 ^3::send ^3
@@ -607,8 +619,8 @@ return
 ^8::send ^8
 ^9::send ^9
 ^0::send ^0
-^ß::send ^-
-;^SC00D::send ^´ ;
+
+
 
 ^q::send ^x
 ^w::send ^v
@@ -621,7 +633,6 @@ return
 ^o::send ^f
 ^p::send ^q
 ^ü::send ^ß
-;^SC01B::send ^~ ;
 
 ^a::send ^u
 ^s::send ^i
@@ -634,7 +645,7 @@ return
 ^l::send ^t
 ^ö::send ^d
 ^ä::send ^y
-;SC02B (#) wird zu AltGr
+
 
 ^y::send ^ö
 ^x::send ^ü
@@ -643,15 +654,12 @@ return
 ^b::send ^z
 ^n::send ^b
 ^m::send ^m
-^SC033::send ^,
-^SC034::send ^.
 ^SC035::send ^j
 
 
 ;Alt-Ebene
 ;---------
 
-<!SC029::send {altdown}^ ;
 <!1::send {altdown}1
 <!2::send {altdown}2
 <!3::send {altdown}3
@@ -662,8 +670,6 @@ return
 <!8::send {altdown}8
 <!9::send {altdown}9
 <!0::send {altdown}0
-<!ß::send {altdown}-
-<!SC00D::send {altdown}´ ;
 
 <!q::send {altdown}x
 <!w::send {altdown}v
@@ -676,7 +682,6 @@ return
 <!o::send {altdown}f
 <!p::send {altdown}q
 <!ü::send {altdown}ß
-<!SC01B::send {altdown}~ ;
 
 <!a::send {altdown}u
 <!s::send {altdown}i
@@ -689,7 +694,6 @@ return
 <!l::send {altdown}t
 <!ö::send {altdown}d
 <!ä::send {altdown}y
-;SC02B (#) wird zu AltGr
 
 <!y::send {altdown}ö
 <!x::send {altdown}ü
@@ -698,14 +702,12 @@ return
 <!b::send {altdown}z
 <!n::send {altdown}b
 <!m::send {altdown}m
-<!SC033::send {altdown},
-<!SC034::send {altdown}.
 <!SC035::send {altdown}j
+
 
 ;Win-Ebene
 ;---------
 
-#SC029::send #^ ;
 #1::send #1
 #2::send #2
 #3::send #3
@@ -717,11 +719,16 @@ return
 #9::send #9
 #0::send #0
 #ß::send #-
-#SC00D::send #´ ;
 
 #q::send #x
 #w::send #v
-#e::send #l
+
+#e::  
+  ; #e::send #l  funktioniert nicht, Computer wird nicht gesperrt
+Run,%A_WinDir%\System32\Rundll32.exe User32.dll`,LockWorkStation 
+  ; http://www.autohotkey.com/forum/viewtopic.php?p=66937#66937
+return
+
 #r::send #c
 #t::send #w
 #z::send #k
@@ -730,7 +737,6 @@ return
 #o::send #f
 #p::send #q
 #ü::send #ß
-#SC01B::send #~ ;
 
 #a::send #u
 #s::send #i
@@ -743,7 +749,6 @@ return
 #l::send #t
 #ö::send #d
 #ä::send #y
-;SC02B (#) wird zu AltGr
 
 #y::send #ö
 #x::send #ü
@@ -752,14 +757,11 @@ return
 #b::send #z
 #n::send #b
 #m::send #m
-#SC033::send #,
-#SC034::send #.
 #SC035::send #j
 
 ;Strg-Shift-Ebene
 ;---------
 
-^+SC029::send ^+^ ;
 ^+1::send ^+1
 ^+2::send ^+2
 ^+3::send ^+3
@@ -770,8 +772,6 @@ return
 ^+8::send ^+8
 ^+9::send ^+9
 ^+0::send ^+0
-^+ß::send ^+-
-^+SC00D::send ^+´ ;
 
 ^+q::send ^+x
 ^+w::send ^+v
@@ -784,7 +784,6 @@ return
 ^+o::send ^+f
 ^+p::send ^+q
 ^+ü::send ^+ß
-^+SC01B::send ^+~ ;
 
 ^+a::send ^+u
 ^+s::send ^+i
@@ -797,7 +796,7 @@ return
 ^+l::send ^+t
 ^+ö::send ^+d
 ^+ä::send ^+y
-;SC02B (#) wird zu AltGr
+
 
 ^+y::send ^+ö
 ^+x::send ^+ü
@@ -806,19 +805,7 @@ return
 ^+b::send ^+z
 ^+n::send ^+b
 ^+m::send ^+m
-^+SC033::send ^+,
-^+SC034::send ^+.
 ^+SC035::send ^+j
-
-*/
-
-
-; Definition der Deadkeys als Hotstrings:
-::°a::å
-::^o::ô
-
-
-#usehook off
 
 
 
@@ -854,7 +841,20 @@ return
 
 
 about:
-   msgbox, 64, %name%, %name% `n`nDas NEO-Layout ersetzt das übliche deutsche Tastaturlayout `nmit der Alternative NEO, beschrieben auf `nhttp://www.neo-layout.org/. `nDazu sind keine Administratorrechte nötig. `n`nWenn Autohotkey aktiviert ist, werden alle Tastendrucke `nabgefangen und statt dessen eine Übersetzung weitergeschickt. `nDies geschieht transparent für den Anwender, `nes muss nichts installiert werden. `n`nDie Zeichenübersetzung kann leicht über ein Icon im `nSystemtray deaktiviert werden.  `n
+   msgbox, 64, %name%, 
+   (
+   %name% 
+   `nDas NEO-Layout ersetzt das übliche deutsche 
+   Tastaturlayout mit der Alternative NEO, 
+   beschrieben auf http://www.neo-layout.org/. 
+   `nDazu sind keine Administratorrechte nötig. 
+   `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
+   abgefangen und statt dessen eine Übersetzung weitergeschickt. 
+   `nDies geschieht transparent für den Anwender, 
+   es muss nichts installiert werden. 
+   `nDie Zeichenübersetzung kann leicht über das Icon im 
+   Systemtray deaktiviert werden.  `n
+   )
 return
 
 
@@ -876,8 +876,14 @@ return
 
 reload:
    Reload
-   Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
-   MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
+   Sleep 1000 
+   ; If successful, the reload will close this instance 
+   ; during the Sleep, so the line below will never be reached.
+   MsgBox, 4,, 
+   (
+   The script could not be reloaded. 
+   Would you like to open it for editing?
+   )
    IfMsgBox, Yes, Edit
    return
 return

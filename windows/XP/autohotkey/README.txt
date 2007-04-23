@@ -29,12 +29,19 @@ Das Umbelegen der Funktionstasten ist etwas ‚buggy‘ (siehe
 http://www.autohotkey.com/forum/topic10169.html) und wurde deshalb in 
 eine Extradatei ausgelagert (neo20-remap.ahk). 
 Verwendung auf eigene Gefahr, einfach beide Skripte starten.
-Problem: besonders auf der 6. Ebene kommt oft nur Control Down an, 
-aber nicht das Up, dann bleibt Control aktiv - Lösung ist dann, einmal die 
-normale Controltaste zu drücken.
 
-Soll mehr als ein Buchstabe auf einer höheren Ebene geschrieben werden, 
-muss zwischendurch der Modifier losgelassen werden.
+Problem: Auf der 5. und 6. Ebene kommt (bei Verwendung von AltGr) nur 
+Control Down an, aber nicht das Up, dann bleibt Control aktiv. 
+Lösung ist dann, einmal die normale Controltaste zu drücken.
+Mod5 auf < hat das Problem nicht.
 
 Ohne die Remap-Datei kann die 5. Ebene mit Ctrl+Win erreicht werden
 (6. entsprechend mit Ctrl-Win-Shift).
+
+== To Do ==
+Dead Keys: Bislang funktionieren nur die Deadkeys, die auch im normalen deutschen Layout vorkommen.
+Alle anderen können über Hotstrings definiert werden:
+  ::~a::ã 
+usw.
+
+Nummernblock
