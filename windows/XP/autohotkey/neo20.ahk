@@ -129,6 +129,8 @@ SC033::send `,
 SC034::send .
 SC035::send j
 
+
+
 ;2. Ebene (Shift)
 ;---------
 
@@ -272,23 +274,6 @@ return
 <^>!SC033::send {&}
 <^>!SC034::send "
 <^>!SC035::send '
-
-<^>!NumpadDiv::send ?
-<^>!NumpadMult::send ?
-<^>!NumpadSub::send ?
-<^>!Numpad8::send ?
-<^>!Numpad9::send ?
-<^>!NumpadAdd::send ?
-<^>!Numpad4::send ?
-<^>!Numpad5::send ?
-<^>!Numpad6::send ?
-<^>!Numpad1::send ?
-<^>!Numpad2::send ?
-<^>!Numpad3::send ?
-<^>!NumpadEnter::send ?
-<^>!Numpad0::send `%
-<^>!NumpadDot::send .
-<^>!Numpad7::send ?
 
 
 
@@ -455,23 +440,6 @@ Gosub Unicode
 return
 
 <^>!+SC035::send j
-
-<^>!+NumpadDiv::send /
-<^>!+NumpadMult::send ?
-<^>!+NumpadSub::send ?
-<^>!+Numpad8::send ?
-<^>!+Numpad9::send ?
-<^>!+NumpadAdd::send ?
-<^>!+Numpad4::send ?
-<^>!+Numpad5::send ?
-<^>!+Numpad6::send ?
-<^>!+Numpad1::send ?
-<^>!+Numpad2::send ?
-<^>!+Numpad3::send ?
-<^>!+NumpadEnter::send ?
-<^>!+Numpad0::send ?
-<^>!+NumpadDot::send `,
-<^>!+Numpad7::send ?
 
 
 
@@ -696,49 +664,49 @@ return
 ;Alt-Ebene
 ;---------
 
-<!1::send {altdown}1
-<!2::send {altdown}2
-<!3::send {altdown}3
-<!4::send {altdown}4
-<!5::send {altdown}5
-<!6::send {altdown}6
-<!7::send {altdown}7
-<!8::send {altdown}8
-<!9::send {altdown}9
-<!0::send {altdown}0
+<!1::send !1
+<!2::send !2
+<!3::send !3
+<!4::send !4
+<!5::send !5
+<!6::send !6
+<!7::send !7
+<!8::send !8
+<!9::send !9
+<!0::send !0
 
-<!q::send {altdown}x
-<!w::send {altdown}v
-<!e::send {altdown}l
-<!r::send {altdown}c
-<!t::send {altdown}w
-<!z::send {altdown}k
-<!u::send {altdown}h
-<!i::send {altdown}g
-<!o::send {altdown}f
-<!p::send {altdown}q
-<!ü::send {altdown}ß
+<!q::send !x
+<!w::send !v
+<!e::send !l
+<!r::send !c
+<!t::send !w
+<!z::send !k
+<!u::send !h
+<!i::send !g
+<!o::send !f
+<!p::send !q
+<!ü::send !ß
 
-<!a::send {altdown}u
-<!s::send {altdown}i
-<!d::send {altdown}a
-<!f::send {altdown}e
-<!g::send {altdown}o
-<!h::send {altdown}s
-<!j::send {altdown}n
-<!k::send {altdown}r
-<!l::send {altdown}t
-<!ö::send {altdown}d
-<!ä::send {altdown}y
+<!a::send !u
+<!s::send !i
+<!d::send !a
+<!f::send !e
+<!g::send !o
+<!h::send !s
+<!j::send !n
+<!k::send !r
+<!l::send !t
+<!ö::send !d
+<!ä::send !y
 
-<!y::send {altdown}ö
-<!x::send {altdown}ü
-<!c::send {altdown}ä
-<!v::send {altdown}p
-<!b::send {altdown}z
-<!n::send {altdown}b
-<!m::send {altdown}m
-<!SC035::send {altdown}j
+<!y::send !ö
+<!x::send !ü
+<!c::send !ä
+<!v::send !p
+<!b::send !z
+<!n::send !b
+<!m::send !m
+<!SC035::send !j
 
 
 ;Win-Ebene
@@ -844,6 +812,171 @@ return
 ^+SC035::send ^+j
 
 
+; -----------------------------------------
+; Nummernblock
+; -----------------
+;
+; 1. Ebene
+; NumLock On
+; --> Zahlenblock
+; ------------------
+;
+; 2. Ebene
+; NumLock Off 
+;   oder NumLock On + Shift
+; --> Cursortasten
+; -----------------
+
+; 3. Ebene
+; NumLock on 
+; + AltGr
+; --> Pfeile
+; -----------------
+
+<^>!NumpadDiv::send ÷
+<^>!NumpadMult::send ×
+<^>!NumpadSub::send -
+<^>!NumpadAdd::send ±
+<^>!NumpadEnter::    ; neq
+  MyUTF_String = â‰ 
+  Gosub Unicode
+  return
+
+<^>!Numpad7::  ;7/8
+  MyUTF_String = â… 
+  Gosub Unicode
+  return
+<^>!Numpad8::   ; uparrow
+  MyUTF_String = â†‘
+  Gosub Unicode
+  return
+<^>!Numpad9::   ;  3/8
+  MyUTF_String = â…œ
+  Gosub Unicode
+  return
+<^>!Numpad4::   ; leftarrow
+  MyUTF_String = â†
+  Gosub Unicode
+  return
+<^>!Numpad5::send †
+<^>!Numpad6::   ; rightarrow
+  MyUTF_String = â†’
+  Gosub Unicode
+  return
+<^>!Numpad1::send ¹ 
+<^>!Numpad2::   ; downarrow
+  MyUTF_String = â†“
+  Gosub Unicode
+  return
+<^>!Numpad3::send ³
+<^>!Numpad0::send `%
+<^>!NumPadDot::send .
+
+
+
+
+; -----------------
+; 4. Ebene
+; NumLock off
+; + AltGr + Shift
+; --> Brüche
+; -----------------
+
+;  Achtung! Wenn Numlock on:
+;  <^>!+Numpad7       ; Log off (AltGr + Pos1)
+;  <^>!+Numpad4       ; Ctrl + Left
+;  <^>!+Numpad6       ; Ctrl + Right
+;  <^>!+Numpad1       ; Shut down (AltGr + Ende)
+;  (Shift schaltet Numpad aus)
+
+
+<^>!+NumpadDiv::send / 
+<^>!+NumpadMult::  ; cdot
+  MyUTF_String = â‹…
+  Gosub Unicode
+  return
+<^>!+NumpadSub::send - ; eig. unbelegt
+<^>!+NumpadAdd::    ; -+
+  MyUTF_String = âˆ“
+  Gosub Unicode
+  return 
+<^>!+NumpadEnter::   ; approx
+  MyUTF_String = â‰ˆ
+  Gosub Unicode
+  return  
+
+
+<^>!+NumpadHome::  ; 1/8
+  MyUTF_String = â…›
+  Gosub Unicode
+  return  
+<^>!+NumpadUp::  ; 5/8
+  MyUTF_String = â…
+  Gosub Unicode
+  return   
+<^>!+NumpadPgUp::  ; 3/8
+  MyUTF_String = â…œ
+  Gosub Unicode
+  return  
+<^>!+NumpadLeft::send ¼
+<^>!+NumpadClear::send ½
+<^>!+NumpadRight::send ¾
+<^>!+NumpadEnd::send ¹ 
+<^>!+NumpadDown::send ² 
+<^>!+NumpadPgDn::send ³ 
+<^>!+NumpadIns::send ‰ 
+<^>!+NumPadDel::send `,
+  
+
+
+; -----------------
+; 5. Ebene
+; NumLock on
+; + Mod5 (Win + Ctrl)
+; --> Brüche (genau wie Ebene 4)
+; -----------------
+
+
+
+^#NumpadDiv::send / 
+^#NumpadMult::  ; cdot
+  MyUTF_String = â‹…
+  Gosub Unicode
+  return
+^#NumpadSub::send - ; eig. unbelegt
+^#NumpadAdd::    ; -+
+  MyUTF_String = âˆ“
+  Gosub Unicode
+  return 
+^#NumpadEnter::   ; approx
+  MyUTF_String = â‰ˆ
+  Gosub Unicode
+  return  
+
+
+^#Numpad7::  ; 1/8
+  MyUTF_String = â…›
+  Gosub Unicode
+  return  
+^#Numpad8::  ; 5/8
+  MyUTF_String = â…
+  Gosub Unicode
+  return   
+^#Numpad9::  ; 3/8
+  MyUTF_String = â…œ
+  Gosub Unicode
+  return  
+^#Numpad4::send ¼
+^#Numpad5::send ½
+^#Numpad6::send ¾
+^#Numpad1::send ¹ 
+^#Numpad2::send ² 
+^#Numpad3::send ³ 
+^#Numpad0::send ‰ 
+^#NumPadDot::send `,
+
+
+; ------------------------------------
 
 
 Unicode:
