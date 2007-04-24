@@ -38,10 +38,23 @@ Mod5 auf < hat das Problem nicht.
 Ohne die Remap-Datei kann die 5. Ebene mit Ctrl+Win erreicht werden
 (6. entsprechend mit Ctrl-Win-Shift).
 
+== Nummernblock ==
+Der Nummernblock auf der 3. Ebene ist bei eingeschaltetem Numlock mit AltGr 
+zu erreichen. Achtung! Bei ausgeschaltetem Numlock fährt AltGr + Ende den
+Computer herunter!!
+Der Nummernblock auf der 4. Ebene ist bei ausgeschaltetem Numlock mit AltGr 
++ Shift zu erreichen. Achtung! Bei eingeschaltetem Numlock fährt AltGr + Shift 
++ Ende den Computer herunter!!
+Sicherer: 
+Der Nummernblock der 4. Ebene ist bei eingeschaltetem Numlock auch 
+über Mod5 zu erreichen, die 2. Ebene über Shift. Damit ist weder das Ausschalten
+des Nummernblocks noch die Verwendung von AltGr + Shift nötig und der
+Computer wird nicht versehentlich heruntergefahren.
+
 == To Do ==
-Dead Keys: Bislang funktionieren nur die Deadkeys, die auch im normalen deutschen Layout vorkommen.
+Dead Keys: Bislang funktionieren nur die Deadkeys, die auch im 
+normalen deutschen qwertz-Layout vorkommen.
 Alle anderen können über Hotstrings definiert werden:
   ::~a::ã 
 usw.
 
-Nummernblock
