@@ -1,13 +1,14 @@
 /*
   Umbelegung von AltGr auf CapsLock und #,
   dafür Mod5 auf AltGr und <
+  Version vom 30.04.2007
 */
 
 ;#InstallKeybdHook
 #usehook on
 #singleinstance force
 
-;SendMode InputThenPlay - geht nicht
+SendMode Input ;ThenPlay - geht nicht
 
 name = NEO-Remap
 enable  = Aktiviere %name%
@@ -99,7 +100,9 @@ Send {Control Up}
 return
 
 
-;-----------------------------------------------
+
+; Funktionen des Systray-Menüs
+; ----------------------------
 
 toggleneo:
    if state <>
