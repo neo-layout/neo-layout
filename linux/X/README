@@ -1,0 +1,26 @@
+== Kleine Anleitung ==
+die datei neo muss unter linux nach: 
+/usr/share/X11/xkb/symbols
+(root-rechte benoetigt)
+
+=== Aktivieren ===
+Zu aktivieren einfach 
+    setxkbmap neo 
+eintippen
+
+=== Deaktivieren ===
+Zurück zu qwertz geht es mit:
+	setxkbmap de
+
+=== Tipp ===
+Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein, 
+kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
+zwischen qwertz und NEO wechseln. 
+alias uiae='setxkbmap de'
+alias asdf='setxkbmap neo'
+
+
+Zur Zeit beinhaltet die Datei nur "NEO2.0". Die Versionen in den anderen beiden xmodmaps folgen.
+Sind mehrere Varianten in der datei angegeben, kann man auf sie mit setxkbmap neo $variante zugreifen.
+Es ist zu überlegen, ob neo als Variante von de sinnvoll ist, wie dies z.Z. schon bei debian und ubuntu 
+mit neo1.0 der fall ist.
