@@ -13,7 +13,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The first row (number Row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 49 = dead_circumflex dead_caron dead_breve paragraph 
+keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke paragraph 
 
 keycode 10 = 1 degree notsign onesuperior
 keycode 11 = 2 2 2 twosuperior 
