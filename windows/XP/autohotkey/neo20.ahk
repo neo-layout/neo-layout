@@ -1,9 +1,10 @@
 /*
    NEO-Layout
-    Version vom 30.04.2007
-   3./4. Ebene funktioniert ¸ber AltGr, 
-    5./6. Ebene ¸ber Win+Ctrl
-   Zur Umbelegung auf CapsLock und AltGr 
+    Version vom 02.05.2007
+   3./4. Ebene funktioniert ¸ber Win+Ctrl, 
+    5./6. Ebene ¸ber AltGr.
+   Zur Umbelegung von Win+Ctrl auf CapsLock und #
+    und f¸r ein zweites AltGr auf <
     verwende neo20-remap.ahk
 */
 
@@ -96,7 +97,7 @@ q::send x
 w::send v
 
 e::
-  If A_PriorHotkey = #^+ ; durchgestrichen
+  If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = ≈Ç
@@ -124,7 +125,7 @@ r::
     MyUTF_String = ƒá
     Gosub Unicode
     }
-  Else If A_PriorHotkey = <^>!¥ ; cedilla
+  Else If A_PriorHotkey = #^¥ ; cedilla
     {
     Send {bs}
     MyUTF_String = √ß
@@ -157,7 +158,7 @@ i::
 Return
 
 o::
-  If A_PriorHotkey = #^+ ; durchgestrichen
+  If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = ∆í
@@ -171,9 +172,9 @@ p::send q
 +::send ~ ; tilde, soll tot
 
 a::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}¸
-  Else If A_PriorHotkey = <^>!++ ; doppelakut
+  Else If A_PriorHotkey = #^++ ; doppelakut
     {
     Send {bs}
     MyUTF_String = ≈±
@@ -185,7 +186,7 @@ a::
 ;    MyUTF_String = 
 ;    Gosub Unicode
 ;    }
-  Else If A_PriorHotkey = <^>!^ ; brevis
+  Else If A_PriorHotkey = #^^ ; brevis
     {
     Send {bs}
     MyUTF_String = ≈≠ 
@@ -202,7 +203,7 @@ a::
 Return
 
 s::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}Ô
   Else If A_PriorHotkey = ++ ; macron
     {
@@ -215,9 +216,9 @@ s::
 Return
 
 d::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send {bs}‰
-  Else If A_PriorHotkey = #^+¥ ; Ring drauf
+  Else If A_PriorHotkey = <^>!+¥ ; Ring drauf
     Send {bs}Â
   Else If A_PriorHotkey = + ; tilde
     {
@@ -225,7 +226,7 @@ d::
     MyUTF_String = √£
     Gosub Unicode
     }
-  Else If A_PriorHotkey = <^>!+¥ ; ogonek
+  Else If A_PriorHotkey = #^+¥ ; ogonek
     {
     Send {bs}
     MyUTF_String = ƒÖ
@@ -242,9 +243,9 @@ d::
 Return 
 
 f::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}Î
-  Else If A_PriorHotkey = <^>!+¥ ; ogonek
+  Else If A_PriorHotkey = #^+¥ ; ogonek
     {
     Send {bs}
     MyUTF_String = ƒô
@@ -261,7 +262,7 @@ f::
 Return 
 
 g::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}ˆ
   Else If A_PriorHotkey = + ; tilde
     {
@@ -269,13 +270,13 @@ g::
     MyUTF_String = √µ
     Gosub Unicode
     }
-  Else If A_PriorHotkey = <^>!++ ; doppel akut
+  Else If A_PriorHotkey = #^++ ; doppel akut
     {
     Send {bs}
     MyUTF_String = ≈ë
     Gosub Unicode
     }
-  Else If A_PriorHotkey = #^+ ; durchgestrichen
+  Else If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = √∏
@@ -335,7 +336,7 @@ k::send r
 l::send t
 
 ˆ::
-  If A_PriorHotkey = #^+ ; durchgestrichen
+  If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = √∞
@@ -346,10 +347,10 @@ l::send t
 Return
 
 ‰::  
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send {bs}ˇ
   Else
-    send Y
+    send y
 Return
 
 ;SC02B (#) wird zu AltGr
@@ -373,7 +374,7 @@ b::
     MyUTF_String = ≈∫
     Gosub Unicode
     }
-  Else If A_PriorHotkey = #^¥ ; punkt dr¸ber
+  Else If A_PriorHotkey = <^>!¥ ; punkt dr¸ber
     {
     Send {bs}
     MyUTF_String = ≈º
@@ -450,7 +451,7 @@ return
     MyUTF_String = ƒÜ
     Gosub Unicode
     }
-  Else If A_PriorHotkey = <^>!¥ ; cedille
+  Else If A_PriorHotkey = #^¥ ; cedille
     {
     Send {bs}
     MyUTF_String = √á
@@ -483,7 +484,7 @@ Return
 Return
 
 +o::
-  If A_PriorHotkey = #^+ ; durchgestrichen
+  If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = ‚Ç£
@@ -501,15 +502,15 @@ Gosub Unicode
 return
 
 +a::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}‹
-;  Else If A_PriorHotkey = #^+¥ ; ring dr¸ber
+;  Else If A_PriorHotkey = <^>!+¥ ; ring dr¸ber
 ;    {
 ;    Send {bs}
 ;    MyUTF_String = ≈Æ
 ;    Gosub Unicode
 ;    }
-  Else If A_PriorHotkey = <^>!^ ; brevis
+  Else If A_PriorHotkey = #^^ ; brevis
     {
     Send {bs}
     MyUTF_String = ≈¨ 
@@ -532,7 +533,7 @@ return
 Return
 
 +s::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}œ
   Else If A_PriorHotkey = ++ ; macron
     {
@@ -545,7 +546,7 @@ Return
 Return
 
 +d::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send {bs}ƒ
   Else If A_PriorHotkey = + ; tilde
     {
@@ -553,7 +554,7 @@ Return
     MyUTF_String = √É
     Gosub Unicode
     }
-  Else If A_PriorHotkey = #^+¥ ; Ring drauf
+  Else If A_PriorHotkey = <^>!+¥ ; Ring drauf
     Send {bs}≈
   Else If A_PriorHotkey = ++ ; macron
     {
@@ -566,7 +567,7 @@ Return
 Return 
 
 +f::
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send, {bs}À
   Else If A_PriorHotkey = +^ ; caron
     {
@@ -585,7 +586,7 @@ Return
 Return 
 
 +g::
-  If A_PriorHotkey = #^+ ; durchgestrichen
+  If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = √ò
@@ -597,7 +598,7 @@ Return
     MyUTF_String = √ï
     Gosub Unicode
     }
-  Else If A_PriorHotkey = <^>!+ ; Diaerese
+  Else If A_PriorHotkey = #^+ ; Diaerese
     Send {bs}÷
   Else If A_PriorHotkey = ++ ; macron
     {
@@ -667,7 +668,7 @@ Return
 
 
 +ˆ::
-  If A_PriorHotkey = #^+ ; durchgestrichen
+  If A_PriorHotkey = <^>!+ ; durchgestrichen
     {
     Send {bs}
     MyUTF_String = ƒê
@@ -683,7 +684,7 @@ Return
 Return
 
 +‰::  
-  If A_PriorHotkey = <^>!+ ; Diaerese
+  If A_PriorHotkey = #^+ ; Diaerese
     Send {bs}ü
   Else
     send Y
@@ -721,411 +722,418 @@ Return
     send J
 Return
 
-;3. Ebene (AltGr)
-;---------
+;3. Ebene 
+;(Win+Ctrl, ¸ber CapsLock und # zu erreichen)
+;---------------------------------------------
 
-<^>!^:: ; brevis, soll tot
+#^^:: ; brevis, soll tot
 MyUTF_String = Àò
 Gosub Unicode
 return
 
-<^>!1:: 
+#^1:: 
 MyUTF_String = ¬¨ 
 Gosub Unicode
 return
 
-<^>!2::send {^} 
-<^>!3::send 3 
-<^>!4::send • 
-<^>!5::send £  
-<^>!6::send Ê 
-<^>!7::send ú 
-<^>!8::send Ç
-<^>!9::send ë
-<^>!0::send í
+#^2::send {^}{space} 
+#^3::send 3 
+#^4::send • 
+#^5::send £  
+#^6::send Ê 
+#^7::send ú 
+#^8::send Ç
+#^9::send ë
+#^0::send í
 
-<^>!ﬂ::
+#^ﬂ::
 MyUTF_String = ‚Äî 
 Gosub Unicode
 return
 
-<^>!¥::send ∏ ; cedillia, soll tot
+#^¥::send ∏ ; cedillia, soll tot
 
-<^>!q::send @ 
-<^>!w::send _
-<^>!e::send [
-<^>!r::send ]
-<^>!t::send {^}{space} ; untot
-<^>!z::sendraw !
-<^>!u::send <
-<^>!i::send >
-<^>!o::send `=
-<^>!p::send `;
+#^q::send @ 
+#^w::send _
+#^e::send [
+#^r::send ]
+#^t::send {^}{space} ; untot
+#^z::sendraw !
+#^u::send <
+#^i::send >
+#^o::send `=
+#^p::send `;
 
-<^>!¸::  ;ij
+#^¸::  ;ij
 MyUTF_String = ƒ≥
 Gosub Unicode
 return
 
-<^>!+:: ; Diaerese, soll tot
+#^+:: ; Diaerese, soll tot
 MyUTF_String = ¬®
 Gosub Unicode
 return
 
 
-<^>!a::send \
-<^>!s::send `/
-<^>!d::sendraw { 
-<^>!f::sendraw } 
-<^>!g::send *
-<^>!h::send ?
-<^>!j::send (
-<^>!k::send )
-<^>!l::send -
-<^>!ˆ::send :
-<^>!‰::send y
+#^a::send \
+#^s::send `/
+#^d::sendraw { 
+#^f::sendraw } 
+#^g::send *
+#^h::send ?
+#^j::send (
+#^k::send )
+#^l::send -
+#^ˆ::send :
+#^‰::send y
 
 
-<^>!y::sendraw ~ 
-<^>!x::send $
-<^>!c::send |
-<^>!v::send {#}
-<^>!b::send ``{space} ; untot
-<^>!n::send {+}
-<^>!m::send `% 
-<^>!,::send {&}
-<^>!.::send "
-<^>!-::send '
+#^y::sendraw ~ 
+#^x::send $
+#^c::send |
+#^v::send {#}
+#^b::send ``{space} ; untot
+#^n::send {+}
+#^m::send `% 
+#^,::send {&}
+#^.::send "
+#^-::send '
 
 
 
-;4. Ebene (AltGr+Shift)
-;---------
+;4. Ebene 
+;(Win+Ctrl+Shift)
+;-----------------
 
-<^>!+^::send ∂ 
-<^>!+1::send π 
-<^>!+2::send ≤
-<^>!+3::send ≥
-<^>!+4::send ¢ 
-<^>!+5::send § 
-<^>!+6::send ∆ 
-<^>!+7::send å 
-<^>!+8::send ª 
-<^>!+9::send ´ 
-<^>!+0::send õ 
-<^>!+ﬂ::send ã 
+#^+^::send ∂ 
+#^+1::send π 
+#^+2::send ≤
+#^+3::send ≥
+#^+4::send ¢ 
+#^+5::send § 
+#^+6::send ∆ 
+#^+7::send å 
+#^+8::send ª 
+#^+9::send ´ 
+#^+0::send õ 
+#^+ﬂ::send ã 
 
-<^>!+¥:: ; ogonek, soll tot
+#^+¥:: ; ogonek, soll tot
 MyUTF_String = Àõ
 Gosub Unicode
 return
 
 
-<^>!+q::  ;xi
+#^+q::  ;xi
 MyUTF_String = Œæ 
 Gosub Unicode
 return
 
-<^>!+w::send v
+#^+w::send v
 
-<^>!+e::  ;lambda
+#^+e::  ;lambda
 MyUTF_String = Œª 
 Gosub Unicode
 return
 
-<^>!+r::  ;chi 
+#^+r::  ;chi 
 MyUTF_String = œá
 Gosub Unicode
 return
 
-<^>!+t::send w
+#^+t::send w
 
-<^>!+z:: ;kappa
+#^+z:: ;kappa
 MyUTF_String = Œ∫
 Gosub Unicode
 return
 
-<^>!+u:: ;psi
+#^+u:: ;psi
 MyUTF_String = œà
 Gosub Unicode
 return
 
-<^>!+i:: ;gamma
+#^+i:: ;gamma
 MyUTF_String = Œ≥
 Gosub Unicode
 return
 
-<^>!+o:: ;phi
+#^+o:: ;phi
 MyUTF_String = œÜ
 Gosub Unicode
 return
 
-<^>!+p::send q
+#^+p::send q
 
-<^>!+¸:: ;IJ
+#^+¸:: ;IJ
 MyUTF_String = ƒ≤
 Gosub Unicode
 return
 
-<^>!++::send " ;doppelakut, soll tot
+#^++::send " ;doppelakut, soll tot
 
-<^>!+a::send u
+#^+a::send u
 
-<^>!+s:: ;iota
+#^+s:: ;iota
 MyUTF_String = Œπ
 Gosub Unicode
 return
 
-<^>!+d:: ;alpha
+#^+d:: ;alpha
 MyUTF_String = Œ±
 Gosub Unicode
 return
 
-<^>!+f:: ;epsilon
+#^+f:: ;epsilon
 MyUTF_String = Œµ
 Gosub Unicode
 return
 
-<^>!+g:: ;omega
+#^+g:: ;omega
 MyUTF_String = œâ
 Gosub Unicode
 return
 
-<^>!+h:: ;sigma
+#^+h:: ;sigma
 MyUTF_String = œÉ
 Gosub Unicode
 return
 
-<^>!+j:: ;nu
+#^+j:: ;nu
 MyUTF_String = ŒΩ
 Gosub Unicode
 return
 
-<^>!+k:: ;rho
+#^+k:: ;rho
 MyUTF_String = œÅ
 Gosub Unicode
 return
 
-<^>!+l:: ;tau
+#^+l:: ;tau
 MyUTF_String = œÑ
 Gosub Unicode
 return
 
-<^>!+ˆ:: ;delta
+#^+ˆ:: ;delta
 MyUTF_String = Œ¥
 Gosub Unicode
 return
 
-<^>!+‰:: ;upsilon
+#^+‰:: ;upsilon
 MyUTF_String = œÖ
 Gosub Unicode
 return
 
 
 
-<^>!+y::send ˆ
-<^>!+x::send ¸
+#^+y::send ˆ
+#^+x::send ¸
 
-<^>!+c:: ;eta
+#^+c:: ;eta
 MyUTF_String = Œ∑
 Gosub Unicode
 return
 
-<^>!+v:: ;pi
+#^+v:: ;pi
 MyUTF_String = œÄ
 Gosub Unicode
 return
 
-<^>!+b:: ;zeta
+#^+b:: ;zeta
 MyUTF_String = Œ∂
 Gosub Unicode
 return
 
-<^>!+n:: ;beta
+#^+n:: ;beta
 MyUTF_String = Œ≤
 Gosub Unicode
 return
 
-<^>!+m:: ;mu
+#^+m:: ;mu
 MyUTF_String = Œº
 Gosub Unicode
 return
 
-<^>!+,:: ;vartheta?
-MyUTF_String = 
+#^+,:: ;vartheta?
+MyUTF_String = œë
 Gosub Unicode
 return
 
-<^>!+.:: ;theta
+#^+.:: ;theta
 MyUTF_String = Œ∏
 Gosub Unicode
 return
 
-<^>!+-::send j
+#^+-::send j
 
 
 
-;5. Ebene (Win + Ctrl)
-;---------
+;5. Ebene (AltGr)
+;-----------------
 
-#^4::Send {PgUp} ;Prev
-#^8::Send /
-#^9::Send *
-#^0::Send -
+<^>!4::Send {PgUp} ;Prev
+<^>!8::Send /
+<^>!9::Send *
+<^>!0::Send -
 
-#^¥:: ; punkt oben dr¸ber, soll tot
+<^>!¥:: ; punkt oben dr¸ber, soll tot
 MyUTF_String = Àô
 Gosub Unicode
 return
 
 
-#^q::Send {Esc}
-#^w::Send {Backspace}
-#^e::Send {Up}
-#^t::Send {Insert}
-#^z::Send °
-#^u::Send 7
-#^i::Send 8
-#^o::Send 9
-#^p::Send {+}
+<^>!q::Send {Esc}
+<^>!w::Send {Backspace}
+<^>!e::Send {Up}
+<^>!t::Send {Insert}
+<^>!z::Send °
+<^>!u::Send 7
+<^>!i::Send 8
+<^>!o::Send 9
+<^>!p::Send {+}
 
-#^¸:: 
+<^>!¸:: 
 MyUTF_String = …ô
 Gosub Unicode
 return
 
-#^+:: ; durchgestrichen, soll tot
+<^>!+:: ; durchgestrichen, soll tot
 MyUTF_String = /
 Gosub Unicode
 return
 
-#^a::Send {Home}
-#^s::Send {Left}
-#^d::Send {Down}
-#^f::Send {Right}
-#^g::Send {End}
-#^h::Send ø
-#^j::Send 4
-#^k::Send 5
-#^l::Send 6
-#^ˆ::Send `,
+<^>!a::Send {Home}
+<^>!s::Send {Left}
+<^>!d::Send {Down}
+<^>!f::Send {Right}
+<^>!g::Send {End}
+<^>!h::Send ø
+<^>!j::Send 4
+<^>!k::Send 5
+<^>!l::Send 6
+<^>!ˆ::Send `,
 
-#^‰:: ; ˛ ( ﬁ? )
+<^>!‰:: ; ˛ ( ﬁ? )
 MyUTF_String = √æ
 Gosub Unicode
 return
 
 
-#^y::Send {Tab}
-#^x::Send {Del}
-#^c::Send {PgDn} ;Next
-#^n::Send ±
-#^m::Send 1
-#^,::Send 2
-#^.::Send 3
-#^-::Send .
+<^>!y::Send {Tab}
+<^>!x::Send {Del}
+<^>!c::Send {PgDn} ;Next
+<^>!n::Send ±
+<^>!m::Send 1
+<^>!,::Send 2
+<^>!.::Send 3
+<^>!-::Send .
+
+<^>!Space::Send 0
+  ; <^>!SC138::Send {NumpadDot} 
+  ; geht nicht, weil sonst AltGr nur noch , macht
 
 
-;6. Ebene (Win + Ctrl & Shift)
+
+;6. Ebene (AltGr+Shift)
 ;-----------------------
 
-#^+4::Send +{Prev}
+<^>!+4::Send +{Prev}
 
-#^+¥:: ; ring obendrauf, soll tot
+<^>!+¥:: ; ring obendrauf, soll tot
 MyUTF_String = Àö
 Gosub Unicode
 return
 
-#^+q:: ; Xi?
+<^>!+q:: ; Xi?
 MyUTF_String = Œû
 Gosub Unicode
 return
  
-#^+w:: ; Lambda
+<^>!+w:: ; Lambda
 MyUTF_String = Œõ
 Gosub Unicode
 return
 
-#^+e::Send +{Up}
-#^+r::Send © 
-#^+t::Send +{Insert}
+<^>!+e::Send +{Up}
+<^>!+r::Send © 
+<^>!+t::Send +{Insert}
 
-#^+u:: ; Phi
+<^>!+u:: ; Phi
 MyUTF_String = Œ®
 Gosub Unicode
 return
 
-#^+i:: ; Gamma
+<^>!+i:: ; Gamma
 MyUTF_String = Œì
 Gosub Unicode
 return
 
-#^+o:: ; Psi
+<^>!+o:: ; Psi
 MyUTF_String = Œ¶
 Gosub Unicode
 return
 
-#^+¸:: ; ?
+<^>!+¸:: ; ?
 MyUTF_String = ∆è
 Gosub Unicode
 return
 
-#^++::  ; komma drunter, soll tot 
-MyUTF_String = Àè
+<^>!++::  ; komma drunter, soll tot 
+MyUTF_String = Àè 
 Gosub Unicode
 return
 
-#^+a::Send +{Home}
-#^+s::Send +{Left}
-#^+d::Send +{Down}
-#^+f::Send +{Right}
-#^+g::Send +{End}
-#^+h:: ; Sigma
-MyUTF_String = 
+<^>!+a::Send +{Home}
+<^>!+s::Send +{Left}
+<^>!+d::Send +{Down}
+<^>!+f::Send +{Right}
+<^>!+g::Send +{End}
+<^>!+h:: ; Sigma
+MyUTF_String = Œ£
 Gosub Unicode
 return
 
-#^+j:: ; No
+<^>!+j:: ; No
 MyUTF_String = ‚Ññ
 Gosub Unicode
 return
 
-#^+k:: ; (R)
+<^>!+k:: ; (R)
 MyUTF_String = ¬Æ
 Gosub Unicode
 return
 
-#^+l:: ; TM
+<^>!+l:: ; TM
 MyUTF_String = ‚Ñ¢
 Gosub Unicode
 return
 
-#^+ˆ:: ; Delta
+<^>!+ˆ:: ; Delta
 MyUTF_String = Œî
 Gosub Unicode
 return
 
-#^+‰:: ; ﬁ ( ˛? )
+<^>!+‰:: ; ﬁ ( ˛? )
 MyUTF_String = √û
 Gosub Unicode
 return
 
 
-#^+y::Send +{Tab}
+<^>!+y::Send +{Tab}
 
-#^+c::Send +{PgDn}
+<^>!+c::Send +{PgDn}
 
-#^+v:: ; Pi
+<^>!+v:: ; Pi
 MyUTF_String = Œ†
 Gosub Unicode
 return
 
-#^+b:: ; Omega
+<^>!+b:: ; Omega
 MyUTF_String = Œ©
 Gosub Unicode
 return
 
-#^+.:: ; Theta 
+<^>!+.:: ; Theta 
 MyUTF_String = Œò
 Gosub Unicode
 return
@@ -1351,48 +1359,48 @@ return
 
 ; 3. Ebene
 ; NumLock on 
-; + AltGr
+; + CapsLock
 ; --> Pfeile
 ; -----------------
 
-<^>!NumpadDiv::send ˜
-<^>!NumpadMult::send ◊
-<^>!NumpadSub::send -
-<^>!NumpadAdd::send ±
-<^>!NumpadEnter::    ; neq
+#^NumpadDiv::send ˜
+#^NumpadMult::send ◊
+#^NumpadSub::send -
+#^NumpadAdd::send ±
+#^NumpadEnter::    ; neq
   MyUTF_String = ‚â†
   Gosub Unicode
   return
 
-<^>!Numpad7::  ;7/8
+#^Numpad7::  ;7/8
   MyUTF_String = ‚Öû 
   Gosub Unicode
   return
-<^>!Numpad8::   ; uparrow
+#^Numpad8::   ; uparrow
   MyUTF_String = ‚Üë
   Gosub Unicode
   return
-<^>!Numpad9::   ;  3/8
+#^Numpad9::   ;  3/8
   MyUTF_String = ‚Öú
   Gosub Unicode
   return
-<^>!Numpad4::   ; leftarrow
+#^Numpad4::   ; leftarrow
   MyUTF_String = ‚Üê
   Gosub Unicode
   return
-<^>!Numpad5::send Ü
-<^>!Numpad6::   ; rightarrow
+#^Numpad5::send Ü
+#^Numpad6::   ; rightarrow
   MyUTF_String = ‚Üí
   Gosub Unicode
   return
-<^>!Numpad1::send π 
-<^>!Numpad2::   ; downarrow
+#^Numpad1::send π 
+#^Numpad2::   ; downarrow
   MyUTF_String = ‚Üì
   Gosub Unicode
   return
-<^>!Numpad3::send ≥
-<^>!Numpad0::send `%
-<^>!NumPadDot::send .
+#^Numpad3::send ≥
+#^Numpad0::send `%
+#^NumPadDot::send .
 
 
 
@@ -1405,49 +1413,52 @@ return
 ; -----------------
 
 ;  Achtung! Wenn Numlock on:
-;  <^>!+Numpad7       ; Log off (AltGr + Pos1)
-;  <^>!+Numpad4       ; Ctrl + Left
-;  <^>!+Numpad6       ; Ctrl + Right
-;  <^>!+Numpad1       ; Shut down (AltGr + Ende)
+;  #^+Numpad7       ; Log off (AltGr + Pos1)
+;  #^+Numpad4       ; Ctrl + Left
+;  #^+Numpad6       ; Ctrl + Right
+;  #^+Numpad1       ; Shut down (AltGr + Ende)
 ;  (Shift schaltet Numpad aus)
 
 
-<^>!+NumpadDiv::send / 
-<^>!+NumpadMult::  ; cdot {ASC 0183}
+#^+NumpadDiv::   ; slash
+  MyUTF_String = ‚àï
+  Gosub Unicode
+  return
+#^+NumpadMult::  ; cdot
   MyUTF_String = ‚ãÖ
   Gosub Unicode
   return
-<^>!+NumpadSub::send - ; eig. unbelegt
-<^>!+NumpadAdd::    ; -+
+#^+NumpadSub::send - ; eig. unbelegt
+#^+NumpadAdd::    ; -+
   MyUTF_String = ‚àì
   Gosub Unicode
   return 
-<^>!+NumpadEnter::   ; approx
+#^+NumpadEnter::   ; approx
   MyUTF_String = ‚âà
   Gosub Unicode
   return  
 
 
-<^>!+NumpadHome::  ; 1/8
+#^+NumpadHome::  ; 1/8
   MyUTF_String = ‚Öõ
   Gosub Unicode
   return  
-<^>!+NumpadUp::  ; 5/8
+#^+NumpadUp::  ; 5/8
   MyUTF_String = ‚Öù
   Gosub Unicode
   return   
-<^>!+NumpadPgUp::  ; 3/8
+#^+NumpadPgUp::  ; 3/8
   MyUTF_String = ‚Öú
   Gosub Unicode
   return  
-<^>!+NumpadLeft::send º
-<^>!+NumpadClear::send Ω
-<^>!+NumpadRight::send æ
-<^>!+NumpadEnd::send π 
-<^>!+NumpadDown::send ≤ 
-<^>!+NumpadPgDn::send ≥ 
-<^>!+NumpadIns::send â 
-<^>!+NumPadDel::send `,
+#^+NumpadLeft::send º
+#^+NumpadClear::send Ω
+#^+NumpadRight::send æ
+#^+NumpadEnd::send π 
+#^+NumpadDown::send ≤ 
+#^+NumpadPgDn::send ≥ 
+#^+NumpadIns::send â 
+#^+NumPadDel::send `,
   
 
 
@@ -1459,43 +1470,42 @@ return
 ; -----------------
 
 
-
-^#NumpadDiv::send / 
-^#NumpadMult::    ; cdot
- ; MyUTF_String = ¬∑ ; ={ASC 0183}, sollte eigentlich ‚ãÖ ??
- ; Gosub Unicode
- ; return∑
-^#NumpadSub::send - ; eig. unbelegt
-^#NumpadAdd::    ; -+
+<^>!NumpadDiv::send / 
+<^>!NumpadMult::    ; cdot
+  MyUTF_String = ‚ãÖ 
+  Gosub Unicode
+  return 
+<^>!NumpadSub::send - ; eig. unbelegt
+<^>!NumpadAdd::    ; -+
   MyUTF_String = ‚àì
   Gosub Unicode
   return 
-^#NumpadEnter::   ; approx
+<^>!NumpadEnter::   ; approx
   MyUTF_String = ‚âà
   Gosub Unicode
   return  
 
 
-^#Numpad7::  ; 1/8
+<^>!Numpad7::  ; 1/8
   MyUTF_String = ‚Öõ
   Gosub Unicode
   return  
-^#Numpad8::  ; 5/8
+<^>!Numpad8::  ; 5/8
   MyUTF_String = ‚Öù
   Gosub Unicode
   return   
-^#Numpad9::  ; 3/8
+<^>!Numpad9::  ; 3/8
   MyUTF_String = ‚Öú
   Gosub Unicode
   return  
-^#Numpad4::send º
-^#Numpad5::send Ω
-^#Numpad6::send æ
-^#Numpad1::send π 
-^#Numpad2::send ≤ 
-^#Numpad3::send ≥ 
-^#Numpad0::send â 
-^#NumPadDot::send `,
+<^>!Numpad4::send º
+<^>!Numpad5::send Ω
+<^>!Numpad6::send æ
+<^>!Numpad1::send π 
+<^>!Numpad2::send ≤ 
+<^>!Numpad3::send ≥ 
+<^>!Numpad0::send â 
+<^>!NumPadDot::send `,
 
 
 ; ------------------------------------
@@ -1503,10 +1513,10 @@ return
 
 
 Unicode:
-; Place Unicode text onto the clipboard:
-Transform, Clipboard, Unicode, %MyUTF_String%  
-; Paste the clipboard's Unicode text: 
-send ^v
+   ; Place Unicode text onto the clipboard:
+  Transform, Clipboard, Unicode, %MyUTF_String%  
+   ; Paste the clipboard's Unicode text: 
+  send ^v
 return
 
 toggleneo:

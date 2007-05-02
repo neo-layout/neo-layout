@@ -1,7 +1,7 @@
 /*
-  Umbelegung von AltGr auf CapsLock und #,
-  dafür Mod5 auf AltGr und <
-  Version vom 30.04.2007
+  Umbelegung von Win+Ctrl auf CapsLock und #,
+  Zweites AltGr auf <
+  Version vom 02.05.2007
 */
 
 ;#InstallKeybdHook
@@ -32,71 +32,59 @@ menu, tray, tip, %name%
 
 
 ; 3. und 4. Ebene:
-; CapsLock und # (SC02B) werden zu AltGr (SC138)
-; ----------------------------------------------
-; http://www.autohotkey.com/forum/topic181.html
+; CapsLock und # werden zu Win + Ctrl
+; --------------------------------------------
+
 
 *CapsLock::
-Send {SC138 Down}
+Send {RWin Down}
+Send {Control Down}
 Loop
 {
    Sleep, 10
    GetKeyState, state, CapsLock, P
-   if state = U  ; The key has been released, so break out of the loop.
-      break
+   if state = U  
+   break
+   ; The key has been released, so break out of the loop.
 }
-Send {SC138 Up} 
+Send {RWin Up} 
+Send {Control Up} 
 return
 
 
-*SC02B::
-Send {SC138 Down}
+*#::
+Send {RWin Down}
+Send {Control Down}
 Loop
 {
    Sleep, 10
-   GetKeyState, state, SC02B, P
-   if state = U  ; The key has been released, so break out of the loop.
-      break
+   GetKeyState, state, #, P
+   if state = U  
+   break
+   ; The key has been released, so break out of the loop.
 }
-Send {SC138 Up} 
+Send {RWin Up} 
+Send {Control Up} 
 return
 
 
 ; 5. und 6. Ebene:
-; < (SC056) und AltGr werden zu Win + Ctrl
-; --------------------------------------------
-  ; < funktioniert, aber bei AltGr kommt (manchmal/immer?) nur 
-  ; Control Down an, aber nicht das Up, dann bleibt Control aktiv 
-  ; - Lösung ist dann, einmal die normale Controltaste zu drücken.
+; < wird zu zweiter AltGr (SC138)
+; --------------------------------
 
 
-*SC056::
-Send {RWin Down}
-Send {Control Down}
+
+*<::
+Send {SC138 Down}
 Loop
 {
    Sleep, 10
-   GetKeyState, state, SC056, P
-   if state = U  ; The key has been released, so break out of the loop.
-      break
+   GetKeyState, state, <, P
+   if state = U  
+   break
+   ; The key has been released, so break out of the loop.
 }
-Send {RWin Up} 
-Send {Control Up} 
-return
-
-
-*SC138::
-Send {RWin Down}
-Send {Control Down}
-Loop
-{
-   Sleep, 10
-   GetKeyState, state, SC138, P
-   if state = U  ; The key has been released, so break out of the loop.
-      break
-}
-Send {RWin Up} 
-Send {Control Up} 
+Send {SC138 Up}
 return
 
 
