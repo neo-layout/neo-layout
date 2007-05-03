@@ -25,4 +25,8 @@ Isländisch, Färöisch: ð
 Kroatisch: đ
 --> das sind die kleinen Varianten zu Ð. Das eine müsste auch mit
 dead_stroke gehen, das andere müssen wir dann wahrscheinlich definieren.
-
+Antwort von Nora:
+- das isländische d ist ein eigener Buchstabe
+(http://unicode.e-workers.de/ligaturen.php)
+- das kroatische d ist aus Querstrich und d zusammengesetzt
+(http://unicode.e-workers.de/querstrich.php)
