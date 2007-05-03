@@ -31,9 +31,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.32"
      inkscape:cx="446.44044"
-     inkscape:cy="148.48484"
+     inkscape:cy="148.10605"
      inkscape:document-units="px"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer3"
      width="900px"
      height="300px"
      showgrid="true"
@@ -937,7 +937,7 @@
          id="tspan3340"
          x="767.06738"
          y="83"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;font-family:DejaVu LGC Sans">-</tspan></text>
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;font-family:DejaVu LGC Sans">ˉ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1303,6 +1303,17 @@
          id="tspan2130"
          x="77.067383"
          y="23">°</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="137.06741"
+       y="23.000015"
+       id="text2570"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2572"
+         x="137.06741"
+         y="23.000015">¶</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1564,7 +1575,7 @@
          id="tspan2180"
          x="795.06738"
          y="113"
-         style="fill:#ff0000">&quot;</tspan></text>
+         style="fill:#ff0000"> ‍̈</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1812,7 +1823,8 @@
          sodipodi:role="line"
          id="tspan2368"
          x="45.067383"
-         y="23">¶</tspan></text>
+         y="23"
+         style="fill:#ff0000">-</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1824,17 +1836,6 @@
          id="tspan2372"
          x="105.06738"
          y="23">¹</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
-       x="165.06738"
-       y="23"
-       id="text2374"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan2376"
-         x="165.06738"
-         y="23">²</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -2233,5 +2234,16 @@
          id="tspan2544"
          x="300.06738"
          y="203">η</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="165.06741"
+       y="23.000015"
+       id="text2574"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2576"
+         x="165.06741"
+         y="23.000015">²</tspan></text>
   </g>
 </svg>
