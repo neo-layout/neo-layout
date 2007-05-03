@@ -1,60 +1,79 @@
+Version 03.05.2007
+
 == Installation ==
-Hierfür braucht man keine Administratorrechte, es muss jedoch zuerst das
-Programm namens „autohotkey“
-(http://www.autohotkey.com/download/AutohotkeyInstall.exe) installiert werden.
+Hierfür braucht man keine Administratorrechte, es muss jedoch 
+zuerst das Programm namens „autohotkey“
+(http://www.autohotkey.com/download/AutohotkeyInstall.exe) 
+installiert werden.
 Dazu benötigt man KEINE Administratorrechte, wenn man das Programm
 beispielsweise in das Verzeichnis „Eigene Dateien/NEO“ installiert.
 
 === ahk-Dateien ===
-Danach kann man .ahk-Skripte mit einem Doppelklick starten. Man erhält 
-dann ein Systray-Icon, mit dem man das Skript vorübergehend deaktivieren 
-(Suspend) oder komplett beenden kann.
+Danach kann man die .ahk-Skripte (neo20.ahk und neo20-remap.ahk) 
+mit einem Doppelklick starten. 
+Man erhält dann ein Systray-Icon, mit dem man das Skript vorübergehend 
+deaktivieren (Suspend) oder komplett beenden kann.
 Wenn das Öffnen nicht direkt funktioniert: Öffnen mit -> Autohotkey.exe
 auswählen -> Immer mit diesem Programm öffnen.
 
 === Automatischer Start ===
-Bei Bedarf kann man sich eine Verknüpfung mit neo20.ahk in den 
-Autostart-Ordner legen, dann hat man das Layout direkt bei der Anmeldung.
+Bei Bedarf kann man sich Verknüpfungen mit neo20.ahk und 
+neo20-remap.ahk in den Autostart-Ordner legen, dann hat man das 
+Layout direkt bei der Anmeldung.
 
 == Wie es funktioniert ==
-Das Programm kann alle Tastendrucke abfangen und statt dessen andere Tasten
-simulieren. Die Zeile
+Das Programm kann alle Tastendrucke abfangen und statt dessen andere 
+Tasten simulieren. Die Zeile
   a::send b
 fängt z. B. die Taste a ab und sendet statt dessen ein b.
-Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss dann 
-nur das Skript neu starten um die Änderungen zu übernehmen.
+Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss 
+dann nur das Skript neu starten um die Änderungen zu übernehmen.
 
 == Bekannte Fehler ==
 Das Umbelegen der Funktionstasten ist etwas ‚buggy‘ (siehe
-http://www.autohotkey.com/forum/topic10169.html) und wurde deshalb in 
-eine Extradatei ausgelagert (neo20-remap.ahk). 
-Verwendung auf eigene Gefahr, einfach beide Skripte starten.
+http://www.autohotkey.com/forum/topic10169.html) und wurde deshalb 
+in eine Extradatei ausgelagert (neo20-remap.ahk). 
+Einfach beide Skripte starten.
 
-Problem: Auf der 5. und 6. Ebene kommt (bei Verwendung von AltGr) nur 
-Control Down an, aber nicht das Up, dann bleibt Control aktiv. 
+Problem: Manchmal kommt nur Control Down an, aber nicht das Up, 
+dann bleibt Control aktiv. 
 Lösung ist dann, einmal die normale Controltaste zu drücken.
-Mod5 auf < hat das Problem nicht.
 
-Ohne die Remap-Datei kann die 5. Ebene mit Ctrl+Win erreicht werden
-(6. entsprechend mit Ctrl-Win-Shift).
+Ohne die Remap-Datei können 
+die 3. Ebene mit Ctrl+Win 
+die 4. entsprechend mit Ctrl-Win-Shift
+die 5. mit AltGr 
+die 6. mit AltGr+Shift
+erreicht werden.
+
+Alle Nicht-ASCII-Zeichen werden über die Zwischenablage eingefügt.
+Der Dateiinhalt der Zwischenablage geht dabei verloren.
 
 == Nummernblock ==
-Der Nummernblock auf der 3. Ebene ist bei eingeschaltetem Numlock mit AltGr 
-zu erreichen. Achtung! Bei ausgeschaltetem Numlock fährt AltGr + Ende den
-Computer herunter!!
-Der Nummernblock auf der 4. Ebene ist bei ausgeschaltetem Numlock mit AltGr 
-+ Shift zu erreichen. Achtung! Bei eingeschaltetem Numlock fährt AltGr + Shift 
-+ Ende den Computer herunter!!
-Sicherer: 
-Der Nummernblock der 4. Ebene ist bei eingeschaltetem Numlock auch 
-über Mod5 zu erreichen, die 2. Ebene über Shift. Damit ist weder das Ausschalten
-des Nummernblocks noch die Verwendung von AltGr + Shift nötig und der
-Computer wird nicht versehentlich heruntergefahren.
+Der Nummernblock auf der 2. Ebene ist wahlweise
+- bei AUSgeschaltetem Numlock  
+- bei EINgeschaltetem Numlock mit Shift 
+zu erreichen.
+Der Nummernblock auf der 3. Ebene funktioniert bei EINgeschaltetem 
+Numlock mit Mod3 (Caps/#).
+Der Nummernblock auf der 4. Ebene ist wahlweise
+- bei AUSgeschaltetem Numlock mit Mod3 + Shift 
+- bei EINgeschaltetem Numlock über Mod5 
+zu erreichen.
+Da die 2. Ebene über Shift ebenfalls bei EINgeschaltetem Numlock
+funktioniert ist das Ausschalten des Nummernblocks nicht unbedingt
+nötig.
+
+Achtung!
+AltGr + Pos1 = Abmelden
+AltGr + Ende = Computer ausschalten
+--> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod5
 
 == To Do ==
-Dead Keys: Bislang funktionieren nur die Deadkeys, die auch im 
-normalen deutschen qwertz-Layout vorkommen.
-Alle anderen können über Hotstrings definiert werden:
-  ::~a::ã 
-usw.
+Dead Keys: Die Deadkeys, die auf der zweiten Seite der .ods aufgeführt sind und die meisten von http://unicode.e-workers.de 
+funktionieren inzwischen – es fehlen noch die mit „Punkt drüber“.
 
+Lässt sich die neo20-remap.ahk in die Hauptdatei integrieren?
+Ist mir bislang noch nicht gelungen.
+
+Dateiinhalt der Zwischenablage sichern?
