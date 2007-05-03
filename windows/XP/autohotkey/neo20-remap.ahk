@@ -1,7 +1,7 @@
 /*
-  Umbelegung von Win+Ctrl auf CapsLock und #,
-  Zweites AltGr auf <
-  Version vom 02.05.2007
+  Mod3: Umbelegung von Win+Ctrl auf CapsLock und #,
+  Mod5: Zweites AltGr auf <
+  Version vom 03.05.2007
 */
 
 ;#InstallKeybdHook
@@ -31,7 +31,7 @@ menu, tray, add, %name% beenden, exitprogram
 menu, tray, tip, %name%
 
 
-; 3. und 4. Ebene:
+; Mod3 (3. und 4. Ebene)
 ; CapsLock und # werden zu Win + Ctrl
 ; --------------------------------------------
 
@@ -68,7 +68,7 @@ Send {Control Up}
 return
 
 
-; 5. und 6. Ebene:
+; Mod5 (5. und 6. Ebene)
 ; < wird zu zweiter AltGr (SC138)
 ; --------------------------------
 
