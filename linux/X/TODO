@@ -2,7 +2,8 @@
 Varianten
 ==============
 
-Es ist zu klären, welche Varianten in die Datei sollen, und welche davon default wird.
+Es ist zu klären, welche Varianten in die Datei sollen, und welche davon default
+wird.
 Ebenso ist die momentane Version vermutlich nicht 100% aktuell.
 Ob die Datei ohne weiteres unter *BSD tut, muss ich noch testen.
 
@@ -30,3 +31,9 @@ Antwort von Nora:
 (http://unicode.e-workers.de/ligaturen.php)
 - das kroatische d ist aus Querstrich und d zusammengesetzt
 (http://unicode.e-workers.de/querstrich.php)
+
+=============
+dead_stroke
+=============
+Den dead_stroke sollte man wieder einkommentieren, leider funktioniert das noch
+nicht auf älteren Systemen (z. B. Debian 3.x).
