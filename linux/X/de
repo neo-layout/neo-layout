@@ -225,7 +225,7 @@ xkb_symbols "neo" {
     key <AE08> { [	    8,	doublelowquotemark, singlelowquotemark, guillemotright, slash	 ] };
     key <AE09> { [	    9,	leftdoublequotemark,    leftsinglequotemark,    guillemotleft,  asterisk] };
     key <AE10> { [	    0,	rightdoublequotemark,   rightsinglequotemark,   U203A,  minus    ] };
-    key <AE11> { [	    minus,  U2013,  U2014,  U2039                                        ] };
+    key <AE11> { [	    minus,  U2013,  U2014,  U2039, eth, ETH                              ] };
     key <AE12> { [	    dead_acute, dead_grave, dead_cedilla,   dead_ogonek,    dead_abovedot,  dead_abovering  ] };
 
 
