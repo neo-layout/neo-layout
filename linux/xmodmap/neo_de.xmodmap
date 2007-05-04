@@ -30,7 +30,7 @@ keycode 17 = 8 doublelowquotemark singlelowquotemark guillemotright slash
 keycode 18 = 9 leftdoublequotemark leftsinglequotemark guillemotleft asterisk
 keycode 19 = 0 rightdoublequotemark rightsinglequotemark U203A minus
 
-keycode 20 = minus U2013 U2014 U2039
+keycode 20 = minus U2013 U2014 U2039 eth ETH
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
