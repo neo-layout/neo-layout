@@ -36,7 +36,8 @@ Antwort von Nora:
 dead_stroke
 =============
 Den dead_stroke sollte man wieder einkommentieren, leider funktioniert das noch
-nicht auf älteren Systemen (z. B. Debian 3.x).
+nicht auf älteren Systemen (z. B. Debian 3.x). Und außerdem bewirkt er leider
+sowieso noch gar nichts.
 
 =============
 neo light
