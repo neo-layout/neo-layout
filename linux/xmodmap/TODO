@@ -5,20 +5,13 @@ Shift+Mod5+x drücke, dann nicht.
 
 == Deadkey finden ==
 was jetzt noch fehlt: 
-Rumänisch: ș Ș ț Ț
-wo bitte ist dieser deadkey? hab in der keysymdef.h nix gefunden oder
-ist das der dead_belowdot ?
+Rumänisch: ț Ț
+Müsste mit dead_cedilla und t oder T gehen, geht aber nicht (X.org 7.1 mit
+Fedora6)
 
 == Bugreport an X.org ==
 folgendes sind meiner Meinung nach Bugs und sollten eigentlich schon mit
 den bisher definierten gehen:
-
-Walisisch: Ŵ ŵ ŷ Ŷ
-Esperanto: ĈĜĤĴŜŬ
---> dead_circum
-
-Maltesisch: Ċ ċ ġ Ġ
---> dead_abovedot
 
 Maltesisch: Ħ ħ
 Isländisch, Färöisch: Ð
@@ -28,6 +21,7 @@ Dänisch, Färöisch, Norwegisch: Ø ø
 --> für diese gibt es meiner Meinung nach den dead_stroke. Der
 funktioniert allerdings bei mir nicht. Vielleicht kann das ja jemand auf
 einem anderen System mal ausprobieren.
+  Funktioniert bei mir auch nicht. Es passiert gar nichts wenn man dead_stroke drückt. gez. Erik
 
 Isländisch, Färöisch: ð
 Kroatisch: đ
@@ -51,4 +45,5 @@ X-Server. Jedoch ist auch ein Missverständnis der Bedienung von xmodmap
 unsererseits noch nicht ausgeschlossen.
 
 3) dead_stroke wieder einkommentieren, was leider noch nicht auf allen Systemen
-funktioniert, z. B. auf Debian 3.x-Systemen.
+funktioniert, z. B. auf Debian 3.x-Systemen. Und außerdem bewirkt er leider
+sowieso noch gar nichts.
