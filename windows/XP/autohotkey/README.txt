@@ -1,6 +1,7 @@
-Version 03.05.2007
+Version 09.05.2007
 
 == Installation ==
+
 Hierfür braucht man keine Administratorrechte, es muss jedoch 
 zuerst das Programm namens „autohotkey“
 (http://www.autohotkey.com/download/AutohotkeyInstall.exe) 
@@ -9,6 +10,7 @@ Dazu benötigt man KEINE Administratorrechte, wenn man das Programm
 beispielsweise in das Verzeichnis „Eigene Dateien/NEO“ installiert.
 
 === ahk-Dateien ===
+
 Danach kann man die .ahk-Skripte (neo20.ahk und neo20-remap.ahk) 
 mit einem Doppelklick starten. 
 Man erhält dann ein Systray-Icon, mit dem man das Skript vorübergehend 
@@ -17,11 +19,13 @@ Wenn das Öffnen nicht direkt funktioniert: Öffnen mit -> Autohotkey.exe
 auswählen -> Immer mit diesem Programm öffnen.
 
 === Automatischer Start ===
+
 Bei Bedarf kann man sich Verknüpfungen mit neo20.ahk und 
 neo20-remap.ahk in den Autostart-Ordner legen, dann hat man das 
 Layout direkt bei der Anmeldung.
 
 == Wie es funktioniert ==
+
 Das Programm kann alle Tastendrucke abfangen und statt dessen andere 
 Tasten simulieren. Die Zeile
   a::send b
@@ -30,6 +34,7 @@ Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss
 dann nur das Skript neu starten um die Änderungen zu übernehmen.
 
 == Bekannte Fehler ==
+
 Das Umbelegen der Funktionstasten ist etwas ‚buggy‘ (siehe
 http://www.autohotkey.com/forum/topic10169.html) und wurde deshalb 
 in eine Extradatei ausgelagert (neo20-remap.ahk). 
@@ -38,6 +43,7 @@ Einfach beide Skripte starten.
 Problem: Manchmal kommt nur Control Down an, aber nicht das Up, 
 dann bleibt Control aktiv. 
 Lösung ist dann, einmal die normale Controltaste zu drücken.
+--> taucht bei mir inzwischen nicht mehr auf *auf Holz klopf*
 
 Ohne die Remap-Datei können 
 die 3. Ebene mit Ctrl+Win 
@@ -46,10 +52,8 @@ die 5. mit AltGr
 die 6. mit AltGr+Shift
 erreicht werden.
 
-Alle Nicht-ASCII-Zeichen werden über die Zwischenablage eingefügt.
-Der Dateiinhalt der Zwischenablage geht dabei verloren.
-
 == Nummernblock ==
+
 Der Nummernblock auf der 2. Ebene ist wahlweise
 - bei AUSgeschaltetem Numlock  
 - bei EINgeschaltetem Numlock mit Shift 
@@ -70,10 +74,9 @@ AltGr + Ende = Computer ausschalten
 --> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod5
 
 == To Do ==
-Dead Keys: Die Deadkeys, die auf der zweiten Seite der .ods aufgeführt sind und die meisten von http://unicode.e-workers.de 
-funktionieren inzwischen – es fehlen noch die mit „Punkt drüber“.
 
 Lässt sich die neo20-remap.ahk in die Hauptdatei integrieren?
 Ist mir bislang noch nicht gelungen.
 
-Dateiinhalt der Zwischenablage sichern?
+Geschütztes Leerzeichen und schmales Leerzeichen auf 4./6. Ebene über 
+Leertaste, finde ich keine ANSI-Darstellung für.
