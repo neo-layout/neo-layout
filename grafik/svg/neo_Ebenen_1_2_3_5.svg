@@ -92,7 +92,7 @@
      d="M 1083,2050 L 210,2050 L 210,249.99995 L 1956,249.99995 L 1956,2050 L 1083,2050"
      id="path469" />
   <text
-     style="font-size:564px;font-weight:700;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text477"
      y="-68.396172"
      x="-460.39285">
@@ -114,7 +114,7 @@
        style="fill:#ff0000">^</tspan>
   </text>
   <text
-     style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text493"
      y="-0.00015889859">
     <tspan
@@ -576,7 +576,7 @@
      d="M 24137,2050 L 23264,2050 L 23264,249.99995 L 25010,249.99995 L 25010,2050 L 24137,2050"
      id="path997" />
   <text
-     style="font-size:564px;font-weight:700;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1005"
      y="-68.396217"
      x="-406.22897">
@@ -598,7 +598,7 @@
        style="fill:#ff0000">'</tspan>
   </text>
   <text
-     style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1021"
      y="-0.00015889859">
     <tspan
@@ -2490,7 +2490,7 @@
        style="fill:#000000;stroke:none;visibility:visible" />
   </g>
   <text
-     style="font-size:564px;font-weight:700;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2692"
      y="-82.99192"
      x="463.96646">
@@ -2501,7 +2501,7 @@
        style="fill:#ff0000">˙</tspan>
   </text>
   <text
-     style="font-size:706px;font-weight:700;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2696"
      y="152.94211"
      x="868.39728">
@@ -2509,27 +2509,27 @@
        x="25343.398"
        y="3767.9419"
        id="tspan2698"
-       style="fill:#ff0000">¨‍</tspan>
+       style="fill:#ff0000">¨</tspan>
   </text>
   <text
-     style="font-size:706px;font-weight:700;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2700"
      y="-713.5686"
      x="949.92548">
     <tspan
        x="25424.926"
-       y="2901.4312"
+       y="2882.4209"
        id="tspan2702"
        style="fill:#ff0000">/</tspan>
   </text>
   <text
-     style="font-size:706px;font-weight:700;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
+     style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2704"
      y="-434.16766"
      x="119.27625">
     <tspan
        x="24594.275"
-       y="3180.832"
+       y="2882.4209"
        id="tspan2706"
        style="fill:#ff0000">ˉ</tspan>
   </text>
