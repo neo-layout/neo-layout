@@ -1,67 +1,96 @@
-1) Umlerner-Version, Vollversion: Wie benennen?
-Vorschläge:
-NEO carving / NEO race
-NEO-light / NEO-full
-NEO-basic / NEO-enhanced
-NEO-basic / NEO
-NEO basic - NEO pro
-NEO basic - NEO advanced
-NEO-start / NEO-advanced
-NEO / NEO++
-NEO-beginner / NEO-pro
-??? / NEO-Hacker
-??? / NEO-Programmer
-NEO Basis /
-NEO Wechsler /
-NEO Umsteiger /
-NEO light - NEO BUchstaben, alte Sonderzeichen
-oder: NEO Writer --> für den Vielschreiber
-NEO enterprise - NEO Sonderzeichen auf QWERTZ Tastatur
-(oder NEO Professional --> für den Hardcore Programmierer)
-NEO World
-oder: NEO full --> das richtige und komplette NEO
+1)  Umlerner-Version, Vollversion: Wie benennen?
+    Vorschläge:
+    NEO carving / NEO race
+    NEO-light / NEO-full
+    NEO-basic / NEO-enhanced
+    NEO-basic / NEO
+    NEO basic - NEO pro
+    NEO basic - NEO advanced
+    NEO-start / NEO-advanced
+    NEO / NEO++
+    NEO-beginner / NEO-pro
+    ??? / NEO-Hacker
+    ??? / NEO-Programmer
+    NEO Basis /
+    NEO Wechsler /
+    NEO Umsteiger /
+    NEO light - NEO BUchstaben, alte Sonderzeichen
+    oder: NEO Writer --> für den Vielschreiber
+    NEO enterprise - NEO Sonderzeichen auf QWERTZ Tastatur
+    (oder NEO Professional --> für den Hardcore Programmierer)
+    NEO World
+    oder: NEO full --> das richtige und komplette NEO
+1a) Wie soll NEO-Starter aussehen? Wie Neo 1.1 nur mit getauschten x, j, q? 
+    Oder noch andere Verbesserungen?
 
-6) Soll noch ein »Enter« auf einer höheren Ebene dazu kommen? Wo?
-7) Fehlen noch irgendwelche Zeichen europäischer Sprachen?
+6)  Soll noch ein »Enter« auf einer höheren Ebene dazu kommen? Wo?
+6a) Enter-Taste auf Tab? Enter-Taste auf 5. Ebene über das »c«?
+
+7)  Fehlen noch irgendwelche Zeichen europäischer Sprachen?
+
 11) letzte  offene Positionen auf den zweiter und dritter Ebene (z.B.
     die   Zahlen   2  und 3; ferner bestand der Vorschlag, wichtigere
     Zeichen  für   die  Belegung  der  Zahlen 6 und 7 auf den höheren
     Ebenen zu finden; Ebene  2 von ß sowie Ebene 3 von y sind noch zu
     belegen und hängen mit Topic #2 zusammen)
+
 13) Position von ; und & auf der 3. Ebene vertauschen? (Vorschlag von Lucky)
+
 14) Position des ^ ändern oder zusätzlich über die 2 auf die dritte Ebene?
     Denn es wird in Tex auch häufig für Zahlen verwendet, z. B. ^2 oder ^3.
     Eine Idee war das ^ mit dem _ oder dem ~ zu tauschen.
+
 15) Weitere Zeichenkombinationen mit Deadkeys (unter Linux noch keine
-Möglichkeit) (siehe Mails vom 2. April 2007):
-Zum Thema Todo gehören ja auch die »Zeichen über die Nachzudenken ist«.
-Die Zeichen »ungleich«, »fast gleich« und »identisch« kann man doch
-einfach per Deadkey realisieren, also / ~ -(alle tot) und =, ebenso die
-»größer gleich« und »kleiner gleich« als Kombination aus -(tot) und <
-bzw. >.
-~= müsste meiner Meinung nach eher ≅ ergeben
+    Möglichkeit) (siehe Mails vom 2. April 2007):
+    Zum Thema Todo gehören ja auch die »Zeichen über die Nachzudenken ist«.
+    Die Zeichen »ungleich«, »fast gleich« und »identisch« kann man doch
+    einfach per Deadkey realisieren, also / ~ -(alle tot) und =, ebenso die
+    »größer gleich« und »kleiner gleich« als Kombination aus -(tot) und <
+    bzw. >.
+    ~= müsste meiner Meinung nach eher ≅ ergeben
 
-== Zeichen über die Nachzudenken ist ==
-№ U+2116 Numero sign
-… U+2026 HORIZONTAL ELLIPSIS
-• U+2022 BULLET
-∕ U+2215 Division slash
-⁄ U+2044 Fraction slash
-≠ U+2260 ungleich
-≈ U+2248 fast gleich
-≟ U+225F gleich?
-≡ U+2261 identisch
-≤ ≥ U+2264 U+2265 kleiner/größer oder gleich
-≪ ≫ U+226A U+226B viel kleiner/größer als
-√ U+221A SQUARE ROOT
-∫ U+222B INTEGRAL
-∧∨ U+2227 U+2228
-∩∪ U+2229 U+222A
-∀∃∊⇒∞~
-Lautschrift
-Del(\partial) und Nabla (\nabla)
+16) ¹, ², ³ auf 3. Ebene? ¬ auf 4.?
 
-== Anleitung schreiben ==
-Eine kurze und außerdem eine ausführliche Anleitung für die Zeichen und
-deren Benutzung schreiben.
+17) Eth »Ð« und eth »ð« auf der vorgeschlagenen Position ok, oder unnötig?
+
+18) Neue Position von untoten ^ und ~ ok?
+
+19) NoBreakSpace auf die 4. und schmales Leerzeichen (gehört zwischen Zahl 
+    und Einheit) auf die 6. Ebene?
+
+20) Zeichen über die Nachzudenken ist
+    Toten „Mittenpunkt" und „Punkt darunter" auf 5. und 6. Ebene über das tote ^?
+    № U+2116 Numero sign
+    … U+2026 HORIZONTAL ELLIPSIS
+    • U+2022 BULLET
+    ∕ U+2215 Division slash
+    ⁄ U+2044 Fraction slash
+    ≠ U+2260 ungleich
+    ≈ U+2248 fast gleich
+    ≟ U+225F gleich?
+    ≡ U+2261 identisch
+    ≤ ≥ U+2264 U+2265 kleiner/größer oder gleich
+    ≪ ≫ U+226A U+226B viel kleiner/größer als
+    √ U+221A SQUARE ROOT
+    ∫ U+222B INTEGRAL
+    ∧∨ U+2227 U+2228
+    ∩∪ U+2229 U+222A
+    ∀∃∊⇒∞~
+    Lautschrift
+    Del(\partial) und Nabla (\nabla)
+
+20) Anleitung schreiben
+    Eine kurze und außerdem eine ausführliche Anleitung für die Zeichen und
+    deren Benutzung schreiben.
+
+21) Was spricht jetzt noch gegen eine „Veröffentlichung“ von Neo2? Es ist
+    doch nun bis auf minimalste Änderungen „fertig“.
+
+22) Wer macht die neue Homepage auf http://www.neo-layout.org?
+    Was für Software dafür nehmen?
+		Benötigt wird: - Hauptseite
+		               - svn
+									 - Mailingliste
+									 - wiki
+									 - Blog
 
