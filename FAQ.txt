@@ -70,6 +70,24 @@ A: Aus 3 Gründen wurde die drei Buchstaben vertauscht:
 
 --------------------------------------------------------------------------------
 
+F: Wieso sind die Sonderzeichen – !<>=;?()-:+%&"'~$|#\/{}*@_[]^ – so angeordnet,
+wie sie angeordnet sind? Wie ist man darauf gekommen?
+
+A: Die Sonderzeichen wurden für NEO Version 2 nach ähnlichen Kriterien
+zugeordnet, wie die Buchstaben schon für NEO Version 1. Also nicht nur nach
+Häufigkeit und guter Erreichbareit, sondern auch nach vorkommenden Bi- und
+Trigrammen. Das wären (unsortiert):
+~/  :=  ->  =>  <=  >=  !=  :// />  </ <!-- --> <?  ?>  /*  */  /.  ="  !"  ?"
+("  ")  ('  ')  );  ,"  ",  &>  =`  }[  ]{  _{  ^{  ^2  ^3  :-) ;-) +=  *=  #!/
+$@  
+Diese werden in den gängigen Programmier-, Skript- und Auszeichnungssprachen
+häufig verwendet. Leider ist es prinzipiell nicht möglich alle Zeichen für alle
+Bi- und Trigramme gut zu positionieren. Verbesserungsvorschläge sind jedoch
+willkommen. Außerdem kann sich jeder seine individuelle NEO-Version auch an die
+eigenen Bedürfnisse anpassen. Dazu einfach auf der Mailingliste fragen.
+
+--------------------------------------------------------------------------------
+
 F: Wann wird eigentlich in der deutschen Sprache welcher Binde-/Gedanken-Strich
 verwendet? Welcher ist der Bis-Strich?
 
