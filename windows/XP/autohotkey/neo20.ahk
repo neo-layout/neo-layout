@@ -22,8 +22,8 @@ disable = Deaktiviere %name%
 
 ; ToDo
 ; --------
-; nobreakspace und schmales Leerzeichen
-
+; nobreakspace und schmales Leerzeichen  
+; , auf Altgr, geht nicht, weil sonst AltGr nur noch , macht
 
 ; ANSI-Darstellung von beliebigen Unicode-Zeichen
 ; -----------------------------------------------
@@ -95,7 +95,7 @@ menu, tray, add, Öffnen, open
    menu, helpmenu, add, http://www.neo-layout.org/, neo
 menu, tray, add, Hilfe, :helpmenu
 menu, tray, add
-menu, tray, add, %disable%, toggleneo
+menu, tray, add, %disable%, togglesuspend
 menu, tray, default, %disable%
 menu, tray, add
 menu, tray, add, Edit, edit
@@ -109,6 +109,21 @@ menu, tray, tip, %name%
 
 ;1. Ebene
 ;---------
+
+Space::                                       
+  If A_PriorHotkey = ^           ; circumflex 
+    BSUnicode("Ë†")                           
+  Else If A_PriorHotkey = +      ; tilde      
+    BSUnicode("Ëœ")                           
+  Else                                        
+    Send {Space}                              
+Return                                        
+                                              
+Enter::Send {Enter}                           
+Esc::Send {Esc}                               
+                                              
+; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ^::send {^} ; circumflex, tot
 1::send 1
@@ -440,18 +455,6 @@ Return
     send j
 Return
 
-Space::
-  If A_PriorHotkey = ^           ; circumflex
-    BSUnicode("Ë†")
-  Else If A_PriorHotkey = +      ; tilde 
-    BSUnicode("Ëœ")
-  Else
-    Send {Space}
-Return
-
-Enter::Send {Enter}
-Esc::Send {Esc}
-
 
 ;2. Ebene (Shift)
 ;---------
@@ -587,15 +590,15 @@ Return
 Return
 
 +s::
-  If A_PriorHotkey = #^+ ; Diaerese
+  If A_PriorHotkey = #^+        ; Diaerese
     Send, {bs}Ï
-  Else If A_PriorHotkey = ++ ; macron
+  Else If A_PriorHotkey = ++    ; macron
     BSUnicode("Äª")
-  Else If A_PriorHotkey = #^^ ; brevis 
+  Else If A_PriorHotkey = #^^   ; brevis 
     BSUnicode("Ä¬")
-  Else If A_PriorHotkey = #^+´ ; ogonek
+  Else If A_PriorHotkey = #^+´  ; ogonek
     BSUnicode("Ä®")
-  Else If A_PriorHotkey = + ; tilde
+  Else If A_PriorHotkey = +     ; tilde
     BSUnicode("Ä¨")
   Else If A_PriorHotkey = <^>!´ ; punkt darüber 
     BSUnicode("Ä°")
@@ -604,32 +607,32 @@ Return
 Return
 
 +d::
-  If A_PriorHotkey = #^+ ; Diaerese
+  If A_PriorHotkey = #^+          ; Diaerese
     Send {bs}Ä
-  Else If A_PriorHotkey = + ; tilde
+  Else If A_PriorHotkey = +       ; tilde
     BSUnicode("Ãƒ")
-  Else If A_PriorHotkey = <^>!+´ ; Ring 
+  Else If A_PriorHotkey = <^>!+´  ; Ring 
     Send {bs}Å
-  Else If A_PriorHotkey = ++ ; macron
+  Else If A_PriorHotkey = ++      ; macron
     BSUnicode("Ä€")
-  Else If A_PriorHotkey = #^^ ; brevis 
+  Else If A_PriorHotkey = #^^     ; brevis 
     BSUnicode("Ä‚")
-  Else If A_PriorHotkey = #^+´ ; ogonek
+  Else If A_PriorHotkey = #^+´    ; ogonek
     BSUnicode("Ä„")
   Else 
     Send A
 Return 
 
 +f::
-  If A_PriorHotkey = #^+ ; Diaerese
+  If A_PriorHotkey = #^+        ; Diaerese
     Send, {bs}Ë
-  Else If A_PriorHotkey = +^ ; caron
+  Else If A_PriorHotkey = +^    ; caron
     BSUnicode("Äš")
-  Else If A_PriorHotkey = ++ ; macron
+  Else If A_PriorHotkey = ++    ; macron
     BSUnicode("Ä’")
-  Else If A_PriorHotkey = #^^ ; brevis 
+  Else If A_PriorHotkey = #^^   ; brevis 
     BSUnicode("Ä”")
-  Else If A_PriorHotkey = #^+´ ; ogonek 
+  Else If A_PriorHotkey = #^+´  ; ogonek 
     BSUnicode("Ä˜")
   Else If A_PriorHotkey = <^>!´ ; punkt darüber 
     BSUnicode("Ä–")
@@ -638,32 +641,32 @@ Return
 Return 
 
 +g::
-  If A_PriorHotkey = <^>!+ ; Schrägstrich
+  If A_PriorHotkey = <^>!+     ; Schrägstrich
     BSUnicode("Ã˜")
-  Else If A_PriorHotkey = + ; tilde
+  Else If A_PriorHotkey = +    ; tilde
     BSUnicode("Ã•")
   Else If A_PriorHotkey = #^++ ; doppelakut
     BSUnicode("Å")
-  Else If A_PriorHotkey = #^+ ; Diaerese
+  Else If A_PriorHotkey = #^+  ; Diaerese
     Send {bs}Ö
-  Else If A_PriorHotkey = ++ ; macron 
+  Else If A_PriorHotkey = ++   ; macron 
     BSUnicode("ÅŒ")
-  Else If A_PriorHotkey = #^^ ; brevis 
+  Else If A_PriorHotkey = #^^  ; brevis 
     BSUnicode("Å")
   Else
     send O
 Return
 
 +h::
-  If A_PriorHotkey = ^ ; circumflex
+  If A_PriorHotkey = ^           ; circumflex
     BSUnicode("Åœ")
-  Else If A_PriorHotkey = +^ ; caron
+  Else If A_PriorHotkey = +^     ; caron
     BSUnicode("Å ")
-  Else If A_PriorHotkey = ´ ; akut 
+  Else If A_PriorHotkey = ´      ; akut 
     BSUnicode("Åš")
-  Else If A_PriorHotkey = #^´ ; cedilla 
+  Else If A_PriorHotkey = #^´    ; cedilla 
     BSUnicode("Å")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("á¹")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¹¢")
@@ -672,13 +675,13 @@ Return
 Return
 
 +j::
-  If A_PriorHotkey = +^ ; caron
+  If A_PriorHotkey = +^         ; caron
     BSUnicode("Å‡")
-  Else If A_PriorHotkey = + ; tilde
+  Else If A_PriorHotkey = +     ; tilde
     BSUnicode("Ã‘")
-  Else If A_PriorHotkey = ´ ; akut 
+  Else If A_PriorHotkey = ´     ; akut 
     BSUnicode("Åƒ")
-  Else If A_PriorHotkey = #^´ ; cedilla 
+  Else If A_PriorHotkey = #^´   ; cedilla 
     BSUnicode("Å…")
   Else If A_PriorHotkey = <^>!´ ; punkt darüber 
     BSUnicode("á¹„")
@@ -687,13 +690,13 @@ Return
 Return
 
 +k::
-  If A_PriorHotkey = +^ ; caron
+  If A_PriorHotkey = +^          ; caron
     BSUnicode("Å˜")
-  Else If A_PriorHotkey = ´ ; akut 
+  Else If A_PriorHotkey = ´      ; akut 
     BSUnicode("Å”")
-  Else If A_PriorHotkey = #^´ ; cedilla 
+  Else If A_PriorHotkey = #^´    ; cedilla 
     BSUnicode("Å–")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("á¹˜")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¹š")
@@ -702,13 +705,13 @@ Return
 Return
 
 +l::
-  If A_PriorHotkey = +^ ; caron
+  If A_PriorHotkey = +^          ; caron
     BSUnicode("Å¤")
-  Else If A_PriorHotkey = #^´ ; cedilla 
+  Else If A_PriorHotkey = #^´    ; cedilla 
     BSUnicode("Å¢")
-  Else If A_PriorHotkey = #^+^ ; Querstrich
+  Else If A_PriorHotkey = #^+^   ; Querstrich
     BSUnicode("Å¦")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("á¹ª")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¹¬")
@@ -718,11 +721,11 @@ Return
 
 
 +ö::
-  If A_PriorHotkey = #^+^ ; Querstrich
+  If A_PriorHotkey = #^+^        ; Querstrich
     BSUnicode("Ä")
-  Else If A_PriorHotkey = +^ ; caron 
+  Else If A_PriorHotkey = +^     ; caron 
     BSUnicode("Ä")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("á¸Š")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¸Œ")
@@ -730,9 +733,9 @@ Return
 Return
 
 +ä::  
-  If A_PriorHotkey = #^+ ; Diaerese
+  If A_PriorHotkey = #^+     ; Diaerese
     Send {bs}Ÿ
-  Else If A_PriorHotkey = ^ ; circumflex
+  Else If A_PriorHotkey = ^  ; circumflex
     BSUnicode("Å¶")
   Else
     send Y
@@ -743,16 +746,16 @@ Return
 +c::send Ä
 
 +v::
-  If A_PriorHotkey = <^>!´ ; punkt darüber 
+  If A_PriorHotkey = <^>!´    ; punkt darüber 
     BSUnicode("á¹–")
   Else 
     send P
 Return
 
 +b::  
-  If A_PriorHotkey = +^ ; caron  
+  If A_PriorHotkey = +^         ; caron  
     BSUnicode("Å½")
-  Else If A_PriorHotkey = ´ ; akut 
+  Else If A_PriorHotkey = ´     ; akut 
     BSUnicode("Å¹")
   Else If A_PriorHotkey = <^>!´ ; punkt darüber 
     BSUnicode("Å»")
@@ -761,14 +764,14 @@ Return
 Return
 
 +n::
-  If A_PriorHotkey = <^>!´ ; punkt darüber 
+  If A_PriorHotkey = <^>!´       ; punkt darüber 
     BSUnicode("á¸‚")
   Else 
     send B
 Return
 
 +m::
-  If A_PriorHotkey = <^>!´ ; punkt darüber 
+  If A_PriorHotkey = <^>!´       ; punkt darüber 
     BSUnicode("á¹€")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¹‚")
@@ -780,7 +783,7 @@ Return
 +.::send :
 
 +-::
-  If A_PriorHotkey = ^ ; circumflex
+  If A_PriorHotkey = ^            ; circumflex
     BSUnicode("Ä´")
   Else
     send J
@@ -791,7 +794,7 @@ Return
 ;(Win+Ctrl)
 ;----------------
 
-#^^::Unicode("Ë˜") ; brevis, soll tot
+#^^::Unicode("Ë˜")   ; brevis
 #^1::Unicode("Â¬")
 #^2::send {^}{space} 
 #^3::send 3 
@@ -803,7 +806,7 @@ Return
 #^9::send ‘
 #^0::send ’
 #^ß::Unicode("â€”")
-#^´::send ¸ ; cedilla, soll tot
+#^´::send ¸ ; cedilla
 
 #^q::send @ 
 #^w::send _
@@ -815,8 +818,8 @@ Return
 #^i::send >
 #^o::send `=
 #^p::send `;
-#^ü::Unicode("Ä³")  ;ij
-#^+::Unicode("Â¨") ; Diaerese, soll tot
+#^ü::Unicode("Ä³")   ; ij
+#^+::Unicode("Â¨")   ; Diaerese
 
 #^a::send \
 #^s::send `/
@@ -859,12 +862,12 @@ Return
 #^+9::send « 
 #^+0::send › 
 #^+ß::send ‹ 
-#^+´::Unicode("Ë›") ; ogonek, soll tot
+#^+´::Unicode("Ë›") ; ogonek
 
-#^+q::Unicode("Î¾")  ;xi
+#^+q::Unicode("Î¾") ;xi
 #^+w::send v
-#^+e::Unicode("Î»")  ;lambda
-#^+r::Unicode("Ï‡")  ;chi 
+#^+e::Unicode("Î»") ;lambda
+#^+r::Unicode("Ï‡") ;chi 
 #^+t::send w
 #^+z::Unicode("Îº") ;kappa
 #^+u::Unicode("Ïˆ") ;psi
@@ -872,7 +875,7 @@ Return
 #^+o::Unicode("Ï†") ;phi
 #^+p::send q
 #^+ü::Unicode("Ä²") ;IJ
-#^++::send " ;doppelakut, soll tot
+#^++::send "        ;doppelakut
 
 #^+a::send u
 #^+s::Unicode("Î¹") ;iota
@@ -906,13 +909,13 @@ Return
 ;(AltGr)
 ;-----------------
 
-<^>!^::Unicode("Â·") ; Mittenpunkt, tot mit l und L
-<^>!4::Send {PgUp} ;Prev
+<^>!^::Unicode("Â·") ; Mittenpunkt
+<^>!4::Send {PgUp}   ; Prev
 <^>!8::Send /
 <^>!9::Send *
 <^>!0::Send -
 <^>!ß::Unicode("Ã°") ; eth
-<^>!´::Unicode("Ë™") ; punkt oben drüber, soll tot
+<^>!´::Unicode("Ë™") ; punkt oben drüber
 
 <^>!q::Send {Esc}
 <^>!w::Send {Backspace}
@@ -924,7 +927,7 @@ Return
 <^>!o::Send 9
 <^>!p::Send {+}
 <^>!ü::Unicode("É™") ; ?
-<^>!+::Unicode("/") ; Schrägstrich, soll tot 
+<^>!+::Unicode("/")  ; Schrägstrich 
 
 <^>!a::Send {Home}
 <^>!s::Send {Left}
@@ -936,12 +939,12 @@ Return
 <^>!k::Send 5
 <^>!l::Send 6
 <^>!ö::Send `,
-<^>!ä::Send ş ; thorn
+<^>!ä::Send ş        ; thorn
 
 
 <^>!y::Send {Tab}
 <^>!x::Send {Del}
-<^>!c::Send {PgDn} ;Next
+<^>!c::Send {PgDn}   ; Next
 <^>!n::Send ±
 <^>!m::Send 1
 <^>!,::Send 2
@@ -958,7 +961,7 @@ Return
 ;(AltGr+Shift)
 ;-----------------------
 
-<^>!+^::Send . ; punkt darunter
+<^>!+^::Send .        ; punkt darunter
 <^>!+4::Send +{Prev}
 <^>!+ß::Unicode("Ã") ; Eth
 <^>!+´::Unicode("Ëš") ; ring obendrauf
@@ -1094,56 +1097,51 @@ Return
 ;Win-Ebene
 ;---------
 
-#1::send #1
-#2::send #2
-#3::send #3
-#4::send #4
-#5::send #5
-#6::send #6
-#7::send #7
-#8::send #8
-#9::send #9
-#0::send #0
-#ß::send #-
+#1::sendevent #1
+#2::sendevent #2
+#3::sendevent #3
+#4::sendevent #4
+#5::sendevent #5
+#6::sendevent #6
+#7::sendevent #7
+#8::sendevent #8
+#9::sendevent #9
+#0::sendevent #0
+#ß::sendevent #-
 
-#q::send #x
-#w::send #v
+#q::sendevent #x
+#w::sendevent #v
+#e::sendevent #l  
+#r::sendevent #c
+#t::sendevent #w
+#z::sendevent #k
+#u::sendevent #h
+#i::sendevent #g
+#o::sendevent #f
+#p::sendevent #q
+#ü::sendevent #ß
 
-#e::  
-  Run,%A_WinDir%\System32\Rundll32.exe User32.dll`,LockWorkStation 
-  return
-   ; #e::send #l  funktioniert nicht, Computer wird nicht gesperrt
-   ; http://www.autohotkey.com/forum/viewtopic.php?p=66937#66937
+#a::sendevent #u
+#s::sendevent #i
+#d::sendevent #a
+#f::sendevent #e
+#g::sendevent #o
+#h::sendevent #s
+#j::sendevent #n
+#k::sendevent #r
+#l::sendevent #t
+#ö::sendevent #d
+#ä::sendevent #y
 
-#r::send #c
-#t::send #w
-#z::send #k
-#u::send #h
-#i::send #g
-#o::send #f
-#p::send #q
-#ü::send #ß
+#y::sendevent #ö
+#x::sendevent #ü
+#c::sendevent #ä
+#v::sendevent #p
+#b::sendevent #z
+#n::sendevent #b
+#m::sendevent #m
+#-::sendevent #j
 
-#a::send #u
-#s::send #i
-#d::send #a
-#f::send #e
-#g::send #o
-#h::send #s
-#j::send #n
-#k::send #r
-#l::send #t
-#ö::send #d
-#ä::send #y
-
-#y::send #ö
-#x::send #ü
-#c::send #ä
-#v::send #p
-#b::send #z
-#n::send #b
-#m::send #m
-#-::send #j
 
 ;Strg-Shift-Ebene
 ;-----------------
@@ -1218,16 +1216,16 @@ Return
 #^NumpadMult::send ×
 #^NumpadSub::send -
 #^NumpadAdd::send ±
-#^NumpadEnter::Unicode("â‰") ; neq
+#^NumpadEnter::Unicode("â‰ ") ; neq
 
-#^Numpad7::Unicode("â…")   ; 7/8
-#^Numpad8::Unicode("â†‘")   ; uparrow
-#^Numpad9::Unicode("â…œ")   ; 3/8
-#^Numpad4::Unicode("â†?")   ; leftarrow
+#^Numpad7::Unicode("â…")     ; 7/8
+#^Numpad8::Unicode("â†‘")     ; uparrow
+#^Numpad9::Unicode("â…œ")     ; 3/8
+#^Numpad4::Unicode("â†")     ; leftarrow
 #^Numpad5::send †
-#^Numpad6::Unicode("â†’")   ; rightarrow
+#^Numpad6::Unicode("â†’")     ; rightarrow
 #^Numpad1::send ¹ 
-#^Numpad2::Unicode("â†“")   ; downarrow
+#^Numpad2::Unicode("â†“")     ; downarrow
 #^Numpad3::send ³
 #^Numpad0::send `%
 #^NumPadDot::send .
@@ -1248,7 +1246,7 @@ Return
 #^+NumpadEnter::Unicode("â‰ˆ") ; approx
 
 #^+NumpadHome::Unicode("â…›")  ; 1/8
-#^+NumpadUp::Unicode("â…?")    ; 5/8
+#^+NumpadUp::Unicode("â…")    ; 5/8
 #^+NumpadPgUp::Unicode("â…œ")  ; 3/8
 #^+NumpadLeft::send ¼
 #^+NumpadClear::send ½
@@ -1276,7 +1274,7 @@ Return
 
 
 <^>!Numpad7::Unicode("â…›")  ; 1/8
-<^>!Numpad8::Unicode("â…?")  ; 5/8
+<^>!Numpad8::Unicode("â…")  ; 5/8
 <^>!Numpad9::Unicode("â…œ")  ; 3/8
 <^>!Numpad4::send ¼
 <^>!Numpad5::send ½
@@ -1306,8 +1304,9 @@ BSUnicode(code)
   Clipboard := saved_clipboard
   }
 
+; ------------------------------------
 
-toggleneo:
+togglesuspend:
    if state <>
    {
       state =
