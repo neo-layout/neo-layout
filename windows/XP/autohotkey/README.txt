@@ -80,3 +80,8 @@ Ist mir bislang noch nicht gelungen.
 
 Geschütztes Leerzeichen und schmales Leerzeichen auf 4./6. Ebene über 
 Leertaste, finde ich keine ANSI-Darstellung für.
+
+¹²³ auf 123 wegnehmen, das ist schon auf dem Nummernblock (siehe FAQ), denn
+die Zeichen sind auch per ^1=¹, ^2=² und ^3=³ erreichbar. (auch unter
+Windows???) ¿ ja, mit Neo und autohotkey auf jeden Fall...vorher vielleicht
+nicht.
