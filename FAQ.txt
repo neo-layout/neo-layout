@@ -78,8 +78,8 @@ zugeordnet, wie die Buchstaben schon für NEO Version 1. Also nicht nur nach
 Häufigkeit und guter Erreichbareit, sondern auch nach vorkommenden Bi- und
 Trigrammen. Das wären (unsortiert):
 ~/  :=  ->  =>  <=  >=  !=  :// />  </ <!-- --> <?  ?>  /*  */  /.  ="  !"  ?"
-("  ")  ('  ')  );  ,"  ",  &>  =`  }[  ]{  _{  ^{  ^2  ^3  :-) ;-) +=  *=  #!/
-$@  
+("  ")  ('  ')  );  ,"  ",  &>  =`  }[  ]{  _{  ^{  ^2  ^3  :-) ;-) +=  *=  /=
+-=  #!/ $@  {$
 Diese werden in den gängigen Programmier-, Skript- und Auszeichnungssprachen
 häufig verwendet. Leider ist es prinzipiell nicht möglich alle Zeichen für alle
 Bi- und Trigramme gut zu positionieren. Verbesserungsvorschläge sind jedoch
