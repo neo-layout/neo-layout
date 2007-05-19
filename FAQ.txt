@@ -183,6 +183,19 @@ A: Die gibt es beide nicht mehr, sind also nur noch historisch, da diese
 Länder jetzt auch den Euro haben.
 
 --------------------------------------------------------------------------------
+
+F: Ich möchte in meinen tex-Dateien (Latex) direkt die Sonderzeichen (z. B.
+griechische Buchstaben oder mathematische Symbole) eingeben, um mir etwas
+Schreibarbeit zu ersparen. Leider kommt immer der Fehler „! Package inputenc
+Error: Unicode char \u8:α not set up for use with LaTeX.“ Wieso?
+
+A: Bisher muss man die meisten Zeichen erst noch definieren. Um sich Arbeit zu
+sparen, haben fleißige Menschen schon eine Datei geschrieben, die man sich nur
+in das gleiche Verzeichnis wie die tex-Datei kopieren muss. Sie befindet sich
+mit kleiner Anleitung unter https://neo.eigenheimstrasse.de/svn/latex/
+Erweiterungen werden gerne gesehen.
+
+--------------------------------------------------------------------------------
 2. Betriebssystemspeziefische Fragen
 --------------------------------------------------------------------------------
 2.1 Linux, Unix, BSD
