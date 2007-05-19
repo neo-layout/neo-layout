@@ -1,5 +1,5 @@
 /*
-   NEO-Layout - Version vom 08.05.2007
+   NEO-Layout - Version vom 19.05.2007
    Mod3 (3./4. Ebene) funktioniert über Win+Ctrl, 
     Mod5 (5./6. Ebene) über AltGr.
    Zur Umbelegung von Mod3 auf CapsLock und #
@@ -22,8 +22,10 @@ disable = Deaktiviere %name%
 
 ; ToDo
 ; --------
-; nobreakspace und schmales Leerzeichen  
-; , auf Altgr, geht nicht, weil sonst AltGr nur noch , macht
+; - nobreakspace und schmales Leerzeichen  
+; - ./, auf Altgr 
+; - CapsLock über beide Mod3
+
 
 ; ANSI-Darstellung von beliebigen Unicode-Zeichen
 ; -----------------------------------------------
@@ -126,9 +128,27 @@ Esc::Send {Esc}
 
 
 ^::send {^} ; circumflex, tot
-1::send 1
-2::send 2
-3::send 3
+1::
+  If A_PriorHotkey = ^          ; circumflex 
+    send {bs}¹
+  Else
+    send 1
+return
+
+2::  
+  If A_PriorHotkey = ^          ; circumflex 
+    send {bs}²
+  Else
+    send 2
+return
+
+3::  
+  If A_PriorHotkey = ^          ; circumflex 
+    send {bs}³
+  Else
+    send 3
+return
+
 4::send 4
 5::send 5
 6::send 6
@@ -136,7 +156,7 @@ Esc::Send {Esc}
 8::send 8
 9::send 9
 0::send 0
-ß::send - 
+ß::send - ; Bind
 ´::send {´} ; akut, tot
 
 q::send x
@@ -230,8 +250,7 @@ Return
 
 p::send q
 ü::send ß
-+::send ~ ; tilde, soll tot
-
++::send ~    ; tilde, tot 
 a::
   If A_PriorHotkey = #^+         ; Diaerese
     Send, {bs}ü
@@ -384,6 +403,8 @@ Return
 ö::
   If A_PriorHotkey = #^+^        ; Querstrich
     BSUnicode("Ä‘")
+  Else If A_PriorHotkey = <^>!+  ; Schrägstrich
+    BSUnicode("Ã°")
   Else If A_PriorHotkey = +^     ; caron
     BSUnicode("Ä")
   Else If A_PriorHotkey = <^>!´  ; punkt darüber 
@@ -403,7 +424,7 @@ Return
     send y
 Return
 
-;SC02B (#) wird zu AltGr
+;SC02B (#) wird zu Mod3
 
 ;SC056 (<) wird zu Mod5
 y::send ö
@@ -562,7 +583,7 @@ Return
 Return
 
 +p::send Q
-+ü::send ß
++ü::send SS ; wird versal-ß
 
 ++::Unicode("Ë‰")  ; macron, tot 
 
@@ -723,6 +744,8 @@ Return
 +ö::
   If A_PriorHotkey = #^+^        ; Querstrich
     BSUnicode("Ä")
+  Else If A_PriorHotkey = <^>!+  ; Schrägstrich
+    BSUnicode("Ã")
   Else If A_PriorHotkey = +^     ; caron 
     BSUnicode("Ä")
   Else If A_PriorHotkey = <^>!´  ; punkt darüber 
@@ -779,8 +802,8 @@ Return
     send M
 Return
 
-+,::send `;
-+.::send :
++,::return
++.::Unicode("â€¦")  ; ellipse
 
 +-::
   If A_PriorHotkey = ^            ; circumflex
@@ -795,9 +818,9 @@ Return
 ;----------------
 
 #^^::Unicode("Ë˜")   ; brevis
-#^1::Unicode("Â¬")
-#^2::send {^}{space} 
-#^3::send 3 
+#^1::return
+#^2::return 
+#^3::return 
 #^4::send ¥ 
 #^5::send £  
 #^6::send æ 
@@ -814,10 +837,40 @@ Return
 #^r::send ]
 #^t::send {^}{space} ; untot
 #^z::sendraw !
-#^u::send <
-#^i::send >
-#^o::send `=
-#^p::send `;
+#^u::
+  If A_PriorHotkey = #^+^    ; Querstrich
+    BSUnicode("â‰¤")
+  Else
+    send <
+return
+
+#^i::
+  If A_PriorHotkey = #^+^    ; Querstrich
+    BSUnicode("â‰¥")
+  Else
+    send >
+return
+
+#^o::
+  If A_PriorHotkey = ^            ; circumflex 
+    BSUnicode("â‰™")
+  Else If A_PriorHotkey = +       ; tilde 
+    BSUnicode("â‰…")
+  Else If A_PriorHotkey = <^>!+   ; Schrägstrich 
+    BSUnicode("â‰ ")
+  Else If A_PriorHotkey = #^+^    ; Querstrich
+    BSUnicode("â‰¡")
+  Else If A_PriorHotkey = +^      ; caron 
+    BSUnicode("â‰š")
+  Else If A_PriorHotkey = <^>!+´  ; ring drüber 
+    BSUnicode("â‰—")
+  Else If A_PriorHotkey = +1      ; Grad
+    BSUnicode("â‰—")
+  Else   
+    send `=
+Return
+
+#^p::send {&}
 #^ü::Unicode("Ä³")   ; ij
 #^+::Unicode("Â¨")   ; Diaerese
 
@@ -829,20 +882,26 @@ Return
 #^h::send ?
 #^j::send (
 #^k::send )
-#^l::send -
+#^l::send - ; Bind
 #^ö::send :
-#^ä::send y
+#^ä::return
 
-#^y::sendraw ~ 
+#^y::send {#}  
 #^x::send $
 #^c::send |
-#^v::send {#}
+#^v::
+  If A_PriorHotkey = +    ; tilde
+    BSUnicode("â‰ˆ")
+  Else
+    sendraw ~ 
+Return
+
 #^b::send ``{space} ; untot
 #^n::send {+}
 #^m::send `% 
-#^,::send {&}
+#^,::send '
 #^.::send "
-#^-::send '
+#^-::send `;
 
 
 
@@ -850,10 +909,10 @@ Return
 ;(Win+Ctrl+Shift)
 ;---------------------
 
-#^+^::send - 
-#^+1::send ¹ 
-#^+2::send ²
-#^+3::send ³
+#^+^::send - ; querstrich, tot
+#^+1::send ¼
+#^+2::send ½
+#^+3::send ¾
 #^+4::send ¢ 
 #^+5::send ¤ 
 #^+6::send Æ 
@@ -865,23 +924,23 @@ Return
 #^+´::Unicode("Ë›") ; ogonek
 
 #^+q::Unicode("Î¾") ;xi
-#^+w::send v
+#^+w::return
 #^+e::Unicode("Î»") ;lambda
 #^+r::Unicode("Ï‡") ;chi 
-#^+t::send w
+#^+t::return
 #^+z::Unicode("Îº") ;kappa
 #^+u::Unicode("Ïˆ") ;psi
 #^+i::Unicode("Î³") ;gamma
 #^+o::Unicode("Ï†") ;phi
-#^+p::send q
+#^+p::return
 #^+ü::Unicode("Ä²") ;IJ
 #^++::send "        ;doppelakut
 
-#^+a::send u
-#^+s::Unicode("Î¹") ;iota
+#^+a::return
+#^+s::Unicode("Î¹") ;iota - funktioniert nicht !?
 #^+d::Unicode("Î±") ;alpha
 #^+f::Unicode("Îµ") ;epsilon
-#^+g::Unicode("Ï‰") ;omega
+#^+g::Unicode("Ï‰") ;omega - funktioniert nicht !?
 #^+h::Unicode("Ïƒ") ;sigma
 #^+j::Unicode("Î½") ;nu
 #^+k::Unicode("Ï") ;rho
@@ -889,8 +948,8 @@ Return
 #^+ö::Unicode("Î´") ;delta
 #^+ä::Unicode("Ï…") ;upsilon
 
-#^+y::send ö
-#^+x::send ü
+#^+y::return
+#^+x::return
 #^+c::Unicode("Î·") ;eta
 #^+v::Unicode("Ï€") ;pi
 #^+b::Unicode("Î¶") ;zeta
@@ -898,7 +957,7 @@ Return
 #^+m::Unicode("Î¼") ;mu
 #^+,::Unicode("Ï‘") ;vartheta?
 #^+.::Unicode("Î¸") ;theta
-#^+-::send j
+#^+-::return
 
 ;#^+space::    ; geschütztes Leerzeichen
 
@@ -909,25 +968,32 @@ Return
 ;(AltGr)
 ;-----------------
 
-<^>!^::Unicode("Â·") ; Mittenpunkt
-<^>!4::Send {PgUp}   ; Prev
+<^>!^::Unicode("Â·")  ; Mittenpunkt, tot
+<^>!1::Unicode("â…›") ; 1/8 
+<^>!2::return
+<^>!3::Unicode("â…œ") ; 3/8
+<^>!4::Send {PgUp}    ; Prev
+<^>!5::Unicode("â…") ; 5/8
+<^>!6::return
+<^>!7::Unicode("â…") ; 7/8
 <^>!8::Send /
 <^>!9::Send *
 <^>!0::Send -
-<^>!ß::Unicode("Ã°") ; eth
+<^>!ß::return
 <^>!´::Unicode("Ë™") ; punkt oben drüber
 
-<^>!q::Send {Esc}
+<^>!q::return
 <^>!w::Send {Backspace}
 <^>!e::Send {Up}
+<^>!r::Send {Tab}
 <^>!t::Send {Insert}
 <^>!z::Send ¡
 <^>!u::Send 7
 <^>!i::Send 8
 <^>!o::Send 9
 <^>!p::Send {+}
-<^>!ü::Unicode("É™") ; ?
-<^>!+::Unicode("/")  ; Schrägstrich 
+<^>!ü::Unicode("É™") ; schwa
+<^>!+::Unicode("/")  ; Schrägstrich, tot
 
 <^>!a::Send {Home}
 <^>!s::Send {Left}
@@ -939,13 +1005,15 @@ Return
 <^>!k::Send 5
 <^>!l::Send 6
 <^>!ö::Send `,
-<^>!ä::Send ş        ; thorn
+<^>!ä::Send ş         ; thorn
 
 
-<^>!y::Send {Tab}
+<^>!y::Send {Esc}
 <^>!x::Send {Del}
-<^>!c::Send {PgDn}   ; Next
-<^>!n::Send ±
+<^>!c::Send {PgDn}    ; Next
+<^>!v::Send {Enter}
+<^>!b::return
+<^>!n::Unicode("âˆ") ;infty
 <^>!m::Send 1
 <^>!,::Send 2
 <^>!.::Send 3
@@ -961,21 +1029,32 @@ Return
 ;(AltGr+Shift)
 ;-----------------------
 
-<^>!+^::Send .        ; punkt darunter
+<^>!+^::Send .         ; punkt darunter
+<^>!+1::return
+<^>!+2::return
+<^>!+3::return
 <^>!+4::Send +{Prev}
-<^>!+ß::Unicode("Ã") ; Eth
-<^>!+´::Unicode("Ëš") ; ring obendrauf
+<^>!+5::Unicode("â‡’") ; Implikation
+<^>!+6::Unicode("â‡”") ; Äquivalenz
+<^>!+7::return
+<^>!+8::Unicode("âˆƒ") ; Existenzquantor
+<^>!+9::Unicode("âˆ€") ; Allquantor
+<^>!+0::Send ¬
+<^>!+ß::Unicode("âˆ¨") ; logisch oder
+<^>!+´::Unicode("Ëš")  ; ring obendrauf
 
-<^>!+q::Unicode("Î") ; Xi
-<^>!+w::Unicode("Î›") ; Lambda
+<^>!+q::Unicode("Î")  ; Xi
+<^>!+w::Unicode("Î›")  ; Lambda
 <^>!+e::Send +{Up}
-<^>!+r::Send © 
+<^>!+r::Send +{Tab} 
 <^>!+t::Send +{Insert}
-<^>!+u::Unicode("Î¨") ; Phi
-<^>!+i::Unicode("Î“") ; Gamma
-<^>!+o::Unicode("Î¦") ; Psi
-<^>!+ü::Unicode("Æ") ; ?
-<^>!++::Unicode("Ë") ; komma drunter, soll tot 
+<^>!+z::Send ©
+<^>!+u::Unicode("Î¨")  ; Phi
+<^>!+i::Unicode("Î“")  ; Gamma
+<^>!+o::Unicode("Î¦")  ; Psi
+<^>!+p::Unicode("âˆ§") ; logisches Und
+<^>!+ü::Unicode("Æ")  ; Schwa
+<^>!++::Unicode("Ë")  ; komma drunter, tot 
 
 <^>!+a::Send +{Home}
 <^>!+s::Send +{Left}
@@ -989,11 +1068,15 @@ Return
 <^>!+ö::Unicode("Î”")  ; Delta
 <^>!+ä::Send Ş         ; Thorn 
 
-<^>!+y::Send +{Tab}
+<^>!+y::return
+<^>!+x::Unicode("âˆ«") ; Int
 <^>!+c::Send +{PgDn}
-<^>!+v::Unicode("Î ") ; Pi
-<^>!+b::Unicode("Î©") ; Omega
-<^>!+.::Unicode("Î˜") ; Theta 
+<^>!+v::Unicode("Î ")  ; Pi
+<^>!+b::Unicode("Î©")  ; Omega
+<^>!+n::Unicode("â€¢") ; bullet
+<^>!+,::Unicode("âˆš") ; sqrt
+<^>!+.::Unicode("Î˜")  ; Theta 
+<^>!+-::Unicode("âˆ‡") ; Nabla
 
 
 
@@ -1218,15 +1301,15 @@ Return
 #^NumpadAdd::send ±
 #^NumpadEnter::Unicode("â‰ ") ; neq
 
-#^Numpad7::Unicode("â…")     ; 7/8
+#^Numpad7::return
 #^Numpad8::Unicode("â†‘")     ; uparrow
-#^Numpad9::Unicode("â…œ")     ; 3/8
+#^Numpad9::return
 #^Numpad4::Unicode("â†")     ; leftarrow
 #^Numpad5::send †
 #^Numpad6::Unicode("â†’")     ; rightarrow
-#^Numpad1::send ¹ 
+#^Numpad1::return
 #^Numpad2::Unicode("â†“")     ; downarrow
-#^Numpad3::send ³
+#^Numpad3::return
 #^Numpad0::send `%
 #^NumPadDot::send .
 
@@ -1241,19 +1324,19 @@ Return
 
 #^+NumpadDiv::Unicode("âˆ•")   ; slash
 #^+NumpadMult::Unicode("â‹…")  ; cdot
-#^+NumpadSub::send -           ; eig. unbelegt
+#^+NumpadSub::return
 #^+NumpadAdd::Unicode("âˆ“")   ; -+
 #^+NumpadEnter::Unicode("â‰ˆ") ; approx
 
-#^+NumpadHome::Unicode("â…›")  ; 1/8
-#^+NumpadUp::Unicode("â…")    ; 5/8
-#^+NumpadPgUp::Unicode("â…œ")  ; 3/8
-#^+NumpadLeft::send ¼
-#^+NumpadClear::send ½
-#^+NumpadRight::send ¾
-#^+NumpadEnd::send ¹ 
-#^+NumpadDown::send ² 
-#^+NumpadPgDn::send ³ 
+#^+NumpadHome::Unicode("â‰ª")  ; ll
+#^+NumpadUp::Unicode("âˆ©")    ;
+#^+NumpadPgUp::Unicode("â‰«")  ; gg
+#^+NumpadLeft::Unicode("âŠ‚")  ;
+#^+NumpadClear::Unicode("")    ;
+#^+NumpadRight::Unicode("âŠƒ") ;
+#^+NumpadEnd::Unicode("â‰¤")   ; leq
+#^+NumpadDown::Unicode("âˆª")  ;
+#^+NumpadPgDn::Unicode("â‰¥")  ; geq
 #^+NumpadIns::send ‰ 
 #^+NumPadDel::send `,
   
@@ -1266,22 +1349,22 @@ Return
 ; ------------------------------
 
 
-<^>!NumpadDiv::send / 
-<^>!NumpadMult::Unicode("â‹…")   ; cdot
-<^>!NumpadSub::send -            ; eig. unbelegt
-<^>!NumpadAdd::Unicode("âˆ“")    ; -+
-<^>!NumpadEnter::Unicode("â‰ˆ")  ; approx
+<^>!NumpadDiv::Unicode("âˆ•")   ; slash
+<^>!NumpadMult::Unicode("â‹…")  ; cdot
+<^>!NumpadSub::return
+<^>!NumpadAdd::Unicode("âˆ“")   ; -+
+<^>!NumpadEnter::Unicode("â‰ˆ") ; approx
 
 
-<^>!Numpad7::Unicode("â…›")  ; 1/8
-<^>!Numpad8::Unicode("â…")  ; 5/8
-<^>!Numpad9::Unicode("â…œ")  ; 3/8
-<^>!Numpad4::send ¼
-<^>!Numpad5::send ½
-<^>!Numpad6::send ¾
-<^>!Numpad1::send ¹ 
-<^>!Numpad2::send ² 
-<^>!Numpad3::send ³ 
+<^>!Numpad7::Unicode("â‰ª")  ; ll
+<^>!Numpad8::Unicode("âˆ©")  ;
+<^>!Numpad9::Unicode("â‰«")  ; gg
+<^>!Numpad4::Unicode("âŠ‚")  ;
+<^>!Numpad5::Unicode("")     ;
+<^>!Numpad6::Unicode("âŠƒ")  ;
+<^>!Numpad1::Unicode("â‰¤")  ; leq
+<^>!Numpad2::Unicode("âˆª")  ;
+<^>!Numpad3::Unicode("â‰¥")  ; geq
 <^>!Numpad0::send ‰ 
 <^>!NumPadDot::send `,
 
