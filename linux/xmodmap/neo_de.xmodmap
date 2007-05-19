@@ -36,17 +36,17 @@ keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_a
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 24 = x X at Greek_xi Escape Greek_XI
-keycode 25 = v V underscore underscore BackSpace U039B
+keycode 24 = x X at Greek_xi x Greek_XI
+keycode 25 = v V underscore v BackSpace U039B
 keycode 26 = l L bracketleft Greek_lambda Up Up
-keycode 27 = c C bracketright Greek_chi c copyright
-keycode 28 = w W asciicircum asciicircum Insert
+keycode 27 = c C bracketright Greek_chi Tab Tab 
+keycode 28 = w W asciicircum w Insert
 
-keycode 29 = k K exclam Greek_kappa exclamdown
+keycode 29 = k K exclam Greek_kappa exclamdown copyright
 keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
-keycode 33 = q Q semicolon semicolon plus
+keycode 33 = q Q ampersand q plus
 keycode 34 = ssharp minus U133 U132 schwa SCHWA 
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_belowdot dead_belowdot
 
@@ -69,17 +69,17 @@ keycode 48 = y Y y Greek_upsilon thorn THORN
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 52 = odiaeresis Odiaeresis asciitilde asciitilde Tab Tab
+keycode 52 = odiaeresis Odiaeresis numbersign odiaeresis Escape
 keycode 53 = udiaeresis Udiaeresis dollar Udiaeresis Delete
 keycode 54 = adiaeresis Adiaeresis bar Greek_eta Next Next
-keycode 55 = p P numbersign Greek_pi p Greek_PI
+keycode 55 = p P asciitilde Greek_pi p Greek_PI
 keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
 
-keycode 57 = b B plus Greek_beta plusminus
-keycode 58 = m M percent mu 1
-keycode 59 = comma semicolon ampersand U3D1 2 
-keycode 60 = period colon quotedbl Greek_theta 3 Greek_THETA
-keycode 61 = j J apostrophe apostrophe period
+keycode 57 = b B plus Greek_beta U221E
+keycode 58 = m M percent Greek_mu 1
+keycode 59 = comma apostrophe apostrophe U3D1 2 
+keycode 60 = period U2026 quotedbl Greek_theta 3 Greek_THETA
+keycode 61 = j J semicolon j period U2207
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
