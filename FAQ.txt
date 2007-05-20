@@ -5,7 +5,7 @@ Gliederung
 2.1 Linux, Unix, BSD
 2.2 Apple Macintosh
 2.3 Windows
-3. Entwicklerfragen
+3. Entwicklerfragen (auch Beta-Tester)
 --------------------------------------------------------------------------------
 1. Allgemeine Fragen
 --------------------------------------------------------------------------------
@@ -316,24 +316,24 @@ A: Doch, man kann NEO auch unter Windows Vista benutzen. Man muss dazu die UAC
 F: Wie kann ich auf Zeichen der 5. und 6. Ebene zugreifen?
 
 A: Diese Ebenen sind über die so genannte SGCaps-Funktion realisiert. Für die 
-5. Ebene muss man Mod5 (der eigentlich Caps Lock ist) drücken, dann die Taste mit
- dem Zeichen, dann Mod5 wieder deaktivieren (Shift drücken oder nochmal Mod5. Für
- die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das Zeichen
+5. Ebene muss man Mod5 drücken, dann die Taste mit dem Zeichen, dann Mod5 wieder
+deaktivieren (Shift drücken oder nochmal Mod5.
+Für die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das Zeichen
 eingeben und dann Mod5 wieder deaktivieren. Es wird noch nach einer Möglichkeit
- gesucht, das weniger umständlich zu ermöglichen
+gesucht, das weniger umständlich zu ermöglichen
 
 --------------------------------------------------------------------------------
 
 F: Eine bestimmte tote Taste (Deadkey) funktioniert nicht?
 
-A: 1. Das resultierende Zeichen gibt es nicht – es können nur Deadkey + Buchstabe
- eingegeben werden, deren Kombination auch Sinn ergibt.
-2. Die toten Tasten sind alle
-von Hand eingegeben, da kann schon mal ein Buchstabe vergessen werden. Falls dem
-so ist, bitte an die Mailingliste schreiben!
+A: 1. Das resultierende Zeichen gibt es nicht – es können nur
+Tote-Taste + Buchstabe eingegeben werden, deren Kombination auch Sinn ergibt.
+2. Die toten Tasten sind alle von Hand eingegeben, da kann schon mal ein
+Buchstabe vergessen werden. Falls dem so ist, bitte an die Mailingliste
+schreiben!
 
 --------------------------------------------------------------------------------
-3. Entwicklerfragen
+3. Entwicklerfragen (auch Beta-Tester)
 --------------------------------------------------------------------------------
 
 F: Wo finde ich die aktuellste Entwicklerversion von NEO als Grafik?
@@ -363,3 +363,15 @@ A: Es gibt eine Mailingliste. Auf dieser wird alles ausdiskutiert und Fragen
 werden beantwortet. Im Webbrowser ist diese per
 http://de.groups.yahoo.com/group/neo_layout/ erreichbar.
 
+--------------------------------------------------------------------------------
+
+F: Ich habe versucht die Grafiken von
+https://neo.eigenheimstrasse.de/svn/grafik/ zu öffnen, aber mein Browser
+(z. B. Firefox) öffnet die SVGs und auch die PDFs als Textdatei, das heißt:
+Ich sehe den Quellcode.
+
+A: Das liegt daran, dass das SVN-Plugin für Apache den falschen Mimetyp meldet,
+weil Subversion denkt, das wären Plaintext Dateien (sind es ja eigentlich auch).
+Speichere die Dateien lokal (auf Deiner Festplatte) und öffne sie dann mit einem
+Programm Deiner Wahl (z. B. Firefox und Adobe Reader). Dann sollte es
+funktionieren.
