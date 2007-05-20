@@ -75,7 +75,7 @@ wie sie angeordnet sind? Wie ist man darauf gekommen?
 
 A: Die Sonderzeichen wurden für NEO Version 2 nach ähnlichen Kriterien
 zugeordnet, wie die Buchstaben schon für NEO Version 1. Also nicht nur nach
-Häufigkeit und guter Erreichbareit, sondern auch nach vorkommenden Bi- und
+Häufigkeit und guter Erreichbarkeit, sondern auch nach vorkommenden Bi- und
 Trigrammen. Das wären (unsortiert):
 ~/  :=  ->  =>  <=  >=  !=  :// />  </ <!-- --> <?  ?>  /*  */  /.  ="  !"  ?"
 ("  ")  ('  ')  );  ,"  ",  &>  =`  }[  ]{  _{  ^{  ^2  ^3  :-) ;-) +=  *=  /=
@@ -186,14 +186,48 @@ Länder jetzt auch den Euro haben.
 
 F: Ich möchte in meinen tex-Dateien (Latex) direkt die Sonderzeichen (z. B.
 griechische Buchstaben oder mathematische Symbole) eingeben, um mir etwas
-Schreibarbeit zu ersparen. Leider kommt immer der Fehler „! Package inputenc
-Error: Unicode char \u8:α not set up for use with LaTeX.“ Wieso?
+Schreibarbeit zu ersparen. Leider kommt immer der Fehler »Package inputenc
+Error: Unicode char \u8:α not set up for use with LaTeX.« Wieso?
 
 A: Bisher muss man die meisten Zeichen erst noch definieren. Um sich Arbeit zu
 sparen, haben fleißige Menschen schon eine Datei geschrieben, die man sich nur
 in das gleiche Verzeichnis wie die tex-Datei kopieren muss. Sie befindet sich
 mit kleiner Anleitung unter https://neo.eigenheimstrasse.de/svn/latex/
 Erweiterungen werden gerne gesehen.
+
+--------------------------------------------------------------------------------
+
+F: Seit ich NEO habe kommt es vor, dass ich beim Kompilieren meiner Programme
+merkwürdige Fehlermeldungen erhalte, obwohl ich in den Betreffenden Zeilen
+wirklich keinen Fehler finden kann. Z. B. »Syntaxfehler in Zeile 23.« Oder in
+Latex: »Package inputenc Error: Unicode char \u8:  not set up for use with
+LaTeX.« oder auch »Package inputenc Error: Unicode char \u8: not set up for use
+with LaTeX.«
+Was ist das?
+
+A: Es gibt seit NEO2 nicht mehr nur das normale, übliche Leerzeichen, sondern
+auf der 4. Ebene auf der Leertaste ein nicht umbrechendes, so genanntes
+„geschütztes Leerzeichen“ (nobreak space). Dieses hat verschiedene Verwendungen,
+unter anderem eben, um einen Zeilenumbruch an dieser Stelle zu verhindern. Zum
+Beispiel sollte bei „Prof. Nameistsuperlangundewig“ ein geschütztes Leerzeichen
+nach „Prof.“ kommen, damit der Name und der Titel nicht auseinander gerissen
+werden.
+Außerdem gibt es bei NEO2 auf der 6. Ebene der Leertaste noch das schmale
+Leerzeichen. Dieses wird zum Beispiel zwischen Zahlen und Einheiten verwendet.
+Beispiele:
+    220¦V    37¦°C    5¦%    20¦€    98¦765¦t␣Bananen
+wobei hier das schmale Leerzeichen durch »¦«, „normales“ Leerzeichen durch »␣«
+dargestellt ist.
+Mehr dazu auf:
+    http://de.wikipedia.org/wiki/Gesch%C3%BCtztes_Leerzeichen
+    http://de.wikipedia.org/wiki/Schmales_Leerzeichen
+    http://de.wikipedia.org/wiki/Schreibweise_von_Zahlen
+Schnelle Abhilfe schafft eine Suche mit dem Texteditor nach folgenden Zeichen:
+Geschütztes Leerzeichen: » «
+Schmales Leerzeichen:    » «
+Diese dann einfach durch ein normales Leerzeichen ersetzen, sofern ein
+spezielles Leerzeichen dort nicht gewünscht ist. Für Latex gibt es noch eine
+andere Lösung hier in der FAQ (weiter oben).
 
 --------------------------------------------------------------------------------
 2. Betriebssystemspeziefische Fragen
@@ -205,11 +239,11 @@ F1: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die öffnende Klamm
 F2: Wenn ich »Mod5« + »n« oder »Mod5« + »Leertaste« drücke, kommt nicht die 4
 oder die 0 sondern ein n oder Leerzeichen. Wieso?
  
-A: Das Problem, was hier auftritt ist der Vielzitierte Bug*, dass wenn man vom
-deutschen Layout ausgeht, xmodmap die 5. Ebene Über dem n nicht mapped. Deshalb
-geht je nach Version die Klammer oder die 4 nicht über dem n. Genau so mit
-der Leertaste.
-Abhilfe dagegen schafft das Irische Layout. Das hat selbst diese Ebene über dem
+A: Das Problem, was hier auftritt ist der viel zitierte Fehler*, dass wenn man
+vom deutschen Layout ausgeht, xmodmap die 5. Ebene über dem n nicht ausgewertet
+wird. Deshalb geht je nach Version die Klammer oder die 4 nicht über dem n.
+Genau so mit der Leertaste.
+Abhilfe dagegen schafft das irische Layout. Das hat selbst diese Ebene über dem
 n definiert und daher ändert xmodmap auch die Belegung ordentlich.
 Also entweder für Version 1.1:
 	setxkbmap ie
@@ -218,7 +252,7 @@ oder für die Version im 2.0 im Subversion-Repository:
 	setxkbmap ie
 	xmodmap neo_de.xmodmap
 
-* Links zu den Bugreports:
+* Links zu den Fehlerberichten:
 	https://bugs.freedesktop.org/show_bug.cgi?id=9254
 	https://bugs.freedesktop.org/show_bug.cgi?id=4535
 
@@ -281,7 +315,7 @@ A: Doch, man kann NEO auch unter Windows Vista benutzen. Man muss dazu die UAC
 
 F: Wie kann ich auf Zeichen der 5. und 6. Ebene zugreifen?
 
-A: Diese Ebenen sind über die sogenannte SGCaps-Funktion realisiert. Für die 
+A: Diese Ebenen sind über die so genannte SGCaps-Funktion realisiert. Für die 
 5. Ebene muss man Mod5 (der eigentlich Caps Lock ist) drücken, dann die Taste mit
  dem Zeichen, dann Mod5 wieder deaktivieren (Shift drücken oder nochmal Mod5. Für
  die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das Zeichen
@@ -290,13 +324,13 @@ eingeben und dann Mod5 wieder deaktivieren. Es wird noch nach einer Möglichkeit
 
 --------------------------------------------------------------------------------
 
-F: Ein bestimmter Deadkey funktioniert nicht?
+F: Eine bestimmte tote Taste (Deadkey) funktioniert nicht?
 
 A: 1. Das resultierende Zeichen gibt es nicht – es können nur Deadkey + Buchstabe
  eingegeben werden, deren Kombination auch Sinn ergibt.
-2. Die Deadkeys sind alle
+2. Die toten Tasten sind alle
 von Hand eingegeben, da kann schon mal ein Buchstabe vergessen werden. Falls dem
-so ist, bitte an die Mailinglist schreiben!
+so ist, bitte an die Mailingliste schreiben!
 
 --------------------------------------------------------------------------------
 3. Entwicklerfragen
