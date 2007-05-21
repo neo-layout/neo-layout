@@ -219,28 +219,28 @@ xkb_symbols "neo" {
     key <AE02> { [	    2,	paragraph,  2,    twosuperior                                            ] };
     key <AE03> { [	    3,	section,    3,  threesuperior                                    ] };
     key <AE04> { [	    4,  dollar, yen,    cent,   Prior,  Prior	                         ] };
-    key <AE05> { [	    5,  EuroSign,   sterling,   currency                                 ] };
-    key <AE06> { [	    6,  ordfeminine,    ae, AE                                           ] };
+    key <AE05> { [	    5,  EuroSign,   sterling,   currency, 5, implies                   ] };
+    key <AE06> { [	    6,  ordfeminine,    ae, AE, 6, ifonlyif                              ] };
     key <AE07> { [	    7,	masculine,  oe, OE                                               ] };
     key <AE08> { [	    8,	doublelowquotemark, singlelowquotemark, guillemotright, slash	 ] };
     key <AE09> { [	    9,	leftdoublequotemark,    leftsinglequotemark,    guillemotleft,  asterisk] };
     key <AE10> { [	    0,	rightdoublequotemark,   rightsinglequotemark,   U203A,  minus    ] };
-    key <AE11> { [	    minus,  U2013,  U2014,  U2039, eth, ETH                              ] };
+    key <AE11> { [	    minus,  endash,  emdash,  U2039, eth, ETH                              ] };
     key <AE12> { [	    dead_acute, dead_grave, dead_cedilla,   dead_ogonek,    dead_abovedot,  dead_abovering  ] };
 
 
     // obere Reihe
-    key <AD01> { [ 	    x,  X,  at,             Greek_xi,     Escape,   Greek_XI             ] };
-    key <AD02> { [	    v,  V,  underscore,     underscore,   BackSpace, U039B               ] };
+    key <AD01> { [ 	    x,  X,  at,             Greek_xi,     x,   Greek_XI             ] };
+    key <AD02> { [	    v,  V,  underscore,     v,            BackSpace, U039B               ] };
     key <AD03> { [	    l,	L,  bracketleft,    Greek_lambda,   Up,     Up                   ] };
-    key <AD04> { [	    c,	C,  bracketright,   Greek_chi,  ccedilla,    copyright 	         ] };
-    key <AD05> { [	    w,	W,  asciicircum,    asciicircum,    Insert                       ] };
-    key <AD06> { [	    k,	K,  exclam,         Greek_kappa,    exclamdown                   ] };
+    key <AD04> { [	    c,	C,  bracketright,   Greek_chi,  Tab, Tab                         ] };
+    key <AD05> { [	    w,	W,  asciicircum,    w,              Insert                       ] };
+    key <AD06> { [	    k,	K,  exclam,         Greek_kappa,    exclamdown, copyright        ] };
     key <AD07> { [	    h,	H,  less,           Greek_psi,  7,  Greek_PSI                    ] };
     key <AD08> { [	    g,	G,  greater,        Greek_gamma,    8,  Greek_GAMMA              ] };
     key <AD09> { [	    f,	F,  equal,          Greek_phi,  9,  Greek_PHI                    ] };
-    key <AD10> { [	    q,  Q,  semicolon,      semicolon,  plus	                         ] };
-    key <AD11> { [      ssharp,  minus,         U133,   U132,   schwa,   SCHWA             	 ] };
+    key <AD10> { [	    q,  Q,  ampersand,      q,          plus	                         ] };
+    key <AD11> { [      ssharp,  ssharp,        U133,   U132,   schwa,   SCHWA             	 ] };
     key <AD12> { [      dead_tilde, dead_macron,    dead_diaeresis, dead_doubleacute,   dead_belowdot,  dead_belowdot   ] };
 
 
@@ -251,7 +251,7 @@ xkb_symbols "neo" {
     key <AC04> { [	    e,	E,  braceright, Greek_epsilon,  Right,  Right                    ] };
     key <AC05> { [	    o,	O,  asterisk,   Greek_omega,    End,    End                      ] };
     key <AC06> { [	    s,	S,  question,   Greek_sigma,    questiondown,   Greek_SIGMA      ] };
-    key <AC07> { [	    n,	N,  parenleft,  Greek_nu,   4,  U2116                            ] };
+    key <AC07> { [	    n,	N,  parenleft,  Greek_nu,   4,  numerosign                       ] };
     key <AC08> { [	    r,	R,  parenright, Greek_rho,  5,  registered                       ] };
     key <AC09> { [	    t,	T,  minus,      Greek_tau,  6,  trademark                        ] };
     key <AC10> { [	    d,	D,  colon,      Greek_delta,    comma,  Greek_DELTA              ] };
@@ -259,20 +259,20 @@ xkb_symbols "neo" {
     
 
     // untere Reihe
-    key <AB01> { [      odiaeresis, Odiaeresis, asciitilde, asciitilde,        Tab,  Tab	 ] };
+    key <AB01> { [      odiaeresis, Odiaeresis, numbersign, odiaeresis, Escape               ] };
     key <AB02> { [      udiaeresis, Udiaeresis, dollar, Udiaeresis, Delete	               	 ] };
     key <AB03> { [      adiaeresis, Adiaeresis, bar,    Greek_eta,  Next,   Next             ] };
-    key <AB04> { [	    p,  P,  numbersign, Greek_pi,   p,  Greek_PI		                 ] };
+    key <AB04> { [	    p,  P,  asciitilde, Greek_pi,   p,  Greek_PI		                     ] };
     key <AB05> { [	    z,	Z,	grave,  Greek_zeta, z,  Greek_ZETA	                         ] };
-    key <AB06> { [	    b,	B,	plus,   Greek_beta, plusminus,  Greek_Beta                   ] };
+    key <AB06> { [	    b,	B,	plus,   Greek_beta, infinity,  Greek_Beta                    ] };
     key <AB07> { [	    m,	M,	percent,    mu, 1 	                                         ] };
-    key <AB08> { [	    comma,  semicolon,    ampersand,  U3D1, 2	                         ] };
-    key <AB09> { [      period, colon,  quotedbl,   Greek_theta,    3,  Greek_THETA	         ] };
-    key <AB10> { [	    j,  J,  apostrophe, apostrophe, period                               ] };
+    key <AB08> { [	    comma,  apostrophe, apostrophe,  U3D1, 2	                           ] };
+    key <AB09> { [      period, elipsis, quotedbl,   Greek_theta,    3,  Greek_THETA	       ] };
+    key <AB10> { [	    j,  J,  semicolon, j, period, nabla                                  ] };
 
   
 
-    key <SPCE> { [	 space,	space,  space,  space,  0,  space ] };
+    key <SPCE> { [	 space,	space,  space,  space,  0,  nobreakspace, U202F ] };
   
 
 
