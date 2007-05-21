@@ -47,7 +47,7 @@ Lösung ist dann, einmal die normale Controltaste zu drücken.
 
 Ohne die Remap-Datei können 
 die 3. Ebene mit Ctrl+Win 
-die 4. entsprechend mit Ctrl-Win-Shift
+die 4. mit Ctrl+Win+Shift
 die 5. mit AltGr 
 die 6. mit AltGr+Shift
 erreicht werden.

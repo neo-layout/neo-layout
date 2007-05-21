@@ -1,7 +1,7 @@
 /*
   Mod3: Umbelegung von Win+Ctrl auf CapsLock und #,
   Mod5: Zweites AltGr auf <
-  Version vom 03.05.2007
+  Version vom 21.05.2007
 */
 
 ;#InstallKeybdHook
@@ -42,8 +42,8 @@ Send {Control Down}
 Loop
 {
    Sleep, 10
-   GetKeyState, state, CapsLock, P
-   if state = U  
+   GetKeyState, keystate, CapsLock, P
+   if keystate = U  
    break
    ; The key has been released, so break out of the loop.
 }
@@ -58,8 +58,8 @@ Send {Control Down}
 Loop
 {
    Sleep, 10
-   GetKeyState, state, #, P
-   if state = U  
+   GetKeyState, keystate, #, P
+   if keystate = U  
    break
    ; The key has been released, so break out of the loop.
 }
@@ -79,8 +79,8 @@ Send {SC138 Down}
 Loop
 {
    Sleep, 10
-   GetKeyState, state, <, P
-   if state = U  
+   GetKeyState, keystate, <, P
+   if keystate = U  
    break
    ; The key has been released, so break out of the loop.
 }
@@ -93,14 +93,14 @@ return
 ; ----------------------------
 
 toggleneo:
-   if state <>
+   if suspendstate <>
    {
-      state =
+      suspendstate =
       menu, tray, rename, %enable%, %disable%
    }
    else
    {
-      state = : Deaktiviert
+      suspendstate = : Deaktiviert
       menu, tray, rename, %disable%, %enable%
    }
    menu, tray, tip, %name%%state%
