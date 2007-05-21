@@ -1,5 +1,5 @@
 /*
-   NEO-Layout - Version vom 19.05.2007
+   NEO-Layout - Version vom 21.05.2007
    Mod3 (3./4. Ebene) funktioniert über Win+Ctrl, 
     Mod5 (5./6. Ebene) über AltGr.
    Zur Umbelegung von Mod3 auf CapsLock und #
@@ -25,6 +25,7 @@ disable = Deaktiviere %name%
 ; - nobreakspace und schmales Leerzeichen  
 ; - ./, auf Altgr 
 ; - CapsLock über beide Mod3
+
 
 
 ; ANSI-Darstellung von beliebigen Unicode-Zeichen
@@ -108,26 +109,35 @@ menu, tray, add, %name% beenden, exitprogram
 menu, tray, tip, %name%
 
 
+; Sondertasten
+; ------------
 
-;1. Ebene
-;---------
+Space::
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("Ë†")
+  Else If A_PriorHotkey = +      ; tilde  
+    BSUnicode("Ëœ")    
+  Else
+    Send {Space} 
+Return
 
-Space::                                       
-  If A_PriorHotkey = ^           ; circumflex 
-    BSUnicode("Ë†")                           
-  Else If A_PriorHotkey = +      ; tilde      
-    BSUnicode("Ëœ")                           
-  Else                                        
-    Send {Space}                              
-Return                                        
-                                              
-Enter::Send {Enter}                           
-Esc::Send {Esc}                               
-                                              
+*Enter::Send {Enter}   
+
+*Esc::Send {Esc} 
+
+*Tab::Send {Tab}
++Tab::Send +{Tab}
+
+*Backspace::Send {BS}    
+^Backspace::Send ^{BS}
+
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+; 1. Ebene
+; ---------
 
 ^::send {^} ; circumflex, tot
+
 1::
   If A_PriorHotkey = ^          ; circumflex 
     send {bs}¹
@@ -162,22 +172,22 @@ return
 q::send x
 
 w::
-  If A_PriorHotkey = <^>!+^ ; punkt darunter 
+  If A_PriorHotkey = <^>!+^      ; punkt darunter 
     BSUnicode("á¹¿")
   Else 
     send v
 Return
 
 e::
-  If A_PriorHotkey = <^>!+ ; Schrägstrich
+  If A_PriorHotkey = <^>!+       ; Schrägstrich
     BSUnicode("Å‚")
-  Else If A_PriorHotkey = ´ ; akut 
+  Else If A_PriorHotkey = ´      ; akut 
     BSUnicode("Äº")
-  Else If A_PriorHotkey = +^ ; caron 
+  Else If A_PriorHotkey = +^     ; caron 
     BSUnicode("Ä¾")
-  Else If A_PriorHotkey = #^´ ; cedilla
+  Else If A_PriorHotkey = #^´    ; cedilla
     BSUnicode("Ä¼")
-  Else If A_PriorHotkey = <^>!^ ; Mittenpunkt
+  Else If A_PriorHotkey = <^>!^  ; Mittenpunkt
     BSUnicode("Å€")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¸·")
@@ -186,29 +196,29 @@ e::
 Return 
 
 r::
-  If A_PriorHotkey = ^ ; circumflex
+  If A_PriorHotkey = ^           ; circumflex
     BSUnicode("Ä‰")
-  Else If A_PriorHotkey = +^ ; caron
+  Else If A_PriorHotkey = +^     ; caron
     BSUnicode("Ä")
-  Else If A_PriorHotkey = ´ ; akut
+  Else If A_PriorHotkey = ´      ; akut
     BSUnicode("Ä‡")
-  Else If A_PriorHotkey = #^´ ; cedilla
+  Else If A_PriorHotkey = #^´    ; cedilla
     BSUnicode("Ã§")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("Ä‹")
   Else 
     Send c
 Return 
 
 t::
-  If A_PriorHotkey = ^ ; circumflex
+  If A_PriorHotkey = ^           ; circumflex
     BSUnicode("Åµ")
   Else
     send w
 Return
 
 z::
-  If A_PriorHotkey = #^´ ; cedilla
+  If A_PriorHotkey = #^´         ; cedilla
     BSUnicode("Ä·")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("á¸³")
@@ -563,13 +573,13 @@ Return
 Return
 
 +i::
-  If A_PriorHotkey = ^          ; circumflex
-    BSUnicode("Äœ")
-  Else If A_PriorHotkey = #^^   ; brevis 
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("Äœ") 
+  Else If A_PriorHotkey = #^^    ; brevis 
     BSUnicode("Ä")
-  Else If A_PriorHotkey = #^´   ; cedilla 
+  Else If A_PriorHotkey = #^´    ; cedilla 
     BSUnicode("Ä¢")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("Ä ")
   Else send G
 Return
@@ -611,17 +621,17 @@ Return
 Return
 
 +s::
-  If A_PriorHotkey = #^+        ; Diaerese
+  If A_PriorHotkey = #^+         ; Diaerese
     Send, {bs}Ï
-  Else If A_PriorHotkey = ++    ; macron
+  Else If A_PriorHotkey = ++     ; macron
     BSUnicode("Äª")
-  Else If A_PriorHotkey = #^^   ; brevis 
+  Else If A_PriorHotkey = #^^    ; brevis 
     BSUnicode("Ä¬")
-  Else If A_PriorHotkey = #^+´  ; ogonek
+  Else If A_PriorHotkey = #^+´   ; ogonek
     BSUnicode("Ä®")
-  Else If A_PriorHotkey = +     ; tilde
+  Else If A_PriorHotkey = +      ; tilde
     BSUnicode("Ä¨")
-  Else If A_PriorHotkey = <^>!´ ; punkt darüber 
+  Else If A_PriorHotkey = <^>!´  ; punkt darüber 
     BSUnicode("Ä°")
   Else 
     Send I
@@ -756,9 +766,9 @@ Return
 Return
 
 +ä::  
-  If A_PriorHotkey = #^+     ; Diaerese
+  If A_PriorHotkey = #^+        ; Diaerese
     Send {bs}Ÿ
-  Else If A_PriorHotkey = ^  ; circumflex
+  Else If A_PriorHotkey = ^     ; circumflex
     BSUnicode("Å¶")
   Else
     send Y
@@ -769,7 +779,7 @@ Return
 +c::send Ä
 
 +v::
-  If A_PriorHotkey = <^>!´    ; punkt darüber 
+  If A_PriorHotkey = <^>!´      ; punkt darüber 
     BSUnicode("á¹–")
   Else 
     send P
@@ -889,6 +899,7 @@ Return
 #^y::send {#}  
 #^x::send $
 #^c::send |
+
 #^v::
   If A_PriorHotkey = +    ; tilde
     BSUnicode("â‰ˆ")
@@ -937,10 +948,10 @@ Return
 #^++::send "        ;doppelakut
 
 #^+a::return
-#^+s::Unicode("Î¹") ;iota - funktioniert nicht !?
+#^+s::Unicode("Î¹") ;iota 
 #^+d::Unicode("Î±") ;alpha
 #^+f::Unicode("Îµ") ;epsilon
-#^+g::Unicode("Ï‰") ;omega - funktioniert nicht !?
+#^+g::Unicode("Ï‰") ;omega 
 #^+h::Unicode("Ïƒ") ;sigma
 #^+j::Unicode("Î½") ;nu
 #^+k::Unicode("Ï") ;rho
@@ -1093,6 +1104,7 @@ Return
 ^8::send ^8
 ^9::send ^9
 ^0::send ^0
+^ß::send ^-
 
 ^q::send ^x
 ^w::send ^v
@@ -1105,6 +1117,7 @@ Return
 ^o::send ^f
 ^p::send ^q
 ^ü::send ^ß
+^+::send ^+ ;z.B. Firefox Schrift größer
 
 ^a::send ^u
 ^s::send ^i
@@ -1126,7 +1139,7 @@ Return
 ^b::send ^z
 ^n::send ^b
 ^m::send ^m
-^-::send ^j
+^-::send ^- ;z.B. Firefox Schrift kleiner
 
 
 ;Alt-Ebene
@@ -1194,7 +1207,12 @@ Return
 
 #q::sendevent #x
 #w::sendevent #v
-#e::sendevent #l  
+
+#e::
+  Run,%A_WinDir%\System32\Rundll32.exe User32.dll`,LockWorkStation 
+  return
+  ;sendevent #l  
+
 #r::sendevent #c
 #t::sendevent #w
 #z::sendevent #k
@@ -1213,7 +1231,19 @@ Return
 #j::sendevent #n
 #k::sendevent #r
 #l::sendevent #t
-#ö::sendevent #d
+
+#ö:: ;  sendevent #d
+  FileAppend,
+    (
+    [Shell]
+    Command=2
+    [Taskbar]
+    Command=ToggleDesktop
+    ), DRT.scf
+  Run DRT.scf
+  FileDelete, DRT.scf
+Return 
+
 #ä::sendevent #y
 
 #y::sendevent #ö
@@ -1332,14 +1362,14 @@ Return
 #^+NumpadUp::Unicode("âˆ©")    ;
 #^+NumpadPgUp::Unicode("â‰«")  ; gg
 #^+NumpadLeft::Unicode("âŠ‚")  ;
-#^+NumpadClear::Unicode("")    ;
+#^+NumpadClear::Unicode("âˆŠ") ;
 #^+NumpadRight::Unicode("âŠƒ") ;
 #^+NumpadEnd::Unicode("â‰¤")   ; leq
 #^+NumpadDown::Unicode("âˆª")  ;
 #^+NumpadPgDn::Unicode("â‰¥")  ; geq
 #^+NumpadIns::send ‰ 
 #^+NumPadDel::send `,
-  
+
 
 
 ; ------------------------------
@@ -1360,7 +1390,7 @@ Return
 <^>!Numpad8::Unicode("âˆ©")  ;
 <^>!Numpad9::Unicode("â‰«")  ; gg
 <^>!Numpad4::Unicode("âŠ‚")  ;
-<^>!Numpad5::Unicode("")     ;
+<^>!Numpad5::Unicode("âˆŠ")  ;
 <^>!Numpad6::Unicode("âŠƒ")  ;
 <^>!Numpad1::Unicode("â‰¤")  ; leq
 <^>!Numpad2::Unicode("âˆª")  ;
