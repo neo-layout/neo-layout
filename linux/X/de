@@ -223,10 +223,10 @@ xkb_symbols "neo" {
     key <AE06> { [ 6, ordfeminine,       ae,            AE,            6, ifonlyif ] };
 
     key <AE07> { [ 7,            masculine,                   oe,             OE, seveneighths ] };
-    key <AE08> { [ 8,   doublelowquotemark,   singlelowquotemark, guillemotright,        slash ] };
-    key <AE09> { [ 9,  leftdoublequotemark,  leftsinglequotemark,  guillemotleft,     asterisk ] };
-    key <AE10> { [ 0, rightdoublequotemark, rightsinglequotemark,          U203A,        minus ] };
-    key <AE11> { [ minus,           endash,               emdash,          U2039, eth,           ETH ] };
+    key <AE08> { [ 8,   doublelowquotemark,   singlelowquotemark, guillemotright,        slash, U2203 ] };
+    key <AE09> { [ 9,  leftdoublequotemark,  leftsinglequotemark,  guillemotleft,     asterisk, U2200 ] };
+    key <AE10> { [ 0, rightdoublequotemark, rightsinglequotemark,          U203A,        minus, notsign ] };
+    key <AE11> { [ minus,           endash,               emdash,          U2039,        minus, U2228 ] };
     key <AE12> { [ dead_acute,  dead_grave,          dead_cedilla,   dead_ogonek, dead_abovedot, dead_abovering ] };
 
 
@@ -241,7 +241,7 @@ xkb_symbols "neo" {
     key <AD07> { [ h, H,      less,   Greek_psi,          7,   Greek_PSI ] };
     key <AD08> { [ g, G,   greater, Greek_gamma,          8, Greek_GAMMA ] };
     key <AD09> { [ f, F,     equal,   Greek_phi,          9,   Greek_PHI ] };
-    key <AD10> { [ q, Q, ampersand,           q,       plus              ] };
+    key <AD10> { [ q, Q, ampersand,           q,       plus,       U2227 ] };
     key <AD11> { [ ssharp, ssharp, U133,   U132,      schwa,       SCHWA ] };
     key <AD12> { [ dead_tilde, dead_macron, dead_diaeresis, dead_doubleacute, dead_belowdot, dead_belowdot ] };
 
@@ -262,15 +262,15 @@ xkb_symbols "neo" {
     
 
     // untere Reihe
-    key <AB01> { [ odiaeresis, Odiaeresis, numbersign, odiaeresis, Escape             ] };
-    key <AB02> { [ udiaeresis, Udiaeresis,     dollar, Udiaeresis, Delete             ] };
-    key <AB03> { [ adiaeresis, Adiaeresis,        bar,  Greek_eta,   Next, Next       ] };
-    key <AB04> { [          p,          P, asciitilde,   Greek_pi,      p, Greek_PI   ] };
-    key <AB05> { [          z,          Z,      grave, Greek_zeta,      z, Greek_ZETA ] };
+    key <AB01> { [ odiaeresis, Odiaeresis, numbersign, odiaeresis, Escape              ] };
+    key <AB02> { [ udiaeresis, Udiaeresis,     dollar, Udiaeresis, Delete,       U222B ] };
+    key <AB03> { [ adiaeresis, Adiaeresis,        bar,  Greek_eta,   Next,        Next ] };
+    key <AB04> { [          p,          P, asciitilde,   Greek_pi,      p,    Greek_PI ] };
+    key <AB05> { [          z,          Z,      grave, Greek_zeta,      z, Greek_OMEGA ] };
 
-    key <AB06> { [      b,           B,       plus,  Greek_beta, infinity,   Greek_BETA ] };
+    key <AB06> { [      b,           B,       plus,  Greek_beta, infinity,        U2022 ] };
     key <AB07> { [      m,           M,    percent,          mu,         1              ] };
-    key <AB08> { [  comma,  apostrophe, apostrophe,        U3D1,         2              ] };
+    key <AB08> { [  comma,  apostrophe, apostrophe,        U3D1,         2,     radical ] };
     key <AB09> { [ period,    ellipsis,   quotedbl, Greek_theta,         3, Greek_THETA ] };
     key <AB10> { [      j,           J,  semicolon,           j,    period,       nabla ] };
 
