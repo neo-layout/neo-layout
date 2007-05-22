@@ -16,7 +16,7 @@
    inkscape:version="0.45"
    width="2104.7244"
    height="605.56982"
-   sodipodi:docname="neo_Ebenen_1_2_3_5.svg"
+   sodipodi:docname="neo_Ebenen_1_2_4_6.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    sodipodi:docbase="/home/ben/neo/grafik/svg"
    sodipodi:modified="true">
@@ -68,8 +68,8 @@
      pagecolor="#ffffff"
      id="base"
      inkscape:zoom="0.43711187"
-     inkscape:cx="1052.3622"
-     inkscape:cy="302.78491"
+     inkscape:cx="1063.2271"
+     inkscape:cy="31.538158"
      inkscape:window-x="6"
      inkscape:window-y="0"
      inkscape:current-layer="svg2"
@@ -124,13 +124,13 @@
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text501"
-     y="54.253246"
-     x="243.73735">
+     y="-808.63342"
+     x="361.92957">
     <tspan
-       x="1435.7372"
-       y="1702.2532"
+       x="1553.9293"
+       y="839.36652"
        id="tspan503"
-       style="fill:#ff0000">˘</tspan>
+       style="fill:#ff0000">.</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -268,16 +268,6 @@
        y="1647.9999"
        id="tspan679" />
   </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text685"
-     y="83.650215"
-     x="189.5735">
-    <tspan
-       x="9064.5742"
-       y="1731.6501"
-       id="tspan687">¥</tspan>
-  </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
      d="M 9816,249.99995 L 11562,249.99995 L 11562,2050 L 9816,2050 L 9816,249.99995 z "
@@ -317,12 +307,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text733"
-     y="87.367989"
-     x="135.40965">
+     y="-867.9801"
+     x="22.703398">
     <tspan
-       x="11014.41"
-       y="1735.3679"
-       id="tspan735">£</tspan>
+       x="10901.704"
+       y="780.01984"
+       id="tspan735">⇒</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -355,11 +345,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text773"
-     y="32.014477">
+     y="-867.9801"
+     x="65.368942">
     <tspan
-       x="12800"
-       y="1680.0144"
-       id="tspan775">æ</tspan>
+       x="12865.369"
+       y="780.01984"
+       id="tspan775">⇔</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -388,15 +379,6 @@
        x="13880.18"
        y="1783.4094"
        id="tspan807">7</tspan>
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text813"
-     y="32.014477">
-    <tspan
-       x="14702"
-       y="1680.0144"
-       id="tspan815">œ</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -429,12 +411,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text853"
-     y="79.518867"
-     x="216.65543">
+     y="-839.20178"
+     x="64.170586">
     <tspan
-       x="16931.656"
-       y="1727.5188"
-       id="tspan855">‚</tspan>
+       x="16779.172"
+       y="808.79816"
+       id="tspan855">∃</tspan>
   </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
@@ -467,12 +449,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text893"
-     y="22.583324"
-     x="189.5735">
+     y="-839.20178"
+     x="57.750443">
     <tspan
-       x="18825.574"
-       y="1670.5833"
-       id="tspan895">‘</tspan>
+       x="18693.75"
+       y="808.79816"
+       id="tspan895">∀</tspan>
   </text>
   <path
      style="fill:#ff9966;stroke:none;visibility:visible"
@@ -505,12 +487,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text933"
-     y="22.583324"
-     x="189.5735">
+     y="-886.56897"
+     x="8.177289">
     <tspan
-       x="20731.574"
-       y="1670.5833"
-       id="tspan935">’</tspan>
+       x="20550.18"
+       y="761.43097"
+       id="tspan935">¬</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -551,12 +533,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text981"
-     y="32.565258"
-     x="54.16386">
+     y="-881.47424"
+     x="160.886">
     <tspan
-       x="22361.164"
-       y="1680.5652"
-       id="tspan983">—</tspan>
+       x="22467.887"
+       y="766.5257"
+       id="tspan983">∨</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -599,13 +581,13 @@
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1029"
-     y="36.282543"
-     x="270.81927">
+     y="-755.20764"
+     x="268.75385">
     <tspan
-       x="24499.82"
-       y="1684.2825"
+       x="24497.754"
+       y="892.7923"
        id="tspan1031"
-       style="fill:#ff0000">¸</tspan>
+       style="fill:#ff0000">˚</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -636,12 +618,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1069"
-     y="-0.00015889859"
-     x="125.39226">
+     y="5.5076537"
+     x="260.80188">
     <tspan
-       x="4104.3921"
-       y="3643.9995"
-       id="tspan1071">@</tspan>
+       x="4239.8022"
+       y="3649.5073"
+       id="tspan1071">ξ</tspan>
   </text>
   <path
      style="fill:#ff9966;stroke:none;visibility:visible"
@@ -668,16 +650,6 @@
     <tspan
        y="3643.9995"
        id="tspan1103" />
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text1109"
-     y="-31.119299"
-     x="54.163857">
-    <tspan
-       x="6135.1641"
-       y="3612.8804"
-       id="tspan1111">_</tspan>
   </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
@@ -708,12 +680,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1145"
-     y="27.538904"
-     x="135.40965">
+     y="64.716637"
+     x="75.374496">
     <tspan
-       x="8177.4102"
-       y="3671.5386"
-       id="tspan1147">[</tspan>
+       x="8117.375"
+       y="3708.7163"
+       id="tspan1147">λ</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -741,16 +713,6 @@
        y="3643.9995"
        id="tspan1179" />
   </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text1181"
-     y="27.538904"
-     x="189.5735">
-    <tspan
-       x="10073.574"
-       y="3671.5386"
-       id="tspan1183">]</tspan>
-  </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
      d="M 10696,2217 L 12442,2217 L 12442,4017 L 10696,4017 L 10696,2217 z "
@@ -776,16 +738,6 @@
     <tspan
        y="3643.9995"
        id="tspan1215" />
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text1217"
-     y="10.189294"
-     x="162.49158">
-    <tspan
-       x="11891.492"
-       y="3654.189"
-       id="tspan1219">^</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -816,12 +768,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1253"
-     y="56.041832"
-     x="270.81927">
+     y="4.6814804"
+     x="108.32772">
     <tspan
-       x="13998.82"
-       y="3700.0415"
-       id="tspan1255">!</tspan>
+       x="13836.328"
+       y="3648.6812"
+       id="tspan1255">κ</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -852,12 +804,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1289"
-     y="27.263514"
-     x="8.2365784e-07">
+     y="-53.976723"
+     x="67.790138">
     <tspan
-       x="15666"
-       y="3671.2632"
-       id="tspan1291">&lt;</tspan>
+       x="15733.79"
+       y="3590.0229"
+       id="tspan1291">ψ</tspan>
   </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
@@ -888,12 +840,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1325"
-     y="27.263514"
-     x="54.16386">
+     y="-53.976723"
+     x="135.40965">
     <tspan
-       x="17624.164"
-       y="3671.2632"
-       id="tspan1327">&gt;</tspan>
+       x="17705.41"
+       y="3590.0229"
+       id="tspan1327">γ</tspan>
   </text>
   <path
      style="fill:#ff9966;stroke:none;visibility:visible"
@@ -924,27 +876,17 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1361"
-     y="26.988123"
-     x="-27.08193">
+     y="-52.875156"
+     x="54.163864">
     <tspan
-       x="19501.918"
-       y="3670.9878"
-       id="tspan1363">=</tspan>
+       x="19583.164"
+       y="3591.1245"
+       id="tspan1363">φ</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
      d="M 20300,2217 L 22047,2217 L 22047,4017 L 20300,4017 L 20300,2217 z "
      id="path1373" />
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2173"
-     y="-3848.2339"
-     x="2676.2788">
-    <tspan
-       x="21480.279"
-       y="3699.7661"
-       id="tspan2175">&amp;</tspan>
-  </text>
   <path
      style="fill:none;stroke:#000000;visibility:visible"
      d="M 21173,4017 L 20300,4017 L 20300,2217 L 22047,2217 L 22047,4017 L 21173,4017"
@@ -989,12 +931,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1437"
-     y="35.058434"
-     x="81.245789">
+     y="28.586754"
+     x="27.081926">
     <tspan
-       x="23458.246"
-       y="3650.0581"
-       id="tspan1439">ĳ</tspan>
+       x="23404.082"
+       y="3643.5864"
+       id="tspan1439">Ĳ</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -1040,16 +982,6 @@
        y="5609.9995"
        id="tspan1511" />
   </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text1513"
-     y="13.137772"
-     x="81.245789">
-    <tspan
-       x="4589.2461"
-       y="5623.1372"
-       id="tspan1515">\</tspan>
-  </text>
   <path
      style="fill:#ff9966;stroke:none;visibility:visible"
      d="M 5332,4183 L 7079,4183 L 7079,5982.9999 L 5332,5982.9999 L 5332,4183 z "
@@ -1079,12 +1011,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1549"
-     y="13.137772"
-     x="135.40965">
+     y="-12.060235"
+     x="121.91551">
     <tspan
-       x="6642.4102"
-       y="5623.1372"
-       id="tspan1551">/</tspan>
+       x="6628.916"
+       y="5597.939"
+       id="tspan1551">ι</tspan>
   </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
@@ -1115,12 +1047,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1585"
-     y="1.9844513"
-     x="216.65543">
+     y="-12.060235"
+     x="208.11832">
     <tspan
-       x="8437.6562"
-       y="5611.9839"
-       id="tspan1587">{</tspan>
+       x="8429.1191"
+       y="5597.939"
+       id="tspan1587">α</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -1151,12 +1083,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1621"
-     y="123.70711"
-     x="135.40965">
+     y="-16.0534"
+     x="40.950668">
     <tspan
-       x="12313.41"
-       y="5733.7065"
-       id="tspan1623">*</tspan>
+       x="12218.951"
+       y="5593.9458"
+       id="tspan1623">ω</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -1187,12 +1119,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1657"
-     y="43.017654"
-     x="135.40965">
+     y="-16.0534"
+     x="138.30125">
     <tspan
-       x="14232.41"
-       y="5653.0171"
-       id="tspan1659">?</tspan>
+       x="14235.302"
+       y="5593.9458"
+       id="tspan1659">σ</tspan>
   </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
@@ -1223,12 +1155,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1693"
-     y="10.521561"
-     x="216.65543">
+     y="-67.000664"
+     x="132.97421">
     <tspan
-       x="18121.656"
-       y="5620.521"
-       id="tspan1695">)</tspan>
+       x="18037.975"
+       y="5542.9985"
+       id="tspan1695">ρ</tspan>
   </text>
   <path
      style="fill:#ff9966;stroke:none;visibility:visible"
@@ -1259,12 +1191,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1729"
-     y="-11.78508"
-     x="135.40965">
+     y="-12.060235"
+     x="147.80223">
     <tspan
-       x="20012.41"
-       y="5598.2144"
-       id="tspan1731">-</tspan>
+       x="20024.803"
+       y="5597.939"
+       id="tspan1731">τ</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -1295,12 +1227,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1765"
-     y="-20.459885"
+     y="39.024727"
      x="135.40965">
     <tspan
        x="21933.41"
-       y="5589.5396"
-       id="tspan1767">:</tspan>
+       y="5649.0239"
+       id="tspan1767">δ</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -1396,15 +1328,6 @@
        y="7576.9995"
        id="tspan1951" />
   </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text1953"
-     y="104.33439">
-    <tspan
-       x="7454"
-       y="7681.3345"
-       id="tspan1955">$</tspan>
-  </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
      d="M 8175,6149.9997 L 9922,6149.9997 L 9922,7949.9998 L 8175,7949.9998 L 8175,6149.9997 z "
@@ -1434,12 +1357,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1989"
-     y="80.513115"
-     x="352.06509">
+     y="27.50042"
+     x="266.694">
     <tspan
-       x="9548.0664"
-       y="7657.5132"
-       id="tspan1991">|</tspan>
+       x="9462.6953"
+       y="7604.5005"
+       id="tspan1991">η</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -1466,16 +1389,6 @@
     <tspan
        y="7576.9995"
        id="tspan2023" />
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2025"
-     y="133.93889"
-     x="-5757.8096">
-    <tspan
-       x="5436.1904"
-       y="7710.939"
-       id="tspan2027">#</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -1506,12 +1419,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2061"
-     y="111.82336"
-     x="135.40965">
+     y="26.398552"
+     x="93.818832">
     <tspan
-       x="13282.41"
-       y="7688.8237"
-       id="tspan2063">`</tspan>
+       x="13240.819"
+       y="7603.3989"
+       id="tspan2063">ζ</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -1542,12 +1455,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2097"
-     y="108.32757"
-     x="100.3494">
+     y="27.50042"
+     x="150.44836">
     <tspan
-       x="15130.35"
-       y="7685.3276"
-       id="tspan2099">+</tspan>
+       x="15180.448"
+       y="7604.5005"
+       id="tspan2099">β</tspan>
   </text>
   <path
      style="fill:#ffff00;stroke:none;visibility:visible"
@@ -1574,15 +1487,6 @@
     <tspan
        y="7576.9995"
        id="tspan2131" />
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2133"
-     y="136.83051">
-    <tspan
-       x="16951"
-       y="7713.8306"
-       id="tspan2135">%</tspan>
   </text>
   <path
      style="fill:#94bd5e;stroke:none;visibility:visible"
@@ -1633,12 +1537,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2213"
-     y="100.88734"
-     x="135.40965">
+     y="165.82582"
+     x="118.75506">
     <tspan
-       x="20874.41"
-       y="7648.8921"
-       id="tspan2215">&quot;</tspan>
+       x="20857.756"
+       y="7713.8306"
+       id="tspan2215">Θ</tspan>
   </text>
   <path
      style="fill:#9999cc;stroke:none;visibility:visible"
@@ -1669,12 +1573,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2249"
-     y="71.892014"
-     x="-3647.3457">
+     y="133.5258"
+     x="-3785.6641">
     <tspan
-       x="19063.654"
-       y="7648.8921"
-       id="tspan2251">'</tspan>
+       x="18925.336"
+       y="7710.5259"
+       id="tspan2251">√</tspan>
   </text>
   <path
      style="fill:#e6ff00;stroke:none;visibility:visible"
@@ -1697,12 +1601,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2285"
-     y="1.9844513"
-     x="162.49158">
+     y="-12.19793"
+     x="190.30603">
     <tspan
        id="tspan2287"
-       y="5611.9839"
-       x="10433.492">}</tspan>
+       y="5597.8013"
+       x="10461.307">ε</tspan>
   </text>
   <path
      style="fill:#dc2300;stroke:none;visibility:visible"
@@ -1737,12 +1641,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2337"
-     y="10.521561"
-     x="135.40965">
+     y="-12.060235"
+     x="87.666901">
     <tspan
        id="tspan2339"
-       y="5620.521"
-       x="16185.41">(</tspan>
+       y="5597.939"
+       x="16137.667">ν</tspan>
   </text>
   <path
      style="fill:#dc2300;stroke:none;visibility:visible"
@@ -2060,215 +1964,182 @@
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2597"
-     y="1184.0289"
-     x="4839.5176">
-    <tspan
-       x="17017.518"
-       y="6794.0283"
-       id="tspan2599"
-       style="font-style:normal;font-weight:normal">1</tspan>
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2627"
-     y="1187.7468"
-     x="6789.8398">
+     y="1191.74"
+     x="6762.7578">
     <tspan
-       x="18967.84"
-       y="6797.7461"
-       id="tspan2629">2</tspan>
+       x="18940.758"
+       y="6801.7393"
+       id="tspan2629">ϑ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2631"
-     y="1183.7521"
-     x="8647.8027">
+     y="1191.7384"
+     x="8729.0488">
     <tspan
-       x="20825.805"
-       y="6793.7529"
-       id="tspan2633">3</tspan>
+       x="20907.051"
+       y="6801.7393"
+       id="tspan2633">θ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2635"
-     y="-721.53601"
-     x="5875.4976">
+     y="-718.64441"
+     x="5767.1694">
     <tspan
-       x="18053.496"
-       y="4888.4644"
-       id="tspan2637">5</tspan>
+       x="17945.168"
+       y="4891.356"
+       id="tspan2637">®</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2639"
      y="-717.54309"
-     x="3941.7273">
+     x="3833.3992">
     <tspan
-       x="16119.729"
+       x="16011.4"
        y="4892.4575"
-       id="tspan2641">4</tspan>
+       id="tspan2641">№</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2643"
-     y="-717.81848"
+     y="-769.30237"
      x="7754.8223">
     <tspan
        x="19932.822"
-       y="4892.1821"
-       id="tspan2645">6</tspan>
+       y="4840.6982"
+       id="tspan2645">™</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2647"
-     y="-2727.8542"
-     x="7382.8511">
+     y="-2727.5789"
+     x="7368.3989">
     <tspan
-       x="19560.852"
-       y="2882.1455"
-       id="tspan2649">9</tspan>
+       x="19546.398"
+       y="2882.4209"
+       id="tspan2649">Φ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2651"
-     y="-2727.8542"
-     x="5465.4399">
+     y="-2727.5789"
+     x="5507.0317">
     <tspan
-       x="17643.439"
-       y="2882.1455"
-       id="tspan2653">8</tspan>
+       x="17685.031"
+       y="2882.4209"
+       id="tspan2653">Γ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2655"
      y="-2727.5789"
-     x="3545.8301">
+     x="3518.748">
     <tspan
-       x="15723.832"
+       x="15696.75"
        y="2882.4209"
-       id="tspan2657">7</tspan>
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2663"
-     y="1155.2506"
-     x="2953.4453">
-    <tspan
-       x="15131.451"
-       y="6765.25"
-       id="tspan2665"
-       style="font-style:normal;font-weight:normal">∞</tspan>
+       id="tspan2657">Ψ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2667"
-     y="-721.53601"
+     y="-717.54285"
      x="2055.5017">
     <tspan
        x="14233.512"
-       y="4888.4644"
+       y="4892.4575"
        id="tspan2669"
-       style="font-style:normal;font-weight:normal">¿</tspan>
+       style="font-style:normal;font-weight:normal">Σ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2671"
-     y="-2727.5793"
-     x="1820.8109">
+     y="-2728.6809"
+     x="1561.9327">
     <tspan
-       x="13998.82"
-       y="2882.4209"
+       x="13739.942"
+       y="2881.3193"
        id="tspan2673"
-       style="font-style:normal;font-weight:normal">¡</tspan>
+       style="font-style:normal;font-weight:normal">©</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2683"
-     y="-4716.7949"
-     x="6594.8384">
+     y="-3918.7014"
+     x="6540.6743">
     <tspan
-       x="18772.838"
-       y="893.20538"
+       x="18718.674"
+       y="1691.3054"
        id="tspan2685"
-       style="font-style:normal;font-weight:normal">*</tspan>
+       style="font-style:normal;font-weight:normal">«</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2687"
-     y="-4827.3643"
-     x="4746.9087">
+     y="-3918.7014"
+     x="4611.4985">
     <tspan
-       x="16924.908"
-       y="782.63605"
+       x="16789.498"
+       y="1691.3054"
        id="tspan2689"
-       style="font-style:normal;font-weight:normal">/</tspan>
-  </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2691"
-     y="-4852.2871"
-     x="8541.1836">
-    <tspan
-       x="20719.182"
-       y="757.7132"
-       id="tspan2693"
-       style="font-style:normal;font-weight:normal">-</tspan>
+       style="font-style:normal;font-weight:normal">»</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2695"
-     y="-2756.3579"
+     y="-2769.8521"
      x="9294.9834">
     <tspan
        x="21472.98"
-       y="2853.6426"
+       y="2840.1484"
        id="tspan2697"
-       style="font-style:normal;font-weight:normal">+</tspan>
+       style="font-style:normal;font-weight:normal">∧</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2699"
-     y="-677.18188"
-     x="9775.7412">
+     y="-717.54419"
+     x="9735.3076">
     <tspan
-       x="21953.74"
-       y="4932.8198"
+       x="21913.307"
+       y="4892.4575"
        id="tspan2701"
-       style="font-style:normal;font-weight:normal">,</tspan>
+       style="font-style:normal;font-weight:normal">Δ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2703"
-     y="-767.52643"
-     x="11653.507">
+     y="-717.54303"
+     x="11559.312">
     <tspan
-       x="23831.506"
-       y="4842.4741"
+       x="23737.312"
+       y="4892.4575"
        id="tspan2705"
-       style="font-style:normal;font-weight:normal">þ</tspan>
+       style="font-style:normal;font-weight:normal">Þ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2707"
-     y="-2779.2153"
-     x="11262.897">
+     y="-2727.855"
+     x="11170.179">
     <tspan
-       x="23440.896"
-       y="2830.7852"
+       x="23348.178"
+       y="2882.1455"
        id="tspan2709"
-       style="font-style:normal;font-weight:normal">ə</tspan>
+       style="font-style:normal;font-weight:normal">Ə</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2711"
-     y="1306.4563"
-     x="10792.117">
+     y="1181.2742"
+     x="10656.707">
     <tspan
-       x="22970.115"
-       y="6916.4565"
+       x="22834.705"
+       y="6791.2744"
        id="tspan2713"
-       style="font-style:normal;font-weight:normal">.</tspan>
+       style="font-style:normal;font-weight:normal">∇</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -2303,44 +2174,12 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2874"
-     y="-4800.2378"
-     x="2490.7756">
+     y="-3929.8542"
+     x="2585.9963">
     <tspan
-       x="8997.7764"
-       y="809.76202"
-       id="tspan2876">↥</tspan>
-  </text>
-  <text
-     style="font-size:275.4418335px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2878"
-     y="2992.6902"
-     x="3677.0042">
-    <tspan
-       x="7317.3296"
-       y="6693.085"
-       id="tspan2880">Entf</tspan>
-  </text>
-  <g
-     id="g3028"
-     transform="translate(24.732813,-35.584953)">
-    <path
-       d="M 6230.0083,2571.9162 L 6233.7888,2570.656 L 6236.3092,2570.656 L 6241.9801,2571.9162 L 6247.6509,2574.4366 L 6251.4315,2580.1074 L 6252.6916,2585.7783 L 6252.6916,2839.0757 L 6251.4315,2844.7465 L 6247.6509,2849.1572 L 6241.9801,2852.9377 L 6236.3092,2854.1979 L 6233.7888,2854.1979 L 6230.0083,2852.9377 L 5947.0966,2726.9191 L 5939.5355,2721.2483 L 5936.385,2711.7969 L 5939.5355,2703.6057 L 5948.3568,2697.3048 L 6230.0083,2571.9162 z "
-       id="path2882"
-       style="fill:#000000;stroke:none;visibility:visible" />
-    <path
-       d="M 6566.4779,2743.9316 L 6189.6823,2743.9316 L 6189.6823,2680.9224 L 6566.4779,2680.9224 L 6566.4779,2743.9316 z "
-       id="path2884"
-       style="fill:#000000;stroke:none;visibility:visible" />
-  </g>
-  <text
-     style="font-size:275.4418335px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2886"
-     y="2986.5039"
-     x="1792.6211">
-    <tspan
-       x="5432.9468"
-       y="6686.8979"
-       id="tspan2888">Esc</tspan>
+       x="9092.9971"
+       y="1680.1521"
+       id="tspan2876">¢</tspan>
   </text>
   <text
      style="font-size:275.4418335px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -2454,35 +2293,35 @@
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2692"
-     y="-82.99192"
+     y="581.68195"
      x="463.96646">
     <tspan
        x="24495.965"
-       y="807.00812"
+       y="1471.6814"
        id="tspan2694"
-       style="fill:#ff0000">˙</tspan>
+       style="fill:#ff0000">˛</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2696"
-     y="152.94211"
+     y="57.356659"
      x="868.39728">
     <tspan
        x="25343.398"
-       y="3767.9419"
+       y="3672.3564"
        id="tspan2698"
-       style="fill:#ff0000">¨</tspan>
+       style="fill:#ff0000">˝</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2700"
-     y="-713.5686"
-     x="949.92548">
+     y="-839.14673"
+     x="863.02802">
     <tspan
-       x="25424.926"
-       y="2882.4209"
+       x="25338.027"
+       y="2756.8428"
        id="tspan2702"
-       style="fill:#ff0000">/</tspan>
+       style="fill:#ff0000">ˏ</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -2498,92 +2337,206 @@
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text1917"
-     y="108.32757"
-     x="5866.1372">
+     y="134.0766"
+     x="6052.5776">
     <tspan
-       x="11194.138"
-       y="7685.3276"
-       id="tspan1919">~</tspan>
+       x="11380.578"
+       y="7711.0767"
+       id="tspan1919">π</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2697"
-     y="-4801.4771"
-     x="-3353.418">
+     y="-3878.6316"
+     x="-3272.1719">
     <tspan
-       x="3153.5828"
-       y="808.52277"
-       id="tspan2699">⅛</tspan>
+       x="3234.8289"
+       y="1731.3748"
+       id="tspan2699">¼</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2701"
-     y="-4801.4771"
-     x="381.71414">
+     y="-3878.6316"
+     x="462.95996">
     <tspan
-       x="6888.7148"
-       y="808.52277"
-       id="tspan2703">⅜</tspan>
+       x="6969.9609"
+       y="1731.3748"
+       id="tspan2703">¾</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2705"
-     y="-4801.4771"
-     x="4399.3354">
+     y="-3907.1345"
+     x="4453.4995">
     <tspan
-       x="10906.336"
-       y="808.52277"
-       id="tspan2707">⅝</tspan>
+       x="10960.5"
+       y="1702.8718"
+       id="tspan2707">¤</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2709"
-     y="-4801.4771"
+     y="-3878.3562"
      x="8197.2432">
     <tspan
        x="14704.243"
-       y="808.52277"
-       id="tspan2711">⅞</tspan>
+       y="1731.6501"
+       id="tspan2711">Œ</tspan>
   </text>
-  <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text1397"
-     y="3977.575"
-     x="1485.6226">
-    <tspan
-       x="22975.623"
-       y="7621.5747"
-       id="tspan1399">;</tspan>
-  </text>
-  <g
-     id="g2713"
-     transform="matrix(0.3549024,0,0,0.3549024,1776.0129,5096.9719)">
-    <path
-       d="M 27166,4477 L 27172,4475 L 27176,4475 L 27185,4477 L 27194,4481 L 27200,4490 L 27202,4499 L 27202,4901 L 27200,4910 L 27194,4917 L 27185,4923 L 27176,4925 L 27172,4925 L 27166,4923 L 26717,4723 L 26705,4714 L 26700,4699 L 26705,4686 L 26719,4676 L 27166,4477 z "
-       id="path2715"
-       style="fill:#000000;stroke:none;visibility:visible" />
-    <path
-       d="M 27700,4750 L 27102,4750 L 27102,4650 L 27700,4650 L 27700,4750 z "
-       id="path2717"
-       style="fill:#000000;stroke:none;visibility:visible" />
-    <path
-       d="M 27606,4673 L 27606,3480 L 27656,3480 L 27706,3480 L 27706,4673 L 27656,4673 L 27606,4673 z "
-       id="path2719"
-       style="fill:#000000;stroke:none;visibility:visible" />
-    <path
-       d="M 27706,3480 L 27706,3517 L 27656,3517 L 27606,3517 L 27606,3480 L 27656,3480 L 27706,3480 z "
-       id="path2721"
-       style="fill:#000000;stroke:none;visibility:visible" />
-  </g>
   <text
      style="font-size:564px;font-weight:400;fill:#ff0000;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2723"
-     y="-848.97815"
-     x="295.37308">
+     y="32.56427"
+     x="349.53696">
     <tspan
-       x="1487.3729"
-       y="799.02179"
+       x="1541.5367"
+       y="1680.5652"
        id="tspan2725"
-       style="fill:#ff0000">·</tspan>
+       style="fill:#ff0000">-</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2708"
+     y="-3878.6316"
+     x="-1349.6174">
+    <tspan
+       x="5157.3838"
+       y="1731.3748"
+       id="tspan2710">½</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2712"
+     y="-3878.3564"
+     x="6336.8877">
+    <tspan
+       x="12843.889"
+       y="1731.6501"
+       id="tspan2714">Æ</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2710"
+     y="-3918.7014"
+     x="8490.7354">
+    <tspan
+       x="20668.734"
+       y="1691.3054"
+       id="tspan2712"
+       style="font-style:normal;font-weight:normal">›</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2714"
+     y="-3918.7017"
+     x="10388.201">
+    <tspan
+       x="22566.201"
+       y="1691.3054"
+       id="tspan2716"
+       style="font-style:normal;font-weight:normal">‹</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text3303"
+     y="-4800.2378"
+     x="2519.2141">
+    <tspan
+       x="9026.2148"
+       y="809.76202"
+       id="tspan3305">↥</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2713"
+     y="-53.976662"
+     x="1981.8657">
+    <tspan
+       x="10023.866"
+       y="3590.0229"
+       id="tspan2715">χ</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2717"
+     y="-761.57867"
+     x="234.50229">
+    <tspan
+       x="4213.5024"
+       y="2882.4209"
+       id="tspan2719">Ξ</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2721"
+     y="-761.57861"
+     x="2065.46">
+    <tspan
+       x="6044.4595"
+       y="2882.4209"
+       id="tspan2723">Λ</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2725"
+     y="-16.192026"
+     x="11580.104">
+    <tspan
+       x="23758.104"
+       y="5593.8081"
+       id="tspan2727"
+       style="font-style:normal;font-weight:normal">υ</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2747"
+     y="-826.20789"
+     x="49.191685">
+    <tspan
+       x="7503.1919"
+       y="6750.792"
+       id="tspan2749">∫</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2751"
+     y="-782.97192"
+     x="3886.6477">
+    <tspan
+       x="11340.646"
+       y="6794.0283"
+       id="tspan2753">Π</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2759"
+     y="-780.4931"
+     x="5725.958">
+    <tspan
+       x="13179.958"
+       y="6796.5068"
+       id="tspan2761">Ω</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2763"
+     y="1188.022"
+     x="3022.2766">
+    <tspan
+       x="15200.276"
+       y="6798.0215"
+       id="tspan2765"
+       style="font-style:normal;font-weight:normal">•</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2767"
+     y="27.500256"
+     x="1961.2814">
+    <tspan
+       x="16991.281"
+       y="7604.5005"
+       id="tspan2769">µ</tspan>
   </text>
 </svg>
