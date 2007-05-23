@@ -128,7 +128,7 @@ keycode 82  = KP_Subtract KP_Subtract U2212
 keycode 79 = KP_Home	KP_7 seveneighths oneeighth		
 keycode 80 = KP_Up KP_8 uparrow fiveeighths 	
 keycode 81 = KP_Prior	KP_9 threeeighths threeeighths 
-keycode 86 = KP_Add plusminus minusplus U2213 
+keycode 86 = KP_Add KP_Add plusminus U2213 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
