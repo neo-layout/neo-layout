@@ -1,5 +1,5 @@
 /*
-   NEO-Layout - Version vom 21.05.2007
+   NEO-Layout - Version vom 23.05.2007
    Mod3 (3./4. Ebene) funktioniert über Win+Ctrl, 
     Mod5 (5./6. Ebene) über AltGr.
    Zur Umbelegung von Mod3 auf CapsLock und #
@@ -121,15 +121,35 @@ Space::
     Send {Space} 
 Return
 
++Space::Send {Space}
+#^space::Send {Space}  
+#^+space::Send {Space}    ; soll geschütztes Leerzeichen
+<^>!Space::Send 0
+<^>!+Space::Send {Space}  ; soll schmales Leerzeichen
+
+
 *Enter::Send {Enter}   
 
 *Esc::Send {Esc} 
 
-*Tab::Send {Tab}
+Tab::Send {Tab}
 +Tab::Send +{Tab}
+#^Tab::Send {Tab}
+#^+Tab::Send {Tab}
+<^>!Tab::Send {Tab}
+<^>!+Tab::Send {Tab}
 
-*Backspace::Send {BS}    
-^Backspace::Send ^{BS}
+
+Backspace::Send {BS}    
++Backspace::Send +{BS}
+#^Backspace::Send {BS}    
+#^+Backspace::Send {BS}    
+<^>!Backspace::Send {BS}    
+<^>!+Backspace::Send {BS}    
+
+;<^>!SC138::Send {NumpadDot} 
+  ; geht nicht, weil sonst AltGr nur noch , macht
+
 
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -970,9 +990,6 @@ Return
 #^+.::Unicode("Î¸") ;theta
 #^+-::return
 
-;#^+space::    ; geschütztes Leerzeichen
-
-
 
 
 ;5. Ebene: Mod5
@@ -1029,11 +1046,6 @@ Return
 <^>!,::Send 2
 <^>!.::Send 3
 <^>!-::Send .
-
-<^>!Space::Send 0
-;<^>!SC138::Send {NumpadDot} 
-  ; geht nicht, weil sonst AltGr nur noch , macht
-
 
 
 ;6. Ebene: Mod5+Shift
@@ -1145,49 +1157,49 @@ Return
 ;Alt-Ebene
 ;---------
 
-<!1::send !1
-<!2::send !2
-<!3::send !3
-<!4::send !4
-<!5::send !5
-<!6::send !6
-<!7::send !7
-<!8::send !8
-<!9::send !9
-<!0::send !0
+<!1::send {altdown}1
+<!2::send {altdown}2
+<!3::send {altdown}3
+<!4::send {altdown}4
+<!5::send {altdown}5
+<!6::send {altdown}6
+<!7::send {altdown}7
+<!8::send {altdown}8
+<!9::send {altdown}9
+<!0::send {altdown}0
 
-<!q::send !x
-<!w::send !v
-<!e::send !l
-<!r::send !c
-<!t::send !w
-<!z::send !k
-<!u::send !h
-<!i::send !g
-<!o::send !f
-<!p::send !q
-<!ü::send !ß
+<!q::send {altdown}x
+<!w::send {altdown}v
+<!e::send {altdown}l
+<!r::send {altdown}c
+<!t::send {altdown}w
+<!z::send {altdown}k
+<!u::send {altdown}h
+<!i::send {altdown}g
+<!o::send {altdown}f
+<!p::send {altdown}q
+<!ü::send {altdown}ß
 
-<!a::send !u
-<!s::send !i
-<!d::send !a
-<!f::send !e
-<!g::send !o
-<!h::send !s
-<!j::send !n
-<!k::send !r
-<!l::send !t
-<!ö::send !d
-<!ä::send !y
+<!a::send {altdown}u
+<!s::send {altdown}i
+<!d::send {altdown}a
+<!f::send {altdown}e
+<!g::send {altdown}o
+<!h::send {altdown}s
+<!j::send {altdown}n
+<!k::send {altdown}r
+<!l::send {altdown}t
+<!ö::send {altdown}d
+<!ä::send {altdown}y
 
-<!y::send !ö
-<!x::send !ü
-<!c::send !ä
-<!v::send !p
-<!b::send !z
-<!n::send !b
-<!m::send !m
-<!-::send !j
+<!y::send {altdown}ö
+<!x::send {altdown}ü
+<!c::send {altdown}ä
+<!v::send {altdown}p
+<!b::send {altdown}z
+<!n::send {altdown}b
+<!m::send {altdown}m
+<!-::send {altdown}j
 
 
 ;Win-Ebene
