@@ -203,11 +203,11 @@ xkb_symbols "sundeadkeys" {
 //   neo_layout (at) yahoogroups (dot) de
 
 
-partial alphanumeric_keys 
+partial modifier_keys alphanumeric_keys
 xkb_symbols "neo" {
-    
-		name[Group1]= "German Neostyle (v2.0)";
-    
+
+    name[Group1]= "German Neostyle (v2.0)";
+
     key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC";
 
     // Zahlenreihe
@@ -283,9 +283,9 @@ xkb_symbols "neo" {
     
     key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
 
-    key <KPDV> { [   KP_Divide,   KP_Divide, division, U2215        ] };
-    key <KPMU> { [ KP_Multiply, KP_Multiply, multiply, U22C5, U2217 ] };
-    key <KPSU> { [ KP_Subtract, KP_Subtract,    U2212               ] };
+    key <KPDV> { [   KP_Divide,   KP_Divide, division, U2215 ] };
+    key <KPMU> { [ KP_Multiply, KP_Multiply, multiply, U22C5 ] };
+    key <KPSU> { [ KP_Subtract, KP_Subtract,    U2212        ] };
 
     key  <KP7> { [  KP_Home,      KP_7,      KP_7, U226A ] };
     key  <KP8> { [    KP_Up,      KP_8,   uparrow, U2229 ] };
@@ -307,27 +307,19 @@ xkb_symbols "neo" {
 
 
     // die neuen Mods
-    key <RALT> {
-        type[Group1]="ONE_LEVEL",
-        symbols[Group1] = [ 0xfe11 ]
-    };
-    modifier_map Mod3   { 0xfe11 };
+    key <CAPS> { 
+			type[Group1]="EIGHT_LEVEL", 
+		  [ ISO_Level3_Shift, ISO_Level3_Shift, Caps_Lock, Caps_Lock, Caps_Lock, Caps_Lock ] 
+		};
+    
+		key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
 
-    key <BKSL> {
-        type[Group1]="ONE_LEVEL",
-        symbols[Group1] = [ ISO_Level3_Shift ]
-    };
-
-    key <CAPS> {
-        type[Group1]="EIGHT_LEVEL",
-        symbols[Group1] = [ ISO_Level3_Shift,   ISO_Level3_Shift,   Caps_Lock,  Caps_Lock,  Caps_Lock,  Caps_Lock ]
-    };
-
-    key <LSGT> {
-        type[Group1]="ONE_LEVEL",
-        symbols[Group1] = [ 0xfe11 ]
-    };
-    modifier_map Mod3   { 0xfe11 };
+    
+		key <LSGT> { [ 0xfe11,0xfe11,0xfe11,0xfe11 ] };
+    
+		key <RALT> { type[Group1]="TWO_LEVEL", symbols[Group1] = [ 0xfe11 ] };
+    
+		modifier_map Mod3 { 0xfe11 };
 
 };
 
