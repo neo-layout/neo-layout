@@ -1,5 +1,5 @@
 /*
-   NEO-Layout - Version vom 23.05.2007
+   NEO-Layout - Version vom 25.05.2007
    Mod3 (3./4. Ebene) funktioniert ¸ber Win+Ctrl, 
     Mod5 (5./6. Ebene) ¸ber AltGr.
    Zur Umbelegung von Mod3 auf CapsLock und #
@@ -7,35 +7,30 @@
     verwende neo20-remap.ahk
 */
 
-;#InstallKeybdHook
 #usehook on
 #singleinstance force
 #LTrim 
   ; Quelltext kann einger¸ckt werden, 
   ; msgbox ist trotzdem linksb¸ndig
 
-SendMode InputThenPlay	
+SendMode Play	
+SetTitleMatchMode 2
 
 name    = NEO-Layout 2.0
 enable  = Aktiviere %name%
 disable = Deaktiviere %name%
 
-; ToDo
-; --------
-; - nobreakspace und schmales Leerzeichen  
-; - ./, auf Altgr 
-; - CapsLock ¸ber beide Mod3
-
-
 
 ; ANSI-Darstellung von beliebigen Unicode-Zeichen
 ; -----------------------------------------------
-; (benˆtigt f¸r MyUTF_String):
 ;  - die untenstehende Definition auskommentieren
 ;  - gew¸nschtes Zeichen in die Zwischenablage befˆrdern
 ;  - ^!u (Control+Alt+U) dr¸cken
 ;  - die ANSI-Darstellung aus der Zwischenablage an die 
 ;    gew¸nschte Stelle ins Skript einf¸gen
+; Wird benˆtigt f¸r Unicode("") und BSUnicode("").
+; Alternativ kann SendUnicodeChar(0x002A) verwendet werden,
+; braucht aber viel mehr CPU.
 /*
 ^!u::  
    MsgBox, 
@@ -76,7 +71,7 @@ if inputlocale <> 00000407
      `t%inputlocale%   
      `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
      sein, damit %name% wie erwartet funktioniert.   
-     `nƒndere die Tastatureinstellung unter 
+     `nƒndern Sie die Tastatureinstellung unter 
      `tSystemsteuerung   
      `t-> Regions- und Sprachoptionen   
      `t-> Sprachen 
@@ -112,25 +107,16 @@ menu, tray, tip, %name%
 ; Sondertasten
 ; ------------
 
-Space::
-  If A_PriorHotkey = ^           ; circumflex
-    BSUnicode("ÀÜ")
-  Else If A_PriorHotkey = +      ; tilde  
-    BSUnicode("Àú")    
-  Else
-    Send {Space} 
-Return
-
-+Space::Send {Space}
-#^space::Send {Space}  
-#^+space::Send {Space}    ; soll gesch¸tztes Leerzeichen
-<^>!Space::Send 0
-<^>!+Space::Send {Space}  ; soll schmales Leerzeichen
-
+*Esc::Send {Esc} 
 
 *Enter::Send {Enter}   
 
-*Esc::Send {Esc} 
+Space::Send {Space} 
++Space::Send {Space}
+#^space::Send {Space}  
+#^+space::SendUnicodeChar(0x00A0)   ; gesch¸tztes Leerzeichen 
+<^>!Space::Send 0
+<^>!+Space::SendUnicodeChar(0x2009) ; schmales Leerzeichen
 
 Tab::Send {Tab}
 +Tab::Send +{Tab}
@@ -147,34 +133,31 @@ Backspace::Send {BS}
 <^>!Backspace::Send {BS}    
 <^>!+Backspace::Send {BS}    
 
-;<^>!SC138::Send {NumpadDot} 
-  ; geht nicht, weil sonst AltGr nur noch , macht
-
 
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ; 1. Ebene
 ; ---------
 
-^::send {^} ; circumflex, tot
+^::Unicode("ÀÜ") ; circumflex, tot
 
 1::
   If A_PriorHotkey = ^          ; circumflex 
-    send {bs}π
+    BSUnicode("¬π")
   Else
     send 1
 return
 
 2::  
   If A_PriorHotkey = ^          ; circumflex 
-    send {bs}≤
+    BSUnicode("¬≤")
   Else
     send 2
 return
 
 3::  
   If A_PriorHotkey = ^          ; circumflex 
-    send {bs}≥
+    BSUnicode("¬≥")
   Else
     send 3
 return
@@ -187,15 +170,15 @@ return
 9::send 9
 0::send 0
 ﬂ::send - ; Bind
-¥::send {¥} ; akut, tot
+¥::send {¥}{space} ; akut, tot
 
-q::send x
+q::sendinput {blind}x
 
 w::
   If A_PriorHotkey = <^>!+^      ; punkt darunter 
     BSUnicode("·πø")
   Else 
-    send v
+    sendinput {blind}v
 Return
 
 e::
@@ -212,7 +195,7 @@ e::
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏∑")
   Else 
-    send l
+    sendinput {blind}l
 Return 
 
 r::
@@ -227,14 +210,14 @@ r::
   Else If A_PriorHotkey = <^>!¥  ; punkt dar¸ber 
     BSUnicode("ƒã")
   Else 
-    Send c
+    sendinput {blind}c
 Return 
 
 t::
   If A_PriorHotkey = ^           ; circumflex
     BSUnicode("≈µ")
   Else
-    send w
+    sendinput {blind}w
 Return
 
 z::
@@ -243,7 +226,7 @@ z::
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏≥")
   Else
-    send k
+    sendinput {blind}k
 Return
 
 u::
@@ -255,7 +238,7 @@ u::
     BSUnicode("·∏£")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏•")
-  Else send h
+  Else sendinput {blind}h
 Return
 
 i::
@@ -267,7 +250,7 @@ i::
     BSUnicode("ƒ£")
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("ƒ°")
-  Else send g
+  Else sendinput {blind}g
 Return
 
 o::
@@ -275,14 +258,22 @@ o::
     BSUnicode("∆í")
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("·∏ü")
-  Else send f
+  Else sendinput {blind}f
 Return
 
-p::send q
-¸::send ﬂ
-+::send ~    ; tilde, tot 
+p::sendinput {blind}q
+¸::sendinput {blind}ﬂ
+
++::Unicode("Àú")    ; tilde, tot 
+
 a::
-  If A_PriorHotkey = #^+         ; Diaerese
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√ª")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√∫")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√π")
+  Else If A_PriorHotkey = #^+    ; Diaerese
     Send, {bs}¸
   Else If A_PriorHotkey = #^++   ; doppelakut 
     BSUnicode("≈±")
@@ -297,11 +288,17 @@ a::
   Else If A_PriorHotkey = +      ; tilde
     BSUnicode("≈©")
   Else
-    send u
+    sendinput {blind}u
 Return
 
 s::
-  If A_PriorHotkey = #^+        ; Diaerese
+  If A_PriorHotkey = ^          ; circumflex
+    BSUnicode("√Æ")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√≠")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√¨")
+  Else If A_PriorHotkey = #^+   ; Diaerese
     Send, {bs}Ô
   Else If A_PriorHotkey = ++    ; macron
     BSUnicode("ƒ´")
@@ -314,12 +311,18 @@ s::
   Else If A_PriorHotkey = <^>!¥ ; (ohne) punkt dar¸ber 
     BSUnicode("ƒ±")
   Else 
-    Send i
+    sendinput {blind}i
 Return
 
 d::
-  If A_PriorHotkey = #^+         ; Diaerese
-    Send {bs}‰
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√¢")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√°")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√†")
+  Else If A_PriorHotkey = #^+    ; Diaerese
+    send {bs}‰
   Else If A_PriorHotkey = <^>!+¥ ; Ring 
     Send {bs}Â
   Else If A_PriorHotkey = +      ; tilde
@@ -331,11 +334,17 @@ d::
   Else If A_PriorHotkey = #^^    ; brevis
     BSUnicode("ƒÉ")
   Else 
-    Send a
+    sendinput {blind}a
 Return 
 
 f::
-  If A_PriorHotkey = #^+        ; Diaerese
+  If A_PriorHotkey = ^          ; circumflex
+    BSUnicode("√™")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√©")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√®")
+  Else If A_PriorHotkey = #^+   ; Diaerese
     Send, {bs}Î
   Else If A_PriorHotkey = #^+¥  ; ogonek
     BSUnicode("ƒô")
@@ -348,11 +357,17 @@ f::
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("ƒó")
   Else 
-    Send e
+    sendinput {blind}e
 Return 
 
 g::
-  If A_PriorHotkey = #^+         ; Diaerese
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√¥")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√≥")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√≤")
+  Else If A_PriorHotkey = #^+    ; Diaerese
     Send, {bs}ˆ
   Else If A_PriorHotkey = +      ; tilde
     BSUnicode("√µ")
@@ -365,7 +380,7 @@ g::
   Else If A_PriorHotkey = #^^    ; brevis 
     BSUnicode("≈è")
   Else 
-    send o
+    sendinput {blind}o
 Return
 
 h::
@@ -382,7 +397,7 @@ h::
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·π£")
   Else   
-    send s
+    sendinput {blind}s
 Return
 
 j::
@@ -397,7 +412,7 @@ j::
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("·πÖ")
   Else
-    send n
+    sendinput {blind}n
 Return
 
 k::
@@ -412,7 +427,7 @@ k::
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·πõ")
   Else 
-    send r
+    sendinput {blind}r
 Return
 
 l::  
@@ -427,7 +442,7 @@ l::
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·π≠")
   Else 
-    send t
+    sendinput {blind}t
 Return
 
 ˆ::
@@ -442,29 +457,31 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏ç")
   Else 
-    send d
+    sendinput {blind}d
 Return
 
 ‰::  
   If A_PriorHotkey = #^+       ; Diaerese
     Send {bs}ˇ
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√Ω")
   Else If A_PriorHotkey = ^    ; circumflex
     BSUnicode("≈∑")
   Else
-    send y
+    sendinput {blind}y
 Return
 
 ;SC02B (#) wird zu Mod3
 
 ;SC056 (<) wird zu Mod5
-y::send ˆ
-x::send ¸
-c::send ‰
+y::sendinput {blind}ˆ
+x::sendinput {blind}¸
+c::sendinput {blind}‰
 v::
   If A_PriorHotkey = <^>!¥      ; punkt dar¸ber 
     BSUnicode("·πó")
   Else
-    send p
+    sendinput {blind}p
 Return
 
 b::
@@ -477,14 +494,14 @@ b::
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("≈º")
   Else 
-    Send z
+    sendinput {blind}z
 Return 
 
 n::
   If A_PriorHotkey = <^>!¥      ; punkt dar¸ber 
     BSUnicode("·∏É")
   Else 
-    send b
+    sendinput {blind}b
 Return
 
 m::
@@ -493,7 +510,7 @@ m::
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·πÉ")
   Else 
-    send m
+    sendinput {blind}m
 Return
 
 ,::send `,
@@ -503,12 +520,13 @@ Return
   If A_PriorHotkey = ^           ; circumflex
     BSUnicode("ƒµ")
   Else
-    send j
+    sendinput {blind}j
 Return
 
 
 ;2. Ebene (Shift)
 ;---------
+; 
 
 +^::Unicode("Àá")  ; caron, tot
 +1::send ∞
@@ -522,14 +540,14 @@ Return
 +9::send ì
 +0::send î
 +ﬂ::Unicode("‚Äì") ; Ged
-+¥::send `` 
++¥::send ``{space} 
 
-+q::send X
++q::sendinput {blind}X
 +w::
   If A_PriorHotkey = <^>!+^      ; punkt darunter
     BSUnicode("·πæ")
   Else 
-    send V
+    sendinput {blind}V
 Return
 
 +e::
@@ -546,7 +564,7 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏∂")
   Else 
-    send L
+    sendinput {blind}L
 return
 
 +r::
@@ -561,14 +579,14 @@ return
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("ƒä")
   Else 
-    Send C
+    sendinput {blind}C
 Return 
 
 +t::
   If A_PriorHotkey = ^           ; circumflex
     BSUnicode("≈¥")
   Else
-    send W
+    sendinput {blind}W
 Return
 
 +z::  
@@ -577,7 +595,7 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏≤")
   Else
-    send K
+    sendinput {blind}K
 Return
 
 +u::
@@ -589,7 +607,7 @@ Return
     BSUnicode("·∏¢")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏§")
-  Else send H
+  Else sendinput {blind}H
 Return
 
 +i::
@@ -601,7 +619,7 @@ Return
     BSUnicode("ƒ¢")
   Else If A_PriorHotkey = <^>!¥  ; punkt dar¸ber 
     BSUnicode("ƒ†")
-  Else send G
+  Else sendinput {blind}G
 Return
 
 +o::
@@ -609,16 +627,22 @@ Return
     BSUnicode("‚Ç£")
   Else If A_PriorHotkey = <^>!¥  ; punkt dar¸ber 
     BSUnicode("·∏û")
-  Else send F
+  Else sendinput {blind}F
 Return
 
-+p::send Q
++p::sendinput {blind}Q
 +¸::send SS ; wird versal-ﬂ
 
 ++::Unicode("Àâ")  ; macron, tot 
 
 +a::
-  If A_PriorHotkey = #^+         ; Diaerese
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√õ")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√ö")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√ô")
+  Else If A_PriorHotkey = #^+    ; Diaerese
     Send, {bs}‹
   Else If A_PriorHotkey = <^>!+¥ ; Ring
     BSUnicode("≈Æ")
@@ -637,11 +661,17 @@ Return
   Else If A_PriorHotkey = +      ; tilde
     BSUnicode("≈®")
   Else
-    send U
+    sendinput {blind}U
 Return
 
 +s::
-  If A_PriorHotkey = #^+         ; Diaerese
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√é")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√ç")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√å")
+  Else If A_PriorHotkey = #^+    ; Diaerese
     Send, {bs}œ
   Else If A_PriorHotkey = ++     ; macron
     BSUnicode("ƒ™")
@@ -654,12 +684,18 @@ Return
   Else If A_PriorHotkey = <^>!¥  ; punkt dar¸ber 
     BSUnicode("ƒ∞")
   Else 
-    Send I
+    sendinput {blind}I
 Return
 
 +d::
-  If A_PriorHotkey = #^+          ; Diaerese
-    Send {bs}ƒ
+  If A_PriorHotkey = ^            ; circumflex
+    BSUnicode("√Ç")
+  Else If A_PriorHotkey = ¥       ; akut 
+    BSUnicode("√Å")
+  Else If A_PriorHotkey = +¥      ; grave
+    BSUnicode("√Ä")
+  Else If A_PriorHotkey = #^+     ; Diaerese
+    send {bs}ƒ
   Else If A_PriorHotkey = +       ; tilde
     BSUnicode("√É")
   Else If A_PriorHotkey = <^>!+¥  ; Ring 
@@ -671,41 +707,53 @@ Return
   Else If A_PriorHotkey = #^+¥    ; ogonek
     BSUnicode("ƒÑ")
   Else 
-    Send A
+    sendinput {blind}A
 Return 
 
 +f::
-  If A_PriorHotkey = #^+        ; Diaerese
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√ä")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√â")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√à")
+  Else If A_PriorHotkey = #^+    ; Diaerese
     Send, {bs}À
-  Else If A_PriorHotkey = +^    ; caron
+  Else If A_PriorHotkey = +^     ; caron
     BSUnicode("ƒö")
-  Else If A_PriorHotkey = ++    ; macron
+  Else If A_PriorHotkey = ++     ; macron
     BSUnicode("ƒí")
-  Else If A_PriorHotkey = #^^   ; brevis 
+  Else If A_PriorHotkey = #^^    ; brevis 
     BSUnicode("ƒî")
-  Else If A_PriorHotkey = #^+¥  ; ogonek 
+  Else If A_PriorHotkey = #^+¥   ; ogonek 
     BSUnicode("ƒò")
-  Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
+  Else If A_PriorHotkey = <^>!¥  ; punkt dar¸ber 
     BSUnicode("ƒñ")
   Else 
-    Send E
+    sendinput {blind}E
 Return 
 
 +g::
-  If A_PriorHotkey = <^>!+     ; Schr‰gstrich
+  If A_PriorHotkey = ^           ; circumflex
+    BSUnicode("√î")
+  Else If A_PriorHotkey = ¥      ; akut 
+    BSUnicode("√ì")
+  Else If A_PriorHotkey = +¥     ; grave
+    BSUnicode("√í")
+  Else If A_PriorHotkey = <^>!+  ; Schr‰gstrich
     BSUnicode("√ò")
-  Else If A_PriorHotkey = +    ; tilde
+  Else If A_PriorHotkey = +      ; tilde
     BSUnicode("√ï")
-  Else If A_PriorHotkey = #^++ ; doppelakut
+  Else If A_PriorHotkey = #^++   ; doppelakut
     BSUnicode("≈ê")
-  Else If A_PriorHotkey = #^+  ; Diaerese
-    Send {bs}÷
-  Else If A_PriorHotkey = ++   ; macron 
+  Else If A_PriorHotkey = #^+    ; Diaerese
+    send {bs}÷
+  Else If A_PriorHotkey = ++     ; macron 
     BSUnicode("≈å")
-  Else If A_PriorHotkey = #^^  ; brevis 
+  Else If A_PriorHotkey = #^^    ; brevis 
     BSUnicode("≈é")
   Else
-    send O
+    sendinput {blind}O
 Return
 
 +h::
@@ -722,7 +770,7 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·π¢")
   Else
-    send S
+    sendinput {blind}S
 Return
 
 +j::
@@ -737,7 +785,7 @@ Return
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("·πÑ")
   Else
-    send N
+    sendinput {blind}N
 Return
 
 +k::
@@ -752,7 +800,7 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·πö")
   Else 
-    send R
+    sendinput {blind}R
 Return
 
 +l::
@@ -767,7 +815,7 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·π¨")
   Else 
-    send T
+    sendinput {blind}T
 Return
 
 
@@ -782,27 +830,29 @@ Return
     BSUnicode("·∏ä")
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·∏å")
-  Else send D
+  Else sendinput {blind}D
 Return
 
 +‰::  
-  If A_PriorHotkey = #^+        ; Diaerese
+  If A_PriorHotkey = ¥           ; akut 
+    BSUnicode("√ù")
+  Else If A_PriorHotkey = #^+    ; Diaerese
     Send {bs}ü
-  Else If A_PriorHotkey = ^     ; circumflex
+  Else If A_PriorHotkey = ^      ; circumflex
     BSUnicode("≈∂")
   Else
-    send Y
+    sendinput {blind}Y
 Return
 
-+y::send ÷
-+x::send ‹
-+c::send ƒ
++y::sendinput {blind}÷
++x::sendinput {blind}‹
++c::sendinput {blind}ƒ
 
 +v::
   If A_PriorHotkey = <^>!¥      ; punkt dar¸ber 
     BSUnicode("·πñ")
   Else 
-    send P
+    sendinput {blind}P
 Return
 
 +b::  
@@ -813,14 +863,14 @@ Return
   Else If A_PriorHotkey = <^>!¥ ; punkt dar¸ber 
     BSUnicode("≈ª")
   Else
-    send Z
+    sendinput {blind}Z
 Return
 
 +n::
   If A_PriorHotkey = <^>!¥       ; punkt dar¸ber 
     BSUnicode("·∏Ç")
   Else 
-    send B
+    sendinput {blind}B
 Return
 
 +m::
@@ -829,7 +879,7 @@ Return
   Else If A_PriorHotkey = <^>!+^ ; punkt darunter 
     BSUnicode("·πÇ")
   Else 
-    send M
+    sendinput {blind}M
 Return
 
 +,::return
@@ -839,7 +889,7 @@ Return
   If A_PriorHotkey = ^            ; circumflex
     BSUnicode("ƒ¥")
   Else
-    send J
+    sendinput {blind}J
 Return
 
 
@@ -985,7 +1035,7 @@ Return
 #^+v::Unicode("œÄ") ;pi
 #^+b::Unicode("Œ∂") ;zeta
 #^+n::Unicode("Œ≤") ;beta
-#^+m::Unicode("Œº") ;mu
+#^+m::Unicode("¬µ") ;micro, mu w‰re Œº
 #^+,::Unicode("œë") ;vartheta?
 #^+.::Unicode("Œ∏") ;theta
 #^+-::return
@@ -1129,7 +1179,7 @@ Return
 ^o::send ^f
 ^p::send ^q
 ^¸::send ^ﬂ
-^+::send ^+ ;z.B. Firefox Schrift grˆﬂer
+^+::send ^{+} ;z.B. Firefox Schrift grˆﬂer
 
 ^a::send ^u
 ^s::send ^i
@@ -1414,20 +1464,40 @@ Return
 ; ------------------------------------
 
 Unicode(code)
-  {
-  saved_clipboard := ClipboardAll
-  Transform, Clipboard, Unicode, %code%
-  send ^v
-  Clipboard := saved_clipboard
-  }
+   {
+   saved_clipboard := ClipboardAll
+   Transform, Clipboard, Unicode, %code%
+   send ^v
+   Clipboard := saved_clipboard
+   }
 
 BSUnicode(code)
-  {
-  saved_clipboard := ClipboardAll
-  Transform, Clipboard, Unicode, %code%
-  send {bs}^v
-  Clipboard := saved_clipboard
-  }
+   {
+   saved_clipboard := ClipboardAll
+   Transform, Clipboard, Unicode, %code%
+   send {bs}^v
+   Clipboard := saved_clipboard
+   }
+
+SendUnicodeChar(charCode)
+   {
+   VarSetCapacity(ki, 28 * 2, 0)
+
+   EncodeInteger(&ki + 0, 1)
+   EncodeInteger(&ki + 6, charCode)
+   EncodeInteger(&ki + 8, 4)
+   EncodeInteger(&ki +28, 1)
+   EncodeInteger(&ki +34, charCode)
+   EncodeInteger(&ki +36, 4|2)
+
+   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
+   }
+
+EncodeInteger(ref, val)
+   {
+   DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
+   } 
+
 
 ; ------------------------------------
 
