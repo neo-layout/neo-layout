@@ -1,4 +1,4 @@
-Version 19.05.2007
+Version 25.05.2007
 
 == Installation ==
 
@@ -47,7 +47,7 @@ Lösung ist dann, einmal die normale Controltaste zu drücken.
 
 Ohne die Remap-Datei können 
 die 3. Ebene mit Ctrl+Win 
-die 4. mit Ctrl+Win+Shift
+die 4. entsprechend mit Ctrl-Win-Shift
 die 5. mit AltGr 
 die 6. mit AltGr+Shift
 erreicht werden.
@@ -77,10 +77,3 @@ AltGr + Ende = Computer ausschalten
 
 Lässt sich die neo20-remap.ahk in die Hauptdatei integrieren?
 Ist mir bislang noch nicht gelungen.
-
-Geschütztes Leerzeichen und schmales Leerzeichen auf 4./6. Ebene über 
-Leertaste, finde ich keine ANSI-Darstellung für.
-
-./, auf Mod5 5. Ebene
-
-CapsLock auf Mod3 3. Ebene
