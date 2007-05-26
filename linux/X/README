@@ -7,6 +7,13 @@ Entweder vorher backup machen oder man benennt diese Datei anders. Dann
 muss man allerdings auch die nachfolgenden Befehle anpassen (den Namen, 
 den man gewählt hat statt „de“)
 
+Wenn man keinen root Rechte hat, funktioniert auch:
+
+setxkbmap de neo -print | xkbcomp - -I$PWD $DISPLAY
+
+Wenn man im ordner mit der Datei "de" ist. Ansonsten muss man $PWD durch das Verzeichnis ersetzen. 
+
+
 === Aktivieren ===
 Zu aktivieren einfach 
     setxkbmap de neo 

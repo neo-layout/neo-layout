@@ -274,7 +274,7 @@ xkb_symbols "neo" {
     key <AB09> { [ period,    ellipsis,   quotedbl, Greek_theta,         3, Greek_THETA ] };
     key <AB10> { [      j,           J,  semicolon,           j,    period,       nabla ] };
 
-    key <SPCE> { [ space, space, space, space, 0, nobreakspace, U202F ] };
+    key <SPCE> { [ space, space, space, nobreakspace, 0, U202F ] };
 
 
     // Keypad
