@@ -1,8 +1,13 @@
 /*
-    Titel:          NEO Autohotkey-Treiber
-    Version:        0.01b
-    Datum:          28.05.2007
-    Basiert auf:    Neo-Layout und Neo-Remap vom 25.05.2007
+    Titel:        NEO Autohotkey-Treiber
+    Version:      0.03b
+    Datum:        29.05.2007
+    Basiert auf:  Neo-Layout und Neo-Remap vom 25.05.2007
+    
+    TODO:         - Nummernblock hinzuf¸gen
+                  - DeadKeys tot machen (?)
+                  - Men¸ des Tasksymbols
+                  - Symbol ‰ndern?
 */
 
 ; aus Nora's script kopiert:
@@ -48,8 +53,6 @@ if inputlocale <> 00000407
    exitapp
 }
 
-
-
 ; Variablen initialisieren
 Ebene = 1
 myPriorHotkey = ""
@@ -72,8 +75,12 @@ return
 
 ; Mod5-Tasten einen Hotkey zuweisen, damit die QWERTZ-Entsprechung nicht mehr ausgegeben wird:
 *<::
-*<^>!::
-return
+*SC138::
+   if GetKeyState("<","P") and GetKeyState("SC138","P")
+   {
+      send {numpaddot}
+   }
+   return
 
 
 
@@ -91,6 +98,12 @@ return
 */
 
 
+/*
+   ------------------------------------------------------
+   Reihe 1
+   ------------------------------------------------------
+*/
+
 *^::
    EbeneAktualisieren()
    if Ebene = 1
@@ -105,18 +118,22 @@ return
    }
    else if Ebene = 3
    {
+      Unicode("Àò")   ; brevis
       myPriorHotkey = "c3"
    }
    else if Ebene = 4
    {
+      send - ; querstrich, tot
       myPriorHotkey = "c4"
    }
    else if Ebene = 5
    {
+      Unicode("¬∑")  ; Mittenpunkt, tot
       myPriorHotkey = "c5"
    }
    else if Ebene = 6
    {
+      Send .         ; punkt darunter
       myPriorHotkey = "c6"
    }
 return
@@ -132,15 +149,11 @@ return
    }
    else if Ebene = 2
       send ∞
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 4
+      send º
+   else if Ebene = 5
+      Unicode("‚Öõ") ; 1/8
+   myPriorHotkey = ""
 return
 
 *2::
@@ -154,15 +167,9 @@ return
    }
    else if Ebene = 2
       send ∂
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 4
+      send Ω
+   myPriorHotkey = ""
 return
 
 *3::
@@ -176,15 +183,11 @@ return
    }
    else if Ebene = 2
       send ß
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-        
-    myPriorHotkey = ""
+   else if Ebene = 4
+      send æ
+   else if Ebene = 5
+      Unicode("‚Öú") ; 3/8
+   myPriorHotkey = ""
 return
 
 *4::
@@ -193,15 +196,15 @@ return
       send 4
    else if Ebene = 2
       send $
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send •
+   else if Ebene = 4
+      send ¢
+   else if Ebene = 5
+      Send {PgUp}    ; Prev
+   else if Ebene = 6
+      Send +{Prev}
+   myPriorHotkey = ""
 return
 
 *5::
@@ -210,15 +213,15 @@ return
       send 5
    else if Ebene = 2
       send Ä
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send £
+   else if Ebene = 4
+      send §
+   else if Ebene = 5
+      Unicode("‚Öù") ; 5/8
+   else if Ebene = 6
+      Unicode("‚áí") ; Implikation
+   myPriorHotkey = ""
 return
 
 *6::
@@ -227,15 +230,13 @@ return
       send 6
    else if Ebene = 2
       send ™
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send Ê 
+   else if Ebene = 4
+      send ∆
+   else if Ebene = 6
+      Unicode("‚áî") ; ƒquivalenz
+   myPriorHotkey = ""
 return
 
 *7::
@@ -244,15 +245,14 @@ return
       send 7
    else if Ebene = 2
       send ∫
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send ú
+   else if Ebene = 4
+      send å
+   else if Ebene = 5
+      Unicode("‚Öû") ; 7/8
+   else if Ebene = 6
+   myPriorHotkey = ""
 return
 
 *8::
@@ -261,15 +261,15 @@ return
       send 8
    else if Ebene = 2
       send Ñ
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send Ç
+   else if Ebene = 4
+      send ª
+   else if Ebene = 5
+      Send /
+   else if Ebene = 6
+      Unicode("‚àÉ") ; Existenzquantor
+   myPriorHotkey = ""
 return
 
 *9::
@@ -278,15 +278,15 @@ return
       send 9
    else if Ebene = 2
       send ì
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send ë
+   else if Ebene = 4
+      send ´
+   else if Ebene = 5
+      Send *
+   else if Ebene = 6
+      Unicode("‚àÄ") ; Allquantor
+   myPriorHotkey = ""
 return
 
 *0::
@@ -295,15 +295,15 @@ return
       send 0
    else if Ebene = 2
       send î
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send í
+   else if Ebene = 4
+      send õ
+   else if Ebene = 5
+      Send -
+   else if Ebene = 6
+      Send ¨
+   myPriorHotkey = ""
 return
 
 *ﬂ::
@@ -312,22 +312,20 @@ return
       send - ; Bind
    else if Ebene = 2
       Unicode("‚Äì") ; Ged
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      Unicode("‚Äî")
+   else if Ebene = 4
+      send ã
+   else if Ebene = 6
+      Unicode("‚à®") ; logisch oder
+   myPriorHotkey = ""
 return
 
 *¥::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {"a1"}{space} ; akut, tot
+      send {¥}{space} ; akut, tot
       myPriorHotkey = "a1"
    }
    else if Ebene = 2
@@ -337,22 +335,32 @@ return
    }
    else if Ebene = 3
    {
+      send ∏ ; cedilla
       myPriorHotkey = "a3"
    }
    else if Ebene = 4
    {
+      Unicode("Àõ") ; ogonek
       myPriorHotkey = "a4"
    }
    else if Ebene = 5
    {
+      Unicode("Àô") ; punkt oben dr¸ber
       myPriorHotkey = "a5"
    }
    else if Ebene = 6
    {
+      Unicode("Àö")  ; ring obendrauf
       myPriorHotkey = "a6"
    }
 return
 
+
+/*
+   ------------------------------------------------------
+   Reihe 2
+   ------------------------------------------------------
+*/
 
 *q::
    EbeneAktualisieren()
@@ -360,15 +368,13 @@ return
       sendinput {blind}x
    else if Ebene = 2
       sendinput {blind}X
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send @
+   else if Ebene = 4
+      Unicode("Œæ") ;xi
+   else if Ebene = 6
+      Unicode("Œû")  ; Xi
+   myPriorHotkey = ""
 return
 
 
@@ -388,15 +394,13 @@ return
       Else 
          sendinput {blind}V
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send _
+   else if Ebene = 5
+      Send {Backspace}
+   else if Ebene = 6
+      Unicode("Œõ")  ; Lambda
+   myPriorHotkey = ""
 return
 
 
@@ -438,15 +442,15 @@ return
          sendinput {blind}L
    }
       
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send [
+   else if Ebene = 4
+      Unicode("Œª") ;lambda
+   else if Ebene = 5
+      Send {Up}
+   else if Ebene = 6
+      Send +{Up}
+   myPriorHotkey = ""
 return
 
 
@@ -482,15 +486,15 @@ return
       Else 
          sendinput {blind}C
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send ]
+   else if Ebene = 4
+      Unicode("œá") ;chi
+   else if Ebene = 5
+      Send {Tab}
+   else if Ebene = 6
+      Send +{Tab}
+   myPriorHotkey = ""
 return
 
 *t::
@@ -509,15 +513,13 @@ return
       Else
          sendinput {blind}W
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send {^}{space} ; untot
+   else if Ebene = 5
+      Send {Insert}
+   else if Ebene = 6
+      Send +{Insert}
+   myPriorHotkey = ""
 return
 
 *z::
@@ -540,15 +542,15 @@ return
       Else
          sendinput {blind}K
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      sendraw !
+   else if Ebene = 4
+      Unicode("Œ∫") ;kappa
+   else if Ebene = 5
+      Send °
+   else if Ebene = 6
+      Send ©
+   myPriorHotkey = ""
 return
 
 *u::
@@ -577,15 +579,20 @@ return
          BSUnicode("·∏§")
       Else sendinput {blind}H
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+   {
+      If myPriorHotkey = "c4"    ; Querstrich
+         BSUnicode("‚â§")
+      Else
+         send <
+   }
+   else if Ebene = 4
+      Unicode("œà") ;psi
+   else if Ebene = 5
+      Send 7
+   else if Ebene = 6
+      Unicode("Œ®")  ; Phi
+   myPriorHotkey = ""
 return
 
 *i::
@@ -614,15 +621,20 @@ return
          BSUnicode("ƒ†")
       Else sendinput {blind}G
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+   {
+      If myPriorHotkey = "c4"    ; Querstrich
+         BSUnicode("‚â•")
+      Else
+         send >
+   }
+   else if Ebene = 4
+      Unicode("Œ≥") ;gamma
+   else if Ebene = 5
+      Send 8
+   else if Ebene = 6
+      Unicode("Œì")  ; Gamma
+   myPriorHotkey = ""
 return
 
 *o::
@@ -643,15 +655,40 @@ return
          BSUnicode("·∏û")
       Else sendinput {blind}F
    } 
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+   {
+      If myPriorHotkey = "c1"            ; circumflex 
+         BSUnicode("‚âô")
+      Else If myPriorHotkey = "t1"       ; tilde 
+         BSUnicode("‚âÖ")
+      Else If myPriorHotkey = "t5"   ; Schr‰gstrich 
+         BSUnicode("‚â†")
+      Else If myPriorHotkey = "c4"    ; Querstrich
+         BSUnicode("‚â°")
+      Else If myPriorHotkey = "c2"      ; caron 
+         BSUnicode("‚âö")
+      Else If myPriorHotkey = "a6"  ; ring dr¸ber 
+         BSUnicode("‚âó")
+         
+
+
+/*
+        was bedeutet dieser PriorHotkey?
+        ich steig da irgendwie nicht durch...
+*/
+
+      Else If myPriorHotkey = +1      ; Grad
+         BSUnicode("‚âó")
+      Else
+         send `=
+   }
+   else if Ebene = 4
+      Unicode("œÜ") ;phi
+   else if Ebene = 5
+      Send 9
+   else if Ebene = 6
+      Unicode("Œ¶")  ; Psi
+   myPriorHotkey = ""
 return
 
 *p::
@@ -660,15 +697,13 @@ return
       sendinput {blind}q
    else if Ebene = 2
       sendinput {blind}Q
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send {&}
+   else if Ebene = 5
+      Send {+}
+   else if Ebene = 6
+      Unicode("‚àß") ; logisches Und
+   myPriorHotkey = ""
 return
 
 *¸::
@@ -677,15 +712,15 @@ return
       sendinput {blind}ﬂ
    else if Ebene = 2
       send SS ; wird versal-ﬂ
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      Unicode("ƒ≥")   ; ij
+   else if Ebene = 4
+      Unicode("ƒ≤") ;IJ
+   else if Ebene = 5
+      Unicode("…ô") ; schwa
+   else if Ebene = 6
+      Unicode("∆è")  ; Schwa
+   myPriorHotkey = ""
 return
 
 
@@ -703,22 +738,32 @@ return
    }
    else if Ebene = 3
    {
+      Unicode("¬®")   ; Diaerese
       myPriorHotkey = "t3"
    }
    else if Ebene = 4
    {
+      send "        ;doppelakut
       myPriorHotkey = "t4"
    }
    else if Ebene = 5
    {
+      Unicode("/")  ; Schr‰gstrich, tot
       myPriorHotkey = "t5"
    }
    else if Ebene = 6
    {
+      Unicode("Àè")  ; komma drunter, tot
       myPriorHotkey = "t6"
    }
 return
 
+
+/*
+   ------------------------------------------------------
+   Reihe 3
+   ------------------------------------------------------
+*/
 
 *a::
    EbeneAktualisieren()
@@ -776,15 +821,13 @@ return
       Else
          sendinput {blind}U
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send \
+   else if Ebene = 5
+      Send {Home}
+   else if Ebene = 6
+      Send +{Home}
+   myPriorHotkey = ""
 return
 
 *s::
@@ -835,15 +878,15 @@ return
       Else 
          sendinput {blind}I
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send `/
+   else if Ebene = 4
+      Unicode("Œπ") ;iota
+   else if Ebene = 5
+      Send {Left}
+   else if Ebene = 6
+      Send +{Left}
+   myPriorHotkey = ""
 return
 
 *d::
@@ -894,16 +937,15 @@ return
       Else 
          sendinput {blind}A
    }
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      sendraw {
+   else if Ebene = 4
+      Unicode("Œ±") ;alpha
+   else if Ebene = 5
+      Send {Down}
+   else if Ebene = 6
+      Send +{Down}
+   myPriorHotkey = ""
 return
 
 *f::
@@ -954,15 +996,15 @@ return
       Else 
          sendinput {blind}E
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      sendraw }
+   else if Ebene = 4
+      Unicode("Œµ") ;epsilon
+   else if Ebene = 5
+      Send {Right}
+   else if Ebene = 6
+      Send +{Right}
+   myPriorHotkey = ""
 return
 
 *g::
@@ -1013,15 +1055,15 @@ return
       Else
          sendinput {blind}O
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send *
+   else if Ebene = 4
+      Unicode("œâ") ;omega
+   else if Ebene = 5
+      Send {End}
+   else if Ebene = 6
+      Send +{End}
+   myPriorHotkey = ""
 return
 
 *h::
@@ -1060,16 +1102,15 @@ return
       Else
          sendinput {blind}S
    }
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send ?
+   else if Ebene = 4
+      Unicode("œÉ") ;sigma
+   else if Ebene = 5
+      Send ø
+   else if Ebene = 6
+      Unicode("Œ£")  ; Sigma
+   myPriorHotkey = ""
 return
 
 *j::
@@ -1104,15 +1145,15 @@ return
       Else
          sendinput {blind}N
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send (
+   else if Ebene = 4
+      Unicode("ŒΩ") ;nu
+   else if Ebene = 5
+      Send 4
+   else if Ebene = 6
+      Unicode("‚Ññ") ; No
+   myPriorHotkey = ""
 return
 
 *k::
@@ -1147,15 +1188,15 @@ return
       Else 
          sendinput {blind}R
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send )
+   else if Ebene = 4
+      Unicode("œÅ") ;rho
+   else if Ebene = 5
+      Send 5
+   else if Ebene = 6
+      Unicode("¬Æ")  ; (R)
+   myPriorHotkey = ""
 return
 
 *l::
@@ -1190,15 +1231,15 @@ return
       Else 
          sendinput {blind}T
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send - ; Bind
+   else if Ebene = 4
+      Unicode("œÑ") ;tau
+   else if Ebene = 5
+      Send 6
+   else if Ebene = 6
+      Unicode("‚Ñ¢") ; TM
+   myPriorHotkey = ""
 return
 
 *ˆ::
@@ -1232,15 +1273,15 @@ return
          BSUnicode("·∏å")
       Else sendinput {blind}D
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
-    myPriorHotkey = ""
+   else if Ebene = 3
+      send :
+   else if Ebene = 4
+      Unicode("Œ¥") ;delta
+   else if Ebene = 5
+      Send `,
+   else if Ebene = 6
+      Unicode("Œî")  ; Delta
+   myPriorHotkey = ""
 return
 
 *‰::
@@ -1267,34 +1308,36 @@ return
       Else
          sendinput {blind}Y
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 4
+      Unicode("œÖ") ;upsilon
+   else if Ebene = 5
+      Send ˛         ; thorn
+   else if Ebene = 6
+      Send ﬁ         ; Thorn
    myPriorHotkey = ""
 return
 
 ;SC02B (#) wird zu Mod3
 
+
+/*
+   ------------------------------------------------------
+   Reihe 4
+   ------------------------------------------------------
+*/
+
 ;SC056 (<) wird zu Mod5
+
 *y::
    EbeneAktualisieren()
    if Ebene = 1
       sendinput {blind}ˆ
    else if Ebene = 2
       sendinput {blind}÷
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send {#}
+   else if Ebene = 5
+      Send {Esc}
    myPriorHotkey = ""
 return
 
@@ -1304,14 +1347,12 @@ return
       sendinput {blind}¸
    else if Ebene = 2
       sendinput {blind}‹
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send $
+   else if Ebene = 5
+      Send {Del}
+   else if Ebene = 6
+      Unicode("‚à´") ; Int
    myPriorHotkey = ""
 return
 
@@ -1321,14 +1362,14 @@ return
       sendinput {blind}‰
    else if Ebene = 2
       sendinput {blind}ƒ
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send |
+   else if Ebene = 4
+      Unicode("Œ∑") ;eta
+   else if Ebene = 5
+      Send {PgDn}    ; Next
+   else if Ebene = 6
+      Send +{PgDn}
    myPriorHotkey = ""
 return
 
@@ -1348,15 +1389,19 @@ return
       Else 
          sendinput {blind}P
    }
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+   {
+      If myPriorHotkey = "t1"    ; tilde
+         BSUnicode("‚âà")
+      Else
+         sendraw ~
+   }      
+   else if Ebene = 4
+      Unicode("œÄ") ;pi
+   else if Ebene = 5
+      Send {Enter}
+   else if Ebene = 6
+      Unicode("Œ†")  ; Pi
    myPriorHotkey = ""
 return
 
@@ -1386,15 +1431,12 @@ return
       Else
          sendinput {blind}Z
    }
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send ``{space} ; untot
+   else if Ebene = 4
+      Unicode("Œ∂") ;zeta
+   else if Ebene = 6
+      Unicode("Œ©")  ; Omega
    myPriorHotkey = ""
 return
 
@@ -1414,15 +1456,14 @@ return
       Else 
          sendinput {blind}B
    }
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send {+}
+   else if Ebene = 4
+      Unicode("Œ≤") ;beta
+   else if Ebene = 5
+      Unicode("‚àû") ;infty
+   else if Ebene = 6
+      Unicode("‚Ä¢") ; bullet
    myPriorHotkey = ""
 return
 
@@ -1446,15 +1487,12 @@ return
       Else 
          sendinput {blind}M
    }
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send `%
+   else if Ebene = 4
+      Unicode("¬µ") ;micro, mu w‰re Œº
+   else if Ebene = 5
+      Send 1
    myPriorHotkey = ""
 return
 
@@ -1462,16 +1500,14 @@ return
    EbeneAktualisieren()
    if Ebene = 1
       send `,
-;   else if Ebene = 2
-      
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send '
+   else if Ebene = 4
+      Unicode("œë") ;vartheta?
+   else if Ebene = 5
+      Send 2
+   else if Ebene = 6
+      Unicode("‚àö") ; sqrt
    myPriorHotkey = ""
 return
 
@@ -1481,14 +1517,14 @@ return
       send .
    else if Ebene = 2
       Unicode("‚Ä¶")  ; ellipse
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send "
+   else if Ebene = 4
+      Unicode("Œ∏") ;theta
+   else if Ebene = 5
+      Send 3
+   else if Ebene = 6
+      Unicode("Œò")  ; Theta
    myPriorHotkey = ""
 return
 
@@ -1509,22 +1545,50 @@ return
       Else
          sendinput {blind}J
    }
-   ;else if Ebene = 3
-      
-   ;else if Ebene = 4
-      
-   ;else if Ebene = 5
-      
-   ;else if Ebene = 6
-      
+   else if Ebene = 3
+      send `;
+   else if Ebene = 5
+      Send .
+   else if Ebene = 6
+      Unicode("‚àá") ; Nabla
    myPriorHotkey = ""
 return
 
 
+/*
+   ------------------------------------------------------
+   Sondertasten
+   ------------------------------------------------------
+*/
 
-; Funktionen
-; ------------------------------------------------------
+*Space::
+   EbeneAktualisieren()
+   if Ebene = 4
+      SendUnicodeChar(0x00A0)   ; gesch¸tztes Leerzeichen
+   else if Ebene = 5
+      Send 0
+   else if Ebene = 6
+      SendUnicodeChar(0x2009) ; schmales Leerzeichen
+   else
+      Send {Space}
+   myPriorHotkey = ""
+return
 
+*Enter::
+   Send {Enter}
+   myPriorhotkey = ""
+return
+
+*Backspace::
+   Send {Backspace}
+   myPriorhotkey = ""
+return
+
+/*
+   ------------------------------------------------------
+   Funktionen
+   ------------------------------------------------------
+*/
 
 EbeneAktualisieren()
 {
@@ -1542,7 +1606,7 @@ EbeneAktualisieren()
       Ebene += 2
    }
    ; ist Mod5 down? Mod3 hat Vorrang!
-   else if ( GetKeyState("<","P") or GetKeyState("<^>!","P") )
+   else if ( GetKeyState("<","P") or GetKeyState("SC138","P") )
    {
       Ebene += 4
    }
@@ -1564,4 +1628,23 @@ BSUnicode(code)
    Transform, Clipboard, Unicode, %code%
    send {bs}^v
    Clipboard := saved_clipboard
+}
+
+SendUnicodeChar(charCode)
+{
+   VarSetCapacity(ki, 28 * 2, 0)
+
+   EncodeInteger(&ki + 0, 1)
+   EncodeInteger(&ki + 6, charCode)
+   EncodeInteger(&ki + 8, 4)
+   EncodeInteger(&ki +28, 1)
+   EncodeInteger(&ki +34, charCode)
+   EncodeInteger(&ki +36, 4|2)
+
+   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
+}
+
+EncodeInteger(ref, val)
+{
+   DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
 }
