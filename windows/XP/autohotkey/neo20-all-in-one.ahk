@@ -1,13 +1,16 @@
 /*
     Titel:        NEO Autohotkey-Treiber
-    Version:      0.03b
+    Version:      0.04 beta
     Datum:        29.05.2007
-    Basiert auf:  Neo-Layout und Neo-Remap vom 25.05.2007
+    Basiert auf:  neo20.ahk und neo20-remap.ahk vom 25.05.2007
     
-    TODO:         - Nummernblock hinzufügen
+    TODO:         - ausgiebig testen...
                   - DeadKeys tot machen (?)
                   - Menü des Tasksymbols
-                  - Symbol ändern?
+                  - Symbol ändern (?)
+                  - auf Ebene 1 und 2 wenn möglich, "send" durch "sendinput {blind}" ersetzen
+                    (wegen möglicher Tastenkombinationen)
+                  - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
 */
 
 ; aus Nora's script kopiert:
@@ -20,9 +23,9 @@
 SendMode Play	
 SetTitleMatchMode 2
 
-name    = NEO 2.0
-enable  = Aktiviere %name%
-disable = Deaktiviere %name%
+;name    = NEO 2.0
+;enable  = Aktiviere %name%
+;disable = Deaktiviere %name%
 
 ; Überprüfung auf deutsches Tastaturlayout 
 ; ----------------------------------------
@@ -53,9 +56,19 @@ if inputlocale <> 00000407
    exitapp
 }
 
-; Variablen initialisieren
+/*
+   Variablen initialisieren
+*/
+
 Ebene = 1
 myPriorHotkey = ""
+
+
+/*
+   ------------------------------------------------------
+   Modifier
+   ------------------------------------------------------
+*/
 
 ; CapsLock durch Mod3+Mod3
 *#::
@@ -73,7 +86,7 @@ myPriorHotkey = ""
    }
 return
 
-; Mod5-Tasten einen Hotkey zuweisen, damit die QWERTZ-Entsprechung nicht mehr ausgegeben wird:
+; Komma durch Mod5+Mod5
 *<::
 *SC138::
    if GetKeyState("<","P") and GetKeyState("SC138","P")
@@ -83,10 +96,7 @@ return
    return
 
 
-
 /*
-   Hier gehts jetzt los.
-   
    Ablauf bei toten Tasten:
    1. Ebene Aktualisieren
    2. Abhängig von der Variablen "Ebene" Zeichen ausgeben und die Variable "myPriorHotkey" setzen
@@ -95,10 +105,7 @@ return
    1. Ebene Aktualisieren
    2. Abhängig von den Variablen "Ebene" und "myPriorHotkey" Zeichen ausgeben
    3. "myPriorHotkey" mit leerem String überschreiben
-*/
 
-
-/*
    ------------------------------------------------------
    Reihe 1
    ------------------------------------------------------
@@ -251,7 +258,6 @@ return
       send Œ
    else if Ebene = 5
       Unicode("â…ž") ; 7/8
-   else if Ebene = 6
    myPriorHotkey = ""
 return
 
@@ -674,10 +680,9 @@ return
 
 /*
         was bedeutet dieser PriorHotkey?
-        ich steig da irgendwie nicht durch...
 */
 
-      Else If myPriorHotkey = +1      ; Grad
+      Else If A_PriorHotkey = +1      ; Grad
          BSUnicode("â‰—")
       Else
          send `=
@@ -1554,6 +1559,350 @@ return
    myPriorHotkey = ""
 return
 
+/*
+   ------------------------------------------------------
+   Numpad
+   ------------------------------------------------------
+
+   folgende Tasten verhalten sich bei ein- und ausgeschaltetem
+   NumLock gleich:
+*/
+
+*NumpadDiv::
+   EbeneAktualisieren()
+   if ( (Ebene = 1) or (Ebene = 2) )
+      send {NumpadDiv}
+   else if Ebene = 3
+      send ÷
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆ•")   ; slash
+   myPriorHotkey = ""
+return
+
+*NumpadMult::
+   EbeneAktualisieren()
+   if ( (Ebene = 1) or (Ebene = 2) )
+      send {NumpadMult}
+   else if Ebene = 3
+      send ×
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‹…")  ; cdot
+   myPriorHotkey = ""
+return
+
+*NumpadSub::
+   EbeneAktualisieren()
+   if ( (Ebene = 1) or (Ebene = 2) )
+      send {NumpadSub}
+   else if Ebene = 3
+      send -
+   myPriorHotkey = ""
+return
+
+*NumpadAdd::
+   EbeneAktualisieren()
+   if ( (Ebene = 1) or (Ebene = 2) )
+      send {NumpadAdd}
+   else if Ebene = 3
+      send ±
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆ“")   ; -+
+   myPriorHotkey = ""
+return
+
+*NumpadEnter::
+   EbeneAktualisieren()
+   if ( (Ebene = 1) or (Ebene = 2) )
+      send {NumpadEnter}      
+   else if Ebene = 3
+      Unicode("â‰ ") ; neq
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰ˆ") ; approx
+   myPriorHotkey = ""
+return
+
+/*
+   folgende Tasten verhalten sich bei ein- und ausgeschaltetem NumLock
+   unterschiedlich:
+
+   bei NumLock ein
+*/
+
+*Numpad7::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad7}
+   else if Ebene = 2
+      send {NumpadHome}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰ª")  ; ll
+   myPriorHotkey = ""
+return
+
+*Numpad8::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad8}
+   else if Ebene = 2
+      send {NumpadUp}
+   else if Ebene = 3
+      Unicode("â†‘")     ; uparrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆ©")    ;
+   myPriorHotkey = ""
+return
+
+*Numpad9::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad9}
+   else if Ebene = 2
+      send {NumpadPgUp}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰«")  ; gg
+   myPriorHotkey = ""
+return
+
+*Numpad4::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad4}
+   else if Ebene = 2
+      send {NumpadLeft}
+   else if Ebene = 3
+      Unicode("â†")     ; leftarrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âŠ‚")  ;
+   myPriorHotkey = ""
+return
+
+*Numpad5::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad5}
+   else if Ebene = 2
+      send {NumpadClear}
+   else if Ebene = 3
+      send †
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆŠ") ;
+   myPriorHotkey = ""
+return
+
+*Numpad6::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad6}
+   else if Ebene = 2
+      send {NumpadRight}
+   else if Ebene = 3
+      Unicode("â†’")     ; rightarrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âŠƒ") ;
+   myPriorHotkey = ""
+return
+
+*Numpad1::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad1}
+   else if Ebene = 2
+      send {NumpadEnd}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰¤")   ; leq
+   myPriorHotkey = ""
+return
+
+*Numpad2::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad2}
+   else if Ebene = 2
+      send {NumpadDown}
+   else if Ebene = 3
+      Unicode("â†“")     ; downarrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆª")  ;
+   myPriorHotkey = ""
+return
+
+*Numpad3::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad3}
+   else if Ebene = 2
+      send {NumpadPgDn}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰¥")  ; geq
+   myPriorHotkey = ""
+return
+
+*Numpad0::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {Numpad0}
+   else if Ebene = 2
+      send {NumpadIns}
+   else if Ebene = 3
+      send `%
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      send ‰ 
+   myPriorHotkey = ""
+return
+
+*NumpadDot::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadDot}
+   else if Ebene = 2
+      send {NumpadDel}
+   else if Ebene = 3
+      send .
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      send `,
+   myPriorHotkey = ""
+return
+
+/*
+   bei NumLock aus
+*/
+
+*NumpadHome::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadHome}
+   else if Ebene = 2
+      send {Numpad7}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰ª")  ; ll
+   myPriorHotkey = ""
+return
+
+*NumpadUp::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadUp}
+   else if Ebene = 2
+      send {Numpad8}
+   else if Ebene = 3
+      Unicode("â†‘")     ; uparrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆ©")    ;
+   myPriorHotkey = ""
+return
+
+*NumpadPgUp::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadPgUp}
+   else if Ebene = 2
+      send {Numpad9}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰«")  ; gg
+   myPriorHotkey = ""
+return
+
+*NumpadLeft::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadLeft}
+   else if Ebene = 2
+      send {Numpad4}
+   else if Ebene = 3
+      Unicode("â†")     ; leftarrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âŠ‚")  ;
+   myPriorHotkey = ""
+return
+
+*NumpadClear::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadClear}
+   else if Ebene = 2
+      send {Numpad5}
+   else if Ebene = 3
+      send †
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆŠ") ;
+   myPriorHotkey = ""
+return
+
+*NumpadRight::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadRight}
+   else if Ebene = 2
+      send {Numpad6}
+   else if Ebene = 3
+      Unicode("â†’")     ; rightarrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âŠƒ") ;
+   myPriorHotkey = ""
+return
+
+*NumpadEnd::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadEnd}
+   else if Ebene = 2
+      send {Numpad1}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰¤")   ; leq
+   myPriorHotkey = ""
+return
+
+*NumpadDown::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadDown}
+   else if Ebene = 2
+      send {Numpad2}
+   else if Ebene = 3
+      Unicode("â†“")     ; downarrow
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("âˆª")  ;
+   myPriorHotkey = ""
+return
+
+*NumpadPgDn::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadPgDn}
+   else if Ebene = 2
+      send {Numpad3}
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      Unicode("â‰¥")  ; geq
+   myPriorHotkey = ""
+return
+
+*NumpadIns::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadIns}
+   else if Ebene = 2
+      send {Numpad0}
+   else if Ebene = 3
+      send `%
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      send ‰ 
+   myPriorHotkey = ""
+return
+
+*NumpadDel::
+   EbeneAktualisieren()
+   if Ebene = 1
+      send {NumpadDel}
+   else if Ebene = 2
+      send {NumpadDot}
+   else if Ebene = 3
+      send .
+   else if ( (Ebene = 4) or (Ebene = 5) )
+      send `,
+   myPriorHotkey = ""
+return
+
+
 
 /*
    ------------------------------------------------------
@@ -1574,15 +1923,67 @@ return
    myPriorHotkey = ""
 return
 
+/*
+   Folgende Tasten sind nur aufgeführt, um myPriorHotkey zu leeren.
+   Irgendwie sieht das noch nicht schön aus. Vielleicht lässt sich dieses
+   Problem irgendwie eleganter lösen...
+*/
+
 *Enter::
-   Send {Enter}
+   sendinput {Blind}{Enter}
    myPriorhotkey = ""
 return
 
 *Backspace::
-   Send {Backspace}
+   sendinput {Blind}{Backspace}
    myPriorhotkey = ""
 return
+
+*Tab::
+   sendinput {Blind}{Tab}
+   myPriorHotkey = ""
+return
+
+*Home::
+   sendinput {Blind}{Home}
+   myPriorHotkey = ""
+return
+
+*End::
+   sendinput {Blind}{End}
+   myPriorHotkey = ""
+return
+
+*PgUp::
+   sendinput {Blind}{PgUp}
+   myPriorHotkey = ""
+return
+
+*PgDn::
+   sendinput {Blind}{PgDn}
+   myPriorHotkey = ""
+return
+
+*Up::
+   sendinput {Blind}{Up}
+   myPriorhotkey = ""
+return
+
+*Down::
+   sendinput {Blind}{Down}
+   myPriorhotkey = ""
+return
+
+*Left::
+   sendinput {Blind}{Left}
+   myPriorhotkey = ""
+return
+
+*Right::
+   sendinput {Blind}{Right}
+   myPriorhotkey = ""
+return
+
 
 /*
    ------------------------------------------------------
