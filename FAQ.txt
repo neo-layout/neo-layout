@@ -278,10 +278,10 @@ Fehler sollte man wohl mal den Gnome-Entwicklern melden.
 
 --------------------------------------------------------------------------------
 
-F: Mein Alt geht nicht als Modifier für die 5. Ebene
+F: Mein »AltGr« geht nicht als Modifier für die 5. Ebene.
 
 A: Deaktiviere die Option „Both Alt keys together change Group” 
-(ralt_switch_for_alts_toggle)
+(ralt_switch_for_alts_toggle).
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
