@@ -272,8 +272,16 @@ unsererseits noch nicht ausgeschlossen.
 
 F: Wenn ich »Strg« + »b« oder »Strg« + »t« drücke, wird mein Terminal größer
 bzw. kleiner. Wieso? Ist das ein Fehler im Layout?
+
 A: Das ist wahrscheinlich ein Fehler in Gnome bzw. dem „gnome-terminal“. Den
 Fehler sollte man wohl mal den Gnome-Entwicklern melden.
+
+--------------------------------------------------------------------------------
+
+F: Mein Alt geht nicht als Modifier für die 5. Ebene
+
+A: Deaktiviere die Option „Both Alt keys together change Group” 
+(ralt_switch_for_alts_toggle)
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
