@@ -8,9 +8,11 @@
                   - DeadKeys tot machen (?)
                   - Menü des Tasksymbols
                   - Symbol ändern (?)
-                  - auf Ebene 1 und 2 wenn möglich, "send" durch "sendinput {blind}" ersetzen
-                    (wegen möglicher Tastenkombinationen)
+                  - wenn möglich, "sendinput {blind}" verwenden (?)
+                    (gibt es irgendwelche Probleme bei "sendinput {blind}" ?)
                   - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+                  - Bessere Lösung für das leeren von myPriorHotkey finden, damit die Sondertasten
+                    nicht mehr abgefangen werden müssen.
 */
 
 ; aus Nora's script kopiert:
@@ -446,16 +448,15 @@ return
          BSUnicode("á¸¶")
       Else 
          sendinput {blind}L
-   }
-      
+   }      
    else if Ebene = 3
       send [
    else if Ebene = 4
       Unicode("Î»") ;lambda
    else if Ebene = 5
-      Send {Up}
+      Sendinput {Blind}{Up}
    else if Ebene = 6
-      Send +{Up}
+      Sendinput {Blind}+{Up}
    myPriorHotkey = ""
 return
 
@@ -888,9 +889,9 @@ return
    else if Ebene = 4
       Unicode("Î¹") ;iota
    else if Ebene = 5
-      Send {Left}
+      Sendinput {Blind}{Left}
    else if Ebene = 6
-      Send +{Left}
+      Sendinput {Blind}+{Left}
    myPriorHotkey = ""
 return
 
@@ -947,9 +948,9 @@ return
    else if Ebene = 4
       Unicode("Î±") ;alpha
    else if Ebene = 5
-      Send {Down}
+      Sendinput {Blind}{Down}
    else if Ebene = 6
-      Send +{Down}
+      Sendinput {Blind}+{Down}
    myPriorHotkey = ""
 return
 
@@ -1006,9 +1007,9 @@ return
    else if Ebene = 4
       Unicode("Îµ") ;epsilon
    else if Ebene = 5
-      Send {Right}
+      Sendinput {Blind}{Right}
    else if Ebene = 6
-      Send +{Right}
+      Sendinput {Blind}+{Right}
    myPriorHotkey = ""
 return
 
@@ -1919,7 +1920,7 @@ return
    else if Ebene = 6
       SendUnicodeChar(0x2009) ; schmales Leerzeichen
    else
-      Send {Space}
+      Send {blind}{Space}
    myPriorHotkey = ""
 return
 
@@ -1927,6 +1928,10 @@ return
    Folgende Tasten sind nur aufgeführt, um myPriorHotkey zu leeren.
    Irgendwie sieht das noch nicht schön aus. Vielleicht lässt sich dieses
    Problem irgendwie eleganter lösen...
+   
+   Nachtrag:
+   Weil es mit Alt+Tab Probleme gab, wird hier jetzt erstmal rumgeflickschustert,
+   bis eine allgemeinere Lösung gefunden wurde.
 */
 
 *Enter::
@@ -1939,14 +1944,23 @@ return
    myPriorhotkey = ""
 return
 
+
+
+/*
+Tab wurde rausgenommen, weil es Probleme mit AltTab und ShiftAltTab gab.
+Allerdings kommt es jetzt zu komischen Ergebnissen, wenn man Tab nach
+einem DeadKey drückt...
+
 *Tab::
-   sendinput {Blind}{Tab}
+   send {Blind}{Tab}
    myPriorHotkey = ""
 return
 
+*/
+
 *Home::
    sendinput {Blind}{Home}
-   myPriorHotkey = ""
+   myPriorHotkey = ""      
 return
 
 *End::
