@@ -314,31 +314,33 @@ ein »Apfel« + »c« nötig.
 2.3 Windows
 --------------------------------------------------------------------------------
 
-F: Unter Windows Visa lässt sich das NEO-Layout nicht installieren. Wieso?
+F: Unter Windows Visa lässt sich die MSKLC-Variante nicht installieren. Wieso?
 
-A: Doch, man kann NEO auch unter Windows Vista benutzen. Man muss dazu die UAC
-(„User Account Control“ = Rechte- und Benutzerkontenverwaltung) deaktivieren.
+A: 1. Benutze die Autohotkey Variante
+   2. UAC („User Account Control“ = Rechte- und Benutzerkontenverwaltung) 
+      muss deaktiviert werden.
 
 --------------------------------------------------------------------------------
 
-F: Wie kann ich auf Zeichen der 5. und 6. Ebene zugreifen?
+F: Wie kann ich mit der MSKLC-Variante auf Zeichen der 5. und 6. Ebene 
+   zugreifen?
 
 A: Diese Ebenen sind über die so genannte SGCaps-Funktion realisiert. Für die 
-5. Ebene muss man Mod5 drücken, dann die Taste mit dem Zeichen, dann Mod5 wieder
-deaktivieren (Shift drücken oder nochmal Mod5.
-Für die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das Zeichen
-eingeben und dann Mod5 wieder deaktivieren. Es wird noch nach einer Möglichkeit
-gesucht, das weniger umständlich zu ermöglichen
+   5. Ebene muss man Mod5 drücken, dann die Taste mit dem Zeichen, dann Mod5 wieder
+   deaktivieren (Shift drücken oder nochmal Mod5.
+   Für die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das Zeichen
+   eingeben und dann Mod5 wieder deaktivieren. Es wird noch nach einer Möglichkeit
+   gesucht, das weniger umständlich zu ermöglichen
 
 --------------------------------------------------------------------------------
 
 F: Eine bestimmte tote Taste (Deadkey) funktioniert nicht?
 
-A: 1. Das resultierende Zeichen gibt es nicht – es können nur
-Tote-Taste + Buchstabe eingegeben werden, deren Kombination auch Sinn ergibt.
-2. Die toten Tasten sind alle von Hand eingegeben, da kann schon mal ein
-Buchstabe vergessen werden. Falls dem so ist, bitte an die Mailingliste
-schreiben!
+A: 1. Das resultierende Zeichen gibt es nicht – es können nur Tote-Taste + 
+      Buchstabe eingegeben werden, deren Kombination auch Sinn ergibt.
+   2. Die toten Tasten sind alle von Hand eingegeben, da kann schon mal ein
+      Buchstabe vergessen werden. Falls dem so ist, bitte an die Mailingliste
+      schreiben!
 
 --------------------------------------------------------------------------------
 3. Entwicklerfragen (auch Beta-Tester)
