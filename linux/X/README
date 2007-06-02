@@ -1,32 +1,42 @@
-== Kleine Anleitung ==
-die Datei „de“ muss unter linux nach: 
-/usr/share/X11/xkb/symbols
-(root-rechte benoetigt)
-Achtung dort befindet meist schon eine Datei mit gleichem Namen!
-Entweder vorher backup machen oder man benennt diese Datei anders. Dann 
-muss man allerdings auch die nachfolgenden Befehle anpassen (den Namen, 
-den man gewählt hat statt „de“)
+== Anleitung für Anwender ohne Root-Zugang ==
+    ______________________________________________________________________
+    Achtung, diese Methode funktioniert nur, wenn man schon ein System mit
+    NEO 1.0 hat. Sonst muss man die xmodmap-Variante benutzen.
+    ——————————————————————————————————————————————————————————————————————
+Wenn man keine root-Rechte hat, gibt man folgenden Befehl ein:
+    setxkbmap de neo -print | xkbcomp - -I$PWD $DISPLAY
+Dies nur, wenn man gerade im Ordner mit der Datei „de“ ist.
+Ansonsten muss man $PWD durch das Verzeichnis mit der „de“-Datei ersetzen. 
 
-Wenn man keinen root Rechte hat, funktioniert auch:
-
-setxkbmap de neo -print | xkbcomp - -I$PWD $DISPLAY
-
-Wenn man im ordner mit der Datei "de" ist. Ansonsten muss man $PWD durch das Verzeichnis ersetzen. 
-
+== Anleitung für Anwender mit Root-Zugang ==
+Wenn man für den benutzten Rechner Root-Rechte bekommen kann, muss die Datei
+„de“ unter Linux nach
+    /usr/share/X11/xkb/symbols
+kopiert werden. Achtung dort befindet meist schon eine Datei mit gleichem Namen!
+Entweder vorher ein Backup machen oder man benennt diese Datei anders. Dann muss
+man allerdings auch die nachfolgenden Befehle anpassen (den Namen, den man statt
+„de“ gewählt hat).
 
 === Aktivieren ===
-Zu aktivieren einfach 
+Zum Aktivieren nur
     setxkbmap de neo 
-eintippen
+eintippen.
 
 === Deaktivieren ===
 Zurück zu qwertz geht es mit:
-	setxkbmap de
+    setxkbmap de
 
-=== Tipp ===
+== Tipp ==
 Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein, 
 kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
 zwischen qwertz und NEO wechseln. 
-alias uiae='setxkbmap de'
-alias asdf='setxkbmap de neo'
 
+=== Ohne Root-Zugang ===
+    alias asdf='setxkbmap de neo -print | xkbcomp - -I$NEO_PWD $DISPLAY'
+    alias uiae='setxkbmap de'
+wobei $NEO_PWD durch das Verzeichnis mit der „de“-Datei ersetzt werden muss.
+
+
+=== Mit Root-Zugang ===
+    alias asdf='setxkbmap de neo'
+    alias uiae='setxkbmap de'
