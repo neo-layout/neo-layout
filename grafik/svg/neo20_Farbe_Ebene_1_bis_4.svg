@@ -31,9 +31,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.32"
      inkscape:cx="446.44044"
-     inkscape:cy="148.10605"
+     inkscape:cy="147.72726"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer5"
      width="900px"
      height="300px"
      showgrid="true"
@@ -60,7 +60,7 @@
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <cc:license
-           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+           rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
         <dc:title>NEO-Tastatur-Layout Version 2.0</dc:title>
         <dc:creator>
           <cc:Agent>
@@ -87,19 +87,17 @@
         <dc:identifier>https://neo.eigenheimstrasse.de/svn/grafik/svg/neo20_Farbe_Ebene_1_bis_4.svg</dc:identifier>
       </cc:Work>
       <cc:License
-         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+         rdf:about="http://creativecommons.org/licenses/by/2.5/">
         <cc:permits
            rdf:resource="http://web.resource.org/cc/Reproduction" />
         <cc:permits
            rdf:resource="http://web.resource.org/cc/Distribution" />
         <cc:requires
            rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
         <cc:permits
            rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
-        <cc:requires
-           rdf:resource="http://web.resource.org/cc/ShareAlike" />
-        <cc:requires
-           rdf:resource="http://web.resource.org/cc/SourceCode" />
       </cc:License>
     </rdf:RDF>
   </metadata>
@@ -1139,17 +1137,6 @@
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
-       x="572.06738"
-       y="203"
-       id="text3453"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan3455"
-         x="572.06738"
-         y="203">;</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
        x="632.06738"
        y="203"
        id="text3457"
@@ -1157,7 +1144,7 @@
          sodipodi:role="line"
          id="tspan3459"
          x="632.06738"
-         y="203">:</tspan></text>
+         y="203">…</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1332,17 +1319,6 @@
          x="45.067383"
          y="53"
          style="fill:#ff0000">˘</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
-       x="105.06738"
-       y="53"
-       id="text2143"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan2145"
-         x="105.06738"
-         y="53">¬</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1552,7 +1528,7 @@
          sodipodi:role="line"
          id="tspan2172"
          x="676.51514"
-         y="112.12121">;</tspan></text>
+         y="112.12121">&amp;</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1707,7 +1683,7 @@
          sodipodi:role="line"
          id="tspan2328"
          x="180.06738"
-         y="233">~</tspan></text>
+         y="233">#</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1740,7 +1716,7 @@
          sodipodi:role="line"
          id="tspan2340"
          x="360.06738"
-         y="233">#</tspan></text>
+         y="233">~</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1784,7 +1760,7 @@
          sodipodi:role="line"
          id="tspan2356"
          x="600.06738"
-         y="233">&amp;</tspan></text>
+         y="233">'</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1806,7 +1782,7 @@
          sodipodi:role="line"
          id="tspan2364"
          x="720.06738"
-         y="233">'</tspan></text>
+         y="233">;</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1835,7 +1811,7 @@
          sodipodi:role="line"
          id="tspan2372"
          x="105.06738"
-         y="23">¹</tspan></text>
+         y="23">¼</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -1846,7 +1822,7 @@
          sodipodi:role="line"
          id="tspan2380"
          x="225.06738"
-         y="23">³</tspan></text>
+         y="23">¾</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
@@ -2244,6 +2220,6 @@
          sodipodi:role="line"
          id="tspan2576"
          x="165.06741"
-         y="23.000015">²</tspan></text>
+         y="23.000015">½</tspan></text>
   </g>
 </svg>
