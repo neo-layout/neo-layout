@@ -293,7 +293,7 @@ xkb_symbols "neo" {
     key <KPAD> { [   KP_Add,    KP_Add, plusminus, U2213 ] };
 
     key  <KP4> { [  KP_Left, KP_4,  leftarrow, U2282 ] };
-    key  <KP5> { [ KP_Begin, KP_5,     dagger, U222A ] };
+    key  <KP5> { [ KP_Begin, KP_5,     dagger, U220A ] };
     key  <KP6> { [ KP_Right, KP_6, rightarrow, U2283 ] };
 
     key  <KP1> { [  KP_End,      KP_1,      KP_1, U2264 ] };

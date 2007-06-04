@@ -134,7 +134,7 @@ keycode 86 = KP_Add KP_Add plusminus U2213
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 83 = KP_Left  KP_4 leftarrow U2282
-keycode 84 = KP_Begin KP_5 dagger U222A
+keycode 84 = KP_Begin KP_5 dagger U220A
 keycode 85 = KP_Right KP_6 rightarrow U2283
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
