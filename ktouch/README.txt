@@ -6,6 +6,8 @@ Die Datei muss in das Verzeichnis
     /opt/local/share/apps/ktouch
 oder
     /usr/share/apps/ktouch
+oder
+    /opt/kde3/share/apps/ktouch/
 oder äquivalentes (je nach Betriebssystem) kopiert werden und kann dann in
 KTouch über das Menü
     Einstellungen --> Tastaturbelegungen
