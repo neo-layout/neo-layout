@@ -22,13 +22,13 @@ FingerKey  100		:			 108   20
 ControlKey	260		Tab			0		10	15     10
 ControlKey	13		Enter		138	10	12     20
 ControlKey	257		Shift		123	30	27     10
-ControlKey	264		AltGr		120	40	15     10
+ControlKey	264		Mod5		120	40	15     10
 ControlKey	265		Ctrl		135	40	15     10
 ControlKey	263		Alt			15	40	15     10
 ControlKey	262		Ctrl		0		40	15     10
 ControlKey	32		Space		30	40	90     10
 ControlKey	258		Shift		0		30	13     10
-ControlKey	259		AltGr		0		20	18     10
+ControlKey	259		Mod3		0		20	18     10
 ControlKey  	8 	BackSpace		130	0	20 10
 #
 NormalKey	94		‍		0		0	117
@@ -49,29 +49,29 @@ NormalKey	64		@		15	10	117
 NormalKey	95		_		25	10	105
 NormalKey	91		[		35	10	97
 NormalKey	93		]		45	10	101
-NormalKey	126		~		55	10	101
+NormalKey	126		^		55	10	101
 NormalKey	107		!		65	10	110
 NormalKey	104		<		75	10	110
 NormalKey	103		>		85	10	114
 NormalKey	102		=		95	10	116
-NormalKey	106		;		105	10	100
+NormalKey	106		&		105	10	100
 NormalKey	223		‍		115	10	100
 NormalKey	43		‍		125	10	100
 #
 NormalKey	111		*		58	20	101
 NormalKey	115		?		68	20	110
 NormalKey	121		‍		118	20	100
-NormalKey	35		M5 		128	20	100
+NormalKey	35		M3 		128	20	100
 #
 NormalKey	122		M5		13	30	117
-NormalKey	246		^		23	30	117
+NormalKey	246		#		23	30	117
 NormalKey	252		$		33	30	105
 NormalKey	228		|		43	30	97
-NormalKey	112		#		53	30	101
+NormalKey	112		~		53	30	101
 NormalKey	122		`		63	30	101
 NormalKey	98		+		73	30	110
 NormalKey	109		%		83	30	110
-NormalKey	44		&		93	30	114
+NormalKey	44		'		93	30	114
 NormalKey	46		"		103	30	116
-NormalKey	120		'		113	30	100
+NormalKey	120		;		113	30	100
 #
