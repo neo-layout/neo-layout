@@ -70,13 +70,13 @@ keycode 48 = y Y y Greek_upsilon thorn THORN
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 52 = odiaeresis Odiaeresis numbersign odiaeresis Escape
-keycode 53 = udiaeresis Udiaeresis dollar udiaeresis Delete integral
+keycode 53 = udiaeresis Udiaeresis dollar udiaeresis Delete Delete
 keycode 54 = adiaeresis Adiaeresis bar Greek_eta Next Next
 keycode 55 = p P asciitilde Greek_pi Return Greek_PI
 keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
 
 keycode 57 = b B plus Greek_beta infinity enfilledcircbullet
-keycode 58 = m M percent mu 1
+keycode 58 = m M percent mu 1 integral
 keycode 59 = comma apostrophe apostrophe U3D1 2 radical
 keycode 60 = period ellipsis quotedbl Greek_theta 3 Greek_THETA
 keycode 61 = j J semicolon j period nabla
