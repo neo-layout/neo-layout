@@ -317,7 +317,9 @@ xkb_symbols "neo" {
 
 		key <LSGT> { [ 0xfe11,0xfe11,0xfe11,0xfe11 ] };
 
-		key <RALT> { type[Group1]="TWO_LEVEL", symbols[Group1] = [ 0xfe11 ] };
+		key <RALT> { 
+			type[Group1]="EIGHT_LEVEL", 
+			symbols[Group1] = [ 0xfe11, 0xfe11, 0xfe11, 0xfe11, KP_Decimal, 0xfe11 ] };
 
 		modifier_map Mod3 { 0xfe11 };
 
