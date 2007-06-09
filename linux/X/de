@@ -272,7 +272,7 @@ xkb_symbols "neo" {
     key <AB07> { [      m,           M,    percent,          mu,         1,    integral ] };
     key <AB08> { [  comma,  apostrophe, apostrophe,        U3D1,         2,     radical ] };
     key <AB09> { [ period,    ellipsis,   quotedbl, Greek_theta,         3, Greek_THETA ] };
-    key <AB10> { [      j,           J,  semicolon,           j,    period,       nabla ] };
+    key <AB10> { [      j,           J,  semicolon,           partialderivative,    period,       nabla ] };
 
     key <SPCE> { [ space, space, space, nobreakspace, 0, U202F ] };
 
