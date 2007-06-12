@@ -90,7 +90,7 @@ PriorDeadKey := ""
    }
 return
 
-; Komma durch Mod5+Mod5
+; KP_Decimal durch Mod5+Mod5
 *<::
 *SC138::
    if GetKeyState("<","P") and GetKeyState("SC138","P")
