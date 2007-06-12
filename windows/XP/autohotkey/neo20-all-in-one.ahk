@@ -1,18 +1,20 @@
 /*
     Titel:        NEO Autohotkey-Treiber
-    Version:      0.04 beta
-    Datum:        29.05.2007
+    Version:      0.05 beta
+    Datum:        12.06.2007
     Basiert auf:  neo20.ahk und neo20-remap.ahk vom 25.05.2007
     
     TODO:         - ausgiebig testen...
-                  - DeadKeys tot machen (?)
                   - Men¸ des Tasksymbols
-                  - Symbol ‰ndern (?)
-                  - wenn mˆglich, "sendinput {blind}" verwenden (?)
+                  - Bessere Lˆsung f¸r das leeren von PriorDeadKey finden, damit die Sondertasten
+                    nicht mehr abgefangen werden m¸ssen.
+    
+    Ideen:
+                  - DeadKeys tot machen
+                  - Symbol ‰ndern
+                  - wenn mˆglich, "sendinput {blind}" verwenden
                     (gibt es irgendwelche Probleme bei "sendinput {blind}" ?)
                   - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-                  - Bessere Lˆsung f¸r das leeren von myPriorHotkey finden, damit die Sondertasten
-                    nicht mehr abgefangen werden m¸ssen.
 */
 
 ; aus Nora's script kopiert:
@@ -63,7 +65,7 @@ if inputlocale <> 00000407
 */
 
 Ebene = 1
-myPriorHotkey = ""
+PriorDeadKey := ""
 
 
 /*
@@ -101,12 +103,12 @@ return
 /*
    Ablauf bei toten Tasten:
    1. Ebene Aktualisieren
-   2. Abh‰ngig von der Variablen "Ebene" Zeichen ausgeben und die Variable "myPriorHotkey" setzen
+   2. Abh‰ngig von der Variablen "Ebene" Zeichen ausgeben und die Variable "PriorDeadKey" setzen
    
    Ablauf bei "lebenden" (sagt man das?) Tasten:
    1. Ebene Aktualisieren
-   2. Abh‰ngig von den Variablen "Ebene" und "myPriorHotkey" Zeichen ausgeben
-   3. "myPriorHotkey" mit leerem String ¸berschreiben
+   2. Abh‰ngig von den Variablen "Ebene" und "PriorDeadKey" Zeichen ausgeben
+   3. "PriorDeadKey" mit leerem String ¸berschreiben
 
    ------------------------------------------------------
    Reihe 1
@@ -118,32 +120,32 @@ return
    if Ebene = 1
    {
       Unicode("ÀÜ") ; circumflex, tot
-      myPriorHotkey = "c1"
+      PriorDeadKey := "c1"
    }
    else if Ebene = 2
    {
       Unicode("Àá")  ; caron, tot
-      myPriorHotkey = "c2"
+      PriorDeadKey := "c2"
    }
    else if Ebene = 3
    {
       Unicode("Àò")   ; brevis
-      myPriorHotkey = "c3"
+      PriorDeadKey := "c3"
    }
    else if Ebene = 4
    {
       send - ; querstrich, tot
-      myPriorHotkey = "c4"
+      PriorDeadKey := "c4"
    }
    else if Ebene = 5
    {
       Unicode("¬∑")  ; Mittenpunkt, tot
-      myPriorHotkey = "c5"
+      PriorDeadKey := "c5"
    }
    else if Ebene = 6
    {
       Send .         ; punkt darunter
-      myPriorHotkey = "c6"
+      PriorDeadKey := "c6"
    }
 return
 
@@ -151,7 +153,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"          ; circumflex 1
+      If (PriorDeadKey = "c1")          ; circumflex 1
          BSUnicode("¬π")
       Else
          send 1
@@ -162,14 +164,14 @@ return
       send º
    else if Ebene = 5
       Unicode("‚Öõ") ; 1/8
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *2::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"          ; circumflex 
+      If (PriorDeadKey = "c1")          ; circumflex 
          BSUnicode("¬≤")
       Else
          send 2      
@@ -178,14 +180,14 @@ return
       send ∂
    else if Ebene = 4
       send Ω
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *3::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"          ; circumflex
+      If (PriorDeadKey = "c1")          ; circumflex
          BSUnicode("¬≥")
       Else
          send 3      
@@ -196,7 +198,7 @@ return
       send æ
    else if Ebene = 5
       Unicode("‚Öú") ; 3/8
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *4::
@@ -213,7 +215,7 @@ return
       Send {PgUp}    ; Prev
    else if Ebene = 6
       Send +{Prev}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *5::
@@ -230,7 +232,7 @@ return
       Unicode("‚Öù") ; 5/8
    else if Ebene = 6
       Unicode("‚áí") ; Implikation
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *6::
@@ -245,7 +247,7 @@ return
       send ∆
    else if Ebene = 6
       Unicode("‚áî") ; ƒquivalenz
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *7::
@@ -260,7 +262,7 @@ return
       send å
    else if Ebene = 5
       Unicode("‚Öû") ; 7/8
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *8::
@@ -277,7 +279,7 @@ return
       Send /
    else if Ebene = 6
       Unicode("‚àÉ") ; Existenzquantor
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *9::
@@ -294,7 +296,7 @@ return
       Send *
    else if Ebene = 6
       Unicode("‚àÄ") ; Allquantor
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *0::
@@ -311,7 +313,7 @@ return
       Send -
    else if Ebene = 6
       Send ¨
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *ﬂ::
@@ -326,7 +328,7 @@ return
       send ã
    else if Ebene = 6
       Unicode("‚à®") ; logisch oder
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *¥::
@@ -334,32 +336,32 @@ return
    if Ebene = 1
    {
       send {¥}{space} ; akut, tot
-      myPriorHotkey = "a1"
+      PriorDeadKey := "a1"
    }
    else if Ebene = 2
    {
       send ``{space}
-      myPriorHotkey = "a2"
+      PriorDeadKey := "a2"
    }
    else if Ebene = 3
    {
       send ∏ ; cedilla
-      myPriorHotkey = "a3"
+      PriorDeadKey := "a3"
    }
    else if Ebene = 4
    {
       Unicode("Àõ") ; ogonek
-      myPriorHotkey = "a4"
+      PriorDeadKey := "a4"
    }
    else if Ebene = 5
    {
       Unicode("Àô") ; punkt oben dr¸ber
-      myPriorHotkey = "a5"
+      PriorDeadKey := "a5"
    }
    else if Ebene = 6
    {
       Unicode("Àö")  ; ring obendrauf
-      myPriorHotkey = "a6"
+      PriorDeadKey := "a6"
    }
 return
 
@@ -382,7 +384,7 @@ return
       Unicode("Œæ") ;xi
    else if Ebene = 6
       Unicode("Œû")  ; Xi
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -390,14 +392,14 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c6"      ; punkt darunter 
+      If (PriorDeadKey = "c6")      ; punkt darunter 
          BSUnicode("·πø")
       Else
          sendinput {blind}v
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c6"      ; punkt darunter
+      If (PriorDeadKey = "c6")      ; punkt darunter
          BSUnicode("·πæ")
       Else 
          sendinput {blind}V
@@ -408,7 +410,7 @@ return
       Send {Backspace}
    else if Ebene = 6
       Unicode("Œõ")  ; Lambda
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -417,34 +419,34 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    { 
-      If myPriorHotkey = "t5"       ; Schr‰gstrich
+      If (PriorDeadKey = "t5")       ; Schr‰gstrich
          BSUnicode("≈Ç")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("ƒ∫")
-      Else If myPriorHotkey = "c2"     ; caron 
+      Else If (PriorDeadKey = "c2")     ; caron 
          BSUnicode("ƒæ")
-      Else If myPriorHotkey = "a3"    ; cedilla
+      Else If (PriorDeadKey = "a3")    ; cedilla
          BSUnicode("ƒº")
-      Else If myPriorHotkey = "c5"  ; Mittenpunkt
+      Else If (PriorDeadKey = "c5")  ; Mittenpunkt
          BSUnicode("≈Ä")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏∑")
       Else 
          sendinput {blind}l
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "a1"           ; akut 
+      If (PriorDeadKey = "a1")           ; akut 
          BSUnicode("ƒπ")
-      Else If myPriorHotkey = "c2"     ; caron 
+      Else If (PriorDeadKey = "c2")     ; caron 
          BSUnicode("ƒΩ")
-      Else If myPriorHotkey = "a3"    ; cedilla
+      Else If (PriorDeadKey = "a3")    ; cedilla
          BSUnicode("ƒª")
-      Else If myPriorHotkey = "t5"  ; Schr‰gstrich 
+      Else If (PriorDeadKey = "t5")  ; Schr‰gstrich 
          BSUnicode("≈Å")
-      Else If myPriorHotkey = "c5"  ; Mittenpunkt 
+      Else If (PriorDeadKey = "c5")  ; Mittenpunkt 
          BSUnicode("ƒø")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏∂")
       Else 
          sendinput {blind}L
@@ -457,7 +459,7 @@ return
       Sendinput {Blind}{Up}
    else if Ebene = 6
       Sendinput {Blind}+{Up}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -465,30 +467,30 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("ƒâ")
-      Else If myPriorHotkey = "c2"     ; caron
+      Else If (PriorDeadKey = "c2")     ; caron
          BSUnicode("ƒç")
-      Else If myPriorHotkey = "a1"      ; akut
+      Else If (PriorDeadKey = "a1")      ; akut
          BSUnicode("ƒá")
-      Else If myPriorHotkey = "a3"    ; cedilla
+      Else If (PriorDeadKey = "a3")    ; cedilla
          BSUnicode("√ß")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("ƒã")
       Else 
          sendinput {blind}c
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"          ; circumflex 
+      If (PriorDeadKey = "c1")          ; circumflex 
          BSUnicode("ƒà")
-      Else If myPriorHotkey = "c2"    ; caron 
+      Else If (PriorDeadKey = "c2")    ; caron 
          BSUnicode("ƒå")
-      Else If myPriorHotkey = "a1"     ; akut 
+      Else If (PriorDeadKey = "a1")     ; akut 
          BSUnicode("ƒÜ")
-      Else If myPriorHotkey = "a3"   ; cedilla 
+      Else If (PriorDeadKey = "a3")   ; cedilla 
          BSUnicode("√á")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("ƒä")
       Else 
          sendinput {blind}C
@@ -501,21 +503,21 @@ return
       Send {Tab}
    else if Ebene = 6
       Send +{Tab}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *t::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("≈µ")
       Else
          sendinput {blind}w
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("≈µ")
       Else
          sendinput {blind}W
@@ -526,25 +528,25 @@ return
       Send {Insert}
    else if Ebene = 6
       Send +{Insert}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *z::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "a3"         ; cedilla
+      If (PriorDeadKey = "a3")         ; cedilla
          BSUnicode("ƒ∑")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏≥")
       Else
          sendinput {blind}k
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "a3"         ; cedilla 
+      If (PriorDeadKey = "a3")         ; cedilla 
          BSUnicode("ƒ∂")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏≤")
       Else
          sendinput {blind}K
@@ -557,38 +559,38 @@ return
       Send °
    else if Ebene = 6
       Send ©
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *u::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("ƒ•")
-      Else If myPriorHotkey = "c4"   ; Querstrich 
+      Else If (PriorDeadKey = "c4")   ; Querstrich 
          BSUnicode("ƒß")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·∏£")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏•")
       Else sendinput {blind}h
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("ƒ§")
-      Else If myPriorHotkey = "c4"   ; Querstrich
+      Else If (PriorDeadKey = "c4")   ; Querstrich
          BSUnicode("ƒ¶")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·∏¢")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏§")
       Else sendinput {blind}H
    }
    else if Ebene = 3
    {
-      If myPriorHotkey = "c4"    ; Querstrich
+      If (PriorDeadKey = "c4")    ; Querstrich
          BSUnicode("‚â§")
       Else
          send <
@@ -599,38 +601,38 @@ return
       Send 7
    else if Ebene = 6
       Unicode("Œ®")  ; Phi
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *i::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"          ; circumflex
+      If (PriorDeadKey = "c1")          ; circumflex
          BSUnicode("ƒù")
-      Else If myPriorHotkey = "c3"   ; brevis
+      Else If (PriorDeadKey = "c3")   ; brevis
          BSUnicode("ƒü")
-      Else If myPriorHotkey = "a3"   ; cedilla
+      Else If (PriorDeadKey = "a3")   ; cedilla
          BSUnicode("ƒ£")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("ƒ°")
       Else sendinput {blind}g
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("ƒú") 
-      Else If myPriorHotkey = "c3"    ; brevis 
+      Else If (PriorDeadKey = "c3")    ; brevis 
          BSUnicode("ƒû")
-      Else If myPriorHotkey = "a3"    ; cedilla 
+      Else If (PriorDeadKey = "a3")    ; cedilla 
          BSUnicode("ƒ¢")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("ƒ†")
       Else sendinput {blind}G
    }
    else if Ebene = 3
    {
-      If myPriorHotkey = "c4"    ; Querstrich
+      If (PriorDeadKey = "c4")    ; Querstrich
          BSUnicode("‚â•")
       Else
          send >
@@ -641,40 +643,40 @@ return
       Send 8
    else if Ebene = 6
       Unicode("Œì")  ; Gamma
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *o::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "t5"      ; durchgestrichen
+      If (PriorDeadKey = "t5")      ; durchgestrichen
          BSUnicode("∆í")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("·∏ü")
       Else sendinput {blind}f
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "t5"       ; durchgestrichen
+      If (PriorDeadKey = "t5")       ; durchgestrichen
          BSUnicode("‚Ç£")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·∏û")
       Else sendinput {blind}F
    } 
    else if Ebene = 3
    {
-      If myPriorHotkey = "c1"            ; circumflex 
+      If (PriorDeadKey = "c1")            ; circumflex 
          BSUnicode("‚âô")
-      Else If myPriorHotkey = "t1"       ; tilde 
+      Else If (PriorDeadKey = "t1")       ; tilde 
          BSUnicode("‚âÖ")
-      Else If myPriorHotkey = "t5"   ; Schr‰gstrich 
+      Else If (PriorDeadKey = "t5")   ; Schr‰gstrich 
          BSUnicode("‚â†")
-      Else If myPriorHotkey = "c4"    ; Querstrich
+      Else If (PriorDeadKey = "c4")    ; Querstrich
          BSUnicode("‚â°")
-      Else If myPriorHotkey = "c2"      ; caron 
+      Else If (PriorDeadKey = "c2")      ; caron 
          BSUnicode("‚âö")
-      Else If myPriorHotkey = "a6"  ; ring dr¸ber 
+      Else If (PriorDeadKey = "a6")  ; ring dr¸ber 
          BSUnicode("‚âó")
          
 
@@ -694,7 +696,7 @@ return
       Send 9
    else if Ebene = 6
       Unicode("Œ¶")  ; Psi
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *p::
@@ -709,7 +711,7 @@ return
       Send {+}
    else if Ebene = 6
       Unicode("‚àß") ; logisches Und
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *¸::
@@ -726,7 +728,7 @@ return
       Unicode("…ô") ; schwa
    else if Ebene = 6
       Unicode("∆è")  ; Schwa
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -735,32 +737,32 @@ return
    if Ebene = 1
    {
       Unicode("Àú")    ; tilde, tot 
-      myPriorHotkey = "t1"
+      PriorDeadKey := "t1"
    }
    else if Ebene = 2
    {
       Unicode("Àâ")  ; macron, tot
-      myPriorHotkey = "t2"
+      PriorDeadKey := "t2"
    }
    else if Ebene = 3
    {
       Unicode("¬®")   ; Diaerese
-      myPriorHotkey = "t3"
+      PriorDeadKey := "t3"
    }
    else if Ebene = 4
    {
       send "        ;doppelakut
-      myPriorHotkey = "t4"
+      PriorDeadKey := "t4"
    }
    else if Ebene = 5
    {
       Unicode("/")  ; Schr‰gstrich, tot
-      myPriorHotkey = "t5"
+      PriorDeadKey := "t5"
    }
    else if Ebene = 6
    {
       Unicode("Àè")  ; komma drunter, tot
-      myPriorHotkey = "t6"
+      PriorDeadKey := "t6"
    }
 return
 
@@ -775,54 +777,54 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√ª")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√∫")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√π")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          Send, {bs}¸
-      Else If myPriorHotkey = "t4"   ; doppelakut 
+      Else If (PriorDeadKey = "t4")   ; doppelakut 
          BSUnicode("≈±")
-      Else If myPriorHotkey = "c3"    ; brevis
+      Else If (PriorDeadKey = "c3")    ; brevis
          BSUnicode("≈≠")
-      Else If myPriorHotkey = "t2"     ; macron
+      Else If (PriorDeadKey = "t2")     ; macron
          BSUnicode("≈´")
-      Else If myPriorHotkey = "a4"   ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSUnicode("≈≥")
-      Else If myPriorHotkey = "a6" ; Ring
+      Else If (PriorDeadKey = "a6") ; Ring
          BSUnicode("≈Ø")
-      Else If myPriorHotkey = "t1"      ; tilde
+      Else If (PriorDeadKey = "t1")      ; tilde
          BSUnicode("≈©")
       Else
          sendinput {blind}u
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√õ")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√ö")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√ô")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          Send, {bs}‹
-      Else If myPriorHotkey = "a6" ; Ring
+      Else If (PriorDeadKey = "a6") ; Ring
          BSUnicode("≈Æ")
-      Else If myPriorHotkey = "c3"    ; brevis
+      Else If (PriorDeadKey = "c3")    ; brevis
          BSUnicode("≈¨")
-      Else If myPriorHotkey = "t4"   ; doppelakut
+      Else If (PriorDeadKey = "t4")   ; doppelakut
          BSUnicode("≈∞")
-      Else If myPriorHotkey = "c2"     ; caron 
+      Else If (PriorDeadKey = "c2")     ; caron 
          BSUnicode("≈Æ")
-      Else If myPriorHotkey = "t2"     ; macron
+      Else If (PriorDeadKey = "t2")     ; macron
          BSUnicode("≈™")
-      Else If myPriorHotkey = "c3"    ; brevis 
+      Else If (PriorDeadKey = "c3")    ; brevis 
          BSUnicode("≈¨")
-      Else If myPriorHotkey = "a4"   ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSUnicode("≈≤")
-      Else If myPriorHotkey = "t1"      ; tilde
+      Else If (PriorDeadKey = "t1")      ; tilde
          BSUnicode("≈®")
       Else
          sendinput {blind}U
@@ -833,53 +835,53 @@ return
       Send {Home}
    else if Ebene = 6
       Send +{Home}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *s::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"          ; circumflex
+      If (PriorDeadKey = "c1")          ; circumflex
          BSUnicode("√Æ")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√≠")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√¨")
-      Else If myPriorHotkey = "t3"   ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}Ô
-      Else If myPriorHotkey = "t2"    ; macron
+      Else If (PriorDeadKey = "t2")    ; macron
          BSUnicode("ƒ´")
-      Else If myPriorHotkey = "c3"   ; brevis
+      Else If (PriorDeadKey = "c3")   ; brevis
          BSUnicode("ƒ≠")
-      Else If myPriorHotkey = "a4"  ; ogonek
+      Else If (PriorDeadKey = "a4")  ; ogonek
          BSUnicode("ƒØ")
-      Else If myPriorHotkey = "t1"     ; tilde
+      Else If (PriorDeadKey = "t1")     ; tilde
          BSUnicode("ƒ©")
-      Else If myPriorHotkey = "a5" ; (ohne) punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; (ohne) punkt dar¸ber 
          BSUnicode("ƒ±")
       Else 
          sendinput {blind}i
    }
    else if Ebene = 2
    {   
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√é")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√ç")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√å")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          Send, {bs}œ
-      Else If myPriorHotkey = "t2"     ; macron
+      Else If (PriorDeadKey = "t2")     ; macron
          BSUnicode("ƒ™")
-      Else If myPriorHotkey = "c3"    ; brevis 
+      Else If (PriorDeadKey = "c3")    ; brevis 
          BSUnicode("ƒ¨")
-      Else If myPriorHotkey = "a4"   ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSUnicode("ƒÆ")
-      Else If myPriorHotkey = "t1"      ; tilde
+      Else If (PriorDeadKey = "t1")      ; tilde
          BSUnicode("ƒ®")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("ƒ∞")
       Else 
          sendinput {blind}I
@@ -892,53 +894,53 @@ return
       Sendinput {Blind}{Left}
    else if Ebene = 6
       Sendinput {Blind}+{Left}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *d::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√¢")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√°")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√†")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          send {bs}‰
-      Else If myPriorHotkey = "a6" ; Ring 
+      Else If (PriorDeadKey = "a6") ; Ring 
          Send {bs}Â
-      Else If myPriorHotkey = "t1"      ; tilde
+      Else If (PriorDeadKey = "t1")      ; tilde
          BSUnicode("√£")
-      Else If myPriorHotkey = "a4"   ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSUnicode("ƒÖ")
-      Else If myPriorHotkey = "t2"     ; macron
+      Else If (PriorDeadKey = "t2")     ; macron
          BSUnicode("ƒÅ")
-      Else If myPriorHotkey = "c3"    ; brevis
+      Else If (PriorDeadKey = "c3")    ; brevis
          BSUnicode("ƒÉ")
       Else 
          sendinput {blind}a
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"            ; circumflex
+      If (PriorDeadKey = "c1")            ; circumflex
          BSUnicode("√Ç")
-      Else If myPriorHotkey = "a1"       ; akut 
+      Else If (PriorDeadKey = "a1")       ; akut 
          BSUnicode("√Å")
-      Else If myPriorHotkey = "a2"      ; grave
+      Else If (PriorDeadKey = "a2")      ; grave
          BSUnicode("√Ä")
-      Else If myPriorHotkey = "t3"     ; Diaerese
+      Else If (PriorDeadKey = "t3")     ; Diaerese
          send {bs}ƒ
-      Else If myPriorHotkey = "t1"       ; tilde
+      Else If (PriorDeadKey = "t1")       ; tilde
          BSUnicode("√É")
-      Else If myPriorHotkey = "a6"  ; Ring 
+      Else If (PriorDeadKey = "a6")  ; Ring 
          Send {bs}≈
-      Else If myPriorHotkey = "t2"      ; macron
+      Else If (PriorDeadKey = "t2")      ; macron
          BSUnicode("ƒÄ")
-      Else If myPriorHotkey = "c3"     ; brevis 
+      Else If (PriorDeadKey = "c3")     ; brevis 
          BSUnicode("ƒÇ")
-      Else If myPriorHotkey = "a4"    ; ogonek
+      Else If (PriorDeadKey = "a4")    ; ogonek
          BSUnicode("ƒÑ")
       Else 
          sendinput {blind}A
@@ -951,53 +953,53 @@ return
       Sendinput {Blind}{Down}
    else if Ebene = 6
       Sendinput {Blind}+{Down}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *f::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"          ; circumflex
+      If (PriorDeadKey = "c1")          ; circumflex
          BSUnicode("√™")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√©")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√®")
-      Else If myPriorHotkey = "t3"   ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}Î
-      Else If myPriorHotkey = "a4"  ; ogonek
+      Else If (PriorDeadKey = "a4")  ; ogonek
          BSUnicode("ƒô")
-      Else If myPriorHotkey = "t2"    ; macron
+      Else If (PriorDeadKey = "t2")    ; macron
          BSUnicode("ƒì")
-      Else If myPriorHotkey = "c3"   ; brevis
+      Else If (PriorDeadKey = "c3")   ; brevis
          BSUnicode("ƒï")
-      Else If myPriorHotkey = "c2"    ; caron
+      Else If (PriorDeadKey = "c2")    ; caron
          BSUnicode("ƒõ")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("ƒó")
       Else 
          sendinput {blind}e
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√ä")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√â")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√à")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          Send, {bs}À
-      Else If myPriorHotkey = "c2"     ; caron
+      Else If (PriorDeadKey = "c2")     ; caron
          BSUnicode("ƒö")
-      Else If myPriorHotkey = "t2"     ; macron
+      Else If (PriorDeadKey = "t2")     ; macron
          BSUnicode("ƒí")
-      Else If myPriorHotkey = "c3"    ; brevis 
+      Else If (PriorDeadKey = "c3")    ; brevis 
          BSUnicode("ƒî")
-      Else If myPriorHotkey = "a4"   ; ogonek 
+      Else If (PriorDeadKey = "a4")   ; ogonek 
          BSUnicode("ƒò")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("ƒñ")
       Else 
          sendinput {blind}E
@@ -1010,53 +1012,53 @@ return
       Sendinput {Blind}{Right}
    else if Ebene = 6
       Sendinput {Blind}+{Right}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *g::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√¥")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√≥")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√≤")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          Send, {bs}ˆ
-      Else If myPriorHotkey = "t1"      ; tilde
+      Else If (PriorDeadKey = "t1")      ; tilde
          BSUnicode("√µ")
-      Else If myPriorHotkey = "t4"   ; doppelakut
+      Else If (PriorDeadKey = "t4")   ; doppelakut
          BSUnicode("≈ë")
-      Else If myPriorHotkey = "t5"  ; Schr‰gstrich
+      Else If (PriorDeadKey = "t5")  ; Schr‰gstrich
          BSUnicode("√∏")
-      Else If myPriorHotkey = "t2"     ; macron
+      Else If (PriorDeadKey = "t2")     ; macron
          BSUnicode("≈ç")
-      Else If myPriorHotkey = "c3"    ; brevis 
+      Else If (PriorDeadKey = "c3")    ; brevis 
          BSUnicode("≈è")
       Else 
          sendinput {blind}o
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("√î")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√ì")
-      Else If myPriorHotkey = "a2"     ; grave
+      Else If (PriorDeadKey = "a2")     ; grave
          BSUnicode("√í")
-      Else If myPriorHotkey = "t5"  ; Schr‰gstrich
+      Else If (PriorDeadKey = "t5")  ; Schr‰gstrich
          BSUnicode("√ò")
-      Else If myPriorHotkey = "t1"      ; tilde
+      Else If (PriorDeadKey = "t1")      ; tilde
          BSUnicode("√ï")
-      Else If myPriorHotkey = "t4"   ; doppelakut
+      Else If (PriorDeadKey = "t4")   ; doppelakut
          BSUnicode("≈ê")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          send {bs}÷
-      Else If myPriorHotkey = "t2"     ; macron 
+      Else If (PriorDeadKey = "t2")     ; macron 
          BSUnicode("≈å")
-      Else If myPriorHotkey = "c3"    ; brevis 
+      Else If (PriorDeadKey = "c3")    ; brevis 
          BSUnicode("≈é")
       Else
          sendinput {blind}O
@@ -1069,41 +1071,41 @@ return
       Send {End}
    else if Ebene = 6
       Send +{End}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *h::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("≈ù")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("≈õ")
-      Else If myPriorHotkey = "c2"     ; caron
+      Else If (PriorDeadKey = "c2")     ; caron
          BSUnicode("≈°")
-      Else If myPriorHotkey = "a3"    ; cedilla
+      Else If (PriorDeadKey = "a3")    ; cedilla
          BSUnicode("≈ü")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·π°")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·π£")
       Else   
          sendinput {blind}s
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("≈ú")
-      Else If myPriorHotkey = "c2"     ; caron
+      Else If (PriorDeadKey = "c2")     ; caron
          BSUnicode("≈†")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("≈ö")
-      Else If myPriorHotkey = "a3"    ; cedilla 
+      Else If (PriorDeadKey = "a3")    ; cedilla 
          BSUnicode("≈û")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·π")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·π¢")
       Else
          sendinput {blind}S
@@ -1116,37 +1118,37 @@ return
       Send ø
    else if Ebene = 6
       Unicode("Œ£")  ; Sigma
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *j::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "a1"          ; akut
+      If (PriorDeadKey = "a1")          ; akut
          BSUnicode("≈Ñ")
-      Else If myPriorHotkey = "t1"     ; tilde
+      Else If (PriorDeadKey = "t1")     ; tilde
          BSUnicode("√±")
-      Else If myPriorHotkey = "c2"    ; caron
+      Else If (PriorDeadKey = "c2")    ; caron
          BSUnicode("≈à")
-      Else If myPriorHotkey = "a3"   ; cedilla
+      Else If (PriorDeadKey = "a3")   ; cedilla
          BSUnicode("≈Ü")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("·πÖ")
       Else
          sendinput {blind}n
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c2"         ; caron
+      If (PriorDeadKey = "c2")         ; caron
          BSUnicode("≈á")
-      Else If myPriorHotkey = "t1"     ; tilde
+      Else If (PriorDeadKey = "t1")     ; tilde
          BSUnicode("√ë")
-      Else If myPriorHotkey = "a1"     ; akut 
+      Else If (PriorDeadKey = "a1")     ; akut 
          BSUnicode("≈É")
-      Else If myPriorHotkey = "a3"   ; cedilla 
+      Else If (PriorDeadKey = "a3")   ; cedilla 
          BSUnicode("≈Ö")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("·πÑ")
       Else
          sendinput {blind}N
@@ -1159,37 +1161,37 @@ return
       Send 4
    else if Ebene = 6
       Unicode("‚Ññ") ; No
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *k::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "a1"           ; akut 
+      If (PriorDeadKey = "a1")           ; akut 
          BSUnicode("≈ï")
-      Else If myPriorHotkey = "c2"     ; caron
+      Else If (PriorDeadKey = "c2")     ; caron
          BSUnicode("≈ô")
-      Else If myPriorHotkey = "a3"    ; cedilla
+      Else If (PriorDeadKey = "a3")    ; cedilla
          BSUnicode("≈ó")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·πô")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·πõ")
       Else 
          sendinput {blind}r
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c2"          ; caron
+      If (PriorDeadKey = "c2")          ; caron
          BSUnicode("≈ò")
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("≈î")
-      Else If myPriorHotkey = "a3"    ; cedilla 
+      Else If (PriorDeadKey = "a3")    ; cedilla 
          BSUnicode("≈ñ")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·πò")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·πö")
       Else 
          sendinput {blind}R
@@ -1202,37 +1204,37 @@ return
       Send 5
    else if Ebene = 6
       Unicode("¬Æ")  ; (R)
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *l::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c2"          ; caron 
+      If (PriorDeadKey = "c2")          ; caron 
          BSUnicode("≈•")
-      Else If myPriorHotkey = "a3"    ; cedilla
+      Else If (PriorDeadKey = "a3")    ; cedilla
          BSUnicode("≈£")
-      Else If myPriorHotkey = "c4"   ; Querstrich
+      Else If (PriorDeadKey = "c4")   ; Querstrich
          BSUnicode("≈ß")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·π´")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·π≠")
       Else 
          sendinput {blind}t
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c2"          ; caron
+      If (PriorDeadKey = "c2")          ; caron
          BSUnicode("≈§")
-      Else If myPriorHotkey = "a3"    ; cedilla 
+      Else If (PriorDeadKey = "a3")    ; cedilla 
          BSUnicode("≈¢")
-      Else If myPriorHotkey = "c4"   ; Querstrich
+      Else If (PriorDeadKey = "c4")   ; Querstrich
          BSUnicode("≈¶")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·π™")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·π¨")
       Else 
          sendinput {blind}T
@@ -1245,37 +1247,37 @@ return
       Send 6
    else if Ebene = 6
       Unicode("‚Ñ¢") ; TM
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *ˆ::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c4"        ; Querstrich
+      If (PriorDeadKey = "c4")        ; Querstrich
          BSUnicode("ƒë")
-      Else If myPriorHotkey = "t5"  ; Schr‰gstrich
+      Else If (PriorDeadKey = "t5")  ; Schr‰gstrich
          BSUnicode("√∞")
-      Else If myPriorHotkey = "c2"     ; caron
+      Else If (PriorDeadKey = "c2")     ; caron
          BSUnicode("ƒè")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·∏ã")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏ç")
       Else 
          sendinput {blind}d
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c4"        ; Querstrich
+      If (PriorDeadKey = "c4")        ; Querstrich
          BSUnicode("ƒê")
-      Else If myPriorHotkey = "t5"  ; Schr‰gstrich
+      Else If (PriorDeadKey = "t5")  ; Schr‰gstrich
          BSUnicode("√ê")
-      Else If myPriorHotkey = "c2"     ; caron 
+      Else If (PriorDeadKey = "c2")     ; caron 
          BSUnicode("ƒé")
-      Else If myPriorHotkey = "a5"  ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5")  ; punkt dar¸ber 
          BSUnicode("·∏ä")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·∏å")
       Else sendinput {blind}D
    }
@@ -1287,29 +1289,29 @@ return
       Send `,
    else if Ebene = 6
       Unicode("Œî")  ; Delta
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *‰::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "t3"       ; Diaerese
+      If (PriorDeadKey = "t3")       ; Diaerese
          Send {bs}ˇ
-      Else If myPriorHotkey = "a1"      ; akut 
+      Else If (PriorDeadKey = "a1")      ; akut 
          BSUnicode("√Ω")
-      Else If myPriorHotkey = "c1"    ; circumflex
+      Else If (PriorDeadKey = "c1")    ; circumflex
          BSUnicode("≈∑")
       Else
          sendinput {blind}y
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "a1"           ; akut 
+      If (PriorDeadKey = "a1")           ; akut 
          BSUnicode("√ù")
-      Else If myPriorHotkey = "t3"    ; Diaerese
+      Else If (PriorDeadKey = "t3")    ; Diaerese
          Send {bs}ü
-      Else If myPriorHotkey = "c1"      ; circumflex
+      Else If (PriorDeadKey = "c1")      ; circumflex
          BSUnicode("≈∂")
       Else
          sendinput {blind}Y
@@ -1320,7 +1322,7 @@ return
       Send ˛         ; thorn
    else if Ebene = 6
       Send ﬁ         ; Thorn
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 ;SC02B (#) wird zu Mod3
@@ -1344,7 +1346,7 @@ return
       send {#}
    else if Ebene = 5
       Send {Esc}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *x::
@@ -1359,7 +1361,7 @@ return
       Send {Del}
    else if Ebene = 6
       Unicode("‚à´") ; Int
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *c::
@@ -1376,28 +1378,28 @@ return
       Send {PgDn}    ; Next
    else if Ebene = 6
       Send +{PgDn}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *v::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "a5"      ; punkt dar¸ber 
+      If (PriorDeadKey = "a5")      ; punkt dar¸ber 
          BSUnicode("·πó")
       Else
          sendinput {blind}p
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "a5"      ; punkt dar¸ber 
+      If (PriorDeadKey = "a5")      ; punkt dar¸ber 
          BSUnicode("·πñ")
       Else 
          sendinput {blind}P
    }
    else if Ebene = 3
    {
-      If myPriorHotkey = "t1"    ; tilde
+      If (PriorDeadKey = "t1")    ; tilde
          BSUnicode("‚âà")
       Else
          sendraw ~
@@ -1408,31 +1410,31 @@ return
       Send {Enter}
    else if Ebene = 6
       Unicode("Œ†")  ; Pi
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *b::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c2"         ; caron
+      If (PriorDeadKey = "c2")         ; caron
          BSUnicode("≈æ")
-      Else If myPriorHotkey = "a1"     ; akut
+      Else If (PriorDeadKey = "a1")     ; akut
          BSUnicode("≈∫")
-      Else If myPriorHotkey = "a5" ; punkt dr¸ber
+      Else If (PriorDeadKey = "a5") ; punkt dr¸ber
          BSUnicode("≈º")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("≈º")
       Else 
          sendinput {blind}z
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c2"         ; caron  
+      If (PriorDeadKey = "c2")         ; caron  
          BSUnicode("≈Ω")
-      Else If myPriorHotkey = "a1"     ; akut 
+      Else If (PriorDeadKey = "a1")     ; akut 
          BSUnicode("≈π")
-      Else If myPriorHotkey = "a5" ; punkt dar¸ber 
+      Else If (PriorDeadKey = "a5") ; punkt dar¸ber 
          BSUnicode("≈ª")
       Else
          sendinput {blind}Z
@@ -1443,21 +1445,21 @@ return
       Unicode("Œ∂") ;zeta
    else if Ebene = 6
       Unicode("Œ©")  ; Omega
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *n::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "a5"      ; punkt dar¸ber 
+      If (PriorDeadKey = "a5")      ; punkt dar¸ber 
          BSUnicode("·∏É")
       Else 
          sendinput {blind}b
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "a5"       ; punkt dar¸ber 
+      If (PriorDeadKey = "a5")       ; punkt dar¸ber 
          BSUnicode("·∏Ç")
       Else 
          sendinput {blind}B
@@ -1470,25 +1472,25 @@ return
       Unicode("‚àû") ;infty
    else if Ebene = 6
       Unicode("‚Ä¢") ; bullet
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *m::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "a5"       ; punkt dar¸ber 
+      If (PriorDeadKey = "a5")       ; punkt dar¸ber 
          BSUnicode("·πÅ")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·πÉ")
       Else 
          sendinput {blind}m
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "a5"       ; punkt dar¸ber 
+      If (PriorDeadKey = "a5")       ; punkt dar¸ber 
          BSUnicode("·πÄ")
-      Else If myPriorHotkey = "c6" ; punkt darunter 
+      Else If (PriorDeadKey = "c6") ; punkt darunter 
          BSUnicode("·πÇ")
       Else 
          sendinput {blind}M
@@ -1499,7 +1501,7 @@ return
       Unicode("¬µ") ;micro, mu w‰re Œº
    else if Ebene = 5
       Send 1
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *,::
@@ -1514,7 +1516,7 @@ return
       Send 2
    else if Ebene = 6
       Unicode("‚àö") ; sqrt
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *.::
@@ -1531,7 +1533,7 @@ return
       Send 3
    else if Ebene = 6
       Unicode("Œò")  ; Theta
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -1539,14 +1541,14 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If myPriorHotkey = "c1"           ; circumflex
+      If (PriorDeadKey = "c1")           ; circumflex
          BSUnicode("ƒµ")
       Else
          sendinput {blind}j
    }
    else if Ebene = 2
    {
-      If myPriorHotkey = "c1"            ; circumflex
+      If (PriorDeadKey = "c1")            ; circumflex
          BSUnicode("ƒ¥")
       Else
          sendinput {blind}J
@@ -1557,7 +1559,7 @@ return
       Send .
    else if Ebene = 6
       Unicode("‚àá") ; Nabla
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 /*
@@ -1577,7 +1579,7 @@ return
       send ˜
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚àï")   ; slash
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadMult::
@@ -1588,7 +1590,7 @@ return
       send ◊
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚ãÖ")  ; cdot
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadSub::
@@ -1597,7 +1599,7 @@ return
       send {NumpadSub}
    else if Ebene = 3
       send -
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadAdd::
@@ -1608,7 +1610,7 @@ return
       send ±
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚àì")   ; -+
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadEnter::
@@ -1619,7 +1621,7 @@ return
       Unicode("‚â†") ; neq
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚âà") ; approx
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 /*
@@ -1637,7 +1639,7 @@ return
       send {NumpadHome}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â™")  ; ll
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad8::
@@ -1650,7 +1652,7 @@ return
       Unicode("‚Üë")     ; uparrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚à©")    ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad9::
@@ -1661,7 +1663,7 @@ return
       send {NumpadPgUp}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â´")  ; gg
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad4::
@@ -1674,7 +1676,7 @@ return
       Unicode("‚Üê")     ; leftarrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚äÇ")  ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad5::
@@ -1687,7 +1689,7 @@ return
       send Ü
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚àä") ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad6::
@@ -1700,7 +1702,7 @@ return
       Unicode("‚Üí")     ; rightarrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚äÉ") ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad1::
@@ -1711,7 +1713,7 @@ return
       send {NumpadEnd}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â§")   ; leq
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad2::
@@ -1724,7 +1726,7 @@ return
       Unicode("‚Üì")     ; downarrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚à™")  ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad3::
@@ -1735,7 +1737,7 @@ return
       send {NumpadPgDn}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â•")  ; geq
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Numpad0::
@@ -1748,7 +1750,7 @@ return
       send `%
    else if ( (Ebene = 4) or (Ebene = 5) )
       send â 
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadDot::
@@ -1761,7 +1763,7 @@ return
       send .
    else if ( (Ebene = 4) or (Ebene = 5) )
       send `,
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 /*
@@ -1776,7 +1778,7 @@ return
       send {Numpad7}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â™")  ; ll
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadUp::
@@ -1789,7 +1791,7 @@ return
       Unicode("‚Üë")     ; uparrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚à©")    ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadPgUp::
@@ -1800,7 +1802,7 @@ return
       send {Numpad9}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â´")  ; gg
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadLeft::
@@ -1813,7 +1815,7 @@ return
       Unicode("‚Üê")     ; leftarrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚äÇ")  ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadClear::
@@ -1826,7 +1828,7 @@ return
       send Ü
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚àä") ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadRight::
@@ -1839,7 +1841,7 @@ return
       Unicode("‚Üí")     ; rightarrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚äÉ") ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadEnd::
@@ -1850,7 +1852,7 @@ return
       send {Numpad1}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â§")   ; leq
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadDown::
@@ -1863,7 +1865,7 @@ return
       Unicode("‚Üì")     ; downarrow
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚à™")  ;
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadPgDn::
@@ -1874,7 +1876,7 @@ return
       send {Numpad3}
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â•")  ; geq
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadIns::
@@ -1887,7 +1889,7 @@ return
       send `%
    else if ( (Ebene = 4) or (Ebene = 5) )
       send â 
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *NumpadDel::
@@ -1900,7 +1902,7 @@ return
       send .
    else if ( (Ebene = 4) or (Ebene = 5) )
       send `,
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -1921,11 +1923,11 @@ return
       SendUnicodeChar(0x2009) ; schmales Leerzeichen
    else
       Send {blind}{Space}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 /*
-   Folgende Tasten sind nur aufgef¸hrt, um myPriorHotkey zu leeren.
+   Folgende Tasten sind nur aufgef¸hrt, um PriorDeadKey zu leeren.
    Irgendwie sieht das noch nicht schˆn aus. Vielleicht l‰sst sich dieses
    Problem irgendwie eleganter lˆsen...
    
@@ -1936,12 +1938,12 @@ return
 
 *Enter::
    sendinput {Blind}{Enter}
-   myPriorhotkey = ""
+   PriorDeadKey := ""
 return
 
 *Backspace::
    sendinput {Blind}{Backspace}
-   myPriorhotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -1953,49 +1955,49 @@ einem DeadKey dr¸ckt...
 
 *Tab::
    send {Blind}{Tab}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 */
 
 *Home::
    sendinput {Blind}{Home}
-   myPriorHotkey = ""      
+   PriorDeadKey := ""      
 return
 
 *End::
    sendinput {Blind}{End}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *PgUp::
    sendinput {Blind}{PgUp}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *PgDn::
    sendinput {Blind}{PgDn}
-   myPriorHotkey = ""
+   PriorDeadKey := ""
 return
 
 *Up::
    sendinput {Blind}{Up}
-   myPriorhotkey = ""
+   PriorDeadKey := ""
 return
 
 *Down::
    sendinput {Blind}{Down}
-   myPriorhotkey = ""
+   PriorDeadKey := ""
 return
 
 *Left::
    sendinput {Blind}{Left}
-   myPriorhotkey = ""
+   PriorDeadKey := ""
 return
 
 *Right::
    sendinput {Blind}{Right}
-   myPriorhotkey = ""
+   PriorDeadKey := ""
 return
 
 
@@ -2063,3 +2065,12 @@ EncodeInteger(ref, val)
 {
    DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
 }
+
+
+/*
+   ------------------------------------------------------
+   Shift+Pause "pausiert" das Script.
+   ------------------------------------------------------
+*/
+
++pause::suspend
