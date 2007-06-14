@@ -24,7 +24,7 @@
   ; Quelltext kann eingerückt werden, 
   ; msgbox ist trotzdem linksbündig
 
-SendMode Play	
+SendMode Input
 SetTitleMatchMode 2
 
 ;name    = NEO 2.0
@@ -2035,7 +2035,7 @@ Unicode(code)
 {
    saved_clipboard := ClipboardAll
    Transform, Clipboard, Unicode, %code%
-   send ^v
+   sendplay ^v
    Clipboard := saved_clipboard
 }
 
@@ -2043,7 +2043,7 @@ BSUnicode(code)
 {
    saved_clipboard := ClipboardAll
    Transform, Clipboard, Unicode, %code%
-   send {bs}^v
+   sendplay {bs}^v
    Clipboard := saved_clipboard
 }
 
