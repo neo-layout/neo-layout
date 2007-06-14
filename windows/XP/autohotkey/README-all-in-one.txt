@@ -9,13 +9,15 @@ Man benötigt halt AutoHotkey von www.autohotkey.com zur Ausführung des
 Scriptes. Autohotkey muss nicht zwangsweise als Administrator
 installiert werden, wenn man in ein Verzeichnis installiert, für das
 man Schreibrechte hat.
-Genaugenommen muss AutoHotkey nicht mal installiert werden, man braucht
-nur die ausführbare Datei (die "exe"). Auf diese weise kann man das
-Script z.B. auf dem USB-Stick überall mit hinnehmen. AutoHotkey krallt
-sich erfreulicherweise nicht in der Registry fest, kann also auf einem
-"Gastcomputer" ausgeführt werden, ohne Spuren zu hinterlassen.
-Ebenso kann man mit einem "Compiler" aus AutoHotkey.exe und dem Script
-eine einzige ausführbare Datei erstellen, für dessen Ausführung mam
+
+Genaugenommen muss AutoHotkey nicht einmal installiert werden, man braucht
+nur die ausführbare Datei (autohotkey.exe). Auf diese Weise kann man
+das Script z.B. auf dem USB-Stick überall mit hinnehmen. AutoHotkey
+krallt sich erfreulicherweise nicht in der Registry fest, kann also auf
+einem Gastcomputer ausgeführt werden, ohne Spuren zu hinterlassen.
+
+Ebenso kann man mit einem „Compiler“ aus AutoHotkey.exe und dem Script
+eine einzige ausführbare Datei erstellen, für dessen Ausführung man
 ebenfalls keine Administratorrechte benötigt.
 
 
@@ -26,12 +28,10 @@ und einer Taste, die mit dem DeadKey ein neues Zeichen ergibt, löscht
 den Tab (Backslash) und sendet die Kombo.
 
 
-== Nummernblock ==
-
-die readme ist noch nicht fertig.
-
-
 == Besonderheiten ==
+
+Ebene 4 des Nummernblocks lässt sich außer über Mod3+Shift auch über
+Mod5 ansprechen.
 
 Es gibt die Tastenkombination Shift+Pause, die das Script pausiert und
 un-pausiert. Meiner Meinung nach sehr praktisch. Wenns nicht
