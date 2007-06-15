@@ -242,7 +242,7 @@ xkb_symbols "neo" {
     key <AD08> { [ g, G,   greater, Greek_gamma,          8, Greek_GAMMA ] };
     key <AD09> { [ f, F,     equal,   Greek_phi,          9,   Greek_PHI ] };
     key <AD10> { [ q, Q, ampersand,           q,       plus,       logicaland ] };
-    key <AD11> { [ ssharp, ssharp, U133,   U132,      schwa,       SCHWA ] };
+    key <AD11> { [ ssharp, U1E9E, U133,   U132,      schwa,       SCHWA ] };
     key <AD12> { [ dead_tilde, dead_macron, dead_diaeresis, dead_doubleacute, dead_belowdot, dead_belowdot ] };
 
 
