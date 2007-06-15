@@ -631,7 +631,7 @@ Return
 Return
 
 +p::sendinput {blind}Q
-+ü::send SS ; wird versal-ß
++ü::Unicode("áºž") ; versal-ß
 
 ++::Unicode("Ë‰")  ; macron, tot 
 
