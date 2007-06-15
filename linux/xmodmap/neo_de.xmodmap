@@ -47,7 +47,7 @@ keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
 keycode 33 = q Q ampersand q plus logicaland
-keycode 34 = ssharp ssharp U133 U132 schwa SCHWA
+keycode 34 = ssharp U1E9E U133 U132 schwa SCHWA
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_belowdot dead_belowdot
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
