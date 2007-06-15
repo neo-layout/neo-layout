@@ -1,6 +1,6 @@
 /*
     Titel:        NEO Autohotkey-Treiber
-    Version:      0.05 beta
+    Version:      0.06 beta
     Datum:        12.06.2007
     Basiert auf:  neo20.ahk und neo20-remap.ahk vom 25.05.2007
     
@@ -717,9 +717,23 @@ return
 *ü::
    EbeneAktualisieren()
    if Ebene = 1
-      sendinput {blind}ß
+      if GetKeyState("CapsLock","T")
+      {
+         Unicode("áºž") ; versal-ß
+      }
+      else
+      {
+         send ß
+      }      
    else if Ebene = 2
-      Unicode("áºž") ; versal-ß
+      if GetKeyState("CapsLock","T")
+      {
+         send ß
+      }
+      else
+      {
+         Unicode("áºž") ; versal-ß
+      }
    else if Ebene = 3
       Unicode("Ä³")   ; ij
    else if Ebene = 4
