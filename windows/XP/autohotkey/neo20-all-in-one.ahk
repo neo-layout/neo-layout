@@ -719,7 +719,7 @@ return
    if Ebene = 1
       sendinput {blind}ß
    else if Ebene = 2
-      send SS ; wird versal-ß
+      Unicode("áºž") ; versal-ß
    else if Ebene = 3
       Unicode("Ä³")   ; ij
    else if Ebene = 4
