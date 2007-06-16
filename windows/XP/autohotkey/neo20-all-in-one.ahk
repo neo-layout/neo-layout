@@ -1,18 +1,22 @@
 /*
     Titel:        NEO Autohotkey-Treiber
-    Version:      0.06 beta
-    Datum:        12.06.2007
+    Version:      0.07 beta
+    Datum:        16.06.2007
     Basiert auf:  neo20.ahk und neo20-remap.ahk vom 25.05.2007
     
     TODO:         - ausgiebig testen...
                   - Menü des Tasksymbols
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
-    
+                  - CapsLock auf 1. und 2. Ebene einbauen:
+                    Die Buchstaben reagieren richtig auf CapsLock, da hier "sendinput {blind}"
+                    verwendet wird. Bei anderen Tasten muss CapsLock in der ersten und zweiten Ebene
+                    explizit abgefragt werden.
+                    (Lässt sich das elegant in eine Funktion auslagern?)
     Ideen:
                   - DeadKeys tot machen
                   - Symbol ändern
-                  - wenn möglich, "sendinput {blind}" verwenden
+                  - wenn nötig, "sendinput {blind}" verwenden
                     (gibt es irgendwelche Probleme bei "sendinput {blind}" ?)
                   - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
 */
@@ -1521,7 +1525,7 @@ return
 *,::
    EbeneAktualisieren()
    if Ebene = 1
-      send `,
+      send {blind},
    else if Ebene = 3
       send '
    else if Ebene = 4
@@ -1536,7 +1540,7 @@ return
 *.::
    EbeneAktualisieren()
    if Ebene = 1
-      send .
+      send {blind}.
    else if Ebene = 2
       Unicode("â€¦")  ; ellipse
    else if Ebene = 3
