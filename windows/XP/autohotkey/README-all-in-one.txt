@@ -1,4 +1,4 @@
-Version 12.06.2007
+Version 16.06.2007
 
 Im Großen und Ganzen gilt es bei der all-in-one-Version das gleiche
 zu beachten wie bei der ursprünglichen Version aus 2 Scripten.
@@ -27,6 +27,11 @@ Der Tabulator macht Probleme mit DeadKeys. Ein DeadKey gefolgt von Tab
 und einer Taste, die mit dem DeadKey ein neues Zeichen ergibt, löscht
 den Tab (Backslash) und sendet die Kombo.
 
+Bisher reagieren nur die Buchstaben der 1. und 2. Ebene richtig auf
+CapsLock.
+
+Der Nummernblock reagiert nicht auf Tastenkombinationen mit Strg, Alt usw.
+
 
 == Besonderheiten ==
 
@@ -34,5 +39,4 @@ Ebene 4 des Nummernblocks lässt sich außer über Mod3+Shift auch über
 Mod5 ansprechen.
 
 Es gibt die Tastenkombination Shift+Pause, die das Script pausiert und
-un-pausiert. Meiner Meinung nach sehr praktisch. Wenns nicht
-gefällt lasst es mich wissen.
+un-pausiert. Wenns nicht gefällt, lasst es mich über den Verteiler wissen.
