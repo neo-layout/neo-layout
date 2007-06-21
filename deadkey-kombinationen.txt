@@ -1,7 +1,17 @@
-ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
+---------------
+ACHTUNG:
+Unter Windows ist in der Grundinstallation eventuell keine Schrift
+installiert, die alle hier gezeigten Unicodezeichen beinhaltet.
+Abhilfe schafft z.B. DejaVu:
+http://dejavu.sourceforge.net/
+oder Libertine:
+http://linuxlibertine.sourceforge.net/
+---------------
+
+Ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
 
 == Ungewöhnliche Kombinationen ==
-
+=== Selbst definiert ===
 ~= wird zu ≅
 /= wird zu ≠
 -> wird zu ≥
@@ -17,12 +27,38 @@ ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
 /d wird zu ð (isländisch, färöisch)
 /D wird zu Ð (kroatisch, isländisch, färöisch)
 
+=== Unter Linux normal, aber recht unbekannt ===
 ^1 wird zu ¹
 ^2 wird zu ²
 ^3 wird zu ³
 
 == Gewöhnliche Kombinationen ==
+=== Buchstaben unter Linux ===
+(Fedora6, Kernel 2.6.20, X Window System Version 7.1.1)
 
+^ ĉŵĥĝŷŝôêâîûẑĵ ĈŴĤĜŶŜÔÊÂÎÛẐĴ
+ˇ ľčǩȟǧďťřňšǒěǎǐǔǚžǰ ĽČǨȞǦĎŤŘŇŠǑĚǍǏǓŽ
+˘ ğŏĕăĭŭ ĞŎĔĂĬŬ
+-
+·
+.
+
+ˊ ĺćẃḱǵýŕńśóéáíúǘṕźḿĹĆẂḰǴÝŔŃŚÓÉÁÍÚṔŹḾ
+` ẁỳǹòèàìùǜẀỲǸÒÈÀÌÙ
+¸ ļçķḩģḑţŗņşȩĻÇĶḨĢḐŢŖŅŞȨ
+˛ ǫęąįųǪĘĄĮŲ
+˙ ẋċẇḣġḟẏḋṫṙṅṡȯėȧıṗżḃṁẊĊẆḢĠḞẎḊṪṘṄṠȮĖȦİṖŻḂṀ
+° ẘẙåůÅŮṖ
+
+~ ṽỹñõẽãĩũṼỸÑÕẼÃĨŨ
+¯ ḡȳōēāīūȫǖǟḠȲŌĒĀĪŪȪǞ
+¨ ẍẅḧÿẗöëäïüẌẄḦŸÖËÄÏÜ
+˝ őűŐŰ
+/
+ˏ ṿḷẉḳḥỵḍṭṛṇṣọẹạịụẓḅṃṾḶẈḲḤỴḌṬṚṆṢỌẸẠỊỤẒḄṂ
+
+
+== Sonstiges ==
 deadkey │ erreichbare Zeichen │ Bemerkung
 ────────┼─────────────────────┼──────────────────────────────────
    ^    │ âÂĉĈêÊîÎĵĴûÛŷŶ      │ êÊĵĴŷŶ geht unter Linux nicht
