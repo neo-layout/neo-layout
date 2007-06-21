@@ -22,9 +22,9 @@ die FAQ (häufigen Fragen) durchlesen.
 F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?
 
 A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings auf
-einer höheren Ebene (»AltGr«). Zum Ein- und Ausschalten, drückt man also erst
-rechts »AltGr« und dann gleichzeitig links die Taste auf der früher (bei
-QWERTZ) schon »CapsLock« war.
+einer höheren Ebene (»Mod3«). Zum Ein- und Ausschalten, drückt man also erst
+rechts »Mod3« und dann gleichzeitig links die Taste auf der früher (bei
+QWERTZ) schon »CapsLock« war – und wo jetzt die zweite Mod3-Taste ist.
 
 --------------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ A: Mit dem toten ^ auf der Taste links neben der 1 und dann die Zahl (also ^1=¹
 F: Wann wird eigentlich in der deutschen Sprache welcher Binde-/Gedanken-Strich
 verwendet? Welcher ist der Bis-Strich?
 
-A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw.
+A: Meist wird der Bindestrich (auf »Mod3« + »t« bzw.
 »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten
 Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann
 man auch zusammen, das heißt ohne Bindestrich, schreiben.
@@ -107,12 +107,12 @@ Der Gedankenstrich/Bis-Strich (auf »Shift« + »Taste-rechts-neben-der-Null«) 
 verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiele:
   1. Mit NEO zu schreiben – das sage nicht nur ich – ist besser als mit QWERTZ.
   2. Öffnungszeiten: Mo–Fr 10–18 Uhr.
-Der englische Gedankenstrich (auf »AltGr« + »Taste-rechts-neben-der-Null«)
+Der englische Gedankenstrich (auf »Mod3« + »Taste-rechts-neben-der-Null«)
 kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen
 geschrieben.
 Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es
 gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das
-Pluszeichen. Dieses befindet sich auf »AltGr« + »Numpad-Minus«.
+Pluszeichen. Dieses befindet sich auf »Mod3« + »Numpad-Minus«.
 Mehr zur Typographie hier:
   http://www.cup.uni-muenchen.de/ac/kluefers/homepage/intranet_typography.html
 
@@ -123,7 +123,7 @@ F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?
 A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen
 für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden
 häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in
-deutschen Texten (vor allem Büchern) verwendet. Diese sind per »AltGr« +
+deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Mod3« +
 »Shift-Taste« + »8« und »9« zu erreichen. Es sind die Zeichen » und «.
 Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Shift-Taste«
 auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.
@@ -131,19 +131,19 @@ Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia:
 	http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 Hinweis: Beim Programmieren muss man immer das Ersatzzeichen " benutzen.
-Dieses ist per »AltGr« + ».« erreichbar.
+Dieses ist per »Mod3« + ».« erreichbar.
 
 --------------------------------------------------------------------------------
 
 F: Wo ist der Apostroph, um z. B. Felix’ Katze zu schreiben?
 
 A: Der echte Apostroph für Texte in deutscher und englischer Sprache befindet
-sich auf »AltGr« + »0«. Es ist das Zeichen ’.
+sich auf »Mod3« + »0«. Es ist das Zeichen ’.
 Zur Verwendung des Apostrophs siehe den Wikipedia Artikel:
 	http://de.wikipedia.org/wiki/Apostroph
 
 Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen.
-Dieses ist per »AltGr« + »j« erreichbar.
+Dieses ist per »Mod3« + »j« erreichbar.
 
 --------------------------------------------------------------------------------
 
@@ -235,7 +235,7 @@ andere Lösung hier in der FAQ (weiter oben).
 2.1 Linux, Unix, BSD
 --------------------------------------------------------------------------------
 
-F1: Wenn ich »AltGr« + »n« drücke, dann erscheint nicht die öffnende Klammer.
+F1: Wenn ich »Mod3« + »n« drücke, dann erscheint nicht die öffnende Klammer.
 F2: Wenn ich »Mod5« + »n« oder »Mod5« + »Leertaste« drücke, kommt nicht die 4
 oder die 0 sondern ein n oder Leerzeichen. Wieso?
  
@@ -259,9 +259,9 @@ oder für die Version im 2.0 im Subversion-Repository:
 --------------------------------------------------------------------------------
 
 F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
-vorgesehen erst rechts »AltGr« und dann gleichzeitig links die Taste auf der
-früher (bei QWERTZ) schon »CapsLock« war drücke, dann ändert sich überhaupt
-nichts.
+vorgesehen erst rechts »Mod3« und dann gleichzeitig links die Taste auf der
+früher (bei QWERTZ) schon »CapsLock« war – wo jetzt das zweite »Mod3« ist –
+drücke, dann ändert sich überhaupt nichts.
 
 A: Das ist ein Fehler, der auftritt, seitdem die xmodmap-Datei von keysym auf
 keycode umgestellt wurde. Eventuell handelt es sich hierbei um einen Fehler im
@@ -278,7 +278,7 @@ Fehler sollte man wohl mal den Gnome-Entwicklern melden.
 
 --------------------------------------------------------------------------------
 
-F: Mein »AltGr« geht nicht als Modifier für die 5. Ebene.
+F: Mein »Mod3« geht nicht als Modifier für die 5. Ebene.
 
 A: Deaktiviere die Option „Both Alt keys together change Group” 
 (ralt_switch_for_alts_toggle).
@@ -287,7 +287,7 @@ A: Deaktiviere die Option „Both Alt keys together change Group”
 2.2 Apple Macintosh
 --------------------------------------------------------------------------------
 
-F: Warum wird auf meinem iBook »Caps-Lock« nicht zu »AltGr«?
+F: Warum wird auf meinem iBook »Caps-Lock« nicht zu »Mod3«?
 
 A: Unter Mac OS X benötigt man entweder das Programm fKeys [1] oder
 uControl [2]. Unter Linux ist ein Patch
@@ -359,7 +359,7 @@ und vor sich Hinstellen (inklusive Mini-FAQ auf der Rückseite).
 
 --------------------------------------------------------------------------------
 
-F: Wie tausche ich rechts AltGr mit Mod5? Wie auf der linken Seite?
+F: Wie tausche ich rechts Mod3 mit Mod5? Wie auf der linken Seite?
 
 A: Für die Linuxversion die Datei neo_de.xmodmap ab Zeile 81 lesen und
 speziell Zeile 87 und 90 muss man ISO_Level3_Shift mit Mode_switch tauschen
