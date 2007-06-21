@@ -1,4 +1,7 @@
 ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
+
+== Ungewöhnliche Kombinationen ==
+
 ~= wird zu ≅
 /= wird zu ≠
 -> wird zu ≥
@@ -17,3 +20,11 @@ ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
 ^1 wird zu ¹
 ^2 wird zu ²
 ^3 wird zu ³
+
+== Gewöhnliche Kombinationen ==
+
+deadkey │ erreichbare Zeichen │ Bemerkung
+────────┼─────────────────────┼──────────────────────────────────
+   ^    │ âÂĉĈêÊîÎĵĴûÛŷŶ      │ êÊĵĴŷŶ geht unter Linux nicht
+   ˇ    │                     │                              
+
