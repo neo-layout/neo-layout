@@ -6,9 +6,11 @@ Abhilfe schafft z.B. DejaVu:
 http://dejavu.sourceforge.net/
 oder Libertine:
 http://linuxlibertine.sourceforge.net/
----------------
 
-Ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
+Unter Linux ist es ähnlich. Je nach Schrift (also je nach Editor) können auch
+nicht alle Zeichen angezeigt werden. Getestet wurde auch hier mit Libertine:
+http://linuxlibertine.sourceforge.net/
+---------------
 
 == Ungewöhnliche Kombinationen ==
 === Selbst definiert ===
@@ -21,6 +23,7 @@ Ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
 °= wird zu ≗
 ^= wird zu ≙
 ˇ= wird zu ≚
+Ein paar weitere Gleichzeihen stehen auf http://de.wikipedia.org/wiki/%3D
 
 -d wird zu đ (kroatisch)
 -D wird zu Ð (kroatisch, isländisch, färöisch)
@@ -61,6 +64,6 @@ Ein paar Unicodes stehen auf http://de.wikipedia.org/wiki/%3D
 == Sonstiges ==
 deadkey │ erreichbare Zeichen │ Bemerkung
 ────────┼─────────────────────┼──────────────────────────────────
-   ^    │ âÂĉĈêÊîÎĵĴûÛŷŶ      │ êÊĵĴŷŶ geht unter Linux nicht
+   ^    │ âÂĉĈêÊîÎĵĴûÛŷŶ      │ 
    ˇ    │                     │                              
 
