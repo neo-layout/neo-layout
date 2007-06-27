@@ -215,18 +215,18 @@ xkb_symbols "neo" {
 //    key <TLDE> { [ dead_circumflex, dead_caron, dead_breve, dead_stroke ] };
     key <TLDE> { [ dead_circumflex, dead_caron, dead_breve ] };
 
-    key <AE01> { [ 1,      degree,        1,    onequarter,    oneeighth           ] };
-    key <AE02> { [ 2,   paragraph,        2,       onehalf                         ] };
-    key <AE03> { [ 3,     section,        3, threequarters, threeeighths           ] };
-    key <AE04> { [ 4,      dollar,      yen,          cent,        Prior, Prior    ] };
-    key <AE05> { [ 5,    EuroSign, sterling,      currency,  fiveeighths, implies  ] };
-    key <AE06> { [ 6, ordfeminine,       ae,            AE,            6, ifonlyif ] };
+    key <AE01> { [ 1,    degree,         1,    onequarter,    oneeighth           ] };
+    key <AE02> { [ 2,    paragraph,      2,       onehalf                         ] };
+    key <AE03> { [ 3,    section,        3, threequarters, threeeighths           ] };
+    key <AE04> { [ 4,    guillemotright, U203A,           4,        Prior, Prior    ] };
+    key <AE05> { [ 5,    guillemotleft,  U2039,           5,  fiveeighths, implies  ] };
+    key <AE06> { [ 6,    dollar,         sterling, currency,            6, ifonlyif ] };
 
-    key <AE07> { [ 7,            masculine,                   oe,             OE, seveneighths ] };
-    key <AE08> { [ 8,   doublelowquotemark,   singlelowquotemark, guillemotright,        slash, U2203 ] };
-    key <AE09> { [ 9,  leftdoublequotemark,  leftsinglequotemark,  guillemotleft,     asterisk, U2200 ] };
-    key <AE10> { [ 0, rightdoublequotemark, rightsinglequotemark,          U203A,        minus, notsign ] };
-    key <AE11> { [ minus,           endash,               emdash,          U2039,        minus, logicalor ] };
+    key <AE07> { [ 7,  EuroSign,             cent,      yen, seveneighths, notsign ] };
+    key <AE08> { [ 8,   doublelowquotemark,   singlelowquotemark, 8,        slash, U2203 ] };
+    key <AE09> { [ 9,  leftdoublequotemark,  leftsinglequotemark, 9,     asterisk, U2200 ] };
+    key <AE10> { [ 0, rightdoublequotemark, rightsinglequotemark, 0,        minus, logicalor ] };
+    key <AE11> { [ minus,           endash,               emdash, minus,    minus, logicaland ] };
     key <AE12> { [ dead_acute,  dead_grave,          dead_cedilla,   dead_ogonek, dead_abovedot, dead_abovering ] };
 
 
@@ -241,7 +241,7 @@ xkb_symbols "neo" {
     key <AD07> { [ h, H,      less,   Greek_psi,          7,   Greek_PSI ] };
     key <AD08> { [ g, G,   greater, Greek_gamma,          8, Greek_GAMMA ] };
     key <AD09> { [ f, F,     equal,   Greek_phi,          9,   Greek_PHI ] };
-    key <AD10> { [ q, Q, ampersand,           q,       plus,       logicaland ] };
+    key <AD10> { [ q, Q, ampersand,           q,       plus,       partialderivative ] };
     key <AD11> { [ ssharp, U1E9E, U133,   U132,      schwa,       SCHWA ] };
     key <AD12> { [ dead_tilde, dead_macron, dead_diaeresis, dead_doubleacute, dead_belowdot, dead_belowdot ] };
 
@@ -272,7 +272,7 @@ xkb_symbols "neo" {
     key <AB07> { [      m,           M,    percent,          mu,         1,    integral ] };
     key <AB08> { [  comma,  apostrophe, apostrophe,        U3D1,         2,     radical ] };
     key <AB09> { [ period,    ellipsis,   quotedbl, Greek_theta,         3, Greek_THETA ] };
-    key <AB10> { [      j,           J,  semicolon,           partialderivative,    period,       nabla ] };
+    key <AB10> { [      j,           J,  semicolon,           j,    period,       nabla ] };
 
     key <SPCE> { [ space, space, space, nobreakspace, 0, U202F ] };
 
