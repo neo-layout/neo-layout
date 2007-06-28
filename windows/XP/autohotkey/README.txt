@@ -1,79 +1,83 @@
-Version 25.05.2007
+Version 16.06.2007
 
 == Installation ==
-
-Hierfür braucht man keine Administratorrechte, es muss jedoch 
-zuerst das Programm namens „autohotkey“
-(http://www.autohotkey.com/download/AutohotkeyInstall.exe) 
-installiert werden.
-Dazu benötigt man KEINE Administratorrechte, wenn man das Programm
-beispielsweise in das Verzeichnis „Eigene Dateien/NEO“ installiert.
+=== Autohotkey herunter laden ===
+Man braucht als erstes das Programm namens Â»autohotkeyÂ«
+(http://www.autohotkey.com/download/AutohotkeyInstall.exe).
+Um dieses zu installieren benÃ¶tigt man KEINE Administratorrechte, wenn man das
+Programm beispielsweise in das Verzeichnis Â»Eigene Dateien/NEOÂ« installiert.
+Oder in ein anderes Verzeichnis, fÃ¼r das man Schreibrechte hat.
 
 === ahk-Dateien ===
+Danach kann man das ahk-Skript Â»neo20-all-in-one.ahkÂ«
+mit einem Doppelklick starten. Man erhÃ¤lt dann ein Systray-Icon, mit dem man
+das Skript vorÃ¼bergehend deaktivieren (Suspend) oder komplett beenden kann.
 
-Danach kann man die .ahk-Skripte (neo20.ahk und neo20-remap.ahk) 
-mit einem Doppelklick starten. 
-Man erhält dann ein Systray-Icon, mit dem man das Skript vorübergehend 
-deaktivieren (Suspend) oder komplett beenden kann.
-Wenn das Öffnen nicht direkt funktioniert: Öffnen mit -> Autohotkey.exe
-auswählen -> Immer mit diesem Programm öffnen.
-
+Wenn das Ã–ffnen nicht direkt funktioniert: Ã–ffnen mit -> Autohotkey.exe
+auswÃ¤hlen -> Immer mit diesem Programm Ã¶ffnen.
 === Automatischer Start ===
+Bei Bedarf kann man sich eine VerknÃ¼pfung mit neo20-all-in-one.ahk in den
+Autostart-Ordner legen, dann hat man die Belegung direkt bei der Anmeldung.
 
-Bei Bedarf kann man sich Verknüpfungen mit neo20.ahk und 
-neo20-remap.ahk in den Autostart-Ordner legen, dann hat man das 
-Layout direkt bei der Anmeldung.
+=== Ohne Installation ===
+Genaugenommen muss AutoHotkey nicht einmal installiert werden, man braucht
+nur die ausfÃ¼hrbare Datei (autohotkey.exe). Auf diese Weise kann man
+das Script z. B. auf dem USB-Stick Ã¼berall hin mitnehmen. AutoHotkey
+krallt sich erfreulicherweise nicht in der Registry fest, kann also auf
+einem Gastcomputer ausgefÃ¼hrt werden, ohne Spuren zu hinterlassen.
+
+Ebenso kann man mit einem â€žCompilerâ€œ aus AutoHotkey.exe und dem Script
+eine einzige ausfÃ¼hrbare Datei erstellen, fÃ¼r dessen AusfÃ¼hrung man
+ebenfalls keine Administratorrechte benÃ¶tigt.
 
 == Wie es funktioniert ==
-
-Das Programm kann alle Tastendrucke abfangen und statt dessen andere 
-Tasten simulieren. Die Zeile
+Das Programm kann alle Tastendrucke abfangen und statt dessen andere Tasten 
+simulieren. Die Zeile
   a::send b
-fängt z. B. die Taste a ab und sendet statt dessen ein b.
-Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss 
-dann nur das Skript neu starten um die Änderungen zu übernehmen.
+fÃ¤ngt z. B. die Taste Â»aÂ« ab und sendet statt dessen ein Â»bÂ«.
+Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss
+dann nur das Skript neu starten um die Ã„nderungen zu Ã¼bernehmen.
 
 == Bekannte Fehler ==
+Der Tabulator macht Probleme mit DeadKeys. Ein DeadKey gefolgt von Tab
+und einer Taste, die mit dem DeadKey ein neues Zeichen ergibt, lÃ¶scht
+den Tab (Backslash) und sendet die Kombo.
 
-Das Umbelegen der Funktionstasten ist etwas ‚buggy‘ (siehe
-http://www.autohotkey.com/forum/topic10169.html) und wurde deshalb 
-in eine Extradatei ausgelagert (neo20-remap.ahk). 
-Einfach beide Skripte starten.
+Bisher reagieren nur die Buchstaben der 1. und 2. Ebene richtig auf
+CapsLock (also immer groÃŸ schreiben â€“ CapsLock erreicht man unter Neo, wenn 
+man erst die rechte und dann die linke Mod3-Tasten gleichzeitig drÃ¼ckt).
 
-Problem: Manchmal kommt nur Control Down an, aber nicht das Up, 
-dann bleibt Control aktiv. 
-Lösung ist dann, einmal die normale Controltaste zu drücken.
---> taucht bei mir inzwischen nicht mehr auf *auf Holz klopf*
-
-Ohne die Remap-Datei können 
-die 3. Ebene mit Ctrl+Win 
-die 4. entsprechend mit Ctrl-Win-Shift
-die 5. mit AltGr 
-die 6. mit AltGr+Shift
-erreicht werden.
+Das Umbelegen der Modifikatoren (Mod3, Mod5) ist etwas fehlerhaft (siehe
+http://www.autohotkey.com/forum/topic10169.html), hat aber mit der neuen
+Version bisher trotzdem geklappt. Bei Fehlern bitte melden.
 
 == Nummernblock ==
+Der Nummernblock reagiert nicht auf Tastenkombinationen mit Strg, Alt usw.
 
 Der Nummernblock auf der 2. Ebene ist wahlweise
-- bei AUSgeschaltetem Numlock  
-- bei EINgeschaltetem Numlock mit Shift 
+- bei AUSgeschaltetem Numlock
+- bei EINgeschaltetem Numlock mit Shift
 zu erreichen.
-Der Nummernblock auf der 3. Ebene funktioniert bei EINgeschaltetem 
+Der Nummernblock auf der 3. Ebene funktioniert bei EINgeschaltetem
 Numlock mit Mod3 (Caps/#).
 Der Nummernblock auf der 4. Ebene ist wahlweise
-- bei AUSgeschaltetem Numlock mit Mod3 + Shift 
-- bei EINgeschaltetem Numlock über Mod5 
+- bei AUSgeschaltetem Numlock mit Mod3 + Shift
+- bei EINgeschaltetem Numlock Ã¼ber Mod5
 zu erreichen.
-Da die 2. Ebene über Shift ebenfalls bei EINgeschaltetem Numlock
+Da die 2. Ebene Ã¼ber Shift ebenfalls bei EINgeschaltetem Numlock
 funktioniert ist das Ausschalten des Nummernblocks nicht unbedingt
-nötig.
+nÃ¶tig.
 
-Achtung!
+== Besonderheiten bei der ahk-Windowsversion von Neo ==
+Ebene 4 des Nummernblocks lÃ¤sst sich auÃŸer Ã¼ber Mod3+Shift auch Ã¼ber
+Mod5 ansprechen.
+
+Es gibt die Tastenkombination Shift+Pause, die das Script pausiert und
+un-pausiert. Wenns nicht gefÃ¤llt, lasst es mich Ã¼ber den Verteiler wissen.
+
+== Warnung ==
+ACHTUNG! Bei Windows ist folgendes festgelegt:
 AltGr + Pos1 = Abmelden
 AltGr + Ende = Computer ausschalten
 --> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod5
 
-== To Do ==
-
-Lässt sich die neo20-remap.ahk in die Hauptdatei integrieren?
-Ist mir bislang noch nicht gelungen.
