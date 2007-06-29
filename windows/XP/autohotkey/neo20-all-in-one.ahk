@@ -1,7 +1,7 @@
 /*
-    Titel:        NEO Autohotkey-Treiber
-    Version:      0.07 beta
-    Datum:        16.06.2007
+    Titel:        NEO 2.0 beta Autohotkey-Treiber
+    Version:      0.08 beta
+    Datum:        29.06.2007
     Basiert auf:  neo20.ahk und neo20-remap.ahk vom 25.05.2007
     
     TODO:         - ausgiebig testen...
@@ -13,11 +13,8 @@
                     verwendet wird. Bei anderen Tasten muss CapsLock in der ersten und zweiten Ebene
                     explizit abgefragt werden.
                     (Lässt sich das elegant in eine Funktion auslagern?)
-    Ideen:
-                  - DeadKeys tot machen
-                  - Symbol ändern
-                  - wenn nötig, "sendinput {blind}" verwenden
-                    (gibt es irgendwelche Probleme bei "sendinput {blind}" ?)
+    Ideen:        - DeadKeys tot machen
+                  - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
 */
 
@@ -194,7 +191,7 @@ return
       If (PriorDeadKey = "c1")          ; circumflex
          BSUnicode("Â³")
       Else
-         send 3      
+         send 3
    }
    else if Ebene = 2
       send §
@@ -210,11 +207,9 @@ return
    if Ebene = 1
       send 4
    else if Ebene = 2
-      send $
+      send »
    else if Ebene = 3
-      send ¥
-   else if Ebene = 4
-      send ¢
+      send ›
    else if Ebene = 5
       Send {PgUp}    ; Prev
    else if Ebene = 6
@@ -227,11 +222,9 @@ return
    if Ebene = 1
       send 5
    else if Ebene = 2
-      send €
+      send «
    else if Ebene = 3
-      send £
-   else if Ebene = 4
-      send ¤
+      send ‹
    else if Ebene = 5
       Unicode("â…") ; 5/8
    else if Ebene = 6
@@ -244,11 +237,11 @@ return
    if Ebene = 1
       send 6
    else if Ebene = 2
-      send ª
+      send $
    else if Ebene = 3
-      send æ 
+      send £
    else if Ebene = 4
-      send Æ
+      send ¤
    else if Ebene = 6
       Unicode("â‡”") ; Äquivalenz
    PriorDeadKey := ""
@@ -259,13 +252,15 @@ return
    if Ebene = 1
       send 7
    else if Ebene = 2
-      send º
+      send €
    else if Ebene = 3
-      send œ
+      send ¢
    else if Ebene = 4
-      send Œ
+      send ¥
    else if Ebene = 5
       Unicode("â…") ; 7/8
+   else if Ebene = 6
+      Send ¬
    PriorDeadKey := ""
 return
 
@@ -277,8 +272,6 @@ return
       send „
    else if Ebene = 3
       send ‚
-   else if Ebene = 4
-      send »
    else if Ebene = 5
       Send /
    else if Ebene = 6
@@ -294,8 +287,6 @@ return
       send “
    else if Ebene = 3
       send ‘
-   else if Ebene = 4
-      send «
    else if Ebene = 5
       Send *
    else if Ebene = 6
@@ -311,12 +302,10 @@ return
       send ”
    else if Ebene = 3
       send ’
-   else if Ebene = 4
-      send ›
    else if Ebene = 5
       Send -
    else if Ebene = 6
-      Send ¬
+      Unicode("âˆ¨") ; logisch oder
    PriorDeadKey := ""
 return
 
@@ -328,10 +317,8 @@ return
       Unicode("â€“") ; Ged
    else if Ebene = 3
       Unicode("â€”")
-   else if Ebene = 4
-      send ‹
    else if Ebene = 6
-      Unicode("âˆ¨") ; logisch oder
+      Unicode("âˆ§") ; logisch und
    PriorDeadKey := ""
 return
 
