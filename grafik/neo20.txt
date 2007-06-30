@@ -1,4 +1,4 @@
----------------
+-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird eine dicktengleiche Schrift einstellen
 und einen automatischen Zeilenumbruch deaktivieren!
@@ -7,16 +7,17 @@ Unter Windows ist in der Grundinstallation leider keine dicktengleiche Schrift
 installiert, die befriedigend viele Unicodezeichen beinhaltet.
 Abhilfe schafft z.B. DejaVu Sans Mono:
 http://dejavu.sourceforge.net/
----------------
+-------------------------------------------------------------------------------
+
+== Symbole ==
 ⇞⇟   … Bild auf/Bild ab
 ⇱⇲   … Pos1/Ende
 ⌫ ⌦  … Backspace/Entf
 ⌧    … Esc
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
----------------
-Erste Ebene
----------------
+
+== Erste Ebene – Miniatur ==
 ┌─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬────────┐
 │^│1│2│3│4│5│6│7│8│9│0│-│ˊ│  Back  │
 ├─┴─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─┬─────┤
@@ -29,9 +30,7 @@ Erste Ebene
 │St│Fen│Al│Leerzeich│M5│Fen│Men│Str│
 └──┴───┴──┴─────────┴──┴───┴───┴───┘
 
----------------
-  alle Ebenen  
----------------
+== Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
 │ˇ - .│° ¼  │¶ ½  │§ ¾  │»    │«   ⇒│$ ¤ ⇔│€ ¥ ¬│„   ∃│“   ∀│”   ∨│–   ∧│` ˛ ˚│Backspace│
 │^ ˘ ·│1   ⅛│2    │3   ⅜│4 › ⇞│5 ‹ ⅝│6 £  │7 ¢ ⅞│8 ‚ /│9 ‘ *│0 ’ -│- —  │ˊ ¸ ˙│    ⌫    │
@@ -66,3 +65,11 @@ Erste Ebene
 │ ⎀ ‰       │ ⌦  .│     │
 └───────────┴─────┴─────┘
 
+== Tipp ==
+Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
+vergleichbares ein, bekommt man anschließend mittels Eingabe von »neom« oder
+»num« die aktuelle Belegung in der Konsole angezeigt:
+alias num='grep -B 15 "┴─────┘"  PFAD_ZUR_DATEI/neo20.txt | head -n 16'
+alias neo='grep -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt | head -n 16'
+ 
+Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
