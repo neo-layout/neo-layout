@@ -203,7 +203,7 @@ xkb_symbols "sundeadkeys" {
 //   neo_layout (at) yahoogroups (dot) de
 
 
-partial modifier_keys alphanumeric_keys
+partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo" {
 
     name[Group1]= "German Neostyle (v2.0)";
