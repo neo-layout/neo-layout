@@ -69,7 +69,7 @@ http://dejavu.sourceforge.net/
 Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
 vergleichbares ein, bekommt man anschließend mittels Eingabe von »neom« oder
 »num« die aktuelle Belegung in der Konsole angezeigt:
-alias num='grep -B 15 "┴─────┘"  PFAD_ZUR_DATEI/neo20.txt | head -n 16'
-alias neo='grep -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt | head -n 16'
+alias num='grep -m 1 -B 15 "┴─────┘"  PFAD_ZUR_DATEI/neo20.txt'
+alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
