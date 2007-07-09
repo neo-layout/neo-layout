@@ -5,7 +5,7 @@
 #     Benjamin Kellermann <Benjamin punkt Kellermann bei gmx in de>    #
 #                                                                      #
 # Installation:                                                        #
-#     die folgenden Zeilen in die menu.lst von GRUB eintragen          #
+#     die folgenden Zeilen an den ANFANG der menu.lst eintragen        #
 #                                                                      #
 # Lizenz:                                                              #
 #     GPL: http://www.gnu.org/licenses/gpl.txt                         #
