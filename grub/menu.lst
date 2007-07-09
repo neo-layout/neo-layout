@@ -1,0 +1,111 @@
+########################################################################
+# NEO-Layout für GRUB                                                  #
+#                                                                      #
+# Author:                                                              #
+#     Benjamin Kellermann <Benjamin punkt Kellermann bei gmx in de>    #
+#                                                                      #
+# Installation:                                                        #
+#     die folgenden Zeilen in die menu.lst von GRUB eintragen          #
+#                                                                      #
+# Lizenz:                                                              #
+#     GPL: http://www.gnu.org/licenses/gpl.txt                         #
+#                                                                      #
+# Bugs:                                                                #
+#     Zahlenreihe wie in qwertz wegen fehlender 3. Ebene               #
+#     <> ^ ` § gehen (noch) nicht                                      #
+#     ~ \ | _ {} [] gehen nicht -> auf öüäß legen?                     #
+#                                                                      #
+########################################################################
+
+setkey x q
+setkey v w
+setkey l e
+setkey c r
+setkey w t
+setkey k y
+setkey h u
+setkey g i
+setkey f o
+setkey q p
+#setkey ß [
+        
+setkey u a
+setkey i s
+setkey a d
+setkey e f
+setkey o g
+setkey s h
+setkey n j
+setkey r k
+setkey t l
+setkey d semicolon
+setkey y quote
+        
+#setkey ö z
+#setkey ü x
+#setkey ä c
+setkey p v
+setkey z b
+setkey b n
+setkey m m
+#setkey comma comma 
+#setkey dot dot
+setkey j slash
+
+setkey X Q
+setkey V W
+setkey L E
+setkey C R
+setkey W T
+setkey K Y
+setkey H U
+setkey G I
+setkey F O
+setkey Q P
+#setkey Versal_ssharp {
+        
+setkey U A
+setkey I S
+setkey A D
+setkey E F
+setkey O G
+setkey S H
+setkey N J
+setkey R K
+setkey T L
+setkey D colon
+setkey Y doublequote
+          
+#setkey Ö Z
+#setkey Ü X
+#setkey Ä C
+setkey P V
+setkey Z B
+setkey B N
+setkey M M
+#setkey ' <
+#setkey dots >
+setkey J question
+
+# Zahlenreihe wie in qwertz wegen fehlender 3. Ebene
+# ~, \, |, _, {}, [] gehen nicht -> auf öüäß legen?
+# <>, ^, `, § gehen (noch) nicht
+
+setkey doublequote at
+#setkey paragraph numbersign
+setkey ampersand caret
+setkey slash ampersand
+setkey parenleft asterisk
+setkey parenright parenleft
+setkey equal parenright
+setkey question underscore
+
+setkey plus bracketright
+setkey asterisk braceright
+
+setkey numbersign backslash
+setkey quote bar
+
+setkey semicolon less
+setkey colon greater
+
