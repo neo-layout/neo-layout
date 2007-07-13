@@ -312,7 +312,7 @@ return
 *ß::
    EbeneAktualisieren()
    if Ebene = 1
-      send - ; Bind
+      send {blind}- ; Bind
    else if Ebene = 2
       Unicode("â€“") ; Ged
    else if Ebene = 3
@@ -1470,7 +1470,7 @@ return
          sendinput {blind}B
    }
    else if Ebene = 3
-      send {+}
+      send {blind}{+}
    else if Ebene = 4
       Unicode("Î²") ;beta
    else if Ebene = 5
@@ -1601,7 +1601,7 @@ return
 *NumpadSub::
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
-      send {NumpadSub}
+      send {blind}{NumpadSub}
    else if Ebene = 3
       send -
    PriorDeadKey := ""
@@ -1610,7 +1610,7 @@ return
 *NumpadAdd::
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
-      send {NumpadAdd}
+      send {blind}{NumpadAdd}
    else if Ebene = 3
       send ±
    else if ( (Ebene = 4) or (Ebene = 5) )
