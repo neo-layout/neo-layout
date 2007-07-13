@@ -584,7 +584,7 @@ return
       If (PriorDeadKey = "c4")    ; Querstrich
          BSUnicode("≤")
       Else
-         send <
+         send {blind}<
    }
    else if Ebene = 4
       Unicode("ψ") ;psi
@@ -1348,7 +1348,7 @@ return
    else if Ebene = 2
       sendinput {blind}�
    else if Ebene = 3
-      send {#}
+      send {blind}{#}
    else if Ebene = 5
       Send {Esc}
    PriorDeadKey := ""
