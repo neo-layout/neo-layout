@@ -1245,7 +1245,7 @@ return
          sendinput {blind}T
    }
    else if Ebene = 3
-      send - ; Bind
+      send {blind}- ; Bind
    else if Ebene = 4
       Unicode("τ") ;tau
    else if Ebene = 5
