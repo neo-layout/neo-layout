@@ -157,7 +157,7 @@ return
       If (PriorDeadKey = "c1")          ; circumflex 1
          BSUnicode("Â¹")
       Else
-         send 1
+         send {blind}1
    }
    else if Ebene = 2
       send °
@@ -175,7 +175,7 @@ return
       If (PriorDeadKey = "c1")          ; circumflex 
          BSUnicode("Â²")
       Else
-         send 2      
+         send {blind}2      
    }
    else if Ebene = 2
       send ¶
@@ -191,7 +191,7 @@ return
       If (PriorDeadKey = "c1")          ; circumflex
          BSUnicode("Â³")
       Else
-         send 3
+         send {blind}3
    }
    else if Ebene = 2
       send §
@@ -205,7 +205,7 @@ return
 *4::
    EbeneAktualisieren()
    if Ebene = 1
-      send 4
+      send {blind}4
    else if Ebene = 2
       send »
    else if Ebene = 3
@@ -220,7 +220,7 @@ return
 *5::
    EbeneAktualisieren()
    if Ebene = 1
-      send 5
+      send {blind}5
    else if Ebene = 2
       send «
    else if Ebene = 3
@@ -235,7 +235,7 @@ return
 *6::
    EbeneAktualisieren()
    if Ebene = 1
-      send 6
+      send {blind}6
    else if Ebene = 2
       send $
    else if Ebene = 3
@@ -250,7 +250,7 @@ return
 *7::
    EbeneAktualisieren()
    if Ebene = 1
-      send 7
+      send {blind}7
    else if Ebene = 2
       send €
    else if Ebene = 3
@@ -267,7 +267,7 @@ return
 *8::
    EbeneAktualisieren()
    if Ebene = 1
-      send 8
+      send {blind}8
    else if Ebene = 2
       send „
    else if Ebene = 3
@@ -282,7 +282,7 @@ return
 *9::
    EbeneAktualisieren()
    if Ebene = 1
-      send 9
+      send {blind}9
    else if Ebene = 2
       send “
    else if Ebene = 3
@@ -297,7 +297,7 @@ return
 *0::
    EbeneAktualisieren()
    if Ebene = 1
-      send 0
+      send {blind}0
    else if Ebene = 2
       send ”
    else if Ebene = 3
@@ -1639,7 +1639,7 @@ return
 *Numpad7::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad7}
+      send {blind}{Numpad7}
    else if Ebene = 2
       send {NumpadHome}
    else if ( (Ebene = 4) or (Ebene = 5) )
@@ -1650,7 +1650,7 @@ return
 *Numpad8::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad8}
+      send {blind}{Numpad8}
    else if Ebene = 2
       send {NumpadUp}
    else if Ebene = 3
@@ -1663,7 +1663,7 @@ return
 *Numpad9::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad9}
+      send {blind}{Numpad9}
    else if Ebene = 2
       send {NumpadPgUp}
    else if ( (Ebene = 4) or (Ebene = 5) )
@@ -1674,7 +1674,7 @@ return
 *Numpad4::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad4}
+      send {blind}{Numpad4}
    else if Ebene = 2
       send {NumpadLeft}
    else if Ebene = 3
@@ -1687,7 +1687,7 @@ return
 *Numpad5::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad5}
+      send {blind}{Numpad5}
    else if Ebene = 2
       send {NumpadClear}
    else if Ebene = 3
@@ -1700,7 +1700,7 @@ return
 *Numpad6::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad6}
+      send {blind}{Numpad6}
    else if Ebene = 2
       send {NumpadRight}
    else if Ebene = 3
@@ -1713,7 +1713,7 @@ return
 *Numpad1::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad1}
+      send {blind}{Numpad1}
    else if Ebene = 2
       send {NumpadEnd}
    else if ( (Ebene = 4) or (Ebene = 5) )
@@ -1724,7 +1724,7 @@ return
 *Numpad2::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad2}
+      send {blind}{Numpad2}
    else if Ebene = 2
       send {NumpadDown}
    else if Ebene = 3
@@ -1737,7 +1737,7 @@ return
 *Numpad3::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad3}
+      send {blind}{Numpad3}
    else if Ebene = 2
       send {NumpadPgDn}
    else if ( (Ebene = 4) or (Ebene = 5) )
@@ -1748,7 +1748,7 @@ return
 *Numpad0::
    EbeneAktualisieren()
    if Ebene = 1
-      send {Numpad0}
+      send {blind}{Numpad0}
    else if Ebene = 2
       send {NumpadIns}
    else if Ebene = 3
