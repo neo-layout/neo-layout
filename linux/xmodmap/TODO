@@ -9,6 +9,9 @@ Rumänisch: ț Ț
 Müsste mit dead_cedilla und t oder T gehen, geht aber nicht (X.org 7.1 mit
 Fedora6)
 
+== Bugreports an Gnome/GTK senden == 
+Siehe Mail von Benjamin Kellermann vom 19.07.2007 09:20.
+
 == Bugreport an X.org ==
 folgendes sind meiner Meinung nach Bugs und sollten eigentlich schon mit
 den bisher definierten gehen:

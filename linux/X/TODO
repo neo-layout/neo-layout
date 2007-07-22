@@ -1,16 +1,10 @@
-==============
-Varianten
-==============
-
+== Varianten ==
 Es ist zu klären, welche Varianten in die Datei sollen, und welche davon default
 wird.
 Ebenso ist die momentane Version vermutlich nicht 100% aktuell.
 Ob die Datei ohne weiteres unter *BSD tut, muss ich noch testen.
 
-==============
-Deadkeys
-==============
-
+== Deadkeys ==
 Alle Deadkey-Bugs der xmodmap sind behoben bis auf:
 
 Maltesisch: Ħ ħ
@@ -32,26 +26,23 @@ Antwort von Nora:
 - das kroatische d ist aus Querstrich und d zusammengesetzt
 (http://unicode.e-workers.de/querstrich.php)
 
-=============
-dead_stroke
-=============
+== dead_stroke ==
 Den dead_stroke sollte man wieder einkommentieren, leider funktioniert das noch
 nicht auf älteren Systemen (z. B. Debian 3.x). Und außerdem bewirkt er leider
 sowieso noch gar nichts.
 
-=============
-neo light
-=============
+== neo light ==
 wie auch immer diese Version heißen wird, sie fehlt in der Datei!
 
-=============
-.kmap?
-=============
+== .kmap? ==
 neuerdings soll man mit dieser Datei auch die Belegung in der Konsole ändern
 können. Wie das? Wenn das nicht geht -> .kmap schreiben
 
 
-========
-Fedora 6
-========
+== Fedora 6 ==
 Siehe Mail vom 15.07.2007 um 23:37 Uhr.
+
+
+== Bugreports an Gnome/GTK senden ==  
+Siehe Mail von Benjamin Kellermann vom 19.07.2007 09:20.
+
