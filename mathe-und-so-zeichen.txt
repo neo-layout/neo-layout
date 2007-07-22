@@ -37,10 +37,10 @@ Mail von Martin Engel vom 29.06.2007 11:15 (Physik, Mathe, Informatik):
 
 Mail von Martin Engel vom 30.06.2007 09:35 (für Chemiker):
 ⇋
-⇋ 
+⇌
 ├─────┼─────┼─────┼─────┤
 │ 1   │ 2   │ 3   │Enter│
-│   ⇋ │     │   ⇋ │     │
+│   ⇋ │     │   ⇌ │     │
 ├─────┴─────┼─────┤     │
 
 
@@ -88,4 +88,11 @@ Mathe/Physik
 Kurvenintegralzeichen
 <.,.> Skalarprodukt mit spitzen Klammern (nix im Unicode?) //Erik: Unnötig?
 ∮ [U+222E]
+
+
+
+
+Mail von Philipp vom 03.07.2007 22:30:
+1) Weicher Trennstrich (Soft-Hyphen) einführen.
+2) Schmales Leerzeichen von 6. Ebene auf 1. oder 2. legen. Dort auf das »,«.
 
