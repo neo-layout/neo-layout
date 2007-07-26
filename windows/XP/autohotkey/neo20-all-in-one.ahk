@@ -1073,9 +1073,9 @@ return
    else if Ebene = 4
       Unicode("ω") ;omega
    else if Ebene = 5
-      Send {End}
+      Send {blind}{End}
    else if Ebene = 6
-      Send +{End}
+      Send {blind}+{End}
    PriorDeadKey := ""
 return
 
