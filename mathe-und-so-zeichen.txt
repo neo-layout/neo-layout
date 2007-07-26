@@ -55,13 +55,14 @@ Brüche umsortieren, nach Achteln aufgezählt (siehe Mail)
 Mail von Martin Engel vom 07.07.2007 14:03:
 … auf y in der 3. Ebene
 ¤ auf ü (da wo schon das $ ist) in die 4. Ebene
-£ ganz weglassen, da die auch bald den € bekommen (???)
+£ ganz weglassen, da die auch bald den € bekommen //Erik: ähh…sicher?
 Brüche auch weglassen, da mit Compose möglich (aber wo ist die Compose-Taste?)
 
 
 
 
 Mail von Martin Engel vom 18.07.2007 14:05:
+(siehe dazu auch Mail von Philipp vom 23.07.2007 15:41)
 Chemischer Bereich
 ⇌ [U+21CC] Harpunendoppelpfeil
 Öfters auch oben bzw. untenkurz und unten bzw. oben lang (nix im Unicode?)
@@ -95,4 +96,26 @@ Kurvenintegralzeichen
 Mail von Philipp vom 03.07.2007 22:30:
 1) Weicher Trennstrich (Soft-Hyphen) einführen.
 2) Schmales Leerzeichen von 6. Ebene auf 1. oder 2. legen. Dort auf das »,«.
+
+
+
+
+Mail von Daniel (trichterwolke) vom 26.07.2007 20:39:
+ω auf z (4. Ebene)
+ζ auf ??? (wird laut seiner Aussage nicht so oft benötigt) //Erik: nö, in der
+                                                             Physik auch sehr
+                                                             häufig
+
+
+
+
+Mail von Ben (und anderen) vom 28.06.2007 21:36:
+Compose-Taste/Ligatur-Taste/Multikey einführen. Aber wo?
+Vorschläge: 1) Mod3+Mod5
+            2) auf die Taste wo momentan das tote ~ liegt (über rechter Mod3),
+               die toten Zeichen dieser Taste dann neu verteilen
+            3) Rollen
+            4) Alt-Option (Windows-Taste)
+Weitere Frage dazu: Wenn Ligatur-Taste, dann tote Tasten weg? Alle?
+Oder ist es angenehmer mit den toten Tasten zu tippen?
 
