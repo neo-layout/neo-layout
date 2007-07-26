@@ -837,9 +837,9 @@ return
    else if Ebene = 3
       send \
    else if Ebene = 5
-      Send {Home}
+      Send {blind}{Home}
    else if Ebene = 6
-      Send +{Home}
+      Send {blind}+{Home}
    PriorDeadKey := ""
 return
 
