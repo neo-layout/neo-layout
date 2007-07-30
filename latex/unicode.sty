@@ -10,7 +10,8 @@
 %
 % Licensed under GPL
 
-%\DeclareUnicodeCharacter{00A0}{ } %nobreakspace
+\DeclareUnicodeCharacter{00A0}{~} %geschuetztes Leerzeichen (nobreak space)
+\DeclareUnicodeCharacter{202F}{\,} %schmales Leerzeichen (narrow nobreak space)
 \DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
 \DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
 %\DeclareUnicodeCharacter{}{\ensuremath{\varrho}}
@@ -20,8 +21,8 @@
 \DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
 \DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
 \DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
-\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
-\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}} %micro
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}} % mü, wird in Neo nich verwend.
+\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}} %micro -- geht nicht!
 \DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
 \DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
 \DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
@@ -30,7 +31,6 @@
 \DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
 %\DeclareUnicodeCharacter{}{\ensuremath{\phi}}
 \DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
-%\DeclareUnicodeCharacter{}{\ensuremath{o}}
 \DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
 \DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
 \DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
@@ -51,6 +51,10 @@
 \DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
 \DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
 \DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
-%\DeclareUnicodeCharacter{}{\ensuremath{\Upsilon}}
 \DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
 \DeclareUnicodeCharacter{22C5}{\ensuremath{\cdot}}
+\DeclareUnicodeCharacter{2207}{\ensuremath{\nabla}}
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}} % geht nicht
+\DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}} % geht nicht
+\DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}} % Mathe-Minus
