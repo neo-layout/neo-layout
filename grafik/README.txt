@@ -1,5 +1,5 @@
 == neo20.ods – Die Referenz ==
-Die Datei neo20.ods ist die Refernz für alle weiteren Grafiken und die Treiber
+Die Datei neo20.txt ist die Refernz für alle weiteren Grafiken und die Treiber
 für die einzelnen Betriebsysteme.
 
 == neo20-aufsteller.pdf – Zum Lernen ==
