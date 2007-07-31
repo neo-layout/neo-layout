@@ -307,19 +307,17 @@ xkb_symbols "neo" {
 
 
     // die neuen Mods
-    key <CAPS> {
-			type[Group1]="EIGHT_LEVEL",
-		  [ ISO_Level3_Shift, ISO_Level3_Shift, Caps_Lock, Caps_Lock, Caps_Lock, Caps_Lock ]
-		};
+    key.type[Group1]="EIGHT_LEVEL" ;
 
-		key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift, Caps_Lock, Caps_Lock, Multi_key, Multi_key ] };
 
+// FIXME: Warum geht das hier nicht ordentlich? 
+//		key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift, Caps_Lock, Caps_Lock, Multi_key, Multi_key ] };
+		key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, Multi_key, Multi_key ] };
 
 		key <LSGT> { [ 0xfe11,0xfe11,0xfe11,0xfe11 ] };
 
-		key <RALT> { 
-			type[Group1]="EIGHT_LEVEL", 
-			symbols[Group1] = [ 0xfe11, 0xfe11, 0xfe11, 0xfe11, KP_Decimal, 0xfe11 ] };
+		key <RALT> { symbols[Group1] = [ 0xfe11, 0xfe11, 0xfe11, 0xfe11, KP_Decimal, 0xfe11 ] };
 
 		modifier_map Mod3 { 0xfe11 };
 

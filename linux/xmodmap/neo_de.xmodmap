@@ -87,7 +87,7 @@ keycode 61 = j J semicolon j period nabla
 ! Make CapsLock an additional Alt_Gr (Mode_switch is for 3rd and 4th level)
 remove Lock = Caps_Lock
 remove Mod3 = ISO_Level3_Shift
-keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock
+keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock Multi_key Multi_key
 
 ! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
 keycode 113 = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift KP_Decimal
@@ -100,7 +100,7 @@ add Mod5 = Mode_switch
 !keycode 116 = ISO_Level3_Shift
 
 ! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
-keycode 51 = Mode_switch Mode_switch
+keycode 51 = Mode_switch Mode_switch Caps_Lock Caps_Lock Multi_key Multi_key
 keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
 add Mod3 = ISO_Level3_Shift
 

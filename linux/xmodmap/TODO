@@ -47,6 +47,8 @@ keycode umgestellt wurde. Eventuell handelt es sich hierbei um einen Fehler im
 X-Server. Jedoch ist auch ein Missverständnis der Bedienung von xmodmap
 unsererseits noch nicht ausgeschlossen.
 
-3) dead_stroke wieder einkommentieren, was leider noch nicht auf allen Systemen
+4) Composekey (Multi_key) geht noch nicht richtig auf der ehemaligen CapsLock Taste
+
+5) dead_stroke wieder einkommentieren, was leider noch nicht auf allen Systemen
 funktioniert, z. B. auf Debian 3.x-Systemen. Und außerdem bewirkt er leider
 sowieso noch gar nichts.
