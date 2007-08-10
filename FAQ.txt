@@ -243,7 +243,8 @@ andere Lösung hier in der FAQ (weiter oben).
 F1: Wenn ich »Mod3« + »n« drücke, dann erscheint nicht die öffnende Klammer.
 F2: Wenn ich »Mod5« + »n« oder »Mod5« + »Leertaste« drücke, kommt nicht die 4
 oder die 0 sondern ein n oder Leerzeichen. Wieso?
- 
+F3: Ebene 5 und 6 über dem »b« gehen nicht?
+
 A: Das Problem, was hier auftritt ist der viel zitierte Fehler*, dass wenn man
 vom deutschen Layout ausgeht, xmodmap die 5. Ebene über dem n nicht ausgewertet
 wird. Deshalb geht je nach Version die Klammer oder die 4 nicht über dem n.
