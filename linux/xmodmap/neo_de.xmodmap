@@ -118,36 +118,36 @@ keycode 65 = space space space nobreakspace 0 U202F
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !keycode 77 = Num_Lock Pointer_EnableKeys
-keycode 112 = KP_Divide KP_Divide division U2215
-keycode 63  = KP_Multiply KP_Multiply multiply U22C5
+keycode 112 = KP_Divide   KP_Divide   division  U2215
+keycode 63  = KP_Multiply KP_Multiply multiply  U22C5
 keycode 82  = KP_Subtract KP_Subtract U2212
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 = KP_Home	KP_7 KP_7 U226A
-keycode 80 = KP_Up KP_8 uparrow U2229
-keycode 81 = KP_Prior	KP_9 KP_9 U226B
-keycode 86 = KP_Add KP_Add plusminus U2213
+keycode 79 =  KP_Home     KP_7        KP_7       U226A
+keycode 80 =  KP_Up       KP_8        uparrow    U2229
+keycode 81 =  KP_Prior    KP_9        KP_9       U226B
+keycode 86 =  KP_Add      KP_Add      plusminus  U2213
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 = KP_Left  KP_4 leftarrow U2282
-keycode 84 = KP_Begin KP_5 dagger U220A
-keycode 85 = KP_Right KP_6 rightarrow U2283
+keycode 83 =  KP_Left     KP_4        leftarrow  U2282
+keycode 84 =  KP_Begin    KP_5        dagger     U220A
+keycode 85 =  KP_Right    KP_6        rightarrow U2283
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  KP_End   KP_1     U21CB     U2264 
-keycode 88 =  KP_Down  KP_2     downarrow U222A 
-keycode 89 =  KP_Next  KP_3     U21CC     U2265 
-keycode 108 = KP_Enter KP_Enter notequal  U2248
-!keysym <KPEQ> 	 	KP_Equal
+keycode 87 =  KP_End      KP_1        U21CB      U2264 
+keycode 88 =  KP_Down     KP_2        downarrow  U222A 
+keycode 89 =  KP_Next     KP_3        U21CC      U2265 
+keycode 108 = KP_Enter    KP_Enter    notequal   U2248
+!keysym <KPEQ> KP_Equal
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = KP_Insert	KP_0 percent U2030
-keycode 91 = KP_Delete	KP_Decimal period comma
+keycode 90 = KP_Insert    KP_0        percent    U2030
+keycode 91 = KP_Delete    KP_Decimal  period     comma
