@@ -289,6 +289,15 @@ F: Mein »Mod3« geht nicht als Modifier für die 5. Ebene.
 A: Deaktiviere die Option „Both Alt keys together change Group” 
 (ralt_switch_for_alts_toggle).
 
+-------------------------------------------------------------------------------
+
+F: Warum wird statt dem Daraus-folgt-Pfeil (Implikation) »⇒« das komische
+Zeichen »⊢« dargestellt?
+
+A: Das ist ein Fehler, der nur bei KDE-Anwendungen auftritt (z. B. unter Kile).
+Daher der schmutzige Hack in der unicode.sty-Datei für Latex.
+Wer schreibt an KDE (einen Bugreport)?
+
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
 --------------------------------------------------------------------------------
