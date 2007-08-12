@@ -140,10 +140,10 @@ keycode 85 = KP_Right KP_6 rightarrow U2283
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 = KP_End  KP_1 KP_1 U2264
-keycode 88 = KP_Down KP_2 downarrow U222A
-keycode 89 = KP_Next KP_3 KP_3 U2265
-keycode 108 = KP_Enter KP_Enter notequal U2248
+keycode 87 =  KP_End   KP_1     U21CB     U2264 
+keycode 88 =  KP_Down  KP_2     downarrow U222A 
+keycode 89 =  KP_Next  KP_3     U21CC     U2265 
+keycode 108 = KP_Enter KP_Enter notequal  U2248
 !keysym <KPEQ> 	 	KP_Equal
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
