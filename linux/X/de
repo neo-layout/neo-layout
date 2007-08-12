@@ -283,27 +283,27 @@ xkb_symbols "neo" {
 
     key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
 
-    key <KPDV> { [   KP_Divide,   KP_Divide, division, U2215 ] };
-    key <KPMU> { [ KP_Multiply, KP_Multiply, multiply, U22C5 ] };
-    key <KPSU> { [ KP_Subtract, KP_Subtract,    U2212        ] };
+    key <KPDV> { [ KP_Divide,   KP_Divide,   division,   U2215 ] };
+    key <KPMU> { [ KP_Multiply, KP_Multiply, multiply,   U22C5 ] };
+    key <KPSU> { [ KP_Subtract, KP_Subtract, U2212 ] };
 
-    key  <KP7> { [  KP_Home,      KP_7,      KP_7, U226A ] };
-    key  <KP8> { [    KP_Up,      KP_8,   uparrow, U2229 ] };
-    key  <KP9> { [ KP_Prior,      KP_9,      KP_9, U226B ] };
-    key <KPAD> { [   KP_Add,    KP_Add, plusminus, U2213 ] };
+    key  <KP7> { [ KP_Home,     KP_7,        KP_7,       U226A ] };
+    key  <KP8> { [ KP_Up,       KP_8,        uparrow,    U2229 ] };
+    key  <KP9> { [ KP_Prior,    KP_9,        KP_9,       U226B ] };
+    key <KPAD> { [ KP_Add,      KP_Add,      plusminus,  U2213 ] };
 
-    key  <KP4> { [  KP_Left, KP_4,  leftarrow, U2282 ] };
-    key  <KP5> { [ KP_Begin, KP_5,     dagger, U220A ] };
-    key  <KP6> { [ KP_Right, KP_6, rightarrow, U2283 ] };
+    key  <KP4> { [ KP_Left,     KP_4,        leftarrow,  U2282 ] };
+    key  <KP5> { [ KP_Begin,    KP_5,        dagger,     U220A ] };
+    key  <KP6> { [ KP_Right,    KP_6,        rightarrow, U2283 ] };
 
-    key  <KP1> { [  KP_End,      KP_1,      KP_1, U2264 ] };
-    key  <KP2> { [ KP_Down,      KP_2, downarrow, U222A ] };
-    key  <KP3> { [ KP_Next,      KP_3,      KP_3, U2265 ] };
-    key <KPEN> { [ KP_Enter, KP_Enter,  notequal, U2248 ] };
+    key  <KP1> { [ KP_End,      KP_1,        U21CB,      U2264 ] };
+    key  <KP2> { [ KP_Down,     KP_2,        downarrow,  U222A ] };
+    key  <KP3> { [ KP_Next,     KP_3,        U21CC,      U2265 ] };
+    key <KPEN> { [ KP_Enter,    KP_Enter,    notequal,   U2248 ] };
     key <KPEQ> { [ KP_Equal ] };
 
-    key  <KP0> { [ KP_Insert,       KP_0, percent, U2030 ] };
-    key <KPDL> { [ KP_Delete, KP_Decimal,  period, comma ] };
+    key  <KP0> { [ KP_Insert,   KP_0,        percent,    U2030 ] };
+    key <KPDL> { [ KP_Delete,   KP_Decimal,  period,     comma ] };
 
 
     // die neuen Mods
