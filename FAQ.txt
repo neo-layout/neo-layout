@@ -264,6 +264,30 @@ oder für die Version im 2.0 im Subversion-Repository:
 
 --------------------------------------------------------------------------------
 
+F: Bei mir geht die 5. Ebene nicht. Stattdessen erscheinen immer die Zeichen
+der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
+
+A: Du verwendest vermutlich nicht die xmodmap-Version des Treibers, sondern
+die xkb-Datei mit dem Namen „de“. Bei dieser kommt es bisher auf einigen
+Systemen (Fedora 6, Ubuntu 7.04 unter bestimmten Konstellationen) zu diesem
+Fehler.
+Unter Ubuntu (und anderen Systemen) kommt es zu diesem Fehler, wenn man in
+seiner xorg.conf nicht Neo, sondern eine andere Tastaturbelegung eingestellt
+hat, und dann die Belegung mittels
+  setxkbmap de neo
+von nachträglich aktiviert. Oder wenn man dann Neo im Gnome-Dialog für die
+Tastatur auswählt.
+
+Als Alternative bietet sich an:
+1) Den xmodmap-Treiber zu benutzen.
+2) Die Neo-Tastaturbelegung direkt in der xorg.conf zu laden. Und zwar so:
+  Option "XkbLayout" "de"
+  Option "XkbVariant" "neo"
+
+Bei weiteren Fragen bitte auf der Mailingliste melden (siehe erste Frage).
+
+--------------------------------------------------------------------------------
+
 F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
 vorgesehen erst rechts »Mod3« und dann gleichzeitig links die Taste auf der
 früher (bei QWERTZ) schon »CapsLock« war – wo jetzt das zweite »Mod3« ist –
@@ -287,7 +311,8 @@ Fehler sollte man wohl mal den Gnome-Entwicklern melden.
 F: Mein »Mod3« geht nicht als Modifier für die 5. Ebene.
 
 A: Deaktiviere die Option „Both Alt keys together change Group” 
-(ralt_switch_for_alts_toggle).
+(ralt_switch_for_alts_toggle) oder frage auf der Mailingliste (siehe erste
+Frage).
 
 -------------------------------------------------------------------------------
 

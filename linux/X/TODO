@@ -34,7 +34,7 @@ können. Wie das? Wenn das nicht geht -> .kmap schreiben
 
 
 == Fedora 6 ==
-Siehe Mail vom 15.07.2007 um 23:37 Uhr.
+5. Ebene geht nicht. Siehe Mail vom 15.07.2007 um 23:37 Uhr.
 
 
 == Bugreports an Gnome/GTK senden ==  
@@ -44,4 +44,5 @@ Siehe Mail von Benjamin Kellermann vom 19.07.2007 09:20.
 Compose und Caps gehen noch nicht richtig (Compose nur rechts, Caps nur links)
 
 == Bugreport an KDE senden ==
-Siehe Mail von Erik Streb vom 13.08.2007 01:34.
+Falsches Zeichen erscheint bei Eingabe vom Implikationspfeil. Siehe Mail von
+Erik Streb vom 13.08.2007 01:34.
