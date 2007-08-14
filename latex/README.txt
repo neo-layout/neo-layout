@@ -3,7 +3,8 @@ Kompiliert man die uniinput.dtx mit LaTeX
 	latex uniinput.dtx
 oder
 	pdflatex uniinput.dtx
-so erhält man die Dokumentation zu dem Paket. Kompiliert man die uniinput.ins mit
+so erhält man die Dokumentation zu dem Paket.
+Kompiliert man die uniinput.ins mit
 	latex uniinput.ins
 wird eine uniinput.sty erzeugt. 
 
@@ -14,8 +15,8 @@ dann muss man sich die Datei
 	uniinput.sty
 in das gleiche Verzeichnis, wie die tex-Datei kopieren.
 Soll die Datei ständig auf dem Rechner sein und immer verfügbar, so muss man sie
-in einen von LaTeX durchsuchten Ordner kopieren und danach mit dem Befehl mktexlsr
-die LaTeX-Bibliothek aktualisieren.
+in einen von LaTeX durchsuchten Ordner kopieren und danach mit dem Befehl
+mktexlsr die LaTeX-Bibliothek aktualisieren.
 
 === Wichtige Zeile ===
 Außerdem muss man natürlich noch die Zeile

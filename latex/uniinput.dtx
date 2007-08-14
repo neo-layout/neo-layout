@@ -77,13 +77,13 @@
 % \maketitle
 %
 % \section{Einleitung}
-% Mit Hilfe dieses Paketes kann eine große Zahl von Sonderzeichen direkt über die Tastatur in \LaTeX\ eingegeben werden, was z.B. das Verwenden von ergonomischen Tastaturkonzepten wie Neo deutlich effizienter macht.
+% Mit Hilfe dieses Paketes kann eine große Zahl von Sonderzeichen direkt über die Tastatur in \LaTeX\ eingegeben werden, was z.\,B. das Verwenden von ergonomischen Tastaturkonzepten wie Neo deutlich effizienter macht.
 % 
 % \section{Anwendung}
 
-% Um das Paket verwenden zu können, muss es \emph{nach} den beiden Paketen \texttt{inputenc} und \texttt{unicode} geladen werden. Es müssen also die Zeilen\\
+% Um das Paket verwenden zu können, muss es \emph{nach} den beiden Paketen \texttt{inputenc} und \texttt{uniinput} geladen werden. Es müssen also die Zeilen\\
 % \verb|\usepackage[utf8]{inputenc}|\\
-% \verb|\usepackage{unicode}|\\
+% \verb|\usepackage{uniinput}|\\
 % in der Präambel eingefügt werden.\\
 %
 % \DescribeMacro{\RequirePackage\{textcomp\}}
@@ -122,7 +122,7 @@
 \DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
 
 %    \end{macrocode}
-% Da das \(\varepsilon\) (mit dem Befehl \verb|\verepsilon| erzeugt) besser aussieht als das normale \(\varepsilon\), wird dieses hier verwendset.
+% Da das \(\varepsilon\) (mit dem Befehl \verb|\varepsilon| erzeugt) besser aussieht als das normale \(\varepsilon\), wird dieses hier verwendset.
 %    \begin{macrocode}
 
 \DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}}
@@ -173,7 +173,7 @@
 
 % man muss noch Klammern und Argument der Wurzel setzen, wenn man das hier verwendet: 
 % Also so: [WURZEL]{7+2}
-% Achtung: darf nur Mathemodus verwendet werden! FIXME: diesen Hinweis noch in die PDF-Doku eintragen?
+% Achtung: darf nur im Mathemodus verwendet werden! FIXME: diesen Hinweis noch in die PDF-Doku eintragen?
 \DeclareUnicodeCharacter{221A}{\sqrt} 
 
 % ist sonst als \texttimes definiert
