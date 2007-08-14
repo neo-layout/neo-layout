@@ -1,0 +1,235 @@
+% \iffalse meta-comment
+%
+% Copyright (C) 2007 by Arno Trautmann <Arno.Trautmann@gmx.de>
+% -------------------------------------------------------
+% 
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.2
+% of this license or (at your option) any later version.
+% The latest version of this license is in:
+%
+%    http://www.latex-project.org/lppl.txt
+%
+% and version 1.2 or later is part of all distributions of LaTeX 
+% version 1999/12/01 or later.
+%
+% \fi
+%
+% \iffalse
+%<*driver>
+\ProvidesFile{uniinput.dtx}
+%</driver>
+%<package>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+%<package>\ProvidesPackage{uniinput}
+%<*package>
+    [2007/08/14 v0.1 uniinput]
+%</package>
+%
+%<*driver>
+
+\documentclass{ltxdoc}
+%\usepackage{uniinput}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\EnableCrossrefs         
+\CodelineIndex
+\RecordChanges
+\begin{document}
+  \DocInput{uniinput.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+% \fi
+%
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+%
+% \changes{v0.1}{2007/08/14}{Initial version}
+%
+% \GetFileInfo{uniinput.dtx}
+%
+% \DoNotIndex{\newcommand,\newenvironment}
+% 
+%
+% \title{The \textsf{uniinput} package\thanks{This document
+%   corresponds to \textsf{uniinput}~\fileversion, dated \filedate.}}
+% \author{Benjamin Kellermann, Erik Streb, Arno Trautmann \\ \texttt{ Benjamin.Kellermann@gmx.de, mail@erikstreb.de},\\ \texttt{Arno.Trautmann@gmx.de}}
+%
+% \maketitle
+%
+% \section{Einleitung}
+% Mit Hilfe dieses Paketes kann eine große Zahl von Sonderzeichen direkt über die Tastatur in \LaTeX\ eingegeben werden, was z.B. das Verwenden von ergonomischen Tastaturkonzepten wie Neo deutlich effizienter macht.
+% 
+% \section{Anwendung}
+
+% Um das Paket verwenden zu können, muss es \emph{nach} den beiden Paketen \texttt{inputenc} und \texttt{unicode} geladen werden. Es müssen also die Zeilen\\
+% \verb|\usepackage[utf8]{inputenc}|\\
+% \verb|\usepackage{unicode}|\\
+% in der Präambel eingefügt werden.\\
+%
+% \DescribeMacro{\RequirePackage\{textcomp\}}
+% \texttt{textcomp} wird geladen, damit viele Sonderzeichen eine schönere Form haben oder überhaupt verfügbar sind.
+% 
+% \DescribeMacro{\RequirePackage\{marvosym\}}
+% Das Paket \texttt{marvosym} wird geladen, damit der Befehl \verb|\EUR| für ein Euro-Zeichen zur Verfügung steht.
+% 
+% \DescribeMacro{\RequirePackage\{amsmath\}}
+% Für einen schönen Formelsatz, z.\,B. ein gutes Integralzeichen, wird das Paket \texttt{amsmath} geladen.
+%
+% \StopEventually{}
+%
+% \section{Implementation}
+%
+%    \begin{macrocode}
+\RequirePackage{textcomp}
+\RequirePackage{marvosym}
+\RequirePackage{amsmath}
+
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+%\DeclareUnicodeCharacter{}{\ensuremath{\varrho}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}} % mü, wird in Neo nich verwend.
+\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}} %micro
+\DeeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DdeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
+\DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
+%    \end{macrocode}
+Da das \(\varepsilon\) (mit dem Befehl \verb|\verepsilon| erzeugt) besser aussieht als das normale \(\varepsilon\), wird dieses hier verwendset.
+%    \begin{macrocode}
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\varepsilon}}
+
+%\DeclareUnicodeCharacter{}{\ensuremath{\epsilon}} % \varepsilon sieht besser aus
+\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
+\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+%\DeclareUnicodeCharacter{}{\ensuremath{\phi}} % \varphi sieht besser aus
+\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+%\DeclareUnicodeCharacter{}{\ensuremath{\varpi}} % \pi sieht besser aus
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
+\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
+\DeclareUnicodeCharacter{03D1}{\ensuremath{\vartheta}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{0393}{\ensuremath{\Gamma}}
+\DeclareUnicodeCharacter{039E}{\ensuremath{\Xi}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{03A8}{\ensuremath{\Psi}}
+\DeclareUnicodeCharacter{0398}{\ensuremath{\Theta}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
+
+\DeclareUnicodeCharacter{00A0}{~} %geschuetztes Leerzeichen (nobreak space)
+\DeclareUnicodeCharacter{202F}{\,} %schmales Leerzeichen (narrow nobreak space)
+
+\DeclareUnicodeCharacter{2207}{\ensuremath{\nabla}}
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}} % geht nicht, wo liegt der Fehler??
+                                                         % Wenn man mit Neo in Kile unter
+                                                         % Linux den Doppelpfeil nach rechts
+                                                         % eingibt, dann erscheint das
+                                                         % Unicode-Zeichen Ux22a2 (warum?)
+\DeclareUnicodeCharacter{22A2}{\ensuremath{\Rightarrow}} % schmutziger Hack, damit vorige Zeile trotzdem geht
+\DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
+\DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
+\DeclareUnicodeCharacter{221A}{\ensuremath{\sqrt}} % man muss noch Klammern und Argument der Wurzel setzen, wenn man das hier verwendet: Also so: [WURZEL]{7+2}
+
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}} % ist sonst als \texttimes definiert
+\DeclareUnicodeCharacter{00F7}{\ensuremath{\div}} % ist sonst als \textdiv definiert
+\DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}} % ist sonst als \textpm definiert
+\DeclareUnicodeCharacter{2213}{\ensuremath{\mp}} % Mathe-Minusplus
+\DeclareUnicodeCharacter{2215}{\ensuremath{/}} % Mathe-Schräg-Bruchstrich
+\DeclareUnicodeCharacter{22C5}{\ensuremath{\cdot}} % Mathe-Malpunkt
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}} % Mathe-Minus
+
+\DeclareUnicodeCharacter{20AC}{\EUR}
+%\DeclareUnicodeCharacter{00A3}{\pounds} % geht sowieso schon
+%\DeclareUnicodeCharacter{00A5}{\textyen} % geht sowieso schon
+
+%\DeclareUnicodeCharacter{2026}{\dots} % geht sowieso schon
+%\DeclareUnicodeCharacter{00A1}{\textexclamdown} % geht sowieso schon
+%\DeclareUnicodeCharacter{00BF}{\textquestiondown} % geht sowieso schon
+%\DeclareUnicodeCharacter{00A9}{\copyright} % geht sowieso schon
+%\DeclareUnicodeCharacter{00AE}{\textregistered} % geht sowieso schon
+%\DeclareUnicodeCharacter{2122}{\texttrademark} % geht sowieso schon
+%\DeclareUnicodeCharacter{2116}{\textnumero} % geht sowieso schon
+
+%\DeclareUnicodeCharacter{2013}{--} % geht sowieso schon
+%\DeclareUnicodeCharacter{2014}{---} % geht sowieso schon
+%\DeclareUnicodeCharacter{201E}{"`} % geht sowieso schon
+%\DeclareUnicodeCharacter{201C}{"'} % geht sowieso schon
+%\DeclareUnicodeCharacter{201A}{\glq} % geht sowieso schon
+%\DeclareUnicodeCharacter{2018}{\grq} % geht sowieso schon
+%\DeclareUnicodeCharacter{00BB}{\frqq} % geht sowieso schon
+%\DeclareUnicodeCharacter{00AB}{\flqq} % geht sowieso schon
+%\DeclareUnicodeCharacter{203A}{\frq} % geht sowieso schon
+%\DeclareUnicodeCharacter{2039}{\flq} % geht sowieso schon
+%\DeclareUnicodeCharacter{2022}{\textbullet} % geht sowieso schon (außerdem nur für Aufzählungen mit \item)
+
+\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{220A}{\ensuremath{\in}}
+\DeclareUnicodeCharacter{2282}{\ensuremath{\subset}}
+\DeclareUnicodeCharacter{2283}{\ensuremath{\supset}}
+\DeclareUnicodeCharacter{2229}{\ensuremath{\cap}}
+\DeclareUnicodeCharacter{222A}{\ensuremath{\cup}}
+\DeclareUnicodeCharacter{2020}{\ensuremath{\dagger}} % ist sonst als \textdagger definiert
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}} % ist sonst als \textlnot definiert
+\DeclareUnicodeCharacter{2203}{\ensuremath{\exists}}
+\DeclareUnicodeCharacter{2200}{\ensuremath{\forall}}
+\DeclareUnicodeCharacter{2228}{\ensuremath{\vee}}
+\DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}
+\DeclareUnicodeCharacter{226A}{\ensuremath{\ll}}
+\DeclareUnicodeCharacter{226B}{\ensuremath{\gg}}
+%    \end{macrocode}
+% \DescribeMacro{\nfrac}
+% Definition eines Befehls \verb|\nfrac|, der einen Bruch in dieser Schrägstellung
+% darstellt, wie es im Fließtext oft zu finden ist (ähnlich \verb|\tfrac| bei \texttt{ams}) 
+%    \begin{macrocode}
+\newcommand{\nfrac}[2]{\leavevmode\kern.1em%
+\raise.5ex\hbox{\scriptsize #1}%
+\kern-.1em/\kern-.15em%
+\lower.25ex\hbox{\scriptsize #2}}
+
+\DeclareUnicodeCharacter{00BC}{\ensuremath{\nfrac{1}{4}}}
+\DeclareUnicodeCharacter{00BD}{\ensuremath{\nfrac{1}{2}}}
+\DeclareUnicodeCharacter{00BE}{\ensuremath{\nfrac{3}{4}}}
+\DeclareUnicodeCharacter{215B}{\ensuremath{\nfrac{1}{8}}}
+\DeclareUnicodeCharacter{215E}{\ensuremath{\nfrac{3}{8}}}
+\DeclareUnicodeCharacter{215D}{\ensuremath{\nfrac{5}{8}}}
+%\DeclareUnicodeCharacter{215E}{\ensuremath{\nfrac{7}{8}}} % sieht wegen der 7 nicht gut aus, dann lieber mit \tfrac
+\DeclareUnicodeCharacter{215E}{\ensuremath{\tfrac{7}{8}}} % schöner als mit \nfrac
+%    \end{macrocode}
+% \Finale
+\endinput
