@@ -279,7 +279,7 @@ von nachträglich aktiviert. Oder wenn man dann Neo im Gnome-Dialog für die
 Tastatur auswählt.
 
 Als Alternative bietet sich an:
-1) Den xmodmap-Treiber zu benutzen.
+1) Den xmodmap-Treiber zu benutzen. Siehe dazu die README-Datei beim Treiber.
 2) Die Neo-Tastaturbelegung direkt in der xorg.conf zu laden. Und zwar so:
   Option "XkbLayout" "de"
   Option "XkbVariant" "neo"
