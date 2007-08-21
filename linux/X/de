@@ -206,9 +206,9 @@ xkb_symbols "sundeadkeys" {
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo" {
 
-    name[Group1]= "German Neostyle (v2.0)";
+    name[Group1]= "German Neostyle";
 
-    key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC";
+    key.type[Group1]="EIGHT_LEVEL";
 
     // Zahlenreihe
 // eigentlich sollte die folgende Zeile rein, aber auf älteren Systemen ist der dead_stroke noch nicht definiert!
@@ -258,7 +258,7 @@ xkb_symbols "neo" {
     key <AC08> { [ r, R, parenright,     Greek_rho,            5,  registered ] };
     key <AC09> { [ t, T,      minus,     Greek_tau,            6,   trademark ] };
     key <AC10> { [ d, D,      colon,   Greek_delta,        comma, Greek_DELTA ] };
-    key <AC11> { [ y, Y,          y, Greek_upsilon,        thorn,       THORN ] };
+    key <AC11> { [ y, Y,doublelowquotemark, Greek_upsilon,        thorn,       THORN ] };
 
 
     // untere Reihe
@@ -293,7 +293,7 @@ xkb_symbols "neo" {
     key <KPAD> { [ KP_Add,      KP_Add,      plusminus,  U2213 ] };
 
     key  <KP4> { [ KP_Left,     KP_4,        leftarrow,  U2282 ] };
-    key  <KP5> { [ KP_Begin,    KP_5,        dagger,     U220A ] };
+    key  <KP5> { [ EuroSign,    KP_5,        dagger,     U220A ] };
     key  <KP6> { [ KP_Right,    KP_6,        rightarrow, U2283 ] };
 
     key  <KP1> { [ KP_End,      KP_1,        U21CB,      U2264 ] };
@@ -317,7 +317,7 @@ xkb_symbols "neo" {
 
 		key <LSGT> { [ 0xfe11,0xfe11,0xfe11,0xfe11 ] };
 
-		key <RALT> { symbols[Group1] = [ 0xfe11, 0xfe11, 0xfe11, 0xfe11, KP_Decimal, 0xfe11 ] };
+		key <RALT> { [ 0xfe11, 0xfe11, 0xfe11, 0xfe11, KP_Decimal, 0xfe11 ] };
 
 		modifier_map Mod3 { 0xfe11 };
 

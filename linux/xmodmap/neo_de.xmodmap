@@ -64,7 +64,7 @@ keycode 44 = n N parenleft Greek_nu    4 numerosign
 keycode 45 = r R parenright Greek_rho  5 registered
 keycode 46 = t T minus Greek_tau 6 trademark
 keycode 47 = d D colon Greek_delta comma Greek_DELTA
-keycode 48 = y Y y Greek_upsilon thorn THORN
+keycode 48 = y Y doublelowquotemark Greek_upsilon thorn THORN
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
@@ -134,7 +134,7 @@ keycode 86 =  KP_Add      KP_Add      plusminus  U2213
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 83 =  KP_Left     KP_4        leftarrow  U2282
-keycode 84 =  KP_Begin    KP_5        dagger     U220A
+keycode 84 =  EuroSign    KP_5        dagger     U220A
 keycode 85 =  KP_Right    KP_6        rightarrow U2283
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
