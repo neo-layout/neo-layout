@@ -1925,7 +1925,7 @@ return
    else if Ebene = 5
       Send 0
    else if Ebene = 6
-      SendUnicodeChar(0x2009) ; schmales Leerzeichen
+      SendUnicodeChar(0x202F) ; schmales Leerzeichen
    else
       Send {blind}{Space}
    PriorDeadKey := ""
