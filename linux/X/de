@@ -1,7 +1,7 @@
 
 // based on a keyboard map from an 'xkb/symbols/de' file
 //
-// $XKeyboardConfig: xkbdesc/symbols/de,v 1.15 2006/10/08 22:43:01 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/de,v 1.17 2007/09/02 17:42:07 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/de,v 1.6 2003/09/08 13:12:51 pascal Exp $
 
 default
@@ -29,7 +29,7 @@ xkb_symbols "basic" {
     key <BKSL>	{ [numbersign, apostrophe,   dead_grave,   dead_breve ]	};
     key <AB01>	{ [         y,          Y, guillemotleft,        less ]	};
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
 
     include "level3(ralt_switch)"
 };
@@ -43,7 +43,7 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Germany - Eliminate dead keys";
 
     key <TLDE>	{ [asciicircum,    degree,      notsign,      notsign ]	};
-    key <AE12>	{ [     acute,      grave,      cedilla,      cedilla ]	};
+    key <AE12>	{ [apostrophe,      grave,      cedilla,      cedilla ]	};
     key <AD11>	{ [udiaeresis, Udiaeresis,    diaeresis,    diaeresis ]	};
     key <AD12>	{ [      plus,   asterisk,   asciitilde,       macron ]	};
     key <AC10>	{ [odiaeresis, Odiaeresis,  doubleacute,  doubleacute ]	};
@@ -115,11 +115,11 @@ xkb_symbols "ro_nodeadkeys" {
 };
 
 // German Dvorak keymap by Thorsten Staerk (www.staerk.de/thorsten)
-// Have acute and grave as dead keys, tilde and circumflex alive as they are needed
+// Have acute and grave as dead keys, tilde and circumflex alive as they are needed 
 // in many programming languages.
 // to use this keymap, use a 105-key-keyboard and the command setxkbmap -model pc105 -layout dvorak -variant de
 // source: http://www-lehre.informatik.uni-osnabrueck.de/~rfreund/dvorak.php
-partial alphanumeric_keys
+partial alphanumeric_keys 
 xkb_symbols "dvorak" {
     include "us(dvorak)"
 
@@ -196,134 +196,115 @@ xkb_symbols "sundeadkeys" {
 // German NEO Style
 // adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
 // inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
-// Authors:
-//   lucky (at) zankt (dot) net
-//   Benjamin (dot) Kellermann (at) gmx (dot) de
+// Authors: 
+//      lucky (at) zankt (dot) net
+//      Benjamin (dot) Kellermann (at) gmx (dot) de
 // Other Questions:
 //   neo_layout (at) yahoogroups (dot) de
 
-
-partial alphanumeric_keys modifier_keys keypad_keys
+partial alphanumeric_keys 
 xkb_symbols "neo" {
 
     name[Group1]= "German Neostyle";
 
-    key.type[Group1]="EIGHT_LEVEL";
+    key.type[Group1]="EIGHT_LEVEL_ALPHABETIC";
 
-    // Zahlenreihe
-// eigentlich sollte die folgende Zeile rein, aber auf älteren Systemen ist der dead_stroke noch nicht definiert!
-//    key <TLDE> { [ dead_circumflex, dead_caron, dead_breve, dead_stroke ] };
-    key <TLDE> { [ dead_circumflex, dead_caron, dead_breve ] };
+    // 1st row
 
-    key <AE01> { [ 1,    degree,         onesuperior,    onequarter,    oneeighth           ] };
-    key <AE02> { [ 2,    paragraph,      twosuperior,       onehalf                         ] };
-    key <AE03> { [ 3,    section,        threesuperior, threequarters, threeeighths           ] };
-    key <AE04> { [ 4,    guillemotright, U203A,           4,        Prior, Prior    ] };
-    key <AE05> { [ 5,    guillemotleft,  U2039,           5,  fiveeighths, implies  ] };
-    key <AE06> { [ 6,    dollar,         sterling, currency,            6, ifonlyif ] };
+    key <TLDE> { [ dead_circumflex,                     dead_caron,             dead_breve                                              ] };
 
-    key <AE07> { [ 7,  EuroSign,             cent,      yen, seveneighths, notsign ] };
-    key <AE08> { [ 8,   doublelowquotemark,   singlelowquotemark, 8,        slash, U2203 ] };
-    key <AE09> { [ 9,  leftdoublequotemark,  leftsinglequotemark, 9,     asterisk, U2200 ] };
-    key <AE10> { [ 0, rightdoublequotemark, rightsinglequotemark, 0,        minus, logicalor ] };
-    key <AE11> { [ minus,           endash,               emdash, hyphen,    minus, logicaland ] };
-    key <AE12> { [ dead_acute,  dead_grave,          dead_cedilla,   dead_ogonek, dead_abovedot, dead_abovering ] };
+    key <AE01> { [ 1,           degree,                 onesuperior,            onequarter,         oneeighth                           ] };
+    key <AE02> { [ 2,           paragraph,              twosuperior,            onehalf                                                 ] };
+    key <AE03> { [ 3,           section,                threesuperior,          threequarters,      threeeighth                         ] };
+    key <AE04> { [ 4,           guillemotright,         U203A,                  4,                  Prior,          Prior               ] };
+    key <AE05> { [ 5,           guillemotleft,          U2039,                  5,                  fiveeighths,    implies             ] };
+    key <AE06> { [ 6,           dollar,                 sterling,               currency,           6,              ifonlyif            ] };
+    key <AE07> { [ 7,           EuroSign,               cent,                   yen,                seveneighths,   notsign             ] };
+    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     8,                  slash,          U2203               ] };
+    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    9,                  asterisk,       U2200               ] };
+    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   0,                  minus,          logicalor           ] };
+    key <AE11> { [ minus,       endash,                 emdash,                 hyphen,             minus,          logicaland          ] };
+    key <AE12> { [ dead_acute,  dead_grave,             dead_cedilla,           dead_ogonek,        dead_abovedot,  dead_abovering      ] };
 
+    // 2nd row
+    key <AD01> { [ x,           X,                      at,                     Greek_xi,           x,              Greek_XI            ] };
+    key <AD02> { [ v,           V,                      underscore,             v,                  BackSpace,      U039B               ] };
+    key <AD03> { [ l,           L,                      bracketleft,            Greek_lambda,       Up,             Up                  ] };
+    key <AD04> { [ c,           C,                      bracketright,           Greek_chi,          Tab,            Tab                 ] };
+    key <AD05> { [ w,           W,                      asciicircum,            w,                  Insert,         Insert              ] };
+    key <AD06> { [ k,           K,                      exclam,                 Greek_kappa,        exclamdown,     copyright           ] };
+    key <AD07> { [ h,           H,                      less,                   Greek_psi,          7,              Greek_PSI           ] };
+    key <AD08> { [ g,           G,                      greater,                Greek_gamma,        8,              Greek_GAMMA         ] };
+    key <AD09> { [ f,           F,                      equal,                  Greek_phi,          9,              Greek_PHI           ] };
+    key <AD10> { [ q,           Q,                      ampersand,              q,                  plus,           partialderivative   ] };
+    key <AD11> { [ ssharp,      U1E9E,                  U133,                   U132,               schwa,          SCHWA               ] };
+    key <AD12> { [ dead_tilde,  dead_macron,            dead_diaeresis,         dead_doubleacute,   dead_belowdot,  dead_belowdot       ] };
 
-    // obere Reihe
-    key <AD01> { [ x, X,           at,     Greek_xi,         x, Greek_XI ] };
-    key <AD02> { [ v, V,   underscore,            v, BackSpace, U039B    ] };
-    key <AD03> { [ l, L,  bracketleft, Greek_lambda,        Up, Up       ] };
-    key <AD04> { [ c, C, bracketright,    Greek_chi,       Tab, Tab      ] };
-    key <AD05> { [ w, W,  asciicircum,            w,    Insert           ] };
+    // 3rd row
+    key <AC01> { [ u,           U,                      backslash,              backslash,          Home,           Home                ] };
+    key <AC02> { [ i,           I,                      slash,                  Greek_iota,         Left,           Left                ] };
+    key <AC03> { [ a,           A,                      braceleft,              Greek_alpha,        Down,           Down                ] };
+    key <AC04> { [ e,           E,                      braceright,             Greek_epsilon,      Right,          Right               ] };
+    key <AC05> { [ o,           O,                      asterisk,               Greek_omega,        End,            End                 ] };
+    key <AC06> { [ s,           S,                      question,               Greek_sigma,        questiondown,   Greek_SIGMA         ] };
+    key <AC07> { [ n,           N,                      parenleft,              Greek_nu,           4,              numerosign          ] };
+    key <AC08> { [ r,           R,                      parenright,             Greek_rho,          5,              registered          ] };
+    key <AC09> { [ t,           T,                      minus,                  Greek_tau,          6,              trademark           ] };
+    key <AC10> { [ d,           D,                      colon,                  Greek_delta,        comma,          Greek_DELTA         ] };
+    key <AC11> { [ y,           Y,                      doublelowquotemark,     Greek_upsilon,      thorn,          THORN               ] };
 
-    key <AD06> { [ k, K,    exclam, Greek_kappa, exclamdown,   copyright ] };
-    key <AD07> { [ h, H,      less,   Greek_psi,          7,   Greek_PSI ] };
-    key <AD08> { [ g, G,   greater, Greek_gamma,          8, Greek_GAMMA ] };
-    key <AD09> { [ f, F,     equal,   Greek_phi,          9,   Greek_PHI ] };
-    key <AD10> { [ q, Q, ampersand,           q,       plus,       partialderivative ] };
-    key <AD11> { [ ssharp, U1E9E, U133,   U132,      schwa,       SCHWA ] };
-    key <AD12> { [ dead_tilde, dead_macron, dead_diaeresis, dead_doubleacute, dead_belowdot, dead_belowdot ] };
+    // 4th row
+    key <AB01> { [ odiaeresis,  Odiaeresis,             numbersign,             odiaeresis,         Escape                              ] };
+    key <AB02> { [ udiaeresis,  Udiaeresis,             dollar,                 udiaeresis,         Delete,         Delete              ] };
+    key <AB03> { [ adiaeresis,  Adiaeresis,             bar,                    Greek_eta,          Next,           Next                ] };
+    key <AB04> { [ p,           P,                      asciitilde,             Greek_pi,           Return,         Greek_PI            ] };
+    key <AB05> { [ z,           Z,                      grave,                  Greek_zeta,         z,              Greek_OMEGA         ] };
+    key <AB06> { [ b,           B,                      plus,                   Greek_beta,         infinity,       enfilledcircbullet  ] };
+    key <AB07> { [ m,           M,                      percent,                mu,                 1,              integral            ] };
+    key <AB08> { [ comma,       comma,                  apostrophe,             U3D1,               2,              radical             ] };
+    key <AB09> { [ period,      ellipsis,               quotedbl,               Greek_theta,        3,              Greek_THETA         ] };
+    key <AB10> { [ j,           J,                      semicolon,              j,                  period,         nabla               ] };
 
+    key <SPCE> { [ space,       space,                  space,                  nobreakspace,       0,              U202F               ] };
+    
+    // new modkeys   
 
-    // mittlere Reihe
-    key <AC01> { [ u, U,  backslash,     backslash,  Home,   Home ] };
-    key <AC02> { [ i, I,      slash,    Greek_iota,  Left,   Left ] };
-    key <AC03> { [ a, A,  braceleft,   Greek_alpha,  Down,   Down ] };
-    key <AC04> { [ e, E, braceright, Greek_epsilon, Right,  Right ] };
-    key <AC05> { [ o, O,   asterisk,   Greek_omega,   End,    End ] };
+    key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock,              Caps_Lock,          Caps_Lock,      Caps_Lock           ] };
+    key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Multi_key,              Multi_key,          Multi_key,      Multi_key           ] };
+    key <LSGT> { [ 0xfe11,      0xfe11,                 0xfe11,                 0xfe11                                                  ] };
+    key <RALT> { [ 0xfe11,      0xfe11,                 0xfe11,                 0xfe11,             KP_Decimal,     0xfe11              ] };
 
-    key <AC06> { [ s, S,   question,   Greek_sigma, questiondown, Greek_SIGMA ] };
-    key <AC07> { [ n, N,  parenleft,      Greek_nu,            4,  numerosign ] };
-    key <AC08> { [ r, R, parenright,     Greek_rho,            5,  registered ] };
-    key <AC09> { [ t, T,      minus,     Greek_tau,            6,   trademark ] };
-    key <AC10> { [ d, D,      colon,   Greek_delta,        comma, Greek_DELTA ] };
-    key <AC11> { [ y, Y,doublelowquotemark, Greek_upsilon,        thorn,       THORN ] };
-
-
-    // untere Reihe
-    key <AB01> { [ odiaeresis, Odiaeresis, numbersign, odiaeresis, Escape              ] };
-    key <AB02> { [ udiaeresis, Udiaeresis,     dollar, udiaeresis, Delete,       Delete ] };
-    key <AB03> { [ adiaeresis, Adiaeresis,        bar,  Greek_eta,   Next,        Next ] };
-    key <AB04> { [          p,          P, asciitilde,   Greek_pi, Return,    Greek_PI ] };
-    key <AB05> { [          z,          Z,      grave, Greek_zeta,      z, Greek_OMEGA ] };
-
-    key <AB06> { [      b,           B,       plus,  Greek_beta, infinity,        enfilledcircbullet ] };
-    key <AB07> { [      m,           M,    percent,          mu,         1,    integral ] };
-    key <AB08> { [  comma,  comma, apostrophe,        U3D1,         2,     radical ] };
-    key <AB09> { [ period,    ellipsis,   quotedbl, Greek_theta,         3, Greek_THETA ] };
-    key <AB10> { [      j,           J,  semicolon,           j,    period,       nabla ] };
-
-    key <SPCE> { [ space, space, space, nobreakspace, 0, U202F ] };
-
-
+    modifier_map mod5 { <LSGT>, <RALT> };
     // Keypad
 
-//    key <NMLK> { [    Num_Lock, Pointer_EnableKeys ] };
+         // key <NMLK> { [ Num_Lock, Pointer_EnableKeys ] };
 
-    key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
+        key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
 
-    key <KPDV> { [ KP_Divide,   KP_Divide,   division,   U2215 ] };
-    key <KPMU> { [ KP_Multiply, KP_Multiply, multiply,   U22C5 ] };
-    key <KPSU> { [ KP_Subtract, KP_Subtract, U2212 ] };
+        key <KPDV> { [ KP_Divide,   KP_Divide,   division,   U2215 ] };
+        key <KPMU> { [ KP_Multiply, KP_Multiply, multiply,   U22C5 ] };
+        key <KPSU> { [ KP_Subtract, KP_Subtract, U2212             ] };
+        
+        key  <KP7> { [ KP_Home,     KP_7,        KP_7,       U226A ] };
+        key  <KP8> { [ KP_Up,       KP_8,        uparrow,    U2229 ] };
+        key  <KP9> { [ KP_Prior,    KP_9,        KP_9,       U226B ] };
+        key <KPAD> { [ KP_Add,      KP_Add,      plusminus,  U2213 ] };
+        
+        key  <KP4> { [ KP_Left,     KP_4,        leftarrow,  U2282 ] };
+        key  <KP5> { [ EuroSign,    KP_5,        dagger,     U220A ] };
+        key  <KP6> { [ KP_Right,    KP_6,        rightarrow, U2283 ] };
 
-    key  <KP7> { [ KP_Home,     KP_7,        KP_7,       U226A ] };
-    key  <KP8> { [ KP_Up,       KP_8,        uparrow,    U2229 ] };
-    key  <KP9> { [ KP_Prior,    KP_9,        KP_9,       U226B ] };
-    key <KPAD> { [ KP_Add,      KP_Add,      plusminus,  U2213 ] };
+        key  <KP1> { [ KP_End,      KP_1,        U21CB,      U2264 ] };
+        key  <KP2> { [ KP_Down,     KP_2,        downarrow,  U222A ] };
+        key  <KP3> { [ KP_Next,     KP_3,        U21CC,      U2265 ] };
+        key <KPEN> { [ KP_Enter,    KP_Enter,    notequal,   U2248 ] };
+        key <KPEQ> { [ KP_Equal                                    ] };
 
-    key  <KP4> { [ KP_Left,     KP_4,        leftarrow,  U2282 ] };
-    key  <KP5> { [ EuroSign,    KP_5,        dagger,     U220A ] };
-    key  <KP6> { [ KP_Right,    KP_6,        rightarrow, U2283 ] };
-
-    key  <KP1> { [ KP_End,      KP_1,        U21CB,      U2264 ] };
-    key  <KP2> { [ KP_Down,     KP_2,        downarrow,  U222A ] };
-    key  <KP3> { [ KP_Next,     KP_3,        U21CC,      U2265 ] };
-    key <KPEN> { [ KP_Enter,    KP_Enter,    notequal,   U2248 ] };
-    key <KPEQ> { [ KP_Equal ] };
-
-    key  <KP0> { [ KP_Insert,   KP_0,        percent,    U2030 ] };
-    key <KPDL> { [ KP_Delete,   KP_Decimal,  period,     comma ] };
-
-
-    // die neuen Mods
-    key.type[Group1]="EIGHT_LEVEL" ;
-
-    key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift, Caps_Lock, Caps_Lock, Multi_key, Multi_key ] };
-
-// FIXME: Warum geht das hier nicht ordentlich? 
-//		key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift, Caps_Lock, Caps_Lock, Multi_key, Multi_key ] };
-		key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Shift, Multi_key, Multi_key ] };
-
-		key <LSGT> { [ 0xfe11,0xfe11,0xfe11,0xfe11 ] };
-
-		key <RALT> { [ 0xfe11, 0xfe11, 0xfe11, 0xfe11, KP_Decimal, 0xfe11 ] };
-
-		modifier_map Mod3 { 0xfe11 };
+        key  <KP0> { [ KP_Insert,   KP_0,        percent,    U2030 ] };
+        key <KPDL> { [ KP_Delete,   KP_Decimal,  period,     comma ] };
 
 };
-
-
+ 
 // Copied from macintosh_vndr/de
 // olh@suse.de   very close to MacOS map
 
