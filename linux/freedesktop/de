@@ -1,7 +1,7 @@
 
 // based on a keyboard map from an 'xkb/symbols/de' file
 //
-// $XKeyboardConfig: xkbdesc/symbols/de,v 1.15 2006/10/08 22:43:01 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/de,v 1.16 2007/07/09 22:15:04 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/de,v 1.6 2003/09/08 13:12:51 pascal Exp $
 
 default
@@ -29,7 +29,7 @@ xkb_symbols "basic" {
     key <BKSL>	{ [numbersign, apostrophe,   dead_grave,   dead_breve ]	};
     key <AB01>	{ [         y,          Y, guillemotleft,        less ]	};
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
 
     include "level3(ralt_switch)"
 };
@@ -43,7 +43,7 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Germany - Eliminate dead keys";
 
     key <TLDE>	{ [asciicircum,    degree,      notsign,      notsign ]	};
-    key <AE12>	{ [     acute,      grave,      cedilla,      cedilla ]	};
+    key <AE12>	{ [apostrophe,      grave,      cedilla,      cedilla ]	};
     key <AD11>	{ [udiaeresis, Udiaeresis,    diaeresis,    diaeresis ]	};
     key <AD12>	{ [      plus,   asterisk,   asciitilde,       macron ]	};
     key <AC10>	{ [odiaeresis, Odiaeresis,  doubleacute,  doubleacute ]	};
