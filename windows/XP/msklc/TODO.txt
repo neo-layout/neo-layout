@@ -1,6 +1,10 @@
 Neo 2.0 Windowstreiber, TODO
 =============================
 
+0) Alle folgenden Punkte können mit einem entsprechenden ahk-Skript
+   ermöglicht werden. Bis auf Punkt 6) können alle gestrichen werden,
+   wenn das Skript vorliegt.
+
 1) Ebenen 5 und 6 sind über SGCaps realisiert. Gibt es eine Möglichkeit,
    Caps-Lock, eine andere Realisierung wäre wünschenswert.
 
