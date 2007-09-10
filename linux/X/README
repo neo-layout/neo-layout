@@ -1,8 +1,3 @@
-== Source == 
-Diese Datei patcht die Aktuellste Version von freedesktop.org
-Abrufbar im Orginal unter:
-http://webcvs.freedesktop.org/xkeyboard-config/xkeyboard-config/symbols/de?view=co
-
 == Anleitung für Anwender ohne Root-Zugang ==
     ______________________________________________________________________
     Achtung, diese Methode funktioniert nur, wenn man schon ein System mit
@@ -46,3 +41,8 @@ wobei $NEO_PWD durch das Verzeichnis mit der „de“-Datei ersetzt werden muss.
 === Mit Root-Zugang ===
     alias asdf='setxkbmap de neo'
     alias uiae='setxkbmap de'
+
+== Quelle == 
+Diese Datei patcht die Aktuellste Version von freedesktop.org
+Abrufbar im Orginal unter:
+http://webcvs.freedesktop.org/xkeyboard-config/xkeyboard-config/symbols/de?view=co
