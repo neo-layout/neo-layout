@@ -16,6 +16,10 @@ http://dejavu.sourceforge.net/
 ⌧    … Esc                               └─────┘ 3 … 3. Ebene │ 6 … 6. Ebene
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
+╌    … Weicher Trennstrich (U+00AD SOFT HYPHEN)
+␣    … Leerzeichen (SPACE)
+⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
+¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
 
 == Erste Ebene – Miniatur ==
 ┌─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬────────┐
@@ -32,7 +36,7 @@ http://dejavu.sourceforge.net/
 
 == Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ - .│°    │¶    │§    │»   ⇞│«   ⇒│  ¤ ⇔│€   ¬│„   ∃│“   ∀│”   ∨│– ­ ∧│` ˛ ˚│Backspace│
+│ˇ - .│°    │¶    │§    │»   ⇞│«   ⇒│  ¤ ⇔│€   ¬│„   ∃│“   ∀│”   ∨│– ╌ ∧│` ˛ ˚│Backspace│
 │^ ˘ ·│1 ¹  │2 ²  │3 ³  │4 › ⇞│5 ‹  │6    │7    │8 ‚ /│9 ‘ *│0 ’ -│- —  │ˊ ¸ ˙│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │ Tab  ⇤ │X ξ  │V   Λ│L λ ⇡│C χ ⇤│W   ⎀│K κ ©│H ψ Ψ│G γ Γ│F φ Φ│Q   ∂│ẞ   Ə│ˉ ˝ ˏ│      │
@@ -41,10 +45,10 @@ http://dejavu.sourceforge.net/
 │ ↘3      │U   ⇱│I ι ⇠│A α ⇣│E ε ⇢│O ω ⇲│S σ Σ│N ν №│R ρ ®│T τ ™│D δ Δ│Y υ Þ│↘3   │  ↲  │
 │    ⇬  ♫ │u \ ⇱│i / ⇠│a { ⇣│e } ⇢│o * ⇲│s ? ¿│n ( 4│r ) 5│t - 6│d : ,│y   þ│  ⇬ ♫│     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Shift │  ↙5 │Ö    │Ü   ⌦│Ä η ⇟│P π Π│Z ζ Ω│B β •│M µ ∫│  ϑ √│… θ Θ│J   ∇│  Shift ⇧     │
+│Shift │↙5 ♫ │Ö    │Ü   ⌦│Ä η ⇟│P π Π│Z ζ Ω│B β •│M µ ∫│  ϑ √│… θ Θ│J   ∇│  Shift ⇧     │
 │  ⇧   │     │ö # ⌧│ü $ ⌦│ä | ⇟│p ~ ↲│z `  │b + ∞│m % 1│, ' 2│. " 3│j ; .│              │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
-│ Strg │ Fen- │ Alt  │ Leerzeichen nobreakspace smallspace  │↙5    │ Fen- │ Menu │ Strg │
+│ Strg │ Fen- │ Alt  │ Leerz.␣    gesch.Leerz.⍽  schm.Lz.¦  │↙5 ♫  │ Fen- │ Menu │ Strg │
 │      │ ster │      │                              0       │   ./,│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
