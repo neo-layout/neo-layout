@@ -11,16 +11,85 @@ http://dejavu.sourceforge.net/
 -------------------------------------------------------------------------------
 
 == Symbole ==                            == Legende ==
-⇞⇟   … Bild auf/Bild ab                  ┌─────┐
-⇱⇲   … Pos1/Ende                         │2 4 6│ 1 … 1. Ebene │ 4 … 4. Ebene
-⌫ ⌦  … Backspace/Entf                    │1 3 5│ 2 … 2. Ebene │ 5 … 5. Ebene
-⌧    … Esc                               └─────┘ 3 … 3. Ebene │ 6 … 6. Ebene
+⇞⇟   … Bild auf/Bild ab                  ┌─────┐ 1 … 1. Ebene │ 4 … 4. Ebene
+⇱⇲   … Pos1/Ende                         │2 4 6│ 2 … 2. Ebene │ 5 … 5. Ebene
+⌫ ⌦  … Backspace/Entf                    │1 3 5│ 3 … 3. Ebene │ 6 … 6. Ebene
+⌧    … Esc                               └─────┘
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
 ╌    … Weicher Trennstrich (U+00AD SOFT HYPHEN)
 ␣    … Leerzeichen (SPACE)
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
+
+== Akzenttasten ==
+Zu den Akzenten siehe auch
+• http://unicode.e-workers.de/
+• http://de.wikipedia.org/wiki/Diakritisches_Zeichen
+• http://de.wikipedia.org/wiki/Liste_lateinisch-basierter_Alphabete
+
+Taste links neben der 1
+        1 … Toter Zirkumflex (U+0302 COMBINING CIRCUMFLEX ACCENT)
+┌─────┬ 2 … Toter Caron/Hatschek (U+030C COMBINING CARON)
+│ˇ - .│ 3 … Toter Breve/Brevis (U+0306 COMBINING BREVE)
+│^ ˘ ·│ 4 … Toter Querstrich (??? U+0335 COMBINING SHORT STROKE OVERLAY)
+├─────┴ 5 … Toter Punkt in der Mitte, verwendet für Ŀ (???)
+        6 … Toter Punkt darunter (U+0323 COMBINING DOT BELOW)
+
+Taste zwei rechts neben der 0
+        1 … Toter Akut (U+0301 COMBINING ACUTE ACCENT)
+┬─────┬ 2 … Toter Grave (U+0300 COMBINING GRAVE ACCENT)
+│` ˛ ˚│ 3 … Tote Cedilla (U+0327 COMBINING CEDILLA)
+│´ ¸ ˙│ 4 … Totes Ogonek (U+0328 COMBINING OGONEK)
+┴──┬──┴ 5 … Toter Punkt darüber (U+0307 COMBINING DOT ABOVE)
+        6 … Toter Ring (U+030A COMBINING RING ABOVE)
+
+Taste rechts neben dem Eszett (ß)
+        1 … Tote Tilde (U+0303 COMBINING TILDE)
+┬──┴──┬ 2 … Toter Makron (U+0304 COMBINING MACRON)
+│ˉ ˝ ,│ 3 … Totes Trema/Diärese/Diaeresis (U+0308 COMBINING DIAERESIS)
+│~ ¨ /│ 4 … Toter Doppelakut (U+030B COMBINING DOUBLE ACUTE ACCENT)
+┴┬────┴ 5 … Toter Schrägstrich (??? U+0337 COMBINING SHORT SOLIDUS OVERLAY)
+        6 … Totes Komma darunter (U+0326 COMBINING COMMA BELOW)
+
+== Taste mit Bindestrichen, Gedankenstrich usw. ==
+Zu den Gedankenstrichen usw. siehe http://www.matthias-kammerer.de/SonsTypo3.htm
+
+Taste rechts neben der 0
+        1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
+┬─────┬ 2 … – Gedankenstrich (U+2013 EN DASH)
+│– ╌ ∧│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
+│- —  │ 4 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
+┴──┬──┴ 5 … nichts
+        6 … ∧ Logisches Und (U+2227 LOGICAL AND)
+
+== Anführungszeichen ==
+Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
+
+┬─────┬
+│»   ⇞│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
+│4 › ⇞│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
+┴──┬──┴
+
+┬─────┬
+│«   ⇒│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
+│5 ‹  │ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
+┴──┬──┴
+
+┬─────┬
+│„   ∃│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
+│8 ‚ /│ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
+┴──┬──┴
+
+┬─────┬
+│“   ∀│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
+│9 ‘ *│ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
+┴──┬──┴
+
+┬─────┬
+│”   ∨│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
+│0 ’ -│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
+┴──┬──┴
 
 == Erste Ebene – Miniatur ==
 ┌─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬────────┐
