@@ -1,0 +1,26 @@
+== Ergänzunge, um in X vorhandene Lücken zu schließen ==
+Die Datei Compose von X.org war insofern fehlerhaft, als dass sich bisher kein
+Buchstabe mittels totem Querstrich (dead_stroke) schreiben ließ, obwohl der
+dead_stroke definiert ist (in /usr/include/X11/keysymdef.h).
+
+=== Anleitung zur Benutzung ===
+Um die unten aufgeführten Ergänzungen zu benutzen muss man die Datei Compose
+durch diese hier ersetzen.
+
+Unter Fedora beispielsweise ist die zu ersetzende Datei verfügbar unter
+	/usr/share/X11/locale/en_US.UTF-8/Compose
+
+Außerdem muss man die xmodmap- bzw. de-Datei in diesem Verzeichnis statt der
+üblichen verwenden (ergänzt um dead_stroke).
+
+=== Gesammelte Ergänzungen ===
+Im Internet gibt es die Originaldatei unter http://webcvs.freedesktop.org/xorg/xc/nls/Compose/en_US.UTF-8?revision=1.3&view=markup.
+Die hier veröffentlichte Version enthält folgende Ergänzungen diesbezüglich:
+<dead_stroke> <space>                   : "-"   minus # HYPHEN-MINUS
+<dead_stroke> <h>                       : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
+<dead_stroke> <H>                       : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
+<dead_stroke> <d>                       : "đ"   dstroke # LATIN SMALL LETTER D WITH STROKE
+<dead_stroke> <D>                       : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
+<dead_stroke> <l>                       : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
+<dead_stroke> <L>                       : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
+
