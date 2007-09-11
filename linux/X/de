@@ -213,9 +213,9 @@ xkb_symbols "neo" {
 
     key <TLDE> { [ dead_circumflex,                     dead_caron,             dead_breve                                              ] };
 
-    key <AE01> { [ 1,           degree,                 onesuperior,            onequarter,         oneeighth                           ] };
-    key <AE02> { [ 2,           paragraph,              twosuperior,            onehalf                                                 ] };
-    key <AE03> { [ 3,           section,                threesuperior,          threequarters,      threeeighth                         ] };
+    key <AE01> { [ 1,           degree,                 onesuperior,            U2640,              oneeighth                           ] };
+    key <AE02> { [ 2,           paragraph,              twosuperior,            U26A5                                                   ] };
+    key <AE03> { [ 3,           section,                threesuperior,          U2642s,             threeeighth                         ] };
     key <AE04> { [ 4,           guillemotright,         U203A,                  4,                  Prior,          Prior               ] };
     key <AE05> { [ 5,           guillemotleft,          U2039,                  5,                  fiveeighths,    implies             ] };
     key <AE06> { [ 6,           dollar,                 sterling,               currency,           6,              ifonlyif            ] };

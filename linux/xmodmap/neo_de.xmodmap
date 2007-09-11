@@ -18,9 +18,9 @@
 !keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke
 keycode 49 = dead_circumflex dead_caron dead_breve
 
-keycode 10 = 1 degree onesuperior onequarter oneeighth
-keycode 11 = 2 paragraph twosuperior onehalf
-keycode 12 = 3 section threesuperior threequarters threeeighths
+keycode 10 = 1 degree onesuperior U2640 oneeighth
+keycode 11 = 2 paragraph twosuperior U26A5
+keycode 12 = 3 section threesuperior U2642 threeeighths
 keycode 13 = 4 guillemotright U203A  4  Prior Prior
 keycode 14 = 5 guillemotleft U2039 5 fiveeighths implies
 keycode 15 = 6 dollar sterling currency 6 ifonlyif
