@@ -4,19 +4,22 @@ Ob die Datei ohne weiteres unter *BSD tut testen.
 == Deadkeys ==
 Alle Deadkey-Bugs der xmodmap sind behoben bis auf:
 
-Maltesisch: Ħ ħ
+Maltesisch, Physik: Ħ ħ
 Isländisch, Färöisch: Ð
-Kroatisch: Ð
-Polnisch, Sorbisch, Weißrussisch, Kaschubisch: ł Ł
+Kroatisch, Rumänisch: Đ đ
+Polnisch, Sorbisch, Weißrussisch, Kaschubisch, Rumänisch: ł Ł
 Dänisch, Färöisch, Norwegisch: Ø ø
 --> für diese gibt es meiner Meinung nach den dead_stroke. Der
 funktioniert allerdings bei mir nicht. Vielleicht kann das ja jemand auf
 einem anderen System mal ausprobieren.
+Teilweise muss man das wohl auch mit dem toten Schrägstrich machen (der aber
+bisher in der /usr/include/X11/keysymdef.h noch nicht definiert ist!).
 
 Isländisch, Färöisch: ð
-Kroatisch: đ
---> das sind die kleinen Varianten zu Ð. Das eine müsste auch mit
-dead_stroke gehen, das andere müssen wir dann wahrscheinlich definieren.
+--> das ist die kleine Variante zu Ð (Eth). Da Đ (Dstroke) mit dead_stroke
+definiert ist (zumindest mit Multikey ist es auch mit Minus gemacht), dann muss
+das andere wohl noch mit dem toten Schrägstrich gemacht werden. Oder nur über
+Multikey (D und H)?
 Antwort von Nora:
 - das isländische d ist ein eigener Buchstabe
 (http://unicode.e-workers.de/ligaturen.php)
@@ -27,6 +30,7 @@ Antwort von Nora:
 Den dead_stroke sollte man wieder einkommentieren, leider funktioniert das noch
 nicht auf älteren Systemen (z. B. Debian 3.x). Und außerdem bewirkt er leider
 sowieso noch gar nichts.
+Siehe eigene Ergänzungen zu X.org im Verzeichnis „Weiteres“.
 
 == .kmap? ==
 neuerdings soll man mit dieser Datei auch die Belegung in der Konsole ändern
