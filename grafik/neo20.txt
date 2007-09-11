@@ -52,7 +52,9 @@ Taste rechts neben dem Eszett (ß)
         6 … Totes Komma darunter (U+0326 COMBINING COMMA BELOW)
 
 == Taste mit Bindestrichen, Gedankenstrich usw. ==
-Zu den Gedankenstrichen usw. siehe http://www.matthias-kammerer.de/SonsTypo3.htm
+Zu den Gedankenstrichen usw. siehe
+• http://www.matthias-kammerer.de/SonsTypo3.htm
+• http://de.wikipedia.org/wiki/Weicher_Trennstrich
 
 Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
@@ -96,7 +98,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 ├─┴─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─┬─────┤
 │Tab │X│V│L│C│W│K│H│G│F│Q│ß│~│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
-│ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │ 
+│ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │Sft│M5│Ö│Ü│Ä│P│Z│B│M│,│.│J│ Shift │
 ├──┬┴──┼─┴┬┴─┴─┴─┴─┴┬┴─┼─┴─┼───┬───┤
@@ -105,7 +107,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 == Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ - .│°    │¶    │§    │»   ⇞│«   ⇒│  ¤ ⇔│€   ¬│„   ∃│“   ∀│”   ∨│– ╌ ∧│` ˛ ˚│Backspace│
+│ˇ - .│° ♀  │¶ ⚥  │§ ♂  │»   ⇞│«   ⇒│  ¤ ⇔│€   ¬│„   ∃│“   ∀│”   ∨│– ╌ ∧│` ˛ ˚│Backspace│
 │^ ˘ ·│1 ¹  │2 ²  │3 ³  │4 › ⇞│5 ‹  │6    │7    │8 ‚ /│9 ‘ *│0 ’ -│- —  │ˊ ¸ ˙│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │ Tab  ⇤ │X ξ  │V   Λ│L λ ⇡│C χ ⇤│W   ⎀│K κ ©│H ψ Ψ│G γ Γ│F φ Φ│Q   ∂│ẞ   Ə│ˉ ˝ ˏ│      │
