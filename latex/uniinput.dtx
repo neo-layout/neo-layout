@@ -81,10 +81,10 @@
 % 
 % \section{Anwendung}
 
-% Um das Paket verwenden zu können, muss es \emph{nach} den beiden Paketen \texttt{inputenc} und \texttt{uniinput} geladen werden. Es müssen also die Zeilen\\
+% Um das Paket verwenden zu können, muss es \emph{nach} dem Paket \texttt{inputenc} geladen werden. Es müssen also die Zeilen\\
 % \verb|\usepackage[utf8]{inputenc}|\\
 % \verb|\usepackage{uniinput}|\\
-% in der Präambel eingefügt werden.\\
+% in der Präambel eingefügt werden (statt \verb|\usepackage[latin1]{inputenc}| oder Ähnlichem).\\
 %
 % \DescribeMacro{\RequirePackage\{textcomp\}}
 % \texttt{textcomp} wird geladen, damit viele Sonderzeichen eine schönere Form haben oder überhaupt verfügbar sind.
@@ -175,8 +175,9 @@
 \DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
 
 % man muss noch Klammern und Argument der Wurzel setzen, wenn man das hier verwendet: 
-% Also so: [WURZEL]{7+2}
-% Achtung: darf nur im Mathemodus verwendet werden! FIXME: diesen Hinweis noch in die PDF-Doku eintragen?
+% Also so: WURZEL{7+2}
+% Achtung: darf nur im Mathemodus verwendet werden!
+% FIXME: diesen Hinweis eben noch in die PDF-Doku eintragen?
 \DeclareUnicodeCharacter{221A}{\sqrt} 
 
 % ist sonst als \texttimes definiert
