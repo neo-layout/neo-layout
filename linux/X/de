@@ -248,7 +248,7 @@ xkb_symbols "neo" {
     key <AC05> { [ o,           O,                      asterisk,               Greek_omega,        End,            End                 ] };
     key <AC06> { [ s,           S,                      question,               Greek_sigma,        questiondown,   Greek_SIGMA         ] };
     key <AC07> { [ n,           N,                      parenleft,              Greek_nu,           4,              numerosign          ] };
-    key <AC08> { [ r,           R,                      parenright,             Greek_rho,          5,              registered          ] };
+    key <AC08> { [ r,           R,                      parenright,             U03F1,              5,              registered          ] };
     key <AC09> { [ t,           T,                      minus,                  Greek_tau,          6,              trademark           ] };
     key <AC10> { [ d,           D,                      colon,                  Greek_delta,        comma,          Greek_DELTA         ] };
     key <AC11> { [ y,           Y,                      doublelowquotemark,     Greek_upsilon,      thorn,          THORN               ] };
