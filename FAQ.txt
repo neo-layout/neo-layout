@@ -240,6 +240,20 @@ andere Lösung hier in der FAQ (weiter oben).
 2.1 Linux, Unix, BSD
 --------------------------------------------------------------------------------
 
+F: Seit der letzten Version der de-Datei für X kann ich nicht mehr zur normalen
+QWERTZ-Belegung zurückkehren. Bei Eingabe von
+	setxkbmap de
+kommt die Fehlermeldung
+	Error loading new keyboard description
+Außerdem startet X neu, wenn ich auf die NEO-Belegung wechseln will
+	setxkbmap de neo
+
+A: Das liegt daran, das mittlerweile „keypad“ gegen „kpdl“ ausgetauscht wurde.
+In der aktuellen de-Datei muss man einfach kpdl durch keypad ersetzen und es
+geht wieder. Oder den X-Server auf den neusten Stand bringen.
+
+--------------------------------------------------------------------------------
+
 F1: Wenn ich »Mod3« + »n« drücke, dann erscheint nicht die öffnende Klammer.
 F2: Wenn ich »Mod5« + »n« oder »Mod5« + »Leertaste« drücke, kommt nicht die 4
 oder die 0 sondern ein n oder Leerzeichen. Wieso?
