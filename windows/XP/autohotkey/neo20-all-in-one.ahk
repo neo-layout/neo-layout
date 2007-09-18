@@ -1321,6 +1321,8 @@ return
       Else
          sendinput {blind}Y
    }
+   else if Ebene = 3
+      Unicode("„")  ; �
    else if Ebene = 4
       Unicode("υ") ;upsilon
    else if Ebene = 5
