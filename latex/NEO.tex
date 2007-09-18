@@ -1,0 +1,49 @@
+\iffalse
+Ein kleines Dokument, um Möglichkeiten für einen Neo-Schriftzug in LaTeX darzustellen.
+\fi
+
+\documentclass[]{scrartcl}\begin{document}\makeatletter
+Vorschl\"age:
+\def\Neo{N%
+           \kern-.13em%
+           \lower.5ex\hbox{\ensuremath{\textstyle\varepsilon}}%
+           \kern-.02emo\@}
+\def\NEO{\Neo\kern-.03em%
+        \raise.8ex\hbox{$\scriptscriptstyle 2
+                        %\kern-.15em.\kern-.15em0%
+                        $}
+       }
+\def\NEo{\Neo\kern-.03em%
+        \lower.6ex\hbox{$\scriptscriptstyle 2
+                        %\kern-.15em.\kern-.15em0%
+                        $}
+       }
+\def\NeO{\Neo\kern-.03em%
+        \lower.8ex\hbox{$\scriptscriptstyle 2
+                        \kern-.1em.\kern-.1em0%
+                        $}
+       }
+\def\nEO{N%
+           \kern-.13em%
+           \lower.5ex\hbox{\ensuremath{\textstyle\varepsilon}}%
+           \kern-.1em\raise.5ex\hbox{o\@}
+           \kern-.6em\lower.6ex\hbox{$\scriptscriptstyle 2
+                          \kern-.1em.\kern-.1em0%
+                          $}
+        }
+\def\nEo{\ensuremath{\mathcal{N}}%
+           \kern-.3em%
+           \lower.5ex\hbox{\ensuremath{\textstyle\varepsilon}}%
+           \kern-.02emo\@}
+
+\makeatother
+\begin{enumerate}
+\item \Neo
+\item \NEo
+\item \NEO
+\item \NeO
+\item \nEO
+\item \nEo
+\end{enumerate}
+
+\end{document}
