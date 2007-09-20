@@ -108,6 +108,8 @@
 <dead_stroke> <D>                       : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
 <dead_stroke> <l>                       : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
 <dead_stroke> <L>                       : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
+<dead_stroke> <o>                       : "ø"   lstroke # LATIN SMALL LETTER O WITH STROKE
+<dead_stroke> <O>                       : "Ø"   Lstroke # LATIN CAPITAL LETTER O WITH STROKE
 <Multi_key> <s> <s>              	: "ß"   ssharp # LATIN SMALL LETTER SHARP S
 
 <Multi_key> <o> <e>              	: "œ"   oe # LATIN SMALL LIGATURE OE
