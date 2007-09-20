@@ -303,9 +303,9 @@ Bei weiteren Fragen bitte auf der Mailingliste melden (siehe erste Frage).
 --------------------------------------------------------------------------------
 
 F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
-vorgesehen erst rechts »Mod3« und dann gleichzeitig links die Taste auf der
-früher (bei QWERTZ) schon »CapsLock« war – wo jetzt das zweite »Mod3« ist –
-drücke, dann ändert sich überhaupt nichts.
+vorgesehen erst rechts »Mod3« und gleichzeitig links die Taste auf der früher
+(bei QWERTZ) schon »CapsLock« war – wo jetzt das zweite »Mod3« ist – drücke,
+dann ändert sich überhaupt nichts.
 
 A: Das ist ein Fehler, der auftritt, seitdem die xmodmap-Datei von keysym auf
 keycode umgestellt wurde. Eventuell handelt es sich hierbei um einen Fehler im
@@ -336,6 +336,14 @@ Zeichen »⊢« dargestellt?
 A: Das ist ein Fehler, der nur bei KDE-Anwendungen auftritt (z. B. unter Kile).
 Daher der schmutzige Hack in der unicode.sty-Datei für Latex.
 Wer schreibt an KDE (einen Bugreport)?
+
+-------------------------------------------------------------------------------
+
+F: Bei mir funktioniert die Kombo-/Komponier-/Compose-Taste nicht. Wieso?
+
+A: In manchen Linux-Distributionen tritt dieser Fehler aus noch ungeklärten
+Ursachen auf. Hinweise zur Lösung des Problems sind an die Mailingliste
+erbeten.
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
@@ -395,6 +403,15 @@ A: 1. Das resultierende Zeichen gibt es nicht – es können nur Tote-Taste +
    2. Die toten Tasten sind alle von Hand eingegeben, da kann schon mal ein
       Buchstabe vergessen werden. Falls dem so ist, bitte an die Mailingliste
       schreiben!
+
+-------------------------------------------------------------------------------
+
+F: Bei mir funktioniert die Kombo-/Komponier-/Compose-Taste nicht. Wieso?
+
+A: Momentan ist diese Funktionalität nur im AHK-Treiber möglich, dort jedoch
+noch nicht implementiert (Freiwillige vor!). Im MSKLC-Treiber muss es laut
+einer Unicode-FAQ bei Microsoft auch eine Möglichkeit geben, jedoch ist der
+Lösungsweg hier noch nicht bekannt. Hinweise bitte an die Mailingliste.
 
 --------------------------------------------------------------------------------
 3. Entwicklerfragen (auch Beta-Tester)
