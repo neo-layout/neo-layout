@@ -91,6 +91,11 @@
 <Multi_key> <O> <r>              	: "®"   registered # REGISTERED SIGN
 <Multi_key> <O> <R>              	: "®"   registered # REGISTERED SIGN
 
+<Multi_key> <t> <m>              	: "™"   trademark # TRADE MARK SIGN
+<Multi_key> <t> <M>              	: "™"   trademark # TRADE MARK SIGN
+<Multi_key> <T> <m>              	: "™"   trademark # TRADE MARK SIGN
+<Multi_key> <T> <M>              	: "™"   trademark # TRADE MARK SIGN
+
 <Multi_key> <period> <greater>   	: "›"   U203a # SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
 <Multi_key> <period> <less>      	: "‹"   U2039 # SINGLE LEFT-POINTING ANGLE QUOTATION MARK
 <Multi_key> <period> <period>    	: "·"   U00B7 # MIDDLE DOT
