@@ -25,4 +25,7 @@ Die hier veröffentlichte Version enthält folgende Ergänzungen diesbezüglich:
 <dead_stroke> <L>                       : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
 <dead_stroke> <o>                       : "ø"   lstroke # LATIN SMALL LETTER O WITH STROKE
 <dead_stroke> <O>                       : "Ø"   Lstroke # LATIN CAPITAL LETTER O WITH STROKE
-
+<Multi_key> <t> <m>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <t> <M>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <T> <m>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <T> <M>                     : "™"   trademark # TRADE MARK SIGN
