@@ -271,8 +271,8 @@ xkb_symbols "neo" {
 
     key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock,              Caps_Lock,          Caps_Lock,      Caps_Lock           ] };
     key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Multi_key,              Multi_key,          Multi_key,      Multi_key           ] };
-    key <LSGT> { [ 0xfe11,      0xfe11,                 0xfe11,                 0xfe11                                                  ] };
-    key <RALT> { [ 0xfe11,      0xfe11,                 0xfe11,                 0xfe11,             KP_Decimal,     0xfe11              ] };
+    key <LSGT> { [ 0xfe11,      0xfe11,                 Multi_key,              Multi_key                                               ] };
+    key <RALT> { [ 0xfe11,      0xfe11,                 Multi_key,              Multi_key,          KP_Decimal,     0xfe11              ] };
 
     modifier_map mod5 { <LSGT>, <RALT> };
     // Keypad
