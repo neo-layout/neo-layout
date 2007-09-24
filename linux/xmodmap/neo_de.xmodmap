@@ -90,7 +90,7 @@ remove Mod3 = ISO_Level3_Shift
 keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock Multi_key Multi_key
 
 ! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
-keycode 113 = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift KP_Decimal
+keycode 113 = ISO_Level3_Shift ISO_Level3_Shift Multi_key Multi_key KP_Decimal
 !keycode 48 = Mode_switch Mode_switch U133 U132 schwa SCHWA
 add Mod5 = Mode_switch
 
@@ -101,7 +101,7 @@ add Mod5 = Mode_switch
 
 ! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
 keycode 51 = Mode_switch Mode_switch Caps_Lock Caps_Lock Multi_key Multi_key
-keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
+keycode 94  = ISO_Level3_Shift ISO_Level3_Shift Multi_key Multi_key
 add Mod3 = ISO_Level3_Shift
 
 ! force to learn the new Escape!
