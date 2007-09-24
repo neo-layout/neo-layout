@@ -18,8 +18,8 @@
 !keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke
 keycode 49 = dead_circumflex dead_caron dead_breve
 
-keycode 10 = 1 degree onesuperior U2640 oneeighth
-keycode 11 = 2 paragraph twosuperior U26A5
+keycode 10 = 1 degree onesuperior U2640 enfilledcircbullet
+keycode 11 = 2 numerosign twosuperior U26A5 U2023
 keycode 12 = 3 section threesuperior U2642 threeeighths
 keycode 13 = 4 guillemotright U203A  4  Prior Prior
 keycode 14 = 5 guillemotleft U2039 5 fiveeighths implies
@@ -46,8 +46,8 @@ keycode 29 = k K exclam Greek_kappa exclamdown copyright
 keycode 30 = h H less Greek_psi 7 Greek_PSI
 keycode 31 = g G greater Greek_gamma 8 Greek_GAMMA
 keycode 32 = f F equal Greek_phi 9 Greek_PHI
-keycode 33 = q Q ampersand q plus partialderivative
-keycode 34 = ssharp U1E9E U133 U132 schwa SCHWA
+keycode 33 = q Q ampersand U0278 plus partialderivative
+keycode 34 = ssharp U1E9E U017F Greek_finalsmallsigma schwa SCHWA
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute dead_belowdot dead_belowdot
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -60,8 +60,8 @@ keycode 41 = e E braceright Greek_epsilon Right Right
 keycode 42 = o O asterisk   Greek_omega   End End
 
 keycode 43 = s S question  Greek_sigma questiondown Greek_SIGMA
-keycode 44 = n N parenleft Greek_nu    4 numerosign
-keycode 45 = r R parenright U03F1 5 registered
+keycode 44 = n N parenleft Greek_nu    4 
+keycode 45 = r R parenright Greek_rho 5 registered
 keycode 46 = t T minus Greek_tau 6 trademark
 keycode 47 = d D colon Greek_delta comma Greek_DELTA
 keycode 48 = y Y doublelowquotemark Greek_upsilon thorn THORN
@@ -75,11 +75,11 @@ keycode 54 = adiaeresis Adiaeresis bar Greek_eta Next Next
 keycode 55 = p P asciitilde Greek_pi Return Greek_PI
 keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
 
-keycode 57 = b B plus Greek_beta infinity enfilledcircbullet
+keycode 57 = b B plus Greek_beta b infinity
 keycode 58 = m M percent mu 1 integral
-keycode 59 = comma comma apostrophe U3D1 2 radical
+keycode 59 = comma comma apostrophe U03F1 2 radical
 keycode 60 = period ellipsis quotedbl Greek_theta 3 Greek_THETA
-keycode 61 = j J semicolon j period nabla
+keycode 61 = j J semicolon U3D1 period nabla
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
@@ -107,7 +107,7 @@ add Mod3 = ISO_Level3_Shift
 ! force to learn the new Escape!
 !keycode 9 =
 
-keycode 65 = space space space nobreakspace 0 U202F
+keycode 65 = space space signifblank nobreakspace 0 U202F
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
