@@ -30,7 +30,7 @@ keycode 17 = 8 doublelowquotemark singlelowquotemark 8 slash U2203
 keycode 18 = 9 leftdoublequotemark leftsinglequotemark 9 asterisk U2200
 keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0 minus logicalor
 
-keycode 20 = minus endash emdash hyphen minus logicaland
+keycode 20 = minus endash emdash hyphen U2011 logicaland
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
