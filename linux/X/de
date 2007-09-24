@@ -223,7 +223,7 @@ xkb_symbols "neo" {
     key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     8,                  slash,          U2203               ] };
     key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    9,                  asterisk,       U2200               ] };
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   0,                  minus,          logicalor           ] };
-    key <AE11> { [ minus,       endash,                 emdash,                 hyphen,             minus,          logicaland          ] };
+    key <AE11> { [ minus,       endash,                 emdash,                 hyphen,             U2011,          logicaland          ] };
     key <AE12> { [ dead_acute,  dead_grave,             dead_cedilla,           dead_ogonek,        dead_abovedot,  dead_abovering      ] };
 
     // 2nd row
