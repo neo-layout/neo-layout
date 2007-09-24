@@ -15,8 +15,8 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !eigentlich sollte die folgende Zeile rein, aber auf älteren Systemen ist der
 !dead_stroke noch nicht definiert
-!keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke
 keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke
+!keycode 49 = dead_circumflex dead_caron dead_breve
 
 keycode 10 = 1 degree onesuperior U2640 oneeighth
 keycode 11 = 2 paragraph twosuperior U26A5
@@ -61,7 +61,7 @@ keycode 42 = o O asterisk   Greek_omega   End End
 
 keycode 43 = s S question  Greek_sigma questiondown Greek_SIGMA
 keycode 44 = n N parenleft Greek_nu    4 numerosign
-keycode 45 = r R parenright Greek_rho  5 registered
+keycode 45 = r R parenright U03F1 5 registered
 keycode 46 = t T minus Greek_tau 6 trademark
 keycode 47 = d D colon Greek_delta comma Greek_DELTA
 keycode 48 = y Y doublelowquotemark Greek_upsilon thorn THORN
@@ -90,7 +90,7 @@ remove Mod3 = ISO_Level3_Shift
 keycode 66 = Mode_switch Mode_switch Caps_Lock Caps_Lock Multi_key Multi_key
 
 ! Make AltGr and apostrophe to Mode_switch (which is the 3rd and 4th level)
-keycode 113 = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift KP_Decimal
+keycode 113 = ISO_Level3_Shift ISO_Level3_Shift Multi_key Multi_key KP_Decimal
 !keycode 48 = Mode_switch Mode_switch U133 U132 schwa SCHWA
 add Mod5 = Mode_switch
 
@@ -101,7 +101,7 @@ add Mod5 = Mode_switch
 
 ! Make the former qwertz-# and qwertz-< to Mod5 (ISO_Level3_Shift)
 keycode 51 = Mode_switch Mode_switch Caps_Lock Caps_Lock Multi_key Multi_key
-keycode 94  = ISO_Level3_Shift ISO_Level3_Shift
+keycode 94  = ISO_Level3_Shift ISO_Level3_Shift Multi_key Multi_key
 add Mod3 = ISO_Level3_Shift
 
 ! force to learn the new Escape!

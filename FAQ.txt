@@ -339,13 +339,11 @@ Wer schreibt an KDE (einen Bugreport)?
 
 -------------------------------------------------------------------------------
 
-F: Bei mir funktioniert die Kombo-/Komponier-/Compose-Taste nicht. Wieso?
+F: Bei mir funktioniert die Kombo-/Komponier-/Compose-/Multi-Key-Taste nicht.
+Wieso?
 
-A: In manchen Linux-Distributionen tritt dieser Fehler aus noch ungeklärten
-Ursachen auf. Hinweise zur Lösung des Problems sind an die Mailingliste
-erbeten.
-Hinweis: Die Kombination »links Mod5« und »rechts Mod3« scheint überall zu
-funktionieren. Seltsam.
+A: Soweit bekannt, funktioniert nur die Kombination »Mod5« und »linkes Mod3«
+nicht. Hinweise zur Lösung dieses komischen Fehlers bitte an die Mailingliste.
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
