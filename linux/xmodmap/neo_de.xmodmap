@@ -107,7 +107,10 @@ add Mod3 = ISO_Level3_Shift
 ! force to learn the new Escape!
 !keycode 9 =
 
-keycode 65 = space space signifblank nobreakspace 0 U202F
+!eigentlich sollte die folgende Zeile rein, aber leider funktioniert das
+!Zeichen signifblank noch nicht, nur wenn man U2423 direkt drin stehen hat
+!keycode 65 = space space signifblank nobreakspace 0 U202F
+keycode 65 = space space U2423 nobreakspace 0 U202F
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
