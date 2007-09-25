@@ -3,6 +3,11 @@
     Achtung, diese Methode funktioniert nur, wenn man schon ein System mit
     NEO 1.0 hat. Das haben die meisten ab Anfang 2007. Sonst muss man die
     xmodmap-Variante benutzen.
+    Probleme gibt es Beispielsweise bei Fedora, weil dort bis heute teils
+    eine veraltetet X-Version benutzt wird.
+    Bei nicht ganz aktuellen Versionen des X-Servers muss man die Datei
+    „de“ nach „kpdl“ durchsuchen und durch „keypad“ ersetzen. Ansonsten
+    erscheint der Fehler »Error loading new keyboard description«.
     ——————————————————————————————————————————————————————————————————————
 Wenn man keine root-Rechte hat, gibt man folgenden Befehl ein:
     setxkbmap de neo -print | xkbcomp - -I$PWD $DISPLAY
@@ -27,7 +32,7 @@ eintippen.
 Zurück zu qwertz geht es mit:
     setxkbmap de
 
-== Tipp ==
+== Tipps ==
 Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein, 
 kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
 zwischen qwertz und NEO wechseln. 
@@ -37,18 +42,17 @@ zwischen qwertz und NEO wechseln.
     alias uiae='setxkbmap de'
 wobei $NEO_PWD durch das Verzeichnis mit der „de“-Datei ersetzt werden muss.
 
-
 === Mit Root-Zugang ===
-    alias asdf='setxkbmap de neo'
-    alias uiae='setxkbmap de'
-
-=== Tipp ===
 Trägt man folgende Zeilen in seine xorg.conf (nur mit root-Zugang möglich) ein,
 kann man anschließend mittels drücken beider Strg-Tasten zwischen qwertz und
 NEO wechseln.
 	Option "XkbLayout"  "de,de"
 	Option "XkbVariant" "neo,nodeadkeys"
 	Option "XkbOptions" "grp:ctrls_toggle"
+
+Alternativ auch hier in die ~/.bashrc, ~/.zshrc oder vergleichbares:
+    alias asdf='setxkbmap de neo'
+    alias uiae='setxkbmap de'
 
 == Quelle == 
 Diese Datei patcht die Aktuellste Version von freedesktop.org
