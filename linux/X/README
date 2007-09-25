@@ -42,6 +42,14 @@ wobei $NEO_PWD durch das Verzeichnis mit der „de“-Datei ersetzt werden muss.
     alias asdf='setxkbmap de neo'
     alias uiae='setxkbmap de'
 
+=== Tipp ===
+Trägt man folgende Zeilen in seine xorg.conf (nur mit root-Zugang möglich) ein,
+kann man anschließend mittels drücken beider Strg-Tasten zwischen qwertz und
+NEO wechseln.
+	Option "XkbLayout"  "de,de"
+	Option "XkbVariant" "neo,nodeadkeys"
+	Option "XkbOptions" "grp:ctrls_toggle"
+
 == Quelle == 
 Diese Datei patcht die Aktuellste Version von freedesktop.org
 Abrufbar im Orginal unter:
