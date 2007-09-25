@@ -60,8 +60,8 @@ Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
 ┬─────┬ 2 … – Gedankenstrich (U+2013 EN DASH)
 │– ╌ ∧│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│- —  │ 4 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
-┴──┬──┴ 5 … nichts
+│- — ‑│ 4 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
+┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ∧ Logisches Und (U+2227 LOGICAL AND)
 
 == Anführungszeichen ==
@@ -120,7 +120,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │  ⇧   │     │ö # ⌧│ü $ ⌦│ä | ⇟│p ~ ↲│z `  │b +  │m % 1│, ' 2│. " 3│j ; .│              │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣   geschütz.Lz.⍽  schmal.Lz.¦ │↙5 ♫  │ Fen- │ Menu │ Strg │
-│      │ ster │      │ Leerz.␣   »␣«          0             │   ./,│ ster │      │      │
+│      │ ster │      │ Leerz.␣       »␣«            0       │   ./,│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
 ┌─────┬─────┬─────┬─────┐
