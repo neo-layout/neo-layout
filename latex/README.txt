@@ -37,7 +37,7 @@ in die Präambel seiner tex-Datei schreiben (statt \usepackage[latin1]{inputenc}
 === Optional: uniinput selbst erweitern ===
 Um die Datei mit weiteren Zeichen zu ergänzen, muss man weitere Zeilen in die
 uniinput.dtx nach diesem Schema einfügen:
-	\DeclareUnicodeCharacter{03B1}{\ifmmode \alpha \else $\alpha$\fi}
+	\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
 für das α (kleines Alpha) zum Beispiel. Dabei steht 03B1 für die
 Unicodebezeichnung, die man irgendwo im Internet (z. B. auf Wikipedia) oder mit Programmen wie „gucharmap“ findet.
 
