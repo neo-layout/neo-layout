@@ -1,10 +1,25 @@
 == Kleine Anleitung ==
-In der Datei ../grafik/neo20.ods sieht man das Layout. 
+In der Datei ../grafik/neo20.txt sieht man das Layout. 
 In neo_de.xmodmap steckt es drin.
 
 === Aktivieren ===
-Zu aktivieren mit dem Kommando:
+Zu aktivieren mit dem Kommando (im Verzeichnis, in dem sich die Datei befindet):
 	xmodmap neo_de.xmodmap
+
+Achtung: Momentan (September 2007) gibt es noch einen Fehler im X-Server, der es
+notwendig macht, stattdessen folgenden Befehl zum Aktivieren einzugeben:
+	setxkbmap ie && xmodmap neo_de.xmodmap
+
+==== Automatisch aktivieren ====
+Um die NEO-Tastaturbelegung automatisch zu aktivieren, kann man die obige
+Befehlszeile in ein Startscript seines Desktop Environments (z.B.
+gnome-session-properties oder ~/GNUstep/Library/WindowMaker/autostart)
+eintragen.
+
+Oder die Befehlszeile in die ~/.Xsession (falls nicht KDE oder Gnome geladen)
+
+Oder die Xmodmap nach ~/.Xmodmap spielen (wo sie automatisch geladen wird) und
+die Standard Tastaturbelegung auf „ie“ festsetzen (in GNOME/KDE/XFCE/.Xsession).
 
 === Deaktivieren ===
 Zurück zu qwertz geht es mit:
@@ -13,7 +28,7 @@ Zurück zu qwertz geht es mit:
 === Tipp ===
 Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein, 
 kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
-zwischen qwertz und NEO wechseln. 
+zwischen qwertz und NEO wechseln. Dazu muss die Datei im Homeverzeichnis sein.
 alias uiae='setxkbmap de'
 alias asdf='xmodmap ~/neo_de.xmodmap'
 

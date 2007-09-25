@@ -303,9 +303,8 @@ Bei weiteren Fragen bitte auf der Mailingliste melden (siehe erste Frage).
 --------------------------------------------------------------------------------
 
 F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
-vorgesehen erst rechts »Mod3« und gleichzeitig links die Taste auf der früher
-(bei QWERTZ) schon »CapsLock« war – wo jetzt das zweite »Mod3« ist – drücke,
-dann ändert sich überhaupt nichts.
+vorgesehen die beiden »Mod3«-Tasten gleichzeitig drücke, dann ändert sich
+überhaupt nichts.
 
 A: Das ist ein Fehler, der auftritt, seitdem die xmodmap-Datei von keysym auf
 keycode umgestellt wurde. Eventuell handelt es sich hierbei um einen Fehler im
