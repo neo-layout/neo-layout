@@ -248,9 +248,11 @@ kommt die Fehlermeldung
 Außerdem startet X neu, wenn ich auf die NEO-Belegung wechseln will
 	setxkbmap de neo
 
-A: Das liegt daran, das mittlerweile „keypad“ gegen „kpdl“ ausgetauscht wurde.
+A: Das liegt daran, das in neueren Versionen des X-Servers (Xorg) – und daher
+auch in der NEO-de-Datei – „keypad“ gegen „kpdl“ ausgetauscht wurde.
 In der aktuellen de-Datei muss man einfach kpdl durch keypad ersetzen und es
-geht wieder. Oder den X-Server auf den neusten Stand bringen.
+funktioniert wieder. Oder den X-Server auf den neusten Stand bringen – was
+aber auch nicht immer klappt (Arch-Linux mit Xorg 7.3).
 
 --------------------------------------------------------------------------------
 
@@ -283,14 +285,14 @@ Zeichen der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
 
 A: Du verwendest vermutlich nicht die xmodmap-Version des Treibers, sondern
 die xkb-Datei mit dem Namen „de“. Bei dieser kommt es bisher auf einigen
-Systemen (Fedora 6, Ubuntu 7.04 unter bestimmten Konstellationen) zu diesem
-Fehler.
+Systemen (Fedora 6, Gentoo mit KDE, Ubuntu 7.04 unter bestimmten
+Konstellationen) zu diesem Fehler.
 Unter Ubuntu (und anderen Systemen) kommt es zu diesem Fehler, wenn man in
 seiner xorg.conf nicht Neo, sondern eine andere Tastaturbelegung eingestellt
 hat, und dann die Belegung mittels
   setxkbmap de neo
-von nachträglich aktiviert. Oder wenn man dann Neo im Gnome-Dialog für die
-Tastatur auswählt.
+nachträglich aktiviert. Oder wenn man dann Neo im Gnome-Dialog für die Tastatur
+auswählt.
 
 Als Alternative bietet sich an:
 1) Den xmodmap-Treiber zu benutzen. Siehe dazu die README-Datei beim Treiber.
