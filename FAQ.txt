@@ -278,8 +278,8 @@ oder für die Version im 2.0 im Subversion-Repository:
 
 --------------------------------------------------------------------------------
 
-F: Bei mir geht die 5. Ebene nicht. Stattdessen erscheinen immer die Zeichen
-der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
+F: Bei mir geht die 5. Ebene (Mod5) nicht. Stattdessen erscheinen immer die
+Zeichen der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
 
 A: Du verwendest vermutlich nicht die xmodmap-Version des Treibers, sondern
 die xkb-Datei mit dem Namen „de“. Bei dieser kommt es bisher auf einigen
