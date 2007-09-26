@@ -1,5 +1,5 @@
 == Ergänzunge, um in X vorhandene Lücken zu schließen ==
-Die Datei Compose von X.org war insofern fehlerhaft, als dass sich bisher kein
+Die Datei Compose von X.org war insofern fehlerhaft, als sich bisher kein
 Buchstabe mittels totem Querstrich (dead_stroke) schreiben ließ, obwohl der
 dead_stroke definiert ist (in /usr/include/X11/keysymdef.h).
 
