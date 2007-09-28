@@ -29,3 +29,12 @@ Die hier veröffentlichte Version enthält folgende Ergänzungen diesbezüglich:
 <Multi_key> <t> <M>                     : "™"   trademark # TRADE MARK SIGN
 <Multi_key> <T> <m>                     : "™"   trademark # TRADE MARK SIGN
 <Multi_key> <T> <M>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <minus> <H>                 : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+<Multi_key> <minus> <h>                 : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+	Wobei schon diese hier drin waren (das ħ war also schon möglich):
+	<Multi_key> <slash> <H>                 : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+	<Multi_key> <KP_Divide> <H>             : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+	<Multi_key> <slash> <h>                 : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+	<Multi_key> <KP_Divide> <h>             : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+
+
