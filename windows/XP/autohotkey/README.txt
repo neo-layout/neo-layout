@@ -1,6 +1,16 @@
 Version 16.06.2007
 
 == Installation ==
+=== Direkte Installation ===
+Einfach das Archiv neo20-all-in-one.zip herunterladen, entpacken und die Datei
+neo20-all-in-one.exe irgendwo speichern (am besten auf dem Desktop z.B.). Danach
+einen Doppelklick auf diese .exe-Datei und NEO steht in voller Funktionalität zur
+Verfügung! Das alles geht ohne Admin-Rechte und ist auf jedem Rechner sofort
+ausführbar.
+Achtung: Da sich NEO in der Entwicklung befindet, kann es vorkommen, dass die
+exe-Datei gegenüber der Datei neo20-all-in-one.ahk leicht veraltet sein kann.
+Entwickler sollten daher Autohotkey selbst runterladen, wie unten beschrieben.
+
 === Autohotkey herunter laden ===
 Man braucht als erstes das Programm namens »autohotkey«
 (http://www.autohotkey.com/download/AutohotkeyInstall.exe).
@@ -18,17 +28,6 @@ auswählen -> Immer mit diesem Programm öffnen.
 === Automatischer Start ===
 Bei Bedarf kann man sich eine Verknüpfung mit neo20-all-in-one.ahk in den
 Autostart-Ordner legen, dann hat man die Belegung direkt bei der Anmeldung.
-
-=== Ohne Installation ===
-Genaugenommen muss AutoHotkey nicht einmal installiert werden, man braucht
-nur die ausführbare Datei (autohotkey.exe). Auf diese Weise kann man
-das Script z. B. auf dem USB-Stick überall hin mitnehmen. AutoHotkey
-krallt sich erfreulicherweise nicht in der Registry fest, kann also auf
-einem Gastcomputer ausgeführt werden, ohne Spuren zu hinterlassen.
-
-Ebenso kann man mit einem „Compiler“ aus AutoHotkey.exe und dem Script
-eine einzige ausführbare Datei erstellen, für dessen Ausführung man
-ebenfalls keine Administratorrechte benötigt.
 
 == Wie es funktioniert ==
 Das Programm kann alle Tastendrucke abfangen und statt dessen andere Tasten 
