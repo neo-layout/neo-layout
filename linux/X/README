@@ -1,13 +1,17 @@
+    ______________________________________________________________________
+    Probleme gibt es Beispielsweise bei Fedora, weil dort bis heute teils
+    eine veraltetet X-Version benutzt wird.
+    Außerdem muss man bei nicht ganz aktuellen Versionen des X-Servers in
+    der Datei „de“ alle Vorkommen von „kpdl“ durch „keypad“ ersetzen.
+    Ansonsten erscheint der Fehler »Error loading new keyboard
+    description«.
+    ——————————————————————————————————————————————————————————————————————
+
 == Anleitung für Anwender ohne Root-Zugang ==
     ______________________________________________________________________
     Achtung, diese Methode funktioniert nur, wenn man schon ein System mit
     NEO 1.0 hat. Das haben die meisten ab Anfang 2007. Sonst muss man die
     xmodmap-Variante benutzen.
-    Probleme gibt es Beispielsweise bei Fedora, weil dort bis heute teils
-    eine veraltetet X-Version benutzt wird.
-    Bei nicht ganz aktuellen Versionen des X-Servers muss man die Datei
-    „de“ nach „kpdl“ durchsuchen und durch „keypad“ ersetzen. Ansonsten
-    erscheint der Fehler »Error loading new keyboard description«.
     ——————————————————————————————————————————————————————————————————————
 Wenn man keine root-Rechte hat, gibt man folgenden Befehl ein:
     setxkbmap de neo -print | xkbcomp - -I$PWD $DISPLAY

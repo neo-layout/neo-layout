@@ -1922,7 +1922,9 @@ return
 
 *Space::
    EbeneAktualisieren()
-   if Ebene = 4
+   if Ebene = 3
+      SendUnicodeChar(0x2423)   ; Symbol für Leerzeichen
+   else if Ebene = 4
       SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
    else if Ebene = 5
       Send 0
