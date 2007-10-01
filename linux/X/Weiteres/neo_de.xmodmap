@@ -69,8 +69,8 @@ keycode 48 = y Y doublelowquotemark Greek_upsilon thorn THORN
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 52 = odiaeresis Odiaeresis numbersign odiaeresis Escape
-keycode 53 = udiaeresis Udiaeresis dollar udiaeresis Delete Delete
+keycode 52 = udiaeresis Udiaeresis numbersign udiaeresis Escape
+keycode 53 = odiaeresis Odiaeresis dollar odiaeresis Delete Delete
 keycode 54 = adiaeresis Adiaeresis bar Greek_eta Next Next
 keycode 55 = p P asciitilde Greek_pi Return Greek_PI
 keycode 56 = z Z grave Greek_zeta z Greek_OMEGA
@@ -107,7 +107,7 @@ add Mod3 = ISO_Level3_Shift
 ! force to learn the new Escape!
 !keycode 9 =
 
-keycode 65 = space space signifblank nobreakspace 0 U202F
+keycode 65 = space space space nobreakspace 0 U202F
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

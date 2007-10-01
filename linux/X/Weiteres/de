@@ -254,8 +254,8 @@ xkb_symbols "neo" {
     key <AC11> { [ y,           Y,                      doublelowquotemark,     Greek_upsilon,      thorn,          THORN               ] };
 
     // 4th row
-    key <AB01> { [ odiaeresis,  Odiaeresis,             numbersign,             odiaeresis,         Escape                              ] };
-    key <AB02> { [ udiaeresis,  Udiaeresis,             dollar,                 udiaeresis,         Delete,         Delete              ] };
+    key <AB01> { [ udiaeresis,  Udiaeresis,             numbersign,             udiaeresis,         Escape                              ] };
+    key <AB02> { [ odiaeresis,  Odiaeresis,             dollar,                 odiaeresis,         Delete,         Delete              ] };
     key <AB03> { [ adiaeresis,  Adiaeresis,             bar,                    Greek_eta,          Next,           Next                ] };
     key <AB04> { [ p,           P,                      asciitilde,             Greek_pi,           Return,         Greek_PI            ] };
     key <AB05> { [ z,           Z,                      grave,                  Greek_zeta,         z,              Greek_OMEGA         ] };
@@ -265,7 +265,7 @@ xkb_symbols "neo" {
     key <AB09> { [ period,      ellipsis,               quotedbl,               Greek_theta,        3,              Greek_THETA         ] };
     key <AB10> { [ j,           J,                      semicolon,              U3D1,               period,         nabla               ] };
 
-    key <SPCE> { [ space,       space,                  signifblank,            nobreakspace,       0,              U202F               ] };
+    key <SPCE> { [ space,       space,                  space,                  nobreakspace,       0,              U202F               ] };
     
     // new modkeys   
 

@@ -164,7 +164,7 @@ return
    else if Ebene = 4
       send ¼
    else if Ebene = 5
-      Unicode("â…›") ; 1/8
+      Unicode("â€¢") ; bullet
    PriorDeadKey := ""
 return
 
@@ -1346,9 +1346,9 @@ return
 *y::
    EbeneAktualisieren()
    if Ebene = 1
-      sendinput {blind}ö
+      sendinput {blind}ü
    else if Ebene = 2
-      sendinput {blind}Ö
+      sendinput {blind}Ü
    else if Ebene = 3
       send {blind}{#}
    else if Ebene = 5
@@ -1359,15 +1359,15 @@ return
 *x::
    EbeneAktualisieren()
    if Ebene = 1
-      sendinput {blind}ü
+      sendinput {blind}ö
    else if Ebene = 2
-      sendinput {blind}Ü
+      sendinput {blind}Ö
    else if Ebene = 3
       send $
    else if Ebene = 5
       Send {Del}
    else if Ebene = 6
-      Unicode("âˆ«") ; Int
+      Send +{Del}
    PriorDeadKey := ""
 return
 
@@ -1475,10 +1475,8 @@ return
       send {blind}{+}
    else if Ebene = 4
       Unicode("Î²") ;beta
-   else if Ebene = 5
-      Unicode("âˆž") ;infty
    else if Ebene = 6
-      Unicode("â€¢") ; bullet
+      Unicode("âˆž") ;infty
    PriorDeadKey := ""
 return
 
@@ -1508,6 +1506,8 @@ return
       Unicode("Âµ") ;micro, mu wäre Î¼
    else if Ebene = 5
       Send 1
+   else if Ebene = 6
+      Unicode("âˆ«") ; Int
    PriorDeadKey := ""
 return
 
@@ -1922,9 +1922,7 @@ return
 
 *Space::
    EbeneAktualisieren()
-   if Ebene = 3
-      SendUnicodeChar(0x2423)   ; Symbol für Leerzeichen
-   else if Ebene = 4
+   if Ebene = 4
       SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
    else if Ebene = 5
       Send 0
