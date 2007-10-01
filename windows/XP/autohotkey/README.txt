@@ -4,8 +4,8 @@ Version 16.06.2007
 === Direkte Installation ===
 Einfach das Archiv neo20-all-in-one.zip herunterladen, entpacken und die Datei
 neo20-all-in-one.exe irgendwo speichern (am besten auf dem Desktop z.B.). Danach
-einen Doppelklick auf diese .exe-Datei und NEO steht in voller Funktionalität zur
-Verfügung! Das alles geht ohne Admin-Rechte und ist auf jedem Rechner sofort
+einen Doppelklick auf diese .exe-Datei und NEO steht in voller Funktionalität
+zur Verfügung! Das alles geht ohne Admin-Rechte und ist auf jedem Rechner sofort
 ausführbar.
 Achtung: Da sich NEO in der Entwicklung befindet, kann es vorkommen, dass die
 exe-Datei gegenüber der Datei neo20-all-in-one.ahk leicht veraltet sein kann.
