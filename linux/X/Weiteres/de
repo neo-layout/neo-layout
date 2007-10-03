@@ -213,8 +213,8 @@ xkb_symbols "neo" {
 
     // eigentlich sollte die folgende Zeile rein, aber auf älteren Systemen ist der
     // dead_stroke noch nicht definiert
-    key <TLDE> { [ dead_circumflex,                     dead_caron,             dead_breve,         dead_stroke                         ] };
-    //key <TLDE> { [ dead_circumflex,                     dead_caron,             dead_breve          dead_breve, dead_belowdot, dead_belowdot ] };
+    //key <TLDE> { [ dead_circumflex,                     dead_caron,             dead_breve,         dead_stroke                         ] };
+    key <TLDE> { [ dead_circumflex,                     dead_caron,             dead_breve          dead_breve, dead_belowdot, dead_belowdot ] };
 
     key <AE01> { [ 1,           degree,                 onesuperior,            U2640,              enfilledcircbullet                  ] };
     key <AE02> { [ 2,           numerosign,             twosuperior,            U26A5,              U2023                               ] };
