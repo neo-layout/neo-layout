@@ -218,7 +218,7 @@ xkb_symbols "neo" {
 
     key <AE01> { [ 1,           degree,                 onesuperior,            U2640,              enfilledcircbullet                  ] };
     key <AE02> { [ 2,           numerosign,             twosuperior,            U26A5,              U2023                               ] };
-    key <AE03> { [ 3,           section,                threesuperior,          U2642s,             threeeighth                         ] };
+    key <AE03> { [ 3,           section,                threesuperior,          U2642                                                   ] };
     key <AE04> { [ 4,           guillemotright,         U203A,                  4,                  Prior,          Prior               ] };
     key <AE05> { [ 5,           guillemotleft,          U2039,                  5,                  5,              implies             ] };
     key <AE06> { [ 6,           dollar,                 sterling,               currency,           6,              ifonlyif            ] };
