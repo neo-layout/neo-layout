@@ -342,8 +342,9 @@ Frage).
 
 -------------------------------------------------------------------------------
 
-F: Warum wird statt dem Daraus-folgt-Pfeil (Implikation) »⇒« das komische
-Zeichen »⊢« dargestellt?
+F: Warum wird statt dem Daraus-folgt-Pfeil (Implikation) »⇒« (U+21D2
+RIGHTWARDS DOUBLE ARROW) das komische Zeichen »⊢« (U+22A2 RIGHT TACK)
+dargestellt?
 
 A: Das ist ein Fehler, der nur bei KDE-Anwendungen auftritt (z. B. unter Kile).
 Daher der schmutzige Hack in der unicode.sty-Datei für Latex.
