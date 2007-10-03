@@ -202,12 +202,12 @@ xkb_symbols "sundeadkeys" {
 // Other Questions:
 //   neo_layout (at) yahoogroups (dot) de
 
-partial alphanumeric_keys 
+partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo" {
 
     name[Group1]= "German Neostyle";
 
-    key.type[Group1]="EIGHT_LEVEL_ALPHABETIC";
+    key.type[Group1]="EIGHT_LEVEL_SEMIALPHABETIC";
 
     // 1st row
 
@@ -271,6 +271,7 @@ xkb_symbols "neo" {
     key <SPCE> { [ space,       space,                  space,                  nobreakspace,       0,              U202F               ] };
     
     // new modkeys   
+    key.type[Group1]="EIGHT_LEVEL" ;
 
     key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock,              Caps_Lock,          Caps_Lock,      Caps_Lock           ] };
     key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Multi_key,              Multi_key,          Multi_key,      Multi_key           ] };
