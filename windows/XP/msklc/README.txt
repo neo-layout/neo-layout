@@ -35,3 +35,7 @@ Tastaturlayouts aus!
 == Deinstallation ==
 Rückgängig gemacht wird die Umstellung, indem die Datei
 „reset_CapsLock_AltGr.reg“ (bzw. „reset_CapsLock_AltGr“) installiert wird.
+
+== FAQ ==
+Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
+Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt

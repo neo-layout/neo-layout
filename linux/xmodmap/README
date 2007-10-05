@@ -32,3 +32,6 @@ zwischen qwertz und NEO wechseln. Dazu muss die Datei im Homeverzeichnis sein.
 alias uiae='setxkbmap de'
 alias asdf='xmodmap ~/neo_de.xmodmap'
 
+== FAQ ==
+Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
+Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt

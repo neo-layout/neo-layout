@@ -10,3 +10,6 @@ Tastaturübersicht-Anwendung aktiviert. Man soll ja sowieso nie auf die Tasten
 schauen ;-) Außerdem gibt es im Verzeichnis grafik mehrere Bilder und auch
 einen Aufsteller, den man sich ausdrucken und vor sich hinstellen kann.
 
+== FAQ ==
+Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
+Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt

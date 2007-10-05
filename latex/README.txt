@@ -45,3 +45,6 @@ Unicodebezeichnung, die man irgendwo im Internet (z. B. auf Wikipedia) oder mit 
 Weitere und ausführlichere Dokumentation ist in der in Schritt 1 erzeugten
 Dokumentation zu finden.
 
+== FAQ ==
+Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
+Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt
