@@ -80,3 +80,6 @@ AltGr + Pos1 = Abmelden
 AltGr + Ende = Computer ausschalten
 --> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod5
 
+== FAQ ==
+Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
+Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt

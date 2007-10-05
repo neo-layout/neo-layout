@@ -58,6 +58,10 @@ Alternativ auch hier in die ~/.bashrc, ~/.zshrc oder vergleichbares:
     alias asdf='setxkbmap de neo'
     alias uiae='setxkbmap de'
 
+== FAQ ==
+Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
+Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt
+
 == Quelle == 
 Diese Datei patcht die Aktuellste Version von freedesktop.org
 Abrufbar im Orginal unter:
