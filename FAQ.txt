@@ -293,9 +293,10 @@ F: Bei mir geht die 5. Ebene (Mod5) nicht. Stattdessen erscheinen immer die
 Zeichen der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
 
 A: Du verwendest vermutlich nicht die xmodmap-Version des Treibers, sondern
-die xkb-Datei mit dem Namen „de“. Bei dieser kommt es bisher auf einigen
-Systemen (Fedora 6, Gentoo, Ubuntu 7.04 unter bestimmten Konstellationen) zu
-diesem Fehler.
+die xkb-Datei mit dem Namen „de“. Bei dieser kommt es auf älteren Systemen
+(Xorg vor Version 7.3 bzw. X-Server vor Version 1.3.0, z. B. bei Fedora 6,
+Gentoo stable, Ubuntu 7.04) oder unter bestimmten Konstellationen zu diesem
+Fehler.
 Unter Ubuntu (und anderen Systemen) kommt es zu diesem Fehler, wenn man in
 seiner xorg.conf nicht Neo, sondern eine andere Tastaturbelegung eingestellt
 hat, und dann die Belegung mittels
@@ -306,8 +307,9 @@ Bei Fedora und Gentoo ist die Datei keysymdef.h veraltet. Ebenfalls ein paar
 andere Dateien des X-Servers.
 
 Als Alternative bietet sich an:
-1) Den xmodmap-Treiber zu benutzen. Siehe dazu die README-Datei beim Treiber.
-2) Die Neo-Tastaturbelegung direkt in der xorg.conf zu laden. Und zwar so:
+1) Aktuelles System benutzen.
+2) Den xmodmap-Treiber zu benutzen. Siehe dazu die README-Datei beim Treiber.
+3) Die Neo-Tastaturbelegung direkt in der xorg.conf zu laden. Und zwar so:
   Option "XkbLayout" "de"
   Option "XkbVariant" "neo"
 
