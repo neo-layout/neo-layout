@@ -1,0 +1,62 @@
+<KTouchLecture>
+ <Title>NEO2-Test</Title>
+ <Comment>Created 2007 by Erik Streb</Comment>
+ <FontSuggestions>Monospace</FontSuggestions>
+ <Levels>
+  <Level>
+   <LevelComment>Anfänger können ohne Modifikatoren tippen</LevelComment>
+   <NewCharacters>Ebene 1</NewCharacters>
+   <Line>^1234567890-'</Line>
+   <Line>xvlcwkhgfqß~</Line>
+   <Line>uiaeosnrtdy</Line>
+   <Line>üöäpzbm,.j</Line>
+  </Level>
+  <Level>
+   <LevelComment>nun muss man Shift bzw. Groß drücken</LevelComment>
+   <NewCharacters>Ebene 2</NewCharacters>
+   <Line>ˇ°№§»«$€„“”–`</Line>
+   <Line>XVLCWKHGFQẞ¯</Line>
+   <Line>UIAEOSNRTDY</Line>
+   <Line>ÜÖÄPZBM,…J</Line>
+  </Level>
+  <Level>
+   <LevelComment>diese Zeichen sind auf der 3. Ebene mit Mod3 bzw. M3 erreichbar</LevelComment>
+   <NewCharacters>Ebene 3</NewCharacters>
+   <Line>˘¹²³›‹£¢‚‘’—¸</Line>
+   <Line>@_[]^!&lt;>=&amp;ſ&quot;</Line>
+   <Line>\/{}*?()-:</Line>
+   <Line>#$|~`+%'&quot;;</Line>
+  </Level>
+  <Level>
+   <LevelComment>diese Zeichen sind mit Shift+Mod3 erreichbar</LevelComment>
+   <NewCharacters>Ebene 4</NewCharacters>
+   <Line>˘♀⚥♂¤¥­˛</Line>
+   <Line>ξvλχwκψγφɸς˝</Line>
+   <Line>uιαεωσνρτδυ</Line>
+   <Line>ηπζβµϱθϑ</Line>
+  </Level>
+  <Level>
+   <LevelComment>mittels Mod5 erreicht man diese Zeichen</LevelComment>
+   <NewCharacters>Ebene 5</NewCharacters>
+   <Line>•‣/*-‑˙</Line>
+   <Line>¡789+ə</Line>
+   <Line>¿456,þ</Line>
+   <Line>123.</Line>
+   <Line>0</Line>
+  </Level>
+  <Level>
+   <LevelComment>Shift+Mod5 ergibt diese Zeichen</LevelComment>
+   <NewCharacters>Ebene 6</NewCharacters>
+   <Line>⇒⇔¬∃∀∨∧°</Line>
+   <Line>ΞΛΨΓΦ∂Ə</Line>
+   <Line>ΣΔÞ</Line>
+   <Line>Ω∞∫√Θ∇</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Großbuchstaben</NewCharacters>
+   <Line>XVLCWKHGFQ</Line>
+   <Line>UIAEOSNRTDY</Line>
+   <Line>ÜÖÄPZBM,J</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>
