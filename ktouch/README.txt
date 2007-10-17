@@ -12,3 +12,11 @@ oder äquivalentes (je nach Betriebssystem) kopiert werden und kann dann in
 KTouch über das Menü
     Einstellungen --> Tastaturbelegungen
 ausgewählt werden.
+
+=== Dateien – welche für was? ===
+de.neo2.keyboard      – zeigt die Belegung der 1. Ebene an
+de.neo2.mod3.keyboard – zeigt die Belegung der 3. Ebene an
+de.neo2.mod5.keyboard – zeigt die Belegung der 5. Ebene an
+german.neo.ktouch.xml – Trainingslektion speziell für NEO (verbesserungswürdig)
+neo2-test.ktouch.xml  – Test-Trainingslektion um alle NEO-Zeichen zu testen
+
