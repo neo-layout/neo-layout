@@ -1,7 +1,7 @@
 
 // based on a keyboard map from an 'xkb/symbols/de' file
 //
-// $XKeyboardConfig: xkeyboard-config/symbols/de,v 1.17 2007/09/02 17:42:07 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/de,v 1.17 2007/07/15 22:12:12 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/de,v 1.6 2003/09/08 13:12:51 pascal Exp $
 
 default
@@ -14,7 +14,17 @@ xkb_symbols "basic" {
     key <AE02>	{ [         2,   quotedbl,  twosuperior,    oneeighth ]	};
     key <AE03>	{ [         3,    section, threesuperior,    sterling ]	};
     key <AE04>	{ [         4,     dollar,   onequarter,     currency ]	};
-    key <AE11>	{ [    ssharp,   question,    backslash, questiondown ]	};
+
+    key <AE11> {type[Group1]="FOUR_LEVEL_PLUS_LOCK",  symbols[Group1]=
+                  [ssharp, question, backslash, questiondown, 0x1001E9E ]};
+// The unicode capital letter sharp s U+1E9E is transformed to "SS"
+// to match the rules for capitalizing sharp s in german.
+// If the capital sharp s is needed, delete the line
+// starting with <U1E9C> from /usr/share/X11/locale/iso8859-15/Compose.
+// If both doubled S and capital sharp s are needed, use  0x1001E9E
+// for capital sharp s and some free unicode codepoint like 0x1001E9C
+// for doubled S. Don`t forget to change this in the Compose file, too.
+
     key <AE12>	{ [dead_acute, dead_grave, dead_cedilla,  dead_ogonek ]	};
 
     key <AD03>	{ [         e,          E,     EuroSign,     EuroSign ]	};
