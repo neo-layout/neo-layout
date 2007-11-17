@@ -66,8 +66,8 @@ keycode 51 = numbersign apostrophe numbersign apostrophe grave dead_breve
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 94 = less greater less greater guillemotleft guillemotright
-keycode 52 = odiaeresis Odiaeresis odiaeresis Odiaeresis oe OE
-keycode 53 = udiaeresis Udiaeresis udiaeresis Udiaeresis apostrophe asciitilde
+keycode 52 = udiaeresis Udiaeresis udiaeresis Udiaeresis oe OE
+keycode 53 = odiaeresis Odiaeresis odiaeresis Odiaeresis apostrophe asciitilde
 keycode 54 = adiaeresis Adiaeresis adiaeresis Adiaeresis ae AE
 keycode 55 = p P p P thorn THORN
 keycode 56 = z Z z Z Greek_zeta Greek_ZETA
