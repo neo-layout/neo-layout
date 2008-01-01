@@ -30,7 +30,7 @@ Antwort von Nora:
 Den dead_stroke sollte man wieder einkommentieren, leider funktioniert das noch
 nicht auf älteren Systemen (z. B. Debian 3.x). Und außerdem bewirkt er leider
 sowieso noch gar nichts.
-Siehe eigene Ergänzungen zu X.org im Verzeichnis „Weiteres“.
+Siehe eigene Ergänzungen zu X.org in „Compose“ und „Readme.Compose“.
 
 == .kmap? ==
 neuerdings soll man mit dieser Datei auch die Belegung in der Konsole ändern
