@@ -4037,15 +4037,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.57174465"
-     inkscape:cx="742.7196"
-     inkscape:cy="241.21431"
+     inkscape:zoom="0.68197822"
+     inkscape:cx="680.37363"
+     inkscape:cy="241.2143"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     inkscape:window-width="872"
-     inkscape:window-height="625"
-     inkscape:window-x="52"
-     inkscape:window-y="14" />
+     inkscape:window-width="1022"
+     inkscape:window-height="730"
+     inkscape:window-x="2"
+     inkscape:window-y="2" />
   <metadata
      id="metadata7636">
     <rdf:RDF>
@@ -6661,10 +6661,10 @@
        id="text18018"
        style="font-size:48px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
        y="394.61682"
-       x="312.47653"><tspan
+       x="294.88065"><tspan
          id="tspan18020"
          y="394.61682"
-         x="327.47653">.</tspan></text>
+         x="309.88065">…</tspan></text>
     <text
        xml:space="preserve"
        id="text18022"
@@ -6734,7 +6734,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
        x="-617.62347"
        y="296.34088"
        id="text6626"
@@ -6745,7 +6745,7 @@
          y="296.34088">Mod3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
        x="553.47302"
        y="295.59048"
        id="text6632"
@@ -6756,7 +6756,7 @@
          y="295.59048">M3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
        x="-516.67944"
        y="392.30133"
        id="text6636"
@@ -6767,7 +6767,7 @@
          y="392.30133">M5</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
        x="385.00555"
        y="487.76434"
        id="text6640"
@@ -6776,5 +6776,63 @@
          id="tspan6642"
          x="385.00555"
          y="487.76434">Mod5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
+       x="-620.75592"
+       y="392.98398"
+       id="text3132"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3134"
+         x="-620.75592"
+         y="392.98398">⇧</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu LGC Sans"
+       x="518.64215"
+       y="392.98398"
+       id="text3136"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         x="518.64215"
+         y="392.98398"
+         id="tspan3140">⇧</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text986"
+       style="font-size:48px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       y="105.92035"
+       x="-250.8217"><tspan
+         id="tspan988"
+         y="105.92035"
+         x="-250.8217">»</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text3140"
+       style="font-size:48px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       y="119.91261"
+       x="-160.74652"><tspan
+         id="tspan3142"
+         y="105.92035"
+         x="-160.74652">«</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text3144"
+       style="font-size:48px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       y="83.270844"
+       x="114.67629"><tspan
+         id="tspan3146"
+         y="105.92035"
+         x="114.67629">„</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text3148"
+       style="font-size:48px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       y="69.395844"
+       x="211.03859"><tspan
+         id="tspan3150"
+         y="105.92035"
+         x="211.03859">“</tspan></text>
   </g>
 </svg>
