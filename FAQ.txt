@@ -411,6 +411,20 @@ die mit der Unicode()-Funktion eingefügt werden, gar nicht.
 
 --------------------------------------------------------------------------------
 
+F: Bei stark ausgelastetem Rechner mit Windows XP wird der Eingabepuffer
+manchmal falschherum abgearbeitet, so dass die Zeichen eines Wortes rückwärts
+erscheinen. Wenn man zu schnell tippt werden einzelne Zeichen manchmal auch
+garnicht ersetzt.
+
+A: Ein bekanntes Problem des AHK-Treibers. Es gibt zwei mehr oder weniger gute
+Wege, dieses Problem zu umgehen.
+  1. AHK auf eine höhere Priorität zu setzen. So richtig rund läufts aber
+     dennoch nicht immer.
+  2. Scheinbar etwas besser: Den Prozess des eingabe-erwartenden Programms
+     runtersetzen, nicht AHK hoch. Funktioniert angeblich zuverlässiger.
+
+--------------------------------------------------------------------------------
+
 F: Unter Windows Vista lässt sich die MSKLC-Variante nicht installieren. Wieso?
 
 A: 1. Benutze die Autohotkey-Variante.
