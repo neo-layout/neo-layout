@@ -403,6 +403,14 @@ ein »Apfel« + »c« nötig.
 2.3 Windows
 --------------------------------------------------------------------------------
 
+F: Unter Windows Vista erscheinen einige Zeichen nicht, hauptsächlich die
+exotischen Zeichen. Wieso?
+
+A: Dies tritt nur beim AHK-Treiber auf. Dort funktionieren sämtliche Zeichen,
+die mit der Unicode()-Funktion eingefügt werden, gar nicht.
+
+--------------------------------------------------------------------------------
+
 F: Unter Windows Vista lässt sich die MSKLC-Variante nicht installieren. Wieso?
 
 A: 1. Benutze die Autohotkey-Variante.
