@@ -1,9 +1,10 @@
 /*
     Titel:        NEO 2.0 beta Autohotkey-Treiber
-    Version:      0.08 beta
-    Datum:        29.06.2007
-    Basiert auf:  neo20.ahk und neo20-remap.ahk vom 25.05.2007
-    
+    Version:      0.09 beta
+    Datum:        10.01.2008
+    Autor:        Stefan Mayer <stm@neo-layout.org>
+    Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
+        
     TODO:         - ausgiebig testen...
                   - Men¸ des Tasksymbols
                   - Bessere Lˆsung f¸r das leeren von PriorDeadKey finden, damit die Sondertasten
@@ -13,12 +14,18 @@
                     verwendet wird. Bei anderen Tasten muss CapsLock in der ersten und zweiten Ebene
                     explizit abgefragt werden.
                     (L‰sst sich das elegant in eine Funktion auslagern?)
+                |------------------|
+				    | - Compose-Taste  |
+                |------------------|
     Ideen:        - DeadKeys tot machen
                   - Symbol ‰ndern (Neo-Logo abwarten)
                   - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+	 CHANGES:      - SUPERSCRIPT von 0 bis 9 sowie (auf Nummernblock) + und -
+                  - Zahlenreihe: Entfernt: Br¸che
+                                 Hinzugef¸gt: Geschlechts-Piktogramme, Listings-Zeichen
 */
 
-; aus Nora's script kopiert:
+; aus Noras script kopiert:
 #usehook on
 #singleinstance force
 #LTrim 
@@ -162,7 +169,7 @@ return
    else if Ebene = 2
       send ∞
    else if Ebene = 4
-      send º
+      Unicode("‚ôÄ") ; Piktogramm weiblich
    else if Ebene = 5
       Unicode("‚Ä¢") ; bullet
    PriorDeadKey := ""
@@ -178,9 +185,11 @@ return
          send {blind}2      
    }
    else if Ebene = 2
-      send ∂
+      Unicode("‚Ññ") ; numero
    else if Ebene = 4
-      send Ω
+      Unicode("‚ö•") ; Piktogramm Zwitter
+   else if Ebene = 5
+      Unicode("‚Ä£") ; aufzaehlungspfeil
    PriorDeadKey := ""
 return
 
@@ -196,16 +205,19 @@ return
    else if Ebene = 2
       send ß
    else if Ebene = 4
-      send æ
-   else if Ebene = 5
-      Unicode("‚Öú") ; 3/8
+      Unicode("‚ôÇ") ; Piktogramm m‰nnlich
    PriorDeadKey := ""
 return
 
 *4::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}4
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Å¥")
+      Else
+         send {blind}4
+	}
    else if Ebene = 2
       send ª
    else if Ebene = 3
@@ -220,13 +232,16 @@ return
 *5::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}5
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Åµ")
+      Else
+         send {blind}5
+	}
    else if Ebene = 2
       send ´
    else if Ebene = 3
       send ã
-   else if Ebene = 5
-      Unicode("‚Öù") ; 5/8
    else if Ebene = 6
       Unicode("‚áí") ; Implikation
    PriorDeadKey := ""
@@ -235,7 +250,12 @@ return
 *6::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}6
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Å∂")
+      Else
+         send {blind}6
+	}
    else if Ebene = 2
       send $
    else if Ebene = 3
@@ -250,15 +270,18 @@ return
 *7::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}7
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Å∑")
+      Else
+         send {blind}7
+	}
    else if Ebene = 2
       send Ä
    else if Ebene = 3
       send ¢
    else if Ebene = 4
       send •
-   else if Ebene = 5
-      Unicode("‚Öû") ; 7/8
    else if Ebene = 6
       Send ¨
    PriorDeadKey := ""
@@ -267,7 +290,12 @@ return
 *8::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}8
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Å∏")
+      Else
+         send {blind}8
+	}
    else if Ebene = 2
       send Ñ
    else if Ebene = 3
@@ -282,7 +310,12 @@ return
 *9::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}9
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Åπ")
+      Else
+         send {blind}9
+	}
    else if Ebene = 2
       send ì
    else if Ebene = 3
@@ -297,7 +330,12 @@ return
 *0::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}0
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Å∞")
+      Else
+         send {blind}0
+	}
    else if Ebene = 2
       send î
    else if Ebene = 3
@@ -317,6 +355,10 @@ return
       Unicode("‚Äì") ; Ged
    else if Ebene = 3
       Unicode("‚Äî")
+   else if Ebene = 4
+      Unicode("‚ïå")
+   else if Ebene = 5
+      Unicode("‚Äë")
    else if Ebene = 6
       Unicode("‚àß") ; logisch und
    PriorDeadKey := ""
@@ -373,6 +415,8 @@ return
       send @
    else if Ebene = 4
       Unicode("Œæ") ;xi
+   else if Ebene = 5
+      send @         ; Redundanz
    else if Ebene = 6
       Unicode("Œû")  ; Xi
    PriorDeadKey := ""
@@ -548,8 +592,6 @@ return
       Unicode("Œ∫") ;kappa
    else if Ebene = 5
       Send °
-   else if Ebene = 6
-      Send ©
    PriorDeadKey := ""
 return
 
@@ -591,7 +633,7 @@ return
    else if Ebene = 5
       Send 7
    else if Ebene = 6
-      Unicode("Œ®")  ; Phi
+      Unicode("Œ®")  ; Psi
    PriorDeadKey := ""
 return
 
@@ -686,7 +728,7 @@ return
    else if Ebene = 5
       Send 9
    else if Ebene = 6
-      Unicode("Œ¶")  ; Psi
+      Unicode("Œ¶")  ; Phi
    PriorDeadKey := ""
 return
 
@@ -698,10 +740,12 @@ return
       sendinput {blind}Q
    else if Ebene = 3
       send {&}
+   else if Ebene = 4
+      Unicode("…∏")  ; Varphi?
    else if Ebene = 5
       Send {+}
    else if Ebene = 6
-      Unicode("‚àß") ; logisches Und
+      Unicode("‚àÇ") ; "verdrehtes e"
    PriorDeadKey := ""
 return
 
@@ -726,9 +770,9 @@ return
          Unicode("·∫û") ; versal-ﬂ
       }
    else if Ebene = 3
-      Unicode("ƒ≥")   ; ij
+      Unicode("≈ø")   ; langes s
    else if Ebene = 4
-      Unicode("ƒ≤") ;IJ
+      Unicode("œÇ") 
    else if Ebene = 5
       Unicode("…ô") ; schwa
    else if Ebene = 6
@@ -1164,8 +1208,6 @@ return
       Unicode("ŒΩ") ;nu
    else if Ebene = 5
       Send 4
-   else if Ebene = 6
-      Unicode("‚Ññ") ; No
    PriorDeadKey := ""
 return
 
@@ -1207,8 +1249,6 @@ return
       Unicode("œÅ") ;rho
    else if Ebene = 5
       Send 5
-   else if Ebene = 6
-      Unicode("¬Æ")  ; (R)
    PriorDeadKey := ""
 return
 
@@ -1250,8 +1290,6 @@ return
       Unicode("œÑ") ;tau
    else if Ebene = 5
       Send 6
-   else if Ebene = 6
-      Unicode("‚Ñ¢") ; TM
    PriorDeadKey := ""
 return
 
@@ -1321,8 +1359,6 @@ return
       Else
          sendinput {blind}Y
    }
-   else if Ebene = 3
-      Unicode("‚Äû")  ; Ñ
    else if Ebene = 4
       Unicode("œÖ") ;upsilon
    else if Ebene = 5
@@ -1518,7 +1554,7 @@ return
    else if Ebene = 3
       send '
    else if Ebene = 4
-      Unicode("œë") ;vartheta?
+      Unicode("œ±") ; varsigma
    else if Ebene = 5
       Send 2
    else if Ebene = 6
@@ -1562,6 +1598,8 @@ return
    }
    else if Ebene = 3
       send `;
+   else if Ebene = 4
+      Unicode("œë") ; vartheta
    else if Ebene = 5
       Send .
    else if Ebene = 6
@@ -1603,16 +1641,26 @@ return
 *NumpadSub::
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
-      send {blind}{NumpadSub}
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Åª")
+      Else
+         send {blind}{NumpadSub}
+   }
    else if Ebene = 3
-      send -
+      Unicode("‚àí") ; echtes minus
    PriorDeadKey := ""
 return
 
 *NumpadAdd::
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
-      send {blind}{NumpadAdd}
+   {
+      If (PriorDeadKey = "c1")          ; circumflex
+         BSUnicode("‚Å∫")
+      Else
+         send {blind}{NumpadAdd}
+   }
    else if Ebene = 3
       send ±
    else if ( (Ebene = 4) or (Ebene = 5) )
@@ -1718,7 +1766,9 @@ return
       send {blind}{Numpad1}
    else if Ebene = 2
       send {NumpadEnd}
-   else if ( (Ebene = 4) or (Ebene = 5) )
+   else if Ebene = 3
+      Unicode("‚áã")
+      else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â§")   ; leq
    PriorDeadKey := ""
 return
@@ -1742,6 +1792,8 @@ return
       send {blind}{Numpad3}
    else if Ebene = 2
       send {NumpadPgDn}
+   else if Ebene = 3
+      Unicode("‚áå")
    else if ( (Ebene = 4) or (Ebene = 5) )
       Unicode("‚â•")  ; geq
    PriorDeadKey := ""
