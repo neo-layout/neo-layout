@@ -210,7 +210,7 @@ xkb_symbols "sundeadkeys" {
 //      lucky (at) zankt (dot) net
 //      Benjamin (dot) Kellermann (at) gmx (dot) de
 // Other Questions:
-//   neo_layout (at) yahoogroups (dot) de
+//   mailinglist (at) neo-layout (dot) org
 
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo" {
