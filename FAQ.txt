@@ -348,6 +348,20 @@ Fehler sollte man wohl mal den Gnome-Entwicklern melden.
 
 --------------------------------------------------------------------------------
 
+F: Ich kann unter Xterm kein großes W und kein großes Ä eingeben. Statt dem W
+wird immer etwas eingefügt, was ich vorher mal markiert hatte.
+
+A: Ja dieses Problem tritt nur mit Xterm auf. Umgehen kann man das Problem,
+wenn man die Zeile
+	keycode 28 = w W asciicircum w Insert
+zu
+	keycode 28 = w W asciicircum w
+ändert. Man kann dann allerdings nicht mehr über Mod5+w einfügen.
+
+Ähnlich müsste die Lösung für das große Ä sein.
+
+--------------------------------------------------------------------------------
+
 F: Mein »Mod3« geht nicht als Modifier für die 5. Ebene.
 
 A: Deaktiviere die Option „Both Alt keys together change Group” 
