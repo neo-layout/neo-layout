@@ -153,3 +153,24 @@ keycode 108 = KP_Enter    KP_Enter    notequal   U2248
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 90 = KP_Insert    KP_0        percent    U2030
 keycode 91 = KP_Delete    KP_Decimal  period     comma
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! generalisierter Lock
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!keycode 115 = ISO_Lock
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! nur Shift_Lock
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 50 = Shift_L ISO_Lock
+keycode 62 = Shift_R ISO_Lock
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Mat/Nat Ebene
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 44 = n N parenleft Greek_nu    4 4 U2207
+
+keycode 51 = Mode_switch Mode_switch ISO_Level3_Shift ISO_Level3_Shift
+keycode 66 = Mode_switch Mode_switch ISO_Level3_Shift ISO_Level3_Shift
+
+keycode 94 = ISO_Level3_Shift ISO_Level3_Shift Mode_switch Mode_switch
+keycode 113 = ISO_Level3_Shift ISO_Level3_Shift Mode_switch Mode_switch
