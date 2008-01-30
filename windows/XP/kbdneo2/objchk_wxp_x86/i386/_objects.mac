@@ -1,0 +1,18 @@
+
+
+386_OBJECTS=\
+ $(OBJ_PATH)\$O\kbdneo2.obj \
+
+
+_RES_FILE=$(OBJ_PATH)\$O\kbdneo2.res
+
+
+
+# lowercased
+BASEDIR=c:\winddk\6001.17051
+OBJECT_ROOT=c:\winddk\6001.17051
+MAKEDIR_LOWERCASE=c:\winddk\6001.17051\src\input\layout\all_kbds\kbdneo2
+MAKEDIR_RELATIVE_TO_BASEDIR=src\input\layout\all_kbds\kbdneo2
+OBJ_PATH=c:\winddk\6001.17051\src\input\layout\all_kbds\kbdneo2
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0
