@@ -31,3 +31,11 @@ $@
 {$
 #{ → Ruby
 $* $< $( %. ${  → Makefiles
+
+5. Ebene
+========
+⇥↲ (tab completion)
+⇡↲ (shell history)
+⇢↲ ⇣↲ (menuauswahl)
+⇡↲⇥ ⇡⇢↲ ⇡⇢⇥ ⇡⇢↲ ⇣↲⇥ ⇣⇢↲ ⇣⇢⇥ ⇣⇢↲ (Formulareingabe)
+
