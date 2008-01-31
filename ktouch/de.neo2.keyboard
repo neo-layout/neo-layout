@@ -27,11 +27,11 @@ FingerKey		100		D		108		20
 ControlKey		260		Tab		0		10		15		10
 ControlKey		13		Enter		138		10		12		20
 ControlKey		257		Shift		123		30		27		10
-ControlKey		264		M5		120		40		15		10
+ControlKey		264		M5		100		40		15		10
 ControlKey		265		Strg		135		40		15		10
-ControlKey		263		Alt		15		40		15		10
+ControlKey		263		Alt		25		40		15		10
 ControlKey		262		Strg		0		40		15		10
-ControlKey		32		Leertaste	30		40		90		10
+ControlKey		32		Leertaste	40		40		60		10
 ControlKey		258		Shift		0		30		13		10
 ControlKey		259		M3		0		20		18		10
 ControlKey		8		BackSpace	130		0		20		10
