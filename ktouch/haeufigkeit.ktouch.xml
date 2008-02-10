@@ -1,0 +1,29 @@
+<KTouchLecture>
+ <Title>Häufigkeitsanalyse</Title>
+ <FontSuggestions>Monospace</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>die Häufigsten Buchstaben</NewCharacters>
+   <Line>enis ratd hulc gmob wfkz pvßj yxq</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Bigramme</NewCharacters>
+   <Line>er en ch de ei in te ie ge nd un be</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Trigramme</NewCharacters>
+   <Line>sch der ich ein che die und ung eit</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Sonderzeichenbigramme</NewCharacters>
+   <Line>~/ := -> => &lt;= >= != /* */ ^{ ^2 ^3</Line>
+   <Line>/. &lt;? ?> =&quot; !&quot; ?&quot; (&quot; &quot;) (' ') ); ,&quot; &quot;,</Line>
+   <Line>&amp;> =` }[ ]{ _{ += *= /= -=</Line>
+   <Line>$@ {$ #{ $* $&lt; $( %. ${</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Sonderzeichentrigramme</NewCharacters>
+   <Line>&lt;!-- --> :-) ;-)</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>
