@@ -3,6 +3,9 @@ ACHTUNG:
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
 
+Im Browser (Firefox) muss man unter Ansicht, Zeichenkodierung auf Unicode
+(UTF-8) stellen.
+
 Unter Windows ist in der Grundinstallation leider keine dicktengleiche Schrift 
 installiert, die befriedigend viele Unicodezeichen beinhaltet.
 Abhilfe schafft z. B. DejaVu Sans Mono:
