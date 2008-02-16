@@ -3,6 +3,9 @@ ACHTUNG:
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
 
+Im Browser (Firefox) muss man unter Ansicht, Zeichenkodierung auf Unicode
+(UTF-8) stellen.
+
 Unter Windows ist in der Grundinstallation leider keine dicktengleiche Schrift 
 installiert, die befriedigend viele Unicodezeichen beinhaltet.
 Abhilfe schafft z. B. DejaVu Sans Mono:
@@ -107,13 +110,13 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 == Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ - .│° ♀ ¬│№ ⚥ ∨│§ ♂ ∧│»   ⊥│«   ∡│$    ∥│€ ϰ ∉│„   ∄│“   ∦│”   ∅│– ‑ ╌│` ˛ ˚│Backspace│
+│ˇ - .│° ♀ ¬│№ ⚥ ∨│§ ♂ ∧│»   ⊥│«   ∡│$   ∥│€ ϰ ∉│„   ∄│“   ∦│”   ∅│– ‑ ╌│` ˛ ˚│Backspace│
 │^ ˘ ·│1 ¹ •│2 ² ‣│3 ³  │4 › ⇞│5 ‹  │6 £ ¤│7 ¢ ¥│8 ‚ /│9 ‘ *│0 ’ -│- —  │´ ¸ ˙│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab  ⇤ │X ξ Ξ│V ϵ ≙│L λ Λ│C χ ℂ│W ω Ω│K κ √│H ψ Ψ│G γ Γ│F ɸ Φ│Q φ ℚ│ẞ ς  │ˉ ˝ ˏ│      │
+│ Tab  ⇤ │X ξ Ξ│V ϵ ≙│L λ Λ│C χ ℂ│W ω Ω│K κ √│H ψ Ψ│G γ Γ│F ɸ Φ│Q φ ℚ│ẞ ς ∘│ˉ ˝ ˏ│      │
 │      ⇥ │x @  │v _ ⌫│l [ ⇡│c ] ⇥│w ^ ⎀│k ! ¡│h < 7│g > 8│f = 9│q & +│ß ſ  │~ ¨ /│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3      │U   ∮│I ι ∫│A α ∀│E ε ∃│O o ∘│S σ Σ│N ν ℕ│R ρ ℝ│T τ ∂│D δ Δ│Y υ ∇│↘3   │  ↲  │
+│ ↘3      │U   ∮│I ι ∫│A α ∀│E ε ∃│O o ∈│S σ Σ│N ν ℕ│R ρ ℝ│T τ ∂│D δ Δ│Y υ ∇│↘3   │  ↲  │
 │    ⇬  ♫ │u \ ⇱│i / ⇠│a { ⇣│e } ⇢│o * ⇲│s ? ¿│n ( 4│r ) 5│t - 6│d : ,│y    │  ⇬ ♫│     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
 │Shift │↙5 ♫ │Ü   ∝│Ö   ℑ│Ä η ℜ│P π Π│Z ζ ℤ│B β ⇒│M µ ⇔│  ϱ ⇐│… θ Θ│J ϑ ≡│  Shift ⇧     │
@@ -137,7 +140,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │ 7 ≪ │ 8 ∩ │ 9 ≫ │     │
 │ ⇱ v⃗ │ ⇡ ↑ │ ⇞ ⊗ │   ∓ │
 ├─────┼─────┼─────┤     │
-│ 4 ⊂ │ 5 ∈ │ 6 ⊃ │ + ± │
+│ 4 ⊂ │ 5 ∋ │ 6 ⊃ │ + ± │
 │ ⇠ ← │ € ∞ │ ⇢ → │     │
 ├─────┼─────┼─────┼─────┤
 │ 1 ≤ │ 2 ∪ │ 3 ≥ │   ≈ │
@@ -158,3 +161,58 @@ alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
+
+
+== Mat-/Nat-Ebene – Haupttastatur ==
+Ξ … Xi, griechischer Majuskel (U039E)
+≙ … entspricht (U2259)
+Λ … Lambda, griechischer Majuskel (U039B)
+ℂ … Menge der komplexen Zahlen (U2102)
+Ω … Omega, griechischer Majuskel (U03A9)
+√ … Wurzel aus (U221A)
+Ψ … Psi, griechischer Majuskel (U03A8)
+Γ … Gamma, griechischer Majuskel (U0393)
+Φ … Phi, griechischer Majuskel (U03A6)
+ℚ … Menge der rationalen Zahlen (U211A)
+∘ … Verknüpfungsoperator (U2218)
+∮ … Integral über eine geschlossene Kurve (U222E)
+∫ … Integral (U222B)
+∀ … Allquantor ; für alle (U2200)
+∃ … Existenzquantor ; es gibt (U2203)
+∈ … Element von (U2208)
+Σ … Sigma, griechischer Majuskel (U03A3)
+ℕ … Menge der natürlichen Zahlen (U2115)
+ℝ … Menge der reellen Zahlen (U211D)
+∂ … partielle Ableitung (U2202)
+Δ … Delta, griechischer Majuskel (U0394)
+∇ … Nablaoperator (Gradient, Divergenz, Rotation) (U2207)
+∝ … proportional zu (U221D)
+ℑ … Imaginärteil einer komplexen Zahl (U2111)
+ℜ … Realteil einer komplexen Zahl (U211C)
+Π … Pi, griechischer Majuskel (U03A0)
+ℤ … Menge der ganzen Zahlen (U2124)
+⇒ … Implikation ; daraus folgt ; hinreichend für (U21D2)
+⇔ … Äquivalenzzeichen (U21D4)
+⇐ … notwendig für ; nur dann, wenn (U21D0)
+Θ … Theta, griechischer Majuskel (U0398)
+≡ … identisch (U2261)
+
+== Mat-/Nat-Ebene – Zahlenblock ==
+v⃗ … Vektorpfeil, kombinierendes Zeichen, lässt sich rückwirkend(!) auf jedes Zeichen setzen (U20D7)
+⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
+∞ … unendlich (U221E)
+∋ … enthält das Element (U220B)
+
+== Hinweise zu Doppelbelegungen in Unicode ==
+Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.
+• Δ für Differenz oder Fehler
+• Θ für homöopathische Urtinktur
+• Γ für Gammafunktion
+
+Einige finden sich darum an mehreren Stellen im Unicode, um (eventuelle) Unterschiede deutliche machen zu können. Zur Platzersparnis haben wir stets eines (das einfachste und allgemeinste) Zeichen aufgenommen:
+• Ω (U03A9) ; Einheit des Widerstandes Ohm (U2126)
+• Σ (U03A3) ; Summenzeichen (U2211)
+• Δ (U0394) ; Laplaceoperator (2206) ; Dreieck, symmetrische Differenz (25B3)
+• ∇ (U2207) ; Dreieck (U25BD)
+• Π (U03A0) ; Produktzeichen ∏ (U220F)
+• µ (U03BC) ; SI-Vorsilbe micro (U00B5)
