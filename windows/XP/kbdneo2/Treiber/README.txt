@@ -1,0 +1,1 @@
+Zur Installation muss zur Zeit noch die MSKLC-Variante installiert werden, anschließend muss die NEO20.dll-Datei im Ordner \WINDOWS\system32 mit der hier vorhandenen Datei überschrieben werden.
