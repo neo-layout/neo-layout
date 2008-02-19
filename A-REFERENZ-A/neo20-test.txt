@@ -13,12 +13,12 @@ http://dejavu.sourceforge.net/
 -------------------------------------------------------------------------------
 
 == Legende ==
-┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Shift+Mod3)
+┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod3+Shift)
 │2 4 6│ 2 … 2. Ebene (Shift)        │ 5 … 5. Ebene (Mod5)
-│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Shift+Mod5)
+│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod5)
 └─────┘
 
-Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Mod5.
+Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Tab.
 Beispiel:
 »Compose« »Compose loslassen« »o« »c« = ©
 
