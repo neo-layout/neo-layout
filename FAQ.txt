@@ -348,8 +348,9 @@ Fehler sollte man wohl mal den Gnome-Entwicklern melden.
 
 --------------------------------------------------------------------------------
 
-F: Ich kann unter Xterm kein großes W und kein großes Ä eingeben. Statt dem W
-wird immer etwas eingefügt, was ich vorher mal markiert hatte.
+F: Ich kann unter Xterm kein großes W und kein großes Ä eingeben. Außerdem
+kein öffnendes deutsches Guillemet mit Shift+4. Statt dem W wird immer etwas
+eingefügt, was ich vorher mal markiert hatte. Shift+4 wirkt wie Bild-hoch.
 
 A: Ja dieses Problem tritt nur mit Xterm auf. Umgehen kann man das Problem,
 wenn man die Zeile
@@ -358,7 +359,9 @@ zu
 	keycode 28 = w W asciicircum w
 ändert. Man kann dann allerdings nicht mehr über Mod5+w einfügen.
 
-Ähnlich müsste die Lösung für das große Ä sein.
+Ähnlich müsste die Lösung für das große Ä sein. Für das Guillemet gibt es
+leider keine Lösung. Hier bedarf es einer Testreihe, um den Fehler
+einzugrenzen.
 
 --------------------------------------------------------------------------------
 
