@@ -12,11 +12,22 @@ Abhilfe schafft z. B. DejaVu Sans Mono:
 http://dejavu.sourceforge.net/
 -------------------------------------------------------------------------------
 
-== Symbole ==                            == Legende ==
-⇞⇟   … Bild auf/Bild ab                  ┌─────┐ 1 … 1. Ebene │ 4 … 4. Ebene
-⇱⇲   … Pos1/Ende                         │2 4 6│ 2 … 2. Ebene │ 5 … 5. Ebene
-⌫ ⌦  … Backspace/Entf                    │1 3 5│ 3 … 3. Ebene │ 6 … 6. Ebene
-⌧    … Esc                               └─────┘
+
+== Legende ==
+┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Shift+Mod3)
+│2 4 6│ 2 … 2. Ebene (Shift)        │ 5 … 5. Ebene (Mod5)
+│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Shift+Mod5)
+└─────┘
+
+Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Mod5.
+Beispiel:
+»Compose« »Compose loslassen« »o« »c« = ©
+
+== Symbole ==                            
+⇞⇟   … Bild auf/Bild ab                  
+⇱⇲   … Pos1/Ende                         
+⌫ ⌦  … Backspace/Entf                    
+⌧    … Esc                               
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
 ╌    … Weicher Trennstrich (U+00AD SOFT HYPHEN)
