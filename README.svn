@@ -1,0 +1,85 @@
+------------------------------------------------------------------------------
+Diese Datei beschreibt den Umgang mit dem Subversion Kommandozeilenclient.
+------------------------------------------------------------------------------
+Gliederung
+1. Voraussetzung
+1.1 Was brauche ich?
+1.2 Terminologie
+2. Verschiedene Arbeitsabläufe (Was will ich machen?)
+2.1 Das Repository lokal auf meinem Rechner haben
+2.2 Das Repository auf meinem Rechner auf den neuesten Stand bringen
+2.3 Dateien im Repository ändern
+2.4 Dem Repository neue Dateien hinzufügen
+2.5 Dateien im Repository umbenennen
+2.6 Dateien aus dem Repository löschen
+------------------------------------------------------------------------------
+1. Voraussetzung
+------------------------------------------------------------------------------
+1.1 Was brauche ich?
+
+Benötigt wird das Programm subversion für die Kommandozeile.
+Download: http://svn.tigris.org
+
+Will man auch Dateien im Repostiory ändern, braucht man einen Schreibzugang.
+	→ Ben fragen!
+
+------------------------------------------------------------------------------
+1.2 Terminologie
+
+$REPOSITORY_HOME … Das Verzeichnis in dem das ausgecheckte Repository liegt
+
+------------------------------------------------------------------------------
+2. Was will ich machen?
+------------------------------------------------------------------------------
+2.1 Das Repository lokal auf meinem Rechner haben
+
+Angenommen ich möchte neo in das Verzeichnis „$VERZEICHNIS/$NEO“ runterladen:
+
+  cd $VERZEICHNIS
+  svn checkout https://neo.eigenheimstrasse.de/svn $NEO
+ 
+$REPOSITORY_HOME ist dann $VERZEICHNIS/$NEO
+
+------------------------------------------------------------------------------
+2.2 Das Repository auf meinem Rechner auf den neuesten Stand bringen
+
+  cd $REPOSITORY_HOME
+  svn update
+
+------------------------------------------------------------------------------
+2.3 Dateien im Repository ändern
+
+Einfach die Datei ändern und weiter gehts mit Abschnitt 2.7.
+
+------------------------------------------------------------------------------
+2.4 Dem Repository neue Dateien hinzufügen
+
+Nachdem man die Datei in der lokalen Repositorykopie erstellt hat:
+  svn add $DATEI
+weiter mit Abschnitt 2.7
+
+------------------------------------------------------------------------------
+2.5 Dateien im Repository umbenennen
+
+  svn mv $DATEI_ALT $DATEI_NEU
+weiter mit Abschnitt 2.7
+
+------------------------------------------------------------------------------
+2.6 Dateien aus dem Repository löschen
+
+  svn rm $DATEI
+weiter mit Abschnitt 2.7
+
+------------------------------------------------------------------------------
+2.7 Änderungen ins Repository hochladen
+
+  cd $REPOSITORY_HOME
+  svn commit -m "$ÄNDERUNGSBESCHREIBUNG" --username $USER
+
+Wenn man das Repository mit seinem Nutzernamen ausgecheckt hat, 
+kann „--username $USER“ weggelassen werden.
+Statt auschecken wie in Abschnitt 2.1 beschrieben:
+  cd $VERZEICHNIS_WO_NEO_REIN_SOLL
+  svn checkout https://$USER@neo.eigenheimstrasse.de/svn neo
+
+------------------------------------------------------------------------------
