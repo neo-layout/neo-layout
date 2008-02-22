@@ -82,7 +82,8 @@
 #undef  T29
 #define T29 _EQ(                           OEM_1                     )
 #undef  T2B
-#define T2B _EQ(                           RMENU                     )
+#define T2B _EQ(                           KANA                      ) // Mod 3
+// #define T2B _EQ(                           OEM_ROYA                  )
 #undef  T2C
 #define T2C _EQ(                           OEM_5                     )
 #undef  T2D
@@ -98,8 +99,11 @@
 #undef  T35
 #define T35 _EQ(                           'J'                       )
 #undef  T3A
-#define T3A _EQ(                           RMENU                     )
+#define T3A _EQ(                           KANA                      )// Mod 3
+// #define T3A _EQ(                           OEM_ROYA                  )
 #undef  X38
-#define X38 _EQ(                           KANA                      )
+#define X38 _EQ(                           RMENU                     )// Mod 5
+// #define X38 _EQ(                           OEM_102                     )
 #undef  T56
-#define T56 _EQ(                           KANA                      )
+#define T56 _EQ(                           RMENU                     )// Mod 5
+// #define T56 _EQ(                           OEM_102                     )
