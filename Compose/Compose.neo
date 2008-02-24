@@ -1,5 +1,4 @@
 # Definitions by Neo keyboard layout
-# Version vom 20.02.08 (Pascal)
 <Multi_key> <1> <3>			: "⅓"   U2153 # VULGAR FRACTION ONE THIRD
 <Multi_key> <2> <3>			: "⅔"   U2154 # VULGAR FRACTION TWO THIRDS
 <Multi_key> <1> <5>			: "⅕"   U2155 # VULGAR FRACTION ONE FIFTH
@@ -204,3 +203,12 @@
 <Multi_key> <l> <o> <g>			: "㏒"   U33D2 # SQUARE LOG
 
 <Multi_key> <m> <o> <l>			: "㏖"   U33D6 # SQUARE MOL
+
+<dead_circumflex> <minus>    		: "⁻"   U207B # SUPERSCRIPT MINUS
+<Multi_key> <asciicircum> <minus> 	: "⁻"   U207B # SUPERSCRIPT MINUS
+<dead_circumflex> <KP_Subtract>    	: "⁻"   U207B # SUPERSCRIPT MINUS
+<Multi_key> <asciicircum> <KP_Subtract> : "⁻"   U207B # SUPERSCRIPT MINUS
+<Multi_key> <underscore> <minus> 	: "₋"   U208B # SUBSCRIPT MINUS
+<Multi_key> <underbar> <minus> 		: "₋"   U208B # SUBSCRIPT MINUS
+<Multi_key> <underscore> <KP_Subtract> 	: "₋"   U208B # SUBSCRIPT MINUS
+<Multi_key> <underbar> <KP_Subtract> 	: "₋"   U208B # SUBSCRIPT MINUS
