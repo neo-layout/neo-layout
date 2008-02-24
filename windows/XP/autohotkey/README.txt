@@ -10,6 +10,9 @@ Achtung: Da sich NEO in der Entwicklung befindet, kann es vorkommen, dass die
 exe-Datei gegenüber der Datei neo20-all-in-one.ahk leicht veraltet sein kann.
 Entwickler sollten daher Autohotkey selbst runterladen, wie unten beschrieben.
 
+Um kurzzeitig zu QWERTZ zu wechseln, kann mit Shift+Pause das Skript pausiert
+werden.
+
 Momentan befindet sich in der Testphase, ob die 6. Ebene über Shift+Mod5 oder
 über Mod3+Mod5 angesprochen werden soll (Shift+Mod5 zum Markieren bleibt
 erhalten). Die Datei neo20_mod-test.ahk spricht die 6. Ebene über Mod3+Mod5 an.
@@ -44,7 +47,12 @@ dann nur das Skript neu starten um die Änderungen zu übernehmen.
 == Bekannte Fehler ==
 Der Tabulator macht Probleme mit DeadKeys. Ein DeadKey gefolgt von Tab
 und einer Taste, die mit dem DeadKey ein neues Zeichen ergibt, löscht
-den Tab (Backslash) und sendet die Kombo.
+den Tab (Backslash) und sendet die Kombo. Ebensolches Verhalten zeigt sich 
+bei der Compose-Taste.
+
+Beim Ziffernblock der 5. Ebene funktionieren die DeadKeys nicht, um Zahlen
+hoch- oder tiefzustellen, wenn man auf die 5. Ebene über die AltGr-Taste
+zugreift.
 
 Bisher reagieren nur die Buchstaben der 1. und 2. Ebene richtig auf
 CapsLock (also immer groß schreiben – CapsLock erreicht man unter Neo, wenn 
