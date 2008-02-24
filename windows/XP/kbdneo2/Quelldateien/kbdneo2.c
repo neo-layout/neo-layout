@@ -467,6 +467,23 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
 	DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
 	DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
+	DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),
+	DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
+	DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
+	DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
+	DEADTRANS( L'5'   , L'^'   , 0x2075	, 0x0000),
+	DEADTRANS( L'6'   , L'^'   , 0x2076	, 0x0000),
+	DEADTRANS( L'7'   , L'^'   , 0x2077	, 0x0000),
+	DEADTRANS( L'8'   , L'^'   , 0x2078	, 0x0000),
+	DEADTRANS( L'9'   , L'^'   , 0x2079	, 0x0000),
+	DEADTRANS( L'0'   , L'^'   , 0x2070 , 0x0000),
+	DEADTRANS( L'i'   , L'^'   , 0x2071	, 0x0000),
+	DEADTRANS( L'+'   , L'^'   , 0x207a , 0x0000),
+	DEADTRANS( L'-'   , L'^'   , 0x207b , 0x0000),
+	DEADTRANS( L'='   , L'^'   , 0x207c , 0x0000),
+	DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
+	DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
+	DEADTRANS( L'n'   , L'^'   , 0x207e , 0x0000),
     DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000),
 	
 	DEADTRANS( L'C'   , 0x030c , 0x010c   , 0x0000), //CARON
@@ -520,7 +537,23 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'u'   , 0x0306 , 0x016d   , 0x0000),
 	DEADTRANS( L' '   , 0x0306 , 0x0306   , 0x0000),
 	
-	DEADTRANS( L' '   , 0x0335 , 0x0335   , 0x0000),	//QUERSTRICH
+	DEADTRANS( L'1'   , 0x0335 , 0x2081   , 0x0000),	//QUERSTRICH
+	DEADTRANS( L'2'   , 0x0335 , 0x2082   , 0x0000),
+	DEADTRANS( L'3'   , 0x0335 , 0x2083   , 0x0000),
+	DEADTRANS( L'4'   , 0x0335 , 0x2084   , 0x0000),
+	DEADTRANS( L'5'   , 0x0335 , 0x2085   , 0x0000),
+	DEADTRANS( L'6'   , 0x0335 , 0x2086   , 0x0000),
+	DEADTRANS( L'7'   , 0x0335 , 0x2087   , 0x0000),
+	DEADTRANS( L'8'   , 0x0335 , 0x2088   , 0x0000),
+	DEADTRANS( L'9'   , 0x0335 , 0x2089   , 0x0000),
+	DEADTRANS( L'0'   , 0x0335 , 0x2080   , 0x0000),
+	DEADTRANS( L'+'   , 0x0335 , 0x208a   , 0x0000),
+	DEADTRANS( L'-'   , 0x0335 , 0x208b   , 0x0000),
+	DEADTRANS( L'='   , 0x0335 , 0x208c   , 0x0000),
+	DEADTRANS( L'('   , 0x0335 , 0x208d   , 0x0000),
+	DEADTRANS( L')'   , 0x0335 , 0x208e   , 0x0000),
+	DEADTRANS( L'x'   , 0x0335 , 0x2093   , 0x0000),
+	DEADTRANS( L' '   , 0x0335 , 0x0335   , 0x0000),
 	
 	DEADTRANS( L' '   , 0x00b7 , 0x00b7   , 0x0000),	//DOT_MID
 	
