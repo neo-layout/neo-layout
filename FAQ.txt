@@ -78,7 +78,9 @@ A: Aus 3 Gründen wurde die drei Buchstaben vertauscht:
 F: Warum wurde im Vergleich zur Version 1 von NEO das »ü« und das »ö«
 vertauscht?
 
-A: Wie sich in einer Umfrage¹ ergeben hat, sind 8 Entwickler dafür gewesen.
+A: Nach der Vertauschung liegt das ü genau unter dem u, das ä genau unter dem a.
+Dies ist leicht zu lernen. Alleine das o liegt an einem anderen Platz.
+Wie sich in einer Umfrage¹ ergeben hat, sind 8 Entwickler dafür gewesen.
 Zweien war es egal. Außerdem sind weitere drei Anfänger/Lernende dafür².
 
 ¹ Siehe Mail in der Yahoo-Mailingliste vom 15.10.2007 11:55 von Erik
@@ -108,8 +110,15 @@ eigenen Bedürfnisse anpassen. Dazu einfach auf der Mailingliste fragen.
 F: Wie kann ich „Hoch-2“ oder „Hoch-3“ schreiben? Also die Zeichen ² und ³?
 Das brauche ich für m², cm³ usw.
 
-A: Mit dem toten ^ auf der Taste links neben der 1 und dann die Zahl (also ^1=¹,
-^2=² und ^3=³).
+A: Dazu gibt es 3 Wege:
+ⅰ) Die wichtigen Hochzahlen ¹,² und ³ liegen auf Mod3+1, Mod3+2 und Mod3+3
+ⅱ) Mit dem toten ^ auf der Taste links neben der 1 und dann die Zahl (also ^1=¹,
+ ^2=², ^3=³, ^4=⁴ usw.).
+ⅲ) Mit der Compose-Taste, dem nicht-toten ^ und der Zahl (also Compose+^+1=¹,
+ Compose+^+2=² u.s.w.)
+
+Auch die Zeichen +,-,(,),= sowie die Buchstaben i und n können hochgestellt werden.
+Des Weiteren können über Compose+_ auch Zeichen tiefgestellt werden (Indizes) 
 
 --------------------------------------------------------------------------------
 
@@ -326,17 +335,6 @@ Als Alternative bietet sich an:
   Option "XkbVariant" "neo"
 
 Bei weiteren Fragen bitte auf der Mailingliste melden (siehe erste Frage).
-
---------------------------------------------------------------------------------
-
-F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
-vorgesehen die beiden »Mod3«-Tasten gleichzeitig drücke, dann ändert sich
-überhaupt nichts.
-
-A: Das ist ein Fehler, der auftritt, seitdem die xmodmap-Datei von keysym auf
-keycode umgestellt wurde. Eventuell handelt es sich hierbei um einen Fehler im
-X-Server. Jedoch ist auch ein Missverständnis der Bedienung von xmodmap
-unsererseits noch nicht ausgeschlossen.
 
 --------------------------------------------------------------------------------
 
