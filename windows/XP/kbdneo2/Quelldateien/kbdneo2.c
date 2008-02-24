@@ -477,13 +477,12 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'8'   , L'^'   , 0x2078	, 0x0000),
 	DEADTRANS( L'9'   , L'^'   , 0x2079	, 0x0000),
 	DEADTRANS( L'0'   , L'^'   , 0x2070 , 0x0000),
-	DEADTRANS( L'i'   , L'^'   , 0x2071	, 0x0000),
 	DEADTRANS( L'+'   , L'^'   , 0x207a , 0x0000),
 	DEADTRANS( L'-'   , L'^'   , 0x207b , 0x0000),
 	DEADTRANS( L'='   , L'^'   , 0x207c , 0x0000),
 	DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
 	DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
-	DEADTRANS( L'n'   , L'^'   , 0x207e , 0x0000),
+	DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
     DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000),
 	
 	DEADTRANS( L'C'   , 0x030c , 0x010c   , 0x0000), //CARON
