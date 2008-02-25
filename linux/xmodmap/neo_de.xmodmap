@@ -89,14 +89,14 @@ keycode 49 = dead_circumflex dead_caron dead_breve dead_breve dead_belowdot dead
 keycode 10 = 1 degree         onesuperior   U2640    enfilledcircbullet enfilledcircbullet U00AC
 keycode 11 = 2 numerosign     twosuperior   U26A5    U2023              U2023              U2228
 keycode 12 = 3 section        threesuperior U2642    U25E6              U25E6              U2227
-keycode 13 = 4 guillemotright U203A         U2113    Prior              Prior              U22A5
+keycode 13 = 4 guillemotright U203A         4        Prior              Prior              U22A5
 keycode 14 = 5 guillemotleft  U2039         5        5                  5                  U2221
-keycode 15 = 6 dollar         sterling      6        currency           currency           U2225
+keycode 15 = 6 EuroSign       cent          6        sterling           sterling           U2225
 
-keycode 16 = 7 EuroSign             cent                 U03F0 yen      yen      U2209
-keycode 17 = 8 doublelowquotemark   singlelowquotemark   8     slash    slash    U2204
-keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  9     asterisk asterisk U2226
-keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     minus    minus    U2205
+keycode 16 = 7 dollar               yen                  U03F0 currency currency           U2209
+keycode 17 = 8 doublelowquotemark   singlelowquotemark   8     slash    slash              U2204
+keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  9     asterisk asterisk           U2226
+keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     minus    minus              U2205
 
 keycode 20 = minus      endash     emdash       2011        minus         minus          U00AD
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering dead_abovering
@@ -104,7 +104,7 @@ keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_a
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 24 = x X at           Greek_xi     at        at        U039E
+keycode 24 = x X at           Greek_xi     x         x         U039E
 keycode 25 = v V underscore   v            BackSpace BackSpace U2259
 keycode 26 = l L bracketleft  Greek_lambda Up        Up        U039B
 keycode 27 = c C bracketright Greek_chi    Tab       Tab       U2102
@@ -145,8 +145,8 @@ keycode 55 = p          P          asciitilde Greek_pi   Return Return U03A0
 keycode 56 = z          Z          grave      Greek_zeta z      z      U2124
 
 keycode 57 = b      B        plus       Greek_beta  b      b      U21D2
-keycode 58 = m      M        percent    Greek_mu          1      1      U21D4
-keycode 59 = comma  U22EE   apostrophe U03F1       2      2      U21D0
+keycode 58 = m      M        percent    Greek_mu    1      1      U21D4
+keycode 59 = comma  comma    apostrophe U03F1       2      2      U21D0
 keycode 60 = period ellipsis quotedbl   Greek_theta 3      3      U0398
 keycode 61 = j      J        semicolon  U03D1       period period U2261
 
@@ -175,7 +175,7 @@ keycode 86 =  KP_Add      KP_Add      plusminus  U2213
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 83 =  KP_Left     KP_4        leftarrow  U2282
-keycode 84 =  5           EuroSign    U221E      U220B
+keycode 84 =  EuroSign    KP_5        U221E      U220B
 keycode 85 =  KP_Right    KP_6        rightarrow U2283
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
