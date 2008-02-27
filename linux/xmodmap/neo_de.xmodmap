@@ -73,7 +73,7 @@ keycode 23 = Tab ISO_Left_Tab Multi_key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Space key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 65 = space space space nobreakspace 0 0 U202F
+keycode 65 = space space space nobreakspace KP_0 KP_0 U202F
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -94,9 +94,9 @@ keycode 14 = 5 guillemotleft  U2039         5        5                  5       
 keycode 15 = 6 EuroSign       cent          6        sterling           sterling           U2225
 
 keycode 16 = 7 dollar               yen                  U03F0 currency currency           U2209
-keycode 17 = 8 doublelowquotemark   singlelowquotemark   8     slash    slash              U2204
-keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  9     asterisk asterisk           U2226
-keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     minus    minus              U2205
+keycode 17 = 8 doublelowquotemark   singlelowquotemark   8     KP_Divide    KP_Divide      U2204
+keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  9     KP_Multiply  KP_Multiply    U2226
+keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     KP_Subtract  KP_Subtract    U2205
 
 keycode 20 = minus      endash     emdash       2011        minus         minus          U00AD
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering dead_abovering
@@ -111,10 +111,10 @@ keycode 27 = c C bracketright Greek_chi    Tab       Tab       U2102
 keycode 28 = w W U005E        Greek_omega  Insert    Insert    U03A9
 
 keycode 29 = k      K     exclam    Greek_kappa           exclamdown exclamdown U221A
-keycode 30 = h      H     less      Greek_psi             7          7          U03A8
-keycode 31 = g      G     greater   Greek_gamma           8          8          U0393
-keycode 32 = f      F     equal     U03D5                 9          9          U03A6
-keycode 33 = q      Q     ampersand U03C6                 plus       plus       U211A
+keycode 30 = h      H     less      Greek_psi             KP_7       KP_7       U03A8
+keycode 31 = g      G     greater   Greek_gamma           KP_8       KP_8       U0393
+keycode 32 = f      F     equal     U03D5                 KP_9       KP_9       U03A6
+keycode 33 = q      Q     ampersand U03C6                 KP_Add     KP_Add     U211A
 keycode 34 = ssharp U1E9E U017F     Greek_finalsmallsigma ssharp     ssharp     U2218
 
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
@@ -129,9 +129,9 @@ keycode 41 = e E braceright Greek_epsilon Right Right U2203
 keycode 42 = o O asterisk   Greek_omicron End   End   U2208
 
 keycode 43 = s S question   Greek_sigma questiondown questiondown U03A3
-keycode 44 = n N parenleft  Greek_nu    4            4            U2115
-keycode 45 = r R parenright Greek_rho   5            5            U211D
-keycode 46 = t T minus      Greek_tau   6            6            U2202
+keycode 44 = n N parenleft  Greek_nu    KP_4         KP_4         U2115
+keycode 45 = r R parenright Greek_rho   KP_5         KP_5         U211D
+keycode 46 = t T minus      Greek_tau   KP_6         KP_6         U2202
 keycode 47 = d D colon      Greek_delta comma        comma        U0394
 keycode 48 = y Y doublelowquotemark Greek_upsilon y  y            U2207
 
@@ -145,9 +145,9 @@ keycode 55 = p          P          asciitilde Greek_pi   Return Return U03A0
 keycode 56 = z          Z          grave      Greek_zeta z      z      U2124
 
 keycode 57 = b      B        plus       Greek_beta  b      b      U21D2
-keycode 58 = m      M        percent    Greek_mu    1      1      U21D4
-keycode 59 = comma  U22EE    apostrophe U03F1       2      2      U21D0
-keycode 60 = period ellipsis quotedbl   Greek_theta 3      3      U0398
+keycode 58 = m      M        percent    Greek_mu    KP_1   KP_1   U21D4
+keycode 59 = comma  U22EE    apostrophe U03F1       KP_2   KP_2   U21D0
+keycode 60 = period ellipsis quotedbl   Greek_theta KP_3   KP_3   U0398
 keycode 61 = j      J        semicolon  U03D1       period period U2261
 
 
