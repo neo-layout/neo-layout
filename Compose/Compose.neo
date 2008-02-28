@@ -212,3 +212,26 @@
 <Multi_key> <underbar> <minus> 		: "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underscore> <KP_Subtract> 	: "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underbar> <KP_Subtract> 	: "₋"   U208B # SUBSCRIPT MINUS
+
+<dead_stroke> <space>                   : "-"   minus # HYPHEN-MINUS
+<dead_stroke> <h>                       : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
+<dead_stroke> <H>                       : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
+<dead_stroke> <d>                       : "đ"   dstroke # LATIN SMALL LETTER D WITH STROKE
+<dead_stroke> <D>                       : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
+<dead_stroke> <l>                       : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
+<dead_stroke> <L>                       : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
+<dead_stroke> <o>                       : "ø"   lstroke # LATIN SMALL LETTER O WITH STROKE
+<dead_stroke> <O>                       : "Ø"   Lstroke # LATIN CAPITAL LETTER O WITH STROKE
+<Multi_key> <t> <m>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <t> <M>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <T> <m>                     : "™"   trademark # TRADE MARK SIGN
+#<Multi_key> <T> <M>                     : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <minus> <H>                 : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+<Multi_key> <minus> <h>                 : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+#	Wobei schon diese ähnlichen drin waren:
+#	<Multi_key> <slash> <H>                 : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+#	<Multi_key> <KP_Divide> <H>             : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+#	<Multi_key> <slash> <h>                 : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+#	<Multi_key> <KP_Divide> <h>             : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+#	<dead_circumflex> <Multi_key> <T> <M>   : "™"   U2122 # TRADE MARK SIGN
+#	<Multi_key> <T> <M>                     : "™"   U2122 # TRADE MARK SIGN
