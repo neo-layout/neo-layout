@@ -1,3 +1,23 @@
+Warum gibt es eine neo20.txt und eine neo20-test.txt?
+
+Hierfür gibt es drei Gründe:
+• häufig geraten auf der Liste gemachte (gute) Vorschläge wieder in
+  Vergessenheit, weil es nicht genügend Reaktionen auf einen Beitrag gibt und
+  weil Treffen im IRC häufig monatelang gar nicht stattfinden
+• es gibt keine klare Regelung, wann ein Vorschlag als Beschlossen gilt
+• das Henne-Ei-Problem: werden nur die Vorschläge umgesetzt, über die zuvor
+  entschieden worden sind? Oder wird nur über die Vorschläge entschieden, die
+  zuvor getestet worden sind?
+
+Um diesen Problemen zu begegnen, gibt es diese neo20-test.txt
+Vorschläge, die auf der Liste besprochen worden sind und eine hinreichend große
+Zustimmung erhalten haben, werden in dieser Datei dokumentiert, damit sie nicht
+vergessen werden. Zusätzlich sollten sie in den Treibern umgesetzt werden, um 
+getestet zu werden.
+Erst wenn ein Vorschlag ausreichend getestet, für gut befunden und beschlossen ist,
+wird er in die offizielle Referenz neo20.txt aufgenommen.
+
+
 -------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
