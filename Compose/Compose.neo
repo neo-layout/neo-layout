@@ -135,11 +135,12 @@
 <Multi_key> <p> <h>			: "ℎ"   U210E # PLANCK CONSTANT
 <Multi_key> <minus> <p> <h>   	     	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key> <KP_Subtract> <p> <h>  	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <minus> <h>			: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <KP_Subtract> <h>		: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <h> <minus>			: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <h> <KP_Subtract>		: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<dead_macron> <h>			: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key> <minus> <p> <h>		: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key> <KP_Subtract> <p> <h>	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key> <p> <h> <minus>		: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key> <p> <h> <KP_Subtract>	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<dead_macron> <p> <h>			: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<dead_stroke> <p> <h>			: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 
 <Multi_key> <1> <question> <exclam>	: "‽"   U203D # INTERROBANG
 <Multi_key> <1> <exclam> <question>	: "‽"   U203D # INTERROBANG
@@ -149,8 +150,6 @@
 <Multi_key> <question> <2>		: "⁇"   U2047 # DOUBLE QUESTION MARK
 <Multi_key> <question> <exclam>		: "⁈"   U2048 # QUESTION EXCLAMATION MARK
 <Multi_key> <exclam> <question>		: "⁉"   U2049 # EXCLAMATION QUESTION MARK
-
-<Multi_key> <t> <m>			: "™"   U2122 # TRADE MARK SIGN
 
 <Multi_key> <asciicircum> <bracketleft>		: "⌈"   U2308 # LEFT CEILING
 <Multi_key> <asciicircum> <bracketright>	: "⌉"   U2309 # RIGHT CEILING
@@ -225,7 +224,6 @@
 <Multi_key> <t> <m>                     : "™"   trademark # TRADE MARK SIGN
 <Multi_key> <t> <M>                     : "™"   trademark # TRADE MARK SIGN
 <Multi_key> <T> <m>                     : "™"   trademark # TRADE MARK SIGN
-#<Multi_key> <T> <M>                     : "™"   trademark # TRADE MARK SIGN
 <Multi_key> <minus> <H>                 : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                 : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
 #	Wobei schon diese ähnlichen drin waren:
