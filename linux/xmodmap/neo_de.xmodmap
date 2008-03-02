@@ -107,7 +107,7 @@ keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_a
 keycode 24 = x X at           Greek_xi     x         x         U039E
 keycode 25 = v V underscore   v            BackSpace BackSpace U2259
 keycode 26 = l L bracketleft  Greek_lambda Up        Up        U039B
-keycode 27 = c C bracketright Greek_chi    Tab       Tab       U2102
+keycode 27 = c C bracketright Greek_chi    Delete Delete       U2102
 keycode 28 = w W U005E        Greek_omega  Insert    Insert    U03A9
 
 keycode 29 = k      K     exclam    Greek_kappa           exclamdown exclamdown U221A
@@ -139,7 +139,7 @@ keycode 48 = y Y doublelowquotemark Greek_upsilon y  y            U2207
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 52 = udiaeresis Udiaeresis numbersign udiaeresis Escape Escape U221D
-keycode 53 = odiaeresis Odiaeresis dollar     odiaeresis Delete Delete U2111
+keycode 53 = odiaeresis Odiaeresis dollar     odiaeresis Tab    Tab    U2111
 keycode 54 = adiaeresis Adiaeresis bar        Greek_eta  Next   Next   U211C
 keycode 55 = p          P          asciitilde Greek_pi   Return Return U03A0
 keycode 56 = z          Z          grave      Greek_zeta z      z      U2124
