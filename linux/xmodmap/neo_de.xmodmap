@@ -40,8 +40,8 @@ keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_Lock
 keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 
-add Mod3 = ISO_Group_Shift
-add Mod5 = ISO_Level3_Shift
+!add Mod3 = ISO_Group_Shift
+!add Mod5 = ISO_Level3_Shift
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
