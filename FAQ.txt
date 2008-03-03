@@ -344,20 +344,12 @@ Fehler sollte man wohl mal den Gnome-Entwicklern melden.
 
 --------------------------------------------------------------------------------
 
-F: Ich kann unter Xterm kein großes W und kein großes Ä eingeben. Außerdem
-kein öffnendes deutsches Guillemet mit Shift+4. Statt dem W wird immer etwas
-eingefügt, was ich vorher mal markiert hatte. Shift+4 wirkt wie Bild-hoch.
+F: Ich kann unter xedit kein v,V,_ oder ≙ schreiben.
 
-A: Ja dieses Problem tritt nur mit Xterm auf. Umgehen kann man das Problem,
-wenn man die Zeile
-	keycode 28 = w W asciicircum w Insert
-zu
-	keycode 28 = w W asciicircum w
-ändert. Man kann dann allerdings nicht mehr über Mod5+w einfügen.
-
-Ähnlich müsste die Lösung für das große Ä sein. Für das Guillemet gibt es
-leider keine Lösung. Hier bedarf es einer Testreihe, um den Fehler
-einzugrenzen.
+A: Dieses Problem tritt nur mit xedit (und ähnlichen Programmen wie xfig) auf.
+Wird dies benötigt, müssen die beiden Backspace aus der Zeile
+	keycode 25 = v  V  underscore  v  BackSpace  BackSpace  U2259
+entfernt (und z.B. durch v ersetzt) werden.
 
 --------------------------------------------------------------------------------
 
