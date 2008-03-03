@@ -1,4 +1,4 @@
-Version 18.02.2008
+Version 24.02.2008
 
 == Installation ==
 === Direkte Installation ===
@@ -45,14 +45,9 @@ Die ahk-Dateien lassen sich mit einem Texteditor bearbeiten, man muss
 dann nur das Skript neu starten um die Änderungen zu übernehmen.
 
 == Bekannte Fehler ==
-Der Tabulator macht Probleme mit DeadKeys. Ein DeadKey gefolgt von Tab
-und einer Taste, die mit dem DeadKey ein neues Zeichen ergibt, löscht
-den Tab (Backslash) und sendet die Kombo. Ebensolches Verhalten zeigt sich 
-bei der Compose-Taste.
-
-Beim Ziffernblock der 5. Ebene funktionieren die DeadKeys nicht, um Zahlen
-hoch- oder tiefzustellen, wenn man auf die 5. Ebene über die AltGr-Taste
-zugreift.
+Da die Compose-Taste auf rechter Mod3 + Tab liegt, mußte die Tabulator-Taste
+umgemappt werden. Dadurch funktioniert leider die ShiftAltTab nicht mehr.
+AltTab reagiert hingegen wie gewohnt.
 
 Bisher reagieren nur die Buchstaben der 1. und 2. Ebene richtig auf
 CapsLock (also immer groß schreiben – CapsLock erreicht man unter Neo, wenn 

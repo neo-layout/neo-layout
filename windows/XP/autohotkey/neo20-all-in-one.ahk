@@ -108,11 +108,6 @@ return
    }
    return
    
-*LAlt::
-   PriorDeadKey := "comp"
-return
-
-
 /*
    Ablauf bei toten Tasten:
    1. Ebene Aktualisieren
@@ -2909,16 +2904,33 @@ return
 
 
 /*
-Tab wurde rausgenommen, weil es Probleme mit AltTab und ShiftAltTab gab.
-Allerdings kommt es jetzt zu komischen Ergebnissen, wenn man Tab nach
-einem DeadKey drückt...
+Auf Mod3+Tab liegt Compose. AltTab funktioniert, jedoch ShiftAltTab nicht.
+Wenigstens kommt es jetzt nicht mehr zu komischen Ergebnissen, wenn man Tab 
+nach einem DeadKey drückt...
+*/
 
 *Tab::
-   send {Blind}{Tab}
-   PriorDeadKey := ""   CompKey := ""
+   if ( GetKeyState("SC038","P") )
+   {
+      SC038 & Tab::AltTab            ; http://de.autohotkey.com/docs/Hotkeys.htm#AltTabDetail
+   }
+   else if GetKeyState("#","P")
+   {
+      PriorDeadKey := "comp"
+      CompKey := ""
+   }
+   else
+   {
+      send {blind}{Tab}
+      PriorDeadKey := ""
+      CompKey := ""
+   }
 return
 
-*/
+*SC038::                            ; LAlt, damit AltTab funktioniert
+   send {blind}{LAlt}
+   PriorDeadKey := ""   CompKey := ""
+return
 
 *Home::
    sendinput {Blind}{Home}
@@ -3087,38 +3099,3 @@ EncodeInteger(ref, val)
 */
 
 +pause::suspend
-
-/*
-   ------------------------------------------------------
-   Maussteuerung, QWERTZ-Belegung!
-   ------------------------------------------------------
-*/
-
-SetMouseDelay, -1
-
-#i::MouseMove,0,-10,0,R
-#k::MouseMove,0,10,0,R
-#l::MouseMove,10,0,0,R
-#j::MouseMove,-10,0,0,R
-
-+#i::MouseMove,0,-50,0,R
-+#k::MouseMove,0,50,0,R
-+#l::MouseMove,50,0,0,R
-+#j::MouseMove,-50,0,0,R
-
-
-#u::MouseClick, left
-#o::MouseClick, right
-;Redundanz, falls noch Shift gehalten
-+#u::MouseClick, left
-+#o::MouseClick, right
-#m::WinMinimize, A
-#Space::WinMaximize, A
-#n::WinRestore, A
-#.::WinClose, A
-
-#z::MouseClick, WheelUp,,,2
-#h::MouseClick, WheelDown,,,2
-;Funktionieren nicht, vermeiden aber Fehler, wenn Shift gehalten:
-+#z::MouseClick, WheelUp,,,4
-+#h::MouseClick, Wheeldown,,,4
