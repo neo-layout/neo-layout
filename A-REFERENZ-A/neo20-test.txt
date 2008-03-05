@@ -33,9 +33,9 @@ http://dejavu.sourceforge.net/
 -------------------------------------------------------------------------------
 
 == Legende ==
-┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod3+Shift)
-│2 4 6│ 2 … 2. Ebene (Shift)        │ 5 … 5. Ebene (Mod5)
-│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod5)
+┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
+│2 4 6│ 2 … 2. Ebene (Shift)        │ 5 … 5. Ebene (Shift+Mod3)
+│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
 
 Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Tab.
@@ -63,24 +63,24 @@ Zu den Akzenten siehe auch
 Taste links neben der 1
         1 … Toter Zirkumflex (sieht aus wie U+0302 COMBINING CIRCUMFLEX ACCENT)
 ┌─────┬ 2 … Toter Caron/Hatschek (sieht aus wie U+030C COMBINING CARON)
-│ˇ - .│ 3 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
-│^ ˘ ·│ 4 … Toter Querstrich (??? sieht aus wie U+0335 COMBINING SHORT STROKE OVERLAY)
+│ˇ · .│ 3 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
+│^ ˘ -│ 4 … Toter Querstrich (??? sieht aus wie U+0335 COMBINING SHORT STROKE OVERLAY)
 ├─────┴ 5 … Toter Punkt in der Mitte, verwendet für Ŀ (???)
         6 … Toter Punkt darunter (sieht aus wie U+0323 COMBINING DOT BELOW)
 
 zwei Tasten rechts neben der 0
         1 … Toter Akut (sieht aus wie U+0301 COMBINING ACUTE ACCENT)
 ┬─────┬ 2 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
-│` ˛ ˚│ 3 … Tote Cedilla (sieht aus wie U+0327 COMBINING CEDILLA)
-│´ ¸ ˙│ 4 … Totes Ogonek (sieht aus wie U+0328 COMBINING OGONEK)
+│` ˙ ˚│ 3 … Tote Cedilla (sieht aus wie U+0327 COMBINING CEDILLA)
+│´ ¸ ˛│ 4 … Totes Ogonek (sieht aus wie U+0328 COMBINING OGONEK)
 ┴──┬──┴ 5 … Toter Punkt darüber (sieht aus wie U+0307 COMBINING DOT ABOVE)
         6 … Toter Ring (sieht aus wie U+030A COMBINING RING ABOVE)
 
 Taste rechts neben dem Eszett (ß)
         1 … Tote Tilde (sieht aus wie U+0303 COMBINING TILDE)
 ┬──┴──┬ 2 … Toter Makron (sieht aus wie U+0304 COMBINING MACRON)
-│ˉ ˝ ,│ 3 … Totes Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
-│~ ¨ /│ 4 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
+│ˉ / ,│ 3 … Totes Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
+│~ ¨ ˝│ 4 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
 ┴┬────┴ 5 … Toter Schrägstrich (??? sieht aus wie U+0337 COMBINING SHORT SOLIDUS OVERLAY)
         6 … Totes Komma darunter (sieht aus wie U+0326 COMBINING COMMA BELOW)
 
@@ -97,8 +97,8 @@ Zu den Gedankenstrichen usw. siehe
 Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
 ┬─────┬ 2 … – Gedankenstrich (U+2013 EN DASH)
-│– ‑ ╌│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│- —  │ 4 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
+│–   ╌│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
+│- — ‑│ 4 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
 ┴──┬──┴ 5 … 
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
@@ -106,28 +106,28 @@ Taste rechts neben der 0
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┬─────┬
-│»   ⇞│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
-│4 › ⇞│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
+│» ⇞ ⊥│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
+│4 › ℓ│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│«   ⇒│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
+│«   ∡│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
 │5 ‹  │ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│„   ∃│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
-│8 ‚ /│ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
+│„ / ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
+│8 ‚  │ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│“   ∀│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
-│9 ‘ *│ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
+│“ * ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
+│9 ‘  │ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│”   ∨│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
-│0 ’ -│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
+│” - ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
+│0 ’  │ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
 == Erste Ebene – Miniatur ==
@@ -145,20 +145,20 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 == Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ - .│° ♀ ¬│№ ⚥ ∨│§ ♂ ∧│» ℓ ⊥│«   ∡│€   ∥│$ ϰ ∉│„   ∄│“   ∦│”   ∅│– ‑ ╌│` ˛ ˚│Backspace│
-│^ ˘ ·│1 ¹ •│2 ² ‣│3 ³ ◦│4 › ⇞│5 ‹  │6 ¢ £│7 ¥ ¤│8 ‚ /│9 ‘ *│0 ’ -│- —  │´ ¸ ˙│    ⌫    │
+│ˇ · .│° • ¬│№ ‣ ∨│§ ◦ ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
+│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹  │6 ¢  │7 ¥ ϰ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab  ⇤ │X ξ Ξ│V ϵ ≙│L λ Λ│C χ ℂ│W ω Ω│K κ √│H ψ Ψ│G γ Γ│F ɸ Φ│Q φ ℚ│ẞ ς ∘│ˉ ˝ ˏ│      │
-│      ♫ │x @  │v _ ⌫│l [ ⇡│c ] ⌦│w ^ ω│k ! ¡│h < 7│g > 8│f = 9│q & +│ß ſ  │~ ¨ /│Enter │
+│ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W   Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
+│    ♫   │x @ ξ│v _ ϵ│l [ λ│c ] χ│w ^ ω│k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U   ∮│I ι ∫│A α ∀│E ε ∃│O o ∈│S σ Σ│N ν ℕ│R ρ ℝ│T τ ∂│D δ Δ│Y υ ∇│↘3 ♫ │  ↲  │
-│         │u \ ⇱│i / ⇠│a { ⇣│e } ⇢│o * ⇲│s ? ¿│n ( 4│r ) 5│t - 6│d : ,│y    │     │     │
+│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y   ∇│↘3 ♫ │  ↲  │
+│         │u \  │i / ι│a { α│e } ε│o * o│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y   υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Sh_Lck│↙5   │Ü   ∝│Ö   ℑ│Ä η ℜ│P π Π│Z ζ ℤ│B β ⇒│M µ ⇔│⋮ ϱ ⇐│… θ Θ│J ϑ ≡│  Shift_Lock  │
-│Shift │5Lock│ü # ⌧│ö $ ⇥│ä | ⇟│p ~ ↲│z `  │b +  │m % 1│, ' 2│. " 3│j ; .│   Shift      │
+│Sh_Lck│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B   ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J . ≡│  Shift_Lock  │
+│Shift │5Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, ' ϱ│. " θ│j ; ϑ│   Shift      │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
-│ Strg │ Fen- │ Alt  │ Leerz.␣   geschütz.Lz.⍽  schmal.Lz.¦ │↙5    │ Fen- │ Menu │ Strg │
-│      │ ster │      │ Leerz.␣     Leerz.␣          0       │ 5Lock│ ster │      │      │
+│ Strg │ Fen- │ Alt  │ Leerz.␣        0        schmal.Lz.¦  │↙4    │ Fen- │ Menu │ Strg │
+│      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 5Lock│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
 
