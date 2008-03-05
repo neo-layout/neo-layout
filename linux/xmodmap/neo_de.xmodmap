@@ -33,10 +33,10 @@ keycode 62 =  Shift_R Shift_Lock
 keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_Lock
 keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_Lock
 
-! Mod5 94=left 113=right
-! Make the former AltGr and qwertz-< to Mod5 (ISO_Level3_Shift)
-! Mod5(rechts)+Mod5(links) lässt Mod5 einrasten (Mod5Lock)
-! das funktioniert nur in dieser Reihenfolge, da Mod5(rechts) (=Qwertz-AltGr) nur 4 Ebenen hat
+! Mod4 94=left 113=right
+! Make the former AltGr and qwertz-< to Mod4 (ISO_Level3_Shift)
+! Mod4(rechts)+Mod4(links) lässt Mod4 einrasten (Mod4Lock)
+! das funktioniert nur in dieser Reihenfolge, da Mod4(rechts) (=Qwertz-AltGr) nur 4 Ebenen hat
 keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 
@@ -50,9 +50,9 @@ keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 ! Ebene 1: normal
 ! Ebene 2: Shift
 ! Ebene 3: Mod3
-! Ebene 4: Shift+Mod3
-! Ebene 5: Mod5 (zum Markieren Shift+Mod5)
-! Ebene 6: Mod3+Mod5 (in dieser Reihenfolge!)
+! Ebene 4: Mod4 (zum Markieren Shift+Mod4)
+! Ebene 5: Shift+Mod3
+! Ebene 6: Mod3+Mod4 (in dieser Reihenfolge!)
 ! Compose (keine eigene Ebene): Mod3+Tab
 
 
@@ -201,17 +201,17 @@ keycode 91 = KP_Delete    KP_Decimal  period     comma
 ! 1.) Ebene 6 (hier: der 7. Eintrag) erreicht man über ISO_Group_Shift+ISO_Group_Shift
 !     (bzw. mode_switch+mode_switch) und über keine andere mir bekannte kombination. Insbesondere legt
 !     ISO_Level3_Shift Level3 (Ebene 5) fest, verschiebt also nicht. Darum kann man ISO_Level3_Shift
-!     nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über Mod3+Mod5
+!     nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über Mod3+Mod4
 !     (ind dieser Reihenfolge!) erreicht werden kann
 !
 ! 2.) Die KP_-Einträge auf Ebene 5 ermöglichen die Steuerung des Mauscursors mit der Tastatur.
 !     Hierzu wird mittels Shift+Num dieser Betriebsmodus ein- und später wieder ausgeschaltet.
 !     Die Steuerung des Cursors kann über den echten Ziffernblock oder den auf Ebene 5 (sinnvollerweise
-!     mit eingerastetem Mod5) erfolgen
+!     mit eingerastetem Mod4) erfolgen
 !
 ! 3.) Die KP_-Einträge auf der linken Seite der Ebene 5 müssen vorhanden sein, da anderenfalls Probleme
 !     mit (älteren) Programmen wie xterm oder xedit auftreten. Da es keinen mir bekannten Ersatz für
-!     Backspace gibt, funktioniert im xterm das v nicht. Wird dies benötigt, muss das Backspace (Mod5+v)
+!     Backspace gibt, funktioniert im xterm das v nicht. Wird dies benötigt, muss das Backspace (Mod4+v)
 !     entfernt (und z.B. durch v ersetzt) werden.
 !
 ! 4.) Auf 0 und q (Ebene 5) muss minus und plus stehen (nicht KP_Substract und KP_Add) !
