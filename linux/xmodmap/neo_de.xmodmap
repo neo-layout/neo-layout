@@ -1,12 +1,13 @@
 !! ~/.xmodmap
 !!
-!! Bei der Benutzung des Befehls »rev« muss die Zeile mit der aktuellen Revisionsnummer
-!! stets die Zeilennummer 9 sein. Anderenfalls muss »rev« angepasst werden.
+!! Bei der Benutzung des Befehls »rev« muss die Zeile mit der aktuellen
+!! Revisionsnummer stets die Zeilennummer 9 sein. Anderenfalls muss »rev«
+!! angepasst werden.
 !!
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !! and Erik Streb <mail at erikstreb dot de>
 !!
-!! The german NEO Layout Revision 400 from Do 6. Mär 16:12:55 CET 2008
+!! The german NEO Layout Revision 401 from Fr 7. Mär 00:09:51 CET 2008
 !! see http://pebbles.schattenlauf.de/layout.php for details
 !!
 !! To try the layout in this file, simply do xmodmap <file>.
