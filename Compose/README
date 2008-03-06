@@ -1,6 +1,5 @@
 == Ergänzungen der Compose-Datei unter Linux/BSD ==
-Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen
-für die Compose-Taste bzw. tote Tasten.
+Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die	Compose-Taste bzw. tote Tasten für Linux.
 
 === Anleitung zur Benutzung ===
 Um die Ergänzungen zu benutzen muss man den Inhalt der Compose.neo in die
@@ -10,6 +9,11 @@ anhängen.
 Unter Fedora beispielsweise ist die zu ergänzende Datei verfügbar unter
 	/usr/share/X11/locale/en_US.UTF-8/Compose
 
-=== Gesammelte Ergänzungen ===
 Im Internet gibt es die Originaldatei unter
-http://webcvs.freedesktop.org/xorg/xc/nls/Compose/en_US.UTF-8
+	http://webcvs.freedesktop.org/xorg/xc/nls/Compose/en_US.UTF-8
+
+== compose_und_deadkeys.txt ==
+Die Datei compose_und_deadkeys.txt fasst Änderungs- und Erweiterungsvorschläge
+für die Compose-Datei zusammen, in der unter Linux auch die Deadkeys (tote
+Tasten) definiert sind.
+

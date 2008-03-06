@@ -1,27 +1,32 @@
-#!/bin/sh
+#!/bin/bash
+
+# Die Zeile in der die Revision stehen soll:
+ZEILENNUMMER=10
 
 case $1 in
   "") ;;
-  --help)
-      echo Aufruf: ./rev
-      echo »rev« wird ohne weiter Argumente aufgerufen und ändert in der Datei neo_de.xmodmap die Nummer der aktuellen Revision.
-      echo Im Anschluss sollten gemachte Änderungem per »svn commit« wie gewohnt übertragen werden.
-      echo -e \\nPascal Hauck\\tVer. 0.1\\tMärz 2008\\t\\t\\t\\tREV
+  "--help" | "-h")
+      echo -e "Aufruf: $0"
+      echo -e "»$0« wird ohne weiter Argumente aufgerufen und ändert in der Datei\nneo_de.xmodmap die Nummer der aktuellen Revision."
+      echo -e "Im Anschluss sollten gemachte Änderungem per »svn commit« wie gewohnt\nübertragen werden."
+      echo -e "\nPascal Hauck\tVer. 0.1\tMärz 2008\t\t\t\tREV"
     exit;;
-  *)  echo Aufruf: »./rev«
-      echo »./rev --help« gibt Ihnen mehr Informationen.
-    exit;;
+  *)  echo -e "Aufruf: »$0«"
+      echo -e "»$0 --help« gibt Ihnen mehr Informationen."
+    exit 1
 esac
 
+# Sicherung der aktuellen Arbeitskopie
+cp -a neo_de.xmodmap neo_de.xmodmap.bak
+
 #    Abfragen der nächsten Revisionsnummer
-r=$(expr $(svn info | head -5 | tail -1| cut -f2 -d\:) + 1)
+#r=$(expr $(svn info | head -5 | tail -1 | cut -f2 -d\:) + 1)
+r=$(( $(svn info | sed -n 5~p | cut -f2 -d\:) + 1))
 
 #    Revisionsnummer in neo_de.xmodmap eintragen
-head -8 neo_de.xmodmap > neo_de.xmodmap.tmp
-echo !! The german NEO Layout Revision $r from $(date) >> neo_de.xmodmap.tmp
-tail +10 neo_de.xmodmap >> neo_de.xmodmap.tmp
-
-rm neo_de.xmodmap
-mv neo_de.xmodmap.tmp neo_de.xmodmap
-
-echo Aktuelle Revisionsnummer auf $r geändert. Die Änderung sollte nun per »svn commit« wie gewohnt übertragen werden.
+head -n $(( $ZEILENNUMMER - 1)) neo_de.xmodmap > neo_de.xmodmap.tmp && \
+echo -e "!! The german NEO Layout Revision $r from $(date)" >> neo_de.xmodmap.tmp && \
+tail -n +$(( $ZEILENNUMMER + 1)) neo_de.xmodmap >> neo_de.xmodmap.tmp && \
+rm neo_de.xmodmap && mv neo_de.xmodmap.tmp neo_de.xmodmap && \
+echo -e "Aktuelle Revisionsnummer auf $r geändert.\nDie Änderung sollte nun per »svn commit« wie gewohnt übertragen werden." || \
+(echo -e "FEHLER! Bitte Programmierer kontaktieren." && cp -a neo_de.xmodmap.bak neo_de.xmodmap)
