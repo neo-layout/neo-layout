@@ -1,0 +1,27 @@
+#!/bin/sh
+
+case $1 in
+  "") ;;
+  --help)
+      echo Aufruf: ./rev
+      echo »rev« wird ohne weiter Argumente aufgerufen und ändert in der Datei neo_de.xmodmap die Nummer der aktuellen Revision.
+      echo Im Anschluss sollten gemachte Änderungem per »svn commit« wie gewohnt übertragen werden.
+      echo -e \\nPascal Hauck\\tVer. 0.1\\tMärz 2008\\t\\t\\t\\tREV
+    exit;;
+  *)  echo Aufruf: »./rev«
+      echo »./rev --help« gibt Ihnen mehr Informationen.
+    exit;;
+esac
+
+#    Abfragen der nächsten Revisionsnummer
+r=$(expr $(svn info | head -5 | tail -1| cut -f2 -d\:) + 1)
+
+#    Revisionsnummer in neo_de.xmodmap eintragen
+head -8 neo_de.xmodmap > neo_de.xmodmap.tmp
+echo !! The german NEO Layout Revision $r from $(date) >> neo_de.xmodmap.tmp
+tail +10 neo_de.xmodmap >> neo_de.xmodmap.tmp
+
+rm neo_de.xmodmap
+mv neo_de.xmodmap.tmp neo_de.xmodmap
+
+echo Aktuelle Revisionsnummer auf $r geändert. Die Änderung sollte nun per »svn commit« wie gewohnt übertragen werden.
