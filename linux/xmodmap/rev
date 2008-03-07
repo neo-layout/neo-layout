@@ -9,7 +9,7 @@ case $1 in
       echo -e "Aufruf: $0"
       echo -e "»$0« wird ohne weiter Argumente aufgerufen und ändert in der Datei\nneo_de.xmodmap die Nummer der aktuellen Revision."
       echo -e "Im Anschluss sollten gemachte Änderungem per »svn commit« wie gewohnt\nübertragen werden."
-      echo -e "\nPascal Hauck\tVer. 0.1\tMärz 2008\t\t\t\tREV"
+      echo -e "\nNEO Tastaturlayout\tVer. 0.2\tMärz 2008\t\t\tREV"
     exit;;
   *)  echo -e "Aufruf: »$0«"
       echo -e "»$0 --help« gibt Ihnen mehr Informationen."
