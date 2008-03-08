@@ -37,23 +37,14 @@ F: Warum gibt es manche Tasten doppelt? Z. B. die Pfeiltasten, die Esc-Taste
 usw. Außerdem auch ~ und ^?
 
 A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der
-Tastatur nehmen muss. Man drückt einfach die Mod5-Taste und schon hat man die 
+Tastatur nehmen muss. Man drückt einfach die Mod4-Taste und schon hat man die 
 gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.
-Da die Mod5-Taste nicht von Allen benutzt wird, sind diese Tasten auch auf 
+Da die Mod4-Taste nicht von Allen benutzt wird, sind diese Tasten auch auf 
 ihrer alten Position verfügbar.
 Die Tilde (~) und der Zirkumflex (^) sind als tote und untote Tasten
 vorhanden. Mit den toten kann man Buchstaben wie â, ô, û und ñ schreiben,
 indem man nacheinander die tote Taste und den Buchstaben drückt. Bei der
 untoten Taste erscheint das Zeichen direkt.
-
---------------------------------------------------------------------------------
-
-F: Wieso gibt es die Pfeiltasten auf den Tasten »i«, »a«, »e« und »l« auf der
-5. und auf der 6. Ebene?
-
-A: Ebene 6 ist »Shift« + »Mod5«. Da »Mod5« + »i« der Pfeil ist, ist
-»Shift« + »Mod5« + »i« der Pfeil zusammen mit »Shift« und das wird von vielen
-Anwendungen als „Markieren“ interpretiert.
 
 --------------------------------------------------------------------------------
 
@@ -128,7 +119,7 @@ verwendet? Welcher ist der Bis-Strich?
 A: Meist wird der Bindestrich (auf »Mod3« + »t« bzw.
 »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten
 Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann
-man auch zusammen, das heißt ohne Bindestrich, schreiben.
+und sollte man auch zusammen, das heißt ohne Bindestrich, schreiben.
 Der Gedankenstrich/Bis-Strich (auf »Shift« + »Taste-rechts-neben-der-Null«) wird
 verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiele:
   1. Mit NEO zu schreiben – das sage nicht nur ich – ist besser als mit QWERTZ.
@@ -138,7 +129,7 @@ kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen
 geschrieben.
 Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es
 gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das
-Pluszeichen. Dieses befindet sich auf »Mod3« + »Numpad-Minus«.
+Pluszeichen. Dieses befindet sich auf »Mod3« + »Ziffernblock-Minus«.
 
 Nochmal kurze Zusammenfassung der Namen:
 ‣ Bindestrich/Viertelgeviertstrich/Hyphen-Minus/Bindestrich-Minus:
@@ -156,10 +147,10 @@ Mehr zur Typographie hier:
 F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?
 
 A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen
-für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden
-häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in
-deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Mod3« +
-»Shift-Taste« + »8« und »9« zu erreichen. Es sind die Zeichen » und «.
+für deutsche Texte erreichbar. Es sind die Zeichen „ und “.
+Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als
+Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind
+per »Shift-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.
 Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Shift-Taste«
 auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.
 Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia:
@@ -178,7 +169,7 @@ Zur Verwendung des Apostrophs siehe den Wikipedia Artikel:
 	http://de.wikipedia.org/wiki/Apostroph
 
 Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen.
-Dieses ist per »Mod3« + »j« erreichbar.
+Dieses ist per »Mod3« + »,« (Komma) erreichbar.
 
 --------------------------------------------------------------------------------
 
@@ -241,7 +232,7 @@ with LaTeX.«
 Was ist das?
 
 A: Es gibt seit NEO2 nicht mehr nur das normale, übliche Leerzeichen, sondern
-auf der 4. Ebene auf der Leertaste ein nicht umbrechendes, so genanntes
+auf der 5. Ebene auf der Leertaste ein nicht umbrechendes, so genanntes
 „geschütztes Leerzeichen“ (nobreak space). Dieses hat verschiedene Verwendungen,
 unter anderem eben, um einen Zeilenumbruch an dieser Stelle zu verhindern. Zum
 Beispiel sollte bei „Prof. Nameistsuperlangundewig“ ein geschütztes Leerzeichen
@@ -287,12 +278,12 @@ aber auch nicht immer klappt (Arch-Linux mit Xorg 7.3).
 --------------------------------------------------------------------------------
 
 F1: Wenn ich »Mod3« + »n« drücke, dann erscheint nicht die öffnende Klammer.
-F2: Wenn ich »Mod5« + »n« oder »Mod5« + »Leertaste« drücke, kommt nicht die 4
+F2: Wenn ich »Mod4« + »n« oder »Mod4« + »Leertaste« drücke, kommt nicht die 4
 oder die 0 sondern ein n oder Leerzeichen. Wieso?
-F3: Ebene 5 und 6 über dem »b« gehen nicht?
+F3: Ebene 4 und 6 über dem »b« gehen nicht?
 
 A: Das Problem, was hier auftritt ist der viel zitierte Fehler*, dass wenn man
-vom deutschen Layout ausgeht, xmodmap die 5. Ebene über dem n nicht ausgewertet
+vom deutschen Layout ausgeht, xmodmap die 4. Ebene über dem n nicht ausgewertet
 wird. Deshalb geht je nach Version die Klammer oder die 4 nicht über dem n.
 Genau so mit der Leertaste.
 Abhilfe dagegen schafft das irische Layout. Das hat selbst diese Ebene über dem
@@ -310,7 +301,7 @@ oder für die Version im 2.0 im Subversion-Repository:
 
 --------------------------------------------------------------------------------
 
-F: Bei mir geht die 5. Ebene (Mod5) nicht. Stattdessen erscheinen immer die
+F: Bei mir geht die 4. Ebene (Mod4) nicht. Stattdessen erscheinen immer die
 Zeichen der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
 
 A: Du verwendest vermutlich nicht die xmodmap-Version des Treibers, sondern
@@ -355,7 +346,7 @@ entfernt (und z.B. durch v ersetzt) werden.
 
 --------------------------------------------------------------------------------
 
-F: Mein »Mod3« geht nicht als Modifier für die 5. Ebene.
+F: Mein »Mod4« geht nicht als Modifier für die 4. Ebene.
 
 A: Deaktiviere die Option „Both Alt keys together change Group” 
 (ralt_switch_for_alts_toggle) oder frage auf der Mailingliste (siehe erste
@@ -376,7 +367,7 @@ Wer schreibt an KDE (einen Bugreport)?
 F: Bei mir funktioniert die Kombo-/Komponier-/Compose-/Multi-Key-Taste nicht.
 Wieso?
 
-A: Soweit bekannt, funktioniert nur die Kombination »Mod5« und »linkes Mod3«
+A: Soweit bekannt, funktioniert nur die Kombination »Mod4« und »linkes Mod3«
 nicht. Hinweise zur Lösung dieses komischen Fehlers bitte an die Mailingliste.
 
 --------------------------------------------------------------------------------
@@ -430,14 +421,14 @@ A: 1. Benutze die Autohotkey-Variante.
 
 --------------------------------------------------------------------------------
 
-F: Wie kann ich mit der MSKLC-Variante auf Zeichen der 5. und 6. Ebene 
+F: Wie kann ich mit der MSKLC-Variante auf Zeichen der 4. und 6. Ebene 
    zugreifen?
 
 A: Diese Ebenen sind über die so genannte SGCaps-Funktion realisiert. Für die 
-   5. Ebene muss man Mod5 drücken, dann die Taste mit dem Zeichen, dann Mod5
-   wieder deaktivieren (Shift drücken oder nochmal Mod5.
-   Für die 6. Ebene hält man Shift gedrückt, dann Mod5 gedrückt, dann das
-   Zeichen eingeben und dann Mod5 wieder deaktivieren. Es wird noch nach einer
+   4. Ebene muss man Mod4 drücken, dann die Taste mit dem Zeichen, dann Mod4
+   wieder deaktivieren (Shift drücken oder nochmal Mod4).
+   Für die 6. Ebene hält man Shift gedrückt, dann Mod4 gedrückt, dann das
+   Zeichen eingeben und dann Mod4 wieder deaktivieren. Es wird noch nach einer
    Möglichkeit gesucht, das weniger umständlich zu ermöglichen.
 
 --------------------------------------------------------------------------------
@@ -476,11 +467,12 @@ und vor sich Hinstellen (inklusive Mini-FAQ auf der Rückseite).
 
 --------------------------------------------------------------------------------
 
-F: Wie tausche ich rechts Mod3 mit Mod5? Wie auf der linken Seite?
+F: Wie tausche ich rechts Mod3 mit Mod4? Wie auf der linken Seite?
 
 A: Für die Linuxversion die Datei neo_de.xmodmap ab Zeile 81 lesen und
 speziell Zeile 87 und 90 muss man ISO_Level3_Shift mit Mode_switch tauschen
-(für die rechte Seite).
+(für die rechte Seite)
+--> ACHTUNG: Stimmt nicht mehr, nochmal auf der Mailingliste fragen!
 
 --------------------------------------------------------------------------------
 

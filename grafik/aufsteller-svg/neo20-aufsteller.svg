@@ -15,7 +15,7 @@
    inkscape:version="0.45.1"
    version="1.0"
    sodipodi:docbase="/home/wicking/programmieren/Projekt/NEO/svn-neo/svn/grafik/aufsteller-svg"
-   sodipodi:docname="neo20-aufstellerserif.svg"
+   sodipodi:docname="neo20-aufsteller.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs2561" />
@@ -26,10 +26,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0401967"
+     inkscape:zoom="1.0307892"
      inkscape:cx="526.17999"
-     inkscape:cy="371.08365"
-     inkscape:current-layer="layer8"
+     inkscape:cy="372.04501"
+     inkscape:current-layer="layer2"
      id="namedview2563"
      width="29.699938cm"
      height="20.999875cm"
@@ -43,12 +43,12 @@
      inkscape:grid-points="true"
      gridtolerance="30.2"
      gridoriginx="0mm"
-     inkscape:object-points="false"
-     inkscape:object-nodes="false"
-     objecttolerance="31.7"
+     inkscape:object-points="true"
+     inkscape:object-nodes="true"
+     objecttolerance="43.6"
      inkscape:guide-points="false"
      guidetolerance="7.5"
-     inkscape:object-paths="false"
+     inkscape:object-paths="true"
      inkscape:guide-bbox="false"
      inkscape:grid-bbox="false"
      gridoriginy="0mm"
@@ -162,27 +162,22 @@
          id="flowPara2927">F: Wo kann ich Fragen zu NEO stellen?</flowPara><flowPara
          id="flowPara2929">A: Es gibt eine Mailingliste. Auf dieser werden Fragen beantwortet und NEO weiter entwickelt. Im Webbrowser ist diese per http://lists.neo-layout.org/mailman/listinfo/mailinglist erreichbar. Ansonsten erst mal die FAQ (häufigen Fragen) durchlesen.</flowPara><flowPara
          id="flowPara2931" /><flowPara
-         id="flowPara2933">F: Es gibt keine Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?</flowPara><flowPara
-         id="flowPara2935">A: Doch, die Caps-Lock-Taste ist noch auf ihrer alten Position, allerdings auf einer höheren Ebene (»AltGr«). Zum Ein- und Ausschalten, drückt man also erst rechts »AltGr« und dann gleichzeitig links die Taste auf der früher (bei QWERTZ) schon »CapsLock« war.</flowPara><flowPara
+         id="flowPara2933">F: Es gibt keine Feststell-/Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?</flowPara><flowPara
+         id="flowPara2935">A: Die Dauergroßschreib-Funktionalität erhält man, indem man beide Shift-Tasten kurz gleichzeitig drückt. Zum Ausschalten dann nur EINE der beiden Shift-Tasten drücken.</flowPara><flowPara
          id="flowPara2937" /><flowPara
          id="flowPara2939">F: Warum gibt es manche Tasten doppelt? Z. B. die Pfeiltasten, die Esc-Taste usw. Außerdem auch ~ und ^?</flowPara><flowPara
-         id="flowPara2941">A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der Tastatur nehmen muss. Man drückt einfach die Mod5-Taste und schon hat man die gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.</flowPara><flowPara
-         id="flowPara2943">Da die Mod5-Taste nicht von Allen benutzt wird, sind diese Tasten auch auf ihrer alten Position verfügbar.</flowPara><flowPara
+         id="flowPara2941">A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der Tastatur nehmen muss. Man drückt einfach die Mod4-Taste und schon hat man die gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.</flowPara><flowPara
+         id="flowPara2943">Da die Mod4-Taste nicht von Allen benutzt wird, sind diese Tasten auch auf ihrer alten Position verfügbar.</flowPara><flowPara
          id="flowPara2945">Die Tilde (~) und der Zirkumflex (^) sind als tote und untote Tasten vorhanden. Mit den toten kann man Buchstaben wie â, ô, û und ñ schreiben, indem man nacheinander die tote Taste und den Buchstaben drückt. Bei der untoten Taste erscheint das Zeichen direkt.</flowPara><flowPara
-         id="flowPara2947" /><flowPara
-         id="flowPara2949">F: Wieso gibt es die Pfeiltasten auf den Tasten »i«, »a«, »e« und »l« auf der 5. und auf der 6. Ebene?</flowPara><flowPara
-         id="flowPara2951">A: Ebene 6 ist »Shift« + »Mod5«. Da »Mod5« + »i« der Pfeil ist, ist »Shift« + »Mod5« + »i« der Pfeil zusammen mit »Shift« und das wird von vielen Anwendungen als „Markieren“ interpretiert.</flowPara><flowPara
-         id="flowPara2953" /><flowPara
-         id="flowPara2955">F: Warum wurde im Vergleich zur Version 1 von NEO das »x«, das »q« und das »j« vertauscht?</flowPara><flowPara
-         id="flowPara2957">A: Aus 3 Gründen wurde die drei Buchstaben vertauscht:</flowPara><flowPara
-         id="flowPara2959"> 1. Das »q« tritt immer im Bigramm „qu“ auf. Daher hat man beim alten »q« immer einen „Worst case“ (zweimal den gleichen Finger hintereinander). Dies wurde mehrfach auf der Liste von unterschiedlichen Leuten bemängelt.</flowPara><flowPara
-         id="flowPara2961"> 2. Man hat das »x«, das »v« und das »c« nun in NEO 2 zusammen und neben einander (benötigt für das Ausschneiden, Einfügen und Kopieren von Texten mittels der Strg-Taste).</flowPara><flowPara
-         id="flowPara2963"> 3. Das »j« wurde nach unten verlegt, weil der kleine Finger wesentlich kürzer als die anderen ist und daher besser an die untere Reihe kommt. Bei der Erstellung von NEO 1 wurde noch davon ausgegangen, dass die Reihe über der Grundreihe von allen Fingern besser zu erreichen ist, als die Reihe unter der Grundreihe.</flowPara><flowPara
          id="flowPara2965" /><flowPara
+         id="flowPara4900">F: Wieso sind die Sonderzeichen – !&lt;&gt;=;?()-:+%&amp;&quot;'~$|#\/{}*@_[]^ – so angeordnet, wie sie angeordnet sind? Wie ist man darauf gekommen?</flowPara><flowPara
+         id="flowPara4916">A: Die Sonderzeichen wurden für NEO Version 2 nach ähnlichen Kriterien zugeordnet, wie die Buchstaben schon für NEO Version 1. Also nicht nur nach Häufigkeit und guter Erreichbarkeit, sondern auch nach vorkommenden Bi- und Trigrammen. Das wären (unsortiert): ~/  :=  -&gt;  =&gt;  &lt;=  &gt;=  !=  :// /&gt;  &lt;/ &lt;!-- --&gt; &lt;?  ?&gt;  /*  */  /.  =&quot;  !&quot;  ?&quot; (&quot;  &quot;)  ('  ')  );  ,&quot;  &quot;,  &amp;&gt;  =`  }[  ]{  _{  ^{  ^2  ^3  :-) ;-) +=  *=  /= -=  #!/ $@  {$</flowPara><flowPara
+         id="flowPara4926">Diese werden in den gängigen Programmier-, Skript- und Auszeichnungssprachen häufig verwendet. Leider ist es prinzipiell nicht möglich alle Zeichen für alle Bi- und Trigramme gut zu positionieren. Verbesserungsvorschläge sind jedoch willkommen. Außerdem kann sich jeder seine individuelle NEO-Version auch an die eigenen Bedürfnisse anpassen. Dazu einfach auf der Mailingliste fragen.</flowPara><flowPara
+         id="flowPara4896" /><flowPara
          id="flowPara2967">F: Wo ist der Apostroph, um z. B. Felix’ Katze zu schreiben?</flowPara><flowPara
-         id="flowPara2969">A: Der echte Apostroph für Texte in deutscher und englischer Sprache befindet sich auf »AltGr« + »0«. Es ist das Zeichen ’.</flowPara><flowPara
+         id="flowPara2969">A: Der echte Apostroph für Texte in deutscher und englischer Sprache befindet sich auf »Mod3« + »0«. Es ist das Zeichen ’.</flowPara><flowPara
          id="flowPara2971">Zur Verwendung des Apostrophs siehe den Wikipedia Artikel: http://de.wikipedia.org/wiki/Apostroph</flowPara><flowPara
-         id="flowPara2973">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen. Dieses ist per »AltGr« + »j« erreichbar.</flowPara><flowPara
+         id="flowPara2973">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen. Dieses ist per »Mod3« + »,« (Komma) erreichbar.</flowPara><flowPara
          id="flowPara2975" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot2675"
@@ -196,18 +191,18 @@
            y="407.7619"
            style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu LGC Serif Condensed" /></flowRegion><flowPara
          id="flowPara2632">F: Wann wird eigentlich in der deutschen Sprache welcher Binde-/Gedanken-Strich verwendet? Welcher ist der Bis-Strich?</flowPara><flowPara
-         id="flowPara2634">A: Meist wird der Bindestrich (auf »AltGr« + »t« bzw.  »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann man auch zusammen, das heißt ohne Bindestrich, schreiben.</flowPara><flowPara
-         id="flowPara2636">Der Gedankenstrich/Bis-Strich (auf »Shift« + »Taste-rechts-neben-der-Null«) wird verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte.  Beispiele:</flowPara><flowPara
+         id="flowPara2634">A: Meist wird der Bindestrich (auf »Mod3« + »t« bzw.  »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann und sollte man auch zusammen, das heißt ohne Bindestrich, schreiben.</flowPara><flowPara
+         id="flowPara2636">Der Gedankenstrich/Bis-Strich (auf »Shift« + »Taste-rechts-neben-der-Null«) wird verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiele:</flowPara><flowPara
          id="flowPara2638">  1. Mit NEO zu schreiben – das sage nicht nur ich – ist besser als mit QWERTZ.</flowPara><flowPara
          id="flowPara2640">  2. Öffnungszeiten: Mo–Fr 10–18 Uhr.</flowPara><flowPara
-         id="flowPara2642">Der englische Gedankenstrich (auf »AltGr« + »Taste-rechts-neben-der-Null«) kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen geschrieben.</flowPara><flowPara
-         id="flowPara2644">Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das Pluszeichen. Dieses befindet sich auf »AltGr« + »Numpad-Minus«.</flowPara><flowPara
+         id="flowPara2642">Der englische Gedankenstrich (auf »Mod3« + »Taste-rechts-neben-der-Null«) kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen geschrieben.</flowPara><flowPara
+         id="flowPara2644">Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das Pluszeichen. Dieses befindet sich auf »Mod3« + »Ziffernblock-Minus«.</flowPara><flowPara
          id="flowPara2646" /><flowPara
          id="flowPara2648">F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?</flowPara><flowPara
-         id="flowPara2650">A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »AltGr« + »Shift-Taste« + »8« und »9« zu erreichen. Es sind die Zeichen » und «.</flowPara><flowPara
+         id="flowPara2650">A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Shift-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.</flowPara><flowPara
          id="flowPara2652">Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Shift-Taste« auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.</flowPara><flowPara
          id="flowPara2654">Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia: http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen</flowPara><flowPara
-         id="flowPara2656">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen &quot; benutzen. Dieses ist per »AltGr« + ».« erreichbar.</flowPara><flowPara
+         id="flowPara2656">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen &quot; benutzen. Dieses ist per »Mod3« + ».« erreichbar.</flowPara><flowPara
          id="flowPara2658" /></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
@@ -227,7 +222,7 @@
            x="862.7619"
            y="579.59161"
            style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu LGC Serif Condensed" /></flowRegion><flowPara
-         id="flowPara3147">5. und 6. Ebene fehlen hier. Sie sind mit Mod5 bzw. Shift &amp; Mod5 zu bedienen.</flowPara></flowRoot>    <flowRoot
+         id="flowPara3147">4. und 6. Ebene fehlen hier. Sie sind mit Mod4 bzw. Mod3 &amp; Mod4 zu bedienen.</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3165"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu LGC Serif Condensed"
@@ -239,7 +234,15 @@
            x="862.7619"
            y="579.59161"
            style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu LGC Serif Condensed" /></flowRegion><flowPara
-         id="flowPara3171">Gepunktete Zeichen stehen für „Kombi-nations-Tasten“, die nur mit einer weite-ren Taste zu einem kombinierten Zeic-hen führen. Z. B. wird ~ und n zu ñ.</flowPara></flowRoot>    <text
+         id="flowPara3171">Gepunktete Zeichen stehen für „Kombi-nations-Tasten“, die nur mit einer weite-ren Taste zu einem kombinierten Zeic-hen führen. Z. B. wird ~ und n zu ñ.</flowPara></flowRoot>    <path
+       style="opacity:1;fill:#fce395;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.98360682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       d="M 406.97165,164.44865 L 287.95524,164.44865 L 287.95524,45.432264 L 406.97165,45.432264 L 406.97165,164.44865 z "
+       id="path11737" />
+    <path
+       style="opacity:1;fill:#fce395;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.98360682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       d="M 287.95524,164.44865 L 168.93883,164.44865 L 168.93883,45.432257 L 287.95524,45.432257 L 287.95524,164.44865 z "
+       id="path5921" />
+    <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Serif Condensed"
        x="-226.47717"
@@ -261,22 +264,6 @@
          id="tspan12343">Modifier</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Serif Condensed"
-       x="-259.80078"
-       y="-145.32884"
-       id="text3560"
-       sodipodi:linespacing="100%"
-       transform="scale(-1,-1)"><tspan
-         sodipodi:role="line"
-         id="tspan3562"
-         x="-259.80078"
-         y="-145.32884">2. Ebene</tspan><tspan
-         sodipodi:role="line"
-         id="tspan3564"
-         x="-259.80078"
-         y="-135.32884">mit Shift</tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Serif Condensed"
        x="-196.80078"
        y="-149.49553"
@@ -286,7 +273,7 @@
          sodipodi:role="line"
          id="tspan3574"
          x="-196.80078"
-         y="-149.49553">4. Ebene</tspan><tspan
+         y="-149.49553">5. Ebene</tspan><tspan
          sodipodi:role="line"
          id="tspan3576"
          x="-196.80078"
@@ -294,7 +281,7 @@
          sodipodi:role="line"
          x="-196.80078"
          y="-129.49553"
-         id="tspan12346">&amp; AltGr</tspan></text>
+         id="tspan12346">&amp; Mod3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a0892c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Serif Condensed"
@@ -310,11 +297,27 @@
          sodipodi:role="line"
          id="tspan3582"
          x="-196.13409"
-         y="-57.995522">mit AltGr</tspan></text>
+         y="-57.995522">mit Mod3</tspan></text>
     <path
-       style="opacity:0.2;fill:#00ffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.98360682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
-       d="M 287.57316,164.44865 L 168.55675,164.44865 L 168.55675,45.43226 L 287.57316,45.43226 L 287.57316,164.44865 z "
+       style="opacity:0.2;fill:#00fcff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.98360682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       d="M 287.95524,164.44865 L 168.93883,164.44865 L 168.93883,45.432264 L 287.95524,45.432264 L 287.95524,164.44865 z "
        id="path4183" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Serif Condensed"
+       x="-259.80078"
+       y="-145.32884"
+       id="text3560"
+       sodipodi:linespacing="100%"
+       transform="scale(-1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan3562"
+         x="-259.80078"
+         y="-145.32884">2. Ebene</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3564"
+         x="-259.80078"
+         y="-135.32884">mit Shift</tspan></text>
     <path
        style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.98360682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 287.57316,164.44865 L 168.55675,164.44865 L 168.55675,45.43226 L 287.57316,45.43226 L 287.57316,164.44865 z "
@@ -322,7 +325,7 @@
     <g
        style="opacity:1;display:inline"
        id="g8383"
-       transform="matrix(1.9722192,0,0,1.9754778,-520.55648,-170.01774)">
+       transform="matrix(1.9722191,0,0,1.9835397,-520.17437,-171.38269)">
       <path
          id="path9915"
          d="M 469.75651,169.30911 L 409.7565,169.30911 L 409.7565,109.30912 L 469.75651,109.30912 L 469.75651,169.30911 z "
@@ -450,7 +453,7 @@
        d="M 75.283338,509.06872 L 180.28334,509.06872 L 180.28334,569.06872 L 75.283338,569.06872 L 75.283338,509.06872 z "
        id="path3285" />
     <path
-       style="opacity:0.2;fill:#00ffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
+       style="opacity:0.2;fill:#00fcff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 75.283338,389.06873 L 135.28335,389.06873 L 135.28335,449.06872 L 75.283338,449.06872 L 75.283338,389.06873 z "
        id="path3237" />
     <path
@@ -1156,7 +1159,7 @@
          sodipodi:role="line"
          id="tspan2564"
          x="104.08609"
-         y="544.37048">AltGr</tspan></text>
+         y="544.37048">Mod3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -1178,7 +1181,7 @@
          sodipodi:role="line"
          x="704.08612"
          y="664.37048"
-         id="tspan2559">Mod5</tspan></text>
+         id="tspan2559">Mod4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -1303,7 +1306,7 @@
          id="tspan3417"
          x="869.15448"
          y="532.37048"
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:DejaVu LGC Sans">AltGr</tspan></text>
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:DejaVu LGC Sans">Mod3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -1315,7 +1318,7 @@
          id="tspan3423"
          x="179.15445"
          y="592.37048"
-         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:DejaVu LGC Sans">Mod5</tspan></text>
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:DejaVu LGC Sans">Mod4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -2107,7 +2110,7 @@
          id="tspan12179"
          x="817.47156"
          y="503.03827"
-         style="fill:#a0892c;font-family:Linux Libertine">ĳ</tspan></text>
+         style="fill:#a0892c;font-family:Linux Libertine">ſ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -3263,7 +3266,7 @@
          id="tspan12183"
          x="815.67957"
          y="467.44855"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">Ĳ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ς</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#0055d4;stroke-width:0.78307086;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:0.78307087, 1.56614173;stroke-dashoffset:2.19259846;stroke-opacity:1;display:inline"
        id="rect18626"
@@ -3539,7 +3542,7 @@
          style="font-family:Linux Libertine"
          id="flowPara22730">     Die jeweiligen Funktionstasten zur Erreichung der Ebene haben die entsprechende Farbe. Plus: Ebenensystem wird</flowPara><flowPara
          style="font-family:Linux Libertine"
-         id="flowPara22732">     leicht erkannt. Dshalb ist auch die Anwahl der Ebene 3 über Groß+AltGroß durch eine blaue Linie, die beide Tasten</flowPara><flowPara
+         id="flowPara22732">     leicht erkannt. Dshalb ist auch die Anwahl der Ebene 5 über Groß+Mod3 durch eine blaue Linie, die beide Tasten</flowPara><flowPara
          style="font-family:Linux Libertine"
          id="flowPara25617">     einrahmt, dargestellt.</flowPara><flowPara
          style="font-family:Linux Libertine"
