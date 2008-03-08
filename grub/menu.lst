@@ -41,8 +41,8 @@ setkey t l
 setkey d semicolon
 setkey y quote
         
-#setkey ö z
-#setkey ü x
+#setkey ü z
+#setkey ö x
 #setkey ä c
 setkey p v
 setkey z b
@@ -76,8 +76,8 @@ setkey T L
 setkey D colon
 setkey Y doublequote
           
-#setkey Ö Z
-#setkey Ü X
+#setkey Ü Z
+#setkey Ö X
 #setkey Ä C
 setkey P V
 setkey Z B
