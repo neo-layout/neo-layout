@@ -37,7 +37,7 @@ ControlKey		259		M3		0		20		18		10
 ControlKey		8		BackSpace	130		0		20		10
 # formerly (with qwertz) normal keys
 ControlKey		266		M3		128		20		10		10
-ControlKey		267		M5		13		30		10		10
+ControlKey		267		M4		13		30		10		10
 #
 #
 #  NormalKey: These keys are the keys that are visible on the keyboard. To 
@@ -78,7 +78,7 @@ NormalKey		115		¿		68		20		110
 NormalKey		121		þ		118		20		100
 #NormalKey		266		M3		128		20		100
 #
-#NormalKey		267		M5		13		30		117
+#NormalKey		267		M4		13		30		117
 NormalKey		252		⌧		23		30		117
 NormalKey		246		⌦		33		30		105
 NormalKey		228		⇟		43		30		97
