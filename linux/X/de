@@ -290,7 +290,7 @@ xkb_symbols "neo" {
     key <LSGT> { [ 0xfe11,      0xfe11,                 Multi_key,              Multi_key,          Caps_Lock,      Caps_Lock           ] };
     key <RALT> { [ 0xfe11,      0xfe11,                 Multi_key,              Multi_key,          KP_Decimal,     Caps_Lock           ] };
 
-    modifier_map mod5 { <LSGT>, <RALT> };
+    modifier_map mod4 { <LSGT>, <RALT> };
     // Keypad
 
          // key <NMLK> { [ Num_Lock, Pointer_EnableKeys ] };

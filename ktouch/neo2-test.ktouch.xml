@@ -28,16 +28,8 @@
    <Line>#$|~`+%'&quot;;</Line>
   </Level>
   <Level>
-   <LevelComment>diese Zeichen sind mit Shift+Mod3 erreichbar</LevelComment>
+   <LevelComment>mittels Mod4 erreicht man diese Zeichen</LevelComment>
    <NewCharacters>Ebene 4</NewCharacters>
-   <Line>˘♀⚥♂¤¥­˛</Line>
-   <Line>ξvλχwκψγφɸς˝</Line>
-   <Line>uιαεωσνρτδυ</Line>
-   <Line>ηπζβµϱθϑ</Line>
-  </Level>
-  <Level>
-   <LevelComment>mittels Mod5 erreicht man diese Zeichen</LevelComment>
-   <NewCharacters>Ebene 5</NewCharacters>
    <Line>•‣/*-‑˙</Line>
    <Line>¡789+ə</Line>
    <Line>¿456,þ</Line>
@@ -45,7 +37,15 @@
    <Line>0</Line>
   </Level>
   <Level>
-   <LevelComment>Shift+Mod5 ergibt diese Zeichen</LevelComment>
+   <LevelComment>diese Zeichen sind mit Shift+Mod3 erreichbar</LevelComment>
+   <NewCharacters>Ebene 5</NewCharacters>
+   <Line>˘♀⚥♂¤¥­˛</Line>
+   <Line>ξvλχwκψγφɸς˝</Line>
+   <Line>uιαεωσνρτδυ</Line>
+   <Line>ηπζβµϱθϑ</Line>
+  </Level>
+  <Level>
+   <LevelComment>Shift+Mod4 ergibt diese Zeichen</LevelComment>
    <NewCharacters>Ebene 6</NewCharacters>
    <Line>⇒⇔¬∃∀∨∧°</Line>
    <Line>ΞΛΨΓΦ∂Ə</Line>

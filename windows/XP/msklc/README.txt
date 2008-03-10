@@ -24,9 +24,9 @@ Wenn bei der Installation dennoch Probleme auftreten, muss über die System-
 steuerung -> Software der Eintrag „Deutsch (NEO ergonomisch 2.0)“ gelöscht
 werden.
 
-== Modifier (AltGr und Mod5) einrichten ==
-Um die Belegung der Modifier (AltGr, Mod5) zu erreichen, muss die Datei
-„AltGr_Mod5_neo20.reg“ (bzw. „AltGr_Mod5_neo20“) runtergeladen und installiert
+== Modifier (Mod3 und Mod4) einrichten ==
+Um die Belegung der Modifier (Mod3, Mod4) zu erreichen, muss die Datei
+„AltGr_Mod5_neo20.reg“ (bzw. „AltGr_Mod4_neo20“) runtergeladen und installiert
 werden. Die Änderung wirkt sich erst nach einer Neuanmeldung des Benutzers
 aus!
 WARNUNG: Diese Änderung (der Modifier) wirkt sich auf alle Benutzer und alle
