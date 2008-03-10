@@ -132,11 +132,9 @@
 <Multi_key> <s> <c> <M>			: "ℳ"   U2133 # SCRIPT CAPITAL M
 <Multi_key> <s> <c> <o>              	: "ℴ"   U2134 # SCRIPT SMALL O
 
-<Multi_key> <p> <h>			: "ℎ"   U210E # PLANCK CONSTANT
+<Multi_key> <p> <h> <space>		: "ℎ"   U210E # PLANCK CONSTANT
 <Multi_key> <minus> <p> <h>   	     	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key> <KP_Subtract> <p> <h>  	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <minus> <p> <h>		: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <KP_Subtract> <p> <h>	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key> <p> <h> <minus>		: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key> <p> <h> <KP_Subtract>	: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <dead_macron> <p> <h>			: "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
