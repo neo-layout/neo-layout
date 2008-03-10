@@ -1,6 +1,3 @@
-1) Ξ (Xi) geht nur, wenn ich rechts Shift+Mod5+x drücke. Wenn ich links
-Shift+Mod5+x drücke, dann nicht.
-
 2) https://bugs.freedesktop.org/show_bug.cgi?id=9974
 
 == Deadkey finden ==
@@ -38,7 +35,7 @@ Antwort von Nora:
 
 3) Caps-Lock funktioniert nicht mit keycode
 F: Warum kann ich nicht „Dauergroßschreiben“ (Caps-Lock)? Wenn ich wie
-vorgesehen erst rechts »AltGr« und dann gleichzeitig links die Taste auf der
+vorgesehen erst rechts »Mod3« und dann gleichzeitig links die Taste auf der
 früher (bei QWERTZ) schon »CapsLock« war drücke, dann ändert sich überhaupt
 nichts.
 

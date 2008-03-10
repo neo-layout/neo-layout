@@ -21,7 +21,7 @@
                   - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGES:      - Kein Parsen über die Zwischenablage mehr
                   - Vista-kompatibel
-                  - Ebene 6 über Mod3+Mod5
+                  - Ebene 6 über Mod3+Mod4
 */
 
 ; aus Noras script kopiert:
@@ -97,7 +97,7 @@ PriorDeadKey := ""
    }
 return
 
-; KP_Decimal durch Mod5+Mod5
+; KP_Decimal durch Mod4+Mod4
 *<::
 *SC138::
    if GetKeyState("<","P") and GetKeyState("SC138","P")
@@ -1399,7 +1399,7 @@ return
    ------------------------------------------------------
 */
 
-;SC056 (<) wird zu Mod5
+;SC056 (<) wird zu Mod4
 
 *y::
    EbeneAktualisieren()
@@ -2122,13 +2122,13 @@ EbeneAktualisieren()
    }
    ; ist Mod3 down?
    if ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ) {
-      ; ist Mod5 down?
+      ; ist Mod4 down?
       if ( GetKeyState("<","P") or GetKeyState("SC138","P") ) {
          Ebene +=6
       }
       else Ebene += 2
    }
-   ; ist Mod5 down? Mod3 hat Vorrang!
+   ; ist Mod4 down? Mod3 hat Vorrang!
    else if ( GetKeyState("<","P") or GetKeyState("SC138","P") ) {
       ; ist Mod3 down?
       if ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ) {

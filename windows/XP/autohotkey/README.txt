@@ -13,9 +13,9 @@ Entwickler sollten daher Autohotkey selbst runterladen, wie unten beschrieben.
 Um kurzzeitig zu QWERTZ zu wechseln, kann mit Shift+Pause das Skript pausiert
 werden.
 
-Momentan befindet sich in der Testphase, ob die 6. Ebene über Shift+Mod5 oder
-über Mod3+Mod5 angesprochen werden soll (Shift+Mod5 zum Markieren bleibt
-erhalten). Die Datei neo20_mod-test.ahk spricht die 6. Ebene über Mod3+Mod5 an.
+Momentan befindet sich in der Testphase, ob die 6. Ebene über Shift+Mod4 oder
+über Mod3+Mod4 angesprochen werden soll (Shift+Mod4 zum Markieren bleibt
+erhalten). Die Datei neo20_mod-test.ahk spricht die 6. Ebene über Mod3+Mod4 an.
 
 === Autohotkey herunter laden ===
 Man braucht als erstes das Programm namens »autohotkey«
@@ -64,7 +64,7 @@ Der Nummernblock auf der 3. Ebene funktioniert bei EINgeschaltetem
 Numlock mit Mod3 (Caps/#).
 Der Nummernblock auf der 4. Ebene ist wahlweise
 - bei AUSgeschaltetem Numlock mit Mod3 + Shift
-- bei EINgeschaltetem Numlock über Mod5
+- bei EINgeschaltetem Numlock über Mod4
 zu erreichen.
 Da die 2. Ebene über Shift ebenfalls bei EINgeschaltetem Numlock
 funktioniert ist das Ausschalten des Nummernblocks nicht unbedingt
@@ -72,13 +72,13 @@ nötig.
 
 == Besonderheiten bei der ahk-Windowsversion von Neo ==
 Ebene 4 des Nummernblocks lässt sich außer über Mod3+Shift auch über
-Mod5 ansprechen.
+Mod4 ansprechen.
 
 == Warnung ==
 ACHTUNG! Bei Windows ist folgendes festgelegt:
 AltGr + Pos1 = Abmelden
 AltGr + Ende = Computer ausschalten
---> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod5
+--> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod4
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.

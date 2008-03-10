@@ -99,7 +99,7 @@ PriorDeadKey := ""
    }
 return
 
-; KP_Decimal durch Mod5+Mod5
+; KP_Decimal durch Mod4+Mod4
 *<::
 *SC138::
    if GetKeyState("<","P") and GetKeyState("SC138","P")
@@ -1826,7 +1826,7 @@ return
    ------------------------------------------------------
 */
 
-;SC056 (<) wird zu Mod5
+;SC056 (<) wird zu Mod4
 
 *y::
    EbeneAktualisieren()
@@ -2995,7 +2995,7 @@ EbeneAktualisieren()
       Ebene += 2
    }
    
-   ; ist Mod5 down? Mod3 hat Vorrang!
+   ; ist Mod4 down? Mod3 hat Vorrang!
    else if ( GetKeyState("<","P") or GetKeyState("SC138","P") )
    {
       Ebene += 4

@@ -7,7 +7,7 @@
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !! and Erik Streb <mail at erikstreb dot de>
 !!
-!! The german NEO Layout Revision 402 from Fr 7. Mär 13:30:24 CET 2008
+!! The german NEO Layout Revision 408 from Mo 10. Mär 09:11:42 CET 2008
 !! see http://pebbles.schattenlauf.de/layout.php for details
 !!
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -21,7 +21,7 @@
 remove Lock = Caps_Lock
 remove Mod3 = ISO_Level3_Shift
 clear Mod3
-clear Mod5
+clear Mod4
 
 ! Shift 50=left 62=right
 ! Shift+Shift ergibt ein ShiftLock (wie Caps, wirkt aber auf alle Zeichen, nicht nur auf Großbuchstaben) und lässt sich durch ein weiteres Shift lösen
@@ -45,7 +45,7 @@ keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 
 !add Mod3 = ISO_Group_Shift
-!add Mod5 = ISO_Level3_Shift
+!add Mod4 = ISO_Level3_Shift
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -206,18 +206,18 @@ keycode 91 = KP_Delete    KP_Decimal  period     comma
 !     (bzw. mode_switch+mode_switch) und über keine andere mir bekannte kombination. Insbesondere legt
 !     ISO_Level3_Shift Level3 (Ebene 5) fest, verschiebt also nicht. Darum kann man ISO_Level3_Shift
 !     nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über Mod3+Mod4
-!     (ind dieser Reihenfolge!) erreicht werden kann
+!     (ind dieser Reihenfolge!) erreicht werden kann.
 !
-! 2.) Die KP_-Einträge auf Ebene 5 ermöglichen die Steuerung des Mauscursors mit der Tastatur.
+! 2.) Die KP_-Einträge auf Ebene 4 ermöglichen die Steuerung des Mauscursors mit der Tastatur.
 !     Hierzu wird mittels Shift+Num dieser Betriebsmodus ein- und später wieder ausgeschaltet.
-!     Die Steuerung des Cursors kann über den echten Ziffernblock oder den auf Ebene 5 (sinnvollerweise
-!     mit eingerastetem Mod4) erfolgen
+!     Die Steuerung des Cursors kann über den echten Ziffernblock oder den auf Ebene 4 (sinnvollerweise
+!     mit eingerastetem Mod4) erfolgen.
 !
-! 3.) Die KP_-Einträge auf der linken Seite der Ebene 5 müssen vorhanden sein, da anderenfalls Probleme
+! 3.) Die KP_-Einträge auf der linken Seite der Ebene 4 müssen vorhanden sein, da anderenfalls Probleme
 !     mit (älteren) Programmen wie xterm oder xedit auftreten. Da es keinen mir bekannten Ersatz für
 !     Backspace gibt, funktioniert im xterm das v nicht. Wird dies benötigt, muss das Backspace (Mod4+v)
 !     entfernt (und z.B. durch v ersetzt) werden.
 !
-! 4.) Auf 0 und q (Ebene 5) muss minus und plus stehen (nicht KP_Substract und KP_Add) !
+! 4.) Auf 0 und q (Ebene 4) muss minus und plus stehen (nicht KP_Substract und KP_Add)!
 !     Anderenfalls funktionieren diese Tasten unter xterm mit shift+q als Vergrößerung (Shift+KP_Add)
-!     und shift+0 als Verkleinerung (Shift+KP_Substract)
+!     und shift+0 als Verkleinerung (Shift+KP_Substract).
