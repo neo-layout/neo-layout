@@ -24,7 +24,9 @@ clear Mod3
 clear Mod4
 
 ! Shift 50=left 62=right
-! Shift+Shift ergibt ein ShiftLock (wie Caps, wirkt aber auf alle Zeichen, nicht nur auf Großbuchstaben) und lässt sich durch ein weiteres Shift lösen
+! Shift+Shift ergibt ein ShiftLock (wie Caps, wirkt aber auf alle Zeichen, nicht nur auf Großbuchstaben)
+! Der Lock lässt sich durch ein weiteres Shift lösen.
+! Eigentlich (siehe Referenz) sollte hier ein CapsLock stehen. Der funktioniert aber über Shift+Shift.
 keycode 50 =  Shift_L Shift_Lock
 keycode 62 =  Shift_R Shift_Lock
 
@@ -204,9 +206,9 @@ keycode 91 = KP_Delete    KP_Decimal  period     comma
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! 1.) Ebene 6 (hier: der 7. Eintrag) erreicht man über ISO_Group_Shift+ISO_Group_Shift
 !     (bzw. mode_switch+mode_switch) und über keine andere mir bekannte kombination. Insbesondere legt
-!     ISO_Level3_Shift Level3 (Ebene 5) fest, verschiebt also nicht. Darum kann man ISO_Level3_Shift
-!     nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über Mod3+Mod4
-!     (ind dieser Reihenfolge!) erreicht werden kann.
+!     ISO_Level3_Shift Level3 (Ebene 4, hier: Eintrag 5) fest, verschiebt also nicht. Darum kann man
+!     ISO_Level3_Shift nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über
+!     Mod3+Mod4 (in dieser Reihenfolge!) erreicht werden kann.
 !
 ! 2.) Die KP_-Einträge auf Ebene 4 ermöglichen die Steuerung des Mauscursors mit der Tastatur.
 !     Hierzu wird mittels Shift+Num dieser Betriebsmodus ein- und später wieder ausgeschaltet.
