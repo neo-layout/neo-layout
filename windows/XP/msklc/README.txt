@@ -26,7 +26,7 @@ werden.
 
 == Modifier (Mod3 und Mod4) einrichten ==
 Um die Belegung der Modifier (Mod3, Mod4) zu erreichen, muss die Datei
-„AltGr_Mod5_neo20.reg“ (bzw. „AltGr_Mod4_neo20“) runtergeladen und installiert
+„Mod3_Mod4_neo20.reg“ (bzw. „Mod3_Mod4_neo20“) runtergeladen und installiert
 werden. Die Änderung wirkt sich erst nach einer Neuanmeldung des Benutzers
 aus!
 WARNUNG: Diese Änderung (der Modifier) wirkt sich auf alle Benutzer und alle

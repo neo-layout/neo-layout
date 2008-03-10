@@ -9,13 +9,14 @@
                   - Menü des Tasksymbols
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
+                  - Ebene 4 und 5 tauschen (im Programmcode, in der Doku ists schon)
                   - CapsLock auf 1. und 2. Ebene einbauen:
                     Die Buchstaben reagieren richtig auf CapsLock, da hier "sendinput {blind}"
                     verwendet wird. Bei anderen Tasten muss CapsLock in der ersten und zweiten Ebene
                     explizit abgefragt werden.
                     (Lässt sich das elegant in eine Funktion auslagern?)
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
-                  - bei Ebene 5 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+                  - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGES:      - SUBSCRIPT von 0 bis 9 sowie (auf Nummernblock) + und -
                      • auch bei Ziffernblock auf der 5. Ebene
                   - Kein Parsen über die Zwischenablage mehr
