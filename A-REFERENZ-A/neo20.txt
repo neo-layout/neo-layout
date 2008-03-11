@@ -138,8 +138,8 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W    │K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
 │    ♫   │x @ ξ│v _  │l [ λ│c ] χ│w ^  │k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ Ω│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y   ∇│↘3 ♫ │  ↲  │
-│         │u \  │i / ι│a { α│e } ε│o * ω│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y   υ│     │     │
+│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲  │S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y   ∇│↘3 ♫ │  ↲  │
+│         │u \  │i / ι│a { α│e } ε│o *  │s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y   υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
 │Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B   ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J . ≡│   Caps_Lock  │
 │Shift │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, ' ϱ│. " θ│j ; ϑ│   Shift      │
@@ -147,6 +147,11 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
 │      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
+
+Derzeit unklar:
+Die Lage von ω und Ω, sowie o und ∈ ist nicht abschließend erklärt (siehe Argumente in TODO.txt)
+
+
 
 == Vier Ebenen – Zahlenblock ==
 ┌─────┐
