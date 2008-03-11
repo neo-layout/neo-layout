@@ -1,0 +1,22 @@
+Neo 2.0 Windowstreiber, TODO
+=============================
+
+0) Alle folgenden Punkte können mit einem entsprechenden ahk-Skript
+   ermöglicht werden. Bis auf Punkt 6) können alle gestrichen werden,
+   wenn das Skript vorliegt.
+
+1) Ebenen 4 und 6 sind über SGCaps realisiert. Gibt es eine Möglichkeit,
+   Caps-Lock, eine andere Realisierung wäre wünschenswert.
+
+2) Ein „Hack“ für die aktuelle Belegung der Modifier fehlt noch.
+
+3) CapsLock über Tastenkombinationen scheint mit dem MS Layouteditor
+   nicht machbar.
+
+4) Numpad geht in höheren Ebenen nicht. Hier gibt es im Layouteditor
+   offenbar keine Möglichkeit.
+
+5) Eine Belegung von Space in höheren Ebenen ist mit dem MS Layouteditor
+   nicht möglich.
+
+6) Sind alle Deadkeys richtig belegt? Fehlen noch bestimmte Zeichen?
