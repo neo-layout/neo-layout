@@ -231,3 +231,5 @@
 #	<Multi_key> <KP_Divide> <h>             : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
 #	<dead_circumflex> <Multi_key> <T> <M>   : "™"   U2122 # TRADE MARK SIGN
 #	<Multi_key> <T> <M>                     : "™"   U2122 # TRADE MARK SIGN
+
+<Multi_key> <E> <E>              	: "Ə"   U+018F # LATIN CAPITAL LETTER SCHWA
