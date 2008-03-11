@@ -1,36 +1,8 @@
-7)  Fehlen noch irgendwelche Zeichen europäischer Sprachen?
-
-20) Anleitung schreiben
-    Eine kurze und außerdem eine ausführliche Anleitung für die Zeichen und
-    deren Benutzung schreiben.
-
 21) Was spricht jetzt noch gegen eine „Veröffentlichung“ von Neo2? Es ist
     doch nun bis auf minimalste Änderungen „fertig“.
 
-22) Wer macht die neue Homepage auf http://www.neo-layout.org?
-    Was für Software dafür nehmen?
-    Benötigt wird: - Hauptseite
-                   - svn
-                   - Mailingliste
-                   - wiki
-                   - Blog
-
-
 23) Wie sollen die Modifier heißen? Mod3 und Mod4? Mod3 und ... oder wie?
-    Symbole haben wir ja schon, aber wie nennt man die? Pfeil3, Pfeil5?
-
-24) Liste der toten Tasten erweitern, so dass alle Möglichkeiten drin stehen.
-    Denn auf viele Zeichen kommt man gar nicht, wenn man es nicht schon weiß
-    (beispielsweise ^2 = ²).
-    Die Liste vielleicht aufteilen in mathematische Operatoren, Buchstaben,
-    sonstige Zeichen.
-
-25) Was richtig gutes für die Mathe-Zeichen (Matheblock?)
-    Z.B. auf die Zahlenreihe?
-
-26) EUR und das Währungszeichen auch woanders hin
-
-27) Zeichen zuordnen: siehe mathe-und-so-zeichen.txt
+    Symbole haben wir ja schon, aber wie nennt man die? Pfeil3, Pfeil4?
 
 28) Lektionen für Tipptrainer verbessern (Ktouch). Siehe Mail von Ben vom
     13.08.2007 21:03.
@@ -47,31 +19,67 @@
 
 == Themen für das IRC-Treffen am Montag ==
 30) Homepage/Webpräsenz
-  a) Wir sollten nur EINE haben (nicht pebbles, eigenheim und neo-layout)
-  b) Wir sollten uns auf eine Wikisoftware einigen, Anbindung ans SVN?
   c) Wir sollten Aufgaben verteilen (wer dokumentiert was, wer macht
      Grafiken usw.)
-  d) Soll die Hauptseite ein Wiki oder statisches HTML sein?
-
-31) 6. Ebene
-  a) Wie erreichbar? Mod3+Mod4 oder klassisch Shift+Mod4?
-  b) Welche Zeichen sollten verändert werden (Pascals Vorschlag liefert
-     hier Anregungen) – Momentan sind wir aber noch auf dem stand der neo20.txt!
 
 32) Griechische Buchstaben
   a) Alle rein? Auch Omikron?
+  
+  Pro:
+1P.)  - Braucht man für semantisch sinnvolle griechische Texte
+2P.)  - Das kleine Omega ω gleicht dem Ausweichbuchstaben w
+3P.)  - Man muss beim Zitieren nicht mehrmals den Mod wechseln, wenn in einem
+  gr. Wort ein oder mehrere Omikrons vorkommen (was keine Seltenheit ist).
+4P.)  - i.d. R keine Verwechslung da 4. Ebene(!) und inmitten griechischer Zeichen
+5P.)  - Verwechslungsgefahr (für Compiler) ist wegen 2 Modifiern+o deutlich geringer als bei - und – oder “ und "
+6P.)  - die kleinen griechischen Buchstaben wären dann komplett. Es ist der einzige, 
+  der ansonsten fehlt.
+7P.)  - @2K.) Argument ist einseitig und übersieht andere Bedürfnisse
+8P.)  - @1K) eine Frage der Gewöhnung, ebenso wie eta nicht auf e und theta nicht auf t ist
+  
+  Kontra:
+1K.)  - Klangähnlichkeit (Wenn ich das Omega suche, werde ich beim O anfangen)
+2K.)  - Braucht man nicht für Formeln
+3K.)  - es sieht genauso aus wie das o → Verwechslung
+          - Nährboden für Compilerfehler („kann funktion »open()« nicht finden“) (!) 
+4K.)  - es macht die Ebene unnötig voll
+5K.)  - es versperrt den Platz für das Omega ω
+6K.)  - Omikron hat keinen Gegenpart in der Mat/Nat-Ebene
+7K.)  - wir haben eh nicht alle Großbuchstaben warum also die Kleinen voll machen
+
   b) Omega (ω und Ω) wohin?
   c) Was ist mit den ganzen Varianten? Wohin? Welche nötig? Alle?
 
-33) Mailingliste? Wer kann helfen?
-
-34) Wer beteiligt sich noch an der Entwicklung des neuen Windowstreibers?
-    Kann der bisherige Entwickler (Florian) Interessierten vielleicht ’ne
-    kleine Einführung geben?
-
 35) Nutzt niemand OS X? Treiber…?
+   http://developer.apple.com/technotes/tn2002/tn2056.html
+   
+   
+38) ‣ Logogestaltung? Kriterien? Welches nehmen wir (von den vorhandenen)? Oder ein neues?
+    ‣ logo für: Webseite (groß, klein), Aufkleber, Aufnäher, Plakate/Banner, was noch....?
+    Siehe Mail »Logogestaltung« vom 1.1.08; 16:08
 
-36) Locks: Shift+Shift=Shift_Lock, Mod3+Mod3=Mod3_Lock, Mod4+Mod4=Mod4_Lock
 
-37) tote Striche – welche und wie viele sind nötig?
+24) ‣ Liste der toten Tasten erweitern, so dass alle Möglichkeiten drin stehen.
+      Denn auf viele Zeichen kommt man gar nicht, wenn man es nicht schon weiß
+      (beispielsweise ^2 = ²).
+      Die Liste vielleicht aufteilen in mathematische Operatoren, Buchstaben,
+      sonstige Zeichen.
+    ‣ Tabelle aller Zeichen (besonders wichtig sind die akzentuierten
+      Buchstaben!), ungefähr so:
+Griechische Zeichen
+-----------+----------------
+ ⋮                  |   ⋮
+δ          |   Mod3+Shift+D
+ ⋮                  |   ⋮
+
+MatNat-Zeichen
+-----------+----------------
+∫          |   Mod3+Mod4+I
+⋮                   |      ⋮
+
+Lateinische Buchstaben mit Akzenten
+-----------+----------------
+ë          | totes Mod3+Taste_rechts_neben_ß und dann e
+⋮                   |   ⋮
+
 
