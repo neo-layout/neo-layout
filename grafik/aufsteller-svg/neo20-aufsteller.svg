@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0307892"
-     inkscape:cx="526.17999"
-     inkscape:cy="372.04501"
+     inkscape:zoom="1.1098564"
+     inkscape:cx="526.18277"
+     inkscape:cy="361.61159"
      inkscape:current-layer="layer2"
      id="namedview2563"
      width="29.699938cm"
@@ -40,15 +40,15 @@
      gridanglez="106.29921px"
      grid_units="px"
      units="cm"
-     inkscape:grid-points="true"
+     inkscape:grid-points="false"
      gridtolerance="30.2"
      gridoriginx="0mm"
-     inkscape:object-points="true"
-     inkscape:object-nodes="true"
-     objecttolerance="43.6"
+     inkscape:object-points="false"
+     inkscape:object-nodes="false"
+     objecttolerance="11.3"
      inkscape:guide-points="false"
-     guidetolerance="7.5"
-     inkscape:object-paths="true"
+     guidetolerance="12.7"
+     inkscape:object-paths="false"
      inkscape:guide-bbox="false"
      inkscape:grid-bbox="false"
      gridoriginy="0mm"
@@ -56,7 +56,8 @@
      inkscape:window-height="986"
      inkscape:window-x="2"
      inkscape:window-y="2"
-     inkscape:object-bbox="true" />
+     inkscape:object-bbox="false"
+     showguides="true" />
   <metadata
      id="metadata2565">
     <rdf:RDF>
@@ -1012,8 +1013,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="tastatur-neu"
-     style="opacity:1;display:inline"
-     sodipodi:insensitive="true">
+     style="opacity:1;display:inline">
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#0055d4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -2237,15 +2237,15 @@
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
-       x="204.60965"
-       y="409.99304"
+       x="208.4566"
+       y="409.85617"
        id="text21330"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan21332"
-         x="204.60965"
-         y="409.99304"
-         style="fill:#ffffff;font-family:Linux Libertine">¶</tspan></text>
+         x="208.4566"
+         y="409.85617"
+         style="fill:#ffffff;font-family:Linux Libertine">№</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -2341,7 +2341,7 @@
          id="tspan21380"
          x="443.61514"
          y="409.7251"
-         style="fill:#ffffff;font-family:Linux Libertine">$</tspan></text>
+         style="fill:#ffffff;font-family:Linux Libertine">€</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#a0892c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -2353,7 +2353,7 @@
          id="tspan21384"
          x="485.5687"
          y="444.48969"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a0892c;font-family:Linux Libertine">£</tspan></text>
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a0892c;font-family:Linux Libertine">¢</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -2377,7 +2377,7 @@
          id="tspan21396"
          x="502.8306"
          y="409.45715"
-         style="fill:#ffffff;font-family:Linux Libertine">€</tspan></text>
+         style="fill:#ffffff;font-family:Linux Libertine">$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#a0892c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -2389,7 +2389,7 @@
          id="tspan21400"
          x="544.78418"
          y="444.22174"
-         style="fill:#a0892c;font-family:Linux Libertine">¢</tspan></text>
+         style="fill:#a0892c;font-family:Linux Libertine">¥</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -3056,13 +3056,60 @@
        y="398.91681"
        ry="3.4065316"
        rx="3.4065316" />
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#a0892c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="187.34924"
+       y="444.7659"
+       id="text2837"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2839"
+         x="187.34924"
+         y="444.7659"
+         style="fill:#a0892c;font-family:Linux Libertine">¹</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#a0892c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="246.28923"
+       y="444.7659"
+       id="text2841"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2843"
+         x="246.28923"
+         y="444.7659"
+         style="fill:#a0892c;font-family:Linux Libertine">²</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#a0892c;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="306.84689"
+       y="444.7659"
+       id="text2845"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2847"
+         x="306.84689"
+         y="444.7659"
+         style="fill:#a0892c;font-family:Linux Libertine">³</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       x="641.95654"
+       y="590.72345"
+       id="text2857"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2859"
+         x="641.95654"
+         y="590.72345"
+         style="fill:#ffffff;font-family:Linux Libertine;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:100%">⋮</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="T blau"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -3279,51 +3326,39 @@
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
-       x="183.46542"
-       y="411.33185"
+       x="184.1443"
+       y="411.15598"
        id="text21306"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan21308"
-         x="183.46542"
-         y="411.33185"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">¼</tspan></text>
+         x="184.1443"
+         y="411.15598"
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">♀</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
        x="305.19589"
-       y="411.89221"
+       y="411.3093"
        id="text21322"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan21324"
          x="305.19589"
-         y="411.89221"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">¾</tspan></text>
+         y="411.3093"
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">♂</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
-       x="244.52121"
-       y="411.35437"
+       x="245.20009"
+       y="411.15598"
        id="text21338"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan21340"
-         x="244.52121"
-         y="411.35437"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">½</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
-       x="483.5267"
-       y="410.74542"
-       id="text21386"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan21388"
-         x="483.5267"
-         y="410.74542"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">¤</tspan></text>
+         x="245.20009"
+         y="411.15598"
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">⚥</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -3335,7 +3370,7 @@
          id="tspan21404"
          x="542.74219"
          y="410.81848"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">¥</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϰ</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#0055d4;stroke-width:0.78307086;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:0.78307087, 1.56614173;stroke-dashoffset:2.19259846;stroke-opacity:1;display:inline"
        id="rect21504"
@@ -3425,7 +3460,7 @@
          id="tspan21656"
          x="679.80865"
          y="587.95264"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϑ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϱ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -3449,7 +3484,7 @@
          id="tspan12151"
          x="695.09399"
          y="467.54474"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">φ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϕ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -3486,6 +3521,42 @@
          x="125.27792"
          y="400.05994"
          style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="364.89236"
+       y="411.11407"
+       id="text2827"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2829"
+         x="364.89236"
+         y="411.11407"
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ℓ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="755.05225"
+       y="467.35776"
+       id="text2849"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2851"
+         x="755.05225"
+         y="467.35776"
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">φ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="798.92694"
+       y="587.90741"
+       id="text2853"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2855"
+         x="798.92694"
+         y="587.90741"
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϑ</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
