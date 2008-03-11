@@ -15,7 +15,7 @@ http://dejavu.sourceforge.net/
 == Legende ==
 ┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
 │2 4 6│ 2 … 2. Ebene (Shift)        │ 5 … 5. Ebene (Shift+Mod3)
-│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Shift+Mod4)
+│1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
 • Ebene 1: Kleinbuchstaben
 • Ebene 2: Großbuchstaben
@@ -24,7 +24,7 @@ http://dejavu.sourceforge.net/
 • Ebene 5: Griechische Kleinbuchstaben
 • Ebene 6: Griechische Großbuchstaben
 
-Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Mod4.
+Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Tab.
 Beispiel:
 »Compose« »Compose loslassen« »o« »c« = ©
 
@@ -35,6 +35,7 @@ Beispiel:
 ⌧    … Esc                               
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
+♫    … Steht als Symbol für die Kombotaste (Compose)
 ╌    … Weicher Trennstrich (U+00AD SOFT HYPHEN)
 ␣    … Leerzeichen (SPACE)
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
@@ -83,36 +84,36 @@ Zu den Gedankenstrichen usw. siehe
 Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
 ┬─────┬ 2 … – Gedankenstrich (U+2013 EN DASH)
-│– ‑ ∧│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│- — ╌│ 4 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
-┴──┬──┴ 5 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
-        6 … ∧ Logisches Und (U+2227 LOGICAL AND)
+│–   ╌│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
+│- — ‑│ 4 … 
+┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
+        6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 == Anführungszeichen ==
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┬─────┬
-│» ⇞ ⇞│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
-│4 ›  │ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
+│» ⇞ ⊥│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
+│4 › ℓ│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│«   ⇒│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
+│«   ∡│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
 │5 ‹  │ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│„ / ∃│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
+│„ / ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
 │8 ‚  │ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│“ * ∀│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
+│“ * ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
 │9 ‘  │ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│” - ∨│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
+│” - ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
 │0 ’  │ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
@@ -131,31 +132,37 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 == Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ · .│° •  │№ ‣  │§    │» ⇞ ⇞│«   ⇒│$   ⇔│€   ¬│„ / ∃│“ * ∀│” - ∨│– ‑ ∧│` ˙ ˚│Backspace│
-│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 ›  │5 ‹  │6 £ ¤│7 ¢ ¥│8 ‚  │9 ‘  │0 ’  │- — ╌│´ ¸ ˛│    ⌫    │
+│ˇ · .│° • ¬│№ ‣ ∨│§ ◦ ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
+│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹  │6 ¢  │7 ¥ ϰ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab  ⇤ │X   Ξ│V ⌫ Λ│L ⇡ ⇡│C ⇥ ⇤│W ⎀ ⎀│K ¡  │H 7 Ψ│G 8 Γ│F 9 Φ│Q + ∂│ẞ ə Ə│ˉ / ˏ│      │
-│      ⇥ │x @ ξ│v _  │l [ λ│c ] χ│w ^  │k ! κ│h < ψ│g > γ│f = φ│q & ɸ│ß ſ ς│~ ¨ ˝│Enter │
+│ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W    │K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
+│    ♫   │x @ ξ│v _  │l [ λ│c ] χ│w ^  │k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3      │U ⇱ ⇱│I ⇠ ⇠│A ⇣ ⇣│E ⇢ ⇢│O ⇲ ⇲│S ¿ Σ│N 4  │R 5  │T 6  │D , Δ│Y þ Þ│↘3   │  ↲  │
-│    ⇬  ♫ │u \  │i / ι│a { α│e } ε│o * ω│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y   υ│  ⇬ ♫│     │
+│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ Ω│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y   ∇│↘3 ♫ │  ↲  │
+│         │u \  │i / ι│a { α│e } ε│o * ω│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y   υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Shift │↙4 ♫ │Ü ⌧  │Ö ⌦ ⌦│Ä ⇟ ⇟│P ↲ Π│Z   Ω│B   ∞│M 1 ∫│  2 √│… 3 Θ│J . ∇│  Shift ⇧     │
-│  ⇧   │     │ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, ' ϱ│. " θ│j ; ϑ│              │
+│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B   ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J . ≡│  Caps_Lock  │
+│Shift │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, ' ϱ│. " θ│j ; ϑ│   Shift      │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
-│ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4 ♫  │ Fen- │ Menu │ Strg │
-│      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │   ./,│ ster │      │      │
+│ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
+│      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
+
+== Vier Ebenen – Zahlenblock ==
+┌─────┐
+│ 7 ≪ │ 3 … v⃗ Vektorpfeil (U+20D7 COMBINING RIGHT ARROW ABOVE)
+│ ⇱ v⃗ │ 5 … ≪ viel kleiner als (U+226A MUCH LESS-THAN)
+└─────┘
 
 ┌─────┬─────┬─────┬─────┐
 │Num  │   ∕ │   ⋅ │     │
 │Lock │ / ÷ │ * × │ - − │
 ├─────┼─────┼─────┼─────┤
 │ 7 ≪ │ 8 ∩ │ 9 ≫ │     │
-│ ⇱   │ ⇡ ↑ │ ⇞   │   ∓ │
+│ ⇱ v⃗ │ ⇡ ↑ │ ⇞ ⊗ │   ∓ │
 ├─────┼─────┼─────┤     │
-│ 4 ⊂ │ 5 ∊ │ 6 ⊃ │ + ± │
-│ ⇠ ← │   † │ ⇢ → │     │
+│ 4 ⊂ │ 5 ∋ │ 6 ⊃ │ + ± │
+│ ⇠ ← │ € ∞ │ ⇢ → │     │
 ├─────┼─────┼─────┼─────┤
 │ 1 ≤ │ 2 ∪ │ 3 ≥ │   ≈ │
 │ ⇲ ⇋ │ ⇣ ↓ │ ⇟ ⇌ │   ≠ │
@@ -173,3 +180,56 @@ alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
+== Mat-/Nat-Ebene – Haupttastatur ==
+Ξ … Xi, griechischer Majuskel (U039E)
+≙ … entspricht (U2259)
+Λ … Lambda, griechischer Majuskel (U039B)
+ℂ … Menge der komplexen Zahlen (U2102)
+Ω … Omega, griechischer Majuskel (U03A9)
+√ … Wurzel aus (U221A)
+Ψ … Psi, griechischer Majuskel (U03A8)
+Γ … Gamma, griechischer Majuskel (U0393)
+Φ … Phi, griechischer Majuskel (U03A6)
+ℚ … Menge der rationalen Zahlen (U211A)
+∘ … Verknüpfungsoperator (U2218)
+∮ … Integral über eine geschlossene Kurve (U222E)
+∫ … Integral (U222B)
+∀ … Allquantor ; für alle (U2200)
+∃ … Existenzquantor ; es gibt (U2203)
+∈ … Element von (U2208)
+Σ … Sigma, griechischer Majuskel (U03A3)
+ℕ … Menge der natürlichen Zahlen (U2115)
+ℝ … Menge der reellen Zahlen (U211D)
+∂ … partielle Ableitung (U2202)
+Δ … Delta, griechischer Majuskel (U0394)
+∇ … Nablaoperator (Gradient, Divergenz, Rotation) (U2207)
+∝ … proportional zu (U221D)
+ℑ … Imaginärteil einer komplexen Zahl (U2111)
+ℜ … Realteil einer komplexen Zahl (U211C)
+Π … Pi, griechischer Majuskel (U03A0)
+ℤ … Menge der ganzen Zahlen (U2124)
+⇒ … Implikation ; daraus folgt ; hinreichend für (U21D2)
+⇔ … Äquivalenzzeichen (U21D4)
+⇐ … notwendig für ; nur dann, wenn (U21D0)
+Θ … Theta, griechischer Majuskel (U0398)
+≡ … identisch (U2261)
+
+== Mat-/Nat-Ebene – Zahlenblock ==
+v⃗ … Vektorpfeil, kombinierendes Zeichen, lässt sich rückwirkend(!) auf jedes Zeichen setzen (U20D7)
+⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
+∞ … unendlich (U221E)
+∋ … enthält das Element (U220B)
+
+== Hinweise zu Doppelbelegungen in Unicode ==
+Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.
+• Δ für Differenz oder Fehler
+• Θ für homöopathische Urtinktur
+• Γ für Gammafunktion
+
+Einige finden sich darum an mehreren Stellen im Unicode, um (eventuelle) Unterschiede deutliche machen zu können. Zur Platzersparnis haben wir stets eines (das einfachste und allgemeinste) Zeichen aufgenommen:
+• Ω (U03A9) ; Einheit des Widerstandes Ohm (U2126)
+• Σ (U03A3) ; Summenzeichen (U2211)
+• Δ (U0394) ; Laplaceoperator (2206) ; Dreieck, symmetrische Differenz (25B3)
+• ∇ (U2207) ; Dreieck (U25BD)
+• Π (U03A0) ; Produktzeichen ∏ (U220F)
+• µ (U03BC) ; SI-Vorsilbe micro (U00B5)
