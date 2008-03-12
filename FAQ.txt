@@ -364,11 +364,11 @@ Wer schreibt an KDE (einen Bugreport)?
 
 -------------------------------------------------------------------------------
 
-F: Bei mir funktioniert die Kombo-/Komponier-/Compose-/Multi-Key-Taste nicht.
-Wieso?
+F: Wie funktioniert die Kombo-/Komponier-/Compose-/Multi-Key-Taste?
 
-A: Soweit bekannt, funktioniert nur die Kombination »Mod4« und »linkes Mod3«
-nicht. Hinweise zur Lösung dieses komischen Fehlers bitte an die Mailingliste.
+A: Die Compose-Taste erreicht man über Mod3+Tab. Viele Linuxdistributionen haben
+außerdem eine weitere Compose-Taste auf der rechten Win-Taste.
+Um z.B. x⁵ zu schreiben, tippt man <x>, <Mod3+Tab>, <Mod3+Tab loslassen>, <Mod3+w>, <5>
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
