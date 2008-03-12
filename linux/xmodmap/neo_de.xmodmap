@@ -7,7 +7,7 @@
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !! and Erik Streb <mail at erikstreb dot de>
 !!
-!! The german NEO Layout Revision 412 from Di 11. Mär 00:31:55 CET 2008
+!! The german NEO Layout Revision 429 from Mi 12. Mär 02:03:48 CET 2008
 !! see http://pebbles.schattenlauf.de/layout.php for details
 !!
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -134,12 +134,12 @@ keycode 40 = a A braceleft  Greek_alpha   KP_Down  KP_Down  U2200
 keycode 41 = e E braceright Greek_epsilon KP_Right KP_Right U2203
 keycode 42 = o O asterisk   Greek_omicron KP_End   KP_End   U2208
 
-keycode 43 = s S question   Greek_sigma questiondown questiondown U03A3
-keycode 44 = n N parenleft  Greek_nu    KP_4         KP_4         U2115
-keycode 45 = r R parenright Greek_rho   KP_5         KP_5         U211D
-keycode 46 = t T minus      Greek_tau   KP_6         KP_6         U2202
-keycode 47 = d D colon      Greek_delta comma        comma        U0394
-keycode 48 = y Y doublelowquotemark Greek_upsilon y  y            U2207
+keycode 43 = s S question   Greek_sigma   questiondown questiondown U03A3
+keycode 44 = n N parenleft  Greek_nu      KP_4         KP_4         U2115
+keycode 45 = r R parenright Greek_rho     KP_5         KP_5         U211D
+keycode 46 = t T minus      Greek_tau     KP_6         KP_6         U2202
+keycode 47 = d D colon      Greek_delta   comma        comma        U0394
+keycode 48 = y Y y          Greek_upsilon y            y            U2207
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
@@ -198,6 +198,25 @@ keycode 108 = KP_Enter    KP_Enter    notequal   U2248
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 90 = KP_Insert    KP_0        percent    U2030
 keycode 91 = KP_Delete    KP_Decimal  period     comma
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Anpassungen (mögliche Verbesserungen)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Es gibt naheliegende Möglichkeiten, NEO anzupassen und damit zu verbessern.
+! Da sie jedoch nicht zwingend notwendige Redundanzen erzeugen und sich nicht in die
+! thematischen Ordnung der Ebenen eingliedern, sind folgende Anpassungen nicht in der offiziellen
+! Version von NEO berücksichtigt und müssen bewusst ermöglicht werden, indem das Ausrufezeichen zu
+! Beginn der folgenden keycode-Zeile entfernt wird.
+!
+! Zusätzliches @-Zeichen auf Mod4+x (gleicher Handgriff wie AltGr+q auf QWERTZ)
+! Dies ist insbesondere auf ergonomischen Tastaturen mit größerer Mod4 auf der linken Seite sinnvoll
+! keycode 24 = x X at           Greek_xi     at        at        U039E
+!
+! Zusätzliches Gänsefüßchen unten („) neben dem Doppelpunkt
+! Dies ist für Wörtliche Rede sinnvoll, um bei :„ oder : „ den Modifer Mod3 liegen lassen zu können
+! keycode 48 = y Y doublelowquotemark Greek_upsilon y  y            U2207
 
 
 
