@@ -11,16 +11,18 @@ Wenn man es jedoch umgekehrt einträgt "XkbVariant" "neo,basic" dann geht es.
 == xmodmap ==
 ‣ Man muss vor »xmodmap neo_de.xmodmap« immer »setxkbmap ie« ausfühern, sonst
   geht folgendes nicht:
-  ‣ die 4 auf der 4. Ebene
+  • die 4 auf der 4. Ebene
 
 ‣ bei der alten xmodmap (ohne KP-Hack)
-  ‣ geht W, Ä und » nicht unter xterm und Konsorten nicht (stattdessen Einfg
+  • W, Ä und » gehen nicht unter xterm und Konsorten (stattdessen Einfg
     usw.)
-  ‣ funktioniert fast kein Buchstabe der linken Tastaturhälfte unter xedit,
+  • fast kein Buchstabe der linken Tastaturhälfte funktioniert unter xedit,
     xfig und ähnlichen Programmen
 
 ‣ bei der neuen xmodmap (mit KP-Hack)
-  ‣ gehen die Bewegungstasten auf der 4. Ebene nicht mehr (in keinem Programm),
+  • gehen die Bewegungstasten auf der 4. Ebene nicht mehr (in keinem Programm),
     wenn Numlock aktiviert ist (betrifft nur Thinkpads (oder?))
-  ‣ bei xpdf, dann geht ö nicht (macht Tab), Ö macht rücktab
 
+‣ nicht alle Probleme können durch den KP-Hack gelöst werden:
+  • bei xpdf: ö geht nicht (stattdessen Tab), Ö macht rücktab
+  • bei xedit: v geht nicht (stattdessen Backspace), ebenso V
