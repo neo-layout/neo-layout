@@ -104,7 +104,7 @@ keycode 17 = 8 doublelowquotemark   singlelowquotemark   8     KP_Divide    KP_D
 keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  9     KP_Multiply  KP_Multiply    U2226
 keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     minus        minus          U2205
 
-keycode 20 = minus      endash     emdash       2011        minus         minus          U00AD
+keycode 20 = minus      endash     emdash       U2011        minus         minus          U00AD
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -108,8 +108,9 @@ A: Dazu gibt es 3 Wege:
 ⅲ) Mit der Compose-Taste, dem nicht-toten ^ und der Zahl (also Compose+^+1=¹,
  Compose+^+2=² u.s.w.)
 
-Auch die Zeichen +,-,(,),= sowie die Buchstaben i und n können hochgestellt werden.
-Des Weiteren können über Compose+_ auch Zeichen tiefgestellt werden (Indizes) 
+Auch die Zeichen +,-,(,),= sowie die Buchstaben i und n können hochgestellt
+werden. Des Weiteren können über Compose+_ auch Zeichen tiefgestellt werden
+(Indizes).
 
 --------------------------------------------------------------------------------
 
@@ -176,7 +177,8 @@ Dieses ist per »Mod3« + »,« (Komma) erreichbar.
 F: Es fehlen ein paar griechische Buchstaben. Wieso?
 
 A: Die griechischen Buchstaben sind nicht dafür da, um griechische oder
-altgriechische Fließtexte zu schreiben. NEO ist ein Layout für die deutsche Sprache.
+altgriechische Fließtexte zu schreiben. NEO ist ein Layout für die deutsche
+Sprache.
 
 Aus genau diesem Grund gibt es auch keine kyrillischen, japanischen sowie
 chinesischen Buchstaben. Dafür gibt es Layouts der einzelnen Sprachen. Es wurde
@@ -187,24 +189,24 @@ Namen europäischer Mitbürger oder ...
 
 Dennoch gibt es griechische Buchstaben auf der NEO-Tastatur. Warum?
 
-Unsere abendländische Kultur basiert auf der griechischen und lateinischen Kultur.
-Darum haben diese beiden Sprachen einen besonderen Stellenwert:
-Zum einen tauschen griechischen und lateinische Wörter oder kurze Zitate regelmäßig
-in wissenschaftlichen Arbeiten auf.
-Das ist für Geistes- und Gesellschaftswissenschaftler interessant.
-Zum anderen dienen die griechischen Buchstaben dazu, mathematische
-Formeln tippen zu können, in denen entsprechende Buchstaben vorkommen.
-Das ist für Naturwissenschaftler interessant.
+Unsere abendländische Kultur basiert auf der griechischen und lateinischen
+Kultur. Darum haben diese beiden Sprachen einen besonderen Stellenwert:
+‣ Zum einen tauchen griechischen und lateinische Wörter oder kurze Zitate
+regelmäßig in wissenschaftlichen Arbeiten auf. Das ist für Geistes- und
+Gesellschaftswissenschaftler interessant.
+‣ Zum anderen dienen die griechischen Buchstaben dazu, mathematische Formeln
+tippen zu können, in denen entsprechende Buchstaben vorkommen. Das ist für
+Naturwissenschaftler interessant.
 
 Da NEO jedoch kein echtes griechisches Layout ist, haben wir auf Großbuchstaben,
-die im Griechischen und Lateinischen (und somit auch im Deutschen) gleich aussehen
-verzichtet, um diesen Platz mit anderen wissenschaftlichen (i.d.R. mathematischen)
-Zeichen zu belegen. Diese lateinischen Großbuchstaben (z.B. A) könnten auch anstelle 
-der griechischen Großbuchstaben (z.B. Α) verwendet werden – im Griechischen sind
-Großbuchstaben viel seltener als im Deutschen (nur in Namen und bei Satzanfängen).
-Jedoch ist das typrographisch nicht korrekt!
-In mathematischen Formeln tauchen solche griechischen Großbuchstaben aufgrund der
-Glyphengleichheit nicht auf.
+die im Griechischen und Lateinischen (und somit auch im Deutschen) gleich
+aussehen verzichtet, um diesen Platz mit anderen wissenschaftlichen (i.d.R.
+mathematischen) Zeichen zu belegen. Diese lateinischen Großbuchstaben (z.B. A)
+könnten auch anstelle der griechischen Großbuchstaben (z.B. Α) verwendet werden
+– im Griechischen sind Großbuchstaben viel seltener als im Deutschen (nur in
+Namen und bei Satzanfängen). Jedoch ist das typrographisch nicht korrekt!
+In mathematischen Formeln tauchen solche griechischen Großbuchstaben aufgrund
+der Glyphengleichheit nicht auf.
 
 --------------------------------------------------------------------------------
 
@@ -256,13 +258,21 @@ Mehr dazu auf:
     http://de.wikipedia.org/wiki/Schreibweise_von_Zahlen
 Zum dritten gibt es bei NEO2 den griechischen Kleinbuchstaben Omikron ο, der dem
 lateinischen Kleinbuchstaben o optisch gleicht.
+Zusätzlich gibt es außerdem noch den „geschützten Bindestrich“ und den „weichen
+Trennstrich“. Siehe:
+    http://de.wikipedia.org/wiki/Gesch%C3%BCtzter_Bindestrich
+    http://de.wikipedia.org/wiki/Weiches_Trennzeichen
+
 Schnelle Abhilfe schafft eine Suche mit dem Texteditor nach folgenden Zeichen:
 Geschütztes Leerzeichen: » «
 Schmales Leerzeichen:    » «
+Geschützter Bindestrich: »‑«
+Weicher Trennstrich:     »­«
 kleines Omikron:         »ο«
-Diese dann einfach durch ein normales Leerzeichen bzw. ein o ersetzen, sofern diese
-Zeichen dort nicht gewünscht sind. Für Latex gibt es noch eine
-andere Lösung hier in der FAQ (weiter oben).
+Diese dann einfach durch ein normales Leerzeichen bzw. ein o ersetzen bzw.
+einen normalen Trennstrich ersetzen (Mod3+t), sofern diese Zeichen dort nicht
+gewünscht sind. Für Latex gibt es noch eine andere Lösung hier in der FAQ
+(weiter oben).
 
 --------------------------------------------------------------------------------
 2. Betriebssystemspeziefische Fragen
@@ -377,7 +387,8 @@ F: Wie funktioniert die Kombo-/Komponier-/Compose-/Multi-Key-Taste?
 
 A: Die Compose-Taste erreicht man über Mod3+Tab. Viele Linuxdistributionen haben
 außerdem eine weitere Compose-Taste auf der rechten Win-Taste.
-Um z.B. x⁵ zu schreiben, tippt man <x>, <Mod3+Tab>, <Mod3+Tab loslassen>, <Mod3+w>, <5>
+Um z.B. x⁵ zu schreiben, tippt man <x>, <Mod3+Tab>, <Mod3+Tab loslassen>,
+<Mod3+w>, <5>.
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
