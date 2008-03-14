@@ -173,11 +173,10 @@ Dieses ist per »Mod3« + »,« (Komma) erreichbar.
 
 --------------------------------------------------------------------------------
 
-F: Es fehlen ein paar griechische Buchstaben. Vor allem die Großbuchstaben.
-Wieso?
+F: Es fehlen ein paar griechische Buchstaben. Wieso?
 
-A: Die griechischen Buchstaben sind nicht dafür da, um griechisch oder
-altgriechisch zu schreiben. NEO ist ein Layout für die deutsche Sprache.
+A: Die griechischen Buchstaben sind nicht dafür da, um griechische oder
+altgriechische Fließtexte zu schreiben. NEO ist ein Layout für die deutsche Sprache.
 
 Aus genau diesem Grund gibt es auch keine kyrillischen, japanischen sowie
 chinesischen Buchstaben. Dafür gibt es Layouts der einzelnen Sprachen. Es wurde
@@ -186,23 +185,30 @@ tippen. Gerade wenn man z. B. an der polnischen Grenze wohnt und immer mal den
 Ort in dem man selbst (in Deutschland) wohnt auf polnisch tippen muss oder für
 Namen europäischer Mitbürger oder ...
 
-Die vorhandenen griechischen Buchstaben sind vielmehr dazu da, mathematische
-Formeln tippen zu können, in denen entsprechende Buchstaben vorkommen. Das ist
-für Naturwissenschaftler interessant. Da die Naturwissenschaftler den größeren
-Anteil ausmachen (gegenüber den griechisch Schreibenden), macht diese
-Ausrichtung Sinn.
+Dennoch gibt es griechische Buchstaben auf der NEO-Tastatur. Warum?
 
-Ein Layout, bei dem alle großen griechischen und alle großen lateinischen
-Buchstaben vertreten sind führt nur zu ungewollten Fehlern. Viele große
-griechische Buchstaben sehen genauso aus, wie die lateinischen (die lateinischen
-sind teilweise aus dem Griechischen übernommen). Für Formeln sind diese daher
-nicht interessant, da es nicht um den griechischen Buchstaben an sich geht,
-sondern darum, mehr Zeichen für mathematische Variablen, Funktionen usw. zu
-haben.
+Unsere abendländische Kultur basiert auf der griechischen und lateinischen Kultur.
+Darum haben diese beiden Sprachen einen besonderen Stellenwert:
+Zum einen tauschen griechischen und lateinische Wörter oder kurze Zitate regelmäßig
+in wissenschaftlichen Arbeiten auf.
+Das ist für Geistes- und Gesellschaftswissenschaftler interessant.
+Zum anderen dienen die griechischen Buchstaben dazu, mathematische
+Formeln tippen zu können, in denen entsprechende Buchstaben vorkommen.
+Das ist für Naturwissenschaftler interessant.
+
+Da NEO jedoch kein echtes griechisches Layout ist, haben wir auf Großbuchstaben,
+die im Griechischen und Lateinischen (und somit auch im Deutschen) gleich aussehen
+verzichtet, um diesen Platz mit anderen wissenschaftlichen (i.d.R. mathematischen)
+Zeichen zu belegen. Diese lateinischen Großbuchstaben (z.B. A) könnten auch anstelle 
+der griechischen Großbuchstaben (z.B. Α) verwendet werden – im Griechischen sind
+Großbuchstaben viel seltener als im Deutschen (nur in Namen und bei Satzanfängen).
+Jedoch ist das typrographisch nicht korrekt!
+In mathematischen Formeln tauchen solche griechischen Großbuchstaben aufgrund der
+Glyphengleichheit nicht auf.
 
 --------------------------------------------------------------------------------
 
-F: Bei den Währungszeichen gibt es nur €,¥,£,¢,¤. Es fehlen Florin (NDL) und
+F: Bei den Währungszeichen gibt es nur €,¢,£,$,¥,¤. Es fehlen Florin (NDL) und
 Franc.
 
 A: Die gibt es beide nicht mehr, sind also nur noch historisch, da diese
@@ -248,11 +254,14 @@ Mehr dazu auf:
     http://de.wikipedia.org/wiki/Gesch%C3%BCtztes_Leerzeichen
     http://de.wikipedia.org/wiki/Schmales_Leerzeichen
     http://de.wikipedia.org/wiki/Schreibweise_von_Zahlen
+Zum dritten gibt es bei NEO2 den griechischen Kleinbuchstaben Omikron ο, der dem
+lateinischen Kleinbuchstaben o optisch gleicht.
 Schnelle Abhilfe schafft eine Suche mit dem Texteditor nach folgenden Zeichen:
 Geschütztes Leerzeichen: » «
 Schmales Leerzeichen:    » «
-Diese dann einfach durch ein normales Leerzeichen ersetzen, sofern ein
-spezielles Leerzeichen dort nicht gewünscht ist. Für Latex gibt es noch eine
+kleines Omikron:         »ο«
+Diese dann einfach durch ein normales Leerzeichen bzw. ein o ersetzen, sofern diese
+Zeichen dort nicht gewünscht sind. Für Latex gibt es noch eine
 andere Lösung hier in der FAQ (weiter oben).
 
 --------------------------------------------------------------------------------
