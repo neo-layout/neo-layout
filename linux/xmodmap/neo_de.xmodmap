@@ -7,7 +7,7 @@
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !! and Erik Streb <mail at erikstreb dot de>
 !!
-!! The german NEO Layout Revision 429 from Mi 12. Mär 02:03:48 CET 2008
+!! The german NEO Layout Revision 443 from Do 20. Mär 01:42:08 CET 2008
 !! see http://pebbles.schattenlauf.de/layout.php for details
 !!
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -118,7 +118,7 @@ keycode 28 = w W U005E        Greek_omega  KP_Insert KP_Insert U03A9
 
 keycode 29 = k      K     exclam    Greek_kappa           exclamdown exclamdown U221A
 keycode 30 = h      H     less      Greek_psi             KP_7       KP_7       U03A8
-keycode 31 = g      G     greater   Greek_gamma           KP_8       KP_8       U0393
+keycode 31 = g      G     greater   U03B3                 KP_8       KP_8       U0393
 keycode 32 = f      F     equal     U03D5                 KP_9       KP_9       U03A6
 keycode 33 = q      Q     ampersand U03C6                 plus       plus       U211A
 keycode 34 = ssharp U1E9E U017F     Greek_finalsmallsigma ssharp     ssharp     U2218
@@ -136,9 +136,9 @@ keycode 42 = o O asterisk   Greek_omicron KP_End   KP_End   U2208
 
 keycode 43 = s S question   Greek_sigma   questiondown questiondown U03A3
 keycode 44 = n N parenleft  Greek_nu      KP_4         KP_4         U2115
-keycode 45 = r R parenright Greek_rho     KP_5         KP_5         U211D
+keycode 45 = r R parenright U03C1         KP_5         KP_5         U211D
 keycode 46 = t T minus      Greek_tau     KP_6         KP_6         U2202
-keycode 47 = d D colon      Greek_delta   comma        comma        U0394
+keycode 47 = d D colon      U03B4         comma        comma        U0394
 keycode 48 = y Y y          Greek_upsilon y            y            U2207
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -150,10 +150,10 @@ keycode 54 = adiaeresis Adiaeresis bar        Greek_eta  KP_Next  KP_Next   U211
 keycode 55 = p          P          asciitilde Greek_pi   KP_Enter KP_Enter  U03A0
 keycode 56 = z          Z          grave      Greek_zeta z        z         U2124
 
-keycode 57 = b      B        plus       Greek_beta  KP_Decimal KP_Decimal   U21D2
-keycode 58 = m      M        percent    Greek_mu    KP_1       KP_1         U21D4
+keycode 57 = b      B        plus       U03B2       KP_Decimal KP_Decimal   U21D2
+keycode 58 = m      M        percent    U03BC       KP_1       KP_1         U21D4
 keycode 59 = comma  U22EE    apostrophe U03F1       KP_2       KP_2         U21D0
-keycode 60 = period ellipsis quotedbl   Greek_theta KP_3       KP_3         U0398
+keycode 60 = period ellipsis quotedbl   U03B8       KP_3       KP_3         U0398
 keycode 61 = j      J        semicolon  U03D1       period     period       U2261
 
 
