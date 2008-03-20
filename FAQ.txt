@@ -239,14 +239,15 @@ LaTeX.« oder auch »Package inputenc Error: Unicode char \u8: not set up for us
 with LaTeX.«
 Was ist das?
 
-A: Es gibt seit NEO2 nicht mehr nur das normale, übliche Leerzeichen, sondern
+A: In NEO2 gibt es einige Zeichen, die möglicherweise Probleme bereiten könnten: 
+• Es gibt seit NEO2 nicht mehr nur das normale, übliche Leerzeichen, sondern
 auf der 5. Ebene auf der Leertaste ein nicht umbrechendes, so genanntes
 „geschütztes Leerzeichen“ (nobreak space). Dieses hat verschiedene Verwendungen,
 unter anderem eben, um einen Zeilenumbruch an dieser Stelle zu verhindern. Zum
 Beispiel sollte bei „Prof. Nameistsuperlangundewig“ ein geschütztes Leerzeichen
 nach „Prof.“ kommen, damit der Name und der Titel nicht auseinander gerissen
 werden.
-Außerdem gibt es bei NEO2 auf der 6. Ebene der Leertaste noch das schmale
+• Außerdem gibt es bei NEO2 auf der 6. Ebene der Leertaste noch das schmale
 Leerzeichen. Dieses wird zum Beispiel zwischen Zahlen und Einheiten verwendet.
 Beispiele:
     220¦V    37¦°C    5¦%    20¦€    98¦765¦t␣Bananen
@@ -256,12 +257,13 @@ Mehr dazu auf:
     http://de.wikipedia.org/wiki/Gesch%C3%BCtztes_Leerzeichen
     http://de.wikipedia.org/wiki/Schmales_Leerzeichen
     http://de.wikipedia.org/wiki/Schreibweise_von_Zahlen
-Zum dritten gibt es bei NEO2 den griechischen Kleinbuchstaben Omikron ο, der dem
+• Drittens gibt es bei NEO2 den griechischen Kleinbuchstaben Omikron ο, der dem
 lateinischen Kleinbuchstaben o optisch gleicht.
-Zusätzlich gibt es außerdem noch den „geschützten Bindestrich“ und den „weichen
+• Viertens gibt es außerdem noch den „geschützten Bindestrich“ und den „weichen
 Trennstrich“. Siehe:
     http://de.wikipedia.org/wiki/Gesch%C3%BCtzter_Bindestrich
     http://de.wikipedia.org/wiki/Weiches_Trennzeichen
+• Fünftens gibt es das Zeichen »ſ«, das dem »f« ähnelt
 
 Schnelle Abhilfe schafft eine Suche mit dem Texteditor nach folgenden Zeichen:
 Geschütztes Leerzeichen: » «
@@ -269,10 +271,22 @@ Schmales Leerzeichen:    » «
 Geschützter Bindestrich: »‑«
 Weicher Trennstrich:     »­«
 kleines Omikron:         »ο«
+langes s:                »ſ«
 Diese dann einfach durch ein normales Leerzeichen bzw. ein o bzw.
-einen normalen Trennstrich ersetzen (Mod3+t), sofern diese Zeichen dort nicht
+einen normalen Trennstrich (Mod3+t) bzw. ein f ersetzen, sofern diese Zeichen dort nicht
 gewünscht sind. Für Latex gibt es noch eine andere Lösung hier in der FAQ
 (weiter oben).
+
+--------------------------------------------------------------------------------
+
+F: Ich erhalte in Calc, Excel oder einem ähnlichen Tabellenkalkulationsprogramm einen
+Fehler, obwohl ich in meiner eingegebenen Formel keinen Fehler finde
+
+A: Der gängigste Fehler ist das Verwenden eines Gedankenstrichs (Shift + -) oder eines
+echten Minus (Mod3 + Minus auf dem Ziffernblock) statt des herkömmlichen Striches.
+Dieser befindet sich auf Ebene 1 (ohne Modifier) auf der Strichtaste neben der Null
+oder auf Mod3+t.
+Nähere Informationen gibt es in der Frage direkt über dieser.
 
 --------------------------------------------------------------------------------
 2. Betriebssystemspeziefische Fragen
