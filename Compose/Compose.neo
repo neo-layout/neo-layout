@@ -56,6 +56,32 @@
 <Multi_key> <r> <1> <1>            	: "ⅺ"   U217A # SMALL ROMAN NUMERAL ELEVEN
 <Multi_key> <r> <1> <2>        		: "ⅻ"   U217B # SMALL ROMAN NUMERAL TWELVE
 
+<Multi_key> <G> <A>			: "Α"   U0391 # GREEK CAPITAL LETTER ALPHA
+<Multi_key> <G> <B>			: "Β"   U0392 # GREEK CAPITAL LETTER BETA
+<Multi_key> <G> <E>			: "Ε"   U0395 # GREEK CAPITAL LETTER EPSILON
+<Multi_key> <G> <Z>			: "Ζ"   U0396 # GREEK CAPITAL LETTER ZETA
+<Multi_key> <G> <H>			: "Η"   U0397 # GREEK CAPITAL LETTER ETA
+<Multi_key> <G> <I>			: "Ι"   U0399 # GREEK CAPITAL LETTER IOTA
+<Multi_key> <G> <K>			: "Κ"   U039A # GREEK CAPITAL LETTER KAPPA
+<Multi_key> <G> <M>			: "Μ"   U039C # GREEK CAPITAL LETTER MU
+<Multi_key> <G> <N>			: "Ν"   U039D # GREEK CAPITAL LETTER NU
+<Multi_key> <G> <O>			: "Ο"   U039F # GREEK CAPITAL LETTER OMICRON
+<Multi_key> <G> <P>			: "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <G> <T>			: "Τ"   U03A4 # GREEK CAPITAL LETTER TAU
+<Multi_key> <G> <Y>			: "Υ"   U03A5 # GREEK CAPITAL LETTER UPSILON
+<Multi_key> <G> <X>			: "Χ"   U03A7 # GREEK CAPITAL LETTER CHI
+
+<Multi_key> <a> <0>			: "٠"   U0660 # ARABIC-INDIC DIGIT ZERO
+<Multi_key> <a> <1>			: "١"   U0661 # ARABIC-INDIC DIGIT ONE
+<Multi_key> <a> <2>			: "٢"   U0662 # ARABIC-INDIC DIGIT TWO
+<Multi_key> <a> <3>			: "٣"   U0663 # ARABIC-INDIC DIGIT THREE
+<Multi_key> <a> <4>			: "٤"   U0664 # ARABIC-INDIC DIGIT FOUR
+<Multi_key> <a> <5>			: "٥"   U0665 # ARABIC-INDIC DIGIT FIVE
+<Multi_key> <a> <6>			: "٦"   U0666 # ARABIC-INDIC DIGIT SIX
+<Multi_key> <a> <7>			: "٧"   U0667 # ARABIC-INDIC DIGIT SEVEN
+<Multi_key> <a> <8>			: "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
+<Multi_key> <a> <9>			: "٩"   U0669 # ARABIC-INDIC DIGIT NINE
+
 <Multi_key> <3> <U221A>	              	: "∛"   U221B # CUBE ROOT
 <Multi_key> <U221A> <3>	              	: "∛"   U221B # CUBE ROOT
 <Multi_key> <4> <U221A>	              	: "∜"   U221C # FOURTH ROOT
@@ -210,6 +236,32 @@
 <Multi_key> <underscore> <KP_Subtract> 	: "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underbar> <KP_Subtract> 	: "₋"   U208B # SUBSCRIPT MINUS
 
+<dead_circumflex> <U03B2>            	: "ᵝ"   U1D5D # MODIFIER LETTER SMALL BETA
+<Multi_key> <asciicircum> <U03B2>    	: "ᵝ"   U1D5D # MODIFIER LETTER SMALL BETA
+<dead_circumflex> <U03B3>            	: "ᵞ"   U1D5E # MODIFIER LETTER SMALL GREEK GAMMA
+<Multi_key> <asciicircum> <U03B3>    	: "ᵞ"   U1D5E # MODIFIER LETTER SMALL GREEK GAMMA
+<dead_circumflex> <U03B4>            	: "ᵟ"   U1D5F # MODIFIER LETTER SMALL DELTA
+<Multi_key> <asciicircum> <U03B4>    	: "ᵟ"   U1D5F # MODIFIER LETTER SMALL DELTA
+<dead_circumflex> <U03C6>            	: "ᵠ"   U1D60 # MODIFIER LETTER SMALL GREEK PHI
+<Multi_key> <asciicircum> <U03C6>    	: "ᵠ"   U1D60 # MODIFIER LETTER SMALL GREEK PHI
+<dead_circumflex> <U03C7>            	: "ᵡ"   U1D61 # MODIFIER LETTER SMALL CHI
+<Multi_key> <asciicircum> <U03C7>    	: "ᵡ"   U1D61 # MODIFIER LETTER SMALL CHI
+<dead_circumflex> <U03B8>            	: "ᶿ"   U1DBF # MODIFIER LETTER SMALL THETA
+<Multi_key> <asciicircum> <U03B8>    	: "ᶿ"   U1DBF # MODIFIER LETTER SMALL THETA
+
+<Multi_key> <underscore> <U03B2>     	: "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
+<Multi_key> <underbar> <U03B2>       	: "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
+<Multi_key> <underscore> <U03B3>     	: "ᵧ"   U1D67 # GREEK SUBSCRIPT SMALL LETTER GAMMA
+<Multi_key> <underbar> <U03B3>       	: "ᵧ"   U1D67 # GREEK SUBSCRIPT SMALL LETTER GAMMA
+<Multi_key> <underscore> <U03C1>     	: "ᵨ"   U1D68 # GREEK SUBSCRIPT SMALL LETTER RHO
+<Multi_key> <underbar> <U03C1>       	: "ᵨ"   U1D68 # GREEK SUBSCRIPT SMALL LETTER RHO
+<Multi_key> <underscore> <U03C6>     	: "ᵩ"   U1D69 # GREEK SUBSCRIPT SMALL LETTER PHI
+<Multi_key> <underbar> <U03C6>       	: "ᵩ"   U1D69 # GREEK SUBSCRIPT SMALL LETTER PHI
+<Multi_key> <underscore> <U03C7>     	: "ᵪ"   U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
+<Multi_key> <underbar> <U03C7>       	: "ᵪ"   U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
+
+
+
 <dead_stroke> <space>                   : "-"   minus # HYPHEN-MINUS
 <dead_stroke> <h>                       : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
 <dead_stroke> <H>                       : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
@@ -232,4 +284,4 @@
 #	<dead_circumflex> <Multi_key> <T> <M>   : "™"   U2122 # TRADE MARK SIGN
 #	<Multi_key> <T> <M>                     : "™"   U2122 # TRADE MARK SIGN
 
-<Multi_key> <E> <E>              	: "Ə"   U+018F # LATIN CAPITAL LETTER SCHWA
+<Multi_key> <E> <E>              	: "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
