@@ -67,7 +67,7 @@ Zu den Akzenten siehe auch
 • http://de.wikipedia.org/wiki/Diakritisches_Zeichen
 • http://de.wikipedia.org/wiki/Liste_lateinisch-basierter_Alphabete
 
-Taste links neben der 1
+T1 („Tote Taste 1“: Taste links neben der 1)
         1 … Toter Zirkumflex (sieht aus wie U+0302 COMBINING CIRCUMFLEX ACCENT)
 ┌─────┬ 2 … Toter Caron/Hatschek (sieht aus wie U+030C COMBINING CARON)
 │ˇ · .│ 3 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
@@ -75,7 +75,7 @@ Taste links neben der 1
 ├─────┴ 5 … Toter Querstrich (??? sieht aus wie U+0335 COMBINING SHORT STROKE OVERLAY)
         6 … Toter Punkt darunter (sieht aus wie U+0323 COMBINING DOT BELOW)
 
-zwei Tasten rechts neben der 0
+T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Akut (sieht aus wie U+0301 COMBINING ACUTE ACCENT)
 ┬─────┬ 2 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
 │` ˙ ˚│ 3 … Tote Cedilla (sieht aus wie U+0327 COMBINING CEDILLA)
@@ -83,7 +83,7 @@ zwei Tasten rechts neben der 0
 ┴──┬──┴ 5 … Totes Ogonek (sieht aus wie U+0328 COMBINING OGONEK)
         6 … Toter Ring (sieht aus wie U+030A COMBINING RING ABOVE)
 
-Taste rechts neben dem Eszett (ß)
+T3 („Tote Taste 3“: Taste rechts neben dem Eszett (ß))
         1 … Tote Tilde (sieht aus wie U+0303 COMBINING TILDE)
 ┬──┴──┬ 2 … Toter Makron (sieht aus wie U+0304 COMBINING MACRON)
 │ˉ / ,│ 3 … Totes Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
@@ -91,10 +91,12 @@ Taste rechts neben dem Eszett (ß)
 ┴┬────┴ 5 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
         6 … Totes Komma darunter (sieht aus wie U+0326 COMBINING COMMA BELOW)
 
-ACHTUNG: Tote Tasten werden so bedient (Beispiel):
-‣ Tote Tilde eingeben.
-‣ Danach n.
-‣ Es erscheint das ñ.
+ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
+gleich erscheinen, sondern nur in Kombination mit einem weiteren Buchstaben) werden
+folgendermaßen bedient (Beispiel):
+1. Tote Tilde »~« eingeben.
+2. Danach »n«.
+3. Es erscheint das »ñ«.
 
 == Taste mit Bindestrichen, Gedankenstrich usw. ==
 Zu den Gedankenstrichen usw. siehe
