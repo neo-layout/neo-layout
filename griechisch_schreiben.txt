@@ -1,0 +1,44 @@
+== Infos auf der Mailingliste und im Web ==
+Die meiste Information gibt es schon auf
+	http://www.stefanluecking.de/exegese/unicode/linux-griechisch.html
+
+Weiters ist einiges in den Mails mit dem Betreff „Nochmal Griechisch“ (vom
+22.10.2007 22:04) zu finden.
+
+== Wie lassen sich die einzelnen Akzente auf den Buchstaben schreiben ==
+Wie erzeugen	Beispiel	Akzentbezeichnung
+-------------------------------------------------------------------------------
+T2 & α		ά		Akut
+		ὰ		Gravis
+		ᾶ		Zirkumflex
+		ϊ		Trema
+		ΐ		Trema und Akut
+		ῒ		Trema und Gravis
+		ᾳ		Iota subscriptum
+		ᾴ		Iota subscriptum und Akut
+		ᾲ		Iota subscriptum und Gravis
+		ᾷ		Iota subscriptum und Zirkumflex
+		ἁ		Spiritus asper
+		ἀ		Spiritus lenis
+		ἅ		
+		ἄ		
+		ἃ
+		ἂ
+		ἇ
+		ἆ
+		ᾇ
+		ἅ
+		ἂ
+		ἇ
+		ᾇ
+
+=== Legende/Abkürzungen ===
+Hierbei stehen T1, T2 und T3 für die drei „toten Tasten“ auf der Neo-Tastatur,
+und zwar von links nach rechts und oben nach unten. Also T1 ganz links, in der
+obersten Reihe der Tastatur neben der 1. T2 in der obersten Reihe zwei Tasten
+rechts neben der 0. Und T3 rechts der Taste für das ß.
+
+Bei „Wie erzeugen“ ist mit „&“ das nacheinander eingeben gemeint. Ein „+“
+bedeutet, dass man die Taste/das Zeichen davor und hinter dem „+“ gleichzeitig
+drücken muss.
+
