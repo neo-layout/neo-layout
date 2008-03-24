@@ -42,3 +42,28 @@ Bei „Wie erzeugen“ ist mit »,« (Komma) das nacheinander Eingeben gemeint. 
 bedeutet, dass man die Taste/das Zeichen davor und hinter dem »+« gleichzeitig
 drücken muss.
 
+=== 5. Ebene der Tastatur (nur griechische Kleinbuchstaben) ===
+┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
+│ T │ │ │ │ │ │6│ϰ│8│ │ │ │T│ Back │   Es fehlt: ω (Omega), ο (Omicron)
+├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤   Uneinigkeit: μ (Mu) oder µ (Micro)
+│Tab │ξ│ │λ│χ│ │κ│ψ│γ│ϕ│φ│ς│T│ Ret │
+├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │   T steht für eine tote Taste
+│ M3  │ │ι│α│ε│ │σ│ν│ρ│τ│δ│υ│M3│   │
+├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
+│Sft│M5│ │ │η│π│ζ│β│μ│ϱ│θ│ϑ│ Shift │
+├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
+│Str│Fe│Al│Leerzeichei│M5│Fe│Me│Str│
+└───┴──┴──┴───────────┴──┴──┴──┴───┘
+
+=== 6. Ebene der Tastatur (nur griechische Großbuchstaben) ===
+┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
+│ T │ │ │ │ │ │ │ │ │ │ │ │T│ Back │   Es fehlt: Ω (Omega)
+├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
+│Tab │Ξ│ │Λ│ │ │ │Ψ│Γ│Φ│ │ │T│ Ret │   T steht für eine tote Taste
+├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
+│ M3  │ │ │ │ │ │Σ│ │ │ │Δ│ │M3│   │
+├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
+│Sft│M5│ │ │ │Π│ │ │ │ │Θ│ │ Shift │
+├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
+│Str│Fe│Al│Leerzeichei│M5│Fe│Me│Str│
+└───┴──┴──┴───────────┴──┴──┴──┴───┘
