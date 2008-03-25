@@ -32,7 +32,7 @@ $@
 #{ → Ruby
 $* $< $( %. ${  → Makefiles
 
-5. Ebene
+4. Ebene
 ========
 ⇥↲ (tab completion)
 ⇡↲ (shell history)
