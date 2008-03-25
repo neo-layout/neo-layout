@@ -12,25 +12,20 @@
 /.
 ="
 !" ?"
-(" ") (' ')
-);
-," ",
+(" ") (' ') (zahlreiche Programmiersprachen)
+); (C, Java)
+," ", (zahlreiche Programmiersprachen)
 &>
-=`
-}[
-]{
-_{
-^{
-^2
-^3
-:-)
-;-)
-+= *= /= -=
-#!/
-$@
-{$
-#{ → Ruby
-$* $< $( %. ${  → Makefiles
+=` (Shell)
+}[ ]{ _{ ^{ (Latex)
+^2 ^3 (Tabellenkalkulation, Latex, Programmiersprachen)
+:-) ;-) (Chat, Email)
++= *= /= -= (C, Java)
+#!/ (Shell)
+$@ (Bash)
+{$ (Pascal, Delphi)
+#{ (Ruby)
+$* $< $( %. ${ (Makefiles, Bash)
 
 4. Ebene
 ========
