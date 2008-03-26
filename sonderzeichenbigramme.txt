@@ -1,17 +1,16 @@
-~/
-:=
+== 3. Ebene ==
+~/ (Shell)
+:= (Pascal, Delphi)
 -> => <= >=
-!=
-://
-/>
-</
-<!--
--->
-<? ?>
-/* */
-/.
-="
-!" ?"
+!= (C, Java)
+:// (URL)
+:% (Vi)
+</ /> <!-- --> (XML, HTML)
+<? ?> (PHP)
+/* */ (C, Java)
+./ (Shell)
+=" (zahlreiche Programmiersprachen)
+!" ?" (sollte eigentlich in Texten ?“ bzw. !“ sein)
 (" ") (' ') (zahlreiche Programmiersprachen)
 ); (C, Java)
 ," ", (zahlreiche Programmiersprachen)
@@ -27,10 +26,9 @@ $@ (Bash)
 #{ (Ruby)
 $* $< $( %. ${ (Makefiles, Bash)
 
-4. Ebene
-========
-⇥↲ (tab completion)
-⇡↲ (shell history)
-⇢↲ ⇣↲ (menuauswahl)
+== 4. Ebene ==
+⇥↲ (Tab-Completion)
+⇡↲ (Shell-History)
+⇢↲ ⇣↲ (Menüauswahl)
 ⇡↲⇥ ⇡⇢↲ ⇡⇢⇥ ⇡⇢↲ ⇣↲⇥ ⇣⇢↲ ⇣⇢⇥ ⇣⇢↲ (Formulareingabe)
 
