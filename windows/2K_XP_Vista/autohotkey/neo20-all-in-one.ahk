@@ -388,7 +388,7 @@ return
 	}
    else if Ebene = 2
    {
-      send $
+      send €
       CompKey := ""
    }
    else if Ebene = 3
@@ -430,7 +430,7 @@ return
 	}
    else if Ebene = 2
    {
-      send €
+      send $
       CompKey := ""
    }
    else if Ebene = 3
