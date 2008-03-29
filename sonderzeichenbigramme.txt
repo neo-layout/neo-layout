@@ -12,7 +12,7 @@
 =" (zahlreiche Programmiersprachen)
 !" ?" (sollte eigentlich in Texten ?“ bzw. !“ sein)
 (" ") (' ') (zahlreiche Programmiersprachen)
-); (C, Java)
+); '; "; (C, Java)
 ," ", (zahlreiche Programmiersprachen)
 &>
 =` (Shell)
