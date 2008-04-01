@@ -243,7 +243,7 @@ xkb_symbols "neo" {
 
     // 2nd row
     key <AD01> { [ x,           X,                      at,                     Greek_xi,           x,              U039E               ] };
-    key <AD02> { [ v,           V,                      underscore,             v,                  BackSpace,      U039B               ] };
+    key <AD02> { [ v,           V,                      underscore,             v,                  BackSpace,      BackSpace           ] };
     key <AD03> { [ l,           L,                      bracketleft,            Greek_lambda,       Up,             Up                  ] };
     key <AD04> { [ c,           C,                      bracketright,           Greek_chi,          Delete,         Delete              ] };
     key <AD05> { [ w,           W,                      asciicircum,            w,                  Insert,         Insert              ] };
