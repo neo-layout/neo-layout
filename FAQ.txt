@@ -202,6 +202,7 @@ Ort in dem man selbst (in Deutschland) wohnt auf polnisch tippen muss oder für
 Namen europäischer Mitbürger oder ...
 
 Dennoch gibt es griechische Buchstaben auf der NEO-Tastatur. Warum?
+(siehe auch nächste Frage)
 
 Unsere abendländische Kultur basiert auf der griechischen und lateinischen
 Kultur. Darum haben diese beiden Sprachen einen besonderen Stellenwert:
@@ -221,6 +222,17 @@ könnten auch anstelle der griechischen Großbuchstaben (z.B. Α) verwendet wer
 Namen und bei Satzanfängen). Jedoch ist das typrographisch nicht korrekt!
 In mathematischen Formeln tauchen solche griechischen Großbuchstaben aufgrund
 der Glyphengleichheit nicht auf.
+
+--------------------------------------------------------------------------------
+
+F: Wie schreibe/erzeuge ich die Akzente bei den griechischen Buchstaben?
+
+A: Eine noch nicht auf Neo angepasste Anleitung gibt es bei Stefan Lücking,
+jedoch ist diese noch nicht auf die Neo-Tastaturbelegung angepasst. Es finden
+sich jedoch alle Akzente bei Neo wieder oder es kann die Kombotaste/Compose
+verwendet werden.
+
+www.stefanluecking.de/exegese/unicode/linux-griechisch.html#tastatur_belegung
 
 --------------------------------------------------------------------------------
 
@@ -286,20 +298,21 @@ Geschützter Bindestrich: »‑«
 Weicher Trennstrich:     »­«
 kleines Omikron:         »ο«
 langes s:                »ſ«
-Diese dann einfach durch ein normales Leerzeichen bzw. ein o bzw.
-einen normalen Trennstrich (Mod3+t) bzw. ein f ersetzen, sofern diese Zeichen dort nicht
+Diese dann einfach durch ein normales Leerzeichen bzw. ein o bzw. einen normalen
+Trennstrich (Mod3+t) bzw. ein f ersetzen, sofern diese Zeichen dort nicht
 gewünscht sind. Für Latex gibt es noch eine andere Lösung hier in der FAQ
 (weiter oben).
 
 --------------------------------------------------------------------------------
 
-F: Ich erhalte in Calc, Excel oder einem ähnlichen Tabellenkalkulationsprogramm einen
-Fehler, obwohl ich in meiner eingegebenen Formel keinen Fehler finde
+F: Ich erhalte in Calc, Excel oder einem ähnlichen Tabellenkalkulationsprogramm
+einen Fehler, obwohl ich in meiner eingegebenen Formel keinen Fehler finde.
 
-A: Der gängigste Fehler ist das Verwenden eines Gedankenstrichs (Shift + -) oder eines
-echten Minus (Mod3 + Minus auf dem Ziffernblock) statt des herkömmlichen Striches.
-Dieser befindet sich auf Ebene 1 (ohne Modifier) auf der Strichtaste neben der Null
-oder auf Mod3+t.
+A: Der gängigste Fehler ist das Verwenden eines Gedankenstrichs (Shift + -) oder
+eines echten Minus (Mod3 + Minus auf dem Ziffernblock) statt des herkömmlichen
+Striches.
+Dieser befindet sich auf Ebene 1 (ohne Modifier) auf der Strichtaste neben der
+Null oder auf Mod3+t.
 Nähere Informationen gibt es in der Frage direkt über dieser.
 
 --------------------------------------------------------------------------------
