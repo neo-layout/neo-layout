@@ -275,19 +275,25 @@ xkb_symbols "neo" {
     key <AB10> { [ j,           J,                      semicolon,              U3D1,               period,         nabla               ] };
 
     key <SPCE> { [ space,       space,                  space,                  nobreakspace,       0,              U202F               ] };
+
+    // Compose bzw. Kombinationstaste auf Mod3+Tab
+    key  <TAB> { [ Tab, ISO_Left_Tab, Multi_key ] };
     
     // new modkeys   
     key.type[Group1]="EIGHT_LEVEL" ;
 
-    key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock,              Caps_Lock,          Multi_key,      Multi_key           ] };
-    key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock,              Caps_Lock,          Multi_key,      Multi_key           ] };
-    key <LSGT> { [ 0xfe11,      0xfe11,                 Multi_key,              Multi_key,          Caps_Lock,      Caps_Lock           ] };
-    key <RALT> { [ 0xfe11,      0xfe11,                 Multi_key,              Multi_key,          KP_Decimal,     Caps_Lock           ] };
-
+    // hier (bei Mod3 und Mod4) sollte mal noch richtige Ebene 6 definiert werden
+    // Mod3
+    key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    // Mod4
+    key <LSGT> { [ 0xfe11,      0xfe11                ] };
+    key <RALT> { [ 0xfe11,      0xfe11                ] };
     modifier_map mod4 { <LSGT>, <RALT> };
+
     // Keypad
 
-         // key <NMLK> { [ Num_Lock, Pointer_EnableKeys ] };
+        // key <NMLK> { [ Num_Lock, Pointer_EnableKeys ] };
 
         key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
 
