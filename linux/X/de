@@ -285,11 +285,11 @@ xkb_symbols "neo" {
     // hier (bei Mod3 und Mod4) sollte mal noch richtige Ebene 6 definiert werden
     // Mod3
     key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
-    key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock ] };
     // Mod4
     key <LSGT> { [ 0xfe11,      0xfe11                ] };
     key <RALT> { [ 0xfe11,      0xfe11                ] };
-    modifier_map mod4 { <LSGT>, <RALT> };
+    modifier_map mod5 { <LSGT>, <RALT> };
 
     // Keypad
 
