@@ -7,7 +7,7 @@
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !! and Erik Streb <mail at erikstreb dot de>
 !!
-!! The german NEO Layout Revision 468 from Sa 5. Apr 18:50:42 CEST 2008
+!! The german NEO Layout Revision 469 from Sa 5. Apr 19:42:53 CEST 2008
 !! see http://pebbles.schattenlauf.de/layout.php for details
 !!
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -87,36 +87,36 @@ keycode 65 = space space space nobreakspace KP_0 KP_0 U202F
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke dead_belowdot dead_belowdot dead_belowdot
 
-keycode 10 = 1 degree         onesuperior   U2640    enfilledcircbullet enfilledcircbullet U00AC
-keycode 11 = 2 numerosign     twosuperior   U26A5    U2023              U2023              U2228
-keycode 12 = 3 section        threesuperior U2642    U25E6              U25E6              U2227
-keycode 13 = 4 guillemotright U203A         U2113    KP_Prior           KP_Prior           U22A5
-keycode 14 = 5 guillemotleft  U2039         5        5                  5                  U2221
-keycode 15 = 6 EuroSign       cent          6        sterling           sterling           U2225
+keycode 10 = 1 degree         onesuperior   femalesymbol enfilledcircbullet enfilledcircbullet notsign
+keycode 11 = 2 numerosign     twosuperior   U26A5        U2023              U2023              logicalor
+keycode 12 = 3 section        threesuperior malesymbol   U25E6              U25E6              logicaland
+keycode 13 = 4 guillemotright U203A         U2113        KP_Prior           KP_Prior           downtack
+keycode 14 = 5 guillemotleft  U2039         5            5                  5                  U2221
+keycode 15 = 6 EuroSign       cent          6            sterling           sterling           U2225
 
-keycode 16 = 7 dollar               yen                  U03F0 currency     currency       U2209
+keycode 16 = 7 dollar               yen                  U03F0 currency     currency       notelementof
 keycode 17 = 8 doublelowquotemark   singlelowquotemark   8     KP_Divide    KP_Divide      U2204
 keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  9     KP_Multiply  KP_Multiply    U2226
-keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     minus        minus          U2205
+keycode 19 = 0 rightdoublequotemark rightsinglequotemark 0     minus        minus          emptyset
 
-keycode 20 = minus      endash     emdash       U2011        minus         minus          U00AD
+keycode 20 = minus      endash     emdash       U2011        minus         minus          hyphen
 keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_abovering dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 24 = x X at           Greek_xi     x         x         U039E
+keycode 24 = x X at           Greek_xi     x         x         Greek_XI
 keycode 25 = v V underscore   v            BackSpace BackSpace U2259
-keycode 26 = l L bracketleft  Greek_lambda KP_Up     KP_Up     U039B
+keycode 26 = l L bracketleft  Greek_lambda KP_Up     KP_Up     Greek_LAMDA
 keycode 27 = c C bracketright Greek_chi    KP_Delete KP_Delete U2102
-keycode 28 = w W U005E        Greek_omega  KP_Insert KP_Insert U03A9
+keycode 28 = w W asciicircum  Greek_omega  KP_Insert KP_Insert Greek_OMEGA
 
-keycode 29 = k      K     exclam    Greek_kappa           exclamdown exclamdown U221A
-keycode 30 = h      H     less      Greek_psi             KP_7       KP_7       U03A8
-keycode 31 = g      G     greater   U03B3                 KP_8       KP_8       U0393
-keycode 32 = f      F     equal     U03D5                 KP_9       KP_9       U03A6
-keycode 33 = q      Q     ampersand U03C6                 plus       plus       U211A
-keycode 34 = ssharp U1E9E U017F     Greek_finalsmallsigma ssharp     ssharp     U2218
+keycode 29 = k      K     exclam    Greek_kappa           exclamdown exclamdown radical
+keycode 30 = h      H     less      Greek_psi             KP_7       KP_7       Greek_PSI
+keycode 31 = g      G     greater   Greek_gamma           KP_8       KP_8       Greek_GAMMA
+keycode 32 = f      F     equal     U03D5                 KP_9       KP_9       Greek_PHI
+keycode 33 = q      Q     ampersand Greek_phi             plus       plus       U211A
+keycode 34 = ssharp U1E9E U017F     Greek_finalsmallsigma ssharp     ssharp     jot
 
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
 
@@ -124,32 +124,32 @@ keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
 ! The home row (middle row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 38 = u U backslash  u             KP_Home  KP_Home  U222E
-keycode 39 = i I slash      Greek_iota    KP_Left  KP_Left  U222B
+keycode 39 = i I slash      Greek_iota    KP_Left  KP_Left  integral
 keycode 40 = a A braceleft  Greek_alpha   KP_Down  KP_Down  U2200
 keycode 41 = e E braceright Greek_epsilon KP_Right KP_Right U2203
-keycode 42 = o O asterisk   Greek_omicron KP_End   KP_End   U2208
+keycode 42 = o O asterisk   Greek_omicron KP_End   KP_End   elementof
 
-keycode 43 = s S question   Greek_sigma   questiondown questiondown U03A3
+keycode 43 = s S question   Greek_sigma   questiondown questiondown Greek_SIGMA
 keycode 44 = n N parenleft  Greek_nu      KP_4         KP_4         U2115
-keycode 45 = r R parenright U03C1         KP_5         KP_5         U211D
-keycode 46 = t T minus      Greek_tau     KP_6         KP_6         U2202
-keycode 47 = d D colon      U03B4         comma        comma        U0394
-keycode 48 = y Y y          Greek_upsilon y            y            U2207
+keycode 45 = r R parenright Greek_rho     KP_5         KP_5         U211D
+keycode 46 = t T minus      Greek_tau     KP_6         KP_6         partialderivative
+keycode 47 = d D colon      Greek_delta   comma        comma        Greek_DELTA
+keycode 48 = y Y y          Greek_upsilon y            y            nabla
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 52 = udiaeresis Udiaeresis numbersign udiaeresis Escape   Escape    U221D
+keycode 52 = udiaeresis Udiaeresis numbersign udiaeresis Escape   Escape    variation
 keycode 53 = odiaeresis Odiaeresis dollar     odiaeresis Tab      Tab       U2111
 keycode 54 = adiaeresis Adiaeresis bar        Greek_eta  KP_Next  KP_Next   U211C
-keycode 55 = p          P          asciitilde Greek_pi   KP_Enter KP_Enter  U03A0
+keycode 55 = p          P          asciitilde Greek_pi   KP_Enter KP_Enter  Greek_PI
 keycode 56 = z          Z          grave      Greek_zeta z        z         U2124
 
-keycode 57 = b      B        plus       U03B2       KP_Decimal KP_Decimal   U21D2
-keycode 58 = m      M        percent    U03BC       KP_1       KP_1         U21D4
+keycode 57 = b      B        plus       Greek_beta  KP_Decimal KP_Decimal   implies
+keycode 58 = m      M        percent    Greek_mu    KP_1       KP_1         ifonlyif
 keycode 59 = comma  U22EE    quotedbl   U03F1       KP_2       KP_2         U21D0
-keycode 60 = period ellipsis apostrophe U03B8       KP_3       KP_3         U0398
-keycode 61 = j      J        semicolon  U03D1       period     period       U2261
+keycode 60 = period ellipsis apostrophe Greek_theta KP_3       KP_3         Greek_THETA
+keycode 61 = j      J        semicolon  U03D1       period     period       identical
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -168,23 +168,23 @@ keycode 82  = KP_Subtract KP_Subtract U2212
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 79 =  KP_Home     KP_7        U20D7      U226A
-keycode 80 =  KP_Up       KP_8        uparrow    U2229
+keycode 80 =  KP_Up       KP_8        uparrow    intersection
 keycode 81 =  KP_Prior    KP_9        U2297      U226B
 keycode 86 =  KP_Add      KP_Add      plusminus  U2213
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  KP_Left     KP_4        leftarrow  U2282
-keycode 84 =  EuroSign    KP_5        U221E      U220B
-keycode 85 =  KP_Right    KP_6        rightarrow U2283
+keycode 83 =  KP_Left     KP_4        leftarrow  includedin
+keycode 84 =  EuroSign    KP_5        infinity   containsas
+keycode 85 =  KP_Right    KP_6        rightarrow includes
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  KP_End      KP_1        U21CB      U2264 
-keycode 88 =  KP_Down     KP_2        downarrow  U222A 
-keycode 89 =  KP_Next     KP_3        U21CC      U2265 
+keycode 87 =  KP_End      KP_1        U21CB      lessthanequal 
+keycode 88 =  KP_Down     KP_2        downarrow  union 
+keycode 89 =  KP_Next     KP_3        U21CC      greaterthanequal 
 keycode 108 = KP_Enter    KP_Enter    notequal   U2248
 !keysym <KPEQ> KP_Equal
 
@@ -207,11 +207,11 @@ keycode 91 = KP_Delete    KP_Decimal  period     comma
 !
 ! Zusätzliches @-Zeichen auf Mod4+x (gleicher Handgriff wie AltGr+q auf QWERTZ)
 ! Dies ist insbesondere auf ergonomischen Tastaturen mit größerer Mod4 auf der linken Seite sinnvoll
-! keycode 24 = x X at           Greek_xi     at        at        U039E
+! keycode 24 = x X at           Greek_xi     at        at        Greek_XI
 !
 ! Zusätzliches Gänsefüßchen unten („) neben dem Doppelpunkt
 ! Dies ist für Wörtliche Rede sinnvoll, um bei :„ oder : „ den Modifer Mod3 liegen lassen zu können
-! keycode 48 = y Y doublelowquotemark Greek_upsilon y  y            U2207
+! keycode 48 = y Y doublelowquotemark Greek_upsilon y  y            nabla
 
 
 
