@@ -236,7 +236,7 @@ xkb_symbols "neo" {
     key <AE12> { [ dead_acute,  dead_grave,             dead_cedilla,           dead_ogonek,        dead_abovedot,  dead_abovering      ] };
 
     // 2nd row
-    key <AD01> { [ x,           X,                      at,                     Greek_xi,           x,              Greek_XI            ] };
+    key <AD01> { [ x,           X,                      x,                      Greek_xi,           x,              Greek_XI            ] };
     key <AD02> { [ v,           V,                      underscore,             v,                  BackSpace,      BackSpace           ] };
     key <AD03> { [ l,           L,                      bracketleft,            Greek_lambda,       Up,             Up                  ] };
     key <AD04> { [ c,           C,                      bracketright,           Greek_chi,          Delete,         Delete              ] };
@@ -260,7 +260,7 @@ xkb_symbols "neo" {
     key <AC08> { [ r,           R,                      parenright,             Greek_rho,          5,              registered          ] };
     key <AC09> { [ t,           T,                      minus,                  Greek_tau,          6,              trademark           ] };
     key <AC10> { [ d,           D,                      colon,                  Greek_delta,        comma,          Greek_DELTA         ] };
-    key <AC11> { [ y,           Y,                      y,                      Greek_upsilon,      y,              nabla               ] };
+    key <AC11> { [ y,           Y,                      at,                     Greek_upsilon,      y,              nabla               ] };
 
     // 4th row
     key <AB01> { [ udiaeresis,  Udiaeresis,             numbersign,             udiaeresis,         Escape                              ] };
