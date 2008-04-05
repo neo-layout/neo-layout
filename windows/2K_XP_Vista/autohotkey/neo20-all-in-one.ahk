@@ -1044,7 +1044,7 @@ return
          Send {+}
    }
    else if Ebene = 6
-      SendUnicodeChar(0x2202) ; "verdrehtes e" (partielle Ableitung)
+      SendUnicodeChar(0x2202) ; "geschweiftes d" (partielle Ableitung)
    PriorDeadKey := ""   CompKey := ""
 return
 

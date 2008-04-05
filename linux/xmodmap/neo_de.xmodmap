@@ -7,7 +7,7 @@
 !! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !! and Erik Streb <mail at erikstreb dot de>
 !!
-!! The german NEO Layout Revision 460 from Di 1. Apr 12:20:53 CEST 2008
+!! The german NEO Layout Revision 468 from Sa 5. Apr 18:50:42 CEST 2008
 !! see http://pebbles.schattenlauf.de/layout.php for details
 !!
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -147,8 +147,8 @@ keycode 56 = z          Z          grave      Greek_zeta z        z         U212
 
 keycode 57 = b      B        plus       U03B2       KP_Decimal KP_Decimal   U21D2
 keycode 58 = m      M        percent    U03BC       KP_1       KP_1         U21D4
-keycode 59 = comma  U22EE    apostrophe U03F1       KP_2       KP_2         U21D0
-keycode 60 = period ellipsis quotedbl   U03B8       KP_3       KP_3         U0398
+keycode 59 = comma  U22EE    quotedbl   U03F1       KP_2       KP_2         U21D0
+keycode 60 = period ellipsis apostrophe U03B8       KP_3       KP_3         U0398
 keycode 61 = j      J        semicolon  U03D1       period     period       U2261
 
 

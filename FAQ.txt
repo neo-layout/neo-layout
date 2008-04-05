@@ -408,9 +408,30 @@ entfernt (und z.B. durch v ersetzt) werden.
 
 F: Mein »Mod4« geht nicht als Modifier für die 4. Ebene.
 
-A: Deaktiviere die Option „Both Alt keys together change Group” 
-(ralt_switch_for_alts_toggle) oder frage auf der Mailingliste (siehe erste
-Frage).
+A1: Deaktiviere die Option „Both Alt keys together change Group” 
+(ralt_switch_for_alts_toggle) oder frage auf der Mailingliste.
+
+A2: Im SQirreL SQL-Client, im TV-Browser (welcher?) und in einigen anderen
+Programmen funktionieren die Bewegungstasten, Ziffern usw. der 4. Ebene nicht.
+Bitte trotzdem jedes „fehlerhafte“ Programm auf der Mailingliste melden, bei der
+die 4. Ebene oder etwas anderes nicht funktioniert.
+
+A3: Du verwendest als Tastaturtreiber nicht »kbd« sondern »evdev«.
+Bei diesem Treiber werden die Keycodes anders ausgeben. Und zwar so:
+  • Keycode 113 ist Cursor-Links und nicht AltGr
+  • Keycode 108 ist Alt Gr und nicht Enter
+  • Keycode 104 ist Enter
+Nach Meinung von Bernd Steinhauser (siehe Mailingliste) ist das übrigens auch
+der Grund, warum man bei der Verwendung des evdev-Treibers im
+KDE-Kontrollzentrum (bzw. in KDE-Systemsettings unter KDE4 wie er es verwendet)
+auf "Evdev managed Keyboard" stellen muss und nicht eine normale
+105-Tasten-Tastatur.
+Warum die Keycodes überhaupt anders sind ist unbekannt.
+
+Als Lösung des Problems kommt hier in Frage:
+  • Verwendung des kbd-Treibers
+  • Ändern/Anpassen der Keycodes in der Xmodmap-Datei (neo_de.xmodmap)
+Bei weiteren Problemen bitte die Mailingliste fragen.
 
 -------------------------------------------------------------------------------
 
@@ -430,6 +451,19 @@ A: Die Compose-Taste erreicht man über Mod3+Tab. Viele Linuxdistributionen habe
 außerdem eine weitere Compose-Taste auf der rechten Win-Taste.
 Um z.B. x⁵ zu schreiben, tippt man <x>, <Mod3+Tab>, <Mod3+Tab loslassen>,
 <Mod3+w>, <5>.
+
+-------------------------------------------------------------------------------
+
+F: Auf meinem Ziffernblock funktioniert die 5 nicht.
+
+A: Beim Programm galculator ist bekannt, dass man nur alle Ziffern eingeben
+kann, wenn man Numlock aktiviert hat. Das ist so, weil man auf dem Ziffernblock
+mit Shift+5 das Eurosymbol (wenn Numlock aktiviert ist) eingeben kann.
+Galculotor erwartet aber, dass sich nicht das Eurosymbol, sondern KP_Begin dort
+befindet.
+
+Falls dies noch bei anderen Programmen auftritt, bitte auf der Mailingliste
+melden.
 
 --------------------------------------------------------------------------------
 2.2 Apple Macintosh
