@@ -15,7 +15,8 @@ werden.
 
 Momentan befindet sich in der Testphase, ob die 6. Ebene über Shift+Mod4 oder
 über Mod3+Mod4 angesprochen werden soll (Shift+Mod4 zum Markieren bleibt
-erhalten). Die Datei neo20_mod-test.ahk spricht die 6. Ebene über Mod3+Mod4 an.
+erhalten). Die Datei neo20_mod-test.ahk spricht die 6. Ebene über Mod3+Mod4 an,
+ist jedoch nicht aktuell.
 
 === Autohotkey herunter laden ===
 Man braucht als erstes das Programm namens »autohotkey«

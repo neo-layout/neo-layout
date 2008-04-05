@@ -2019,7 +2019,7 @@ return
    if Ebene = 1
       send {blind},
    else if Ebene = 3
-      send '
+      send "
    else if Ebene = 4
       SendUnicodeChar(0x03F1) ; varrho
    else if Ebene = 5
@@ -2043,7 +2043,7 @@ return
    else if Ebene = 2
       SendUnicodeChar(0x2026)  ; ellipse
    else if Ebene = 3
-      send "
+      send '
    else if Ebene = 4
       SendUnicodeChar(0x03B8) ;theta
    else if Ebene = 5
