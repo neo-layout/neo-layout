@@ -649,7 +649,7 @@ return
    else if Ebene = 2
       sendinput {blind}X
    else if Ebene = 3
-      send @
+      send @         ; Redundanz, liegt jetzt auf ä (QWERTZ)
    else if Ebene = 4
       SendUnicodeChar(0x03BE) ;xi
    else if Ebene = 5
@@ -1809,6 +1809,8 @@ return
       Else
          sendinput {blind}Y
    }
+   else if Ebene = 3
+      send @
    else if Ebene = 4
       SendUnicodeChar(0x03C5) ;upsilon
    else if Ebene = 5
