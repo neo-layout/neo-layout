@@ -40,7 +40,7 @@ http://dejavu.sourceforge.net/
 • Ebene 1: Kleinbuchstaben
 • Ebene 2: Großbuchstaben
 • Ebene 3: Sonderzeichen
-• Ebene 4: Navigation und Zahlenblock
+• Ebene 4: Navigation und Ziffernblock
 • Ebene 5: Griechische Kleinbuchstaben
 • Ebene 6: Griechische Großbuchstaben
 
@@ -155,7 +155,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 == Alle Ebenen – Normale Tastatur ==
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
 │ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹  │6 ¢  │7 ¥ ϰ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
+│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ ϰ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W   Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
 │    ♫   │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
@@ -174,7 +174,7 @@ Derzeit unklar:
 Die Lage von ω und Ω, sowie o und ∈ ist nicht abschließend geklärt
 (siehe Argumente in TODO.txt)
 
-== Vier Ebenen – Zahlenblock ==
+== Vier Ebenen – Ziffernblock ==
 ┌─────┐
 │ 7 ≪ │ 3 … v⃗ Vektorpfeil (U+20D7 COMBINING RIGHT ARROW ABOVE)
 │ ⇱ v⃗ │ 5 … ≪ viel kleiner als (U+226A MUCH LESS-THAN)
@@ -240,7 +240,7 @@ Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 Θ … Theta, griechischer Majuskel (U0398)
 ≡ … identisch (U2261)
 
-== Mat-/Nat-Ebene – Zahlenblock ==
+== Mat-/Nat-Ebene – Ziffernblock ==
 v⃗ … Vektorpfeil, kombinierendes Zeichen, lässt sich rückwirkend(!) auf jedes Zeichen setzen (U20D7)
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)

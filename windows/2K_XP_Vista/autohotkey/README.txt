@@ -54,25 +54,25 @@ Bisher reagieren nur die Buchstaben der 1. und 2. Ebene richtig auf
 CapsLock (also immer groß schreiben – CapsLock erreicht man unter Neo, wenn 
 man erst die rechte und dann die linke Mod3-Tasten gleichzeitig drückt).
 
-== Nummernblock ==
-Der Nummernblock reagiert nicht auf Tastenkombinationen mit Strg, Alt usw.
+== Ziffernblock ==
+Der Ziffernblock reagiert nicht auf Tastenkombinationen mit Strg, Alt usw.
 
-Der Nummernblock auf der 2. Ebene ist wahlweise
+Der Ziffernblock auf der 2. Ebene ist wahlweise
 - bei AUSgeschaltetem Numlock
 - bei EINgeschaltetem Numlock mit Shift
 zu erreichen.
-Der Nummernblock auf der 3. Ebene funktioniert bei EINgeschaltetem
+Der Ziffernblock auf der 3. Ebene funktioniert bei EINgeschaltetem
 Numlock mit Mod3 (Caps/#).
-Der Nummernblock auf der 4. Ebene ist wahlweise
+Der Ziffernblock auf der 4. Ebene ist wahlweise
 - bei AUSgeschaltetem Numlock mit Mod3 + Shift
 - bei EINgeschaltetem Numlock über Mod4
 zu erreichen.
 Da die 2. Ebene über Shift ebenfalls bei EINgeschaltetem Numlock
-funktioniert ist das Ausschalten des Nummernblocks nicht unbedingt
+funktioniert ist das Ausschalten des Ziffernblocks nicht unbedingt
 nötig.
 
 == Besonderheiten bei der ahk-Windowsversion von Neo ==
-Ebene 4 des Nummernblocks lässt sich außer über Mod3+Shift auch über
+Ebene 4 des Ziffernblocks lässt sich außer über Mod3+Shift auch über
 Mod4 ansprechen.
 
 == Warnung ==
