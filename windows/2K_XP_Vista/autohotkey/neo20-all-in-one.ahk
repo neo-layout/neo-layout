@@ -17,7 +17,7 @@
                     (Lässt sich das elegant in eine Funktion auslagern?)
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGES:      - SUBSCRIPT von 0 bis 9 sowie (auf Nummernblock) + und -
+    CHANGES:      - SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
                      • auch bei Ziffernblock auf der 5. Ebene
                   - Kein Parsen über die Zwischenablage mehr
                   - Vista-kompatibel
