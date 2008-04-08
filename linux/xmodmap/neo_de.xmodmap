@@ -91,7 +91,7 @@ keycode 10 = 1 degree         onesuperior   femalesymbol enfilledcircbullet enfi
 keycode 11 = 2 numerosign     twosuperior   U26A5        U2023              U2023              logicalor
 keycode 12 = 3 section        threesuperior malesymbol   3                  U25E6              logicaland
 keycode 13 = 4 guillemotright U203A         U2113        KP_Prior           KP_Prior           downtack
-keycode 14 = 5 guillemotleft  U2039         5            5                  5                  U2221
+keycode 14 = 5 guillemotleft  U2039         dagger       5                  5                  U2221
 keycode 15 = 6 EuroSign       cent          6            sterling           sterling           U2225
 
 keycode 16 = 7 dollar               yen                  U03F0 currency     currency       notelementof
