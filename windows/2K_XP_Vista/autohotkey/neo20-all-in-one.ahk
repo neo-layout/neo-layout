@@ -648,12 +648,8 @@ return
       sendinput {blind}x
    else if Ebene = 2
       sendinput {blind}X
-   else if Ebene = 3
-      send @         ; Redundanz, liegt jetzt auf ä (QWERTZ)
    else if Ebene = 4
       SendUnicodeChar(0x03BE) ;xi
-   else if Ebene = 5
-      send @         ; Redundanz
    else if Ebene = 6
       SendUnicodeChar(0x039E)  ; Xi
    PriorDeadKey := ""   CompKey := ""
