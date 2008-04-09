@@ -552,14 +552,16 @@ Lösungsweg hier noch nicht bekannt. Hinweise bitte an die Mailingliste.
 
 F: Wo finde ich die aktuellste Entwicklerversion von NEO als Grafik?
 
-A: Auf https://neo.eigenheimstrasse.de/svn/grafik/neo20.ods, also im
-Verzeichnis „grafik“ in der Subversion-Versionsverwaltung. Diese Datei lässt
-sich mit allen aktuellen Tabellenkalkulationsprogrammen öffnen (OpenOffice,
-KOffice, Textmaker, Google Text & Tabellen, Mobile Office, AjaxXLS,
-IBM Workplace, Lotus Notes, EditGrid, Gnumeric, IRows, MS Office mit Plugin).
-Außerdem gibt es noch die Datei
-https://neo.eigenheimstrasse.de/svn/grafik/neo20-aufsteller.pdf zum Ausdrucken
-und vor sich Hinstellen (inklusive Mini-FAQ auf der Rückseite).
+A: In der Datei https://neo.eigenheimstrasse.de/svn/A-REFERENZ-A/neo20.txt
+in der Subversion-Versionsverwaltung gibt es die Tastaturbelegung als
+Textgrafik. Die dortige Version ist immer die aktuellste. Davon ausgehend
+werden verschiedene Grafiken im Verzeichnis grafik/ nach und nach aktualisiert,
+sind jedoch meist etwas hinterher.
+
+Zum Lernen der Belegung ist beispielsweise der Aufsteller
+https://neo.eigenheimstrasse.de/svn/grafik/neo20-aufsteller.pdf ziemlich
+geeignet, da man ihn einfach nur ausdrucken, an den Knicklinien falten und dann
+vor sich Hinstellen kann (inklusive Mini-FAQ auf der Rückseite).
 
 --------------------------------------------------------------------------------
 
