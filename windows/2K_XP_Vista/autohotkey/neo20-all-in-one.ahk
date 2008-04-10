@@ -675,9 +675,9 @@ return
    else if Ebene = 3
       send _
    else if Ebene = 5
-      Send {Tab}
+      Send {Backspace}
    else if Ebene = 6
-      Send +{Tab}
+      Send +{Backspace}
    PriorDeadKey := ""   CompKey := ""
 return
 
@@ -806,7 +806,7 @@ return
    }
    else if Ebene = 5
    {
-      Send {Backspace}
+      Send {Del}
       CompKey := ""
    }
    else if Ebene = 6
@@ -1849,9 +1849,9 @@ return
    else if Ebene = 3
       send $
    else if Ebene = 5
-      Send {Del}
+      Send {Tab}
    else if Ebene = 6
-      Send +{Del}
+      Send +{Tab}
    PriorDeadKey := ""   CompKey := ""
 return
 
