@@ -1,19 +1,21 @@
 !! ~/.xmodmap
-!!
-!! Bei der Benutzung des Befehls »rev« muss die Zeile mit der aktuellen
-!! Revisionsnummer stets die Zeilennummer 10 sein. Anderenfalls muss »rev«
-!! angepasst werden.
-!!
-!! created by Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
-!! and Erik Streb <mail at erikstreb dot de>
-!!
-!! The german NEO Layout Revision 469 from Sa 5. Apr 22:28:05 CEST 2008
-!! see http://pebbles.schattenlauf.de/layout.php for details
-!!
+!! 
+!! German NEO-Layout
+!! adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
+!! inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
+!! Authors: 
+!!      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
+!!      Erik Streb <mail at erikstreb dot de>
+!! 
+!! Other Questions:
+!!      <mailinglist at neo-layout dot org>
+!! 
+!! Revision 479, Fr 11. Apr 13:17:49 CEST 2008
+!! http://pebbles.schattenlauf.de/layout.php
+!! 
 !! To try the layout in this file, simply do xmodmap <file>.
 !! To load the layout in this file at X startup, simply store it as
-!! ~/.xmodmap (named .xmodmap in your home directory)
-
+!! ~/.xmodmap
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
