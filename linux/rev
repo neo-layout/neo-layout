@@ -1,0 +1,37 @@
+#!/bin/sh
+# Autoren: Pascal Hauck
+#          Benjamin Kellermann <Benjamin Punkt Kellermann at gmx in Deutschland>
+
+
+case $1 in
+	"--help" | "-h")
+		echo "Aufruf: $0 <Dateien>"
+		echo "Beispiel: $0 xmodmap/neo_de.xmodmap X/de"
+		echo "»$0« ändert in der <Datei> oder den <Dateien> die Nummer der aktuellen Revision."
+		echo "Im Anschluss sollten gemachte Änderungen"
+		echo "per »svn commit« wie gewohnt übertragen werden."
+		echo "NEO Tastaturlayout\tVer. 0.3\tMärz 2008\t\t\tREV"
+		exit;;
+	"")  
+		echo "Aufruf: »$0«"
+		echo "»$0 --help« gibt Ihnen mehr Informationen."
+		exit 1
+esac
+
+#    Abfragen der nächsten Revisionsnummer
+REVISION=$(( $(svn info | sed -n 5~p | cut -f2 -d\:) + 1))
+
+for DATEI in "$@";
+do
+	# Sicherung der aktuellen Arbeitskopie
+	cp -a $DATEI $DATEI.bak
+
+	# Revisionsnummer in ändern
+	echo "Ändere Zeile:"
+	grep "Revision" $DATEI
+
+	sed -e "s/Revision [0-9]*, .*/Revision $REVISION, $(date)/1;" $DATEI > $DATEI.tmp
+	mv $DATEI.tmp $DATEI
+	echo "In Zeile:"
+	grep "Revision" $DATEI
+done
