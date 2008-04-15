@@ -2198,6 +2198,11 @@ return
       send {NumpadHome}
       CompKey := ""
    }
+   else if Ebene = 3
+   {
+      SendUnicodeChar(0x2195)   ; Hoch-Runter-Pfeil
+      CompKey := ""
+   }
    else if ( (Ebene = 4) or (Ebene = 5) )
    {
       SendUnicodeChar(0x226A)  ; ll
@@ -2388,7 +2393,7 @@ return
    }
    else if Ebene = 3
    {
-      SendUnicodeChar(0x21CB) ; LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
+      SendUnicodeChar(0x2194) ; Links-Rechts-Pfeil
       CompKey := ""
    }
    else if ( (Ebene = 4) or (Ebene = 5) )
