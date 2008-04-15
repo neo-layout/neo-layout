@@ -156,8 +156,8 @@ Die Lage von ω und Ω, sowie o und ∈ ist nicht abschließend geklärt
 
 == Vier Ebenen – Ziffernblock ==
 ┌─────┐
-│ 7 ≪ │ 3 … v⃗ Vektorpfeil (U+20D7 COMBINING RIGHT ARROW ABOVE)
-│ ⇱ v⃗ │ 5 … ≪ viel kleiner als (U+226A MUCH LESS-THAN)
+│ 7 ≪ │ 3 … ↕ Hoch-runter-Pfeil (U+2195 UP DOWN ARROW)
+│ ⇱ ↕ │ 5 … ≪ viel kleiner als  (U+226A MUCH LESS-THAN)
 └─────┘
 
 ┌─────┬─────┬─────┬─────┐
@@ -165,13 +165,13 @@ Die Lage von ω und Ω, sowie o und ∈ ist nicht abschließend geklärt
 │Lock │ / ÷ │ * × │ - − │
 ├─────┼─────┼─────┼─────┤
 │ 7 ≪ │ 8 ∩ │ 9 ≫ │     │
-│ ⇱ v⃗ │ ⇡ ↑ │ ⇞ ⊗ │   ∓ │
+│ ⇱ ↕ │ ⇡ ↑ │ ⇞ ⊗ │   ∓ │
 ├─────┼─────┼─────┤     │
 │ 4 ⊂ │ 5 ∋ │ 6 ⊃ │ + ± │
 │ ⇠ ← │ € ∞ │ ⇢ → │     │
 ├─────┼─────┼─────┼─────┤
 │ 1 ≤ │ 2 ∪ │ 3 ≥ │   ≈ │
-│ ⇲ ⇋ │ ⇣ ↓ │ ⇟ ⇌ │   ≠ │
+│ ⇲ ↔ │ ⇣ ↓ │ ⇟ ⇌ │   ≠ │
 ├─────┴─────┼─────┤     │
 │ 0 ‰       │,/. ,│     │
 │ ⎀ %       │ ⌦  .│Enter│
@@ -221,7 +221,6 @@ Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 ≡ … identisch (U2261)
 
 == Mat-/Nat-Ebene – Ziffernblock ==
-v⃗ … Vektorpfeil, kombinierendes Zeichen, lässt sich rückwirkend(!) auf jedes Zeichen setzen (U20D7)
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
 ∋ … enthält das Element (U220B)

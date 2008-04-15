@@ -169,7 +169,7 @@ keycode 82  = KP_Subtract KP_Subtract U2212
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  KP_Home     KP_7        U20D7      U226A
+keycode 79 =  KP_Home     KP_7        U2195      U226A
 keycode 80 =  KP_Up       KP_8        uparrow    intersection
 keycode 81 =  KP_Prior    KP_9        U2297      U226B
 keycode 86 =  KP_Add      KP_Add      plusminus  U2213
@@ -184,7 +184,7 @@ keycode 85 =  KP_Right    KP_6        rightarrow includes
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  KP_End      KP_1        U21CB      lessthanequal 
+keycode 87 =  KP_End      KP_1        U2194      lessthanequal 
 keycode 88 =  KP_Down     KP_2        downarrow  union 
 keycode 89 =  KP_Next     KP_3        U21CC      greaterthanequal 
 keycode 108 = KP_Enter    KP_Enter    notequal   U2248
