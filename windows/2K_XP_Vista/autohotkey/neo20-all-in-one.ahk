@@ -1,7 +1,7 @@
 /*
     Titel:        NEO 2.0 beta Autohotkey-Treiber
-    Version:      0.12 beta
-    Datum:        23.02.2008
+    $Revision$
+    $Date$
     Autor:        Stefan Mayer <stm@neo-layout.org>
     Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
         
