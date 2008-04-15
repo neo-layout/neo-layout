@@ -246,7 +246,7 @@ xkb_symbols "neo" {
     // Ebene 3: Mod3
     // Ebene 4: Mod4 (zum Markieren Shift+Mod4)
     // Ebene 5: Shift+Mod3
-    // Ebene 6: Mod3+Mod4 (in dieser Reihenfolge//)
+    // Ebene 6: Mod3+Mod4 (in dieser Reihenfolge)
     // Compose (keine eigene Ebene): Mod3+Tab
 
 
@@ -350,7 +350,7 @@ xkb_symbols "neo" {
     ////////////////////////////////////////////////////
     // The upper row
     ////////////////////////////////////////////////////
-    key  <KP7> { [ KP_Home,     KP_7,        KP_7,       U226A            ] };
+    key  <KP7> { [ KP_Home,     KP_7,        U2195,      U226A            ] };
     key  <KP8> { [ KP_Up,       KP_8,        uparrow,    intersection     ] };
     key  <KP9> { [ KP_Prior,    KP_9,        KP_9,       U226B            ] };
     key <KPAD> { [ KP_Add,      KP_Add,      plusminus,  U2213            ] };
@@ -365,7 +365,7 @@ xkb_symbols "neo" {
     ////////////////////////////////////////////////////
     // The lower row
     ////////////////////////////////////////////////////
-    key  <KP1> { [ KP_End,      KP_1,        U21CB,      lessthanequal    ] };
+    key  <KP1> { [ KP_End,      KP_1,        U2194,      lessthanequal    ] };
     key  <KP2> { [ KP_Down,     KP_2,        downarrow,  union            ] };
     key  <KP3> { [ KP_Next,     KP_3,        U21CC,      greaterthanequal ] };
     key <KPEN> { [ KP_Enter,    KP_Enter,    notequal,   U2248            ] };
