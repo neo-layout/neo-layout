@@ -14,7 +14,7 @@ http://dejavu.sourceforge.net/
 
 == Legende ==
 ┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
-│2 4 6│ 2 … 2. Ebene (Shift)        │ 5 … 5. Ebene (Shift+Mod3)
+│2 4 6│ 2 … 2. Ebene (Umschalt)     │ 5 … 5. Ebene (Mod3+Umschalt)
 │1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
 • Ebene 1: Kleinbuchstaben
@@ -127,7 +127,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Sft│M4│Ü│Ö│Ä│P│Z│B│M│,│.│J│ Shift │
+│Ums│M4│Ü│Ö│Ä│P│Z│B│M│,│.│J│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -144,7 +144,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │         │u \  │i / ι│a { α│e } ε│o * o│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y @ υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
 │Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B   ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J . ≡│   Caps_Lock  │
-│Shift │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ϱ│. ' θ│j ; ϑ│   Shift      │
+│Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ϱ│. ' θ│j ; ϑ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
 │      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │

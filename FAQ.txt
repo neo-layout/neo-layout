@@ -43,8 +43,8 @@ F: Es gibt keine Feststell-/Caps-Lock-Taste. Kann ich nie mehr dauernd groß
 schreiben?
 
 A: Die Dauergroßschreib-Funktionalität erhält man, indem man beide
-Shift-Tasten kurz gleichzeitig drückt. Zum Ausschalten dann nur EINE der beiden
-Shift-Tasten drücken.
+Umschalt-Tasten kurz gleichzeitig drückt. Zum Ausschalten dann nur EINE der
+beiden Umschalt-Tasten drücken.
 
 --------------------------------------------------------------------------------
 
@@ -136,8 +136,9 @@ A: Meist wird der Bindestrich (auf »Mod3« + »t« bzw.
 »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten
 Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann
 und sollte man auch zusammen, das heißt ohne Bindestrich, schreiben.
-Der Gedankenstrich/Bis-Strich (auf »Shift« + »Taste-rechts-neben-der-Null«) wird
-verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiele:
+Der Gedankenstrich/Bis-Strich (auf »Umschalt« + »Taste-rechts-neben-der-Null«)
+wird verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte.
+Beispiele:
   1. Mit NEO zu schreiben – das sage nicht nur ich – ist besser als mit QWERTZ.
   2. Öffnungszeiten: Mo–Fr 10–18 Uhr.
 Der englische Gedankenstrich (auf »Mod3« + »Taste-rechts-neben-der-Null«)
@@ -151,7 +152,7 @@ Nochmal kurze Zusammenfassung der Namen:
 ‣ Bindestrich/Viertelgeviertstrich/Hyphen-Minus/Bindestrich-Minus:
   - (Strich-Taste oder Mod3 + t)
 ‣ Halbgeviertstrich/En-Dash/Gedankenstrich/Bis-Strich:
-  – (Shift + Strich-Taste)
+  – (Umschalt + Strich-Taste)
 ‣ Geviertstrich/Em-Dash/Englischer Gedankenstrich:
   — (Mod3 + Strich-Taste)
 
@@ -162,12 +163,12 @@ Mehr zur Typographie hier:
 
 F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?
 
-A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen
-für deutsche Texte erreichbar. Es sind die Zeichen „ und “.
+A: Bei gedrückter »Umschalt-Taste« sind auf den Tasten »8« und »9« die
+Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “.
 Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als
 Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind
-per »Shift-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.
-Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Shift-Taste«
+per »Umschalt-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.
+Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Umschalt-Taste«
 auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.
 Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia:
 	http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
@@ -309,11 +310,11 @@ gewünscht sind. Für Latex gibt es noch eine andere Lösung hier in der FAQ
 F: Ich erhalte in Calc, Excel oder einem ähnlichen Tabellenkalkulationsprogramm
 einen Fehler, obwohl ich in meiner eingegebenen Formel keinen Fehler finde.
 
-A: Der gängigste Fehler ist das Verwenden eines Gedankenstrichs (Shift + -) oder
-eines echten Minus (Mod3 + Minus auf dem Ziffernblock) statt des herkömmlichen
-Striches.
-Dieser befindet sich auf Ebene 1 (ohne Modifier) auf der Strichtaste neben der
-Null oder auf Mod3+t.
+A: Der gängigste Fehler ist das Verwenden eines Gedankenstrichs (Umschalt + -)
+oder eines echten Minus (Mod3 + Minus auf dem Ziffernblock) statt des
+herkömmlichen Striches.
+Dieser befindet sich auf Ebene 1 (ohne Modifikator) auf der Strichtaste neben
+der Null oder auf Mod3+t.
 Nähere Informationen gibt es in der Frage direkt über dieser.
 
 --------------------------------------------------------------------------------
@@ -363,7 +364,7 @@ oder für die Version im 2.0 im Subversion-Repository:
 --------------------------------------------------------------------------------
 
 F: Bei mir geht die 4. Ebene (Mod4) nicht. Stattdessen erscheinen immer die
-Zeichen der 1. Ebene, egal welchen der beiden Modifier ich drücke. Warum?
+Zeichen der 1. Ebene, egal welchen der beiden Modifikator ich drücke. Warum?
 
 A: Du verwendest vermutlich nicht die xmodmap-Version des Treibers, sondern
 die xkb-Datei mit dem Namen „de“. Bei dieser kommt es auf älteren Systemen
@@ -407,7 +408,7 @@ entfernt (und z.B. durch v ersetzt) werden.
 
 --------------------------------------------------------------------------------
 
-F: Mein »Mod4« geht nicht als Modifier für die 4. Ebene.
+F: Mein »Mod4« geht nicht als Modifikator für die 4. Ebene.
 
 A1: Deaktiviere die Option „Both Alt keys together change Group” 
 (ralt_switch_for_alts_toggle) oder frage auf der Mailingliste.
@@ -459,7 +460,7 @@ F: Auf meinem Ziffernblock funktioniert die 5 nicht.
 
 A: Beim Programm galculator ist bekannt, dass man nur alle Ziffern eingeben
 kann, wenn man Numlock aktiviert hat. Das ist so, weil man auf dem Ziffernblock
-mit Shift+5 das Eurosymbol (wenn Numlock aktiviert ist) eingeben kann.
+mit Umschalt+5 das Eurosymbol (wenn Numlock aktiviert ist) eingeben kann.
 Galculotor erwartet aber, dass sich nicht das Eurosymbol, sondern KP_Begin dort
 befindet.
 
@@ -522,8 +523,8 @@ F: Wie kann ich mit der MSKLC-Variante auf Zeichen der 4. und 6. Ebene
 
 A: Diese Ebenen sind über die so genannte SGCaps-Funktion realisiert. Für die 
    4. Ebene muss man Mod4 drücken, dann die Taste mit dem Zeichen, dann Mod4
-   wieder deaktivieren (Shift drücken oder nochmal Mod4).
-   Für die 6. Ebene hält man Shift gedrückt, dann Mod4 gedrückt, dann das
+   wieder deaktivieren (Umschalt drücken oder nochmal Mod4).
+   Für die 6. Ebene hält man Umschalt gedrückt, dann Mod4 gedrückt, dann das
    Zeichen eingeben und dann Mod4 wieder deaktivieren. Es wird noch nach einer
    Möglichkeit gesucht, das weniger umständlich zu ermöglichen.
 
