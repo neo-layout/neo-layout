@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,10 +13,10 @@
    fill-rule="evenodd"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.45.1"
+   inkscape:version="0.46"
    width="2104.7244"
    height="751.05377"
-   sodipodi:docname="neo_Ebene_5.svg"
+   sodipodi:docname="neo_Ebene_4.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    sodipodi:docbase="/home/ben/neo/grafik/tastatur2d-svg">
   <metadata
@@ -55,8 +55,8 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:window-height="994"
-     inkscape:window-width="1594"
+     inkscape:window-height="1019"
+     inkscape:window-width="1695"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      guidetolerance="10.0"
@@ -66,24 +66,33 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.5"
-     inkscape:cx="1083.2674"
-     inkscape:cy="250.15674"
-     inkscape:window-x="0"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="1030.1997"
+     inkscape:cy="340.64201"
+     inkscape:window-x="1400"
      inkscape:window-y="0"
      inkscape:current-layer="svg2"
      width="2104.7244px"
      height="650px"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true"
+     showgrid="false" />
   <defs
-     id="defs4" />
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 375.52689 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="2104.7244 : 375.52689 : 1"
+       inkscape:persp3d-origin="1052.3622 : 250.35126 : 1"
+       id="perspective450" />
+  </defs>
   <path
      style="fill:#b3b3b3;stroke:none;visibility:visible"
      d="M 0,-984.9966 L 28500,-984.9966 L 28500,9184.9966 L 0,9184.9966 L 0,-984.9966 z "
      id="path452" />
   <g
-     id="g2432">
+     id="g2599">
     <path
        id="path609"
        d="M 5972,-734.99662 L 7719,-734.99662 L 7719,1065.0038 L 5972,1065.0038 L 5972,-734.99662 z "
@@ -623,13 +632,33 @@
      d="M 15600,4740.0037 L 16100,4740.0037 L 16100,4890.0037 L 15600,4890.0037 L 15600,4740.0037 z " />
   <text
      style="font-size:706px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2923"
+     y="-670.14117"
+     x="-3732.8496">
+    <tspan
+       x="284.14868"
+       y="4283.8589"
+       id="tspan2925">↘3</tspan>
+  </text>
+  <text
+     style="font-size:706px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2927"
+     y="-643.57788"
+     x="20804.945">
+    <tspan
+       x="24821.943"
+       y="4310.4209"
+       id="tspan2929">↘3</tspan>
+  </text>
+  <text
+     style="font-size:706px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2931"
      y="1348.246"
      x="-1573.897">
     <tspan
        x="2443.1008"
        y="6302.2456"
-       id="tspan2933">M4</tspan>
+       id="tspan2933">↗4</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -765,14 +794,36 @@
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2695"
-     y="-3741.3555"
-     x="9294.9834">
+     id="text2663"
+     y="170.25433"
+     x="2682.625">
     <tspan
-       x="21472.98"
-       y="1868.6449"
-       id="tspan2697"
-       style="font-style:normal;font-weight:normal">+</tspan>
+       x="14860.631"
+       y="5780.2524"
+       id="tspan2665"
+       style="font-style:normal;font-weight:normal">∞</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2667"
+     y="-1706.5325"
+     x="2055.5017">
+    <tspan
+       x="14233.512"
+       y="3903.4668"
+       id="tspan2669"
+       style="font-style:normal;font-weight:normal">¿</tspan>
+  </text>
+  <text
+     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2671"
+     y="-3712.5769"
+     x="1820.8109">
+    <tspan
+       x="13998.82"
+       y="1897.4232"
+       id="tspan2673"
+       style="font-style:normal;font-weight:normal">¡</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -804,7 +855,7 @@
     <tspan
        x="4450.3115"
        y="3878.6816"
-       id="tspan2864">↤</tspan>
+       id="tspan2864">⇱</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -814,7 +865,7 @@
     <tspan
        x="12215.784"
        y="3878.6816"
-       id="tspan2868">↦</tspan>
+       id="tspan2868">⇲</tspan>
   </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -824,17 +875,7 @@
     <tspan
        x="9135.9707"
        y="5808.0669"
-       id="tspan2872">↧</tspan>
-  </text>
-  <text
-     style="font-size:275.4418335px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2878"
-     y="2007.6925"
-     x="3406.1838">
-    <tspan
-       x="7046.5093"
-       y="5708.0874"
-       id="tspan2880">Entf</tspan>
+       id="tspan2872">⇟</tspan>
   </text>
   <text
      style="font-size:275.4418335px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -847,24 +888,14 @@
        id="tspan2888">Esc</tspan>
   </text>
   <text
-     style="font-size:275.4418335px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2890"
-     y="-1903.9138"
-     x="8210.0596">
-    <tspan
-       x="11850.386"
-       y="1796.4796"
-       id="tspan2892">Einf</tspan>
-  </text>
-  <text
      style="font-size:706px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text17807"
-     y="3739.5737"
-     x="15317.814">
+     y="3333.3433"
+     x="15615.716">
     <tspan
-       x="19334.812"
-       y="8693.5732"
-       id="tspan17809">M4</tspan>
+       x="19632.715"
+       y="8287.3428"
+       id="tspan17809">↗4</tspan>
   </text>
   <text
      style="font-size:1625.21203613px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
@@ -887,13 +918,25 @@
        id="tspan2735">⌫</tspan>
   </text>
   <text
+     style="font-size:974.94952393px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#161616;stroke:none;visibility:visible;font-family:CMU Serif"
+     id="text2737"
+     y="-2956.5305"
+     x="-3689.9883"
+     sodipodi:linespacing="125%">
+    <tspan
+       x="327.00983"
+       y="1997.4679"
+       id="tspan2739"
+       style="font-size:974.94952393px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:CMU Serif">↹</tspan>
+  </text>
+  <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
      id="text2741"
-     y="-3741.3533"
-     x="-2227.5259">
+     y="170.25269"
+     x="-5051.689">
     <tspan
-       x="9950.4746"
-       y="1868.6464"
+       x="7126.3115"
+       y="5780.2524"
        id="tspan2743"
        style="font-weight:normal">↹</tspan>
   </text>
@@ -921,353 +964,72 @@
        style="font-weight:normal">↵</tspan>
   </text>
   <text
-     style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text2601"
-     y="2074.4155"
-     x="4888.8159">
+     style="font-size:379.14703369px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#161616;stroke:none;visibility:visible;font-family:CMU Serif"
+     id="text2823"
+     y="-3774.1245"
+     x="-2273.6577"
+     sodipodi:linespacing="125%">
     <tspan
-       x="17066.816"
-       y="7684.4136"
-       id="tspan2603"
-       style="font-style:normal;font-weight:normal">0</tspan>
+       x="9904.3438"
+       y="1835.8756"
+       id="tspan2825"
+       style="font-size:379.14703369px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:CMU Serif">⌦</tspan>
   </text>
-  <g
-     style="fill-rule:evenodd"
-     id="g3052"
-     transform="translate(20441.954,-16363.893)">
-    <text
-       y="-984.99658"
-       id="text3064"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3066"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3076"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3078"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3086"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3088"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3100"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3102"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3112"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3114"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3164"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3166"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3176"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3178"
-         y="663.00354" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3186"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3188"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3196"
-       style="font-size:564px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3198"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3206"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3208"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3216"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3218"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3226"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3228"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3236"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3238"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3246"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3248"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3256"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3258"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3266"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3268"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3278"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3280"
-         y="2659.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3296"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3298"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3306"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3308"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3316"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3318"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3326"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3328"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3336"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3338"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3346"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3348"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3356"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3358"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3366"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3368"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3376"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3378"
-         y="4625.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3388"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3390"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3396"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3398"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3406"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3408"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3416"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3418"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3426"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3428"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3436"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3438"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3446"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3448"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3468"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan3470"
-         y="6592.002" />
-    </text>
-    <text
-       y="-984.99658"
-       id="text3486"
-       style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         y="4625.002"
-         id="tspan3488" />
-    </text>
-    <text
-       x="-13962.283"
-       y="10696.029"
-       id="text3700"
-       style="font-size:564px;font-weight:400;fill:#161616;fill-rule:evenodd;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         style="font-style:normal;font-weight:normal"
-         id="tspan3702"
-         y="16306.031"
-         x="-1784.2854">*</tspan>
-    </text>
-    <text
-       x="-15810.213"
-       y="10585.462"
-       id="text3704"
-       style="font-size:564px;font-weight:400;fill:#161616;fill-rule:evenodd;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         style="font-style:normal;font-weight:normal"
-         id="tspan3706"
-         y="16195.463"
-         x="-3632.2139">/</tspan>
-    </text>
-    <text
-       x="-12015.939"
-       y="10560.537"
-       id="text3708"
-       style="font-size:564px;font-weight:400;fill:#161616;fill-rule:evenodd;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         style="font-style:normal;font-weight:normal"
-         id="tspan3710"
-         y="16170.539"
-         x="162.05521">-</tspan>
-    </text>
-    <text
-       x="-17923.221"
-       y="10612.588"
-       id="text4085"
-       style="font-size:564px;font-weight:400;fill:#161616;fill-rule:evenodd;stroke:none;visibility:visible;font-family:Arial embedded">
-      <tspan
-         id="tspan4087"
-         y="16222.589"
-         x="-11416.219">↥</tspan>
-    </text>
-  </g>
+  <text
+     style="font-size:486.20031738px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#161616;stroke:none;visibility:visible;font-family:CMU Serif"
+     id="text2827"
+     y="-5379.0684"
+     x="-3634.9446"
+     sodipodi:linespacing="125%">
+    <tspan
+       x="11981.537"
+       y="1814.9373"
+       id="tspan2829"
+       style="font-size:486.20031738px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:CMU Serif">⎀</tspan>
+  </text>
   <text
      style="font-size:564px;font-weight:400;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
-     id="text4089"
-     y="2074.4128"
-     x="8482.9053">
+     id="text2831"
+     y="2223.3665"
+     x="5078.3896">
     <tspan
-       x="20660.904"
-       y="7684.4136"
-       id="tspan4091"
-       style="font-style:normal;font-weight:normal">,/.</tspan>
+       x="17256.389"
+       y="7833.3643"
+       id="tspan2833"
+       style="font-style:normal;font-weight:normal">0</tspan>
+  </text>
+  <text
+     style="font-size:706px;font-weight:700;fill:#161616;stroke:none;visibility:visible;font-family:Arial embedded"
+     id="text2847"
+     y="-1074.8398"
+     x="-1568.8514">
+    <tspan
+       x="2030.1472"
+       y="1913.1586"
+       id="tspan2849">♫</tspan>
+  </text>
+  <text
+     style="font-size:1045.28686523px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#161616;stroke:none;visibility:visible;font-family:Arial"
+     id="text2725"
+     y="-2129.9067"
+     x="-6936.561"
+     sodipodi:linespacing="125%">
+    <tspan
+       x="201.68948"
+       y="6673.4028"
+       id="tspan2727"
+       style="font-size:1045.28686523px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial">⇧</tspan>
+  </text>
+  <text
+     style="font-size:1045.28686523px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#161616;stroke:none;visibility:visible;font-family:Arial"
+     id="text2899"
+     y="-2129.9065"
+     x="16207.949"
+     sodipodi:linespacing="125%">
+    <tspan
+       x="23346.201"
+       y="6673.4028"
+       id="tspan2901"
+       style="font-size:1045.28686523px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Arial">⇧</tspan>
   </text>
 </svg>
