@@ -2,7 +2,7 @@
     Titel:        NEO 2.0 beta Autohotkey-Treiber
     $Revision$
     $Date$
-    Autor:        Stefan Mayer <stm@neo-layout.org>
+    Autor:        Stefan Mayer <stm (at) neo-layout.org>
     Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
         
     TODO:         - ausgiebig testen...
@@ -34,12 +34,12 @@
   ; Quelltext kann eingerückt werden, 
   ; msgbox ist trotzdem linksbündig
 
-SendMode Input
 SetTitleMatchMode 2
+SendMode InputThenPlay	
 
-;name    = NEO 2.0
-;enable  = Aktiviere %name%
-;disable = Deaktiviere %name%
+name    = Neo 2.0
+enable  = Aktiviere %name%
+disable = Deaktiviere %name%
 
 ; Überprüfung auf deutsches Tastaturlayout 
 ; ----------------------------------------
@@ -69,6 +69,29 @@ if inputlocale <> 00000407
      )
    exitapp
 }
+
+; Menü des Systray-Icons 
+; ----------------------
+
+menu, tray, nostandard
+menu, tray, add, Öffnen, open
+   menu, helpmenu, add, About, about
+   menu, helpmenu, add, Autohotkey-Hilfe, help
+   menu, helpmenu, add
+   menu, helpmenu, add, http://&autohotkey.com/, autohotkey
+   menu, helpmenu, add, http://www.neo-layout.org/, neo
+ menu, tray, add, Hilfe, :helpmenu
+menu, tray, add
+menu, tray, add, %disable%, togglesuspend
+menu, tray, default, %disable%
+menu, tray, add
+menu, tray, add, Edit, edit
+menu, tray, add, Reload, reload
+menu, tray, add
+menu, tray, add, Nicht im Systray anzeigen, hide
+menu, tray, add, %name% beenden, exitprogram
+menu, tray, tip, %name%
+
 
 /*
    Variablen initialisieren
@@ -3103,3 +3126,73 @@ EncodeInteger(ref, val)
 */
 
 +pause::suspend
+
+; ------------------------------------
+
+togglesuspend:
+   if state <>
+   {
+      state =
+      menu, tray, rename, %enable%, %disable%
+   }
+   else
+   {
+      state = : Deaktiviert
+      menu, tray, rename, %disable%, %enable%
+   }
+
+   menu, tray, tip, %name%%state%
+   suspend
+return
+
+
+help:
+   Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
+return
+
+
+about:
+   msgbox, 64, %name% – Ergonomische Tastaturbelegung, 
+   (
+   %name% 
+   `nDas Neo-Layout ersetzt das übliche deutsche 
+   Tastaturlayout mit der Alternative Neo, 
+   beschrieben auf http://neo-layout.org/. 
+   `nDazu sind keine Administratorrechte nötig. 
+   `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
+   abgefangen und statt dessen eine Übersetzung weitergeschickt. 
+   `nDies geschieht transparent für den Anwender, 
+   es muss nichts installiert werden. 
+   `nDie Zeichenübersetzung kann leicht über das Icon im 
+   Systemtray deaktiviert werden.  `n
+   )
+return
+
+
+neo:
+   run http://neo-layout.org/
+return
+
+autohotkey:
+   run http://autohotkey.com/
+return
+
+open:
+   ListLines ; shows the Autohotkey window
+return
+
+edit:
+   edit
+return
+
+reload:
+   Reload
+return
+
+hide:
+   menu, tray, noicon
+return
+
+exitprogram:
+   exitapp
+return
