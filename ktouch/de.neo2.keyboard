@@ -26,15 +26,15 @@ FingerKey		100		D		108		20
 #			Unicode		KeyText		x		y		Width		Height
 ControlKey		260		Tab		0		10		15		10
 ControlKey		13		Enter		138		10		12		20
-ControlKey		257		Shift		123		30		27		10
+ControlKey		257		Umschalt	123		30		27		10
 ControlKey		264		M4		100		40		15		10
 ControlKey		265		Strg		135		40		15		10
 ControlKey		263		Alt		25		40		15		10
 ControlKey		262		Strg		0		40		15		10
 ControlKey		32		Leertaste	40		40		60		10
-ControlKey		258		Shift		0		30		13		10
+ControlKey		258		Umschalt	0		30		13		10
 ControlKey		259		M3		0		20		18		10
-ControlKey		8		BackSpace	130		0		20		10
+ControlKey		8		Rück		130		0		20		10
 # formerly (with qwertz) normal keys
 ControlKey		266		M3		128		20		10		10
 ControlKey		267		M4		13		30		10		10
@@ -146,7 +146,7 @@ HiddenKey		80		112		101		257		#P
 HiddenKey		90		122		101		257		#Z
 HiddenKey		66		98		110		258		#B
 HiddenKey		77		109		110		258		#M
-#HiddenKey		44		44		114		258		#Shift+, (?)
+#HiddenKey		44		44		114		258		#Umschalt+, (?)
 HiddenKey		8230		46		116		258		#…
 HiddenKey		74		106		100		258		#J
 #
