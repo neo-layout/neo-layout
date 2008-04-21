@@ -109,7 +109,7 @@ keycode 21 = dead_acute dead_grave dead_cedilla dead_ogonek dead_abovedot dead_a
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 24 = x X x            Greek_xi     x         x         Greek_XI
 keycode 25 = v V underscore   v            BackSpace BackSpace U2259
-keycode 26 = l L bracketleft  Greek_lambda KP_Up     KP_Up     Greek_LAMDA
+keycode 26 = l L bracketleft  Greek_lambda KP_Up     KP_Up     Greek_LAMBDA
 keycode 27 = c C bracketright Greek_chi    KP_Delete KP_Delete U2102
 keycode 28 = w W asciicircum  Greek_omega  KP_Insert KP_Insert Greek_OMEGA
 
