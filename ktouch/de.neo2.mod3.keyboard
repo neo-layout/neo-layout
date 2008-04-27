@@ -15,6 +15,7 @@ FingerKey		117		\		18		20
 FingerKey		105		/		28		20
 FingerKey		97		{		38		20
 FingerKey		101		}		48		20
+
 FingerKey		110		(		78		20
 FingerKey		114		)		88		20
 FingerKey		116		-		98		20
@@ -52,15 +53,15 @@ NormalKey		50		²		20		0		117
 NormalKey		51		³		30		0		105
 NormalKey		52		›		40		0		97
 NormalKey		53		‹		50		0		101
-NormalKey		54		£		60		0		101
-NormalKey		55		¢		70		0		110
+NormalKey		54		¢		60		0		101
+NormalKey		55		¥		70		0		110
 NormalKey		56		‚		80		0		110
 NormalKey		57		‘		90		0		114
 NormalKey		48		’		100		0		116
 NormalKey		9999		—		110		0		100		# redundant
 NormalKey		769		¸		120		0		100
 #
-NormalKey		120		@		15		10		117
+#NormalKey		120		@		15		10		117
 NormalKey		118		_		25		10		105
 NormalKey		108		[		35		10		97
 NormalKey		99		]		45		10		101
@@ -75,10 +76,8 @@ NormalKey		771		¨		125		10		100
 #
 NormalKey		111		*		58		20		101
 NormalKey		115		?		68		20		110
-#NormalKey		121		„		118		20		100
-#NormalKey		266		M3		128		20		100
+NormalKey		121		@		118		20		100
 #
-#NormalKey		267		M4		13		30		117
 NormalKey		252		#		23		30		117
 NormalKey		246		$		33		30		105
 NormalKey		228		|		43		30		97
@@ -86,8 +85,8 @@ NormalKey		112		~		53		30		101
 NormalKey		122		`		63		30		101
 NormalKey		98		+		73		30		110
 NormalKey		109		%		83		30		110
-NormalKey		46		"		93		30		114
-NormalKey		44		'		103		30		116
+NormalKey		44		"		93		30		114
+NormalKey		46		'		103		30		116
 NormalKey		106		;		113		30		100
 #
 #
@@ -106,13 +105,13 @@ HiddenKey		8470		50		117		257		#№
 HiddenKey		167		51		105		257		#§
 HiddenKey		187		52		97		257		#»
 HiddenKey		171		53		101		257		#«
-#HiddenKey		36		246		101		257		#$ redundant
-HiddenKey		8364		55		110		258		#€
-HiddenKey		8222		56		110		258		#„ redundant
+HiddenKey		8364		54		101		257		#€
+#HiddenKey		36		55		110		258		#$ redundant
+HiddenKey		8222		56		110		258		#„
 HiddenKey		8220		57		114		258		#“
 HiddenKey		8221		48		116		258		#”
-#HiddenKey		8211		9998		100		258		#–
-HiddenKey		768		769		100		258		#`
+HiddenKey		8211		9999		100		258		#–
+#HiddenKey		768		769		100		258		#` redundant
 #
 HiddenKey		88		120		117		257		#X
 HiddenKey		86		118		105		257		#V
@@ -146,7 +145,7 @@ HiddenKey		80		112		101		257		#P
 HiddenKey		90		122		101		257		#Z
 HiddenKey		66		98		110		258		#B
 HiddenKey		77		109		110		258		#M
-#HiddenKey		44		44		114		258		#Shift+, (?)
+HiddenKey		8942		44		114		258		#⋮
 HiddenKey		8230		46		116		258		#…
 HiddenKey		74		106		100		258		#J
 #
@@ -158,15 +157,14 @@ HiddenKey		178		50		117		266		#²
 HiddenKey		179		51		105		266		#³
 HiddenKey		8250		52		97		266		#›
 HiddenKey		8249		53		101		266		#‹
-HiddenKey		163		54		101		266		#£
-HiddenKey		162		55		110		259		#¢
+HiddenKey		162		54		101		266		#¢
+HiddenKey		165		55		110		259		#¥
 HiddenKey		8218		56		110		259		#‚
 HiddenKey		8216		57		114		259		#‘
 HiddenKey		8217		48		116		259		#’
 HiddenKey		8212		9999		100		259		#—
 HiddenKey		807		769		100		259		#¸
 #
-HiddenKey		64		120		117		266		#@
 HiddenKey		95		118		105		266		#_
 HiddenKey		91		108		97		266		#[
 HiddenKey		93		99		101		266		#]
@@ -177,7 +175,7 @@ HiddenKey		62		103		114		259		#>
 HiddenKey		61		102		116		259		#=
 HiddenKey		38		113		100		259		#&
 HiddenKey		383		223		100		259		#ſ
-HiddenKey		776		771		100		259		#¨
+#HiddenKey		776		771		100		259		#¨ redundant
 #
 HiddenKey		92		117		117		266		#\
 HiddenKey		47		105		105		266		#/
@@ -189,16 +187,16 @@ HiddenKey		40		110		110		259		#(
 HiddenKey		41		114		114		259		#)
 HiddenKey		45		116		116		259		#- redundant
 HiddenKey		58		100		100		259		#:
-#HiddenKey		8222		121		100		259		#„ redundant
+HiddenKey		64		121		100		259		#@
 #
 HiddenKey		35		252		117		266		##
 HiddenKey		36		246		105		266		#$ redundant
 HiddenKey		124		228		97		266		#|
 HiddenKey		126		112		101		266		#~
-HiddenKey		96		122		101		266		#`
+HiddenKey		96		122		101		266		#` redundant
 HiddenKey		43		98		110		259		#+
 HiddenKey		37		109		110		259		#%
-HiddenKey		39		44		114		259		#'
-HiddenKey		34		46		116		259		#"
+HiddenKey		34		44		114		259		#" redundant
+HiddenKey		39		46		116		259		#'
 HiddenKey		59		106		100		259		#;
 
