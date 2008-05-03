@@ -17,16 +17,17 @@ http://dejavu.sourceforge.net/
 │2 4 6│ 2 … 2. Ebene (Umschalt)     │ 5 … 5. Ebene (Mod3+Umschalt)
 │1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
-• Ebene 1: Kleinbuchstaben
-• Ebene 2: Großbuchstaben
-• Ebene 3: Sonderzeichen
-• Ebene 4: Navigation und Ziffernblock
-• Ebene 5: Griechische Kleinbuchstaben
-• Ebene 6: Griechische Großbuchstaben
+• Ebene 1: Kleinbuchstaben                   (kein Mod)
+• Ebene 2: Großbuchstaben                    (Umschalt)
+• Ebene 3: Sonderzeichen                     (Mod3)
+• Ebene 4: Navigation und Ziffernblock       (Mod4)
+• Ebene 5: Griechische Kleinbuchstaben       (Mod3+Umschalt)
+• Ebene 6: Griechische Großbuchstaben        (Mod3+Mod4)
 
-Kombo/Compose (zusammen setzen von Zeichen) erreicht man über Mod3+Tab.
-Beispiel:
-»Compose« »Compose loslassen« »o« »c« = ©
+• Kombo/Compose: Zusammen setzen von Zeichen (Mod3+Tab)
+  Beispiel:
+  »Compose« »Compose loslassen« »o« »c« = ©
+• Feststellen/Capslock: Dauergroßschreiben   (Umschalt+Umschalt)
 
 == Symbole ==                            
 ⇞⇟   … Bild auf/Bild ab                  
