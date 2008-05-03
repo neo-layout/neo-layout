@@ -303,7 +303,7 @@ xkb_symbols "neo" {
     ////////////////////////////////////////////////////
     // The upper row
     ////////////////////////////////////////////////////
-    key <AD01> { [ x,           X,                      at,                      Greek_xi,           x,             NoSymbol,	Greek_XI         ] };
+    key <AD01> { [ x,           X,                      x,                      Greek_xi,           x,             NoSymbol,	Greek_XI         ] };
     key <AD02> { [ v,           V,                      underscore,             v,                  BackSpace,      NoSymbol,	BackSpace        ] };
     key <AD03> { [ l,           L,                      bracketleft,            Greek_lambda,       KP_Up,          NoSymbol,	KP_Up            ] };
     key <AD04> { [ c,           C,                      bracketright,           Greek_chi,          KP_Delete,      NoSymbol,	KP_Delete        ] };
