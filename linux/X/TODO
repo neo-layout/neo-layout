@@ -50,3 +50,6 @@ Compose und Caps gehen noch nicht richtig (Compose nur rechts, Caps nur links)
 == Bugreport an KDE senden ==
 Falsches Zeichen erscheint bei Eingabe vom Implikationspfeil. Siehe Mail von
 Erik Streb vom 13.08.2007 01:34.
+
+== uptack und downtack ==
+in der Datei /usr/include/X11/keysymdef.h sind uptack und downtack vertauscht! Fehler melden!

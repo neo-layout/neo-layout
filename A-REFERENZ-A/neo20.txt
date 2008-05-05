@@ -88,9 +88,8 @@ Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
 ┬─────┬ 2 … – Gedankenstrich (U+2013 EN DASH)
 │–   ╌│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│- — ‑│ 4 … 
-┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
-        6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
+│- — ‑│ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
+┴──┬──┴ 6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 == Anführungszeichen ==
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
@@ -102,7 +101,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┬─────┬
 │«   ∡│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
-│5 ‹  │ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
+│5 ‹ †│ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
@@ -119,6 +118,16 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │” - ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
 │0 ’  │ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 ┴──┬──┴
+
+== Dezimaltrennzeichen ==
+Das Dezimaltrennzeichen ist auf englischen und spanischen Systemen ein Punkt ».«.
+Auf deutschen, französischen, schweizerischen und anderen ein Komma »,«.
+Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
+
+┬──┴──┬
+│B , ⇒│ 4 … ,/. Dezimaltrennzeichen (Komma oder Punkt)
+│b + β│
+┴─────┴
 
 == Erste Ebene – Miniatur ==
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
@@ -141,28 +150,40 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
 │    ♫   │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y   ∇│↘3 ♫ │  ↲  │
+│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D   Δ│Y   ∇│↘3 ♫ │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y @ υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B   ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J . ≡│   Caps_Lock  │
+│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B , ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J   ≡│   Caps_Lock  │
 │Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ϱ│. ' θ│j ; ϑ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
 │      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
-Derzeit unklar:
-Die Lage von ω und Ω, sowie o und ∈ ist nicht abschließend geklärt
-(siehe Argumente in TODO.txt)
-
 == Vier Ebenen – Ziffernblock ==
-┌─────┐
-│ 7 ≪ │ 3 … ↕ Hoch-runter-Pfeil (U+2195 UP DOWN ARROW)
-│ ⇱ ↕ │ 5 … ≪ viel kleiner als  (U+226A MUCH LESS-THAN)
-└─────┘
+┌─────┐ 1 … 1. Ebene (kein Mod)
+│ 2 5 │ 2 … 2. Ebene (Umschalt)
+│ 1 3 │ 3 … 3. Ebene (Mod3)
+└─────┘ 5 … 5. Ebene (Mod3+Umschalt)
+
+== Rechenzeichen ==
+┬─────┬ 1 … ASCII-Schrägstrich
+│   ∕ │ 2 … ASCII-Schrägstrich
+│ / ÷ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
+┼─────┼ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
+
+┬─────┬ 1 … ASCII-Malzeichen
+│   ∙ │ 2 … ASCII-Malzeichen
+│ * × │ 3 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
+┼─────┼ 4 … Malpunkt (U+2219 BULLET OPERATOR)
+
+┬─────┐ 1 … ASCII-Minus
+│     │ 2 … ASCII-Minus
+│ - − │ 3 … Minuszeichen (U+2212 MINUS SIGN)
+┼─────┤
 
 ┌─────┬─────┬─────┬─────┐
-│Num  │   ∕ │   ⋅ │     │
+│Num  │   ∕ │   ∙ │     │
 │Lock │ / ÷ │ * × │ - − │
 ├─────┼─────┼─────┼─────┤
 │ 7 ≪ │ 8 ∩ │ 9 ≫ │     │
