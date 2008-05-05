@@ -125,7 +125,7 @@ SOFTWARE.
 
 /* International & multi-key character composition */
 
-#define XK_Multi_key                     0xff20  /* Multi-key character compose */
+#define XK_Multi_key                     0xff20  /* U+266B BEAMED EIGHTH NOTES Multi-key character compose */
 #define XK_Codeinput                     0xff37
 #define XK_SingleCandidate               0xff3c
 #define XK_MultipleCandidate             0xff3d
@@ -301,12 +301,12 @@ SOFTWARE.
 
 /* Modifiers */
 
-#define XK_Shift_L                       0xffe1  /* Left shift */
-#define XK_Shift_R                       0xffe2  /* Right shift */
+#define XK_Shift_L                       0xffe1  /* U+21E7 UPWARDS WHITE ARROW */
+#define XK_Shift_R                       0xffe2  /* U+21E7 UPWARDS WHITE ARROW */
 #define XK_Control_L                     0xffe3  /* Left control */
 #define XK_Control_R                     0xffe4  /* Right control */
 #define XK_Caps_Lock                     0xffe5  /* Caps lock */
-#define XK_Shift_Lock                    0xffe6  /* Shift lock */
+#define XK_Shift_Lock                    0xffe6  /* U+21E7 UPWARDS WHITE ARROW */
 
 #define XK_Meta_L                        0xffe7  /* Left meta */
 #define XK_Meta_R                        0xffe8  /* Right meta */
@@ -345,7 +345,7 @@ SOFTWARE.
 #define XK_ISO_Last_Group                0xfe0e
 #define XK_ISO_Last_Group_Lock           0xfe0f
 
-#define XK_ISO_Left_Tab                  0xfe20
+#define XK_ISO_Left_Tab                  0xfe20 /* U+21E4 LEFTWARDS ARROW TO BAR */
 #define XK_ISO_Move_Line_Up              0xfe21
 #define XK_ISO_Move_Line_Down            0xfe22
 #define XK_ISO_Partial_Line_Up           0xfe23
@@ -372,7 +372,7 @@ SOFTWARE.
 #define XK_dead_circumflex               0xfe52  /* U+005E CIRCUMFLEX ACCENT */
 #define XK_dead_tilde                    0xfe53  /* U+007E TILDE */
 #define XK_dead_macron                   0xfe54  /* U+02C9 MODIFIER LETTER MACRON */
-#define XK_dead_breve                    0xfe55
+#define XK_dead_breve                    0xfe55  /* U+0306 COMBINING BREVE */
 #define XK_dead_abovedot                 0xfe56  /* U+02D9 DOT ABOVE */
 #define XK_dead_diaeresis                0xfe57  /* U+00A8 DIAERESIS */
 #define XK_dead_abovering                0xfe58  /* U+02DA RING ABOVE */
@@ -383,10 +383,10 @@ SOFTWARE.
 #define XK_dead_iota                     0xfe5d
 #define XK_dead_voiced_sound             0xfe5e
 #define XK_dead_semivoiced_sound         0xfe5f
-#define XK_dead_belowdot                 0xfe60
+#define XK_dead_belowdot                 0xfe60  /* U+0323 COMBINING DOT BELOW */
 #define XK_dead_hook                     0xfe61
 #define XK_dead_horn                     0xfe62
-#define XK_dead_stroke                   0xfe63
+#define XK_dead_stroke                   0xfe63  /* U+0335 COMBINING SHORT STROKE OVERLAY */
 
 #define XK_First_Virtual_Screen          0xfed0
 #define XK_Prev_Virtual_Screen           0xfed1
