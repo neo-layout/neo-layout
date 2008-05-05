@@ -75,7 +75,6 @@ sed -n -e '/^keycode/p' $1 > ./tmp_$1
 
 
 
-
 #================================================
 # Freistellen der Zeichen; der keycode bleibt als ID für die SVG-Datei vorhanden
 
@@ -90,6 +89,9 @@ ex -s -c '%s/^[^0-9]\+//' -c '%s/=//' -c '%s/ \+/\t/g' -c '%s/\t\+/\t/g' -c "w! 
 
 cat tmp_$1 | grep -v -E "^(9|51|65|66|94|113|115|116)[^0-9]" > tmp_$1
 
+
+
+
 #================================================
 # Parsfreundlicheres Tablayout
 
@@ -99,19 +101,41 @@ ex -s -c '%s/ \+/\t/g' -c '%s/\t\+/\t/g' -c "w! ./tmp_$1" -c 'q!' ./tmp_$1
 #================================================
 # Aufbereiten der keysymdef.h zum Nachschlagen des Zeichens
 
+#ex -s -c '%s/^[^_]\+//' -c'%s/^_//' -c "w! ./tmp_keysymdef.h" -c 'q!' ./keysymdef.h
+#cat ./tmp_keysymdef.h | sed -e '/^$/d' >./tmp_keysymdef.h
 
 ex -s -c '%s/^\([^_]\+\)_//' -c "w! ./tmp_keysymdef.h" -c 'q!' ./keysymdef.h
-sed -n -e '/U+/p' ./tmp_keysymdef.h > tmptmp
+
+#ex -s -c '%s/^#define XK_//'  -c "w! ./tmp_keysymdef.h" -c 'q!' ./keysymdef.h
 
 
-cp tmptmp tmp_keysymdef.h
+#cat ./tmp_keysymdef.h | sed -e '/^$/d' >./tmp_keysymdef.h
+#sed -n -e '/U\+/p' ./tmp_keysymdef.h > tmp_tmp
+sed -n -e '/U+/p' ./tmp_keysymdef.h > tmp_tmp
+
+
+#cat ./tmp_keysymdef.h |grep tra
+#cat tmp_tmp |grep tra
+#exit 1
+
+cp tmp_tmp tmp_keysymdef.h
 
 
 #===============================================
 # Nachschlagen und Ersetzen von Symbolnamen
 
 
-while read ZEILE; do
+cp ./tmp_$1 ./tmp_analysiert_$1
+
+while read -r ZEILE; do
+
+#debug
+echo
+echo ====================================================
+echo -e "\033[40;01;37m $ZEILE \033[0m"
+echo ----------------------------------------------------
+echo -e "Tastencode ist \033[40;01;34m`echo $ZEILE | cut -d\  -f1`\033[0m ."
+
 
 for ebene in `seq 2 8`; do
 
@@ -119,6 +143,9 @@ for ebene in `seq 2 8`; do
   echo $ZEILE | awk "{ printf $`echo $ebene` }" > ./tmp_symbolistleer
 
   if [ -s ./tmp_symbolistleer ]; then 
+
+###        #Tastensymbol ist Keypad -> gleiches Symbol wie normal
+###	ex -s -c "%s/^KP_//" -c 'w! ./tmp_symbolistleer' -c "q!"  ./tmp_symbolistleer
 
 
 	Tastensymbol=`cat ./tmp_symbolistleer` 
@@ -129,25 +156,36 @@ for ebene in `seq 2 8`; do
 
 	if [ -s ./tmp_keysymdef.h_buchstabenanalyse ]; then
 		if  ( grep -q -i "U+" ./tmp_keysymdef.h_buchstabenanalyse );  then
-			echo -n »$Tastensymbol« hat laut keysymdef.h den Unicode U+
 			ex -s -c '%s/\(.\+\)U+/U+/g' -c '%s/U+\([^ ]\+\).\+/\1/g' -c "w! ./tmp_keysymdef.h_buchstabenanalyse" -c 'q!'   ./tmp_keysymdef.h_buchstabenanalyse; 
 
 			if [ -s ./tmp_keysymdef.h_buchstabenanalyse ]; then 
-			     cat ./tmp_keysymdef.h_buchstabenanalyse
+			     #cat ./tmp_keysymdef.h_buchstabenanalyse
+			     echo -e "Mit Unicode  \033[40;0;32mU+`cat ./tmp_keysymdef.h_buchstabenanalyse`\033[0m  ist in keysymdef.h folgender Zeichenname verknüpft: »\033[40;0;32m$Tastensymbol\033[0m«."
 			else
-			     echo "ERROR"     
+			     echo -e "\033[40;0;31mERROR: Unicode in Datei keysymdef.h\033[0m"     
 			     exit 1 
 			fi 
 
-   			ex -s  -c "%s/\t`cat ./tmp_symbolistleer`\t/\t\&\#x`cat ./tmp_keysymdef.h_buchstabenanalyse`;\t/g" -c "w! ./tmp_$1" -c 'q!' ./tmp_$1
-			ex -s  -c  "%s/\t`cat ./tmp_symbolistleer`$/\t\&\#x`cat ./tmp_keysymdef.h_buchstabenanalyse`;\t/g" -c "w! ./tmp_$1" -c 'q!' ./tmp_$1
+   			ex -s  -c "%s/\t`cat ./tmp_symbolistleer`\t/\t\&\#x`cat ./tmp_keysymdef.h_buchstabenanalyse`;\t/g" -c "w! ./tmp_analysiert_$1" -c 'q!' ./tmp_analysiert_$1
+			ex -s  -c  "%s/\t`cat ./tmp_symbolistleer`$/\t\&\#x`cat ./tmp_keysymdef.h_buchstabenanalyse`;\t/g" -c "w! ./tmp_analysiert_$1" -c 'q!' ./tmp_analysiert_$1
+
+###			#Für KP_ gleiche Ersetzung
+###
+   ####			ex -s  -c "%s/\tKP_`cat ./tmp_symbolistleer`\t/\t\&\#x`cat ./tmp_keysymdef.h_buchstabenanalyse`;\t/g" -c "w! ./tmp_$1" -c 'q!' ./tmp_$1
+###			ex -s  -c  "%s/\tKP_`cat ./tmp_symbolistleer`$/\t\&\#x`cat ./tmp_keysymdef.h_buchstabenanalyse`;\t/g" -c "w! ./tmp_$1" -c 'q!' ./tmp_$1
 
  		else
-			echo »$Tastensymbol« hat in keysymdef.h keinen Unicode gelistet.
+			echo -e "\033[40;0;31m»$Tastensymbol« hat in keysymdef.h keinen Unicode gelistet. Deswegen wird der Text unmodifiziert übernommen.\033[0m"
 		fi
  
 	else
-		echo »$Tastensymbol« ist in keysymdef.h nicht gelistet.
+		if [ "${Tastensymbol/U[0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f][0-9A-Fa-f ]/Unicodezeichen}" == "Unicodezeichen" ] 
+		then 
+		echo -e "Der Unicode \033[40;0;32m ${Tastensymbol/U/U+} \033[0m aus $1 wird \033[40;0;32m übernommen \033[0m. \033[0m"
+		else
+		echo -e "\033[40;01;31m»$Tastensymbol« ist in keysymdef.h nicht gelistet. Tippfehler? Der Text wird unmodifiziert übernommen. \033[0m"  
+		nichtgelistet="$nichtgelistet, »$Tastensymbol«"
+		fi
 	fi
   else
   #Kein Tastensymbol in der aktuellen Ebene
@@ -158,6 +196,9 @@ for ebene in `seq 2 8`; do
 done;
 
 done < ./tmp_$1;
+
+
+cp ./tmp_analysiert_$1 ./tmp_$1
 
 
 #===============================================
@@ -193,12 +234,12 @@ echo "transform=\"translate($X_Translation,$Y_Translation)\" x=\"0\"  y=\"0\"  /
 
 echo $ZEILE | awk '{   printf "<g id=\""$1"\" " } ' >> ./tmp_svg_$1
 echo "transform=\"translate($X_Translation,$Y_Translation)\" >" >> ./tmp_svg_$1
-echo $ZEILE | awk '{print " <text id=\""$1"_ebene1\" x=\"30\" y=\"35\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#ffffff;font-weight:bold\" xml:space=\"preserve\">"$2"</text>"}' >> ./tmp_svg_$1
-echo $ZEILE | awk '{print " <text id=\""$1"_ebene2\" x=\"90\" y=\"35\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;font-weight:bold\" xml:space=\"preserve\">"$3"</text>"}' >> ./tmp_svg_$1
-echo $ZEILE | awk '{print " <text id=\""$1"_ebene3\" x=\"30\" y=\"85\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;font-weight:bold\" xml:space=\"preserve\">"$4"</text>"}' >> ./tmp_svg_$1
-echo $ZEILE | awk '{print " <text id=\""$1"_ebene4\" x=\"90\" y=\"85\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;font-weight:bold\" xml:space=\"preserve\">"$5"</text>"}' >> ./tmp_svg_$1
-echo $ZEILE | awk '{print " <text id=\""$1"_ebene5\" x=\"30\" y=\"135\" style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;font-weight:bold\" xml:space=\"preserve\">"$6"</text>"}' >> ./tmp_svg_$1
-echo $ZEILE | awk '{print " <text id=\""$1"_ebene6\" x=\"90\" y=\"135\" style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;font-weight:bold\" xml:space=\"preserve\">"$7"</text>"}' >> ./tmp_svg_$1
+echo $ZEILE | awk '{print " <text id=\""$1"_ebene1\" x=\"30\" y=\"35\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;\" xml:space=\"preserve\">"$3"</text>"}' >> ./tmp_svg_$1
+echo $ZEILE | awk '{print " <text id=\""$1"_ebene2\" x=\"90\" y=\"35\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;\" xml:space=\"preserve\">"$5"</text>"}' >> ./tmp_svg_$1
+echo $ZEILE | awk '{print " <text id=\""$1"_ebene3\" x=\"30\" y=\"85\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#ffffff;font-weight:bold\" xml:space=\"preserve\">"$2"</text>"}' >> ./tmp_svg_$1
+echo $ZEILE | awk '{print " <text id=\""$1"_ebene4\" x=\"90\" y=\"85\"  style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;\" xml:space=\"preserve\">"$4"</text>"}' >> ./tmp_svg_$1
+echo $ZEILE | awk '{print " <text id=\""$1"_ebene5\" x=\"30\" y=\"135\" style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;\" xml:space=\"preserve\">"$6"</text>"}' >> ./tmp_svg_$1
+echo $ZEILE | awk '{print " <text id=\""$1"_ebene6\" x=\"90\" y=\"135\" style=\"font-size:30;text-align:center;text-anchor:middle;fill:#000000;\" xml:space=\"preserve\">"$8"</text>"}' >> ./tmp_svg_$1
 echo "</g>" >> ./tmp_svg_$1
 
 
@@ -221,31 +262,46 @@ echo "</svg>" >> ./tmp_svg_$1
 ex -s  -c '%s/&#x;//g' -c "w! ./tmp_svg_$1" -c 'q!' ./tmp_svg_$1
 
 
+#======================
+# Fehleranzeige
+
+if [ -n "$nichtgelistet" ]; then
+echo
+echo
+echo -e "\033[40;01;31mFehlerbericht\033[0m"
+echo
+echo Folgende Bezeichner wurden nicht in der keysymdef.h gefunden und wurden unabgeändert übernommen:
+echo -e "\033[40;01;31m ${nichtgelistet/, /}\033[0m "
+echo
+echo
+fi
 
 #=======================
 # Dateiausgabe
+
+echo
 
 if [ $#  -gt 1 ]; then
  if  echo $2 | grep "\.svg$" ; then
   # svg-datei mit .svg-suffix
   cp tmp_svg_$1 $2
-  echo "Die SVG-Datei $2 wurde angelegt." >&2
+  echo -e "Die SVG-Datei \033[40;01;370m$2\033[0m wurde geschrieben." >&2
 
   else
   # svg-datei ohne .svg-suffix
   cp tmp_svg_$1 $2.svg
-  echo "Die SVG-Datei $2.svg wurde angelegt." >&2
+  echo -e "Die SVG-Datei \033[40;01;370m$2.svg\033[0m wurde geschrieben." >&2
 
   fi
 else
  # keine svg-datei
  cp tmp_svg_$1 $1.svg
-  echo "Die SVG-Datei $1.svg wurde angelegt." >&2
+  echo -e "Die SVG-Datei \033[40;01;370m$1.svg\033[0m wurde geschrieben." >&2
 fi
 
-
+echo
 
 #========================
 # debug
 
-#rm ./tmp_*
+rm ./tmp_*
