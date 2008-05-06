@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG:
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -521,16 +521,14 @@ A: 1. Benutze die Autohotkey-Variante.
 F: Wie kann ich mit der MSKLC-Variante auf Zeichen der 4. und 6. Ebene 
    zugreifen?
 
-A: Diese Ebenen sind über die so genannte SGCaps-Funktion realisiert. Für die 
-   4. Ebene muss man Mod4 drücken, dann die Taste mit dem Zeichen, dann Mod4
-   wieder deaktivieren (Umschalt drücken oder nochmal Mod4).
-   Für die 6. Ebene hält man Umschalt gedrückt, dann Mod4 gedrückt, dann das
-   Zeichen eingeben und dann Mod4 wieder deaktivieren. Es wird noch nach einer
-   Möglichkeit gesucht, das weniger umständlich zu ermöglichen.
+
+A: Diese Ebenen sind über die MSKLC-Variante nicht zu erreichen.
+ Benutze den Windowstreiber.
 
 --------------------------------------------------------------------------------
 
 F: Eine bestimmte tote Taste (Deadkey) funktioniert nicht?
+
 
 A: 1. Das resultierende Zeichen gibt es nicht – es können nur Tote-Taste + 
       Buchstabe eingegeben werden, deren Kombination auch Sinn ergibt.
