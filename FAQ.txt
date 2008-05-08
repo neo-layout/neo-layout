@@ -1,4 +1,4 @@
-﻿-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ACHTUNG:
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -521,9 +521,8 @@ A: 1. Benutze die Autohotkey-Variante.
 F: Wie kann ich mit der MSKLC-Variante auf Zeichen der 4. und 6. Ebene 
    zugreifen?
 
-
-A: Diese Ebenen sind über die MSKLC-Variante nicht zu erreichen.
- Benutze den Windowstreiber.
+A: Diese Ebenen sind über die MSKLC-Variante nicht zu erreichen. Benutze den
+Windowstreiber der bei windows/kbdneo2/Treiber/ zu finden ist.
 
 --------------------------------------------------------------------------------
 
