@@ -1,6 +1,6 @@
 == Kleine Anleitung ==
 In der Datei /A-REFERENZ-A/neo20.txt sieht man das Layout. 
-In neo_de.xmodmap steckt es drin.
+In neo_de.xmodmap (bzw. neo_de_evdev.xmodmap für KDE4 mit evdev) steckt es drin.
 
 === Aktivieren ===
 Zu aktivieren mit dem Kommando (im Verzeichnis, in dem sich die Datei befindet):
