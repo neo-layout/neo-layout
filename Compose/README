@@ -1,5 +1,6 @@
 == Ergänzungen der Compose-Datei unter Linux/BSD ==
-Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die	Compose-Taste bzw. tote Tasten für Linux.
+Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die
+Compose-Taste bzw. tote Tasten für Linux.
 
 === Anleitung zur Benutzung ===
 Um die Ergänzungen zu benutzen muss man den Inhalt der Compose.neo in die
@@ -11,6 +12,15 @@ Unter Fedora beispielsweise ist die zu ergänzende Datei verfügbar unter
 
 Im Internet gibt es die Originaldatei unter
 	http://webcvs.freedesktop.org/xorg/xc/nls/Compose/en_US.UTF-8
+
+=== Gnome macht Probleme ==
+Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen
+die entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5 geht das nicht. Ebenso
+mit viele anderen eingentlich definierten Kombinationen. Das liegt daran, dass
+Gnome da noch irgendwas eigenes vorschaltet. Aber nach:
+  export GTK_IM_MODULE=xim
+klappt auch das. Siehe auch:
+  https://help.ubuntu.com/community/ComposeKey
 
 == compose_und_deadkeys.txt ==
 Die Datei compose_und_deadkeys.txt fasst Änderungs- und Erweiterungsvorschläge

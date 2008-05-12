@@ -432,7 +432,7 @@ Warum die Keycodes überhaupt anders sind ist unbekannt.
 
 Als Lösung des Problems kommt hier in Frage:
   • Verwendung des kbd-Treibers
-  • Ändern/Anpassen der Keycodes in der Xmodmap-Datei (neo_de.xmodmap)
+  • Angepasste Version der Xmodmap-Datei verwenden: neo_de_evdev.xmodmap
 Bei weiteren Problemen bitte die Mailingliste fragen.
 
 -------------------------------------------------------------------------------
@@ -453,6 +453,23 @@ A: Die Compose-Taste erreicht man über Mod3+Tab. Viele Linuxdistributionen habe
 außerdem eine weitere Compose-Taste auf der rechten Win-Taste.
 Um z.B. x⁵ zu schreiben, tippt man <x>, <Mod3+Tab>, <Mod3+Tab loslassen>,
 <Mod3+w>, <5>.
+
+-------------------------------------------------------------------------------
+
+F: Bei mir funktionieren manche Kombinationen mit der Kombo-/Compose-Taste
+nicht. Beispielsweise liefert o+c ein ©, aber mit o+r geht es nicht. ^+1, ^+2,
+^+3 funktionieren in jedem Programm, aber ^+4, ^+5 usw. funktionieren bei mir
+nur in KDE-Programmen oder im xterm. Ebenso viele andere exotische (aber auch
+schon ältere) Kombinationen.
+
+A: Unter Gnome funktionieren manche deshalb nicht, weil da noch irgendwas
+eigenes vorgeschaltet wird. Aber nach:
+  export GTK_IM_MODULE=xim
+klappt auch das. Siehe auch:
+  https://help.ubuntu.com/community/ComposeKey  
+
+In der Datei https://neo.eigenheimstrasse.de/svn/Compose/README gibt es noch
+weitere Infos zu unseren eigenen Erweiterungen.
 
 -------------------------------------------------------------------------------
 
@@ -527,7 +544,6 @@ Windowstreiber der bei windows/kbdneo2/Treiber/ zu finden ist.
 --------------------------------------------------------------------------------
 
 F: Eine bestimmte tote Taste (Deadkey) funktioniert nicht?
-
 
 A: 1. Das resultierende Zeichen gibt es nicht – es können nur Tote-Taste + 
       Buchstabe eingegeben werden, deren Kombination auch Sinn ergibt.
