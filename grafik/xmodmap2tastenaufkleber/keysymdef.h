@@ -2347,3 +2347,8 @@ SOFTWARE.
 #define XK_braille_dots_2345678       0x10028fe  /* U+28fe BRAILLE PATTERN DOTS-2345678 */
 #define XK_braille_dots_12345678      0x10028ff  /* U+28ff BRAILLE PATTERN DOTS-12345678 */
 #endif /* XK_BRAILLE */
+
+
+#ifdef FALSE
+#define XK_NoSymbol                      0x0000  /* U+0020 SPACE */
+#endif 
