@@ -30,7 +30,7 @@ Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein,
 kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
 zwischen qwertz und NEO wechseln. Dazu muss die Datei im Homeverzeichnis sein.
 alias uiae='setxkbmap de'
-alias asdf='xmodmap ~/neo_de.xmodmap'
+alias asdf='setxkbmap ie && xmodmap ~/neo_de.xmodmap'
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
