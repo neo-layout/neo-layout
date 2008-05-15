@@ -21,6 +21,16 @@ Oder die Befehlszeile in die ~/.Xsession (falls nicht KDE oder Gnome geladen)
 Oder die Xmodmap nach ~/.Xmodmap spielen (wo sie automatisch geladen wird) und
 die Standard Tastaturbelegung auf „ie“ festsetzen (in GNOME/KDE/XFCE/.Xsession).
 
+==== Automatischen Linux-NEO-USB-Stick erstellen ====
+diese Datei auf einen USB-Stick kopieren
+
+  cp neo_de.xmodmap /media/<USBSTICK>
+
+auf dem USB-Stick eine ausführbare Datei mit dem Namen autorun, autorun oder 
+autorun.sh anlegen, die die Datei automatisch läd.
+
+  echo -e "#!/bin/sh\nsetxkbmap ie && xmodmap neo_de.xmodmap" > /media/<USBSTICK>/autorun
+
 === Deaktivieren ===
 Zurück zu qwertz geht es mit:
 	setxkbmap de
