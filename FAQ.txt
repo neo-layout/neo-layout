@@ -560,6 +560,12 @@ noch nicht implementiert (Freiwillige vor!). Im MSKLC-Treiber muss es laut
 einer Unicode-FAQ bei Microsoft auch eine Möglichkeit geben, jedoch ist der
 Lösungsweg hier noch nicht bekannt. Hinweise bitte an die Mailingliste.
 
+-------------------------------------------------------------------------------
+
+F: Kann man AHK per Tastenkombination ausschhalten?
+
+A: Shift+Pause pausiert das Skript.
+
 --------------------------------------------------------------------------------
 3. Entwicklerfragen (auch Beta-Tester)
 --------------------------------------------------------------------------------
