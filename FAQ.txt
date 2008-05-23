@@ -246,7 +246,7 @@ Länder jetzt auch den Euro haben.
 
 --------------------------------------------------------------------------------
 
-F: Ich möchte in meinen tex-Dateien (Latex) direkt die Sonderzeichen (z. B.
+F: Ich möchte in meinen tex-Dateien (LaTeX) direkt die Sonderzeichen (z. B.
 griechische Buchstaben oder mathematische Symbole) eingeben, um mir etwas
 Schreibarbeit zu ersparen. Leider kommt immer der Fehler »Package inputenc
 Error: Unicode char \u8:α not set up for use with LaTeX.« Wieso?
