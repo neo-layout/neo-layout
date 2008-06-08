@@ -9,7 +9,7 @@
                   - Menü des Tasksymbols
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
-                  - Ebene 4 und 5 tauschen (im Programmcode, in der Doku ists schon)
+                  - Ebene 6 über Mod3+Mod4
                   - CapsLock auf 1. und 2. Ebene einbauen:
                     Die Buchstaben reagieren richtig auf CapsLock, da hier "sendinput {blind}"
                     verwendet wird. Bei anderen Tasten muss CapsLock in der ersten und zweiten Ebene
@@ -35,7 +35,7 @@
   ; msgbox ist trotzdem linksbündig
 
 SetTitleMatchMode 2
-SendMode InputThenPlay	
+SendMode Input	
 
 name    = Neo 2.0
 enable  = Aktiviere %name%
