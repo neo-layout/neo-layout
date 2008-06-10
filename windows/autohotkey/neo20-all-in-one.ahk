@@ -1,23 +1,26 @@
 /*
     Titel:        NEO 2.0 beta Autohotkey-Treiber
-    $Revision: 490 $
-    $Date: 2008-04-19 22:51:27 +0200 (Sa, 19 Apr 2008) $
+    $Revision$
+    $Date$
     Autor:        Stefan Mayer <stm (at) neo-layout.org>
     Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
         
     TODO:         - ausgiebig testen...
-                  - Menü des Tasksymbols
+                  - umgekehrtes ^ für o, a, ü,i  sowie für die grossen vokale ( 3. ton chinesisch) (bei e und u geht es schon).
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
                   - Ebene 6 über Mod3+Mod4
-                  - CapsLock auf 1. und 2. Ebene einbauen:
-                    Die Buchstaben reagieren richtig auf CapsLock, da hier "sendinput {blind}"
-                    verwendet wird. Bei anderen Tasten muss CapsLock in der ersten und zweiten Ebene
-                    explizit abgefragt werden.
-                    (Lässt sich das elegant in eine Funktion auslagern?)
+                  - Alt+Tab+Shift sollte Alt+Tab umkehrt
+    
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGES:      - SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
+    CHANGEHISTORY: Revision 522 (von Matthias Berg):
+    				- CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
+                    - vertikale Ellipse eingebaut
+                    - Umschalt+Umschalt für Capslock statt Mod3+Mod3
+                    - bei Suspend wird jetzt wirklich togglesuspend aufgerufen (auch beim aktivieren per shift+pause)
+                   Revsion 490 (von Stefan Mayer): 
+                   - SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
                      • auch bei Ziffernblock auf der 5. Ebene
                   - Kein Parsen über die Zwischenablage mehr
                   - Vista-kompatibel
@@ -80,7 +83,7 @@ menu, tray, add, Öffnen, open
    menu, helpmenu, add
    menu, helpmenu, add, http://&autohotkey.com/, autohotkey
    menu, helpmenu, add, http://www.neo-layout.org/, neo
- menu, tray, add, Hilfe, :helpmenu
+menu, tray, add, Hilfe, :helpmenu
 menu, tray, add
 menu, tray, add, %disable%, togglesuspend
 menu, tray, default, %disable%
@@ -107,11 +110,13 @@ PriorDeadKey := ""
    ------------------------------------------------------
 */
 
-; CapsLock durch Mod3+Mod3
-*#::
-*CapsLock::
-   if GetKeyState("#","P") and GetKeyState("CapsLock","P")
-   {
+
+; CapsLock durch Umschalt+Umschalt
+*CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
+*#::return ; Nichts machen beim # release event (weil es Mod3 ist)
+
+;RShift wenn vorher LShift gedrückt wurde
+LShift & ~RShift::	
       if GetKeyState("CapsLock","T")
       {
          setcapslockstate, off
@@ -120,7 +125,18 @@ PriorDeadKey := ""
       {
          setcapslockstate, on
       }
-   }
+return
+
+;LShift wenn vorher RShift gedrückt wurde
+RShift & ~LShift::
+      if GetKeyState("CapsLock","T")
+      {
+         setcapslockstate, off
+      }
+      else
+      {
+         setcapslockstate, on
+      }
 return
 
 ; KP_Decimal durch Mod4+Mod4
@@ -194,7 +210,7 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x216A)          ; römisch XI
       Else
-         send {blind}1
+         send 1
       If (PriorDeadKey = "comp")
          CompKey := "1"
       Else If (CompKey = "r_small")
@@ -239,7 +255,7 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x216B)          ; römisch XII
       Else
-         send {blind}2      
+         send 2      
       If (PriorDeadKey = "comp")
          CompKey := "2"
       Else
@@ -280,7 +296,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2162)          ; römisch III
       Else
-         send {blind}3
+         send 3
       If (PriorDeadKey = "comp")
          CompKey := "3"
       Else
@@ -312,7 +328,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2163)          ; römisch IV
       Else
-         send {blind}4
+         send 4
       If (PriorDeadKey = "comp")
          CompKey := "4"
       Else
@@ -362,7 +378,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2164)          ; römisch V
       Else
-         send {blind}5
+         send 5
       If (PriorDeadKey = "comp")
          CompKey := "5"
       Else
@@ -403,7 +419,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2165)          ; römisch VI
       Else
-         send {blind}6
+         send 6
       If (PriorDeadKey = "comp")
          CompKey := "6"
       Else
@@ -445,7 +461,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2166)          ; römisch VII
       Else
-         send {blind}7
+         send 7
       If (PriorDeadKey = "comp")
          CompKey := "7"
       Else
@@ -494,7 +510,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2167)          ; römisch VIII
       Else
-         send {blind}8
+         send 8
       If (PriorDeadKey = "comp")
          CompKey := "8"
       Else
@@ -536,7 +552,7 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2168)          ; römisch IX
       Else
-         send {blind}9
+         send 9
       If (PriorDeadKey = "comp")
          CompKey := "9"
       Else
@@ -578,7 +594,7 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x2169)          ; römisch X
       Else
-         send {blind}0
+         send 0
       If (PriorDeadKey = "comp")
          CompKey := "0"
       Else
@@ -610,7 +626,7 @@ return
 *ß::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}- ; Bind
+      send - ; Bind
    else if Ebene = 2
       SendUnicodeChar(0x2013) ; Ged
    else if Ebene = 3
@@ -925,7 +941,7 @@ return
       If (PriorDeadKey = "c4")    ; Querstrich
          BSSendUnicodeChar(0x2264) ; kleiner gleich
       Else
-         send {blind}<
+         send <
    }
    else if Ebene = 4
       SendUnicodeChar(0x03C8) ;psi
@@ -1139,6 +1155,8 @@ return
    Reihe 3
    ------------------------------------------------------
 */
+
+
 
 *a::
    EbeneAktualisieren()
@@ -2038,7 +2056,9 @@ return
 *,::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind},
+      send `,
+   else if Ebene = 2
+       SendUnicodeChar(0x22EE) ;  vertikale ellipse 
    else if Ebene = 3
       send "
    else if Ebene = 4
@@ -2060,7 +2080,7 @@ return
 *.::
    EbeneAktualisieren()
    if Ebene = 1
-      send {blind}.
+      send .
    else if Ebene = 2
       SendUnicodeChar(0x2026)  ; ellipse
    else if Ebene = 3
@@ -2161,7 +2181,7 @@ return
       Else If (PriorDeadKey = "c4")       ; toter -
          BSSendUnicodeChar(0x208B)         
       Else
-         send {blind}{NumpadSub}
+         send {NumpadSub}
    }
    else if Ebene = 3
       SendUnicodeChar(0x2212) ; echtes minus
@@ -2177,7 +2197,7 @@ return
       Else If (PriorDeadKey = "c4")       ; toter -
          BSSendUnicodeChar(0x208A)         
       Else
-         send {blind}{NumpadAdd}
+         send {NumpadAdd}
    }
    else if Ebene = 3
       send ±
@@ -2210,7 +2230,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {blind}{Numpad7}
+      send {Numpad7}
       If (PriorDeadKey = "comp")
          CompKey := "Num_7"
       Else
@@ -2247,7 +2267,7 @@ return
       Else If (CompKey = "Num_7")
          CompUnicodeChar(0x215E)       ; 7/8
       Else
-         send {blind}{Numpad8}
+         send {Numpad8}
       If (PriorDeadKey = "comp")
          CompKey := "Num_8"
       Else
@@ -2275,7 +2295,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {blind}{Numpad9}
+      send {Numpad9}
       If (PriorDeadKey = "comp")
          CompKey := "Num_9"
       Else
@@ -2305,7 +2325,7 @@ return
       Else If (CompKey = "Num_3")
          CompUnicodeChar(0x00BE)       ; 3/4
       Else
-         send {blind}{Numpad4}
+         send {Numpad4}
       If (PriorDeadKey = "comp")
          CompKey := "Num_4"
       Else
@@ -2342,7 +2362,7 @@ return
       Else If (CompKey = "Num_4")
          CompUnicodeChar(0x2158)       ; 4/5
       Else
-         send {blind}{Numpad5}
+         send {Numpad5}
       If (PriorDeadKey = "comp")
          CompKey := "Num_5"
       Else
@@ -2375,7 +2395,7 @@ return
       Else If (CompKey = "Num_5")
          CompUnicodeChar(0x215A)       ; 5/6
       Else
-         send {blind}{Numpad6}
+         send {Numpad6}
       If (PriorDeadKey = "comp")
          CompKey := "Num_6"
       Else
@@ -2403,7 +2423,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {blind}{Numpad1}
+      send {Numpad1}
       If (PriorDeadKey = "comp")
          CompKey := "Num_1"
       Else
@@ -2434,7 +2454,7 @@ return
       If (CompKey = "Num_1")
          CompUnicodeChar(0x00BD)       ; 1/2
       Else
-         send {blind}{Numpad2}
+         send {Numpad2}
       If (PriorDeadKey = "comp")
          CompKey := "Num_2"
       Else
@@ -2467,7 +2487,7 @@ return
       Else If (CompKey = "Num_2")
          CompUnicodeChar(0x2154)       ; 2/3
       Else
-         send {blind}{Numpad3}
+         send {Numpad3}
       If (PriorDeadKey = "comp")
          CompKey := "Num_3"
       Else
@@ -2486,7 +2506,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {blind}{Numpad0}
+      send {Numpad0}
       If (PriorDeadKey = "comp")
          CompKey := "Num_0"
       Else
@@ -2886,12 +2906,12 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x2160)          ; römisch I
       Else
-         Send {blind}{Space}
+         send {Space}
    }
    if  Ebene  =  2
       Send  {blind}{Space}
    if Ebene = 3
-      Send {blind}{Space}
+      send {Space}
    if Ebene = 4
       SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
    else if Ebene = 5
@@ -2948,14 +2968,14 @@ nach einem DeadKey drückt...
    }
    else
    {
-      send {blind}{Tab}
+      send {Tab}
       PriorDeadKey := ""
       CompKey := ""
    }
 return
 
 *SC038::                            ; LAlt, damit AltTab funktioniert
-   send {blind}{LAlt}
+   send {LAlt}
    PriorDeadKey := ""   CompKey := ""
 return
 
@@ -3125,25 +3145,44 @@ EncodeInteger(ref, val)
    ------------------------------------------------------
 */
 
-+pause::suspend
++pause::
+Suspend, Permit
+   goto togglesuspend
+return
 
 ; ------------------------------------
 
-togglesuspend:
-   if state <>
+togglesus:
+   if A_IsSuspended
    {
-      state =
       menu, tray, rename, %enable%, %disable%
+	  menu, tray, tip, %name%
    }
    else
    {
-      state = : Deaktiviert
       menu, tray, rename, %disable%, %enable%
+      menu, tray, tip, %name% : Deaktiviert  
    }
 
-   menu, tray, tip, %name%%state%
-   suspend
 return
+
+
+togglesuspend:
+   if A_IsSuspended
+   {
+      menu, tray, rename, %enable%, %disable%
+	  menu, tray, tip, %name%
+      suspend , off ; Schaltet Suspend aus -> NEO
+   }
+   else
+   {
+      menu, tray, rename, %disable%, %enable%
+      menu, tray, tip, %name% : Deaktiviert  
+      suspend , on  ; Schaltet Suspend ein -> QWERTZ 
+   }
+
+return
+
 
 
 help:
