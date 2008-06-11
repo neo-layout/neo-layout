@@ -5,29 +5,37 @@
     Autor:        Stefan Mayer <stm (at) neo-layout.org>
     Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
         
-    TODO:         - ausgiebig testen...
-                  - umgekehrtes ^ für o, a, ü,i  sowie für die grossen vokale ( 3. ton chinesisch) (bei e und u geht es schon).
+    TODO:         - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
                   - Ebene 6 über Mod3+Mod4
                   - Alt+Tab+Shift sollte Alt+Tab umkehrt
+                  - Anderen Weg für Capslock statt Shiftlock suchen.
+                  - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGEHISTORY: Revision 522 (von Matthias Berg):
-    				- CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
-                    - vertikale Ellipse eingebaut
-                    - Umschalt+Umschalt für Capslock statt Mod3+Mod3
-                    - bei Suspend wird jetzt wirklich togglesuspend aufgerufen (auch beim aktivieren per shift+pause)
-                   Revsion 490 (von Stefan Mayer): 
-                   - SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
-                     • auch bei Ziffernblock auf der 5. Ebene
+    CHANGEHISTORY: 
+                  Revision 525 (von Matthias Berg):
+                  - Capslock bei Zahlen und Sonderzeichen berücksichtigt
+                  Revision 524 (von Matthias Berg):
+                  - umgekehrtes ^ für o, a, ü,i  sowie für die grossen vokale ( 3. ton chinesisch)
+                    • damit wird jetzt PinYin vollständig unterstützt caron, macron, akut, grave auf uiaeoü
+                  - Sonderzeichen senden wieder blind -> Shortcuts funktionieren, Capslock ist leider Shiftlock
+                  Revision 523 (von Matthias Berg):
+    			        - CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
+                  - vertikale Ellipse eingebaut
+                  - Umschalt+Umschalt für Capslock statt Mod3+Mod3
+                  - bei Suspend wird jetzt wirklich togglesuspend aufgerufen (auch beim aktivieren per shift+pause)
+                  Revsion 490 (von Stefan Mayer): 
+                  - SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
+                    • auch bei Ziffernblock auf der 5. Ebene
                   - Kein Parsen über die Zwischenablage mehr
                   - Vista-kompatibel
                   - Compose-Taste
-                     • Brüche (auf Zahlenreihe und Hardware-Ziffernblock)
-                     • römische Zahlen
-                     • Ligaturen und Copyright
+                    • Brüche (auf Zahlenreihe und Hardware-Ziffernblock)
+                    • römische Zahlen
+                    • Ligaturen und Copyright
 */
 
 ; aus Noras script kopiert:
@@ -113,6 +121,7 @@ PriorDeadKey := ""
 
 ; CapsLock durch Umschalt+Umschalt
 *CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
+
 *#::return ; Nichts machen beim # release event (weil es Mod3 ist)
 
 ;RShift wenn vorher LShift gedrückt wurde
@@ -162,7 +171,6 @@ return
    Reihe 1
    ------------------------------------------------------
 */
-
 *^::
    EbeneAktualisieren()
    if Ebene = 1
@@ -210,7 +218,23 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x216A)          ; römisch XI
       Else
-         send 1
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}1
+           }
+           Else
+           {
+              send 1
+           }
+               
+         }
+         Else {
+           send {blind}1
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "1"
       Else If (CompKey = "r_small")
@@ -255,7 +279,23 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x216B)          ; römisch XII
       Else
-         send 2      
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}2
+           }
+           Else
+           {
+              send 2
+           }
+               
+         }
+         Else {
+           send {blind}2
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "2"
       Else
@@ -296,7 +336,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2162)          ; römisch III
       Else
-         send 3
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}3
+           }
+           Else
+           {
+              send 3
+           }
+               
+         }
+         Else {
+           send {blind}3
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "3"
       Else
@@ -328,7 +384,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2163)          ; römisch IV
       Else
-         send 4
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}4
+           }
+           Else
+           {
+              send 4
+           }
+               
+         }
+         Else {
+           send {blind}4
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "4"
       Else
@@ -378,7 +450,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2164)          ; römisch V
       Else
-         send 5
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}5
+           }
+           Else
+           {
+              send 5
+           }
+               
+         }
+         Else {
+           send {blind}5
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "5"
       Else
@@ -419,7 +507,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2165)          ; römisch VI
       Else
-         send 6
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}6
+           }
+           Else
+           {
+              send 6
+           }
+               
+         }
+         Else {
+           send {blind}6
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "6"
       Else
@@ -461,7 +565,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2166)          ; römisch VII
       Else
-         send 7
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}7
+           }
+           Else
+           {
+              send 7
+           }
+               
+         }
+         Else {
+           send {blind}7
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "7"
       Else
@@ -510,7 +630,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2167)          ; römisch VIII
       Else
-         send 8
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}8
+           }
+           Else
+           {
+              send 8
+           }
+               
+         }
+         Else {
+           send {blind}8
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "8"
       Else
@@ -552,7 +688,23 @@ return
       Else If (CompKey = "r_capital")
          CompUnicodeChar(0x2168)          ; römisch IX
       Else
-         send 9
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}9
+           }
+           Else
+           {
+              send 9
+           }
+               
+         }
+         Else {
+           send {blind}9
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "9"
       Else
@@ -594,7 +746,23 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x2169)          ; römisch X
       Else
-         send 0
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}0
+           }
+           Else
+           {
+              send 0
+           }
+               
+         }
+         Else {
+           send {blind}0
+         }
+       }
       If (PriorDeadKey = "comp")
          CompKey := "0"
       Else
@@ -626,9 +794,25 @@ return
 *ß::
    EbeneAktualisieren()
    if Ebene = 1
-      send - ; Bind
+        {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}-
+           }
+           Else
+           {
+              send -
+           }
+               
+         }
+         Else {
+           send {blind}-   ;Bindestrich
+         }
+       }
    else if Ebene = 2
-      SendUnicodeChar(0x2013) ; Ged
+      SendUnicodeChar(0x2013) ; Gedankenstrich
    else if Ebene = 3
       SendUnicodeChar(0x2014)
    else if Ebene = 4
@@ -941,7 +1125,7 @@ return
       If (PriorDeadKey = "c4")    ; Querstrich
          BSSendUnicodeChar(0x2264) ; kleiner gleich
       Else
-         send <
+         send {blind}<
    }
    else if Ebene = 4
       SendUnicodeChar(0x03C8) ;psi
@@ -1156,31 +1340,29 @@ return
    ------------------------------------------------------
 */
 
-
-
 *a::
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")       ; circumflex
          BSSendUnicodeChar(0x00FB)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")  ; akut 
          BSSendUnicodeChar(0x00FA)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")  ; grave
          BSSendUnicodeChar(0x00F9)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")  ; Diaerese
          Send, {bs}ü
-      Else If (PriorDeadKey = "t4")   ; doppelakut 
+      Else If (PriorDeadKey = "t4")  ; doppelakut 
          BSSendUnicodeChar(0x0171)
-      Else If (PriorDeadKey = "c3")    ; brevis
+      Else If (PriorDeadKey = "c3")  ; brevis
          BSSendUnicodeChar(0x016D)
-      Else If (PriorDeadKey = "t2")     ; macron
+      Else If (PriorDeadKey = "t2")  ; macron
          BSSendUnicodeChar(0x016B)
-      Else If (PriorDeadKey = "a4")   ; ogonek
+      Else If (PriorDeadKey = "a4")  ; ogonek
          BSSendUnicodeChar(0x0173)
-      Else If (PriorDeadKey = "a6") ; Ring
+      Else If (PriorDeadKey = "a6")  ; Ring
          BSSendUnicodeChar(0x016F)
-      Else If (PriorDeadKey = "t1")      ; tilde
+      Else If (PriorDeadKey = "t1")  ; tilde
          BSSendUnicodeChar(0x0169)
       Else If (PriorDeadKey = "c2")  ; caron
          BSSendUnicodeChar(0x01D4)
@@ -1189,27 +1371,27 @@ return
    }
    else if Ebene = 2
    {
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00DB)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00DA)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00D9)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}Ü
-      Else If (PriorDeadKey = "a6") ; Ring
+      Else If (PriorDeadKey = "a6")   ; Ring
          BSSendUnicodeChar(0x016E)
-      Else If (PriorDeadKey = "c3")    ; brevis
+      Else If (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x016C)
       Else If (PriorDeadKey = "t4")   ; doppelakut
          BSSendUnicodeChar(0x0170)
-      Else If (PriorDeadKey = "c2")     ; caron 
+      Else If (PriorDeadKey = "c2")   ; caron 
          BSSendUnicodeChar(0x01D3)
-      Else If (PriorDeadKey = "t2")     ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x016A)
       Else If (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x0172)
-      Else If (PriorDeadKey = "t1")      ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0168)
       Else
          sendinput {blind}U
@@ -1227,54 +1409,58 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If (PriorDeadKey = "c1")          ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00EE)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00ED)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00EC)
       Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}ï
-      Else If (PriorDeadKey = "t2")    ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x012B)
       Else If (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x012D)
-      Else If (PriorDeadKey = "a4")  ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x012F)
-      Else If (PriorDeadKey = "t1")     ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0129)
-      Else If (PriorDeadKey = "a5") ; (ohne) punkt darüber 
+      Else If (PriorDeadKey = "a5")   ; (ohne) punkt darüber 
          BSSendUnicodeChar(0x0131)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01D0)
       Else 
          sendinput {blind}i
-      If (PriorDeadKey = "comp")            ; compose
+      If (PriorDeadKey = "comp")      ; compose
          CompKey := "i_small"
       Else 
          CompKey := ""
    }
    else if Ebene = 2
    {   
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00CE)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00CD)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00CC)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}Ï
-      Else If (PriorDeadKey = "t2")     ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x012A)
-      Else If (PriorDeadKey = "c3")    ; brevis 
+      Else If (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x012C)
       Else If (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x012E)
-      Else If (PriorDeadKey = "t1")      ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0128)
-      Else If (PriorDeadKey = "a5")  ; punkt darüber 
+      Else If (PriorDeadKey = "a5")   ; punkt darüber 
          BSSendUnicodeChar(0x0130)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01CF)
       Else 
          sendinput {blind}I
-      If (PriorDeadKey = "comp")            ; compose
+      If (PriorDeadKey = "comp")      ; compose
          CompKey := "i_capital"
       Else
          CompKey := ""
@@ -1306,54 +1492,58 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00E2)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00E1)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00E0)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          send {bs}ä
-      Else If (PriorDeadKey = "a6") ; Ring 
+      Else If (PriorDeadKey = "a6")   ; Ring 
          Send {bs}å
-      Else If (PriorDeadKey = "t1")      ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00E3)
       Else If (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x0105)
-      Else If (PriorDeadKey = "t2")     ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0101)
-      Else If (PriorDeadKey = "c3")    ; brevis
+      Else If (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x0103)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01CE)
       Else
          sendinput {blind}a
-      If (PriorDeadKey = "comp")            ; compose
+      If (PriorDeadKey = "comp")      ; compose
          CompKey := "a_small"
       Else
          CompKey := ""
    }
    else if Ebene = 2
    {
-      If (PriorDeadKey = "c1")            ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00C2)
-      Else If (PriorDeadKey = "a1")       ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00C1)
-      Else If (PriorDeadKey = "a2")      ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00C0)
-      Else If (PriorDeadKey = "t3")     ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          send {bs}Ä
-      Else If (PriorDeadKey = "t1")       ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00C3)
-      Else If (PriorDeadKey = "a6")  ; Ring 
+      Else If (PriorDeadKey = "a6")   ; Ring 
          Send {bs}Å
-      Else If (PriorDeadKey = "t2")      ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0100)
-      Else If (PriorDeadKey = "c3")     ; brevis 
+      Else If (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x0102)
-      Else If (PriorDeadKey = "a4")    ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x0104)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01CD)
       Else
          sendinput {blind}A
-      If (PriorDeadKey = "comp")            ; compose
+      If (PriorDeadKey = "comp")      ; compose
          CompKey := "a_capital"
       Else
          CompKey := ""
@@ -1385,30 +1575,30 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If (PriorDeadKey = "c1")          ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00EA)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00E9)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00E8)
       Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}ë
-      Else If (PriorDeadKey = "a4")  ; ogonek
+      Else If (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x0119)
-      Else If (PriorDeadKey = "t2")    ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0113)
       Else If (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x0115)
-      Else If (PriorDeadKey = "c2")    ; caron
+      Else If (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x011B)
-      Else If (PriorDeadKey = "a5") ; punkt darüber 
+      Else If (PriorDeadKey = "a5")   ; punkt darüber 
          BSSendUnicodeChar(0x0117)
-      Else If (CompKey = "a_small")        ; compose
+      Else If (CompKey = "a_small")   ; compose
       {
          Send {bs}æ
          CompKey := ""
       }
-      Else If (CompKey = "o_small")        ; compose
+      Else If (CompKey = "o_small")   ; compose
       {
          Send {bs}œ
          CompKey := ""
@@ -1418,25 +1608,25 @@ return
    }
    else if Ebene = 2
    {
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00CA)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00C9)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00C8)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}Ë
-      Else If (PriorDeadKey = "c2")     ; caron
+      Else If (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x011A)
-      Else If (PriorDeadKey = "t2")     ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0112)
-      Else If (PriorDeadKey = "c3")    ; brevis 
+      Else If (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x0114)
       Else If (PriorDeadKey = "a4")   ; ogonek 
          BSSendUnicodeChar(0x0118)
-      Else If (PriorDeadKey = "a5")  ; punkt darüber 
+      Else If (PriorDeadKey = "a5")   ; punkt darüber 
          BSSendUnicodeChar(0x0116)
-      Else If (CompKey = "a_capital")        ; compose
+      Else If (CompKey = "a_capital") ; compose
       {
          Send {bs}Æ
          CompKey := ""
@@ -1452,11 +1642,13 @@ return
    else if Ebene = 3
       sendraw }
    else if Ebene = 4
-      SendUnicodeChar(0x03B5) ;epsilon
+   {
+        SendUnicodeChar(0x03B5) ;epsilon
+   }
    else if Ebene = 5
       Sendinput {Blind}{Right}
    else if Ebene = 6
-      Sendinput {Blind}+{Right}
+      Sendinput {Blind}+{Right}	
    PriorDeadKey := ""   CompKey := ""
 return
 
@@ -1464,54 +1656,62 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00F4)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00F3)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00F2)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          Send, {bs}ö
-      Else If (PriorDeadKey = "t1")      ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00F5)
       Else If (PriorDeadKey = "t4")   ; doppelakut
          BSSendUnicodeChar(0x0151)
-      Else If (PriorDeadKey = "t5")  ; Schrägstrich
+      Else If (PriorDeadKey = "t5")   ; Schrägstrich
          BSSendUnicodeChar(0x00F8)
-      Else If (PriorDeadKey = "t2")     ; macron
+      Else If (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x014D)
-      Else If (PriorDeadKey = "c3")    ; brevis 
+      Else If (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x014F)
+      Else If (PriorDeadKey = "a4")   ; ogonek
+         BSSendUnicodeChar(0x01EB)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01D2)                   	
       Else
          sendinput {blind}o
-      If (PriorDeadKey = "comp")            ; compose
+      If (PriorDeadKey = "comp")      ; compose
          CompKey := "o_small"
       Else
          CompKey := ""
    }
    else if Ebene = 2
    {
-      If (PriorDeadKey = "c1")           ; circumflex
+      If (PriorDeadKey = "c1")        ; circumflex
          BSSendUnicodeChar(0x00D4)
-      Else If (PriorDeadKey = "a1")      ; akut 
+      Else If (PriorDeadKey = "a1")   ; akut 
          BSSendUnicodeChar(0x00D3)
-      Else If (PriorDeadKey = "a2")     ; grave
+      Else If (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00D2)
-      Else If (PriorDeadKey = "t5")  ; Schrägstrich
+      Else If (PriorDeadKey = "t5")   ; Schrägstrich
          BSSendUnicodeChar(0x00D8)
-      Else If (PriorDeadKey = "t1")      ; tilde
+      Else If (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00D5)
       Else If (PriorDeadKey = "t4")   ; doppelakut
          BSSendUnicodeChar(0x0150)
-      Else If (PriorDeadKey = "t3")    ; Diaerese
+      Else If (PriorDeadKey = "t3")   ; Diaerese
          send {bs}Ö
-      Else If (PriorDeadKey = "t2")     ; macron 
+      Else If (PriorDeadKey = "t2")   ; macron 
          BSSendUnicodeChar(0x014C)
-      Else If (PriorDeadKey = "c3")    ; brevis 
+      Else If (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x014E)
+      Else If (PriorDeadKey = "a4")   ; ogonek
+         BSSendUnicodeChar(0x01EA)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01D1)    
       Else
          sendinput {blind}O
-      If (PriorDeadKey = "comp")            ; compose
+      If (PriorDeadKey = "comp")      ; compose
          CompKey := "o_capital"
       Else
          CompKey := ""
@@ -1871,9 +2071,31 @@ return
 *y::
    EbeneAktualisieren()
    if Ebene = 1
-      sendinput {blind}ü
+   {
+      If (PriorDeadKey = "t2")        ; macron
+         BSSendUnicodeChar(0x01D6)
+      Else If (PriorDeadKey = "a1")   ; akut 
+         BSSendUnicodeChar(0x01D8)
+      Else If (PriorDeadKey = "a2")   ; grave
+         BSSendUnicodeChar(0x01DC)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01DA)
+      Else
+         sendinput {blind}ü
+   }
    else if Ebene = 2
-      sendinput {blind}Ü
+   {
+      If (PriorDeadKey = "t2")        ; macron
+         BSSendUnicodeChar(0x01D5)
+      Else If (PriorDeadKey = "a1")   ; akut 
+         BSSendUnicodeChar(0x01D7)
+      Else If (PriorDeadKey = "a2")   ; grave
+         BSSendUnicodeChar(0x01DB)
+      Else If (PriorDeadKey = "c2")   ; caron
+         BSSendUnicodeChar(0x01D9)
+      Else
+         sendinput {blind}Ü
+   }
    else if Ebene = 3
       send {blind}{#}
    else if Ebene = 5
@@ -1884,9 +2106,19 @@ return
 *x::
    EbeneAktualisieren()
    if Ebene = 1
-      sendinput {blind}ö
+   {
+      If (PriorDeadKey = "t2")        ; macron
+         BSSendUnicodeChar(0x022B)
+      Else
+         sendinput {blind}ö
+   }
    else if Ebene = 2
-      sendinput {blind}Ö
+   {
+      If (PriorDeadKey = "t2")        ; macron
+         BSSendUnicodeChar(0x022A)
+      Else
+         sendinput {blind}Ö
+   }
    else if Ebene = 3
       send $
    else if Ebene = 5
@@ -1899,9 +2131,19 @@ return
 *c::
    EbeneAktualisieren()
    if Ebene = 1
-      sendinput {blind}ä
+   {
+      If (PriorDeadKey = "t2")        ; macron
+         BSSendUnicodeChar(0x01DF)
+      Else
+         sendinput {blind}ä
+   }
    else if Ebene = 2
-      sendinput {blind}Ä
+   {
+      If (PriorDeadKey = "t2")        ; macron
+         BSSendUnicodeChar(0x001DE)
+      Else
+         sendinput {blind}Ä
+   }
    else if Ebene = 3
       send |
    else if Ebene = 4
@@ -2056,7 +2298,23 @@ return
 *,::
    EbeneAktualisieren()
    if Ebene = 1
-      send `,
+       {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind},
+           }
+           Else
+           {
+              send `,
+           }
+               
+         }
+         Else {
+           send {blind},
+         }
+       }
    else if Ebene = 2
        SendUnicodeChar(0x22EE) ;  vertikale ellipse 
    else if Ebene = 3
@@ -2080,8 +2338,24 @@ return
 *.::
    EbeneAktualisieren()
    if Ebene = 1
-      send .
-   else if Ebene = 2
+        {  
+         If GetKeyState("CapsLock","T") 
+         {
+           If (IsModifierPressed())
+           {
+             send {blind}.
+           }
+           Else
+           {
+              send .
+           }
+               
+         }
+         Else {
+           send {blind}.
+         }
+       }
+  else if Ebene = 2
       SendUnicodeChar(0x2026)  ; ellipse
    else if Ebene = 3
       send '
@@ -2181,7 +2455,7 @@ return
       Else If (PriorDeadKey = "c4")       ; toter -
          BSSendUnicodeChar(0x208B)         
       Else
-         send {NumpadSub}
+         send {blind}{NumpadSub}
    }
    else if Ebene = 3
       SendUnicodeChar(0x2212) ; echtes minus
@@ -2197,7 +2471,7 @@ return
       Else If (PriorDeadKey = "c4")       ; toter -
          BSSendUnicodeChar(0x208A)         
       Else
-         send {NumpadAdd}
+         send {blind}{NumpadAdd}
    }
    else if Ebene = 3
       send ±
@@ -2230,7 +2504,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {Numpad7}
+      send {blind}{Numpad7}
       If (PriorDeadKey = "comp")
          CompKey := "Num_7"
       Else
@@ -2267,7 +2541,7 @@ return
       Else If (CompKey = "Num_7")
          CompUnicodeChar(0x215E)       ; 7/8
       Else
-         send {Numpad8}
+         send {blind}{Numpad8}
       If (PriorDeadKey = "comp")
          CompKey := "Num_8"
       Else
@@ -2295,7 +2569,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {Numpad9}
+      send {blind}{Numpad9}
       If (PriorDeadKey = "comp")
          CompKey := "Num_9"
       Else
@@ -2325,7 +2599,7 @@ return
       Else If (CompKey = "Num_3")
          CompUnicodeChar(0x00BE)       ; 3/4
       Else
-         send {Numpad4}
+         send {blind}{Numpad4}
       If (PriorDeadKey = "comp")
          CompKey := "Num_4"
       Else
@@ -2362,7 +2636,7 @@ return
       Else If (CompKey = "Num_4")
          CompUnicodeChar(0x2158)       ; 4/5
       Else
-         send {Numpad5}
+         send {blind}{Numpad5}
       If (PriorDeadKey = "comp")
          CompKey := "Num_5"
       Else
@@ -2395,7 +2669,7 @@ return
       Else If (CompKey = "Num_5")
          CompUnicodeChar(0x215A)       ; 5/6
       Else
-         send {Numpad6}
+         send {blind}{Numpad6}
       If (PriorDeadKey = "comp")
          CompKey := "Num_6"
       Else
@@ -2423,7 +2697,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {Numpad1}
+      send {blind}{Numpad1}
       If (PriorDeadKey = "comp")
          CompKey := "Num_1"
       Else
@@ -2454,7 +2728,7 @@ return
       If (CompKey = "Num_1")
          CompUnicodeChar(0x00BD)       ; 1/2
       Else
-         send {Numpad2}
+         send {blind}{Numpad2}
       If (PriorDeadKey = "comp")
          CompKey := "Num_2"
       Else
@@ -2487,7 +2761,7 @@ return
       Else If (CompKey = "Num_2")
          CompUnicodeChar(0x2154)       ; 2/3
       Else
-         send {Numpad3}
+         send {blind}{Numpad3}
       If (PriorDeadKey = "comp")
          CompKey := "Num_3"
       Else
@@ -2506,7 +2780,7 @@ return
    EbeneAktualisieren()
    if Ebene = 1
    {
-      send {Numpad0}
+      send {blind}{Numpad0}
       If (PriorDeadKey = "comp")
          CompKey := "Num_0"
       Else
@@ -2906,12 +3180,12 @@ return
       Else If (CompKey = "r_capital_1")
          Comp3UnicodeChar(0x2160)          ; römisch I
       Else
-         send {Space}
+         Send {blind}{Space}
    }
    if  Ebene  =  2
       Send  {blind}{Space}
    if Ebene = 3
-      send {Space}
+      Send {blind}{Space}
    if Ebene = 4
       SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
    else if Ebene = 5
@@ -2968,14 +3242,14 @@ nach einem DeadKey drückt...
    }
    else
    {
-      send {Tab}
+      send {blind}{Tab}
       PriorDeadKey := ""
       CompKey := ""
    }
 return
 
 *SC038::                            ; LAlt, damit AltTab funktioniert
-   send {LAlt}
+   send {blind}{LAlt}
    PriorDeadKey := ""   CompKey := ""
 return
 
@@ -3026,27 +3300,80 @@ return
    ------------------------------------------------------
 */
 
+/*
+Ebenen laut Referenz:
+1. Ebene (kein Mod)      4. Ebene (Mod4)
+2. Ebene (Umschalt)      5. Ebene (Mod3+Umschalt)
+3. Ebene (Mod3)          6. Ebene (Mod3+Mod4)
+*/
+
 EbeneAktualisieren()
 {
    global
-   Ebene = 1
+   If ( IsShiftPressed() )
+   {  ; Umschalt
+   		If ( IsMod3Pressed() )
+		{ ; Umschalt UND Mod3 
+           If ( IsMod4Pressed() )
+           {  ; Umschald UND Mod3 UND Mod4 
+               Ebene = 6
+           }
+           Else
+           { ; Umschald UND Mod3 NICHT Mod4
+               Ebene = 5	               
+           }
+        }
+		Else 
+		{  ; Umschalt NICHT Mod3
+           If ( IsMod4Pressed() )
+           {  ; Umschald UND Mod4 NICHT Mod3 
+               Ebene = 2
+           }
+           Else
+           { ; Umschald NICHT Mod3 NICHT Mod4
+               Ebene = 2	
+           }
+       	}   
+   }
+   Else
+   { ; NICHT Umschalt
+		If ( IsMod3Pressed() )
+		{ ; Mod3 NICHT Umschalt 
+           If ( IsMod4Pressed() )
+           {  ; Mod3 UND Mod4 NICHT Umschalt
+               Ebene = 6
+           }
+           Else
+           { ; Mod3 NICHT Mod4 NICHT Umschalt
+               Ebene = 3	
+           }
+        }
+		Else 
+		{  ; NICHT Umschalt NICHT Mod3
+           If ( IsMod4Pressed() )
+           {  ; Mod4 NICHT Umschalt NICHT Mod3 
+               Ebene = 4
+           }
+           Else
+           { ; NICHT Umschalt NICHT Mod3 NICHT Mod4
+               Ebene = 1
+           }
+       	}   
+   }
+}
+IsShiftPressed()
+{
+  return GetKeyState("Shift","P")
+}
 
-   ; ist Shift down?
-   if ( GetKeyState("Shift","P") )
-   {
-      Ebene += 1
-   }
-   ; ist Mod3 down?
-   if ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )
-   {
-      Ebene += 2
-   }
-   
-   ; ist Mod4 down? Mod3 hat Vorrang!
-   else if ( GetKeyState("<","P") or GetKeyState("SC138","P") )
-   {
-      Ebene += 4
-   }
+IsMod3Pressed()
+{
+  return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )
+}
+
+IsMod4Pressed()
+{
+ return ( GetKeyState("<","P") or GetKeyState("SC138","P") )
 }
 
 
@@ -3072,6 +3399,18 @@ BSUnicode(code)
 }
 */
 
+IsModifierPressed()
+{
+   if (GetKeyState("LControl","P") or GetKeyState("RControl","P") or GetKeyState("LAlt","P") or GetKeyState("RAltl","P") or GetKeyState("LWin","P") or GetKeyState("RWin","P") or GetKeyState("LShift","P") or GetKeyState("RShift","P") or GetKeyState("AltGr","P") ) 
+    {
+       return 1
+    }
+    else
+    {
+       return 0
+    }
+}
+
 SendUnicodeChar(charCode)
 {
    VarSetCapacity(ki, 28 * 2, 0)
@@ -3089,47 +3428,20 @@ SendUnicodeChar(charCode)
 BSSendUnicodeChar(charCode)
 {
    send {bs}
-   VarSetCapacity(ki, 28 * 2, 0)
-
-   EncodeInteger(&ki + 0, 1)
-   EncodeInteger(&ki + 6, charCode)
-   EncodeInteger(&ki + 8, 4)
-   EncodeInteger(&ki +28, 1)
-   EncodeInteger(&ki +34, charCode)
-   EncodeInteger(&ki +36, 4|2)
-
-   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
+   SendUnicodeChar(charCode)
 }
 
 CompUnicodeChar(charCode)
 {
    send {bs}
-   VarSetCapacity(ki, 28 * 2, 0)
-
-   EncodeInteger(&ki + 0, 1)
-   EncodeInteger(&ki + 6, charCode)
-   EncodeInteger(&ki + 8, 4)
-   EncodeInteger(&ki +28, 1)
-   EncodeInteger(&ki +34, charCode)
-   EncodeInteger(&ki +36, 4|2)
-
-   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
+	 SendUnicodeChar(charCode)
 }
 
 Comp3UnicodeChar(charCode)
 {
    send {bs}
    send {bs}
-   VarSetCapacity(ki, 28 * 2, 0)
-
-   EncodeInteger(&ki + 0, 1)
-   EncodeInteger(&ki + 6, charCode)
-   EncodeInteger(&ki + 8, 4)
-   EncodeInteger(&ki +28, 1)
-   EncodeInteger(&ki +34, charCode)
-   EncodeInteger(&ki +36, 4|2)
-
-   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
+   SendUnicodeChar(charCode)
 }
 
 
@@ -3151,20 +3463,6 @@ Suspend, Permit
 return
 
 ; ------------------------------------
-
-togglesus:
-   if A_IsSuspended
-   {
-      menu, tray, rename, %enable%, %disable%
-	  menu, tray, tip, %name%
-   }
-   else
-   {
-      menu, tray, rename, %disable%, %enable%
-      menu, tray, tip, %name% : Deaktiviert  
-   }
-
-return
 
 
 togglesuspend:
