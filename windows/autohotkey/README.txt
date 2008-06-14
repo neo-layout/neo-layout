@@ -31,8 +31,8 @@ auswählen -> Immer mit diesem Programm öffnen.
 === Icon ===
 Will man ein spezielles Neo-Icon in der Taskleiste, kann man einfach die beiden
 Dateien neo.ico und neo_disabled.ico in den Ordner kopieren, in dem sich die
-neo20-all-in-one.ahk befindet. Danach im ahk-Skript bei den globalen Schaltern
-den Schalter für das Icon auf 1 setzen und das Skript (neu) starten.
+neo20-all-in-one.ahk befindet. Danach das Skript neu laden oder starten.
+In der .exe geschieht das automatisch.
 
 === Automatischer Start ===
 Bei Bedarf kann man sich eine Verknüpfung mit neo20-all-in-one.ahk in den
