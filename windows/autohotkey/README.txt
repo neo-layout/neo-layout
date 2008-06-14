@@ -1,4 +1,4 @@
-Version 24.02.2008
+Version 14.06.2008
 
 == Installation ==
 === Direkte Installation ===
@@ -7,16 +7,11 @@ speichern (am besten auf dem Desktop z.B.). Danach einen Doppelklick auf
 diese .exe-Datei und NEO steht in voller Funktionalität zur Verfügung!
 Das alles geht ohne Admin-Rechte und ist auf jedem Rechner sofort ausführbar.
 Achtung: Da sich NEO in der Entwicklung befindet, kann es vorkommen, dass die
-exe-Datei gegenüber der Datei neo20-all-in-one.ahk leicht veraltet sein kann.
+exe-Datei gegenüber der Datei neo20-all-in-one.ahk leicht veraltet ist.
 Entwickler sollten daher Autohotkey selbst runterladen, wie unten beschrieben.
 
 Um kurzzeitig zu QWERTZ zu wechseln, kann mit Shift+Pause das Skript pausiert
 werden.
-
-Momentan befindet sich in der Testphase, ob die 6. Ebene über Shift+Mod4 oder
-über Mod3+Mod4 angesprochen werden soll (Shift+Mod4 zum Markieren bleibt
-erhalten). Die Datei neo20_mod-test.ahk spricht die 6. Ebene über Mod3+Mod4 an,
-ist jedoch nicht aktuell.
 
 === Autohotkey herunter laden ===
 Man braucht als erstes das Programm namens »autohotkey«
@@ -52,7 +47,7 @@ AltTab reagiert hingegen wie gewohnt.
 
 Bisher reagieren nur die Buchstaben der 1. und 2. Ebene richtig auf
 CapsLock (also immer groß schreiben – CapsLock erreicht man unter Neo, wenn 
-man erst die rechte und dann die linke Mod3-Tasten gleichzeitig drückt).
+man beide Shift-Tasten gleichzeitig drückt).
 
 == Ziffernblock ==
 Der Ziffernblock reagiert nicht auf Tastenkombinationen mit Strg, Alt usw.
