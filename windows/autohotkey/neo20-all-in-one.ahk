@@ -15,7 +15,10 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  Aktuelle Revision (von Matthias Berg):
+                  aktuelle Revision (vos Stefan Mayer)
+				  - Icon wird automatisch geladen, falls .ico-Dateien im selbem Ordner
+				  - in der .exe sind die .ico mitgespeichert und werden geladen
+				  Revision 528 (von Matthias Berg):
                   - Neo-Icon
                   - Neo-Prozess jetzt automatisch auf hoher Prioritaet
                     (siehe globale Schalter)
@@ -63,8 +66,12 @@
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
 nurEbenenFuenfUndSechs = 0
 
-iconBenutzen = 0
+if FileExist("neo.ico") && FileExist("neo_disabled.ico")
+  iconBenutzen = 1
+FileInstall, neo.ico, neo.ico, 1
+FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
+  
 Process, Priority,, High
 
 ; aus Noras script kopiert:
