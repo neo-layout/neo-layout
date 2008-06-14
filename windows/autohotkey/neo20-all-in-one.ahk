@@ -11,13 +11,14 @@
                   - Alt+Tab+Shift sollte Alt+Tab umkehrt
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
-                  - AltGr wird von Programmen wie Wort und Eclipse oft abgefangen :-(
-                  - iota geht nicht
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY: 
-                  Aktuelle Revision (von Matthias Berg):
+                  Aktuelle Reversion (von Matthias Berg):
+                  - AltGr Problem hoffentlich behoben
+                  - Umschalt+Mod4 Bug behoben
+                  Revision 526 (von Matthias Berg):
                   - Ebenen 1 bis 4 ausschalten per Umschalter siehe erste Codezeile
                      nurEbenenFuenfUndSechs = 0
                   - Mod4-Lock durch Mod4+Mod4
@@ -50,7 +51,8 @@
 
 /******************
  Globale Schalter *
-******************/
+*****************
+*/
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
 nurEbenenFuenfUndSechs = 0
 
@@ -179,6 +181,9 @@ IsMod4Locked := 0
          IsMod4Locked = 1
       }
 return
+*SC138::return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
+
+
 /* ; das folgende wird seltsamerweise nicht gebraucht :)
 SC138 & *<::
       if (IsMod4Locked) 
@@ -192,6 +197,7 @@ SC138 & *<::
          IsMod4Locked = 1
       }
 return
+
 */
  
 /*
@@ -1588,7 +1594,6 @@ return
    }
    else if Ebene = 5
    {
-      MsgBox iota   
       SendUnicodeChar(0x03B9) ; iota
       CompKey := ""
    }
@@ -3507,7 +3512,7 @@ EbeneAktualisieren()
             if ( IsMod4Pressed() )
             {  ; Umschald UND Mod4 NICHT Mod3
                ; Ebene 7 impliziert Ebene 4 
-                Ebene = 6
+                Ebene = 4
             }
             else
             { ; Umschald NICHT Mod3 NICHT Mod4
