@@ -14,8 +14,15 @@
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGEHISTORY: 
-                  Aktuelle Reversion (von Matthias Berg):
+    CHANGEHISTORY:
+                  Aktuelle Revision (von Matthias Berg):
+                  - Neo-Icon
+                  - Neo-Prozess jetzt automatisch auf hoher Prioritaet
+                    (siehe globale Schalter)
+                  - Mod3-Lock (nur wenn rechtes Mod3 zuerst gedrückt wird, andere Lösung führte zum Caps-Bug)
+                  - Mod4-Lock (nur wenn das linke Mod4 zuerst gedrückt wird, andere Lösung fühte zum AltGr-Bug)
+                  - Ein paar falsche Zeichen korrigiert
+                  Revision 527 (von Matthias Berg):
                   - AltGr Problem hoffentlich behoben
                   - Umschalt+Mod4 Bug behoben
                   Revision 526 (von Matthias Berg):
@@ -56,6 +63,9 @@
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
 nurEbenenFuenfUndSechs = 0
 
+iconBenutzen = 0
+
+Process, Priority,, High
 
 ; aus Noras script kopiert:
 #usehook on
@@ -103,6 +113,8 @@ if inputlocale <> 00000407
 ; Menü des Systray-Icons 
 ; ----------------------
 
+if (iconBenutzen)
+   menu, tray, icon, neo.ico,,1
 menu, tray, nostandard
 menu, tray, add, Öffnen, open
    menu, helpmenu, add, About, about
@@ -139,7 +151,7 @@ PriorDeadKey := ""
 
 
 ; CapsLock durch Umschalt+Umschalt
-*CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
+;*CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
 
 *#::return ; Nichts machen beim # release event (weil es Mod3 ist)
 
@@ -198,6 +210,46 @@ SC138 & *<::
       }
 return
 
+*/
+ 
+ ; Mod3-Lock durch Mod3+Mod3
+IsMod3Locked := 0
+# & *Capslock::
+    if (GetKeyState("#","P")) 
+    {
+      if (IsMod3Locked) 
+      {
+         MsgBox Mod3-Feststellung aufgebehoben
+         IsMod3Locked = 0
+      }
+      else
+      {
+         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
+         IsMod3Locked = 1
+      }
+    }
+    else
+    {
+      MsgBox nothing
+      return
+    }
+return
+
+;Capslock::MsgBox hallo
+*Capslock:: return
+/*
+Capslock & *#::
+      if (IsMod3Locked) 
+      {
+         MsgBox Mod3-Feststellung aufgebehoben
+         IsMod3Locked = 0
+      }
+      else
+      {
+         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
+         IsMod3Locked = 1
+      }
+return
 */
  
 /*
@@ -1517,6 +1569,8 @@ return
       send \
    else if Ebene = 4
       Send {blind}{Home}
+   else if Ebene = 5	
+   {  } ; leer
    else if Ebene = 6
       SendUnicodeChar(0x222E) ; contour integral
    PriorDeadKey := ""   CompKey := ""
@@ -1592,7 +1646,7 @@ return
       Sendinput {Blind}{Left}
       CompKey := ""
    }
-   else if Ebene = 5
+   else if Ebene = 5	
    {
       SendUnicodeChar(0x03B9) ; iota
       CompKey := ""
@@ -1843,7 +1897,7 @@ return
    }
    else if Ebene = 5
    {
-      SendUnicodeChar(0x03C9) ; omega
+      SendUnicodeChar(0x03BF) ; omicron
       CompKey := ""
    }
    else if Ebene = 6
@@ -2351,7 +2405,7 @@ return
    }
    else if Ebene = 3
       send ``{space} ; untot
-   else if Ebene = 5
+   else if Ebene = 4
      {} ; leer   
    else if Ebene = 5
       SendUnicodeChar(0x03B6) ;zeta 
@@ -2545,7 +2599,7 @@ return
    else if Ebene = 3
       send `;
    else if Ebene = 4
-     {} ; leer ... Send .
+     Send . ; eigentlich laut Referenz { } ; leer
    else if Ebene = 5
       SendUnicodeChar(0x03D1) ; vartheta
    else if Ebene = 6
@@ -3555,7 +3609,14 @@ IsShiftPressed()
 
 IsMod3Pressed()
 {
-  return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )
+   global
+   if (IsMod3Locked) 
+   {
+       return (not ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ))
+   }
+   else {
+	  return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )
+   }
 }
 
 IsMod4Pressed()
@@ -3563,14 +3624,7 @@ IsMod4Pressed()
    global
    if (IsMod4Locked) 
    {
-      if (IsShiftPressed()) 
-      {
-       return ( GetKeyState("<","P") or GetKeyState("SC138","P") )
-      }
-      else 
-      {
        return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") ))
-      } 
    }
    else {
        return ( GetKeyState("<","P") or GetKeyState("SC138","P") )
@@ -3671,12 +3725,16 @@ togglesuspend:
    {
       menu, tray, rename, %enable%, %disable%
 	  menu, tray, tip, %name%
+	  if (iconBenutzen)
+          menu, tray, icon, neo.ico,,1  
       suspend , off ; Schaltet Suspend aus -> NEO
    }
    else
    {
       menu, tray, rename, %disable%, %enable%
-      menu, tray, tip, %name% : Deaktiviert  
+      menu, tray, tip, %name% : Deaktiviert
+	  if (iconBenutzen)
+	     menu, tray, icon, neo_disabled.ico,,1
       suspend , on  ; Schaltet Suspend ein -> QWERTZ 
    }
 
