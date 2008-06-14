@@ -28,6 +28,12 @@ das Skript vorübergehend deaktivieren (Suspend) oder komplett beenden kann.
 Wenn das Öffnen nicht direkt funktioniert: Öffnen mit -> Autohotkey.exe
 auswählen -> Immer mit diesem Programm öffnen.
 
+=== Icon ===
+Will man ein spezielles Neo-Icon in der Taskleiste, kann man einfach die beiden
+Dateien neo.ico und neo_disabled.ico in den Ordner kopieren, in dem sich die
+neo20-all-in-one.ahk befindet. Danach im ahk-Skript bei den globalen Schaltern
+den Schalter für das Icon auf 1 setzen und das Skript (neu) starten.
+
 === Automatischer Start ===
 Bei Bedarf kann man sich eine Verknüpfung mit neo20-all-in-one.ahk in den
 Autostart-Ordner legen, dann hat man die Belegung direkt bei der Anmeldung.
