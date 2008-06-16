@@ -15,7 +15,12 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  aktuelle Revision (vos Stefan Mayer)
+                  Aktuelle Revision (von Matthias Berg):
+                  - BildschirmTastatur 
+                    * aktiviert mit strg+F1 bis 7 schaltet Keyboard ein oder aus
+                    * strg+F7 zeigt die zuletzt angezeigte Ebene an (und wieder aus).
+                    * strg+F8 schaltet AlwaysOnTop um    
+                  Revision 529 (von Stefan Mayer):
 				  - Icon wird automatisch geladen, falls .ico-Dateien im selbem Ordner
 				  - in der .exe sind die .ico mitgespeichert und werden geladen
 				  Revision 528 (von Matthias Berg):
@@ -64,9 +69,12 @@
 *****************
 */
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
-nurEbenenFuenfUndSechs = 0
+nurEbenenFuenfUndSechs := 0
 
-if FileExist("neo.ico") && FileExist("neo_disabled.ico")
+if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
+  zeigeBildschirmTastatur = 1
+
+if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
   iconBenutzen = 1
 FileInstall, neo.ico, neo.ico, 1
 FileInstall, neo_disabled.ico, neo_disabled.ico, 1
@@ -3711,6 +3719,238 @@ EncodeInteger(ref, val)
 {
    DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
 }
+
+
+
+/* 
+   ------------------------------------------------------
+   BildschirmTastatur
+   ------------------------------------------------------
+*/
+guiErstellt = 0
+alwaysOnTop = 1
+aktuellesBild = ebene1.png 
+^~F1::
+{
+  if (zeigeBildschirmTastatur)
+    goto Switch1
+  return
+}
+^~F2::
+{
+  if (zeigeBildschirmTastatur)
+    goto Switch2
+  return
+}
+^~F3::
+{
+  if (zeigeBildschirmTastatur)
+    goto Switch3
+  return
+}
+^~F4::
+{
+  if (zeigeBildschirmTastatur)
+    goto Switch4
+  return
+}
+^~F5::
+{
+  if (zeigeBildschirmTastatur)
+    goto Switch5
+  return
+}
+^~F6::
+{
+  if (zeigeBildschirmTastatur)
+    goto Switch6
+  return
+}
+^~F7::
+{
+  if (zeigeBildschirmTastatur)
+    goto Show
+  return
+}
+^~F8::
+{
+  if (zeigeBildschirmTastatur)
+	goto ToggleAlwaysOnTop
+  return
+}
+
+Switch1:
+  if (guiErstellt) 
+  {
+     if (Image == "ebene1.png")
+        goto Close
+     else
+     {
+       Image = ebene1.png
+       SetTimer, Refresh
+     }
+  }
+  else 
+  {
+    Image = ebene1.png
+    goto Show    
+  }
+Return
+
+Switch2:
+  if (guiErstellt) 
+  {
+     if (Image == "ebene2.png")
+        goto Close
+     else
+     {
+       Image = ebene2.png
+       SetTimer, Refresh
+     }
+  }
+  else 
+  {
+    Image = ebene2.png
+    goto Show    
+  }
+Return
+
+Switch3:
+  if (guiErstellt) 
+  {
+     if (Image == "ebene3.png")
+        goto Close
+     else
+     {
+       Image = ebene3.png
+       SetTimer, Refresh
+     }
+  }
+  else 
+  {
+    Image = ebene3.png
+    goto Show    
+  }
+Return
+
+Switch4:
+  if (guiErstellt) 
+  {
+     if (Image == "ebene4.png")
+        goto Close
+     else
+     {
+       Image = ebene4.png
+       SetTimer, Refresh
+     }
+  }
+  else 
+  {
+    Image = ebene4.png
+    goto Show    
+  }
+Return
+
+Switch5:
+  if (guiErstellt) 
+  {
+     if (Image == "ebene5.png")
+        goto Close
+     else
+     {
+       Image = ebene5.png
+       SetTimer, Refresh
+     }
+  }
+  else 
+  {
+    Image = ebene5.png
+    goto Show    
+  }
+Return
+
+Switch6:
+  if (guiErstellt) 
+  {
+     if (Image == "ebene6.png")
+        goto Close
+     else
+     {
+       Image = ebene6.png
+       SetTimer, Refresh
+     }
+  }
+  else 
+  {
+    Image = ebene6.png
+    goto Show    
+  }
+Return
+
+Show:
+  if (guiErstellt) 
+  {
+     goto Close
+  }
+  else
+  {
+    if (Image = "")	
+    {
+      Image = ebene1.png 
+    }     
+    yPosition := A_ScreenHeight -270
+  	Gui, Color, FFFFFF
+    Gui, Add, Button, xm+5 gSwitch1, F1
+    Gui, Add, Text, x+5, kleine Buchstaben
+    Gui, Add, Button, xm+5 gSwitch2, F2
+    Gui, Add, Text, x+5, große Buchstaben
+    Gui, Add, Button, xm+5 gSwitch3, F3
+    Gui, Add, Text, x+5, Satz-/Sonderzeichen
+    Gui, Add, Button, xm+5 gSwitch4, F4
+    Gui, Add, Text, x+5, Zahlen / Steuerung
+    Gui, Add, Button, xm+5 gSwitch5, F5
+    Gui, Add, Text, x+5, Sprachen
+    Gui, Add, Button, xm+5 gSwitch6, F6
+    Gui, Add, Text, x+5, Mathesymbole
+    Gui, Add, Button, xm+5 gShow, F7
+    Gui, Add, Text, x+5, An /
+    Gui, Add, Text, y+3, Aus
+    Gui, Add, Button, x+10 y+-30 gShow, F8
+    Gui, Add, Text, x+5, OnTop
+    Gui, Add, Picture,AltSubmit ys w564 h200 vPicture, %Image%
+    Gui, +AlwaysOnTop
+    Gui, Show, y%yposition% Autosize
+    SetTimer, Refresh
+    guiErstellt = 1
+  } 
+Return
+
+Close:
+  guiErstellt = 0
+  Gui, Destroy
+Return
+
+Refresh:
+   If (Image != OldImage)
+   {
+      GuiControl, , Picture, %Image%
+      OldImage := Image
+   }
+Return
+
+ToggleAlwaysOnTop:
+    if (alwaysOnTop)
+    {
+      Gui, -AlwaysOnTop
+      alwaysOnTop = 0    
+    }
+    else
+    {
+      Gui, +AlwaysOnTop
+      alwaysOnTop = 1
+    }
+Return
+ ; Ende der BildschirmTastatur
 
 
 /*
