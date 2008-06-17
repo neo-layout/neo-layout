@@ -1,9 +1,7 @@
 /***************************************************************************\
 * Module Name: KBDNEO2.C
 *
-* keyboard layout for German
-*
-* Copyright (c) 1985-2000, Microsoft Corporation
+* keyboard layout for German NEO 2.0
 *
 * History:
 \***************************************************************************/
@@ -131,18 +129,15 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 * aVkToBits[]  - map Virtual Keys to Modifier Bits
 *
 * See kbd.h for a full description.
-*
-* German Keyboard has only three shifter keys:
-*     SHIFT (L & R) affects alphabnumeric keys,
-*     CTRL  (L & R) is used to generate control characters
-*     ALT   (L & R) used for generating characters by number with numpad
 \***************************************************************************/
+// Es wird nicht zwischen linken und/oder rechtem Modifier unterschieden
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
-    { VK_SHIFT    ,   KBDSHIFT     },
-    { VK_CONTROL  ,   KBDCTRL      },	
-	{ VK_MENU     ,   KBDALT       },
-	{ VK_KANA     ,   KBDKANA	   },
-	{ 0           ,   0            }
+    { VK_SHIFT		,   KBDSHIFT	},
+    { VK_CONTROL	,   KBDCTRL		},	
+	{ VK_MENU		,   KBDALT		},
+	{ VK_KANA		,   KBDKANA		}, //Mod 3
+	{ VK_OEM_102	,   16			}, //Mod 4
+	{ 0				,   0			}
 };
 
 /***************************************************************************\
@@ -151,38 +146,48 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 * See kbd.h for a full description.
 *
 \***************************************************************************/
+
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
     &aVkToBits[0],
-    14,
+    25, //Anzahl der verwendeten Ebenen (inklusive der INVALIDen!)
     {
 	//  Modifier NEO 
-	//  Ebene 1 - nix
-	//  Ebene 2 - Shift
-	//  Ebene 3 - Kana
-	//  Ebene 4 - AltGr
-	//  Ebene 5 - Kana+Shift
-	//  Ebene 6 - AltGr+Kana
+	//  Ebene 0 - nix
+	//  Ebene 1 - Shift
+	//  Ebene 2 - Kana = Mod 3
+	//  Ebene 3 - Neu = Mod 4
+	//  Ebene 4 - Kana+Shift 
+	//  Ebene 5 - Neu+Kana
 	//  
 	//  Modification# //  Keys Pressed
-    //  ============= // =============
-        0,            	// 0000 
-        1,            	// 0001	Shift
-        6,            	// 0010	Strg
-        7,            	// 0011	Shift + Strg
-        SHFT_INVALID, 	// 0100	Menu
-        SHFT_INVALID,	// 0101	Shift + Menu 
-        3,				// 0110	Strg + Menu 
-		SHFT_INVALID,	// 0111	Shift + Strg + Menu
-		2,			  	// 1000	Kana
-		4,             	// 1001	Shift + Kana
-		SHFT_INVALID,	// 1010	Strg + Kana
-		SHFT_INVALID,	// 1011	Shift + Strg + Kana
-		SHFT_INVALID,	// 1100	Menu + Kana
-		SHFT_INVALID,	// 1101	Shift + Menu + Kana
-		5				// 1110	Menu + Strg + Kana
-		
+    //  ============= // ===========	Neu	Kana	Alt	Strg	Shift
+		0,				// 	0	0	0	0	0
+		1,				// 	0	0	0	0	1
+		6,				// 	0	0	0	1	0
+		7,				// 	0	0	0	1	1
+		SHFT_INVALID,	// 	0	0	1	0	0
+		SHFT_INVALID,	// 	0	0	1	0	1
+		SHFT_INVALID,	// 	0	0	1	1	0
+		SHFT_INVALID,	// 	0	0	1	1	1
+		2,				// 	0	1	0	0	0
+		4,				// 	0	1	0	0	1
+		SHFT_INVALID,	// 	0	1	0	1	0
+		SHFT_INVALID,	// 	0	1	0	1	1
+		SHFT_INVALID,	// 	0	1	1	0	0
+		SHFT_INVALID,	// 	0	1	1	0	1
+		SHFT_INVALID,	// 	0	1	1	1	0
+		SHFT_INVALID,	// 	0	1	1	1	1
+		3,				// 	1	0	0	0	0
+		8,				// 	1	0	0	0	1   (für Pseudo-Ebene)
+		SHFT_INVALID,	// 	1	0	0	1	0
+		SHFT_INVALID,	// 	1	0	0	1	1
+		SHFT_INVALID,	// 	1	0	1	0	0
+		SHFT_INVALID,	// 	1	0	1	0	1
+		SHFT_INVALID,	// 	1	0	1	1	0
+		SHFT_INVALID,	// 	1	0	1	1	1
+		5,				// 	1	1	0	0	0
 	}
-};
+};                      
 
 
 /***************************************************************************\
@@ -215,121 +220,127 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 \***************************************************************************/
 
-static ALLOC_SECTION_LDATA VK_TO_WCHARS2 aVkToWch2[] = {
-//				|		 |    Shift      |
-//				|===========|=========|
-{VK_DECIMAL		,0      ,','      ,','      },
-{0            	,0      ,0        ,0        }
-};
-
-static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
-//							|			|   SHIFT	        |   KANA                   |  ALT+CTL	          |
-//							|			|===============|================|===============|
-{VK_ADD			,0			,'+'		,'+'		,0x00b1		,0x2213		},
-{VK_DIVIDE		,0			,'/'		,'/'		,0x00f7		,0x2215		},
-{VK_MULTIPLY	,0			,'*'		,'*'		,0x00d7		,0x22c5		},
-{VK_SUBTRACT	,0			,'-'		,'-'		,WCH_NONE	,0x2052		},
-{0				,0			,0			,0			,0			,0			}
-};                                                                
+//	Reihenfolge der Ebene wie oben ( ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {    &aVkToBits[0],)… festgelegt
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
-//							|			|   SHIFT	          |   KANA                  |  ALT+CTL	          |  KANA+Shift      |   ALT+CTL+Kana	 | 
+//							|			|   SHIFT	          |   KANA                  |  NEU		|  KANA+Shift      |   NEU+Kana	 | 
 //							|			|===============|================|===============|===============|================|
 {VK_OEM_1		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},
 {0xff			,0			,'^'		,0x030c		,0x0306		,0x00b7		,0x0335		,0x0323		},
-{'1'			,CAPLOK		,'1'		,0x00b0		,0x00B9		,0x2022		,0x2640		,0x00ac		},
-{'3'			,CAPLOK		,'3'		,0x00a7		,0x00b3		,WCH_NONE	,0x2640		,0x2227		},
-{'4'			,CAPLOK		,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2113		,0x02d4		},
-{'5'			,CAPLOK		,'5'		,0x00ab		,0x2039		,WCH_NONE	,0x2020		,0x2221		},
-{'7'			,CAPLOK		,'7'		,0x0024		,0x00a5		,0x00a4		,0x03f0		,0x2209		},
-{'8'			,CAPLOK		,'8'		,0x201E		,0x201A		,0x002F		,WCH_NONE	,0x2204		},
-{'9'			,CAPLOK		,'9'		,0x201C		,0x2018		,0x002A		,WCH_NONE	,0x2226		},
-{'0'			,CAPLOK		,'0'		,0x201D		,0x2019		,0x002D		,WCH_NONE	,0x2205		},
-{VK_OEM_MINUS	,0			,'-'		,0x2013		,0x2014		,0X2011		,0x00AD		,0x2227		},
+{'1'			,0			,'1'		,0x00b0		,0x00B9		,0x2022		,0x2640		,0x00ac		},
+{'3'			,0			,'3'		,0x00a7		,0x00b3		,WCH_NONE	,0x2642		,0x2227		},
+{'4'			,0			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2113		,0x02d4		}, //WCH_NONE sollte »Bild auf« sein (AHK?)
+{'5'			,0			,'5'		,0x00ab		,0x2039		,WCH_NONE	,0x2020		,0x2221		},
+{'7'			,0			,'7'		,0x0024		,0x00a5		,0x00a4		,0x03f0		,0x2209		},
+{'8'			,0			,'8'		,0x201E		,0x201A		,0x002F		,WCH_NONE	,0x2204		},
+{'9'			,0			,'9'		,0x201C		,0x2018		,0x002A		,WCH_NONE	,0x2226		},
+{'0'			,0			,'0'		,0x201D		,0x2019		,0x002D		,WCH_NONE	,0x2205		},
+{VK_OEM_MINUS	,0			,'-'		,0x2013		,0x2014		,WCH_DEAD	,0x0011		,0x00ad		},
 {VK_OEM_2		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},
 {0xff			,0			,0x0301		,0x0300		,0x0327		,0x0307		,0x0328		,0x030a		},
 {VK_TAB			,0			,'\t'		,'\t'		,'\t'		,'\t'		,'\t'		,'\t'		},
 {'X'			,CAPLOK		,'x'		,'X'		,WCH_NONE	,WCH_NONE	,0x03BE		,0x039E		},
 {'V'			,CAPLOK		,'v'		,'V'		,'_'		,'\b'		,WCH_NONE	,0x2259		},
-{'L'			,CAPLOK		,'l'		,'L'		,'['		,WCH_NONE	,0x03BB		,0x039b		},
-{'C'			,CAPLOK		,'c'		,'C'		,']'		,0x007f		,0x03C7		,0x2102		}, 
-{'W'			,CAPLOK		,'w'		,'W'		,0x005E		,WCH_NONE	,0x1f7c		,0x03a9		},
+{'L'			,CAPLOK		,'l'		,'L'		,'['		,WCH_NONE	,0x03BB		,0x039b		}, //WCH_NONE sollte »Pfeil hoch« sein (AHK?)
+{'C'			,CAPLOK		,'c'		,'C'		,']'		,0x007f		,0x03C7		,0x2102		}, //0x007f sollte »Entfernen« sein (AHK?)
+{'W'			,CAPLOK		,'w'		,'W'		,0x005E		,WCH_NONE	,0x03c9		,0x03a9		}, //WCH_NONE sollte »Einfügen« sein (AHK?)
 {'K'			,CAPLOK		,'k'		,'K'		,'!'		,0x00A1		,0x03BA		,0x221a		},
 {'H'			,CAPLOK		,'h'		,'H'		,'<'		,'7'		,0x03C8		,0x03A8		},
 {'G'			,CAPLOK		,'g'		,'G'		,'>'		,'8'		,0x03B3		,0x0393		},
 {'F'			,CAPLOK		,'f'		,'F'		,'='		,'9'		,0x03C6		,0x03A6		},
-{'Q'			,CAPLOK		,'q'		,'Q'		,'&'		,'+'		,0x0278		,0x211a		},
-{'U'			,CAPLOK		,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x222e		},
-{'I'			,CAPLOK		,'i'		,'I'		,'/'		,WCH_NONE	,0x03B9		,0x222b		},
-{'A'			,CAPLOK		,'a'		,'A'		,'{'		,WCH_NONE	,0x03B1		,0x2200		},
-{'E'			,CAPLOK		,'e'		,'E'		,'}'		,WCH_NONE	,0x03B5		,0x2203		},
-{'O'			,CAPLOK		,'o'		,'O'		,'*'		,WCH_NONE	,0x03bf		,0x2208		},
+{'Q'			,CAPLOK		,'q'		,'Q'		,'&'		,'+'		,0x03c6		,0x211a		},
+{'U'			,CAPLOK		,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x222e		}, //1. WCH_NONE sollte »Pos 1« sein (AHK?)
+{'I'			,CAPLOK		,'i'		,'I'		,'/'		,WCH_NONE	,0x03B9		,0x222b		}, //WCH_NONE sollte »Pfeil links« sein (AHK?)
+{'A'			,CAPLOK		,'a'		,'A'		,'{'		,WCH_NONE	,0x03B1		,0x2200		}, //WCH_NONE sollte »Pfeil runter« sein (AHK?)
+{'E'			,CAPLOK		,'e'		,'E'		,'}'		,WCH_NONE	,0x03B5		,0x2203		}, //WCH_NONE sollte »Pfeil rechts« sein (AHK?)
+{'O'			,CAPLOK		,'o'		,'O'		,'*'		,WCH_NONE	,0x03bf		,0x2208		}, //WCH_NONE sollte »Ende« sein (AHK?)
 {'S'			,CAPLOK		,'s'		,'S'		,'?'		,0x00BF		,0x03C3		,0x03A3		},
 {'N'			,CAPLOK		,'n'		,'N'		,'('		,'4'		,0x03BD		,0x2115		},
 {'R'			,CAPLOK		,'r'		,'R'		,')'		,'5'		,0x03C1		,0x211d		},
 {'T'			,CAPLOK		,'t'		,'T'		,'-'		,'6'		,0x03C4		,0x2202		},
-{'D'			,CAPLOK		,'d'		,'D'		,':'		,','		,0x03B4		,0x0394		},
+{'D'			,CAPLOK		,'d'		,'D'		,':'		,WCH_NONE	,0x03B4		,0x0394		},
 {VK_OEM_5		,CAPLOK		,0x00FC		,0x00DC		,'#'		,0x001b		,WCH_NONE	,0x221d		},
 {VK_OEM_6		,CAPLOK		,0x00F6		,0x00D6		,'$'		,'\t'		,WCH_NONE	,0x2111		},
-{VK_OEM_7		,CAPLOK		,0x00E4		,0x00C4		,'|'		,WCH_NONE	,0x03B7		,0x211c		},
+{VK_OEM_7		,CAPLOK		,0x00E4		,0x00C4		,'|'		,WCH_NONE	,0x03B7		,0x211c		}, //WCH_NONE sollte »Bild runter« sein (AHK?)
 {'P'			,CAPLOK		,'p'		,'P'		,'~'		,'\r'		,0x03C0		,0x03A0		},
 {'Z'			,CAPLOK		,'z'		,'Z'		,'`'		,WCH_NONE	,0x03B6		,0x2124		},
-{'B'			,CAPLOK		,'b'		,'B'		,'+'		,WCH_NONE	,0x03B2		,0x212d		},
+{'B'			,CAPLOK		,'b'		,'B'		,'+'		,','		,0x03B2		,0x21d2		},
 {'M'			,CAPLOK		,'m'		,'M'		,'%'		,'1'		,0x00b5		,0x21d4		},
-{VK_OEM_COMMA	,0			,','		,0x22ee		,'\''		,'2'		,0x03F1		,0x21d0		},
-{VK_OEM_PERIOD	,0			,'.'		,0x2026		,'\"'		,'3'		,0x03B8		,0x0398		},
+{VK_OEM_COMMA	,0			,','		,0x22ee		,'\"'		,'2'		,0x03F1		,0x21d0		},
+{VK_OEM_PERIOD	,0			,'.'		,0x2026		,'\''		,'3'		,0x03B8		,0x0398		},
 {0				,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
-//							|			|   SHIFT	          |   KANA                  |  ALT+CTL	          |  KANA+Shift       |   ALT+CTL+Kana	 |  Control		| 
+//							|			|   SHIFT	          |   KANA                  |  NEU		|  KANA+Shift      |   NEU+Kana	 |  Control		| 
 //							|			|===============|================|===============|===============|================|===============|
 {VK_OEM_3		,CAPLOK		,0x00df		,0x1E9E 	,0x017F		,WCH_NONE	,0x03C2		,0x018F		,0x2218		},
 {VK_OEM_4		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,0x001d		},
 {0xff			,0			,0x0303		,0x0304		,0x0308		,0x0337		,0x030b		,0x0326		,WCH_NONE	},
 {'Y'			,CAPLOK		,'y'		,'Y'		,'@'		,WCH_NONE	,0x03C5		,0x2207		,0x001c		},
-{VK_SPACE		,0      	,' '		,' '		,0x00A0		,'0'		,' '		,0x2009		,' '		},
-{VK_BACK		,0			,'\b'		,'\b'		,WCH_NONE	,WCH_NONE	,WCH_NONE	,WCH_NONE	,0x007f		},
-{VK_ESCAPE		,0			,0x001b		,0x001b		,WCH_NONE	,WCH_NONE	,WCH_NONE	,WCH_NONE	,0x001b		},
+{VK_SPACE		,0      	,' '		,' '		,' '		,'0'		,0x00a0		,0x2009		,' '		},
+{VK_BACK		,0			,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,0x007f		},
+{VK_ESCAPE		,0			,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		},
 {VK_RETURN		,0			,'\r'		,'\r'		,WCH_NONE	,WCH_NONE	,WCH_NONE	,WCH_NONE	,'\n'		},
 {VK_CANCEL		,0			,0x0003		,0x0003		,WCH_NONE	,WCH_NONE	,WCH_NONE	,WCH_NONE	,0x0003		},
 {0				,0			,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
-//							|			|   SHIFT	          |   KANA                  |  ALT+CTL	          |  KANA+Shift       |   ALT+CTL+Kana	 |  Control		|  Control+Shift	|
+//							|			|   SHIFT	          |   KANA                  |  NEU		|  KANA+Shift      |   NEU+Kana	 |  Control		|  Control+Shift	|
 //							|			|===============|================|===============|===============|================|===============|===============|
-{'2'			,CAPLOK		,'2'		,0x2116		,0x00b2		,0x2023		,0x26A5		,0x2228		,WCH_NONE	,0x0000		},
-{'6'			,CAPLOK		,'6'		,0x20ac		,0x00Ac		,0x00a3		,WCH_NONE	,0x2225		,WCH_NONE	,0x001e		},
-{'J'			,CAPLOK		,'j'		,'J'		,';'		,'.'		,0x03D1		,0x2261		,WCH_NONE	,0x001f		},
+{'2'			,0			,'2'		,0x2116		,0x00b2		,0x2023		,0x26A5		,0x2228		,WCH_NONE	,0x0000		},
+{'6'			,0			,'6'		,0x20ac		,0x00A2		,0x00a3		,WCH_NONE	,0x2225		,WCH_NONE	,0x001e		},
+{'J'			,CAPLOK		,'j'		,'J'		,';'		,WCH_NONE	,0x03D1		,0x2261		,WCH_NONE	,0x001f		},
 {0				,0			,0			,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
 // Put this last so that VkKeyScan interprets number characters
-// as coming from the main section of the kbd (aVkToWch2 and
-// aVkToWch5) before considering the numpad (aVkToWch1).
+// as coming from the main section of the kbd  before considering
+// the numpad.
 
-static ALLOC_SECTION_LDATA VK_TO_WCHARS1 aVkToWch1[] = {
-    { VK_NUMPAD0   , 0      ,  '0'   },
-    { VK_NUMPAD1   , 0      ,  '1'   },
-    { VK_NUMPAD2   , 0      ,  '2'   },
-    { VK_NUMPAD3   , 0      ,  '3'   },
-    { VK_NUMPAD4   , 0      ,  '4'   },
-    { VK_NUMPAD5   , 0      ,  '5'   },
-    { VK_NUMPAD6   , 0      ,  '6'   },
-    { VK_NUMPAD7   , 0      ,  '7'   },
-    { VK_NUMPAD8   , 0      ,  '8'   },
-    { VK_NUMPAD9   , 0      ,  '9'   },
-    { 0            , 0      ,  '\0'  }
-};
+/*
+Entgegen der neo20.txt vorgesehene Belegung 1,2,3,5 ist hier 1,2,3,4 umgesetzt:
 
+== Vier Ebenen – Ziffernblock ==
+ +-----+ 
+¦ 1  4 ¦  
+¦ 2  3 ¦ 
+ +-----+ 
+1. Ebene (kein Mod) 	(Ziffern)
+2. Ebene (Umschalt)	(Steuertasten)
+3. Ebene (Mod3)		(Pfeile u.ä.)
+4. Ebene (Mod4)		(anderes Zeug)
+*/
+
+
+static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
+//							|			|   SHIFT		|   KANA		|      NEU		|
+//							|			|===============|================|===============|
+{VK_ADD			,0			,'+'		,'+'		,0x00b1		,0x2213		},
+{VK_DIVIDE		,0			,'/'		,'/'		,0x00f7		,0x2215		},
+{VK_MULTIPLY	,0			,'*'		,'*'		,0x00d7		,0x2219		},
+{VK_SUBTRACT	,0			,'-'		,'-'		,0x2052		,WCH_NONE	},
+{VK_DECIMAL		,0			,','		,','		,'.'		,','		},
+{VK_NUMPAD0		,0      	,'0'      	,'0'      	,0x0025		,0x2030		},
+{VK_NUMPAD1		,0      	,'1'      	,'1'      	,0x2194		,0x2264   	},
+{VK_NUMPAD2		,0      	,'2'      	,'2'      	,0x2193		,0x222a		},
+{VK_NUMPAD3		,0      	,'3'      	,'3'      	,0x21cc		,0x2265		},
+{VK_NUMPAD4		,0      	,'4'      	,'4'      	,0x2190		,0x2282		},
+{VK_NUMPAD5		,0      	,'5'      	,'5'      	,0x221e		,0x220B		},
+{VK_NUMPAD6		,0      	,'6'      	,'6'      	,0x2192		,0x2283		},
+{VK_NUMPAD7		,0      	,'7'      	,'7'      	,0x2195		,0x226a		},
+{VK_NUMPAD8		,0      	,'8'      	,'8'      	,0x2191		,0x2229		},
+{VK_NUMPAD9		,0      	,'9'      	,'9'      	,0x2297		,0x226b		},
+{0				,0		 	,0			,0			,0			,0			}
+};                                                      
+
+// Hier müssen die verwendeten WChar_Tables vorkommen; Numpad MUSS letzte Zeile sein.
 static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
-    {  (PVK_TO_WCHARS1)aVkToWch4, 4, sizeof(aVkToWch4[0]) },
     {  (PVK_TO_WCHARS1)aVkToWch6, 6, sizeof(aVkToWch6[0]) },
     {  (PVK_TO_WCHARS1)aVkToWch7, 7, sizeof(aVkToWch7[0]) },
 	{  (PVK_TO_WCHARS1)aVkToWch8, 8, sizeof(aVkToWch8[0]) },
-    {  (PVK_TO_WCHARS1)aVkToWch2, 2, sizeof(aVkToWch2[0]) },
-    {  (PVK_TO_WCHARS1)aVkToWch1, 1, sizeof(aVkToWch1[0]) },
+    {  (PVK_TO_WCHARS1)aVkToWch4, 4, sizeof(aVkToWch4[0]) },
     {                       NULL, 0, 0                    },
 };
 
@@ -414,22 +425,22 @@ static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
     L"^"		L"ZIRKUMFLEX",
     L"\x030c"	L"CARON",
 	L"\x0306"	L"BREVIS",
-	L"\x0335"	L"QUERSTRICH",
 	L"\x00b7"	L"DOT_MID",
+	L"\x0335"	L"QUERSTRICH",
 	L"\x0323"	L"DOT_BELOW",
 	
 	L"\x0301"	L"AKUT",
     L"\x0300"	L"GRAVIS",
 	L"\x0327"	L"CEDILLA",
-	L"\x0328"	L"OGONEK",
 	L"\x0307"	L"DOT_ABOVE",
+	L"\x0328"	L"OGONEK",
 	L"\x030a"	L"RING",
 	
 	L"\x0303"	L"TILDE",
 	L"\x0304"	L"MAKRON",
-	L"\x0308"	L"DIAERASE",
-	L"\x030b"	L"DOPPEL_AKUT",
+	L"\x0308"	L"TREMA",
 	L"\x0337"	L"SCHRAEGSTRICH",
+	L"\x030b"	L"DOPPEL_AKUT", 
 	L"\x0326"	L"KOMMA_BELOW",
 
 
@@ -437,9 +448,11 @@ static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
 };
 
 static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
-
+// Schema:
+//	Deadtrans( Name oder Unicode der normalen Taste,	Name oder Unicode der toten Taste,	Name oder Unicode der zu bildenden Taste,	0x0000)
+//	0, 0	terminiert komplette Liste
 // Anfang der Taste links neben der 1
-	DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000), //ZIRKUMFLEX
+	DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000), //Zirkumflex
 	DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
 	DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
     DEADTRANS( L'A'   , L'^'   , 0x00c2 , 0x0000),	
@@ -486,7 +499,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
     DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000),
 	
-	DEADTRANS( L'C'   , 0x030c , 0x010c   , 0x0000), //CARON
+	DEADTRANS( L'C'   , 0x030c , 0x010c   , 0x0000), //Caron
 	DEADTRANS( L'c'   , 0x030c , 0x010d   , 0x0000), 
 	DEADTRANS( L'D'   , 0x030c , 0x010e   , 0x0000), 
 	DEADTRANS( L'd'   , 0x030c , 0x010f   , 0x0000),
@@ -523,7 +536,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( 0x00dc , 0x030c , 0x01d9   , 0x0000),
 	DEADTRANS( L' '   , 0x030c , 0x030c   , 0x0000), 
 	
-	DEADTRANS( L'A'   , 0x0306 , 0x0102   , 0x0000),	//BREVIS
+	DEADTRANS( L'A'   , 0x0306 , 0x0102   , 0x0000),	//Brevis
 	DEADTRANS( L'a'   , 0x0306 , 0x0103   , 0x0000),
 	DEADTRANS( L'E'   , 0x0306 , 0x0114   , 0x0000),
 	DEADTRANS( L'e'   , 0x0306 , 0x0115   , 0x0000),
@@ -536,8 +549,10 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'U'   , 0x0306 , 0x016c   , 0x0000),
 	DEADTRANS( L'u'   , 0x0306 , 0x016d   , 0x0000),
 	DEADTRANS( L' '   , 0x0306 , 0x0306   , 0x0000),
+
+	DEADTRANS( L' '   , 0x00b7 , 0x00b7   , 0x0000),	//Dot Middle
 	
-	DEADTRANS( L'1'   , 0x0335 , 0x2081   , 0x0000),	//QUERSTRICH
+	DEADTRANS( L'1'   , 0x0335 , 0x2081   , 0x0000),	//Querstrich
 	DEADTRANS( L'2'   , 0x0335 , 0x2082   , 0x0000),
 	DEADTRANS( L'3'   , 0x0335 , 0x2083   , 0x0000),
 	DEADTRANS( L'4'   , 0x0335 , 0x2084   , 0x0000),
@@ -555,9 +570,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'x'   , 0x0335 , 0x2093   , 0x0000),
 	DEADTRANS( L' '   , 0x0335 , 0x0335   , 0x0000),
 	
-	DEADTRANS( L' '   , 0x00b7 , 0x00b7   , 0x0000),	//DOT_MID
-	
-	DEADTRANS( L'B'   , 0x0323 , 0x1e04   , 0x0000),	//DOT_BELOW
+	DEADTRANS( L'B'   , 0x0323 , 0x1e04   , 0x0000),	//Dot Below
 	DEADTRANS( L'b'   , 0x0323 , 0x1e05   , 0x0000),
 	DEADTRANS( L'D'   , 0x0323 , 0x1e0c   , 0x0000),
 	DEADTRANS( L'd'   , 0x0323 , 0x1e0d   , 0x0000),
@@ -596,7 +609,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L' '   , 0x0323 , 0x0323   , 0x0000),
 // Ende der Taste links neben der 1
 // Anfang der Tasten zwei rechts neben der 0
-    DEADTRANS( L'a'   , 0x0301 , 0x00e1 , 0x0000),	//AKUT
+    DEADTRANS( L'a'   , 0x0301 , 0x00e1 , 0x0000),	//Akut
     DEADTRANS( L'e'   , 0x0301 , 0x00e9 , 0x0000),
     DEADTRANS( L'i'   , 0x0301 , 0x00ed , 0x0000),
     DEADTRANS( L'o'   , 0x0301 , 0x00f3 , 0x0000),
@@ -634,7 +647,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
     DEADTRANS( L'w'   , 0x0301 , 0x1e83 , 0x0000),
 	DEADTRANS( L' '   , 0x0301 , 0x0301 , 0x0000),
 
-    DEADTRANS( L'a'   , 0x0300 , 0x00e0 , 0x0000),	//GRAVIS
+    DEADTRANS( L'a'   , 0x0300 , 0x00e0 , 0x0000),	//Gravis
     DEADTRANS( L'e'   , 0x0300 , 0x00e8 , 0x0000),
     DEADTRANS( L'i'   , 0x0300 , 0x00ec , 0x0000),
     DEADTRANS( L'o'   , 0x0300 , 0x00f2 , 0x0000),
@@ -654,7 +667,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'y'   , 0x0300 , 0x1ef3 , 0x0000),
 	DEADTRANS( L' '   , 0x0300 , 0x0300 , 0x0000),
 	
-	DEADTRANS( L'C'   , 0x0327 , 0x00c7 , 0x0000),	//CEDILLA
+	DEADTRANS( L'C'   , 0x0327 , 0x00c7 , 0x0000),	//Cedilla
 	DEADTRANS( L'c'   , 0x0327 , 0x00e7 , 0x0000),
 	DEADTRANS( L'G'   , 0x0327 , 0x0122 , 0x0000),
 	DEADTRANS( L'g'   , 0x0327 , 0x0123 , 0x0000),
@@ -677,20 +690,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'H'   , 0x0327 , 0x1e28 , 0x0000),
 	DEADTRANS( L'h'   , 0x0327 , 0x1e29 , 0x0000),
 	DEADTRANS( L' '   , 0x0327 , 0x0327 , 0x0000),
-		
-	DEADTRANS( L'A'   , 0x0328 , 0x0104 , 0x0000),	//OGONEK
-	DEADTRANS( L'a'   , 0x0328 , 0x0105 , 0x0000),
-	DEADTRANS( L'E'   , 0x0328 , 0x0118 , 0x0000),
-	DEADTRANS( L'e'   , 0x0328 , 0x0119 , 0x0000),
-	DEADTRANS( L'I'   , 0x0328 , 0x012e , 0x0000),
-	DEADTRANS( L'i'   , 0x0328 , 0x012f , 0x0000),
-	DEADTRANS( L'U'   , 0x0328 , 0x0172 , 0x0000),
-	DEADTRANS( L'u'   , 0x0328 , 0x0173 , 0x0000),
-	DEADTRANS( L'O'   , 0x0328 , 0x01ea , 0x0000),
-	DEADTRANS( L'o'   , 0x0328 , 0x01eb , 0x0000),
-	DEADTRANS( L' '   , 0x0328 , 0x0328 , 0x0000),
 	
-	DEADTRANS( L'C'   , 0x0307 , 0x010a , 0x0000),	//DOT_ABOVE
+	DEADTRANS( L'C'   , 0x0307 , 0x010a , 0x0000),	//Dot Above
 	DEADTRANS( L'c'   , 0x0307 , 0x010b , 0x0000),
 	DEADTRANS( L'E'   , 0x0307 , 0x0116 , 0x0000),
 	DEADTRANS( L'e'   , 0x0307 , 0x0117 , 0x0000),
@@ -731,71 +732,180 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( L'Y'   , 0x0307 , 0x1e8e , 0x0000),
 	DEADTRANS( L'y'   , 0x0307 , 0x1e8f , 0x0000),
 	DEADTRANS( L' '   , 0x0307 , 0x0307 , 0x0000),
+		
+	DEADTRANS( L'A'   , 0x0328 , 0x0104 , 0x0000),	//Ogonek
+	DEADTRANS( L'a'   , 0x0328 , 0x0105 , 0x0000),
+	DEADTRANS( L'E'   , 0x0328 , 0x0118 , 0x0000),
+	DEADTRANS( L'e'   , 0x0328 , 0x0119 , 0x0000),
+	DEADTRANS( L'I'   , 0x0328 , 0x012e , 0x0000),
+	DEADTRANS( L'i'   , 0x0328 , 0x012f , 0x0000),
+	DEADTRANS( L'U'   , 0x0328 , 0x0172 , 0x0000),
+	DEADTRANS( L'u'   , 0x0328 , 0x0173 , 0x0000),
+	DEADTRANS( L'O'   , 0x0328 , 0x01ea , 0x0000),
+	DEADTRANS( L'o'   , 0x0328 , 0x01eb , 0x0000),
+	DEADTRANS( L' '   , 0x0328 , 0x0328 , 0x0000),
 	
-	DEADTRANS( L'E'   , 0x030a , 0x0116 , 0x0000),	//RING
-	DEADTRANS( L'e'   , 0x030a , 0x030a , 0x0000),
-	DEADTRANS( L'e'   , 0x030a , 0x030a , 0x0000),
+	DEADTRANS( L'E'   , 0x030a , 0x0116 , 0x0000),	//Ring
+	DEADTRANS( L'e'   , 0x030a , 0x0117 , 0x0000),
+	DEADTRANS( L'G'   , 0x030a , 0x0120 , 0x0000),
+	DEADTRANS( L'g'   , 0x030a , 0x0121 , 0x0000),
+	DEADTRANS( L'I'   , 0x030a , 0x0130 , 0x0000),
+	DEADTRANS( L'i'   , 0x030a , 0x0131 , 0x0000),
+	DEADTRANS( L'Z'   , 0x030a , 0x017B , 0x0000),
+	DEADTRANS( L'z'   , 0x030a , 0x017C , 0x0000),
+	DEADTRANS( L'A'   , 0x030a , 0x0226 , 0x0000),
+	DEADTRANS( L'a'   , 0x030a , 0x0227 , 0x0000),
+	DEADTRANS( L'O'   , 0x030a , 0x022e , 0x0000),
+	DEADTRANS( L'o'   , 0x030a , 0x022f , 0x0000),
+	DEADTRANS( L'B'   , 0x030a , 0x1e02 , 0x0000),
+	DEADTRANS( L'b'   , 0x030a , 0x1e03 , 0x0000),
+	DEADTRANS( L'D'   , 0x030a , 0x1e0a , 0x0000),
+	DEADTRANS( L'd'   , 0x030a , 0x1e0b , 0x0000),
+	DEADTRANS( L'F'   , 0x030a , 0x1e1e , 0x0000),
+	DEADTRANS( L'f'   , 0x030a , 0x1e1f , 0x0000),
+	DEADTRANS( L'H'   , 0x030a , 0x1e22 , 0x0000),
+	DEADTRANS( L'h'   , 0x030a , 0x1e23 , 0x0000),
+	DEADTRANS( L'M'   , 0x030a , 0x1e40 , 0x0000),
+	DEADTRANS( L'm'   , 0x030a , 0x1e41 , 0x0000),
+	DEADTRANS( L'N'   , 0x030a , 0x1e44 , 0x0000),
+	DEADTRANS( L'n'   , 0x030a , 0x1e45 , 0x0000),
+	DEADTRANS( L'P'   , 0x030a , 0x1e56 , 0x0000),
+	DEADTRANS( L'p'   , 0x030a , 0x1e57 , 0x0000),
+	DEADTRANS( L'R'   , 0x030a , 0x1e58 , 0x0000),
+	DEADTRANS( L'r'   , 0x030a , 0x1e59 , 0x0000),
+	DEADTRANS( L'S'   , 0x030a , 0x1e60 , 0x0000),
+	DEADTRANS( L's'   , 0x030a , 0x1e61 , 0x0000),
+	DEADTRANS( L'T'   , 0x030a , 0x1e6a , 0x0000),
+	DEADTRANS( L't'   , 0x030a , 0x1e6b , 0x0000),
+	DEADTRANS( L'W'   , 0x030a , 0x1e86 , 0x0000),
+	DEADTRANS( L'w'   , 0x030a , 0x1e87 , 0x0000),
+	DEADTRANS( L'X'   , 0x030a , 0x1e8a , 0x0000),
+	DEADTRANS( L'x'   , 0x030a , 0x1e8b , 0x0000),
+	DEADTRANS( L'Y'   , 0x030a , 0x1e8e , 0x0000),
+	DEADTRANS( L'y'   , 0x030a , 0x1e8f , 0x0000),
+	DEADTRANS( L' '   , 0x030a , 0x030a , 0x0000),
+	// Ende der Taste zwei rechts neben der 0
+	// Anfang der Taste rechts neben dem »ß«
+	DEADTRANS( L'A'   , 0x0303 , 0x00c3 , 0x0000), //Tilde
+	DEADTRANS( L'N'   , 0x0303 , 0x00d1 , 0x0000),
+	DEADTRANS( L'O'   , 0x0303 , 0x00d5 , 0x0000),
+	DEADTRANS( L'a'   , 0x0303 , 0x00e3 , 0x0000),
+	DEADTRANS( L'n'   , 0x0303 , 0x00f1 , 0x0000),
+	DEADTRANS( L'o'   , 0x0303 , 0x00f5 , 0x0000),
+	DEADTRANS( L'I'   , 0x0303 , 0x0128 , 0x0000),
+	DEADTRANS( L'i'   , 0x0303 , 0x0129 , 0x0000),
+	DEADTRANS( L'U'   , 0x0303 , 0x0168 , 0x0000),
+	DEADTRANS( L'u'   , 0x0303 , 0x0169 , 0x0000),
+	DEADTRANS( L'V'   , 0x0303 , 0x1e7c , 0x0000),
+	DEADTRANS( L'v'   , 0x0303 , 0x1e7d , 0x0000),
+	DEADTRANS( L'E'   , 0x0303 , 0x1ebc , 0x0000),
+	DEADTRANS( L'e'   , 0x0303 , 0x1ebd , 0x0000),
+	DEADTRANS( L'Y'   , 0x0303 , 0x1ef8 , 0x0000),
+	DEADTRANS( L'y'   , 0x0303 , 0x1ef9 , 0x0000),
+	DEADTRANS( L' '   , 0x0303 , 0x0303 , 0x0000),
 	
+	DEADTRANS( L'A'   , 0x0304 , 0x0100 , 0x0000), //Makron
+	DEADTRANS( L'a'   , 0x0304 , 0x0101 , 0x0000),
+	DEADTRANS( L'E'   , 0x0304 , 0x0112 , 0x0000),
+	DEADTRANS( L'e'   , 0x0304 , 0x0113 , 0x0000),
+	DEADTRANS( L'I'   , 0x0304 , 0x012a , 0x0000),
+	DEADTRANS( L'i'   , 0x0304 , 0x012b , 0x0000),
+	DEADTRANS( L'O'   , 0x0304 , 0x014c , 0x0000),
+	DEADTRANS( L'o'   , 0x0304 , 0x014d , 0x0000),
+	DEADTRANS( L'U'   , 0x0304 , 0x016a , 0x0000),
+	DEADTRANS( L'u'   , 0x0304 , 0x016b , 0x0000),
+	DEADTRANS( L'Y'   , 0x0304 , 0x0232 , 0x0000),
+	DEADTRANS( L'y'   , 0x0304 , 0x0233 , 0x0000),
+	DEADTRANS( L'G'   , 0x0304 , 0x1e20 , 0x0000),
+	DEADTRANS( L'g'   , 0x0304 , 0x1e21 , 0x0000),
+	DEADTRANS( L' '   , 0x0304 , 0x0304 , 0x0000),
 	
-	DEADTRANS( L'e'   , 0x030a , 0x030a , 0x0000),
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-// Ende der Tasten zwei rechts neben der 0
-//Fehlt noch viel :(	
+	DEADTRANS( L'A'   , 0x0308 , 0x00c4 , 0x0000), //Diaräse
+	DEADTRANS( L'E'   , 0x0308 , 0x00cb , 0x0000),
+	DEADTRANS( L'I'   , 0x0308 , 0x00cf , 0x0000),
+	DEADTRANS( L'O'   , 0x0308 , 0x00d6 , 0x0000),
+	DEADTRANS( L'U'   , 0x0308 , 0x00dc , 0x0000),
+	DEADTRANS( L'a'   , 0x0308 , 0x00e4 , 0x0000),
+	DEADTRANS( L'e'   , 0x0308 , 0x00eb , 0x0000),
+	DEADTRANS( L'i'   , 0x0308 , 0x00ef , 0x0000),
+	DEADTRANS( L'o'   , 0x0308 , 0x00f6 , 0x0000),
+	DEADTRANS( L'u'   , 0x0308 , 0x00fc , 0x0000),
+	DEADTRANS( L'y'   , 0x0308 , 0x0177 , 0x0000),
+	DEADTRANS( L'Y'   , 0x0308 , 0x0178 , 0x0000),
+	DEADTRANS( L'H'   , 0x0308 , 0x1e26 , 0x0000),
+	DEADTRANS( L'h'   , 0x0308 , 0x1e27 , 0x0000),
+	DEADTRANS( L'W'   , 0x0308 , 0x1e84 , 0x0000),
+	DEADTRANS( L'w'   , 0x0308 , 0x1e85 , 0x0000),
+	DEADTRANS( L'X'   , 0x0308 , 0x1e8c , 0x0000),
+	DEADTRANS( L'x'   , 0x0308 , 0x1e8d , 0x0000),
+	DEADTRANS( L't'   , 0x0308 , 0x1e97 , 0x0000),
+	DEADTRANS( L' '   , 0x0308 , 0x0308 , 0x0000),
+
+	DEADTRANS( L'O'   , 0x0337 , 0x00d8 , 0x0000), //Schrägstrich
+	DEADTRANS( L'o'   , 0x0337 , 0x00f8 , 0x0000),
+	DEADTRANS( L'L'   , 0x0337 , 0x0141 , 0x0000),
+	DEADTRANS( L'l'   , 0x0337 , 0x0142 , 0x0000),
+	DEADTRANS( L' '   , 0x0337 , 0x0337 , 0x0000),
+
+	DEADTRANS( L'O'   , 0x030b , 0x0150 , 0x0000), //Doppel Akut
+	DEADTRANS( L'o'   , 0x030b , 0x0151 , 0x0000),
+	DEADTRANS( L'U'   , 0x030b , 0x0170 , 0x0000),
+	DEADTRANS( L'u'   , 0x030b , 0x0171 , 0x0000),
+	DEADTRANS( L' '   , 0x030b , 0x030b , 0x0000),
+
+	DEADTRANS( L'S'   , 0x0326 , 0x0218 , 0x0000), //Komma Below
+	DEADTRANS( L's'   , 0x0326 , 0x0219 , 0x0000),
+	DEADTRANS( L'T'   , 0x0326 , 0x021a , 0x0000),
+	DEADTRANS( L't'   , 0x0326 , 0x021b , 0x0000),
+	DEADTRANS( L' '   , 0x0326 , 0x0326 , 0x0000),
+// Ende der Tasten rechts neben dem »ß«
     0, 0
 };
 
 
 static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
-    /*
-     * Modifier keys
-     */
+/*
+* Modifier keys
+*/
     &CharModifiers,
 
-    /*
-     * Characters tables
-     */
+/*
+* Characters tables
+*/
     aVkToWcharTable,
 
-    /*
-     * Diacritics
-     */
+/*
+* Diacritics
+*/
     aDeadKey,
 
-    /*
-     * Names of Keys
-     */
+/*
+* Names of Keys
+*/
     aKeyNames,
     aKeyNamesExt,
     aKeyNamesDead,
 
-    /*
-     * Scan codes to Virtual Keys
-     */
+/*
+* Scan codes to Virtual Keys
+*/
     ausVK,
     sizeof(ausVK) / sizeof(ausVK[0]),
     aE0VscToVk,
     aE1VscToVk,
 
-    /*
-     * Locale-specific special processing
-     */
-    MAKELONG(KLLF_ALTGR, KBD_VERSION),
+/*
+* Locale-specific special processing
+* KLLF_ALTGR damit AltGr = Strg+Alt 
+*/
+	MAKELONG(KLLF_ALTGR, KBD_VERSION),
 
-    /*
-     * Ligatures
-     */
-   0,
-   0,
-    NULL
+/*
+* Ligatures
+*/
+	0,
+	0,
+	NULL
 };
 
 PKBDTABLES KbdLayerDescriptor(VOID)

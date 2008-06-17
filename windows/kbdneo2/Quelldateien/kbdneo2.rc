@@ -3,7 +3,7 @@
 
 #define VER_FILETYPE              VFT_DLL
 #define VER_FILESUBTYPE           VFT2_DRV_KEYBOARD
-#define VER_FILEDESCRIPTION_STR   "NEO2 German ergonomic Keyboard Layout"
+#define VER_FILEDESCRIPTION_STR   "Deutsch (NEO 2.0 ergonomisch) Tastaturlayout"
 #define VER_INTERNALNAME_STR      "kbdneo2"
 #define VER_ORIGINALFILENAME_STR  "kbdneo2.dll"
 

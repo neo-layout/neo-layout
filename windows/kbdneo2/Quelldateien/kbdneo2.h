@@ -1,11 +1,9 @@
 /****************************** Module Header ******************************\
 * Module Name: KBDNEO2.H
 *
-* keyboard layout header for NEO German
+* keyboard layout header for German NEO 2.0
 *
 * Various defines for use by keyboard input code.
-*
-* History: Ver 0.1
 *
 \***************************************************************************/
 
@@ -30,7 +28,7 @@
 *     | Scan | |    kbd   |    kbd   |    kbd   |    kbd   |    kbd   |    kbd   |
 *     | code | |   type 1 |   type 2 |   type 3 |   type 4 |   type 5 |   type 6 |
 \****+-------+_+----------+----------+----------+----------+----------+----------+*/
-
+// Tastenumbelegung für Neo 2.0 ; sonstige Tastenzuordnung siehe kbd.h
 #undef  T0D
 #define T0D _EQ(                           OEM_2                     )
 #undef  T10
@@ -83,7 +81,6 @@
 #define T29 _EQ(                           OEM_1                     )
 #undef  T2B
 #define T2B _EQ(                           KANA                      ) // Mod 3
-// #define T2B _EQ(                           OEM_ROYA                  )
 #undef  T2C
 #define T2C _EQ(                           OEM_5                     )
 #undef  T2D
@@ -100,10 +97,9 @@
 #define T35 _EQ(                           'J'                       )
 #undef  T3A
 #define T3A _EQ(                           KANA                      )// Mod 3
-// #define T3A _EQ(                           OEM_ROYA                  )
 #undef  X38
-#define X38 _EQ(                           RMENU                     )// Mod 5
-// #define X38 _EQ(                           OEM_102                     )
+//#define X38 _EQ(                           RMENU                     )// Mod 4
+#define X38 _EQ(                           OEM_102                     )
 #undef  T56
-#define T56 _EQ(                           RMENU                     )// Mod 5
-// #define T56 _EQ(                           OEM_102                     )
+//#define T56 _EQ(                           RMENU                     )// Mod 4
+#define T56 _EQ(                           OEM_102                     )
