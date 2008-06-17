@@ -4,17 +4,23 @@ Deshalb muss der Treiber noch von Hand registriert werden.
 
 Installation:
 1.) reg_backup.bat ausführen.
-    Dies sichert einen bereits vorhandenen Schlüssel. Wenn der Schlüssel
-    bislang noch nicht vorhanden war wird auch keine Sicherungsdatei angelegt.
+    Dies sichert einen bereits vorhandenen Schlüssel. Wenn der Schlüssel bislang
+    noch nicht vorhanden war wird auch keine Sicherungsdatei angelegt.
 2.) kbdneo2.dll nach \%SystemRoot%\system32\ (in der Regel C:\Windows\system32\)
     kopieren.
 3.) kbdneo2_install.reg ausführen.
-4.) Nun kann das in den Sprachoptionen Neo 2.0 ausgewählt werden. D(Start->Einstellungen->Systemsteuerung) unter „Regions- und Sprachoptionen“ -> Reiter „Sprachen“ -> „Details“ -> „Hinzufügen“ -> „Tastaturlayout/IME“ -> „Deutsch (NEO ergonomisch 2.0)“ hinzugefügt werden.
+4.) Nun kann das in den Sprachoptionen Neo 2.0 ausgewählt werden. D(Start->
+    Einstellungen->Systemsteuerung) unter „Regions- und Sprachoptionen“-> Reiter
+    „Sprachen“ -> „Details“ -> „Hinzufügen“ -> „Tastaturlayout/IME“ -> „Deutsch
+    (NEO ergonomisch 2.0)“ hinzugefügt werden.
 
 Deinstallation:
-1.) Neo 2.0 nicht mehr als Tastaturlayout verwenden. Dazu das Layout in den     „Regions- und Sprachoptionen“ entfernen.
-2.) kbdneo2_uninstall.reg ausführen. Hierbei werden alle vorgenommenen Einträge in      der Registry gelöscht.
-3.) Falls vorhanden die gesicherten Schlüssel zurückspielen (backup1.reg,     backup2.reg und backup3reg –soweit vorhanden– ausführen)
+1.) Neo 2.0 nicht mehr als Tastaturlayout verwenden. Dazu das Layout in den
+    „Regions- und Sprachoptionen“ entfernen.
+2.) kbdneo2_uninstall.reg ausführen. Hierbei werden alle vorgenommenen Einträge in
+    der Registry gelöscht.
+3.) Falls vorhanden die gesicherten Schlüssel zurückspielen (backup1.reg,
+    backup2.reg und backup3reg –soweit vorhanden– ausführen)
 
 Je nach Windows-Version sind für die einzelnen Schritte Administrator-Rechte nötig.
 
