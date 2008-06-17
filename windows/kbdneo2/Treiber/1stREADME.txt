@@ -6,8 +6,8 @@ Installation:
 1.) reg_backup.bat ausführen.
     Dies sichert einen bereits vorhandenen Schlüssel. Wenn der Schlüssel bislang
     noch nicht vorhanden war wird auch keine Sicherungsdatei angelegt.
-2.) kbdneo2.dll nach \%SystemRoot%\system32\ (in der Regel C:\Windows\system32\)
-    kopieren.
+2.) kbdneo2.dll (Windowsversion beachten) nach \%SystemRoot%\system32\ (in der
+    Regel C:\Windows\system32\) kopieren.
 3.) kbdneo2_install.reg ausführen.
 4.) Nun kann das in den Sprachoptionen Neo 2.0 ausgewählt werden. D(Start->
     Einstellungen->Systemsteuerung) unter „Regions- und Sprachoptionen“-> Reiter
