@@ -79,7 +79,7 @@
 */
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
 nurEbenenFuenfUndSechs := 0
-einHandNeo := 1
+einHandNeo := 0
 
 Process, Priority,, High
 
