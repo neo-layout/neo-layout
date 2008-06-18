@@ -16,6 +16,15 @@
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
                   Aktuelle Revision (von Matthias Berg):
+                  - stark überarbeitet um Wartbarkeit zu erhöhen und Redundanz zu veringern
+                  - nurEbenenFuenfUndSechs sollte nun Qwerty berücksichtigen
+                    * aber es muss noch jemand testen
+                    * Problem: was kann man abfangen, wenn eine tote Taste gedrückt wird
+                 - einHandNeo:
+                    * An-/Ausschalten mit STRG+Punkt
+                    * Buchstaben der rechten Hand werden mit Space zur linken Hand
+                    * Nebeneffekt: es gibt beim Festhalten von Space keine wiederholten Leerzeichen mehr
+                  Revision 532 (von Matthias Berg):
                   - BildschirmTastatur 
                     * aktiviert mit strg+F1 bis 7 schaltet Keyboard ein oder aus
                     * strg+F7 zeigt die zuletzt angezeigte Ebene an (und wieder aus).
@@ -70,6 +79,10 @@
 */
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
 nurEbenenFuenfUndSechs := 0
+einHandNeo := 1
+
+Process, Priority,, High
+
 
 if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
   zeigeBildschirmTastatur = 1
@@ -80,7 +93,6 @@ FileInstall, neo.ico, neo.ico, 1
 FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
   
-Process, Priority,, High
 
 ; aus Noras script kopiert:
 #usehook on
@@ -156,6 +168,48 @@ menu, tray, tip, %name%
 
 Ebene = 1
 PriorDeadKey := ""
+
+
+ 
+
+
+/*
+   EinHandNeo
+*/
+spacepressed := 0
+keypressed:= 0
+
+; Reihe 1
+gespiegelt_7 = neo_6
+gespiegelt_8 = neo_5
+gespiegelt_9 = neo_4
+gespiegelt_0 = neo_3
+gespiegelt_strich = neo_2
+gespiegelt_tot2 = neo_1
+
+; Reihe 2
+gespiegelt_k = neo_w
+gespiegelt_h = neo_c
+gespiegelt_g = neo_l
+gespiegelt_f = neo_v
+gespiegelt_q = neo_x
+gespiegelt_sz = neo_tab 
+gespiegelt_tot3 = neo_tot1
+
+; Reihe 3
+gespiegelt_s = neo_o
+gespiegelt_n = neo_e
+gespiegelt_r = neo_a
+gespiegelt_t = neo_i
+gespiegelt_d = neo_u
+
+; Reihe 4
+gespiegelt_b = neo_z
+gespiegelt_m = neo_p
+gespiegelt_komma = neo_ä
+gespiegelt_punkt = neo_ö
+gespiegelt_j = neo_ü
+
 
 
 /*
@@ -279,6 +333,485 @@ return
 return
  
 */
+
+/*
+   ------------------------------------------------------
+   QWERTZ->Neo umwandlung
+   ------------------------------------------------------
+*/
+; Reihe 1
+*^::goto neo_tot1
+*1::goto neo_1
+*2::goto neo_2
+*3::goto neo_3
+*4::goto neo_4
+*5::goto neo_5
+*6::goto neo_6
+*7::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_7
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_7%
+      }
+return
+*8::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_8
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_8%
+      }
+return
+*9::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_9
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_9%
+      }
+return
+*0::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_0
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_0%
+      }
+return
+*ß::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+       if( not(einHandNeo) or not(spacepressed) )
+       goto neo_strich
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_strich%
+      }
+   }
+  else
+  {
+     goto neo_sz   
+  }
+*´::goto neo_tot2
+; Reihe 2
+*Tab::goto neo_tab
+*q::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_x
+  }
+  else
+  {
+     goto neo_q   
+  }
+*w::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+	 goto neo_v
+  }
+  else
+  {
+     goto neo_w   
+  }
+*e::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+	 goto neo_l
+  }
+  else
+  {
+     goto neo_e   
+  }
+*r::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_c
+  }
+  else
+  {
+     goto neo_r   
+  }
+*t::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_w
+  }
+  else
+  {
+     goto neo_t   
+  }
+*z::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_k
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_k%
+      }
+  }
+  else
+  {
+     goto neo_z   
+  }
+*u::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_h
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_h%
+      }
+  }
+  else
+  {
+     goto neo_u   
+  }
+*i::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_g
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_g%
+      }
+  }
+  else
+  {
+     goto neo_i   
+  }
+*o::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_f
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_f%
+      }
+  }
+  else
+  {
+     goto neo_o   
+  }
+*p::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_q
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_q%
+      }
+  }
+  else
+  {
+     goto neo_p   
+  }
+*ü::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_sz
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_sz%
+      }
+  }
+  else
+  {
+     goto neo_ü   
+  }
+*+::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_tot3
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_tot3%
+      }
+  }
+  else
+  { } ; this should never happen
+; Reihe 3
+*a::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_u
+  }
+  else
+  {
+     goto neo_a   
+  }
+*s::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_i
+  }
+  else
+  {
+     goto neo_s   
+  }
+*d::goto neo_a
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_a
+  }
+  else
+  {
+     goto neo_d   
+  }
+*f::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_e
+  }
+  else
+  {
+     goto neo_f   
+  }
+*g::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_o
+  }
+  else
+  {
+     goto neo_g   
+  }
+*h::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_s
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_s%
+      }
+  }
+  else
+  {
+     goto neo_h   
+  }
+*j::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_n
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_n%
+      }
+  }
+  else
+  {
+     goto neo_j   
+  }
+*k::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_r
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_r%
+      }
+  }
+  else
+  {
+     goto neo_k   
+  }
+*l::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_t
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_t%
+      }
+  }
+  else
+  {
+     goto neo_l   
+  }
+*ö::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_d
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_d%
+      }
+  }
+  else
+  {
+     goto neo_ö   
+  }
+*ä::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_y
+  }
+  else
+  {
+     goto neo_ä
+  }
+; Reihe 4
+*y::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_ü
+  }
+  else
+  {
+     goto neo_y   
+  }
+*x::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_ö
+  }
+  else
+  {
+     goto neo_x   
+  }
+*c::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_ä
+  }
+  else
+  {
+     goto neo_c
+  }
+*v::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_p
+  }
+  else
+  {
+     goto neo_v
+  }
+*b::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     goto neo_z
+  }
+  else
+  {
+     goto neo_b
+  }
+*n::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_b
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_b%
+      }
+  }
+  else
+  {
+     goto neo_n
+  }
+*m::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_m
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_m%
+      }
+return
+*,::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_komma
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_komma%
+      }
+return
+*.::
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_punkt
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_punkt%
+      }
+return
+*-::
+  if ( not(nurEbenenFuenfUndSechs) )
+  {
+     if( not(einHandNeo) or not(spacepressed) )
+       goto neo_j
+     else
+      {
+        keypressed := 1
+        goto %gespiegelt_j%
+      }
+  }
+  else
+  {
+     goto neo_strich
+  }
+; Numpad
+*NumpadDiv::goto neo_NumpadDiv
+*NumpadMult::goto neo_NumpadMult
+*NumpadSub::goto neo_NumpadSub
+*NumpadAdd::goto neo_NumpadAdd
+*NumpadEnter::goto neo_NumpadEnter
+*Numpad7::goto neo_Numpad7
+*Numpad8::goto neo_Numpad8
+*Numpad9::goto neo_Numpad9
+*Numpad4::goto neo_Numpad4
+*Numpad5::goto neo_Numpad5
+*Numpad6::goto neo_Numpad6
+*Numpad1::goto neo_Numpad1
+*Numpad2::goto neo_Numpad2
+*Numpad3::goto neo_Numpad3
+*Numpad0::goto neo_Numpad0
+*NumpadDot::goto neo_NumpadDot
+*NumpadHome::goto neo_NumpadHome
+*NumpadUp::goto neo_NumpadUp
+*NumpadPgUp::goto neo_NumpadPgUp
+*NumpadLeft::goto neo_NumpadLeft
+*NumpadClear::goto neo_NumpadClear
+*NumpadRight::goto neo_NumpadRight
+*NumpadEnd::goto neo_NumpadEnd
+*NumpadDown::goto neo_NumpadDown
+*NumpadPgDn::goto neo_NumpadPgDn
+*NumpadIns::goto neo_NumpadIns
+*NumpadDel::goto neo_NumpadDel
+
+  
   
 /*
    Ablauf bei toten Tasten:
@@ -294,7 +827,9 @@ return
    Reihe 1
    ------------------------------------------------------
 */
-*^::
+
+
+neo_tot1:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -328,7 +863,7 @@ return
    }
 return
 
-*1::
+neo_1:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -394,7 +929,7 @@ return
    PriorDeadKey := ""
 return
 
-*2::
+neo_2:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -461,7 +996,7 @@ return
    PriorDeadKey := ""
 return
 
-*3::
+neo_3:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -525,7 +1060,7 @@ return
    PriorDeadKey := ""
 return
 
-*4::
+neo_4:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -588,7 +1123,7 @@ return
    PriorDeadKey := ""
 return
 
-*5::
+neo_5:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -656,7 +1191,7 @@ return
    PriorDeadKey := ""
 return
 
-*6::
+neo_6:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -720,7 +1255,7 @@ return
    PriorDeadKey := ""
 return
 
-*7::
+neo_7:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -783,7 +1318,7 @@ return
    PriorDeadKey := ""
 return
 
-*8::
+neo_8:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -851,7 +1386,7 @@ return
    PriorDeadKey := ""
 return
 
-*9::
+neo_9:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -911,7 +1446,7 @@ return
    PriorDeadKey := ""
 return
 
-*0::
+neo_0:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -971,7 +1506,7 @@ return
    PriorDeadKey := ""
 return
 
-*ß::
+neo_strich:
    EbeneAktualisieren()
    if Ebene = 1
         {  
@@ -1004,7 +1539,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*´::
+neo_tot2:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1045,7 +1580,7 @@ return
    ------------------------------------------------------
 */
 
-*q::
+neo_x:
    EbeneAktualisieren()
    if Ebene = 1
       sendinput {blind}x
@@ -1059,7 +1594,7 @@ return
 return
 
 
-*w::
+neo_v:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1086,7 +1621,7 @@ return
 
 
 
-*e::
+neo_l:
    EbeneAktualisieren()
    if Ebene = 1
    { 
@@ -1153,7 +1688,7 @@ return
 return
 
 
-*r::
+neo_c:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1220,7 +1755,7 @@ return
    PriorDeadKey := ""
 return
 
-*t::
+neo_w:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1247,7 +1782,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*z::
+neo_k:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1278,7 +1813,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*u::
+neo_h:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1327,7 +1862,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*i::
+neo_g:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1376,7 +1911,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*o::
+neo_f:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1427,7 +1962,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*p::
+neo_q:
    EbeneAktualisieren()
    if Ebene = 1
       sendinput {blind}q
@@ -1451,7 +1986,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*ü::
+neo_sz:
    EbeneAktualisieren()
    if Ebene = 1
       if GetKeyState("CapsLock","T")
@@ -1483,7 +2018,7 @@ return
 return
 
 
-*+::
+neo_tot3:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1524,7 +2059,7 @@ return
    ------------------------------------------------------
 */
 
-*a::
+neo_u:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1591,7 +2126,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*s::
+neo_i:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1674,7 +2209,7 @@ return
       PriorDeadKey := ""
 return
 
-*d::
+neo_a:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1757,7 +2292,7 @@ return
    PriorDeadKey := ""
 return
 
-*f::
+neo_e:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1836,7 +2371,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*g::
+neo_o:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1923,7 +2458,7 @@ return
    PriorDeadKey := ""
 return
 
-*h::
+neo_s:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -1990,7 +2525,7 @@ return
    PriorDeadKey := ""
 return
 
-*j::
+neo_n:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2040,7 +2575,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*k::
+neo_r:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2108,75 +2643,75 @@ return
    PriorDeadKey := ""
 return
 
-*l::
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c2")          ; caron 
-         BSSendUnicodeChar(0x0165)
-      else if (PriorDeadKey = "a3")    ; cedilla
-         BSSendUnicodeChar(0x0163)
-      else if (PriorDeadKey = "c4")   ; Querstrich
-         BSSendUnicodeChar(0x0167)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E6B)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E6D)
-      else 
-         sendinput {blind}t
-      if (PriorDeadKey = "comp")
-         CompKey := "t_small"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c2")          ; caron
-         BSSendUnicodeChar(0x0164)
-      else if (PriorDeadKey = "a3")    ; cedilla 
-         BSSendUnicodeChar(0x0162)
-      else if (PriorDeadKey = "c4")   ; Querstrich
-         BSSendUnicodeChar(0x0166)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E6A)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E6C)
-      else 
-         sendinput {blind}T
-      if (PriorDeadKey = "comp")
-         CompKey := "t_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send {blind}- ; Bis
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2076)
-      else if (PriorDeadKey = "c4")       ; toter -
-         BSSendUnicodeChar(0x2086)
-      else
-         Send 6
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
-      SendUnicodeChar(0x03C4) ; tau
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
-      SendUnicodeChar(0x2202 ) ; partielle Ableitung
-      CompKey := ""
-   }
-   PriorDeadKey := ""
+neo_t:
+     EbeneAktualisieren()
+     if Ebene = 1
+     {
+        if (PriorDeadKey = "c2")          ; caron 
+           BSSendUnicodeChar(0x0165)
+        else if (PriorDeadKey = "a3")    ; cedilla
+           BSSendUnicodeChar(0x0163)
+        else if (PriorDeadKey = "c4")   ; Querstrich
+           BSSendUnicodeChar(0x0167)
+        else if (PriorDeadKey = "a5")  ; punkt darüber 
+           BSSendUnicodeChar(0x1E6B)
+        else if (PriorDeadKey = "c6") ; punkt darunter 
+           BSSendUnicodeChar(0x1E6D)
+        else 
+           sendinput {blind}t
+        if (PriorDeadKey = "comp")
+           CompKey := "t_small"
+        else
+           CompKey := ""
+     }
+     else if Ebene = 2
+     {
+        if (PriorDeadKey = "c2")          ; caron
+           BSSendUnicodeChar(0x0164)
+        else if (PriorDeadKey = "a3")    ; cedilla 
+           BSSendUnicodeChar(0x0162)
+        else if (PriorDeadKey = "c4")   ; Querstrich
+           BSSendUnicodeChar(0x0166)
+        else if (PriorDeadKey = "a5")  ; punkt darüber 
+           BSSendUnicodeChar(0x1E6A)
+        else if (PriorDeadKey = "c6") ; punkt darunter 
+           BSSendUnicodeChar(0x1E6C)
+        else 
+           sendinput {blind}T
+        if (PriorDeadKey = "comp")
+           CompKey := "t_capital"
+        else
+           CompKey := ""
+     }
+     else if Ebene = 3
+     {
+        send {blind}- ; Bis
+        CompKey := ""
+     }
+     else if Ebene = 4
+     {
+        if (PriorDeadKey = "c1")            ; circumflex
+           BSSendUnicodeChar(0x2076)
+        else if (PriorDeadKey = "c4")       ; toter -
+           BSSendUnicodeChar(0x2086)
+        else
+           Send 6
+        CompKey := ""
+     }
+     else if Ebene = 5
+     {
+        SendUnicodeChar(0x03C4) ; tau
+        CompKey := ""
+     }
+     else if Ebene = 6
+     {
+        SendUnicodeChar(0x2202 ) ; partielle Ableitung
+        CompKey := ""
+     }
+     PriorDeadKey := ""
 return
 
-*ö::
+neo_d:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2218,7 +2753,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*ä::
+neo_y:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2264,7 +2799,7 @@ return
 
 ;SC056 (<) wird zu Mod4
 
-*y::
+neo_ü:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2304,7 +2839,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*x::
+neo_ö:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2331,7 +2866,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*c::
+neo_ä:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2358,7 +2893,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*v::
+neo_p:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2390,7 +2925,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*b::
+neo_z:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2429,7 +2964,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*n::
+neo_b:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2456,7 +2991,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*m::
+neo_m:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2502,7 +3037,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*,::
+neo_komma:
    EbeneAktualisieren()
    if Ebene = 1
        {  
@@ -2542,7 +3077,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*.::
+neo_punkt:
    EbeneAktualisieren()
    if Ebene = 1
         {  
@@ -2583,7 +3118,7 @@ return
 return
 
 
-*-::
+neo_j:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2631,7 +3166,7 @@ return
    NumLock gleich:
 */
 
-*NumpadDiv::
+neo_NumpadDiv:
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
       send {NumpadDiv}
@@ -2642,7 +3177,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*NumpadMult::
+neo_NumpadMult:
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
       send {NumpadMult}
@@ -2653,7 +3188,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*NumpadSub::
+neo_NumpadSub:
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
    {
@@ -2669,7 +3204,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*NumpadAdd::
+neo_NumpadAdd:
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
    {
@@ -2687,7 +3222,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*NumpadEnter::
+neo_NumpadEnter:
    EbeneAktualisieren()
    if ( (Ebene = 1) or (Ebene = 2) )
       send {NumpadEnter}      
@@ -2707,7 +3242,7 @@ return
 
 
 
-*Numpad7::
+neo_Numpad7:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2735,7 +3270,7 @@ return
    PriorDeadKey := ""
 return
 
-*Numpad8::
+neo_Numpad8:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2772,7 +3307,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*Numpad9::
+neo_Numpad9:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2797,7 +3332,7 @@ return
 
 
 
-*Numpad4::
+neo_Numpad4:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2830,7 +3365,7 @@ return
    PriorDeadKey := ""
 return
 
-*Numpad5::
+neo_Numpad5:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2867,7 +3402,7 @@ return
    PriorDeadKey := ""
 return
 
-*Numpad6::
+neo_Numpad6:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2900,7 +3435,7 @@ return
    PriorDeadKey := ""
 return
 
-*Numpad1::
+neo_Numpad1:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2928,7 +3463,7 @@ return
    PriorDeadKey := ""
 return
 
-*Numpad2::
+neo_Numpad2:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2959,7 +3494,7 @@ return
    PriorDeadKey := ""
 return
 
-*Numpad3::
+neo_Numpad3:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -2983,7 +3518,7 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*Numpad0::
+neo_Numpad0:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3011,7 +3546,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadDot::
+neo_NumpadDot:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3040,7 +3575,7 @@ return
    bei NumLock aus
 */
 
-*NumpadHome::
+neo_NumpadHome:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3063,7 +3598,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadUp::
+neo_NumpadUp:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3100,7 +3635,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadPgUp::
+neo_NumpadPgUp:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3123,7 +3658,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadLeft::
+neo_NumpadLeft:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3156,7 +3691,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadClear::
+neo_NumpadClear:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3193,7 +3728,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadRight::
+neo_NumpadRight:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3226,7 +3761,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadEnd::
+neo_NumpadEnd:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3254,7 +3789,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadDown::
+neo_NumpadDown:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3285,7 +3820,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadPgDn::
+neo_NumpadPgDn:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3318,7 +3853,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadIns::
+neo_NumpadIns:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3346,7 +3881,7 @@ return
    PriorDeadKey := ""
 return
 
-*NumpadDel::
+neo_NumpadDel:
    EbeneAktualisieren()
    if Ebene = 1
    {
@@ -3377,7 +3912,64 @@ return
    Sondertasten
    ------------------------------------------------------
 */
+*space::
+   if (einHandNeo)
+	spacepressed := 1
+   else
+    goto neo_SpaceUp
+return
 
+*space up::
+   if (einHandNeo)
+   {
+     if (keypressed)
+     {
+       keypressed := 0
+       spacepressed := 0  	
+     }
+     else
+     {
+        goto neo_SpaceUp
+     }
+   }
+   else
+     { } ;do nothing
+return 
+
+neo_SpaceUp:
+     EbeneAktualisieren()
+     if Ebene = 1
+     {
+        if (CompKey = "r_small_1")
+           Comp3UnicodeChar(0x2170)          ; römisch i
+        else if (CompKey = "r_capital_1")
+           Comp3UnicodeChar(0x2160)          ; römisch I
+        else
+           Send {blind}{Space}
+     }
+     if  Ebene  =  2
+        Send  {blind}{Space}
+     if Ebene = 3
+        Send {blind}{Space}
+     if Ebene = 4
+     {
+        if (PriorDeadKey = "c1")            ; circumflex
+           BSSendUnicodeChar(0x2070)
+        else if (PriorDeadKey = "c4")       ; toter -
+           BSSendUnicodeChar(0x2080)
+        else
+           Send 0
+     }
+     else if Ebene = 5
+        SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
+     else if Ebene = 6
+        SendUnicodeChar(0x202F) ; schmales Leerzeichen
+     PriorDeadKey := ""   CompKey := ""
+  spacepressed := 0  	
+  keypressed := 0  		
+return
+
+/*
 *Space::
    EbeneAktualisieren()
    if Ebene = 1
@@ -3408,7 +4000,7 @@ return
       SendUnicodeChar(0x202F) ; schmales Leerzeichen
    PriorDeadKey := ""   CompKey := ""
 return
-
+*/
 /*
    Folgende Tasten sind nur aufgeführt, um PriorDeadKey zu leeren.
    Irgendwie sieht das noch nicht schön aus. Vielleicht lässt sich dieses
@@ -3437,7 +4029,7 @@ Wenigstens kommt es jetzt nicht mehr zu komischen Ergebnissen, wenn man Tab
 nach einem DeadKey drückt...
 */
 
-*Tab::
+neo_tab:
    if ( GetKeyState("SC038","P") )
    {
       SC038 & Tab::AltTab            ; http://de.autohotkey.com/docs/Hotkeys.htm#AltTabDetail
@@ -3539,7 +4131,7 @@ EbeneAktualisieren()
 */
 
 
- EbeneAktualisieren()
+EbeneAktualisieren()
 {
    global
    if (nurEbenenFuenfUndSechs)
@@ -3966,6 +4558,8 @@ return
 
 ; ------------------------------------
 
+^.::einHandNeo := not(einHandNeo)
+
 
 togglesuspend:
    if A_IsSuspended
@@ -3986,7 +4580,6 @@ togglesuspend:
    }
 
 return
-
 
 
 help:
