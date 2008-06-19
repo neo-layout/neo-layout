@@ -16,8 +16,12 @@
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
                   Aktuelle Revision (von Matthias Berg):
+                  - bei EinHandNeo ist jetzt Space+y auch Mod4
+                  - AltGr-Bug  hoffentlich wieder behoben. Diesmal mit extra altGrPressed Variable
+                  - nurEbenenFuenfUndSechs umbenannt in ahkTreiberKombi und auf Ebene 4 statt 5 und 6 geändert
+                  Revision 540 (von Matthias Berg):
                   - stark überarbeitet um Wartbarkeit zu erhöhen und Redundanz zu veringern
-                  - nurEbenenFuenfUndSechs sollte nun Qwerty berücksichtigen
+                  - nurEbenenFuenfUndSechs sollte nun auch auf Neo Treiber statt Qwertz laufen
                     * aber es muss noch jemand testen
                     * Problem: was kann man abfangen, wenn eine tote Taste gedrückt wird
                  - einHandNeo:
@@ -78,7 +82,7 @@
 *****************
 */
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
-nurEbenenFuenfUndSechs := 0
+ahkTreiberKombi := 0
 einHandNeo := 0
 
 Process, Priority,, High
@@ -262,8 +266,12 @@ IsMod4Locked := 0
          IsMod4Locked = 1
       }
 return
-*SC138::return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
-
+*SC138::
+ altGrPressed := 1
+return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
+*SC138 up::
+ altGrPressed := 0
+return 
 
 /* ; das folgende wird seltsamerweise nicht gebraucht :)
 SC138 & *<::
@@ -384,7 +392,7 @@ return
       }
 return
 *ß::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
        if( not(einHandNeo) or not(spacepressed) )
        goto neo_strich
@@ -402,7 +410,7 @@ return
 ; Reihe 2
 *Tab::goto neo_tab
 *q::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_x
   }
@@ -411,7 +419,7 @@ return
      goto neo_q   
   }
 *w::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
 	 goto neo_v
   }
@@ -420,7 +428,7 @@ return
      goto neo_w   
   }
 *e::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
 	 goto neo_l
   }
@@ -429,7 +437,7 @@ return
      goto neo_e   
   }
 *r::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_c
   }
@@ -438,7 +446,7 @@ return
      goto neo_r   
   }
 *t::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_w
   }
@@ -447,7 +455,7 @@ return
      goto neo_t   
   }
 *z::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_k
@@ -462,7 +470,7 @@ return
      goto neo_z   
   }
 *u::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_h
@@ -477,7 +485,7 @@ return
      goto neo_u   
   }
 *i::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_g
@@ -492,7 +500,7 @@ return
      goto neo_i   
   }
 *o::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_f
@@ -507,7 +515,7 @@ return
      goto neo_o   
   }
 *p::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_q
@@ -522,7 +530,7 @@ return
      goto neo_p   
   }
 *ü::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_sz
@@ -537,7 +545,7 @@ return
      goto neo_ü   
   }
 *+::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_tot3
@@ -551,7 +559,7 @@ return
   { } ; this should never happen
 ; Reihe 3
 *a::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_u
   }
@@ -560,7 +568,7 @@ return
      goto neo_a   
   }
 *s::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_i
   }
@@ -569,7 +577,7 @@ return
      goto neo_s   
   }
 *d::goto neo_a
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_a
   }
@@ -578,7 +586,7 @@ return
      goto neo_d   
   }
 *f::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_e
   }
@@ -587,7 +595,7 @@ return
      goto neo_f   
   }
 *g::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_o
   }
@@ -596,7 +604,7 @@ return
      goto neo_g   
   }
 *h::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_s
@@ -611,7 +619,7 @@ return
      goto neo_h   
   }
 *j::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_n
@@ -626,7 +634,7 @@ return
      goto neo_j   
   }
 *k::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_r
@@ -641,7 +649,7 @@ return
      goto neo_k   
   }
 *l::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_t
@@ -656,7 +664,7 @@ return
      goto neo_l   
   }
 *ö::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_d
@@ -671,7 +679,7 @@ return
      goto neo_ö   
   }
 *ä::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_y
   }
@@ -681,7 +689,7 @@ return
   }
 ; Reihe 4
 *y::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_ü
   }
@@ -690,7 +698,7 @@ return
      goto neo_y   
   }
 *x::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_ö
   }
@@ -699,7 +707,7 @@ return
      goto neo_x   
   }
 *c::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_ä
   }
@@ -708,7 +716,7 @@ return
      goto neo_c
   }
 *v::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_p
   }
@@ -717,7 +725,7 @@ return
      goto neo_v
   }
 *b::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      goto neo_z
   }
@@ -726,7 +734,7 @@ return
      goto neo_b
   }
 *n::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_b
@@ -768,7 +776,7 @@ return
       }
 return
 *-::
-  if ( not(nurEbenenFuenfUndSechs) )
+  if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_j
@@ -1705,7 +1713,9 @@ neo_c:
       else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
          Send {bs}©
       else
-         sendinput {blind}c
+      {         
+         sendinput {blind}c      
+      }
       if (PriorDeadKey = "comp")
          CompKey := "c_small"
       else
@@ -4047,12 +4057,12 @@ neo_tab:
    }
 return
 
-*SC038::                            ; LAlt, damit AltTab funktioniert
+*SC038::                    ; LAlt, damit AltTab funktioniert
    send {blind}{LAlt}
    PriorDeadKey := ""   CompKey := ""
 return
 
-*Home::
+*Home::+
    sendinput {Blind}{Home}
    PriorDeadKey := ""   CompKey := ""
 return
@@ -4134,19 +4144,12 @@ EbeneAktualisieren()
 EbeneAktualisieren()
 {
    global
-   if (nurEbenenFuenfUndSechs)
+   if (ahkTreiberKombi)
    {
-      if ( IsMod3Pressed() )
+      if ( IsMod4Pressed() and not(IsShiftPressed()) and not(IsMod3Pressed()))
       {
-        if ( IsShiftPressed() )
-        {
-           Ebene = 5
-        }
-        else if ( IsMod4Pressed() )
-        {
-           Ebene = 6      
-        }
-      } 
+         Ebene = 6      
+      }
       else
       {
         Ebene = -1
@@ -4229,13 +4232,27 @@ IsMod3Pressed()
 IsMod4Pressed()
 {
    global
-   if (IsMod4Locked) 
+   if( not(einHandNeo) or not(spacepressed) )
    {
-       return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") ))
+     if (IsMod4Locked) 
+     {
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed ))
+     }
+     else {
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed )
+     }
    }
-   else {
-       return ( GetKeyState("<","P") or GetKeyState("SC138","P") )
+   else
+   {
+     if (IsMod4Locked) 
+     {
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")  or altGrPressed ))
+     }
+     else {
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P") or altGrPressed )
+     }
    }
+   
 }
 
 
