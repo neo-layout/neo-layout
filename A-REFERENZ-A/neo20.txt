@@ -12,7 +12,8 @@ Abhilfe schafft z. B. DejaVu Sans Mono (ist z. B. bei OpenOffice dabei):
 http://dejavu.sourceforge.net/
 -------------------------------------------------------------------------------
 
-== Legende ==
+== Haupttastatur ==
+=== Legende – Haupttastatur ===
 ┌─────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
 │2 4 6│ 2 … 2. Ebene (Umschalt)     │ 5 … 5. Ebene (Mod3+Umschalt)
 │1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
@@ -35,7 +36,7 @@ http://dejavu.sourceforge.net/
   HINWEIS: Unter Linux ist es momentan noch nicht möglich die Feststellung
   zu lösen, indem man beide Mods drückt. Man muss dort nur einen drücken!
 
-== Symbole ==                            
+=== Symbole ===                            
 ⇞⇟   … Bild auf/Bild ab                  
 ⇱⇲   … Pos1/Ende                         
 ⌫ ⌦  … Backspace/Entf                    
@@ -48,7 +49,7 @@ http://dejavu.sourceforge.net/
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
 
-== Akzenttasten ==
+=== Akzenttasten ===
 Zu den Akzenten siehe auch
 • http://unicode.e-workers.de/
 • http://de.wikipedia.org/wiki/Diakritisches_Zeichen
@@ -85,7 +86,7 @@ folgendermaßen bedient (Beispiel):
 2. Danach »n«.
 3. Es erscheint das »ñ«.
 
-== Taste mit Bindestrichen, Gedankenstrich usw. ==
+=== Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
 • http://www.matthias-kammerer.de/SonsTypo3.htm
 • http://de.wikipedia.org/wiki/Weicher_Trennstrich
@@ -97,7 +98,7 @@ Taste rechts neben der 0
 │- — ‑│ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
 ┴──┬──┴ 6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
-== Anführungszeichen ==
+=== Anführungszeichen ===
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┬─────┬
@@ -125,7 +126,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │0 ’  │ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
-== Dezimaltrennzeichen ==
+=== Dezimaltrennzeichen ===
 Das Dezimaltrennzeichen ist auf englischen und südamerikanischen Systemen ein
 Punkt ».«.
 Auf deutschen, französischen, spanischen, schweizerischen und anderen ein
@@ -137,7 +138,23 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │b + β│
 ┴─────┴
 
-== Haupttastatur ==
+=== Alle Ebenen – Haupttastatur ===
+┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
+│ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
+│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ ϰ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
+├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
+│ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
+│    ♫   │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
+├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
+│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D   Δ│Y   ∇│↘3 ♫ │  ↲  │
+│         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y @ υ│     │     │
+├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
+│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B , ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J   ≡│   Caps_Lock  │
+│Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ϱ│. ' θ│j ; ϑ│   Umschalt   │
+├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
+│ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
+│      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
+└──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
 === Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
@@ -217,33 +234,14 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │Str│Fe│Al│ schmal.Lz.│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
-=== Alle Ebenen – Groß ===
-┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ ϰ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
-├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
-│    ♫   │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! κ│h < ψ│g > γ│f = ɸ│q & φ│ß ſ ς│~ ¨ ˝│Enter │
-├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D   Δ│Y   ∇│↘3 ♫ │  ↲  │
-│         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y @ υ│     │     │
-├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B , ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J   ≡│   Caps_Lock  │
-│Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ϱ│. ' θ│j ; ϑ│   Umschalt   │
-├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
-│ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
-│      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
-└──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
-
 == Ziffernblock ==
-
-== Vier Ebenen – Ziffernblock ==
+=== Legende – Ziffernblock ===
 ┌─────┐ 1 … 1. Ebene (kein Mod)
 │ 2 4 │ 2 … 2. Ebene (Umschalt)
 │ 1 3 │ 3 … 3. Ebene (Mod3)
 └─────┘ 4 … 5. Ebene (Mod3+Umschalt)
 
-== Rechenzeichen ==
+=== Rechenzeichen ===
 ┬─────┬ 1 … ASCII-Schrägstrich
 │   ∕ │ 2 … ASCII-Schrägstrich
 │ / ÷ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
@@ -259,8 +257,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ - − │ 3 … Minuszeichen (U+2212 MINUS SIGN)
 ┼─────┤
 
-== Alle Ebenen – Groß ==
-
+=== Alle Ebenen – Ziffernblock ===
 ┌─────┬─────┬─────┬─────┐
 │Num  │   ∕ │   ∙ │     │
 │Lock │ / ÷ │ * × │ - − │
@@ -278,43 +275,57 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ ⎀ %       │ ⌦  .│Enter│
 └───────────┴─────┴─────┘
 
-== Ziffernblock – erste und zweite Ebene ==
+=== Erste Ebene – Miniatur ===
+┌───┬───┬───┬───┐
+│Num│ / │ * │ - │
+├───┼───┼───┼───┤
+│ ⇱ │ ⇡ │ ⇞ │   │
+├───┼───┼───┤   │
+│ ⇠ │ € │ ⇢ │ + │
+├───┼───┼───┼───┤
+│ ⇲ │ ⇣ │ ⇟ │   │
+├───┴───┼───┤   │
+│ ⎀     │ ⌦ │Ent│
+└───────┴───┴───┘
 
-┌─────┬─────┬─────┬─────┐┌─────┬─────┬─────┬─────┐
-│Num  │     │     │     ││Num  │     │     │     │
-│Lock │ /   │ *   │ -   ││Lock │     │     │     │
-├─────┼─────┼─────┼─────┤├─────┼─────┼─────┼─────┤
-│     │     │     │     ││ 7   │ 8   │ 9   │     │
-│ ⇱   │ ⇡   │ ⇞   │     ││     │     │     │     │
-├─────┼─────┼─────┤     │├─────┼─────┼─────┤     │
-│     │     │     │ +   ││ 4   │ 5   │ 6   │     │
-│ ⇠   │ €   │ ⇢   │     ││     │     │     │     │
-├─────┼─────┼─────┼─────┤├─────┼─────┼─────┼─────┤
-│     │     │     │     ││ 1   │ 2   │ 3   │     │
-│ ⇲   │ ⇣   │ ⇟   │     ││     │     │     │     │
-├─────┴─────┼─────┤     │├─────┴─────┼─────┤     │
-│           │     │     ││ 0         │,/.  │     │
-│ ⎀         │ ⌦   │Enter││           │     │Enter│
-└───────────┴─────┴─────┘└───────────┴─────┴─────┘
+=== Zweite Ebene – Miniatur ===
+┌───┬───┬───┬───┐
+│Num│   │   │   │
+├───┼───┼───┼───┤
+│ 7 │ 8 │ 9 │   │
+├───┼───┼───┤   │
+│ 4 │ 5 │ 6 │   │
+├───┼───┼───┼───┤
+│ 1 │ 2 │ 3 │   │
+├───┴───┼───┤   │
+│ 0     │,/.│Ent│
+└───────┴───┴───┘
 
-== Ziffernblock – dritte und vierte Ebene ==
+=== Dritte Ebene – Miniatur ===
+┌───┬───┬───┬───┐
+│Num│ ÷ │ × │ − │
+├───┼───┼───┼───┤
+│ ↕ │ ↑ │ ⊗ │   │
+├───┼───┼───┤   │
+│ ← │ ∞ │ → │ ± │
+├───┼───┼───┼───┤
+│ ↔ │ ↓ │ ⇌ │   │
+├───┴───┼───┤   │
+│ %     │ . │ ≠ │
+└───────┴───┴───┘
 
-┌─────┬─────┬─────┬─────┐┌─────┬─────┬─────┬─────┐
-│Num  │     │     │     ││Num  │   ∕ │   ∙ │     │
-│Lock │   ÷ │   × │   − ││Lock │     │     │     │
-├─────┼─────┼─────┼─────┤├─────┼─────┼─────┼─────┤
-│     │     │     │     ││   ≪ │   ∩ │   ≫ │     │
-│   ↕ │   ↑ │   ⊗ │     ││     │     │     │   ∓ │
-├─────┼─────┼─────┤     │├─────┼─────┼─────┤     │
-│     │     │     │   ± ││   ⊂ │   ∋ │   ⊃ │     │
-│   ← │   ∞ │   → │     ││     │     │     │     │
-├─────┼─────┼─────┼─────┤├─────┼─────┼─────┼─────┤
-│     │     │     │     ││   ≤ │   ∪ │   ≥ │   ≈ │
-│   ↔ │   ↓ │   ⇌ │   ≠ ││     │     │     │     │
-├─────┴─────┼─────┤     │├─────┴─────┼─────┤     │
-│           │     │     ││   ‰       │    ,│     │
-│   %       │   . │Enter││           │     │Enter│
-└───────────┴─────┴─────┘└───────────┴─────┴─────┘
+=== Vierte Ebene – Miniatur ===
+┌───┬───┬───┬───┐
+│Num│ ∕ │ ∙ │   │
+├───┼───┼───┼───┤
+│ ≪ │ ∩ │ ≫ │   │
+├───┼───┼───┤   │
+│ ⊂ │ ∋ │ ⊃ │ ∓ │
+├───┼───┼───┼───┤
+│ ≤ │ ∪ │ ≥ │   │
+├───┴───┼───┤   │
+│ ‰     │  ,│ ≈ │
+└───────┴───┴───┘
 
 == Tipp ==
 Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
@@ -325,7 +336,7 @@ alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
-== Mat-/Nat-Ebene – Haupttastatur ==
+== Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
 Ξ … Xi, griechischer Majuskel (U039E)
 ≙ … entspricht (U2259)
 Λ … Lambda, griechischer Majuskel (U039B)
@@ -359,7 +370,7 @@ Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 Θ … Theta, griechischer Majuskel (U0398)
 ≡ … identisch (U2261)
 
-== Mat-/Nat-Ebene – Ziffernblock ==
+== Zeichenerläuterungen zur Mat-/Nat-Ebene – Ziffernblock ==
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
 ∋ … enthält das Element (U220B)
@@ -370,7 +381,9 @@ Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung,
 • Θ für homöopathische Urtinktur
 • Γ für Gammafunktion
 
-Einige finden sich darum an mehreren Stellen im Unicode, um (eventuelle) Unterschiede deutliche machen zu können. Zur Platzersparnis haben wir stets eines (das einfachste und allgemeinste) Zeichen aufgenommen:
+Einige finden sich darum an mehreren Stellen im Unicode, um (eventuelle) Unterschiede
+deutliche machen zu können. Zur Platzersparnis haben wir stets eines (das einfachste
+und allgemeinste) Zeichen aufgenommen:
 • Ω (U03A9) ; Einheit des Widerstandes Ohm (U2126)
 • Σ (U03A3) ; Summenzeichen (U2211)
 • Δ (U0394) ; Laplaceoperator (2206) ; Dreieck, symmetrische Differenz (25B3)
