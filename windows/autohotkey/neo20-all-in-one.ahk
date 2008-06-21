@@ -15,7 +15,13 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  Revision 544 (von Matthias Berg):
+                  Aktuelle Revision (von Matthias Berg):
+                  - lernModus (an/aus mit Strg+Komma)
+                    * im Skript konfigurierbar
+                    * Schaltet z.B. Qwertz Tasten aus, die es auf der 4. Ebene gibt (Return, Backspace,...)
+                    * Kann auch Backspace und/oder Entfernen der 4. Ebene ausschalten (gut zum Lernen richtig zu schreiben)
+                  - Bug aufgetaucht: Icons werden nicht mehr angezeigt
+                  Revision 544 (von Stefan Mayer):
                   - ,.:; auf dem Mod4-Ziffernblock an die aktuelle Referenz angepasst
                   - Versionen von rho, theta, kappa und phi an die aktuelle Referenz angepasst
                   Revision 542 (von Matthias Berg):
@@ -87,9 +93,9 @@
 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
 ahkTreiberKombi := 0
 einHandNeo := 0
+lernModus := 0
 
 Process, Priority,, High
-
 
 if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
   zeigeBildschirmTastatur = 1
@@ -98,6 +104,44 @@ if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
   iconBenutzen = 1
 FileInstall, neo.ico, neo.ico, 1
 FileInstall, neo_disabled.ico, neo_disabled.ico, 1
+
+
+/*************************
+ lernModus Konfiguration *
+ nur relevant wenn       *
+ lernModus = 1           *
+ Strg+Komma schaltet um  *   
+**************************
+*/
+; 0 = aus, 1 = an
+
+^,::lernModus := not(lernModus)
+
+
+
+; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
+lernModus_std_Return = 0
+lernModus_std_Backspace = 0
+lernModus_std_PgUp = 0
+lernModus_std_PgDn = 0
+lernModus_std_Einf = 0
+lernModus_std_Entf = 0
+lernModus_std_Pos1 = 0
+lernModus_std_Ende = 0
+lernModus_std_Hoch = 0
+lernModus_std_Runter = 0
+lernModus_std_Links = 0
+lernModus_std_Rechts = 0
+lernModus_std_ZahlenReihe = 0
+
+
+
+; im folgenden kann man auch noch ein paar Tasten der 4. Ebene deaktivieren
+; nützlich um sich zu zwingen, richtig zu schreiben
+lernModus_neo_Backspace = 0
+lernModus_neo_Entf = 1
+
+
 
   
 
@@ -900,7 +944,10 @@ neo_1:
            }   
          }
          else {
-           send {blind}1
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+                send {blind}1
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -971,7 +1018,10 @@ neo_2:
                
          }
          else {
-           send {blind}2
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+                send {blind}2
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1033,12 +1083,14 @@ neo_3:
            }
            else
            {
-              send 3
-           }
-               
+               send 3
+           }    
          }
          else {
-           send {blind}3
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {           
+              send {blind}3
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1097,8 +1149,12 @@ neo_4:
            }
                
          }
-         else {
-           send {blind}4
+         else
+         {
+           if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+           {
+               send {blind}4
+           }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1169,7 +1225,10 @@ neo_5:
                
          }
          else {
-           send {blind}5
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+               send {blind}5
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1233,7 +1292,10 @@ neo_6:
                
          }
          else {
-           send {blind}6
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+              send {blind}6
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1293,7 +1355,10 @@ neo_7:
                
          }
          else {
-           send {blind}7
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+               send {blind}7
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1364,7 +1429,10 @@ neo_8:
                
          }
          else {
-           send {blind}8
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+              send {blind}8
+            }   
          }
        }
       if (PriorDeadKey = "comp")
@@ -1424,7 +1492,10 @@ neo_9:
                
          }
          else {
-           send {blind}9
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+              send {blind}9
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1484,7 +1555,10 @@ neo_0:
                
          }
          else {
-           send {blind}0
+            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            {
+               send {blind}0
+            }
          }
        }
       if (PriorDeadKey = "comp")
@@ -1624,7 +1698,10 @@ neo_v:
    else if Ebene = 3
       send _
    else if Ebene = 4
-      Send {Backspace}
+      if ( not(lernModus) and not(lernModus_neo_Backspace) )
+      {
+         Send {Backspace}
+      }
    else if Ebene = 6
       SendUnicodeChar(0x2259) ; estimates
    PriorDeadKey := ""   CompKey := ""
@@ -1752,8 +1829,11 @@ neo_c:
    }
    else if Ebene = 4
    {
-      Send {Del}
-      CompKey := ""
+      if ( not(lernModus) and not(lernModus_neo_Entf) )
+      {
+        Send {Del}
+        CompKey := ""
+      }
    }
    else if Ebene = 5
    {
@@ -2930,7 +3010,7 @@ neo_p:
          sendraw ~
    }      
    else if Ebene = 4
-      Send {Enter}
+        Send {Enter}
    else if Ebene = 5
       SendUnicodeChar(0x03C0) ;pi
    else if Ebene = 6
@@ -4025,14 +4105,36 @@ return
 */
 
 *Enter::
-   sendinput {Blind}{Enter}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Return) )
+   {
+     sendinput {Blind}{Enter}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *Backspace::
-   sendinput {Blind}{Backspace}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Backspace) )
+   {
+     sendinput {Blind}{Backspace}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
+
+*Del::
+   if ( not(lernModus) and not(lernModus_std_Entf) )
+   {
+     sendinput {Blind}{Del}
+   }
+return
+
+*Ins::
+   if ( not(lernModus) and not(lernModus_std_Einf) )
+   {
+     sendinput {Blind}{Ins}
+   }
+return
+
+
 
 
 
@@ -4065,44 +4167,68 @@ return
    PriorDeadKey := ""   CompKey := ""
 return
 
-*Home::+
-   sendinput {Blind}{Home}
-   PriorDeadKey := ""   CompKey := ""
+*Home::
+   if ( not(lernModus) and not(lernModus_std_Pos1) )
+   {
+     sendinput {Blind}{Home}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *End::
-   sendinput {Blind}{End}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Ende) )
+   {
+     sendinput {Blind}{End}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *PgUp::
-   sendinput {Blind}{PgUp}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_PgUp) )
+   {
+     sendinput {Blind}{PgUp}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *PgDn::
-   sendinput {Blind}{PgDn}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_PgDn) )
+   {
+     sendinput {Blind}{PgDn}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *Up::
-   sendinput {Blind}{Up}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Hoch) )
+   {
+     sendinput {Blind}{Up}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *Down::
-   sendinput {Blind}{Down}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Runter) )
+   {
+     sendinput {Blind}{Down}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *Left::
-   sendinput {Blind}{Left}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Links) )
+   {
+     sendinput {Blind}{Left}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 *Right::
-   sendinput {Blind}{Right}
-   PriorDeadKey := ""   CompKey := ""
+   if ( not(lernModus) and not(lernModus_std_Rechts) )
+   {
+     sendinput {Blind}{Right}
+     PriorDeadKey := ""   CompKey := ""
+   }
 return
 
 
