@@ -136,8 +136,8 @@ keycode 43 = s S question   Greek_sigma   questiondown NoSymbol     Greek_SIGMA
 keycode 44 = n N parenleft  Greek_nu      KP_4         NoSymbol     U2115
 keycode 45 = r R parenright Greek_rho     KP_5         NoSymbol     U211D
 keycode 46 = t T minus      Greek_tau     KP_6         NoSymbol     partialderivative
-keycode 47 = d D colon      Greek_delta   NoSymbol     NoSymbol     Greek_DELTA
-keycode 48 = y Y at         Greek_upsilon NoSymbol     NoSymbol     nabla
+keycode 47 = d D colon      Greek_delta   comma        NoSymbol     Greek_DELTA
+keycode 48 = y Y at         Greek_upsilon period       NoSymbol     nabla
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
@@ -148,11 +148,11 @@ keycode 54 = adiaeresis Adiaeresis bar        Greek_eta  KP_Next  KP_Next   U211
 keycode 55 = p          P          asciitilde Greek_pi   KP_Enter KP_Enter  Greek_PI
 keycode 56 = z          Z          grave      Greek_zeta NoSymbol NoSymbol  U2124
 
-keycode 57 = b      B        plus       Greek_beta  KP_Decimal NoSymbol     implies
+keycode 57 = b      B        plus       Greek_beta  colon      NoSymbol     implies
 keycode 58 = m      M        percent    Greek_mu    KP_1       NoSymbol     ifonlyif
 keycode 59 = comma  U22EE    quotedbl   U03F1       KP_2       NoSymbol     U21D0
 keycode 60 = period ellipsis apostrophe Greek_theta KP_3       NoSymbol     Greek_THETA
-keycode 61 = j      J        semicolon  U03D1       NoSymbol   NoSymbol     identical
+keycode 61 = j      J        semicolon  U03D1       semicolon  NoSymbol     identical
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

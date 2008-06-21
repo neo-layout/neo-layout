@@ -334,8 +334,8 @@ xkb_symbols "neo" {
     key <AC07> { [ n,           N,                      parenleft,              Greek_nu,           KP_4,           NoSymbol,    U2115             ] };
     key <AC08> { [ r,           R,                      parenright,             Greek_rho,          KP_5,           NoSymbol,    U211D             ] };
     key <AC09> { [ t,           T,                      minus,                  Greek_tau,          KP_6,           NoSymbol,    partialderivative ] };
-    key <AC10> { [ d,           D,                      colon,                  Greek_delta,        NoSymbol,       NoSymbol,    Greek_DELTA       ] };
-    key <AC11> { [ y,           Y,                      at,                     Greek_upsilon,      NoSymbol,       NoSymbol,    nabla             ] };
+    key <AC10> { [ d,           D,                      colon,                  Greek_delta,        comma,          NoSymbol,    Greek_DELTA       ] };
+    key <AC11> { [ y,           Y,                      at,                     Greek_upsilon,      period,         NoSymbol,    nabla             ] };
 
     ////////////////////////////////////////////////////
     // The lower row
@@ -346,11 +346,11 @@ xkb_symbols "neo" {
     key <AB04> { [ p,           P,                      asciitilde,             Greek_pi,           KP_Enter,       KP_Enter,    Greek_PI          ] };
     key <AB05> { [ z,           Z,                      grave,                  Greek_zeta,         NoSymbol,       NoSymbol,    U2124             ] };
 
-    key <AB06> { [ b,           B,                      plus,                   Greek_beta,         KP_Decimal,     NoSymbol,    implies           ] };
+    key <AB06> { [ b,           B,                      plus,                   Greek_beta,         colon,          NoSymbol,    implies           ] };
     key <AB07> { [ m,           M,                      percent,                Greek_mu,           KP_1,           NoSymbol,    ifonlyif          ] };
     key <AB08> { [ comma,       U22EE,                  quotedbl,               U03F1,              KP_2,           NoSymbol,    U21D0             ] };
     key <AB09> { [ period,      ellipsis,               apostrophe,             Greek_theta,        KP_3,           NoSymbol,    Greek_THETA       ] };
-    key <AB10> { [ j,           J,                      semicolon,              U03D1,              NoSymbol,       NoSymbol,    identical         ] };
+    key <AB10> { [ j,           J,                      semicolon,              U03D1,              semicolon,      NoSymbol,    identical         ] };
 
     ////////////////////////////////////////////////////
     // Space key
