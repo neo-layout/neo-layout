@@ -15,7 +15,10 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  Aktuelle Revision (von Matthias Berg):
+                  Revision 544 (von Matthias Berg):
+                  - ,.:; auf dem Mod4-Ziffernblock an die aktuelle Referenz angepasst
+                  - Versionen von rho, theta, kappa und phi an die aktuelle Referenz angepasst
+                  Revision 542 (von Matthias Berg):
                   - bei EinHandNeo ist jetzt Space+y auch Mod4
                   - AltGr-Bug  hoffentlich wieder behoben. Diesmal mit extra altGrPressed Variable
                   - nurEbenenFuenfUndSechs umbenannt in ahkTreiberKombi und auf Ebene 4 statt 5 und 6 geändert
