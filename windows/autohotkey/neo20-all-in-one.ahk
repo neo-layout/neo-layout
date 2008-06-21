@@ -2755,7 +2755,7 @@ neo_d:
    else if Ebene = 3
       send :
    else if Ebene = 4
-     {}  ; leer ... Send `,
+     Send `,
    else if Ebene = 5
       SendUnicodeChar(0x03B4) ;delta
    else if Ebene = 6
@@ -2790,7 +2790,7 @@ neo_y:
    else if Ebene = 3
       send @
    else if Ebene = 4
-  	  { } ; leer ... 
+  	  Send .
    else if Ebene = 5
   	  SendUnicodeChar(0x03C5) ; upsilon
    else if Ebene = 6
@@ -2993,7 +2993,7 @@ neo_b:
    else if Ebene = 3
       send {blind}{+}
    else if Ebene = 4
-      send {NumpadDot}
+      send :
    else if Ebene = 5
       SendUnicodeChar(0x03B2) ; beta
    else if Ebene = 6
@@ -3159,7 +3159,7 @@ neo_j:
    else if Ebene = 3
       send `;
    else if Ebene = 4
-     Send . ; eigentlich laut Referenz { } ; leer
+     Send `;
    else if Ebene = 5
       SendUnicodeChar(0x03D1) ; vartheta
    else if Ebene = 6
