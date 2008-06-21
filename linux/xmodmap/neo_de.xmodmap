@@ -97,13 +97,13 @@ keycode 13 = 4 guillemotright U203A         U2113                 KP_Prior    KP
 keycode 14 = 5 guillemotleft  U2039         dagger                NoSymbol    NoSymbol       U2221
 keycode 15 = 6 EuroSign       cent          NoSymbol              sterling    NoSymbol       U2225
 
-keycode 16 = 7 dollar               yen                  U03F0    currency    NoSymbol       notelementof
-keycode 17 = 8 doublelowquotemark   singlelowquotemark   NoSymbol KP_Divide   NoSymbol       U2204
-keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  NoSymbol KP_Multiply NoSymbol       U2226
-keycode 19 = 0 rightdoublequotemark rightsinglequotemark NoSymbol minus       NoSymbol       emptyset
+keycode 16 = 7 dollar               yen                  Greek_kappa currency    NoSymbol       notelementof
+keycode 17 = 8 doublelowquotemark   singlelowquotemark   NoSymbol    KP_Divide   NoSymbol       U2204
+keycode 18 = 9 leftdoublequotemark  leftsinglequotemark  NoSymbol    KP_Multiply NoSymbol       U2226
+keycode 19 = 0 rightdoublequotemark rightsinglequotemark NoSymbol    minus       NoSymbol       emptyset
 
-keycode 20 = minus      endash      emdash               U2011    NoSymbol    NoSymbol       hyphen
-keycode 21 = dead_acute dead_grave  dead_cedilla    dead_ogonek dead_abovedot NoSymbol       dead_abovering
+keycode 20 = minus      endash      emdash               U2011       NoSymbol    NoSymbol       hyphen
+keycode 21 = dead_acute dead_grave  dead_cedilla      dead_ogonek  dead_abovedot NoSymbol       dead_abovering
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
@@ -114,11 +114,11 @@ keycode 26 = l      L     bracketleft  Greek_lambda       KP_Up      KP_Up      
 keycode 27 = c      C     bracketright Greek_chi          KP_Delete  KP_Delete  U2102
 keycode 28 = w      W     asciicircum  Greek_omega        KP_Insert  KP_Insert  Greek_OMEGA
 
-keycode 29 = k      K     exclam       Greek_kappa        exclamdown NoSymbol   radical
+keycode 29 = k      K     exclam       U03F0              exclamdown NoSymbol   radical
 keycode 30 = h      H     less         Greek_psi          KP_7       NoSymbol   Greek_PSI
 keycode 31 = g      G     greater      Greek_gamma        KP_8       NoSymbol   Greek_GAMMA
-keycode 32 = f      F     equal        U03D5              KP_9       NoSymbol   Greek_PHI
-keycode 33 = q      Q     ampersand    Greek_phi          plus       NoSymbol   U211A
+keycode 32 = f      F     equal        Greek_phi          KP_9       NoSymbol   Greek_PHI
+keycode 33 = q      Q     ampersand    U03D5              plus       NoSymbol   U211A
 keycode 34 = ssharp U1E9E U017F     Greek_finalsmallsigma NoSymbol   NoSymbol   jot
 
 keycode 35 = dead_tilde dead_macron dead_diaeresis dead_doubleacute
@@ -134,7 +134,7 @@ keycode 42 = o O asterisk   Greek_omicron KP_End   KP_End   elementof
 
 keycode 43 = s S question   Greek_sigma   questiondown NoSymbol     Greek_SIGMA
 keycode 44 = n N parenleft  Greek_nu      KP_4         NoSymbol     U2115
-keycode 45 = r R parenright Greek_rho     KP_5         NoSymbol     U211D
+keycode 45 = r R parenright U03F1         KP_5         NoSymbol     U211D
 keycode 46 = t T minus      Greek_tau     KP_6         NoSymbol     partialderivative
 keycode 47 = d D colon      Greek_delta   comma        NoSymbol     Greek_DELTA
 keycode 48 = y Y at         Greek_upsilon period       NoSymbol     nabla
@@ -150,9 +150,9 @@ keycode 56 = z          Z          grave      Greek_zeta NoSymbol NoSymbol  U212
 
 keycode 57 = b      B        plus       Greek_beta  colon      NoSymbol     implies
 keycode 58 = m      M        percent    Greek_mu    KP_1       NoSymbol     ifonlyif
-keycode 59 = comma  U22EE    quotedbl   U03F1       KP_2       NoSymbol     U21D0
-keycode 60 = period ellipsis apostrophe Greek_theta KP_3       NoSymbol     Greek_THETA
-keycode 61 = j      J        semicolon  U03D1       semicolon  NoSymbol     identical
+keycode 59 = comma  U22EE    quotedbl   Greek_rho   KP_2       NoSymbol     U21D0
+keycode 60 = period ellipsis apostrophe U03D1       KP_3       NoSymbol     Greek_THETA
+keycode 61 = j      J        semicolon  Greek_theta semicolon  NoSymbol     identical
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
