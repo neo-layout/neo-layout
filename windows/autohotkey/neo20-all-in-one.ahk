@@ -1315,7 +1315,7 @@ neo_7:
    }
    else if Ebene = 5
    {
-      SendUnicodeChar(0x03F0) ; Kappa Symbol 
+      SendUnicodeChar(0x03BA) ; greek small letter kappa
       CompKey := ""
    }
    else if Ebene = 6
@@ -1817,7 +1817,7 @@ neo_k:
    else if Ebene = 4
       Send ¡
    else if Ebene = 5
-      SendUnicodeChar(0x03BA) ;kappa
+      SendUnicodeChar(0x03F0) ;kappa symbol (varkappa)
    else if Ebene = 6
       SendUnicodeChar(0x221A) ; Wurzel
    PriorDeadKey := ""   CompKey := ""
@@ -1966,7 +1966,7 @@ neo_f:
          Send 9
    }
    else if Ebene = 5
-      SendUnicodeChar(0x03D5) ; Symbol Phi
+      SendUnicodeChar(0x03C6) ; phi
    else if Ebene = 6
       SendUnicodeChar(0x03A6)  ; Phi
    PriorDeadKey := ""   CompKey := ""
@@ -1990,7 +1990,7 @@ neo_q:
          Send {+}
    }
    else if Ebene = 5
-      SendUnicodeChar(0x03C6)  ;  phi
+      SendUnicodeChar(0x03D5)  ;  phi symbol (varphi)
    else if Ebene = 6
       SendUnicodeChar(0x211A) ; Q (rationale Zahlen)
    PriorDeadKey := ""   CompKey := ""
@@ -2642,7 +2642,7 @@ neo_r:
    }
    else if Ebene = 5
    {
-      SendUnicodeChar(0x03C1) ;rho
+      SendUnicodeChar(0x03F1) ; rho symbol (varrho)
       CompKey := ""
    }
    else if Ebene = 6
@@ -3081,7 +3081,7 @@ neo_komma:
          Send 2
    }
    else if Ebene = 5
-      SendUnicodeChar(0x03F1) ; varrho
+      SendUnicodeChar(0x03C1) ; rho
    else if Ebene = 6
       SendUnicodeChar(0x21D0) ; Doppelpfeil links
    PriorDeadKey := ""   CompKey := ""
@@ -3121,7 +3121,7 @@ neo_punkt:
          Send 3
    }
    else if Ebene = 5
-      SendUnicodeChar(0x03B8) ;theta
+      SendUnicodeChar(0x03D1) ; theta symbol (vartheta)
    else if Ebene = 6
       SendUnicodeChar(0x0398)  ; Theta
    PriorDeadKey := ""   CompKey := ""
@@ -3161,7 +3161,7 @@ neo_j:
    else if Ebene = 4
      Send `;
    else if Ebene = 5
-      SendUnicodeChar(0x03D1) ; vartheta
+      SendUnicodeChar(0x03B8) ; theta
    else if Ebene = 6
       SendUnicodeChar(0x2261) ; identisch
    PriorDeadKey := ""   CompKey := ""
