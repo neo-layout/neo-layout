@@ -8,7 +8,6 @@
     TODO:         - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
-                  - Alt+Tab+Shift sollte Alt+Tab umkehrt
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
     
@@ -16,6 +15,8 @@
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
                   Aktuelle Revision (von Matthias Berg):
+                  - Shift+Alt+Tab Problem gelöst (muss noch mehr auf Nebeneffekte getestet werden)
+                  Revision 558 (von Matthias Berg):
                   - Icon-Bug behoben
                     * Hotkeys dürfen nicht vor der folgenden Zeile stehen:
                      "menu, tray, icon, neo.ico,,1"
@@ -306,12 +307,12 @@ IsMod4Locked := 0
 < & *SC138::
       if (IsMod4Locked) 
       {
-         MsgBox Mod4-Feststellung aufgebehoben
+;         MsgBox Mod4-Feststellung aufgebehoben
          IsMod4Locked = 0
       }
       else
       {
-         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig 
+;         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig 
          IsMod4Locked = 1
       }
 return
@@ -322,7 +323,7 @@ return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
  altGrPressed := 0
 return 
 
-/* ; das folgende wird seltsamerweise nicht gebraucht :)
+/* ; das folgende wird seltsamerweise nicht gebraucht :) oder führt zum AltGr Bug; Umschalt+‹ (Mod4) Zeigt ‹
 SC138 & *<::
       if (IsMod4Locked) 
       {
@@ -4153,7 +4154,20 @@ nach einem DeadKey drückt...
 neo_tab:
    if ( GetKeyState("SC038","P") )
    {
-      SC038 & Tab::AltTab            ; http://de.autohotkey.com/docs/Hotkeys.htm#AltTabDetail
+   	Send,{Blind}{AltDown}{tab}
+    
+/*
+     if (isShiftPressed())
+     {
+      Send,{ShiftDown}{AltDown}{tab}
+     }
+     else
+     {       
+;       msgbox alt+tab
+		Send,{AltDown}{tab}
+      ; SC038 & Tab::AltTab            ; http://de.autohotkey.com/docs/Hotkeys.htm#AltTabDetail
+     }
+*/
    }
    else if GetKeyState("#","P")
    {
@@ -4168,8 +4182,13 @@ neo_tab:
    }
 return
 
-*SC038::                    ; LAlt, damit AltTab funktioniert
-   send {blind}{LAlt}
+*SC038 up::
+   PriorDeadKey := ""   CompKey := ""
+   send {blind}{AltUp}
+return
+   
+*SC038 down::                    ; LAlt, damit AltTab funktioniert
+   	Send,{Blind}{AltDown}
    PriorDeadKey := ""   CompKey := ""
 return
 
