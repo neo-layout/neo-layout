@@ -14,7 +14,11 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  Aktuelle Revision (von Matthias Berg):
+                  Aktuelle Revision (von Dennis Heidsiek):
+                  - Neue Option im Skript: bildschirmTastaturEinbinden bindet die PNG-Bilder der
+                    Bildschirmtastur mit in die exe-Datei ein, so dass sich der Benutzer nur eine Datei
+                    herunterladen muss
+                  Revision 559 (von Matthias Berg):
                   - Shift+Alt+Tab Problem gelöst (muss noch mehr auf Nebeneffekte getestet werden)
                   Revision 558 (von Matthias Berg):
                   - Icon-Bug behoben
@@ -26,7 +30,8 @@
                   - lernModus (an/aus mit Strg+Komma)
                     * im Skript konfigurierbar
                     * Schaltet z.B. Qwertz Tasten aus, die es auf der 4. Ebene gibt (Return, Backspace,...)
-                    * Kann auch Backspace und/oder Entfernen der 4. Ebene ausschalten (gut zum Lernen richtig zu schreiben)
+                    * Kann auch Backspace und/oder Entfernen der 4. Ebene ausschalten (gut zum Lernen richtig 
+                      zu schreiben)
                   - Bug aufgetaucht: Icons werden nicht mehr angezeigt
                   Revision 544 (von Stefan Mayer):
                   - ,.:; auf dem Mod4-Ziffernblock an die aktuelle Referenz angepasst
@@ -50,9 +55,9 @@
                     * strg+F7 zeigt die zuletzt angezeigte Ebene an (und wieder aus).
                     * strg+F8 schaltet AlwaysOnTop um    
                   Revision 529 (von Stefan Mayer):
-				  - Icon wird automatisch geladen, falls .ico-Dateien im selbem Ordner
-				  - in der .exe sind die .ico mitgespeichert und werden geladen
-				  Revision 528 (von Matthias Berg):
+                  - Icon wird automatisch geladen, falls .ico-Dateien im selbem Ordner
+                  - in der .exe sind die .ico mitgespeichert und werden geladen
+                  Revision 528 (von Matthias Berg):
                   - Neo-Icon
                   - Neo-Prozess jetzt automatisch auf hoher Prioritaet
                     (siehe globale Schalter)
@@ -77,7 +82,7 @@
                     • damit wird jetzt PinYin vollständig unterstützt caron, macron, akut, grave auf uiaeoü
                   - Sonderzeichen senden wieder blind -> Shortcuts funktionieren, Capslock ist leider Shiftlock
                   Revision 523 (von Matthias Berg):
-    			        - CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
+                        - CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
                   - vertikale Ellipse eingebaut
                   - Umschalt+Umschalt für Capslock statt Mod3+Mod3
                   - bei Suspend wird jetzt wirklich togglesuspend aufgerufen (auch beim aktivieren per shift+pause)
@@ -95,22 +100,42 @@
 
 /******************
  Globale Schalter *
-*****************
+*******************
 */
-; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden) Ja = 1, Nein = 0
-ahkTreiberKombi := 0
-einHandNeo := 0
-lernModus := 0
+
+; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
+ahkTreiberKombi := 0 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden)
+einHandNeo := 0 ; Soll der Treiber im Einhandmodus betrieben werden?
+lernModus := 0 ; Soll der Lernmodus aktiviert werden?
+bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfanger stets einfach verfügbar)
 
 Process, Priority,, High
 
+
+/*************************
+ Recourcen-Verwaltung    *
+**************************
+*/
+
+; Versuche zuerst, eventuell in die EXE eingebundenen Dateien zu extrahieren
+FileInstall, neo.ico, neo.ico, 1
+FileInstall, neo_disabled.ico, neo_disabled.ico, 1
+
+if(bildschirmTastaturEinbinden==1) {
+   FileInstall, ebene1.png, ebene1.png, 1
+   FileInstall, ebene2.png, ebene2.png, 1
+   FileInstall, ebene3.png, ebene3.png, 1
+   FileInstall, ebene4.png, ebene4.png, 1
+   FileInstall, ebene5.png, ebene5.png, 1
+   FileInstall, ebene6.png, ebene6.png, 1
+}
+
+; Benutze die Dateien (soweit sie vorhanden sind)
 if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
   zeigeBildschirmTastatur = 1
 
 if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
   iconBenutzen = 1
-FileInstall, neo.ico, neo.ico, 1
-FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
 
 /*************************
