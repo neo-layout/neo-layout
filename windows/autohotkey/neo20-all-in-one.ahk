@@ -14,7 +14,9 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  Aktuelle Revision (von Dennis Heidsiek):
+                  Aktuelle Revision (von Matthias Berg):
+                  - Ebene 4 Tab verhält sich jetzt wie das andere Tab dank "goto neo_tab"
+                  Revision 560 (von Dennis Heidsiek):
                   - Neue Option im Skript: bildschirmTastaturEinbinden bindet die PNG-Bilder der
                     Bildschirmtastur mit in die exe-Datei ein, so dass sich der Benutzer nur eine Datei
                     herunterladen muss
@@ -2983,7 +2985,7 @@ neo_ö:
    else if Ebene = 3
       send $
    else if Ebene = 4
-      Send {Tab}
+      goto neo_tab
    else if Ebene = 5
        {} ;leer
    else if Ebene = 6
