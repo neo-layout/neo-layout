@@ -20,7 +20,7 @@
                     * Hotkeys dürfen nicht vor der folgenden Zeile stehen:
                      "menu, tray, icon, neo.ico,,1"
                   - lernModus-Konfigurations-Bug behoben: or statt and(not)
-                  - Ein paak leere Else-Fälle eingebaut (Verständlichkeit, mögliche Compilerprobleme vermeiden)   
+                  - Ein paar leere Else-Fälle eingebaut (Verständlichkeit, mögliche Compilerprobleme vermeiden)   
                   Revision 556 (von Matthias Berg):
                   - lernModus (an/aus mit Strg+Komma)
                     * im Skript konfigurierbar
