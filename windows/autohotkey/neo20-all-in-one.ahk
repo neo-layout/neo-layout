@@ -16,6 +16,12 @@
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
                   Aktuelle Revision (von Matthias Berg):
+                  - Icon-Bug behoben
+                    * Hotkeys dürfen nicht vor der folgenden Zeile stehen:
+                     "menu, tray, icon, neo.ico,,1"
+                  - lernModus-Konfigurations-Bug behoben: or statt and(not)
+                  - Ein paak leere Else-Fälle eingebaut (Verständlichkeit, mögliche Compilerprobleme vermeiden)   
+                  Revision 556 (von Matthias Berg):
                   - lernModus (an/aus mit Strg+Komma)
                     * im Skript konfigurierbar
                     * Schaltet z.B. Qwertz Tasten aus, die es auf der 4. Ebene gibt (Return, Backspace,...)
@@ -115,9 +121,6 @@ FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 */
 ; 0 = aus, 1 = an
 
-^,::lernModus := not(lernModus)
-
-
 
 ; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
 lernModus_std_Return = 0
@@ -126,7 +129,7 @@ lernModus_std_PgUp = 0
 lernModus_std_PgDn = 0
 lernModus_std_Einf = 0
 lernModus_std_Entf = 0
-lernModus_std_Pos1 = 0
+lernModus_std_Pos0 = 0
 lernModus_std_Ende = 0
 lernModus_std_Hoch = 0
 lernModus_std_Runter = 0
@@ -140,7 +143,6 @@ lernModus_std_ZahlenReihe = 0
 ; nützlich um sich zu zwingen, richtig zu schreiben
 lernModus_neo_Backspace = 0
 lernModus_neo_Entf = 1
-
 
 
   
@@ -944,7 +946,7 @@ neo_1:
            }   
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
                 send {blind}1
             }
@@ -1018,7 +1020,7 @@ neo_2:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
                 send {blind}2
             }
@@ -1087,7 +1089,7 @@ neo_3:
            }    
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {           
               send {blind}3
             }
@@ -1151,7 +1153,7 @@ neo_4:
          }
          else
          {
-           if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+           if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
            {
                send {blind}4
            }
@@ -1225,7 +1227,7 @@ neo_5:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
                send {blind}5
             }
@@ -1292,7 +1294,7 @@ neo_6:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
               send {blind}6
             }
@@ -1355,7 +1357,7 @@ neo_7:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
                send {blind}7
             }
@@ -1429,7 +1431,7 @@ neo_8:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
               send {blind}8
             }   
@@ -1492,7 +1494,7 @@ neo_9:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
               send {blind}9
             }
@@ -1555,7 +1557,7 @@ neo_0:
                
          }
          else {
-            if ( not(lernModus) and not(lernModus_std_ZahlenReihe) )
+            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
             {
                send {blind}0
             }
@@ -1698,10 +1700,12 @@ neo_v:
    else if Ebene = 3
       send _
    else if Ebene = 4
-      if ( not(lernModus) and not(lernModus_neo_Backspace) )
+      if ( not(lernModus) or (lernModus_neo_Backspace) )
       {
          Send {Backspace}
       }
+      else 
+      {} ; leer
    else if Ebene = 6
       SendUnicodeChar(0x2259) ; estimates
    PriorDeadKey := ""   CompKey := ""
@@ -1829,11 +1833,13 @@ neo_c:
    }
    else if Ebene = 4
    {
-      if ( not(lernModus) and not(lernModus_neo_Entf) )
+      if ( not(lernModus) or (lernModus_neo_Entf) )
       {
         Send {Del}
         CompKey := ""
       }
+      else 
+      {} ; leer
    }
    else if Ebene = 5
    {
@@ -4105,7 +4111,7 @@ return
 */
 
 *Enter::
-   if ( not(lernModus) and not(lernModus_std_Return) )
+   if ( not(lernModus) or (lernModus_std_Return) )
    {
      sendinput {Blind}{Enter}
      PriorDeadKey := ""   CompKey := ""
@@ -4113,7 +4119,7 @@ return
 return
 
 *Backspace::
-   if ( not(lernModus) and not(lernModus_std_Backspace) )
+   if ( not(lernModus) or (lernModus_std_Backspace) )
    {
      sendinput {Blind}{Backspace}
      PriorDeadKey := ""   CompKey := ""
@@ -4121,14 +4127,14 @@ return
 return
 
 *Del::
-   if ( not(lernModus) and not(lernModus_std_Entf) )
+   if ( not(lernModus) or (lernModus_std_Entf) )
    {
      sendinput {Blind}{Del}
    }
 return
 
 *Ins::
-   if ( not(lernModus) and not(lernModus_std_Einf) )
+   if ( not(lernModus) or (lernModus_std_Einf) )
    {
      sendinput {Blind}{Ins}
    }
@@ -4168,7 +4174,7 @@ return
 return
 
 *Home::
-   if ( not(lernModus) and not(lernModus_std_Pos1) )
+   if ( not(lernModus) or (lernModus_std_Pos1) )
    {
      sendinput {Blind}{Home}
      PriorDeadKey := ""   CompKey := ""
@@ -4176,7 +4182,7 @@ return
 return
 
 *End::
-   if ( not(lernModus) and not(lernModus_std_Ende) )
+   if ( not(lernModus) or (lernModus_std_Ende) )
    {
      sendinput {Blind}{End}
      PriorDeadKey := ""   CompKey := ""
@@ -4184,7 +4190,7 @@ return
 return
 
 *PgUp::
-   if ( not(lernModus) and not(lernModus_std_PgUp) )
+   if ( not(lernModus) or (lernModus_std_PgUp) )
    {
      sendinput {Blind}{PgUp}
      PriorDeadKey := ""   CompKey := ""
@@ -4192,7 +4198,7 @@ return
 return
 
 *PgDn::
-   if ( not(lernModus) and not(lernModus_std_PgDn) )
+   if ( not(lernModus) or (lernModus_std_PgDn) )
    {
      sendinput {Blind}{PgDn}
      PriorDeadKey := ""   CompKey := ""
@@ -4200,7 +4206,7 @@ return
 return
 
 *Up::
-   if ( not(lernModus) and not(lernModus_std_Hoch) )
+   if ( not(lernModus) or (lernModus_std_Hoch) )
    {
      sendinput {Blind}{Up}
      PriorDeadKey := ""   CompKey := ""
@@ -4208,7 +4214,7 @@ return
 return
 
 *Down::
-   if ( not(lernModus) and not(lernModus_std_Runter) )
+   if ( not(lernModus) or (lernModus_std_Runter) )
    {
      sendinput {Blind}{Down}
      PriorDeadKey := ""   CompKey := ""
@@ -4216,7 +4222,7 @@ return
 return
 
 *Left::
-   if ( not(lernModus) and not(lernModus_std_Links) )
+   if ( not(lernModus) or (lernModus_std_Links) )
    {
      sendinput {Blind}{Left}
      PriorDeadKey := ""   CompKey := ""
@@ -4224,7 +4230,7 @@ return
 return
 
 *Right::
-   if ( not(lernModus) and not(lernModus_std_Rechts) )
+   if ( not(lernModus) or (lernModus_std_Rechts) )
    {
      sendinput {Blind}{Right}
      PriorDeadKey := ""   CompKey := ""
@@ -4705,6 +4711,8 @@ return
 ; ------------------------------------
 
 ^.::einHandNeo := not(einHandNeo)
+^,::lernModus := not(lernModus)
+
 
 
 togglesuspend:
