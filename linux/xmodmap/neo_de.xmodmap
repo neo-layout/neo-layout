@@ -40,8 +40,8 @@ keycode 62 =  Shift_R Shift_Lock
 ! Mod3(links) (=Qwertz-Caps) erlaubt nur 4 Ebenen
 ! ISO_Lock funktioniert nicht! Weder das Einrasten, noch das Lösen
 ! Ohne einen Eintrag in der zweiten Gruppe (=Ebene 3) ergäbe Mod3+Mod3=Group_Shift+Group_Shift=Gruppe 3=Ebene 6. Das ist nicht gewünscht.
-keycode 51 =  ISO_Group_Shift ISO_Group_Shift
-keycode 66 =  ISO_Group_Shift ISO_Group_Shift
+keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group
+keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group
 
 ! Mod4 94=left 113=right
 ! Make the former AltGr and qwertz-< to Mod4 (ISO_Level3_Shift)
