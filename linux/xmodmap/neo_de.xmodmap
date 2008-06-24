@@ -22,6 +22,8 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 remove Lock = Caps_Lock
 remove Mod3 = ISO_Level3_Shift
+clear Mod2
+! Mod2 war NumLock !
 clear Mod3
 clear Mod5
 
@@ -163,40 +165,40 @@ keycode 61 = j      J        semicolon  Greek_theta semicolon  NoSymbol     iden
 ! The uppest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-!keycode 77 = Num_Lock Pointer_EnableKeys
-keycode 112 = KP_Divide   KP_Divide   division  U2215
-keycode 63  = KP_Multiply KP_Multiply multiply  U2219
-keycode 82  = KP_Subtract KP_Subtract U2212     NoSymbol
+!keycode 77 = NoSymbol    Pointer_EnableKeys
+keycode 112 = slash       slash       division  U2215
+keycode 63  = asterisk    asterisk    multiply  U2219
+keycode 82  = minus       minus       U2212     NoSymbol
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  KP_Home     KP_7        U2195      U226A
-keycode 80 =  KP_Up       KP_8        uparrow    intersection
-keycode 81 =  KP_Prior    KP_9        U2297      U226B
-keycode 86 =  KP_Add      KP_Add      plusminus  U2213
+keycode 79 =  7         Home	      U2195      U226A
+keycode 80 =  8         Up	      uparrow    intersection
+keycode 81 =  9         Prior         U2297      U226B
+keycode 86 =  plus      plus          plusminus  U2213
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  KP_Left     KP_4        leftarrow  includedin
-keycode 84 =  EuroSign    KP_5        infinity   containsas
-keycode 85 =  KP_Right    KP_6        rightarrow includes
+keycode 83 =  4           Left        leftarrow  includedin
+keycode 84 =  5           EuroSign    infinity   containsas
+keycode 85 =  6           Right       rightarrow includes
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  KP_End      KP_1        U2194      lessthanequal 
-keycode 88 =  KP_Down     KP_2        downarrow  union 
-keycode 89 =  KP_Next     KP_3        U21CC      greaterthanequal 
-keycode 108 = KP_Enter    KP_Enter    notequal   U2248
+keycode 87 =  1           End         U2194      lessthanequal 
+keycode 88 =  2           Down        downarrow  union 
+keycode 89 =  3           Next        U21CC      greaterthanequal 
+keycode 108 = Return      Return      notequal   U2248
 !keysym <KPEQ> KP_Equal
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = KP_Insert    KP_0        percent    U2030
-keycode 91 = KP_Delete    KP_Decimal  period     comma
+keycode 90 = 0            Insert      percent    U2030
+keycode 91 = comma        Delete      period     comma
 
 
 
