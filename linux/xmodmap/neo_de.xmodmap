@@ -23,7 +23,7 @@
 remove Lock = Caps_Lock
 remove Mod3 = ISO_Level3_Shift
 clear Mod3
-clear Mod4
+clear Mod5
 
 ! Shift 50=left 62=right
 ! Shift+Shift ergibt ein ShiftLock (wie Caps, wirkt aber auf alle Zeichen, nicht nur auf Großbuchstaben)
@@ -49,7 +49,7 @@ keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 
 !add Mod3 = ISO_Group_Shift
-!add Mod4 = ISO_Level3_Shift
+!add Mod5 = ISO_Level3_Shift
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -70,6 +70,7 @@ keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 ! Einrasten über linke Win-Taste+Modifier, Lösen über nochmaliges Betätigen des Modifiers
 ! ShiftLock und Mo5Lock funktionieren, Mod3Lock lässt sich aber nicht mehr lösen!!!!
 ! keycode 115 = ISO_Lock
+! add Lock = ISO_Lock
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
