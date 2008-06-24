@@ -165,7 +165,7 @@ keycode 61 = j      J        semicolon  Greek_theta semicolon  NoSymbol     iden
 ! The uppest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-!keycode 77 = NoSymbol    Pointer_EnableKeys
+keycode 77  = NoSymbol    Pointer_EnableKeys
 keycode 112 = slash       slash       division  U2215
 keycode 63  = asterisk    asterisk    multiply  U2219
 keycode 82  = minus       minus       U2212     NoSymbol
