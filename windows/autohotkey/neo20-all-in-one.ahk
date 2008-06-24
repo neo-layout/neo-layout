@@ -4576,7 +4576,7 @@ KeyboardLED(LEDvalue, Cmd)  ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cm
   input=
   success := DllCall( "DeviceIoControl"
               , "uint", h_device
-              , "uint", CTL_CODE( 0x0000000b     ; FILE_DEVICE_KEYBOARD
+              , "uint", CTL_CODE_LED( 0x0000000b     ; FILE_DEVICE_KEYBOARD
                         , 2
                         , 0             ; METHOD_BUFFERED
                         , 0  )          ; FILE_ANY_ACCESS
@@ -4588,7 +4588,7 @@ KeyboardLED(LEDvalue, Cmd)  ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cm
               , "uint", 0 )
 }
 
-CTL_CODE( p_device_type, p_function, p_method, p_access )
+CTL_CODE_LED( p_device_type, p_function, p_method, p_access )
 {
   Return, ( p_device_type << 16 ) | ( p_access << 14 ) | ( p_function << 2 ) | p_method
 }
@@ -4608,7 +4608,7 @@ NtCreateFileLED(ByRef wfilename,desiredaccess,sharemode,createdist,flags,fattrib
   InsertIntegerLED(&pus,objattrib,8) 
   status:=DllCall("ntdll\ZwCreateFile","str",fh,"UInt",desiredaccess,"str",objattrib,"str",io,"UInt",0,"UInt",fattribs
                   ,"UInt",sharemode,"UInt",createdist,"UInt",flags,"UInt",0,"UInt",0, "UInt") 
-  return % ExtractIntegerLED(fh) 
+  return ExtractIntegerLED(fh) 
 } 
 
 
