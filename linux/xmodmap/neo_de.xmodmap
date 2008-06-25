@@ -149,7 +149,7 @@ keycode 52 = udiaeresis Udiaeresis numbersign NoSymbol   Escape   Escape    vari
 keycode 53 = odiaeresis Odiaeresis dollar     NoSymbol   Tab      Tab       U2111
 keycode 54 = adiaeresis Adiaeresis bar        Greek_eta  KP_Next  KP_Next   U211C
 keycode 55 = p          P          asciitilde Greek_pi   KP_Enter KP_Enter  Greek_PI
-keycode 56 = z          Z          grave      Greek_zeta NoSymbol NoSymbol  U2124
+keycode 56 = z          Z          grave      Greek_zeta Pointer_EnableKeys NoSymbol  U2124
 
 keycode 57 = b      B        plus       Greek_beta  colon      NoSymbol     implies
 keycode 58 = m      M        percent    Greek_mu    KP_1       NoSymbol     ifonlyif
@@ -165,40 +165,40 @@ keycode 61 = j      J        semicolon  Greek_theta semicolon  NoSymbol     iden
 ! The uppest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-keycode 77  = NoSymbol    Pointer_EnableKeys
-keycode 112 = slash       slash       division  U2215
-keycode 63  = asterisk    asterisk    multiply  U2219
-keycode 82  = minus       minus       U2212     NoSymbol
+keycode 77  = Tab         equal        U2248     notequal
+keycode 112 = slash       slash        division  U2215
+keycode 63  = asterisk    asterisk     multiply  U2219
+keycode 82  = minus       minus        U2212     NoSymbol
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  7         Home	      U2195      U226A
-keycode 80 =  8         Up	      uparrow    intersection
-keycode 81 =  9         Prior         U2297      U226B
-keycode 86 =  plus      plus          plusminus  U2213
+keycode 79 =  7         U2714         U2195      U226A
+keycode 80 =  8         asciicircum   uparrow    intersection
+keycode 81 =  9         U2717         U2297      U226B
+keycode 86 =  plus      NoSymbol      plusminus  U2213
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  4           Left        leftarrow  includedin
-keycode 84 =  5           EuroSign    infinity   containsas
-keycode 85 =  6           Right       rightarrow includes
+keycode 83 =  4          parenleft    leftarrow  includedin
+keycode 84 =  5          EuroSign     infinity   containsas
+keycode 85 =  6          parenright   rightarrow includes
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  1           End         U2194      lessthanequal 
-keycode 88 =  2           Down        downarrow  union 
-keycode 89 =  3           Next        U21CC      greaterthanequal 
-keycode 108 = Return      Return      notequal   U2248
+keycode 87 =  1          U2081        U2194      lessthanequal 
+keycode 88 =  2          U2082        downarrow  union 
+keycode 89 =  3          U2083        U21CC      greaterthanequal 
+keycode 108 = Return     Tab          notequal   U2248
 !keysym <KPEQ> KP_Equal
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = 0            Insert      percent    U2030
-keycode 91 = comma        Delete      period     comma
+keycode 90 = 0       enfilledcircbullet     percent    U2030
+keycode 91 = comma        U2023             period     comma
 
 
 
