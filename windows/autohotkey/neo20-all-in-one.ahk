@@ -14,8 +14,13 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-                  Aktuelle Revision (von Dennis Heidsiek):
-                  - Aktivierter Mod4 Lock wird jetzt über die Rollen-LED des Keybord angazeigt
+                  Aktuelle Revision (von Matthias Berg):
+                  - Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt
+                    * jetzt wird auch bei eingestelltem US Layout Neo verwendet.
+                      (z.B. für Chinesische InputMethodEditors)
+                    * rechter Mod3 geht noch nicht bei US Layout (weder ScanCode noch "\")
+                  Revision 567 (von Dennis Heidsiek):
+                  - Aktivierter Mod4 Lock wird jetzt über die Rollen-LED des Keybord angezeigt
                     (analog zu CapsLock), die NUM-LED behält ihr bisheriges Verhalten
                   - Neue Option im Skript: UseMod4Light
                   Revision 561 (von Matthias Berg):
@@ -114,7 +119,7 @@ ahkTreiberKombi := 0 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Tr
 einHandNeo := 0 ; Soll der Treiber im Einhandmodus betrieben werden?
 lernModus := 0 ; Soll der Lernmodus aktiviert werden?
 bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfanger stets einfach verfügbar)
-UseMod4Light := 1 ; Aktivierter Mod4 Lock wird über die Rollen-LED des Keybord angazeigt (analog zu CapsLock)
+UseMod4Light := 1 ; Aktivierter Mod4 Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
 
 Process, Priority,, High
 
@@ -308,7 +313,7 @@ gespiegelt_j = neo_ü
 ; CapsLock durch Umschalt+Umschalt
 ;*CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
 
-*#::return ; Nichts machen beim # release event (weil es Mod3 ist)
+*#::return ; Nichts machen beim # release event (weil es Mod3 ist) ; # = SC02B
 
 ;RShift wenn vorher LShift gedrückt wurde
 LShift & ~RShift::	
@@ -379,9 +384,7 @@ return
  
  ; Mod3-Lock durch Mod3+Mod3
 IsMod3Locked := 0
-# & *Capslock::
-    if (GetKeyState("#","P")) 
-    {
+SC02B & *Capslock::  ; #
       if (IsMod3Locked) 
       {
          MsgBox Mod3-Feststellung aufgebehoben
@@ -392,19 +395,13 @@ IsMod3Locked := 0
          MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
          IsMod3Locked = 1
       }
-    }
-    else
-    {
-      MsgBox nothing
-      return
-    }
 return
 
 
 *Capslock:: return
 ;Capslock::MsgBox hallo
 /*
-Capslock & *#::
+Capslock & *:
       if (IsMod3Locked) 
       {
          MsgBox Mod3-Feststellung aufgebehoben
@@ -437,7 +434,7 @@ return
    ------------------------------------------------------
 */
 ; Reihe 1
-*^::goto neo_tot1
+*SC029::goto neo_tot1  ; Zirkumflex ^
 *1::goto neo_1
 *2::goto neo_2
 *3::goto neo_3
@@ -480,7 +477,7 @@ return
         goto %gespiegelt_0%
       }
 return
-*ß::
+*SC00C::  ; ß
   if ( not(ahkTreiberKombi) )
   {
        if( not(einHandNeo) or not(spacepressed) )
@@ -495,7 +492,7 @@ return
   {
      goto neo_sz   
   }
-*´::goto neo_tot2
+*SC00D::goto neo_tot2  ; Akkut
 ; Reihe 2
 *Tab::goto neo_tab
 *q::
@@ -543,7 +540,7 @@ return
   {
      goto neo_t   
   }
-*z::
+*SC015::  ; z 
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -618,7 +615,7 @@ return
   {
      goto neo_p   
   }
-*ü::
+*SC01A:: ; ü
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -633,7 +630,7 @@ return
   {
      goto neo_ü   
   }
-*+::
+*SC01B::  ; +
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -752,7 +749,7 @@ return
   {
      goto neo_l   
   }
-*ö::
+*SC027::  ; ö
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -767,7 +764,7 @@ return
   {
      goto neo_ö   
   }
-*ä::
+*SC028::  ; ä
   if ( not(ahkTreiberKombi) )
   {
      goto neo_y
@@ -777,7 +774,7 @@ return
      goto neo_ä
   }
 ; Reihe 4
-*y::
+*SC02C::  ; y
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ü
@@ -846,7 +843,7 @@ return
         goto %gespiegelt_m%
       }
 return
-*,::
+*SC033::  ; Komma ,
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_komma
      else
@@ -855,7 +852,7 @@ return
         goto %gespiegelt_komma%
       }
 return
-*.::
+*SC034::  ; Punkt .
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_punkt
      else
@@ -864,7 +861,7 @@ return
         goto %gespiegelt_punkt%
       }
 return
-*-::
+*SC035::  ; Minus -
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -908,7 +905,6 @@ return
 *NumpadIns::goto neo_NumpadIns
 *NumpadDel::goto neo_NumpadDel
 
-  
   
 /*
    Ablauf bei toten Tasten:
@@ -4208,13 +4204,11 @@ neo_tab:
      }
 */
    }
-   else if GetKeyState("#","P")
-   {
+   else if (IsMod3Pressed()) { ;#
       PriorDeadKey := "comp"
       CompKey := ""
    }
-   else
-   {
+   else {
       send {blind}{Tab}
       PriorDeadKey := ""
       CompKey := ""
@@ -4308,31 +4302,6 @@ Ebenen laut Referenz:
 2. Ebene (Umschalt)      5. Ebene (Mod3+Umschalt)
 3. Ebene (Mod3)          6. Ebene (Mod3+Mod4)
 */
-/*
-EbeneAktualisieren()
-{
-   global
-   Ebene = 1
-
-   ; ist Shift down?
-   if ( GetKeyState("Shift","P") )
-   {
-      Ebene += 1
-   }
-   ; ist Mod3 down?
-   if ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )
-   {
-      Ebene += 2
-   }
-   
-   ; ist Mod4 down? Mod3 hat Vorrang!
-   else if ( GetKeyState("<","P") or GetKeyState("SC138","P") )
-   {
-      Ebene += 4
-   }
-}
-*/
-
 
 EbeneAktualisieren()
 {
@@ -4405,6 +4374,8 @@ EbeneAktualisieren()
    }
 }
 
+
+
 IsShiftPressed()
 {
   return GetKeyState("Shift","P")
@@ -4415,10 +4386,10 @@ IsMod3Pressed()
    global
    if (IsMod3Locked) 
    {
-       return (not ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ))
+       return (not ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ))  ; # = SC02B
    }
    else {
-	  return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )
+	  return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )  ; # = SC02B
    }
 }
 
