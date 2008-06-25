@@ -13,8 +13,10 @@
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGEHISTORY:
+    CHANGEHISTORY:   
                   Aktuelle Revision (von Matthias Berg):
+                  - Hotkeys für einHandNeo und lernModus durch entsprechende ScanCodes ersetzt 
+                  Revision 568 (von Matthias Berg):
                   - Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt
                     * jetzt wird auch bei eingestelltem US Layout Neo verwendet.
                       (z.B. für Chinesische InputMethodEditors)
@@ -4862,8 +4864,8 @@ return
 
 ; ------------------------------------
 
-^.::einHandNeo := not(einHandNeo)
-^,::lernModus := not(lernModus)
+^SC034::einHandNeo := not(einHandNeo)  ; Punkt
+^SC033::lernModus := not(lernModus)    ; Komma
 
 
 
