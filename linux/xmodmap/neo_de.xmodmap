@@ -71,7 +71,7 @@ keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Einrasten über linke Win-Taste+Modifier, Lösen über nochmaliges Betätigen des Modifiers
 ! ShiftLock und Mo5Lock funktionieren, Mod3Lock lässt sich aber nicht mehr lösen!!!!
-! keycode 115 = ISO_Lock
+keycode 115 = Undo Redo
 ! add Lock = ISO_Lock
 
 
@@ -139,7 +139,7 @@ keycode 43 = s S question   Greek_sigma   questiondown NoSymbol     Greek_SIGMA
 keycode 44 = n N parenleft  Greek_nu      KP_4         NoSymbol     U2115
 keycode 45 = r R parenright U03F1         KP_5         NoSymbol     U211D
 keycode 46 = t T minus      Greek_tau     KP_6         NoSymbol     partialderivative
-keycode 47 = d D colon      Greek_delta   comma        comma        U0394
+keycode 47 = d D colon      Greek_delta   comma        NoSymbol     U0394
 keycode 48 = y Y at         Greek_upsilon period       NoSymbol     nabla
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
