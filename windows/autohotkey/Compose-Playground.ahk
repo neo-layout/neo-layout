@@ -1,8 +1,9 @@
 /*
 *******************************************
-; Über dieses Skript
+* Über dieses Skript
 *******************************************
-Dies ist ein experimentelles Minimalbeispiel, um die noch fehlende Compose-Funktionalität in der neo20-all-in-one.ahk zu implementieren.
+Dies ist ein experimentelles Minimalbeispiel, um die noch fehlende 
+Compose-Funktionalität in der neo20-all-in-one.ahk zu implementieren.
 
 Konkret werden dafür die sog. Hotstrings genutzt:
 http://www.autohotkey.com/docs/Hotstrings.htm
@@ -14,7 +15,7 @@ Autoren: Matthias Berg, Dennis Heidsiek
 
 
 *******************************************
-; Kurze Beschreibung der Funktionsweise
+* Kurze Beschreibung der Funktionsweise
 *******************************************
 
 compose aktiviert die hotstrings und die nächsten gr (copyright) oder 12
@@ -26,29 +27,29 @@ eine Ersetzung erfolgt, weil nach Compose doch umentschieden wurde), wird mit
 Space (vielleicht auch später mit anderen Tasten) compose wieder deaktiviert.
 
 
-;*******************************************
-; Zu Testzwecken aufgenommene Kombinationen
-; (in der Linux-Schreibweise)
-;*******************************************
-; 
-; <Multi_key> <o> <c> "©" # copyright
-; <Multi_key> <1> <2> "½" # FRACTION 1/2
-; <Multi_key> <r> <2> <0> "xx" # SMALL ROMAN NUMERAL 20
-; <Multi_key> <r> <2> <0> <0> "cc" # SMALL ROMAN NUMERAL 200
-; <Multi_key> <r> <2> <0> <0> <0> "mm" # SMALL ROMAN NUMERAL 2000
-; <Multi_key> <r> <3> <9> <9> <9> "mmmcmxcix" # SMALL ROMAN NUMERAL 3999
-; <Multi_key> <K> <2> <0> <0> <0> "\u216f\u216f" # ROMAN NUMERAL 2000
-; 
+********************************************
+* Zu Testzwecken aufgenommene Kombinationen
+* (in der Linux-Schreibweise)
+********************************************
+
+<Multi_key> <o> <c> "©" # copyright
+<Multi_key> <1> <2> "½" # FRACTION 1/2
+<Multi_key> <r> <2> <0> "xx" # SMALL ROMAN NUMERAL 20
+<Multi_key> <r> <2> <0> <0> "cc" # SMALL ROMAN NUMERAL 200
+<Multi_key> <r> <2> <0> <0> <0> "mm" # SMALL ROMAN NUMERAL 2000
+<Multi_key> <r> <3> <9> <9> <9> "mmmcmxcix" # SMALL ROMAN NUMERAL 3999
+<Multi_key> <R> <2> <0> <0> <0> "\u216f\u216f" # ROMAN NUMERAL 2000
+
 *******************************************
-; Offene und noch zu lösende Probleme:
+* Offene und noch zu lösende Probleme:
 *******************************************
 
 - {compose}r200 und {compose}r2000 können nicht eingegeben werden,
   da zuvor {compose}r20 erkannt wird
   
 - Unbedingt die folgende noch fehlende Dokumentation ergänzen, damit die
-  Compose-Kombinationen von Dennis automatisch aus den Linux-Sourcen generiert
-  werden können: Wann/wofür benutzt man:
+  Compose-Kombinationen von Dennis automatisch aus den Linux-Sourcen
+  generiert werden können: Wann/wofür benutzt man:
   
   send a
   
@@ -72,19 +73,23 @@ Space (vielleicht auch später mit anderen Tasten) compose wieder deaktiviert.
   
   
 *******************************************
-; Gelöste Probleme:
+* Gelöste Probleme:
 *******************************************
 
-  - {compose}r2000 und {compose}R2000 werden jetzt unterschieden
+- {compose}r2000 und {compose}R2000 werden jetzt unterschieden:
+  Alle Keystrings sind jetzt Case-sensitive (Parameter c)
   
 */
 
 
 
 
-;*******************************************/
-; Compose-Methoden 
-;*******************************************/
+
+/*
+********************************************
+* Compose-Methoden 
+*******************************************
+*/
 
 composeActive := 0  ; unsere neue Variable
 
@@ -109,10 +114,12 @@ IsMod3Pressed()
     return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )  ; # = SC02B
 }
 
+/*
+********************************************
+* Unicode-Methoden
+********************************************
+*/
 
-;*******************************************/
-; Unicode-Methoden
-;*******************************************/
 SendUnicodeChar(charCode)
 {
    VarSetCapacity(ki, 28 * 2, 0)
@@ -153,13 +160,27 @@ EncodeInteger(ref, val)
 }
 
 
-;*******************************************/
-; Compose-Kombinationen
-; (werden später automatisch generiert)
-;*******************************************/
+/*
+*******************************************
+ Compose-Kombinationen
+*******************************************
+
+Diese sollen später automatisch generiert werden.
+
+Bedeutung der Parameter im Keystring
+(Quelle: http://www.autohotkey.com/docs/Hotstrings.htm):
+
+* (asterisk): An ending character (e.g. space, period, or enter) is not  required to trigger the hotstring.
+O: Omit the ending character of auto-replace hotstrings when the replacement is produced. This is useful when you want a hotstring to be kept unambiguous by still requiring an ending character, but don't actually want the ending character to be shown on the screen.
+? (question mark): The hotstring will be triggered even when it is inside another word; that is, when the character typed immediately before it is alphanumeric.
+Z: This rarely-used option resets the hotstring recognizer after each triggering of the hotstring. In other words, the script will begin waiting for an entirely new hotstring, eliminating from consideration anything you previously typed. This can prevent unwanted triggerings of hotstrings.
+ob * und O gleichzeitig gebraucht werden... vielleicht ist das O überflüssig :)
+Beim Z bin ich mir auch nicht ganz sicher. Aber es funktioniert halt ;) 
+*/
+
 
 ; <Multi_key> <o> <c> "©" # copyright
-:*O?Z:oc::
+:*O?ZC:oc::
   if (composeActive) {
      send ©
      composeActive := 0
@@ -169,7 +190,7 @@ EncodeInteger(ref, val)
 Return
 
 ; <Multi_key> <1> <2> "½" # FRACTION 1/2
-:*O?Z:12::
+:*O?ZC:12::
   if (composeActive) {
      send ½
      composeActive := 0
@@ -219,7 +240,7 @@ Return
   }
 Return
 
-; <Multi_key> <K> <2> <0> <0> <0> "\u216f\u216f" # ROMAN NUMERAL 2000
+; <Multi_key> <R> <2> <0> <0> <0> "\u216f\u216f" # ROMAN NUMERAL 2000
 :*O?ZC:R2000::
   if (composeActive) {
      SendUnicodeChar(0x216F)
