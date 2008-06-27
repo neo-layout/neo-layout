@@ -26,35 +26,33 @@ damit dies aber nicht unendlich lange geht (also erst ein paar Wörter später
 eine Ersetzung erfolgt, weil nach Compose doch umentschieden wurde), wird mit
 Space (vielleicht auch später mit anderen Tasten) compose wieder deaktiviert.
 
-
-********************************************
-* Zu Testzwecken aufgenommene Kombinationen
-* (in der Linux-Schreibweise)
-********************************************
-
-<Multi_key> <o> <c> "©" # copyright
-<Multi_key> <1> <2> "½" # FRACTION 1/2
-<Multi_key> <r> <2> <0> "xx" # SMALL ROMAN NUMERAL 20
-<Multi_key> <r> <2> <0> <0> "cc" # SMALL ROMAN NUMERAL 200
-<Multi_key> <r> <2> <0> <0> <0> "mm" # SMALL ROMAN NUMERAL 2000
-<Multi_key> <r> <3> <9> <9> <9> "mmmcmxcix" # SMALL ROMAN NUMERAL 3999
-<Multi_key> <R> <2> <0> <0> <0> "\u216f\u216f" # ROMAN NUMERAL 2000
-
 *******************************************
 * Offene und noch zu lösende Probleme:
 *******************************************
+- Anscheinend funktionieren die Compose-Kombinationen nicht mit umgemappten
+  Tasten?
 
 - {compose}r200 und {compose}r2000 können nicht eingegeben werden,
-  da zuvor {compose}r20 erkannt wird
+  da zuvor {compose}r20 erkannt und sofort verarbeitet wird
+  
+- Können mit den Hotkeys auch die toten Tasten erzeugt werden, z.B.
+  (in Linux-Schreibweise):
+  <dead_stroke> <o> : "ø" # LATIN SMALL LETTER O WITH STROKE
   
 - Unbedingt die folgende noch fehlende Dokumentation ergänzen, damit die
-  Compose-Kombinationen von Dennis automatisch aus den Linux-Sourcen
-  generiert werden können: Wann/wofür benutzt man:
+  Compose-Kombinationen von automatisch aus den Linux-Sourcen
+  generiert werden können: Wofür bzw. wann benutzt man:
   
   send a
   
   
   send {blind} a
+  
+  
+  sendinput a
+  
+  
+  sendinput {blind}a
   
   
   SendUnicodeChar(0x0061)
@@ -77,7 +75,7 @@ Space (vielleicht auch später mit anderen Tasten) compose wieder deaktiviert.
 *******************************************
 
 - {compose}r2000 und {compose}R2000 werden jetzt unterschieden:
-  Alle Keystrings sind jetzt Case-sensitive (Parameter c)
+  Alle Keystrings sind jetzt Case-sensitive (Parameter C)
   
 */
 
@@ -114,7 +112,18 @@ IsMod3Pressed()
     return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )  ; # = SC02B
 }
 
+; Test: Funktionieren die Compose-Kombinationen auch noch, wenn Tasten umgemappt werden?
+q::
+   send r
+return
+
+w::
+   send R
+return
+
 /*
+*R:: sendinput {blind}r
+
 ********************************************
 * Unicode-Methoden
 ********************************************
