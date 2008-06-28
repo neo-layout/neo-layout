@@ -3459,6 +3459,11 @@ neo_Numpad9:
       send {NumpadPgUp}
       CompKey := ""
    }
+   else if Ebene = 3
+   {
+      SendUnicodeChar(0x2297) ; Tensorprodukt ; Vektor in die Ebene zeigend 
+      CompKey := ""
+   }
    else if ( (Ebene = 4) or (Ebene = 5) )
    {
       SendUnicodeChar(0x226B)  ; gg
@@ -3528,12 +3533,12 @@ neo_Numpad5:
    }
    else if Ebene = 3
    {
-      send †
+      SendUnicodeChar(0x221E) ; INFINITY
       CompKey := ""
    }
    else if ( (Ebene = 4) or (Ebene = 5) )
    {
-      SendUnicodeChar(0x220A) ; small element of
+      SendUnicodeChar(0x220B) ; enthält das Element
       CompKey := ""
    }
    PriorDeadKey := ""
