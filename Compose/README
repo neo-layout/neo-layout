@@ -4,12 +4,15 @@ Compose-Taste bzw. tote Tasten für Linux.
 
 
 
-=== Bereits vorhandene Buchstaben (unter Linux) ===
+=== Bereits vorhandene Tastenkombinationen (unter Linux) ===
+Diese sind in der Datei en_US.UTF-8 gesammelt und hier im SVN für die Windows-Nutzer
+lokal gespiegelt.
 
-Im Internet gibt es die Originaldatei unter
+Im Internet gibt es die stets aktuellste Originaldatei unter
 	http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=HEAD&content-type=text/vnd.viewcvs-markup
 
-Unter Fedora beispielsweise ist die zu ergänzende Datei auch direkt verfügbar unter
+Unter Linux (beispielsweise unter Fedora) ist die zu ergänzende Datei auch direkt
+verfügbar unter
 	/usr/share/X11/locale/en_US.UTF-8/Compose
 
 
@@ -29,6 +32,9 @@ Gnome da noch irgendwas eigenes vorschaltet. Aber nach:
   export GTK_IM_MODULE=xim
 klappt auch das. Siehe auch:
   https://help.ubuntu.com/community/ComposeKey
+Zudem scheint dieses Problem in aktuellen Gnome-Version behoben worden zu sein:
+  http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-based-apps/
+  http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/ 
 
 
 
