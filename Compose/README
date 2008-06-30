@@ -2,16 +2,24 @@
 Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die
 Compose-Taste bzw. tote Tasten für Linux.
 
+
+
+=== Bereits vorhandene Buchstaben (unter Linux) ===
+
+Im Internet gibt es die Originaldatei unter
+	http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=HEAD&content-type=text/vnd.viewcvs-markup
+
+Unter Fedora beispielsweise ist die zu ergänzende Datei auch direkt verfügbar unter
+	/usr/share/X11/locale/en_US.UTF-8/Compose
+
+
+
 === Anleitung zur Benutzung ===
 Um die Ergänzungen zu benutzen muss man den Inhalt der Compose.neo in die
 vorhandene Compose einfügen bzw. die Datei Compose.neo an die alte Compose
 anhängen.
 
-Unter Fedora beispielsweise ist die zu ergänzende Datei verfügbar unter
-	/usr/share/X11/locale/en_US.UTF-8/Compose
 
-Im Internet gibt es die Originaldatei unter
-	http://webcvs.freedesktop.org/xorg/xc/nls/Compose/en_US.UTF-8
 
 === Gnome macht Probleme ==
 Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen
@@ -22,8 +30,9 @@ Gnome da noch irgendwas eigenes vorschaltet. Aber nach:
 klappt auch das. Siehe auch:
   https://help.ubuntu.com/community/ComposeKey
 
+
+
 == compose_und_deadkeys.txt ==
 Die Datei compose_und_deadkeys.txt fasst Änderungs- und Erweiterungsvorschläge
 für die Compose-Datei zusammen, in der unter Linux auch die Deadkeys (tote
 Tasten) definiert sind.
-
