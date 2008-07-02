@@ -9,7 +9,10 @@ http://www.eigenheimstrasse.de:8668/space/Computerecke/NEO-Tastaturlayout/Downlo
 
 
 == autohotkey ==
-Hierfür braucht man keine Administratorrechte, es muss jedoch zuerst ein Programm namens „autohotkey“ (http://www.autohotkey.com) installiert werden. Dazu benötigt man keine Administratorrechte, wenn man das Programm beispielsweise in das Verzeichnis „Eigene Dateien“ installiert.
+Hier befindet sich ein Treiber, der mit der Autohotkey-Scriptsprache (http://www.autohotkey.com)
+erstellt wurde. Hierfür braucht man keine Administratorrechte, es muss jedoch eine ausführbare
+EXE-Datei heruntergeladen und gestartet werden. Dazu benötigt man keine Administratorrechte, wenn man
+das Programm beispielsweise in dem Verzeichnis „Eigene Dateien“ abspeichert.
 
 == kbdneo2 ==
 Hier entsteht mit Hilfe des WinDDK (http://www.microsoft.com/whdc/devtools/ddk/default.mspx) ein Windowstreiber mit allen 6 Ebenen, der also der MSKLC-Variante überlegen ist.
