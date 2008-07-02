@@ -9,10 +9,8 @@ http://www.eigenheimstrasse.de:8668/space/Computerecke/NEO-Tastaturlayout/Downlo
 
 
 == autohotkey ==
-Hier befindet sich ein Treiber, der mit der Autohotkey-Scriptsprache (http://www.autohotkey.com)
-erstellt wurde. Hierfür braucht man keine Administratorrechte, es muss jedoch eine ausführbare
-EXE-Datei heruntergeladen und gestartet werden. Dazu benötigt man keine Administratorrechte, wenn man
-das Programm beispielsweise in dem Verzeichnis „Eigene Dateien“ abspeichert.
+Hier befindet sich ein Treiber, der mit der Autohotkey-Scriptsprache (http://www.autohotkey.com) erstellt wurde.
+Hierfür muss eine ausführbare EXE-Datei heruntergeladen und gestartet werden. Dazu benötigt man jedoch keine Administratorrechte, wenn man das Programm beispielsweise in dem Verzeichnis „Eigene Dateien“ abspeichert. Zudem kann man diesen Treiber etwa von einem USB-Stick aus starten.
 
 == kbdneo2 ==
 Hier entsteht mit Hilfe des WinDDK (http://www.microsoft.com/whdc/devtools/ddk/default.mspx) ein Windowstreiber mit allen 6 Ebenen, der also der MSKLC-Variante überlegen ist.
