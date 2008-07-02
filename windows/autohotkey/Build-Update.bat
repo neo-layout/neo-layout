@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 
 
 
@@ -19,11 +19,14 @@ tskill neo20-all-in-one
 
 
 echo Creating a new Driver from the Source code
-copy /B "%scr%\Warning.ahk" + "%scr%\neo20-all-in-one.ahk" "%svn%\%fn%.ahk"
+REM The order *is* important!
+copy "%scr%\Warning.ahk" + "%scr%\Changelog-and-Todo.ahk" + "%scr%\Global-Part.ahk" + "%scr%\Methods-Layers.ahk" + "%scr%\Keys-Qwert-to-Neo.ahk" + "%scr%\Keys-Neo.ahk" + "%scr%\Methods-Lights.ahk" + "%scr%\Methods-Other.ahk" "%svn%\%fn%.ahk"
+
 
 
 echo Compiling the new Driver using Autohotkey
 "%ahk%\Compiler\Ahk2Exe.exe" /in "%svn%\%fn%.ahk" /out "%svn%\%fn%.exe" /icon "%svn%\neo.ico"
+
 
 
 echo Driver Update complete! You can now close this log-window.

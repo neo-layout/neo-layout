@@ -6,8 +6,7 @@ Dies ist inzwischen eine automatisch
 generierte Datei!
 
 Sie wird regelmäßig übrerschrieben und sollte
-deshalb nicht mehr bearbeitet werden!
-
+deshalb nicht mehr direkt bearbeitet werden!
 
 
 Statdessen sollten die Dateien/Module im
@@ -104,6 +103,8 @@ DU BIST GEWARNT WORDEN!
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:   
                   Aktuelle Revision (von Matthias Berg):
+                  - Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*
+                  Revision 583 (von Matthias Berg):
                   - Hotkeys für einHandNeo und lernModus durch entsprechende ScanCodes ersetzt 
                   Revision 568 (von Matthias Berg):
                   - Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt
@@ -200,6 +201,7 @@ DU BIST GEWARNT WORDEN!
 */
 
 
+
 /******************
  Globale Schalter *
 *******************
@@ -284,7 +286,7 @@ lernModus_neo_Entf = 1
   ; msgbox ist trotzdem linksbündig
 
 SetTitleMatchMode 2
-SendMode Input	
+SendMode Input  
 
 name    = Neo 2.0
 enable  = Aktiviere %name%
@@ -318,6 +320,8 @@ if inputlocale <> 00000407
      )
    exitapp
 }
+
+
 
 ; Menü des Systray-Icons 
 ; ----------------------
@@ -394,6 +398,7 @@ gespiegelt_j = neo_ü
 
 
 
+
 /*
    ------------------------------------------------------
    Modifier
@@ -407,7 +412,7 @@ gespiegelt_j = neo_ü
 *#::return ; Nichts machen beim # release event (weil es Mod3 ist) ; # = SC02B
 
 ;RShift wenn vorher LShift gedrückt wurde
-LShift & ~RShift::	
+LShift & ~RShift::  
       if GetKeyState("CapsLock","T")
       {
          setcapslockstate, off
@@ -519,6 +524,8 @@ return
  
 */
 
+
+
 /*
    ------------------------------------------------------
    QWERTZ->Neo umwandlung
@@ -598,7 +605,7 @@ return
 *w::
   if ( not(ahkTreiberKombi) )
   {
-	 goto neo_v
+     goto neo_v
   }
   else
   {
@@ -607,7 +614,7 @@ return
 *e::
   if ( not(ahkTreiberKombi) )
   {
-	 goto neo_l
+     goto neo_l
   }
   else
   {
@@ -996,8 +1003,12 @@ return
 *NumpadIns::goto neo_NumpadIns
 *NumpadDel::goto neo_NumpadDel
 
-  
+
+
 /*
+Die eigentliche NEO-Belegung und der Hauptteil des AHK-Treibers.
+
+
    Ablauf bei toten Tasten:
    1. Ebene Aktualisieren
    2. Abhängig von der Variablen "Ebene" Zeichen ausgeben und die Variable "PriorDeadKey" setzen
@@ -1164,7 +1175,7 @@ neo_2:
       CompKey := ""
    }
    else if Ebene = 3
-   {	
+   {    
       SendUnicodeChar(0x00B2) ; 2 Hochgestellte
       CompKey := ""
    }
@@ -1290,7 +1301,7 @@ neo_4:
          CompKey := "4"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send »
@@ -1364,7 +1375,7 @@ neo_5:
          CompKey := "5"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send «
@@ -1431,7 +1442,7 @@ neo_6:
          CompKey := "6"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send €
@@ -1494,7 +1505,7 @@ neo_7:
          CompKey := "7"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send $
@@ -1568,7 +1579,7 @@ neo_8:
          CompKey := "8"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send „
@@ -1631,7 +1642,7 @@ neo_9:
          CompKey := "9"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send “
@@ -1694,7 +1705,7 @@ neo_0:
          CompKey := "0"
       else
          CompKey := ""         
-	}
+    }
    else if Ebene = 2
    {
       send ”
@@ -2345,7 +2356,7 @@ neo_u:
       send \
    else if Ebene = 4
       Send {blind}{Home}
-   else if Ebene = 5	
+   else if Ebene = 5    
    {  } ; leer
    else if Ebene = 6
       SendUnicodeChar(0x222E) ; contour integral
@@ -2422,7 +2433,7 @@ neo_i:
       Sendinput {Blind}{Left}
       CompKey := ""
    }
-   else if Ebene = 5	
+   else if Ebene = 5    
    {
       SendUnicodeChar(0x03B9) ; iota
       CompKey := ""
@@ -2622,7 +2633,7 @@ neo_o:
       else if (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x01EB)
       else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01D2)                   	
+         BSSendUnicodeChar(0x01D2)                      
       else
          sendinput {blind}o
       if (PriorDeadKey = "comp")      ; compose
@@ -3006,9 +3017,9 @@ neo_y:
    else if Ebene = 3
       send @
    else if Ebene = 4
-  	  Send .
+      Send .
    else if Ebene = 5
-  	  SendUnicodeChar(0x03C5) ; upsilon
+      SendUnicodeChar(0x03C5) ; upsilon
    else if Ebene = 6
       SendUnicodeChar(0x2207) ; nabla
    PriorDeadKey := ""   CompKey := ""
@@ -3883,6 +3894,7 @@ neo_NumpadPgUp:
    }
    else if ( (Ebene = 4) or (Ebene = 5) )
    {
+
       SendUnicodeChar(0x226B)  ; gg
       CompKey := ""
    }
@@ -4145,7 +4157,7 @@ return
 */
 *space::
    if (einHandNeo)
-	spacepressed := 1
+    spacepressed := 1
    else
     goto neo_SpaceUp
 return
@@ -4156,7 +4168,7 @@ return
      if (keypressed)
      {
        keypressed := 0
-       spacepressed := 0  	
+       spacepressed := 0    
      }
      else
      {
@@ -4196,8 +4208,8 @@ neo_SpaceUp:
      else if Ebene = 6
         SendUnicodeChar(0x202F) ; schmales Leerzeichen
      PriorDeadKey := ""   CompKey := ""
-  spacepressed := 0  	
-  keypressed := 0  		
+  spacepressed := 0     
+  keypressed := 0       
 return
 
 /*
@@ -4285,7 +4297,7 @@ nach einem DeadKey drückt...
 neo_tab:
    if ( GetKeyState("SC038","P") )
    {
-   	Send,{Blind}{AltDown}{tab}
+    Send,{Blind}{AltDown}{tab}
     
 /*
      if (isShiftPressed())
@@ -4295,7 +4307,7 @@ neo_tab:
      else
      {       
 ;       msgbox alt+tab
-		Send,{AltDown}{tab}
+        Send,{AltDown}{tab}
       ; SC038 & Tab::AltTab            ; http://de.autohotkey.com/docs/Hotkeys.htm#AltTabDetail
      }
 */
@@ -4317,7 +4329,7 @@ return
 return
    
 *SC038 down::                    ; LAlt, damit AltTab funktioniert
-   	Send,{Blind}{AltDown}
+    Send,{Blind}{AltDown}
    PriorDeadKey := ""   CompKey := ""
 return
 
@@ -4386,218 +4398,14 @@ return
 return
 
 
-/*
-   ------------------------------------------------------
-   Funktionen
-   ------------------------------------------------------
-*/
-
-/*
-Ebenen laut Referenz:
-1. Ebene (kein Mod)      4. Ebene (Mod4)
-2. Ebene (Umschalt)      5. Ebene (Mod3+Umschalt)
-3. Ebene (Mod3)          6. Ebene (Mod3+Mod4)
-*/
-
-EbeneAktualisieren()
-{
-   global
-   if (ahkTreiberKombi)
-   {
-      if ( IsMod4Pressed() and not(IsShiftPressed()) and not(IsMod3Pressed()))
-      {
-         Ebene = 6      
-      }
-      else
-      {
-        Ebene = -1
-      }  
-   }
-   else 
-   {   
-     if ( IsShiftPressed() )
-     {  ; Umschalt
-   		if ( IsMod3Pressed() )
-	    	{ ; Umschalt UND Mod3 
-            if ( IsMod4Pressed() )
-            {  ; Umschald UND Mod3 UND Mod4 
-               ; Ebene 8 impliziert Ebene 6
-               Ebene = 6
-             }
-            else
-            { ; Umschald UND Mod3 NICHT Mod4
-                Ebene = 5	               
-            }
-        }
-		else 
-		{  ; Umschalt NICHT Mod3
-            if ( IsMod4Pressed() )
-            {  ; Umschald UND Mod4 NICHT Mod3
-               ; Ebene 7 impliziert Ebene 4 
-                Ebene = 4
-            }
-            else
-            { ; Umschald NICHT Mod3 NICHT Mod4
-               Ebene = 2	
-            }
-         }   
-     }
-     else
-     { ; NICHT Umschalt
-		if ( IsMod3Pressed() )
-		{ ; Mod3 NICHT Umschalt 
-           if ( IsMod4Pressed() )
-           {  ; Mod3 UND Mod4 NICHT Umschalt
-               Ebene = 6
-           }
-           else
-           { ; Mod3 NICHT Mod4 NICHT Umschalt
-               Ebene = 3	
-           }
-        }
-		else 
-		{  ; NICHT Umschalt NICHT Mod3
-           if ( IsMod4Pressed() )
-           {  ; Mod4 NICHT Umschalt NICHT Mod3 
-               Ebene = 4
-           }
-           else
-           { ; NICHT Umschalt NICHT Mod3 NICHT Mod4
-               Ebene = 1
-           }
-       	}   
-      }
-   }
-}
-
-
-
-IsShiftPressed()
-{
-  return GetKeyState("Shift","P")
-}
-
-IsMod3Pressed()
-{
-   global
-   if (IsMod3Locked) 
-   {
-       return (not ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ))  ; # = SC02B
-   }
-   else {
-	  return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )  ; # = SC02B
-   }
-}
-
-IsMod4Pressed()
-{
-   global
-   if( not(einHandNeo) or not(spacepressed) )
-   {
-     if (IsMod4Locked) 
-     {
-         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed ))
-     }
-     else {
-         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed )
-     }
-   }
-   else
-   {
-     if (IsMod4Locked) 
-     {
-         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")  or altGrPressed ))
-     }
-     else {
-         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P") or altGrPressed )
-     }
-   }
-   
-}
-
-
-/*************************
-  Alte Methoden
-*************************/
-
-/*
-Unicode(code)
-{
-   saved_clipboard := ClipboardAll
-   Transform, Clipboard, Unicode, %code%
-   sendplay ^v
-   Clipboard := saved_clipboard
-}
-
-BSUnicode(code)
-{
-   saved_clipboard := ClipboardAll
-   Transform, Clipboard, Unicode, %code%
-   sendplay {bs}^v
-   Clipboard := saved_clipboard
-}
-*/
-
-IsModifierPressed()
-{
-   if (GetKeyState("LControl","P") or GetKeyState("RControl","P") or GetKeyState("LAlt","P") or GetKeyState("RAltl","P") or GetKeyState("LWin","P") or GetKeyState("RWin","P") or GetKeyState("LShift","P") or GetKeyState("RShift","P") or GetKeyState("AltGr","P") ) 
-    {
-       return 1
-    }
-    else
-    {
-       return 0
-    }
-}
-
-SendUnicodeChar(charCode)
-{
-   VarSetCapacity(ki, 28 * 2, 0)
-
-   EncodeInteger(&ki + 0, 1)
-   EncodeInteger(&ki + 6, charCode)
-   EncodeInteger(&ki + 8, 4)
-   EncodeInteger(&ki +28, 1)
-   EncodeInteger(&ki +34, charCode)
-   EncodeInteger(&ki +36, 4|2)
-
-   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
-}
-
-BSSendUnicodeChar(charCode)
-{
-   send {bs}
-   SendUnicodeChar(charCode)
-}
-
-CompUnicodeChar(charCode)
-{
-   send {bs}
-	 SendUnicodeChar(charCode)
-}
-
-Comp3UnicodeChar(charCode)
-{
-   send {bs}
-   send {bs}
-   SendUnicodeChar(charCode)
-}
-
-
-EncodeInteger(ref, val)
-{
-   DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
-}
-
-
 
 
 /* 
    ------------------------------------------------------
-   Methode zur Steuerung der Keyboard-LEDs
+   Methode KeyboardLED zur Steuerung der Keyboard-LEDs
    (NumLock/CapsLock/ScrollLock-Lichter)
    
-   Benutzungshinweise:
+   Benutzungshinweise: Man benutze
    KeyboardLED(LEDvalue,"Cmd"), wobei
    Cmd = on/off/switch,
    LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4
@@ -4714,6 +4522,214 @@ InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4)
 
 
 
+
+/*
+   ------------------------------------------------------
+   Funktionen
+   ------------------------------------------------------
+*/
+
+/*
+Ebenen laut Referenz:
+1. Ebene (kein Mod)      4. Ebene (Mod4)
+2. Ebene (Umschalt)      5. Ebene (Mod3+Umschalt)
+3. Ebene (Mod3)          6. Ebene (Mod3+Mod4)
+*/
+
+EbeneAktualisieren()
+{
+   global
+   if (ahkTreiberKombi)
+   {
+      if ( IsMod4Pressed() and not(IsShiftPressed()) and not(IsMod3Pressed()))
+      {
+         Ebene = 6      
+      }
+      else
+      {
+        Ebene = -1
+      }  
+   }
+   else 
+   {   
+     if ( IsShiftPressed() )
+     {  ; Umschalt
+        if ( IsMod3Pressed() )
+            { ; Umschalt UND Mod3 
+            if ( IsMod4Pressed() )
+            {  ; Umschald UND Mod3 UND Mod4 
+               ; Ebene 8 impliziert Ebene 6
+               Ebene = 6
+             }
+            else
+            { ; Umschald UND Mod3 NICHT Mod4
+                Ebene = 5                  
+            }
+        }
+        else 
+        {  ; Umschalt NICHT Mod3
+            if ( IsMod4Pressed() )
+            {  ; Umschald UND Mod4 NICHT Mod3
+               ; Ebene 7 impliziert Ebene 4 
+                Ebene = 4
+            }
+            else
+            { ; Umschald NICHT Mod3 NICHT Mod4
+               Ebene = 2    
+            }
+         }   
+     }
+     else
+     { ; NICHT Umschalt
+        if ( IsMod3Pressed() )
+        { ; Mod3 NICHT Umschalt 
+           if ( IsMod4Pressed() )
+           {  ; Mod3 UND Mod4 NICHT Umschalt
+               Ebene = 6
+           }
+           else
+           { ; Mod3 NICHT Mod4 NICHT Umschalt
+               Ebene = 3    
+           }
+        }
+        else 
+        {  ; NICHT Umschalt NICHT Mod3
+           if ( IsMod4Pressed() )
+           {  ; Mod4 NICHT Umschalt NICHT Mod3 
+               Ebene = 4
+           }
+           else
+           { ; NICHT Umschalt NICHT Mod3 NICHT Mod4
+               Ebene = 1
+           }
+        }   
+      }
+   }
+}
+
+
+
+IsShiftPressed()
+{
+  return GetKeyState("Shift","P")
+}
+
+IsMod3Pressed()
+{
+   global
+   if (IsMod3Locked) 
+   {
+       return (not ( GetKeyState("CapsLock","P") or GetKeyState("#","P") ))  ; # = SC02B
+   }
+   else {
+      return ( GetKeyState("CapsLock","P") or GetKeyState("#","P") )  ; # = SC02B
+   }
+}
+
+IsMod4Pressed()
+{
+   global
+   if( not(einHandNeo) or not(spacepressed) )
+   {
+     if (IsMod4Locked) 
+     {
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed ))
+     }
+     else {
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed )
+     }
+   }
+   else
+   {
+     if (IsMod4Locked) 
+     {
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")  or altGrPressed ))
+     }
+     else {
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P") or altGrPressed )
+     }
+   }
+   
+}
+
+
+/*************************
+  Alte Methoden
+*************************/
+
+/*
+Unicode(code)
+{
+   saved_clipboard := ClipboardAll
+   Transform, Clipboard, Unicode, %code%
+   sendplay ^v
+   Clipboard := saved_clipboard
+}
+
+BSUnicode(code)
+{
+   saved_clipboard := ClipboardAll
+   Transform, Clipboard, Unicode, %code%
+   sendplay {bs}^v
+   Clipboard := saved_clipboard
+}
+*/
+
+IsModifierPressed()
+{
+   if (GetKeyState("LControl","P") or GetKeyState("RControl","P") or GetKeyState("LAlt","P") or GetKeyState("RAltl","P") or GetKeyState("LWin","P") or GetKeyState("RWin","P") or GetKeyState("LShift","P") or GetKeyState("RShift","P") or GetKeyState("AltGr","P") ) 
+    {
+       return 1
+    }
+    else
+    {
+       return 0
+    }
+}
+
+SendUnicodeChar(charCode)
+{
+   VarSetCapacity(ki, 28 * 2, 0)
+
+   EncodeInteger(&ki + 0, 1)
+   EncodeInteger(&ki + 6, charCode)
+   EncodeInteger(&ki + 8, 4)
+   EncodeInteger(&ki +28, 1)
+   EncodeInteger(&ki +34, charCode)
+   EncodeInteger(&ki +36, 4|2)
+
+   DllCall("SendInput", "UInt", 2, "UInt", &ki, "Int", 28)
+}
+
+BSSendUnicodeChar(charCode)
+{
+   send {bs}
+   SendUnicodeChar(charCode)
+}
+
+CompUnicodeChar(charCode)
+{
+   send {bs}
+     SendUnicodeChar(charCode)
+}
+
+Comp3UnicodeChar(charCode)
+{
+   send {bs}
+   send {bs}
+   SendUnicodeChar(charCode)
+}
+
+
+EncodeInteger(ref, val)
+{
+   DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
+}
+
+
+
+
+
 /* 
    ------------------------------------------------------
    BildschirmTastatur
@@ -4722,55 +4738,62 @@ InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4)
 guiErstellt = 0
 alwaysOnTop = 1
 aktuellesBild = ebene1.png 
-^~F1::
+SC056 & *F1::
+SC138 & *F1::
 {
   if (zeigeBildschirmTastatur)
     goto Switch1
   return
 }
-^~F2::
+SC056 & *F2::
+SC138 & *F2::
 {
   if (zeigeBildschirmTastatur)
     goto Switch2
   return
 }
-^~F3::
+SC056 & *F3::
+SC138 & *F3::
 {
   if (zeigeBildschirmTastatur)
     goto Switch3
   return
 }
-^~F4::
+SC056 & *F4::
+SC138 & *F4::
 {
   if (zeigeBildschirmTastatur)
     goto Switch4
   return
 }
-^~F5::
+SC056 & *F5::
+SC138 & *F5::
 {
   if (zeigeBildschirmTastatur)
     goto Switch5
   return
 }
-^~F6::
+SC056 & *F6::
+SC138 & *F6::
 {
   if (zeigeBildschirmTastatur)
     goto Switch6
   return
 }
-^~F7::
+SC056 & *F7::
+SC138 & *F7::
 {
   if (zeigeBildschirmTastatur)
     goto Show
   return
 }
-^~F8::
+SC056 & *F8::
+SC138 & *F8::
 {
   if (zeigeBildschirmTastatur)
-	goto ToggleAlwaysOnTop
+    goto ToggleAlwaysOnTop
   return
 }
-
 Switch1:
   if (guiErstellt) 
   {
@@ -4886,12 +4909,12 @@ Show:
   }
   else
   {
-    if (Image = "")	
+    if (Image = "") 
     {
       Image = ebene1.png 
     }     
     yPosition := A_ScreenHeight -270
-  	Gui, Color, FFFFFF
+    Gui, Color, FFFFFF
     Gui, Add, Button, xm+5 gSwitch1, F1
     Gui, Add, Text, x+5, kleine Buchstaben
     Gui, Add, Button, xm+5 gSwitch2, F2
@@ -4967,8 +4990,8 @@ togglesuspend:
    if A_IsSuspended
    {
       menu, tray, rename, %enable%, %disable%
-	  menu, tray, tip, %name%
-	  if (iconBenutzen)
+      menu, tray, tip, %name%
+      if (iconBenutzen)
           menu, tray, icon, neo.ico,,1  
       suspend , off ; Schaltet Suspend aus -> NEO
    }
@@ -4976,8 +4999,8 @@ togglesuspend:
    {
       menu, tray, rename, %disable%, %enable%
       menu, tray, tip, %name% : Deaktiviert
-	  if (iconBenutzen)
-	     menu, tray, icon, neo_disabled.ico,,1
+      if (iconBenutzen)
+         menu, tray, icon, neo_disabled.ico,,1
       suspend , on  ; Schaltet Suspend ein -> QWERTZ 
    }
 
@@ -5034,3 +5057,9 @@ return
 exitprogram:
    exitapp
 return
+
+
+
+
+
+

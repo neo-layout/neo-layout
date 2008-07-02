@@ -6,8 +6,7 @@ Dies ist inzwischen eine automatisch
 generierte Datei!
 
 Sie wird regelmäßig übrerschrieben und sollte
-deshalb nicht mehr bearbeitet werden!
-
+deshalb nicht mehr direkt bearbeitet werden!
 
 
 Statdessen sollten die Dateien/Module im
