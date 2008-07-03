@@ -22,4 +22,4 @@ Viel Spaß mit dem NEO-mplayer!
 ¹ Achtung: Dadurch wird die DVD-Navigation überlagert.
 ² Also: ~/.mplayer/input.conf , die Tilde ~ symbolisiert das eigene 
   Home-Verzeichnis
-³ sie findet sich unter
+³ sie findet sich unter /etc/mplayer/input.conf
