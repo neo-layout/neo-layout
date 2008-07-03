@@ -1,6 +1,8 @@
-== Kleine Anleitung ==
-In der Datei /A-REFERENZ-A/neo20.txt sieht man das Layout. 
-In neo_de.xmodmap (bzw. neo_de_evdev.xmodmap für KDE4 mit evdev) steckt es drin.
+== Dateien ==
+/A-REFERENZ-A/neo20.txt das Layout als ASCII-Art
+neo_de.xmodmap          Normale Version für die meisten Benutzer
+neo_de_evdev.xmodmap    für KDE4 mit evdev¹
+
 
 === Aktivieren ===
 Zu aktivieren mit dem Kommando (im Verzeichnis, in dem sich die Datei befindet):
@@ -49,3 +51,6 @@ alias asdf='setxkbmap ie && xmodmap ~/neo_de.xmodmap'
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
 Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt
+
+¹ um die evdev auf dem laufenden zu halten kann folgende auf die neo_de.xmodmap anwenden:
+  sed -e 's/^keycode 112/keycode 106/;s/^keycode 108/keycode 104/;s/^keycode 113/keycode 108/' neo_de.xmodmap > neo_de_evdev.xmodmap
