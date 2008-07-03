@@ -1,17 +1,25 @@
-Das Programm mplayer benutzt die Zahlenreihe der Tastatur, um die Einstellungen von Konstrast (1–2), Helligkeit (3–4), Farbton (5–6) und Sättigung (7–8) während der Ausgabe eines Videos zu verändern – vor allem aber wird die Lautstärke über (9–0) gesteuert.
+Das Programm mplayer benutzt die Zahlenreihe der Tastatur, um die Einstellungen
+von Konstrast (1–2), Helligkeit (3–4), Farbton (5–6) und Sättigung (7–8) 
+während der Ausgabe eines Videos zu verändern – vor allem aber wird die 
+Lautstärke über (9–0) gesteuert.
 
-Zwar funktioniert mit der NEO die Zahlenreihe wie gewohnt (also auch diese Steuerung), die zusätzliche Möglichkeit, diese Einstellungen auch über den Ziffernblock der Ebene 4 vorzunehmen, gibt es apriori nicht (ebensowenig kann man den mplayer mit dem QWERTZ-Ziffernblock steuern).
-Da der NEO-Ziffernblock (Ebene 4) jedoch deutlich leichter zu erreichen ist, wird der Wunsch verständlich, eine zusätzliche Steuermöglichkeit zu erhalten.	¹
+Zwar funktioniert mit der NEO die Zahlenreihe wie gewohnt (also auch diese 
+Steuerung), die zusätzliche Möglichkeit, diese Einstellungen auch über den 
+Ziffernblock der Ebene 4 vorzunehmen, gibt es apriori nicht (ebensowenig kann
+man den mplayer mit dem QWERTZ-Ziffernblock steuern).
+Da der NEO-Ziffernblock (Ebene 4) jedoch deutlich leichter zu erreichen ist, 
+wird der Wunsch verständlich, eine zusätzliche Steuermöglichkeit zu erhalten.¹
 
-
-Die Datei „input.conf“ muss dazu in dem Ordner ~/.mplayer/ (Anmerkung²) gespeichert werden.
-Die originale Steuerung³ wird dadurch nicht überschrieben, sondern nur erweitert. Wird die Datei ~/.mplayer/input.conf gelöscht, so wird der QWERTZ-Status wieder eingenommen.
+Die Datei „input.conf“ muss dazu in dem Ordner ~/.mplayer/ (Anmerkung²) 
+gespeichert werden.
+Die originale Steuerung³ wird dadurch nicht überschrieben, sondern nur 
+erweitert. Wird die Datei ~/.mplayer/input.conf gelöscht, so wird der 
+QWERTZ-Status wieder eingenommen.
 
 
 Viel Spaß mit dem NEO-mplayer!
 
-
-
 ¹ Achtung: Dadurch wird die DVD-Navigation überlagert.
-² Also: ~/.ṁplayer/input.conf , die Tilde ~ symbolisiert das eigene Home-Verzeichnis
-³ sie findet sich unter 
+² Also: ~/.mplayer/input.conf , die Tilde ~ symbolisiert das eigene 
+  Home-Verzeichnis
+³ sie findet sich unter
