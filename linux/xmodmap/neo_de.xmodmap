@@ -133,7 +133,7 @@ keycode 24 = x      X     NoSymbol     Greek_xi           NoSymbol   NoSymbol   
 !					ξ					Ξ Greek_XI
 keycode 25 = v      V     underscore   NoSymbol           BackSpace  BackSpace  U2259
 !										≙ 
-keycode 26 = l      L     bracketleft  Greek_lambda       Up         KP_Up      U039B
+keycode 26 = l      L     bracketleft  Greek_lambda       Up         Up      U039B
 !					λ					Λ Greek_LAMBDA
 keycode 27 = c      C     bracketright Greek_chi          Delete     KP_Delete  U2102
 !					χ					ℂ komplex
@@ -162,11 +162,11 @@ keycode 35 = dead_tilde	dead_macron	dead_diaeresis	dead_doubleacute
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 38 = u 	U 	backslash	NoSymbol	Home		KP_Home		U222E
 !			\								∮ contour integral
-keycode 39 = i 	I 	slash		Greek_iota	Left    	KP_Left  	integral
+keycode 39 = i 	I 	slash		Greek_iota	Left    	Left  	integral
 !			/		ι						∫
-keycode 40 = a	A 	braceleft  	Greek_alpha   	Down    	KP_Down  	U2200
+keycode 40 = a	A 	braceleft  	Greek_alpha   	Down    	Down  	U2200
 !			{		α						∀ for all
-keycode 41 = e 	E 	braceright 	Greek_epsilon 	Right   	KP_Right 	U2203
+keycode 41 = e 	E 	braceright 	Greek_epsilon 	Right   	Right 	U2203
 !			}		ε						∃ there exists
 keycode 42 = o 	O 	asterisk	Greek_omicron	End		KP_End   	elementof
 !			*		ο						∈
@@ -268,6 +268,16 @@ keycode 90 = 0	    enfilledcircbullet	percent		U2030
 !			• itemize	%		‰ per mille
 keycode 91 = comma	U2023		period		comma
 !	     ,		‣ itemize	.		,
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Navigation
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 98  = Up	NoSymbol	KP_Up
+keycode 100 = Left	NoSymbol	KP_Left
+keycode 102 = Right	NoSymbol	KP_Right
+keycode 104 = Down	NoSymbol	KP_Down
 
 
 
