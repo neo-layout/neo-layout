@@ -15,7 +15,7 @@ http://dejavu.sourceforge.net/
 --------------------------------------------------------------------------------
 Gliederung
 1. Allgemeine Fragen
-2. Betriebssystemspeziefische Fragen
+2. Betriebssystemspezifische Fragen
 2.1 Linux, Unix, BSD
 2.2 Apple Macintosh
 2.3 Windows
@@ -110,6 +110,20 @@ häufig verwendet. Leider ist es prinzipiell nicht möglich alle Zeichen für al
 Bi- und Trigramme gut zu positionieren. Verbesserungsvorschläge sind jedoch
 willkommen. Außerdem kann sich jeder seine individuelle NEO-Version auch an die
 eigenen Bedürfnisse anpassen. Dazu einfach auf der Mailingliste fragen.
+
+--------------------------------------------------------------------------------
+
+F: Wie ist die korrekte Bezeichnung der einzelnen Ebenen?
+
+A: Es gibt keine offiziellen korrekten Benennungen. Auf der Mailingliste
+haben sich jedoch folgende Bezeichnungen etabliert:
+
+Ebene 1 (kein Mod): Kleinbuchstaben („Klein“)
+Ebene 2 (Mod2): Großbuchstaben („Groß“, „Umschalt-Ebene“, „Shift-Ebene“, …)
+Ebene 3 (Mod3): Sonder- und Interpunktionszeichen („Int“, manchmal auch noch „AltGr-Ebene“, …)
+Ebene 4 (Mod4): Navigation und Ziffernblock („Nav/Num“, „Navigations-Ebene“, „Ziffern-Ebene“, „Steuer-Ebene“ …)
+Ebene 5 (Mod3+Mod2): Griechische Kleinbuchstaben („Griech“, „Griechische-Ebene“, „kleine-griechische-Ebene“, …)
+Ebene 6 (Mod3+Mod4): Mathematische und naturwissenschaften Zeichen („Mat/Nat“, „Mat/Nat-Ebene“, „MINT“, …)
 
 --------------------------------------------------------------------------------
 
@@ -318,7 +332,7 @@ der Null oder auf Mod3+t.
 Nähere Informationen gibt es in der Frage direkt über dieser.
 
 --------------------------------------------------------------------------------
-2. Betriebssystemspeziefische Fragen
+2. Betriebssystemspezifische Fragen
 --------------------------------------------------------------------------------
 2.1 Linux, Unix, BSD
 --------------------------------------------------------------------------------
