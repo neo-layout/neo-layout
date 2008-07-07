@@ -32,7 +32,7 @@ Source\Methods-Lights.ahk
 
 Um die gemachten Änderungen zu testen, sollte die Datei
 Source\All.ahk
-verwendet werden, die alle Modulle einbindet und
+verwendet werden, die alle Module einbindet und
 regulär durch einen Doppelklick mit dem AHK-Interpreter
 gestartet werden kann.
 
