@@ -1,4 +1,4 @@
-== Infos auf der Mailingliste und im Web ==
+﻿== Infos auf der Mailingliste und im Web ==
 Die meiste Information gibt es schon auf
 	http://www.stefanluecking.de/exegese/unicode/linux-griechisch.html
 
@@ -44,9 +44,9 @@ drücken muss.
 
 === 5. Ebene der Tastatur (nur griechische Kleinbuchstaben) ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ T │ │ │ │ │ │6│ϰ│8│ │ │ │T│ Back │   Es fehlt: ω (Omega), ο (Omicron)
+│ T │ │ │ │ │ │6│ϰ│8│ │ │ │T│ Back │   
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤   Uneinigkeit: μ (Mu) oder µ (Micro)
-│Tab │ξ│ │λ│χ│ │κ│ψ│γ│ϕ│φ│ς│T│ Ret │
+│Tab │ξ│ │λ│χ│ω│κ│ψ│γ│ϕ│φ│ς│T│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │   T steht für eine tote Taste
 │ M3  │ │ι│α│ε│ │σ│ν│ρ│τ│δ│υ│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -57,9 +57,9 @@ drücken muss.
 
 === 6. Ebene der Tastatur (nur griechische Großbuchstaben) ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ T │ │ │ │ │ │ │ │ │ │ │ │T│ Back │   Es fehlt: Ω (Omega)
+│ T │ │ │ │ │ │ │ │ │ │ │ │T│ Back │   
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab │Ξ│ │Λ│ │ │ │Ψ│Γ│Φ│ │ │T│ Ret │   T steht für eine tote Taste
+│Tab │Ξ│ │Λ│ │Ω│ │Ψ│Γ│Φ│ │ │T│ Ret │   T steht für eine tote Taste
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │ │ │ │ │ │Σ│ │ │ │Δ│ │M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
