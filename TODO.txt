@@ -87,3 +87,21 @@ Lateinische Buchstaben mit Akzenten
 
 39) Wie sollen die „toten Tasten“ genannt werden? tot1, tot2, tot3?
 
+
+40) Die Lizenzierung von NEO klären: In der Wikipedia steht nur das Folgende:
+»Die NEO-Tastaturbelegung wurde unter der GNU General Public License <http://de.wikipedia.org/wiki/GNU_General_Public_License> (GPL) veröffentlicht und ist somit in diesem Sinne frei. «
+
+Ist damit die GPLv2 oder die GPLv3 gemeint? Oder ist das für uns eher unwichtig? Oder gibt es da für uns relevante Unterschiede und wenn ja welche?
+
+Und was genau steht unter dieser Lizenz? »Nur« die abstrakte theoretische Referenz, oder alle konkreten Treiber, oder der gesamte Inhalt des SVNs? Oder steht beispielsweise die FAQ eher unter der GNU-Lizenz für freie Dokumentation?
+
+Und was gilt für die Homepage bzw. das Wiki: Steht dessen Inhalt dann auch unter der GNU-Lizenz für freie Dokumentation (zwecks Wikipedia-Kompatibilität)? Oder einer CreativeCommons-Lizenz? Oder gehen auch beide gleichzeitig, um eine möglichst große Verbreitung zu ermöglichen?
+
+Bisher vorgeschlagene Lizenzen: GPLv2, GPLv3, GNU-Lizenz für freie Dokumentation, Creative Commons, BSD, MIT, Public Domain () …
+
+Mehrfachlizensierung (zb. GPL+CC+BSD) scheint (?) möglich zu sein.
+
+Man muss das ganze eben unter eine Lizenz stellen. Wenn die Lizenz "Mach damit, was du willst." lautet. dann ist das immer noch eine Lizenz.
+
+Und wenn wir eine CreativeCommons-Lizenz nutzen wollen: ¿Welche? Ist z.B. die kommerzielle Nutzung erlaubt oder nicht – darf z.B. Apple eine NEO2-Variante zum neuen Apple-Tastatur-Standard im OS 10.8 erklären und dann überteuerte, nur mit Apple-Rechnern funktionierende »NEO2ε«-Tastaturen verkaufen?
+
