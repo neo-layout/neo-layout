@@ -5,18 +5,18 @@ WARNUNG:
 Dies ist inzwischen eine automatisch
 generierte Datei!
 
-Sie wird regelmäßig übrerschrieben und sollte
+Sie wird regelmäßig überschrieben und sollte
 deshalb nicht mehr direkt bearbeitet werden!
 
 
-Statdessen sollten die Dateien/Module im
+Stattdessen sollten die Dateien/Module im
 Source-Unterverzeichnis bearbeitet werden, etwa:
 
-Source\log.ahk
-Source\keys-qwert-to-neo.ahk
-Source\keys-neo.ahk
-Source\methods-unicode.ahk
-Source\methods-lights.ahk
+Source\Changelog-and-Todo.ahk
+Source\Keys-Neo.ahk
+Source\Keys-Qwert-to-Neo.ahk
+Source\Methods-Layers.ahk
+Source\Methods-Lights.ahk
 ...
 
 *******************************************
