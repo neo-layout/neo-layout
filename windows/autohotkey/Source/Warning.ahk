@@ -48,6 +48,16 @@ The programm will exit.
 
 
 
+AHK-LINKS
+
+Eine kurze Einführung (Installation und Beispielscipt) findet man etwa auf
+http://www.kikizas.net/en/usbapps.ahk.html
+
+Eine alphabetische Liste aller erlaubten Kommandos findet man online unter
+http://www.autohotkey.com/docs/commands.htm
+
+
+
 *******************************************
 */
 
