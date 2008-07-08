@@ -39,22 +39,24 @@ IsMod4Locked := 0
 < & *SC138::
       if (IsMod4Locked) 
       {
-;         MsgBox Mod4-Feststellung aufgebehoben
+         MsgBox Mod4-Feststellung aufgebehoben
          IsMod4Locked = 0
-         if (UseMod4Light==1) {
+         if (UseMod4Light==1)
+         {
             KeyboardLED(1,"off")
          }
       }
       else
       {
-;         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig
+         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig
          IsMod4Locked = 1
-         if (UseMod4Light==1) {
+         if (UseMod4Light==1)
+         {
             KeyboardLED(1,"on")
          }
-         
       }
 return
+
 *SC138::
  altGrPressed := 1
 return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
@@ -62,7 +64,7 @@ return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
  altGrPressed := 0
 return 
 
-/* ; das folgende wird seltsamerweise nicht gebraucht :) oder führt zum AltGr Bug; Umschalt+‹ (Mod4) Zeigt ‹
+; das folgende wird seltsamerweise nicht gebraucht :) oder führt zum AltGr Bug; Umschalt+‹ (Mod4) Zeigt ‹
 SC138 & *<::
       if (IsMod4Locked) 
       {
@@ -75,7 +77,7 @@ SC138 & *<::
          IsMod4Locked = 1
       }
 return
-*/
+
  
  ; Mod3-Lock durch Mod3+Mod3
 IsMod3Locked := 0

@@ -18,10 +18,10 @@ Autoren: Matthias Berg, Dennis Heidsiek
 * Kurze Beschreibung der Funktionsweise
 *******************************************
 
-compose aktiviert die hotstrings und die nächsten gr (copyright) oder 12
+compose aktiviert die hotstrings und die nächsten oc (copyright) oder 12
 (einhalb) werden ersetzt und deaktivieren es aber sofort.
 
-Also {compose}neogrneo12  wird zu neo©neo12  (einhalb wird nicht ersetzt).
+Also {compose}neoocneo12  wird zu neo©neo12  (einhalb wird nicht ersetzt).
 damit dies aber nicht unendlich lange geht (also erst ein paar Wörter später
 eine Ersetzung erfolgt, weil nach Compose doch umentschieden wurde), wird mit
 Space (vielleicht auch später mit anderen Tasten) compose wieder deaktiviert.

@@ -6,7 +6,7 @@ Die eigentliche NEO-Belegung und der Hauptteil des AHK-Treibers.
    1. Ebene Aktualisieren
    2. Abhängig von der Variablen "Ebene" Zeichen ausgeben und die Variable "PriorDeadKey" setzen
    
-   Ablauf bei "lebenden" (sagt man das?) Tasten:
+   Ablauf bei "untoten" Tasten:
    1. Ebene Aktualisieren
    2. Abhängig von den Variablen "Ebene" und "PriorDeadKey" Zeichen ausgeben
    3. "PriorDeadKey" mit leerem String überschreiben
@@ -26,27 +26,27 @@ neo_tot1:
    }
    else if Ebene = 2
    {
-      SendUnicodeChar(0x02C7)  ; caron, tot
+      SendUnicodeChar(0x02C7) ; caron, tot
       PriorDeadKey := "c2"
    }
    else if Ebene = 3
    {
-      SendUnicodeChar(0x02D8)   ; brevis
+      SendUnicodeChar(0x02D8) ; brevis
       PriorDeadKey := "c3"
    }
    else if Ebene = 4
    {
-      SendUnicodeChar(0x00B7)  ; Mittenpunkt, tot
+      SendUnicodeChar(0x00B7) ; Mittenpunkt, tot
       PriorDeadKey := "c5"
    }
    else if Ebene = 5
    {
-      send - ; querstrich, tot
+      send -                  ; querstrich, tot
       PriorDeadKey := "c4"
    }
    else if Ebene = 6
    {
-      Send .         ; punkt darunter (colon)
+      Send .                  ; punkt darunter (colon)
       PriorDeadKey := "c6"
    }
 return
@@ -1165,13 +1165,13 @@ neo_f:
          BSSendUnicodeChar(0x2259)   ; entspricht
       else if (PriorDeadKey = "t1")       ; tilde 
          BSSendUnicodeChar(0x2245)   ; ungefähr gleich
-      else if (PriorDeadKey = "t5")   ; Schrägstrich 
+      else if (PriorDeadKey = "t5")       ; Schrägstrich 
          BSSendUnicodeChar(0x2260)   ; ungleich
-      else if (PriorDeadKey = "c4")    ; Querstrich
+      else if (PriorDeadKey = "c4")       ; Querstrich
          BSSendUnicodeChar(0x2261)   ; identisch
-      else if (PriorDeadKey = "c2")      ; caron 
+      else if (PriorDeadKey = "c2")       ; caron 
          BSSendUnicodeChar(0x225A)   ; EQUIANGULAR TO
-      else if (PriorDeadKey = "a6")      ; ring drüber 
+      else if (PriorDeadKey = "a6")       ; ring drüber 
          BSSendUnicodeChar(0x2257)   ; ring equal to
       else
          send `=
@@ -1210,7 +1210,7 @@ neo_q:
          Send {+}
    }
    else if Ebene = 5
-      SendUnicodeChar(0x03D5)  ;  phi symbol (varphi)
+      SendUnicodeChar(0x03D5) ; phi symbol (varphi)
    else if Ebene = 6
       SendUnicodeChar(0x211A) ; Q (rationale Zahlen)
    PriorDeadKey := ""   CompKey := ""
@@ -1221,29 +1221,50 @@ neo_sz:
    if Ebene = 1
       if GetKeyState("CapsLock","T")
       {
-         SendUnicodeChar(0x1E9E) ; versal-ß
+         SendUnicodeChar(0x1E9E) ; verssal-ß
       }
       else
       {
-         send ß
-      }      
+         if (LangSTastatur = 1)
+         {
+            sendinput {blind}s
+         }
+         else
+         {
+            send ß
+         }
+      }
    else if Ebene = 2
       if GetKeyState("CapsLock","T")
       {
-         send ß
+         if (LangSTastatur = 1)
+         {
+            sendinput {blind}s
+         }
+         else
+         {
+            send ß
+         }
       }
       else
       {
          SendUnicodeChar(0x1E9E) ; versal-ß
       }
    else if Ebene = 3
-      SendUnicodeChar(0x017F)   ; langes s
+   {
+      if (LangSTastatur = 1)
+         send ß
+      else
+         SendUnicodeChar(0x017F) ; langes s
+   }
    else if Ebene = 4
-      {} ; leer    
+   {
+       LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
+   }
    else if Ebene = 5
       SendUnicodeChar(0x03C2) ; varsigma
    else if Ebene = 6
-      SendUnicodeChar(0x2218)  ; Verknüpfungsoperator
+      SendUnicodeChar(0x2218) ; Verknüpfungsoperator
    PriorDeadKey := ""   CompKey := ""
 return
 
@@ -1692,20 +1713,30 @@ neo_s:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "c1")           ; circumflex
+      if (PriorDeadKey = "c1")      ; circumflex
          BSSendUnicodeChar(0x015D)
-      else if (PriorDeadKey = "a1")      ; akut 
+      else if (PriorDeadKey = "a1") ; akut 
          BSSendUnicodeChar(0x015B)
-      else if (PriorDeadKey = "c2")     ; caron
+      else if (PriorDeadKey = "c2") ; caron
          BSSendUnicodeChar(0x0161)
-      else if (PriorDeadKey = "a3")    ; cedilla
+      else if (PriorDeadKey = "a3") ; cedilla
          BSSendUnicodeChar(0x015F)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a5") ; punkt darüber 
          BSSendUnicodeChar(0x1E61)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E63)
-      else   
-         sendinput {blind}s
+      else
+      {
+         if (LangSTastatur = 1)
+         {
+            if GetKeyState("CapsLock","T")
+               sendinput {blind}s
+            else
+               SendUnicodeChar(0x017F) ; langes s
+         }
+         else
+            sendinput {blind}s
+      }
       if (PriorDeadKey = "comp")
          CompKey := "s_small"
       else
@@ -1713,20 +1744,25 @@ neo_s:
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "c1")           ; circumflex
+      if (PriorDeadKey = "c1")      ; circumflex
          BSSendUnicodeChar(0x015C)
-      else if (PriorDeadKey = "c2")     ; caron
+      else if (PriorDeadKey = "c2") ; caron
          BSSendUnicodeChar(0x0160)
-      else if (PriorDeadKey = "a1")      ; akut 
+      else if (PriorDeadKey = "a1") ; akut 
          BSSendUnicodeChar(0x015A)
-      else if (PriorDeadKey = "a3")    ; cedilla 
+      else if (PriorDeadKey = "a3") ; cedilla 
          BSSendUnicodeChar(0x015E)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a5") ; punkt darüber 
          BSSendUnicodeChar(0x1E60)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E62)
       else
-         sendinput {blind}S
+      {
+         if GetKeyState("CapsLock","T") && (LangSTastatur = 1)
+            SendUnicodeChar(0x017F)
+         else 
+            sendinput {blind}S
+      }
       if (PriorDeadKey = "comp")
          CompKey := "s_capital"
       else
@@ -2283,7 +2319,8 @@ neo_komma:
            }
                
          }
-         else {
+         else
+         {
            send {blind},
          }
        }
@@ -3305,11 +3342,15 @@ neo_tab:
      }
 */
    }
-   else if (IsMod3Pressed()) { ;#
+   else if (IsMod3Pressed()) ;#
+   {
       PriorDeadKey := "comp"
       CompKey := ""
+      ;#include *i %a_include%\Compose.ahk
+      ;#include *i %a_include%\Source\Compose.ahk
    }
-   else {
+   else
+   {
       send {blind}{Tab}
       PriorDeadKey := ""
       CompKey := ""

@@ -62,7 +62,7 @@ return
   {
      goto neo_sz   
   }
-*SC00D::goto neo_tot2  ; Akkut
+*SC00D::goto neo_tot2  ; Akut			
 ; Reihe 2
 *Tab::goto neo_tab
 *q::

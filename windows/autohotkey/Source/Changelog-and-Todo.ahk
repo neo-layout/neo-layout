@@ -1,7 +1,7 @@
 /*
     Titel:        NEO 2.0 beta Autohotkey-Treiber
-    $Revision: 583 $
-    $Date: 2008-06-28 02:23:42 +0200 (Sa, 28 Jun 2008) $
+    $Revision:    624 $
+    $Date:        2008-07-08 18:50:00 +0200 (Di, 07 Jul 2008) $
     Autor:        Stefan Mayer <stm (at) neo-layout.org>
     Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
         
@@ -10,29 +10,28 @@
                     nicht mehr abgefangen werden müssen.
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
-				  - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
+                  - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+
     CHANGEHISTORY:
 
-
-
-
-	Revision: 616
+                  Revision 624(von Martin Roppelt):
+                  - Lang-s-Tastatur (ein- und auszuschalten durch Mod4+ß)
                   Revision 616 (von Dennis Heidsiek):
-                  - Der nicht funktionierender Mod5-Lock-Fix wurde wieder entfernt, da
+                  - Der nicht funktionierende Mod5-Lock-Fix wurde wieder entfernt, da
                     er sogar neue Fehler produzierte.
                   Revision 615 (von Dennis Heidsiek):
                   - Erfolgloser Versuch, den Mod4-Lock wiederherzustellen
-                    (durch eine Tilde von den Scancodes der Bildschirmtastatur).
+                    (durch eine Tilde vor den Scancodes der Bildschirmtastatur).
                   - Rechtschreibfehler korrigiert.
                   - Zwei AHK-Links eingefügt.
                   Revision 609 (von Dennis Heidsiek):
                   - Vorläufiger Abschluss der AHK-Modularisierung.
                   - Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der
                     sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und
-                    nicht auf das grosse »vereinigte« Skript beziehen.
+                    nicht auf das große »vereinigte« Skript beziehen.
                   Revision 608 (von Martin Roppelt):
                   - Rechtschreibfehler korrigiert und Dateinamen aktualisiert und sortiert.
                   Revision 590 (von Dennis Heidsiek):
