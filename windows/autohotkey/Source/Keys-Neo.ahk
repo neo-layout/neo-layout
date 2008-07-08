@@ -3344,10 +3344,10 @@ neo_tab:
    }
    else if (IsMod3Pressed()) ;#
    {
+      #Include *i %a_scriptdir%\ComposeLaunch.ahk
+      #Include *i %a_scriptdir%\Source\ComposeLaunch.ahk
       PriorDeadKey := "comp"
       CompKey := ""
-      ;#include *i %a_include%\Compose.ahk
-      ;#include *i %a_include%\Source\Compose.ahk
    }
    else
    {
