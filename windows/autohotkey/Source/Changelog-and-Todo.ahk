@@ -10,13 +10,37 @@
                     nicht mehr abgefangen werden müssen.
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
+				  - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGEHISTORY:   
-                  Aktuelle Revision (von Matthias Berg):
-                  - Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*
-                  Revision 583 (von Matthias Berg):
+    CHANGEHISTORY:
+	
+
+
+                  Revision 615 (von Dennis Heidsiek):
+                  - Erfolgloser Versuch, den Mod4-Lock wiederherzustellen
+                    (durch eine Tilde von den Scancodes der Bildschirmtastatur).
+                  - Rechtschreibfehler korrigiert.
+                  - Zwei AHK-Links eingefügt.
+                  Revision 609 (von Dennis Heidsiek):
+                  - Vorläufiger Abschluss der AHK-Modularisierung.
+                  - Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der
+                    sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und
+                    nicht auf das grosse »vereinigte« Skript beziehen.
+                  Revision 608 (von Martin Roppelt):
+                  - Rechtschreibfehler korrigiert und Dateinamen aktualisiert und sortiert.
+                  Revision 590 (von Dennis Heidsiek):
+                  - Erste technische Vorarbeiten zur logischen Modularisierung des viel
+                    zu lange gewordenen AHK-Quellcodes.
+                  - Neue Batch-Datei Build-Update.bat zur einfachen Aktualisierung der EXE-Datei
+                  Revision 583 (von Dennis Heidsiek):
+                  - Kleinere Korrekturen (Mod3+Numpad5, Mod5+Numpad5 und Mod3+Numpad9
+                    stimmen wieder mit der Referenz überein).
+                  Revision 580 (von Matthias Berg):
+                  - Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*, dies deaktiviert
+                    jedoch leider den Mod4-Lock
+                  Revision 570 (von Matthias Berg):
                   - Hotkeys für einHandNeo und lernModus durch entsprechende ScanCodes ersetzt 
                   Revision 568 (von Matthias Berg):
                   - Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt

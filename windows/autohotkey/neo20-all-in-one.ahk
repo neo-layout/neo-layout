@@ -1,23 +1,62 @@
 /*
 *******************************************
-WARNUNG:
-
-Dies ist inzwischen eine automatisch
-generierte Datei!
-
-Sie wird regelmäßig übrerschrieben und sollte
-deshalb nicht mehr direkt bearbeitet werden!
 
 
-Statdessen sollten die Dateien/Module im
+
+WICHTIGE WARNUNG:
+
+Dies ist inzwischen eine automatisch generierte
+Datei! Sie wird regelmäßig überschrieben und
+sollte deshalb nicht mehr direkt bearbeitet werden!
+
+
+
+DIE AUSFÜHRBARE DATEI AKTUALISIEREN:
+
+Um die neo20-all-in-one.exe auf den neuesten Stand zu
+bringen, reicht (wenn Autohotkey im Standardverzeichnis
+installiert wurde) ein Doppelklick auf die Batch-Datei
+Build-Update.bat
+
+
+
+HINWEISE FÜR AHK-ENTWICKLER:
+
+Anstatt dieser Datei müssen die Dateien/Module im
 Source-Unterverzeichnis bearbeitet werden, etwa:
+Source\Changelog-and-Todo.ahk
+Source\Keys-Neo.ahk
+Source\Keys-Qwert-to-Neo.ahk
+Source\Methods-Layers.ahk
+Source\Methods-Lights.ahk
 
-Source\log.ahk
-Source\keys-qwert-to-neo.ahk
-Source\keys-neo.ahk
-Source\methods-unicode.ahk
-Source\methods-lights.ahk
-...
+Um die gemachten Änderungen zu testen, sollte die Datei
+Source\All.ahk
+verwendet werden, die alle Module einbindet und
+regulär durch einen Doppelklick mit dem AHK-Interpreter
+gestartet werden kann.
+
+Der grosse Vorteil dieser Methode liegt daran, dass sich die
+Zeilennummern eventueller Fehlermeldungen nicht mehr auf
+die grosse "vereinigte" AHK-Datei, sondern auf die tatsäch-
+lich relevanten Module beziehen, z.B.:
+
+Error at line 64 in #include file "C:\...\autohotkey\Source\Methods-Lights.ahk"
+Line Text: CTL_CODE_LED(p_device_type, p_function, p_method, p_access)
+Error: Functions cannot contain functions.
+The programm will exit.
+
+
+
+AHK-LINKS
+
+Eine kurze Einführung (Installation und Beispielscipt) findet man etwa auf
+http://www.kikizas.net/en/usbapps.ahk.html
+
+Eine alphabetische Liste aller erlaubten Kommandos findet man online unter
+http://www.autohotkey.com/docs/commands.htm
+
+
 
 *******************************************
 */
@@ -98,13 +137,35 @@ DU BIST GEWARNT WORDEN!
                     nicht mehr abgefangen werden müssen.
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
+				  - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
     
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-    CHANGEHISTORY:   
-                  Aktuelle Revision (von Matthias Berg):
-                  - Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*
-                  Revision 583 (von Matthias Berg):
+    CHANGEHISTORY:
+	
+
+
+                  Revision 615 (von Dennis Heidsiek):
+                  - Erfolgloser Versuch, den Mod4-Lock wiederherzustellen
+                    (durch eine Tilde von den Scancodes der Bildschirmtastatur)
+                  - Rechtschreibfehler korrigiert.
+                  - Zwei AHK-Links eingefügt.
+                  Revision 609 (von Dennis Heidsiek):
+                  - Vorläufiger Abschluss der AHK-Modularisierung.
+                  - Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der sich
+                    die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und nicht
+                    auf das grosse »vereinigte« Skript beziehen.
+                  Revision 590 (von Dennis Heidsiek):
+                  - Erste technische Vorarbeiten zur logischen Modularisierung des viel
+                    zu lange gewordenen AHK-Quellcodes.
+                  - Neue Batch-Datei Build-Update.bat zur einfachen Aktualisierung der EXE-Datei
+                  Revision 583 (von Dennis Heidsiek):
+                  - Kleinere Korrekturen (Mod3+Numpad5, Mod5+Numpad5 und Mod3+Numpad9
+                    stimmen wieder mit der Referenz überein).
+                  Revision 580 (von Matthias Berg):
+                  - Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*, dies deaktiviert
+                    jedoch leider den Mod4-Lock
+                  Revision 570 (von Matthias Berg):
                   - Hotkeys für einHandNeo und lernModus durch entsprechende ScanCodes ersetzt 
                   Revision 568 (von Matthias Berg):
                   - Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt
@@ -4738,57 +4799,57 @@ EncodeInteger(ref, val)
 guiErstellt = 0
 alwaysOnTop = 1
 aktuellesBild = ebene1.png 
-SC056 & *F1::
-SC138 & *F1::
+~SC056 & *F1::
+~SC138 & *F1::
 {
   if (zeigeBildschirmTastatur)
     goto Switch1
   return
 }
-SC056 & *F2::
-SC138 & *F2::
+~SC056 & *F2::
+~SC138 & *F2::
 {
   if (zeigeBildschirmTastatur)
     goto Switch2
   return
 }
-SC056 & *F3::
-SC138 & *F3::
+~SC056 & *F3::
+~SC138 & *F3::
 {
   if (zeigeBildschirmTastatur)
     goto Switch3
   return
 }
-SC056 & *F4::
-SC138 & *F4::
+~SC056 & *F4::
+~SC138 & *F4::
 {
   if (zeigeBildschirmTastatur)
     goto Switch4
   return
 }
-SC056 & *F5::
-SC138 & *F5::
+~SC056 & *F5::
+~SC138 & *F5::
 {
   if (zeigeBildschirmTastatur)
     goto Switch5
   return
 }
-SC056 & *F6::
-SC138 & *F6::
+~SC056 & *F6::
+~SC138 & *F6::
 {
   if (zeigeBildschirmTastatur)
     goto Switch6
   return
 }
-SC056 & *F7::
-SC138 & *F7::
+~SC056 & *F7::
+~SC138 & *F7::
 {
   if (zeigeBildschirmTastatur)
     goto Show
   return
 }
-SC056 & *F8::
-SC138 & *F8::
+~SC056 & *F8::
+~SC138 & *F8::
 {
   if (zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
