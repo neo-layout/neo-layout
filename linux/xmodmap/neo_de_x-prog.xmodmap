@@ -50,9 +50,14 @@ keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group
 keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
 
-!add Mod3 = ISO_Group_Shift
-!add Mod5 = ISO_Level3_Shift
+! add Mod3 = ISO_Group_Shift
+! add Mod5 = ISO_Level3_Shift
 
+keycode 115 = Super_L
+! keycode 116 = Super_R
+keycode 116 = Multi_key Multi_key
+
+add Mod4 = Super_L Super_R
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Ebenen
@@ -75,8 +80,6 @@ keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 ! ShiftLock und Mo5Lock funktionieren, Mod3Lock lässt sich aber nicht mehr lösen!!!!
 ! keycode 115 = ISO_Lock
 ! add Lock = ISO_Lock
-
-! keycode 115 = Undo Redo
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -194,7 +197,7 @@ keycode 54 = adiaeresis Adiaeresis 	bar        	Greek_eta  	KP_Next		KP_Next		U2
 !		ä	Ä		|		η						ℜ real part
 keycode 55 = p          P          	asciitilde 	Greek_pi   	KP_Enter	KP_Enter	U03A0
 !					~		π						Π Greek_PI
-keycode 56 = z          Z          	grave      	Greek_zeta Pointer_EnableKeys Pointer_EnableKeys  U2124
+keycode 56 = z          Z          	grave      	Greek_zeta	Undo		Redo		U2124
 !					`		ζ						ℤ integers
 
 keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol     	U21D2
