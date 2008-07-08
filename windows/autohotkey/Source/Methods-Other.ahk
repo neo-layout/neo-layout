@@ -213,57 +213,57 @@ EncodeInteger(ref, val)
 guiErstellt = 0
 alwaysOnTop = 1
 aktuellesBild = ebene1.png 
-~SC056 & *F1::
-~SC138 & *F1::
+SC056 & *F1::
+SC138 & *F1::
 {
   if (zeigeBildschirmTastatur)
     goto Switch1
   return
 }
-~SC056 & *F2::
-~SC138 & *F2::
+SC056 & *F2::
+SC138 & *F2::
 {
   if (zeigeBildschirmTastatur)
     goto Switch2
   return
 }
-~SC056 & *F3::
-~SC138 & *F3::
+SC056 & *F3::
+SC138 & *F3::
 {
   if (zeigeBildschirmTastatur)
     goto Switch3
   return
 }
-~SC056 & *F4::
-~SC138 & *F4::
+SC056 & *F4::
+SC138 & *F4::
 {
   if (zeigeBildschirmTastatur)
     goto Switch4
   return
 }
-~SC056 & *F5::
-~SC138 & *F5::
+SC056 & *F5::
+SC138 & *F5::
 {
   if (zeigeBildschirmTastatur)
     goto Switch5
   return
 }
-~SC056 & *F6::
-~SC138 & *F6::
+SC056 & *F6::
+SC138 & *F6::
 {
   if (zeigeBildschirmTastatur)
     goto Switch6
   return
 }
-~SC056 & *F7::
-~SC138 & *F7::
+SC056 & *F7::
+SC138 & *F7::
 {
   if (zeigeBildschirmTastatur)
     goto Show
   return
 }
-~SC056 & *F8::
-~SC138 & *F8::
+SC056 & *F8::
+SC138 & *F8::
 {
   if (zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
