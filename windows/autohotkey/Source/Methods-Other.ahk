@@ -7,7 +7,7 @@
 /*
 Ebenen laut Referenz:
 1. Ebene (kein Mod)      4. Ebene (Mod4)
-2. Ebene (Umschalt)      5. Ebene (Mod3+Umschalt)
+2. Ebene (Umschalt)      5. Ebene (Umschalt+Mod3)
 3. Ebene (Mod3)          6. Ebene (Mod3+Mod4)
 */
 
@@ -32,7 +32,7 @@ EbeneAktualisieren()
         if ( IsMod3Pressed() )
             { ; Umschalt UND Mod3 
             if ( IsMod4Pressed() )
-            {  ; Umschald UND Mod3 UND Mod4 
+            {  ; Umschalt UND Mod3 UND Mod4 
                ; Ebene 8 impliziert Ebene 6
                Ebene = 6
              }
@@ -44,12 +44,12 @@ EbeneAktualisieren()
         else 
         {  ; Umschalt NICHT Mod3
             if ( IsMod4Pressed() )
-            {  ; Umschald UND Mod4 NICHT Mod3
+            {  ; Umschalt UND Mod4 NICHT Mod3
                ; Ebene 7 impliziert Ebene 4 
                 Ebene = 4
             }
             else
-            { ; Umschald NICHT Mod3 NICHT Mod4
+            { ; Umschalt NICHT Mod3 NICHT Mod4
                Ebene = 2    
             }
          }   

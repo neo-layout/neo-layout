@@ -1,4 +1,4 @@
-Version 14.06.2008
+﻿Version 14.06.2008
 
 == Installation ==
 === Direkte Installation ===
@@ -73,7 +73,7 @@ funktioniert ist das Ausschalten des Ziffernblocks nicht unbedingt
 nötig.
 
 == Besonderheiten bei der ahk-Windowsversion von Neo ==
-Ebene 4 des Ziffernblocks lässt sich außer über Mod3+Shift auch über
+Ebene 5 des Ziffernblocks lässt sich außer über Mod3+Shift auch über
 Mod4 ansprechen.
 
 == Warnung ==

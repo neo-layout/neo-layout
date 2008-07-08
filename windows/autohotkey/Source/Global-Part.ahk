@@ -5,11 +5,12 @@
 */
 
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
-ahkTreiberKombi := 0 ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden)
-einHandNeo := 0 ; Soll der Treiber im Einhandmodus betrieben werden?
-lernModus := 0 ; Soll der Lernmodus aktiviert werden?
-bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfanger stets einfach verfügbar)
-UseMod4Light := 1 ; Aktivierter Mod4 Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
+ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden)
+einHandNeo := 0                  ; Soll der Treiber im Einhandmodus betrieben werden?
+lernModus := 0                   ; Soll der Lernmodus aktiviert werden?
+bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+UseMod4Light := 1                ; Aktivierter Mod4 Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
+LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf M3+ß gelegt werden?
 
 Process, Priority,, High
 
