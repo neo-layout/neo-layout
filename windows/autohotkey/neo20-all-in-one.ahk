@@ -142,19 +142,26 @@ DU BIST GEWARNT WORDEN!
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-	
 
 
+
+
+	Revision: 616
+                  Revision 616 (von Dennis Heidsiek):
+                  - Der nicht funktionierender Mod5-Lock-Fix wurde wieder entfernt, da
+                    er sogar neue Fehler produzierte.
                   Revision 615 (von Dennis Heidsiek):
                   - Erfolgloser Versuch, den Mod4-Lock wiederherzustellen
-                    (durch eine Tilde von den Scancodes der Bildschirmtastatur)
+                    (durch eine Tilde von den Scancodes der Bildschirmtastatur).
                   - Rechtschreibfehler korrigiert.
                   - Zwei AHK-Links eingefügt.
                   Revision 609 (von Dennis Heidsiek):
                   - Vorläufiger Abschluss der AHK-Modularisierung.
-                  - Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der sich
-                    die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und nicht
-                    auf das grosse »vereinigte« Skript beziehen.
+                  - Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der
+                    sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und
+                    nicht auf das grosse »vereinigte« Skript beziehen.
+                  Revision 608 (von Martin Roppelt):
+                  - Rechtschreibfehler korrigiert und Dateinamen aktualisiert und sortiert.
                   Revision 590 (von Dennis Heidsiek):
                   - Erste technische Vorarbeiten zur logischen Modularisierung des viel
                     zu lange gewordenen AHK-Quellcodes.
@@ -4799,57 +4806,57 @@ EncodeInteger(ref, val)
 guiErstellt = 0
 alwaysOnTop = 1
 aktuellesBild = ebene1.png 
-~SC056 & *F1::
-~SC138 & *F1::
+SC056 & *F1::
+SC138 & *F1::
 {
   if (zeigeBildschirmTastatur)
     goto Switch1
   return
 }
-~SC056 & *F2::
-~SC138 & *F2::
+SC056 & *F2::
+SC138 & *F2::
 {
   if (zeigeBildschirmTastatur)
     goto Switch2
   return
 }
-~SC056 & *F3::
-~SC138 & *F3::
+SC056 & *F3::
+SC138 & *F3::
 {
   if (zeigeBildschirmTastatur)
     goto Switch3
   return
 }
-~SC056 & *F4::
-~SC138 & *F4::
+SC056 & *F4::
+SC138 & *F4::
 {
   if (zeigeBildschirmTastatur)
     goto Switch4
   return
 }
-~SC056 & *F5::
-~SC138 & *F5::
+SC056 & *F5::
+SC138 & *F5::
 {
   if (zeigeBildschirmTastatur)
     goto Switch5
   return
 }
-~SC056 & *F6::
-~SC138 & *F6::
+SC056 & *F6::
+SC138 & *F6::
 {
   if (zeigeBildschirmTastatur)
     goto Switch6
   return
 }
-~SC056 & *F7::
-~SC138 & *F7::
+SC056 & *F7::
+SC138 & *F7::
 {
   if (zeigeBildschirmTastatur)
     goto Show
   return
 }
-~SC056 & *F8::
-~SC138 & *F8::
+SC056 & *F8::
+SC138 & *F8::
 {
   if (zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
