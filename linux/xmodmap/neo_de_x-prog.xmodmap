@@ -76,8 +76,7 @@ keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Sh
 ! keycode 115 = ISO_Lock
 ! add Lock = ISO_Lock
 
-keycode 115 = Undo Redo
-! testweise
+! keycode 115 = Undo Redo
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
