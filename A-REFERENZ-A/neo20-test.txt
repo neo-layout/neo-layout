@@ -278,7 +278,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Erste Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│Tab│ / │ * │ - │
+│ = │ / │ * │ - │
 ├───┼───┼───┼───┤
 │ 7 │ 8 │ 9 │   │
 ├───┼───┼───┤   │
@@ -291,42 +291,43 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Zweite Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ = │ / │ * │ - │
+│ ≈ │ ÷ │ ∙ │ - │
 ├───┼───┼───┼───┤
-│ ✔ │ ^ │ ✗ │   │
+│ ✔ │ ∩ │ ✗ │   │
 ├───┼───┼───┤   │
-│ ( │ € │ ) │ + │
+│ ⊂ │ ∪ │ ⊃ │ ± │
 ├───┼───┼───┼───┤
-│ ₁ │ ₂ │ ₃ │   │
-├───┴───┼───┤   │
-│ •     │ ‣ │Ent│
-└───────┴───┴───┘
-
-=== Dritte Ebene – Miniatur ===
-┌───┬───┬───┬───┐
-│ ≈ │ ÷ │ × │ − │
-├───┼───┼───┼───┤
-│ ↕ │ ↑ │ ⊗ │   │
-├───┼───┼───┤   │
-│ ← │ ∞ │ → │ ± │
-├───┼───┼───┼───┤
-│ ↔ │ ↓ │ ⇌ │   │
+│ ₁ │ ₂  │ ₃ │   │
 ├───┴───┼───┤   │
 │ %     │ . │Ent│
 └───────┴───┴───┘
 
-=== Vierte Ebene – Miniatur ===
+=== Dritte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≠ │ ∕ │ ∙ │ − │
+│ ≠ │frc│ × │ − │ frc soll der Bruchstrich ⁄ sein
 ├───┼───┼───┼───┤
-│ ≪ │ ∩ │ ≫ │   │
+│ ↕ │ ↑ │ ∋ │   │
 ├───┼───┼───┤   │
-│ ⊂ │ ∋ │ ⊃ │ ∓ │
+│ ← │ ∞ │ → │ ∓ │
 ├───┼───┼───┼───┤
-│ ≤ │ ∪ │ ≥ │   │
+│ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
-│ ‰     │ , │Ent│
+│ ‰     │,/.│Ent│
 └───────┴───┴───┘
+
+=== Vierte Ebene – Miniatur === 
+┌───┬───┬───┬───┐
+│ ⍓ │ / │ * │ - │ (zur Tastaturmaussteuerung)
+├───┼───┼───┼───┤
+│Hom│KP↑│Pgu│   │
+├───┼───┼───┤   │
+│KP←│Beg│KP→│ + │
+├───┼───┼───┼───┤
+│End│KP↓│Pgd│   │
+├───┴───┼───┤   │
+│ Ins   │Del│Ent│
+└───────┴───┴───┘
+
 
 == Tipp ==
 Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
