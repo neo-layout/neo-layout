@@ -15,9 +15,14 @@
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
     CHANGEHISTORY:
-	
 
 
+
+
+	Revision: 616
+                  Revision 616 (von Dennis Heidsiek):
+                  - Der nicht funktionierender Mod5-Lock-Fix wurde wieder entfernt, da
+                    er sogar neue Fehler produzierte.
                   Revision 615 (von Dennis Heidsiek):
                   - Erfolgloser Versuch, den Mod4-Lock wiederherzustellen
                     (durch eine Tilde von den Scancodes der Bildschirmtastatur).

@@ -1,0 +1,44 @@
+﻿\documentclass{scrartcl}
+
+\usepackage[ngerman]{babel}
+%\usepackage{xcolor}
+\usepackage{hyperref}
+
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\setmainfont{Linux Libertine O} % Constantia, Gentium, Linux Libertine O, YanoneKaffeesatz, ComicJens …
+
+%\setkomafont{disposition}{\fontspec{Gentium}} % Benutzt eine Schrift für alle Gliederungsebenen
+
+% Aber wir wollen sie lieber manuell konfigurieren:
+\setkomafont{section}{\fontspec{Linux Libertine O}\Huge\textbf}
+\setkomafont{subsection}{\fontspec[Color=FF2010B9]{Linux Libertine O}\Large}
+
+
+
+\begin{document}
+\section*{Liesmich}
+Zuerst sollte man sich von \url{http://linuxlibertine.sourceforge.net/Libertine-DE.html} die Schrift »Linux Libertine O« im OpenType-Format herunterladen. Diese muß dann nur noch auf \emph{ganz normale, betriebsſystemspezifische} Art und Weise im jeweiligen Betriebsſystem (Windows, Linux, Apple) installiert werden. Anschließend kann diese Beispieldatei problemlos mit »xelatex LiesMich-LinuxLibertine.tex« kompiliert werden (eine moderne Mik\TeX- oder \TeX Life-Distribution vorausgesetzt).
+
+
+\subsection*{Ein paar nette \XeLaTeX-Spielereien}
+¡Willkommen zu \XeLaTeX, dem \TeX-Derivat der Zukunft! Die Schriften des Betriebsſystems werden \emph{natlos} und \emph{vollautomatisch} mitsamt aller Schriftschnitte in \XeTeX\ integriert. Oft werden so sogar erweiterte OpenType-Features ansprechbar, die in Word, OpenOffice etc.\ noch gar nicht unterstützt werden.
+
+Dies betrifft beispielsweise dichtengleiche Zahlen wie {\addfontfeatures{Numbers={Lining,Monospaced,SlashedZero}}1234,50} (vs.\ 1234,50), normale wie seltene {\addfontfeatures{Ligatures={NoCommon, Rare}}fluffige Ligaturenschätze} (fluffige Ligaturenschätze) oder auch {\addfontfeatures{Letters=SmallCaps,LetterSpace=6.0}ECHTE KAPITÄLCHEN}.
+
+Wird so ein Feature im aktuellen Font hingegen nicht unterstützt, gibt \XeTeX\ eine Warnmeldung in die Log-Datei aus.
+
+Zudem arbeitet \XeLaTeX\ standardmäßig mit der UTF-8-Kodierung, was die direkte Eingabe beliebiger Unicode-Zeichen möglich macht: α,β,γ, °№§, ¹²³, ♀⚥♂, FLUẞ. Ältere \LaTeX-Syntax kann hingegen manchmal zu unerwarteten (aber logischen) Problemen führen, vergleiche etwa – (Gedankenstrich) vs.\ -- (Divis-Divis) vs.\ {\addfontfeatures{Mapping=tex-text}-- (Divis-Divis, \LaTeX-Kompatibilitätsmodus)}.
+
+
+\subsection*{Wo Licht ist, ist auch Schatten}
+Die Unterstützung des Mathematik-Modus ist vorhanden, aber noch experimentell und deshalb in einem separaten Packet ausgelagert. Zudem werden die typographischen Feinheiten des Microtype Packetes (optischer Randausgleich etc.) derzeitig noch nicht unterstützt.
+
+
+\input{Wikipedia-Artikel.utf8}
+
+
+\end{document}
