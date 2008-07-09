@@ -1666,7 +1666,9 @@ neo_8:
       CompKey := ""
    }
    else if Ebene = 5
-   {  }  ; leer
+   {
+      SendUnicodeChar(0x27E8) ;bra (öffnende spitze klammer)
+   }
    else if Ebene = 6
    {
       SendUnicodeChar(0x2204) ; es existiert nicht
@@ -1729,7 +1731,9 @@ neo_9:
       CompKey := ""
    }
    else if Ebene = 5
-   {  } ; leer
+   {
+      SendUnicodeChar(0x27E9) ;ket (schließende spitze klammer)
+   }
    else if Ebene = 6
    {
       SendUnicodeChar(0x2226) ; nicht parallel
