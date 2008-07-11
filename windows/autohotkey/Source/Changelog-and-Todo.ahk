@@ -11,12 +11,14 @@
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
                   - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
-    
+                  - Auf der 6. Ebene von 2 und 3 werden Delta und Nabla gesendet, aber nicht die
+                    logischen Symbole UND und ODER (wie in der Referenz)
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
 
     CHANGEHISTORY:
-
+                  Revision 629(von Martin Roppelt):
+                  - Spitze Klammern (bra und ket) testweise auf M5+8/9
                   Revision 624(von Martin Roppelt):
                   - Lang-s-Tastatur (ein- und auszuschalten durch Mod4+ß)
                   Revision 616 (von Dennis Heidsiek):
