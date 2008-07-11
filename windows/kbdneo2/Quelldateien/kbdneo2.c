@@ -178,7 +178,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 		SHFT_INVALID,	// 	0	1	1	1	0
 		SHFT_INVALID,	// 	0	1	1	1	1
 		3,				// 	1	0	0	0	0
-		8,				// 	1	0	0	0	1   (für Pseudo-Ebene)
+		8,				// 	1	0	0	0	1  
 		SHFT_INVALID,	// 	1	0	0	1	0
 		SHFT_INVALID,	// 	1	0	0	1	1
 		SHFT_INVALID,	// 	1	0	1	0	0
@@ -229,7 +229,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {0xff			,0			,'^'		,0x030c		,0x0306		,0x00b7		,0x0335		,0x0323		},
 {'1'			,0			,'1'		,0x00b0		,0x00B9		,0x2022		,0x2640		,0x00ac		},
 {'3'			,0			,'3'		,0x00a7		,0x00b3		,WCH_NONE	,0x2642		,0x2227		},
-{'4'			,0			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2113		,0x02d4		}, //WCH_NONE sollte »Bild auf« sein (AHK?)
+{'4'			,0			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2113		,0x22a5		}, //WCH_NONE sollte »Bild auf« sein (AHK?)
 {'5'			,0			,'5'		,0x00ab		,0x2039		,WCH_NONE	,0x2020		,0x2221		},
 {'7'			,0			,'7'		,0x0024		,0x00a5		,0x00a4		,0x03f0		,0x2209		},
 {'8'			,0			,'8'		,0x201E		,0x201A		,0x002F		,WCH_NONE	,0x2204		},
@@ -248,7 +248,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'H'			,CAPLOK		,'h'		,'H'		,'<'		,'7'		,0x03C8		,0x03A8		},
 {'G'			,CAPLOK		,'g'		,'G'		,'>'		,'8'		,0x03B3		,0x0393		},
 {'F'			,CAPLOK		,'f'		,'F'		,'='		,'9'		,0x03C6		,0x03A6		},
-{'Q'			,CAPLOK		,'q'		,'Q'		,'&'		,'+'		,0x03c6		,0x211a		},
+{'Q'			,CAPLOK		,'q'		,'Q'		,'&'		,'+'		,0x03d5		,0x211a		},
 {'U'			,CAPLOK		,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x222e		}, //1. WCH_NONE sollte »Pos 1« sein (AHK?)
 {'I'			,CAPLOK		,'i'		,'I'		,'/'		,WCH_NONE	,0x03B9		,0x222b		}, //WCH_NONE sollte »Pfeil links« sein (AHK?)
 {'A'			,CAPLOK		,'a'		,'A'		,'{'		,WCH_NONE	,0x03B1		,0x2200		}, //WCH_NONE sollte »Pfeil runter« sein (AHK?)
@@ -256,28 +256,29 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'O'			,CAPLOK		,'o'		,'O'		,'*'		,WCH_NONE	,0x03bf		,0x2208		}, //WCH_NONE sollte »Ende« sein (AHK?)
 {'S'			,CAPLOK		,'s'		,'S'		,'?'		,0x00BF		,0x03C3		,0x03A3		},
 {'N'			,CAPLOK		,'n'		,'N'		,'('		,'4'		,0x03BD		,0x2115		},
-{'R'			,CAPLOK		,'r'		,'R'		,')'		,'5'		,0x03C1		,0x211d		},
+{'R'			,CAPLOK		,'r'		,'R'		,')'		,'5'		,0x03f1		,0x211d		},
 {'T'			,CAPLOK		,'t'		,'T'		,'-'		,'6'		,0x03C4		,0x2202		},
-{'D'			,CAPLOK		,'d'		,'D'		,':'		,WCH_NONE	,0x03B4		,0x0394		},
+{'D'			,CAPLOK		,'d'		,'D'		,':'		,','		,0x03B4		,0x0394		},
 {VK_OEM_5		,CAPLOK		,0x00FC		,0x00DC		,'#'		,0x001b		,WCH_NONE	,0x221d		},
-{VK_OEM_6		,CAPLOK		,0x00F6		,0x00D6		,'$'		,'\t'		,WCH_NONE	,0x2111		},
+
 {VK_OEM_7		,CAPLOK		,0x00E4		,0x00C4		,'|'		,WCH_NONE	,0x03B7		,0x211c		}, //WCH_NONE sollte »Bild runter« sein (AHK?)
 {'P'			,CAPLOK		,'p'		,'P'		,'~'		,'\r'		,0x03C0		,0x03A0		},
 {'Z'			,CAPLOK		,'z'		,'Z'		,'`'		,WCH_NONE	,0x03B6		,0x2124		},
-{'B'			,CAPLOK		,'b'		,'B'		,'+'		,','		,0x03B2		,0x21d2		},
+{'B'			,CAPLOK		,'b'		,'B'		,'+'		,':'		,0x03B2		,0x21d2		},
 {'M'			,CAPLOK		,'m'		,'M'		,'%'		,'1'		,0x00b5		,0x21d4		},
-{VK_OEM_COMMA	,0			,','		,0x22ee		,'\"'		,'2'		,0x03F1		,0x21d0		},
-{VK_OEM_PERIOD	,0			,'.'		,0x2026		,'\''		,'3'		,0x03B8		,0x0398		},
+{VK_OEM_COMMA	,0			,','		,0x22ee		,'\"'		,'2'		,0x03c1		,0x21d0		},
+{VK_OEM_PERIOD	,0			,'.'		,0x2026		,'\''		,'3'		,0x03d1		,0x0398		},
 {0				,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
 //							|			|   SHIFT	          |   KANA                  |  NEU		|  KANA+Shift      |   NEU+Kana	 |  Control		| 
 //							|			|===============|================|===============|===============|================|===============|
-{VK_OEM_3		,CAPLOK		,0x00df		,0x1E9E 	,0x017F		,WCH_NONE	,0x03C2		,0x018F		,0x2218		},
+{VK_OEM_3		,CAPLOK		,0x00df		,0x1E9E 	,0x017F		,WCH_NONE	,0x03C2		,0x2218		,0x2218		},
 {VK_OEM_4		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,0x001d		},
 {0xff			,0			,0x0303		,0x0304		,0x0308		,0x0337		,0x030b		,0x0326		,WCH_NONE	},
-{'Y'			,CAPLOK		,'y'		,'Y'		,'@'		,WCH_NONE	,0x03C5		,0x2207		,0x001c		},
+{'Y'			,CAPLOK		,'y'		,'Y'		,'@'		,'.'		,0x03C5		,0x2207		,0x001c		},
+{VK_OEM_6		,CAPLOK		,0x00F6		,0x00D6		,'$'		,'\t'		,WCH_NONE	,0x2111		,'\t'		},
 {VK_SPACE		,0      	,' '		,' '		,' '		,'0'		,0x00a0		,0x2009		,' '		},
 {VK_BACK		,0			,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,0x007f		},
 {VK_ESCAPE		,0			,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		},
@@ -291,7 +292,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 //							|			|===============|================|===============|===============|================|===============|===============|
 {'2'			,0			,'2'		,0x2116		,0x00b2		,0x2023		,0x26A5		,0x2228		,WCH_NONE	,0x0000		},
 {'6'			,0			,'6'		,0x20ac		,0x00A2		,0x00a3		,WCH_NONE	,0x2225		,WCH_NONE	,0x001e		},
-{'J'			,CAPLOK		,'j'		,'J'		,';'		,WCH_NONE	,0x03D1		,0x2261		,WCH_NONE	,0x001f		},
+{'J'			,CAPLOK		,'j'		,'J'		,';'		,WCH_NONE	,0x03b8		,0x2261		,WCH_NONE	,0x001f		},
 {0				,0			,0			,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
@@ -360,11 +361,12 @@ static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNames[] = {
     0x1c,    L"EINGABE",
     0x1d,    L"STRG",
     0x2a,    L"UMSCHALT",
+	0x2a,    L"Mod 3",
     0x36,    L"UMSCHALT RECHTS",
-    0x37,    L" (ZEHNERTASTATUR)",
+    0x37,    L"* (ZEHNERTASTATUR)",
     0x38,    L"ALT",
     0x39,    L"LEER",
-    0x3a,    L"FESTSTELL",
+    0x3a,    L"Mod 3",
     0x3b,    L"F1",
     0x3c,    L"F2",
     0x3d,    L"F3",
@@ -400,7 +402,7 @@ static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNamesExt[] = {
     0x1d,    L"STRG-RECHTS",
     0x35,    L" (ZEHNERTASTATUR)",
     0x37,    L"DRUCK",
-    0x38,    L"ALT GR",
+    0x38,    L"Mod4",
     0x45,    L"NUM-FESTSTELL",
     0x46,    L"UNTBR",
     0x47,    L"POS1",
