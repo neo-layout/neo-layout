@@ -2340,7 +2340,7 @@ neo_sz:
    }
    else if Ebene = 4
    {
-       LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
+       ;LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
    }
    else if Ebene = 5
       SendUnicodeChar(0x03C2) ; varsigma
