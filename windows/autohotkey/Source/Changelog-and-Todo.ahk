@@ -17,6 +17,8 @@
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
 
     CHANGEHISTORY:
+                  Revision 639(von Martin Roppelt):
+                  - Lang-s-Tastatur kann nicht mehr durch einen Hotkey aktiviert werden
                   Revision 629(von Martin Roppelt):
                   - Spitze Klammern (bra und ket) testweise auf M5+8/9
                   Revision 624(von Martin Roppelt):
