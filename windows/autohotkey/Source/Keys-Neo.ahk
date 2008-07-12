@@ -1006,7 +1006,8 @@ neo_w:
          sendinput {blind}W
    }
    else if Ebene = 3
-      send {^}{space} ; untot
+      SendUnicodeChar(0x005E) ; untotes ^ - Unicode-Name: CIRCUMFLEX ACCENT
+      ;send {^}{space} ; Funktioniert nicht unter Java-Programmen 
    else if Ebene = 4
       Send {Insert}
    else if Ebene = 5
