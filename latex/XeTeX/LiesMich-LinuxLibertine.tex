@@ -1,9 +1,7 @@
 ﻿\documentclass{scrartcl}
 
 \usepackage[ngerman]{babel}
-%\usepackage{xcolor}
 \usepackage{hyperref}
-
 
 \usepackage{fontspec}
 \usepackage{xunicode}
@@ -20,8 +18,10 @@
 
 
 \begin{document}
+
+
 \section*{Liesmich}
-Zuerſt ſollte man ſich von \url{http://linuxlibertine.sourceforge.net/Libertine-DE.html} die Schrift »Linux Libertine O« im OpenType-Format herunterladen. Dieſe muſs dann nur noch auf \emph{ganz normale, betriebsſyſtemspezifiſche} Art und Weiſe im jeweiligen Betriebsſyſtem (Windows, Linux, Apple) inſtalliert werden. Anſchließend kann dieſe Beiſpieldatei problemlos mit »xelatex LiesMich-LinuxLibertine.tex« kompiliert werden (eine moderne Mik\TeX- oder \TeX Life-Distribution vorausgeſetzt).
+Zuerſt ſollte man ſich die Schrift »Linux Libertine O« im OpenType-Format herunterladen. Dieſe muſs dann nur noch auf \emph{ganz normale, betriebsſyſtemspezifiſche} Art und Weiſe im jeweiligen Betriebsſyſtem (Windows, Linux, Apple) inſtalliert werden. Anſchließend kann dieſe Beiſpieldatei problemlos mit »xelatex LiesMich-LinuxLibertine.tex« kompiliert werden (eine moderne Mik\TeX- oder \TeX Life-Distribution vorausgeſetzt).
 
 
 \subsection*{Ein paar nette \XeLaTeX-Spielereien}
@@ -38,7 +38,16 @@ Zudem arbeitet \XeLaTeX\ ſtandardmäßig mit der UTF-8-Kodierung, was die direk
 Die Unterſtützung des Mathematik-Modus iſt vorhanden, aber noch experimentell und deshalb in einem ſeparaten Packet ausgelagert. Zudem werden die typographiſchen Feinheiten des Microtype Packetes (optischer Randausgleich etc.) derzeitig noch nicht unterſtützt.
 
 
+\subsection{Links}
+\begin{description}
+\item[\url{http://scripts.sil.org/xetex/}:] Die offizielle englischsrachige \XeTeX−Homepage.
+\item[\url{http://linuxlibertine.sourceforge.net/XeTex/Libertine-XeTex-DE.pdf}:] Verwendung der Schrift »Linux Libertine« mit \XeTeX\ – Beihaltet Konfigurationsbeiſpiele und zeigt Vorteile von \XeTeX\ gegenüber klaſſiſchem \LaTeX\ auf.
+\item[\url{http://xml.web.cern.ch/XML/lgc2/xetexmain.pdf}:] Eine sehr ausführliche engliſchſprachige XeTeX-Einführung, die neben dem praktiſchen Teil auch die \XeTeX\ zu Grunde liegenden Softwareſtandards (Unicode, OpenType, …) behandelt.
+\end{description}
+
+
 \input{Wikipedia-Artikel.utf8}
+
 
 
 \end{document}
