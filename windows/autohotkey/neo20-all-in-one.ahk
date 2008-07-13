@@ -1885,6 +1885,8 @@ neo_x:
       sendinput {blind}x
    else if Ebene = 2
       sendinput {blind}X
+   else if Ebene = 3
+      SendUnicodeChar(0x2026) ;Ellipse
    else if Ebene = 5
       SendUnicodeChar(0x03BE) ;xi
    else if Ebene = 6
@@ -2337,10 +2339,6 @@ neo_sz:
          send ß
       else
          SendUnicodeChar(0x017F) ; langes s
-   }
-   else if Ebene = 4
-   {
-       ;LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
    }
    else if Ebene = 5
       SendUnicodeChar(0x03C2) ; varsigma
@@ -4842,7 +4840,13 @@ EncodeInteger(ref, val)
 }
 
 
-
+;Lang-s-Tastatur:
+{
+SC056 & *Esc::
+LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
+;if (LangSTastatur) SoundBeep ;auskommentieren, um Warnton zu erzeugen
+return
+}
 
 
 /* 
