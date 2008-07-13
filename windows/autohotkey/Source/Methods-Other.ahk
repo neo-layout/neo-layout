@@ -202,7 +202,13 @@ EncodeInteger(ref, val)
 }
 
 
-
+;Lang-s-Tastatur:
+{
+SC056 & *Esc::
+LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
+;if (LangSTastatur) SoundBeep ;auskommentieren, um Warnton zu erzeugen
+return
+}
 
 
 /* 

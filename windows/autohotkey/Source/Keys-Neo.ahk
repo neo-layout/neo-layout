@@ -808,6 +808,8 @@ neo_x:
       sendinput {blind}x
    else if Ebene = 2
       sendinput {blind}X
+   else if Ebene = 3
+      SendUnicodeChar(0x2026) ;Ellipse
    else if Ebene = 5
       SendUnicodeChar(0x03BE) ;xi
    else if Ebene = 6
@@ -1262,10 +1264,6 @@ neo_sz:
       else
          SendUnicodeChar(0x017F) ; langes s
    }
-   else if Ebene = 4
-   {
-       ;LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
-   }
    else if Ebene = 5
       SendUnicodeChar(0x03C2) ; varsigma
    else if Ebene = 6
@@ -1278,7 +1276,7 @@ neo_tot3:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      SendUnicodeChar(0x02DC)    ; tilde, tot 
+      SendUnicodeChar(0x02DC)  ; tilde, tot 
       PriorDeadKey := "t1"
    }
    else if Ebene = 2
@@ -1288,7 +1286,7 @@ neo_tot3:
    }
    else if Ebene = 3
    {
-      SendUnicodeChar(0x00A8)   ; Diaerese
+      SendUnicodeChar(0x00A8)  ; Diaerese
       PriorDeadKey := "t3"
    }
    else if Ebene = 4
@@ -1298,7 +1296,7 @@ neo_tot3:
    }
    else if Ebene = 5
    {
-      send "        ;doppelakut
+      sendUnicodeChar(0x02DD)  ;doppelakut
       PriorDeadKey := "t4"
    }
    else if Ebene = 6
@@ -1398,11 +1396,11 @@ neo_i:
          BSSendUnicodeChar(0x012B)
       else if (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x012D)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x012F)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0129)
-      else if (PriorDeadKey = "a5")   ; (ohne) punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0131)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D0)

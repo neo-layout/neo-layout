@@ -17,6 +17,9 @@
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
 
     CHANGEHISTORY:
+                  Revision 645 (von Martin Roppelt):
+                  - Ellipse zusätzlich auf M3+x; 
+                  - Lang-s-Tastatur probeweise auf M4+Esc
                   Revision 640 (von Dennis Heidsiek):
                   - Der untote Zirkumflex (^) auf Ebene 3 funktioniert jetzt auch
                     in Java-Programmen
