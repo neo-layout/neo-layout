@@ -15,6 +15,12 @@
                     logischen Symbole UND und ODER (wie in der Referenz)
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+                  - Tastatur-Reset: mod4+escape (oder ev. ein anderer Hotkey) soll die
+                    Tastatur wieder in den Normalzustand versetzen (d.h. alle Ebenen
+                    unlocken und Einhand, Lang-s oder Sonstwelche-Modi deaktivieren)
+                  - Die Varianten (lernModus, einHandNeo, Lang-s-Tastatur Qwertz/pausieren)
+                    sollten einheitlich (de-)aktiviert werden, etwa über Mod4 F9-F12
+
 
     CHANGEHISTORY:
                   Revision 645 (von Martin Roppelt):
