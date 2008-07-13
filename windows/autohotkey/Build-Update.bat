@@ -28,3 +28,6 @@ REM Start the new Driver
 %fn%.exe
 
 rem wie kann man hier mit der Skriptabarbeitung weitermachen?
+rem Unter Windows XP scheint es nicht möglich zu sein, dies mit "Bordmitteln" zu erreichen, es gibt hierfür jedoch extere Programme, etwa
+REM echo Start the new driver asynchronously, using "Hidden Start" (hstart.exe) from http://www.ntwind.com/software/utilities/hstart/
+REM hstart.exe  /NOCONSOLE /D="%exe%" "%exe%\%fn%.exe"
