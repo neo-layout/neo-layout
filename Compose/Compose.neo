@@ -1,4 +1,4 @@
-﻿# Definitions by Neo keyboard layout
+# Definitions by Neo keyboard layout
 <Multi_key> <1> <3>                      : "⅓"   U2153 # VULGAR FRACTION ONE THIRD
 <Multi_key> <2> <3>                      : "⅔"   U2154 # VULGAR FRACTION TWO THIRDS
 <Multi_key> <1> <5>                      : "⅕"   U2155 # VULGAR FRACTION ONE FIFTH
@@ -106,32 +106,32 @@
 <Multi_key> <a> <8>                      : "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
 <Multi_key> <a> <9>                      : "٩"   U0669 # ARABIC-INDIC DIGIT NINE
 
-<Multi_key> <3> <U221A>                  : "∛"   U221B # CUBE ROOT
-<Multi_key> <U221A> <3>                  : "∛"   U221B # CUBE ROOT
-<Multi_key> <4> <U221A>                  : "∜"   U221C # FOURTH ROOT
-<Multi_key> <U221A> <4>                  : "∜"   U221C # FOURTH ROOT
-<Multi_key> <U222B> <2>                  : "∬"   U222C # DOUBLE INTEGRAL
-<Multi_key> <2> <U222B>                  : "∬"   U222C # DOUBLE INTEGRAL
-<Multi_key> <U222B> <U222B>              : "∬"   U222C # DOUBLE INTEGRAL
-<Multi_key> <U222B> <3>                  : "∭"   U222D # TRIPLE INTEGRAL
-<Multi_key> <3> <U222B>                  : "∭"   U222D # TRIPLE INTEGRAL
-<Multi_key> <U222B> <4>                  : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
-<Multi_key> <4> <U222B>                  : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key> <3> <radical>                  : "∛"   U221B # CUBE ROOT
+<Multi_key> <radical> <3>                  : "∛"   U221B # CUBE ROOT
+<Multi_key> <4> <radical>                  : "∜"   U221C # FOURTH ROOT
+<Multi_key> <radical> <4>                  : "∜"   U221C # FOURTH ROOT
+<Multi_key> <integral> <2>                  : "∬"   U222C # DOUBLE INTEGRAL
+<Multi_key> <2> <integral>                  : "∬"   U222C # DOUBLE INTEGRAL
+<Multi_key> <integral> <integral>              : "∬"   U222C # DOUBLE INTEGRAL
+<Multi_key> <integral> <3>                  : "∭"   U222D # TRIPLE INTEGRAL
+<Multi_key> <3> <integral>                  : "∭"   U222D # TRIPLE INTEGRAL
+<Multi_key> <integral> <4>                  : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key> <4> <integral>                  : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key> <U222E> <2>                  : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <2> <U222E>                  : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <U222E> <U222E>              : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <U222E> <3>                  : "∰"   U2230 # VOLUME INTEGRAL
 <Multi_key> <3> <U222E>                  : "∰"   U2230 # VOLUME INTEGRAL
-<Multi_key> <KP3> <U221A>                : "∛"   U221B # CUBE ROOT
-<Multi_key> <U221A> <KP3>                : "∛"   U221B # CUBE ROOT
-<Multi_key> <KP4> <U221A>                : "∜"   U221C # FOURTH ROOT
-<Multi_key> <U221A> <KP4>                : "∜"   U221C # FOURTH ROOT
-<Multi_key> <U222B> <KP2>                : "∬"   U222C # DOUBLE INTEGRAL
-<Multi_key> <KP2> <U222B>                : "∬"   U222C # DOUBLE INTEGRAL
-<Multi_key> <U222B> <KP3>                : "∭"   U222D # TRIPLE INTEGRAL
-<Multi_key> <KP3> <U222B>                : "∭"   U222D # TRIPLE INTEGRAL
-<Multi_key> <U222B> <KP4>                : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
-<Multi_key> <KP4> <U222B>                : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key> <KP3> <radical>                : "∛"   U221B # CUBE ROOT
+<Multi_key> <radical> <KP3>                : "∛"   U221B # CUBE ROOT
+<Multi_key> <KP4> <radical>                : "∜"   U221C # FOURTH ROOT
+<Multi_key> <radical> <KP4>                : "∜"   U221C # FOURTH ROOT
+<Multi_key> <integral> <KP2>                : "∬"   U222C # DOUBLE INTEGRAL
+<Multi_key> <KP2> <integral>                : "∬"   U222C # DOUBLE INTEGRAL
+<Multi_key> <integral> <KP3>                : "∭"   U222D # TRIPLE INTEGRAL
+<Multi_key> <KP3> <integral>                : "∭"   U222D # TRIPLE INTEGRAL
+<Multi_key> <integral> <KP4>                : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
+<Multi_key> <KP4> <integral>                : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key> <U222E> <KP2>                : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <KP2> <U222E>                : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <U222E> <KP3>                : "∰"   U2230 # VOLUME INTEGRAL
@@ -140,10 +140,10 @@
 <Multi_key> <degree> <C>                 : "℃"   U2103 # DEGREE CELSIUS
 <Multi_key> <degree> <F>                 : "℉"   U2109 # DEGREE FAHRENHEIT
 
-<Multi_key> <U2640> <U2640>              : "⚢"   U26A2 # DOUBLED FEMALE SIGN
-<Multi_key> <U2642> <U2642>              : "⚣"   U26A3 # DOUBLED MALE SIGN
-<Multi_key> <U2640> <U2642>              : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
-<Multi_key> <U2642> <U2640>              : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
+<Multi_key> <femalesymbol> <femalesymbol>: "⚢"   U26A2 # DOUBLED FEMALE SIGN
+<Multi_key> <malesymbol> <malesymbol>    : "⚣"   U26A3 # DOUBLED MALE SIGN
+<Multi_key> <femalesymbol> <malesymbol>  : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
+<Multi_key> <malesymbol> <femalesymbol>  : "⚥"   U26A5 # MALE AND FEMALE SIGN
 
 <Multi_key> <colon> <parenright>         : "☺"   U263A # WHITE SMILING FACE
 <Multi_key> <colon> <parenleft>          : "☹"   U2639 # WHITE FROWNING FACE
