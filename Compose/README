@@ -5,26 +5,32 @@ Compose-Taste bzw. tote Tasten für Linux.
 Die Kombinationen der gängigien Compose verändert NEO im Sinne erhaltender 
 Kompatibilität nicht!
 
-
 === Bereits vorhandene Tastenkombinationen (unter Linux) ===
-Diese sind in der Datei en_US.UTF-8 gesammelt und hier im SVN für die Windows-Nutzer
-lokal gespiegelt.
+Diese sind in der Datei en_US.UTF-8 gesammelt und hier im SVN für die
+Windows-Nutzer lokal gespiegelt.
 
 Im Internet gibt es die stets aktuellste Originaldatei unter
-	http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=HEAD&content-type=text/vnd.viewcvs-markup
+  http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=
+   HEAD&content-type=text/vnd.viewcvs-markup
 
-Unter Linux (beispielsweise unter Fedora) ist die zu ergänzende Datei auch direkt
-verfügbar unter
-	/usr/share/X11/locale/en_US.UTF-8/Compose
+Unter Linux (beispielsweise unter Fedora) ist die zu ergänzende Datei auch
+direkt verfügbar unter
+  /usr/share/X11/locale/en_US.UTF-8/Compose
 
-
-
-=== Anleitung zur Benutzung ===
+=== Installation/Anleitung zur Benutzung ===
+==== Mit Root-/Administrator-Rechten ====
 Um die Ergänzungen zu benutzen muss man den Inhalt der Compose.neo in die
 vorhandene Compose einfügen bzw. die Datei Compose.neo an die alte Compose
-anhängen.
+anhängen. So geht das:
+cp /usr/share/X11/locale/en_US.UTF-8/Compose \
+/usr/share/X11/locale/en_US.UTF-8/Compose.original
+cat /usr/share/X11/locale/en_US.UTF-8/Compose.original Compose.neo > \
+/usr/share/X11/locale/en_US.UTF-8/Compose
 
-
+==== Ohne Root-Rechte/lokal ====
+Einfach den Inhalt der originalen Compose-Datei und die Compose.neo in eine
+Datei namens ~/.XCompose (also im HOME-Verzeichnis) kopieren. So geht das:
+cat /usr/share/X11/locale/en_US.UTF-8/Compose Compose.neo > ~/.XCompose
 
 === Gnome macht Probleme ==
 Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen
@@ -35,10 +41,9 @@ Gnome da noch irgendwas eigenes vorschaltet. Aber nach:
 klappt auch das. Siehe auch:
   https://help.ubuntu.com/community/ComposeKey
 Zudem scheint dieses Problem in aktuellen Gnome-Version behoben worden zu sein:
-  http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-based-apps/
-  http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/ 
-
-
+  http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-
+   based-apps/
+  http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/
 
 == compose_und_deadkeys.txt ==
 Die Datei compose_und_deadkeys.txt fasst Änderungs- und Erweiterungsvorschläge
