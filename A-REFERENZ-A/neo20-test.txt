@@ -48,7 +48,8 @@ http://dejavu.sourceforge.net/
 ␣    … Leerzeichen (SPACE)
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
-⍓    … (de)aktiviert die Maussteuerung über die Tastatur (Navigationsblock Ebene 4)
+⍓    … (de)aktiviert die Maussteuerung über die Tastatur (Navigationsblock Ebene 2)
+⎌    … undo-Funktion
 
 === Akzenttasten ===
 Zu den Akzenten siehe auch
@@ -142,15 +143,15 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
 │ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│^ ˘ -│1 ¹ ₁│2 ² ₂ │3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│´ ¸ ˛│    ⌫    │
+│^ ˘ -│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab  ⇤ │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
-│    ♫   │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
+│  ⇤     │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
+│ Tab  ♫ │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3 ♫ │  ↲  │
+│ ↘3  (♫) │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3(♫)│  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z ⍓ ℤ│B : ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J ; ≡│   Caps_Lock  │
+│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z ⎌ ℤ│B : ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J ; ≡│   Caps_Lock  │
 │Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
@@ -260,20 +261,20 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Alle Ebenen – Ziffernblock ===
 ┌─────┬─────┬─────┬─────┐
-│ =  ≠│   ∕ │   ∙ │     │
-│Tab ≈│ / ÷ │ * × │ - − │
+│ ≠ ⍓ │ / ⁄ │ * × │ - − │
+│ = ≈ │ / ÷ │ * ⋅ │ - - │
 ├─────┼─────┼─────┼─────┤
-│ ✔ ≪ │ ^ ∩ │ ✗ ≫ │     │
-│ 7 ↕ │ 8 ↑ │ 9 ⊗ │   ∓ │
+│Hom ↕│KP↑ ∩│PgU ⊗│     │
+│ 7  †│ 8  ↑│ 9  ∋│ + ∓ │
 ├─────┼─────┼─────┤     │
-│ ( ⊂ │ € ∋ │ ) ⊃ │ + ± │
-│ 4 ← │ 5 ∞ │ 6 → │     │
+│KP← ⊂│Beg €│KP→ ⊃│ + ± │
+│ 4  ←│ 5  ∞│ 6  →│     │
 ├─────┼─────┼─────┼─────┤
-│ ₁ ≤ │ ₂ ∪ │ ₃ ≥ │     │
-│ 1 ↓ │ 2 ↓ │ 3 ⇌ │     │
+│End ✔│KP↓ ∪│PgD ✗│     │
+│ 1  ↔│ 2  ↓│ 3  ⇌│     │
 ├─────┴─────┼─────┤     │
-│ • ‰       │ ‣ , │     │
-│ 0 %       │ , . │Enter│
+│ Ins  ‰    │Del S│     │ S: ,/. KP_Seperator
+│ 0    %    │ ,  .│Enter│
 └───────────┴─────┴─────┘
 
 === Erste Ebene – Miniatur ===
@@ -293,11 +294,11 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬───┬───┬───┐
 │ ≠ │ / │ * │ - │
 ├───┼───┼───┼───┤
-│Hom│KP↑│Pgu│   │
+│Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
 │KP←│Beg│KP→│ + │
 ├───┼───┼───┼───┤
-│End│KP↓│Pgd│   │
+│End│KP↓│PgD│   │
 ├───┴───┼───┤   │
 │ Ins   │Del│Ent│
 └───────┴───┴───┘
@@ -307,11 +308,11 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬───┬───┬───┐
 │ ≈ │ ÷ │ ∙ │ - │
 ├───┼───┼───┼───┤
-│ † │ ∩ │ ⊗ │   │
+│ ↕ │ ↑ │ ∋ │   │
 ├───┼───┼───┤   │
-│ ⊂ │ € │ ⊃ │ ± │
+│ ← │ ∞ │ → │ ± │
 ├───┼───┼───┼───┤
-│ ✔ │ ∪ │ ✗ │   │
+│ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
 │ %     │ . │Ent│
 └───────┴───┴───┘
@@ -320,11 +321,11 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬───┬───┬───┐
 │ ⍓ │frc│ × │ − │ ⍓ turns on/off the keyboard mouse control
 ├───┼───┼───┼───┤ frc means fraction slash ⁄
-│ ↕ │ ↑ │ ∋ │   │
+│ † │ ∩ │ ⊗ │   │
 ├───┼───┼───┤   │
-│ ← │ ∞ │ → │ ∓ │
+│ ⊂ │ € │ ⊃ │ ∓ │
 ├───┼───┼───┼───┤
-│ ↔ │ ↓ │ ⇌ │   │
+│ ✔ │ ∪ │ ✗ │   │
 ├───┴───┼───┤   │
 │ ‰     │,/.│Ent│
 └───────┴───┴───┘
