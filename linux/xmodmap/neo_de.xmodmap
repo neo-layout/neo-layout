@@ -233,34 +233,34 @@ keycode 82  = KP_Subtract	KP_Subtract		minus		U2212
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  7		KP_Home		dagger		U2195
-!					†		↕ arrow
-keycode 80 =  8		KP_Up		intersection	uparrow
-!					∩		↑		
-keycode 81 =  9		KP_Prior	U2297		containsas
-!					⊗		∋		
+keycode 79 =  7		KP_Home		U2195		dagger
+!					↕ arrow		†
+keycode 80 =  8		KP_Up		uparrow		intersection
+!					↑		∩	
+keycode 81 =  9		KP_Prior	containsas	U2297
+!					∋		⊗	
 keycode 86 =  KP_Add	KP_Add		plusminus	U2213
 !	      +		+2		±		∓ minus-plus	
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  4		KP_Left		includedin	leftarrow
-!					⊂		←		
-keycode 84 =  5		KP_Begin	EuroSign	infinity
-!			€		∞		
-keycode 85 =  6		KP_Right	includes	rightarrow
-!					⊃		→		
+keycode 83 =  4		KP_Left		leftarrow	includedin
+!					←		⊂	
+keycode 84 =  5		KP_Begin	infinity	EuroSign
+!					∞		€
+keycode 85 =  6		KP_Right	rightarrow	includes
+!					→		⊃
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  1		KP_End		U2714		U2194
-!					✔ check mark	↔ arrow		
-keycode 88 =  2		KP_Down		union		downarrow
-!					∪		↓		
-keycode 89 =  3		KP_Next		U2717		U21CC
-!					✗ battol X	⇌ arrow		
+keycode 87 =  1		KP_End		U2194		U2714
+!					↔ arrow		✔ check mark	
+keycode 88 =  2		KP_Down		downarrow	union
+!					↓		∪	
+keycode 89 =  3		KP_Next		U21CC		U2717
+!					⇌ arro		✗ battol X
 keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
 
