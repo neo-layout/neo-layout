@@ -143,8 +143,8 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
 │^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ κ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ ⇤      │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
-│Tab ♫   │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
+│Tab⇤    │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
+│Tab⇥ ♫  │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3 ♫ │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
@@ -160,7 +160,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ^ │1│2│3│4│5│6│7│8│9│0│-│´│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab │x│v│l│c│w│k│h│g│f│q│ß│~│ Ret │
+│Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│~│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │u│i│a│e│o│s│n│r│t│d│y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -173,7 +173,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˇ │°│№│§│»│«│€│$│„│“│”│–│`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab │X│V│L│C│W│K│H│G│F│Q│ẞ│ˉ│ Ret │
+│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│ˉ│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -341,8 +341,12 @@ Folgende Scripte bewirken etwas ähnliches, können allerdings noch zusätzlich 
 #!/bin/sh
 if [ 0 = $# ];then
     grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt
-else
-    grep -B 11 -m "$1" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
+else 
+    while [ $(($1)) -ge 1 ] && [ $(($1)) -le 6 ] 
+    do
+        grep -B 11 -m "$1" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
+        shift
+    done
 fi
 
 === num ===
@@ -350,7 +354,11 @@ fi
 if [ 0 = $# ];then
     grep -m 1 -B 15 "┴─────┘" PFAD_ZUR_DATEI/neo20.txt
 else
-    grep -B 11 -m "$1" "└───────┴───┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
+    while [ $(($1)) -ge 1 ] && [ $(($1)) -le 6 ] 
+    do
+        grep -B 11 -m "$1" "└───────┴───┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
+        shift
+    done
 fi
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
