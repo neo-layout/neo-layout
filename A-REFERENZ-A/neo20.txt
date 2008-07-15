@@ -156,7 +156,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
-=== 1. Ebene – Miniatur ===
+=== Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ^ │1│2│3│4│5│6│7│8│9│0│-│´│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
@@ -169,7 +169,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
-=== 2. Ebene – Miniatur ===
+=== Zweite Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˇ │°│№│§│»│«│€│$│„│“│”│–│`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
@@ -182,7 +182,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
-=== 3. Ebene – Miniatur ===
+=== Dritte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˘ │¹│²│³│›│‹│¢│¥│‚│‘│’│—│¸│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
@@ -195,7 +195,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
-=== 4. Ebene – Miniatur ===
+=== Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ · │•│‣│ │⇞│ │£│¤│/│*│-│ │˙│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
@@ -208,7 +208,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
-=== 5. Ebene – Miniatur ===
+=== Fünfte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ - │♀│⚥│♂│ℓ│†│ │κ│ │ │ │‑│˛│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
@@ -221,7 +221,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │Str│Fe│Al│geschütz.Lz│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
-=== 6. Ebene – Miniatur ===
+=== Sechste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ . │¬│∨│∧│⊥│∡│∥│∉│∄│∦│∅│╌│˚│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
@@ -275,7 +275,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ ⎀ %       │ ⌦  .│Enter│
 └───────────┴─────┴─────┘
 
-=== 1. Ebene – Miniatur ===
+=== Erste Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
 │Num│ / │ * │ - │
 ├───┼───┼───┼───┤
@@ -288,7 +288,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ ⎀     │ ⌦ │Ent│
 └───────┴───┴───┘
 
-=== 2. Ebene – Miniatur ===
+=== Zweite Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
 │Num│   │   │   │
 ├───┼───┼───┼───┤
@@ -301,7 +301,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ 0     │,/.│Ent│
 └───────┴───┴───┘
 
-=== 3. Ebene – Miniatur ===
+=== Zweite Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
 │Num│ ÷ │ × │ − │
 ├───┼───┼───┼───┤
@@ -314,7 +314,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ %     │ . │ ≠ │
 └───────┴───┴───┘
 
-=== 4. Ebene – Miniatur ===
+=== Vierte Ebene – Miniatur === 
 ┌───┬───┬───┬───┐
 │Num│ ∕ │ ∙ │   │
 ├───┼───┼───┼───┤
@@ -340,19 +340,18 @@ Folgende Scripte bewirken etwas ähnliches, können allerdings noch zusätzlich 
 === neo ===
 #!/bin/sh
 if [ 0 = $# ];then
-	grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt
+    grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt
 else
-	grep -B 11 "└───┴──┴──┴───────────┴──┴──┴──┴───┘" PFAD_ZUR_DATEI/neo20.txt |grep "$1. Ebene" -A 11
+    grep -B 11 -m "$1" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
 fi
 
 === num ===
 #!/bin/sh
 if [ 0 = $# ];then
-	grep -m 1 -B 15 "┴─────┘" PFAD_ZUR_DATEI/neo20.txt
+    grep -m 1 -B 15 "┴─────┘" PFAD_ZUR_DATEI/neo20.txt
 else
-	grep -B 11 "└───────┴───┴───┘" PFAD_ZUR_DATEI/neo20.txt |grep "$1. Ebene" -A 11
+    grep -B 11 -m "$1" "└───────┴───┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
 fi
-
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
 Ξ … Xi, griechischer Majuskel (U039E)
