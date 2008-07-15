@@ -502,7 +502,8 @@ melden.
 
 F: Ich kann unter Gnome und GTK-Programmen, auch Thunderbird und Firefox,
 einige Zeichen mit Compose nicht eingeben. Beispielsweise führt ^+1, ^+2 oder
-^+3 zum Erscheinen von den entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5 usw. geht das nicht. Ebenso mit viele anderen eingentlich definierten
+^+3 zum Erscheinen von den entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5
+usw. geht das nicht. Ebenso mit viele anderen eingentlich definierten
 Kombinationen.
 
 A: Das liegt daran, dass Gnome da noch irgendwas eigenes vorschaltet. Aber nach
@@ -512,7 +513,8 @@ klappt auch das. Siehe auch:
   https://help.ubuntu.com/community/ComposeKey
 Zudem scheint dieses Problem in aktuellen Gnome-Version behoben worden zu
 sein:
-  http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-based-apps/
+  http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-
+   based-apps/
   http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/
 
 --------------------------------------------------------------------------------
