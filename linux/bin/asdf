@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -n "$SSH_CONNECTION" ]; then
+	echo "Dude, du bist in einer ssh session. Wie soll ich das Tastaturlayout hier ändern?"
+	exit 1
+fi
+if [ -z "$DISPLAY" ]; then
+	echo "Dude, du bist auf der Textkonsole. Ich kann das Layout nur auf dem X Server ändern!"
+	exit 1
+fi
+
+setxkbmap de neo

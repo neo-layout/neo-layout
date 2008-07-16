@@ -1,0 +1,18 @@
+#!/bin/sh
+
+NEO_TXT=$HOME/neo/A-REFERENZ-A/neo20.txt
+
+if [ 0 = $# ];then
+  grep -m 1 -B 15 "┴─────┘" $NEO_TXT
+else 
+	for NUM in $@; do
+		if [ $(($NUM)) -ge 1  -a $(($NUM)) -le 6 ]; then
+      grep -B 11 -m "$NUM" "└───────┴───┴───┘" $NEO_TXT | tail -n 12
+		else
+			echo "Benutzung: `basename $0` [1-6]"
+			echo "           Wenn der Aufruf ohne Zahl erfolgt, werden alle Ebenen ausgegeben."
+			echo "           Ansonsten werden nur die Ebenen ausgegeben, die angegeben sind."
+			exit 1
+		fi
+	done
+fi
