@@ -29,6 +29,8 @@ Zuerſt ſollte man ſich die Schrift »Linux Libertine O« im OpenType-Format h
 
 Dies betrifft beispielsweise dichtengleiche Zahlen wie {\addfontfeatures{Numbers={Lining,Monospaced,SlashedZero}}1234,50} (vs.\ 1234,50), Mediäval- oder Minuskelziffern wie {\addfontfeature{Numbers=OldStyle}0123456789}, normale wie ſeltene {\addfontfeatures{Ligatures={Rare,Historical}}fluffige starke Ligaturenſchätze wie »ct«}, aber auch {\addfontfeatures{Letters=SmallCaps,LetterSpace=6.0}ECHTE KAPITÄLCHEN}.
 
+% Nicht in dieser Schrift unterstützt: Ligatures={Required,Rare,Common,Historical,Contextual}, Contextuals={Swash,WordInitial,WordFinal,LineFinal,Inner}
+
 Wird ſo ein Feature im aktuellen Font hingegen nicht unterſtützt, gibt \XeTeX\ eine Warnmeldung in die Log-Datei aus.
 
 Zudem arbeitet \XeLaTeX\ ſtandardmäßig mit der UTF-8-Kodierung, was die direkte Eingabe beliebiger Unicode-Zeichen möglich macht: α,β,γ, °№§, ¹²³, ♀⚥♂, PREUẞEN. Ältere \LaTeX-Syntax kann hingegen manchmal zu unerwarteten (aber logiſchen) Problemen führen, vergleiche etwa – (Gedankenstrich) vs.\ -- (Divis-Divis) vs.\ {\addfontfeatures{Mapping=tex-text}-- (Divis-Divis, \LaTeX-Kompatibilitätsmodus)}.
