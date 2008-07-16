@@ -336,30 +336,7 @@ alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
-Folgende Scripte bewirken etwas ähnliches, können allerdings noch zusätzlich nach der Miniaturversion suchen
-=== neo ===
-#!/bin/sh
-if [ 0 = $# ];then
-    grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt
-else 
-    while [ $(($1)) -ge 1 ] && [ $(($1)) -le 6 ] 
-    do
-        grep -B 11 -m "$1" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
-        shift
-    done
-fi
-
-=== num ===
-#!/bin/sh
-if [ 0 = $# ];then
-    grep -m 1 -B 15 "┴─────┘" PFAD_ZUR_DATEI/neo20.txt
-else
-    while [ $(($1)) -ge 1 ] && [ $(($1)) -le 6 ] 
-    do
-        grep -B 11 -m "$1" "└───────┴───┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
-        shift
-    done
-fi
+Im Verzeichniss linux/bin sind umfangreichere Scripte mit größerer Funktionalität.
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
 Ξ … Xi, griechischer Majuskel (U039E)
