@@ -336,7 +336,7 @@ alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
-Im Verzeichniss linux/bin sind umfangreichere Scripte mit größerer Funktionalität.
+Im Verzeichniss linux/bin sind umfangreichere Skripte mit größerer Funktionalität.
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
 Ξ … Xi, griechischer Majuskel (U039E)
