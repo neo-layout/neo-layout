@@ -1,8 +1,9 @@
 #!/bin/sh
 
+# Verzeichnis muss eventuell an den Ort der neo20.txt angepasst werden:
 NEO_TXT=$HOME/neo/A-REFERENZ-A/neo20.txt
 
-if [ 0 = $# ];then
+if [ 0 = $# ]; then
 	grep -m 1 -B 15 "┴──────┘" $NEO_TXT
 else 
 	for NUM in $@; do
