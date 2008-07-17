@@ -202,12 +202,12 @@ keycode 55 = p          P          	asciitilde 	Greek_pi   	Return  	Return		U03
 keycode 56 = z          Z          	grave      	Greek_zeta	Undo		Redo		  U2124
 !					`		ζ						ℤ integers
 
-keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol     	U21D2
-!					+		β		:				⇒ implies
+keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol     	U21D0
+!					+		β		:				⇐
 keycode 58 = m      	M        	percent    	Greek_mu    	1       	1       	ifonlyif
 !					%		μ						⇔
-keycode 59 = comma  	U22EE    	quotedbl   	Greek_rho   	2       	2        	U21D0
-!		,	⋮ vert. ell.	"		ρ						⇐ 
+keycode 59 = comma  	U22EE    	quotedbl   	Greek_rho   	2       	2        	U21D2
+!		,	⋮ vert. ell.	"		ρ						⇒ implies 
 keycode 60 = period 	ellipsis 	apostrophe 	U03D1       	3       	3        	U0398
 !		.	…		'		ϑ Greek_theta					Θ Greek_THETA
 keycode 61 = j      	J        	semicolon  	Greek_theta 	semicolon  	NoSymbol     	identical
