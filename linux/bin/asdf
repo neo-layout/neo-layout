@@ -9,4 +9,6 @@ if [ -z "$DISPLAY" ]; then
 	exit 1
 fi
 
+xset -r 51
+xset -r 94
 setxkbmap de neo
