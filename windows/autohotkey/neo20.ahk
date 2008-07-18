@@ -127,8 +127,8 @@ DU BIST GEWARNT WORDEN!
 
 /*
     Titel:        NEO 2.0 beta Autohotkey-Treiber
-    $Revision$
-    $Date$
+    $Revision: 645 $
+    $Date: 2008-07-13 03:08:31 +0200 (So, 13 Jul 2008) $
     Autor:        Stefan Mayer <stm (at) neo-layout.org>
     Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
         
