@@ -10,7 +10,7 @@ set svn=.
 
 REM Just some usefull shortcuts:
 set scr="%svn%\Source"
-set fn=neo20-all-in-one
+set fn=neo20
 
 echo Killing the old (AHK)Driver
 REM tskill neo20-all-in-one
