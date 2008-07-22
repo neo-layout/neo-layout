@@ -2,9 +2,14 @@
     Titel:        NEO 2.0 beta Autohotkey-Treiber
     $Revision:    624 $
     $Date:        2008-07-08 18:50:00 +0200 (Di, 07 Jul 2008) $
-    Autor:        Stefan Mayer <stm (at) neo-layout.org>
-    Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
-        
+    Autoren:      Stefan Mayer <stm (at) neo-layout. o r g>
+                  Nora Geissler <nora_geissler (at) yahoo. d e>
+                  Matthias Berg <neo (at) matthias-berg. e u>
+                  ...
+                  
+                  
+                  
+                  
     TODO:         - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
