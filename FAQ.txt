@@ -268,7 +268,7 @@ Error: Unicode char \u8:α not set up for use with LaTeX.« Wieso?
 A: Bisher muss man die meisten Zeichen erst noch definieren. Um sich Arbeit zu
 sparen, haben fleißige Menschen schon eine Datei geschrieben, die man sich nur
 in das gleiche Verzeichnis wie die tex-Datei kopieren muss. Sie befindet sich
-mit kleiner Anleitung unter https://neo.eigenheimstrasse.de/svn/latex/
+mit kleiner Anleitung unter https://svn.neo-layout.org/latex/
 Erweiterungen werden gerne gesehen.
 
 --------------------------------------------------------------------------------
@@ -482,7 +482,7 @@ eigenes vorgeschaltet wird. Aber nach:
 klappt auch das. Siehe auch:
   https://help.ubuntu.com/community/ComposeKey  
 
-In der Datei https://neo.eigenheimstrasse.de/svn/Compose/README gibt es noch
+In der Datei https://svn.neo-layout.org/Compose/README gibt es noch
 weitere Infos zu unseren eigenen Erweiterungen.
 
 -------------------------------------------------------------------------------
@@ -605,14 +605,14 @@ A: Shift+Pause pausiert das Skript.
 
 F: Wo finde ich die aktuellste Entwicklerversion von NEO als Grafik?
 
-A: In der Datei https://svn.eigenheimstrasse.de/A-REFERENZ-A/neo20.txt
+A: In der Datei https://svn.neo-layout.org/A-REFERENZ-A/neo20.txt
 in der Subversion-Versionsverwaltung gibt es die Tastaturbelegung als
 Textgrafik. Die dortige Version ist immer die aktuellste. Davon ausgehend
 werden verschiedene Grafiken im Verzeichnis grafik/ nach und nach aktualisiert,
 sind jedoch meist etwas hinterher.
 
 Zum Lernen der Belegung ist beispielsweise der Aufsteller
-https://neo.eigenheimstrasse.de/svn/grafik/neo20-aufsteller.pdf ziemlich
+https://svn.neo-layout.org/grafik/neo20-aufsteller.pdf ziemlich
 geeignet, da man ihn einfach nur ausdrucken, an den Knicklinien falten und dann
 vor sich Hinstellen kann (inklusive Mini-FAQ auf der Rückseite).
 
@@ -636,7 +636,7 @@ http://lists.neo-layout.org/mailman/listinfo/mailinglist erreichbar.
 --------------------------------------------------------------------------------
 
 F: Ich habe versucht die Grafiken von
-https://neo.eigenheimstrasse.de/svn/grafik/ zu öffnen, aber mein Browser
+https://svn.neo-layout.org/grafik/ zu öffnen, aber mein Browser
 (z. B. Firefox) öffnet die SVGs und auch die PDFs als Textdatei, das heißt:
 Ich sehe den Quellcode.
 
