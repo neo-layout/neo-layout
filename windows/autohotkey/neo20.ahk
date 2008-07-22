@@ -127,24 +127,45 @@ DU BIST GEWARNT WORDEN!
 
 /*
     Titel:        NEO 2.0 beta Autohotkey-Treiber
-    $Revision: 645 $
-    $Date: 2008-07-13 03:08:31 +0200 (So, 13 Jul 2008) $
-    Autor:        Stefan Mayer <stm (at) neo-layout.org>
-    Basiert auf:  neo20-all-in-one.ahk vom 29.06.2007
-        
+    $Revision:    624 $
+    $Date:        2008-07-08 18:50:00 +0200 (Di, 07 Jul 2008) $
+    Autoren:      Stefan Mayer <stm (at) neo-layout. o r g>
+                  Nora Geissler <nora_geissler (at) yahoo. d e>
+                  Matthias Berg <neo (at) matthias-berg. e u>
+                  ...
+                  
+                  
+                  
+                  
     TODO:         - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
                   - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
                     nicht mehr abgefangen werden müssen.
                   - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
                   - Sind Ebenen vom Touchpad noch richtig?
                   - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
-    
+                  - Auf der 6. Ebene von 2 und 3 werden Delta und Nabla gesendet, aber nicht die
+                    logischen Symbole UND und ODER (wie in der Referenz)
     Ideen:        - Symbol ändern (Neo-Logo abwarten)
                   - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+                  - Tastatur-Reset: mod4+escape (oder ev. ein anderer Hotkey) soll die
+                    Tastatur wieder in den Normalzustand versetzen (d.h. alle Ebenen
+                    unlocken und Einhand, Lang-s oder Sonstwelche-Modi deaktivieren)
+                  - Die Varianten (lernModus, einHandNeo, Lang-s-Tastatur Qwertz/pausieren)
+                    sollten einheitlich (de-)aktiviert werden, etwa über Mod4 F9-F12
+
 
     CHANGEHISTORY:
-
-                  Revision 624(von Martin Roppelt):
+                  Revision 645 (von Martin Roppelt):
+                  - Ellipse zusätzlich auf M3+x; 
+                  - Lang-s-Tastatur probeweise auf M4+Esc
+                  Revision 640 (von Dennis Heidsiek):
+                  - Der untote Zirkumflex (^) auf Ebene 3 funktioniert jetzt auch
+                    in Java-Programmen
+                  Revision 639 (von Martin Roppelt):
+                  - Lang-s-Tastatur kann nicht mehr durch einen Hotkey aktiviert werden
+                  Revision 629 (von Martin Roppelt):
+                  - Spitze Klammern (bra und ket) testweise auf M5+8/9
+                  Revision 624 (von Martin Roppelt):
                   - Lang-s-Tastatur (ein- und auszuschalten durch Mod4+ß)
                   Revision 616 (von Dennis Heidsiek):
                   - Der nicht funktionierende Mod5-Lock-Fix wurde wieder entfernt, da
@@ -2085,7 +2106,8 @@ neo_w:
          sendinput {blind}W
    }
    else if Ebene = 3
-      send {^}{space} ; untot
+      SendUnicodeChar(0x005E) ; untotes ^ - Unicode-Name: CIRCUMFLEX ACCENT
+      ;send {^}{space} ; Funktioniert nicht unter Java-Programmen 
    else if Ebene = 4
       Send {Insert}
    else if Ebene = 5
@@ -2352,7 +2374,7 @@ neo_tot3:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      SendUnicodeChar(0x02DC)    ; tilde, tot 
+      SendUnicodeChar(0x02DC)  ; tilde, tot 
       PriorDeadKey := "t1"
    }
    else if Ebene = 2
@@ -2362,7 +2384,7 @@ neo_tot3:
    }
    else if Ebene = 3
    {
-      SendUnicodeChar(0x00A8)   ; Diaerese
+      SendUnicodeChar(0x00A8)  ; Diaerese
       PriorDeadKey := "t3"
    }
    else if Ebene = 4
@@ -2372,7 +2394,7 @@ neo_tot3:
    }
    else if Ebene = 5
    {
-      send "        ;doppelakut
+      sendUnicodeChar(0x02DD)  ;doppelakut
       PriorDeadKey := "t4"
    }
    else if Ebene = 6
@@ -2472,11 +2494,11 @@ neo_i:
          BSSendUnicodeChar(0x012B)
       else if (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x012D)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x012F)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0129)
-      else if (PriorDeadKey = "a5")   ; (ohne) punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0131)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D0)
