@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG:
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -14,12 +14,12 @@ http://dejavu.sourceforge.net/
 
 --------------------------------------------------------------------------------
 Gliederung
-1. Allgemeine Fragen
-2. Betriebssystemspezifische Fragen
+1.  Allgemeine Fragen
+2.  Betriebssystemspezifische Fragen
 2.1 Linux, Unix, BSD
 2.2 Apple Macintosh
 2.3 Windows
-3. Entwicklerfragen (auch Beta-Tester)
+3.  Entwicklerfragen (auch Beta-Tester)
 --------------------------------------------------------------------------------
 1. Allgemeine Fragen
 --------------------------------------------------------------------------------
@@ -605,7 +605,7 @@ A: Shift+Pause pausiert das Skript.
 
 F: Wo finde ich die aktuellste Entwicklerversion von NEO als Grafik?
 
-A: In der Datei https://neo.eigenheimstrasse.de/svn/A-REFERENZ-A/neo20.txt
+A: In der Datei https://svn.eigenheimstrasse.de/A-REFERENZ-A/neo20.txt
 in der Subversion-Versionsverwaltung gibt es die Tastaturbelegung als
 Textgrafik. Die dortige Version ist immer die aktuellste. Davon ausgehend
 werden verschiedene Grafiken im Verzeichnis grafik/ nach und nach aktualisiert,
