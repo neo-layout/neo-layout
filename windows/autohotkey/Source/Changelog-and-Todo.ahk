@@ -28,6 +28,9 @@
 
 
     CHANGEHISTORY:
+                  Revision 687 (von Dennis Heidsiek):
+                  - Die SendUnicodeChar-Methode um den GDK-Workarround von Matthias Wächter ergänzt
+                  - (An/Aus) Icons an Favicon der neuen Homepage angepasst
                   Revision 645 (von Martin Roppelt):
                   - Ellipse zusätzlich auf M3+x; 
                   - Lang-s-Tastatur probeweise auf M4+Esc
