@@ -19,5 +19,6 @@
 #Include %a_scriptdir%\Keys-Neo.ahk
 #Include %a_scriptdir%\Methods-Lights.ahk
 #Include %a_scriptdir%\Methods-Other.ahk
+;#Include %a_scriptdir%\Methods-Unicode.ahk
 ;#Include *i %a_scriptdir%\..\Compose\Compose-all-in-one.ahk
 
