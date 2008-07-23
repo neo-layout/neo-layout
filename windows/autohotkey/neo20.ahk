@@ -4830,7 +4830,7 @@ SendUnicodeChar(charCode)
    IfWinActive, ahk_class gdkWindowToplevel
    {
       StringLower, charCode, charCode
-      send "^+u" . SubStr(charCode,3) . " "
+      send % "^+u" . SubStr(charCode,3) . " "
    } else {
       VarSetCapacity(ki, 28 * 2, 0)
 
