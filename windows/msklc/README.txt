@@ -32,4 +32,3 @@ Rückgängig gemacht wird die Umstellung, indem die Datei
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
-Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt

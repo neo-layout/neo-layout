@@ -3,7 +3,6 @@ Für viele Windowsversionen sind hier Treiber zu finden.
 
 == Windows 98 ==
 Für Windows 95 und 98 gibt es nur die Version 1 von NEO. Und zwar hier:
-http://www.eigenheimstrasse.de:8668/space/Computerecke/NEO-Tastaturlayout/Download/Windows
 
 
 
