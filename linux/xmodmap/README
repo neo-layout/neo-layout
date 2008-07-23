@@ -50,7 +50,6 @@ alias asdf='setxkbmap ie && xmodmap ~/neo_de.xmodmap'
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
-Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt
 
 ¹ um die evdev auf dem laufenden zu halten kann folgende auf die neo_de.xmodmap anwenden:
   sed -e 's/^keycode 112/keycode 106/;s/^keycode 108/keycode 104/;s/^keycode 113/keycode 108/' neo_de.xmodmap > neo_de_evdev.xmodmap

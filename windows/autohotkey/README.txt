@@ -84,4 +84,3 @@ AltGr + Ende = Computer ausschalten
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
-Hier: https://neo.eigenheimstrasse.de/svn/FAQ.txt
