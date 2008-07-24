@@ -4791,28 +4791,6 @@ IsMod4Pressed()
 }
 
 
-/*************************
-  Alte Methoden
-*************************/
-
-/*
-Unicode(code)
-{
-   saved_clipboard := ClipboardAll
-   Transform, Clipboard, Unicode, %code%
-   sendplay ^v
-   Clipboard := saved_clipboard
-}
-
-BSUnicode(code)
-{
-   saved_clipboard := ClipboardAll
-   Transform, Clipboard, Unicode, %code%
-   sendplay {bs}^v
-   Clipboard := saved_clipboard
-}
-*/
-
 IsModifierPressed()
 {
    if (GetKeyState("LControl","P") or GetKeyState("RControl","P") or GetKeyState("LAlt","P") or GetKeyState("RAltl","P") or GetKeyState("LWin","P") or GetKeyState("RWin","P") or GetKeyState("LShift","P") or GetKeyState("RShift","P") or GetKeyState("AltGr","P") ) 
@@ -4887,7 +4865,45 @@ return
 }
 
 
-/* 
+
+
+/*
+   ------------------------------------------------------
+   Methoden zum Senden von Unicode-Zeichen
+   ------------------------------------------------------
+*/
+
+
+/************************************************************
+  Alter Weg – Copy/Paste über die Zwischenablage
+************************************************************/
+
+/*
+Unicode(code)
+{
+   saved_clipboard := ClipboardAll
+   Transform, Clipboard, Unicode, %code%
+   sendplay ^v
+   Clipboard := saved_clipboard
+}
+
+BSUnicode(code)
+{
+   saved_clipboard := ClipboardAll
+   Transform, Clipboard, Unicode, %code%
+   sendplay {bs}^v
+   Clipboard := saved_clipboard
+}
+*/
+
+
+/************************************************************
+  Neuer Weg – Benutzung der entsprechenden Win32-API-Methode
+************************************************************/
+
+
+
+/*
    ------------------------------------------------------
    BildschirmTastatur
    ------------------------------------------------------
@@ -5214,6 +5230,7 @@ return
 exitprogram:
    exitapp
 return
+
 
 
 
