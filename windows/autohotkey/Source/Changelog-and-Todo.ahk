@@ -14,14 +14,13 @@ Matthias Berg <neo (at) matthias-berg. e u>
 * TODO: *
 *********
 - Die Bildschirmtastatur mit Mod4 hat den Mod4-Lock deaktiviert!
-- Auf der 6. Ebene von 2 und 3 werden Delta und Nabla gesendet, aber nicht die logischen Symbole UND und ODER (wie in der Referenz)
+- Auf der 6. Ebene von 2 und 3 werden noch immer Delta und Nabla gesendet, aber nicht die logischen Symbole UND und ODER (wie in der Referenz)
 - send und send(blind) durch SendUnicodeChar ersetzen (aus Performance-Gründen jedoch nicht a-z, A-Z, 0-9)
 - Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?)
 - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
 - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
 - Testen, ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
 - Die Ebenen vom Tastenblock an die neue Referenz anpassen (wenn da ein Konsens gefunden wurde)
-
 
 
 **********
