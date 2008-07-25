@@ -6,6 +6,8 @@ Autoren:
 Stefan Mayer <stm (at) neo-layout. o r g>
 Nora Geissler <nora_geissler (at) yahoo. d e>
 Matthias Berg <neo (at) matthias-berg. e u>
+Martin Roppelt <m.p.roppelt (at) web. d e>
+Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 ...
 
 
@@ -35,6 +37,11 @@ Matthias Berg <neo (at) matthias-berg. e u>
 ******************
 * CHANGEHISTORY: *
 ******************
+
+Revision 694 (von Martin Roppelt):
+- LangSTastatur auf F11 (Ebene 4)
+- Entwickler können durch das Erstellen einer Datei »LangSTastaturStandardmäßigEingeschaltet.ahk« mit dem Inhalt »LangSTastatur := 1« diese standardmäßig aktivieren
+- Mehrere DeadKeys aktualisiert (T*, Ebene 4 und T*, Ebene 5)
 Revision 687 (von Dennis Heidsiek):
 - Die SendUnicodeChar-Methode um den GDK-Workarround von Matthias Wächter ergänzt
 - (An/Aus) Icons an Favicon der neuen Homepage angepasst
