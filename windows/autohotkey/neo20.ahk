@@ -1,15 +1,10 @@
 /*
 *******************************************
-
-
-
 WICHTIGE WARNUNG:
 
 Dies ist inzwischen eine automatisch generierte
 Datei! Sie wird regelmäßig überschrieben und
 sollte deshalb nicht mehr direkt bearbeitet werden!
-
-
 
 DIE AUSFÜHRBARE DATEI AKTUALISIEREN:
 
@@ -17,8 +12,6 @@ Um die neo20-all-in-one.exe auf den neuesten Stand zu
 bringen, reicht (wenn Autohotkey im Standardverzeichnis
 installiert wurde) ein Doppelklick auf die Batch-Datei
 Build-Update.bat
-
-
 
 HINWEISE FÜR AHK-ENTWICKLER:
 
@@ -46,8 +39,6 @@ Line Text: CTL_CODE_LED(p_device_type, p_function, p_method, p_access)
 Error: Functions cannot contain functions.
 The programm will exit.
 
-
-
 AHK-LINKS
 
 Eine kurze Einführung (Installation und Beispielscipt) findet man etwa auf
@@ -57,239 +48,170 @@ Eine alphabetische Liste aller erlaubten Kommandos findet man online unter
 http://www.autohotkey.com/docs/commands.htm
 
 
-
 *******************************************
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
-*******************************************
-DU BIST GEWARNT WORDEN!
-*******************************************
+*************************************
+* NEO 2.0 (beta) Autohotkey-Treiber *
+*************************************
+Autoren:
+Stefan Mayer <stm (at) neo-layout. o r g>
+Nora Geissler <nora_geissler (at) yahoo. d e>
+Matthias Berg <neo (at) matthias-berg. e u>
+...
+
+
+
+*********
+* TODO: *
+*********
+- Die Bildschirmtastatur mit Mod4 hat den Mod4-Lock deaktiviert!
+- Auf der 6. Ebene von 2 und 3 werden noch immer Delta und Nabla gesendet, aber nicht die logischen Symbole UND und ODER (wie in der Referenz); siehe hierzu auch http://de.autohotkey.com/forum/post-26040.html
+- send und send{blind} durch SendUnicodeChar ersetzen (aus Performance-Gründen jedoch nicht a-z, A-Z, 0-9)
+- Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?)
+- ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
+- Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
+- Testen, ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
+- Die Ebenen vom Tastenblock an die neue Referenz anpassen (wenn da ein Konsens gefunden wurde)
+
+
+**********
+* IDEEN: *
+**********
+- Tastatur-Reset: mod4+escape (oder ev. ein anderer Hotkey) soll die Tastatur wieder in den Normalzustand versetzen (d.h. alle Ebenen unlocken und Einhand, Lang-s oder Sonstwelche-Modi deaktivieren)
+- Die Varianten (lernModus, einHandNeo, Lang-s-Tastatur, Qwertz/pausieren) sollten einheitlich (de-)aktiviert werden, etwa über Mod4 F9-F12
+- bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
+
+
+
+******************
+* CHANGEHISTORY: *
+******************
+Revision 687 (von Dennis Heidsiek):
+- Die SendUnicodeChar-Methode um den GDK-Workarround von Matthias Wächter ergänzt
+- (An/Aus) Icons an Favicon der neuen Homepage angepasst
+Revision 645 (von Martin Roppelt):
+- Ellipse zusätzlich auf M3+x; 
+- Lang-s-Tastatur probeweise auf M4+Esc
+Revision 640 (von Dennis Heidsiek):
+- Der untote Zirkumflex (^) auf Ebene 3 funktioniert jetzt auch in Java-Programmen
+Revision 639 (von Martin Roppelt):
+- Lang-s-Tastatur kann nicht mehr durch einen Hotkey aktiviert werden
+Revision 629 (von Martin Roppelt):
+- Spitze Klammern (bra und ket) testweise auf M5+8/9
+Revision 624 (von Martin Roppelt):
+- Lang-s-Tastatur (ein- und auszuschalten durch Mod4+ß)
+Revision 616 (von Dennis Heidsiek):
+- Der nicht funktionierende Mod5-Lock-Fix wurde wieder entfernt, da er sogar neue Fehler produzierte.
+Revision 615 (von Dennis Heidsiek):
+- Erfolgloser Versuch, den Mod4-Lock wiederherzustellen (durch eine Tilde vor den Scancodes der Bildschirmtastatur).
+- Rechtschreibfehler korrigiert.
+- Zwei AHK-Links eingefügt.
+Revision 609 (von Dennis Heidsiek):
+- Vorläufiger Abschluss der AHK-Modularisierung.
+- Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und nicht auf das große »vereinigte« Skript beziehen.
+Revision 608 (von Martin Roppelt):
+- Rechtschreibfehler korrigiert und Dateinamen aktualisiert und sortiert.
+Revision 590 (von Dennis Heidsiek):
+- Erste technische Vorarbeiten zur logischen Modularisierung des viel zu lange gewordenen AHK-Quellcodes.
+- Neue Batch-Datei Build-Update.bat zur einfachen Aktualisierung der EXE-Datei
+Revision 583 (von Dennis Heidsiek):
+- Kleinere Korrekturen (Mod3+Numpad5, Mod5+Numpad5 und Mod3+Numpad9 stimmen wieder mit der Referenz überein).
+Revision 580 (von Matthias Berg):
+- Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*, dies deaktiviert jedoch leider den Mod4-Lock
+Revision 570 (von Matthias Berg):
+- Hotkeys für einHandNeo und lernModus durch entsprechende ScanCodes ersetzt 
+Revision 568 (von Matthias Berg):
+- Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt
+  * jetzt wird auch bei eingestelltem US Layout Neo verwendet. (z.B. für Chinesische InputMethodEditors)
+  * rechter Mod3 geht noch nicht bei US Layout (weder ScanCode noch "\")
+Revision 567 (von Dennis Heidsiek):
+- Aktivierter Mod4 Lock wird jetzt über die Rollen-LED des Keybord angezeigt (analog zu CapsLock), die NUM-LED behält ihr bisheriges Verhalten
+- Neue Option im Skript: UseMod4Light
+Revision 561 (von Matthias Berg):
+- Ebene 4 Tab verhält sich jetzt wie das andere Tab dank "goto neo_tab"
+Revision 560 (von Dennis Heidsiek):
+- Neue Option im Skript: bildschirmTastaturEinbinden bindet die PNG-Bilder der Bildschirmtastur mit in die exe-Datei ein, so dass sich der Benutzer nur eine Datei herunterladen muss
+Revision 559 (von Matthias Berg):
+- Shift+Alt+Tab Problem gelöst (muss noch mehr auf Nebeneffekte getestet werden)
+Revision 558 (von Matthias Berg):
+- Icon-Bug behoben
+  * Hotkeys dürfen nicht vor der folgenden Zeile stehen:
+   "menu, tray, icon, neo.ico,,1"
+- lernModus-Konfigurations-Bug behoben: or statt and(not)
+- Ein paar leere Else-Fälle eingebaut (Verständlichkeit, mögliche Compilerprobleme vermeiden)   
+Revision 556 (von Matthias Berg):
+- lernModus (an/aus mit Strg+Komma)
+  * im Skript konfigurierbar
+  * Schaltet z.B. Qwertz Tasten aus, die es auf der 4. Ebene gibt (Return, Backspace,...)
+  * Kann auch Backspace und/oder Entfernen der 4. Ebene ausschalten (gut zum Lernen richtig zu schreiben)
+- Bug aufgetaucht: Icons werden nicht mehr angezeigt
+Revision 544 (von Stefan Mayer):
+- ,.:; auf dem Mod4-Ziffernblock an die aktuelle Referenz angepasst
+- Versionen von rho, theta, kappa und phi an die aktuelle Referenz angepasst
+Revision 542 (von Matthias Berg):
+- bei EinHandNeo ist jetzt Space+y auch Mod4
+- AltGr-Bug  hoffentlich wieder behoben. Diesmal mit extra altGrPressed Variable
+- nurEbenenFuenfUndSechs umbenannt in ahkTreiberKombi und auf Ebene 4 statt 5 und 6 geändert
+Revision 540 (von Matthias Berg):
+- stark überarbeitet um Wartbarkeit zu erhöhen und Redundanz zu veringern
+- nurEbenenFuenfUndSechs sollte nun auch auf Neo Treiber statt Qwertz laufen
+  * aber es muss noch jemand testen
+  * Problem: was kann man abfangen, wenn eine tote Taste gedrückt wird
+- einHandNeo:
+  * An-/Ausschalten mit STRG+Punkt
+  * Buchstaben der rechten Hand werden mit Space zur linken Hand
+  * Nebeneffekt: es gibt beim Festhalten von Space keine wiederholten Leerzeichen mehr
+Revision 532 (von Matthias Berg):
+- BildschirmTastatur 
+  * aktiviert mit strg+F1 bis 7 schaltet Keyboard ein oder aus
+  * strg+F7 zeigt die zuletzt angezeigte Ebene an (und wieder aus).
+  * strg+F8 schaltet AlwaysOnTop um    
+Revision 529 (von Stefan Mayer):
+- Icon wird automatisch geladen, falls .ico-Dateien im selbem Ordner
+- in der .exe sind die .ico mitgespeichert und werden geladen
+Revision 528 (von Matthias Berg):
+- Neo-Icon
+- Neo-Prozess jetzt automatisch auf hoher Prioritaet
+  (siehe globale Schalter)
+- Mod3-Lock (nur wenn rechtes Mod3 zuerst gedrückt wird, andere Lösung führte zum Caps-Bug)
+- Mod4-Lock (nur wenn das linke Mod4 zuerst gedrückt wird, andere Lösung fühte zum AltGr-Bug)
+- Ein paar falsche Zeichen korrigiert
+Revision 527 (von Matthias Berg):
+- AltGr Problem hoffentlich behoben
+- Umschalt+Mod4 Bug behoben
+Revision 526 (von Matthias Berg):
+- Ebenen 1 bis 4 ausschalten per Umschalter siehe erste Codezeile nurEbenenFuenfUndSechs = 0
+- Mod4-Lock durch Mod4+Mod4
+- EbenenAktualisierung neu geschrieben
+- Ebene 6 über Mod3+Mod4
+- Ebenen (besonders Matheebene) an Referenz angepasst (allerdings kaum um Ebenen 1&2 gekümmert, besonders Compose könnte noch überholt werden)
+Revision 525 (von Matthias Berg):
+- Capslock bei Zahlen und Sonderzeichen berücksichtigt
+Revision 524 (von Matthias Berg):
+- umgekehrtes ^ für o, a, ü,i  sowie für die grossen vokale ( 3. ton chinesisch)
+  • damit wird jetzt PinYin vollständig unterstützt caron, macron, akut, grave auf uiaeoü
+- Sonderzeichen senden wieder blind -> Shortcuts funktionieren, Capslock ist leider Shiftlock
+Revision 523 (von Matthias Berg):
+- CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
+- vertikale Ellipse eingebaut
+- Umschalt+Umschalt für Capslock statt Mod3+Mod3
+- bei Suspend wird jetzt wirklich togglesuspend aufgerufen (auch beim aktivieren per shift+pause)
+Revsion 490 (von Stefan Mayer): 
+- SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
+  • auch bei Ziffernblock auf der 5. Ebene
+- Kein Parsen über die Zwischenablage mehr
+- Vista-kompatibel
+- Compose-Taste
+  • Brüche (auf Zahlenreihe und Hardware-Ziffernblock)
+  • römische Zahlen
+  • Ligaturen und Copyright
+
+
+
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    Titel:        NEO 2.0 beta Autohotkey-Treiber
-    $Revision:    624 $
-    $Date:        2008-07-08 18:50:00 +0200 (Di, 07 Jul 2008) $
-    Autoren:      Stefan Mayer <stm (at) neo-layout. o r g>
-                  Nora Geissler <nora_geissler (at) yahoo. d e>
-                  Matthias Berg <neo (at) matthias-berg. e u>
-                  ...
-                  
-                  
-                  
-                  
-    TODO:         - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
-                  - Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten
-                    nicht mehr abgefangen werden müssen.
-                  - Testen ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
-                  - Sind Ebenen vom Touchpad noch richtig?
-                  - Die Bildschirmtastatur mit Mod4 deaktiviert den Mod4-Lock
-                  - Auf der 6. Ebene von 2 und 3 werden Delta und Nabla gesendet, aber nicht die
-                    logischen Symbole UND und ODER (wie in der Referenz)
-    Ideen:        - Symbol ändern (Neo-Logo abwarten)
-                  - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-                  - Tastatur-Reset: mod4+escape (oder ev. ein anderer Hotkey) soll die
-                    Tastatur wieder in den Normalzustand versetzen (d.h. alle Ebenen
-                    unlocken und Einhand, Lang-s oder Sonstwelche-Modi deaktivieren)
-                  - Die Varianten (lernModus, einHandNeo, Lang-s-Tastatur Qwertz/pausieren)
-                    sollten einheitlich (de-)aktiviert werden, etwa über Mod4 F9-F12
-
-
-    CHANGEHISTORY:
-                  Revision 687 (von Dennis Heidsiek):
-                  - Die SendUnicodeChar-Methode um den GDK-Workarround von Matthias Wächter ergänzt
-                  - (An/Aus) Icons an Favicon der neuen Homepage angepasst
-                  Revision 645 (von Martin Roppelt):
-                  - Ellipse zusätzlich auf M3+x; 
-                  - Lang-s-Tastatur probeweise auf M4+Esc
-                  Revision 640 (von Dennis Heidsiek):
-                  - Der untote Zirkumflex (^) auf Ebene 3 funktioniert jetzt auch
-                    in Java-Programmen
-                  Revision 639 (von Martin Roppelt):
-                  - Lang-s-Tastatur kann nicht mehr durch einen Hotkey aktiviert werden
-                  Revision 629 (von Martin Roppelt):
-                  - Spitze Klammern (bra und ket) testweise auf M5+8/9
-                  Revision 624 (von Martin Roppelt):
-                  - Lang-s-Tastatur (ein- und auszuschalten durch Mod4+ß)
-                  Revision 616 (von Dennis Heidsiek):
-                  - Der nicht funktionierende Mod5-Lock-Fix wurde wieder entfernt, da
-                    er sogar neue Fehler produzierte.
-                  Revision 615 (von Dennis Heidsiek):
-                  - Erfolgloser Versuch, den Mod4-Lock wiederherzustellen
-                    (durch eine Tilde vor den Scancodes der Bildschirmtastatur).
-                  - Rechtschreibfehler korrigiert.
-                  - Zwei AHK-Links eingefügt.
-                  Revision 609 (von Dennis Heidsiek):
-                  - Vorläufiger Abschluss der AHK-Modularisierung.
-                  - Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der
-                    sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und
-                    nicht auf das große »vereinigte« Skript beziehen.
-                  Revision 608 (von Martin Roppelt):
-                  - Rechtschreibfehler korrigiert und Dateinamen aktualisiert und sortiert.
-                  Revision 590 (von Dennis Heidsiek):
-                  - Erste technische Vorarbeiten zur logischen Modularisierung des viel
-                    zu lange gewordenen AHK-Quellcodes.
-                  - Neue Batch-Datei Build-Update.bat zur einfachen Aktualisierung der EXE-Datei
-                  Revision 583 (von Dennis Heidsiek):
-                  - Kleinere Korrekturen (Mod3+Numpad5, Mod5+Numpad5 und Mod3+Numpad9
-                    stimmen wieder mit der Referenz überein).
-                  Revision 580 (von Matthias Berg):
-                  - Bildschirmtastatur jetzt mit Mod4+F* statt Strg+F*, dies deaktiviert
-                    jedoch leider den Mod4-Lock
-                  Revision 570 (von Matthias Berg):
-                  - Hotkeys für einHandNeo und lernModus durch entsprechende ScanCodes ersetzt 
-                  Revision 568 (von Matthias Berg):
-                  - Sonderzeichen, Umlaute, z und y durch ScanCodes ersetzt
-                    * jetzt wird auch bei eingestelltem US Layout Neo verwendet.
-                      (z.B. für Chinesische InputMethodEditors)
-                    * rechter Mod3 geht noch nicht bei US Layout (weder ScanCode noch "\")
-                  Revision 567 (von Dennis Heidsiek):
-                  - Aktivierter Mod4 Lock wird jetzt über die Rollen-LED des Keybord angezeigt
-                    (analog zu CapsLock), die NUM-LED behält ihr bisheriges Verhalten
-                  - Neue Option im Skript: UseMod4Light
-                  Revision 561 (von Matthias Berg):
-                  - Ebene 4 Tab verhält sich jetzt wie das andere Tab dank "goto neo_tab"
-                  Revision 560 (von Dennis Heidsiek):
-                  - Neue Option im Skript: bildschirmTastaturEinbinden bindet die PNG-Bilder der
-                    Bildschirmtastur mit in die exe-Datei ein, so dass sich der Benutzer nur eine Datei
-                    herunterladen muss
-                  Revision 559 (von Matthias Berg):
-                  - Shift+Alt+Tab Problem gelöst (muss noch mehr auf Nebeneffekte getestet werden)
-                  Revision 558 (von Matthias Berg):
-                  - Icon-Bug behoben
-                    * Hotkeys dürfen nicht vor der folgenden Zeile stehen:
-                     "menu, tray, icon, neo.ico,,1"
-                  - lernModus-Konfigurations-Bug behoben: or statt and(not)
-                  - Ein paar leere Else-Fälle eingebaut (Verständlichkeit, mögliche Compilerprobleme vermeiden)   
-                  Revision 556 (von Matthias Berg):
-                  - lernModus (an/aus mit Strg+Komma)
-                    * im Skript konfigurierbar
-                    * Schaltet z.B. Qwertz Tasten aus, die es auf der 4. Ebene gibt (Return, Backspace,...)
-                    * Kann auch Backspace und/oder Entfernen der 4. Ebene ausschalten (gut zum Lernen richtig 
-                      zu schreiben)
-                  - Bug aufgetaucht: Icons werden nicht mehr angezeigt
-                  Revision 544 (von Stefan Mayer):
-                  - ,.:; auf dem Mod4-Ziffernblock an die aktuelle Referenz angepasst
-                  - Versionen von rho, theta, kappa und phi an die aktuelle Referenz angepasst
-                  Revision 542 (von Matthias Berg):
-                  - bei EinHandNeo ist jetzt Space+y auch Mod4
-                  - AltGr-Bug  hoffentlich wieder behoben. Diesmal mit extra altGrPressed Variable
-                  - nurEbenenFuenfUndSechs umbenannt in ahkTreiberKombi und auf Ebene 4 statt 5 und 6 geändert
-                  Revision 540 (von Matthias Berg):
-                  - stark überarbeitet um Wartbarkeit zu erhöhen und Redundanz zu veringern
-                  - nurEbenenFuenfUndSechs sollte nun auch auf Neo Treiber statt Qwertz laufen
-                    * aber es muss noch jemand testen
-                    * Problem: was kann man abfangen, wenn eine tote Taste gedrückt wird
-                 - einHandNeo:
-                    * An-/Ausschalten mit STRG+Punkt
-                    * Buchstaben der rechten Hand werden mit Space zur linken Hand
-                    * Nebeneffekt: es gibt beim Festhalten von Space keine wiederholten Leerzeichen mehr
-                  Revision 532 (von Matthias Berg):
-                  - BildschirmTastatur 
-                    * aktiviert mit strg+F1 bis 7 schaltet Keyboard ein oder aus
-                    * strg+F7 zeigt die zuletzt angezeigte Ebene an (und wieder aus).
-                    * strg+F8 schaltet AlwaysOnTop um    
-                  Revision 529 (von Stefan Mayer):
-                  - Icon wird automatisch geladen, falls .ico-Dateien im selbem Ordner
-                  - in der .exe sind die .ico mitgespeichert und werden geladen
-                  Revision 528 (von Matthias Berg):
-                  - Neo-Icon
-                  - Neo-Prozess jetzt automatisch auf hoher Prioritaet
-                    (siehe globale Schalter)
-                  - Mod3-Lock (nur wenn rechtes Mod3 zuerst gedrückt wird, andere Lösung führte zum Caps-Bug)
-                  - Mod4-Lock (nur wenn das linke Mod4 zuerst gedrückt wird, andere Lösung fühte zum AltGr-Bug)
-                  - Ein paar falsche Zeichen korrigiert
-                  Revision 527 (von Matthias Berg):
-                  - AltGr Problem hoffentlich behoben
-                  - Umschalt+Mod4 Bug behoben
-                  Revision 526 (von Matthias Berg):
-                  - Ebenen 1 bis 4 ausschalten per Umschalter siehe erste Codezeile
-                     nurEbenenFuenfUndSechs = 0
-                  - Mod4-Lock durch Mod4+Mod4
-                  - EbenenAktualisierung neu geschrieben
-                  - Ebene 6 über Mod3+Mod4
-                  - Ebenen (besonders Matheebene) an Referenz angepasst
-                    (allerdings kaum um Ebenen 1&2 gekümmert, besonders Compose könnte noch überholt werden)
-                  Revision 525 (von Matthias Berg):
-                  - Capslock bei Zahlen und Sonderzeichen berücksichtigt
-                  Revision 524 (von Matthias Berg):
-                  - umgekehrtes ^ für o, a, ü,i  sowie für die grossen vokale ( 3. ton chinesisch)
-                    • damit wird jetzt PinYin vollständig unterstützt caron, macron, akut, grave auf uiaeoü
-                  - Sonderzeichen senden wieder blind -> Shortcuts funktionieren, Capslock ist leider Shiftlock
-                  Revision 523 (von Matthias Berg):
-                        - CapsLock geht jetzt auch bei allen Zeichen ('send Zeichen' statt 'send {blind} Zeichen')
-                  - vertikale Ellipse eingebaut
-                  - Umschalt+Umschalt für Capslock statt Mod3+Mod3
-                  - bei Suspend wird jetzt wirklich togglesuspend aufgerufen (auch beim aktivieren per shift+pause)
-                  Revsion 490 (von Stefan Mayer): 
-                  - SUBSCRIPT von 0 bis 9 sowie (auf Ziffernblock) + und -
-                    • auch bei Ziffernblock auf der 5. Ebene
-                  - Kein Parsen über die Zwischenablage mehr
-                  - Vista-kompatibel
-                  - Compose-Taste
-                    • Brüche (auf Zahlenreihe und Hardware-Ziffernblock)
-                    • römische Zahlen
-                    • Ligaturen und Copyright
-*/
 
 
 
@@ -299,14 +221,20 @@ DU BIST GEWARNT WORDEN!
 */
 
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
-ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden)
+
+ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
 einHandNeo := 0                  ; Soll der Treiber im Einhandmodus betrieben werden?
 lernModus := 0                   ; Soll der Lernmodus aktiviert werden?
-bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
-UseMod4Light := 1                ; Aktivierter Mod4 Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
-LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf M3+ß gelegt werden?
+bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden?
+                                 ; (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+UseMod4Light := 1                ; Aktivierter Mod4-Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
+LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf ß(3) gelegt werden?
+#Include *i %a_scriptdir%\LangSTastaturStandardmäßigEingeschaltet.ahk
+#Include *i %a_scriptdir%\source\LangSTastaturStandardmäßigEingeschaltet.ahk
+                                 ; Wenn diese Datei vorhanden ist und die Zeichenfolge »LangSTastatur := 1« enthält,
+                                 ; ist die LangSTastatur beim Starten der ahk/exe-Datei automatisch eingeschaltet.
 
-Process, Priority,, High
+Process,Priority,,High
 
 
 /*************************
@@ -318,7 +246,7 @@ Process, Priority,, High
 FileInstall, neo.ico, neo.ico, 1
 FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
-if(bildschirmTastaturEinbinden==1) {
+if (bildschirmTastaturEinbinden==1) {
    FileInstall, ebene1.png, ebene1.png, 1
    FileInstall, ebene2.png, ebene2.png, 1
    FileInstall, ebene3.png, ebene3.png, 1
@@ -1138,12 +1066,12 @@ neo_tot1:
    else if Ebene = 4
    {
       SendUnicodeChar(0x00B7) ; Mittenpunkt, tot
-      PriorDeadKey := "c5"
+      PriorDeadKey := "c4"
    }
    else if Ebene = 5
    {
       send -                  ; querstrich, tot
-      PriorDeadKey := "c4"
+      PriorDeadKey := "c5"
    }
    else if Ebene = 6
    {
@@ -1158,7 +1086,7 @@ neo_1:
    {
       if (PriorDeadKey = "c1")          ; circumflex 1
          BSSendUnicodeChar(0x00B9)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2081)
       else if (CompKey = "r_small_1")
          Comp3UnicodeChar(0x217A)          ; römisch xi
@@ -1227,7 +1155,7 @@ neo_2:
    {
       if (PriorDeadKey = "c1")          ; circumflex 
          BSSendUnicodeChar(0x00B2)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2082)
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2171)          ; römisch ii
@@ -1297,7 +1225,7 @@ neo_3:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x00B3)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2083)
       else if (CompKey = "1")
          CompUnicodeChar(0x2153)          ; 1/3
@@ -1363,7 +1291,7 @@ neo_4:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2074)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2084)         
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2173)          ; römisch iv
@@ -1430,7 +1358,7 @@ neo_5:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2075)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2085)
       else if (CompKey = "1")
          CompUnicodeChar(0x2155)          ; 1/5
@@ -1501,7 +1429,7 @@ neo_6:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2076)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2086)         
       else if (CompKey = "1")
          CompUnicodeChar(0x2159)          ; 1/6
@@ -1568,7 +1496,7 @@ neo_7:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2077)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2087)
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2176)          ; römisch vii
@@ -1634,7 +1562,7 @@ neo_8:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2078)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2088)
       else if (CompKey = "1")
          CompUnicodeChar(0x215B)          ; 1/8
@@ -1707,7 +1635,7 @@ neo_9:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2079)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2089)
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2178)          ; römisch ix
@@ -1772,7 +1700,7 @@ neo_0:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2070)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2080)         
       else if (CompKey = "r_small_1")
          Comp3UnicodeChar(0x2179)          ; römisch x
@@ -1882,12 +1810,12 @@ neo_tot2:
    else if Ebene = 4
    {
       SendUnicodeChar(0x02D9) ; punkt oben drüber
-      PriorDeadKey := "a5"
+      PriorDeadKey := "a4"
    }
    else if Ebene = 5
    {
       SendUnicodeChar(0x02DB) ; ogonek
-      PriorDeadKey := "a4"
+      PriorDeadKey := "a5"
    }
    else if Ebene = 6
    {
@@ -1955,7 +1883,7 @@ neo_l:
    EbeneAktualisieren()
    if Ebene = 1
    { 
-      if (PriorDeadKey = "t5")       ; Schrägstrich
+      if (PriorDeadKey = "t4")       ; Schrägstrich
          BSSendUnicodeChar(0x0142)
       else if (PriorDeadKey = "a1")      ; akut 
          BSSendUnicodeChar(0x013A)
@@ -1963,7 +1891,7 @@ neo_l:
          BSSendUnicodeChar(0x013E)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x013C)
-      else if (PriorDeadKey = "c5")  ; Mittenpunkt
+      else if (PriorDeadKey = "c4")  ; Mittenpunkt
          BSSendUnicodeChar(0x0140)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E37)
@@ -1982,9 +1910,9 @@ neo_l:
          BSSendUnicodeChar(0x013D)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x013B)
-      else if (PriorDeadKey = "t5")  ; Schrägstrich 
+      else if (PriorDeadKey = "t4")  ; Schrägstrich 
          BSSendUnicodeChar(0x0141)
-      else if (PriorDeadKey = "c5")  ; Mittenpunkt 
+      else if (PriorDeadKey = "c4")  ; Mittenpunkt 
          BSSendUnicodeChar(0x013F)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E36)
@@ -2030,7 +1958,7 @@ neo_c:
          BSSendUnicodeChar(0x0107)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x00E7)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x010B)
       else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
          Send {bs}©
@@ -2053,7 +1981,7 @@ neo_c:
          BSSendUnicodeChar(0x0106)
       else if (PriorDeadKey = "a3")   ; cedilla 
          BSSendUnicodeChar(0x00E6)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x010A)
       else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
          Send {bs}©         
@@ -2157,9 +2085,9 @@ neo_h:
    {
       if (PriorDeadKey = "c1")           ; circumflex
          BSSendUnicodeChar(0x0125)
-      else if (PriorDeadKey = "c4")   ; Querstrich 
+      else if (PriorDeadKey = "c5")   ; Querstrich 
          BSSendUnicodeChar(0x0127)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E23)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E25)
@@ -2169,9 +2097,9 @@ neo_h:
    {
       if (PriorDeadKey = "c1")           ; circumflex
          BSSendUnicodeChar(0x0124)
-      else if (PriorDeadKey = "c4")   ; Querstrich
+      else if (PriorDeadKey = "c5")   ; Querstrich
          BSSendUnicodeChar(0x0126)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E22)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E24)
@@ -2179,7 +2107,7 @@ neo_h:
    }
    else if Ebene = 3
    {
-      if (PriorDeadKey = "c4")    ; Querstrich
+      if (PriorDeadKey = "c5")    ; Querstrich
          BSSendUnicodeChar(0x2264) ; kleiner gleich
       else
          send {blind}<
@@ -2188,7 +2116,7 @@ neo_h:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2077)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2087)
       else
          Send 7
@@ -2210,7 +2138,7 @@ neo_g:
          BSSendUnicodeChar(0x011F)
       else if (PriorDeadKey = "a3")   ; cedilla
          BSSendUnicodeChar(0x0123)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x0121)
       else sendinput {blind}g
    }
@@ -2222,13 +2150,13 @@ neo_g:
          BSSendUnicodeChar(0x011E)
       else if (PriorDeadKey = "a3")    ; cedilla 
          BSSendUnicodeChar(0x0122)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x0120)
       else sendinput {blind}G
    }
    else if Ebene = 3
    {
-      if (PriorDeadKey = "c4")    ; Querstrich
+      if (PriorDeadKey = "c5")    ; Querstrich
          SendUnicodeChar(0x2265) ; größer gleich
       else
          send >
@@ -2237,7 +2165,7 @@ neo_g:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2078)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2088)
       else
          Send 8
@@ -2253,17 +2181,17 @@ neo_f:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "t5")      ; durchgestrichen
+      if (PriorDeadKey = "t4")      ; durchgestrichen
          BSSendUnicodeChar(0x0192)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E1F)
       else sendinput {blind}f
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "t5")       ; durchgestrichen
+      if (PriorDeadKey = "t4")       ; durchgestrichen
          BSSendUnicodeChar(0x0191)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E1E)
       else sendinput {blind}F
    } 
@@ -2273,9 +2201,9 @@ neo_f:
          BSSendUnicodeChar(0x2259)   ; entspricht
       else if (PriorDeadKey = "t1")       ; tilde 
          BSSendUnicodeChar(0x2245)   ; ungefähr gleich
-      else if (PriorDeadKey = "t5")       ; Schrägstrich 
+      else if (PriorDeadKey = "t4")       ; Schrägstrich 
          BSSendUnicodeChar(0x2260)   ; ungleich
-      else if (PriorDeadKey = "c4")       ; Querstrich
+      else if (PriorDeadKey = "c5")       ; Querstrich
          BSSendUnicodeChar(0x2261)   ; identisch
       else if (PriorDeadKey = "c2")       ; caron 
          BSSendUnicodeChar(0x225A)   ; EQUIANGULAR TO
@@ -2288,7 +2216,7 @@ neo_f:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2079)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2089)
       else
          Send 9
@@ -2312,7 +2240,7 @@ neo_q:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x207A)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x208A)
       else
          Send {+}
@@ -2387,18 +2315,18 @@ neo_tot3:
    }
    else if Ebene = 3
    {
-      SendUnicodeChar(0x00A8)  ; Diaerese
+      SendUnicodeChar(0x00A8)  ; diaerese
       PriorDeadKey := "t3"
    }
    else if Ebene = 4
    {
       SendUnicodeChar(0x002F)  ; Schrägstrich, tot
-      PriorDeadKey := "t5"
+      PriorDeadKey := "t4"
    }
    else if Ebene = 5
    {
       sendUnicodeChar(0x02DD)  ;doppelakut
-      PriorDeadKey := "t4"
+      PriorDeadKey := "t5"
    }
    else if Ebene = 6
    {
@@ -2424,15 +2352,15 @@ neo_u:
          BSSendUnicodeChar(0x00FA)
       else if (PriorDeadKey = "a2")  ; grave
          BSSendUnicodeChar(0x00F9)
-      else if (PriorDeadKey = "t3")  ; Diaerese
+      else if (PriorDeadKey = "t3")  ; diaerese
          Send, {bs}ü
-      else if (PriorDeadKey = "t4")  ; doppelakut 
+      else if (PriorDeadKey = "t5")  ; doppelakut 
          BSSendUnicodeChar(0x0171)
       else if (PriorDeadKey = "c3")  ; brevis
          BSSendUnicodeChar(0x016D)
       else if (PriorDeadKey = "t2")  ; macron
          BSSendUnicodeChar(0x016B)
-      else if (PriorDeadKey = "a4")  ; ogonek
+      else if (PriorDeadKey = "a5")  ; ogonek
          BSSendUnicodeChar(0x0173)
       else if (PriorDeadKey = "a6")  ; Ring
          BSSendUnicodeChar(0x016F)
@@ -2451,19 +2379,19 @@ neo_u:
          BSSendUnicodeChar(0x00DA)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00D9)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}Ü
       else if (PriorDeadKey = "a6")   ; Ring
          BSSendUnicodeChar(0x016E)
       else if (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x016C)
-      else if (PriorDeadKey = "t4")   ; doppelakut
+      else if (PriorDeadKey = "t5")   ; doppelakut
          BSSendUnicodeChar(0x0170)
       else if (PriorDeadKey = "c2")   ; caron 
          BSSendUnicodeChar(0x01D3)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x016A)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0172)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0168)
@@ -2491,17 +2419,17 @@ neo_i:
          BSSendUnicodeChar(0x00ED)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00EC)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}ï
-      else if (PriorDeadKey = "t2")   ; macron
+      else if (PriorDeadKey = "t2")   ; macron - defekt
          BSSendUnicodeChar(0x012B)
       else if (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x012D)
-      else if (PriorDeadKey = "a5")   ; ogonek
+      else if (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x012F)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0129)
-      else if (PriorDeadKey = "a4")   ; punkt darüber 
+      else if (PriorDeadKey = "a5")   ; punkt darüber 
          BSSendUnicodeChar(0x0131)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D0)
@@ -2520,17 +2448,17 @@ neo_i:
          BSSendUnicodeChar(0x00CD)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00CC)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}Ï
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x012A)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x012C)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x012E)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0128)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0130)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01CF)
@@ -2574,13 +2502,13 @@ neo_a:
          BSSendUnicodeChar(0x00E1)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00E0)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          send {bs}ä
       else if (PriorDeadKey = "a6")   ; Ring 
          Send {bs}å
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00E3)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0105)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0101)
@@ -2603,7 +2531,7 @@ neo_a:
          BSSendUnicodeChar(0x00C1)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00C0)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          send {bs}Ä
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00C3)
@@ -2613,7 +2541,7 @@ neo_a:
          BSSendUnicodeChar(0x0100)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x0102)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0104)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01CD)
@@ -2657,17 +2585,17 @@ neo_e:
          BSSendUnicodeChar(0x00E9)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00E8)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}ë
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0119)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0113)
-      else if (PriorDeadKey = "c3")   ; brevis
+      else if (PriorDeadKey = "c3")   ; brevis - defekt
          BSSendUnicodeChar(0x0115)
-      else if (PriorDeadKey = "c2")   ; caron
+      else if (PriorDeadKey = "c2")   ; caron - defekt
          BSSendUnicodeChar(0x011B)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0117)
       else if (CompKey = "a_small")   ; compose
       {
@@ -2690,7 +2618,7 @@ neo_e:
          BSSendUnicodeChar(0x00C9)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00C8)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}Ë
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x011A)
@@ -2698,9 +2626,9 @@ neo_e:
          BSSendUnicodeChar(0x0112)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x0114)
-      else if (PriorDeadKey = "a4")   ; ogonek 
+      else if (PriorDeadKey = "a5")   ; ogonek 
          BSSendUnicodeChar(0x0118)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0116)
       else if (CompKey = "a_capital") ; compose
       {
@@ -2736,19 +2664,19 @@ neo_o:
          BSSendUnicodeChar(0x00F3)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00F2)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}ö
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00F5)
-      else if (PriorDeadKey = "t4")   ; doppelakut
+      else if (PriorDeadKey = "t5")   ; doppelakut
          BSSendUnicodeChar(0x0151)
-      else if (PriorDeadKey = "t5")   ; Schrägstrich
+      else if (PriorDeadKey = "t4")   ; Schrägstrich
          BSSendUnicodeChar(0x00F8)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x014D)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x014F)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x01EB)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D2)                      
@@ -2767,19 +2695,19 @@ neo_o:
          BSSendUnicodeChar(0x00D3)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00D2)
-      else if (PriorDeadKey = "t5")   ; Schrägstrich
+      else if (PriorDeadKey = "t4")   ; Schrägstrich
          BSSendUnicodeChar(0x00D8)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00D5)
-      else if (PriorDeadKey = "t4")   ; doppelakut
+      else if (PriorDeadKey = "t5")   ; doppelakut
          BSSendUnicodeChar(0x0150)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          send {bs}Ö
       else if (PriorDeadKey = "t2")   ; macron 
          BSSendUnicodeChar(0x014C)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x014E)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x01EA)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D1)    
@@ -2825,7 +2753,7 @@ neo_s:
          BSSendUnicodeChar(0x0161)
       else if (PriorDeadKey = "a3") ; cedilla
          BSSendUnicodeChar(0x015F)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E61)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E63)
@@ -2856,7 +2784,7 @@ neo_s:
          BSSendUnicodeChar(0x015A)
       else if (PriorDeadKey = "a3") ; cedilla 
          BSSendUnicodeChar(0x015E)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E60)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E62)
@@ -2907,7 +2835,7 @@ neo_n:
          BSSendUnicodeChar(0x0148)
       else if (PriorDeadKey = "a3")   ; cedilla
          BSSendUnicodeChar(0x0146)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E45)
       else
          sendinput {blind}n
@@ -2922,7 +2850,7 @@ neo_n:
          BSSendUnicodeChar(0x0143)
       else if (PriorDeadKey = "a3")   ; cedilla 
          BSSendUnicodeChar(0x0145)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E44)
       else
          sendinput {blind}N
@@ -2933,7 +2861,7 @@ neo_n:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2074)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2084)
       else
          Send 4
@@ -2955,7 +2883,7 @@ neo_r:
          BSSendUnicodeChar(0x0159)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x0157)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x0E59)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E5B)
@@ -2974,7 +2902,7 @@ neo_r:
          BSSendUnicodeChar(0x0154)
       else if (PriorDeadKey = "a3")    ; cedilla 
          BSSendUnicodeChar(0x0156)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E58)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E5A)
@@ -2994,7 +2922,7 @@ neo_r:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2075)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2085)
       else
          Send 5
@@ -3021,9 +2949,9 @@ neo_t:
            BSSendUnicodeChar(0x0165)
         else if (PriorDeadKey = "a3")    ; cedilla
            BSSendUnicodeChar(0x0163)
-        else if (PriorDeadKey = "c4")   ; Querstrich
+        else if (PriorDeadKey = "c5")   ; Querstrich
            BSSendUnicodeChar(0x0167)
-        else if (PriorDeadKey = "a5")  ; punkt darüber 
+        else if (PriorDeadKey = "a4")  ; punkt darüber 
            BSSendUnicodeChar(0x1E6B)
         else if (PriorDeadKey = "c6") ; punkt darunter 
            BSSendUnicodeChar(0x1E6D)
@@ -3040,9 +2968,9 @@ neo_t:
            BSSendUnicodeChar(0x0164)
         else if (PriorDeadKey = "a3")    ; cedilla 
            BSSendUnicodeChar(0x0162)
-        else if (PriorDeadKey = "c4")   ; Querstrich
+        else if (PriorDeadKey = "c5")   ; Querstrich
            BSSendUnicodeChar(0x0166)
-        else if (PriorDeadKey = "a5")  ; punkt darüber 
+        else if (PriorDeadKey = "a4")  ; punkt darüber 
            BSSendUnicodeChar(0x1E6A)
         else if (PriorDeadKey = "c6") ; punkt darunter 
            BSSendUnicodeChar(0x1E6C)
@@ -3062,7 +2990,7 @@ neo_t:
      {
         if (PriorDeadKey = "c1")            ; circumflex
            BSSendUnicodeChar(0x2076)
-        else if (PriorDeadKey = "c4")       ; toter -
+        else if (PriorDeadKey = "c5")       ; toter -
            BSSendUnicodeChar(0x2086)
         else
            Send 6
@@ -3085,13 +3013,13 @@ neo_d:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "c4")        ; Querstrich
+      if (PriorDeadKey = "c5")        ; Querstrich
          BSSendUnicodeChar(0x0111)
-      else if (PriorDeadKey = "t5")  ; Schrägstrich
+      else if (PriorDeadKey = "t4")  ; Schrägstrich
          BSSendUnicodeChar(0x00F0)
       else if (PriorDeadKey = "c2")     ; caron
          BSSendUnicodeChar(0x010F)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E0B)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E0D)
@@ -3100,13 +3028,13 @@ neo_d:
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "c4")        ; Querstrich
+      if (PriorDeadKey = "c5")        ; Querstrich
          BSSendUnicodeChar(0x0110)
-      else if (PriorDeadKey = "t5")  ; Schrägstrich
+      else if (PriorDeadKey = "t4")  ; Schrägstrich
          BSSendUnicodeChar(0x00D0)
       else if (PriorDeadKey = "c2")     ; caron 
          BSSendUnicodeChar(0x010E)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E0A)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E0D)
@@ -3127,7 +3055,7 @@ neo_y:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "t3")       ; Diaerese
+      if (PriorDeadKey = "t3")       ; diaerese
          Send {bs}ÿ
       else if (PriorDeadKey = "a1")      ; akut 
          BSSendUnicodeChar(0x00FD)
@@ -3140,7 +3068,7 @@ neo_y:
    {
       if (PriorDeadKey = "a1")           ; akut 
          BSSendUnicodeChar(0x00DD)
-      else if (PriorDeadKey = "t3")    ; Diaerese
+      else if (PriorDeadKey = "t3")    ; diaerese
          Send {bs}Ÿ
       else if (PriorDeadKey = "c1")      ; circumflex
          BSSendUnicodeChar(0x0176)
@@ -3267,14 +3195,14 @@ neo_p:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "a5")      ; punkt darüber 
+      if (PriorDeadKey = "a4")      ; punkt darüber 
          BSSendUnicodeChar(0x1E57)
       else
          sendinput {blind}p
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "a5")      ; punkt darüber 
+      if (PriorDeadKey = "a4")      ; punkt darüber 
          BSSendUnicodeChar(0x1E56)
       else 
          sendinput {blind}P
@@ -3303,7 +3231,7 @@ neo_z:
          BSSendUnicodeChar(0x017E)
       else if (PriorDeadKey = "a1")     ; akut
          BSSendUnicodeChar(0x017A)
-      else if (PriorDeadKey = "a5") ; punkt drüber
+      else if (PriorDeadKey = "a4") ; punkt drüber
          BSSendUnicodeChar(0x017C)
       else if (PriorDeadKey = "c6") ; punkt drunter
          BSSendUnicodeChar(0x1E93)
@@ -3316,7 +3244,7 @@ neo_z:
          BSSendUnicodeChar(0x017D)
       else if (PriorDeadKey = "a1")     ; akut 
          BSSendUnicodeChar(0x0179)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x017B)
       else if (PriorDeadKey = "c6") ; punkt drunter
          BSSendUnicodeChar(0x1E92)
@@ -3338,14 +3266,14 @@ neo_b:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "a5")      ; punkt darüber 
+      if (PriorDeadKey = "a4")      ; punkt darüber 
          BSSendUnicodeChar(0x1E03)
       else 
          sendinput {blind}b
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "a5")       ; punkt darüber 
+      if (PriorDeadKey = "a4")       ; punkt darüber 
          BSSendUnicodeChar(0x1E02)
       else 
          sendinput {blind}B
@@ -3365,7 +3293,7 @@ neo_m:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "a5")       ; punkt darüber 
+      if (PriorDeadKey = "a4")       ; punkt darüber 
          BSSendUnicodeChar(0x1E41)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E43)
@@ -3378,7 +3306,7 @@ neo_m:
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "a5")       ; punkt darüber 
+      if (PriorDeadKey = "a4")       ; punkt darüber 
          BSSendUnicodeChar(0x1E40)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E42)
@@ -3395,7 +3323,7 @@ neo_m:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x00B9)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2081)
       else
          Send 1
@@ -3436,7 +3364,7 @@ neo_komma:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x00B2)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2082)
       else
          Send 2
@@ -3476,7 +3404,7 @@ neo_punkt:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x00B3)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2083)
       else
          Send 3
@@ -3565,7 +3493,7 @@ neo_NumpadSub:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x207B)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x208B)         
       else
          send {blind}{NumpadSub}
@@ -3581,7 +3509,7 @@ neo_NumpadAdd:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x207A)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x208A)         
       else
          send {blind}{NumpadAdd}
@@ -4332,7 +4260,7 @@ neo_SpaceUp:
      {
         if (PriorDeadKey = "c1")            ; circumflex
            BSSendUnicodeChar(0x2070)
-        else if (PriorDeadKey = "c4")       ; toter -
+        else if (PriorDeadKey = "c5")       ; toter -
            BSSendUnicodeChar(0x2080)
         else
            Send 0
@@ -4366,7 +4294,7 @@ return
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2070)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2080)
       else
          Send 0
@@ -4823,7 +4751,7 @@ SendUnicodeChar(charCode)
    }
 }
 /*
-Über den GDK-Workarround:
+Über den GDK-Workaround:
 Dieser basiert auf http://www.autohotkey.com/forum/topic32947.html
 
 Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex mit führendem „0x“ angegeben sind. Die abenteuerliche „^+u“-Konstruktion benötigt im Übrigen den Hex-Wert in Kleinschrift, was derzeit nicht bei den Zeichendefinitionen umgesetzt ist, daher zentral und weniger fehlerträchtig an dieser Stelle. Außerdem ein abschließend gesendetes Space, sonst bleibt der „eingetippte“ Unicode-Wert noch kurz sichtbar stehen, bevor er sich GTK-sei-dank in das gewünschte Zeichen verwandelt.
@@ -4839,7 +4767,7 @@ BSSendUnicodeChar(charCode)
 CompUnicodeChar(charCode)
 {
    send {bs}
-     SendUnicodeChar(charCode)
+   SendUnicodeChar(charCode)
 }
 
 Comp3UnicodeChar(charCode)
@@ -4857,15 +4785,9 @@ EncodeInteger(ref, val)
 
 
 ;Lang-s-Tastatur:
-{
-SC056 & *Esc::
+SC056 & *F11::
 LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
-;if (LangSTastatur) SoundBeep ;auskommentieren, um Warnton zu erzeugen
 return
-}
-
-
-
 
 /*
    ------------------------------------------------------

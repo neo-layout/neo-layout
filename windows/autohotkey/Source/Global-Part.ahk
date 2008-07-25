@@ -5,14 +5,20 @@
 */
 
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
-ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden? (kann z.B. vom dll Treiber übernommen werden)
+
+ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
 einHandNeo := 0                  ; Soll der Treiber im Einhandmodus betrieben werden?
 lernModus := 0                   ; Soll der Lernmodus aktiviert werden?
-bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
-UseMod4Light := 1                ; Aktivierter Mod4 Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
-LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf M3+ß gelegt werden?
+bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden?
+                                 ; (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+UseMod4Light := 1                ; Aktivierter Mod4-Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
+LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf ß(3) gelegt werden?
+#Include *i %a_scriptdir%\LangSTastaturStandardmäßigEingeschaltet.ahk
+#Include *i %a_scriptdir%\source\LangSTastaturStandardmäßigEingeschaltet.ahk
+                                 ; Wenn diese Datei vorhanden ist und die Zeichenfolge »LangSTastatur := 1« enthält,
+                                 ; ist die LangSTastatur beim Starten der ahk/exe-Datei automatisch eingeschaltet.
 
-Process, Priority,, High
+Process,Priority,,High
 
 
 /*************************
@@ -24,7 +30,7 @@ Process, Priority,, High
 FileInstall, neo.ico, neo.ico, 1
 FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
-if(bildschirmTastaturEinbinden==1) {
+if (bildschirmTastaturEinbinden==1) {
    FileInstall, ebene1.png, ebene1.png, 1
    FileInstall, ebene2.png, ebene2.png, 1
    FileInstall, ebene3.png, ebene3.png, 1

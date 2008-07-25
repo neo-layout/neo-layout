@@ -1,4 +1,4 @@
-In dieser Datei stehen lang diskutierte Sachen, die irgendwann mal fest 
+﻿In dieser Datei stehen lang diskutierte Sachen, die irgendwann mal fest 
 beschlossen wurden.
 
 - ß bleibt auf Ebene 1
@@ -22,8 +22,7 @@ beschlossen wurden.
   europäische Sprachen, da viel häufiger verwendet von deutschen Schreibern –
   also NEO-Benutzern.
 
-- Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server
-  „neo“ eine Option des Layouts „de“ sein.
+- Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“ eine Option des Layouts „de“ sein.
 
 - ü und ö getauscht, am 15. Oktober wurde gezeigt, wie einstimmig der
   Beschluss ist (siehe Mail von Erik an diesem Tag).
@@ -33,7 +32,7 @@ beschlossen wurden.
   Modifikatortasten. Zusätzlich noch 2, 3, 5 in die Schäfte der Pfeile, damit
   man sie auch benennen kann. „Drück Pfeil3+f für »=«.“
 
-- Komponiertaste (Sympol: Note) auf Mod4+Mod3 (siehe Textgrafik neo20.txt).
+- Komponiertaste (Sympol: Note) auf Mod3+Tab (siehe Textgrafik neo20.txt).
 
 - Eth »Ð« und eth »ð« bzw. »đ« werden mit Komponiertaste erstellt,
   wobei »ð« entweder mit Komp+/+d oder Komp+-+δ oder Komp+-+∂ erstellt
