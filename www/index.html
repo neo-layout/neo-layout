@@ -9,6 +9,17 @@
  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
+<script type="text/javascript">
+function Tastenebenenwechsel_nach (Zielebene) {
+	self.document.tastaturbild.src="./tastaturbilder/ebene" + Zielebene +".png";
+	for (var Nr = 1; Nr <= 6; Nr++) self.document.getElementById("ebenenreiter" + Nr).style.color="";
+	for (var Nr = 1; Nr <= 6; Nr++) self.document.getElementById("ebenenreiter" + Nr).style.borderColor="";
+	self.document.getElementById("ebenenreiter" + Zielebene).style.borderColor="#56b";
+	self.document.getElementById("ebenenreiter" + Zielebene).style.Color="#23b";
+	return false;
+  }
+</script>
+
 <body>
 
 
@@ -78,16 +89,17 @@
 
   <div style="min-width:650px; overflow:visible;">
     <div id="linkbutton" style="text-align:center; ">
-        <a href="i" style="border-color:#56b"><font style="color:#23b">Ebene1</font></a>
-        <a href="i" style="">Ebene2</a>
-        <a href="i" style="">Ebene3</a>
-        <a href="i" style="">Ebene4</a>
-        <a href="i" style="">Ebene5</a>
+        <a href="./index_ebene1.html"  style="border-color:#56b; color:#23b" onclick="Tastenebenenwechsel_nach(1); return false;" id="ebenenreiter1" > Ebene1</a>
+        <a href="./index_ebene2.html" onclick="Tastenebenenwechsel_nach(2); return false;"  style="" id="ebenenreiter2">Ebene2</a>
+        <a href="./index_ebene3.html" onclick="Tastenebenenwechsel_nach(3); return false;"  style="" id="ebenenreiter3">Ebene3</a>
+        <a href="./index_ebene4.html" onclick="Tastenebenenwechsel_nach(4); return false;"  style="" id="ebenenreiter4">Ebene4</a>
+        <a href="./index_ebene5.html" onclick="Tastenebenenwechsel_nach(5); return false;"  style="" id="ebenenreiter5">Ebene5</a>
+        <a href="./index_ebene6.html" onclick="Tastenebenenwechsel_nach(6); return false;"  style="" id="ebenenreiter6">Ebene6</a>
     </div>
   </div>
 
   <div>
-   <img src="./tastatur_ebene1.png"/>
+   <img src="./tastatur_ebene1.png"  name="tastaturbild" />
   </div>
 
   <div id="linkbutton" style="min-width:650px; overflow:visible; text-align:center;">
@@ -166,7 +178,7 @@
 
 
 <div style="position:relative; top:-.6em; margin-bottom:1em;">
-<div style="background-color:#fDD; border-color:#f00; margin:2em; padding:2em; border-style:solid; border-width:2px;; text-size:+2">
+<div style="background-color:#fDD; border-color:#f00; margin:2em; padding:2em; border-style:solid; border-width:2px; ">
 <h1>Kurzinformation für Interessierte</h1>
 <p>
 Um an Neo zu gelangen, wird auf das SVN-Repository: <b>svn co https://svn.neo-layout.org neo</b> bzw. auf die Mailingliste <b>mailinglist@neo-layout.org</b> verwiesen. </p>
@@ -190,7 +202,9 @@ Um an Neo zu gelangen, wird auf das SVN-Repository: <b>svn co https://svn.neo-la
 </ul>
 
 <p>Verbesserungsvorschläge sind immer willkommen! Da wir sehr viele Abhängigkeiten haben, kann es aber sein, dass sie nicht unbedingt eingepflegt werden.<br />
-</p>
+ </p>
+
+
 Danke fürs Interesse!<br />
 Euer Neo-Team<br />
 
@@ -239,7 +253,7 @@ Euer Neo-Team<br />
 </div>
 
 <div style="position:fixed; top:0px; left:0px; width:11px; height:100%; 
-   background-image:url(./schatten_links.png); ibackground-color:#b95755; background-repeat:repeat-y; background-attachment:fixed; ">
+   background-image:url(./schatten_links.png); background-repeat:repeat-y; background-attachment:fixed; ">
 </div>
 
 <div style="position:absolute; top:0px; left:0px; width:50px; height:50px; 
