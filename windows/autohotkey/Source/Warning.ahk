@@ -1,15 +1,10 @@
 /*
 *******************************************
-
-
-
 WICHTIGE WARNUNG:
 
 Dies ist inzwischen eine automatisch generierte
 Datei! Sie wird regelmäßig überschrieben und
 sollte deshalb nicht mehr direkt bearbeitet werden!
-
-
 
 DIE AUSFÜHRBARE DATEI AKTUALISIEREN:
 
@@ -17,8 +12,6 @@ Um die neo20-all-in-one.exe auf den neuesten Stand zu
 bringen, reicht (wenn Autohotkey im Standardverzeichnis
 installiert wurde) ein Doppelklick auf die Batch-Datei
 Build-Update.bat
-
-
 
 HINWEISE FÜR AHK-ENTWICKLER:
 
@@ -46,8 +39,6 @@ Line Text: CTL_CODE_LED(p_device_type, p_function, p_method, p_access)
 Error: Functions cannot contain functions.
 The programm will exit.
 
-
-
 AHK-LINKS
 
 Eine kurze Einführung (Installation und Beispielscipt) findet man etwa auf
@@ -57,71 +48,6 @@ Eine alphabetische Liste aller erlaubten Kommandos findet man online unter
 http://www.autohotkey.com/docs/commands.htm
 
 
-
 *******************************************
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-*******************************************
-DU BIST GEWARNT WORDEN!
-*******************************************
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

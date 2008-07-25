@@ -37,12 +37,12 @@ neo_tot1:
    else if Ebene = 4
    {
       SendUnicodeChar(0x00B7) ; Mittenpunkt, tot
-      PriorDeadKey := "c5"
+      PriorDeadKey := "c4"
    }
    else if Ebene = 5
    {
       send -                  ; querstrich, tot
-      PriorDeadKey := "c4"
+      PriorDeadKey := "c5"
    }
    else if Ebene = 6
    {
@@ -57,7 +57,7 @@ neo_1:
    {
       if (PriorDeadKey = "c1")          ; circumflex 1
          BSSendUnicodeChar(0x00B9)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2081)
       else if (CompKey = "r_small_1")
          Comp3UnicodeChar(0x217A)          ; römisch xi
@@ -126,7 +126,7 @@ neo_2:
    {
       if (PriorDeadKey = "c1")          ; circumflex 
          BSSendUnicodeChar(0x00B2)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2082)
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2171)          ; römisch ii
@@ -196,7 +196,7 @@ neo_3:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x00B3)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2083)
       else if (CompKey = "1")
          CompUnicodeChar(0x2153)          ; 1/3
@@ -262,7 +262,7 @@ neo_4:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2074)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2084)         
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2173)          ; römisch iv
@@ -329,7 +329,7 @@ neo_5:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2075)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2085)
       else if (CompKey = "1")
          CompUnicodeChar(0x2155)          ; 1/5
@@ -400,7 +400,7 @@ neo_6:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2076)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2086)         
       else if (CompKey = "1")
          CompUnicodeChar(0x2159)          ; 1/6
@@ -467,7 +467,7 @@ neo_7:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2077)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2087)
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2176)          ; römisch vii
@@ -533,7 +533,7 @@ neo_8:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2078)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2088)
       else if (CompKey = "1")
          CompUnicodeChar(0x215B)          ; 1/8
@@ -606,7 +606,7 @@ neo_9:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2079)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2089)
       else if (CompKey = "r_small")
          CompUnicodeChar(0x2178)          ; römisch ix
@@ -671,7 +671,7 @@ neo_0:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x2070)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2080)         
       else if (CompKey = "r_small_1")
          Comp3UnicodeChar(0x2179)          ; römisch x
@@ -781,12 +781,12 @@ neo_tot2:
    else if Ebene = 4
    {
       SendUnicodeChar(0x02D9) ; punkt oben drüber
-      PriorDeadKey := "a5"
+      PriorDeadKey := "a4"
    }
    else if Ebene = 5
    {
       SendUnicodeChar(0x02DB) ; ogonek
-      PriorDeadKey := "a4"
+      PriorDeadKey := "a5"
    }
    else if Ebene = 6
    {
@@ -854,7 +854,7 @@ neo_l:
    EbeneAktualisieren()
    if Ebene = 1
    { 
-      if (PriorDeadKey = "t5")       ; Schrägstrich
+      if (PriorDeadKey = "t4")       ; Schrägstrich
          BSSendUnicodeChar(0x0142)
       else if (PriorDeadKey = "a1")      ; akut 
          BSSendUnicodeChar(0x013A)
@@ -862,7 +862,7 @@ neo_l:
          BSSendUnicodeChar(0x013E)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x013C)
-      else if (PriorDeadKey = "c5")  ; Mittenpunkt
+      else if (PriorDeadKey = "c4")  ; Mittenpunkt
          BSSendUnicodeChar(0x0140)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E37)
@@ -881,9 +881,9 @@ neo_l:
          BSSendUnicodeChar(0x013D)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x013B)
-      else if (PriorDeadKey = "t5")  ; Schrägstrich 
+      else if (PriorDeadKey = "t4")  ; Schrägstrich 
          BSSendUnicodeChar(0x0141)
-      else if (PriorDeadKey = "c5")  ; Mittenpunkt 
+      else if (PriorDeadKey = "c4")  ; Mittenpunkt 
          BSSendUnicodeChar(0x013F)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E36)
@@ -929,7 +929,7 @@ neo_c:
          BSSendUnicodeChar(0x0107)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x00E7)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x010B)
       else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
          Send {bs}©
@@ -952,7 +952,7 @@ neo_c:
          BSSendUnicodeChar(0x0106)
       else if (PriorDeadKey = "a3")   ; cedilla 
          BSSendUnicodeChar(0x00E6)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x010A)
       else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
          Send {bs}©         
@@ -1056,9 +1056,9 @@ neo_h:
    {
       if (PriorDeadKey = "c1")           ; circumflex
          BSSendUnicodeChar(0x0125)
-      else if (PriorDeadKey = "c4")   ; Querstrich 
+      else if (PriorDeadKey = "c5")   ; Querstrich 
          BSSendUnicodeChar(0x0127)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E23)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E25)
@@ -1068,9 +1068,9 @@ neo_h:
    {
       if (PriorDeadKey = "c1")           ; circumflex
          BSSendUnicodeChar(0x0124)
-      else if (PriorDeadKey = "c4")   ; Querstrich
+      else if (PriorDeadKey = "c5")   ; Querstrich
          BSSendUnicodeChar(0x0126)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E22)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E24)
@@ -1078,7 +1078,7 @@ neo_h:
    }
    else if Ebene = 3
    {
-      if (PriorDeadKey = "c4")    ; Querstrich
+      if (PriorDeadKey = "c5")    ; Querstrich
          BSSendUnicodeChar(0x2264) ; kleiner gleich
       else
          send {blind}<
@@ -1087,7 +1087,7 @@ neo_h:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2077)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2087)
       else
          Send 7
@@ -1109,7 +1109,7 @@ neo_g:
          BSSendUnicodeChar(0x011F)
       else if (PriorDeadKey = "a3")   ; cedilla
          BSSendUnicodeChar(0x0123)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x0121)
       else sendinput {blind}g
    }
@@ -1121,13 +1121,13 @@ neo_g:
          BSSendUnicodeChar(0x011E)
       else if (PriorDeadKey = "a3")    ; cedilla 
          BSSendUnicodeChar(0x0122)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x0120)
       else sendinput {blind}G
    }
    else if Ebene = 3
    {
-      if (PriorDeadKey = "c4")    ; Querstrich
+      if (PriorDeadKey = "c5")    ; Querstrich
          SendUnicodeChar(0x2265) ; größer gleich
       else
          send >
@@ -1136,7 +1136,7 @@ neo_g:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2078)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2088)
       else
          Send 8
@@ -1152,17 +1152,17 @@ neo_f:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "t5")      ; durchgestrichen
+      if (PriorDeadKey = "t4")      ; durchgestrichen
          BSSendUnicodeChar(0x0192)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E1F)
       else sendinput {blind}f
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "t5")       ; durchgestrichen
+      if (PriorDeadKey = "t4")       ; durchgestrichen
          BSSendUnicodeChar(0x0191)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E1E)
       else sendinput {blind}F
    } 
@@ -1172,9 +1172,9 @@ neo_f:
          BSSendUnicodeChar(0x2259)   ; entspricht
       else if (PriorDeadKey = "t1")       ; tilde 
          BSSendUnicodeChar(0x2245)   ; ungefähr gleich
-      else if (PriorDeadKey = "t5")       ; Schrägstrich 
+      else if (PriorDeadKey = "t4")       ; Schrägstrich 
          BSSendUnicodeChar(0x2260)   ; ungleich
-      else if (PriorDeadKey = "c4")       ; Querstrich
+      else if (PriorDeadKey = "c5")       ; Querstrich
          BSSendUnicodeChar(0x2261)   ; identisch
       else if (PriorDeadKey = "c2")       ; caron 
          BSSendUnicodeChar(0x225A)   ; EQUIANGULAR TO
@@ -1187,7 +1187,7 @@ neo_f:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2079)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2089)
       else
          Send 9
@@ -1211,7 +1211,7 @@ neo_q:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x207A)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x208A)
       else
          Send {+}
@@ -1286,18 +1286,18 @@ neo_tot3:
    }
    else if Ebene = 3
    {
-      SendUnicodeChar(0x00A8)  ; Diaerese
+      SendUnicodeChar(0x00A8)  ; diaerese
       PriorDeadKey := "t3"
    }
    else if Ebene = 4
    {
       SendUnicodeChar(0x002F)  ; Schrägstrich, tot
-      PriorDeadKey := "t5"
+      PriorDeadKey := "t4"
    }
    else if Ebene = 5
    {
       sendUnicodeChar(0x02DD)  ;doppelakut
-      PriorDeadKey := "t4"
+      PriorDeadKey := "t5"
    }
    else if Ebene = 6
    {
@@ -1323,15 +1323,15 @@ neo_u:
          BSSendUnicodeChar(0x00FA)
       else if (PriorDeadKey = "a2")  ; grave
          BSSendUnicodeChar(0x00F9)
-      else if (PriorDeadKey = "t3")  ; Diaerese
+      else if (PriorDeadKey = "t3")  ; diaerese
          Send, {bs}ü
-      else if (PriorDeadKey = "t4")  ; doppelakut 
+      else if (PriorDeadKey = "t5")  ; doppelakut 
          BSSendUnicodeChar(0x0171)
       else if (PriorDeadKey = "c3")  ; brevis
          BSSendUnicodeChar(0x016D)
       else if (PriorDeadKey = "t2")  ; macron
          BSSendUnicodeChar(0x016B)
-      else if (PriorDeadKey = "a4")  ; ogonek
+      else if (PriorDeadKey = "a5")  ; ogonek
          BSSendUnicodeChar(0x0173)
       else if (PriorDeadKey = "a6")  ; Ring
          BSSendUnicodeChar(0x016F)
@@ -1350,19 +1350,19 @@ neo_u:
          BSSendUnicodeChar(0x00DA)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00D9)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}Ü
       else if (PriorDeadKey = "a6")   ; Ring
          BSSendUnicodeChar(0x016E)
       else if (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x016C)
-      else if (PriorDeadKey = "t4")   ; doppelakut
+      else if (PriorDeadKey = "t5")   ; doppelakut
          BSSendUnicodeChar(0x0170)
       else if (PriorDeadKey = "c2")   ; caron 
          BSSendUnicodeChar(0x01D3)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x016A)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0172)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0168)
@@ -1390,17 +1390,17 @@ neo_i:
          BSSendUnicodeChar(0x00ED)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00EC)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}ï
-      else if (PriorDeadKey = "t2")   ; macron
+      else if (PriorDeadKey = "t2")   ; macron - defekt
          BSSendUnicodeChar(0x012B)
       else if (PriorDeadKey = "c3")   ; brevis
          BSSendUnicodeChar(0x012D)
-      else if (PriorDeadKey = "a5")   ; ogonek
+      else if (PriorDeadKey = "a4")   ; ogonek
          BSSendUnicodeChar(0x012F)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0129)
-      else if (PriorDeadKey = "a4")   ; punkt darüber 
+      else if (PriorDeadKey = "a5")   ; punkt darüber 
          BSSendUnicodeChar(0x0131)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D0)
@@ -1419,17 +1419,17 @@ neo_i:
          BSSendUnicodeChar(0x00CD)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00CC)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}Ï
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x012A)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x012C)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x012E)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x0128)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0130)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01CF)
@@ -1473,13 +1473,13 @@ neo_a:
          BSSendUnicodeChar(0x00E1)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00E0)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          send {bs}ä
       else if (PriorDeadKey = "a6")   ; Ring 
          Send {bs}å
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00E3)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0105)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0101)
@@ -1502,7 +1502,7 @@ neo_a:
          BSSendUnicodeChar(0x00C1)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00C0)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          send {bs}Ä
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00C3)
@@ -1512,7 +1512,7 @@ neo_a:
          BSSendUnicodeChar(0x0100)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x0102)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0104)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01CD)
@@ -1556,17 +1556,17 @@ neo_e:
          BSSendUnicodeChar(0x00E9)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00E8)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}ë
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x0119)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x0113)
-      else if (PriorDeadKey = "c3")   ; brevis
+      else if (PriorDeadKey = "c3")   ; brevis - defekt
          BSSendUnicodeChar(0x0115)
-      else if (PriorDeadKey = "c2")   ; caron
+      else if (PriorDeadKey = "c2")   ; caron - defekt
          BSSendUnicodeChar(0x011B)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0117)
       else if (CompKey = "a_small")   ; compose
       {
@@ -1589,7 +1589,7 @@ neo_e:
          BSSendUnicodeChar(0x00C9)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00C8)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}Ë
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x011A)
@@ -1597,9 +1597,9 @@ neo_e:
          BSSendUnicodeChar(0x0112)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x0114)
-      else if (PriorDeadKey = "a4")   ; ogonek 
+      else if (PriorDeadKey = "a5")   ; ogonek 
          BSSendUnicodeChar(0x0118)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
+      else if (PriorDeadKey = "a4")   ; punkt darüber 
          BSSendUnicodeChar(0x0116)
       else if (CompKey = "a_capital") ; compose
       {
@@ -1635,19 +1635,19 @@ neo_o:
          BSSendUnicodeChar(0x00F3)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00F2)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          Send, {bs}ö
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00F5)
-      else if (PriorDeadKey = "t4")   ; doppelakut
+      else if (PriorDeadKey = "t5")   ; doppelakut
          BSSendUnicodeChar(0x0151)
-      else if (PriorDeadKey = "t5")   ; Schrägstrich
+      else if (PriorDeadKey = "t4")   ; Schrägstrich
          BSSendUnicodeChar(0x00F8)
       else if (PriorDeadKey = "t2")   ; macron
          BSSendUnicodeChar(0x014D)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x014F)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x01EB)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D2)                      
@@ -1666,19 +1666,19 @@ neo_o:
          BSSendUnicodeChar(0x00D3)
       else if (PriorDeadKey = "a2")   ; grave
          BSSendUnicodeChar(0x00D2)
-      else if (PriorDeadKey = "t5")   ; Schrägstrich
+      else if (PriorDeadKey = "t4")   ; Schrägstrich
          BSSendUnicodeChar(0x00D8)
       else if (PriorDeadKey = "t1")   ; tilde
          BSSendUnicodeChar(0x00D5)
-      else if (PriorDeadKey = "t4")   ; doppelakut
+      else if (PriorDeadKey = "t5")   ; doppelakut
          BSSendUnicodeChar(0x0150)
-      else if (PriorDeadKey = "t3")   ; Diaerese
+      else if (PriorDeadKey = "t3")   ; diaerese
          send {bs}Ö
       else if (PriorDeadKey = "t2")   ; macron 
          BSSendUnicodeChar(0x014C)
       else if (PriorDeadKey = "c3")   ; brevis 
          BSSendUnicodeChar(0x014E)
-      else if (PriorDeadKey = "a4")   ; ogonek
+      else if (PriorDeadKey = "a5")   ; ogonek
          BSSendUnicodeChar(0x01EA)
       else if (PriorDeadKey = "c2")   ; caron
          BSSendUnicodeChar(0x01D1)    
@@ -1724,7 +1724,7 @@ neo_s:
          BSSendUnicodeChar(0x0161)
       else if (PriorDeadKey = "a3") ; cedilla
          BSSendUnicodeChar(0x015F)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E61)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E63)
@@ -1755,7 +1755,7 @@ neo_s:
          BSSendUnicodeChar(0x015A)
       else if (PriorDeadKey = "a3") ; cedilla 
          BSSendUnicodeChar(0x015E)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E60)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E62)
@@ -1806,7 +1806,7 @@ neo_n:
          BSSendUnicodeChar(0x0148)
       else if (PriorDeadKey = "a3")   ; cedilla
          BSSendUnicodeChar(0x0146)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E45)
       else
          sendinput {blind}n
@@ -1821,7 +1821,7 @@ neo_n:
          BSSendUnicodeChar(0x0143)
       else if (PriorDeadKey = "a3")   ; cedilla 
          BSSendUnicodeChar(0x0145)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x1E44)
       else
          sendinput {blind}N
@@ -1832,7 +1832,7 @@ neo_n:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2074)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2084)
       else
          Send 4
@@ -1854,7 +1854,7 @@ neo_r:
          BSSendUnicodeChar(0x0159)
       else if (PriorDeadKey = "a3")    ; cedilla
          BSSendUnicodeChar(0x0157)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x0E59)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E5B)
@@ -1873,7 +1873,7 @@ neo_r:
          BSSendUnicodeChar(0x0154)
       else if (PriorDeadKey = "a3")    ; cedilla 
          BSSendUnicodeChar(0x0156)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E58)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E5A)
@@ -1893,7 +1893,7 @@ neo_r:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2075)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2085)
       else
          Send 5
@@ -1920,9 +1920,9 @@ neo_t:
            BSSendUnicodeChar(0x0165)
         else if (PriorDeadKey = "a3")    ; cedilla
            BSSendUnicodeChar(0x0163)
-        else if (PriorDeadKey = "c4")   ; Querstrich
+        else if (PriorDeadKey = "c5")   ; Querstrich
            BSSendUnicodeChar(0x0167)
-        else if (PriorDeadKey = "a5")  ; punkt darüber 
+        else if (PriorDeadKey = "a4")  ; punkt darüber 
            BSSendUnicodeChar(0x1E6B)
         else if (PriorDeadKey = "c6") ; punkt darunter 
            BSSendUnicodeChar(0x1E6D)
@@ -1939,9 +1939,9 @@ neo_t:
            BSSendUnicodeChar(0x0164)
         else if (PriorDeadKey = "a3")    ; cedilla 
            BSSendUnicodeChar(0x0162)
-        else if (PriorDeadKey = "c4")   ; Querstrich
+        else if (PriorDeadKey = "c5")   ; Querstrich
            BSSendUnicodeChar(0x0166)
-        else if (PriorDeadKey = "a5")  ; punkt darüber 
+        else if (PriorDeadKey = "a4")  ; punkt darüber 
            BSSendUnicodeChar(0x1E6A)
         else if (PriorDeadKey = "c6") ; punkt darunter 
            BSSendUnicodeChar(0x1E6C)
@@ -1961,7 +1961,7 @@ neo_t:
      {
         if (PriorDeadKey = "c1")            ; circumflex
            BSSendUnicodeChar(0x2076)
-        else if (PriorDeadKey = "c4")       ; toter -
+        else if (PriorDeadKey = "c5")       ; toter -
            BSSendUnicodeChar(0x2086)
         else
            Send 6
@@ -1984,13 +1984,13 @@ neo_d:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "c4")        ; Querstrich
+      if (PriorDeadKey = "c5")        ; Querstrich
          BSSendUnicodeChar(0x0111)
-      else if (PriorDeadKey = "t5")  ; Schrägstrich
+      else if (PriorDeadKey = "t4")  ; Schrägstrich
          BSSendUnicodeChar(0x00F0)
       else if (PriorDeadKey = "c2")     ; caron
          BSSendUnicodeChar(0x010F)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E0B)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E0D)
@@ -1999,13 +1999,13 @@ neo_d:
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "c4")        ; Querstrich
+      if (PriorDeadKey = "c5")        ; Querstrich
          BSSendUnicodeChar(0x0110)
-      else if (PriorDeadKey = "t5")  ; Schrägstrich
+      else if (PriorDeadKey = "t4")  ; Schrägstrich
          BSSendUnicodeChar(0x00D0)
       else if (PriorDeadKey = "c2")     ; caron 
          BSSendUnicodeChar(0x010E)
-      else if (PriorDeadKey = "a5")  ; punkt darüber 
+      else if (PriorDeadKey = "a4")  ; punkt darüber 
          BSSendUnicodeChar(0x1E0A)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E0D)
@@ -2026,7 +2026,7 @@ neo_y:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "t3")       ; Diaerese
+      if (PriorDeadKey = "t3")       ; diaerese
          Send {bs}ÿ
       else if (PriorDeadKey = "a1")      ; akut 
          BSSendUnicodeChar(0x00FD)
@@ -2039,7 +2039,7 @@ neo_y:
    {
       if (PriorDeadKey = "a1")           ; akut 
          BSSendUnicodeChar(0x00DD)
-      else if (PriorDeadKey = "t3")    ; Diaerese
+      else if (PriorDeadKey = "t3")    ; diaerese
          Send {bs}Ÿ
       else if (PriorDeadKey = "c1")      ; circumflex
          BSSendUnicodeChar(0x0176)
@@ -2166,14 +2166,14 @@ neo_p:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "a5")      ; punkt darüber 
+      if (PriorDeadKey = "a4")      ; punkt darüber 
          BSSendUnicodeChar(0x1E57)
       else
          sendinput {blind}p
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "a5")      ; punkt darüber 
+      if (PriorDeadKey = "a4")      ; punkt darüber 
          BSSendUnicodeChar(0x1E56)
       else 
          sendinput {blind}P
@@ -2202,7 +2202,7 @@ neo_z:
          BSSendUnicodeChar(0x017E)
       else if (PriorDeadKey = "a1")     ; akut
          BSSendUnicodeChar(0x017A)
-      else if (PriorDeadKey = "a5") ; punkt drüber
+      else if (PriorDeadKey = "a4") ; punkt drüber
          BSSendUnicodeChar(0x017C)
       else if (PriorDeadKey = "c6") ; punkt drunter
          BSSendUnicodeChar(0x1E93)
@@ -2215,7 +2215,7 @@ neo_z:
          BSSendUnicodeChar(0x017D)
       else if (PriorDeadKey = "a1")     ; akut 
          BSSendUnicodeChar(0x0179)
-      else if (PriorDeadKey = "a5") ; punkt darüber 
+      else if (PriorDeadKey = "a4") ; punkt darüber 
          BSSendUnicodeChar(0x017B)
       else if (PriorDeadKey = "c6") ; punkt drunter
          BSSendUnicodeChar(0x1E92)
@@ -2237,14 +2237,14 @@ neo_b:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "a5")      ; punkt darüber 
+      if (PriorDeadKey = "a4")      ; punkt darüber 
          BSSendUnicodeChar(0x1E03)
       else 
          sendinput {blind}b
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "a5")       ; punkt darüber 
+      if (PriorDeadKey = "a4")       ; punkt darüber 
          BSSendUnicodeChar(0x1E02)
       else 
          sendinput {blind}B
@@ -2264,7 +2264,7 @@ neo_m:
    EbeneAktualisieren()
    if Ebene = 1
    {
-      if (PriorDeadKey = "a5")       ; punkt darüber 
+      if (PriorDeadKey = "a4")       ; punkt darüber 
          BSSendUnicodeChar(0x1E41)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E43)
@@ -2277,7 +2277,7 @@ neo_m:
    }
    else if Ebene = 2
    {
-      if (PriorDeadKey = "a5")       ; punkt darüber 
+      if (PriorDeadKey = "a4")       ; punkt darüber 
          BSSendUnicodeChar(0x1E40)
       else if (PriorDeadKey = "c6") ; punkt darunter 
          BSSendUnicodeChar(0x1E42)
@@ -2294,7 +2294,7 @@ neo_m:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x00B9)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2081)
       else
          Send 1
@@ -2335,7 +2335,7 @@ neo_komma:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x00B2)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2082)
       else
          Send 2
@@ -2375,7 +2375,7 @@ neo_punkt:
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x00B3)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2083)
       else
          Send 3
@@ -2464,7 +2464,7 @@ neo_NumpadSub:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x207B)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x208B)         
       else
          send {blind}{NumpadSub}
@@ -2480,7 +2480,7 @@ neo_NumpadAdd:
    {
       if (PriorDeadKey = "c1")          ; circumflex
          BSSendUnicodeChar(0x207A)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x208A)         
       else
          send {blind}{NumpadAdd}
@@ -3231,7 +3231,7 @@ neo_SpaceUp:
      {
         if (PriorDeadKey = "c1")            ; circumflex
            BSSendUnicodeChar(0x2070)
-        else if (PriorDeadKey = "c4")       ; toter -
+        else if (PriorDeadKey = "c5")       ; toter -
            BSSendUnicodeChar(0x2080)
         else
            Send 0
@@ -3265,7 +3265,7 @@ return
    {
       if (PriorDeadKey = "c1")            ; circumflex
          BSSendUnicodeChar(0x2070)
-      else if (PriorDeadKey = "c4")       ; toter -
+      else if (PriorDeadKey = "c5")       ; toter -
          BSSendUnicodeChar(0x2080)
       else
          Send 0

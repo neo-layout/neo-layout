@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -74,7 +74,7 @@ T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
 T3 („Tote Taste 3“: Taste rechts neben dem Eszett (ß))
         1 … Tote Tilde (sieht aus wie U+0303 COMBINING TILDE)
 ┬──┴──┬ 2 … Toter Makron (sieht aus wie U+0304 COMBINING MACRON)
-│ˉ / ,│ 3 … Totes Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
+│ˉ / ,│ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
 │~ ¨ ˝│ 4 … Toter Schrägstrich (??? sieht aus wie U+0337 COMBINING SHORT SOLIDUS OVERLAY)
 ┴┬────┴ 5 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
         6 … Totes Komma darunter (sieht aus wie U+0326 COMBINING COMMA BELOW)
@@ -85,6 +85,8 @@ folgendermaßen bedient (Beispiel):
 1. Tote Tilde »~« eingeben.
 2. Danach »n«.
 3. Es erscheint das »ñ«.
+
+TIPP: Mit den toten Tasten Zirkumflex und Querstrich kann man hoch(ˆ)- und tiefgestellte(-) Ziffern erzeugen.
 
 === Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
@@ -141,10 +143,10 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
 │ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ κ│8 ‚  │9 ‘  │0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
+│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │Tab⇤    │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
-│Tab⇥ ♫  │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
+│Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3 ♫ │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
@@ -186,7 +188,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˘ │¹│²│³│›│‹│¢│¥│‚│‘│’│—│¸│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ ♫  │ │_│[│]│^│!│<│>│=│&│ſ│¨│ Ret │
+│ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│¨│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │\│/│{│}│*│?│(│)│-│:│@│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -210,7 +212,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ - │♀│⚥│♂│ℓ│†│ │κ│ │ │ │‑│˛│ Back │
+│ - │♀│⚥│♂│ℓ│†│ │κ│⟨│⟩│ │‑│˛│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │    │ξ│ │λ│χ│ω│ϰ│ψ│γ│φ│ϕ│ς│˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │

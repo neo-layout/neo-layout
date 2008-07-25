@@ -160,7 +160,7 @@ SendUnicodeChar(charCode)
    }
 }
 /*
-Über den GDK-Workarround:
+Über den GDK-Workaround:
 Dieser basiert auf http://www.autohotkey.com/forum/topic32947.html
 
 Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex mit führendem „0x“ angegeben sind. Die abenteuerliche „^+u“-Konstruktion benötigt im Übrigen den Hex-Wert in Kleinschrift, was derzeit nicht bei den Zeichendefinitionen umgesetzt ist, daher zentral und weniger fehlerträchtig an dieser Stelle. Außerdem ein abschließend gesendetes Space, sonst bleibt der „eingetippte“ Unicode-Wert noch kurz sichtbar stehen, bevor er sich GTK-sei-dank in das gewünschte Zeichen verwandelt.
@@ -176,7 +176,7 @@ BSSendUnicodeChar(charCode)
 CompUnicodeChar(charCode)
 {
    send {bs}
-     SendUnicodeChar(charCode)
+   SendUnicodeChar(charCode)
 }
 
 Comp3UnicodeChar(charCode)
@@ -194,13 +194,7 @@ EncodeInteger(ref, val)
 
 
 ;Lang-s-Tastatur:
-{
-SC056 & *Esc::
+SC056 & *F11::
 LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
-;if (LangSTastatur) SoundBeep ;auskommentieren, um Warnton zu erzeugen
 return
-}
-
-
-
 

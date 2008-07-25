@@ -15,10 +15,10 @@ Matthias Berg <neo (at) matthias-berg. e u>
 *********
 - Die Bildschirmtastatur mit Mod4 hat den Mod4-Lock deaktiviert!
 - Auf der 6. Ebene von 2 und 3 werden noch immer Delta und Nabla gesendet, aber nicht die logischen Symbole UND und ODER (wie in der Referenz); siehe hierzu auch http://de.autohotkey.com/forum/post-26040.html
-- send und send(blind) durch SendUnicodeChar ersetzen (aus Performance-Gründen jedoch nicht a-z, A-Z, 0-9)
+- send und send{blind} durch SendUnicodeChar ersetzen (aus Performance-Gründen jedoch nicht a-z, A-Z, 0-9)
 - Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?)
 - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
-- Bessere Lösung für das leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
+- Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
 - Testen, ob die Capslocklösung (siehe *1:: ebene 1) auch für Numpad gebraucht wird
 - Die Ebenen vom Tastenblock an die neue Referenz anpassen (wenn da ein Konsens gefunden wurde)
 
@@ -27,9 +27,8 @@ Matthias Berg <neo (at) matthias-berg. e u>
 * IDEEN: *
 **********
 - Tastatur-Reset: mod4+escape (oder ev. ein anderer Hotkey) soll die Tastatur wieder in den Normalzustand versetzen (d.h. alle Ebenen unlocken und Einhand, Lang-s oder Sonstwelche-Modi deaktivieren)
-- Die Varianten (lernModus, einHandNeo, Lang-s-Tastatur Qwertz/pausieren) sollten einheitlich (de-)aktiviert werden, etwa über Mod4 F9-F12
+- Die Varianten (lernModus, einHandNeo, Lang-s-Tastatur, Qwertz/pausieren) sollten einheitlich (de-)aktiviert werden, etwa über Mod4 F9-F12
 - bei Ebene 4 rechte Hand (Numpad) z.B. Numpad5 statt 5 senden
-- Symbol ändern (das entgültige Neo-Logo abwarten)
 
 
 
