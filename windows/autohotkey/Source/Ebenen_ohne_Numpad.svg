@@ -10,15 +10,18 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="1360.7473"
-   height="482.42859"
+   width="1360.75"
+   height="482.42999"
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.46+devel"
-   sodipodi:docname="Ebenen_mit_Numpad.svg"
+   sodipodi:docname="Ebenen_ohne_Numpad.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    sodipodi:docbase="G:\NEO"
-   style="display:inline">
+   style="display:inline"
+   inkscape:export-filename="C:\Dokumente und Einstellungen\Dennis Heidsiek\Eigene Dateien\0 Hobbies\Informatik\0 PC Tipps\0 NEO-Tastaturlayout\0 Neo-SVN\windows\autohotkey\Source\ebene1.png"
+   inkscape:export-xdpi="37.299999"
+   inkscape:export-ydpi="37.299999">
   <metadata
      id="metadata2757">
     <rdf:RDF>
@@ -42,12 +45,12 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="1.1640662"
-     inkscape:cx="680.37366"
-     inkscape:cy="241.21429"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
-     inkscape:current-layer="svg2"
+     inkscape:zoom="1.1640639"
+     inkscape:cx="680.375"
+     inkscape:cy="241.215"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:current-layer="layer11"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -16359,6 +16362,41 @@
        fx="559.02637"
        fy="233.19801"
        r="31.428574" />
+    <inkscape:perspective
+       id="perspective6034"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6091"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6139"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6161"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6191"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -16366,6 +16404,13 @@
      inkscape:label="tasten"
      style="display:inline"
      transform="translate(-3.9677053,-258.53258)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;marker-start:none;marker-mid:none;marker-end:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5255"
+       width="1360.75"
+       height="482.42999"
+       x="3.9677052"
+       y="258.53259" />
     <g
        style="opacity:0.65"
        id="g10632"
@@ -21252,6 +21297,17 @@
          id="tspan5612"
          x="1175"
          y="405.65906">◌</tspan></text>
+    <text
+       x="162.19592"
+       y="417.00397"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text6206"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6210"
+         x="162.19592"
+         y="417.00397">…</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -21537,14 +21593,14 @@
     <text
        x="1079.2539"
        y="599.67651"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text29670"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6130"
          x="1079.2539"
-         y="599.67651"
-         id="tspan29672"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">.</tspan></text>
+         y="599.67651">;</tspan></text>
     <text
        xml:space="preserve"
        id="text29710"
@@ -21811,6 +21867,28 @@
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43943"
        sodipodi:nodetypes="cssccsscc" />
+    <text
+       x="1036.3638"
+       y="506.30725"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text6114"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6126"
+         x="1036.3638"
+         y="506.30725">,</tspan></text>
+    <text
+       x="1124.6322"
+       y="501.15289"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       id="text6120"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6128"
+         x="1124.6322"
+         y="501.15289">.</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
