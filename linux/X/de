@@ -237,7 +237,7 @@ xkb_symbols "neo" {
     key <LSGT> { [ 0xfe11 ]};
     key <RALT> { [ 0xfe11 ]};
 
-    modifier_map Mod4 { <LSGT>, <RALT> };
+    modifier_map Mod3 { <LSGT>, <RALT> };
 
     ////////////////////////////////////////////////////
     // Ebenen im Neo-Jargon, hier im Treiber andere Reihenfolge
