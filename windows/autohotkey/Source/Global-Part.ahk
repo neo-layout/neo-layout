@@ -26,23 +26,32 @@ Process,Priority,,High
 **************************
 */
 
-; Versuche zuerst, eventuell in die EXE eingebundenen Dateien zu extrahieren
-FileInstall, neo.ico, neo.ico, 1
-FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
-if (bildschirmTastaturEinbinden==1) {
-   FileInstall, ebene1.png, ebene1.png, 1
-   FileInstall, ebene2.png, ebene2.png, 1
-   FileInstall, ebene3.png, ebene3.png, 1
-   FileInstall, ebene4.png, ebene4.png, 1
-   FileInstall, ebene5.png, ebene5.png, 1
-   FileInstall, ebene6.png, ebene6.png, 1
+; Setze das Arbeitsverzeichnis für eventuell zu extrahierende Dateien
+EnvGet, WindowsEnvTempFolder, TEMP
+ResourceFolder = %WindowsEnvTempFolder%\NEO2
+FileCreateDir, %ResourceFolder%
+if(FileExist("ResourceFolder") <> false) {
+	; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
+	FileInstall, neo.ico, %ResourceFolder%\neo.ico, 1
+	FileInstall, neo_disabled.ico, %ResourceFolder%\neo_disabled.ico, 1
+	iconBenutzen = 1
+	if (bildschirmTastaturEinbinden==1) {
+		FileInstall, ebene1.png, %ResourceFolder%\ebene1.png, 1
+		FileInstall, ebene2.png, %ResourceFolder%\ebene2.png, 1
+		FileInstall, ebene3.png, %ResourceFolder%\ebene3.png, 1
+		FileInstall, ebene4.png, %ResourceFolder%\ebene4.png, 1
+		FileInstall, ebene5.png, %ResourceFolder%\ebene5.png, 1
+		FileInstall, ebene6.png, %ResourceFolder%\ebene6.png, 1
+		zeigeBildschirmTastatur = 1
+	}
+} else {
+	MsgBox, "Das Verzeichnis %ResourceFolder% konnte nicht angelegt werden!" ; Diese Zeile dient nur der eventuellen Fehlersuche und sollte eigentlich niemals auftauchen.
 }
 
-; Benutze die Dateien (soweit sie vorhanden sind)
+; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
 if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
   zeigeBildschirmTastatur = 1
-
 if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
   iconBenutzen = 1
 
@@ -131,7 +140,7 @@ if inputlocale <> 00000407
 ; ----------------------
 
 if (iconBenutzen)
-   menu, tray, icon, neo.ico,,1
+   menu, tray, icon, %ResourceFolder%\neo.ico,,1
 menu, tray, nostandard
 menu, tray, add, Öffnen, open
    menu, helpmenu, add, About, about

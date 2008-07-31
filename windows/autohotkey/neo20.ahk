@@ -59,6 +59,8 @@ Autoren:
 Stefan Mayer <stm (at) neo-layout. o r g>
 Nora Geissler <nora_geissler (at) yahoo. d e>
 Matthias Berg <neo (at) matthias-berg. e u>
+Martin Roppelt <m.p.roppelt (at) web. d e>
+Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 ...
 
 
@@ -88,6 +90,11 @@ Matthias Berg <neo (at) matthias-berg. e u>
 ******************
 * CHANGEHISTORY: *
 ******************
+
+Revision 694 (von Martin Roppelt):
+- LangSTastatur auf F11 (Ebene 4)
+- Entwickler können durch das Erstellen einer Datei »LangSTastaturStandardmäßigEingeschaltet.ahk« mit dem Inhalt »LangSTastatur := 1« diese standardmäßig aktivieren
+- Mehrere DeadKeys aktualisiert (T*, Ebene 4 und T*, Ebene 5)
 Revision 687 (von Dennis Heidsiek):
 - Die SendUnicodeChar-Methode um den GDK-Workarround von Matthias Wächter ergänzt
 - (An/Aus) Icons an Favicon der neuen Homepage angepasst
@@ -242,23 +249,32 @@ Process,Priority,,High
 **************************
 */
 
-; Versuche zuerst, eventuell in die EXE eingebundenen Dateien zu extrahieren
-FileInstall, neo.ico, neo.ico, 1
-FileInstall, neo_disabled.ico, neo_disabled.ico, 1
 
-if (bildschirmTastaturEinbinden==1) {
-   FileInstall, ebene1.png, ebene1.png, 1
-   FileInstall, ebene2.png, ebene2.png, 1
-   FileInstall, ebene3.png, ebene3.png, 1
-   FileInstall, ebene4.png, ebene4.png, 1
-   FileInstall, ebene5.png, ebene5.png, 1
-   FileInstall, ebene6.png, ebene6.png, 1
+; Setze das Arbeitsverzeichnis für eventuell zu extrahierende Dateien
+EnvGet, WindowsEnvTempFolder, TEMP
+ResourceFolder = %WindowsEnvTempFolder%\NEO2
+FileCreateDir, %ResourceFolder%
+if(FileExist("ResourceFolder") <> false) {
+	; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
+	FileInstall, neo.ico, %ResourceFolder%\neo.ico, 1
+	FileInstall, neo_disabled.ico, %ResourceFolder%\neo_disabled.ico, 1
+	iconBenutzen = 1
+	if (bildschirmTastaturEinbinden==1) {
+		FileInstall, ebene1.png, %ResourceFolder%\ebene1.png, 1
+		FileInstall, ebene2.png, %ResourceFolder%\ebene2.png, 1
+		FileInstall, ebene3.png, %ResourceFolder%\ebene3.png, 1
+		FileInstall, ebene4.png, %ResourceFolder%\ebene4.png, 1
+		FileInstall, ebene5.png, %ResourceFolder%\ebene5.png, 1
+		FileInstall, ebene6.png, %ResourceFolder%\ebene6.png, 1
+		zeigeBildschirmTastatur = 1
+	}
+} else {
+	MsgBox, "Das Verzeichnis %ResourceFolder% konnte nicht angelegt werden!" ; Diese Zeile dient nur der eventuellen Fehlersuche und sollte eigentlich niemals auftauchen.
 }
 
-; Benutze die Dateien (soweit sie vorhanden sind)
+; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
 if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
   zeigeBildschirmTastatur = 1
-
 if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
   iconBenutzen = 1
 
@@ -347,7 +363,7 @@ if inputlocale <> 00000407
 ; ----------------------
 
 if (iconBenutzen)
-   menu, tray, icon, neo.ico,,1
+   menu, tray, icon, %ResourceFolder%\neo.ico,,1
 menu, tray, nostandard
 menu, tray, add, Öffnen, open
    menu, helpmenu, add, About, about
@@ -1326,12 +1342,12 @@ neo_4:
     }
    else if Ebene = 2
    {
-      send »
+      SendUnicodeChar(0x00BB) ; », Double guillemot right
       CompKey := ""
    }
     else if Ebene = 3
    {
-      send ›
+      Send › ; Single guillemot right
       CompKey := ""
    }
    else if Ebene = 4
@@ -1400,12 +1416,12 @@ neo_5:
     }
    else if Ebene = 2
    {
-      send «
+      SendUnicodeChar(0x00AB) ; «, Double guillemot left
       CompKey := ""
    }
    else if Ebene = 3
    {
-      send ‹
+      Send ‹ ; Single guillemot left
       CompKey := ""
    }
    else if Ebene = 4
@@ -4832,7 +4848,7 @@ BSUnicode(code)
 */
 guiErstellt = 0
 alwaysOnTop = 1
-aktuellesBild = ebene1.png 
+aktuellesBild = %ResourceFolder%\ebene1.png 
 SC056 & *F1::
 SC138 & *F1::
 {
@@ -4892,17 +4908,17 @@ SC138 & *F8::
 Switch1:
   if (guiErstellt) 
   {
-     if (Image == "ebene1.png")
+     if (Image == "%ResourceFolder%\ebene1.png")
         goto Close
      else
      {
-       Image = ebene1.png
+       Image = %ResourceFolder%\ebene1.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene1.png
+    Image = %ResourceFolder%\ebene1.png
     goto Show    
   }
 Return
@@ -4910,17 +4926,17 @@ Return
 Switch2:
   if (guiErstellt) 
   {
-     if (Image == "ebene2.png")
+     if (Image == "%ResourceFolder%\ebene2.png")
         goto Close
      else
      {
-       Image = ebene2.png
+       Image = %ResourceFolder%\ebene2.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene2.png
+    Image = %ResourceFolder%\ebene2.png
     goto Show    
   }
 Return
@@ -4928,17 +4944,17 @@ Return
 Switch3:
   if (guiErstellt) 
   {
-     if (Image == "ebene3.png")
+     if (Image == "%ResourceFolder%\ebene3.png")
         goto Close
      else
      {
-       Image = ebene3.png
+       Image = %ResourceFolder%\ebene3.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene3.png
+    Image = %ResourceFolder%\ebene3.png
     goto Show    
   }
 Return
@@ -4946,17 +4962,17 @@ Return
 Switch4:
   if (guiErstellt) 
   {
-     if (Image == "ebene4.png")
+     if (Image == "%ResourceFolder%\ebene4.png")
         goto Close
      else
      {
-       Image = ebene4.png
+       Image = %ResourceFolder%\ebene4.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene4.png
+    Image = %ResourceFolder%\ebene4.png
     goto Show    
   }
 Return
@@ -4964,17 +4980,17 @@ Return
 Switch5:
   if (guiErstellt) 
   {
-     if (Image == "ebene5.png")
+     if (Image == "%ResourceFolder%\ebene5.png")
         goto Close
      else
      {
-       Image = ebene5.png
+       Image = %ResourceFolder%\ebene5.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene5.png
+    Image = %ResourceFolder%\ebene5.png
     goto Show    
   }
 Return
@@ -4982,17 +4998,17 @@ Return
 Switch6:
   if (guiErstellt) 
   {
-     if (Image == "ebene6.png")
+     if (Image == "%ResourceFolder%\ebene6.png")
         goto Close
      else
      {
-       Image = ebene6.png
+       Image = %ResourceFolder%\ebene6.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene6.png
+    Image = %ResourceFolder%\ebene6.png
     goto Show    
   }
 Return
@@ -5006,7 +5022,7 @@ Show:
   {
     if (Image = "") 
     {
-      Image = ebene1.png 
+      Image = %ResourceFolder%\ebene1.png 
     }     
     yPosition := A_ScreenHeight -270
     Gui, Color, FFFFFF
@@ -5087,7 +5103,7 @@ togglesuspend:
       menu, tray, rename, %enable%, %disable%
       menu, tray, tip, %name%
       if (iconBenutzen)
-          menu, tray, icon, neo.ico,,1  
+          menu, tray, icon, %ResourceFolder%\neo.ico,,1  
       suspend , off ; Schaltet Suspend aus -> NEO
    }
    else
@@ -5095,7 +5111,7 @@ togglesuspend:
       menu, tray, rename, %disable%, %enable%
       menu, tray, tip, %name% : Deaktiviert
       if (iconBenutzen)
-         menu, tray, icon, neo_disabled.ico,,1
+         menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
       suspend , on  ; Schaltet Suspend ein -> QWERTZ 
    }
 

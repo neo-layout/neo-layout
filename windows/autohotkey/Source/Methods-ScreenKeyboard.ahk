@@ -5,7 +5,7 @@
 */
 guiErstellt = 0
 alwaysOnTop = 1
-aktuellesBild = ebene1.png 
+aktuellesBild = %ResourceFolder%\ebene1.png 
 SC056 & *F1::
 SC138 & *F1::
 {
@@ -65,17 +65,17 @@ SC138 & *F8::
 Switch1:
   if (guiErstellt) 
   {
-     if (Image == "ebene1.png")
+     if (Image == "%ResourceFolder%\ebene1.png")
         goto Close
      else
      {
-       Image = ebene1.png
+       Image = %ResourceFolder%\ebene1.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene1.png
+    Image = %ResourceFolder%\ebene1.png
     goto Show    
   }
 Return
@@ -83,17 +83,17 @@ Return
 Switch2:
   if (guiErstellt) 
   {
-     if (Image == "ebene2.png")
+     if (Image == "%ResourceFolder%\ebene2.png")
         goto Close
      else
      {
-       Image = ebene2.png
+       Image = %ResourceFolder%\ebene2.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene2.png
+    Image = %ResourceFolder%\ebene2.png
     goto Show    
   }
 Return
@@ -101,17 +101,17 @@ Return
 Switch3:
   if (guiErstellt) 
   {
-     if (Image == "ebene3.png")
+     if (Image == "%ResourceFolder%\ebene3.png")
         goto Close
      else
      {
-       Image = ebene3.png
+       Image = %ResourceFolder%\ebene3.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene3.png
+    Image = %ResourceFolder%\ebene3.png
     goto Show    
   }
 Return
@@ -119,17 +119,17 @@ Return
 Switch4:
   if (guiErstellt) 
   {
-     if (Image == "ebene4.png")
+     if (Image == "%ResourceFolder%\ebene4.png")
         goto Close
      else
      {
-       Image = ebene4.png
+       Image = %ResourceFolder%\ebene4.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene4.png
+    Image = %ResourceFolder%\ebene4.png
     goto Show    
   }
 Return
@@ -137,17 +137,17 @@ Return
 Switch5:
   if (guiErstellt) 
   {
-     if (Image == "ebene5.png")
+     if (Image == "%ResourceFolder%\ebene5.png")
         goto Close
      else
      {
-       Image = ebene5.png
+       Image = %ResourceFolder%\ebene5.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene5.png
+    Image = %ResourceFolder%\ebene5.png
     goto Show    
   }
 Return
@@ -155,17 +155,17 @@ Return
 Switch6:
   if (guiErstellt) 
   {
-     if (Image == "ebene6.png")
+     if (Image == "%ResourceFolder%\ebene6.png")
         goto Close
      else
      {
-       Image = ebene6.png
+       Image = %ResourceFolder%\ebene6.png
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = ebene6.png
+    Image = %ResourceFolder%\ebene6.png
     goto Show    
   }
 Return
@@ -179,7 +179,7 @@ Show:
   {
     if (Image = "") 
     {
-      Image = ebene1.png 
+      Image = %ResourceFolder%\ebene1.png 
     }     
     yPosition := A_ScreenHeight -270
     Gui, Color, FFFFFF
@@ -260,7 +260,7 @@ togglesuspend:
       menu, tray, rename, %enable%, %disable%
       menu, tray, tip, %name%
       if (iconBenutzen)
-          menu, tray, icon, neo.ico,,1  
+          menu, tray, icon, %ResourceFolder%\neo.ico,,1  
       suspend , off ; Schaltet Suspend aus -> NEO
    }
    else
@@ -268,7 +268,7 @@ togglesuspend:
       menu, tray, rename, %disable%, %enable%
       menu, tray, tip, %name% : Deaktiviert
       if (iconBenutzen)
-         menu, tray, icon, neo_disabled.ico,,1
+         menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
       suspend , on  ; Schaltet Suspend ein -> QWERTZ 
    }
 

@@ -297,12 +297,12 @@ neo_4:
     }
    else if Ebene = 2
    {
-      send »
+      SendUnicodeChar(0x00BB) ; », Double guillemot right
       CompKey := ""
    }
     else if Ebene = 3
    {
-      send ›
+      Send › ; Single guillemot right
       CompKey := ""
    }
    else if Ebene = 4
@@ -371,12 +371,12 @@ neo_5:
     }
    else if Ebene = 2
    {
-      send «
+      SendUnicodeChar(0x00AB) ; «, Double guillemot left
       CompKey := ""
    }
    else if Ebene = 3
    {
-      send ‹
+      Send ‹ ; Single guillemot left
       CompKey := ""
    }
    else if Ebene = 4
