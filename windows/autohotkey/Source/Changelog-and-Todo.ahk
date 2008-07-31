@@ -38,7 +38,7 @@ Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 * CHANGEHISTORY: *
 ******************
 
-Revision 705 (von Dennis Heidsiek):
+Revision 707 (von Dennis Heidsiek):
 - Die Resourcen-Dateien (PNGs, ICOs) werden nun nach "Von Windows vorgegebenes TEMP Verzeichnis\NEO2\ extrahiert und nicht mehr in das Verzeichnis, in dem sich die EXE befindet
 - Die doppelten französischen Anführungszeichen werden nun ebenfalls über SendUnicodeChar gesendet
 Revision 694 (von Martin Roppelt):
