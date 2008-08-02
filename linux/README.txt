@@ -1,15 +1,13 @@
-ï»¿== Neo 2.0 fÃ¼r Windows ==
-FÃ¼r viele Linuxdistributionen sind hier Treiber zu finden.
-
-== bin ==
+== Neo 2.0 für Windows ==
+Für viele Linuxdistributionen sind hier Treiber zu finden.
 
 == X ==
-Dieser Treiber nutzt das Programm setxkbmap des X-Servers. Er sollte in den folgenden FÃ¤llen installiert bzw. der xmodmap vorgezogen werden:
-[Bitte ergÃ¤nzen!]
+Dieser Treiber nutzt das Programm setxkbmap des X-Servers. Er sollte in den folgenden Fällen installiert bzw. der xmodmap vorgezogen werden:
+[Bitte ergänzen!]
 
 == xmodmap ==
-Dieser Treiber nutzt das Programm xmodmap des X-Servers. Er sollte in den folgenden FÃ¤llen installiert bzw. der setxkbmap vorgezogen werden:
-[Bitte ergÃ¤nzen!]
+Dieser Treiber nutzt das Programm xmodmap des X-Servers. Er sollte in den folgenden Fällen installiert bzw. der setxkbmap vorgezogen werden:
+[Bitte ergänzen!]
 
 == bin ==
-Dieses Verzeichnis enthÃ¤lt einige nÃ¼tzliche Batch-Befehle zur Ausgabe des aktuellen Tastaturlayouts sowie die MÃ¶glichkeit, Ã¼ber Â»uiaeÂ« bzw. Â»asdfÂ« einfach zwischen NEO und QWERT* hin- und herzuwechseln.
+Dieses Verzeichnis enthält einige nützliche Batch-Befehle zur Ausgabe des aktuellen Tastaturlayouts sowie die Möglichkeit, über »uiae« bzw. »asdf« einfach zwischen NEO und QWERT* hin- und herzuwechseln.

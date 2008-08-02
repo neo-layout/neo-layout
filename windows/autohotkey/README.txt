@@ -61,7 +61,7 @@ Line Text: CTL_CODE_LED(p_device_type, p_function, p_method, p_access)
 Error: Functions cannot contain functions.
 The programm will exit.
 
-Zudem ist angedacht, den AHK in voneinander möglichst unabhängige Teile aufzusplitten, um so die Übersichtlichkeit zu erhöhen und die Komplextität des Codes zu verringern.
+Zudem ist angedacht, den AHK in voneinander möglichst unabhängige Teile aufzusplitten, um so die Übersichtlichkeit zu erhöhen und die Komplexität des Codes zu verringern.
 
 === Links zur AHK/Autohotkey-Skriptsprache ===
 Eine kurze Einführung (Installation und Beispielscipt) findet man etwa auf
