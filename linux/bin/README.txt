@@ -1,0 +1,19 @@
+== uiae, asdf ==
+asdf (linke Hand auf der Grundreihe abrollen) schaltet von QWERTZ zu Neo um.
+uiae ( “      “   “   “       “        “    )    “      “  Neo zu QWERTZ um.
+
+== neo ==
+Gibt die Neo-Tastaturbelegung des Buchstabenfeldes aus. Beispiele:
+  »neo« – gibt die Tastaturbelegung mit allen Ebenen aus
+  »neo 1« – gibt die erste Ebene der Tastaturbelegung aus
+  »neo 3« – gibt die dritte Ebene der Tastaturbelegung aus
+  »neo 2 3 4« – gibt die zweite, dritte und vierte Ebene aus
+usw.
+
+== num ==
+Gibt die Neo-Tastaturbelegung des Ziffernblocks aus. Beispiele:
+  »num« – gibt die Tastaturbelegung mit allen Ebenen aus
+  »num 1« – gibt die erste Ebene der Tastaturbelegung aus
+  »num 3« – gibt die dritte Ebene der Tastaturbelegung aus
+  »num 2 3 4« – gibt die zweite, dritte und vierte Ebene aus
+usw.
