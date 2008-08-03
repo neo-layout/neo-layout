@@ -4,8 +4,7 @@
 == Hinweise für Nutzer ==
 
 === Direkte Installation ===
-Einfach die Datei neo20.exe herunterladen und die Datei irgendwo 
-speichern (bspw. auf dem Desktop oder in dem Order »Eigenen Dateien«). Nach einem einfachen Doppelklick auf diese .exe-Datei steht NEO in voller Funktionalität zur Verfügung! Das alles geht ohne Administratoren-Rechte und ist auf jedem Rechner sofort ausführbar.
+Einfach die Datei neo20.exe herunterladen und die Datei irgendwo speichern (bspw. auf dem Desktop oder in dem Order »Eigenen Dateien«). Nach einem einfachen Doppelklick auf diese .exe-Datei steht NEO in voller Funktionalität zur Verfügung! Das alles geht ohne Administratoren-Rechte und ist auf jedem Rechner sofort ausführbar.
 
 === Rückkehr zum normalen Tastaturlayout ===
 Um kurzzeitig zwischen QWERTZ und NEO hin- und herzuwechseln, kann mit der Tastenkombination Shift+Pause das Skript pausiert bzw. wieder gestartet werden. Die Möglchkeit, Autohotkey dauerhaft zu deaktivieren, erhält man hingegen mit einem Rechtsklick auf das rote/weiße NEO-Icon im Traybereich (bei der Uhr).
@@ -19,7 +18,7 @@ Bei Bedarf kann man sich eine Verknüpfung mit neo20.exe in den Autostart-Ordner
 === Temporäre Dateien und gründliche Deinstallation ===
 Die exe-Datei entpackt bei der ersten Ausführung Bilder für die Tray-Icons und die Bildschirmtastatur in einen NEO2-Unterordner des temporären Windows(Umgebungsvariablen-)Ordners (unter Windows XP ist dies etwa C:\Dokumente und Einstellungen\Mario Mustermann\Lokale Einstellungen\Temp\NEO2). Diese Dateien bitte während der Dateiausführung nicht verschieben oder löschen, ansonsten treten Laufzeitfehler auf.
 
-== FAQ ==
+=== FAQ ===
 Bei vielen Problemen hilt es weiter, ersteinmal in die allgemeine NEO-FAQ zu schauen, viele bekannte Probleme und Fragen sind dort mit entsprechendene Lösungshinweisen dokumentiert.
 
 === Hinweis zur Aktualität ===
@@ -39,7 +38,7 @@ In diesem Fall muss dann für eine Kompilierung des Skriptes noch die Datei Buil
 === Die ausführbare Datei aktualisieren ===
 Um die neo20-all-in-one.exe auf den neuesten Stand zu bringen, reicht (wenn Autohotkey im Standardverzeichnis installiert wurde) ein Doppelklick auf die Batch-Datei
 Build-Update.bat
-Es ist empfohlen, diese Batch-Datei stets vor einem Comit auszuführen, damit die .exe-Datei stets auf dem aktuellsten Stand ist.
+Es ist empfohlen, diese Batch-Datei stets vor einem Comit auszuführen, damit die .exe-Datei immer auf dem aktuellsten Stand ist.
 
 === Den Sourcecode bearbeiten ===
 Die Datei neo20.ahk  sollte auf keinen Fall mehr direkt bearbeitet oder gestartet werden, da sie inzwischen automatisch generiert und regelmäßig überschrieben wird.
