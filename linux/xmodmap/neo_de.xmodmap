@@ -133,11 +133,11 @@ keycode 21 = dead_acute dead_grave  dead_cedilla  	dead_ogonek	dead_abovedot NoS
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 24 = x      X     NoSymbol     Greek_xi           ellipsis   U22EE      U039E
-!					ξ		  …	   ⋮ vert. ell	Ξ Greek_XI
+keycode 24 = x      X     ellipsis     Greek_xi           U22EE      NoSymbol   U039E
+!				…	ξ		 ⋮ vert. ell		Ξ Greek_XI
 keycode 25 = v      V     underscore   NoSymbol           BackSpace  BackSpace  U2259
 !										≙ 
-keycode 26 = l      L     bracketleft  Greek_lambda       Up         Up      U039B
+keycode 26 = l      L     bracketleft  Greek_lambda       Up         Up         U039B
 !					λ					Λ Greek_LAMBDA
 keycode 27 = c      C     bracketright Greek_chi          Delete     Delete     U2102
 !					χ					ℂ komplex
