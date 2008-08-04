@@ -1,4 +1,10 @@
 Diese Datei enthält eine Liste aller undo/redo-fähigen oder unfähigen Programme
-✔ OpenOffice
+✔ OpenOffice (nur undo, kein redo)
 ✘ kate
 ✘ kmail
+✘ firefox
+✘ gimp
+✘ amarok
+✘ lyx
+✘ konqueror
+✘ gedit
