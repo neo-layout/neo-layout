@@ -133,8 +133,8 @@ keycode 21 = dead_acute dead_grave  dead_cedilla  	dead_ogonek	dead_abovedot NoS
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 24 = x      X     NoSymbol     Greek_xi           NoSymbol   NoSymbol   U039E
-!					ξ					Ξ Greek_XI
+keycode 24 = x      X     NoSymbol     Greek_xi           ellipsis   U22EE      U039E
+!					ξ		  …	   ⋮ vert. ell	Ξ Greek_XI
 keycode 25 = v      V     underscore   NoSymbol           BackSpace  BackSpace  U2259
 !										≙ 
 keycode 26 = l      L     bracketleft  Greek_lambda       Up         Up      U039B
@@ -206,10 +206,10 @@ keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol    
 !					+		β		:				⇐
 keycode 58 = m      	M        	percent    	Greek_mu    	1       	1       	ifonlyif
 !					%		μ						⇔
-keycode 59 = comma  	U22EE    	quotedbl   	Greek_rho   	2       	2        	U21D2
-!		,	⋮ vert. ell.	"		ρ						⇒ implies 
-keycode 60 = period 	ellipsis 	apostrophe 	U03D1       	3       	3        	U0398
-!		.	…		'		ϑ Greek_theta					Θ Greek_THETA
+keycode 59 = comma  	NoSymbol	quotedbl   	Greek_rho   	2       	2        	U21D2
+!		,		.	"		ρ						⇒ implies 
+keycode 60 = period 	NoSymbol	apostrophe 	U03D1       	3       	3        	U0398
+!		.			'		ϑ Greek_theta					Θ Greek_THETA
 keycode 61 = j      	J        	semicolon  	Greek_theta 	semicolon  	NoSymbol     	identical
 !					;		θ		;				≡
 
