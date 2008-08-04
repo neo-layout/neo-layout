@@ -1,4 +1,4 @@
-﻿-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -48,6 +48,8 @@ http://dejavu.sourceforge.net/
 ␣    … Leerzeichen (SPACE)
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
+⍓    … (de)aktiviert die Maussteuerung über die Tastatur (Navigationsblock Ebene 2)
+⎌    … undo-Funktion
 
 === Akzenttasten ===
 Zu den Akzenten siehe auch
@@ -143,15 +145,15 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
 │ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│^ ˘ -│1 ¹ ♀│2 ² ⚥│3 ³ ♂│4 › ℓ│5 ‹ †│6 ¢  │7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’  │- — ‑│´ ¸ ˛│    ⌫    │
+│^ ˘ -│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│Tab⇤    │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
+│Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
 │Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│~ ¨ ˝│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3 ♫ │  ↲  │
+│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3   │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z   ℤ│B : ⇒│M 1 ⇔│⋮ 2 ⇐│… 3 Θ│J ; ≡│   Caps_Lock  │
+│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z ⎌ ℤ│B : ⇐│M 1 ⇔│  2 ⇒│  3 Θ│J ; ≡│   Caps_Lock  │
 │Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
@@ -179,7 +181,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│CpL│M4│Ü│Ö│Ä│P│Z│B│M│⋮│…│J│ Cps_Lk│
+│CpL│M4│Ü│Ö│Ä│P│Z│B│M│ │ │J│ Cps_Lk│
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -201,18 +203,18 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ · │•│‣│ │⇞│ │£│¤│/│*│-│ │˙│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ 4Lk│ │⌫│⇡│⌦│⎀│¡│7│8│9│+│ │/│ Ret │
+│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│4L│⌧│⇥│⇟│↲│ │:│1│2│3│;│ Umsch │
+│Ums│4L│⌧│⇥│⇟│↲│⍓│:│1│2│3│;│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ - │♀│⚥│♂│ℓ│†│ │κ│⟨│⟩│ │‑│˛│ Back │
+│ - │₁│₂│₃│ℓ│♀│♂│κ│⟨│⟩│₀│‑│˛│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │    │ξ│ │λ│χ│ω│ϰ│ψ│γ│φ│ϕ│ς│˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -231,7 +233,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │∮│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│M4│∝│ℑ│ℜ│Π│ℤ│⇒│⇔│⇐│Θ│≡│ Umsch │
+│Ums│M4│∝│ℑ│ℜ│Π│ℤ│⇐│⇔│⇒│Θ│≡│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│ schmal.Lz.│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -261,72 +263,73 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Alle Ebenen – Ziffernblock ===
 ┌─────┬─────┬─────┬─────┐
-│Num  │   ∕ │   ∙ │     │
-│Lock │ / ÷ │ * × │ - − │
+│ ≠ ⍓ │ / ⁄ │ * × │ - − │
+│ = ≈ │ / ÷ │ * ⋅ │ - - │
 ├─────┼─────┼─────┼─────┤
-│ 7 ≪ │ 8 ∩ │ 9 ≫ │     │
-│ ⇱ ↕ │ ⇡ ↑ │ ⇞ ⊗ │   ∓ │
+│Hom ↕│KP↑ ∩│PgU ⊗│     │
+│ 7  †│ 8  ↑│ 9  ∋│ + ∓ │
 ├─────┼─────┼─────┤     │
-│ 4 ⊂ │ 5 ∋ │ 6 ⊃ │ + ± │
-│ ⇠ ← │ € ∞ │ ⇢ → │     │
+│KP← ⊂│Beg €│KP→ ⊃│ + ± │
+│ 4  ←│ 5  ∞│ 6  →│     │
 ├─────┼─────┼─────┼─────┤
-│ 1 ≤ │ 2 ∪ │ 3 ≥ │   ≈ │
-│ ⇲ ↔ │ ⇣ ↓ │ ⇟ ⇌ │   ≠ │
+│End ✔│KP↓ ∪│PgD ✗│     │
+│ 1  ↔│ 2  ↓│ 3  ⇌│     │
 ├─────┴─────┼─────┤     │
-│ 0 ‰       │,/. ,│     │
-│ ⎀ %       │ ⌦  .│Enter│
+│ Ins  ‰    │Del S│     │ S: ,/. KP_Seperator
+│ 0    %    │ ,  .│Enter│
 └───────────┴─────┴─────┘
 
 === Erste Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│Num│ / │ * │ - │
-├───┼───┼───┼───┤
-│ ⇱ │ ⇡ │ ⇞ │   │
-├───┼───┼───┤   │
-│ ⇠ │ € │ ⇢ │ + │
-├───┼───┼───┼───┤
-│ ⇲ │ ⇣ │ ⇟ │   │
-├───┴───┼───┤   │
-│ ⎀     │ ⌦ │Ent│
-└───────┴───┴───┘
-
-=== Zweite Ebene – Miniatur ===
-┌───┬───┬───┬───┐
-│Num│   │   │   │
+│ = │ / │ * │ - │
 ├───┼───┼───┼───┤
 │ 7 │ 8 │ 9 │   │
 ├───┼───┼───┤   │
-│ 4 │ 5 │ 6 │   │
+│ 4 │ 5 │ 6 │ + │
 ├───┼───┼───┼───┤
 │ 1 │ 2 │ 3 │   │
 ├───┴───┼───┤   │
-│ 0     │,/.│Ent│
+│ 0     │ , │Ent│
 └───────┴───┴───┘
 
 === Zweite Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│Num│ ÷ │ × │ − │
+│ ≠ │ / │ * │ - │
 ├───┼───┼───┼───┤
-│ ↕ │ ↑ │ ⊗ │   │
+│Hom│KP↑│PgU│   │
+├───┼───┼───┤   │
+│KP←│Beg│KP→│ + │
+├───┼───┼───┼───┤
+│End│KP↓│PgD│   │
+├───┴───┼───┤   │
+│ Ins   │Del│Ent│
+└───────┴───┴───┘
+
+
+=== Dritte Ebene – Miniatur ===
+┌───┬───┬───┬───┐
+│ ≈ │ ÷ │ ∙ │ - │
+├───┼───┼───┼───┤
+│ ↕ │ ↑ │ ∋ │   │
 ├───┼───┼───┤   │
 │ ← │ ∞ │ → │ ± │
 ├───┼───┼───┼───┤
 │ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
-│ %     │ . │ ≠ │
+│ %     │ . │Ent│
 └───────┴───┴───┘
 
 === Vierte Ebene – Miniatur === 
 ┌───┬───┬───┬───┐
-│Num│ ∕ │ ∙ │   │
-├───┼───┼───┼───┤
-│ ≪ │ ∩ │ ≫ │   │
+│ ⍓ │frc│ × │ − │ ⍓ turns on/off the keyboard mouse control
+├───┼───┼───┼───┤ frc means fraction slash ⁄
+│ † │ ∩ │ ⊗ │   │
 ├───┼───┼───┤   │
-│ ⊂ │ ∋ │ ⊃ │ ∓ │
+│ ⊂ │ € │ ⊃ │ ∓ │
 ├───┼───┼───┼───┤
-│ ≤ │ ∪ │ ≥ │   │
+│ ✔ │ ∪ │ ✗ │   │
 ├───┴───┼───┤   │
-│ ‰     │  ,│ ≈ │
+│ ‰     │,/.│Ent│
 └───────┴───┴───┘
 
 == Tipp ==
@@ -338,7 +341,22 @@ alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
-Im Verzeichniss linux/bin sind umfangreichere Skripte mit größerer Funktionalität.
+Folgende Scripte bewirken etwas ähnliches, können allerdings noch zusätzlich nach der Miniaturversion suchen
+=== neo ===
+#!/bin/sh
+if [ 0 = $# ];then
+    grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt
+else
+    grep -B 11 -m "$1" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
+fi
+
+=== num ===
+#!/bin/sh
+if [ 0 = $# ];then
+    grep -m 1 -B 15 "┴─────┘" PFAD_ZUR_DATEI/neo20.txt
+else
+    grep -B 11 -m "$1" "└───────┴───┴───┘" PFAD_ZUR_DATEI/neo20.txt | tail -n 12
+fi
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
 Ξ … Xi, griechischer Majuskel (U039E)
