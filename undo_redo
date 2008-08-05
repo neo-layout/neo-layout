@@ -1,10 +1,2 @@
-Diese Datei enthält eine Liste aller undo/redo-fähigen oder unfähigen Programme
-✔ OpenOffice (nur undo, kein redo)
-✘ kate
-✘ kmail
-✘ firefox
-✘ gimp
-✘ amarok
-✘ lyx
-✘ konqueror
-✘ gedit
+Die Liste der Programme mit undo-/redo-Fähigkeiten befindet sich nun an neuer Stelle im Wiki:
+http://wiki.neo-layout.org/wiki/Undo/Redo
