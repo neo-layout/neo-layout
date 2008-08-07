@@ -1,24 +1,48 @@
 
+
+/********************
+ Verzeichnisse      *
+*********************
+*/
+; Setzt den Pfad zu einem temporären Verzeichnis
+EnvGet, WindowsEnvTempFolder, TEMP
+ResourceFolder = %WindowsEnvTempFolder%\NEO2
+FileCreateDir, %ResourceFolder%
+
+; Setzt den Pfad zu den NEO-Anwendungsdateien
+EnvGet, WindowsEnvAppDataFolder, APPDATA
+ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
+FileCreateDir, %ApplicationFolder%
+
+
+
 /******************
  Globale Schalter *
 *******************
 */
 
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
+; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
 
-ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
-einHandNeo := 0                  ; Soll der Treiber im Einhandmodus betrieben werden?
-lernModus := 0                   ; Soll der Lernmodus aktiviert werden?
-bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden?
-                                 ; (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
-UseMod4Light := 1                ; Aktivierter Mod4-Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
-LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf ß(3) gelegt werden?
-#Include *i %a_scriptdir%\LangSTastaturStandardmäßigEingeschaltet.ahk
-#Include *i %a_scriptdir%\source\LangSTastaturStandardmäßigEingeschaltet.ahk
-                                 ; Wenn diese Datei vorhanden ist und die Zeichenfolge »LangSTastatur := 1« enthält,
-                                 ; ist die LangSTastatur beim Starten der ahk/exe-Datei automatisch eingeschaltet.
 
-Process,Priority,,High
+; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+bildschirmTastaturEinbinden := 1
+
+; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
+IniRead, ahkTreiberKombi, %ApplicationFolder%\NEO2.ini, Global, ahkTreiberKombi, 0
+
+; Soll der Treiber im Einhandmodus betrieben werden?
+IniRead, einHandNeo, %ApplicationFolder%\NEO2.ini, Global, einHandNeo, 0
+
+; Soll der Lernmodus aktiviert werden?
+IniRead, lernModus, %ApplicationFolder%\NEO2.ini, Global, lernModus, 0
+
+; Aktivierter Mod4-Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
+IniRead, UseMod4Light, %ApplicationFolder%\NEO2.ini, Global, UseMod4Light, 1
+
+; Soll Lang-s auf s, s auf ß und ß auf Mod3+ß gelegt (bzw. vertauscht) werden?
+IniRead, LangSTastatur, %ApplicationFolder%\NEO2.ini, Global, LangSTastatur, 0
+
 
 
 /*************************
@@ -27,10 +51,6 @@ Process,Priority,,High
 */
 
 
-; Setze das Arbeitsverzeichnis für eventuell zu extrahierende Dateien
-EnvGet, WindowsEnvTempFolder, TEMP
-ResourceFolder = %WindowsEnvTempFolder%\NEO2
-FileCreateDir, %ResourceFolder%
 if(FileExist("ResourceFolder") <> false) {
 	; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
 	FileInstall, neo.ico, %ResourceFolder%\neo.ico, 1
@@ -92,6 +112,9 @@ lernModus_neo_Entf = 1
   
 
 ; aus Noras script kopiert:
+
+Process,Priority,,High
+
 #usehook on
 #singleinstance force
 #LTrim 
