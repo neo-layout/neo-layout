@@ -6,50 +6,35 @@ Dies ist inzwischen eine automatisch generierte
 Datei! Sie wird regelmäßig überschrieben und
 sollte deshalb nicht mehr direkt bearbeitet werden!
 
-DIE AUSFÜHRBARE DATEI AKTUALISIEREN:
-
-Um die neo20-all-in-one.exe auf den neuesten Stand zu
-bringen, reicht (wenn Autohotkey im Standardverzeichnis
-installiert wurde) ein Doppelklick auf die Batch-Datei
-Build-Update.bat
-
-HINWEISE FÜR AHK-ENTWICKLER:
-
-Anstatt dieser Datei müssen die Dateien/Module im
-Source-Unterverzeichnis bearbeitet werden, etwa:
-Source\Changelog-and-Todo.ahk
-Source\Keys-Neo.ahk
-Source\Keys-Qwert-to-Neo.ahk
-Source\Methods-Layers.ahk
-Source\Methods-Lights.ahk
-
-Um die gemachten Änderungen zu testen, sollte die Datei
-Source\All.ahk
-verwendet werden, die alle Module einbindet und
-regulär durch einen Doppelklick mit dem AHK-Interpreter
-gestartet werden kann.
-
-Der grosse Vorteil dieser Methode liegt daran, dass sich die
-Zeilennummern eventueller Fehlermeldungen nicht mehr auf
-die grosse "vereinigte" AHK-Datei, sondern auf die tatsäch-
-lich relevanten Module beziehen, z.B.:
-
-Error at line 64 in #include file "C:\...\autohotkey\Source\Methods-Lights.ahk"
-Line Text: CTL_CODE_LED(p_device_type, p_function, p_method, p_access)
-Error: Functions cannot contain functions.
-The programm will exit.
-
-AHK-LINKS
-
-Eine kurze Einführung (Installation und Beispielscipt) findet man etwa auf
-http://www.kikizas.net/en/usbapps.ahk.html
-
-Eine alphabetische Liste aller erlaubten Kommandos findet man online unter
-http://www.autohotkey.com/docs/commands.htm
-
-
+Alle weiterführende Informationen finden sich im Abschnitt 
+== Hinweise für Entwickler ==
+in der Datei README.txt!  
 *******************************************
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*******************************************
+Das war die letzte WARNUNG, ich hoffe nur dass
+sie wirklich wissen was sie hier tun wollen ...
+*******************************************
+*/
+
 
 /*
 *************************************
@@ -91,6 +76,13 @@ Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 * CHANGEHISTORY: *
 ******************
 
+
+
+Revision 7?? (von Dennis Heidsiek):
+- Ist die Datei [...]\Anwendungsdaten\NEO2\NEO2.ini vorhanden, werden dort eventuell vonhandene Werte für die Globalen Schalter beim Start übernommen
+Revision 707 (von Dennis Heidsiek):
+- Die Resourcen-Dateien (PNGs, ICOs) werden nun nach "Von Windows vorgegebenes TEMP Verzeichnis\NEO2\ extrahiert und nicht mehr in das Verzeichnis, in dem sich die EXE befindet
+- Die doppelten französischen Anführungszeichen werden nun ebenfalls über SendUnicodeChar gesendet
 Revision 694 (von Martin Roppelt):
 - LangSTastatur auf F11 (Ebene 4)
 - Entwickler können durch das Erstellen einer Datei »LangSTastaturStandardmäßigEingeschaltet.ahk« mit dem Inhalt »LangSTastatur := 1« diese standardmäßig aktivieren
@@ -222,26 +214,50 @@ Revsion 490 (von Stefan Mayer):
 
 
 
+
+/********************
+ Verzeichnisse      *
+*********************
+*/
+; Setzt den Pfad zu einem temporären Verzeichnis
+EnvGet, WindowsEnvTempFolder, TEMP
+ResourceFolder = %WindowsEnvTempFolder%\NEO2
+FileCreateDir, %ResourceFolder%
+
+; Setzt den Pfad zu den NEO-Anwendungsdateien
+EnvGet, WindowsEnvAppDataFolder, APPDATA
+ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
+FileCreateDir, %ApplicationFolder%
+
+
+
 /******************
  Globale Schalter *
 *******************
 */
 
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
+; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
 
-ahkTreiberKombi := 0             ; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
-einHandNeo := 0                  ; Soll der Treiber im Einhandmodus betrieben werden?
-lernModus := 0                   ; Soll der Lernmodus aktiviert werden?
-bildschirmTastaturEinbinden := 1 ; Sollen die Bilder für die Bildschirmtastatur in die EXE-Datei miteingebunden werden?
-                                 ; (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
-UseMod4Light := 1                ; Aktivierter Mod4-Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
-LangSTastatur := 0               ; Sollen Lang-s auf s, s auf ß und ß auf ß(3) gelegt werden?
-#Include *i %a_scriptdir%\LangSTastaturStandardmäßigEingeschaltet.ahk
-#Include *i %a_scriptdir%\source\LangSTastaturStandardmäßigEingeschaltet.ahk
-                                 ; Wenn diese Datei vorhanden ist und die Zeichenfolge »LangSTastatur := 1« enthält,
-                                 ; ist die LangSTastatur beim Starten der ahk/exe-Datei automatisch eingeschaltet.
 
-Process,Priority,,High
+; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+bildschirmTastaturEinbinden := 1
+
+; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
+IniRead, ahkTreiberKombi, %ApplicationFolder%\NEO2.ini, Global, ahkTreiberKombi, 0
+
+; Soll der Treiber im Einhandmodus betrieben werden?
+IniRead, einHandNeo, %ApplicationFolder%\NEO2.ini, Global, einHandNeo, 0
+
+; Soll der Lernmodus aktiviert werden?
+IniRead, lernModus, %ApplicationFolder%\NEO2.ini, Global, lernModus, 0
+
+; Aktivierter Mod4-Lock wird über die Rollen-LED des Keybord angezeigt (analog zu CapsLock)
+IniRead, UseMod4Light, %ApplicationFolder%\NEO2.ini, Global, UseMod4Light, 1
+
+; Soll Lang-s auf s, s auf ß und ß auf Mod3+ß gelegt (bzw. vertauscht) werden?
+IniRead, LangSTastatur, %ApplicationFolder%\NEO2.ini, Global, LangSTastatur, 0
+
 
 
 /*************************
@@ -250,10 +266,6 @@ Process,Priority,,High
 */
 
 
-; Setze das Arbeitsverzeichnis für eventuell zu extrahierende Dateien
-EnvGet, WindowsEnvTempFolder, TEMP
-ResourceFolder = %WindowsEnvTempFolder%\NEO2
-FileCreateDir, %ResourceFolder%
 if(FileExist("ResourceFolder") <> false) {
 	; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
 	FileInstall, neo.ico, %ResourceFolder%\neo.ico, 1
@@ -315,6 +327,9 @@ lernModus_neo_Entf = 1
   
 
 ; aus Noras script kopiert:
+
+Process,Priority,,High
+
 #usehook on
 #singleinstance force
 #LTrim 

@@ -102,3 +102,15 @@ ACHTUNG! Unter Windows ist folgendes festgelegt:
 AltGr + Pos1 = Abmelden
 AltGr + Ende = Computer ausschalten
 --> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod4.
+
+=== Globale Schalter ===
+Ist die ANSI-kodierte Datei [...]\Anwendungsdaten\NEO2\NEO2.ini vorhanden, werden dort eventuell vonhandene Werte für die Globalen Schalter beim Start übernommen. Eine NEO2.ini, die alle Werte auf die Standardwerte »ändert«, sähe etwa so aus:
+[Global]
+# Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
+ahkTreiberKombi=0
+einHandNeo=0
+lernModus=0
+UseMod4Light=1
+LangSTastatur=0
+
+=== ... ===

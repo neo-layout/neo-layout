@@ -38,6 +38,10 @@ Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 * CHANGEHISTORY: *
 ******************
 
+
+
+Revision 728 (von Dennis Heidsiek):
+- Ist die Datei [...]\Anwendungsdaten\NEO2\NEO2.ini vorhanden, werden dort eventuell vonhandene Werte für die Globalen Schalter beim Start übernommen
 Revision 707 (von Dennis Heidsiek):
 - Die Resourcen-Dateien (PNGs, ICOs) werden nun nach "Von Windows vorgegebenes TEMP Verzeichnis\NEO2\ extrahiert und nicht mehr in das Verzeichnis, in dem sich die EXE befindet
 - Die doppelten französischen Anführungszeichen werden nun ebenfalls über SendUnicodeChar gesendet
