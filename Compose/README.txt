@@ -32,7 +32,7 @@ Einfach den Inhalt der originalen Compose-Datei und die Compose.neo in eine
 Datei namens ~/.XCompose (also im HOME-Verzeichnis) kopieren. So geht das:
 cat /usr/share/X11/locale/en_US.UTF-8/Compose Compose.neo > ~/.XCompose
 
-=== Gnome macht Probleme ==
+==== Gnome macht Probleme ====
 Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen
 die entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5 geht das nicht. Ebenso
 mit viele anderen eingentlich definierten Kombinationen. Das liegt daran, dass
@@ -45,7 +45,18 @@ Zudem scheint dieses Problem in aktuellen Gnome-Version behoben worden zu sein:
    based-apps/
   http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/
 
-== compose_und_deadkeys.txt ==
+=== compose_und_deadkeys.txt ===
 Die Datei compose_und_deadkeys.txt fasst Änderungs- und Erweiterungsvorschläge
 für die Compose-Datei zusammen, in der unter Linux auch die Deadkeys (tote
 Tasten) definiert sind.
+
+
+=== Zusätzliche Compose-Kombinationen (Cokos) ===
+Im dem Archiv »Numericals.tar.bz2« befinden sich optionale Compose-Kombinationen für Römische (r1-r3999, R1-R3999) und klingonische Zahlen (k1-k-3999). Diese können – wenn gewünscht – wie oben beschrieben installiert werden. Ist die eingegebene Zahl nicht vierstellig, muss die Eingabe mit einem <SPACE> terminiert werden.
+
+Beispiele:
+<Multi_key> <R> <1> <9> <9> <9> : "ⅯⅭⅯⅩⅭⅠⅩ" # ROMAN NUMERAL 1999
+<Multi_key> <r> <1> <9> <9> <9> : "ⅿⅽⅿⅹⅽⅰⅹ" # SMALL ROMAN NUMERAL 1999
+<Multi_key> <k> <1> <9> <9> <9> : "wa'SaD Hutvatlh HutmaH Hut" # KLINGON NUMERAL 1999
+<Multi_key> <R> <8> <SPACE> : "ⅤⅠⅠⅠ" # ROMAN NUMERAL 8
+
