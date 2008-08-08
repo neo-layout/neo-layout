@@ -10,7 +10,7 @@
 !! Other Questions:
 !!      <mailinglist at neo-layout dot org>
 !! 
-!! $Revision$, $Date$
+!! $Revision: 720 $, $Date: 2008-08-04 23:46:24 +0200 (Mo, 04 Aug 2008) $
 !! http://pebbles.schattenlauf.de/layout.php
 !! 
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -92,15 +92,18 @@ keycode 23 = Tab ISO_Left_Tab Multi_key ISO_Level3_Lock
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Space key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 65 = space space space nobreakspace 0 0 U202F
-
+!keycode 65 = space space space nobreakspace 0 0 U202F
+keycode 65 = space space space nobreakspace 0 0 NoSymbol
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The first row (number Row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1          Ebene2     Ebene3     Ebene5      Ebene4         Ebene4+Sh      Ebene6
-keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke dead_belowdot  NoSymbol       dead_belowdot
+!keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke dead_belowdot  NoSymbol       dead_belowdot
 !		^		ˇ	˘
+keycode 49 = dead_circumflex dead_caron dead_breve NoSymbol    dead_belowdot  NoSymbol       dead_belowdot
+!		^		ˇ	˘
+
 
 keycode 10 = 1 degree         onesuperior   U2081	 enfilledcircbullet   NoSymbol       notsign
 !		°		¹	  subscript-1		•				¬
