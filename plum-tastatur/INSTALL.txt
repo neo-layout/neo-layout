@@ -1,6 +1,6 @@
-
+﻿
      Treiber zur Benutzung einer PLUM-Tastatur als Matrixtastatur
-	       Hans-Christoph Wirth <hcw*at*gmx*dot*de>
+               Hans-Christoph Wirth <hcw*at*gmx*dot*de>
 
 * Installation unter Linux
 
@@ -24,3 +24,13 @@
 
   Zu Testzwecken kann "enable-plum -n" aufgerufen werden, was die
   Befehle nur anzeigt, aber nicht ausführt.
+
+* Installation unter Windows
+
+  Genutzt wird der Mechanismus von Windows, mittels eines Eintrags in
+  der Registry Tastaturscancodes zu transformieren.  Durch Doppelclick
+  auf "Tastatur PLUM.reg" wird auf PLUM umgeschaltet, Doppelklick auf
+  "Tastatur NORMAL.reg" schaltet wieder zurück.
+
+  Die Änderung wird erst beim nächsten Einloggen wirksam und gilt dann
+  systemweit. 

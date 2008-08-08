@@ -2,8 +2,8 @@
 
 # Enable PLUM to work as a standard pc keyboard
 # Written 2008 by Hans-Christoph Wirth <hcw@at@gmx@dot@de>
-# $Revision: $
-# $Date: $
+# $Revision$
+# $Date$
 #
 # This command modifies any current X keymap (which is assumed to be
 # designed for use with an ordinary 105 key PC keyboard) so that it
