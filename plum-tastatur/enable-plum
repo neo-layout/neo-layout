@@ -1,0 +1,236 @@
+#!/usr/bin/perl -w
+
+# Enable PLUM to work as a standard pc keyboard
+# Written 2008 by Hans-Christoph Wirth <hcw@at@gmx@dot@de>
+# $Revision: $
+# $Date: $
+#
+# This command modifies any current X keymap (which is assumed to be
+# designed for use with an ordinary 105 key PC keyboard) so that it
+# can be used (almost) identically on a connected PLUM keyboard (see
+# www.plum.bz for information on that matrix-like keyboard).
+#
+# Usage: 
+#
+# 1. Setup your keyboard layout for your standard keyboard using xmodmap.
+# 2. Read the warning below and prepare a recovery mechanism.
+# 3. Run this script without any parameters.
+#
+#    Run with option "-n" to print the commands without executing them.
+#
+# Warning:
+#
+# There is no reliable way (that I am aware of) to determine the type
+# of the currently active keyboard.  Hence we cannot prevent that you
+# call this script twice, which will instantaneously switch keyboard
+# input into a completely useless state.  To recover from that, you
+# should prepare your desktop to run a recovery command (like 'xmodmap
+# $HOME/your-standard.modmap') on a mouse click.
+#
+######################################################################
+
+$XMODMAP = "/usr/bin/xmodmap";
+
+#
+# Options
+#
+$opt = shift || "";
+$noexec = $opt eq "-n" ? 1 : 0;
+$P = $noexec ? "! " : "";
+
+#
+# Read transformation matrix
+#
+while (<DATA>) {
+    ($plum, $pc) = split;
+    $plum[$pc] = 0+ $plum;
+}
+
+#
+# Read and parse existing map
+#
+print "${P}reading existing keymap\n";
+
+open (IN, "$XMODMAP -pke |") or die "read keyboard mapping failed\n";
+while (<IN>) {
+    /^keycode\s+(\d+)\s+=\s+(.*)$/o or die "error: malformed line: $_\n";
+
+    if ($plum[$1]) {
+	push @clearkeys, "keycode $plum[$1] =\n";
+	push @setkeys, "keycode $plum[$1] = $2\n";
+
+	push @report_keys, (split( ' ', $2, 2 ))[0];
+    }
+}
+close (IN);
+
+#
+# Read and parse existing modifiers
+#
+print "${P}reading existing modifiers\n";
+
+open (IN, "$XMODMAP -pm |") or die "read modifier list failed\n";
+while (<IN>) {
+    unless (/^(shift|lock|control|mod\d)\s*(.*)$/) {
+	next;
+    }
+
+    ($mod, $info) = ($1, $2);
+
+    @infos = ();
+    for (split( /,/, $info )) {
+	s/\(\S*\)//;
+	next if /^\s*$/;
+	push @infos, $_;
+    }
+
+    push @clearmodifiers, "clear $mod\n";
+    push @report_clearmodifiers, "$mod ";
+
+    if (@infos) {
+	push @setmodifiers, "add $mod = @infos\n";
+	push @report_setmodifiers, "$mod ";
+    }
+}
+close (IN);
+
+#
+# Now perform the changes using two external calls.
+#
+
+print "${P}clearing " . @report_keys . " keys... @report_keys\n";
+print "${P}clearing " . @report_clearmodifiers . 
+    " modifiers... @report_clearmodifiers\n";
+
+if ($noexec) {
+    open (OUT, "| cat") or die "clear map failed\n";
+} else {
+    open (OUT, "| $XMODMAP -") or die "clear map failed\n";
+}
+
+print OUT @clearkeys;
+print OUT @clearmodifiers;
+
+close (OUT) or die "clear map failed\n";
+
+print "${P}setting all keys and modifiers @report_setmodifiers\n";
+
+if ($noexec) {
+    open (OUT, "| cat") or die "set new map failed\n";
+} else {
+    open (OUT, "| $XMODMAP -") or die "set new map failed\n";
+}
+
+print OUT @setkeys;
+print OUT @setmodifiers;
+
+close (OUT) or die "set new map failed\n";
+
+# The data section lists the plum keyboard scancodes ordered from left
+# to right and top to bottom.  Each line describes one key position in
+# the form 'plum code' 'pc code'.  Since the keyboard is short of a
+# few keys we have to move some keys in the periphery: this affects in
+# particular
+#
+# - the key to the left of '1' moves down next to right shift
+# - the key to the right of left shift moves down; there is no longer 
+#   a left windows key
+# - return key moves down to space key, obviously
+#
+# As an example, the standard German 105 key layout is mapped as
+# follows:
+#
+#
+# regular pc layout
+#
+#     esc     f1  f2  f3  f4    f5  f6  f7  f8    f9  f10 f11 f12
+#      ^   1   2   3   4   5   6   7   8   9   0   ß   '   -bsp-
+#      tab   q   w   e   r   t   z   u   i   o   p   ü   +   ret
+#      lock   a   s   d   f   g   h   j   k   l   ö   ä   #
+#     shf   <   y   x   c   v   b   n   m   ,   .   -   ---shf---
+#     ctr   win   alt  ---------spc---------  agr   win  men  ctr
+#
+#
+# plum mapping
+#
+#     esc f1  f2  f3  f4  f5  f6  f7  f8  f9  f10 f11 f12
+#      1   2   3   4   5   6   7   8   9   0   ß   '  bsp
+#     tab  q   w   e   r   t   z   u   i   o   p   ü   +
+#     lck  a   s   d   f   g   h   j   k   l   ö   ä   #
+#     shf  y   x   c   v   b   n   m   ,   .   -  shf  ^
+#     ctr  <  alt  ---ret---   ---spc---  agr win ctr
+
+__DATA__
+9 9
+67 67
+68 68
+69 69
+70 70
+71 71
+72 72
+73 73
+74 74
+75 75
+76 76
+95 95
+96 96
+49 10
+10 11
+11 12
+12 13
+13 14
+14 15
+15 16
+16 17
+17 18
+18 19
+19 20
+20 21
+21 22
+47 23
+33 24
+46 25
+30 26
+58 27
+23 28
+22 29
+54 30
+41 31
+42 32
+24 33
+48 34
+51 35
+36 36
+50 66
+27 38
+26 39
+38 40
+40 41
+32 42
+57 43
+28 44
+43 45
+31 46
+39 47
+62 48
+61 51
+66 50
+45 52
+44 53
+55 54
+56 55
+59 56
+60 57
+25 58
+53 59
+29 60
+52 61
+34 62
+35 49
+37 37
+115 94
+64 64
+65 65
+113 113
+116 116
+109 109
