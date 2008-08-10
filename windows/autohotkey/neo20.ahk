@@ -46,6 +46,7 @@ Nora Geissler <nora_geissler (at) yahoo. d e>
 Matthias Berg <neo (at) matthias-berg. e u>
 Martin Roppelt <m.p.roppelt (at) web. d e>
 Dennis Heidsiek <HeidsiekB (at) aol. c o m>
+Matthias Wächter <matthias (at) waechter.. w i z .. a t>
 ...
 
 
@@ -54,8 +55,6 @@ Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 * TODO: *
 *********
 - Die Bildschirmtastatur mit Mod4 hat den Mod4-Lock deaktiviert!
-- Auf der 6. Ebene von 2 und 3 werden noch immer Delta und Nabla gesendet, aber nicht die logischen Symbole UND und ODER (wie in der Referenz); siehe hierzu auch http://de.autohotkey.com/forum/post-26040.html
-- send und send{blind} durch SendUnicodeChar ersetzen (aus Performance-Gründen jedoch nicht a-z, A-Z, 0-9)
 - Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?)
 - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
 - Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
@@ -78,7 +77,7 @@ Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 
 
 
-Revision 7?? (von Dennis Heidsiek):
+Revision 728 (von Dennis Heidsiek):
 - Ist die Datei [...]\Anwendungsdaten\NEO2\NEO2.ini vorhanden, werden dort eventuell vonhandene Werte für die Globalen Schalter beim Start übernommen
 Revision 707 (von Dennis Heidsiek):
 - Die Resourcen-Dateien (PNGs, ICOs) werden nun nach "Von Windows vorgegebenes TEMP Verzeichnis\NEO2\ extrahiert und nicht mehr in das Verzeichnis, in dem sich die EXE befindet
@@ -403,8 +402,12 @@ menu, tray, tip, %name%
    Variablen initialisieren
 */
 
-Ebene = 1
-PriorDeadKey := ""
+DeadKey = ""
+CompKey = ""
+PriorDeadKey = ""
+PriorCompKey = ""
+Ebene12 = 0
+EbeneAktualisieren()
 
 
  
@@ -457,38 +460,69 @@ gespiegelt_j = neo_ü
 */
 
 
-; CapsLock durch Umschalt+Umschalt
-;*CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
+;LShift+RShift == CapsLock (simuliert)
+; Es werden nur die beiden Tastenkombinationen abgefragt,
+; daher kommen LShift und RShift ungehindert bis in die
+; Applikation. Dies ist aber merkwürdig, da beide Shift-
+; Tasten nun /modifier keys/ werden und, wie in der AHK-
+; Hilfe beschrieben, eigentlich nicht mehr bis zur App
+; durchkommen sollten.
 
-*#::return ; Nichts machen beim # release event (weil es Mod3 ist) ; # = SC02B
+VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
+VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
+;
+; mit diesen funktioniert das automatische Übernehmen der
+; gedrückten Shift-Tasten nicht, also z.B. Shift-Ins, wenn Ins
+; bei gedrückter Shift-Taste {blind} gesendet wird
+; *VKA1SC136::
+; *VKA0SC02A::
+   if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
+      send {blind}{capslock}
+return
 
-;RShift wenn vorher LShift gedrückt wurde
-LShift & ~RShift::  
-      if GetKeyState("CapsLock","T")
+
+; Mod3+Mod3 == Mod3-Lock
+; Im Gegensatz zu LShift+RShift werden die beiden Tasten
+; _nicht_ zur Applikation weitergeleitet, da '#' kein
+; Modifier ist und CapsLock sonst den CapsLock-Status
+; beeinflusst. Dafür werden sämtliche Events dieser
+; Tasten abgefangen, und nur bei gleichzeitigem Drücken
+; wird der Mod3-Lock aktiviert und angezeigt.
+
+IsMod3Locked := 0
+; VKBFSC02B & VK14SC03A::
+; VK14SC03A & VKBFSC02B::
+*VKBFSC02B:: ; #
+*VK14SC03A:: ; CapsLock
+   if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P"))
+   {
+      if (IsMod3Locked) 
       {
-         setcapslockstate, off
+         IsMod3Locked = 0
+         MsgBox Mod3-Feststellung aufgebehoben
       }
       else
       {
-         setcapslockstate, on
+         IsMod3Locked = 1
+         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
       }
+   }
 return
 
-;LShift wenn vorher RShift gedrückt wurde
-RShift & ~LShift::
-      if GetKeyState("CapsLock","T")
-      {
-         setcapslockstate, off
-      }
-      else
-      {
-         setcapslockstate, on
-      }
-return
+; Mod4+Mod4 == Mod4-Lock
+; Wie bei Mod3-Lock werden im Gegensatz zu LShift+RShift 
+; die beiden Tasten _nicht_ zur Applikation weitergeleitet,
+; und nur bei gleichzeitigem Drücken wird der Mod4-Lock
+; aktiviert und angezeigt.
 
-; Mod4-Lock durch Mod4+Mod4
 IsMod4Locked := 0
-< & *SC138::
+; VKA5SC138 & VKE2SC056:: ; AltGr, dann <
+; VKE2SC056 & VKA5SC138:: ; <, dann AltGr
+*VKA5SC138::
+*VKE2SC056::
+   if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
+   {
+      ; Mod4-Lock durch Mod4(rechts)+Mod4(links)
       if (IsMod4Locked) 
       {
          MsgBox Mod4-Feststellung aufgebehoben
@@ -507,92 +541,22 @@ IsMod4Locked := 0
             KeyboardLED(1,"on")
          }
       }
-return
-
-*SC138::
- altGrPressed := 1
-return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
-*SC138 up::
- altGrPressed := 0
-return 
-
-; das folgende wird seltsamerweise nicht gebraucht :) oder führt zum AltGr Bug; Umschalt+‹ (Mod4) Zeigt ‹
-SC138 & *<::
-      if (IsMod4Locked) 
-      {
-         MsgBox Mod4-Feststellung aufgebehoben
-         IsMod4Locked = 0
-      }
-      else
-      {
-         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig 
-         IsMod4Locked = 1
-      }
-return
-
- 
- ; Mod3-Lock durch Mod3+Mod3
-IsMod3Locked := 0
-SC02B & *Capslock::  ; #
-      if (IsMod3Locked) 
-      {
-         MsgBox Mod3-Feststellung aufgebehoben
-         IsMod3Locked = 0
-      }
-      else
-      {
-         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
-         IsMod3Locked = 1
-      }
-return
-
-
-*Capslock:: return
-;Capslock::MsgBox hallo
-/*
-Capslock & *:
-      if (IsMod3Locked) 
-      {
-         MsgBox Mod3-Feststellung aufgebehoben
-         IsMod3Locked = 0
-      }
-      else
-      {
-         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
-         IsMod3Locked = 1
-      }
-return
-*/
- 
-/*
-;  Wird nicht mehr gebraucht weil jetzt auf b (bzw. *n::)
-; KP_Decimal durch Mod4+Mod4
-*<::
-*SC138::
-   if GetKeyState("<","P") and GetKeyState("SC138","P")
-   {
-      send {numpaddot}
    }
 return
- 
-*/
-
-
-
 /*
    ------------------------------------------------------
    QWERTZ->Neo umwandlung
    ------------------------------------------------------
 */
 ; Reihe 1
-*SC029::goto neo_tot1  ; Zirkumflex ^
-*1::goto neo_1
-*2::goto neo_2
-*3::goto neo_3
-*4::goto neo_4
-*5::goto neo_5
-*6::goto neo_6
-*7::
+*VKDCSC029::goto neo_tot1  ; Zirkumflex ^
+*VK31SC002::goto neo_1
+*VK32SC003::goto neo_2
+*VK33SC004::goto neo_3
+*VK34SC005::goto neo_4
+*VK35SC006::goto neo_5
+*VK36SC007::goto neo_6
+*VK37SC008::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_7
      else
@@ -600,8 +564,7 @@ return
         keypressed := 1
         goto %gespiegelt_7%
       }
-return
-*8::
+*VK38SC009::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_8
      else
@@ -609,8 +572,7 @@ return
         keypressed := 1
         goto %gespiegelt_8%
       }
-return
-*9::
+*VK39SC00A::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_9
      else
@@ -618,8 +580,7 @@ return
         keypressed := 1
         goto %gespiegelt_9%
       }
-return
-*0::
+*VK30SC00B::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_0
      else
@@ -627,8 +588,7 @@ return
         keypressed := 1
         goto %gespiegelt_0%
       }
-return
-*SC00C::  ; ß
+*VKDBSC00C:: ; ß
   if ( not(ahkTreiberKombi) )
   {
        if( not(einHandNeo) or not(spacepressed) )
@@ -643,10 +603,10 @@ return
   {
      goto neo_sz   
   }
-*SC00D::goto neo_tot2  ; Akut			
+*VKDDSC00D::goto neo_tot2  ; Akut			
 ; Reihe 2
-*Tab::goto neo_tab
-*q::
+VK09SC00F::goto neo_tab
+*VK51SC010:: ; q (x)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_x
@@ -655,7 +615,7 @@ return
   {
      goto neo_q   
   }
-*w::
+*VK57SC011:: ; w (v)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_v
@@ -664,7 +624,7 @@ return
   {
      goto neo_w   
   }
-*e::
+*VK45SC012:: ; e (l)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_l
@@ -673,7 +633,7 @@ return
   {
      goto neo_e   
   }
-*r::
+*VK52SC013:: ; r (c)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_c
@@ -682,7 +642,7 @@ return
   {
      goto neo_r   
   }
-*t::
+*VK54SC014:: ; t (w)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_w
@@ -691,7 +651,7 @@ return
   {
      goto neo_t   
   }
-*SC015::  ; z 
+*VK5ASC015:: ; z (k) 
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -706,7 +666,7 @@ return
   {
      goto neo_z   
   }
-*u::
+*VK55SC016:: ; u (h)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -721,7 +681,7 @@ return
   {
      goto neo_u   
   }
-*i::
+*VK49SC017:: ; i (g)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -736,7 +696,7 @@ return
   {
      goto neo_i   
   }
-*o::
+*VK4FSC018:: ; o (f)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -751,7 +711,7 @@ return
   {
      goto neo_o   
   }
-*p::
+*VK50SC019:: ; p (q)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -766,7 +726,7 @@ return
   {
      goto neo_p   
   }
-*SC01A:: ; ü
+*VKBASC01A:: ; ü (ß)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -781,7 +741,7 @@ return
   {
      goto neo_ü   
   }
-*SC01B::  ; +
+*VKBBSC01B:: ; + (tot3)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -794,8 +754,9 @@ return
   }
   else
   { } ; this should never happen
+
 ; Reihe 3
-*a::
+*VK41SC01E:: ; a (u)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_u
@@ -804,7 +765,7 @@ return
   {
      goto neo_a   
   }
-*s::
+*VK53SC01F:: ; s (i)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_i
@@ -813,7 +774,7 @@ return
   {
      goto neo_s   
   }
-*d::goto neo_a
+*VK44SC020:: ; d (a)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_a
@@ -822,7 +783,7 @@ return
   {
      goto neo_d   
   }
-*f::
+*VK46SC021:: ; f (e)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_e
@@ -831,7 +792,7 @@ return
   {
      goto neo_f   
   }
-*g::
+*VK47SC022:: ; g (o)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_o
@@ -840,7 +801,7 @@ return
   {
      goto neo_g   
   }
-*h::
+*VK48SC023:: ; h (s)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -855,7 +816,7 @@ return
   {
      goto neo_h   
   }
-*j::
+*VK4ASC024:: ; j (n)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -870,7 +831,7 @@ return
   {
      goto neo_j   
   }
-*k::
+*VK4BSC025:: ; k (r)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -885,7 +846,7 @@ return
   {
      goto neo_k   
   }
-*l::
+*VK4CSC026:: ; l (t)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -900,7 +861,7 @@ return
   {
      goto neo_l   
   }
-*SC027::  ; ö
+*VKC0SC027:: ; ö (d)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -915,7 +876,7 @@ return
   {
      goto neo_ö   
   }
-*SC028::  ; ä
+*VKDESC028:: ; ä (y)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_y
@@ -924,8 +885,9 @@ return
   {
      goto neo_ä
   }
+
 ; Reihe 4
-*SC02C::  ; y
+*VK59SC02C:: ; y (ü)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ü
@@ -934,7 +896,7 @@ return
   {
      goto neo_y   
   }
-*x::
+*VK58SC02D:: ; x (ö)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ö
@@ -943,7 +905,7 @@ return
   {
      goto neo_x   
   }
-*c::
+*VK43SC02E:: ; c (ä)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ä
@@ -952,7 +914,7 @@ return
   {
      goto neo_c
   }
-*v::
+*VK56SC02F:: ; v (p)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_p
@@ -961,7 +923,7 @@ return
   {
      goto neo_v
   }
-*b::
+*VK42SC030:: ; b (z)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_z
@@ -970,7 +932,7 @@ return
   {
      goto neo_b
   }
-*n::
+*VK4ESC031:: ; n (b)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -985,7 +947,7 @@ return
   {
      goto neo_n
   }
-*m::
+*VK4DSC032:: ; m (m)
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_m
      else
@@ -993,8 +955,7 @@ return
         keypressed := 1
         goto %gespiegelt_m%
       }
-return
-*SC033::  ; Komma ,
+*VKBCSC033:: ; , (,)
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_komma
      else
@@ -1002,8 +963,7 @@ return
         keypressed := 1
         goto %gespiegelt_komma%
       }
-return
-*SC034::  ; Punkt .
+*VKBESC034:: ; . (.)
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_punkt
      else
@@ -1011,8 +971,7 @@ return
         keypressed := 1
         goto %gespiegelt_punkt%
       }
-return
-*SC035::  ; Minus -
+*VKBDSC035:: ; - (j)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -1027,37 +986,46 @@ return
   {
      goto neo_strich
   }
+
 ; Numpad
-*NumpadDiv::goto neo_NumpadDiv
-*NumpadMult::goto neo_NumpadMult
-*NumpadSub::goto neo_NumpadSub
-*NumpadAdd::goto neo_NumpadAdd
-*NumpadEnter::goto neo_NumpadEnter
-*Numpad7::goto neo_Numpad7
-*Numpad8::goto neo_Numpad8
-*Numpad9::goto neo_Numpad9
-*Numpad4::goto neo_Numpad4
-*Numpad5::goto neo_Numpad5
-*Numpad6::goto neo_Numpad6
-*Numpad1::goto neo_Numpad1
-*Numpad2::goto neo_Numpad2
-*Numpad3::goto neo_Numpad3
-*Numpad0::goto neo_Numpad0
-*NumpadDot::goto neo_NumpadDot
-*NumpadHome::goto neo_NumpadHome
-*NumpadUp::goto neo_NumpadUp
-*NumpadPgUp::goto neo_NumpadPgUp
-*NumpadLeft::goto neo_NumpadLeft
-*NumpadClear::goto neo_NumpadClear
-*NumpadRight::goto neo_NumpadRight
-*NumpadEnd::goto neo_NumpadEnd
-*NumpadDown::goto neo_NumpadDown
-*NumpadPgDn::goto neo_NumpadPgDn
-*NumpadIns::goto neo_NumpadIns
-*NumpadDel::goto neo_NumpadDel
+*VK6FSC135::goto neo_NumpadDiv
+*VK6ASC037::goto neo_NumpadMult
+*VK6DSC04A::goto neo_NumpadSub
+*VK6BSC04E::goto neo_NumpadAdd
+*VK0DSC11C::goto neo_NumpadEnter
 
+*VK67SC047::                      ; NumPad7    (mit NumLock  und ohne Shift)
+*VK24SC047::goto neo_Numpad7      ; NumPadHome (ohne Numlock oder mit Shift)
 
+*VK68SC048::                      ; NumPad8    (mit NumLock  und ohne Shift)
+*VK26SC048::goto neo_Numpad8      ; NumPadUp   (ohne Numlock oder mit Shift)
 
+*VK69SC049::                      ; NumPad9    (mit NumLock  und ohne Shift)
+*VK21SC049::goto neo_Numpad9      ; NumPadPgUp (ohne Numlock oder mit Shift)
+
+*VK64SC04B::                      ; NumPad4    (mit NumLock  und ohne Shift)
+*VK25SC04B::goto neo_Numpad4      ; NumPadLeft (ohne Numlock oder mit Shift)
+
+*VK65SC04C::                      ; NumPad5    (mit NumLock  und ohne Shift)
+*VK0CSC04C::goto neo_Numpad5      ; NumPadClear(ohne Numlock oder mit Shift)
+
+*VK66SC04D::                      ; NumPad6    (mit NumLock  und ohne Shift)
+*VK27SC04D::goto neo_Numpad6      ; NumPadRight(ohne Numlock oder mit Shift)
+
+*VK61SC04F::                      ; NumPad1    (mit NumLock  und ohne Shift)
+*VK23SC04F::goto neo_Numpad1      ; NumPadEnd  (ohne Numlock oder mit Shift)
+
+*VK62SC050::                      ; NumPad2    (mit NumLock  und ohne Shift)
+*VK28SC050::goto neo_Numpad2      ; NumPadDown (ohne Numlock oder mit Shift)
+
+*VK63SC051::                      ; NumPad3    (mit NumLock  und ohne Shift)
+*VK22SC051::goto neo_Numpad3      ; NumPadPgDn (ohne Numlock oder mit Shift)
+
+*VK60SC052::                      ; NumPad0    (mit NumLock  und ohne Shift)
+*VK2DSC052::goto neo_Numpad0      ; NumPadIns  (ohne Numlock oder mit Shift)
+
+*VK6ESC053::                      ; NumPadDot  (mit NumLock  und ohne Shift)
+*VK2ESC053::goto neo_NumpadDot    ; NumPadIns  (ohne Numlock oder mit Shift)
 /*
 Die eigentliche NEO-Belegung und der Hauptteil des AHK-Treibers.
 
@@ -1079,780 +1047,404 @@ Die eigentliche NEO-Belegung und der Hauptteil des AHK-Treibers.
 
 neo_tot1:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      SendUnicodeChar(0x02C6) ; circumflex, tot
-      PriorDeadKey := "c1"
+      deadUni(0x02C6) ; circumflex, tot
+      DeadKey := "c1"
    }
-   else if Ebene = 2
+   else if (Ebene = 2)
    {
-      SendUnicodeChar(0x02C7) ; caron, tot
-      PriorDeadKey := "c2"
+      deadUni(0x02C7) ; caron, tot
+      DeadKey := "c2"
    }
-   else if Ebene = 3
+   else if (Ebene = 3)
    {
-      SendUnicodeChar(0x02D8) ; brevis
-      PriorDeadKey := "c3"
+      deadUni(0x02D8) ; brevis
+      DeadKey := "c3"
    }
-   else if Ebene = 4
+   else if (Ebene = 4)
    {
-      SendUnicodeChar(0x00B7) ; Mittenpunkt, tot
-      PriorDeadKey := "c4"
+      deadUni(0x00B7) ; Mittenpunkt, tot
+      DeadKey := "c4"
    }
-   else if Ebene = 5
+   else if (Ebene = 5)
    {
-      send -                  ; querstrich, tot
-      PriorDeadKey := "c5"
+      deadAsc("-")                 ; querstrich, tot
+      DeadKey := "c5"
    }
-   else if Ebene = 6
+   else if (Ebene = 6)
    {
-      Send .                  ; punkt darunter (colon)
-      PriorDeadKey := "c6"
+      deadAsc(".")                 ; punkt darunter (colon)
+      DeadKey := "c6"
    }
+   CompKey := PriorCompKey
 return
 
 neo_1:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex 1
-         BSSendUnicodeChar(0x00B9)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2081)
-      else if (CompKey = "r_small_1")
-         Comp3UnicodeChar(0x217A)          ; römisch xi
-      else if (CompKey = "r_capital_1")
-         Comp3UnicodeChar(0x216A)          ; römisch XI
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}1
-           }
-           else
-           {
-              send 1
-           }   
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-                send {blind}1
-            }
-         }
-       }
-      if (PriorDeadKey = "comp")
+      if !(CheckDeadUni("c1",0x00B9)
+        or CheckDeadUni("c5",0x2081)
+        or CheckComp3Uni("r_1",0x217A)       ; römisch xi
+        or CheckComp3Uni("R_1",0x216A))      ; römisch XI
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}1{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}1
+
+      if      (PriorDeadKey = "comp")
          CompKey := "1"
-      else if (CompKey = "r_small")
-         CompKey := "r_small_1"
-      else if (CompKey = "r_capital")
-         CompKey := "r_capital_1"
-      else
-         CompKey := ""
+      else if (PriorCompKey = "r")
+         CompKey := "r_1"
+      else if (PriorCompKey = "R")
+         CompKey := "R_1"
    }
-   else if Ebene = 2
-   {
+   else if (Ebene = 2)
       send °
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x00B9) ; 2 Hochgestellte
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
+   else if (Ebene = 4)
       SendUnicodeChar(0x2022) ; bullet
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 5)
       SendUnicodeChar(0x2640) ; Piktogramm weiblich
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x00AC) ; Nicht-Symbol
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_2:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex 
-         BSSendUnicodeChar(0x00B2)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2082)
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2171)          ; römisch ii
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2161)          ; römisch II
-      else if (CompKey = "r_small_1")
-         Comp3UnicodeChar(0x217B)          ; römisch xii
-      else if (CompKey = "r_capital_1")
-         Comp3UnicodeChar(0x216B)          ; römisch XII
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}2
-           }
-           else
-           {
-              send 2
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-                send {blind}2
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x00B2)
+        or CheckDeadUni("c5",0x2082)
+        or CheckCompUni("r",0x2171)      ; römisch ii
+        or CheckCompUni("R",0x2161)      ; römisch II
+        or CheckComp3Uni("r_1",0x217B)   ; römisch xii
+        or CheckComp3Uni("R_1",0x216B))  ; römisch XII
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}2{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}2
+
       if (PriorDeadKey = "comp")
          CompKey := "2"
-      else
-         CompKey := ""         
    }
-   else if Ebene = 2
-   {
+   else if (Ebene = 2)
       SendUnicodeChar(0x2116) ; numero
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {    
+   else if (Ebene = 3)
       SendUnicodeChar(0x00B2) ; 2 Hochgestellte
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
+   else if (Ebene = 4)
       SendUnicodeChar(0x2023) ; aufzaehlungspfeil
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 5)
       SendUnicodeChar(0x26A5) ; Piktogramm Zwitter
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2228) ; Logisches Oder
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_3:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x00B3)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2083)
-      else if (CompKey = "1")
-         CompUnicodeChar(0x2153)          ; 1/3
-      else if (CompKey = "2")
-         CompUnicodeChar(0x2154)          ; 2/3
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2172)          ; römisch iii
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2162)          ; römisch III
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}3
-           }
-           else
-           {
-               send 3
-           }    
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {           
-              send {blind}3
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x00B3)
+        or CheckDeadUni("c5",0x2083)
+        or CheckCompUni("1",0x2153)           ; 1/3
+        or CheckCompUni("2",0x2154)           ; 2/3
+        or CheckCompUni("r",0x2172)           ; römisch iii
+        or CheckCompUni("R",0x2162))          ; römisch III
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}3{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}3
+
       if (PriorDeadKey = "comp")
          CompKey := "3"
-      else
-         CompKey := ""         
    }
-   else if Ebene = 2
-   {
+   else if (Ebene = 2)
       send §
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x00B3) ; 3 Hochgestellte
-      CompKey := ""
-   }
-   else if Ebene = 4
-   { } ; leer
-   else if Ebene = 5
+   else if (Ebene = 4)
    {
+       CompKey := PriorCompKey
+       DeadKey := PriorDeadKey
+   } ; leer
+   else if (Ebene = 5)
       SendUnicodeChar(0x2642) ; Piktogramm Mann
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2227) ; Logisches Und
-      CompKey := ""
-   }   
-   PriorDeadKey := ""
 return
 
 neo_4:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2074)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2084)         
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2173)          ; römisch iv
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2163)          ; römisch IV
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}4
-           }
-           else
-           {
-              send 4
-           }
-               
-         }
-         else
-         {
-           if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-           {
-               send {blind}4
-           }
-         }
-       }
+      if !(CheckDeadUni("c1",0x2074)
+        or CheckDeadUni("c5",0x2084)
+        or CheckCompUni("r",0x2173)     ; römisch iv
+        or CheckCompUni("R",0x2163))    ; römisch IV
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}4{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}4
+
       if (PriorDeadKey = "comp")
          CompKey := "4"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       SendUnicodeChar(0x00BB) ; », Double guillemot right
-      CompKey := ""
-   }
-    else if Ebene = 3
-   {
-      Send › ; Single guillemot right
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Send {PgUp}    ; Prev
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+    else if (Ebene = 3)
+      Send {blind}› ; Single guillemot right
+   else if (Ebene = 4)
+      Send {blind}{PgUp}    ; Prev
+   else if (Ebene = 5)
       SendUnicodeChar(0x2113) ; Script small L
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x22A5) ; Senkrecht
-      CompKey := ""
-   }   
-   PriorDeadKey := ""
 return
 
 neo_5:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2075)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2085)
-      else if (CompKey = "1")
-         CompUnicodeChar(0x2155)          ; 1/5
-      else if (CompKey = "2")
-         CompUnicodeChar(0x2156)          ; 2/5
-      else if (CompKey = "3")
-         CompUnicodeChar(0x2157)          ; 3/5
-      else if (CompKey = "4")
-         CompUnicodeChar(0x2158)          ; 4/5
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2174)          ; römisch v
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2164)          ; römisch V
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}5
-           }
-           else
-           {
-              send 5
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-               send {blind}5
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x2075)
+        or CheckDeadUni("c5",0x2085)
+        or CheckCompUni("1",0x2155)           ; 1/5
+        or CheckCompUni("2",0x2156)           ; 2/5
+        or CheckCompUni("3",0x2157)           ; 3/5
+        or CheckCompUni("4",0x2158)           ; 4/5
+        or CheckCompUni("r",0x2174)           ; römisch v
+        or CheckCompUni("R",0x2164))          ; römisch V
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}5{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}5
+
       if (PriorDeadKey = "comp")
          CompKey := "5"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       SendUnicodeChar(0x00AB) ; «, Double guillemot left
-      CompKey := ""
-   }
-   else if Ebene = 3
+   else if (Ebene = 3)
+      Send {blind}‹ ; Single guillemot left
+   else if (Ebene = 4)
    {
-      Send ‹ ; Single guillemot left
-      CompKey := ""
-   }
-   else if Ebene = 4
-   { } ; leer
-   else if Ebene = 5
-   {
+       CompKey := PriorCompKey
+       DeadKey := PriorDeadKey
+   } ; leer
+   else if (Ebene = 5)
       SendUnicodeChar(0x2020) ; Kreuz (Dagger)
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2221) ; Winkel
-      CompKey := ""
-   }   
-   PriorDeadKey := ""
 return
 
 neo_6:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2076)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2086)         
-      else if (CompKey = "1")
-         CompUnicodeChar(0x2159)          ; 1/6
-      else if (CompKey = "5")
-         CompUnicodeChar(0x215A)          ; 5/6
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2175)          ; römisch vi
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2165)          ; römisch VI
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}6
-           }
-           else
-           {
-              send 6
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-              send {blind}6
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x2076)
+        or CheckDeadUni("c5",0x2086)
+        or CheckCompUni("1",0x2159)           ; 1/6
+        or CheckCompUni("5",0x215A)           ; 5/6
+        or CheckCompUni("r",0x2175)           ; römisch vi
+        or CheckCompUni("R",0x2165))          ; römisch VI
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}6{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}6
+
       if (PriorDeadKey = "comp")
          CompKey := "6"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       send €
-      CompKey := ""
-   }
-   else if Ebene = 3
+   else if (Ebene = 3)
+      send {blind}¢
+   else if (Ebene = 4)
+      send {blind}£
+   else if (Ebene = 5)
    {
-      send ¢
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      send £
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {  } ; leer
-   else if Ebene = 6
-   {
+       CompKey := PriorCompKey
+       DeadKey := PriorDeadKey
+   } ; leer
+   else if (Ebene = 6)
       SendUnicodeChar(0x2225) ; parallel
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_7:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2077)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2087)
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2176)          ; römisch vii
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2166)          ; römisch VII
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}7
-           }
-           else
-           {
-              send 7
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-               send {blind}7
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x2077)
+        or CheckDeadUni("c5",0x2087)
+        or CheckCompUni("r",0x2176)     ; römisch vii
+        or CheckCompUni("R",0x2166))    ; römisch VII
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}7{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}7
+
       if (PriorDeadKey = "comp")
          CompKey := "7"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       send $
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send ¥
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      send ¤ 
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 3)
+      send {blind}¥
+   else if (Ebene = 4)
+      send {blind}¤ 
+   else if (Ebene = 5)
       SendUnicodeChar(0x03BA) ; greek small letter kappa
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2209) ; nicht Element von 
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_8:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2078)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2088)
-      else if (CompKey = "1")
-         CompUnicodeChar(0x215B)          ; 1/8
-      else if (CompKey = "3")
-         CompUnicodeChar(0x215C)          ; 3/8
-      else if (CompKey = "5")
-         CompUnicodeChar(0x215D)          ; 5/8
-      else if (CompKey = "7")
-         CompUnicodeChar(0x215E)          ; 7/8
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2177)          ; römisch viii
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2167)          ; römisch VIII
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}8
-           }
-           else
-           {
-              send 8
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-              send {blind}8
-            }   
-         }
-       }
+      if !(CheckDeadUni("c1",0x2078)
+        or CheckDeadUni("c5",0x2088)
+        or CheckCompUni("1",0x215B)           ; 1/8
+        or CheckCompUni("3",0x215C)           ; 3/8
+        or CheckCompUni("5",0x215D)           ; 5/8
+        or CheckCompUni("7",0x215E)           ; 7/8
+        or CheckCompUni("r",0x2177)           ; römisch viii
+        or CheckCompUni("R",0x2167))          ; römisch VIII
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}8{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}8
+
       if (PriorDeadKey = "comp")
          CompKey := "8"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       send „
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send ‚
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Send /
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 3)
+      send {blind}‚
+   else if (Ebene = 4)
+      Send {blind}{NumpadDiv}
+   else if (Ebene = 5)
       SendUnicodeChar(0x27E8) ;bra (öffnende spitze klammer)
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2204) ; es existiert nicht
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_9:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2079)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2089)
-      else if (CompKey = "r_small")
-         CompUnicodeChar(0x2178)          ; römisch ix
-      else if (CompKey = "r_capital")
-         CompUnicodeChar(0x2168)          ; römisch IX
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}9
-           }
-           else
-           {
-              send 9
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-              send {blind}9
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x2079)
+        or CheckDeadUni("c5",0x2089)
+        or CheckCompUni("r",0x2178)     ; römisch ix
+        or CheckCompUni("R",0x2168))    ; römisch IX
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}9{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}9
+
       if (PriorDeadKey = "comp")
          CompKey := "9"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       send “
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send ‘
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Send *
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 3)
+      send {blind}‘
+   else if (Ebene = 4)
+      Send {blind}{NumpadMult}
+   else if (Ebene = 5)
       SendUnicodeChar(0x27E9) ;ket (schließende spitze klammer)
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2226) ; nicht parallel
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_0:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x2070)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2080)         
-      else if (CompKey = "r_small_1")
-         Comp3UnicodeChar(0x2179)          ; römisch x
-      else if (CompKey = "r_capital_1")
-         Comp3UnicodeChar(0x2169)          ; römisch X
-      else
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}0
-           }
-           else
-           {
-              send 0
-           }
-               
-         }
-         else {
-            if ( not(lernModus) or (lernModus_std_ZahlenReihe) )
-            {
-               send {blind}0
-            }
-         }
-       }
+      if !(CheckDeadUni("c1",0x2070)
+        or CheckDeadUni("c5",0x2080)
+        or CheckComp3Uni("r_1",0x2179)     ; römisch x
+        or CheckComp3Uni("R_1",0x2169))    ; römisch X
+         if (GetKeyState("CapsLock","T")) 
+            send {blind}{Shift down}0{Shift up}
+         else if (not(lernModus) or lernModus_std_ZahlenReihe)
+            send {blind}0
+
       if (PriorDeadKey = "comp")
          CompKey := "0"
-      else
-         CompKey := ""         
-    }
-   else if Ebene = 2
-   {
+   }
+   else if (Ebene = 2)
       send ”
-      CompKey := ""
-   }
-   else if Ebene = 3
+   else if (Ebene = 3)
+      send {blind}’
+   else if (Ebene = 4)
+      Send {blind}{NumpadMinus}
+   else if (Ebene = 5)
    {
-      send ’
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Send -
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {  } ; leer
-   else if Ebene = 6
-   {
+       CompKey := PriorCompKey
+       DeadKey := PriorDeadKey
+   } ; leer
+   else if (Ebene = 6)
       SendUnicodeChar(0x2205) ; leere Menge
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_strich:
    EbeneAktualisieren()
-   if Ebene = 1
-        {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}-
-           }
-           else
-           {
-              send -
-           }
-               
-         }
-         else {
-           send {blind}-   ;Bindestrich
-         }
-       }
-   else if Ebene = 2
+   if (Ebene = 1)
+      if (GetKeyState("CapsLock","T")) 
+         send {blind}{Shift down}-{Shift up}
+      else
+         send {blind}- ; Bindestrich-Minus
+   else if (Ebene = 2)
       SendUnicodeChar(0x2013) ; Gedankenstrich
-   else if Ebene = 3
-      SendUnicodeChar(0x2014) ; Englische Gedankenstrich
-   else if Ebene = 4
-     { } ; leer ...  SendUnicodeChar(0x254C) 
-   else if Ebene = 5
-      SendUnicodeChar(0x2011) ; geschützter Bindestrich
-   else if Ebene = 6
-      SendUnicodeChar(0x00AD) ; weicher Trennstrich
-   PriorDeadKey := ""   CompKey := ""
+   else if (Ebene = 3)
+      SendUnicodeChar(0x2014) ; Englischer Gedankenstrich (Geviertstrich)
+   else if (Ebene = 4)
+   {
+       CompKey := PriorCompKey
+       DeadKey := PriorDeadKey
+   } ; leer
+   else if (Ebene = 5)
+      SendUnicodeChar(0x2011) ; geschützter Bindestrich (Bindestrich ohne Zeilenumbruch)
+   else if (Ebene = 6)
+      SendUnicodeChar(0x00AD) ; weicher Bindestrich
 return
 
 neo_tot2:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      send {´}{space} ; akut, tot
-      PriorDeadKey := "a1"
+      deadAsc("{´}{space}") ; akut, tot
+      DeadKey := "a1"
    }
-   else if Ebene = 2
+   else if (Ebene = 2)
    {
-      send ``{space}
-      PriorDeadKey := "a2"
+      deadAsc("``{space}")
+      DeadKey := "a2"
    }
-   else if Ebene = 3
+   else if (Ebene = 3)
    {
-      send ¸ ; cedilla
-      PriorDeadKey := "a3"
+      deadAsc("¸") ; cedilla
+      DeadKey := "a3"
    }
-   else if Ebene = 4
+   else if (Ebene = 4)
    {
-      SendUnicodeChar(0x02D9) ; punkt oben drüber
-      PriorDeadKey := "a4"
+      deadUni(0x02D9) ; punkt oben drüber
+      DeadKey := "a4"
    }
-   else if Ebene = 5
+   else if (Ebene = 5)
    {
-      SendUnicodeChar(0x02DB) ; ogonek
-      PriorDeadKey := "a5"
+      deadUni(0x02DB) ; ogonek
+      DeadKey := "a5"
    }
-   else if Ebene = 6
+   else if (Ebene = 6)
    {
-      SendUnicodeChar(0x02DA)  ; ring obendrauf
-      PriorDeadKey := "a6"
+      deadUni(0x02DA)  ; ring obendrauf
+      DeadKey := "a6"
    }
+   CompKey := PriorCompKey
 return
 
 
@@ -1864,506 +1456,247 @@ return
 
 neo_x:
    EbeneAktualisieren()
-   if Ebene = 1
-      sendinput {blind}x
-   else if Ebene = 2
-      sendinput {blind}X
-   else if Ebene = 3
+   if (Ebene12)
+      OutputChar("x","X")
+   else if (Ebene = 3)
       SendUnicodeChar(0x2026) ;Ellipse
-   else if Ebene = 5
+   else if (Ebene = 5)
       SendUnicodeChar(0x03BE) ;xi
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x039E)  ; Xi
-   PriorDeadKey := ""   CompKey := ""
 return
 
 
 neo_v:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c6")      ; punkt darunter 
-         BSSendUnicodeChar(0x1E7F)
+   if (Ebene12 and !(CheckDeadUni12("c6",0x1E7F,0x1E7E)))
+      OutputChar("v","V")
+   else if (Ebene = 3)
+      send {blind}_
+   else if (Ebene = 4)
+      if (not(lernModus) or lernModus_neo_Backspace)
+         Send {blind}{Backspace}
       else
-         sendinput {blind}v
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c6")      ; punkt darunter
-         BSSendUnicodeChar(0x1E7E)
-      else 
-         sendinput {blind}V
-   }
-   else if Ebene = 3
-      send _
-   else if Ebene = 4
-      if ( not(lernModus) or (lernModus_neo_Backspace) )
       {
-         Send {Backspace}
-      }
-      else 
-      {} ; leer
-   else if Ebene = 6
+          CompKey := PriorCompKey
+          DeadKey := PriorDeadKey
+      } ; leer
+   else if (Ebene = 6)
       SendUnicodeChar(0x2259) ; estimates
-   PriorDeadKey := ""   CompKey := ""
 return
 
 
 
 neo_l:
    EbeneAktualisieren()
-   if Ebene = 1
-   { 
-      if (PriorDeadKey = "t4")       ; Schrägstrich
-         BSSendUnicodeChar(0x0142)
-      else if (PriorDeadKey = "a1")      ; akut 
-         BSSendUnicodeChar(0x013A)
-      else if (PriorDeadKey = "c2")     ; caron 
-         BSSendUnicodeChar(0x013E)
-      else if (PriorDeadKey = "a3")    ; cedilla
-         BSSendUnicodeChar(0x013C)
-      else if (PriorDeadKey = "c4")  ; Mittenpunkt
-         BSSendUnicodeChar(0x0140)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E37)
-      else 
-         sendinput {blind}l
-      if (PriorDeadKey = "comp")            ; compose
-         CompKey := "l_small"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "a1")           ; akut 
-         BSSendUnicodeChar(0x0139)
-      else if (PriorDeadKey = "c2")     ; caron 
-         BSSendUnicodeChar(0x013D)
-      else if (PriorDeadKey = "a3")    ; cedilla
-         BSSendUnicodeChar(0x013B)
-      else if (PriorDeadKey = "t4")  ; Schrägstrich 
-         BSSendUnicodeChar(0x0141)
-      else if (PriorDeadKey = "c4")  ; Mittenpunkt 
-         BSSendUnicodeChar(0x013F)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E36)
-      else 
-         sendinput {blind}L
-      if (PriorDeadKey = "comp")            ; compose
-         CompKey := "l_capital"
-      else CompKey := ""
-   }      
-   else if Ebene = 3
-   {
-      send [
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Sendinput {Blind}{Up}
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   if (Ebene12 and !(CheckDeadUni12("a1",0x013A,0x0139)
+                  or CheckDeadUni12("a3",0x013C,0x013B)
+                  or CheckDeadUni12("c2",0x013E,0x013D)
+                  or CheckDeadUni12("c4",0x0140,0x013F)
+                  or CheckDeadUni12("c6",0x1E37,0x1E36)
+                  or CheckDeadUni12("t4",0x0142,0x0141)))
+      OutputChar("l","L")
+   else if (Ebene = 3)
+      send {blind}[
+   else if (Ebene = 4)
+      Send {Blind}{Up}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03BB) ; lambda
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x039B) ; Lambda
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 
 neo_c:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x0109)
-      else if (PriorDeadKey = "c2")     ; caron
-         BSSendUnicodeChar(0x010D)
-      else if (PriorDeadKey = "a1")      ; akut
-         BSSendUnicodeChar(0x0107)
-      else if (PriorDeadKey = "a3")    ; cedilla
-         BSSendUnicodeChar(0x00E7)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x010B)
-      else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
-         Send {bs}©
+   if (Ebene12 and !(CheckDeadUni12("a1",0x0107,0x0106)
+                  or CheckDeadUni12("a3",0x00E7,0x00E6)
+                  or CheckDeadUni12("a4",0x010B,0x010A)
+                  or CheckDeadUni12("c1",0x0109,0x0108)
+                  or CheckDeadUni12("c2",0x010D,0x010C)
+                  or CheckCompAsc12("o","©","©")
+                  or CheckCompAsc12("O","©","©")))
+      OutputChar("c","C")
+   else if (Ebene = 3)
+      send {blind}]
+   else if (Ebene = 4)
+      if (not(lernModus) or lernModus_neo_Entf)
+        Send {blind}{Del}
       else
-      {         
-         sendinput {blind}c      
-      }
-      if (PriorDeadKey = "comp")
-         CompKey := "c_small"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")          ; circumflex 
-         BSSendUnicodeChar(0x0108)
-      else if (PriorDeadKey = "c2")    ; caron 
-         BSSendUnicodeChar(0x010C)
-      else if (PriorDeadKey = "a1")     ; akut 
-         BSSendUnicodeChar(0x0106)
-      else if (PriorDeadKey = "a3")   ; cedilla 
-         BSSendUnicodeChar(0x00E6)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x010A)
-      else if ( (CompKey = "o_small") or (CompKey = "o_capital") )
-         Send {bs}©         
-      else 
-         sendinput {blind}C
-      if (PriorDeadKey = "comp")
-         CompKey = "c_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send ]
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      if ( not(lernModus) or (lernModus_neo_Entf) )
       {
-        Send {Del}
-        CompKey := ""
-      }
-      else 
-      {} ; leer
-   }
-   else if Ebene = 5
-   {
+          CompKey := PriorCompKey
+          DeadKey := PriorDeadKey
+      } ; leer
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C7) ;chi
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2102)  ; C (Komplexe Zahlen)
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_w:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x0175)
-      else
-         sendinput {blind}w
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x0174)
-      else
-         sendinput {blind}W
-   }
-   else if Ebene = 3
+   if (Ebene12 and !(CheckDeadUni12("c1",0x0175,0x0174)))
+      OutputChar("w","W")
+   else if (Ebene = 3)
       SendUnicodeChar(0x005E) ; untotes ^ - Unicode-Name: CIRCUMFLEX ACCENT
       ;send {^}{space} ; Funktioniert nicht unter Java-Programmen 
-   else if Ebene = 4
-      Send {Insert}
-   else if Ebene = 5
+   else if (Ebene = 4)
+      Send {blind}{Insert}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C9) ; omega
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x03A9) ; Omega
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_k:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "a3")         ; cedilla
-         BSSendUnicodeChar(0x0137)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E33)
-      else
-         sendinput {blind}k
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "a3")         ; cedilla 
-         BSSendUnicodeChar(0x0136)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E32)
-      else
-         sendinput {blind}K
-   }
-   else if Ebene = 3
-      sendraw !
-   else if Ebene = 4
+   if (Ebene12 and !(CheckDeadUni12("a3",0x0137,0x0136)
+                  or CheckDeadUni12("c6",0x1E33,0x1E32)))
+      OutputChar("k","K")
+   else if (Ebene = 3)
+      send {blind}{!}
+   else if (Ebene = 4)
       Send ¡
-   else if Ebene = 5
+   else if (Ebene = 5)
       SendUnicodeChar(0x03F0) ;kappa symbol (varkappa)
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x221A) ; Wurzel
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_h:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x0125)
-      else if (PriorDeadKey = "c5")   ; Querstrich 
-         BSSendUnicodeChar(0x0127)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E23)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E25)
-      else sendinput {blind}h
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x0124)
-      else if (PriorDeadKey = "c5")   ; Querstrich
-         BSSendUnicodeChar(0x0126)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E22)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E24)
-      else sendinput {blind}H
-   }
-   else if Ebene = 3
-   {
-      if (PriorDeadKey = "c5")    ; Querstrich
-         BSSendUnicodeChar(0x2264) ; kleiner gleich
-      else
-         send {blind}<
-   }
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2077)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2087)
-      else
-         Send 7
-   }
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a4",0x1E23,0x1E22)
+                  or CheckDeadUni12("c1",0x0125,0x0124)
+                  or CheckDeadUni12("c5",0x0127,0x0126)
+                  or CheckDeadUni12("c6",0x1E25,0x1E24)))
+      OutputChar("h","H")
+   else if ((Ebene = 3) and !(CheckDeadUni("c5",0x2264))) ; kleiner gleich
+      send {blind}<
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2077)
+                           or CheckDeadUni("c5",0x2087)))
+      Send {blind}{NumPad7}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C8) ;psi
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x03A8)  ; Psi
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_g:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x011D)
-      else if (PriorDeadKey = "c3")   ; brevis
-         BSSendUnicodeChar(0x011F)
-      else if (PriorDeadKey = "a3")   ; cedilla
-         BSSendUnicodeChar(0x0123)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x0121)
-      else sendinput {blind}g
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x011C)
-      else if (PriorDeadKey = "c3")    ; brevis 
-         BSSendUnicodeChar(0x011E)
-      else if (PriorDeadKey = "a3")    ; cedilla 
-         BSSendUnicodeChar(0x0122)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x0120)
-      else sendinput {blind}G
-   }
-   else if Ebene = 3
-   {
-      if (PriorDeadKey = "c5")    ; Querstrich
-         SendUnicodeChar(0x2265) ; größer gleich
-      else
-         send >
-   }
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2078)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2088)
-      else
-         Send 8
-   }
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a3",0x0123,0x0122)
+                  or CheckDeadUni12("a4",0x0121,0x0120)
+                  or CheckDeadUni12("c1",0x011D,0x011C)
+                  or CheckDeadUni12("c3",0x011F,0x011E)))
+      OutputChar("g","G")
+   else if ((Ebene = 3) and !(CheckDeadUni("c5",0x2265))) ; größer gleich
+      send {blind}>
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2078)
+                           or CheckDeadUni("c5",0x2088)))
+      Send {blind}{NumPad8}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B3) ;gamma
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x0393)  ; Gamma
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_f:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "t4")      ; durchgestrichen
-         BSSendUnicodeChar(0x0192)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x1E1F)
-      else sendinput {blind}f
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "t4")       ; durchgestrichen
-         BSSendUnicodeChar(0x0191)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E1E)
-      else sendinput {blind}F
-   } 
-   else if Ebene = 3
-   {
-      if (PriorDeadKey = "c1")            ; circumflex 
-         BSSendUnicodeChar(0x2259)   ; entspricht
-      else if (PriorDeadKey = "t1")       ; tilde 
-         BSSendUnicodeChar(0x2245)   ; ungefähr gleich
-      else if (PriorDeadKey = "t4")       ; Schrägstrich 
-         BSSendUnicodeChar(0x2260)   ; ungleich
-      else if (PriorDeadKey = "c5")       ; Querstrich
-         BSSendUnicodeChar(0x2261)   ; identisch
-      else if (PriorDeadKey = "c2")       ; caron 
-         BSSendUnicodeChar(0x225A)   ; EQUIANGULAR TO
-      else if (PriorDeadKey = "a6")       ; ring drüber 
-         BSSendUnicodeChar(0x2257)   ; ring equal to
-      else
-         send `=
-   }
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2079)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2089)
-      else
-         Send 9
-   }
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a4",0x1E1F,0x1E1E)
+                  or CheckDeadUni12("t4",0x0192,0x0191)))
+      OutputChar("f","F")
+   else if ((Ebene = 3) and !(CheckDeadUni("a6",0x2257)    ; ring equal to
+                      or CheckDeadUni("c1",0x2259)    ; entspricht
+                      or CheckDeadUni("c2",0x225A)    ; EQUIANGULAR TO
+                      or CheckDeadUni("c5",0x2261)    ; identisch
+                      or CheckDeadUni("t1",0x2245)    ; ungefähr gleich
+                      or CheckDeadUni("t4",0x2260)))  ; ungleich
+      send {blind}`=
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2079)
+                           or CheckDeadUni("c5",0x2089)))
+      Send {blind}{NumPad9}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C6) ; phi
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x03A6)  ; Phi
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_q:
    EbeneAktualisieren()
-   if Ebene = 1
-      sendinput {blind}q
-   else if Ebene = 2
-      sendinput {blind}Q
-   else if Ebene = 3
-      send {&}
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x207A)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x208A)
-      else
-         Send {+}
-   }
-   else if Ebene = 5
+   if (Ebene12)
+      OutputChar("q","Q")
+   else if (Ebene = 3)
+      send {blind}{&}
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x207A)
+                           or CheckDeadUni("c5",0x208A)))
+      Send {blind}{NumPadPlus}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03D5) ; phi symbol (varphi)
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x211A) ; Q (rationale Zahlen)
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_sz:
    EbeneAktualisieren()
-   if Ebene = 1
-      if GetKeyState("CapsLock","T")
-      {
+   if (Ebene = 1)
+      if (GetKeyState("CapsLock","T"))
          SendUnicodeChar(0x1E9E) ; verssal-ß
-      }
+      else if (LangSTastatur = 1)
+         send {blind}s
       else
-      {
+         send ß
+   else if (Ebene = 2)
+      if (GetKeyState("CapsLock","T"))
          if (LangSTastatur = 1)
-         {
-            sendinput {blind}s
-         }
+            send {blind}s
          else
-         {
             send ß
-         }
-      }
-   else if Ebene = 2
-      if GetKeyState("CapsLock","T")
-      {
-         if (LangSTastatur = 1)
-         {
-            sendinput {blind}s
-         }
-         else
-         {
-            send ß
-         }
-      }
       else
-      {
          SendUnicodeChar(0x1E9E) ; versal-ß
-      }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       if (LangSTastatur = 1)
          send ß
       else
          SendUnicodeChar(0x017F) ; langes s
-   }
-   else if Ebene = 5
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C2) ; varsigma
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x2218) ; Verknüpfungsoperator
-   PriorDeadKey := ""   CompKey := ""
 return
 
 
 neo_tot3:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene = 1)
    {
-      SendUnicodeChar(0x02DC)  ; tilde, tot 
-      PriorDeadKey := "t1"
+      deadUni(0x02DC)  ; tilde, tot 
+      DeadKey := "t1"
    }
-   else if Ebene = 2
+   else if (Ebene = 2)
    {
-      SendUnicodeChar(0x00AF)  ; macron, tot
-      PriorDeadKey := "t2"
+      deadUni(0x00AF)  ; macron, tot
+      DeadKey := "t2"
    }
-   else if Ebene = 3
+   else if (Ebene = 3)
    {
-      SendUnicodeChar(0x00A8)  ; diaerese
-      PriorDeadKey := "t3"
+      deadUni(0x00A8)  ; diaerese
+      DeadKey := "t3"
    }
-   else if Ebene = 4
+   else if (Ebene = 4)
    {
-      SendUnicodeChar(0x002F)  ; Schrägstrich, tot
-      PriorDeadKey := "t4"
+      deadUni(0x002F)  ; Schrägstrich, tot
+      DeadKey := "t4"
    }
-   else if Ebene = 5
+   else if (Ebene = 5)
    {
-      sendUnicodeChar(0x02DD)  ;doppelakut
-      PriorDeadKey := "t5"
+      deadUni(0x02DD)  ;doppelakut
+      DeadKey := "t5"
    }
-   else if Ebene = 6
+   else if (Ebene = 6)
    {
-      SendUnicodeChar(0x02CF)  ; komma drunter, tot
-      PriorDeadKey := "t6"
+      deadUni(0x02CF)  ; komma drunter, tot
+      DeadKey := "t6"
    }
+   
 return
 
 
@@ -2375,750 +1708,244 @@ return
 
 neo_u:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")       ; circumflex
-         BSSendUnicodeChar(0x00FB)
-      else if (PriorDeadKey = "a1")  ; akut 
-         BSSendUnicodeChar(0x00FA)
-      else if (PriorDeadKey = "a2")  ; grave
-         BSSendUnicodeChar(0x00F9)
-      else if (PriorDeadKey = "t3")  ; diaerese
-         Send, {bs}ü
-      else if (PriorDeadKey = "t5")  ; doppelakut 
-         BSSendUnicodeChar(0x0171)
-      else if (PriorDeadKey = "c3")  ; brevis
-         BSSendUnicodeChar(0x016D)
-      else if (PriorDeadKey = "t2")  ; macron
-         BSSendUnicodeChar(0x016B)
-      else if (PriorDeadKey = "a5")  ; ogonek
-         BSSendUnicodeChar(0x0173)
-      else if (PriorDeadKey = "a6")  ; Ring
-         BSSendUnicodeChar(0x016F)
-      else if (PriorDeadKey = "t1")  ; tilde
-         BSSendUnicodeChar(0x0169)
-      else if (PriorDeadKey = "c2")  ; caron
-         BSSendUnicodeChar(0x01D4)
-      else
-         sendinput {blind}u
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00DB)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00DA)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00D9)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         Send, {bs}Ü
-      else if (PriorDeadKey = "a6")   ; Ring
-         BSSendUnicodeChar(0x016E)
-      else if (PriorDeadKey = "c3")   ; brevis
-         BSSendUnicodeChar(0x016C)
-      else if (PriorDeadKey = "t5")   ; doppelakut
-         BSSendUnicodeChar(0x0170)
-      else if (PriorDeadKey = "c2")   ; caron 
-         BSSendUnicodeChar(0x01D3)
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x016A)
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x0172)
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x0168)
-      else
-         sendinput {blind}U
-   }
-   else if Ebene = 3
-      send \
-   else if Ebene = 4
+   if (Ebene12 and !(CheckDeadUni12("a1",0x00FA,0x00DA)
+                  or CheckDeadUni12("a2",0x00F9,0x00D9)
+                  or CheckDeadUni12("a5",0x0173,0x0172)
+                  or CheckDeadUni12("a6",0x016F,0x016E)
+                  or CheckDeadUni12("c1",0x00FB,0x00DB)
+                  or CheckDeadUni12("c2",0x01D4,0x01D3)
+                  or CheckDeadUni12("c3",0x016D,0x016C)
+                  or CheckDeadUni12("t1",0x0169,0x0168)
+                  or CheckDeadUni12("t2",0x016B,0x016A)
+                  or CheckDeadAsc12("t3","ü","Ü")
+                  or CheckDeadUni12("t5",0x0171,0x0170)))
+      OutputChar("u","U")
+   else if (Ebene = 3)
+      send {blind}\
+   else if (Ebene = 4)
       Send {blind}{Home}
-   else if Ebene = 5    
-   {  } ; leer
-   else if Ebene = 6
+   else if (Ebene = 5)
+   {
+       CompKey := PriorCompKey
+       DeadKey := PriorDeadKey
+   } ; leer
+   else if (Ebene = 6)
       SendUnicodeChar(0x222E) ; contour integral
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_i:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00EE)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00ED)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00EC)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         Send, {bs}ï
-      else if (PriorDeadKey = "t2")   ; macron - defekt
-         BSSendUnicodeChar(0x012B)
-      else if (PriorDeadKey = "c3")   ; brevis
-         BSSendUnicodeChar(0x012D)
-      else if (PriorDeadKey = "a4")   ; ogonek
-         BSSendUnicodeChar(0x012F)
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x0129)
-      else if (PriorDeadKey = "a5")   ; punkt darüber 
-         BSSendUnicodeChar(0x0131)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01D0)
-      else 
-         sendinput {blind}i
-      if (PriorDeadKey = "comp")      ; compose
-         CompKey := "i_small"
-      else 
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {   
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00CE)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00CD)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00CC)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         Send, {bs}Ï
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x012A)
-      else if (PriorDeadKey = "c3")   ; brevis 
-         BSSendUnicodeChar(0x012C)
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x012E)
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x0128)
-      else if (PriorDeadKey = "a4")   ; punkt darüber 
-         BSSendUnicodeChar(0x0130)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01CF)
-      else 
-         sendinput {blind}I
-      if (PriorDeadKey = "comp")      ; compose
-         CompKey := "i_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send `/
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Sendinput {Blind}{Left}
-      CompKey := ""
-   }
-   else if Ebene = 5    
-   {
+   if (Ebene12 and !(CheckDeadUni12("a1",0x00ED,0x00CD)
+                  or CheckDeadUni12("a2",0x00EC,0x00CC)
+                  or CheckDeadUni12("a4",0x012F,0x012E)
+                  or CheckDeadUni12("a5",0x0131,0x0130)
+                  or CheckDeadUni12("c1",0x00EE,0x00CE)
+                  or CheckDeadUni12("c2",0x01D0,0x01CF)
+                  or CheckDeadUni12("c3",0x012D,0x012C)
+                  or CheckDeadUni12("t1",0x0129,0x0128)
+                  or CheckDeadUni12("t2",0x012B,0x012A)
+                  or CheckDeadAsc12("t3","ï","Ï")))
+      OutputChar("i","I")
+   else if (Ebene = 3)
+      send {blind}`/
+   else if (Ebene = 4)
+      Send {Blind}{Left}
+   else if (Ebene = 5    )
       SendUnicodeChar(0x03B9) ; iota
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x222B) ; integral
-      CompKey := ""
-   }
-      PriorDeadKey := ""
 return
 
 neo_a:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00E2)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00E1)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00E0)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         send {bs}ä
-      else if (PriorDeadKey = "a6")   ; Ring 
-         Send {bs}å
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x00E3)
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x0105)
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x0101)
-      else if (PriorDeadKey = "c3")   ; brevis
-         BSSendUnicodeChar(0x0103)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01CE)
-      else
-         sendinput {blind}a
-      if (PriorDeadKey = "comp")      ; compose
-         CompKey := "a_small"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00C2)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00C1)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00C0)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         send {bs}Ä
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x00C3)
-      else if (PriorDeadKey = "a6")   ; Ring 
-         Send {bs}Å
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x0100)
-      else if (PriorDeadKey = "c3")   ; brevis 
-         BSSendUnicodeChar(0x0102)
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x0104)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01CD)
-      else
-         sendinput {blind}A
-      if (PriorDeadKey = "comp")      ; compose
-         CompKey := "a_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      sendraw {
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      Sendinput {Blind}{Down}
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   if (Ebene12 and !(CheckDeadUni12("a1",0x00E1,0x00C1)
+                  or CheckDeadUni12("a2",0x00E0,0x00C0)
+                  or CheckDeadUni12("a5",0x0105,0x0104)
+                  or CheckDeadAsc12("a6","å","Å")
+                  or CheckDeadUni12("c1",0x00E2,0x00C2)
+                  or CheckDeadUni12("c2",0x01CE,0x01CD)
+                  or CheckDeadUni12("c3",0x0103,0x0102)
+                  or CheckDeadUni12("t1",0x00E3,0x00C3)
+                  or CheckDeadUni12("t2",0x0101,0x0100)
+                  or CheckDeadAsc12("t3","ä","Ä")))
+      OutputChar("a","A")
+   else if (Ebene = 3)
+      send {blind}{{}   ; }
+   else if (Ebene = 4)
+      Send {Blind}{Down}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B1) ;alpha
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2200) ;fuer alle   
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_e:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00EA)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00E9)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00E8)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         Send, {bs}ë
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x0119)
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x0113)
-      else if (PriorDeadKey = "c3")   ; brevis - defekt
-         BSSendUnicodeChar(0x0115)
-      else if (PriorDeadKey = "c2")   ; caron - defekt
-         BSSendUnicodeChar(0x011B)
-      else if (PriorDeadKey = "a4")   ; punkt darüber 
-         BSSendUnicodeChar(0x0117)
-      else if (CompKey = "a_small")   ; compose
-      {
-         Send {bs}æ
-         CompKey := ""
-      }
-      else if (CompKey = "o_small")   ; compose
-      {
-         Send {bs}œ
-         CompKey := ""
-      }      
-      else
-         sendinput {blind}e
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00CA)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00C9)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00C8)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         Send, {bs}Ë
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x011A)
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x0112)
-      else if (PriorDeadKey = "c3")   ; brevis 
-         BSSendUnicodeChar(0x0114)
-      else if (PriorDeadKey = "a5")   ; ogonek 
-         BSSendUnicodeChar(0x0118)
-      else if (PriorDeadKey = "a4")   ; punkt darüber 
-         BSSendUnicodeChar(0x0116)
-      else if (CompKey = "a_capital") ; compose
-      {
-         Send {bs}Æ
-         CompKey := ""
-      }
-      else if (CompKey = "o_capital")        ; compose
-      {
-         Send {bs}Œ
-         CompKey := ""
-      }      
-      else 
-         sendinput {blind}E
-   }
-   else if Ebene = 3
-      sendraw }
-   else if Ebene = 4
-      Sendinput {Blind}{Right}
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a1",0x00E9,0x00C9)
+                  or CheckDeadUni12("a2",0x00E8,0x00C8)
+                  or CheckDeadUni12("a4",0x0117,0x0116)
+                  or CheckDeadUni12("a5",0x0119,0x0118)
+                  or CheckDeadUni12("c1",0x00EA,0x00CA)
+                  or CheckDeadUni12("c2",0x011B,0x011A)
+                  or CheckDeadUni12("c3",0x0115,0x0114)
+                  or CheckDeadUni12("t2",0x0113,0x0112)
+                  or CheckDeadAsc12("t3","ë","Ë")
+                  or CheckCompAsc12("a","æ","Æ")
+                  or CheckCompAsc12("A","Æ","Æ")
+                  or CheckCompAsc12("o","œ","Œ")
+                  or CheckCompAsc12("O","Œ","Œ")))
+      OutputChar("e","E")
+   else if (Ebene = 3)      ; {
+      send {blind}{}}
+   else if (Ebene = 4)
+      Send {Blind}{Right}
+   else if (Ebene = 5)
         SendUnicodeChar(0x03B5) ;epsilon
-   else if Ebene = 6
+   else if (Ebene = 6)
         SendUnicodeChar(0x2203) ;es existiert   
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_o:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00F4)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00F3)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00F2)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         Send, {bs}ö
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x00F5)
-      else if (PriorDeadKey = "t5")   ; doppelakut
-         BSSendUnicodeChar(0x0151)
-      else if (PriorDeadKey = "t4")   ; Schrägstrich
-         BSSendUnicodeChar(0x00F8)
-      else if (PriorDeadKey = "t2")   ; macron
-         BSSendUnicodeChar(0x014D)
-      else if (PriorDeadKey = "c3")   ; brevis 
-         BSSendUnicodeChar(0x014F)
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x01EB)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01D2)                      
-      else
-         sendinput {blind}o
-      if (PriorDeadKey = "comp")      ; compose
-         CompKey := "o_small"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")        ; circumflex
-         BSSendUnicodeChar(0x00D4)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x00D3)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x00D2)
-      else if (PriorDeadKey = "t4")   ; Schrägstrich
-         BSSendUnicodeChar(0x00D8)
-      else if (PriorDeadKey = "t1")   ; tilde
-         BSSendUnicodeChar(0x00D5)
-      else if (PriorDeadKey = "t5")   ; doppelakut
-         BSSendUnicodeChar(0x0150)
-      else if (PriorDeadKey = "t3")   ; diaerese
-         send {bs}Ö
-      else if (PriorDeadKey = "t2")   ; macron 
-         BSSendUnicodeChar(0x014C)
-      else if (PriorDeadKey = "c3")   ; brevis 
-         BSSendUnicodeChar(0x014E)
-      else if (PriorDeadKey = "a5")   ; ogonek
-         BSSendUnicodeChar(0x01EA)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01D1)    
-      else
-         sendinput {blind}O
-      if (PriorDeadKey = "comp")      ; compose
-         CompKey := "o_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send *
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
+   if (Ebene12 and !(CheckDeadUni12("a1",0x00F3,0x00D3)
+                  or CheckDeadUni12("a2",0x00F2,0x00D2)
+                  or CheckDeadUni12("a5",0x01EB,0x01EA)
+                  or CheckDeadUni12("c1",0x00F4,0x00D4)
+                  or CheckDeadUni12("c2",0x01D2,0x01D1)
+                  or CheckDeadUni12("c3",0x014F,0x014E)
+                  or CheckDeadUni12("t1",0x00F5,0x00D5)
+                  or CheckDeadUni12("t2",0x014D,0x014C)
+                  or CheckDeadAsc12("t3","ö","Ö")
+                  or CheckDeadUni12("t4",0x00F8,0x00D8)
+                  or CheckDeadUni12("t5",0x0151,0x0150)))
+      OutputChar("o","O")
+   else if (Ebene = 3)
+      send {blind}*
+   else if (Ebene = 4)
       Send {blind}{End}
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 5)
       SendUnicodeChar(0x03BF) ; omicron
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x2208) ; element of
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_s:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")      ; circumflex
-         BSSendUnicodeChar(0x015D)
-      else if (PriorDeadKey = "a1") ; akut 
-         BSSendUnicodeChar(0x015B)
-      else if (PriorDeadKey = "c2") ; caron
-         BSSendUnicodeChar(0x0161)
-      else if (PriorDeadKey = "a3") ; cedilla
-         BSSendUnicodeChar(0x015F)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x1E61)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E63)
-      else
-      {
-         if (LangSTastatur = 1)
-         {
-            if GetKeyState("CapsLock","T")
-               sendinput {blind}s
-            else
-               SendUnicodeChar(0x017F) ; langes s
-         }
+   if (Ebene12 and !(CheckDeadUni12("a1",0x015B,0x015A)
+                  or CheckDeadUni12("a3",0x015F,0x015E)
+                  or CheckDeadUni12("a4",0x1E61,0x1E60)
+                  or CheckDeadUni12("c1",0x015D,0x015C)
+                  or CheckDeadUni12("c2",0x0161,0x0160)
+                  or CheckDeadUni12("c6",0x1E63,0x1A62)))
+      if (LangSTastatur = 1)
+         if (GetKeyState("CapsLock","T") xor (Ebene = 1))
+            SendUnicodeChar(0x017F) ; langes s
          else
-            sendinput {blind}s
-      }
-      if (PriorDeadKey = "comp")
-         CompKey := "s_small"
+            OutputChar("s","S")
       else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")      ; circumflex
-         BSSendUnicodeChar(0x015C)
-      else if (PriorDeadKey = "c2") ; caron
-         BSSendUnicodeChar(0x0160)
-      else if (PriorDeadKey = "a1") ; akut 
-         BSSendUnicodeChar(0x015A)
-      else if (PriorDeadKey = "a3") ; cedilla 
-         BSSendUnicodeChar(0x015E)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x1E60)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E62)
-      else
-      {
-         if GetKeyState("CapsLock","T") && (LangSTastatur = 1)
-            SendUnicodeChar(0x017F)
-         else 
-            sendinput {blind}S
-      }
-      if (PriorDeadKey = "comp")
-         CompKey := "s_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send ?
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
+         OutputChar("s","S")
+   else if (Ebene = 3)
+      send {blind}?
+   else if (Ebene = 4)
       Send ¿
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C3) ;sigma
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x03A3)  ; Sigma
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_n:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "a1")          ; akut
-         BSSendUnicodeChar(0x0144)
-      else if (PriorDeadKey = "t1")     ; tilde
-         BSSendUnicodeChar(0x00F1)
-      else if (PriorDeadKey = "c2")    ; caron
-         BSSendUnicodeChar(0x0148)
-      else if (PriorDeadKey = "a3")   ; cedilla
-         BSSendUnicodeChar(0x0146)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x1E45)
-      else
-         sendinput {blind}n
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c2")         ; caron
-         BSSendUnicodeChar(0x0147)
-      else if (PriorDeadKey = "t1")     ; tilde
-         BSSendUnicodeChar(0x00D1)
-      else if (PriorDeadKey = "a1")     ; akut 
-         BSSendUnicodeChar(0x0143)
-      else if (PriorDeadKey = "a3")   ; cedilla 
-         BSSendUnicodeChar(0x0145)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x1E44)
-      else
-         sendinput {blind}N
-   }
-   else if Ebene = 3
-      send (
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2074)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2084)
-      else
-         Send 4
-   }
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a1",0x0144,0x0143)
+                  or CheckDeadUni12("a3",0x0146,0x0145)
+                  or CheckDeadUni12("a4",0x1E45,0x1E44)
+                  or CheckDeadUni12("c2",0x0148,0x0147)
+                  or CheckDeadUni12("t1",0x00F1,0x00D1)))
+      OutputChar("n","N")
+   else if (Ebene = 3)
+      send {blind}(                 ; )
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2074)
+                           or CheckDeadUni("c5",0x2084)))
+      Send {blind}{NumPad4}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03BD) ; nu
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x2115) ; N (natürliche Zahlen)
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_r:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "a1")           ; akut 
-         BSSendUnicodeChar(0x0155)
-      else if (PriorDeadKey = "c2")     ; caron
-         BSSendUnicodeChar(0x0159)
-      else if (PriorDeadKey = "a3")    ; cedilla
-         BSSendUnicodeChar(0x0157)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x0E59)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E5B)
-      else 
-         sendinput {blind}r
-      if (PriorDeadKey = "comp")
-         CompKey := "r_small"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c2")          ; caron
-         BSSendUnicodeChar(0x0158)
-      else if (PriorDeadKey = "a1")      ; akut 
-         BSSendUnicodeChar(0x0154)
-      else if (PriorDeadKey = "a3")    ; cedilla 
-         BSSendUnicodeChar(0x0156)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E58)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E5A)
-      else 
-         sendinput {blind}R
-      if (PriorDeadKey = "comp")
-         CompKey := "r_capital"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send )
-      CompKey := ""
-   }
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2075)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2085)
-      else
-         Send 5
-      CompKey := ""
-   }
-   else if Ebene = 5
-   {
+   if (Ebene12 and !(CheckDeadUni12("a1",0x0155,0x0154)
+                  or CheckDeadUni12("a3",0x0157,0x0156)
+                  or CheckDeadUni12("a4",0x0E59,0x0E58)
+                  or CheckDeadUni12("c2",0x0159,0x0158)
+                  or CheckDeadUni12("c6",0x1E5B,0x1E5A)
+                  or CheckCompAsc12("o","®","®")
+                  or CheckCompAsc12("O","®","®")))
+      OutputChar("r","R")
+   else if (Ebene = 3)                ;(
+      send {blind})
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2075)
+                           or CheckDeadUni("c5",0x2085)))
+      Send {blind}{NumPad5}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03F1) ; rho symbol (varrho)
-      CompKey := ""
-   }
-   else if Ebene = 6
-   {
+   else if (Ebene = 6)
       SendUnicodeChar(0x211D) ; R (reelle Zahlen)
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_t:
-     EbeneAktualisieren()
-     if Ebene = 1
-     {
-        if (PriorDeadKey = "c2")          ; caron 
-           BSSendUnicodeChar(0x0165)
-        else if (PriorDeadKey = "a3")    ; cedilla
-           BSSendUnicodeChar(0x0163)
-        else if (PriorDeadKey = "c5")   ; Querstrich
-           BSSendUnicodeChar(0x0167)
-        else if (PriorDeadKey = "a4")  ; punkt darüber 
-           BSSendUnicodeChar(0x1E6B)
-        else if (PriorDeadKey = "c6") ; punkt darunter 
-           BSSendUnicodeChar(0x1E6D)
-        else 
-           sendinput {blind}t
-        if (PriorDeadKey = "comp")
-           CompKey := "t_small"
-        else
-           CompKey := ""
-     }
-     else if Ebene = 2
-     {
-        if (PriorDeadKey = "c2")          ; caron
-           BSSendUnicodeChar(0x0164)
-        else if (PriorDeadKey = "a3")    ; cedilla 
-           BSSendUnicodeChar(0x0162)
-        else if (PriorDeadKey = "c5")   ; Querstrich
-           BSSendUnicodeChar(0x0166)
-        else if (PriorDeadKey = "a4")  ; punkt darüber 
-           BSSendUnicodeChar(0x1E6A)
-        else if (PriorDeadKey = "c6") ; punkt darunter 
-           BSSendUnicodeChar(0x1E6C)
-        else 
-           sendinput {blind}T
-        if (PriorDeadKey = "comp")
-           CompKey := "t_capital"
-        else
-           CompKey := ""
-     }
-     else if Ebene = 3
-     {
-        send {blind}- ; Bis
-        CompKey := ""
-     }
-     else if Ebene = 4
-     {
-        if (PriorDeadKey = "c1")            ; circumflex
-           BSSendUnicodeChar(0x2076)
-        else if (PriorDeadKey = "c5")       ; toter -
-           BSSendUnicodeChar(0x2086)
-        else
-           Send 6
-        CompKey := ""
-     }
-     else if Ebene = 5
-     {
-        SendUnicodeChar(0x03C4) ; tau
-        CompKey := ""
-     }
-     else if Ebene = 6
-     {
-        SendUnicodeChar(0x2202 ) ; partielle Ableitung
-        CompKey := ""
-     }
-     PriorDeadKey := ""
+   EbeneAktualisieren()
+   if (Ebene12 and !(CheckDeadUni12("a3",0x0163,0x0162)
+                  or CheckDeadUni12("a4",0x1E6B,0x1E6A)
+                  or CheckDeadUni12("c2",0x0165,0x0164)
+                  or CheckDeadUni12("c5",0x0167,0x0166)
+                  or CheckDeadUni12("c6",0x1E6D,0x1E6C)))
+      OutputChar("t","T")
+   else if (Ebene = 3)
+      send {blind}- ; Bis
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2076)
+                           or CheckDeadUni("c5",0x2086)))
+      Send {blind}{NumPad6}
+   else if (Ebene = 5)
+      SendUnicodeChar(0x03C4) ; tau
+   else if (Ebene = 6)
+      SendUnicodeChar(0x2202 ) ; partielle Ableitung
 return
 
 neo_d:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c5")        ; Querstrich
-         BSSendUnicodeChar(0x0111)
-      else if (PriorDeadKey = "t4")  ; Schrägstrich
-         BSSendUnicodeChar(0x00F0)
-      else if (PriorDeadKey = "c2")     ; caron
-         BSSendUnicodeChar(0x010F)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E0B)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E0D)
-      else 
-         sendinput {blind}d
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c5")        ; Querstrich
-         BSSendUnicodeChar(0x0110)
-      else if (PriorDeadKey = "t4")  ; Schrägstrich
-         BSSendUnicodeChar(0x00D0)
-      else if (PriorDeadKey = "c2")     ; caron 
-         BSSendUnicodeChar(0x010E)
-      else if (PriorDeadKey = "a4")  ; punkt darüber 
-         BSSendUnicodeChar(0x1E0A)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E0D)
-      else sendinput {blind}D
-   }
-   else if Ebene = 3
-      send :
-   else if Ebene = 4
-     Send `,
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a4",0x1E0B,0x1E0A)
+                  or CheckDeadUni12("c2",0x010F,0x010E)
+                  or CheckDeadUni12("c5",0x0111,0x0110)
+                  or CheckDeadUni12("c6",0x1E0D,0x1E0C)
+                  or CheckDeadUni12("t4",0x00F0,0x00D0)))
+      OutputChar("d","D")
+   else if (Ebene = 3)
+      send {blind}:
+   else if (Ebene = 4)
+      Send {blind}{NumPadKomma}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B4) ;delta
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x0394)  ; Delta
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_y:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "t3")       ; diaerese
-         Send {bs}ÿ
-      else if (PriorDeadKey = "a1")      ; akut 
-         BSSendUnicodeChar(0x00FD)
-      else if (PriorDeadKey = "c1")    ; circumflex
-         BSSendUnicodeChar(0x0177)
-      else
-         sendinput {blind}y
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "a1")           ; akut 
-         BSSendUnicodeChar(0x00DD)
-      else if (PriorDeadKey = "t3")    ; diaerese
-         Send {bs}Ÿ
-      else if (PriorDeadKey = "c1")      ; circumflex
-         BSSendUnicodeChar(0x0176)
-      else
-         sendinput {blind}Y
-   }
-   else if Ebene = 3
-      send @
-   else if Ebene = 4
-      Send .
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a1",0x00FD,0x00DD)
+                  or CheckDeadUni12("c1",0x0177,0x0176)
+                  or CheckDeadAsc12("t3","ÿ",Ÿ)))
+      OutputChar("y","Y")
+   else if (Ebene = 3)
+      send {blind}@
+   else if (Ebene = 4)
+      Send {blind}.
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C5) ; upsilon
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x2207) ; nabla
-   PriorDeadKey := ""   CompKey := ""
 return
-
-;SC02B (#) wird zu Mod3
-
 
 /*
    ------------------------------------------------------
@@ -3126,365 +1953,186 @@ return
    ------------------------------------------------------
 */
 
-;SC056 (<) wird zu Mod4
-
 neo_ü:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "t2")        ; macron
-         BSSendUnicodeChar(0x01D6)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x01D8)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x01DC)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01DA)
-      else
-         sendinput {blind}ü
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "t2")        ; macron
-         BSSendUnicodeChar(0x01D5)
-      else if (PriorDeadKey = "a1")   ; akut 
-         BSSendUnicodeChar(0x01D7)
-      else if (PriorDeadKey = "a2")   ; grave
-         BSSendUnicodeChar(0x01DB)
-      else if (PriorDeadKey = "c2")   ; caron
-         BSSendUnicodeChar(0x01D9)
-      else
-         sendinput {blind}Ü
-   }
-   else if Ebene = 3
+   if (Ebene12 and !(CheckDeadUni12("a1",0x01D8,0x01D7)
+                  or CheckDeadUni12("a2",0x01DC,0x01DB)
+                  or CheckDeadUni12("c2",0x01DA,0x01D9)
+                  or CheckDeadUni12("t2",0x01D6,0x01D5)))
+      OutputChar("ü","Ü")
+   else if (Ebene = 3)
       send {blind}{#}
-   else if Ebene = 4
-      Send {Esc}
-   else if Ebene = 5
-     {} ; leer
-   else if Ebene = 6
+   else if (Ebene = 4)
+      Send {blind}{Esc}
+   else if (Ebene = 5)
+   {
+      DeadKey := PriorDeadKey
+      CompKey := PriorCompKey
+   } ; leer
+   else if (Ebene = 6)
       SendUnicodeChar(0x221D) ; proportional
-
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_ö:
    EbeneAktualisieren()
-   if Ebene = 1
+   if (Ebene12 and !(CheckDeadUni12("t2",0x022B,0x022A)))
+      OutputChar("ö","Ö")
+   else if (Ebene = 3)
+      send {blind}$
+   else if (Ebene = 4)
+      send {blind}{Tab}
+   else if (Ebene = 5)
    {
-      if (PriorDeadKey = "t2")        ; macron
-         BSSendUnicodeChar(0x022B)
-      else
-         sendinput {blind}ö
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "t2")        ; macron
-         BSSendUnicodeChar(0x022A)
-      else
-         sendinput {blind}Ö
-   }
-   else if Ebene = 3
-      send $
-   else if Ebene = 4
-      goto neo_tab
-   else if Ebene = 5
-       {} ;leer
-   else if Ebene = 6
+      DeadKey := PriorDeadKey
+      CompKey := PriorCompKey
+   } ; leer
+   else if (Ebene = 6)
       SendUnicodeChar(0x2111) ; Fraktur I
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_ä:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "t2")        ; macron
-         BSSendUnicodeChar(0x01DF)
-      else
-         sendinput {blind}ä
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "t2")        ; macron
-         BSSendUnicodeChar(0x001DE)
-      else
-         sendinput {blind}Ä
-   }
-   else if Ebene = 3
-      send |
-   else if Ebene = 4
-      Send {PgDn}    ; Next
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("t2",0x01DF,0x01DE)))
+      OutputChar("ä","Ä")
+   else if (Ebene = 3)
+      send {blind}|
+   else if (Ebene = 4)
+      Send {blind}{PgDn}    ; Next
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B7) ; eta
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x211C) ; altes R
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_p:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "a4")      ; punkt darüber 
-         BSSendUnicodeChar(0x1E57)
-      else
-         sendinput {blind}p
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "a4")      ; punkt darüber 
-         BSSendUnicodeChar(0x1E56)
-      else 
-         sendinput {blind}P
-   }
-   else if Ebene = 3
-   {
-      if (PriorDeadKey = "t1")    ; tilde
-         BSSendUnicodeChar(0x2248)
-      else
-         sendraw ~
-   }      
-   else if Ebene = 4
-        Send {Enter}
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a4",0x1E57,0x1E56)))
+      OutputChar("p","P")
+   else if ((Ebene = 3) and !(CheckDeadUni("t1",0x2248)))
+      send {blind}~
+   else if (Ebene = 4)
+        Send {blind}{Enter}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C0) ;pi
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x03A0)  ; Pi
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_z:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c2")         ; caron
-         BSSendUnicodeChar(0x017E)
-      else if (PriorDeadKey = "a1")     ; akut
-         BSSendUnicodeChar(0x017A)
-      else if (PriorDeadKey = "a4") ; punkt drüber
-         BSSendUnicodeChar(0x017C)
-      else if (PriorDeadKey = "c6") ; punkt drunter
-         BSSendUnicodeChar(0x1E93)
-      else 
-         sendinput {blind}z
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c2")         ; caron  
-         BSSendUnicodeChar(0x017D)
-      else if (PriorDeadKey = "a1")     ; akut 
-         BSSendUnicodeChar(0x0179)
-      else if (PriorDeadKey = "a4") ; punkt darüber 
-         BSSendUnicodeChar(0x017B)
-      else if (PriorDeadKey = "c6") ; punkt drunter
-         BSSendUnicodeChar(0x1E92)
-      else
-         sendinput {blind}Z
-   }
-   else if Ebene = 3
+   if (Ebene12 and !(CheckDeadUni12("a1",0x017A,0x0179)
+                  or CheckDeadUni12("a4",0x017C,0x017B)
+                  or CheckDeadUni12("c2",0x017E,0x017D)
+                  or CheckDeadUni12("c6",0x1E93,0x1E92)))
+      OutputChar("z","Z")
+   else if (Ebene = 3)
       send ``{space} ; untot
-   else if Ebene = 4
-     {} ; leer   
-   else if Ebene = 5
+   else if (Ebene = 4)
+   {
+      DeadKey := PriorDeadKey
+      CompKey := PriorCompKey
+   } ; leer
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B6) ;zeta 
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x2124)  ; Z (ganze Zahlen)
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_b:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "a4")      ; punkt darüber 
-         BSSendUnicodeChar(0x1E03)
-      else 
-         sendinput {blind}b
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "a4")       ; punkt darüber 
-         BSSendUnicodeChar(0x1E02)
-      else 
-         sendinput {blind}B
-   }
-   else if Ebene = 3
+   if (Ebene12 and !(CheckDeadUni12("a4",0x1E03,0x1E02)))
+      OutputChar("b","B")
+   else if (Ebene = 3)
       send {blind}{+}
-   else if Ebene = 4
-      send :
-   else if Ebene = 5
+   else if (Ebene = 4)
+      send {blind}:
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B2) ; beta
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x21D2) ; Doppel-Pfeil rechts
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_m:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "a4")       ; punkt darüber 
-         BSSendUnicodeChar(0x1E41)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E43)
-      else if ( (CompKey = "t_small") or (CompKey = "t_capital") )       ; compose
-         CompUnicodeChar(0x2122)          ; TM
-      else if ( (CompKey = "s_small") or (CompKey = "s_capital") )       ; compose
-         CompUnicodeChar(0x2120)          ; SM
-      else
-         sendinput {blind}m
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "a4")       ; punkt darüber 
-         BSSendUnicodeChar(0x1E40)
-      else if (PriorDeadKey = "c6") ; punkt darunter 
-         BSSendUnicodeChar(0x1E42)
-      else if ( (CompKey = "t_capital") or (CompKey = "t_small") )       ; compose
-         CompUnicodeChar(0x2122)          ; TM
-      else if ( (CompKey = "s_capital") or (CompKey = "s_small") )       ; compose
-         CompUnicodeChar(0x2120)          ; SM
-      else 
-         sendinput {blind}M
-   }
-   else if Ebene = 3
-      send `%
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x00B9)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2081)
-      else
-         Send 1
-   }
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("a4",0x1E41,0x1E40)
+                  or CheckDeadUni12("c6",0x1E43,0x1E42)
+                  or CheckCompUni12("t",0x2122,0x2122)        ; TM
+                  or CheckCompUni12("T",0x2122,0x2122)        ; TM
+                  or CheckCompUni12("s",0x2120,0x2120)        ; SM
+                  or CheckCompUni12("S",0x2120,0x2120)))      ; SM
+
+      OutputChar("m","M")
+   else if (Ebene = 3)
+      send {blind}`%
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B9)
+                           or CheckDeadUni("c5",0x2081)))
+      Send {blind}{NumPad1}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03BC) ; griechisch mu, micro wäre 0x00B5
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x21D4) ; doppelter Doppelpfeil (genau dann wenn)
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_komma:
    EbeneAktualisieren()
-   if Ebene = 1
-       {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind},
-           }
-           else
-           {
-              send `,
-           }
-               
-         }
-         else
-         {
-           send {blind},
-         }
-       }
-   else if Ebene = 2
-       SendUnicodeChar(0x22EE) ;  vertikale ellipse 
-   else if Ebene = 3
-      send "
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x00B2)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2082)
+   if (Ebene = 1)
+      if (GetKeyState("CapsLock","T")) 
+         send {blind}{Shift down},{Shift up}
       else
-         Send 2
-   }
-   else if Ebene = 5
+         send {blind},
+   else if (Ebene = 2)
+       SendUnicodeChar(0x22EE) ;  vertikale ellipse 
+   else if (Ebene = 3)
+      send {blind}"
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B2)
+                           or CheckDeadUni("c5",0x2082)))
+      Send {blind}{NumPad2}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03C1) ; rho
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x21D0) ; Doppelpfeil links
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_punkt:
    EbeneAktualisieren()
-   if Ebene = 1
-        {  
-         if GetKeyState("CapsLock","T") 
-         {
-           if (IsModifierPressed())
-           {
-             send {blind}.
-           }
-           else
-           {
-              send .
-           }
-               
-         }
-         else {
-           send {blind}.
-         }
-       }
-  else if Ebene = 2
-      SendUnicodeChar(0x2026)  ; ellipse
-   else if Ebene = 3
-      send '
-   else if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x00B3)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2083)
+   if (Ebene = 1)
+      if (GetKeyState("CapsLock","T")) 
+         send {blind}{Shift down}.{Shift up}
       else
-         Send 3
-   }
-   else if Ebene = 5
+         send {blind}.
+   else if (Ebene = 2)
+      SendUnicodeChar(0x2026)  ; ellipse
+   else if (Ebene = 3)
+      send {blind}'
+   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
+                           or CheckDeadUni("c5",0x2083)))
+      Send {blind}{NumPad3}
+   else if (Ebene = 5)
       SendUnicodeChar(0x03D1) ; theta symbol (vartheta)
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x0398)  ; Theta
-   PriorDeadKey := ""   CompKey := ""
 return
 
 
 neo_j:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (PriorDeadKey = "c1")           ; circumflex
-         BSSendUnicodeChar(0x0135)
-      else if (PriorDeadKey = "c2")      ; caron
-         BSSendUnicodeChar(0x01F0)
-      else if (CompKey = "i_small")        ; compose
-         CompUnicodeChar(0x0133)          ; ij
-      else if (CompKey = "l_small")        ; compose
-         CompUnicodeChar(0x01C9)          ; lj
-      else if (CompKey = "l_capital")       ; compose
-         CompUnicodeChar(0x01C8)          ; Lj
-      else
-         sendinput {blind}j
-   }
-   else if Ebene = 2
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x0134)
-      else if (CompKey = "i_capital")        ; compose
-         CompUnicodeChar(0x0132)          ; IJ
-      else if (CompKey = "l_capital")        ; compose
-         CompUnicodeChar(0x01C7)          ; LJ
-      else
-         sendinput {blind}J
-   }
-   else if Ebene = 3
-      send `;
-   else if Ebene = 4
-     Send `;
-   else if Ebene = 5
+   if (Ebene12 and !(CheckDeadUni12("c1",0x0135,0x0134)
+                  or CheckDeadUni12("c2",0x01F0,"")
+                  or CheckCompUni12("i",0x0133,"")          ; ij
+                  or CheckCompUni12("I","",0x0132)          ; IJ
+                  or CheckCompUni12("l",0x01C9,"")          ; lj
+                  or CheckCompUni12("L",0x01C8,0x01C7)      ; Lj/LJ
+                  or CheckCompUni12("n",0x01CC,"")          ; nj
+                  or CheckCompUni12("N",0x01CB,0x01CA)))    ; Nj/NJ
+      OutputChar("j","J")
+   else if (Ebene = 3)
+      send {blind}`;
+   else if (Ebene = 4)
+      Send {blind}`;
+   else if (Ebene = 5)
       SendUnicodeChar(0x03B8) ; theta
-   else if Ebene = 6
+   else if (Ebene = 6)
       SendUnicodeChar(0x2261) ; identisch
-   PriorDeadKey := ""   CompKey := ""
 return
 
 /*
@@ -3498,748 +2146,328 @@ return
 
 neo_NumpadDiv:
    EbeneAktualisieren()
-   if ( (Ebene = 1) or (Ebene = 2) )
-      send {NumpadDiv}
-   else if Ebene = 3
-      send ÷
-   else if ( (Ebene = 4) or (Ebene = 5) )
+   if ((Ebene = 1) or (Ebene = 2))
+      send {blind}{NumpadDiv}
+   else if (Ebene = 3)
+      send {blind}÷
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2215)   ; slash
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_NumpadMult:
    EbeneAktualisieren()
-   if ( (Ebene = 1) or (Ebene = 2) )
-      send {NumpadMult}
-   else if Ebene = 3
-      send ×
-   else if ( (Ebene = 4) or (Ebene = 5) )
+   if ((Ebene = 1) or (Ebene = 2))
+      send {blind}{NumpadMult}
+   else if (Ebene = 3)
+      send {blind}×
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x22C5)  ; cdot
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_NumpadSub:
    EbeneAktualisieren()
-   if ( (Ebene = 1) or (Ebene = 2) )
-   {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x207B)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x208B)         
-      else
-         send {blind}{NumpadSub}
-   }
-   else if Ebene = 3
+   if (((Ebene = 1) or (Ebene = 2)) and !(CheckDeadUni("c1",0x207B)
+                                       or CheckDeadUni("c5",0x208B)))
+      send {blind}{NumpadSub}
+   else if (Ebene = 3)
       SendUnicodeChar(0x2212) ; echtes minus
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_NumpadAdd:
    EbeneAktualisieren()
-   if ( (Ebene = 1) or (Ebene = 2) )
-   {
-      if (PriorDeadKey = "c1")          ; circumflex
-         BSSendUnicodeChar(0x207A)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x208A)         
-      else
-         send {blind}{NumpadAdd}
-   }
-   else if Ebene = 3
-      send ±
-   else if ( (Ebene = 4) or (Ebene = 5) )
+   if (((Ebene = 1) or (Ebene = 2)) and !(CheckDeadUni("c1",0x207A)
+                                       or CheckDeadUni("c5",0x208A)))
+      send {blind}{NumpadAdd}
+   else if (Ebene = 3)
+      send {blind}±
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2213)   ; -+
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_NumpadEnter:
    EbeneAktualisieren()
-   if ( (Ebene = 1) or (Ebene = 2) )
-      send {NumpadEnter}      
-   else if Ebene = 3
+   if ((Ebene = 1) or (Ebene = 2))
+      send {blind}{NumpadEnter}      
+   else if (Ebene = 3)
       SendUnicodeChar(0x2260) ; neq
-   else if ( (Ebene = 4) or (Ebene = 5) )
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2248) ; approx
-   PriorDeadKey := ""   CompKey := ""
 return
 
 /*
    folgende Tasten verhalten sich bei ein- und ausgeschaltetem NumLock
-   unterschiedlich:
-
-   bei NumLock ein
+   unterschiedlich
 */
 
 
 
 neo_Numpad7:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadHome}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadHome}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      send {blind}{Numpad7}
+      if (Ebene = 1)
+         send {blind}{Numpad7}
+      else
+         send {blind){Shift up}{Numpad7}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_7"
-      else
-         CompKey := ""       
    }
-   else if Ebene = 2
-   {
-      send {NumpadHome}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2195)   ; Hoch-Runter-Pfeil
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x226A)  ; ll
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_Numpad8:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadUp}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadUp}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x215B)       ; 1/8
-      else if (CompKey = "Num_3")
-         CompUnicodeChar(0x215C)       ; 3/8
-      else if (CompKey = "Num_5")
-         CompUnicodeChar(0x215D)       ; 5/8
-      else if (CompKey = "Num_7")
-         CompUnicodeChar(0x215E)       ; 7/8
-      else
-         send {blind}{Numpad8}
+      if !(CheckCompUni("Num_1",0x215B) ; 1/8
+        or CheckCompUni("1",0x215B)     ; 1/8
+        or CheckCompUni("Num_3",0x215C) ; 3/8
+        or CheckCompUni("3",0x215C)     ; 3/8
+        or CheckCompUni("Num_5",0x215D) ; 3/8
+        or CheckCompUni("5",0x215D)     ; 5/8
+        or CheckCompUni("Num_7",0x215E) ; 7/8
+        or CheckCompUni("7",0x215E))    ; 7/8
+         if (Ebene = 1)
+            send {blind}{Numpad8}
+         else
+            send {blind){Shift up}{Numpad8}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_8"
-      else
-         CompKey := "" 
    }
-   else if Ebene = 2
-   {
-      send {NumpadUp}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2191)     ; uparrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2229)    ; intersection
-      CompKey := ""
-   }
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_Numpad9:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadPgUp}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadPgUp}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      send {blind}{Numpad9}
+      if (Ebene = 1)
+         send {blind}{Numpad9}
+      else
+         send {blind){Shift up}{Numpad9}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_9"
-      else
-         CompKey := "" 
    }
-   else if Ebene = 2
-   {
-      send {NumpadPgUp}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2297) ; Tensorprodukt ; Vektor in die Ebene zeigend 
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x226B)  ; gg
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 
 
 neo_Numpad4:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadLeft}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadLeft}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x00BC)       ; 1/4
-      else if (CompKey = "Num_3")
-         CompUnicodeChar(0x00BE)       ; 3/4
-      else
-         send {blind}{Numpad4}
+      if !(CheckCompUni("Num_1",0x00BC) ; 1/4
+        or CheckCompUni("1",0x00BE)     ; 1/4
+        or CheckCompUni("Num_3",0x00BE) ; 3/4
+        or CheckCompUni("3",0x00BE))    ; 3/4
+         if (Ebene = 1)
+            send {blind}{Numpad4}
+         else
+            send {blind){Shift up}{Numpad4}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_4"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-   {
-      send {NumpadLeft}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2190)     ; leftarrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2282)  ; subset of
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_Numpad5:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadClear}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadClear}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x2155)       ; 1/5
-      else if (CompKey = "Num_2")
-         CompUnicodeChar(0x2156)       ; 2/5
-      else if (CompKey = "Num_3")
-         CompUnicodeChar(0x2157)       ; 3/5
-      else if (CompKey = "Num_4")
-         CompUnicodeChar(0x2158)       ; 4/5
-      else
-         send {blind}{Numpad5}
+      if !(CheckCompUni("Num_1",0x2155) ; 1/5
+        or CheckCompUni("1",0x2155)     ; 1/5
+        or CheckCompUni("Num_2",0x2156) ; 2/5
+        or CheckCompUni("2",0x2156)     ; 2/5
+        or CheckCompUni("Num_3",0x2157) ; 3/5
+        or CheckCompUni("3",0x2157)     ; 3/5
+        or CheckCompUni("Num_4",0x2158) ; 4/5
+        or CheckCompUni("4",0x2158))    ; 4/5
+         if (Ebene = 1)
+            send {blind}{Numpad5}
+         else
+            send {blind){Shift up}{Numpad5}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_5"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-   {
-      send {NumpadClear}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x221E) ; INFINITY
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x220B) ; enthält das Element
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_Numpad6:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadRight}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadRight}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x2159)       ; 1/6
-      else if (CompKey = "Num_5")
-         CompUnicodeChar(0x215A)       ; 5/6
-      else
-         send {blind}{Numpad6}
+      if !(CheckCompUni("Num_1",0x2159) ; 1/6
+        or CheckCompUni("1",0x2159)     ; 1/6
+        or CheckCompUni("Num_5",0x215A) ; 5/6
+        or CheckCompUni("5",0x215A))    ; 5/6
+         if (Ebene = 1)
+            send {blind}{Numpad6}
+         else
+            send {blind){Shift up}{Numpad6}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_6"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-   {
-      send {NumpadRight}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2192)     ; rightarrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2283) ; superset of
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_Numpad1:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadEnd}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadEnd}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      send {blind}{Numpad1}
+      if (Ebene = 1)
+         send {blind}{Numpad1}
+      else
+         send {blind){Shift up}{Numpad1}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_1"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-   {
-      send {NumpadEnd}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2194) ; Links-Rechts-Pfeil
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2264)   ; leq
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_Numpad2:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadDown}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadDown}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x00BD)       ; 1/2
-      else
-         send {blind}{Numpad2}
+      if !(CheckCompUni("Num_1",0x00BD) ; 1/2
+        or CheckCompUni("1",0x00BD))    ; 1/2
+         if (Ebene = 1)
+            send {blind}{Numpad2}
+         else
+            send {blind){Shift up}{Numpad2}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_2"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-   {
-      send {NumpadDown}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
+   else if (Ebene = 3)
       SendUnicodeChar(0x2193)     ; downarrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x222A)  ; vereinigt
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_Numpad3:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadPgDn}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadPgDn}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x2153)       ; 1/3
-      else if (CompKey = "Num_2")
-         CompUnicodeChar(0x2154)       ; 2/3
-      else
-         send {blind}{Numpad3}
+      if !(CheckCompUni("Num_1",0x2153) ; 1/3
+        or CheckCompUni("1",0x2154)     ; 1/3
+        or CheckCompUni("Num_2",0x2154) ; 2/3
+        or CheckCompUni("2",0x2154))    ; 2/3
+         if (Ebene = 1)
+            send {blind}{Numpad3}
+         else
+            send {blind){Shift up}{Numpad3}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_3"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-      send {NumpadPgDn}
-   else if Ebene = 3
+   else if (Ebene = 3)
       SendUnicodeChar(0x21CC) ; RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON
-   else if ( (Ebene = 4) or (Ebene = 5) )
+   else if ((Ebene = 4) or (Ebene = 5))
       SendUnicodeChar(0x2265)  ; geq
-   PriorDeadKey := ""   CompKey := ""
 return
 
 neo_Numpad0:
    EbeneAktualisieren()
-   if Ebene = 1
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadIns}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadIns}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
    {
-      send {blind}{Numpad0}
+      if (Ebene = 1)
+         send {blind}{Numpad0}
+      else
+         send {blind){Shift up}{Numpad0}{Shift down}
+
       if (PriorDeadKey = "comp")
          CompKey := "Num_0"
-      else
-         CompKey := ""
    }
-   else if Ebene = 2
-   {
-      send {NumpadIns}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send `%
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   else if (Ebene = 3)
+      send {blind}`%
+   else if ((Ebene = 4) or (Ebene = 5))
       send ‰ 
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 neo_NumpadDot:
    EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadDot}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      send {NumpadDel}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send .
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
+   if      ((Ebene = 1) and (NumLock = 0))
+      send {blind}{NumpadDel}
+   else if ((Ebene = 2) and (NumLock = 1))
+      send {blind}{Shift up}{NumpadDel}{Shift down}
+   else if (((Ebene = 1) and (NumLock = 1)) or ((Ebene = 2) and (NumLock = 0)))
+      if (Ebene = 1)
+         send {blind}{NumpadDot}
+      else
+         send {blind){Shift up}{NumpadDot}{Shift down}
+   else if (Ebene = 3)
+      send {blind}.
+   else if ((Ebene = 4) or (Ebene = 5))
       send `,
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-/*
-   bei NumLock aus
-*/
-
-neo_NumpadHome:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadHome}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      send {Numpad7}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_7"
-      else
-         CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x226A)  ; ll
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadUp:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadUp}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x215B)       ; 1/8
-      else if (CompKey = "Num_3")
-         CompUnicodeChar(0x215C)       ; 3/8
-      else if (CompKey = "Num_5")
-         CompUnicodeChar(0x215D)       ; 5/8
-      else if (CompKey = "Num_7")
-         CompUnicodeChar(0x215E)       ; 7/8
-      else
-         send {Numpad8}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_8"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      SendUnicodeChar(0x2191)     ; uparrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x2229)    ; intersection
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadPgUp:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadPgUp}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      send {Numpad9}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_9"
-      else
-         CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-
-      SendUnicodeChar(0x226B)  ; gg
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadLeft:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadLeft}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x00BC)       ; 1/4
-      else if (CompKey = "Num_3")
-         CompUnicodeChar(0x00BE)       ; 3/4
-      else
-         send {Numpad4}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_4"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      SendUnicodeChar(0x2190)     ; leftarrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x2282)  ; subset of
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadClear:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadClear}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x2155)       ; 1/5
-      else if (CompKey = "Num_2")
-         CompUnicodeChar(0x2156)       ; 2/5
-      else if (CompKey = "Num_3")
-         CompUnicodeChar(0x2157)       ; 3/5
-      else if (CompKey = "Num_4")
-         CompUnicodeChar(0x2158)       ; 4/5
-      else
-         send {Numpad5}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_5"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send †
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x220A) ; small element of
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadRight:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadRight}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x2159)       ; 1/6
-      else if (CompKey = "Num_5")
-         CompUnicodeChar(0x215A)       ; 5/6
-      else
-         send {Numpad6}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_6"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      SendUnicodeChar(0x2192)     ; rightarrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x2283) ; superset of
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadEnd:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadEnd}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      send {Numpad1}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_1"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      SendUnicodeChar(0x21CB) ; LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x2264)   ; leq
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadDown:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadDown}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x00BD)       ; 1/2
-      else
-         send {Numpad2}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_2"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      SendUnicodeChar(0x2193)     ; downarrow
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x222A)  ; vereinigt
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadPgDn:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadPgDn}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      if (CompKey = "Num_1")
-         CompUnicodeChar(0x2153)       ; 1/3
-      else if (CompKey = "Num_2")
-         CompUnicodeChar(0x2154)       ; 2/3
-      else
-         send {Numpad3}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_3"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      SendUnicodeChar(0x21CC) ; RIGHTWARDS HARPOON OVER LEFTWARDS HARPOON   
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      SendUnicodeChar(0x2265)  ; geq
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadIns:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadIns}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      send {Numpad0}
-      if (PriorDeadKey = "comp")
-         CompKey := "Num_0"
-      else
-         CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send `%
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      send ‰ 
-      CompKey := ""
-   }
-   PriorDeadKey := ""
-return
-
-neo_NumpadDel:
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      send {NumpadDel}
-      CompKey := ""
-   }
-   else if Ebene = 2
-   {
-      send {NumpadDot}
-      CompKey := ""
-   }
-   else if Ebene = 3
-   {
-      send .
-      CompKey := ""
-   }
-   else if ( (Ebene = 4) or (Ebene = 5) )
-   {
-      send `,
-      CompKey := ""
-   }
-   PriorDeadKey := ""
 return
 
 
@@ -4249,16 +2477,16 @@ return
    ------------------------------------------------------
 */
 *space::
-   if (einHandNeo)
+   if ((einHandNeo))
     spacepressed := 1
    else
     goto neo_SpaceUp
 return
 
 *space up::
-   if (einHandNeo)
+   if ((einHandNeo))
    {
-     if (keypressed)
+     if ((keypressed))
      {
        keypressed := 0
        spacepressed := 0    
@@ -4274,69 +2502,27 @@ return
 
 neo_SpaceUp:
      EbeneAktualisieren()
-     if Ebene = 1
-     {
-        if (CompKey = "r_small_1")
-           Comp3UnicodeChar(0x2170)          ; römisch i
-        else if (CompKey = "r_capital_1")
-           Comp3UnicodeChar(0x2160)          ; römisch I
-        else
-           Send {blind}{Space}
-     }
-     if  Ebene  =  2
-        Send  {blind}{Space}
-     if Ebene = 3
+     if      ((Ebene = 1) and !(CheckComp3Uni("r_1",0x2170)          ; römisch i
+                             or CheckComp3Uni("R_1",0x2160)))      ; römisch I 
         Send {blind}{Space}
-     if Ebene = 4
-     {
+     else if  ((Ebene = 2) or (Ebene = 3))
+        Send {blind}{Space}
+     else if (Ebene = 4)
         if (PriorDeadKey = "c1")            ; circumflex
            BSSendUnicodeChar(0x2070)
         else if (PriorDeadKey = "c5")       ; toter -
            BSSendUnicodeChar(0x2080)
         else
-           Send 0
-     }
-     else if Ebene = 5
+           Send {blind}{NumPad0}
+     else if (Ebene = 5)
         SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
-     else if Ebene = 6
+     else if (Ebene = 6)
         SendUnicodeChar(0x202F) ; schmales Leerzeichen
-     PriorDeadKey := ""   CompKey := ""
+     DeadKey := ""   CompKey := ""
   spacepressed := 0     
   keypressed := 0       
 return
 
-/*
-*Space::
-   EbeneAktualisieren()
-   if Ebene = 1
-   {
-      if (CompKey = "r_small_1")
-         Comp3UnicodeChar(0x2170)          ; römisch i
-      else if (CompKey = "r_capital_1")
-         Comp3UnicodeChar(0x2160)          ; römisch I
-      else
-         Send {blind}{Space}
-   }
-   if  Ebene  =  2
-      Send  {blind}{Space}
-   if Ebene = 3
-      Send {blind}{Space}
-   if Ebene = 4
-   {
-      if (PriorDeadKey = "c1")            ; circumflex
-         BSSendUnicodeChar(0x2070)
-      else if (PriorDeadKey = "c5")       ; toter -
-         BSSendUnicodeChar(0x2080)
-      else
-         Send 0
-   }
-   else if Ebene = 5
-      SendUnicodeChar(0x00A0)   ; geschütztes Leerzeichen
-   else if Ebene = 6
-      SendUnicodeChar(0x202F) ; schmales Leerzeichen
-   PriorDeadKey := ""   CompKey := ""
-return
-*/
 /*
    Folgende Tasten sind nur aufgeführt, um PriorDeadKey zu leeren.
    Irgendwie sieht das noch nicht schön aus. Vielleicht lässt sich dieses
@@ -4348,33 +2534,29 @@ return
 */
 
 *Enter::
-   if ( not(lernModus) or (lernModus_std_Return) )
+   if (not(lernModus) or lernModus_std_Return)
    {
-     sendinput {Blind}{Enter}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Enter}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *Backspace::
-   if ( not(lernModus) or (lernModus_std_Backspace) )
+   if (not(lernModus) or lernModus_std_Backspace)
    {
-     sendinput {Blind}{Backspace}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Backspace}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *Del::
-   if ( not(lernModus) or (lernModus_std_Entf) )
-   {
-     sendinput {Blind}{Del}
-   }
+   if (not(lernModus) or lernModus_std_Entf)
+     send {Blind}{Del}
 return
 
 *Ins::
-   if ( not(lernModus) or (lernModus_std_Einf) )
-   {
-     sendinput {Blind}{Ins}
-   }
+   if (not(lernModus) or lernModus_std_Einf)
+     send {Blind}{Ins}
 return
 
 
@@ -4382,115 +2564,86 @@ return
 
 
 /*
-Auf Mod3+Tab liegt Compose. AltTab funktioniert, jedoch ShiftAltTab nicht.
-Wenigstens kommt es jetzt nicht mehr zu komischen Ergebnissen, wenn man Tab 
-nach einem DeadKey drückt...
+Auf Mod3+Tab liegt Compose.
 */
 
 neo_tab:
-   if ( GetKeyState("SC038","P") )
-   {
-    Send,{Blind}{AltDown}{tab}
-    
-/*
-     if (isShiftPressed())
-     {
-      Send,{ShiftDown}{AltDown}{tab}
-     }
-     else
-     {       
-;       msgbox alt+tab
-        Send,{AltDown}{tab}
-      ; SC038 & Tab::AltTab            ; http://de.autohotkey.com/docs/Hotkeys.htm#AltTabDetail
-     }
-*/
-   }
-   else if (IsMod3Pressed()) ;#
+   if (IsMod3Pressed()) ;#
    {
       #Include *i %a_scriptdir%\ComposeLaunch.ahk
       #Include *i %a_scriptdir%\Source\ComposeLaunch.ahk
-      PriorDeadKey := "comp"
+      DeadKey := "comp"
       CompKey := ""
    }
    else
    {
       send {blind}{Tab}
-      PriorDeadKey := ""
+      DeadKey := ""
       CompKey := ""
    }
 return
 
-*SC038 up::
-   PriorDeadKey := ""   CompKey := ""
-   send {blind}{AltUp}
-return
-   
-*SC038 down::                    ; LAlt, damit AltTab funktioniert
-    Send,{Blind}{AltDown}
-   PriorDeadKey := ""   CompKey := ""
-return
-
 *Home::
-   if ( not(lernModus) or (lernModus_std_Pos1) )
+   if (not(lernModus) or lernModus_std_Pos1)
    {
-     sendinput {Blind}{Home}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Home}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *End::
-   if ( not(lernModus) or (lernModus_std_Ende) )
+   if (not(lernModus) or lernModus_std_Ende)
    {
-     sendinput {Blind}{End}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{End}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *PgUp::
-   if ( not(lernModus) or (lernModus_std_PgUp) )
+   if (not(lernModus) or lernModus_std_PgUp)
    {
-     sendinput {Blind}{PgUp}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{PgUp}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *PgDn::
-   if ( not(lernModus) or (lernModus_std_PgDn) )
+   if (not(lernModus) or lernModus_std_PgDn)
    {
-     sendinput {Blind}{PgDn}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{PgDn}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *Up::
-   if ( not(lernModus) or (lernModus_std_Hoch) )
+   if (not(lernModus) or lernModus_std_Hoch)
    {
-     sendinput {Blind}{Up}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Up}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *Down::
-   if ( not(lernModus) or (lernModus_std_Runter) )
+   if (not(lernModus) or lernModus_std_Runter)
    {
-     sendinput {Blind}{Down}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Down}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *Left::
-   if ( not(lernModus) or (lernModus_std_Links) )
+   if (not(lernModus) or lernModus_std_Links)
    {
-     sendinput {Blind}{Left}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Left}
+     DeadKey := ""   CompKey := ""
    }
 return
 
 *Right::
-   if ( not(lernModus) or (lernModus_std_Rechts) )
+   if (not(lernModus) or lernModus_std_Rechts)
    {
-     sendinput {Blind}{Right}
-     PriorDeadKey := ""   CompKey := ""
+     send {Blind}{Right}
+     DeadKey := ""   CompKey := ""
    }
 return
 
@@ -4636,72 +2789,42 @@ Ebenen laut Referenz:
 EbeneAktualisieren()
 {
    global
+   PriorDeadKey := DeadKey
+   PriorCompKey := CompKey
+   DeadKey := ""
+   CompKey := ""
+   Ebene12 := 0
+   Modstate := IsShiftPressed() . IsMod3Pressed() . IsMod4Pressed()
+
    if (ahkTreiberKombi)
-   {
-      if ( IsMod4Pressed() and not(IsShiftPressed()) and not(IsMod3Pressed()))
-      {
+      if ( Modstate = "001")
          Ebene = 6      
-      }
       else
-      {
-        Ebene = -1
-      }  
-   }
+         Ebene = -1
    else 
-   {   
-     if ( IsShiftPressed() )
-     {  ; Umschalt
-        if ( IsMod3Pressed() )
-            { ; Umschalt UND Mod3 
-            if ( IsMod4Pressed() )
-            {  ; Umschalt UND Mod3 UND Mod4 
-               ; Ebene 8 impliziert Ebene 6
-               Ebene = 6
-             }
-            else
-            { ; Umschald UND Mod3 NICHT Mod4
-                Ebene = 5                  
-            }
-        }
-        else 
-        {  ; Umschalt NICHT Mod3
-            if ( IsMod4Pressed() )
-            {  ; Umschalt UND Mod4 NICHT Mod3
-               ; Ebene 7 impliziert Ebene 4 
-                Ebene = 4
-            }
-            else
-            { ; Umschalt NICHT Mod3 NICHT Mod4
-               Ebene = 2    
-            }
-         }   
-     }
-     else
-     { ; NICHT Umschalt
-        if ( IsMod3Pressed() )
-        { ; Mod3 NICHT Umschalt 
-           if ( IsMod4Pressed() )
-           {  ; Mod3 UND Mod4 NICHT Umschalt
-               Ebene = 6
-           }
-           else
-           { ; Mod3 NICHT Mod4 NICHT Umschalt
-               Ebene = 3    
-           }
-        }
-        else 
-        {  ; NICHT Umschalt NICHT Mod3
-           if ( IsMod4Pressed() )
-           {  ; Mod4 NICHT Umschalt NICHT Mod3 
-               Ebene = 4
-           }
-           else
-           { ; NICHT Umschalt NICHT Mod3 NICHT Mod4
-               Ebene = 1
-           }
-        }   
-      }
-   }
+     if      (Modstate = "000")
+         Ebene = 1                 ; Ebene 1: Ohne Mod
+     else if (Modstate = "100")
+         Ebene = 2                 ; Ebene 2: Shift
+     else if (Modstate = "010")
+         Ebene = 3                 ; Ebene 3: Mod3
+     else if (Modstate = "001")
+         Ebene = 4                 ; Ebene 4: Mod4
+     else if (Modstate = "110")
+         Ebene = 5                 ; Ebene 5: Shift+Mod3
+     else if (Modstate = "011")
+         Ebene = 6                 ; Ebene 6: Mod3+Mod4
+     else if (Modstate = "101")
+         Ebene = 4                 ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+     else if (Modstate = "111")
+         Ebene = 6                 ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+
+   Ebene12 := ((Ebene = 1) or (Ebene = 2))
+
+   if GetKeyState("NumLock","T")
+     NumLock = 1
+   else
+     NumLock = 0
 }
 
 
@@ -4730,37 +2853,25 @@ IsMod4Pressed()
    {
      if (IsMod4Locked) 
      {
-         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed ))
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P")))
      }
      else {
-         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or altGrPressed )
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P"))
      }
    }
    else
    {
      if (IsMod4Locked) 
      {
-         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")  or altGrPressed ))
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")))
      }
      else {
-         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P") or altGrPressed )
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
      }
    }
    
 }
 
-
-IsModifierPressed()
-{
-   if (GetKeyState("LControl","P") or GetKeyState("RControl","P") or GetKeyState("LAlt","P") or GetKeyState("RAltl","P") or GetKeyState("LWin","P") or GetKeyState("RWin","P") or GetKeyState("LShift","P") or GetKeyState("RShift","P") or GetKeyState("AltGr","P") ) 
-    {
-       return 1
-    }
-    else
-    {
-       return 0
-    }
-}
 
 SendUnicodeChar(charCode)
 {
@@ -4782,7 +2893,7 @@ SendUnicodeChar(charCode)
    }
 }
 /*
-Über den GDK-Workaround:
+Über den GTK-Workaround:
 Dieser basiert auf http://www.autohotkey.com/forum/topic32947.html
 
 Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex mit führendem „0x“ angegeben sind. Die abenteuerliche „^+u“-Konstruktion benötigt im Übrigen den Hex-Wert in Kleinschrift, was derzeit nicht bei den Zeichendefinitionen umgesetzt ist, daher zentral und weniger fehlerträchtig an dieser Stelle. Außerdem ein abschließend gesendetes Space, sonst bleibt der „eingetippte“ Unicode-Wert noch kurz sichtbar stehen, bevor er sich GTK-sei-dank in das gewünschte Zeichen verwandelt.
@@ -4803,8 +2914,7 @@ CompUnicodeChar(charCode)
 
 Comp3UnicodeChar(charCode)
 {
-   send {bs}
-   send {bs}
+   send {bs}{bs}
    SendUnicodeChar(charCode)
 }
 
@@ -4814,11 +2924,298 @@ EncodeInteger(ref, val)
    DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
 }
 
+DeadSilence = 0
+
+deadAsc(val)
+{
+  global
+  if (DeadSilence)
+    {} ; keine Ausgabe
+  else
+    send % "{blind}" . val
+}
+
+deadUni(val)
+{
+  global
+  if (DeadSilence)
+    {} ; keine Ausgabe
+  else
+    SendUnicodeChar(val)
+}
+
+undeadAsc(val)
+{
+  global
+  if (DeadSilence)
+    send % "{blind}" . val
+  else
+    send % "{blind}{bs}" . val
+}
+
+undeadUni(val)
+{
+  global
+  if (DeadSilence)
+    {} ; keine ausgabe
+  else
+    send {bs}
+  SendUnicodeChar(val)    
+}
+
+CheckDeadAsc(d,val)
+{
+  global
+  if (PriorDeadKey == d)
+  {
+    undeadAsc(val)
+    return 1
+  }
+  else
+    return 0
+}
+
+CheckDeadUni(d,val)
+{
+  global
+  if (PriorDeadKey == d)
+  {
+    undeadUni(val)
+    return 1
+  }
+  else
+    return 0
+}
+
+CheckDeadAsc12(d,val1,val2)
+{
+  global
+  if (PriorDeadKey == d)
+  {
+    if      ((Ebene = 1) and (val1 != ""))
+    {
+      undeadAsc(val1)
+      return 1
+    }
+    else if ((Ebene = 2) and (val2 != ""))
+    {
+      undeadAsc(val2)
+      return 1
+    }
+    else 
+      return 0
+  }
+  else
+    return 0
+}
+
+CheckDeadUni12(d,val1,val2)
+{
+  global
+  if (PriorDeadKey == d)
+  {
+    if      ((Ebene = 1) and (val1 != ""))
+    {
+      undeadUni(val1)
+      return 1
+    }
+    else if ((Ebene = 2) and (val2 != ""))
+    {
+      undeadUni(val2)
+      return 1
+    }
+    else 
+      return 0
+  }
+  else
+    return 0
+}
+
+DeadCompose = 0
+
+compAsc(val)
+{
+  global
+  if (DeadCompose)
+    {} ; keine Ausgabe
+  else
+    send % "{blind}" . val
+}
+
+compUni(val)
+{
+  global
+  if (DeadCompose)
+    {} ; keine Ausgabe
+  else
+    SendUnicodeChar(val)
+}
+
+uncompAsc(val)
+{
+  global
+  if (DeadCompose)
+    send % "{blind}" . val
+  else
+    send % "{blind}{bs}" . val
+}
+
+uncompUni(val)
+{
+  global
+  if (DeadCompose)
+    {} ; keine ausgabe
+  else
+    send {bs}
+  SendUnicodeChar(val)    
+}
+
+uncomp3Uni(val)
+{
+  global
+  if (DeadCompose)
+    {} ; keine ausgabe
+  else
+    send {bs}{bs}
+  SendUnicodeChar(val)    
+}
+
+CheckCompAsc(d,val)
+{
+  global
+  if (PriorCompKey == d)
+  {
+    uncompAsc(val)
+    return 1
+  }
+  else
+    return 0
+}
+
+CheckCompAsc12(d,val1,val2)
+{
+  global
+  if (PriorCompKey == d)
+    if      ((Ebene = 1) and (val1 != ""))
+    {
+      uncompAsc(val1)
+      return 1
+    }
+    else if ((Ebene = 2) and (val2 != ""))
+    {
+      uncompAsc(val2)
+      return 1
+    }
+    else 
+      return 0
+  else
+    return 0
+}
+
+CheckCompUni(d,val)
+{
+  global
+  if (PriorCompKey == d)
+  {
+    uncompUni(val)
+    return 1
+  }
+  else
+    return 0
+}
+
+CheckCompUni12(d,val1,val2)
+{
+  global
+  if (PriorCompKey == d)
+  {
+    if      ((Ebene = 1) and (val1 != ""))
+    {
+      uncompUni(val1)
+      return 1
+    }
+    else if ((Ebene = 2) and (val2 != ""))
+    {
+      uncompUni(val2)
+      return 1
+    }
+    else 
+      return 0
+  }
+  else
+    return 0
+}
+
+CheckComp3Uni(d,val)
+{
+  global
+  if (PriorCompKey == d)
+  {
+    uncomp3Uni(val)
+    return 1
+  }
+  else
+    return 0
+}
+
+CheckComp3Uni12(d,val1,val2)
+{
+  global
+  if (PriorCompKey == d)
+  {
+    if      ((Ebene = 1) and (val1 != ""))
+    {
+      uncomp3Uni(val1)
+      return 1
+    }
+    else if ((Ebene = 2) and (val2 != ""))
+    {
+      uncomp3Uni(val2)
+      return 1
+    }
+    else
+      return 0
+  }
+  else
+    return 0
+}
+
+outputChar(val1,val2)
+{
+  global
+  if (Ebene = 1)
+    c := val1
+  else
+    c := val2
+  send % "{blind}" . c
+  if (PriorDeadKey = "comp")
+    CompKey := c
+}
+
+;Tote/Untote Tasten
+*F9::
+  if (isMod4pressed())
+    DeadSilence :=  not(DeadSilence)
+  else
+    send {blind}{F9}
+return
+
+;Tote/Untote Compose
+*F10::
+  if (isMod4pressed())
+    DeadCompose :=  not(DeadCompose)
+  else
+    send {blind}{F10}
+return
 
 ;Lang-s-Tastatur:
-SC056 & *F11::
-LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
+*F11::
+  if (isMod4pressed())
+    LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
+  else
+    send {blind}{F11}
 return
+
 
 /*
    ------------------------------------------------------
@@ -4863,167 +3260,107 @@ BSUnicode(code)
 */
 guiErstellt = 0
 alwaysOnTop = 1
-aktuellesBild = %ResourceFolder%\ebene1.png 
-SC056 & *F1::
-SC138 & *F1::
-{
-  if (zeigeBildschirmTastatur)
+
+*F1::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch1
-  return
-}
-SC056 & *F2::
-SC138 & *F2::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F1}
+return
+
+*F2::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch2
-  return
-}
-SC056 & *F3::
-SC138 & *F3::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F2}
+return
+
+*F3::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch3
-  return
-}
-SC056 & *F4::
-SC138 & *F4::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F3}
+return
+
+*F4::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch4
-  return
-}
-SC056 & *F5::
-SC138 & *F5::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F4}
+return
+
+*F5::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch5
-  return
-}
-SC056 & *F6::
-SC138 & *F6::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F5}
+return
+
+*F6::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch6
-  return
-}
-SC056 & *F7::
-SC138 & *F7::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F6}
+return
+
+*F7::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Show
-  return
-}
-SC056 & *F8::
-SC138 & *F8::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F7}
+return
+
+*F8::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
-  return
-}
+  else
+    send {blind}{F8}
+return
+
 Switch1:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene1.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene1.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene1.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene1.png"
+  goto Switch
 Return
 
 Switch2:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene2.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene2.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene2.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene2.png"
+  goto Switch
 Return
 
 Switch3:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene3.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene3.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene3.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene3.png"
+  goto Switch
 Return
 
 Switch4:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene4.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene4.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene4.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene4.png"
+  goto Switch
 Return
 
 Switch5:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene5.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene5.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene5.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene5.png"
+  goto Switch
 Return
 
 Switch6:
+  tImage := ResourceFolder . "\ebene6.png"
+  goto Switch
+Return
+
+Switch:
   if (guiErstellt) 
   {
-     if (Image == "%ResourceFolder%\ebene6.png")
+     if (Image = tImage)
         goto Close
      else
      {
-       Image = %ResourceFolder%\ebene6.png
+       Image := tImage
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = %ResourceFolder%\ebene6.png
+    Image := tImage
     goto Show    
   }
 Return
@@ -5037,7 +3374,7 @@ Show:
   {
     if (Image = "") 
     {
-      Image = %ResourceFolder%\ebene1.png 
+      Image := ResourceFolder . "\ebene1.png"
     }     
     yPosition := A_ScreenHeight -270
     Gui, Color, FFFFFF
@@ -5061,7 +3398,7 @@ Show:
     Gui, Add, Picture,AltSubmit ys w564 h200 vPicture, %Image%
     Gui, +AlwaysOnTop
     Gui, Show, y%yposition% Autosize
-    SetTimer, Refresh
+;    SetTimer, Refresh
     guiErstellt = 1
   } 
 Return
@@ -5100,15 +3437,18 @@ Return
    ------------------------------------------------------
 */
 
-+pause::
+*pause::
 Suspend, Permit
-   goto togglesuspend
+   if isshiftpressed()
+     goto togglesuspend
+   else
+     send {blind}{pause}
 return
 
 ; ------------------------------------
 
-^SC034::einHandNeo := not(einHandNeo)  ; Punkt
-^SC033::lernModus := not(lernModus)    ; Komma
+^.::einHandNeo := not(einHandNeo)  ; Punkt
+^,::lernModus := not(lernModus)    ; Komma
 
 
 
@@ -5183,10 +3523,4 @@ return
 exitprogram:
    exitapp
 return
-
-
-
-
-
-
 

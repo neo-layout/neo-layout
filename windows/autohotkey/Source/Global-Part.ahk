@@ -188,8 +188,12 @@ menu, tray, tip, %name%
    Variablen initialisieren
 */
 
-Ebene = 1
-PriorDeadKey := ""
+DeadKey = ""
+CompKey = ""
+PriorDeadKey = ""
+PriorCompKey = ""
+Ebene12 = 0
+EbeneAktualisieren()
 
 
  
