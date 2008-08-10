@@ -3,7 +3,7 @@
 
 == Hinweise für Nutzer ==
 
-=== Direkte Installation ===
+=== Direkte Installation === 
 Einfach die Datei neo20.exe herunterladen und die Datei irgendwo speichern (bspw. auf dem Desktop oder in dem Order »Eigenen Dateien«). Nach einem einfachen Doppelklick auf diese .exe-Datei steht NEO in voller Funktionalität zur Verfügung! Das alles geht ohne Administratoren-Rechte und ist auf jedem Rechner sofort ausführbar.
 
 === Rückkehr zum normalen Tastaturlayout ===

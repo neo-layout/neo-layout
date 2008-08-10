@@ -8,6 +8,7 @@ Nora Geissler <nora_geissler (at) yahoo. d e>
 Matthias Berg <neo (at) matthias-berg. e u>
 Martin Roppelt <m.p.roppelt (at) web. d e>
 Dennis Heidsiek <HeidsiekB (at) aol. c o m>
+Matthias Wächter <matthias (at) waechter.. w i z .. a t>
 ...
 
 
@@ -16,8 +17,6 @@ Dennis Heidsiek <HeidsiekB (at) aol. c o m>
 * TODO: *
 *********
 - Die Bildschirmtastatur mit Mod4 hat den Mod4-Lock deaktiviert!
-- Auf der 6. Ebene von 2 und 3 werden noch immer Delta und Nabla gesendet, aber nicht die logischen Symbole UND und ODER (wie in der Referenz); siehe hierzu auch http://de.autohotkey.com/forum/post-26040.html
-- send und send{blind} durch SendUnicodeChar ersetzen (aus Performance-Gründen jedoch nicht a-z, A-Z, 0-9)
 - Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?)
 - ausgiebig testen... (besonders Vollständigkeit bei Deadkeys)
 - Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.

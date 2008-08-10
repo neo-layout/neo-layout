@@ -4,14 +4,14 @@
    ------------------------------------------------------
 */
 ; Reihe 1
-*SC029::goto neo_tot1  ; Zirkumflex ^
-*1::goto neo_1
-*2::goto neo_2
-*3::goto neo_3
-*4::goto neo_4
-*5::goto neo_5
-*6::goto neo_6
-*7::
+*VKDCSC029::goto neo_tot1  ; Zirkumflex ^
+*VK31SC002::goto neo_1
+*VK32SC003::goto neo_2
+*VK33SC004::goto neo_3
+*VK34SC005::goto neo_4
+*VK35SC006::goto neo_5
+*VK36SC007::goto neo_6
+*VK37SC008::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_7
      else
@@ -19,8 +19,7 @@
         keypressed := 1
         goto %gespiegelt_7%
       }
-return
-*8::
+*VK38SC009::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_8
      else
@@ -28,8 +27,7 @@ return
         keypressed := 1
         goto %gespiegelt_8%
       }
-return
-*9::
+*VK39SC00A::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_9
      else
@@ -37,8 +35,7 @@ return
         keypressed := 1
         goto %gespiegelt_9%
       }
-return
-*0::
+*VK30SC00B::
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_0
      else
@@ -46,8 +43,7 @@ return
         keypressed := 1
         goto %gespiegelt_0%
       }
-return
-*SC00C::  ; ß
+*VKDBSC00C:: ; ß
   if ( not(ahkTreiberKombi) )
   {
        if( not(einHandNeo) or not(spacepressed) )
@@ -62,10 +58,10 @@ return
   {
      goto neo_sz   
   }
-*SC00D::goto neo_tot2  ; Akut			
+*VKDDSC00D::goto neo_tot2  ; Akut			
 ; Reihe 2
-*Tab::goto neo_tab
-*q::
+VK09SC00F::goto neo_tab
+*VK51SC010:: ; q (x)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_x
@@ -74,7 +70,7 @@ return
   {
      goto neo_q   
   }
-*w::
+*VK57SC011:: ; w (v)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_v
@@ -83,7 +79,7 @@ return
   {
      goto neo_w   
   }
-*e::
+*VK45SC012:: ; e (l)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_l
@@ -92,7 +88,7 @@ return
   {
      goto neo_e   
   }
-*r::
+*VK52SC013:: ; r (c)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_c
@@ -101,7 +97,7 @@ return
   {
      goto neo_r   
   }
-*t::
+*VK54SC014:: ; t (w)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_w
@@ -110,7 +106,7 @@ return
   {
      goto neo_t   
   }
-*SC015::  ; z 
+*VK5ASC015:: ; z (k) 
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -125,7 +121,7 @@ return
   {
      goto neo_z   
   }
-*u::
+*VK55SC016:: ; u (h)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -140,7 +136,7 @@ return
   {
      goto neo_u   
   }
-*i::
+*VK49SC017:: ; i (g)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -155,7 +151,7 @@ return
   {
      goto neo_i   
   }
-*o::
+*VK4FSC018:: ; o (f)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -170,7 +166,7 @@ return
   {
      goto neo_o   
   }
-*p::
+*VK50SC019:: ; p (q)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -185,7 +181,7 @@ return
   {
      goto neo_p   
   }
-*SC01A:: ; ü
+*VKBASC01A:: ; ü (ß)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -200,7 +196,7 @@ return
   {
      goto neo_ü   
   }
-*SC01B::  ; +
+*VKBBSC01B:: ; + (tot3)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -213,8 +209,9 @@ return
   }
   else
   { } ; this should never happen
+
 ; Reihe 3
-*a::
+*VK41SC01E:: ; a (u)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_u
@@ -223,7 +220,7 @@ return
   {
      goto neo_a   
   }
-*s::
+*VK53SC01F:: ; s (i)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_i
@@ -232,7 +229,7 @@ return
   {
      goto neo_s   
   }
-*d::goto neo_a
+*VK44SC020:: ; d (a)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_a
@@ -241,7 +238,7 @@ return
   {
      goto neo_d   
   }
-*f::
+*VK46SC021:: ; f (e)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_e
@@ -250,7 +247,7 @@ return
   {
      goto neo_f   
   }
-*g::
+*VK47SC022:: ; g (o)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_o
@@ -259,7 +256,7 @@ return
   {
      goto neo_g   
   }
-*h::
+*VK48SC023:: ; h (s)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -274,7 +271,7 @@ return
   {
      goto neo_h   
   }
-*j::
+*VK4ASC024:: ; j (n)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -289,7 +286,7 @@ return
   {
      goto neo_j   
   }
-*k::
+*VK4BSC025:: ; k (r)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -304,7 +301,7 @@ return
   {
      goto neo_k   
   }
-*l::
+*VK4CSC026:: ; l (t)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -319,7 +316,7 @@ return
   {
      goto neo_l   
   }
-*SC027::  ; ö
+*VKC0SC027:: ; ö (d)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -334,7 +331,7 @@ return
   {
      goto neo_ö   
   }
-*SC028::  ; ä
+*VKDESC028:: ; ä (y)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_y
@@ -343,8 +340,9 @@ return
   {
      goto neo_ä
   }
+
 ; Reihe 4
-*SC02C::  ; y
+*VK59SC02C:: ; y (ü)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ü
@@ -353,7 +351,7 @@ return
   {
      goto neo_y   
   }
-*x::
+*VK58SC02D:: ; x (ö)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ö
@@ -362,7 +360,7 @@ return
   {
      goto neo_x   
   }
-*c::
+*VK43SC02E:: ; c (ä)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_ä
@@ -371,7 +369,7 @@ return
   {
      goto neo_c
   }
-*v::
+*VK56SC02F:: ; v (p)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_p
@@ -380,7 +378,7 @@ return
   {
      goto neo_v
   }
-*b::
+*VK42SC030:: ; b (z)
   if ( not(ahkTreiberKombi) )
   {
      goto neo_z
@@ -389,7 +387,7 @@ return
   {
      goto neo_b
   }
-*n::
+*VK4ESC031:: ; n (b)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -404,7 +402,7 @@ return
   {
      goto neo_n
   }
-*m::
+*VK4DSC032:: ; m (m)
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_m
      else
@@ -412,8 +410,7 @@ return
         keypressed := 1
         goto %gespiegelt_m%
       }
-return
-*SC033::  ; Komma ,
+*VKBCSC033:: ; , (,)
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_komma
      else
@@ -421,8 +418,7 @@ return
         keypressed := 1
         goto %gespiegelt_komma%
       }
-return
-*SC034::  ; Punkt .
+*VKBESC034:: ; . (.)
      if( not(einHandNeo) or not(spacepressed) )
        goto neo_punkt
      else
@@ -430,8 +426,7 @@ return
         keypressed := 1
         goto %gespiegelt_punkt%
       }
-return
-*SC035::  ; Minus -
+*VKBDSC035:: ; - (j)
   if ( not(ahkTreiberKombi) )
   {
      if( not(einHandNeo) or not(spacepressed) )
@@ -446,34 +441,43 @@ return
   {
      goto neo_strich
   }
+
 ; Numpad
-*NumpadDiv::goto neo_NumpadDiv
-*NumpadMult::goto neo_NumpadMult
-*NumpadSub::goto neo_NumpadSub
-*NumpadAdd::goto neo_NumpadAdd
-*NumpadEnter::goto neo_NumpadEnter
-*Numpad7::goto neo_Numpad7
-*Numpad8::goto neo_Numpad8
-*Numpad9::goto neo_Numpad9
-*Numpad4::goto neo_Numpad4
-*Numpad5::goto neo_Numpad5
-*Numpad6::goto neo_Numpad6
-*Numpad1::goto neo_Numpad1
-*Numpad2::goto neo_Numpad2
-*Numpad3::goto neo_Numpad3
-*Numpad0::goto neo_Numpad0
-*NumpadDot::goto neo_NumpadDot
-*NumpadHome::goto neo_NumpadHome
-*NumpadUp::goto neo_NumpadUp
-*NumpadPgUp::goto neo_NumpadPgUp
-*NumpadLeft::goto neo_NumpadLeft
-*NumpadClear::goto neo_NumpadClear
-*NumpadRight::goto neo_NumpadRight
-*NumpadEnd::goto neo_NumpadEnd
-*NumpadDown::goto neo_NumpadDown
-*NumpadPgDn::goto neo_NumpadPgDn
-*NumpadIns::goto neo_NumpadIns
-*NumpadDel::goto neo_NumpadDel
+*VK6FSC135::goto neo_NumpadDiv
+*VK6ASC037::goto neo_NumpadMult
+*VK6DSC04A::goto neo_NumpadSub
+*VK6BSC04E::goto neo_NumpadAdd
+*VK0DSC11C::goto neo_NumpadEnter
 
+*VK67SC047::                      ; NumPad7    (mit NumLock  und ohne Shift)
+*VK24SC047::goto neo_Numpad7      ; NumPadHome (ohne Numlock oder mit Shift)
 
+*VK68SC048::                      ; NumPad8    (mit NumLock  und ohne Shift)
+*VK26SC048::goto neo_Numpad8      ; NumPadUp   (ohne Numlock oder mit Shift)
 
+*VK69SC049::                      ; NumPad9    (mit NumLock  und ohne Shift)
+*VK21SC049::goto neo_Numpad9      ; NumPadPgUp (ohne Numlock oder mit Shift)
+
+*VK64SC04B::                      ; NumPad4    (mit NumLock  und ohne Shift)
+*VK25SC04B::goto neo_Numpad4      ; NumPadLeft (ohne Numlock oder mit Shift)
+
+*VK65SC04C::                      ; NumPad5    (mit NumLock  und ohne Shift)
+*VK0CSC04C::goto neo_Numpad5      ; NumPadClear(ohne Numlock oder mit Shift)
+
+*VK66SC04D::                      ; NumPad6    (mit NumLock  und ohne Shift)
+*VK27SC04D::goto neo_Numpad6      ; NumPadRight(ohne Numlock oder mit Shift)
+
+*VK61SC04F::                      ; NumPad1    (mit NumLock  und ohne Shift)
+*VK23SC04F::goto neo_Numpad1      ; NumPadEnd  (ohne Numlock oder mit Shift)
+
+*VK62SC050::                      ; NumPad2    (mit NumLock  und ohne Shift)
+*VK28SC050::goto neo_Numpad2      ; NumPadDown (ohne Numlock oder mit Shift)
+
+*VK63SC051::                      ; NumPad3    (mit NumLock  und ohne Shift)
+*VK22SC051::goto neo_Numpad3      ; NumPadPgDn (ohne Numlock oder mit Shift)
+
+*VK60SC052::                      ; NumPad0    (mit NumLock  und ohne Shift)
+*VK2DSC052::goto neo_Numpad0      ; NumPadIns  (ohne Numlock oder mit Shift)
+
+*VK6ESC053::                      ; NumPadDot  (mit NumLock  und ohne Shift)
+*VK2ESC053::goto neo_NumpadDot    ; NumPadIns  (ohne Numlock oder mit Shift)

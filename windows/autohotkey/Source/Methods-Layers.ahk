@@ -5,38 +5,69 @@
 */
 
 
-; CapsLock durch Umschalt+Umschalt
-;*CapsLock::return ; Nichts machen beim Capslock release event (weil es Mod3 ist)
+;LShift+RShift == CapsLock (simuliert)
+; Es werden nur die beiden Tastenkombinationen abgefragt,
+; daher kommen LShift und RShift ungehindert bis in die
+; Applikation. Dies ist aber merkwürdig, da beide Shift-
+; Tasten nun /modifier keys/ werden und, wie in der AHK-
+; Hilfe beschrieben, eigentlich nicht mehr bis zur App
+; durchkommen sollten.
 
-*#::return ; Nichts machen beim # release event (weil es Mod3 ist) ; # = SC02B
+VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
+VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
+;
+; mit diesen funktioniert das automatische Übernehmen der
+; gedrückten Shift-Tasten nicht, also z.B. Shift-Ins, wenn Ins
+; bei gedrückter Shift-Taste {blind} gesendet wird
+; *VKA1SC136::
+; *VKA0SC02A::
+   if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
+      send {blind}{capslock}
+return
 
-;RShift wenn vorher LShift gedrückt wurde
-LShift & ~RShift::  
-      if GetKeyState("CapsLock","T")
+
+; Mod3+Mod3 == Mod3-Lock
+; Im Gegensatz zu LShift+RShift werden die beiden Tasten
+; _nicht_ zur Applikation weitergeleitet, da '#' kein
+; Modifier ist und CapsLock sonst den CapsLock-Status
+; beeinflusst. Dafür werden sämtliche Events dieser
+; Tasten abgefangen, und nur bei gleichzeitigem Drücken
+; wird der Mod3-Lock aktiviert und angezeigt.
+
+IsMod3Locked := 0
+; VKBFSC02B & VK14SC03A::
+; VK14SC03A & VKBFSC02B::
+*VKBFSC02B:: ; #
+*VK14SC03A:: ; CapsLock
+   if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P"))
+   {
+      if (IsMod3Locked) 
       {
-         setcapslockstate, off
+         IsMod3Locked = 0
+         MsgBox Mod3-Feststellung aufgebehoben
       }
       else
       {
-         setcapslockstate, on
+         IsMod3Locked = 1
+         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
       }
+   }
 return
 
-;LShift wenn vorher RShift gedrückt wurde
-RShift & ~LShift::
-      if GetKeyState("CapsLock","T")
-      {
-         setcapslockstate, off
-      }
-      else
-      {
-         setcapslockstate, on
-      }
-return
+; Mod4+Mod4 == Mod4-Lock
+; Wie bei Mod3-Lock werden im Gegensatz zu LShift+RShift 
+; die beiden Tasten _nicht_ zur Applikation weitergeleitet,
+; und nur bei gleichzeitigem Drücken wird der Mod4-Lock
+; aktiviert und angezeigt.
 
-; Mod4-Lock durch Mod4+Mod4
 IsMod4Locked := 0
-< & *SC138::
+; VKA5SC138 & VKE2SC056:: ; AltGr, dann <
+; VKE2SC056 & VKA5SC138:: ; <, dann AltGr
+*VKA5SC138::
+*VKE2SC056::
+   if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
+   {
+      ; Mod4-Lock durch Mod4(rechts)+Mod4(links)
       if (IsMod4Locked) 
       {
          MsgBox Mod4-Feststellung aufgebehoben
@@ -55,75 +86,5 @@ IsMod4Locked := 0
             KeyboardLED(1,"on")
          }
       }
-return
-
-*SC138::
- altGrPressed := 1
-return  ; Damit AltGr nicht extra etwas schickt und als stiller Modifier geht.
-*SC138 up::
- altGrPressed := 0
-return 
-
-; das folgende wird seltsamerweise nicht gebraucht :) oder führt zum AltGr Bug; Umschalt+‹ (Mod4) Zeigt ‹
-SC138 & *<::
-      if (IsMod4Locked) 
-      {
-         MsgBox Mod4-Feststellung aufgebehoben
-         IsMod4Locked = 0
-      }
-      else
-      {
-         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig 
-         IsMod4Locked = 1
-      }
-return
-
- 
- ; Mod3-Lock durch Mod3+Mod3
-IsMod3Locked := 0
-SC02B & *Capslock::  ; #
-      if (IsMod3Locked) 
-      {
-         MsgBox Mod3-Feststellung aufgebehoben
-         IsMod3Locked = 0
-      }
-      else
-      {
-         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
-         IsMod3Locked = 1
-      }
-return
-
-
-*Capslock:: return
-;Capslock::MsgBox hallo
-/*
-Capslock & *:
-      if (IsMod3Locked) 
-      {
-         MsgBox Mod3-Feststellung aufgebehoben
-         IsMod3Locked = 0
-      }
-      else
-      {
-         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
-         IsMod3Locked = 1
-      }
-return
-*/
- 
-/*
-;  Wird nicht mehr gebraucht weil jetzt auf b (bzw. *n::)
-; KP_Decimal durch Mod4+Mod4
-*<::
-*SC138::
-   if GetKeyState("<","P") and GetKeyState("SC138","P")
-   {
-      send {numpaddot}
    }
 return
- 
-*/
-
-
-

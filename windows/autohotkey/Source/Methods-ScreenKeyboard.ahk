@@ -5,167 +5,107 @@
 */
 guiErstellt = 0
 alwaysOnTop = 1
-aktuellesBild = %ResourceFolder%\ebene1.png 
-SC056 & *F1::
-SC138 & *F1::
-{
-  if (zeigeBildschirmTastatur)
+
+*F1::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch1
-  return
-}
-SC056 & *F2::
-SC138 & *F2::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F1}
+return
+
+*F2::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch2
-  return
-}
-SC056 & *F3::
-SC138 & *F3::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F2}
+return
+
+*F3::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch3
-  return
-}
-SC056 & *F4::
-SC138 & *F4::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F3}
+return
+
+*F4::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch4
-  return
-}
-SC056 & *F5::
-SC138 & *F5::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F4}
+return
+
+*F5::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch5
-  return
-}
-SC056 & *F6::
-SC138 & *F6::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F5}
+return
+
+*F6::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Switch6
-  return
-}
-SC056 & *F7::
-SC138 & *F7::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F6}
+return
+
+*F7::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto Show
-  return
-}
-SC056 & *F8::
-SC138 & *F8::
-{
-  if (zeigeBildschirmTastatur)
+  else
+    send {blind}{F7}
+return
+
+*F8::
+  if (isMod4Pressed() and zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
-  return
-}
+  else
+    send {blind}{F8}
+return
+
 Switch1:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene1.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene1.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene1.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene1.png"
+  goto Switch
 Return
 
 Switch2:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene2.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene2.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene2.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene2.png"
+  goto Switch
 Return
 
 Switch3:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene3.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene3.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene3.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene3.png"
+  goto Switch
 Return
 
 Switch4:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene4.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene4.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene4.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene4.png"
+  goto Switch
 Return
 
 Switch5:
-  if (guiErstellt) 
-  {
-     if (Image == "%ResourceFolder%\ebene5.png")
-        goto Close
-     else
-     {
-       Image = %ResourceFolder%\ebene5.png
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
-    Image = %ResourceFolder%\ebene5.png
-    goto Show    
-  }
+  tImage := ResourceFolder . "\ebene5.png"
+  goto Switch
 Return
 
 Switch6:
+  tImage := ResourceFolder . "\ebene6.png"
+  goto Switch
+Return
+
+Switch:
   if (guiErstellt) 
   {
-     if (Image == "%ResourceFolder%\ebene6.png")
+     if (Image = tImage)
         goto Close
      else
      {
-       Image = %ResourceFolder%\ebene6.png
+       Image := tImage
        SetTimer, Refresh
      }
   }
   else 
   {
-    Image = %ResourceFolder%\ebene6.png
+    Image := tImage
     goto Show    
   }
 Return
@@ -179,7 +119,7 @@ Show:
   {
     if (Image = "") 
     {
-      Image = %ResourceFolder%\ebene1.png 
+      Image := ResourceFolder . "\ebene1.png"
     }     
     yPosition := A_ScreenHeight -270
     Gui, Color, FFFFFF
@@ -203,7 +143,7 @@ Show:
     Gui, Add, Picture,AltSubmit ys w564 h200 vPicture, %Image%
     Gui, +AlwaysOnTop
     Gui, Show, y%yposition% Autosize
-    SetTimer, Refresh
+;    SetTimer, Refresh
     guiErstellt = 1
   } 
 Return
@@ -242,15 +182,18 @@ Return
    ------------------------------------------------------
 */
 
-+pause::
+*pause::
 Suspend, Permit
-   goto togglesuspend
+   if isshiftpressed()
+     goto togglesuspend
+   else
+     send {blind}{pause}
 return
 
 ; ------------------------------------
 
-^SC034::einHandNeo := not(einHandNeo)  ; Punkt
-^SC033::lernModus := not(lernModus)    ; Komma
+^.::einHandNeo := not(einHandNeo)  ; Punkt
+^,::lernModus := not(lernModus)    ; Komma
 
 
 
@@ -325,9 +268,3 @@ return
 exitprogram:
    exitapp
 return
-
-
-
-
-
-
