@@ -103,8 +103,11 @@ AltGr + Pos1 = Abmelden
 AltGr + Ende = Computer ausschalten
 --> diese Kombinationen treten auf bei AUSgeschaltetem Numlock mit Mod4.
 
-=== Globale Schalter ===
-Ist die ANSI-kodierte Datei [...]\Anwendungsdaten\NEO2\NEO2.ini vorhanden, werden dort eventuell vonhandene Werte für die Globalen Schalter beim Start übernommen. Eine NEO2.ini, die alle Werte auf die Standardwerte »ändert«, sähe etwa so aus:
+=== Globale Schalter und die NEO2.ini ===
+Es besteht die Möglichkeit, beim Starten des AHK’s individuelle Anfangswerte für die Globalen Schalter des Programms vorzugeben.
+
+Dies geschieht über die Konfigurationsdatei NEO2.ini (diese muss im gebräuchlichen INI-Format vorliegen, also insbesondere ANSI-kodiert sein). 
+Eine NEO2.ini, die alle Werte auf die Standardwerte »ändert«, sähe etwa so aus:
 [Global]
 # Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
 ahkTreiberKombi=0
@@ -112,5 +115,11 @@ einHandNeo=0
 lernModus=0
 UseMod4Light=1
 LangSTastatur=0
+
+Diese Datei muss manuell (etwa mit dem Notepad) in dem richtigen Verzeichnis innerhalb der Anwendungsdaten des aktuellen Nutzers angelegt werden. Unter Windows Vista ist dies etwa das Verzeichnis
+C:\Users\<BENUTZERNAME>\AppData\Roaming\NEO2\NEO2.ini
+unter Windows XP hingegen das Verzeichnis
+C:\Dokumente und Einstellungen\<BENUTZERNAME>\Anwendungsdaten\NEO2\NEO2.ini 
+usw.
 
 === ... ===
