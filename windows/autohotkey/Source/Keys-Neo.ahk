@@ -896,7 +896,7 @@ neo_d:
    else if (Ebene = 3)
       send {blind}:
    else if (Ebene = 4)
-      Send {blind}{NumPadKomma}
+		send `,
    else if (Ebene = 5)
       SendUnicodeChar(0x03B4) ;delta
    else if (Ebene = 6)
