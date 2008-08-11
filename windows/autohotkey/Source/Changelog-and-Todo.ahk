@@ -37,8 +37,10 @@ Matthias Wächter <matthias (at) waechter.. w i z .. a t>
 * CHANGEHISTORY: *
 ******************
 
-
-
+Revision 742 (von Matthias Wächter, commited von Stefan Mayer)
+- Ebene4-Ziffernblock: NumPadAdd und NumPadSub korrigiert
+Revision 740 (von Matthias Wächter, commited von HCW)
+- "Mega-Patch" (Skript verkürzt, Ebenenabfrage verändert, ...), siehe CHANGES.txt
 Revision 728 (von Dennis Heidsiek):
 - Ist die Datei [...]\Anwendungsdaten\NEO2\NEO2.ini vorhanden, werden dort eventuell vonhandene Werte für die Globalen Schalter beim Start übernommen
 Revision 707 (von Dennis Heidsiek):

@@ -67,9 +67,9 @@ neo_1:
 
       if      (PriorDeadKey = "comp")
          CompKey := "1"
-      else if (PriorCompKey = "r")
+      else if (PriorCompKey == "r")
          CompKey := "r_1"
-      else if (PriorCompKey = "R")
+      else if (PriorCompKey == "R")
          CompKey := "R_1"
    }
    else if (Ebene = 2)
@@ -352,7 +352,7 @@ neo_0:
    else if (Ebene = 3)
       send {blind}’
    else if (Ebene = 4)
-      Send {blind}{NumpadMinus}
+      Send {blind}{NumpadSub}
    else if (Ebene = 5)
    {
        CompKey := PriorCompKey
@@ -600,7 +600,7 @@ neo_q:
       send {blind}{&}
    else if ((Ebene = 4) and !(CheckDeadUni("c1",0x207A)
                            or CheckDeadUni("c5",0x208A)))
-      Send {blind}{NumPadPlus}
+      Send {blind}{NumPadAdd}
    else if (Ebene = 5)
       SendUnicodeChar(0x03D5) ; phi symbol (varphi)
    else if (Ebene = 6)
@@ -1618,6 +1618,7 @@ return
      DeadKey := ""   CompKey := ""
    }
 return
+
 
 
 

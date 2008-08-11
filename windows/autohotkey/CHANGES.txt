@@ -1,5 +1,10 @@
 ﻿== Neo 2.0 Autohotkey-Treiber für Windows ==
 
+== 2008-08-11 Matthias Wächter ==
+
+Ebene4-Ziffernblock: NumpadAdd und NumPadSub korriegiert
+
+
 == 2008-08-10 Matthias Wächter ==
 
 • Erstmal ist fast kein Stein auf dem anderen geblieben. Die grobe Struktur und das Verhalten (natürlich auch die Tastenbelegung ist 100% NEO!) sind grundsätzlich gleich geblieben, aber einerseits hat sich im Feinen viel getan (z.B. Tab-Behandlung), andererseits schauen viele Zeilen altbekannten Codes jetzt anders aus.
