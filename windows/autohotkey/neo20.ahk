@@ -1869,6 +1869,7 @@ neo_s:
               or CheckDeadUni12("c1",0x015D,0x015C)
               or CheckDeadUni12("c2",0x0161,0x0160)
               or CheckDeadUni12("c6",0x1E63,0x1A62)))
+   {
       if (Ebene = 1)
       {
         if LangSTastatur
@@ -1893,6 +1894,7 @@ neo_s:
         if (PriorDeadKey = "comp")
           CompKey := "S"
       }
+  }
   else if (Ebene = 3)
     send {blind}?
   else if (Ebene = 4)

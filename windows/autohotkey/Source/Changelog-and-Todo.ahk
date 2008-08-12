@@ -29,6 +29,8 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 * CHANGEHISTORY: *
 ******************
 
+Revision 749 (von Dennis Heidsiek)
+- ? und ¿ funktionieren wieder (Klammer vergessen)
 Revision 748 (von Dennis Heidsiek)
 - Neue Globale Variable »zeigeLockBoxen«: Soll mit MessageBoxen explizit auf das Ein- und Ausschalten des Mod{3,4}-Locks hingewiesen werden?
 Revision 746 (von Martin Roppelt)
