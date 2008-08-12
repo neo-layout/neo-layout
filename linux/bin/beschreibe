@@ -92,5 +92,5 @@ fi
 
 if [ ${a[$zahl]} ]
 then
-	./wiemitneo ${a[$zahl]}
+	wiemitneo ${a[$zahl]}
 fi
