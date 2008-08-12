@@ -1,4 +1,4 @@
-﻿-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -101,6 +101,10 @@ Taste rechts neben der 0
 │–   ╌│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
 │- — ‑│ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
 ┴──┬──┴ 6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
+
+Außerdem gibt es noch
+• den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzugt wird
+• das (echte) Minuszeichen (U+2212 MINUS SIGN) auf dem Keypad
 
 === Anführungszeichen ===
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
