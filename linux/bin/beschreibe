@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# Verzeichnis muss eventuell an den Ort der Compose angepasst werden:
+COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
+n=10
+
+while [ ! "$beschreibung" ]
+do
+	case ${1-" "} in
+		" ")
+			echo Aufruf: $0 [OPTION] BESCHREIBUNG
+			echo »$0 --help« gibt Ihnen mehr Informationen.
+			exit;;
+		--help)
+			echo Aufruf: $0 [OPTION] BESCHREIBUNG
+			echo »$0« versucht ein Zeichen anhand einer Beschreibung zu idetifizieren
+			echo Option:
+			echo -e "  -n               gibt n statt 10 Vorschläge aus"
+			exit;;
+		\ )
+			echo $0: Kein Suchkriterium eingegeben!
+			echo Versuchen Sie »$0 --help« für weitere Informationen.
+			exit;;
+		-*)
+			n=`echo $1 | cut -c2-`
+			shift;;
+		*)
+			beschreibung=${*?$0: Fehler! Versuchen Sie »$0 --help« für weitere Informationen.}
+	esac
+done
+
+anzahl=`grep -iw $beschreibung $COMPOSE | head -$n | wc -l`
+if [ $anzahl -gt 0 ]
+then
+	for i in $(seq 1 $anzahl)
+	do
+		a[$i]=`grep -iw $beschreibung $COMPOSE | grep ^\< | head -$i | tail -1 | cut -f2 -d \"`
+		echo $i\) ${a[$i]}
+	done
+
+	read -p 'welches Zeichen suchen Sie: ' zahl
+	echo
+else
+	echo „$beschreibung“ ist unbekannt, versuchen Sie eine andere Beschreibung.
+	exit
+fi
+
+if [ ${a[$zahl]} ]
+then
+	echo
+	./wiemitneo ${a[$zahl]}
+fi

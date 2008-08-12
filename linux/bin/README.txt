@@ -27,3 +27,6 @@ Gibt an, ob und wie ein Zeichen mit NEO ermöglicht werden kann. Beispiele:
 Außerdem ist @ über Compose folgendermaßen darstellbar:
 <Multi_key> + <A> + <T>
 -------------------------------
+
+== beschreibe ==
+Versucht, Zeichen anhand einer Beschreibung zu erraten und ruft »wiemitneo« auf
