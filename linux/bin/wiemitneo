@@ -1,0 +1,100 @@
+#!/bin/sh
+
+# Verzeichnis muss eventuell an den Ort der neo20.txt angepasst werden:
+COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
+REFERENZ=$HOME/neo/A-REFERENZ-A/neo20.txt
+
+zeichen=$1
+# suche nach diesem Zeichen
+typeset -i z s e
+# z=zeile, s=spalte, e=Ebene
+
+find=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep [│\ ]$zeichen[│\ ] | head -1  | cut -f1 -d \ `
+anzahl=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep -n [│\ ]$zeichen[│\ ] | wc -l`
+if [ $find ]
+then
+# $zeichen gibt es direkt auf der Tastatur bei Ebene $e auf der Taste $ursprung
+
+	for i in $(seq 1 $anzahl)
+	do
+#	eventuell mehrfach auf der Tastatur vorhanden
+		e=1
+		zeile=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep -n [│\ ]$zeichen[│\ ] | head -$i | tail -1 | cut -f1 -d:`
+		spalte=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep [│\ ]$zeichen[│\ ] | head -$i | tail -1| cut -f1 -d $zeichen | wc -m`
+		z=$((zeile))
+		s=$((spalte))
+
+		teste=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | head -$z | tail -1 | cut -c $s`
+		while [ ! "$teste" = "─" ] && [ ! "$teste" = "┬" ]
+		do
+#		finde Zeile z von $ursprung (=Tastenname), berechne die Ebene $e von $zeichen
+			z=z+1
+			e=e+1
+			ursprung=$teste
+			teste=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | head -$z | tail -1 | cut -c $s`
+		done
+
+		teste=$ursprung
+		z=z-1
+		e=e-1
+		while [ ! "$teste" = "│" ]
+		do
+#		finde Spalte s von $ursprung (=Tastenname), berechne die Ebene $e von $zeichen
+			s=s-1
+			e=e+1
+			ursprung=$teste
+			teste=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | head -$z | tail -1 | cut -c $s`
+		done	
+		e=e-1
+
+		case $e in
+			1)
+				echo $zeichen ist eine eigene Taste
+				;;
+			2)
+				echo $zeichen erreicht man mit Shift+$ursprung
+				;;
+			3)
+				echo $zeichen erreicht man mit Mod3+$ursprung
+				;;
+			4)
+				echo $zeichen erreicht man mit Mod4+$ursprung
+				;;
+			5)
+				echo $zeichen erreicht man mit Shift+Mod3+$ursprung
+				;;
+			6)
+				echo $zeichen erreicht man mit Mod3+Mod4+$ursprung
+				;;
+		esac
+	
+	done
+
+else
+# $zeichen gibt es nicht direkt auf der Tastatur
+	keinetaste=1
+fi
+
+
+such=\"$zeichen\"
+find=`grep $such $COMPOSE | head -1 | cut -f1 -d \ `
+if [ $find ]
+then
+# $zeichen gibt es als Compose
+	if [ "$keinetaste" = "1" ]
+	then
+		echo $zeichen ist nicht direkt auf der NEO-Tastatur
+		echo
+		echo Aber $zeichen ist über Compose folgendermaßen darstellbar:
+	else
+		echo
+		echo Außerdem ist $zeichen über Compose folgendermaßen darstellbar:
+	fi
+	grep $such $COMPOSE | cut -f1 -d: | sed -e 's/> </> + </g'
+else
+# $zeichen gibt es nicht als Compose
+	if [ "$keinetaste" = "1" ]
+	then
+		echo $zeichen kann man mit der NEO nicht erzeugen
+	fi
+fi
