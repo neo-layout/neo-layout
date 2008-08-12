@@ -4,7 +4,7 @@
 COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
 REFERENZ=$HOME/neo/A-REFERENZ-A/neo20.txt
 
-zeichen=$1
+zeichen=`echo $1 | cut -c1`
 # suche nach diesem Zeichen
 typeset -i z s e
 # z=zeile, s=spalte, e=Ebene
@@ -90,7 +90,7 @@ then
 		echo
 		echo Außerdem ist $zeichen über Compose folgendermaßen darstellbar:
 	fi
-	grep $such $COMPOSE | cut -f1 -d: | sed -e 's/> </> + </g'
+	grep ^\<.*$such $COMPOSE | cut -f1 -d: | sed -e 's/> </> + </g'
 else
 # $zeichen gibt es nicht als Compose
 	if [ "$keinetaste" = "1" ]
