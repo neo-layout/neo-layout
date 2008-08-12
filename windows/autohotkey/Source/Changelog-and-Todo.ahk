@@ -29,6 +29,8 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 * CHANGEHISTORY: *
 ******************
 
+Revision 748 (von Dennis Heidsiek)
+- Neue Globale Variable »zeigeLockBoxen«: Soll mit MessageBoxen explizit auf das Ein- und Ausschalten des Mod{3,4}-Locks hingewiesen werden?
 Revision 746 (von Martin Roppelt)
 - Zurücksetzen der Tastatur über M4+Esc
 - #(2L) sendet nicht mehr '

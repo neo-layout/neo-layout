@@ -67,6 +67,8 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 * CHANGEHISTORY: *
 ******************
 
+Revision 748 (von Dennis Heidsiek)
+- Neue Globale Variable »zeigeLockBoxen«: Soll mit MessageBoxen explizit auf das Ein- und Ausschalten des Mod{3,4}-Locks hingewiesen werden?
 Revision 746 (von Martin Roppelt)
 - Zurücksetzen der Tastatur über M4+Esc
 - #(2L) sendet nicht mehr '
@@ -84,7 +86,7 @@ Revision 728 (von Dennis Heidsiek):
 - Ist die Datei %APPDATA%\NEO2\NEO2.ini vorhanden, werden dort eventuell vorhandene Werte für die Globalen Schalter beim Start übernommen
 - »LangSTastaturStandardmäßigEingeschaltet.ahk« wird nicht mehr unterstützt, weil sonst immer neu kompiliert werden muss
 Revision 707 (von Dennis Heidsiek):
-- Die Resourcen-Dateien (PNGs, ICOs) werden nun nach "Von Windows vorgegebenes TEMP Verzeichnis"\NEO2\ extrahiert und nicht mehr in das Verzeichnis, in dem sich die EXE befindet
+- Die Resourcen-Dateien (PNGs, ICOs) werden nun nach %TEMP%\NEO2\ extrahiert und nicht mehr in das Verzeichnis, in dem sich die EXE befindet
 - Die doppelten französischen Anführungszeichen werden nun ebenfalls über SendUnicodeChar gesendet
 Revision 694 (von Martin Roppelt):
 - LangSTastatur auf M4+F11
@@ -248,6 +250,9 @@ IniRead, einHandNeo, %ApplicationFolder%\NEO2.ini, Global, einHandNeo, 0
 
 ; Soll der Lernmodus aktiviert werden?
 IniRead, lernModus, %ApplicationFolder%\NEO2.ini, Global, lernModus, 0
+
+; Soll mit MessageBoxen explizit auf das Ein- und Ausschalten des Mod{3,4}-Locks hingewiesen werden?
+IniRead, zeigeLockBoxen, %ApplicationFolder%\NEO2.ini, Global, zeigeLockBoxen, 1
 
 ; Soll aktivierter Mod4-Lock über die Rollen-LED des Keybord angezeigt werden (analog zu CapsLock)?
 IniRead, UseMod4Light, %ApplicationFolder%\NEO2.ini, Global, UseMod4Light, 1
@@ -516,12 +521,19 @@ IsMod3Locked := 0
       if (IsMod3Locked) 
       {
          IsMod3Locked = 0
-         MsgBox Mod3-Feststellung aufgebehoben
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod3-Feststellung aufgebehoben!
+         }
       }
       else
       {
          IsMod3Locked = 1
-         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig!
+         }
+         
       }
    }
 return
@@ -542,7 +554,10 @@ IsMod4Locked := 0
       ; Mod4-Lock durch Mod4(rechts)+Mod4(links)
       if (IsMod4Locked) 
       {
-         MsgBox Mod4-Feststellung aufgebehoben
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod4-Feststellung aufgebehoben!
+         }
          IsMod4Locked = 0
          if (UseMod4Light==1)
          {
@@ -551,7 +566,10 @@ IsMod4Locked := 0
       }
       else
       {
-         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig!
+         }
          IsMod4Locked = 1
          if (UseMod4Light==1)
          {
