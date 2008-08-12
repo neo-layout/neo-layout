@@ -232,11 +232,11 @@ keycode 82  = KP_Subtract	KP_Subtract		minus		U2212
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  7		KP_Home		U2195		dagger
+keycode 79 =  KP_7	KP_Home		U2195		dagger
 !					↕ arrow		†
-keycode 80 =  8		KP_Up		uparrow		intersection
+keycode 80 =  KP_8	KP_Up		uparrow		intersection
 !					↑		∩	
-keycode 81 =  9		KP_Prior	containsas	U2297
+keycode 81 =  KP_9	KP_Prior	containsas	U2297
 !					∋		⊗	
 keycode 86 =  KP_Add	KP_Add		plusminus	U2213
 !	      +		+2		±		∓ minus-plus	
@@ -244,21 +244,21 @@ keycode 86 =  KP_Add	KP_Add		plusminus	U2213
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  4		KP_Left		leftarrow	includedin
+keycode 83 =  KP_4	KP_Left		leftarrow	includedin
 !					←		⊂	
-keycode 84 =  5		KP_Begin	infinity	EuroSign
+keycode 84 =  KP_5	KP_Begin	infinity	EuroSign
 !					∞		€
-keycode 85 =  6		KP_Right	rightarrow	includes
+keycode 85 =  KP_6	KP_Right	rightarrow	includes
 !					→		⊃
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  1		KP_End		U2194		U2714
+keycode 87 =  KP_1	KP_End		U2194		U2714
 !					↔ arrow		✔ check mark	
-keycode 88 =  2		KP_Down		downarrow	union
+keycode 88 =  KP_2	KP_Down		downarrow	union
 !					↓		∪	
-keycode 89 =  3		KP_Next		U21CC		U2717
+keycode 89 =  KP_3	KP_Next		U21CC		U2717
 !					⇌ arro		✗ battol X
 keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
@@ -267,7 +267,7 @@ keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = 0		KP_Insert	percent		U2030
+keycode 90 = KP_0	KP_Insert	percent		U2030
 !					%		‰ per mille	
 keycode 91 = comma	KP_Delete	period		KP_Separator
 !	     ,				.		,/.		
