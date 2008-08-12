@@ -10,7 +10,7 @@ Einfach die Datei neo20.exe herunterladen und die Datei irgendwo speichern (bspw
 Um kurzzeitig zwischen QWERTZ und NEO hin- und herzuwechseln, kann mit der Tastenkombination Shift+Pause das Skript pausiert bzw. wieder gestartet werden. Die Möglchkeit, Autohotkey dauerhaft zu deaktivieren, erhält man hingegen mit einem Rechtsklick auf das rote/weiße NEO-Icon im Traybereich (bei der Uhr).
 
 === Bildschirmtastatur oder: Wo ist bloß XYZ abgeblieben? ===
-Mit den Tastenkominationen Mod4+F1 bis Mod4+F8 (Mod4 ist beim normalen Tastaturlayout die "<" Taste rechts neben der linken Großschreibetaste) erhalten sie eine graphische Zusammenfassung der Neo-Tastatur. Die erleichert das Finden eines noch nicht so vertrauten Zeichen und hilft zudem beim Erlernen des Blindschreibens, da der Blick auf den Bildschirm und nicht auf die Tastatur gerichtet ist.
+Mit den Tastenkominationen Mod4+F1 bis Mod4+F8 (Mod4 ist beim normalen Tastaturlayout AltGr oder die "<" Taste rechts neben der linken Großschreibetaste) erhalten sie eine graphische Zusammenfassung der Neo-Tastatur. Die erleichert das Finden eines noch nicht so vertrauten Zeichen und hilft zudem beim Erlernen des Blindschreibens, da der Blick auf den Bildschirm und nicht auf die Tastatur gerichtet ist.
 
 === Automatischer Start ===
 Bei Bedarf kann man sich eine Verknüpfung mit neo20.exe in den Autostart-Ordner im Startmenü legen, dann hat man die Belegung direkt bei der Anmeldung. In diesem Fall sollte man jedoch auch einen Umstieg auf den nativen kbdneo2-Treiber erwägen.
