@@ -1,53 +1,53 @@
-ï»¿== Neo 2.0 Autohotkey-Treiber fÃ¼r Windows ==
+== Neo 2.0 Autohotkey-Treiber für Windows ==
 
-== 2008-08-11 Matthias WÃ¤chter ==
+== 2008-08-11 Matthias Wächter ==
 
-Ebene4-Ziffernblock: NumpadAdd und NumPadSub korriegiert
+Ebene4-Ziffernblock: NumPadAdd und NumPadSub korrigiert
 
 
-== 2008-08-10 Matthias WÃ¤chter ==
+== 2008-08-10 Matthias Wächter ==
 
-â€¢ Erstmal ist fast kein Stein auf dem anderen geblieben. Die grobe Struktur und das Verhalten (natÃ¼rlich auch die Tastenbelegung ist 100% NEO!) sind grundsÃ¤tzlich gleich geblieben, aber einerseits hat sich im Feinen viel getan (z.B. Tab-Behandlung), andererseits schauen viele Zeilen altbekannten Codes jetzt anders aus.
+• Erstmal ist fast kein Stein auf dem anderen geblieben. Die grobe Struktur und das Verhalten (natürlich ist auch die Tastenbelegung 100% NEO!) sind grundsätzlich gleich geblieben, aber einerseits hat sich im Feinen viel getan (z.B. Tab-Behandlung), andererseits schauen viele Zeilen altbekannten Codes jetzt anders aus.
 
-â€¢ Beim Â»BootenÂ« wird einmal EbeneAktualisieren() aufgerufen, um die Ebene sicher richtig zu haben. Dieses fragt jetzt auch den Zustand von NumLock ab, damit man es bei der NumPad-Behandlung gleich parat hat.
+• Beim »Booten« wird einmal EbeneAktualisieren() aufgerufen, um die Ebene sicher richtig zu haben. Dieses fragt jetzt auch den Zustand von NumLock ab, damit man es bei der NumPad-Behandlung gleich parat hat.
 
-â€¢ Die DeadKey- und CompKey-Behandlung ist zwar im Prinzip gleich geblieben, aber die Syntax habe ich wesentlich gestrafft. Die einzelnen Subs haben jetzt nur mehr den Job, DeadKey und CompKey zu setzen, wenn dieser nach Verlassen des Subs einen Wert haben soll  EbeneAktualisieren() Ã¼bertrÃ¤gt fÃ¼r eine einfachere Handhabung die beiden Variablen DeadKey und CompKey nach PriorDeadKey und PriorCompKey. Letztere kÃ¶nnen im Programm abgefragt werden, wÃ¤hrend die nicht-Prior-Varianten schamlos verÃ¤ndert werden dÃ¼rfen. Das entfernt die immer gleichen (aber doch manchmal unterschiedlichen und nicht selten lÃ¼ckenhaften) Zeilen a la Â»CompKey := ""Â«.
+• Die DeadKey- und CompKey-Behandlung ist zwar im Prinzip gleich geblieben, aber die Syntax habe ich wesentlich gestrafft. Die einzelnen Subs haben jetzt nur mehr den Job, DeadKey und CompKey zu setzen, wenn dieser nach Verlassen des Subs einen Wert haben soll.  EbeneAktualisieren() überträgt für eine einfachere Handhabung die beiden Variablen DeadKey und CompKey nach PriorDeadKey und PriorCompKey. Letztere können im Programm abgefragt werden, während die nicht-Prior-Varianten schamlos verändert werden dürfen. Das entfernt die immer gleichen (aber doch manchmal unterschiedlichen und nicht selten lückenhaften) Zeilen a la »CompKey := ""«.
 
-â€¢ Ich habe ganz dreist auf Scancodes mit Virtual Keys umgestellt. SchÃ¶ner wÃ¤re es natÃ¼rlich gewesen, wenn ich auf die VKs hÃ¤tte verzichten kÃ¶nnen, aber das fÃ¼hrt ja zu bekannten Problemen mit AHK-Bugs, sodass Scancode-Trigger plÃ¶tzlich von SendUnicodeChar-Zeilen aktiviert werden. Durch das Abfragen der VKs sind wir aber immer noch nicht soweit, dass wir Layout-agnostisch arbeiten kÃ¶nnen.
+• Ich habe ganz dreist auf Scancodes mit Virtual Keys umgestellt. Schöner wäre es natürlich gewesen, wenn ich auf die VKs hätte verzichten können, aber das führt ja zu bekannten Problemen mit AHK-Bugs, sodass Scancode-Trigger plötzlich von SendUnicodeChar-Zeilen aktiviert werden. Durch das Abfragen der VKs sind wir aber immer noch nicht soweit, dass wir Layout-agnostisch arbeiten können.
 
-â€¢ Dabei gibt es noch ein paar wesentliche Ã„nderungen im Bereich der Tastentrigger: Erstens gehen alle bekannten Scancodes fÃ¼r den NumPad auf paarweise gemeinsame Routinen. Das hÃ¤lt sie nicht nur konsistent, sondern ermÃ¶glicht erst eine konsequente Analyse in Zusammenhang mit NumLock und Shift. Zweitens wird bei der Tab-Taste _nur_ mehr der Trigger ohne Modifier abgefragt. Das bedeutet, dass beispielsweise Tab in Verbindung mit Alt an unserem Skript vorbei geschleust wird, um Probleme zu verhindern.
+• Dabei gibt es noch ein paar wesentliche Änderungen im Bereich der Tastentrigger: Erstens gehen alle bekannten Scancodes für den NumPad auf paarweise gemeinsame Routinen. Das hält sie nicht nur konsistent, sondern ermöglicht erst eine konsequente Analyse in Zusammenhang mit NumLock und Shift. Zweitens wird bei der Tab-Taste _nur_ noch der Trigger ohne Modifier abgefragt. Das bedeutet, dass beispielsweise Tab in Verbindung mit Alt an unserem Skript vorbei geschleust wird, um Probleme zu verhindern.
 
-â€¢ Drittens, und eines eigenen Punktes in dieser Liste wÃ¼rdig, werden die Modifier in deutlich reduziertem Umfang abgefragt und nur die wirklich interessanten FÃ¤lle behandelt. Auch das erlaubt beispielsweise der Alt-Taste wieder ungestÃ¶rten Einsatz, Shifts werden ganz normal der Applikation gemeldet, wenn sie gedrÃ¼ckt sind, und weniger MerkwÃ¼rdigkeiten mir lange gehaltenen Modifiern. GrundsÃ¤tzlich ist in diesem Bereich aber einer der Schwachpunkte des AHK-Skripts  sauberer Key-Repeat.
+• Schließlich, und eines eigenen Punktes in dieser Liste würdig, werden die Modifier in deutlich reduziertem Umfang abgefragt und nur die wirklich interessanten Fälle behandelt. Auch das erlaubt beispielsweise der Alt-Taste wieder ungestörten Einsatz, Shifts werden ganz normal der Applikation gemeldet, wenn sie gedrückt sind, und weniger Merkwürdigkeiten mit lange gehaltenen Modifiern. Grundsätzlich ist in diesem Bereich aber einer der Schwachpunkte des AHK-Skripts sauberer Key-Repeat.
 
-â€¢ In jedem Fall laufen bei mir alle Modifier-Locks: Shift+Shift in jedwelcher Reihenfolge fÃ¼r CapsLock, Mod3+Mod3 genauso, und auch Mod4-Lock spielt auf die Art problemlos!
+• In jedem Fall laufen bei mir alle Modifier-Locks: Shift+Shift in jedwelcher Reihenfolge für CapsLock, Mod3+Mod3 genauso, und auch Mod4-Lock spielt auf die Art problemlos!
 
-â€¢ Bei mir hat die Bildschirmtastatur nicht richtig funktionieren wollen, wenn ich das all.ahk aus dem source/-Verzeichnis verwendet habe. Ein kleiner Patch, und schon gehtâ€™s. Ein Refresh beim ersten Start war auch eingebaut, der hat ein unnÃ¶tiges Flackern produziert. Vielleicht braucht ihn ja wer, bitte melden (mit BegrÃ¼ndung!). AuÃŸerdem habe ich die Abfragen fÃ¼r die Funktionstasten und von Shift+Pause im Stil der anderen Tasten abgeÃ¤ndert.
+• Bei mir hat die Bildschirmtastatur nicht richtig funktionieren wollen, wenn ich das all.ahk aus dem source/-Verzeichnis verwendet habe. Ein kleiner Patch, und schon geht’s. Ein Refresh beim ersten Start war auch eingebaut, der hat ein unnötiges Flackern produziert. Vielleicht braucht ihn ja wer, bitte melden (mit Begründung!). Außerdem habe ich die Abfragen für die Funktionstasten und von Shift+Pause im Stil der anderen Tasten abgeändert.
 
-â€¢ Nachdem ich viel Zeit verplempert hatte, weil ich den Unterschied zwischen Â»if Ebene = 2Â« und Â»if (Ebene = 2)Â« nicht gekannt und daher den ganzen Quellcode groÃŸzÃ¼gig editiert hatte, um dann herauszufinden, dass es so nicht gehtâ€˜, habe ich jetzt konsequent (hoffentlich) alle Abfragen mit Â»if ()Â«, also mit konsequenter Klammersetzung zur richtigen Evaluirung durch AHK gemacht.
+• Nachdem ich viel Zeit verplempert hatte, weil ich den Unterschied zwischen »if Ebene = 2« und »if (Ebene = 2)« nicht gekannt und daher den ganzen Quellcode großzügig editiert hatte, um dann herauszufinden, dass es so nicht geht, habe ich jetzt konsequent (hoffentlich) alle Abfragen mit »if ()«, also mit konsequenter Klammersetzung zur richtigen Evaluierung durch AHK gemacht.
 
-â€¢ Nicht ganz fertig bin ich mit meinem deadKeys-deadComposeKeys geworden: Ãœber TastendrÃ¼cke (z.B. Mod4+F9) sollen sich die Deadkeys und ComposeKeys tatsÃ¤chlich dergestalt Â»umbringenÂ«, dass sie nicht mehr am Schirm erscheinen, wodurch das Skript sie auch nicht mehr mit {bs} lÃ¶schen muss, wenn das endgÃ¼ltige Zeichen fest steht. FÃ¼r die DeadKeys istâ€™s schon drinnen, aber fÃ¼r die Compose-Sachen mÃ¼sste ich die Logik ein weiteres Mal auf den Kopf stellen, und das ist mir fÃ¼r heute einfach zu viel.
+• Nicht ganz fertig bin ich mit meinem deadKeys-deadComposeKeys geworden: Über Tastendrücke (z.B. Mod4+F9) sollen sich die Deadkeys und ComposeKeys tatsächlich dergestalt »umbringen«, dass sie nicht mehr am Schirm erscheinen, wodurch das Skript sie auch nicht mehr mit {bs} löschen muss, wenn das endgültige Zeichen fest steht. Für die DeadKeys ist’s schon drinnen, aber für die Compose-Sachen müsste ich die Logik ein weiteres Mal auf den Kopf stellen, und das ist mir für heute einfach zu viel.
 
-â€¢ FÃ¼r das Abfragen von gemerkten DeadKeys und CompKeys habe ich Routinen geschrieben, die sich mit einem Shortcut-Evaluations-Trick recht kompakt darstellen lassen. ZusÃ¤tzlich habe ich bei den Buchstaben die Abfragen fÃ¼r die Ebenen 1 und 2 zusammen gelegt, was nochmals deutlich Platz spart und der Ãœbersichtlichkeit dienlich ist.
+• Für das Abfragen von gemerkten DeadKeys und CompKeys habe ich Routinen geschrieben, die sich mit einem Shortcut-Evaluations-Trick recht kompakt darstellen lassen. Zusätzlich habe ich bei den Buchstaben die Abfragen für die Ebenen 1 und 2 zusammen gelegt, was nochmals deutlich Platz spart und der Übersichtlichkeit dienlich ist.
 
-â€¢ Ich habe jetzt, wo mÃ¶glich, doch die Ausgabe mit Â»sendÂ« der mit Â»SendUnicodeCharÂ« vorgezogen, da so manches Windows-Programm doch nicht ganz so intelligent wie der Rest der Meute ist. Andererseits habe ich ziemlich konsequent mit {blind} gearbeitet. Ein paar Passagen fehlen noch, insbesondere auf Ebene 2, die noch ohne {blind} sind  diese sollte man wohl umstellen auf Â»send {blind}{Shift up}..{shift down}Â«, um auch mit Alt, Strg und Win korrekt kombinieren zu kÃ¶nnen (Shift fÃ¤llt ja leider flach, da bereits gedrÃ¼ckt).
+• Ich habe jetzt, wo möglich, doch die Ausgabe mit »send« der mit »SendUnicodeChar« vorgezogen, da so manches Windows-Programm doch nicht ganz so intelligent wie der Rest der Meute ist. Andererseits habe ich ziemlich konsequent mit {blind} gearbeitet. Ein paar Passagen fehlen noch, insbesondere auf Ebene 2, die noch ohne {blind} sind, diese sollte man wohl umstellen auf »send {blind}{Shift up}..{shift down}«, um auch mit Alt, Strg und Win korrekt kombinieren zu können (Shift fällt ja leider flach, da bereits gedrückt).
 
-â€¢ Diverse Compose-Namen habe ich gekÃ¼rzt  wenn man case sensitive vergleichen mÃ¶chte, muss man nur mit == abfragen, statt die Strings auf beispielsweise Â»r_capitalÂ« zu setzen.
+• Diverse Compose-Namen habe ich gekürzt, wenn man case-sensitive vergleichen möchte, muss man nur mit == abfragen, statt die Strings auf beispielsweise »r_capital« zu setzen.
 
-â€¢ Die Sache mit Capslock ist fÃ¼r meinen Geschmack immer noch nicht befriedigend gelÃ¶st, scheint aber im Moment ganz gut zu laufen. Mit Compose vertrÃ¤gt sich CapsLock garnicht, auÃŸer man erwartet bei aktiviertem CapsLock nach Eingabe von Â»R12Â« das da: â…».
+• Die Sache mit Capslock ist für meinen Geschmack immer noch nicht befriedigend gelöst, scheint aber im Moment ganz gut zu laufen. Mit Compose verträgt sich CapsLock garnicht, außer man erwartet bei aktiviertem CapsLock nach Eingabe von »R12« das da: ?.
 
-â€¢ Ungeachtet der VorschlÃ¤ge, wie mit dem NumPad weiter vor zu gehen ist, habe ich es jetzt erst mal -YÂ¥unangetastetÂ´ lassen, wenn man bei solch einer Baustelle noch von Unversehrtheit sprechen kann.
+• Ungeachtet der Vorschläge, wie mit dem NumPad weiter vor zu gehen ist, habe ich es jetzt erst mal unangetastet lassen, wenn man bei solch einer Baustelle noch von Unversehrtheit sprechen kann.
 
-â€¢ Das Numpad auf Ebene 4 unter der rechten Hand habe ich derart abgeÃ¤ndert, dass es statt der blanken Zahlen NumPad-Codes liefert. Damit kann man es reichhaltiger verwenden als die Tasten in Zeile 1. Auch die Cursortasten auf gleicher Ebene, linke Hand, werden jetzt {blind} geschickt, um diverse NavigationsmÃ¶glichkeiten mit den anderen Modifiern (Shift, Strg) zu Ã¶ffnen.
+• Das Numpad auf Ebene 4 unter der rechten Hand habe ich derart abgeändert, dass es statt der blanken Zahlen NumPad-Codes liefert. Damit kann man es reichhaltiger verwenden als die Tasten in Zeile 1. Auch die Cursortasten auf gleicher Ebene, linke Hand, werden jetzt {blind} geschickt, um diverse Navigationsmöglichkeiten mit den anderen Modifiern (Shift, Strg) zu öffnen.
 
-â€¢ Insgesamt hat sich der Code-Umfang drastisch verringert: mein fertiges neo20.ahk hat jetzt nur mehr 93 kB, wo das alte noch 126 kB hatte. Das ist mit 33 kB fast Â¼ weniger Code! Obâ€™s auch damit Â¼ weniger Bugs sind, kann ich nicht sagen â€¦ ;-)
+• Insgesamt hat sich der Code-Umfang drastisch verringert: meine fertige neo20.ahk hat jetzt nur noch 93 kB, wogegen die alte noch 126 kB hatte. Das ist mit 33 kB fast ¼ weniger Code! Ob’s damit auch ¼ weniger Bugs sind, kann ich nicht sagen … ;-)
 
 Known Bugs:
 ===========
 
-â€¢ Ich kann keine Flash-Spiele spielen (Firefox), die die Tastatur benÃ¶tigen. Ist das bekannt? Ist davon auch Java betroffen?
+• Ich kann keine Flash-Spiele spielen (Firefox), die die Tastatur benötigen. Ist das bekannt? Ist davon auch Java betroffen?
 
-â€¢ Manche Compose-Kombinationen zwischen den Zahlen habe ich auf dem NumPad vereinheitlicht aber noch nicht auf Zeile 1.
+• Manche Compose-Kombinationen zwischen den Zahlen habe ich auf dem NumPad vereinheitlicht aber noch nicht auf Zeile 1.
 
-â€¢ Die diversen Compose-ExperimentierkÃ¤sten unter Compose/ habe ich nicht angerÃ¼hrt, sie werden woht auch kleine Anpassungen benÃ¶tigen.
+• Die diversen Compose-Experimentierkästen unter Compose/ habe ich nicht angerührt, sie werden wohl auch kleine Anpassungen benötigen.
 
-â€¢ Der Patch ist in dieser Form quasi ungetestet. Die wichtigsten funktionalen Ã„nderungen wie die Mod-Lock und das ZusammenfÃ¼hren der Numlock-Numpad-Ebenen habe ich schon vor diesem Patch ausprobiert, aber insbesondere die diversen CheckDead* und CheckComp*-Aufrufe sind erst vor ein paar Stunden entstanden.
+• Der Patch ist in dieser Form quasi ungetestet. Die wichtigsten funktionalen Änderungen wie die Mod-Lock und das Zusammenführen der Numlock-Numpad-Ebenen habe ich schon vor diesem Patch ausprobiert, aber insbesondere die diversen CheckDead* und CheckComp*-Aufrufe sind erst vor ein paar Stunden entstanden.

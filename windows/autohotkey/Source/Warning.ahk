@@ -31,7 +31,7 @@ in der Datei README.txt!
 /*
 *******************************************
 Das war die letzte WARNUNG, ich hoffe nur dass
-sie wirklich wissen was sie hier tun wollen ...
+Sie wirklich wissen was Sie hier tun wollen ...
 *******************************************
 */
 

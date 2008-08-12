@@ -1,7 +1,5 @@
 /*
-   ------------------------------------------------------
-   Funktionen
-   ------------------------------------------------------
+  Funktionen
 */
 
 /*
@@ -19,6 +17,8 @@ EbeneAktualisieren()
    DeadKey := ""
    CompKey := ""
    Ebene12 := 0
+   Ebene7 := 0
+   Ebene8 := 0
    Modstate := IsShiftPressed() . IsMod3Pressed() . IsMod4Pressed()
 
    if (ahkTreiberKombi)
@@ -40,9 +40,15 @@ EbeneAktualisieren()
      else if (Modstate = "011")
          Ebene = 6                 ; Ebene 6: Mod3+Mod4
      else if (Modstate = "101")
+     {
          Ebene = 4                 ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+         Ebene7 = 1
+     }
      else if (Modstate = "111")
+     {
          Ebene = 6                 ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+         Ebene8 = 1
+     }
 
    Ebene12 := ((Ebene = 1) or (Ebene = 2))
 
@@ -51,7 +57,6 @@ EbeneAktualisieren()
    else
      NumLock = 0
 }
-
 
 
 IsShiftPressed()
@@ -148,8 +153,6 @@ EncodeInteger(ref, val)
 {
    DllCall("ntdll\RtlFillMemoryUlong", "Uint", ref, "Uint", 4, "Uint", val)
 }
-
-DeadSilence = 0
 
 deadAsc(val)
 {
@@ -255,8 +258,6 @@ CheckDeadUni12(d,val1,val2)
   else
     return 0
 }
-
-DeadCompose = 0
 
 compAsc(val)
 {
@@ -416,29 +417,5 @@ outputChar(val1,val2)
   if (PriorDeadKey = "comp")
     CompKey := c
 }
-
-;Tote/Untote Tasten
-*F9::
-  if (isMod4pressed())
-    DeadSilence :=  not(DeadSilence)
-  else
-    send {blind}{F9}
-return
-
-;Tote/Untote Compose
-*F10::
-  if (isMod4pressed())
-    DeadCompose :=  not(DeadCompose)
-  else
-    send {blind}{F10}
-return
-
-;Lang-s-Tastatur:
-*F11::
-  if (isMod4pressed())
-    LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
-  else
-    send {blind}{F11}
-return
 
 
