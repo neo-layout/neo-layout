@@ -34,10 +34,10 @@ done
 anzahl=`grep -iw $beschreibung $COMPOSE | head -$n | wc -l`
 if [ $anzahl -gt 0 ]
 then
-	ausgabe=1
 	for i in $(seq 1 $anzahl)
 	do
 		j=j+1
+		ausgabe=1
 		a[$j]=`grep -iw $beschreibung $COMPOSE | grep ^\< | head -$i | tail -1 | cut -f2 -d \"`
 		echo $j\) ${a[$j]}
 	done
@@ -46,7 +46,6 @@ fi
 anzahl2=`grep -i [\ _]$beschreibung[\ _] $KEYSYM | head -$n | wc -l`
 if [ $anzahl2 -gt 0 ]
 then
-	ausgabe=1
 	for i in $(seq 1 $anzahl2)
 	do
 		c=`grep -i [\ _]$beschreibung[\ _] $KEYSYM | grep ^#define  | head -$i | tail -1 | cut -f2- -d\* | cut -f2- -d+ | cut -f1 -d\ `
@@ -57,6 +56,7 @@ then
 		case $c1 in
 		00)
 			j=j+1
+			ausgabe=1
 			a[$j]=`echo -e \\\x${c2}`
 			echo $j\) ${a[$j]}
 			;;
@@ -64,11 +64,13 @@ then
 			if [ "$c2" = "C" ]
 			then
 				j=j+1
+				ausgabe=1
 				a[$j]=`echo -e \\\xcf\\\x8${c3}`
 				echo $j\) ${a[$j]}
 
 			else
 				j=j+1
+				ausgabe=1
 				a[$j]=`echo -e \\\xce\\\x${c2}${c3}`
 				echo $j\) ${a[$j]}
 			fi
