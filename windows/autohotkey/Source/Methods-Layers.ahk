@@ -22,7 +22,7 @@ VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
 ; *VKA1SC136::
 ; *VKA0SC02A::
    if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
-      send {blind}{capslock}
+      send {blind}{CapsLock}
 return
 
 
