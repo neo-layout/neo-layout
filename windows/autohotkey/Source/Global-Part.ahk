@@ -36,6 +36,9 @@ IniRead, einHandNeo, %ApplicationFolder%\NEO2.ini, Global, einHandNeo, 0
 ; Soll der Lernmodus aktiviert werden?
 IniRead, lernModus, %ApplicationFolder%\NEO2.ini, Global, lernModus, 0
 
+; Soll mit MessageBoxen explizit auf das Ein- und Ausschalten des Mod{3,4}-Locks hingewiesen werden?
+IniRead, zeigeLockBoxen, %ApplicationFolder%\NEO2.ini, Global, zeigeLockBoxen, 1
+
 ; Soll aktivierter Mod4-Lock über die Rollen-LED des Keybord angezeigt werden (analog zu CapsLock)?
 IniRead, UseMod4Light, %ApplicationFolder%\NEO2.ini, Global, UseMod4Light, 1
 

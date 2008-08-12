@@ -44,12 +44,19 @@ IsMod3Locked := 0
       if (IsMod3Locked) 
       {
          IsMod3Locked = 0
-         MsgBox Mod3-Feststellung aufgebehoben
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod3-Feststellung aufgebehoben!
+         }
       }
       else
       {
          IsMod3Locked = 1
-         MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig 
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig!
+         }
+         
       }
    }
 return
@@ -70,7 +77,10 @@ IsMod4Locked := 0
       ; Mod4-Lock durch Mod4(rechts)+Mod4(links)
       if (IsMod4Locked) 
       {
-         MsgBox Mod4-Feststellung aufgebehoben
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod4-Feststellung aufgebehoben!
+         }
          IsMod4Locked = 0
          if (UseMod4Light==1)
          {
@@ -79,7 +89,10 @@ IsMod4Locked := 0
       }
       else
       {
-         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod4 Tasten gleichzeitig
+         if (zeigeLockBoxen==1)
+         {
+            MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig!
+         }
          IsMod4Locked = 1
          if (UseMod4Light==1)
          {

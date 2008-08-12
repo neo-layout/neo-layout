@@ -113,8 +113,11 @@ Eine NEO2.ini, die alle Werte auf die Standardwerte »ändert«, sähe etwa so a
 ahkTreiberKombi=0
 einHandNeo=0
 lernModus=0
+zeigeLockBoxen=1
 UseMod4Light=1
 LangSTastatur=0
+DeadSilence=0
+DeadCompose=0
 
 Diese Datei muss manuell (etwa mit dem Notepad) in dem richtigen Verzeichnis innerhalb der Anwendungsdaten des aktuellen Nutzers angelegt werden. Unter Windows Vista ist dies etwa das Verzeichnis
 C:\Users\<BENUTZERNAME>\AppData\Roaming\NEO2\NEO2.ini
