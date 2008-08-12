@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -170,7 +170,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │Ums│M4│ü│ö│ä│p│z│b│m│,│.│j│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
-│Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
+│Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Zweite Ebene – Miniatur ===
@@ -183,7 +183,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │CpL│M4│Ü│Ö│Ä│P│Z│B│M│ │ │J│ Cps_Lk│
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
-│Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
+│Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Dritte Ebene – Miniatur ===
@@ -196,7 +196,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │Ums│M4│#│$│|│~│`│+│%│"│'│;│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
-│Str│Fe│Al│Leerzeichei│M4│Fe│Me│Str│
+│Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Vierte Ebene – Miniatur ===
