@@ -243,6 +243,9 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 == Ziffernblock ==
+Um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gewährleisten,
+sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwendet werden!
+
 === Legende – Ziffernblock ===
 ┌─────┐ 1 … 1. Ebene (kein Mod)
 │ 2 4 │ 2 … 2. Ebene (Umschalt)
