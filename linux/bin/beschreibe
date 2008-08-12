@@ -17,7 +17,7 @@ do
 		echo Aufruf: $0 [OPTION] BESCHREIBUNG
 		echo »$0« versucht ein Zeichen anhand einer Beschreibung zu idetifizieren
 		echo Option:
-		echo -e "  -n               gibt n statt 10 Vorschläge aus"
+		echo -e "  -n               gibt maximal 2n statt 10 Vorschläge aus"
 		exit;;
 	\ )
 		echo $0: Kein Suchkriterium eingegeben!
