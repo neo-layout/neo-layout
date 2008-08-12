@@ -45,7 +45,7 @@ Revision 743 (von Matthias Wächter, commit durch Stefan Mayer)
 Revision 740 (von Matthias Wächter, commit durch HCW)
 - "Mega-Patch" (Skript verkürzt, Ebenenabfrage verändert, ...), siehe CHANGES.txt
 - Blinde tote Tasten auf M4+F9 (Toggle)
-- Blinde Compose auf M4+F10 (Toggle)
+- Blinde Compose auf M4+F10 (Toggle) (noch nicht funktionstüchtig
 Revision 728 (von Dennis Heidsiek):
 - Ist die Datei %APPDATA%\NEO2\NEO2.ini vorhanden, werden dort eventuell vorhandene Werte für die Globalen Schalter beim Start übernommen
 - »LangSTastaturStandardmäßigEingeschaltet.ahk« wird nicht mehr unterstützt, weil sonst immer neu kompiliert werden muss
