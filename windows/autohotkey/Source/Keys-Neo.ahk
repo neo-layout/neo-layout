@@ -428,11 +428,13 @@ neo_x:
   if (Ebene12)
     OutputChar("x","X")
   else if (Ebene = 3)
-    SendUnicodeChar(0x2026) ;Ellipse
+    SendUnicodeChar(0x2026) ;Ellipse horizontal
+  else if (Ebene = 4)
+    SendUnicodeChar(0x22EE) ;Ellipse vertikal
   else if (Ebene = 5)
     SendUnicodeChar(0x03BE) ;xi
   else if (Ebene = 6)
-    SendUnicodeChar(0x039E)  ; Xi
+    SendUnicodeChar(0x039E) ;Xi
 return
 
 
