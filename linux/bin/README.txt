@@ -17,3 +17,13 @@ Gibt die Neo-Tastaturbelegung des Ziffernblocks aus. Beispiele:
   »num 3« – gibt die dritte Ebene der Tastaturbelegung aus
   »num 2 3 4« – gibt die zweite, dritte und vierte Ebene aus
 usw.
+
+== wiemitneo ==
+Gibt an, ob und wie ein Zeichen mit NEO ermöglicht werden kann. Beispiele:
+  »wiemitneo @« ergibt:
+-------------------------------
+@ erreicht man mit Mod3+y
+
+Außerdem ist @ über Compose folgendermaßen darstellbar:
+<Multi_key> + <A> + <T>
+-------------------------------
