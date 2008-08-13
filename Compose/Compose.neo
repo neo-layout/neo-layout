@@ -90,6 +90,9 @@
 <Multi_key> <KP_1> <questiondown> <exclamdown>   : "⸘"   U2E18 # INVERTED INTERROBANG
 <Multi_key> <KP_1> <exclamdown> <questiondown>   : "⸘"   U2E18 # INVERTED INTERROBANG
 
+<Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
+<Multi_key> <colon> <colon>                      : "‥"   U2025 # TWO DOT LEADER
+
 
 # numerals
 # roman
@@ -244,6 +247,24 @@
 
 <Multi_key> <greater> <period>             : "∴"   U2234 # THEREFORE
 <Multi_key> <less> <period>                : "∵"   U2235 # BECAUSE
+
+<Multi_key> <asciitilde> <equal>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
+<Multi_key> <equal> <asciitilde>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
+<dead_tilde> <equal>                       : "≅"   U2245 # APPROXIMATELY EQUAL TO
+<Multi_key> <asciitilde> <asciitilde>      : "≈"   U2248 # ALMOST EQUAL TO
+<dead_tilde> <asciitilde>                  : "≈"   U2248 # ALMOST EQUAL TO
+<Multi_key> <greater> <equal>              : "≥"   U2265 # GREATER-THAN OR EQUAL TO
+<Multi_key> <equal> <greater>              : "≥"   U2265 # GREATER-THAN OR EQUAL TO
+<Multi_key> <less> <equal>                 : "≤"   U2264 # LESS-THAN OR EQUAL TO
+<Multi_key> <equal> <less>                 : "≤"   U2264 # LESS-THAN OR EQUAL TO
+<Multi_key> <equal> <degree>               : "≗"   U2257 # RING EQUAL TO
+<Multi_key> <degree> <equal>               : "≗"   U2257 # RING EQUAL TO
+<dead_abovering> <equal>                   : "≗"   U2257 # RING EQUAL TO
+<dead_caron> <equal>                       : "≚"   U225A # EQUIANGULAR TO
+
+<Multi_key> <KP_Add> <KP_Subtract>         : "±"   plusminus # PLUS-MINUS SIGN
+<Multi_key> <KP_Subtract> <KP_Add>         : "∓"   U2213 # MINUS-OR-PLUS SIGN
+<Multi_key> <minus> <plus>                 : "∓"   U2213 # MINUS-OR-PLUS SIGN
 
 # superscripts and subscripts
 <dead_circumflex> <minus>                  : "⁻"   U207B # SUPERSCRIPT MINUS
