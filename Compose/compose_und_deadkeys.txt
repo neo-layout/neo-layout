@@ -108,18 +108,6 @@ Möglichkeiten gibt oder geben sollte, kann man sie hier gut pflegen.
 
 
 ---------------
-ACHTUNG:
-Unter Windows ist in der Grundinstallation eventuell keine Schrift
-installiert, die alle hier gezeigten Unicodezeichen beinhaltet.
-Abhilfe schafft z.B. DejaVu:
-http://dejavu.sourceforge.net/
-oder Libertine:
-http://linuxlibertine.sourceforge.net/
-
-Unter Linux ist es ähnlich. Je nach Schrift (also je nach Editor) können auch
-nicht alle Zeichen angezeigt werden. Getestet wurde auch hier mit Libertine:
-http://linuxlibertine.sourceforge.net/
----------------
 
 == Ungewöhnliche Kombinationen ==
 === Selbst definiert ===

@@ -60,3 +60,17 @@ Beispiele:
 <Multi_key> <r> <1> <9> <9> <9> : "ⅿⅽⅿⅹⅽⅰⅹ" # SMALL ROMAN NUMERAL 1999
 <Multi_key> <k> <1> <9> <9> <9> : "wa'SaD Hutvatlh HutmaH Hut" # KLINGON NUMERAL 1999
 <Multi_key> <K> <1> <9> <9> <9> : "" # KLINGON NUMERAL, PIQAD SCRIPT 1999
+
+
+=== Zur korrekten Darstellung empfohlene Schriftarten ===
+Unter Windows ist in der Grundinstallation eventuell keine Schrift
+installiert, die alle hier gezeigten Unicodezeichen beinhaltet.
+Abhilfe schafft z.B. DejaVu:
+http://dejavu.sourceforge.net/
+oder Libertine:
+http://linuxlibertine.sourceforge.net/
+
+Unter Linux ist es ähnlich. Je nach Schrift (also je nach Editor) können auch nicht alle Zeichen angezeigt werden. Auch hier wird die Linux Libertine empfohlen:
+http://linuxlibertine.sourceforge.net/
+
+Zudem kann es helfen, die Datei nicht in einem Editor oder Browser (z.B. Firefox, Version 3.0 oder besser) darzustellen, der die in der aktuellen Schrift nicht vorhandene Zeichen durch eine andere Schrift (in der sie vorhanden sind) automatisch ersetzen kann.
