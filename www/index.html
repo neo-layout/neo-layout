@@ -3,7 +3,7 @@
 <html>
 
 <head>
- <title>Neo – Neues Deutsches Tastaturlayout</title>
+ <title>Neo – Ergonomisches Tastaturlayout</title>
  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
  <link rel="shortcut icon" href="./favicon.ico">
  <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -23,13 +23,26 @@ function Tastenebenenwechsel_nach (Zielebene) {
 <body>
 
 
+<div style="position:absolute; top:34px; left:52px; width:522px; height:70px;  overflow:hidden;   <!-- w522h70 /-->
+   background-image:url(./11111neo_kopf_trac_522x50.png); background-repeat:no-repeat;">      <!-- top:35px; left:50px; /--> 
+
+   <object data="./neo_kopf_trac_522x50.svg" type="image/svg+xml" style="width:522px; height:50px;">
+             <param name="src" value="./neo_kopf_trac_522x50.svg">
+           <img src="./neo_kopf_trac_522x50.png"  alt="Neo – Ergonomisches Tastaturlayout">
+   </object>
+</div>
+
+
+
+
+<div style="display:block; background-image:url(./schattierer_rechts.png);  background-position: top left;" >
 
 <!-- Quicklinks /-->
 
  <div style="position:relative; top:-50px; right:-10px; float:right; text-align:center;">
-  <a href=""><img src="./tastentier_laechelnd.png" width="50px" height="34px" alt="quickdownload:Neo_Windows" border="0"></a><br />
-  <a href=""><img src="./tastentier_linksblickend.png" width="50px" height="37px" alt="quickdownload:Neo_Linux" border="0"></a><br />
-  <a href=""><img src="./tastentier_grinsend.png"  width="50px" height="34px" alt="quickdownload:Neo_OS-X" border="0"></a>
+  <a href="https://svn.neo-layout.org/windows/autohotkey/neo20.exe"><img src="./tastentier_laechelnd.png" width="50px" height="34px" alt="quickdownload:Neo_Windows" border="0"></a>
+  <a href="https://svn.neo-layout.org/linux/xmodmap/neo_de.xmodmap"><img src="./tastentier_linksblickend.png" width="50px" height="37px" alt="quickdownload:Neo_Linux" border="0"></a>
+  <a href="https://svn.neo-layout.org/mac_osx/neo.keylayout"><img src="./tastentier_grinsend.png"  width="50px" height="34px" alt="quickdownload:Neo_OS-X" border="0"></a>
  </div>
 <!--
  <div style="position:absolute; left:2em; top:180px; background-image:url(./verzierung_vertikal_links.png);  width:100px; height:228px; text-align:center; z-index:0;"></div>
@@ -45,7 +58,7 @@ function Tastenebenenwechsel_nach (Zielebene) {
 /-->
 
 
-   <a href="http://wiki.neo-layout.org">Wiki</a> &nbsp;
+   <a href="http://wiki.neo-layout.org" style="clear:both;">Wiki</a> &nbsp;
    <a href="http://wiki.neo-layout.org/wiki/Einführung">Einführung</a> &nbsp;
    <a href="./download.html">Download</a> &nbsp;
    <a href="http://wiki.neo-layout.org/wiki/Benutzerhandbuch">Benutzerhandbuch</a>  &nbsp;
@@ -79,7 +92,7 @@ function Tastenebenenwechsel_nach (Zielebene) {
  </div>
 
 
-
+</div>
 
 <hr>
 
@@ -239,9 +252,12 @@ Euer Neo-Team<br />
 </div>
 /-->
 
+
+<!--
 <div style="position:absolute; top:34px; left:52px; width:522px; height:70px;     
-   background-image:url(./neo_kopf_trac_522x50.png); background-repeat:no-repeat;">      <!-- top:35px; left:50px; /--> 
+   background-image:url(./neo_kopf_trac_522x50.png); background-repeat:no-repeat;">  
 </div>
+/-->
 
 <div style="position:fixed; top:0px; right:0px; width:11px; height:100%; 
    background-image:url(./schatten_rechts.png); background-repeat:repeat-y; background-attachment:scroll; ">
