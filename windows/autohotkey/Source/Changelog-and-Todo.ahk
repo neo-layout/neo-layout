@@ -85,7 +85,7 @@ Revision 615 (von Dennis Heidsiek):
 - Zwei AHK-Links eingefügt.
 Revision 609 (von Dennis Heidsiek):
 - Vorläufiger Abschluss der AHK-Modularisierung.
-- Bessere Testmöglichkeit »All.a5hk« für AHK-Entwickler hinzugefügt, bei der sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und nicht auf das große »vereinigte« Skript beziehen.
+- Bessere Testmöglichkeit »All.ahk« für AHK-Entwickler hinzugefügt, bei der sich die Zeilenangaben in Fehlermeldungen auf die tatsächlichen Module und nicht auf das große »vereinigte« Skript beziehen.
 Revision 608 (von Martin Roppelt):
 - Rechtschreibfehler korrigiert und Dateinamen aktualisiert und sortiert.
 Revision 590 (von Dennis Heidsiek):
