@@ -1,10 +1,11 @@
-------------------------------------------------------------------------------
+﻿------------------------------------------------------------------------------
 Diese Datei beschreibt den Umgang mit dem Subversion Kommandozeilenclient.
 ------------------------------------------------------------------------------
 Gliederung
 1. Voraussetzung
-1.1 Was brauche ich?
-1.2 Terminologie
+1.1 Welche Software brauche ich?
+1.2 Dateien im SVN ändern
+1.3 Terminologie
 2. Verschiedene Arbeitsabläufe (Was will ich machen?)
 2.1 Das Repository lokal auf meinem Rechner haben
 2.2 Das Repository auf meinem Rechner auf den neuesten Stand bringen
@@ -12,19 +13,30 @@ Gliederung
 2.4 Dem Repository neue Dateien hinzufügen
 2.5 Dateien im Repository umbenennen
 2.6 Dateien aus dem Repository löschen
+2.7 Änderungen ins Repository hochladen
+3 Ratschläge / »best practice SVN usage«
 ------------------------------------------------------------------------------
 1. Voraussetzung
 ------------------------------------------------------------------------------
-1.1 Was brauche ich?
+1.1 Welche Software brauche ich?
 
-Benötigt wird das Programm subversion für die Kommandozeile.
+Benötigt wird das Programm subversion für die Kommandozeile:
 Download: http://svn.tigris.org
 
-Will man auch Dateien im Repostiory ändern, braucht man einen Schreibzugang.
-	→ Ben fragen!
+Alternativ liegt für Windows auch ein komfortabler SVN-Client vor, der sich in die normale Dateiverwaltung integriert:
+http://www.tortoisesvn.net/
+
+Die weiteren Erläuterung beziehen sich auf den Kommandozeilen-Client, können aber sinngemäß auf einen graphischen Client übertragen werden.
 
 ------------------------------------------------------------------------------
-1.2 Terminologie
+1.2 Dateien im SVN ändern
+
+Will man auch Dateien im Repostiory ändern, braucht man einen Schreibzugang mit Namen und Passwort.
+	→ Ben fragen!
+Wenn es vorrausſichtlich bei einer einzigen Änderung bleiben wird, kann alternativ auch auf der Mailingliste Unterstützung für ein einmaliges »Einchecken« erbeten werden.
+
+------------------------------------------------------------------------------
+1.3 Terminologie
 
 $REPOSITORY_HOME … Das Verzeichnis in dem das ausgecheckte Repository liegt
 
@@ -81,5 +93,19 @@ kann „--username $USER“ weggelassen werden.
 Statt auschecken wie in Abschnitt 2.1 beschrieben:
   cd $VERZEICHNIS_WO_NEO_REIN_SOLL
   svn checkout https://$USER@neo.eigenheimstrasse.de/svn neo
+
+------------------------------------------------------------------------------
+3. Ratschläge / »best practice«
+------------------------------------------------------------------------------
+In diesem Abschnitt geht es weniger um technische Fragen, sondern eher darum wie man sinnvoll/empfohlenerweise mit einem SVN arbeiten sollte. Diese Ratschläge haben sich in der Praxis als sinnvoll erwiesen:
+
+• Bevor man beginnt, die eigene SVN-Kopie zu bearbeiten, sollte immer erst ein Update durchgeführt werden (insbesondere, wenn das letzte Auschecken schon länger her liegt). Dies vermeidet mögliche Konflikte.
+• Es ist vorteilhaft, inhaltlich Zusammengehörendes auch gemeinsam zu committen, und Dinge, die voneinander unabhängig sind, auch einzeln einzuchecken.
+• Die Änderungsbeschreibung sollte immer eingegeben werden.
+• Längere Änderungsbeschreibungen sollten mit einer kurzen Zusammmenfassung der Form »[Adjektiv] Subjekt Prädikat: …« begonnen werden, etwa »Neues Feature: …«, »Caps-Lock-Fehler behoben: …«, »Dokumentation ergänzt: …«
+• Inhaltliche (bzw. »programmiertechnische«) Änderungen (oder Fehlerkorrekturen) sollten unabhängig von ästhetischen Korrekturen (wie Einrückungen oder der Korrektur von Rechtschreibfehlern) eingecheckt werden. Mögliche Änderungsbeschreibungen wären etwa: [Revision 698:] »Doku erweitert: Wie man NEO auf dem C64 installieren kann«, [Revision 699:] »Formatierung korregiert: Leere Zeiten entfernt, Einrückung angeglichen (r698)«
+• Grössere Commits können auch aufgeteilt werden, wenn die Intention dazu aus den Änderungsbeschreibungen hervor geht. 
+• Wenn man Angst um kostbare Änderungen durch einen Headcrash während einer intensiven Change-Session hat, muss man halt einen Branch für den Zeitraum der Änderungen eröffnen.
+• …
 
 ------------------------------------------------------------------------------
