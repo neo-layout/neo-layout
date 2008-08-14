@@ -12,7 +12,6 @@
 
 
 #Include %a_scriptdir%\Warning.ahk
-#Include %a_scriptdir%\Changelog-and-Todo.ahk
 #Include %a_scriptdir%\Global-Part.ahk
 #Include %a_scriptdir%\Methods-Layers.ahk
 #Include %a_scriptdir%\Keys-Qwert-to-Neo.ahk
