@@ -16,19 +16,18 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 - Ausgiebig testen... (besonders Vollständigkeit bei Deadkeys).
 - Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?).
 - Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
-- Testen, ob die Capslocklösung (siehe *1:: Ebene 1) auch für Numpad gebraucht wird.
-- Die Ebenen vom Tastenblock an die neue Referenz anpassen (wenn da ein Konsens gefunden wurde).
 - Blindes Compose implementieren.
-- CompKey in Abhängigkeit von CapsLock setzen.
 - CapsLock-Abhängigkeiten entfernen.
 
 === Ideen und Vorschläge ===
 - Modi für vertauschte Ziffern in der Zahlenreihe und auf der 4. Ebene.
 - Die Compose-Kombinationen sollten automatisch aus den Referenzdateien im Compose-Verzeichnis erzeugt werden.
 
-
 === Änderungshistorie ===
-
+Revision 778 (von Martin Roppelt)
+- CapsLock+Shift-Fehler au?gebessert
+Revision 777 (von Martin Roppelt)
+- Syntaxfehler ausgebessert
 Revision 776 (von Martin Roppelt)
 - Global-Part.ahk, Keys-Neo.ahk: ZeigeLockBoxen in ZeigeLockBox umbenannt.
 - Keys-Neo.ahk: Fehler ausgebessert, Quelltext neu ausgerichtet, Numpad an die Referenz angeglichen, Ebenen 7 und 8 ergänzt;

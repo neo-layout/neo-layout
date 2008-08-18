@@ -110,7 +110,16 @@ EbeneAktualisieren()
 IsShiftPressed()
 {
   global
-  return ((GetKeyState("Shift","P")) = !(isMod2Locked)) ;xor
+  if GetKeyState("Shift","P")
+    if isMod2Locked
+      return 0
+    else
+      return 1
+  else
+    if isMod2Locked
+      return 1
+    else
+      return 0
 }
 
 IsMod3Pressed()

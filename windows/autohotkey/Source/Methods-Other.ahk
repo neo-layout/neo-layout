@@ -275,7 +275,10 @@ outputChar(val1,val2)
     c := val1
   else
     c := val2
-  send % "{blind}" . c
+  if GetKeyState("Shift","P") and isMod2Locked
+    send % "{blind}{Shift Up}" . c . "{Shift Down}"
+  else
+    send % "{blind}" . c
   if (PriorDeadKey = "comp")
     CompKey := c
 }

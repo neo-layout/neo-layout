@@ -467,7 +467,16 @@ EbeneAktualisieren()
 IsShiftPressed()
 {
   global
-  return ((GetKeyState("Shift","P")) = !(isMod2Locked)) ;xor
+  if GetKeyState("Shift","P")
+    if isMod2Locked
+      return 0
+    else
+      return 1
+  else
+    if isMod2Locked
+      return 1
+    else
+      return 0
 }
 
 IsMod3Pressed()
@@ -3004,7 +3013,10 @@ outputChar(val1,val2)
     c := val1
   else
     c := val2
-  send % "{blind}" . c
+  if GetKeyState("Shift","P") and isMod2Locked
+    send % "{blind}{Shift Up}" . c . "{Shift Down}"
+  else
+    send % "{blind}" . c
   if (PriorDeadKey = "comp")
     CompKey := c
 }
