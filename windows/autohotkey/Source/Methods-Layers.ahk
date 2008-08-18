@@ -1,103 +1,137 @@
-/*
-   ------------------------------------------------------
-   Modifier
-   ------------------------------------------------------
-*/
-
-
-;LShift+RShift == CapsLock (simuliert)
+; LShift+RShift == CapsLock (simuliert)
 ; Es werden nur die beiden Tastenkombinationen abgefragt,
 ; daher kommen LShift und RShift ungehindert bis in die
 ; Applikation. Dies ist aber merkwürdig, da beide Shift-
 ; Tasten nun /modifier keys/ werden und, wie in der AHK-
 ; Hilfe beschrieben, eigentlich nicht mehr bis zur App
 ; durchkommen sollten.
+; KeyboardLED(4,"switch") hatte ich zuerst genommen, aber
+; das schaltet, oh Wunder, die LED nicht wieder aus.
 
+isMod2Locked = 0
 VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
 VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
-;
-; mit diesen funktioniert das automatische Übernehmen der
-; gedrückten Shift-Tasten nicht, also z.B. Shift-Ins, wenn Ins
-; bei gedrückter Shift-Taste {blind} gesendet wird
-; *VKA1SC136::
-; *VKA0SC02A::
-   if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
-      send {blind}{CapsLock}
+  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
+  {
+    if isMod2Locked
+    {
+      isMod2Locked = 0
+      KeyboardLED(4,"off")
+    }
+    else
+    {
+      isMod2Locked = 1
+      KeyBoardLED(4,"on")
+    }
+  }
 return
 
-
-; Mod3+Mod3 == Mod3-Lock
-; Im Gegensatz zu LShift+RShift werden die beiden Tasten
-; _nicht_ zur Applikation weitergeleitet, da '#' kein
-; Modifier ist und CapsLock sonst den CapsLock-Status
-; beeinflusst. Dafür werden sämtliche Events dieser
-; Tasten abgefangen, und nur bei gleichzeitigem Drücken
-; wird der Mod3-Lock aktiviert und angezeigt.
-
-IsMod3Locked := 0
-; VKBFSC02B & VK14SC03A::
-; VK14SC03A & VKBFSC02B::
+;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
-   if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P"))
-   {
-      if (IsMod3Locked) 
-      {
-         IsMod3Locked = 0
-         if (zeigeLockBoxen==1)
-         {
-            MsgBox Mod3-Feststellung aufgebehoben!
-         }
-      }
-      else
-      {
-         IsMod3Locked = 1
-         if (zeigeLockBoxen==1)
-         {
-            MsgBox Mod3 festgestellt: Um Mod3 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig!
-         }
-         
-      }
-   }
 return
 
-; Mod4+Mod4 == Mod4-Lock
-; Wie bei Mod3-Lock werden im Gegensatz zu LShift+RShift 
-; die beiden Tasten _nicht_ zur Applikation weitergeleitet,
-; und nur bei gleichzeitigem Drücken wird der Mod4-Lock
-; aktiviert und angezeigt.
+;Mod4+Mod4 == Mod4-Lock
+; Im Gegensatz zu LShift+RShift werden die beiden Tasten
+; _nicht_ zur Applikation weitergeleitet, und nur bei
+; gleichzeitigem Drücken wird der Mod4-Lock aktiviert und
+; angezeigt.
 
 IsMod4Locked := 0
-; VKA5SC138 & VKE2SC056:: ; AltGr, dann <
-; VKE2SC056 & VKA5SC138:: ; <, dann AltGr
 *VKA5SC138::
 *VKE2SC056::
-   if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
-   {
-      ; Mod4-Lock durch Mod4(rechts)+Mod4(links)
-      if (IsMod4Locked) 
-      {
-         if (zeigeLockBoxen==1)
-         {
-            MsgBox Mod4-Feststellung aufgebehoben!
-         }
-         IsMod4Locked = 0
-         if (UseMod4Light==1)
-         {
-            KeyboardLED(1,"off")
-         }
-      }
-      else
-      {
-         if (zeigeLockBoxen==1)
-         {
-            MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen drücke beide Mod3 Tasten gleichzeitig!
-         }
-         IsMod4Locked = 1
-         if (UseMod4Light==1)
-         {
-            KeyboardLED(1,"on")
-         }
-      }
-   }
+  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
+  {
+    if IsMod4Locked
+    {
+      if zeigeLockBox
+        MsgBox Mod4-Feststellung aufgebehoben!
+       IsMod4Locked = 0
+      if UseMod4Light
+        KeyboardLED(1,"off")
+    }
+    else
+    {
+      if zeigeLockBox
+        MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
+      IsMod4Locked = 1
+      if UseMod4Light
+        KeyboardLED(1,"on")
+    }
+  }
 return
+
+Ebene12 := 0
+Ebene7 := 0
+Ebene8 := 0
+
+EbeneAktualisieren()
+{
+  global
+  PriorDeadKey := DeadKey
+  PriorCompKey := CompKey
+  DeadKey := ""
+  CompKey := ""
+  Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
+  if ahkTreiberKombi
+    if ( Modstate = "001")
+      Ebene = 6
+    else
+      Ebene = -1
+  else
+    if      (Modstate = "000") ; Ebene 1: Ohne Mod
+      Ebene = 1
+    else if (Modstate = "001") ; Ebene 2: Shift
+      Ebene = 2
+    else if (Modstate = "010") ; Ebene 3: Mod3
+      Ebene = 3
+    else if (Modstate = "100") ; Ebene 4: Mod4
+      Ebene = 4
+    else if (Modstate = "011") ; Ebene 5: Shift+Mod3
+      Ebene = 5
+    else if (Modstate = "110") ; Ebene 6: Mod3+Mod4
+      Ebene = 6
+    else if (Modstate = "101") ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+    {
+      Ebene = 4
+      Ebene7 = 1
+    }
+    else if (Modstate = "111") ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+    {
+      Ebene = 6
+      Ebene8 = 1
+    }
+  Ebene12 := ((Ebene = 1) or (Ebene = 2))
+  Ebene14 := ((Ebene = 1) or (Ebene = 4))
+  GetKeyState("NumLock","T")
+}
+
+
+IsShiftPressed()
+{aAAA
+  global
+  return ((GetKeyState("Shift","P")) = !(isMod2Locked)) ;xor
+}
+
+IsMod3Pressed()
+{
+   global
+   return ((GetKeyState("CapsLock","P")) or (GetKeyState("#","P")))
+}
+
+IsMod4Pressed()
+{
+   global
+   if( not(einHandNeo) or not(spacepressed))
+     if IsMod4Locked
+         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P")))
+     else
+         return ( GetKeyState("<","P") or GetKeyState("SC138","P"))
+   else
+     if IsMod4Lock
+       return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")))
+     else
+       return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
+}
+
+

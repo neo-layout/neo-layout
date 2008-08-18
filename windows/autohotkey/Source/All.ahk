@@ -1,9 +1,11 @@
 /* 
    ------------------------------------------------------
-   Liste der Module
-   
+   All.ahk:
+   Diese Datei ist für Entwickler zum schnellen Testen von Änderungen vorgesehen. Bei Syntaxfehlern bietet sie zudem den Vorteil, dass die Zeilennummern relativ zu den einzelnen Modulen angezeigt werden.
+
    Die Reihenfolge der Includes *ist* relevant!
-   
+   Denn: Vor dem Menü in der Global-Part.ahk dürfen keine Tastenkombinationen definiert werden. Ansonsten können Sie die Dateien hier beliebig anordnen. :-)
+
    Siehe auch:
    http://www.autohotkey.com/docs/commands/_Include.htm
 

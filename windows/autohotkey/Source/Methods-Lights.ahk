@@ -6,7 +6,7 @@
    Benutzungshinweise: Man benutze
    KeyboardLED(LEDvalue,"Cmd"), wobei
    Cmd = on/off/switch,
-   LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4
+   LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4,
    bzw. eine beliebige Summe dieser Werte:
    AlleAus=0, CapsLock+NumLock=6, etc.
    
@@ -14,7 +14,7 @@
    http://www.autohotkey.com/forum/viewtopic.php?t=10532
    
    Um eventuelle Wechselwirkungen mit dem bestehenden
-   Code (insb. der Unicode-Konvertierung) auszuschieﬂen,
+   Code (insb. der Unicode-Konvertierung) auszuschlieﬂen,
    sind auch alle (Hilfsmethoden) mit dem Postfix LED
    versehen worden.
    ------------------------------------------------------

@@ -443,6 +443,7 @@ VK09SC00F::goto neo_tab
   }
 
 ; Numpad
+*VK90SC145::goto neo_NumLock
 *VK6FSC135::goto neo_NumpadDiv
 *VK6ASC037::goto neo_NumpadMult
 *VK6DSC04A::goto neo_NumpadSub
