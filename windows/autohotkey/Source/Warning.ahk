@@ -10,7 +10,6 @@ Alle weiterführende Informationen finden sich im Abschnitt
 == Hinweise für Entwickler ==
 in der Datei README.txt!  
 *******************************************
-*/
 
 
 
@@ -28,7 +27,9 @@ in der Datei README.txt!
 
 
 
-/*
+
+
+
 *******************************************
 Das war die letzte WARNUNG, ich hoffe nur dass
 Sie wirklich wissen was Sie hier tun wollen ...
