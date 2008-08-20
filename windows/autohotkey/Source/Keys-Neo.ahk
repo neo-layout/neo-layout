@@ -1500,7 +1500,7 @@ neo_SpaceUp:
     else if (Ebene = 5)
       SendUnicodeChar(0x00A0)  ; geschütztes Leerzeichen
     else if (Ebene = 6)
-      SendUnicodeChar(0x202F) ; schmales Leerzeichen
+      SendUnicodeChar(0x202F) ; schmales geschütztes Leerzeichen
     DeadKey := ""  CompKey := ""
   spacepressed := 0
   keypressed := 0
