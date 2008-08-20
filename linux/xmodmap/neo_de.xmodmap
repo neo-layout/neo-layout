@@ -157,7 +157,7 @@ keycode 33 = q      Q     ampersand    U03D5              plus       NoSymbol   
 keycode 34 = ssharp	U1E9E 		U017F		Greek_finalsmallsigma	NoSymbol	NoSymbol	U2218
 !	     ß		ẞ Capital ß	ſ long s	ς							∘ ring operator
 
-keycode 35 = dead_tilde	dead_macron	dead_diaeresis	dead_doubleacute
+keycode 35 = dead_tilde	dead_macron	dead_diaeresis	dead_doubleacute        NoSymbol        NoSymbol        NoSymbol
 !		~	¯		"		˝
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -220,56 +220,56 @@ keycode 61 = j      	J        	semicolon  	Greek_theta 	semicolon  	NoSymbol    
 ! The uppest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-keycode 77  = equal		notequal		U2248		Pointer_EnableKeys
+keycode 77  = equal		notequal		U2248		Pointer_EnableKeys    NoSymbol   NoSymbol  NoSymbol
 !		=		≠			≈ almost equal	(keypad-mouse mode)
-keycode 112 = KP_Divide		KP_Divide		division	U2044
+keycode 112 = KP_Divide		KP_Divide		division	U2044                 NoSymbol   NoSymbol  NoSymbol
 !	      /			/			÷		(für ⁶⁄₅₉)
-keycode 63  = KP_Multiply	KP_Multiply		U22C5		multiply
+keycode 63  = KP_Multiply	KP_Multiply		U22C5		multiply              NoSymbol   NoSymbol  NoSymbol
 !	      *			*			⋅		×
-keycode 82  = KP_Subtract	KP_Subtract		minus		U2212
+keycode 82  = KP_Subtract	KP_Subtract		minus		U2212                 NoSymbol   NoSymbol  NoSymbol
 !	      -			-			-		− real minus
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  KP_7	KP_Home		U2195		dagger
+keycode 79 =  KP_7	KP_Home		U2195		dagger                                NoSymbol   NoSymbol  NoSymbol
 !					↕ arrow		†
-keycode 80 =  KP_8	KP_Up		uparrow		intersection
+keycode 80 =  KP_8	KP_Up		uparrow		intersection                          NoSymbol   NoSymbol  NoSymbol
 !					↑		∩	
-keycode 81 =  KP_9	KP_Prior	containsas	U2297
+keycode 81 =  KP_9	KP_Prior	containsas	U2297                                 NoSymbol   NoSymbol  NoSymbol
 !					∋		⊗	
-keycode 86 =  KP_Add	KP_Add		plusminus	U2213
+keycode 86 =  KP_Add	KP_Add		plusminus	U2213                                 NoSymbol   NoSymbol  NoSymbol
 !	      +		+2		±		∓ minus-plus	
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  KP_4	KP_Left		leftarrow	includedin
+keycode 83 =  KP_4	KP_Left		leftarrow	includedin                            NoSymbol   NoSymbol  NoSymbol
 !					←		⊂	
-keycode 84 =  KP_5	KP_Begin	infinity	EuroSign
+keycode 84 =  KP_5	KP_Begin	infinity	EuroSign                              NoSymbol   NoSymbol  NoSymbol
 !					∞		€
-keycode 85 =  KP_6	KP_Right	rightarrow	includes
+keycode 85 =  KP_6	KP_Right	rightarrow	includes                              NoSymbol   NoSymbol  NoSymbol
 !					→		⊃
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  KP_1	KP_End		U2194		U2714
+keycode 87 =  KP_1	KP_End		U2194		U2714                                 NoSymbol   NoSymbol  NoSymbol
 !					↔ arrow		✔ check mark	
-keycode 88 =  KP_2	KP_Down		downarrow	union
+keycode 88 =  KP_2	KP_Down		downarrow	union                                 NoSymbol   NoSymbol  NoSymbol
 !					↓		∪	
-keycode 89 =  KP_3	KP_Next		U21CC		U2717
+keycode 89 =  KP_3	KP_Next		U21CC		U2717                                 NoSymbol   NoSymbol  NoSymbol
 !					⇌ arro		✗ battol X
-keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter
+keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter                              NoSymbol   NoSymbol  NoSymbol
 !								
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = KP_0	KP_Insert	percent		U2030
+keycode 90 = KP_0	KP_Insert	percent		U2030                                 NoSymbol   NoSymbol  NoSymbol
 !					%		‰ per mille	
-keycode 91 = comma	KP_Delete	period		KP_Separator
+keycode 91 = comma	KP_Delete	period		KP_Separator                          NoSymbol   NoSymbol  NoSymbol
 !	     ,				.		,/.		
 
 
