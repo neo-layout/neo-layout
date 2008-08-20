@@ -8,6 +8,13 @@
 /************************************************************
   Alter Weg – Copy/Paste über die Zwischenablage
 ************************************************************/
+/*
+Diese Variante sollte nicht mehr verwendet werden (könnte jedoch unter Umständen noch zu Testzwecken hilfreich sein).
+
+hat den Vorteil, dass sie etwas kompatibler ist (es ist kein separater GTK-Workarround notwendig). Stefan zufolge wurde sie schon einmal getestet, dann jedoch wieder verworfen.
+
+Das Problem war vor allem, daß bei einer etwas größeren Rechnerauslastung kein normales Schreiben mehr möglich war. Nicht nur, daß die Perfomanz sehr schlecht war (es dauerte lange, bis die Buchstaben überhaupt erschienen) -- viel schlimmer war, daß die Reihenfolge der Tastatureingabe nicht mehr eingehalten wurde, sondern die genommen wurde, die in der Zwischenablage war: genau umgekehrt.
+*/
 
 /*
 Unicode(code)
