@@ -6,4 +6,4 @@ grep space $xmodmap | grep ^keycode | tr -s [:blank:] ' '| cut -f2 -d = >> mach_
 
 sed -f console.ersetze mach_kurzreferenz.hilfe
 
-#rm mach_kurzreferenz.hilfe
+rm mach_kurzreferenz.hilfe
