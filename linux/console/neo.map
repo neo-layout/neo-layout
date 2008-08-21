@@ -183,63 +183,63 @@ compose as usual for "iso-8859-1"
 ! --------------------------------------------------------------------------
 ! Row 1 (number row)
 ! --------------------------------------------------------------------------
-                   keycode  41 = dead_circumflex       dead_caron            dead_breve            dead_stroke           
-           shiftl  keycode  41 = dead_belowdot         
+                   keycode  41 = dead_circumflex       dead_caron            dead_breve            VoidSymbol            
+           shiftl  keycode  41 = VoidSymbol            
    shift   shiftl  keycode  41 = VoidSymbol            
-   altgr   shiftl  keycode  41 = dead_belowdot         
+   altgr   shiftl  keycode  41 = VoidSymbol            
                    keycode   2 = one                   degree                onesuperior           U+2081                
-           shiftl  keycode   2 = enfilledcircbullet    
+           shiftl  keycode   2 = U+2022                
    shift   shiftl  keycode   2 = VoidSymbol            
    altgr   shiftl  keycode   2 = notsign               
-                   keycode   3 = two                   numerosign            twosuperior           U+2082                
+                   keycode   3 = two                   U+2116                twosuperior           U+2082                
            shiftl  keycode   3 = U+2023                
    shift   shiftl  keycode   3 = VoidSymbol            
-   altgr   shiftl  keycode   3 = logicalor             
+   altgr   shiftl  keycode   3 = U+2228                
                    keycode   4 = three                 section               threesuperior         U+2083                
            shiftl  keycode   4 = VoidSymbol            
    shift   shiftl  keycode   4 = VoidSymbol            
-   altgr   shiftl  keycode   4 = logicaland            
+   altgr   shiftl  keycode   4 = U+2227                
                    keycode   5 = four                  guillemotright        U+203A                U+2113                
            shiftl  keycode   5 = Prior                 
    shift   shiftl  keycode   5 = Prior                 
    altgr   shiftl  keycode   5 = U+22A5                
-                   keycode   6 = five                  guillemotleft         U+2039                femalesymbol          
+                   keycode   6 = five                  guillemotleft         U+2039                U+2640                
            shiftl  keycode   6 = VoidSymbol            
    shift   shiftl  keycode   6 = VoidSymbol            
    altgr   shiftl  keycode   6 = U+2221                
-                   keycode   7 = six                   EuroSign              cent                  malesymbol            
+                   keycode   7 = six                   U+20ac                cent                  U+2642                
            shiftl  keycode   7 = sterling              
    shift   shiftl  keycode   7 = VoidSymbol            
    altgr   shiftl  keycode   7 = U+2225                
-                   keycode   8 = seven                 dollar                yen                   Greek_kappa           
+                   keycode   8 = seven                 dollar                yen                   U+03ba                
            shiftl  keycode   8 = currency              
    shift   shiftl  keycode   8 = VoidSymbol            
-   altgr   shiftl  keycode   8 = notelementof          
-                   keycode   9 = eight                 doublelowquotemark    singlelowquotemark    U+27E8                
+   altgr   shiftl  keycode   8 = VoidSymbol            
+                   keycode   9 = eight                 U+201e                U+201a                U+27E8                
            shiftl  keycode   9 = slash                 
    shift   shiftl  keycode   9 = slash                 
    altgr   shiftl  keycode   9 = U+2204                
-                   keycode  10 = nine                  leftdoublequotemark   leftsinglequotemark   U+27E9                
+                   keycode  10 = nine                  U+201c                U+2018                U+27E9                
            shiftl  keycode  10 = asterisk              
    shift   shiftl  keycode  10 = asterisk              
    altgr   shiftl  keycode  10 = U+2226                
-                   keycode  11 = zero                  rightdoublequotemark  rightsinglequotemark  U+2080                
+                   keycode  11 = zero                  U+201d                U+2019                U+2080                
            shiftl  keycode  11 = minus                 
    shift   shiftl  keycode  11 = VoidSymbol            
-   altgr   shiftl  keycode  11 = emptyset              
-                   keycode  12 = minus                 endash                emdash                U+2011                
+   altgr   shiftl  keycode  11 = VoidSymbol            
+                   keycode  12 = minus                 U+2013                U+2014                U+2011                
            shiftl  keycode  12 = VoidSymbol            
    shift   shiftl  keycode  12 = VoidSymbol            
    altgr   shiftl  keycode  12 = hyphen                
                    keycode  13 = dead_acute            dead_grave            dead_cedilla          dead_ogonek           
-           shiftl  keycode  13 = dead_abovedot         
+           shiftl  keycode  13 = U+0307                
    shift   shiftl  keycode  13 = VoidSymbol            
-   altgr   shiftl  keycode  13 = dead_abovering        
+   altgr   shiftl  keycode  13 = U+030a                
 
 ! --------------------------------------------------------------------------
 ! Row 2 (upper row)
 ! --------------------------------------------------------------------------
-                   keycode  16 = x                     X                     ellipsis              Greek_xi              
+                   keycode  16 = x                     X                     U+2026                U+03be                
            shiftl  keycode  16 = U+22EE                
    shift   shiftl  keycode  16 = VoidSymbol            
    altgr   shiftl  keycode  16 = U+039E                
@@ -247,31 +247,31 @@ compose as usual for "iso-8859-1"
            shiftl  keycode  17 = BackSpace             
    shift   shiftl  keycode  17 = BackSpace             
    altgr   shiftl  keycode  17 = U+2259                
-                   keycode  18 = l                     L                     bracketleft           Greek_lambda          
+                   keycode  18 = l                     L                     bracketleft           U+03bb                
            shiftl  keycode  18 = Up                    
    shift   shiftl  keycode  18 = Up                    
    altgr   shiftl  keycode  18 = U+039B                
-                   keycode  19 = c                     C                     bracketright          Greek_chi             
+                   keycode  19 = c                     C                     bracketright          U+03c7                
            shiftl  keycode  19 = Delete                
    shift   shiftl  keycode  19 = Delete                
    altgr   shiftl  keycode  19 = U+2102                
-                   keycode  20 = w                     W                     asciicircum           Greek_omega           
+                   keycode  20 = w                     W                     asciicircum           U+03c9                
            shiftl  keycode  20 = Insert                
    shift   shiftl  keycode  20 = Insert                
    altgr   shiftl  keycode  20 = U+03A9                
                    keycode  21 = k                     K                     exclam                U+03F0                
            shiftl  keycode  21 = exclamdown            
    shift   shiftl  keycode  21 = VoidSymbol            
-   altgr   shiftl  keycode  21 = radical               
-                   keycode  22 = h                     H                     less                  Greek_psi             
+   altgr   shiftl  keycode  21 = U+221a                
+                   keycode  22 = h                     H                     less                  U+03c8                
            shiftl  keycode  22 = seven                 
    shift   shiftl  keycode  22 = seven                 
    altgr   shiftl  keycode  22 = U+03A8                
-                   keycode  23 = g                     G                     greater               Greek_gamma           
+                   keycode  23 = g                     G                     greater               U+03b3                
            shiftl  keycode  23 = eight                 
    shift   shiftl  keycode  23 = eight                 
    altgr   shiftl  keycode  23 = U+0393                
-                   keycode  24 = f                     F                     equal                 Greek_phi             
+                   keycode  24 = f                     F                     equal                 U+03c6                
            shiftl  keycode  24 = nine                  
    shift   shiftl  keycode  24 = nine                  
    altgr   shiftl  keycode  24 = U+03A6                
@@ -279,11 +279,11 @@ compose as usual for "iso-8859-1"
            shiftl  keycode  25 = plus                  
    shift   shiftl  keycode  25 = VoidSymbol            
    altgr   shiftl  keycode  25 = U+211A                
-                   keycode  26 = ssharp                U+1E9E                U+017F                Greek_finalsmallsigma 
+                   keycode  26 = ssharp                U+1E9E                U+017F                U+03c2                
            shiftl  keycode  26 = VoidSymbol            
    shift   shiftl  keycode  26 = VoidSymbol            
    altgr   shiftl  keycode  26 = U+2218                
-                   keycode  27 = dead_tilde            dead_macron           dead_diaeresis        dead_doubleacute      
+                   keycode  27 = dead_tilde            U+0304                dead_diaeresis        dead_doubleacute      
            shiftl  keycode  27 = VoidSymbol            
    shift   shiftl  keycode  27 = VoidSymbol            
    altgr   shiftl  keycode  27 = VoidSymbol            
@@ -295,27 +295,27 @@ compose as usual for "iso-8859-1"
            shiftl  keycode  30 = Home                  
    shift   shiftl  keycode  30 = Home                  
    altgr   shiftl  keycode  30 = U+222E                
-                   keycode  31 = i                     I                     slash                 Greek_iota            
+                   keycode  31 = i                     I                     slash                 U+03b9                
            shiftl  keycode  31 = Left                  
    shift   shiftl  keycode  31 = Left                  
-   altgr   shiftl  keycode  31 = integral              
-                   keycode  32 = a                     A                     braceleft             Greek_alpha           
+   altgr   shiftl  keycode  31 = U+222b                
+                   keycode  32 = a                     A                     braceleft             U+03b1                
            shiftl  keycode  32 = Down                  
    shift   shiftl  keycode  32 = Down                  
    altgr   shiftl  keycode  32 = U+2200                
-                   keycode  33 = e                     E                     braceright            Greek_epsilon         
+                   keycode  33 = e                     E                     braceright            U+03b5                
            shiftl  keycode  33 = Right                 
    shift   shiftl  keycode  33 = Right                 
    altgr   shiftl  keycode  33 = U+2203                
-                   keycode  34 = o                     O                     asterisk              Greek_omicron         
+                   keycode  34 = o                     O                     asterisk              U+03bf                
            shiftl  keycode  34 = End                   
    shift   shiftl  keycode  34 = End                   
-   altgr   shiftl  keycode  34 = elementof             
-                   keycode  35 = s                     S                     question              Greek_sigma           
+   altgr   shiftl  keycode  34 = VoidSymbol            
+                   keycode  35 = s                     S                     question              U+03c3                
            shiftl  keycode  35 = questiondown          
    shift   shiftl  keycode  35 = VoidSymbol            
    altgr   shiftl  keycode  35 = U+03A3                
-                   keycode  36 = n                     N                     parenleft             Greek_nu              
+                   keycode  36 = n                     N                     parenleft             U+03bd                
            shiftl  keycode  36 = four                  
    shift   shiftl  keycode  36 = four                  
    altgr   shiftl  keycode  36 = U+2115                
@@ -323,18 +323,18 @@ compose as usual for "iso-8859-1"
            shiftl  keycode  37 = five                  
    shift   shiftl  keycode  37 = five                  
    altgr   shiftl  keycode  37 = U+211D                
-                   keycode  38 = t                     T                     minus                 Greek_tau             
+                   keycode  38 = t                     T                     minus                 U+03c4                
            shiftl  keycode  38 = six                   
    shift   shiftl  keycode  38 = six                   
-   altgr   shiftl  keycode  38 = partialderivative     
-                   keycode  39 = d                     D                     colon                 Greek_delta           
+   altgr   shiftl  keycode  38 = U+2202                
+                   keycode  39 = d                     D                     colon                 U+03b4                
            shiftl  keycode  39 = comma                 
    shift   shiftl  keycode  39 = VoidSymbol            
    altgr   shiftl  keycode  39 = U+0394                
-                   keycode  40 = y                     Y                     at                    Greek_upsilon         
+                   keycode  40 = y                     Y                     at                    U+03c5                
            shiftl  keycode  40 = period                
    shift   shiftl  keycode  40 = VoidSymbol            
-   altgr   shiftl  keycode  40 = nabla                 
+   altgr   shiftl  keycode  40 = U+2207                
 
 ! --------------------------------------------------------------------------
 ! Row 4 (lower row)
@@ -342,32 +342,32 @@ compose as usual for "iso-8859-1"
                    keycode  44 = udiaeresis            Udiaeresis            numbersign            VoidSymbol            
            shiftl  keycode  44 = Escape                
    shift   shiftl  keycode  44 = Escape                
-   altgr   shiftl  keycode  44 = variation             
+   altgr   shiftl  keycode  44 = U+221d                
                    keycode  45 = odiaeresis            Odiaeresis            dollar                VoidSymbol            
            shiftl  keycode  45 = Tab                   
    shift   shiftl  keycode  45 = Tab                   
    altgr   shiftl  keycode  45 = U+2111                
-                   keycode  46 = adiaeresis            Adiaeresis            bar                   Greek_eta             
+                   keycode  46 = adiaeresis            Adiaeresis            bar                   U+03b7                
            shiftl  keycode  46 = Next                  
    shift   shiftl  keycode  46 = Next                  
    altgr   shiftl  keycode  46 = U+211C                
-                   keycode  47 = p                     P                     asciitilde            Greek_pi              
+                   keycode  47 = p                     P                     asciitilde            U+03c0                
            shiftl  keycode  47 = Return                
    shift   shiftl  keycode  47 = Return                
    altgr   shiftl  keycode  47 = U+03A0                
-                   keycode  48 = z                     Z                     grave                 Greek_zeta            
-           shiftl  keycode  48 = Undo                  
-   shift   shiftl  keycode  48 = Redo                  
+                   keycode  48 = z                     Z                     grave                 U+03b6                
+           shiftl  keycode  48 = VoidSymbol            
+   shift   shiftl  keycode  48 = VoidSymbol            
    altgr   shiftl  keycode  48 = U+2124                
-                   keycode  49 = b                     B                     plus                  Greek_beta            
+                   keycode  49 = b                     B                     plus                  U+03b2                
            shiftl  keycode  49 = colon                 
    shift   shiftl  keycode  49 = VoidSymbol            
    altgr   shiftl  keycode  49 = U+21D0                
-                   keycode  50 = m                     M                     percent               Greek_mu              
+                   keycode  50 = m                     M                     percent               U+03bc                
            shiftl  keycode  50 = one                   
    shift   shiftl  keycode  50 = one                   
-   altgr   shiftl  keycode  50 = ifonlyif              
-                   keycode  51 = comma                 VoidSymbol            quotedbl              Greek_rho             
+   altgr   shiftl  keycode  50 = U+21d4                
+                   keycode  51 = comma                 VoidSymbol            quotedbl              U+03c1                
            shiftl  keycode  51 = two                   
    shift   shiftl  keycode  51 = two                   
    altgr   shiftl  keycode  51 = U+21D2                
@@ -375,15 +375,15 @@ compose as usual for "iso-8859-1"
            shiftl  keycode  52 = three                 
    shift   shiftl  keycode  52 = three                 
    altgr   shiftl  keycode  52 = U+0398                
-                   keycode  53 = j                     J                     semicolon             Greek_theta           
+                   keycode  53 = j                     J                     semicolon             U+03b8                
            shiftl  keycode  53 = semicolon             
    shift   shiftl  keycode  53 = VoidSymbol            
-   altgr   shiftl  keycode  53 = identical             
+   altgr   shiftl  keycode  53 = U+2261                
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 1 (uppest row)
 ! --------------------------------------------------------------------------
-                   keycode  69 = equal                 notequal              U+2248                Pointer_EnableKeys    
+                   keycode  69 = equal                 U+2260                U+2248                VoidSymbol            
            shiftl  keycode  69 = VoidSymbol            
    shift   shiftl  keycode  69 = VoidSymbol            
    altgr   shiftl  keycode  69 = VoidSymbol            
@@ -403,15 +403,15 @@ compose as usual for "iso-8859-1"
 ! --------------------------------------------------------------------------
 ! Keypad Row 2 (upper row)
 ! --------------------------------------------------------------------------
-                   keycode  71 = KP_7                  KP_Home               U+2195                dagger                
+                   keycode  71 = KP_7                  VoidSymbol            U+2195                U+2020                
            shiftl  keycode  71 = VoidSymbol            
    shift   shiftl  keycode  71 = VoidSymbol            
    altgr   shiftl  keycode  71 = VoidSymbol            
-                   keycode  72 = KP_8                  KP_Up                 uparrow               intersection          
+                   keycode  72 = KP_8                  VoidSymbol            U+2191                U+2229                
            shiftl  keycode  72 = VoidSymbol            
    shift   shiftl  keycode  72 = VoidSymbol            
    altgr   shiftl  keycode  72 = VoidSymbol            
-                   keycode  73 = KP_9                  KP_Prior              containsas            U+2297                
+                   keycode  73 = KP_9                  VoidSymbol            VoidSymbol            U+2297                
            shiftl  keycode  73 = VoidSymbol            
    shift   shiftl  keycode  73 = VoidSymbol            
    altgr   shiftl  keycode  73 = VoidSymbol            
@@ -423,15 +423,15 @@ compose as usual for "iso-8859-1"
 ! --------------------------------------------------------------------------
 ! Keypad Row 3 (home row, middle row)
 ! --------------------------------------------------------------------------
-                   keycode  75 = KP_4                  KP_Left               leftarrow             includedin            
+                   keycode  75 = KP_4                  VoidSymbol            U+2190                U+2282                
            shiftl  keycode  75 = VoidSymbol            
    shift   shiftl  keycode  75 = VoidSymbol            
    altgr   shiftl  keycode  75 = VoidSymbol            
-                   keycode  76 = KP_5                  KP_Begin              infinity              EuroSign              
+                   keycode  76 = KP_5                  VoidSymbol            U+221e                U+20ac                
            shiftl  keycode  76 = VoidSymbol            
    shift   shiftl  keycode  76 = VoidSymbol            
    altgr   shiftl  keycode  76 = VoidSymbol            
-                   keycode  77 = KP_6                  KP_Right              rightarrow            includes              
+                   keycode  77 = KP_6                  VoidSymbol            U+2192                U+2283                
            shiftl  keycode  77 = VoidSymbol            
    shift   shiftl  keycode  77 = VoidSymbol            
    altgr   shiftl  keycode  77 = VoidSymbol            
@@ -439,15 +439,15 @@ compose as usual for "iso-8859-1"
 ! --------------------------------------------------------------------------
 ! Keypad Row 4 (lower row)
 ! --------------------------------------------------------------------------
-                   keycode  79 = KP_1                  KP_End                U+2194                U+2714                
+                   keycode  79 = KP_1                  VoidSymbol            U+2194                U+2714                
            shiftl  keycode  79 = VoidSymbol            
    shift   shiftl  keycode  79 = VoidSymbol            
    altgr   shiftl  keycode  79 = VoidSymbol            
-                   keycode  80 = KP_2                  KP_Down               downarrow             union                 
+                   keycode  80 = KP_2                  VoidSymbol            U+2193                U+222a                
            shiftl  keycode  80 = VoidSymbol            
    shift   shiftl  keycode  80 = VoidSymbol            
    altgr   shiftl  keycode  80 = VoidSymbol            
-                   keycode  81 = KP_3                  KP_Next               U+21CC                U+2717                
+                   keycode  81 = KP_3                  VoidSymbol            U+21CC                U+2717                
            shiftl  keycode  81 = VoidSymbol            
    shift   shiftl  keycode  81 = VoidSymbol            
    altgr   shiftl  keycode  81 = VoidSymbol            
@@ -455,11 +455,11 @@ compose as usual for "iso-8859-1"
 ! --------------------------------------------------------------------------
 ! Keypad Row 5 (lowest row)
 ! --------------------------------------------------------------------------
-                   keycode  82 = KP_0                  KP_Insert             percent               U+2030                
+                   keycode  82 = KP_0                  VoidSymbol            percent               U+2030                
            shiftl  keycode  82 = VoidSymbol            
    shift   shiftl  keycode  82 = VoidSymbol            
    altgr   shiftl  keycode  82 = VoidSymbol            
-                   keycode  83 = comma                 KP_Delete             period                KP_Separator          
+                   keycode  83 = comma                 VoidSymbol            period                U+002c                
            shiftl  keycode  83 = VoidSymbol            
    shift   shiftl  keycode  83 = VoidSymbol            
    altgr   shiftl  keycode  83 = VoidSymbol            
