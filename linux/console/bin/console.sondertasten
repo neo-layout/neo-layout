@@ -57,7 +57,7 @@ compose as usual for "iso-8859-1"
 ! function keys
 ! --------------------------------------------------------------------------
 ! ----Backspace-------------------------------------------------------------
-                   keycode  42 = Delete           Delete          
+                   keycode  14 = Delete           Delete          
 	   alt	   keycode  14 = Meta_Delete     
    shift   alt     keycode  14 = Meta_Delete     
 ! ----Return Enter----------------------------------------------------------
