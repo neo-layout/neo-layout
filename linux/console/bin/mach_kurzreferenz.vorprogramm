@@ -1,0 +1,37 @@
+#!/bin/sh
+xmodmap=../xmodmap/neo_de.xmodmap
+
+grep -n ^keycode $xmodmap | grep ^[12] | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe1
+
+sed -f console.ersetze.vorprogramm mach_kurzreferenz.hilfe1 > mach_kurzreferenz.hilfe2
+
+anzahl=`wc -l mach_kurzreferenz.hilfe2 | cut -f1 -d \ `
+
+for i in $(seq 1 $anzahl)
+do
+	for j in $(seq 2 8)
+	do
+		a=`head -$i mach_kurzreferenz.hilfe2 | tail -1 | cut -f $j -d\ `
+		if [ "$a" ]
+		then
+			b=`echo $a | cut -c-2`
+			if [ ! "$b" == "U+" ]
+			then
+				c=`grep $a dump`
+				if [ ! "$c" ]
+				then
+					d=`grep -w $a console.keysyms | cut -f2 -d U | cut -c-4`
+					if [ "$d" ]
+					then
+						echo "s/"$a"/U+"$d"/g"
+					else
+						echo "s/"$a"/VoidSymbol/g"
+					fi
+				fi
+			fi
+		fi
+	done
+done
+
+rm mach_kurzreferenz.hilfe1
+rm mach_kurzreferenz.hilfe2

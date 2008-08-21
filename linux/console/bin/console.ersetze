@@ -1,0 +1,116 @@
+s/ 1 / one /g
+s/ 2 / two /g
+s/ 3 / three /g
+s/ 4 / four /g
+s/ 5 / five /g
+s/ 6 / six /g
+s/ 7 / seven /g
+s/ 8 / eight /g
+s/ 9 / nine /g
+s/ 0 / zero /g
+s/ 1 / one /g
+s/ 2 / two /g
+s/ 3 / three /g
+s/ 4 / four /g
+s/ 5 / five /g
+s/ 6 / six /g
+s/ 7 / seven /g
+s/ 8 / eight /g
+s/ 9 / nine /g
+s/ 0 / zero /g
+s/NoSymbol/VoidSymbol/g
+s/U1/U+1/g
+s/U2/U+2/g
+s/U3/U+3/g
+s/U4/U+4/g
+s/U5/U+5/g
+s/U6/U+6/g
+s/U7/U+7/g
+s/U8/U+8/g
+s/U9/U+9/g
+s/U0/U+0/g
+s/dead_stroke/VoidSymbol/g
+s/dead_belowdot/VoidSymbol/g
+s/dead_belowdot/VoidSymbol/g
+s/enfilledcircbullet/U+2022/g
+s/numerosign/U+2116/g
+s/logicalor/U+2228/g
+s/logicaland/U+2227/g
+s/femalesymbol/U+2640/g
+s/EuroSign/U+20ac/g
+s/malesymbol/U+2642/g
+s/Greek_kappa/U+03ba/g
+s/notelementof/VoidSymbol/g
+s/doublelowquotemark/U+201e/g
+s/singlelowquotemark/U+201a/g
+s/leftdoublequotemark/U+201c/g
+s/leftsinglequotemark/U+2018/g
+s/rightdoublequotemark/U+201d/g
+s/rightsinglequotemark/U+2019/g
+s/emptyset/VoidSymbol/g
+s/endash/U+2013/g
+s/emdash/U+2014/g
+s/dead_abovedot/U+0307/g
+s/dead_abovering/U+030a/g
+s/ellipsis/U+2026/g
+s/Greek_xi/U+03be/g
+s/Greek_lambda/U+03bb/g
+s/Greek_chi/U+03c7/g
+s/Greek_omega/U+03c9/g
+s/radical/U+221a/g
+s/Greek_psi/U+03c8/g
+s/Greek_gamma/U+03b3/g
+s/Greek_phi/U+03c6/g
+s/Greek_finalsmallsigma/U+03c2/g
+s/dead_macron/U+0304/g
+s/Greek_iota/U+03b9/g
+s/integral/U+222b/g
+s/Greek_alpha/U+03b1/g
+s/Greek_epsilon/U+03b5/g
+s/Greek_omicron/U+03bf/g
+s/elementof/VoidSymbol/g
+s/Greek_sigma/U+03c3/g
+s/Greek_nu/U+03bd/g
+s/Greek_tau/U+03c4/g
+s/partialderivative/U+2202/g
+s/Greek_delta/U+03b4/g
+s/Greek_upsilon/U+03c5/g
+s/nabla/U+2207/g
+s/variation/U+221d/g
+s/Greek_eta/U+03b7/g
+s/Greek_pi/U+03c0/g
+s/Greek_zeta/U+03b6/g
+s/Undo/VoidSymbol/g
+s/Redo/VoidSymbol/g
+s/Greek_beta/U+03b2/g
+s/Greek_mu/U+03bc/g
+s/ifonlyif/U+21d4/g
+s/Greek_rho/U+03c1/g
+s/Greek_theta/U+03b8/g
+s/identical/U+2261/g
+s/notequal/U+2260/g
+s/Pointer_EnableKeys/VoidSymbol/g
+s/KP_Home/VoidSymbol/g
+s/dagger/U+2020/g
+s/KP_Up/VoidSymbol/g
+s/uparrow/U+2191/g
+s/intersection/U+2229/g
+s/KP_Prior/VoidSymbol/g
+s/containsas/VoidSymbol/g
+s/KP_Left/VoidSymbol/g
+s/leftarrow/U+2190/g
+s/includedin/U+2282/g
+s/KP_Begin/VoidSymbol/g
+s/infinity/U+221e/g
+s/EuroSign/U+20ac/g
+s/KP_Right/VoidSymbol/g
+s/rightarrow/U+2192/g
+s/includes/U+2283/g
+s/KP_End/VoidSymbol/g
+s/KP_Down/VoidSymbol/g
+s/downarrow/U+2193/g
+s/union/U+222a/g
+s/KP_Next/VoidSymbol/g
+s/KP_Insert/VoidSymbol/g
+s/KP_Delete/VoidSymbol/g
+s/KP_Separator/U+002c/g
