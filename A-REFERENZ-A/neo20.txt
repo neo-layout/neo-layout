@@ -1,4 +1,4 @@
-﻿-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -248,7 +248,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Legende – Ziffernblock ===
 ┌─────┐ 1 … 1. Ebene (kein Mod)
-│ 4 2 │ 2 … 2. Ebene (Umschalt)
+│ 2 4 │ 2 … 2. Ebene (Umschalt)
 │ 1 3 │ 3 … 3. Ebene (Mod3)
 └─────┘ 4 … 5. Ebene (Mod3+Umschalt)
 
@@ -270,16 +270,16 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Alle Ebenen – Ziffernblock ===
 ┌─────┬─────┬─────┬─────┐
-│ ≠ ⍓ │ / ⁄ │ * × │ - − │
-│ = ≈ │ / ÷ │ * ⋅ │ - - │
+│ ≠ ⍓ │ /frc│ * × │ - − │ ⍓ turns on/off the keyboard mouse control
+│ = ≈ │ / ÷ │ * ⋅ │ - - │ frc means fraction slash ⁄
 ├─────┼─────┼─────┼─────┤
-│Hom †│KP↑ ∩│PgU ⊗│     │
+│† Hom│∩ KP↑│⊗ PgU│     │
 │ 7  ↕│ 8  ↑│ 9  ∋│ + ∓ │
 ├─────┼─────┼─────┤     │
-│KP← ⊂│Beg €│KP→ ⊃│ + ± │
+│⊂ KP←│€ Beg│⊃ KP→│ + ± │
 │ 4  ←│ 5  ∞│ 6  →│     │
 ├─────┼─────┼─────┼─────┤
-│End ✔│KP↓ ∪│PgD ✗│     │
+│✔ End│∪ KP↓│✗ PgD│     │
 │ 1  ↔│ 2  ↓│ 3  ⇌│     │
 ├─────┴─────┼─────┤     │
 │ Ins  ‰    │Del S│     │ S: ,/. KP_Seperator
@@ -301,15 +301,15 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Zweite Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ⍓ │frc│ × │ − │ ⍓ turns on/off the keyboard mouse control
-├───┼───┼───┼───┤ frc means fraction slash ⁄
+│ ≠ │ / │ * │ - │
+├───┼───┼───┼───┤
 │ † │ ∩ │ ⊗ │   │
 ├───┼───┼───┤   │
-│ ⊂ │ € │ ⊃ │ ∓ │
+│ ⊂ │ € │ ⊃ │ + │
 ├───┼───┼───┼───┤
 │ ✔ │ ∪ │ ✗ │   │
 ├───┴───┼───┤   │
-│ ‰     │,/.│Ent│
+│ Ins   │Del│Ent│
 └───────┴───┴───┘
 
 === Dritte Ebene – Miniatur ===
@@ -327,15 +327,15 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Vierte Ebene – Miniatur === 
 ┌───┬───┬───┬───┐
-│ ≠ │ / │ * │ - │
-├───┼───┼───┼───┤
+│ ⍓ │frc│ × │ − │ ⍓ turns on/off the keyboard mouse control
+├───┼───┼───┼───┤ frc means fraction slash ⁄
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│ + │
+│KP←│Beg│KP→│ ∓ │
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
-│ Ins   │Del│Ent│
+│ ‰     │,/.│Ent│
 └───────┴───┴───┘
 
 == Tipp ==
