@@ -1,0 +1,175 @@
+! neo.map - german NEO keyboard layout
+!
+! Diese Datei ist experimentell!
+! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
+! anders verhalten als erwartet, sollte dies auf der Mailingliste
+! der NEO-Tastaturbelegung gemeldet werden.
+!
+! Diese Keymap wird �ber einige Skripte automatisch aus der neo_de.xmodmap
+! erzeugt.
+!
+
+keymaps 0-3,4-6,8-10,12,16-18
+charset "ISO-8859-1"
+include "linux-with-two-alt-keys.inc"
+strings as usual
+compose as usual for "iso-8859-1"
+! --------------------------------------------------------------------------
+! Modifier definitions
+! --------------------------------------------------------------------------
+                   keycode  42 = Shift           
+                   keycode  54 = Shift           
+                   keycode  58 = AltGr           
+                   keycode  43 = AltGr           
+                   keycode  86 = ShiftL          
+                   keycode 100 = ShiftL          
+
+                   keycode   1 = Escape           Escape          
+           alt     keycode   1 = Meta_Escape     
+   shift   altgr   keycode   1 = Meta_Escape     
+
+! --------------------------------------------------------------------------
+! Keys with control function (has to be edited manally!!!!)
+! --------------------------------------------------------------------------
+           control keycode  33 = Control_e       
+   shift   control keycode  33 = Control_e       
+   altgr   control keycode  33 = Control_e       
+           alt     keycode  33 = Meta_e          
+   shift   alt     keycode  33 = Meta_E          
+   altgr   alt     keycode  33 = Meta_e          
+   control alt     keycode  33 = Meta_Control_e  
+           control keycode  19 = Control_c       
+   shift   control keycode  19 = Control_c       
+   altgr   control keycode  19 = Control_c       
+           alt     keycode  19 = Meta_c          
+   shift   alt     keycode  19 = Meta_C          
+   altgr   alt     keycode  19 = Meta_c          
+   control alt     keycode  19 = Meta_Control_c  
+           control keycode  50 = Control_m       
+   shift   control keycode  50 = Control_m       
+   altgr   control keycode  50 = Control_m       
+           alt     keycode  50 = Meta_m          
+   shift   alt     keycode  50 = Meta_M          
+   altgr   alt     keycode  50 = Meta_m          
+   control alt     keycode  50 = Meta_Control_m  
+
+! --------------------------------------------------------------------------
+! function keys
+! --------------------------------------------------------------------------
+! ----Backspace-------------------------------------------------------------
+                   keycode  42 = Delete           Delete          
+	   alt	   keycode  14 = Meta_Delete     
+   shift   alt     keycode  14 = Meta_Delete     
+! ----Return Enter----------------------------------------------------------
+                   keycode  28 = Return          
+           alt     keycode  28 = Meta_Control_m  
+                   keycode  96 = KP_Enter        
+           altgr   keycode  96 = Hex_F           
+! ----Tab-------------------------------------------------------------------
+                   keycode  15 = Tab              Meta_Tab        
+           alt     keycode  15 = Meta_Tab        
+           altgr   keycode  15 = Compose
+! ----Control Alt-----------------------------------------------------------
+                   keycode  29 = Control         
+                   keycode  97 = Control         
+                   keycode  56 = Alt             
+! ----Prt SclLk Pause-------------------------------------------------------
+                   keycode  99 =
+           control keycode  99 = Control_backslash
+           alt     keycode  99 = Control_backslash
+   control alt	   keycode  99 = Meta_Control_backslash
+                   keycode  70 = Scroll_Lock      Show_Memory      Show_Registers   Show_State      
+           alt     keycode  70 = Scroll_Lock     
+                   keycode 119 = Pause           
+! ----Home block------------------------------------------------------------
+                   keycode 102 = Find            
+                   keycode 104 = Prior           
+           shift   keycode 104 = Scroll_Backward 
+                   keycode 107 = Select          
+                   keycode 109 = Next            
+           shift   keycode 109 = Scroll_Forward  
+                   keycode 111 = Remove          
+   altgr   control keycode 111 = Boot            
+   control alt     keycode 111 = Boot            
+                   keycode 110 = Insert          
+! ----Navigation block------------------------------------------------------
+                   keycode 103 = Up              
+           alt     keycode 103 = KeyboardSignal  
+                   keycode 105 = Left            
+           alt     keycode 105 = Decr_Console    
+                   keycode 106 = Right           
+           alt     keycode 106 = Incr_Console    
+                   keycode 108 = Down            
+! ----Win keys--------------------------------------------------------------
+                   keycode 125 =
+                   keycode 126 = Compose
+! ----menue key-------------------------------------------------------------
+                   keycode 127 = F100
+! ----F-keys----------------------------------------------------------------
+                   keycode  59 = F1               F13              Console_13       F25             
+           alt     keycode  59 = Console_1       
+   control alt     keycode  59 = Console_1       
+                   keycode  60 = F2               F14              Console_14       F26             
+           alt     keycode  60 = Console_2       
+   control alt     keycode  60 = Console_2       
+                   keycode  61 = F3               F15              Console_15       F27             
+           alt     keycode  61 = Console_3       
+   control alt     keycode  61 = Console_3       
+                   keycode  62 = F4               F16              Console_16       F28             
+           alt     keycode  62 = Console_4       
+   control alt     keycode  62 = Console_4       
+                   keycode  63 = F5               F17              Console_17       F29             
+           alt     keycode  63 = Console_5       
+   control alt     keycode  63 = Console_5       
+                   keycode  64 = F6               F18              Console_18       F30             
+           alt     keycode  64 = Console_6       
+   control alt     keycode  64 = Console_6       
+                   keycode  65 = F7               F19              Console_19       F31             
+           alt     keycode  65 = Console_7       
+   control alt     keycode  65 = Console_7       
+                   keycode  66 = F8               F20              Console_20       F32             
+           alt     keycode  66 = Console_8       
+   control alt     keycode  66 = Console_8       
+                   keycode  67 = F9               F21              Console_21       F33             
+           alt     keycode  67 = Console_9       
+   control alt     keycode  67 = Console_9       
+                   keycode  68 = F10              F22              Console_22       F34             
+           alt     keycode  68 = Console_10      
+   control alt     keycode  68 = Console_10      
+                   keycode  87 = F11              F23              Console_23       F35             
+           alt     keycode  87 = Console_11      
+   control alt     keycode  87 = Console_11      
+                   keycode  88 = F12              F24              Console_24       F36             
+           alt     keycode  88 = Console_12      
+   control alt     keycode  88 = Console_12      
+! ----unknown keys from defkeymap.map---------------------------------------
+                   keycode 101 = Break           
+                   keycode  84 = Last_Console    
+                   keycode 112 = Macro           
+   altgr   control keycode 112 = VoidSymbol      
+   shift   alt     keycode 112 = VoidSymbol      
+   altgr   alt     keycode 112 = VoidSymbol      
+                   keycode 113 = F13             
+   altgr   control keycode 113 = VoidSymbol      
+   shift   alt     keycode 113 = VoidSymbol      
+   altgr   alt     keycode 113 = VoidSymbol      
+                   keycode 114 = F14             
+   altgr   control keycode 114 = VoidSymbol      
+   shift   alt     keycode 114 = VoidSymbol      
+   altgr   alt     keycode 114 = VoidSymbol      
+                   keycode 115 = Help            
+   altgr   control keycode 115 = VoidSymbol      
+   shift   alt     keycode 115 = VoidSymbol      
+   altgr   alt     keycode 115 = VoidSymbol      
+                   keycode 116 = Do              
+   altgr   control keycode 116 = VoidSymbol      
+   shift   alt     keycode 116 = VoidSymbol      
+   altgr   alt     keycode 116 = VoidSymbol      
+                   keycode 117 = F17             
+   altgr   control keycode 117 = VoidSymbol      
+   shift   alt     keycode 117 = VoidSymbol      
+   altgr   alt     keycode 117 = VoidSymbol      
+                   keycode 118 = KP_MinPlus      
+   altgr   control keycode 118 = VoidSymbol      
+   shift   alt     keycode 118 = VoidSymbol      
+   altgr   alt     keycode 118 = VoidSymbol      

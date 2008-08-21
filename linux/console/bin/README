@@ -1,0 +1,13 @@
+In console.ersetze.vorprogramm finden sich die absolut notwendigen Ersetzungen.
+Unter der console (!!!!) werden mit »dumpkeys --long-info > dump« werden die dem System bekannten keysyms der console (die sind anders als unter x!!!!) bestimmt.
+Mit »mach_kurzreferenz.vorpgrogramm« werden weitere notwendige Ersetzungen bestimmt.
+
+Zusammengefasst:
+cat console.ersetze.vorprogramm > console.ersetze
+dumpkeys --long-info > dump
+mach_kurzreferenz.vorpgrogramm >> console.ersetze
+
+Nun kann mit »mach_kurzreferenz > kurzreferenz« eine Kurzreferenz aus der xmodmap erstellt werden.
+
+Aus dieser Kurzreferenz kann mit »mach_console > neo.map« die Datei erstellt werden, die mit »loadkeys neo.map« (als root!!!) gelden werden kann.
+
