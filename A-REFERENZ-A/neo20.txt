@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -157,7 +157,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3   │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z ⎌ ℤ│B : ⇐│M 1 ⇔│  2 ⇒│  3 Θ│J ; ≡│   Caps_Lock  │
+│Cps_Lk│↙4   │Ü ⌧ ∝│Ö ⇥ ℑ│Ä ⇟ ℜ│P ↲ Π│Z ⍓ ℤ│B : ⇐│M 1 ⇔│  2 ⇒│  3 Θ│J ; ≡│   Caps_Lock  │
 │Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % µ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
@@ -247,44 +247,46 @@ Um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gewährleist
 sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwendet werden!
 
 === Legende – Ziffernblock ===
-┌─────┐ 1 … 1. Ebene (kein Mod)
-│ 2 4 │ 2 … 2. Ebene (Umschalt)
-│ 1 3 │ 3 … 3. Ebene (Mod3)
-└─────┘ 4 … 5. Ebene (Mod3+Umschalt)
+┌───────┐ 1 … 1. Ebene (kein Mod)
+│ 2 4 6 │ 2 … 2. Ebene (Umschalt)
+│ 1 3 5 │ 3 … 3. Ebene (Mod3)
+└───────┘ 4 … 4. Ebene (Mod4)
+          5 … 5. Ebene (Mod3+Umschalt) (z.Zt. noch nicht belegt)
+          6 … 6. Ebene (Mod3+Mod4) (z.Zt. noch nicht belegt)
 
 === Rechenzeichen ===
-┬─────┬ 1 … ASCII-Schrägstrich
-│   ∕ │ 2 … ASCII-Schrägstrich
-│ / ÷ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
-┼─────┼ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
+┬───────┬ 1 … ASCII-Schrägstrich
+│ / ⁄   │ 2 … ASCII-Schrägstrich
+│ / ÷   │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
+┼───────┼ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
 
-┬─────┬ 1 … ASCII-Malzeichen
-│   ∙ │ 2 … ASCII-Malzeichen
-│ * × │ 3 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
-┼─────┼ 4 … Malpunkt (U+2219 BULLET OPERATOR)
+┬───────┬ 1 … ASCII-Malzeichen
+│ * ×   │ 2 … ASCII-Malzeichen
+│ * ∙   │ 3 … Malpunkt (U+2219 BULLET OPERATOR)
+┼───────┼ 4 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
 
-┬─────┐ 1 … ASCII-Minus
-│     │ 2 … ASCII-Minus
-│ - − │ 3 … Minuszeichen (U+2212 MINUS SIGN)
-┼─────┤
+┬───────┐ 1 … ASCII-Minus
+│ - −   │ 2 … ASCII-Minus
+│ - −   │ 3 … Minuszeichen (U+2212 MINUS SIGN)
+┼───────┤ 4 … Minuszeichen (U+2212 MINUS SIGN)
 
 === Alle Ebenen – Ziffernblock ===
-┌─────┬─────┬─────┬─────┐
-│ ≠ ⍓ │ /frc│ * × │ - − │ ⍓ turns on/off the keyboard mouse control
-│ = ≈ │ / ÷ │ * ⋅ │ - - │ frc means fraction slash ⁄
-├─────┼─────┼─────┼─────┤
-│† Hom│∩ KP↑│⊗ PgU│     │
-│ 7  ↕│ 8  ↑│ 9  ∋│ + ∓ │
-├─────┼─────┼─────┤     │
-│⊂ KP←│€ Beg│⊃ KP→│ + ± │
-│ 4  ←│ 5  ∞│ 6  →│     │
-├─────┼─────┼─────┼─────┤
-│✔ End│∪ KP↓│✗ PgD│     │
-│ 1  ↔│ 2  ↓│ 3  ⇌│     │
-├─────┴─────┼─────┤     │
-│ Ins  ‰    │Del S│     │ S: ,/. KP_Seperator
-│ 0    %    │ ,  .│Enter│
-└───────────┴─────┴─────┘
+┌───────┬───────┬───────┬───────┐
+│ ≠ ⍓   │ / ⁄   │ * ×   │ - −   │
+│ = ≈   │ / ÷   │ * ⋅   │ - −   │
+├───────┼───────┼───────┼───────┤
+│† Hom  │∩ KP↑  │⊗ PgD  │       │
+│7  ↕   │8   ↑  │9  ∍   │       │
+├───────┼───────┼───────┤       │
+│⊂ KP←  │€ Beg  │⊃ KP→  │ + ∓   │
+│4   ←  │5  ∞   │6   →  │ + ±   │
+├───────┼───────┼───────┼───────┤
+│✔ End  │∪ KP↓  │✗ PgD  │       │
+│1  ↔   │2   ↓  │3  ⇌   │       │
+├───────┴───────┼───────┤       │
+│  %   Ins      │. Del  │       │
+│  0    ‰       │, ,/.  │ Enter │
+└───────────────┴───────┴───────┘
 
 === Erste Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
@@ -309,20 +311,20 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 ├───┼───┼───┼───┤
 │ ✔ │ ∪ │ ✗ │   │
 ├───┴───┼───┤   │
-│ Ins   │Del│Ent│
+│ %     │ . │Ent│
 └───────┴───┴───┘
 
 === Dritte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≈ │ ÷ │ ∙ │ - │
+│ ≈ │ ÷ │ ∙ │ − │
 ├───┼───┼───┼───┤
-│ ↕ │ ↑ │ ∋ │   │
+│ ↕ │ ↑ │ ∍ │   │
 ├───┼───┼───┤   │
 │ ← │ ∞ │ → │ ± │
 ├───┼───┼───┼───┤
 │ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
-│ %     │ . │Ent│
+│ ‰     │,/.│Ent│
 └───────┴───┴───┘
 
 === Vierte Ebene – Miniatur === 
@@ -331,18 +333,18 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 ├───┼───┼───┼───┤ frc means fraction slash ⁄
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│ ∓ │
+│KP←│Beg│KP→│ ∓ │ Beg invokes click of the keyboard mouse
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
-│ ‰     │,/.│Ent│
+│  Ins  │Del│Ent│
 └───────┴───┴───┘
 
 == Tipp ==
 Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
 vergleichbares ein, bekommt man anschließend mittels Eingabe von »neo« oder
 »num« die aktuelle Belegung in der Konsole angezeigt:
-alias num='grep -m 1 -B 15 "┴─────┘"  PFAD_ZUR_DATEI/neo20.txt'
+alias num='grep -m 1 -B 15 "┴───────┘"  PFAD_ZUR_DATEI/neo20.txt'
 alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
  
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
@@ -386,7 +388,7 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Ziffernblock ==
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
-∋ … enthält das Element (U220B)
+∍ … enthält das Element (U220D)
 
 == Hinweise zu Doppelbelegungen in Unicode ==
 Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.

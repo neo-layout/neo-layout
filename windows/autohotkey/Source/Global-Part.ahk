@@ -1,4 +1,28 @@
-SetNumLockState AlwaysOff
+/******************
+* Initialisierung *
+*******************
+*/
+DeadKey = ""
+CompKey = ""
+PriorDeadKey = ""
+PriorCompKey = ""
+Ebene12 = 0
+noCaps = 0
+
+EbeneAktualisieren()
+SetBatchLines -1
+SetCapsLockState Off
+SetNumLockState Off
+SetScrollLockState Off
+
+name=Neo 2.0 (%A_ScriptName%)
+enable=Aktiviere %name%
+disable=Deaktiviere %name%
+#usehook on
+#singleinstance force
+#LTrim ; Quelltext kann eingerückt werden, 
+Process,Priority,,High
+SendMode Input  
 
 /****************
 * Verzeichnisse *
@@ -13,74 +37,245 @@ FileCreateDir, %ResourceFolder%
 EnvGet, WindowsEnvAppDataFolder, APPDATA
 ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
 FileCreateDir, %ApplicationFolder%
-
-
+ini = %ApplicationFolder%\NEO2.ini
 
 /*******************
 * Globale Schalter *
 ********************
 */
-
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
-; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
 
 ; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
 bildschirmTastaturEinbinden := 1
 
+; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
+
 ; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
-IniRead, ahkTreiberKombi, %ApplicationFolder%\NEO2.ini, Global, ahkTreiberKombi, 0
+IniRead,ahkTreiberKombi,%ini%,Global,ahkTreiberKombi,0
 
 ; Soll der Treiber im Einhandmodus betrieben werden?
-IniRead, einHandNeo, %ApplicationFolder%\NEO2.ini, Global, einHandNeo, 0
+IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 
 ; Soll der Lernmodus aktiviert werden?
-IniRead, lernModus, %ApplicationFolder%\NEO2.ini, Global, lernModus, 0
+IniRead,lernModus,%ini%,Global,lernModus,0
 
 ; Soll mit einer MsgBox explizit auf das Ein- und Ausschalten des Mod4-Locks hingewiesen werden?
-IniRead, zeigeLockBox, %ApplicationFolder%\NEO2.ini, Global, zeigeLockBox, 1
+IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1
 
 ; Soll aktivierter Mod4-Lock über die Rollen-LED des Keybord angezeigt werden (analog zu CapsLock)?
-IniRead, UseMod4Light, %ApplicationFolder%\NEO2.ini, Global, UseMod4Light, 1
+IniRead,UseMod4Light,%ini%,Global,UseMod4Light,1
 
 ; Soll Lang-s auf s, s auf ß und ß auf Lang-s gelegt (bzw. vertauscht) werden?
-IniRead, LangSTastatur, %ApplicationFolder%\NEO2.ini, Global, LangSTastatur, 0
+IniRead,LangSTastatur,%ini%,Global,LangSTastatur,0
+If LangSTastatur
+  KeyboardLED(2,"on")
 
 ; Sollen tote Tasten blind angezeigt werden?
-IniRead, DeadCompose, %ApplicationFolder%\NEO2.ini, Global, DeadCompose, 0
+IniRead,DeadCompose,%ini%,Global,DeadCompose,0
 
 ;Sollen Compose-Tasten blind angezeigt werden?
-IniRead, DeadSilence, %ApplicationFolder%\NEO2.ini, Global, DeadSilence, 0
+IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 
 
 /***********************
 * Recourcen-Verwaltung *
 ************************
 */
-
-if(FileExist("ResourceFolder") <> false) {
+if(FileExist("ResourceFolder")<>false){
   ; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
-  FileInstall, neo.ico, %ResourceFolder%\neo.ico, 1
-  FileInstall, neo_disabled.ico, %ResourceFolder%\neo_disabled.ico, 1
-  iconBenutzen = 1
-  if (bildschirmTastaturEinbinden==1) {
-    FileInstall, ebene1.png, %ResourceFolder%\ebene1.png, 1
-    FileInstall, ebene2.png, %ResourceFolder%\ebene2.png, 1
-    FileInstall, ebene3.png, %ResourceFolder%\ebene3.png, 1
-    FileInstall, ebene4.png, %ResourceFolder%\ebene4.png, 1
-    FileInstall, ebene5.png, %ResourceFolder%\ebene5.png, 1
-    FileInstall, ebene6.png, %ResourceFolder%\ebene6.png, 1
-    zeigeBildschirmTastatur = 1
+  FileInstall,neo.ico,%ResourceFolder%\neo.ico,1
+  FileInstall,neo_disabled.ico,%ResourceFolder%\neo_disabled.ico,1
+  iconBenutzen=1
+  if (bildschirmTastaturEinbinden=1){
+    FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
+    FileInstall,ebene2.png,%ResourceFolder%\ebene2.png,1
+    FileInstall,ebene3.png,%ResourceFolder%\ebene3.png,1
+    FileInstall,ebene4.png,%ResourceFolder%\ebene4.png,1
+    FileInstall,ebene5.png,%ResourceFolder%\ebene5.png,1
+    FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
+    zeigeBildschirmTastatur=1
   }
-} else {
-  MsgBox, "Das Verzeichnis %ResourceFolder% konnte nicht angelegt werden!" ; Diese Zeile dient nur der eventuellen Fehlersuche und sollte eigentlich niemals auftauchen.
+}else{
+  MsgBox,"Das Verzeichnis %ResourceFolder% konnte nicht angelegt werden!" ; Diese Zeile dient nur der eventuellen Fehlersuche und sollte eigentlich niemals auftauchen.
 }
 
 ; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
-if ( FileExist("ebene1.png") && FileExist("ebene2.png") && FileExist("ebene3.png") && FileExist("ebene4.png") && FileExist("ebene5.png") && FileExist("ebene6.png") )
-  zeigeBildschirmTastatur = 1
-if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
-  iconBenutzen = 1
+if(FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
+  zeigeBildschirmTastatur=1
+if(FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
+  iconBenutzen=1
 
+/*******************************************
+* Überprüfung auf deutsches Tastaturlayout *
+********************************************
+*/
+regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1
+regread,inputlocalealias,HKEY_CURRENT_USER,Keyboard Layout\Substitutes,%inputlocale%
+if inputlocalealias<>inputlocale=%inputlocalealias%
+if inputlocale<>00000407
+{
+  suspend   
+  regread,inputlocale,HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%,Layout Text
+  msgbox, 48, Warnung!,
+    (
+    Nicht kompatibles Tastaturlayout:   
+    `t%inputlocale%   
+    `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
+    sein, damit %name% wie erwartet funktioniert.   
+    `nÄndern Sie die Tastatureinstellung unter 
+    `tSystemsteuerung   
+    `t-> Regions- und Sprachoptionen   
+    `t-> Sprachen 
+    `t-> Details...   `n
+    )
+  exitapp
+}
+
+/*************************
+* Menü des Systray-Icons *
+**************************
+*/
+if (iconBenutzen)
+  menu,tray,icon,%ResourceFolder%\neo.ico,,1
+menu,tray,nostandard
+menu,tray,add,Öffnen,open
+  menu,helpmenu,add,About,about
+  menu,helpmenu,add,Autohotkey-Hilfe,help
+  menu,helpmenu,add
+  menu,helpmenu,add,http://autohotkey.com/,autohotkey
+  menu,helpmenu,add,http://www.neo-layout.org/,neo
+menu,tray,add,Hilfe,:helpmenu
+menu,tray,add
+menu,tray,add,%disable%,togglesuspend
+menu,tray,add
+menu,tray,add,Bearbeiten,edit
+menu,tray,add,Neu Laden,reload
+menu,tray,add
+menu,tray,add,Nicht im Systray anzeigen,hide
+menu,tray,add,%name% beenden, exitprogram
+menu,tray,default,%disable%
+menu,tray,tip,%name%
+
+/**********************
+* Tastenkombinationen *
+***********************
+*/
+;Blinde/Sichtbare Tote Tasten
+*F9::
+  if (isMod4pressed())
+    DeadSilence := not(DeadSilence)
+  else
+    send {blind}{F9}
+return
+
+;Blinde/Sichtbare Compose
+*F10::
+  if (isMod4pressed())
+    DeadCompose := not(DeadCompose)
+  else
+    send {blind}{F10}
+return
+
+;Lang-s-Tastatur:
+*F11::
+  if (isMod4pressed()){
+    LangSTastatur := not(LangSTastatur)
+    if LangSTastatur
+      KeyboardLED(2,"on")
+    else KeyboardLED(2,"off")
+  } 
+  else
+    send {blind}{F11}
+return
+
+;Alle Modi und Locks in den Normalzustand versetzen
+;bzw. Skript neu laden:
+*Esc::
+  if (isMod4pressed())
+    reload
+  else
+    send {blind}{Esc}
+return
+
+*pause::
+Suspend, Permit
+  if isShiftpressed()
+    goto togglesuspend
+  else=
+    send {blind}{pause}
+return
+
+/*****************
+* Menüfunktionen *
+******************
+*/
+togglesuspend:
+  if A_IsSuspended
+  {
+    menu, tray, rename, %enable%, %disable%
+    menu, tray, tip, %name%
+    if (iconBenutzen)
+      menu, tray, icon, %ResourceFolder%\neo.ico,,1
+    suspend , off ; Schaltet Suspend aus -> NEO
+  }
+  else
+  {
+    menu, tray, rename, %disable%, %enable%
+    menu, tray, tip, %name% : Deaktiviert
+    if (iconBenutzen)
+      menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
+    suspend , on  ; Schaltet Suspend ein -> QWERTZ
+  }
+return
+
+help:
+   Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
+return
+
+about:
+  msgbox, 64, %name% – Ergonomische Tastaturbelegung, 
+  (
+  %name% 
+  `nDas Neo-Layout ersetzt das übliche deutsche 
+  Tastaturlayout mit der Alternative Neo, 
+  beschrieben auf http://neo-layout.org/. 
+  `nDazu sind keine Administratorrechte nötig. 
+  `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
+  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
+  `nDies geschieht transparent für den Anwender, 
+  es muss nichts installiert werden. 
+  `nDie Zeichenübersetzung kann leicht über das Icon im 
+  Systemtray deaktiviert werden.  `n
+  )
+return
+
+neo:
+   run http://neo-layout.org/
+return
+
+autohotkey:
+   run http://autohotkey.com/
+return
+
+open:
+   ListLines ; shows the Autohotkey window
+return
+
+edit:
+   edit
+return
+
+reload:
+   Reload
+return
+
+hide:
+   menu, tray, noicon
+return
+
+exitprogram:
+   exitapp
+return
 
 /**************************
 * lernModus Konfiguration *
@@ -89,6 +284,8 @@ if ( FileExist("neo.ico") && FileExist("neo_disabled.ico") )
 * Strg+Komma schaltet um  *
 ***************************
 */
+^,::lernModus := not(lernModus)
+
 ; 0 = aus, 1 = an
 
 ; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
@@ -111,90 +308,13 @@ lernModus_std_ZahlenReihe = 0
 lernModus_neo_Backspace = 0
 lernModus_neo_Entf = 1
 
-; aus Noras Skript kopiert:
-Process,Priority,,High
-#usehook on
-#singleinstance force
-#LTrim 
-  ; Quelltext kann eingerückt werden, 
-  ; msgbox ist trotzdem linksbündig
-SetTitleMatchMode 2
-SendMode Input  
-name    = Neo 2.0
-enable  = Aktiviere %name%
-disable = Deaktiviere %name%
-
-; Überprüfung auf deutsches Tastaturlayout 
-; ----------------------------------------
-
-regread, inputlocale, HKEY_CURRENT_USER, Keyboard Layout\Preload, 1
-regread, inputlocalealias, HKEY_CURRENT_USER
-     , Keyboard Layout\Substitutes, %inputlocale%
-if inputlocalealias <>
-   inputlocale = %inputlocalealias%
-if inputlocale <> 00000407
-{
-  suspend   
-  regread, inputlocale, HKEY_LOCAL_MACHINE
-    , SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%
-    , Layout Text
-  msgbox, 48, Warnung!, 
-    (
-    Nicht kompatibles Tastaturlayout:   
-    `t%inputlocale%   
-    `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
-    sein, damit %name% wie erwartet funktioniert.   
-    `nÄndern Sie die Tastatureinstellung unter 
-    `tSystemsteuerung   
-    `t-> Regions- und Sprachoptionen   
-    `t-> Sprachen 
-    `t-> Details...   `n
-    )
-  exitapp
-}
-
-
-; Menü des Systray-Icons 
-; ----------------------
-
-if (iconBenutzen)
-  menu, tray, icon, %ResourceFolder%\neo.ico,,1
-menu, tray, nostandard
-menu, tray, add, Öffnen, open
-  menu, helpmenu, add, About, about
-  menu, helpmenu, add, Autohotkey-Hilfe, help
-  menu, helpmenu, add
-  menu, helpmenu, add, http://&autohotkey.com/, autohotkey
-  menu, helpmenu, add, http://www.neo-layout.org/, neo
-menu, tray, add, Hilfe, :helpmenu
-menu, tray, add
-menu, tray, add, %disable%, togglesuspend
-menu, tray, default, %disable%
-menu, tray, add
-menu, tray, add, Edit, edit
-menu, tray, add, Reload, reload
-menu, tray, add
-menu, tray, add, Nicht im Systray anzeigen, hide
-menu, tray, add, %name% beenden, exitprogram
-menu, tray, tip, %name%
-
-
-/*
-  Variablen initialisieren
+/****************************
+* EinHandNeo                *
+* Umschalten mit Strg+Punkt *
+*****************************
 */
+^.::einHandNeo := not(einHandNeo)
 
-DeadKey = ""
-CompKey = ""
-PriorDeadKey = ""
-PriorCompKey = ""
-Ebene12 = 0
-
-EbeneAktualisieren()
-
-
-/*
-  EinHandNeo
-*/
 spacepressed := 0
 keypressed:= 0
 
@@ -230,129 +350,3 @@ gespiegelt_punkt = neo_ö
 gespiegelt_j = neo_ü
 
 
-;Blinde/Sichtbare Tote Tasten
-*F9::
-  if (isMod4pressed())
-    DeadSilence :=  not(DeadSilence)
-  else
-    send {blind}{F9}
-return
-
-;Blinde/Sichtbare Compose
-*F10::
-  if (isMod4pressed())
-    DeadCompose :=  not(DeadCompose)
-  else
-    send {blind}{F10}
-return
-
-;Lang-s-Tastatur:
-*F11::
-  if (isMod4pressed())
-    LangSTastatur := not(LangSTastatur) ; schaltet die Lang-s-Tastatur ein und aus
-  else
-    send {blind}{F11}
-return
-
-*Esc::
-  if (isMod4pressed())
-    reload
-  else
-    send {blind}{Esc}
-return
-
-/*
-   ------------------------------------------------------
-   Shift+Pause "pausiert" das Skript.
-   ------------------------------------------------------
-*/
-
-*pause::
-Suspend, Permit
-   if isshiftpressed()
-     goto togglesuspend
-   else
-     send {blind}{pause}
-return
-
-; ------------------------------------
-
-^.::einHandNeo := not(einHandNeo)  ; Punkt
-^,::lernModus := not(lernModus)    ; Komma
-
-
-
-togglesuspend:
-   if A_IsSuspended
-   {
-      menu, tray, rename, %enable%, %disable%
-      menu, tray, tip, %name%
-      if (iconBenutzen)
-          menu, tray, icon, %ResourceFolder%\neo.ico,,1  
-      suspend , off ; Schaltet Suspend aus -> NEO
-   }
-   else
-   {
-      menu, tray, rename, %disable%, %enable%
-      menu, tray, tip, %name% : Deaktiviert
-      if (iconBenutzen)
-         menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
-      suspend , on  ; Schaltet Suspend ein -> QWERTZ 
-   }
-
-return
-
-
-help:
-   Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
-return
-
-
-about:
-   msgbox, 64, %name% – Ergonomische Tastaturbelegung, 
-   (
-   %name% 
-   `nDas Neo-Layout ersetzt das übliche deutsche 
-   Tastaturlayout mit der Alternative Neo, 
-   beschrieben auf http://neo-layout.org/. 
-   `nDazu sind keine Administratorrechte nötig. 
-   `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-   abgefangen und statt dessen eine Übersetzung weitergeschickt. 
-   `nDies geschieht transparent für den Anwender, 
-   es muss nichts installiert werden. 
-   `nDie Zeichenübersetzung kann leicht über das Icon im 
-   Systemtray deaktiviert werden.  `n
-   )
-return
-
-
-neo:
-   run http://neo-layout.org/
-return
-
-autohotkey:
-   run http://autohotkey.com/
-return
-
-open:
-   ListLines ; shows the Autohotkey window
-return
-
-edit:
-   edit
-return
-
-reload:
-   Reload
-return
-
-hide:
-   menu, tray, noicon
-return
-
-exitprogram:
-   exitapp
-return
-
-
-

@@ -61,10 +61,6 @@ IsMod4Locked := 0
   }
 return
 
-Ebene12 := 0
-Ebene7 := 0
-Ebene8 := 0
-
 EbeneAktualisieren()
 {
   global
@@ -73,6 +69,8 @@ EbeneAktualisieren()
   DeadKey := ""
   CompKey := ""
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
+  Ebene7 := 0
+  Ebene8 := 0
   if ahkTreiberKombi
     if ( Modstate = "001")
       Ebene = 6
@@ -103,23 +101,23 @@ EbeneAktualisieren()
     }
   Ebene12 := ((Ebene = 1) or (Ebene = 2))
   Ebene14 := ((Ebene = 1) or (Ebene = 4))
-  GetKeyState("NumLock","T")
+  NumLock := GetKeyState("NumLock","T")
 }
-
 
 IsShiftPressed()
 {
   global
   if GetKeyState("Shift","P")
-    if isMod2Locked
+    if isMod2Locked and !noCaps
       return 0
     else
       return 1
   else
-    if isMod2Locked
+    if isMod2Locked and !noCaps
       return 1
     else
       return 0
+  noCaps = 0
 }
 
 IsMod3Pressed()

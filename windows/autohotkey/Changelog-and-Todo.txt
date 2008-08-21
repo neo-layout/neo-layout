@@ -116,7 +116,7 @@ Revision 558 (von Matthias Berg):
 - Icon-Bug behoben
   • Hotkeys dürfen nicht vor der folgenden Zeile stehen: »menu, tray, icon, neo.ico,,1«
 - lernModus-Konfigurations-Bug behoben: or statt and(not).
-- Ein paar leere Else-Fälle eingebaut (um die Verständlichkeit zu erhöhen und mögliche Compilerprobleme vermeiden).
+- Ein paar leere Else-Fälle eingebaut (um die Verständlichkeit zu erhöhen und mögliche Compilerprobleme zu vermeiden).
 Revision 556 (von Matthias Berg):
 - lernModus (an/aus mit Strg+Komma)
   • im Skript konfigurierbar.

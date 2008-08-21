@@ -3,67 +3,60 @@
    BildschirmTastatur
    ------------------------------------------------------
 */
+
 guiErstellt = 0
 alwaysOnTop = 1
 
 *F1::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch1
-  else
-    send {blind}{F1}
+  else send {blind}{F1}
 return
 
 *F2::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch2
-  else
-    send {blind}{F2}
+  else send {blind}{F2}
 return
 
 *F3::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch3
-  else
-    send {blind}{F3}
+  else send {blind}{F3}
 return
 
 *F4::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch4
-  else
-    send {blind}{F4}
+  else send {blind}{F4}
 return
 
 *F5::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch5
-  else
-    send {blind}{F5}
+  else send {blind}{F5}
 return
 
 *F6::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch6
-  else
-    send {blind}{F6}
+  else send {blind}{F6}
 return
 
 *F7::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Show
-  else
-    send {blind}{F7}
+  else send {blind}{F7}
 return
 
 *F8::
-  if (isMod4Pressed() and zeigeBildschirmTastatur)
+  if(isMod4Pressed()&&zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
-  else
-    send {blind}{F8}
+  else send {blind}{F8}
 return
 
 Switch1:
-  tImage := ResourceFolder . "\ebene1.png"
+  tImage:=ResourceFolder . "\ebene1.png"
   goto Switch
 Return
 
