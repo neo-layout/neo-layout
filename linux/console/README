@@ -1,0 +1,17 @@
+Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X auf der Konsole benutzten zu können.
+Dazu wird die keymap (leider als root!!) mit »loadkeys PFAD/neo.map« geladen.
+Mit »loadkeys -d« wird wieder die Standardbelegung verwendet.
+
+Die neo.map kann auch selbst als Standardbelegung verwendet werden, ob dies aber unter verschiedenen Linux-
+Distributionen unterschiedlich ist, bleibt abzuwarten.
+
+
+Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status von »NumLock« (den es unter NEO
+nicht mehr gibt). Um NumLock dennoch nachträglich einschalten zu können, muss die Menü-Taste (in der untersten
+Reihe) betätigt werden.
+
+Diese Keymap ist für ein MS Natural Keyboard Elite erstellt worden. Sollten andere Tastaturen andere keycodes
+verwenden (z.B. Laptoptastaturen), sollte dies auf den Mailingliste der NEO-Tastaturbelegung gemeldet werden.
+
+
+Der nächste Schritt sollte sein, die Compose-Erweiterungen von NEO auch für diese Keymap verfügbar zu machen.
