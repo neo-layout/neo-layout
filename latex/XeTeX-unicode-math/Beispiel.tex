@@ -1,0 +1,50 @@
+﻿\documentclass{article}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\usepackage{fontspec}
+\setmainfont{Cambria} % [Mapping=tex-text]
+
+\usepackage{unicode-math}
+\setmathfont{Cambria Math}
+
+
+% \mathrel \mathord \mathalpha …
+\UnicodeMathSymbol{"02026}{\ldots    }{\mathpunct}{Horizontal ellipsis}
+\UnicodeMathSymbol{"000E8}{\grave{e} }{}{LATIN SMALL LETTER E WITH GRAVE}
+\UnicodeMathSymbol{"000E9}{\acute{e} }{}{LATIN SMALL LETTER E WITH ACUTE}
+\UnicodeMathSymbol{"00117}{\dot{e}   }{}{LATIN SMALL LETTER E WITH DOT ABOVE}
+\UnicodeMathSymbol{"00113}{\bar{e}   }{}{LATIN SMALL LETTER E WITH MACRON}
+%\UnicodeMathSymbol{"01E9E}{\SS      }{}{LATIN CAPITAL LETTER SHARP S}
+%\UnicodeMathSymbol{"003A3}{\sum     }{\mathop}{GREEK CAPITAL LETTER SIGMA}
+
+
+
+\begin{document}
+
+\title{Das Packet \emph{unicode-math«}}
+
+
+\section{Unicode im Mathematik-Modus benutzen}
+\XeLaTeX\ versteht die direkte Eingabe von Unicode-Zeichen wie äöüß, αβδε oder ∞∫ – ¡und das mit Hilfe des Paketes \emph{unicode-math} auch im Mathematik-Modus! Man kann also anstatt wie bisher
+\[ \forall \varepsilon>0 \exists \delta>0 \forall 1 \geq\Delta\geq0: \infty>\varepsilon,\delta,\delta+\Delta>0, \mathbf{0\leq\Delta\leq1} \]
+auch einfach
+\[ ∀ ε>0 ∃ δ>0 ∀1≥Δ≥0: ∞>ε,δ,δ+Δ>0, \mathbf{0≤Δ≤1} \]
+eingeben.
+
+\section{Diverse Tests}
+Interpretation von doppeldeutigen Zeichen:
+\[ Σ=\Sigma ≠ \sum, Π=\Pi ≠ \prod, \sum_{δ=0}^Ψ, ∫_a^b, \int_aˆb… \]
+
+Behandlung in der aktuellen Schrift unbekannter Zeichen: PREUẞEN vs.
+\[ PREUẞEN \]
+
+Auszeichnungen:
+\[ \sin(π) ≠ E, \mathbf{\sin(π) ≠ E,}  \]
+
+Diakritische Zeichen:
+\[ α_1, α_2, …, α_n, é è ē ė \hat{a}, ℝ, ℂ, ⇋↓⇌←†→↑≪∩≫⊂∊⊃≤∪≥⊃∊⊂≠±× \]
+
+
+\end{document}
