@@ -8,7 +8,7 @@ XeTeX ist eine moderne Alternative zu e-TeX, die neben nativer Unicode-Unterstü
 Leider unterstützt XeTeX derzeitig jedoch noch nicht die typographischen Feinheiten des Microtype-Paketes (optischer Randausgleich etc.).
 
 === XeTeX-unicode-math ===
-Mit XeTeX können Unicode-Zeichen auch im Mathematik-Modus gesetzt werden. Die Unterstützung hierfür ist zwar bereits weit vortgeschritten, wird aber noch als experimentell angesehen und ist deshalb in einem separaten Packet unicode-math ausgelagert. In diesem Ordner befindet sich neben einer Installationsanleitung auch ein Beispiel, das grundliegende Features demonstriert.
+Mit XeTeX können Unicode-Zeichen auch im Mathematik-Modus gesetzt werden. Die Unterstützung hierfür ist zwar bereits weit fortgeschritten, wird aber noch als experimentell angesehen und ist deshalb in einem separaten Paket unicode-math ausgelagert. In diesem Ordner befindet sich neben einer Installationsanleitung auch ein Beispiel, das grundliegende Features demonstriert.
 
 === Standard-LaTeX ===
 In diesem Ordner befindet sich das Paket uniinput. Es setzt auf dem Standard-Paket utf8 (via inputenc) auf und ergänzt dieses um mehrere auf der NEO-Tastatur vorkommende Zeichen (insbesondere aus der Mathematik). Es wurde von NEO-Nutzern geschrieben und hat den Vorteil, mit dem »normalen« pdfLaTeX benutzt werden zu können.
