@@ -1,19 +1,19 @@
 ! neo.map - german NEO keyboard layout
+! 2008 Pascal Hauck, <pascal.hauck@web.de>
 !
 ! Diese Datei ist experimentell!
 ! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
 ! anders verhalten als erwartet, sollte dies auf der Mailingliste
 ! der NEO-Tastaturbelegung gemeldet werden.
 !
-! Diese Keymap wird �ber einige Skripte automatisch aus der neo_de.xmodmap
+! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap
 ! erzeugt.
 !
 
-keymaps 0-3,4-6,8-10,12,16-18
-charset "ISO-8859-1"
-include "linux-with-two-alt-keys.inc"
+include "/usr/share/kbd/keymaps/i386/qwerty/defkeymap.map.gz"
+keymaps 0-18
 strings as usual
-compose as usual for "iso-8859-1"
+compose as usual
 ! --------------------------------------------------------------------------
 ! Modifier definitions
 ! --------------------------------------------------------------------------
@@ -29,7 +29,7 @@ compose as usual for "iso-8859-1"
    shift   altgr   keycode   1 = Meta_Escape     
 
 ! --------------------------------------------------------------------------
-! Keys with control function (has to be edited manally!!!!)
+! Keys with control function (has to be edited manually!!!!)
 ! --------------------------------------------------------------------------
            control keycode  33 = Control_e       
    shift   control keycode  33 = Control_e       
@@ -58,7 +58,7 @@ compose as usual for "iso-8859-1"
 ! --------------------------------------------------------------------------
 ! ----Backspace-------------------------------------------------------------
                    keycode  14 = Delete           Delete          
-	   alt	   keycode  14 = Meta_Delete     
+           alt	   keycode  14 = Meta_Delete     
    shift   alt     keycode  14 = Meta_Delete     
 ! ----Return Enter----------------------------------------------------------
                    keycode  28 = Return          
@@ -143,8 +143,15 @@ compose as usual for "iso-8859-1"
            alt     keycode  88 = Console_12      
    control alt     keycode  88 = Console_12      
 ! ----unknown keys from defkeymap.map---------------------------------------
-                   keycode 101 = Break           
                    keycode  84 = Last_Console    
+                   keycode  89 =
+                   keycode  90 =
+                   keycode  91 =
+                   keycode  92 =
+                   keycode  93 =
+                   keycode  94 =
+                   keycode  95 =
+                   keycode 101 = Break           
                    keycode 112 = Macro           
    altgr   control keycode 112 = VoidSymbol      
    shift   alt     keycode 112 = VoidSymbol      
@@ -173,12 +180,22 @@ compose as usual for "iso-8859-1"
    altgr   control keycode 118 = VoidSymbol      
    shift   alt     keycode 118 = VoidSymbol      
    altgr   alt     keycode 118 = VoidSymbol      
-! ----unknown keys----------------------------------------------------------
+                   keycode 119 = Pause
+                   keycode 120 =
+                   keycode 121 =
+                   keycode 122 =
+                   keycode 123 =
+                   keycode 124 =
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     Compose
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     Compose
+                   keycode 127 = Compose         Decr_Console      Incr_Console     Last_Console 
+
+
+! ----Space key-------------------------------------------------------------
                    keycode  57 = space                 space                 space                 nobreakspace          
            shiftl  keycode  57 = zero                  
    shift   shiftl  keycode  57 = zero                  
    altgr   shiftl  keycode  57 = U+202F                
-
 
 ! --------------------------------------------------------------------------
 ! Row 1 (number row)
