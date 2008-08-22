@@ -1,0 +1,73 @@
+﻿\documentclass{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\setmainfont{Linux Libertine O} % Constantia, Gentium, Linux Libertine O, YanoneKaffeesatz, ComicJens …
+\setkomafont{disposition}{\fontspec{Linux Libertine O}} % Benutzt eine Schrift für alle Gliederungsebenen
+
+
+\begin{document}
+
+\title{Installationsanleitung für das \XeTeX-Paket \emph{unicode-math}}
+\author{Die Entwickler des NEO-Tastaturlayouts}
+\maketitle
+\tableofcontents
+
+\section{Status des Paketes}
+Mit \XeTeX\ können auch im Mathematik-Modus Unicode-Zeichen gesetzt werden. Die Unterstützung hierfür ist zwar bereits weit vortgeschritten, aber noch nicht ausgereift – oder wie es Will Robertson, der Autor des Paketes unicode-math selbst formuliert hat:
+\begin{quote}
+This is an experimental package providing for Unicode maths glyphs in XeTeX+LaTeX (previously known as xmaths). Snapshots of development are available from the \XeTeX\ SVN repository; nothing is stable or complete enough for CTAN yet.
+\end{quote}
+
+\section{Installation}
+Zuerst sollten alle Dateien aus dem unicode-math-SVN heruntergeladen und in dem selben Verzeichnis, im dem sich auch die \verb|Beispiel.tex| befindet, abgespeichert werden.\footnote{Wenn dieses Paket jedoch dauerhaft oder für mehrere Dateien verwendet werden soll, bietet es sich an, die Dateien stattdessen in ein lokales \TeX-Root-Directory zu installieren.} Die Dateien sind noch nicht kompiliert, was man aber durch den Aufruf von \verb|xelatex unicode-math.dtx| auf der Kommandozeile selbst erledigen kann. Das dauert zwar u.\,U.\ eine Weile und läuft auch noch nicht so ganz glatt (zumindest bricht er bei mir mit der Fehlermeldung ab, dass er die Datei \verb|FPL N.cfg| nicht finden könne), produziert aber alle notwendigen Dateien.
+
+Anschließend sollte man die Beispieldatei mit dem Kommando \verb|xelatex Beispiel.tex| problemlos kompilieren können. Unter einem Linux-System muss \emph{eventuell} zuvor noch das ByteOrderMark (\verb|ï»¿|) am Beginn der UTF-8 kodierten Datei entfernt werden.
+
+
+\subsection{Empfohlene Schriften}
+Das Beipiel verwendet die beiden Schriften »Cambria« und »Cambria Math«, um die automatische Nutzung einiger OpenType-Features zu demonstrieren. Diese Schriften liegen dem Betriebsſystem Windows Vista standardmäßig bei; liegen sie lokal jedoch nicht vor, sollten sie durch entsprechende auf dem System auch tatsächlich installierte Schriften ersetzen werden. Hier bietet sich etwa die  Schrift \emph{Linux Libertine}\footnote{¡Leider nicht! Ein Test hat ergeben, dass die Libertine unterstützt anscheinend nicht das OpenType-Math-Script unterstützt. ¿Wer kennt eine Open-Source-Schrift, die über dieses Feature verfügt?} an.
+
+\section{Nutzungshinweise}
+Grundsätzlich sei hier erst einmal auf die offizielle, ausführliche und maßgebende Dokumentation des Paketes in der Datei \verb|unicode-math| hingewiesen. Dieses Abschnitt konzentriert sich deshalb primär auf NEO-Tastatur-relevante Punkte.
+
+\subsection{Interpretation der griechischen Großbuchstaben}
+Das Neo-Σ wird als der griechische Großbuchstabe \verb|\Sigma| und nicht als die \verb|\sum|-Summe interpretiert. Dieses Verhalten ist Unicode-Standard-konform, bringt jedoch ein paar Inkonsequenzen mit sich (mann kann etwa ∫ für ein Integral, muss aber \verb|\sum| für eine Summe schreiben). Hier besteht zwar die theoretische Möglichkeit, die Interpretation dieser Zeichen selbst umzudefinieren, wovon wir aber klar abraten.
+
+\subsection{Unterstützung der 6. NEO-Ebene}
+Im Großen und Ganzen scheint das Paket sehr gut mit Neo zu harmonisieren; die ganzen Unicode-Mathematik-Symbole wie ℝ, ℂ, ⇋↓⇌←†→↑≪∩≫⊂∊⊃≤∪≥⊃∊⊂≠±× werden anstandslos gelesen und dargestellt.
+
+\subsection{Diaktritische Zeichen}
+Probleme scheint es noch mit den Diakritisches Zeichen (é und Konsorten) zu geben; die musste ich ganz traditionell mit \verb|\acute{e}| eingeben. Auch die …-Auslassungspunkte scheint das Paket so noch nicht zu kennen.
+
+\subsection{Verhalten bei unbekannten Zeichen}
+Wenn XeTeX im normalen Textmodus auf ein unbekanntes bzw. nicht in der Schrift vorhandenes Unicode-Zeichen trifft, kompiliert es trotzdem, schreibt einen Fehler in die Log-Datei und ersetzt es in der Ausgabe durch ein Fragezeichen. Im Mathematikmodus tut er dasſelbe, nur lässt er hier das unbekannte Zeichen einfach komplett weg: \verb|PREUẞEN $PREUẞEN$| kompiliert mit der Cambria-Schrift zu »PREU?EN PREUEN«.
+
+\subsection{Fehlende Zeichen selbst ergänzen}
+Intern wurde das Abbilden der Unicode-Eingabe auf \LaTeX-Kommandos durch Befehle der Form
+\verb|\UnicodeMathSymbol{"0039A}{\upKappa}{\mathalpha}{capital kappa, greek}|
+realisiert. Somit kann man das Paket relativ leicht um neue Unicode-Zeichen erweitert werden. Der erste Argument ist der Unicode-Codepoint (in Heximalschreibweise), das zweite der auszuführende \LaTeX-Code, der dritte die Zeichenklasse und der vierte die Beschreibung.
+
+Die Zeichenklasse gibt dabei sozusagen den »Typ« des Zeichens im Mathematikmodus an. \TeX\ braucht diese Zusatzinformation, um beim Formelsatz die Abstände etc.\ korrekt berechnen zu können. Es gibt eigene Klassen für Klammern (\verb|\delimiter|), Relationen (\verb|\mathrel|), Grosses-Summenzeichen-ähnliche Operatoren (\verb|\mathop|), gewönliche Zeichen (\verb|\mathord|), Akzente (\verb|\mathaccent|) und weiß der Geier wofür sonst noch – D.\,E.~Knuth ist halt ein Perfektionist, genauere Informationen können seinem \TeX book entnommen werden. Man kann die Zeichenklasse auch weglassen, kriegt dann aber u.\,U.\ eine schlechtere Ausgabe.
+
+Auf diese Weise kann beispielsweise die fehlende Ellipse dem Mathematikmodus hinzugefügt werden: \verb|\UnicodeMathSymbol{"02026}{\ldots}{\mathpunct}{Horizontal ellipsis}|
+Anschließend kann einfach \verb|$a_1, …, a_n$| geschrieben werden.
+
+\section*{Fazit: ¡\XeTeX\ rocks!}
+Gerade im Mathematikmodus geht es viel schneller, mithilfe des NEO-Tastaturlayoutes einfach ∀ ε>0 ∃ δ>0 statt \verb|\forall \epsilon>0 \exists \delta>0| schreiben zu können – und es sieht auch noch viel übersichtlicher aus. \verb|\epsilon>0| ist tot, lang lebe ε>0!
+
+\subsection*{Links}
+Alle Links führen auf Websiten in englischer Sprache.
+\begin{itemize}
+\item Die offizielle \XeTeX−Homepage: \url{http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=XeTeX}
+\item Die Homepage von Will Robertson, dem Autor der \XeTeX-Pakete fontspec und unicode-math: \url{http://www.mecheng.adelaide.edu.au/~will/}  (näheres im \LaTeX-Bereich)
+\item Das SVN mit der akuelle Version des Paketes unicode-math (kann entweder mit dem Browser oder komfortabler über einen SVN-Client heruntergeladen werden): \url{http://scripts.sil.org/svn-public/xetex/TRUNK/texmf/source/xelatex/unicode-math/}
+\end{itemize}
+
+
+\end{document}
