@@ -1,4 +1,4 @@
-﻿-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -276,7 +276,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 │ = ≈   │ / ÷   │ * ⋅   │ - −   │
 ├───────┼───────┼───────┼───────┤
 │† Hom  │∩ KP↑  │⊗ PgD  │       │
-│7  ↕   │8   ↑  │9  ∍   │       │
+│7  ↕   │8   ↑  │9  ∋   │       │
 ├───────┼───────┼───────┤       │
 │⊂ KP←  │€ Beg  │⊃ KP→  │ + ∓   │
 │4   ←  │5  ∞   │6   →  │ + ±   │
@@ -318,7 +318,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 ┌───┬───┬───┬───┐
 │ ≈ │ ÷ │ ∙ │ − │
 ├───┼───┼───┼───┤
-│ ↕ │ ↑ │ ∍ │   │
+│ ↕ │ ↑ │ ∋ │   │
 ├───┼───┼───┤   │
 │ ← │ ∞ │ → │ ± │
 ├───┼───┼───┼───┤
@@ -388,7 +388,7 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Ziffernblock ==
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
-∍ … enthält das Element (U220D)
+∋ … enthält das Element (U220B)
 
 == Hinweise zu Doppelbelegungen in Unicode ==
 Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.
