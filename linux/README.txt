@@ -1,5 +1,5 @@
-== Neo 2.0 für Linux ==
-Für viele Linuxdistributionen sind hier Treiber zu finden.
+ï»¿== Neo 2.0 fÃ¼r Linux ==
+FÃ¼r viele Linuxdistributionen sind hier Treiber zu finden.
 
 === X ===
 Dieser Treiber ersetzt die veraltete Neo Version 1.0, die bei allen
@@ -11,10 +11,13 @@ Dieser Treiber nutzt das Programm xmodmap des X-Servers. Man braucht also
 keine Administrator-Rechte (root-Rechte), um diesen zu nutzen. Allerdings hat
 man hiermit bei der Anmeldung keine Neo-Tastaturbelegung (bei der
 Passworteingabe bedenken!). Jedoch hat man hiermit den Vorteil hoher
-Portabilität: Beispielsweise die Xmodmap-Datei auf einen USB-Stick kopieren
+PortabilitÃ¤t: Beispielsweise die Xmodmap-Datei auf einen USB-Stick kopieren
 und in den fremden Linux-Rechner einstecken, schon kann man mit Neo tippen.
 
 === bin ===
-Dieses Verzeichnis enthält einige nützliche Shell-Befehle zur Ausgabe der
-Neo-Tastaturbelegung (auch einzelne Ebenen) sowie die Möglichkeit, über »uiae«
-bzw. »asdf« einfach zwischen NEO und QWERT* hin- und herzuwechseln.
+Dieses Verzeichnis enthÃ¤lt einige nÃ¼tzliche Shell-Befehle zur Ausgabe der
+Neo-Tastaturbelegung (auch einzelne Ebenen) sowie die MÃ¶glichkeit, Ã¼ber Â»uiaeÂ«
+bzw. Â»asdfÂ« einfach zwischen NEO und QWERT* hin- und herzuwechseln.
+
+=== console ===
+Dieser Ordner enthÃ¤lt eine keymap, um die NEO-Tastaturbelegung auch ohne X auf der Konsole benutzten zu kÃ¶nnen. Diese kann mithilfe einige Skripte automatisch aus der Â»normalenÂ« xmodmap erstellt werden.
