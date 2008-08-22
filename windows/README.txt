@@ -13,9 +13,7 @@ Hier entsteht mit Hilfe des WinDDK (http://www.microsoft.com/whdc/devtools/ddk/d
 In dem Ordner befinden sich der Treiber für viele Windowsversionen und auch die Quelldateien. Bitte die jeweilige README.txt beachten. Dieser Treiber ist der älteren MSKLC-Variante überlegen.
 
 == msklc ==
-Im Verzeichnis msklc sind Dateien, die mit dem MS Keyboard Layout Creator erstellt wurden. Nach Installation der dort abgelegten Dateien, ist das NEO-Layout in das Windowssystem integriert, als wäre es eins der vielen anderen Layouts verschiedener Sprachen.
-Man benötigt für die Installation jedoch Administratorrechte, weshalb man diese Variante nicht überall installieren kann. Außerdem ist diese Variante nicht mehr aktuell, stattdessen sollte der kbdneo2-Treiber installiert werden.
-
+Im Verzeichnis msklc befanden sich Dateien, die mit dem MS Keyboard Layout Creator erstellt wurden. Dieser Treiber ist jedoch nicht mehr aktuell, stattdessen sollte der kbdneo2-Treiber installiert werden. In dem Verzeichnis befindet sich lediglich noch eine Anleitung für »Alt-Nutzer«, wie der msklc komplett deinstalliert werden kann.
 
 == Eigabe beliebiger Unicode-Zeichen unter Windows ==
 Hierzu muss in der Registry der Schlüssel
