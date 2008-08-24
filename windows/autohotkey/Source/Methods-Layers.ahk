@@ -140,5 +140,3 @@ IsMod4Pressed()
      else
        return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
 }
-
-

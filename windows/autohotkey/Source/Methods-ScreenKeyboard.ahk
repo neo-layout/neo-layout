@@ -166,4 +166,3 @@ ToggleAlwaysOnTop:
       alwaysOnTop = 1
     }
 Return
-
