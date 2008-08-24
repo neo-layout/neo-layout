@@ -111,9 +111,7 @@ if(FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
 */
 regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1
 regread,inputlocalealias,HKEY_CURRENT_USER,Keyboard Layout\Substitutes,%inputlocale%
-if inputlocalealias<>inputlocale=%inputlocalealias%
-if inputlocale<>00000407
-{
+if (inputlocalealias<>inputlocale=%inputlocalealias% and inputlocale<>00000407) {
   suspend   
   regread,inputlocale,HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%,Layout Text
   msgbox, 48, Warnung!,
@@ -162,47 +160,41 @@ menu,tray,tip,%name%
 */
 ;Blinde/Sichtbare Tote Tasten
 *F9::
-  if (isMod4pressed())
-    DeadSilence := not(DeadSilence)
-  else
-    send {blind}{F9}
+  if isMod4pressed()
+    DeadSilence := !(DeadSilence)
+  else send {blind}{F9}
 return
 
 ;Blinde/Sichtbare Compose
 *F10::
-  if (isMod4pressed())
-    DeadCompose := not(DeadCompose)
-  else
-    send {blind}{F10}
+  if isMod4pressed()
+    DeadCompose := !(DeadCompose)
+  else send {blind}{F10}
 return
 
 ;Lang-s-Tastatur:
 *F11::
-  if (isMod4pressed()){
-    LangSTastatur := not(LangSTastatur)
+  if isMod4pressed() {
+    LangSTastatur := !(LangSTastatur)
     if LangSTastatur
       KeyboardLED(2,"on")
     else KeyboardLED(2,"off")
-  } 
-  else
-    send {blind}{F11}
+  } else send {blind}{F11}
 return
 
 ;Alle Modi und Locks in den Normalzustand versetzen
 ;bzw. Skript neu laden:
 *Esc::
-  if (isMod4pressed())
+  if isMod4pressed()
     reload
-  else
-    send {blind}{Esc}
+  else send {blind}{Esc}
 return
 
 *pause::
 Suspend, Permit
   if isShiftpressed()
     goto togglesuspend
-  else=
-    send {blind}{pause}
+  else send {blind}{pause}
 return
 
 /*****************
@@ -210,26 +202,22 @@ return
 ******************
 */
 togglesuspend:
-  if A_IsSuspended
-  {
+  if A_IsSuspended {
     menu, tray, rename, %enable%, %disable%
     menu, tray, tip, %name%
     if (iconBenutzen)
       menu, tray, icon, %ResourceFolder%\neo.ico,,1
     suspend , off ; Schaltet Suspend aus -> NEO
-  }
-  else
-  {
+  } else {
     menu, tray, rename, %disable%, %enable%
     menu, tray, tip, %name% : Deaktiviert
     if (iconBenutzen)
       menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
     suspend , on  ; Schaltet Suspend ein -> QWERTZ
-  }
-return
+  } return
 
 help:
-   Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
+  Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
 return
 
 about:
@@ -250,31 +238,31 @@ about:
 return
 
 neo:
-   run http://neo-layout.org/
+  run http://neo-layout.org/
 return
 
 autohotkey:
-   run http://autohotkey.com/
+  run http://autohotkey.com/
 return
 
 open:
-   ListLines ; shows the Autohotkey window
+  ListLines ; shows the Autohotkey window
 return
 
 edit:
-   edit
+  edit
 return
 
 reload:
-   Reload
+  Reload
 return
 
 hide:
-   menu, tray, noicon
+  menu, tray, noicon
 return
 
 exitprogram:
-   exitapp
+  exitapp
 return
 
 /**************************
@@ -348,5 +336,3 @@ gespiegelt_m = neo_p
 gespiegelt_komma = neo_ä
 gespiegelt_punkt = neo_ö
 gespiegelt_j = neo_ü
-
-

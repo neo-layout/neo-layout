@@ -35,5 +35,3 @@ Das war die letzte WARNUNG, ich hoffe nur dass
 Sie wirklich wissen was Sie hier tun wollen ...
 *******************************************
 */
-
-
