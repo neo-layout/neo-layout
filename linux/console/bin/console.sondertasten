@@ -10,7 +10,6 @@
 ! erzeugt.
 !
 
-include "/usr/share/kbd/keymaps/i386/qwerty/defkeymap.map.gz"
 keymaps 0-18
 strings as usual
 compose as usual
@@ -101,8 +100,8 @@ compose as usual
            alt     keycode 106 = Incr_Console    
                    keycode 108 = Down            
 ! ----Win keys--------------------------------------------------------------
-                   keycode 125 =
-                   keycode 126 = Compose
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     Compose
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     Compose
 ! ----menue key-------------------------------------------------------------
                    keycode 127 = F100
 ! ----F-keys----------------------------------------------------------------
@@ -186,6 +185,3 @@ compose as usual
                    keycode 122 =
                    keycode 123 =
                    keycode 124 =
-                   keycode 125 = Decr_Console    Last_Console      Incr_Console     Compose
-                   keycode 126 = Incr_Console    Last_Console      Decr_Console     Compose
-                   keycode 127 = Compose         Decr_Console      Incr_Console     Last_Console 
