@@ -1,0 +1,8 @@
+dumpkeys --long-info > dump
+cat console.ersetze.vorprogramm > console.ersetze
+./mach_kurzreferenz.vorprogramm >> console.ersetze
+rm dump
+./mach_kurzreferenz > kurzreferenz
+./mach_console
+rm kurzreferenz
+rm console.ersetze

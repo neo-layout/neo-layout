@@ -1,13 +1,14 @@
-In console.ersetze.vorprogramm finden sich die absolut notwendigen Ersetzungen.
-Unter der console (!!!!) werden mit »dumpkeys --long-info > dump« werden die dem System bekannten keysyms der console (die sind anders als unter x!!!!) bestimmt.
-Mit »mach_kurzreferenz.vorpgrogramm« werden weitere notwendige Ersetzungen bestimmt.
+Das Skript »erzeuge_neo-belegung« gibt die keymap für die NEO-Belegung auf der Standardausgabe aus.
+Dazu werden verschiedene Skripte aufgerufen:
 
-Zusammengefasst:
-cat console.ersetze.vorprogramm > console.ersetze
-dumpkeys --long-info > dump
-mach_kurzreferenz.vorpgrogramm >> console.ersetze
-
-Nun kann mit »mach_kurzreferenz > kurzreferenz« eine Kurzreferenz aus der xmodmap erstellt werden.
-
-Aus dieser Kurzreferenz kann mit »mach_console > neo.map« die Datei erstellt werden, die mit »loadkeys neo.map« (als root!!!) gelden werden kann.
-
+• dumpkeys --long-info > dump
+»dumpkeys« muss unter der Console laufen (!!!), da es unter X ein anderes Ergebnis erbringt!
+• cat console.ersetze.vorprogramm > console.ersetze
+in console.ersetze.vorprogramm finden sich die absolut notwendigen Ersetzungen.
+• mach_kurzreferenz.vorprogramm >> console.ersetze
+mit »mach_kurzreferenz.vorprogramm« werden weitere notwendige Ersetzungen bestimmt.
+• mach_kurzreferenz > kurzreferenz
+die Kurzreferenz stellt die NEO-Belegung all der Zeichen dar, mit der die Console umgehen kann.
+• mach_console
+mit »mach_console« wird eine von »loadkeys« lesbare keymap erstellt und auf der Standardausgabe ausgegeben.
+Es ist darum sinnvoll die Ausgabe in eine Datei »neo.map« umzuleiten und anschließend zu laden
