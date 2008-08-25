@@ -8,7 +8,13 @@ sollte deshalb nicht mehr direkt bearbeitet werden!
 
 Alle weiterführende Informationen finden sich im Abschnitt 
 == Hinweise für Entwickler ==
-in der Datei README.txt!  
+in der Datei README.txt!
+
+Versionshinweise (SVN Keywords) für diese Datei:
+$LastChangedRevision$
+$LastChangedDate$
+$LastChangedBy$
+$HeadURL$
 *******************************************
 
 
