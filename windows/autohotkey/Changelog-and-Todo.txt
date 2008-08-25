@@ -24,6 +24,10 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 - Die Compose-Kombinationen sollten automatisch aus den Referenzdateien im Compose-Verzeichnis erzeugt werden.
 
 === Änderungshistorie ===
+
+Revision 804 (von Martin Roppelt)
+- Formatierung vereinfacht und vereinheitlicht.
+- Compose-Ligaturen implementiert: ﬂ, …
 Revision 789 (von Martin Roppelt)
 - NumLock-Bug ausgebessert (NumLock konnte nach dem Beenden von Neo nicht mehr aktiviert werden).
 Revision 778 (von Martin Roppelt)
