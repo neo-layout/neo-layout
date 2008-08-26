@@ -40,3 +40,11 @@ Diese Mängel sollen durch einen spezielle AutoHotKey-Treiber noch behoben werden
 1. Setup des MSKLC aufrufen
 2. „Remove the keyboard layout“ auswählen und mit „Finish“ bestätigen.
 
+
+== NEO auf dem Benutzerkonto-Anmeldebildschirm verfügbar machen (Vista) ==
+Vista erlaubt jedem Benutzer, die Regions- Sprachoptionen individuell anzupassen. Allerdings ist der Zugriff auf Systemkonten aus Sicherheitsgründen beschränkt, deshalb müssen die Einstellungen manuell und mit Adminrechten auf das allgemeine Systemkonto übertragen werden: 
+
+Start / Systemsteuerung / Regions- und Sprachoptionen / Reiter »Verwaltung« / Button »Zu reservierten Konten kopieren…« / »Systemkonten« markieren / OK
+
+Ausführlich steht das ganze in der Hilfe unter dem Titel »Ändern des Tastaturlayouts«.
+
