@@ -2,10 +2,10 @@
 * Initialisierung *
 *******************
 */
-DeadKey = ""
-CompKey = ""
-PriorDeadKey = ""
-PriorCompKey = ""
+DeadKey := ""
+CompKey := ""
+PriorDeadKey := ""
+PriorCompKey := ""
 Ebene12 = 0
 noCaps = 0
 
@@ -50,9 +50,6 @@ bildschirmTastaturEinbinden := 1
 
 ; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
 
-; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
-IniRead,ahkTreiberKombi,%ini%,Global,ahkTreiberKombi,0
-
 ; Soll der Treiber im Einhandmodus betrieben werden?
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 
@@ -71,22 +68,24 @@ If LangSTastatur
   KeyboardLED(2,"on")
 
 ; Sollen tote Tasten blind angezeigt werden?
-IniRead,DeadCompose,%ini%,Global,DeadCompose,0
-
-;Sollen Compose-Tasten blind angezeigt werden?
 IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 
+;Sollen Compose-Tasten blind angezeigt werden?
+IniRead,DeadCompose,%ini%,Global,DeadCompose,0
+
+:Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
+IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 
 /***********************
 * Recourcen-Verwaltung *
 ************************
 */
-if(FileExist("ResourceFolder")<>false){
+if (FileExist("ResourceFolder")<>false) {
   ; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
   FileInstall,neo.ico,%ResourceFolder%\neo.ico,1
   FileInstall,neo_disabled.ico,%ResourceFolder%\neo_disabled.ico,1
   iconBenutzen=1
-  if (bildschirmTastaturEinbinden=1){
+  if (bildschirmTastaturEinbinden=1) {
     FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
     FileInstall,ebene2.png,%ResourceFolder%\ebene2.png,1
     FileInstall,ebene3.png,%ResourceFolder%\ebene3.png,1
@@ -95,14 +94,12 @@ if(FileExist("ResourceFolder")<>false){
     FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
     zeigeBildschirmTastatur=1
   }
-}else{
-  MsgBox,"Das Verzeichnis %ResourceFolder% konnte nicht angelegt werden!" ; Diese Zeile dient nur der eventuellen Fehlersuche und sollte eigentlich niemals auftauchen.
 }
 
 ; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
-if(FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
+if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
   zeigeBildschirmTastatur=1
-if(FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
+if (FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
 /*******************************************
@@ -154,6 +151,74 @@ menu,tray,add,%name% beenden, exitprogram
 menu,tray,default,%disable%
 menu,tray,tip,%name%
 
+/**************************
+* lernModus Konfiguration *
+* nur relevant wenn       *
+* lernModus = 1           *
+* Strg+Komma schaltet um  *
+***************************
+*/
+; 0 = aus, 1 = an
+
+; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
+lernModus_std_Return = 0
+lernModus_std_Backspace = 0
+lernModus_std_PgUp = 0
+lernModus_std_PgDn = 0
+lernModus_std_Einf = 0
+lernModus_std_Entf = 0
+lernModus_std_Pos0 = 0
+lernModus_std_Ende = 0
+lernModus_std_Hoch = 0
+lernModus_std_Runter = 0
+lernModus_std_Links = 0
+lernModus_std_Rechts = 0
+lernModus_std_ZahlenReihe = 0
+
+; im folgenden kann man auch noch ein paar Tasten der 4. Ebene deaktivieren
+; nützlich um sich zu zwingen, richtig zu schreiben
+lernModus_neo_Backspace = 0
+lernModus_neo_Entf = 1
+
+/****************************
+* EinHandNeo                *
+* Umschalten mit Strg+Punkt *
+*****************************
+*/
+spacepressed := 0
+keypressed := 0
+
+; Reihe 1
+gespiegelt_7 = neo_6
+gespiegelt_8 = neo_5
+gespiegelt_9 = neo_4
+gespiegelt_0 = neo_3
+gespiegelt_strich = neo_2
+gespiegelt_tot2 = neo_1
+
+; Reihe 2
+gespiegelt_k = neo_w
+gespiegelt_h = neo_c
+gespiegelt_g = neo_l
+gespiegelt_f = neo_v
+gespiegelt_q = neo_x
+gespiegelt_sz = neo_tab 
+gespiegelt_tot3 = neo_tot1
+
+; Reihe 3
+gespiegelt_s = neo_o
+gespiegelt_n = neo_e
+gespiegelt_r = neo_a
+gespiegelt_t = neo_i
+gespiegelt_d = neo_u
+
+; Reihe 4
+gespiegelt_b = neo_z
+gespiegelt_m = neo_p
+gespiegelt_komma = neo_ä
+gespiegelt_punkt = neo_ö
+gespiegelt_j = neo_ü
+
 /**********************
 * Tastenkombinationen *
 ***********************
@@ -161,29 +226,28 @@ menu,tray,tip,%name%
 ;Blinde/Sichtbare Tote Tasten
 *F9::
   if isMod4pressed()
-    DeadSilence := !(DeadSilence)
+    DeadSilence := !DeadSilence
   else send {blind}{F9}
 return
 
 ;Blinde/Sichtbare Compose
 *F10::
   if isMod4pressed()
-    DeadCompose := !(DeadCompose)
+    DeadCompose := !DeadCompose
   else send {blind}{F10}
 return
 
 ;Lang-s-Tastatur:
 *F11::
   if isMod4pressed() {
-    LangSTastatur := !(LangSTastatur)
+    LangSTastatur := !LangSTastatur
     if LangSTastatur
       KeyboardLED(2,"on")
     else KeyboardLED(2,"off")
   } else send {blind}{F11}
 return
 
-;Alle Modi und Locks in den Normalzustand versetzen
-;bzw. Skript neu laden:
+;Alle Modi und Locks in den Normalzustand versetzen, bzw. Skript neu laden:
 *Esc::
   if isMod4pressed()
     reload
@@ -196,6 +260,10 @@ Suspend, Permit
     goto togglesuspend
   else send {blind}{pause}
 return
+
+^,::lernModus := not(lernModus)
+
+^.::einHandNeo := !einHandNeo
 
 /*****************
 * Menüfunktionen *
@@ -264,75 +332,3 @@ return
 exitprogram:
   exitapp
 return
-
-/**************************
-* lernModus Konfiguration *
-* nur relevant wenn       *
-* lernModus = 1           *
-* Strg+Komma schaltet um  *
-***************************
-*/
-^,::lernModus := not(lernModus)
-
-; 0 = aus, 1 = an
-
-; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
-lernModus_std_Return = 0
-lernModus_std_Backspace = 0
-lernModus_std_PgUp = 0
-lernModus_std_PgDn = 0
-lernModus_std_Einf = 0
-lernModus_std_Entf = 0
-lernModus_std_Pos0 = 0
-lernModus_std_Ende = 0
-lernModus_std_Hoch = 0
-lernModus_std_Runter = 0
-lernModus_std_Links = 0
-lernModus_std_Rechts = 0
-lernModus_std_ZahlenReihe = 0
-
-; im folgenden kann man auch noch ein paar Tasten der 4. Ebene deaktivieren
-; nützlich um sich zu zwingen, richtig zu schreiben
-lernModus_neo_Backspace = 0
-lernModus_neo_Entf = 1
-
-/****************************
-* EinHandNeo                *
-* Umschalten mit Strg+Punkt *
-*****************************
-*/
-^.::einHandNeo := not(einHandNeo)
-
-spacepressed := 0
-keypressed:= 0
-
-; Reihe 1
-gespiegelt_7 = neo_6
-gespiegelt_8 = neo_5
-gespiegelt_9 = neo_4
-gespiegelt_0 = neo_3
-gespiegelt_strich = neo_2
-gespiegelt_tot2 = neo_1
-
-; Reihe 2
-gespiegelt_k = neo_w
-gespiegelt_h = neo_c
-gespiegelt_g = neo_l
-gespiegelt_f = neo_v
-gespiegelt_q = neo_x
-gespiegelt_sz = neo_tab 
-gespiegelt_tot3 = neo_tot1
-
-; Reihe 3
-gespiegelt_s = neo_o
-gespiegelt_n = neo_e
-gespiegelt_r = neo_a
-gespiegelt_t = neo_i
-gespiegelt_d = neo_u
-
-; Reihe 4
-gespiegelt_b = neo_z
-gespiegelt_m = neo_p
-gespiegelt_komma = neo_ä
-gespiegelt_punkt = neo_ö
-gespiegelt_j = neo_ü

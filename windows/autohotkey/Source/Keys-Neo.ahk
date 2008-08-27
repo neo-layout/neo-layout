@@ -27,7 +27,7 @@ neo_tot1:
     deadUni(0x002D) ; Querstrich, tot
     DeadKey = c5
   } else if (Ebene = 6) {
-    deadUni(0x0323) ; Punkt drunter (Colon), tot
+    deadUni(0x002E) ; Punkt drunter (Colon), tot
     DeadKey = c6
   } CompKey := PriorCompKey
 return
@@ -481,8 +481,8 @@ neo_sz:
     if LangSTastatur
       send ß
     else {
-      SendUnicodeChar(0x017F) ; langes s
-      CheckComp("lang_s")
+      if !checkComp("lang_s")
+        SendUnicodeChar(0x017F) ; langes s
   } else if (Ebene = 5)
     SendUnicodeChar(0x03C2) ; varsigma
   else if (Ebene = 6)
@@ -658,8 +658,8 @@ neo_s:
                  or CheckDeadUni12("c6",0x1E63,0x1A62)))
     {
       if LangSTastatur and (Ebene = 1) {
-        SendUnicodeChar(0x017F) ;langes S
-        CheckComp("lang_s")
+        if !checkComp("lang_s")
+          SendUnicodeChar(0x017F) ; langes s
       } else outputChar("s","S")
     } else if (Ebene = 3)
     send {blind}?

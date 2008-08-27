@@ -1,54 +1,11 @@
-/*
-*******************************************
-WICHTIGE WARNUNG:
-
-Dies ist inzwischen eine automatisch generierte
-Datei! Sie wird regelmäßig überschrieben und
-sollte deshalb nicht mehr direkt bearbeitet werden!
-
-Alle weiterführende Informationen finden sich im Abschnitt 
-== Hinweise für Entwickler ==
-in der Datei README.txt!
-
-Versionshinweise (SVN Keywords) für diese Datei:
-$LastChangedRevision$
-$LastChangedDate$
-$LastChangedBy$
-$HeadURL$
-*******************************************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*******************************************
-Das war die letzte WARNUNG, ich hoffe nur dass
-Sie wirklich wissen was Sie hier tun wollen ...
-*******************************************
-*/
 /******************
 * Initialisierung *
 *******************
 */
-DeadKey = ""
-CompKey = ""
-PriorDeadKey = ""
-PriorCompKey = ""
+DeadKey := ""
+CompKey := ""
+PriorDeadKey := ""
+PriorCompKey := ""
 Ebene12 = 0
 noCaps = 0
 
@@ -93,9 +50,6 @@ bildschirmTastaturEinbinden := 1
 
 ; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
 
-; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
-IniRead,ahkTreiberKombi,%ini%,Global,ahkTreiberKombi,0
-
 ; Soll der Treiber im Einhandmodus betrieben werden?
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 
@@ -114,22 +68,24 @@ If LangSTastatur
   KeyboardLED(2,"on")
 
 ; Sollen tote Tasten blind angezeigt werden?
-IniRead,DeadCompose,%ini%,Global,DeadCompose,0
-
-;Sollen Compose-Tasten blind angezeigt werden?
 IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 
+;Sollen Compose-Tasten blind angezeigt werden?
+IniRead,DeadCompose,%ini%,Global,DeadCompose,0
+
+:Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
+IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 
 /***********************
 * Recourcen-Verwaltung *
 ************************
 */
-if(FileExist("ResourceFolder")<>false){
+if (FileExist("ResourceFolder")<>false) {
   ; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
   FileInstall,neo.ico,%ResourceFolder%\neo.ico,1
   FileInstall,neo_disabled.ico,%ResourceFolder%\neo_disabled.ico,1
   iconBenutzen=1
-  if (bildschirmTastaturEinbinden=1){
+  if (bildschirmTastaturEinbinden=1) {
     FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
     FileInstall,ebene2.png,%ResourceFolder%\ebene2.png,1
     FileInstall,ebene3.png,%ResourceFolder%\ebene3.png,1
@@ -138,14 +94,12 @@ if(FileExist("ResourceFolder")<>false){
     FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
     zeigeBildschirmTastatur=1
   }
-}else{
-  MsgBox,"Das Verzeichnis %ResourceFolder% konnte nicht angelegt werden!" ; Diese Zeile dient nur der eventuellen Fehlersuche und sollte eigentlich niemals auftauchen.
 }
 
 ; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
-if(FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
+if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
   zeigeBildschirmTastatur=1
-if(FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
+if (FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
 /*******************************************
@@ -197,6 +151,74 @@ menu,tray,add,%name% beenden, exitprogram
 menu,tray,default,%disable%
 menu,tray,tip,%name%
 
+/**************************
+* lernModus Konfiguration *
+* nur relevant wenn       *
+* lernModus = 1           *
+* Strg+Komma schaltet um  *
+***************************
+*/
+; 0 = aus, 1 = an
+
+; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
+lernModus_std_Return = 0
+lernModus_std_Backspace = 0
+lernModus_std_PgUp = 0
+lernModus_std_PgDn = 0
+lernModus_std_Einf = 0
+lernModus_std_Entf = 0
+lernModus_std_Pos0 = 0
+lernModus_std_Ende = 0
+lernModus_std_Hoch = 0
+lernModus_std_Runter = 0
+lernModus_std_Links = 0
+lernModus_std_Rechts = 0
+lernModus_std_ZahlenReihe = 0
+
+; im folgenden kann man auch noch ein paar Tasten der 4. Ebene deaktivieren
+; nützlich um sich zu zwingen, richtig zu schreiben
+lernModus_neo_Backspace = 0
+lernModus_neo_Entf = 1
+
+/****************************
+* EinHandNeo                *
+* Umschalten mit Strg+Punkt *
+*****************************
+*/
+spacepressed := 0
+keypressed := 0
+
+; Reihe 1
+gespiegelt_7 = neo_6
+gespiegelt_8 = neo_5
+gespiegelt_9 = neo_4
+gespiegelt_0 = neo_3
+gespiegelt_strich = neo_2
+gespiegelt_tot2 = neo_1
+
+; Reihe 2
+gespiegelt_k = neo_w
+gespiegelt_h = neo_c
+gespiegelt_g = neo_l
+gespiegelt_f = neo_v
+gespiegelt_q = neo_x
+gespiegelt_sz = neo_tab 
+gespiegelt_tot3 = neo_tot1
+
+; Reihe 3
+gespiegelt_s = neo_o
+gespiegelt_n = neo_e
+gespiegelt_r = neo_a
+gespiegelt_t = neo_i
+gespiegelt_d = neo_u
+
+; Reihe 4
+gespiegelt_b = neo_z
+gespiegelt_m = neo_p
+gespiegelt_komma = neo_ä
+gespiegelt_punkt = neo_ö
+gespiegelt_j = neo_ü
+
 /**********************
 * Tastenkombinationen *
 ***********************
@@ -204,29 +226,28 @@ menu,tray,tip,%name%
 ;Blinde/Sichtbare Tote Tasten
 *F9::
   if isMod4pressed()
-    DeadSilence := !(DeadSilence)
+    DeadSilence := !DeadSilence
   else send {blind}{F9}
 return
 
 ;Blinde/Sichtbare Compose
 *F10::
   if isMod4pressed()
-    DeadCompose := !(DeadCompose)
+    DeadCompose := !DeadCompose
   else send {blind}{F10}
 return
 
 ;Lang-s-Tastatur:
 *F11::
   if isMod4pressed() {
-    LangSTastatur := !(LangSTastatur)
+    LangSTastatur := !LangSTastatur
     if LangSTastatur
       KeyboardLED(2,"on")
     else KeyboardLED(2,"off")
   } else send {blind}{F11}
 return
 
-;Alle Modi und Locks in den Normalzustand versetzen
-;bzw. Skript neu laden:
+;Alle Modi und Locks in den Normalzustand versetzen, bzw. Skript neu laden:
 *Esc::
   if isMod4pressed()
     reload
@@ -239,6 +260,10 @@ Suspend, Permit
     goto togglesuspend
   else send {blind}{pause}
 return
+
+^,::lernModus := not(lernModus)
+
+^.::einHandNeo := !einHandNeo
 
 /*****************
 * Menüfunktionen *
@@ -307,78 +332,6 @@ return
 exitprogram:
   exitapp
 return
-
-/**************************
-* lernModus Konfiguration *
-* nur relevant wenn       *
-* lernModus = 1           *
-* Strg+Komma schaltet um  *
-***************************
-*/
-^,::lernModus := not(lernModus)
-
-; 0 = aus, 1 = an
-
-; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
-lernModus_std_Return = 0
-lernModus_std_Backspace = 0
-lernModus_std_PgUp = 0
-lernModus_std_PgDn = 0
-lernModus_std_Einf = 0
-lernModus_std_Entf = 0
-lernModus_std_Pos0 = 0
-lernModus_std_Ende = 0
-lernModus_std_Hoch = 0
-lernModus_std_Runter = 0
-lernModus_std_Links = 0
-lernModus_std_Rechts = 0
-lernModus_std_ZahlenReihe = 0
-
-; im folgenden kann man auch noch ein paar Tasten der 4. Ebene deaktivieren
-; nützlich um sich zu zwingen, richtig zu schreiben
-lernModus_neo_Backspace = 0
-lernModus_neo_Entf = 1
-
-/****************************
-* EinHandNeo                *
-* Umschalten mit Strg+Punkt *
-*****************************
-*/
-^.::einHandNeo := not(einHandNeo)
-
-spacepressed := 0
-keypressed:= 0
-
-; Reihe 1
-gespiegelt_7 = neo_6
-gespiegelt_8 = neo_5
-gespiegelt_9 = neo_4
-gespiegelt_0 = neo_3
-gespiegelt_strich = neo_2
-gespiegelt_tot2 = neo_1
-
-; Reihe 2
-gespiegelt_k = neo_w
-gespiegelt_h = neo_c
-gespiegelt_g = neo_l
-gespiegelt_f = neo_v
-gespiegelt_q = neo_x
-gespiegelt_sz = neo_tab 
-gespiegelt_tot3 = neo_tot1
-
-; Reihe 3
-gespiegelt_s = neo_o
-gespiegelt_n = neo_e
-gespiegelt_r = neo_a
-gespiegelt_t = neo_i
-gespiegelt_d = neo_u
-
-; Reihe 4
-gespiegelt_b = neo_z
-gespiegelt_m = neo_p
-gespiegelt_komma = neo_ä
-gespiegelt_punkt = neo_ö
-gespiegelt_j = neo_ü
 ; LShift+RShift == CapsLock (simuliert)
 ; Es werden nur die beiden Tastenkombinationen abgefragt,
 ; daher kommen LShift und RShift ungehindert bis in die
@@ -392,15 +345,11 @@ gespiegelt_j = neo_ü
 isMod2Locked = 0
 VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
 VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
-  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
-  {
-    if isMod2Locked
-    {
+  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P")) {
+    if isMod2Locked {
       isMod2Locked = 0
       KeyboardLED(4,"off")
-    }
-    else
-    {
+    } else {
       isMod2Locked = 1
       KeyBoardLED(4,"on")
     }
@@ -410,6 +359,10 @@ return
 ;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
+  if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")) {
+    DeadKey := "comp"
+    CompKey := ""
+  }
 return
 
 ;Mod4+Mod4 == Mod4-Lock
@@ -421,18 +374,14 @@ return
 IsMod4Locked := 0
 *VKA5SC138::
 *VKE2SC056::
-  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
-  {
-    if IsMod4Locked
-    {
+  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P")) {
+    if IsMod4Locked {
       if zeigeLockBox
         MsgBox Mod4-Feststellung aufgebehoben!
        IsMod4Locked = 0
       if UseMod4Light
         KeyboardLED(1,"off")
-    }
-    else
-    {
+    } else {
       if zeigeLockBox
         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
       IsMod4Locked = 1
@@ -442,8 +391,7 @@ IsMod4Locked := 0
   }
 return
 
-EbeneAktualisieren()
-{
+EbeneAktualisieren() {
   global
   PriorDeadKey := DeadKey
   PriorCompKey := CompKey
@@ -452,35 +400,25 @@ EbeneAktualisieren()
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
   Ebene7 := 0
   Ebene8 := 0
-  if ahkTreiberKombi
-    if ( Modstate = "001")
-      Ebene = 6
-    else
-      Ebene = -1
-  else
-    if      (Modstate = "000") ; Ebene 1: Ohne Mod
-      Ebene = 1
-    else if (Modstate = "001") ; Ebene 2: Shift
-      Ebene = 2
-    else if (Modstate = "010") ; Ebene 3: Mod3
-      Ebene = 3
-    else if (Modstate = "100") ; Ebene 4: Mod4
-      Ebene = 4
-    else if (Modstate = "011") ; Ebene 5: Shift+Mod3
-      Ebene = 5
-    else if (Modstate = "110") ; Ebene 6: Mod3+Mod4
-      Ebene = 6
-    else if (Modstate = "101") ; Ebene 7: Shift+Mod4 impliziert Ebene 4
-    {
-      Ebene = 4
-      Ebene7 = 1
-    }
-    else if (Modstate = "111") ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
-    {
-      Ebene = 6
-      Ebene8 = 1
-    }
-  Ebene12 := ((Ebene = 1) or (Ebene = 2))
+  if      (Modstate = "000") ; Ebene 1: Ohne Mod
+    Ebene = 1
+  else if (Modstate = "001") ; Ebene 2: Shift
+    Ebene = 2
+  else if (Modstate = "010") ; Ebene 3: Mod3
+    Ebene = 3
+  else if (Modstate = "100") ; Ebene 4: Mod4
+    Ebene = 4
+  else if (Modstate = "011") ; Ebene 5: Shift+Mod3
+    Ebene = 5
+  else if (Modstate = "110") ; Ebene 6: Mod3+Mod4
+    Ebene = 6
+  else if (Modstate = "101") { ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+    Ebene = 4
+    Ebene7 = 1
+  } else if (Modstate = "111") { ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+    Ebene = 6
+    Ebene8 = 1
+  } Ebene12 := ((Ebene = 1) or (Ebene = 2))
   Ebene14 := ((Ebene = 1) or (Ebene = 4))
   NumLock := GetKeyState("NumLock","T")
 }
@@ -488,6 +426,8 @@ EbeneAktualisieren()
 IsShiftPressed()
 {
   global
+  if striktesMod2Lock
+    noCaps = 0
   if GetKeyState("Shift","P")
     if isMod2Locked and !noCaps
       return 0
@@ -503,23 +443,23 @@ IsShiftPressed()
 
 IsMod3Pressed()
 {
-   global
-   return ((GetKeyState("CapsLock","P")) or (GetKeyState("#","P")))
+  global
+  return ((GetKeyState("CapsLock","P")) or (GetKeyState("#","P")))
 }
 
 IsMod4Pressed()
 {
-   global
-   if( not(einHandNeo) or not(spacepressed))
-     if IsMod4Locked
-         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P")))
-     else
-         return ( GetKeyState("<","P") or GetKeyState("SC138","P"))
-   else
-     if IsMod4Lock
-       return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")))
-     else
-       return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
+  global
+  if !(einHandNeo) or !(spacepressed)
+    if IsMod4Locked
+      return !(GetKeyState("<","P") or GetKeyState("SC138","P"))
+    else
+      return (GetKeyState("<","P") or GetKeyState("SC138","P"))
+  else
+    if IsMod4Locked
+      return !(GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
+    else
+      return (GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
 }
 /*
    ------------------------------------------------------
@@ -855,7 +795,7 @@ neo_tot1:
     deadUni(0x002D) ; Querstrich, tot
     DeadKey = c5
   } else if (Ebene = 6) {
-    deadUni(0x0323) ; Punkt drunter (Colon), tot
+    deadUni(0x002E) ; Punkt drunter (Colon), tot
     DeadKey = c6
   } CompKey := PriorCompKey
 return
@@ -1309,8 +1249,8 @@ neo_sz:
     if LangSTastatur
       send ß
     else {
-      SendUnicodeChar(0x017F) ; langes s
-      CheckComp("lang_s")
+      if !checkComp("lang_s")
+        SendUnicodeChar(0x017F) ; langes s
   } else if (Ebene = 5)
     SendUnicodeChar(0x03C2) ; varsigma
   else if (Ebene = 6)
@@ -1486,8 +1426,8 @@ neo_s:
                  or CheckDeadUni12("c6",0x1E63,0x1A62)))
     {
       if LangSTastatur and (Ebene = 1) {
-        SendUnicodeChar(0x017F) ;langes S
-        CheckComp("lang_s")
+        if !checkComp("lang_s")
+          SendUnicodeChar(0x017F) ; langes s
       } else outputChar("s","S")
     } else if (Ebene = 3)
     send {blind}?
@@ -2340,7 +2280,7 @@ CheckDeadAsc(d,val) {
   if (PriorDeadKey == d) {
     undeadAsc(val)
     return 1
-  } else return 0
+  }
 }
 
 CheckDeadUni(d,val) {
@@ -2348,7 +2288,7 @@ CheckDeadUni(d,val) {
   if (PriorDeadKey == d) {
     undeadUni(val)
     return 1
-  } else return 0
+  }
 }
 
 CheckDeadAsc12(d,val1,val2) {
@@ -2360,8 +2300,8 @@ CheckDeadAsc12(d,val1,val2) {
     } else if (Ebene = 2) and (val2 != "") {
       undeadAsc(val2)
       return 1
-    } else return 0
-  } else return 0
+    }
+  }
 }
 
 CheckDeadUni12(d,val1,val2) {
@@ -2373,104 +2313,70 @@ CheckDeadUni12(d,val1,val2) {
     } else if (Ebene = 2) and (val2 != "") {
       undeadUni(val2)
       return 1
-    } else return 0
-  } else return 0
-}
-
-compAsc(val) {
-  global
-  if !DeadCompose
-    send % val
-}
-
-compUni(val) {
-  global
-  if !DeadCompose
-    SendUnicodeChar(val)
-}
-
-uncompAsc(val) {
-  global
-  if DeadCompose
-    send % val
-  else send % "{bs}" . val
-}
-
-uncompUni(val) {
-  global
-  if !DeadCompose
-    send {bs}
-  SendUnicodeChar(val)    
-}
-
-uncomp3Uni(val) {
-  global
-  if !DeadCompose
-    send {bs}{bs}
-  SendUnicodeChar(val)    
+    }
+  }
 }
 
 CheckCompAsc(d,val) {
   global
   if (PriorCompKey == d) {
-    uncompAsc(val)
+    send % val
     return 1
-  } else return 0
+  }
 }
 
 CheckCompAsc12(d,val1,val2) {
   global
   if (PriorCompKey == d)
     if (Ebene = 1) and (val1 != "") {
-      uncompAsc(val1)
+      send % val1
       return 1
     } else if (Ebene = 2) and (val2 != "") {
-      uncompAsc(val2)
+      send % val2
       return 1
-    } else return 0
-  else return 0
+    }
 }
 
 CheckCompUni(d,val) {
   global
   if (PriorCompKey == d) {
-    uncompUni(val)
+    SendUnicodeChar(val)
     return 1
-  } else return 0
+  }
 }
 
 CheckCompUni12(d,val1,val2){
   global
   if (PriorCompKey == d) {
     if (Ebene = 1) and (val1 != "") {
-      uncompUni(val1)
+      SendUnicodeChar(val1)
       return 1
     }else if (Ebene = 2) and (val2 != "") {
-      uncompUni(val2)
+      SendUnicodeChar(val2)
       return 1
-    } else return 0
-  } else return 0
+    }
+  }
 }
 
 CheckComp3Uni(d,val) {
   global
   if (PriorCompKey == d) {
-    uncomp3Uni(val)
+    SendUnicodeChar(val)
     return 1
-  } else return 0
+  }
 }
 
 CheckComp3Uni12(d,val1,val2) {
   global
   if (PriorCompKey == d) {
     if (Ebene = 1) and (val1 != "") {
-      uncomp3Uni(val1)
+      SendUnicodeChar(val1)
       return 1
     } else if (Ebene = 2) and (val2 != "") {
-      uncomp3Uni(val2)
+      SendUnicodeChar(val2)
       return 1
-    } else return 0
-  } else return 0
+    }
+  }
 }
 
 outputChar(val1,val2) {
@@ -2478,14 +2384,14 @@ outputChar(val1,val2) {
   if (Ebene = 1)
     c := val1
   else c := val2
-  if GetKeyState("Shift","P") and isMod2Locked
-    send % "{blind}{Shift Up}" . c . "{Shift Down}"
-  else send % "{blind}" . c
-  if (PriorDeadKey = "comp")
-    CompKey := c
+  if !(CheckComp(c) and DeadCompose or PriorCompKey)
+    if GetKeyState("Shift","P") and isMod2Locked
+      send % "{blind}{Shift Up}" . c . "{Shift Down}"
+    else send % "{blind}" . c
 }
 
 checkComp(d) {
+  global
   if (PriorDeadKey = "comp") {
     CompKey := d
     return 1
@@ -2501,12 +2407,13 @@ Dieser basiert auf http://www.autohotkey.com/forum/topic32947.html
 Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex mit führendem „0x“ angegeben sind. Die abenteuerliche „^+u“-Konstruktion benötigt im Übrigen den Hex-Wert in Kleinschrift, was derzeit nicht bei den Zeichendefinitionen umgesetzt ist, daher zentral und weniger fehlerträchtig an dieser Stelle. Außerdem ein abschließend gesendetes Space, sonst bleibt der „eingetippte“ Unicode-Wert noch kurz sichtbar stehen, bevor er sich GTK-sei-dank in das gewünschte Zeichen verwandelt.
 */
 
-SendUnicodeChar(charCode){
+SendUnicodeChar(charCode) {
+
   IfWinActive,ahk_class gdkWindowToplevel
   {
     StringLower,charCode,charCode
     send % "^+u" . SubStr(charCode,3) . " "
-  }else{
+  } else {
     VarSetCapacity(ki,28*2,0)
     EncodeInteger(&ki+0,1)
     EncodeInteger(&ki+6,charCode)
@@ -2518,7 +2425,7 @@ SendUnicodeChar(charCode){
   }
 }
 
-EncodeInteger(ref,val){
+EncodeInteger(ref,val) {
   DllCall("ntdll\RtlFillMemoryUlong","Uint",ref,"Uint",4,"Uint",val)
 }
 /*

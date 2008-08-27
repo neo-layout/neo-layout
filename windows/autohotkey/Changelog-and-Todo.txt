@@ -8,7 +8,7 @@ Stefan Mayer <stm (at) neo-layout. o r g>
 Nora Geißler <nora_geissler (at) yahoo. d e>
 Matthias Berg <neo (at) matthias-berg. e u>
 Martin Roppelt <m.p.roppelt (at) web. d e>
-Dennis Heidsiek <HeidsiekB (at) aol. c o m>
+Dennis Heidsiek <heidsiekb (at) aol. c o m>
 Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 
@@ -16,20 +16,27 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 - Ausgiebig testen … (besonders Vollständigkeit bei Deadkeys).
 - Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?).
 - Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
-- Blindes Compose implementieren.
-- CapsLock-Abhängigkeiten entfernen.
 
 === Ideen und Vorschläge ===
-- Modi für vertauschte Ziffern in der Zahlenreihe und auf der 4. Ebene.
 - Die Compose-Kombinationen sollten automatisch aus den Referenzdateien im Compose-Verzeichnis erzeugt werden.
+- Modi für vertauschte Ziffern in der Zahlenreihe und auf der 4. Ebene.
+- Tote Zeichen durch Verbindungszeichen ersetzen, sie können in Abhängigkeit des vorigen Zeichens zusammengezogen werden. Alle Akzente sind an einer Stelle
 
 === Änderungshistorie ===
 
+Revision 810 (von Martin Roppelt)
+- DeadCompose implementiert, uncomp…-Methoden gelöscht, »return 0«-Zeilen entfernt (wird sowieso gemacht).
+- checkComp ausgebessert: »global« hatte gefehlt.
+  • Damit wurde ›ﬅ‹ ermöglicht (war defekt).
+- ahkTreiberKombi rausgeschmissen (war für den gelöschten msklc-Treiber gedacht).
+- Massenweise Formatierungen normalisiert.
+- Zusätzliche Compose-Aktivierung über Mod3+Mod3.
+- Einhand- und Lernmodus wiederhergestellt.
 Revision 806 (von Dennis Heidsiek)
 - Die automatisch erzeugte Datei neo20.ahk wird wieder um die SVN-Keywords (Date, Author, Revision) ergänzt.
 Revision 804 (von Martin Roppelt)
 - Formatierung vereinfacht und vereinheitlicht.
-- Compose-Ligaturen implementiert: ﬂ, …
+- Compose-Ligaturen implementiert: ›ﬂ‹, ›ﬄ‹(♫Fl), ›ﬁ‹, ›ﬃ‹(♫Fi), ›ﬀ‹, ›ﬆ‹, ›ﬅ‹.
 Revision 789 (von Martin Roppelt)
 - NumLock-Bug ausgebessert (NumLock konnte nach dem Beenden von Neo nicht mehr aktiviert werden).
 Revision 778 (von Martin Roppelt)

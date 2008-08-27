@@ -8,12 +8,13 @@ Dieser basiert auf http://www.autohotkey.com/forum/topic32947.html
 Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex mit führendem „0x“ angegeben sind. Die abenteuerliche „^+u“-Konstruktion benötigt im Übrigen den Hex-Wert in Kleinschrift, was derzeit nicht bei den Zeichendefinitionen umgesetzt ist, daher zentral und weniger fehlerträchtig an dieser Stelle. Außerdem ein abschließend gesendetes Space, sonst bleibt der „eingetippte“ Unicode-Wert noch kurz sichtbar stehen, bevor er sich GTK-sei-dank in das gewünschte Zeichen verwandelt.
 */
 
-SendUnicodeChar(charCode){
+SendUnicodeChar(charCode) {
+
   IfWinActive,ahk_class gdkWindowToplevel
   {
     StringLower,charCode,charCode
     send % "^+u" . SubStr(charCode,3) . " "
-  }else{
+  } else {
     VarSetCapacity(ki,28*2,0)
     EncodeInteger(&ki+0,1)
     EncodeInteger(&ki+6,charCode)
@@ -25,6 +26,6 @@ SendUnicodeChar(charCode){
   }
 }
 
-EncodeInteger(ref,val){
+EncodeInteger(ref,val) {
   DllCall("ntdll\RtlFillMemoryUlong","Uint",ref,"Uint",4,"Uint",val)
 }
