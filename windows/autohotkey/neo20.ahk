@@ -1,3 +1,46 @@
+/*
+*******************************************
+WICHTIGE WARNUNG:
+
+Dies ist inzwischen eine automatisch generierte
+Datei! Sie wird regelmäßig überschrieben und
+sollte deshalb nicht mehr direkt bearbeitet werden!
+
+Alle weiterführende Informationen finden sich im Abschnitt 
+== Hinweise für Entwickler ==
+in der Datei README.txt!
+
+Versionshinweise (SVN Keywords) für diese Datei:
+$LastChangedRevision$
+$LastChangedDate$
+$LastChangedBy$
+$HeadURL$
+*******************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*******************************************
+Das war die letzte WARNUNG, ich hoffe nur dass
+Sie wirklich wissen was Sie hier tun wollen ...
+*******************************************
+*/
 /******************
 * Initialisierung *
 *******************
@@ -20,7 +63,7 @@ enable=Aktiviere %name%
 disable=Deaktiviere %name%
 #usehook on
 #singleinstance force
-#LTrim ; Quelltext kann eingerückt werden, 
+#LTrim ; Quelltext kann eingerückt werden
 Process,Priority,,High
 SendMode Input  
 
@@ -29,14 +72,14 @@ SendMode Input
 *****************
 */
 ; Setzt den Pfad zu einem temporären Verzeichnis
-EnvGet, WindowsEnvTempFolder, TEMP
+EnvGet,WindowsEnvTempFolder,TEMP
 ResourceFolder = %WindowsEnvTempFolder%\NEO2
-FileCreateDir, %ResourceFolder%
+FileCreateDir,%ResourceFolder%
 
 ; Setzt den Pfad zu den NEO-Anwendungsdateien
-EnvGet, WindowsEnvAppDataFolder, APPDATA
+EnvGet,WindowsEnvAppDataFolder,APPDATA
 ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
-FileCreateDir, %ApplicationFolder%
+FileCreateDir,%ApplicationFolder%
 ini = %ApplicationFolder%\NEO2.ini
 
 /*******************
@@ -45,7 +88,8 @@ ini = %ApplicationFolder%\NEO2.ini
 */
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
 
-; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? 
+; (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
 bildschirmTastaturEinbinden := 1
 
 ; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
@@ -73,32 +117,32 @@ IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 ;Sollen Compose-Tasten blind angezeigt werden?
 IniRead,DeadCompose,%ini%,Global,DeadCompose,0
 
-:Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
+;Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 
 /***********************
 * Recourcen-Verwaltung *
 ************************
 */
-if (FileExist("ResourceFolder")<>false) {
+if (FileExist("ResourceFolder") <> false) {
   ; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
   FileInstall,neo.ico,%ResourceFolder%\neo.ico,1
   FileInstall,neo_disabled.ico,%ResourceFolder%\neo_disabled.ico,1
   iconBenutzen=1
-  if (bildschirmTastaturEinbinden=1) {
+  if (bildschirmTastaturEinbinden = 1) {
     FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
     FileInstall,ebene2.png,%ResourceFolder%\ebene2.png,1
     FileInstall,ebene3.png,%ResourceFolder%\ebene3.png,1
     FileInstall,ebene4.png,%ResourceFolder%\ebene4.png,1
     FileInstall,ebene5.png,%ResourceFolder%\ebene5.png,1
     FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
-    zeigeBildschirmTastatur=1
+    zeigeBildschirmTastatur = 1
   }
 }
 
 ; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
 if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
-  zeigeBildschirmTastatur=1
+  zeigeBildschirmTastatur = 1
 if (FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
@@ -147,7 +191,7 @@ menu,tray,add,Bearbeiten,edit
 menu,tray,add,Neu Laden,reload
 menu,tray,add
 menu,tray,add,Nicht im Systray anzeigen,hide
-menu,tray,add,%name% beenden, exitprogram
+menu,tray,add,%name% beenden,exitprogram
 menu,tray,default,%disable%
 menu,tray,tip,%name%
 
@@ -271,17 +315,17 @@ return
 */
 togglesuspend:
   if A_IsSuspended {
-    menu, tray, rename, %enable%, %disable%
-    menu, tray, tip, %name%
+    menu,tray,rename,%enable%,%disable%
+    menu,tray,tip,%name%
     if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo.ico,,1
-    suspend , off ; Schaltet Suspend aus -> NEO
+      menu,tray,icon,%ResourceFolder%\neo.ico,,1
+    suspend,off ; Schaltet Suspend aus -> NEO
   } else {
-    menu, tray, rename, %disable%, %enable%
-    menu, tray, tip, %name% : Deaktiviert
+    menu,tray,rename,%disable%, %enable%
+    menu,tray,tip,%name% : Deaktiviert
     if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
-    suspend , on  ; Schaltet Suspend ein -> QWERTZ
+      menu,tray,icon, %ResourceFolder%\neo_disabled.ico,,1
+    suspend,on ; Schaltet Suspend ein -> QWERTZ
   } return
 
 help:
@@ -345,7 +389,7 @@ return
 isMod2Locked = 0
 VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
 VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
-  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P")) {
+  if GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P") {
     if isMod2Locked {
       isMod2Locked = 0
       KeyboardLED(4,"off")
@@ -357,6 +401,7 @@ VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
 return
 
 ;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
+;Auf Mod3+Mod3 liegt zusätzlich zu Mod3+Tab Compose
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
   if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")) {
@@ -374,7 +419,7 @@ return
 IsMod4Locked := 0
 *VKA5SC138::
 *VKE2SC056::
-  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P")) {
+  if GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P") {
     if IsMod4Locked {
       if zeigeLockBox
         MsgBox Mod4-Feststellung aufgebehoben!
@@ -444,7 +489,7 @@ IsShiftPressed()
 IsMod3Pressed()
 {
   global
-  return ((GetKeyState("CapsLock","P")) or (GetKeyState("#","P")))
+  return (GetKeyState("VKBFSC02B","P") or GetKeyState("VK14SC03A","P"))
 }
 
 IsMod4Pressed()
@@ -476,266 +521,200 @@ IsMod4Pressed()
 *VK35SC006::goto neo_5
 *VK36SC007::goto neo_6
 *VK37SC008::
-  if (!(einHandNeo) or !(spacepressed))
+  if !einHandNeo or !spacepressed
     goto neo_7
   else {
     keypressed := 1
     goto %gespiegelt_7%
   } 
 *VK38SC009::
-  if(!(einHandNeo) or !(spacepressed))
+  if !einHandNeo or !spacepressed
     goto neo_8
   else {
     keypressed := 1
     goto %gespiegelt_8%
   }
 *VK39SC00A::
-  if(!(einHandNeo) or !(spacepressed))
+  if !einHandNeo or !spacepressed
     goto neo_9
   else {
     keypressed := 1
     goto %gespiegelt_9%
   }
 *VK30SC00B::
-  if(!(einHandNeo) or !(spacepressed))
+  if !einHandNeo or !spacepressed
     goto neo_0
   else {
     keypressed := 1
     goto %gespiegelt_0%
   }
 *VKDBSC00C:: ; ß
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_strich
-    else {
-      keypressed := 1
-      goto %gespiegelt_strich%
-    }
-  } else goto neo_sz   
+  if !einHandNeo or !spacepressed
+    goto neo_strich
+  else {
+    keypressed := 1
+    goto %gespiegelt_strich%
+  }
 *VKDDSC00D::goto neo_tot2 ; Akut
 
 ; Reihe 2
 
 VK09SC00F::goto neo_tab
 *VK51SC010:: ; q (x)
-  if !ahkTreiberKombi 
-    goto neo_x
-  else goto neo_q   
+  goto neo_x
 *VK57SC011:: ; w (v)
-  if !ahkTreiberKombi 
-    goto neo_v
-  else goto neo_w   
+  goto neo_v
 *VK45SC012:: ; e (l)
-  if !ahkTreiberKombi 
-    goto neo_l
-  else goto neo_e   
+  goto neo_l
 *VK52SC013:: ; r (c)
-  if !ahkTreiberKombi 
-    goto neo_c
-  else goto neo_r   
+  goto neo_c
 *VK54SC014:: ; t (w)
-  if !ahkTreiberKombi 
-    goto neo_w
-  else goto neo_t   
+  goto neo_w
 *VK5ASC015:: ; z (k) 
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_k
-    else {
-      keypressed := 1
-      goto %gespiegelt_k%
-    }
+  if !einHandNeo or !spacepressed
+    goto neo_k
+  else {
+    keypressed := 1
+    goto %gespiegelt_k%
   }
-  else goto neo_z   
 *VK55SC016:: ; u (h)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_h
-    else {
-      keypressed := 1
-      goto %gespiegelt_h%
-    }
-  } else goto neo_u   
+  if !einHandNeo or !spacepressed
+    goto neo_h
+  else {
+    keypressed := 1
+    goto %gespiegelt_h%
+  }
 *VK49SC017:: ; i (g)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_g
-    else {
-      keypressed := 1
-      goto %gespiegelt_g%
-    }
+  if !einHandNeo or !spacepressed
+    goto neo_g
+  else {
+    keypressed := 1
+    goto %gespiegelt_g%
   }
-  else goto neo_i   
 *VK4FSC018:: ; o (f)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_f
-    else {
-      keypressed := 1
-      goto %gespiegelt_f%
-    }
+  if !einHandNeo or !spacepressed
+    goto neo_f
+  else {
+    keypressed := 1
+    goto %gespiegelt_f%
   }
-  else goto neo_o   
 *VK50SC019:: ; p (q)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_q
-    else {
-      keypressed := 1
-      goto %gespiegelt_q%
-    }
+  if !einHandNeo or !spacepressed
+    goto neo_q
+  else {
+    keypressed := 1
+    goto %gespiegelt_q%
   }
-  else goto neo_p   
 *VKBASC01A:: ; ü (ß)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_sz
-    else {
-      keypressed := 1
-      goto %gespiegelt_sz%
-    }
-  } else goto neo_ü   
+  if !einHandNeo or !spacepressed
+    goto neo_sz
+  else {
+    keypressed := 1
+    goto %gespiegelt_sz%
+  }
 *VKBBSC01B:: ; + (tot3)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_tot3
-    else {
-      keypressed := 1
-      goto %gespiegelt_tot3%
-    }
+  if !einHandNeo or !spacepressed
+    goto neo_tot3
+  else {
+    keypressed := 1
+    goto %gespiegelt_tot3%
   }
 
 ; Reihe 3
 *VK41SC01E:: ; a (u)
-  if !ahkTreiberKombi 
-    goto neo_u
-  else goto neo_a   
+  goto neo_u
 *VK53SC01F:: ; s (i)
-  if !ahkTreiberKombi 
-    goto neo_i
-  else goto neo_s   
+  goto neo_i
 *VK44SC020:: ; d (a)
-  if !ahkTreiberKombi 
-    goto neo_a
-  else goto neo_d   
+  goto neo_a
 *VK46SC021:: ; f (e)
-  if !ahkTreiberKombi 
-    goto neo_e
-  else goto neo_f   
+  goto neo_e
 *VK47SC022:: ; g (o)
-  if !ahkTreiberKombi 
-    goto neo_o
-  else goto neo_g   
+  goto neo_o
 *VK48SC023:: ; h (s)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_s
-    else {
-      keypressed := 1
-      goto %gespiegelt_s%
-    }
-  } else goto neo_h   
+  if !einHandNeo or !spacepressed
+    goto neo_s
+  else {
+    keypressed := 1
+    goto %gespiegelt_s%
+  }
 *VK4ASC024:: ; j (n)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_n
-    else {
-      keypressed := 1
-      goto %gespiegelt_n%
-    }
-  } else goto neo_j   
+  if !einHandNeo or !spacepressed
+    goto neo_n
+  else {
+    keypressed := 1
+    goto %gespiegelt_n%
+  }
 *VK4BSC025:: ; k (r)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_r
-    else {
-      keypressed := 1
-      goto %gespiegelt_r%
-    }
-  } else goto neo_k   
+  if !einHandNeo or !spacepressed
+    goto neo_r
+  else {
+    keypressed := 1
+    goto %gespiegelt_r%
+  }
 *VK4CSC026:: ; l (t)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_t
-    else {
-      keypressed := 1
-      goto %gespiegelt_t%
-    }
-  } else goto neo_l   
+  if !einHandNeo or !spacepressed
+    goto neo_t
+  else {
+    keypressed := 1
+    goto %gespiegelt_t%
+  }
 *VKC0SC027:: ; ö (d)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_d
-    else {
-      keypressed := 1
-      goto %gespiegelt_d%
-    }
-  } else goto neo_ö   
+  if !einHandNeo or !spacepressed
+    goto neo_d
+  else {
+    keypressed := 1
+    goto %gespiegelt_d%
+  }
 *VKDESC028:: ; ä (y)
-  if !ahkTreiberKombi 
     goto neo_y
-  else goto neo_ä
 
 ; Reihe 4
 *VK59SC02C:: ; y (ü)
-  if !ahkTreiberKombi 
-    goto neo_ü
-  else goto neo_y   
+  goto neo_ü
 *VK58SC02D:: ; x (ö)
-  if !ahkTreiberKombi 
-    goto neo_ö
-  else goto neo_x   
-*VK43SC02E:: ; c (ä)
-  if !ahkTreiberKombi 
-    goto neo_ä
-  else goto neo_c
+  goto neo_ö
+*VK43SC02E:: ; c (ä)  
+  goto neo_ä
 *VK56SC02F:: ; v (p)
-  if !ahkTreiberKombi 
-    goto neo_p
-  else goto neo_v
+  goto neo_p
 *VK42SC030:: ; b (z)
-  if !ahkTreiberKombi 
-    goto neo_z
-  else goto neo_b
+  goto neo_z
 *VK4ESC031:: ; n (b)
-  if !ahkTreiberKombi {
-    if(!(einHandNeo) or !(spacepressed))
-      goto neo_b
-    else {
-      keypressed := 1
-      goto %gespiegelt_b%
-    }
-  } else goto neo_n
+  if !einHandNeo or !spacepressed
+    goto neo_b
+  else {
+    keypressed := 1
+    goto %gespiegelt_b%
+  }
 *VK4DSC032:: ; m (m)
-     if(!(einHandNeo) or !(spacepressed))
-       goto neo_m
-     else {
-       keypressed := 1
-       goto %gespiegelt_m%
-      }
+  if !einHandNeo or !spacepressed
+    goto neo_m
+  else {
+    keypressed := 1
+    goto %gespiegelt_m%
+  }
 *VKBCSC033:: ; , (,)
-     if(!(einHandNeo) or !(spacepressed))
-       goto neo_komma
-     else {
-       keypressed := 1
-       goto %gespiegelt_komma%
-     }
+  if !einHandNeo or !spacepressed
+    goto neo_komma
+  else {
+    keypressed := 1
+    goto %gespiegelt_komma%
+  }
 *VKBESC034:: ; . (.)
-     if(!(einHandNeo) or !(spacepressed))
-       goto neo_punkt
-     else {
-       keypressed := 1
-       goto %gespiegelt_punkt%
-     }
+  if !einHandNeo or !spacepressed
+    goto neo_punkt
+  else {
+    keypressed := 1
+    goto %gespiegelt_punkt%
+  }
 *VKBDSC035:: ; - (j)
-  if !ahkTreiberKombi {
-     if(!(einHandNeo) or !(spacepressed))
-       goto neo_j
-     else {
-       keypressed := 1
-       goto %gespiegelt_j%
-     }
-  } else goto neo_strich
+  if !einHandNeo or !spacepressed
+    goto neo_j
+  else {
+    keypressed := 1
+    goto %gespiegelt_j%
+  }
 
 ; Numpad
 *VK90SC145::goto neo_NumLock
@@ -775,26 +754,22 @@ VK09SC00F::goto neo_tab
 neo_tot1:
   noCaps=1
   EbeneAktualisieren()
-  if (Ebene=1) {
+  if (Ebene=1) and !CheckDeadUni("c1",0x0302) {
      deadUni(0x02C6) ; Zirkumflex, tot
      DeadKey = c1
-  } else if (Ebene = 2) {
+  } else if (Ebene = 2) and !CheckDeadUni("c2",0x030C) {
      deadUni(0x02C7) ; Caron, tot
      DeadKey = c2
-  } else if (Ebene = 3) {
+  } else if (Ebene = 3) and !CheckDeadUni("c3",0x0306) {
     deadUni(0x02D8) ; Brevis, tot
     DeadKey = c3
-  } else if Ebene7
-    SendUnicodeChar(0x0302) ; Verbindungszeichen Zirkumflex
-  else if Ebene8
-    SendUnicodeChar(0x0306) ; Verbindungszeichen Brevis
-  else if (Ebene = 4) {
+  } else if (Ebene = 4) {
     deadUni(0x00B7) ; Mittenpunkt, tot
     DeadKey = c4
-  } else if (Ebene = 5) {
+  } else if (Ebene = 5) and !CheckDeadUni("c5",0x0335) {
     deadUni(0x002D) ; Querstrich, tot
     DeadKey = c5
-  } else if (Ebene = 6) {
+  } else if (Ebene = 6) and !CheckDeadUni("c6",0x0323) {
     deadUni(0x002E) ; Punkt drunter (Colon), tot
     DeadKey = c6
   } CompKey := PriorCompKey
@@ -809,11 +784,11 @@ neo_1:
       or CheckComp3Uni("r_1",0x217A) ; Römisch xi
       or CheckComp3Uni("R_1",0x216A)) ; Römisch XI
       outputChar(1,"°")
-    if !(checkComp(1))
-    if (PriorCompKey == "r")
-      CompKey := "r_1"
-    else if (PriorCompkey == "R")
-      CompKey := "R_1"
+    if !checkComp(1)
+      if (PriorCompKey == "r")
+        CompKey := "r_1"
+      else if (PriorCompkey == "R")
+        CompKey := "R_1"
   } else if (Ebene = 3)
     SendUnicodeChar(0x00B9) ; Hochgestellte 1
   else if (Ebene = 4)
@@ -1036,22 +1011,22 @@ return
 neo_tot2:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) {
+  if (Ebene = 1) and !CheckDeadUni("a1",0x0301) {
     deadAsc("{´}{space}") ; Akut, tot
     DeadKey := "a1"
-  } else if (Ebene = 2) {
+  } else if (Ebene = 2) !CheckDeadUni("a2",0x0300) {
     deadAsc("``{space}") ; Gravis, tot
     DeadKey := "a2"
-  } else if (Ebene = 3) {
+  } else if (Ebene = 3) !CheckDeadUni("a3",0x0327) {
     deadAsc("¸") ; Cedilla, tot
     DeadKey := "a3"
-  } else if (Ebene = 4) {
+  } else if (Ebene = 4) !CheckDeadUni("a4",0x0307) {
     deadUni(0x02D9) ; Punkt oben
     DeadKey := "a4"
-  } else if (Ebene = 5) {
+  } else if (Ebene = 5) !CheckDeadUni("a5",0x0328) {
     deadUni(0x02DB) ; Ogonek
     DeadKey := "a5"
-  } else if (Ebene = 6) {
+  } else if (Ebene = 6) !CheckDeadUni("a6",0x030A) {
     deadUni(0x02DA) ; Ring oben
     DeadKey := "a6"
   } CompKey := PriorCompKey
@@ -1088,7 +1063,7 @@ neo_v:
   else if (Ebene = 4) and (!lernModus or lernModus_neo_Backspace)
       Send {blind}{Backspace}
   else if (Ebene = 6)
-    SendUnicodeChar(0x2259) ; estimates
+    SendUnicodeChar(0x2259) ; estimates/entspricht
 return
 
 
@@ -1261,24 +1236,22 @@ return
 neo_tot3:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) {
+  if (Ebene = 1) !CheckDeadUni("t1",0x0303) {
     deadUni(0x02DC) ; Tilde, tot
     DeadKey := "t1"
-  } else if (Ebene = 2) {
+  } else if (Ebene = 2) !CheckDeadUni("t2",0x0304) {
     deadUni(0x00AF) ; Macron, tot
     DeadKey := "t2"
-  } else if (Ebene = 3) {
+  } else if (Ebene = 3) !CheckDeadUni("t3",0x0308) {
     deadUni(0x00A8) ; Diärese
     DeadKey := "t3"
-  } else if Ebene7
-    SendUnicodeChar(0x0308) ; Verbindungszeichen Diärese
-  else if (Ebene = 4) {
+  } else if (Ebene = 4) !CheckDeadUni("t4",0x0337) {
     deadUni(0x002F) ; Schrägstrich, tot
     DeadKey := "t4"
-  } else if (Ebene = 5) {
+  } else if (Ebene = 5) !CheckDeadUni("t5",0x030B) {
     deadUni(0x02DD) ; Doppelakut
     DeadKey := "t5"
-  } else if (Ebene = 6) {
+  } else if (Ebene = 6) !CheckDeadUni("t6",0x0326) {
     deadUni(0x02CF) ; Komma drunter, tot
     DeadKey := "t6"
   }
@@ -1624,7 +1597,9 @@ neo_b:
   if (Ebene12 and !(CheckDeadUni12("a4",0x1E03,0x1E02)))
     OutputChar("b","B")
   else if (Ebene = 3)
-    send {blind}{+}
+    if isMod2Locked
+      send {blind}{Shift Up}{+}
+    else send {blind}{+}
   else if (Ebene = 4)
     send {blind}:
   else if (Ebene = 5)
@@ -1655,10 +1630,7 @@ neo_komma:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1)
-    if isMod2Locked
-      send {blind}{Shift down} , {Shift up}
-    else
-      send {blind},
+    send {blind},
   else if (Ebene = 2)
      SendUnicodeChar(0x22EE) ; vertikale ellipse
   else if (Ebene = 3)
@@ -1676,10 +1648,7 @@ neo_punkt:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1)
-    if isMod2Locked
-      send {blind}{Shift down} . {Shift up}
-    else
-      send {blind}.
+    send {blind}.
   else if (Ebene = 2)
     SendUnicodeChar(0x2026) ; ellipse
   else if (Ebene = 3)
@@ -1697,13 +1666,13 @@ return
 neo_j:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("c1",0x0135,0x0134)
-            or CheckDeadUni12("c2",0x01F0,"")
-            or CheckCompUni("i",0x0133) ; ij
-            or CheckCompUni("l",0x01C9) ; lj
-            or CheckCompUni("n",0x01CC) ; nj
-            or CheckCompUni("I",0x0132) ; IJ
-            or CheckCompUni12("L",0x01C8,0x01C7) ; Lj/LJ
-            or CheckCompUni12("N",0x01CB,0x01CA))) ; Nj/NJ
+                 or CheckDeadUni12("c2",0x01F0,"")
+                 or CheckCompUni("i",0x0133) ; ij
+                 or CheckCompUni("l",0x01C9) ; lj
+                 or CheckCompUni("n",0x01CC) ; nj
+                 or CheckCompUni("I",0x0132) ; IJ
+                 or CheckCompUni12("L",0x01C8,0x01C7) ; Lj/LJ
+                 or CheckCompUni12("N",0x01CB,0x01CA))) ; Nj/NJ
     OutputChar("j","J")
   else if (Ebene = 3)
     send {blind}`;
@@ -1725,10 +1694,6 @@ neo_NumLock:
   EbeneAktualisieren()
   if (Ebene = 1)
     send `=
-  if (Ebene = 2) { ; Funktioniert nicht
-    SetNumLockState
-    send {NumLock}
-  }
   if (Ebene = 3)
     SendUnicodeChar(0x2248) ; Fast gleich
   if (Ebene = 4)
@@ -1782,21 +1747,14 @@ return
 neo_Numpad7:
   EbeneAktualisieren()
   if (Ebene = 1) {
-    if NumLock
-      send {blind}{Numpad7}
-    else
-      send {blind) {Shift up}{Numpad7}
-    if (PriorDeadKey = "comp")
-      CompKey := "7"
+    send {blind}{Numpad7}
+    checkComp(7)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2020) ; Kreuz
   else if (Ebene = 3)
     SendUnicodeChar(0x2195) ; Hoch-Runter-Pfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadHome}
-    else
-      send {blind}{NumpadHome}
+    send {blind}{NumpadHome}
 return
 
 neo_Numpad8:
@@ -1805,62 +1763,41 @@ neo_Numpad8:
                      or CheckCompUni("3",0x215C) ; 3/8
                      or CheckCompUni("5",0x215D) ; 5/8
                      or CheckCompUni("7",0x215E))) { ; 7/8
-    if NumLock
-      send {blind}{Numpad8}
-    else
-      send {blind) {Shift up}{Numpad8}
-    if (PriorDeadKey = "comp")
-      CompKey := "8"
+    send {blind}{Numpad8}
+    checkComp(8)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2229) ; Durchschnitt
   else if (Ebene = 3)
     SendUnicodeChar(0x2191) ; Hochpfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadUp}
-    else
-      send {blind}{NumpadUp}
+    send {blind}{NumpadUp}
 return
 
 neo_Numpad9:
   EbeneAktualisieren()
   if (Ebene = 1) {
-    if NumLock
-      send {blind}{Numpad9}
-    else
-      send {blind) {Shift up}{Numpad9}
-    if (PriorDeadKey = "comp")
-      CompKey := "9"
+    send {blind}{Numpad9}
+    checkComp(9)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2297) ; Tensorprodukt / Vektor in die Ebene zeigend
   else if (Ebene = 3)
     SendUnicodeChar(0x220D) ; Kleines umgekehrtes Elementzeichen
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadPgUp}
-    else
-      send {blind}{NumpadPgUp}
+    send {blind}{NumpadPgUp}
 return
 
 neo_Numpad4:
   EbeneAktualisieren()
   if ((Ebene = 1) and !(CheckCompUni("1",0x00BC) ; 1/4
                      or CheckCompUni("3",0x00BE))) { ; 3/4
-    if NumLock
-      send {blind}{Numpad4}
-    else
-      send {blind) {Shift up}{Numpad4}
-    if (PriorDeadKey = "comp")
-      CompKey := "4"
+    send {blind}{Numpad4}
+    checkComp(4)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2282) ; Teilmenge
   else if (Ebene = 3)
     SendUnicodeChar(0x2190) ; Linkspfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadLeft}
-    else
-      send {blind}{NumpadLeft}
+    send {blind}{NumpadLeft}
 return
 
 neo_Numpad5:
@@ -1869,141 +1806,93 @@ neo_Numpad5:
                      or CheckCompUni("2",0x2156) ; 2/5
                      or CheckCompUni("3",0x2157) ; 3/5
                      or CheckCompUni("4",0x2158))) { ; 4/5
-    if NumLock
-      send {blind}{Numpad5}
-    else
-      send {blind) {Shift up}{Numpad5}
-    if (PriorDeadKey = "comp")
-      CompKey := "5"
-  } else if (Ebene = 3)
-    SendUnicodeChar(0x221E) ; Unendlich
-  else if (Ebene = 2)
+    send {blind}{Numpad5}
+    checkComp(5)
+  } else if (Ebene = 2)
     SendUnicodeChar(0x20AC) ; Euro
+  else if (Ebene = 3)
+    SendUnicodeChar(0x221E) ; Unendlich
   else if (Ebene = 4) ; Beg
-    if NumLock
-      send {NumPad5}
-    else
-      send {Shift}{Numpad5}
+      send {blind}{NumPadClear}
 return
 
 neo_Numpad6:
   EbeneAktualisieren()
   if ((Ebene = 1) and !(CheckCompUni("1",0x2159) ; 1/6
                      or CheckCompUni("5",0x215a))) { ; 5/6
-    if NumLock
-      send {blind}{Numpad6}
-    else
-      send {blind) {Shift up}{Numpad6}
-    if (PriorDeadKey = "comp")
-      CompKey := "6"
+    send {blind}{Numpad6}
+    checkComp(6)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2283) ; Obermenge
   else if (Ebene = 3)
     SendUnicodeChar(0x2192) ; Rechtspfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadRight}
-    else
-      send {blind}{NumpadRight}
+    send {blind}{NumpadRight}
 return
 
 neo_Numpad1:
   EbeneAktualisieren()
   if (Ebene = 1) {
-    if NumLock
-      send {blind}{Numpad1}
-    else
-      send {blind) {Shift up}{Numpad1}
-    if (PriorDeadKey = "comp")
-      CompKey := "1"
+    send {blind}{Numpad1}
+    checkComp(1)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2714) ; Häkchen
   else if (Ebene = 3)
     SendUnicodeChar(0x2194) ; Links-Rechts-Pfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadEnd}
-    else
-      send {blind}{NumpadEnd}
+    send {blind}{NumpadEnd}
 return
 
 neo_Numpad2:
   EbeneAktualisieren()
   if ((Ebene = 1) and !(CheckCompUni("1",0x00BD))) { ; 1/2
-    if NumLock
-      send {blind}{Numpad2}
-    else
-      send {blind) {Shift up}{Numpad2}
-    if (PriorDeadKey = "comp")
-      CompKey := "2"
+    send {blind}{Numpad2}
+    checkComp(2)
   } else if (Ebene = 2)
     SendUnicodeChar(0x222A) ; Vereinigung
   else if (Ebene = 3)
     SendUnicodeChar(0x2192) ; Untenpfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadDown}
-    else
-      send {blind}{NumpadDown}
+    send {blind}{NumpadDown}
 return
 
 neo_Numpad3:
   EbeneAktualisieren()
   if ((Ebene = 1) and !(CheckCompUni("1",0x2153) ; 1/3
                      or CheckCompUni("5",0x2154))) { ; 2/3
-    if NumLock
-      send {blind}{Numpad3}
-    else
-      send {blind) {Shift up}{Numpad3}
-    if (PriorDeadKey = "comp")
-      CompKey := "3"
+    send {blind}{Numpad3}
+    checkComp(2)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2718) ; Kreuzchen
   else if (Ebene = 3)
     SendUnicodeChar(0x2192) ; Rechtspfeil
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadPgDn}
-    else
-      send {blind}{NumpadPgDn}
+    send {blind}{NumpadPgDn}
 return
 
 neo_Numpad0:
   EbeneAktualisieren()
   if (Ebene = 1) {
-    if NumLock
-      send {blind}{Numpad0}
-    else
-      send {blind) {Shift up}{Numpad0}
-    if (PriorDeadKey = "comp")
-      CompKey := "0"
+    send {blind}{Numpad0}
+    checkComp(0)
   } else if (Ebene = 2)
     SendUnicodeChar(0x2030) ; Promille
   else if (Ebene = 3)
     SendUnicodeChar(0x0025) ; Prozent
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadIns}
-    else
-      send {blind}{NumpadIns}
+    send {blind}{NumpadIns}
 return
 
 neo_NumpadDot:
   EbeneAktualisieren()
-  if (Ebene = 1) {
-    if NumLock
-      send {blind}{NumpadDot}
-    else	
-      send {blind) {Shift up}{NumpadDot}
-  } else if (Ebene = 2)
+  if (Ebene = 1)
+    send {blind}{NumpadDot}
+  else if (Ebene = 2)
     send `,
   else if (Ebene = 3)
     send {blind}.
   else if (Ebene = 4)
-    if NumLock
-      send {blind}{Shift up}{NumpadDel}
-    else
-      send {blind}{NumpadDel}
+    send {blind}{NumpadDel}
 return
 
 /*
@@ -2013,41 +1902,35 @@ return
 */
 
 *space::
-  if ((einHandNeo))
-   spacepressed := 1
-  else
-   goto neo_SpaceUp
+  if einHandNeo
+    spacepressed := 1
+  else goto neo_SpaceUp
 return
 
 *space up::
-  if ((einHandNeo)) {
-    if ((keypressed))
-    {
+  if einHandNeo
+    if keypressed {
      keypressed := 0
      spacepressed := 0
-    } else
-    {
-      goto neo_SpaceUp
-    }
-  } else
-    {} ;do nothing
-return
+    } else goto neo_SpaceUp
+  return
 
 neo_SpaceUp:
-    EbeneAktualisieren()
-    if ((Ebene = 1) and !(CheckComp3Uni("r_1",0x2170) ; Römisch i
-                    or CheckComp3Uni("R_1",0x2160))) ; Römisch I
-      Send {blind}{Space}
-    else if ((Ebene = 2) or (Ebene = 3))
-      Send {blind}{Space}
-    else if (Ebene = 4 and !(CheckDeadUni("c1",0x2070)
-                       or CheckDeadUni("c5",0x2080)))
-      Send {blind}{NumPad0}
-    else if (Ebene = 5)
-      SendUnicodeChar(0x00A0) ; geschütztes Leerzeichen
-    else if (Ebene = 6)
-      SendUnicodeChar(0x202F) ; schmales geschütztes Leerzeichen
-    DeadKey := "" CompKey := ""
+  EbeneAktualisieren()
+  if (Ebene = 1) and !(CheckComp3Uni("r_1",0x2170) ; Römisch i
+                    or CheckComp3Uni("R_1",0x2160)) ; Römisch I
+    Send {blind}{Space}
+  else if (Ebene = 2) or (Ebene = 3)
+    Send {blind}{Space}
+  else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2070)
+                        or CheckDeadUni("c5",0x2080)))
+    Send {blind}{NumPad0}
+  else if (Ebene = 5)
+    SendUnicodeChar(0x00A0) ; geschütztes Leerzeichen
+  else if (Ebene = 6)
+    SendUnicodeChar(0x202F) ; schmales geschütztes Leerzeichen
+  DeadKey := ""
+  CompKey := ""
   spacepressed := 0
   keypressed := 0
 return
@@ -2059,24 +1942,26 @@ return
 */
 
 *Enter::
-  if (not(lernModus) or lernModus_std_Return) {
+  if !lernModus or lernModus_std_Return {
     send {Blind}{Enter}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *Backspace::
-  if (not(lernModus) or lernModus_std_Backspace) {
+  if !lernModus or lernModus_std_Backspace {
     send {Blind}{Backspace}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *Del::
-  if (not(lernModus) or lernModus_std_Entf)
+  if !lernModus or lernModus_std_Entf
     send {Blind}{Del}
 return
 
 *Ins::
-  if (not(lernModus) or lernModus_std_Einf)
+  if !lernModus or lernModus_std_Einf
     send {Blind}{Ins}
 return
 
@@ -2095,51 +1980,59 @@ neo_tab:
   } return
 
 *Home::
-  if (not(lernModus) or lernModus_std_Pos1) {
+  if !lernModus or lernModus_std_Pos1 {
     send {Blind}{Home}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *End::
-  if (not(lernModus) or lernModus_std_Ende) {
+  if !lernModus or lernModus_std_Ende {
     send {Blind}{End}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *PgUp::
-  if (not(lernModus) or lernModus_std_PgUp) {
+  if !lernModus or lernModus_std_PgUp {
     send {Blind}{PgUp}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *PgDn::
-  if (not(lernModus) or lernModus_std_PgDn) {
+  if !lernModus or lernModus_std_PgDn {
     send {Blind}{PgDn}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *Up::
-  if (not(lernModus) or lernModus_std_Hoch) {
+  if !lernModus or lernModus_std_Hoch {
     send {Blind}{Up}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *Down::
-  if (not(lernModus) or lernModus_std_Runter) {
+  if !lernModus or lernModus_std_Runter {
     send {Blind}{Down}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *Left::
-  if (not(lernModus) or lernModus_std_Links) {
+  if !lernModus or lernModus_std_Links {
     send {Blind}{Left}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 
 *Right::
-  if (not(lernModus) or lernModus_std_Rechts) {
+  if !lernModus or lernModus_std_Rechts {
     send {Blind}{Right}
-    DeadKey := "" CompKey := ""
+    DeadKey := ""
+    CompKey := ""
   } return
 /* 
    ------------------------------------------------------
@@ -2163,10 +2056,9 @@ neo_tab:
    ------------------------------------------------------
 */
 
-KeyboardLED(LEDvalue, Cmd){ ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cmd = on/off/switch
+KeyboardLED(LEDvalue, Cmd) { ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cmd = on/off/switch
   Static h_device
-  If ! h_device ; initialise
-  {
+  If !(h_device) { ; initialise
     device=\Device\KeyBoardClass0
     SetUnicodeStrLED(fn,device) 
     h_device:=NtCreateFileLED(fn,0+0x00000100+0x00000080+0x00100000,1,1,0x00000040+0x00000020,0)
@@ -2178,15 +2070,15 @@ KeyboardLED(LEDvalue, Cmd){ ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cm
    KeyLED:=LEDvalue
   If Cmd=on ;forces all choosen LED's to ON (LEDvalue= 0 ->LED's according to keystate)
    KeyLED:=LEDvalue | (GetKeyState("ScrollLock", "T") + 2*GetKeyState("NumLock", "T") + 4*GetKeyState("CapsLock", "T"))
-  If Cmd=off ;forces all choosen LED's to OFF (LEDvalue= 0 ->LED's according to keystate)
-    {
+  If (Cmd=off) { ;forces all choosen LED's to OFF (LEDvalue= 0 ->LED's according to keystate)
     LEDvalue:=LEDvalue ^ 7
     KeyLED:=LEDvalue & (GetKeyState("ScrollLock","T") + 2*GetKeyState("NumLock","T") + 4*GetKeyState("CapsLock","T"))
-    }
+  }
   ; EncodeIntegerLED(KeyLED,1,&input,2) ;input bit pattern (KeyLED): bit 0 = scrolllock ;bit 1 = numlock ;bit 2 = capslock
-  input:=Chr(1) Chr(1) Chr(KeyLED)
-  input:=Chr(1)
-  input=
+  input := Chr(1) Chr(1) Chr(KeyLED)
+  input := Chr(1)
+  input =
+  ; ???
   success:=DllCall("DeviceIoControl"
     , "uint", h_device
     , "uint", CTL_CODE_LED( 0x0000000b     ; FILE_DEVICE_KEYBOARD
@@ -2201,8 +2093,8 @@ KeyboardLED(LEDvalue, Cmd){ ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cm
     , "uint", 0 )
 }
 
-CTL_CODE_LED(p_device_type,p_function,p_method,p_access ){
-  Return, ( p_device_type << 16 ) | ( p_access << 14 ) | ( p_function << 2 ) | p_method
+CTL_CODE_LED(p_device_type,p_function,p_method,p_access ) {
+  Return,( p_device_type << 16 ) | ( p_access << 14 ) | ( p_function << 2 ) | p_method
 }
 
 NtCreateFileLED(ByRef wfilename,desiredaccess,sharemode,createdist,flags,fattribs){ 
@@ -2221,14 +2113,14 @@ NtCreateFileLED(ByRef wfilename,desiredaccess,sharemode,createdist,flags,fattrib
   return ExtractIntegerLED(fh) 
 } 
 
-SetUnicodeStrLED(ByRef out, str_){ 
+SetUnicodeStrLED(ByRef out, str_) { 
   VarSetCapacity(st1, 8, 0) 
   InsertIntegerLED(0x530025, st1) 
   VarSetCapacity(out, (StrLen(str_)+1)*2, 0) 
   DllCall("wsprintfW", "str", out, "str", st1, "str", str_, "Cdecl UInt") 
 } 
 
-ExtractIntegerLED(ByRef pSource, pOffset = 0, pIsSigned = false, pSize = 4){
+ExtractIntegerLED(ByRef pSource, pOffset = 0, pIsSigned = false, pSize = 4) {
 ; pSource is a string (buffer) whose memory area contains a raw/binary integer at pOffset. 
 ; The caller should pass true for pSigned to interpret the result as signed vs. unsigned. 
 ; pSize is the size of PSource's integer in bytes (e.g. 4 bytes for a DWORD or Int). 
@@ -2242,7 +2134,7 @@ ExtractIntegerLED(ByRef pSource, pOffset = 0, pIsSigned = false, pSize = 4){
   return -(0xFFFFFFFF - result + 1) 
 } 
 
-InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4){ 
+InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4) { 
 ; The caller must ensure that pDest has sufficient capacity.  To preserve any existing contents in pDest, 
 ; only pSize number of bytes starting at pOffset are altered in it. 
   Loop %pSize%  ; Copy each byte in the integer into the structure as raw binary data. 
@@ -2351,7 +2243,7 @@ CheckCompUni12(d,val1,val2){
     if (Ebene = 1) and (val1 != "") {
       SendUnicodeChar(val1)
       return 1
-    }else if (Ebene = 2) and (val2 != "") {
+    } else if (Ebene = 2) and (val2 != "") {
       SendUnicodeChar(val2)
       return 1
     }
@@ -2438,55 +2330,55 @@ guiErstellt = 0
 alwaysOnTop = 1
 
 *F1::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch1
   else send {blind}{F1}
 return
 
 *F2::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch2
   else send {blind}{F2}
 return
 
 *F3::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch3
   else send {blind}{F3}
 return
 
 *F4::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch4
   else send {blind}{F4}
 return
 
 *F5::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch5
   else send {blind}{F5}
 return
 
 *F6::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch6
   else send {blind}{F6}
 return
 
 *F7::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Show
   else send {blind}{F7}
 return
 
 *F8::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
   else send {blind}{F8}
 return
 
 Switch1:
-  tImage:=ResourceFolder . "\ebene1.png"
+  tImage := ResourceFolder . "\ebene1.png"
   goto Switch
 Return
 
@@ -2516,84 +2408,72 @@ Switch6:
 Return
 
 Switch:
-  if (guiErstellt) 
-  {
-     if (Image = tImage)
-        goto Close
-     else
-     {
-       Image := tImage
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
+  if guiErstellt {
+    if (Image = tImage)
+       goto Close
+    else {
+      Image := tImage
+      SetTimer, Refresh
+    }
+  } else {
     Image := tImage
     goto Show    
   }
 Return
 
 Show:
-  if (guiErstellt) 
-  {
+  if guiErstellt {
      goto Close
-  }
-  else
-  {
-    if (Image = "") 
-    {
+  } else {
+    if (Image = "") {
       Image := ResourceFolder . "\ebene1.png"
     }     
     yPosition := A_ScreenHeight -270
-    Gui, Color, FFFFFF
-    Gui, Add, Button, xm+5 gSwitch1, F1
-    Gui, Add, Text, x+5, kleine Buchstaben
-    Gui, Add, Button, xm+5 gSwitch2, F2
-    Gui, Add, Text, x+5, große Buchstaben
-    Gui, Add, Button, xm+5 gSwitch3, F3
-    Gui, Add, Text, x+5, Satz-/Sonderzeichen
-    Gui, Add, Button, xm+5 gSwitch4, F4
-    Gui, Add, Text, x+5, Zahlen / Steuerung
-    Gui, Add, Button, xm+5 gSwitch5, F5
-    Gui, Add, Text, x+5, Sprachen
-    Gui, Add, Button, xm+5 gSwitch6, F6
-    Gui, Add, Text, x+5, Mathesymbole
-    Gui, Add, Button, xm+5 gShow, F7
-    Gui, Add, Text, x+5, An /
-    Gui, Add, Text, y+3, Aus
-    Gui, Add, Button, x+10 y+-30 gShow, F8
-    Gui, Add, Text, x+5, OnTop
-    Gui, Add, Picture,AltSubmit ys w564 h200 vPicture, %Image%
-    Gui, +AlwaysOnTop
-    Gui, Show, y%yposition% Autosize
-;    SetTimer, Refresh
+    Gui,Color,FFFFFF
+    Gui,Add,Button,xm+5 gSwitch1,F1
+    Gui,Add,Text,x+5,kleine Buchstaben
+    Gui,Add,Button,xm+5 gSwitch2,F2
+    Gui,Add,Text,x+5,große Buchstaben
+    Gui,Add,Button,xm+5 gSwitch3,F3
+    Gui,Add,Text,x+5,Satz-/Sonderzeichen
+    Gui,Add,Button,xm+5 gSwitch4,F4
+    Gui,Add,Text,x+5,Zahlen / Steuerung
+    Gui,Add,Button,xm+5 gSwitch5,F5
+    Gui,Add,Text,x+5,Sprachen
+    Gui,Add,Button,xm+5 gSwitch6,F6
+    Gui,Add,Text,x+5,Mathesymbole
+    Gui,Add,Button,xm+5 gShow,F7
+    Gui,Add,Text,x+5,An /
+    Gui,Add,Text,y+3,Aus
+    Gui,Add,Button,x+10 y+-30 gShow,F8
+    Gui,Add,Text,x+5,OnTop
+    Gui,Add,Picture,AltSubmit ys w564 h200 vPicture,%Image%
+    Gui,+AlwaysOnTop
+    Gui,Show,y%yposition% Autosize
+;    SetTimer,Refresh
     guiErstellt = 1
   } 
 Return
 
 Close:
   guiErstellt = 0
-  Gui, Destroy
+  Gui,Destroy
 Return
 
 Refresh:
-   If (Image != OldImage)
-   {
-      GuiControl, , Picture, %Image%
-      OldImage := Image
-   }
+  If (Image != OldImage) {
+    GuiControl,,Picture,%Image%
+    OldImage := Image
+  }
 Return
 
 ToggleAlwaysOnTop:
-    if (alwaysOnTop)
-    {
-      Gui, -AlwaysOnTop
-      alwaysOnTop = 0    
-    }
-    else
-    {
-      Gui, +AlwaysOnTop
-      alwaysOnTop = 1
-    }
+  if alwaysOnTop {
+    Gui, -AlwaysOnTop
+    alwaysOnTop = 0    
+  } else {
+    Gui, +AlwaysOnTop
+    alwaysOnTop = 1
+  }
 Return
 

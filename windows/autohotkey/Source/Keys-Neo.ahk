@@ -7,26 +7,22 @@
 neo_tot1:
   noCaps=1
   EbeneAktualisieren()
-  if (Ebene=1) {
+  if (Ebene=1) and !CheckDeadUni("c1",0x0302) {
      deadUni(0x02C6) ; Zirkumflex, tot
      DeadKey = c1
-  } else if (Ebene = 2) {
+  } else if (Ebene = 2) and !CheckDeadUni("c2",0x030C) {
      deadUni(0x02C7) ; Caron, tot
      DeadKey = c2
-  } else if (Ebene = 3) {
+  } else if (Ebene = 3) and !CheckDeadUni("c3",0x0306) {
     deadUni(0x02D8) ; Brevis, tot
     DeadKey = c3
-  } else if Ebene7
-    SendUnicodeChar(0x0302) ; Verbindungszeichen Zirkumflex
-  else if Ebene8
-    SendUnicodeChar(0x0306) ; Verbindungszeichen Brevis
-  else if (Ebene = 4) {
+  } else if (Ebene = 4) {
     deadUni(0x00B7) ; Mittenpunkt, tot
     DeadKey = c4
-  } else if (Ebene = 5) {
+  } else if (Ebene = 5) and !CheckDeadUni("c5",0x0335) {
     deadUni(0x002D) ; Querstrich, tot
     DeadKey = c5
-  } else if (Ebene = 6) {
+  } else if (Ebene = 6) and !CheckDeadUni("c6",0x0323) {
     deadUni(0x002E) ; Punkt drunter (Colon), tot
     DeadKey = c6
   } CompKey := PriorCompKey
@@ -268,22 +264,22 @@ return
 neo_tot2:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) {
+  if (Ebene = 1) and !CheckDeadUni("a1",0x0301) {
     deadAsc("{´}{space}") ; Akut, tot
     DeadKey := "a1"
-  } else if (Ebene = 2) {
+  } else if (Ebene = 2) !CheckDeadUni("a2",0x0300) {
     deadAsc("``{space}") ; Gravis, tot
     DeadKey := "a2"
-  } else if (Ebene = 3) {
+  } else if (Ebene = 3) !CheckDeadUni("a3",0x0327) {
     deadAsc("¸") ; Cedilla, tot
     DeadKey := "a3"
-  } else if (Ebene = 4) {
+  } else if (Ebene = 4) !CheckDeadUni("a4",0x0307) {
     deadUni(0x02D9) ; Punkt oben
     DeadKey := "a4"
-  } else if (Ebene = 5) {
+  } else if (Ebene = 5) !CheckDeadUni("a5",0x0328) {
     deadUni(0x02DB) ; Ogonek
     DeadKey := "a5"
-  } else if (Ebene = 6) {
+  } else if (Ebene = 6) !CheckDeadUni("a6",0x030A) {
     deadUni(0x02DA) ; Ring oben
     DeadKey := "a6"
   } CompKey := PriorCompKey
@@ -493,24 +489,22 @@ return
 neo_tot3:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) {
+  if (Ebene = 1) !CheckDeadUni("t1",0x0303) {
     deadUni(0x02DC) ; Tilde, tot
     DeadKey := "t1"
-  } else if (Ebene = 2) {
+  } else if (Ebene = 2) !CheckDeadUni("t2",0x0304) {
     deadUni(0x00AF) ; Macron, tot
     DeadKey := "t2"
-  } else if (Ebene = 3) {
+  } else if (Ebene = 3) !CheckDeadUni("t3",0x0308) {
     deadUni(0x00A8) ; Diärese
     DeadKey := "t3"
-  } else if Ebene7
-    SendUnicodeChar(0x0308) ; Verbindungszeichen Diärese
-  else if (Ebene = 4) {
+  } else if (Ebene = 4) !CheckDeadUni("t4",0x0337) {
     deadUni(0x002F) ; Schrägstrich, tot
     DeadKey := "t4"
-  } else if (Ebene = 5) {
+  } else if (Ebene = 5) !CheckDeadUni("t5",0x030B) {
     deadUni(0x02DD) ; Doppelakut
     DeadKey := "t5"
-  } else if (Ebene = 6) {
+  } else if (Ebene = 6) !CheckDeadUni("t6",0x0326) {
     deadUni(0x02CF) ; Komma drunter, tot
     DeadKey := "t6"
   }
@@ -856,7 +850,9 @@ neo_b:
   if (Ebene12 and !(CheckDeadUni12("a4",0x1E03,0x1E02)))
     OutputChar("b","B")
   else if (Ebene = 3)
-    send {blind}{+}
+    if isMod2Locked
+      send {blind}{Shift Up}{+}
+    else send {blind}{+}
   else if (Ebene = 4)
     send {blind}:
   else if (Ebene = 5)
