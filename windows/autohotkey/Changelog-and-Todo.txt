@@ -24,6 +24,9 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 812 (von Martin Roppelt)
+- Überflüssigen Code entfernt.
+- Code gestrafft.
 Revision 810 (von Martin Roppelt)
 - DeadCompose implementiert, uncomp…-Methoden gelöscht, »return 0«-Zeilen entfernt (wird sowieso gemacht).
 - checkComp ausgebessert: »global« hatte gefehlt.

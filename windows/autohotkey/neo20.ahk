@@ -261,7 +261,7 @@ Suspend, Permit
   else send {blind}{pause}
 return
 
-^,::lernModus := not(lernModus)
+^,::lernModus := !lernModus
 
 ^.::einHandNeo := !einHandNeo
 

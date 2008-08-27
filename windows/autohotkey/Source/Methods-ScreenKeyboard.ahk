@@ -8,55 +8,55 @@ guiErstellt = 0
 alwaysOnTop = 1
 
 *F1::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch1
   else send {blind}{F1}
 return
 
 *F2::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch2
   else send {blind}{F2}
 return
 
 *F3::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch3
   else send {blind}{F3}
 return
 
 *F4::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch4
   else send {blind}{F4}
 return
 
 *F5::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch5
   else send {blind}{F5}
 return
 
 *F6::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Switch6
   else send {blind}{F6}
 return
 
 *F7::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto Show
   else send {blind}{F7}
 return
 
 *F8::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if (isMod4Pressed()&&zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
   else send {blind}{F8}
 return
 
 Switch1:
-  tImage:=ResourceFolder . "\ebene1.png"
+  tImage := ResourceFolder . "\ebene1.png"
   goto Switch
 Return
 
@@ -86,83 +86,71 @@ Switch6:
 Return
 
 Switch:
-  if (guiErstellt) 
-  {
-     if (Image = tImage)
-        goto Close
-     else
-     {
-       Image := tImage
-       SetTimer, Refresh
-     }
-  }
-  else 
-  {
+  if guiErstellt {
+    if (Image = tImage)
+       goto Close
+    else {
+      Image := tImage
+      SetTimer, Refresh
+    }
+  } else {
     Image := tImage
     goto Show    
   }
 Return
 
 Show:
-  if (guiErstellt) 
-  {
+  if guiErstellt {
      goto Close
-  }
-  else
-  {
-    if (Image = "") 
-    {
+  } else {
+    if (Image = "") {
       Image := ResourceFolder . "\ebene1.png"
     }     
     yPosition := A_ScreenHeight -270
-    Gui, Color, FFFFFF
-    Gui, Add, Button, xm+5 gSwitch1, F1
-    Gui, Add, Text, x+5, kleine Buchstaben
-    Gui, Add, Button, xm+5 gSwitch2, F2
-    Gui, Add, Text, x+5, groﬂe Buchstaben
-    Gui, Add, Button, xm+5 gSwitch3, F3
-    Gui, Add, Text, x+5, Satz-/Sonderzeichen
-    Gui, Add, Button, xm+5 gSwitch4, F4
-    Gui, Add, Text, x+5, Zahlen / Steuerung
-    Gui, Add, Button, xm+5 gSwitch5, F5
-    Gui, Add, Text, x+5, Sprachen
-    Gui, Add, Button, xm+5 gSwitch6, F6
-    Gui, Add, Text, x+5, Mathesymbole
-    Gui, Add, Button, xm+5 gShow, F7
-    Gui, Add, Text, x+5, An /
-    Gui, Add, Text, y+3, Aus
-    Gui, Add, Button, x+10 y+-30 gShow, F8
-    Gui, Add, Text, x+5, OnTop
-    Gui, Add, Picture,AltSubmit ys w564 h200 vPicture, %Image%
-    Gui, +AlwaysOnTop
-    Gui, Show, y%yposition% Autosize
-;    SetTimer, Refresh
+    Gui,Color,FFFFFF
+    Gui,Add,Button,xm+5 gSwitch1,F1
+    Gui,Add,Text,x+5,kleine Buchstaben
+    Gui,Add,Button,xm+5 gSwitch2,F2
+    Gui,Add,Text,x+5,groﬂe Buchstaben
+    Gui,Add,Button,xm+5 gSwitch3,F3
+    Gui,Add,Text,x+5,Satz-/Sonderzeichen
+    Gui,Add,Button,xm+5 gSwitch4,F4
+    Gui,Add,Text,x+5,Zahlen / Steuerung
+    Gui,Add,Button,xm+5 gSwitch5,F5
+    Gui,Add,Text,x+5,Sprachen
+    Gui,Add,Button,xm+5 gSwitch6,F6
+    Gui,Add,Text,x+5,Mathesymbole
+    Gui,Add,Button,xm+5 gShow,F7
+    Gui,Add,Text,x+5,An /
+    Gui,Add,Text,y+3,Aus
+    Gui,Add,Button,x+10 y+-30 gShow,F8
+    Gui,Add,Text,x+5,OnTop
+    Gui,Add,Picture,AltSubmit ys w564 h200 vPicture,%Image%
+    Gui,+AlwaysOnTop
+    Gui,Show,y%yposition% Autosize
+;    SetTimer,Refresh
     guiErstellt = 1
   } 
 Return
 
 Close:
   guiErstellt = 0
-  Gui, Destroy
+  Gui,Destroy
 Return
 
 Refresh:
-   If (Image != OldImage)
-   {
-      GuiControl, , Picture, %Image%
-      OldImage := Image
-   }
+  If (Image != OldImage) {
+    GuiControl,,Picture,%Image%
+    OldImage := Image
+  }
 Return
 
 ToggleAlwaysOnTop:
-    if (alwaysOnTop)
-    {
-      Gui, -AlwaysOnTop
-      alwaysOnTop = 0    
-    }
-    else
-    {
-      Gui, +AlwaysOnTop
-      alwaysOnTop = 1
-    }
+  if alwaysOnTop {
+    Gui, -AlwaysOnTop
+    alwaysOnTop = 0    
+  } else {
+    Gui, +AlwaysOnTop
+    alwaysOnTop = 1
+  }
 Return

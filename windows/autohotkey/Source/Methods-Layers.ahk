@@ -11,7 +11,7 @@
 isMod2Locked = 0
 VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
 VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
-  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P")) {
+  if GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P") {
     if isMod2Locked {
       isMod2Locked = 0
       KeyboardLED(4,"off")
@@ -23,6 +23,7 @@ VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
 return
 
 ;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
+;Auf Mod3+Mod3 liegt zusätzlich zu Mod3+Tab Compose
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
   if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")) {
@@ -40,7 +41,7 @@ return
 IsMod4Locked := 0
 *VKA5SC138::
 *VKE2SC056::
-  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P")) {
+  if GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P") {
     if IsMod4Locked {
       if zeigeLockBox
         MsgBox Mod4-Feststellung aufgebehoben!
