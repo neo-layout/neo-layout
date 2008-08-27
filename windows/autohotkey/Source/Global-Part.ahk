@@ -20,7 +20,7 @@ enable=Aktiviere %name%
 disable=Deaktiviere %name%
 #usehook on
 #singleinstance force
-#LTrim ; Quelltext kann eingerückt werden, 
+#LTrim ; Quelltext kann eingerückt werden
 Process,Priority,,High
 SendMode Input  
 
@@ -29,14 +29,14 @@ SendMode Input
 *****************
 */
 ; Setzt den Pfad zu einem temporären Verzeichnis
-EnvGet, WindowsEnvTempFolder, TEMP
+EnvGet,WindowsEnvTempFolder,TEMP
 ResourceFolder = %WindowsEnvTempFolder%\NEO2
-FileCreateDir, %ResourceFolder%
+FileCreateDir,%ResourceFolder%
 
 ; Setzt den Pfad zu den NEO-Anwendungsdateien
-EnvGet, WindowsEnvAppDataFolder, APPDATA
+EnvGet,WindowsEnvAppDataFolder,APPDATA
 ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
-FileCreateDir, %ApplicationFolder%
+FileCreateDir,%ApplicationFolder%
 ini = %ApplicationFolder%\NEO2.ini
 
 /*******************
@@ -45,7 +45,8 @@ ini = %ApplicationFolder%\NEO2.ini
 */
 ; Im folgenden gilt (soweit nicht anders angegeben) Ja = 1, Nein = 0:
 
-; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
+; Sollen die Bilder für die Bildschirmtastatur in die compilierte EXE-Datei miteingebunden werden? 
+; (Nachteil: grössere Dateigrösse, Vorteil: Referenz für Anfänger stets einfach verfügbar)
 bildschirmTastaturEinbinden := 1
 
 ; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
@@ -73,32 +74,32 @@ IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 ;Sollen Compose-Tasten blind angezeigt werden?
 IniRead,DeadCompose,%ini%,Global,DeadCompose,0
 
-:Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
+;Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 
 /***********************
 * Recourcen-Verwaltung *
 ************************
 */
-if (FileExist("ResourceFolder")<>false) {
+if (FileExist("ResourceFolder") <> false) {
   ; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
   FileInstall,neo.ico,%ResourceFolder%\neo.ico,1
   FileInstall,neo_disabled.ico,%ResourceFolder%\neo_disabled.ico,1
   iconBenutzen=1
-  if (bildschirmTastaturEinbinden=1) {
+  if (bildschirmTastaturEinbinden = 1) {
     FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
     FileInstall,ebene2.png,%ResourceFolder%\ebene2.png,1
     FileInstall,ebene3.png,%ResourceFolder%\ebene3.png,1
     FileInstall,ebene4.png,%ResourceFolder%\ebene4.png,1
     FileInstall,ebene5.png,%ResourceFolder%\ebene5.png,1
     FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
-    zeigeBildschirmTastatur=1
+    zeigeBildschirmTastatur = 1
   }
 }
 
 ; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
 if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
-  zeigeBildschirmTastatur=1
+  zeigeBildschirmTastatur = 1
 if (FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
@@ -147,7 +148,7 @@ menu,tray,add,Bearbeiten,edit
 menu,tray,add,Neu Laden,reload
 menu,tray,add
 menu,tray,add,Nicht im Systray anzeigen,hide
-menu,tray,add,%name% beenden, exitprogram
+menu,tray,add,%name% beenden,exitprogram
 menu,tray,default,%disable%
 menu,tray,tip,%name%
 
@@ -261,7 +262,7 @@ Suspend, Permit
   else send {blind}{pause}
 return
 
-^,::lernModus := not(lernModus)
+^,::lernModus := !lernModus
 
 ^.::einHandNeo := !einHandNeo
 
@@ -271,17 +272,17 @@ return
 */
 togglesuspend:
   if A_IsSuspended {
-    menu, tray, rename, %enable%, %disable%
-    menu, tray, tip, %name%
+    menu,tray,rename,%enable%,%disable%
+    menu,tray,tip,%name%
     if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo.ico,,1
-    suspend , off ; Schaltet Suspend aus -> NEO
+      menu,tray,icon,%ResourceFolder%\neo.ico,,1
+    suspend,off ; Schaltet Suspend aus -> NEO
   } else {
-    menu, tray, rename, %disable%, %enable%
-    menu, tray, tip, %name% : Deaktiviert
+    menu,tray,rename,%disable%, %enable%
+    menu,tray,tip,%name% : Deaktiviert
     if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
-    suspend , on  ; Schaltet Suspend ein -> QWERTZ
+      menu,tray,icon, %ResourceFolder%\neo_disabled.ico,,1
+    suspend,on ; Schaltet Suspend ein -> QWERTZ
   } return
 
 help:

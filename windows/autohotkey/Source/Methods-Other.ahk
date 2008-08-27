@@ -101,7 +101,7 @@ CheckCompUni12(d,val1,val2){
     if (Ebene = 1) and (val1 != "") {
       SendUnicodeChar(val1)
       return 1
-    }else if (Ebene = 2) and (val2 != "") {
+    } else if (Ebene = 2) and (val2 != "") {
       SendUnicodeChar(val2)
       return 1
     }
