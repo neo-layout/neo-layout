@@ -40,6 +40,7 @@ UseMod4Light=1
 LangSTastatur=0
 DeadSilence=0
 DeadCompose=0
+striktesMod2Lock=0
 
 Diese Datei muss manuell (etwa mit Notepad) in dem richtigen Verzeichnis innerhalb der Anwendungsdaten des aktuellen Nutzers angelegt werden. Unter Windows Vista ist dies etwa das Verzeichnis
 C:\Users\<BENUTZERNAME>\AppData\Roaming\Neo2\Neo2.ini
