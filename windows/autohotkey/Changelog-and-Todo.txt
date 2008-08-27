@@ -24,6 +24,9 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 815 (von Martin Roppelt)
+- AHK um Verbindungszeichen bei doppelten toten Tasten ergänzt.
+- Bei CapsLock, Mod3 und Shift wird jetzt ›+‹ statt ›*‹ gesendet.
 Revision 812 (von Martin Roppelt)
 - Überflüssigen Code entfernt.
 - Code gestrafft.
