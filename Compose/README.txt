@@ -13,15 +13,14 @@ Im Internet gibt es die stets aktuellste Originaldatei unter
   http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=
    HEAD&content-type=text/vnd.viewcvs-markup
 
-Unter Linux (beispielsweise unter Fedora) ist die zu ergänzende Datei auch
+Unter Linux ist die zu ergänzende Datei auch
 direkt verfügbar unter
   /usr/share/X11/locale/en_US.UTF-8/Compose
 
 === Installation/Anleitung zur Benutzung ===
 ==== Mit Root-/Administrator-Rechten ====
-Um die Ergänzungen zu benutzen muss man den Inhalt der Compose.neo in die
-vorhandene Compose einfügen bzw. die Datei Compose.neo an die alte Compose
-anhängen. So geht das:
+Um die Ergänzungen systemweit zu benutzen, muss man die Datei Compose.neo
+ an die alte Compose anhängen. So geht das:
 cp /usr/share/X11/locale/en_US.UTF-8/Compose \
 /usr/share/X11/locale/en_US.UTF-8/Compose.original
 cat /usr/share/X11/locale/en_US.UTF-8/Compose.original Compose.neo > \
@@ -44,11 +43,6 @@ Zudem scheint dieses Problem in aktuellen Gnome-Version behoben worden zu sein:
   http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-
    based-apps/
   http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/
-
-=== compose_und_deadkeys.txt ===
-Die Datei compose_und_deadkeys.txt fasst Änderungs- und Erweiterungsvorschläge
-für die Compose-Datei zusammen, in der unter Linux auch die Deadkeys (tote
-Tasten) definiert sind.
 
 
 === Zusätzliche Compose-Kombinationen (Cokos) ===
