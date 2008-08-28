@@ -11,10 +11,10 @@ Alle weiterführende Informationen finden sich im Abschnitt
 in der Datei README.txt!
 
 Versionshinweise (SVN Keywords) für diese Datei:
-$LastChangedRevision: 820 $
-$LastChangedDate: 2008-08-28 03:13:00 +0200 (Do, 28 Aug 2008) $
-$LastChangedBy: martin_r $
-$HeadURL: https://svn.neo-layout.org/windows/autohotkey/neo20.ahk $
+$LastChangedRevision$
+$LastChangedDate$
+$LastChangedBy$
+$HeadURL$
 *******************************************
 
 
