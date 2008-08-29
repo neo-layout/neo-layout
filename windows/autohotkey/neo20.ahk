@@ -6,7 +6,7 @@ Dies ist inzwischen eine automatisch generierte
 Datei! Sie wird regelmäßig überschrieben und
 sollte deshalb nicht mehr direkt bearbeitet werden!
 
-Alle weiterführende Informationen finden sich im Abschnitt 
+Alle weiterführenden Informationen finden sich im Abschnitt 
 == Hinweise für Entwickler ==
 in der Datei README.txt!
 
@@ -37,8 +37,8 @@ $HeadURL$
 
 
 *******************************************
-Das war die letzte WARNUNG, ich hoffe nur dass
-Sie wirklich wissen was Sie hier tun wollen ...
+Das war die letzte WARNUNG, ich hoffe nur, dass
+Sie wirklich wissen, was Sie hier tun wollen ...
 *******************************************
 */
 /******************
@@ -55,6 +55,7 @@ noCaps = 0
 EbeneAktualisieren()
 SetBatchLines -1
 SetCapsLockState Off
+KeyboardLED(4, "off")
 SetNumLockState Off
 SetScrollLockState Off
 
@@ -392,10 +393,10 @@ VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
   if GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P") {
     if isMod2Locked {
       isMod2Locked = 0
-      KeyboardLED(4,"off")
+      KeyboardLED(4, "off")
     } else {
       isMod2Locked = 1
-      KeyBoardLED(4,"on")
+      KeyBoardLED(4, "on")
     }
   }
 return
@@ -404,7 +405,7 @@ return
 ;Auf Mod3+Mod3 liegt zusätzlich zu Mod3+Tab Compose
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
-  if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")) {
+  if GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P") {
     DeadKey := "comp"
     CompKey := ""
   }
@@ -425,13 +426,13 @@ IsMod4Locked := 0
         MsgBox Mod4-Feststellung aufgebehoben!
        IsMod4Locked = 0
       if UseMod4Light
-        KeyboardLED(1,"off")
+        KeyboardLED(1, "off")
     } else {
       if zeigeLockBox
         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
       IsMod4Locked = 1
       if UseMod4Light
-        KeyboardLED(1,"on")
+        KeyboardLED(1, "on")
     }
   }
 return
@@ -443,6 +444,7 @@ EbeneAktualisieren() {
   DeadKey := ""
   CompKey := ""
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
+  noCaps := 0
   Ebene7 := 0
   Ebene8 := 0
   if      (Modstate = "000") ; Ebene 1: Ohne Mod
@@ -483,7 +485,6 @@ IsShiftPressed()
       return 1
     else
       return 0
-  noCaps = 0
 }
 
 IsMod3Pressed()
@@ -837,6 +838,8 @@ neo_3:
     checkComp(3)
   } else if (Ebene = 3)
     SendUnicodeChar(0x00B3) ; Hochgestellte 3
+  else if (Ebene = 4)
+    SendUnicodeChar(0x266B) ; 2 Achtelnoten
   else if (Ebene = 5)
     SendUnicodeChar(0x2642) ; Piktogramm Mann
   else if (Ebene = 6)
