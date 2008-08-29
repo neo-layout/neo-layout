@@ -1,49 +1,44 @@
 == Ergänzungen der Compose-Datei unter Linux/BSD ==
-Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die
-Compose-Taste bzw. tote Tasten für Linux.
+Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die Compose-Taste bzw. tote Tasten für Linux.
 
-Die Kombinationen der gängigien Compose verändert NEO im Sinne erhaltender 
-Kompatibilität nicht!
+Die Kombinationen der gängigien Compose verändert NEO im Sinne erhaltender Kompatibilität nicht!
 
 === Bereits vorhandene Tastenkombinationen (unter Linux) ===
-Diese sind in der Datei en_US.UTF-8 gesammelt und hier im SVN für die
-Windows-Nutzer lokal gespiegelt.
+Diese sind in der Datei en_US.UTF-8 gesammelt und hier im SVN für die Windows-Nutzer lokal gespiegelt.
 
 Im Internet gibt es die stets aktuellste Originaldatei unter
   http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=
    HEAD&content-type=text/vnd.viewcvs-markup
 
-Unter Linux ist die zu ergänzende Datei auch
-direkt verfügbar unter
+Unter Linux ist die zu ergänzende Datei auch direkt verfügbar unter
   /usr/share/X11/locale/en_US.UTF-8/Compose
 
 === Installation/Anleitung zur Benutzung ===
+
 ==== Mit Root-/Administrator-Rechten ====
-Um die Ergänzungen systemweit zu benutzen, muss man die Datei Compose.neo
- an die alte Compose anhängen. So geht das:
+Um die Ergänzungen systemweit zu benutzen, muss man die Datei Compose.neo an die alte Compose anhängen. Dies geht in der Konsole folgendermassen:
 cp /usr/share/X11/locale/en_US.UTF-8/Compose \
 /usr/share/X11/locale/en_US.UTF-8/Compose.original
 cat /usr/share/X11/locale/en_US.UTF-8/Compose.original Compose.neo > \
 /usr/share/X11/locale/en_US.UTF-8/Compose
 
 ==== Ohne Root-Rechte/lokal ====
-Einfach den Inhalt der originalen Compose-Datei und die Compose.neo in eine
-Datei namens ~/.XCompose (also im HOME-Verzeichnis) kopieren. So geht das:
+Einfach den Inhalt der originalen Compose-Datei und die Compose.neo in eine Datei namens ~/.XCompose (also im HOME-Verzeichnis) kopieren. Dies geht in der Konsole folgendermassen:
 cat /usr/share/X11/locale/en_US.UTF-8/Compose Compose.neo > ~/.XCompose
 
 ==== Gnome macht Probleme ====
-Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen
-die entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5 geht das nicht. Ebenso
-mit viele anderen eingentlich definierten Kombinationen. Das liegt daran, dass
-Gnome da noch irgendwas eigenes vorschaltet. Aber nach:
+Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen die entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5 geht das nicht. Ebenso mit viele anderen eingentlich definierten Kombinationen. Das liegt daran, dass Gnome da noch irgendwas eigenes vorschaltet. Aber nach:
   export GTK_IM_MODULE=xim
 klappt auch das. Siehe auch:
   https://help.ubuntu.com/community/ComposeKey
-Zudem scheint dieses Problem in aktuellen Gnome-Version behoben worden zu sein:
+Zudem scheint dieses Problem in aktuelleren Gnome-Versionen behoben worden zu sein:
   http://blogs.gnome.org/simos/2008/01/30/improving-input-method-support-in-gtk-
    based-apps/
   http://blogs.gnome.org/simos/2008/03/05/testing-the-updated-im-support-in-gtk/
 
+=== Überschreiben vorhandener Cokos ===
+Falls einmal bereits vorhandene Kombinationen bewusst umdefiniert werden sollten, ist es 
+wichtig, dass die Compose.neo am Ende der Compose eingefügt wird, da bei mehrfach vorhandenen Kombinationen stets die letzte gültig ist.
 
 === Zusätzliche Compose-Kombinationen (Cokos) ===
 Im dem Archiv »Numericals.tar.bz2« befinden sich optionale Compose-Kombinationen für Römische (Klein (Unicode): r1-r3999, Groß (Unicode): R1-R3999) und klingonische (Umschrift (ASCII): k0-k3999, pIqaD (Private Use Area of Unicode): K0-3999) Zahlen. Diese können – wenn gewünscht – wie oben beschrieben installiert werden. Ist die eingegebene Zahl nicht vierstellig, muss die Eingabe mit einem <space> terminiert werden (dies ist notwendig, um die Eindeutigkeit der Cokos zu erreichen).
@@ -55,11 +50,8 @@ Beispiele:
 <Multi_key> <k> <1> <9> <9> <9> : "wa'SaD Hutvatlh HutmaH Hut" # KLINGON NUMERAL 1999
 <Multi_key> <K> <1> <9> <9> <9> : "" # KLINGON NUMERAL, PIQAD SCRIPT 1999
 
-
 === Zur korrekten Darstellung empfohlene Schriftarten ===
-Unter Windows ist in der Grundinstallation eventuell keine Schrift
-installiert, die alle hier gezeigten Unicodezeichen beinhaltet.
-Abhilfe schafft z.B. DejaVu:
+Unter Windows ist in der Grundinstallation eventuell keine Schrift installiert, die alle hier gezeigten Unicodezeichen beinhaltet. Abhilfe schafft z.B. DejaVu:
 http://dejavu.sourceforge.net/
 oder Libertine:
 http://linuxlibertine.sourceforge.net/
