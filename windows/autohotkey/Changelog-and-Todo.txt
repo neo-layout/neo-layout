@@ -23,6 +23,10 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revisionen 827-830 (von Martin Roppelt)
+- 2 Achtelnoten (Composesymbol) auf 3(4).
+- CapsLock-Bug Ⅱ.: CapsLock funktionierte nicht mehr, wenn eine Taste gedrückt wurde, auf die CapsLock nicht wirkt (Ziffernreihe/-block, Akzente, Punkt, Komma), da die Zeile »NoCaps = 0« in der isShiftPressed() nie ausgeführt wird.
+- CapsLock-Licht wird jetzt beim (Neu-)Laden des Treibers ausgeschaltet.
 Revision 820 (von Martin Roppelt)
 ‐ Weitere Cokos ergänzt: ›Ə‹, ›ǆ‹, ›ǅ‹, ›Ǆ‹, glyphengleiche griechische Majuskeln.
 ‐ Echter Bindestich durch Shift+Mod3+Zirkumflex, Leertaste.
