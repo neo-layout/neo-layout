@@ -14,10 +14,10 @@ VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
   if GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P") {
     if isMod2Locked {
       isMod2Locked = 0
-      KeyboardLED(4,"off")
+      KeyboardLED(4, "off")
     } else {
       isMod2Locked = 1
-      KeyBoardLED(4,"on")
+      KeyBoardLED(4, "on")
     }
   }
 return
@@ -26,7 +26,7 @@ return
 ;Auf Mod3+Mod3 liegt zusätzlich zu Mod3+Tab Compose
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
-  if (GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")) {
+  if GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P") {
     DeadKey := "comp"
     CompKey := ""
   }
@@ -47,13 +47,13 @@ IsMod4Locked := 0
         MsgBox Mod4-Feststellung aufgebehoben!
        IsMod4Locked = 0
       if UseMod4Light
-        KeyboardLED(1,"off")
+        KeyboardLED(1, "off")
     } else {
       if zeigeLockBox
         MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
       IsMod4Locked = 1
       if UseMod4Light
-        KeyboardLED(1,"on")
+        KeyboardLED(1, "on")
     }
   }
 return
@@ -65,6 +65,7 @@ EbeneAktualisieren() {
   DeadKey := ""
   CompKey := ""
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
+  noCaps := 0
   Ebene7 := 0
   Ebene8 := 0
   if      (Modstate = "000") ; Ebene 1: Ohne Mod
@@ -105,7 +106,6 @@ IsShiftPressed()
       return 1
     else
       return 0
-  noCaps = 0
 }
 
 IsMod3Pressed()
