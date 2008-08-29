@@ -12,6 +12,7 @@ noCaps = 0
 EbeneAktualisieren()
 SetBatchLines -1
 SetCapsLockState Off
+KeyboardLED(4, "off")
 SetNumLockState Off
 SetScrollLockState Off
 
