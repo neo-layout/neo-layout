@@ -90,6 +90,8 @@ neo_3:
     checkComp(3)
   } else if (Ebene = 3)
     SendUnicodeChar(0x00B3) ; Hochgestellte 3
+  else if (Ebene = 4)
+    SendUnicodeChar(0x266B) ; 2 Achtelnoten
   else if (Ebene = 5)
     SendUnicodeChar(0x2642) ; Piktogramm Mann
   else if (Ebene = 6)
