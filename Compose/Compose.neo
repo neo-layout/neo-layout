@@ -1,4 +1,4 @@
-# Definitions by Neo keyboard layout
+﻿# Definitions by Neo keyboard layout
 
 # letters
 # capital greek letters
@@ -27,15 +27,25 @@
 <Multi_key> <s> <t>                      : "ﬆ"   UFB06 # LATIN SMALL LIGATURE ST
 
 <Multi_key> <f> <b>                      : ""   UE030 # LATIN SMALL LIGATURE FB
-<Multi_key> <F> <b>                      : ""   UE031 # LATIN CAPITAL LETTER F WITH SMALL LETTER B
+<Multi_key> <F> <b>                      : ""   UE031 # LATIN SMALL LIGATURE FFB
+<Multi_key> <F> <h>                      : ""   UE032 # LATIN SMALL LIGATURE FFH
+<Multi_key> <F> <j>                      : ""   UE033 # LATIN SMALL LIGATURE FFJ
+<Multi_key> <F> <k>                      : ""   UE034 # LATIN SMALL LIGATURE FFK
+<Multi_key> <F> <t>                      : ""   UE035 # LATIN SMALL LIGATURE FFT
 <Multi_key> <f> <h>                      : ""   UE036 # LATIN SMALL LIGATURE FH
-<Multi_key> <F> <h>                      : ""   UE032 # LATIN CAPITAL LETTER F WITH SMALL LETTER H
 <Multi_key> <f> <j>                      : ""   UE037 # LATIN SMALL LIGATURE FJ
-<Multi_key> <F> <j>                      : ""   UE033 # LATIN CAPITAL LETTER F WITH SMALL LETTER J
 <Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
-<Multi_key> <F> <k>                      : ""   UE034 # LATIN CAPITAL LETTER F WITH SMALL LETTER K
 <Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
-<Multi_key> <F> <t>                      : ""   UE035 # LATIN CAPITAL LETTER F WITH SMALL LETTER T
+<Multi_key> <c> <k>                      : ""   UE03A # LATIN SMALL LIGATURE CK
+<Multi_key> <c> <h>                      : ""   UE03A # LATIN SMALL LIGATURE CH
+<Multi_key> <t> <t>                      : ""   UE03A # LATIN SMALL LIGATURE TT
+<Multi_key> <c> <t>                      : ""   UE03A # LATIN SMALL LIGATURE CT
+<Multi_key> <ſ> <i>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S I
+<Multi_key> <ſ> <ſ>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S LONG S
+<Multi_key> <ſ> <l>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S L
+<Multi_key> <S> <i>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S LONG S I
+<Multi_key> <ſ> <s>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
+<Multi_key> <t> <z>                      : ""   UE04F # LATIN SMALL LIGATURE TZ
 <Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
 <Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
 
@@ -67,7 +77,6 @@
 
 # other letters
 <Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
-
 
 # interpunctation
 <Multi_key> <2> <exclam>                         : "‼"   U203C # DOUBLE EXCLAMATION MARK
