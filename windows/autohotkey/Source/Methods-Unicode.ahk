@@ -10,6 +10,8 @@ Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex m
 
 SendUnicodeChar(charCode) {
 
+  global
+  if !((CheckComp(charCode) or PriorCompKey) and DeadCompose)
   IfWinActive,ahk_class gdkWindowToplevel
   {
     StringLower,charCode,charCode
