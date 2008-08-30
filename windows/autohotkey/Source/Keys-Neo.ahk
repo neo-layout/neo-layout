@@ -5,44 +5,33 @@
 */
 
 neo_tot1:
-  noCaps=1
+  noCaps = 1
   EbeneAktualisieren()
-  if (Ebene=1) and !CheckDeadUni("c1",0x0302) {
-     deadUni(0x02C6) ; Zirkumflex, tot
-     DeadKey = c1
-  } else if (Ebene = 2) and !CheckDeadUni("c2",0x030C) {
-     deadUni(0x02C7) ; Caron, tot
-     DeadKey = c2
-  } else if (Ebene = 3) and !CheckDeadUni("c3",0x0306) {
-    deadUni(0x02D8) ; Brevis, tot
-    DeadKey = c3
-  } else if (Ebene = 4) {
-    deadUni(0x00B7) ; Mittenpunkt, tot
-    DeadKey = c4
-  } else if (Ebene = 5) and !CheckDeadUni("c5",0x0335) {
-    deadUni(0x002D) ; Querstrich, tot
-    DeadKey = c5
-  } else if (Ebene = 6) and !CheckDeadUni("c6",0x0323) {
-    deadUni(0x002E) ; Punkt drunter (Colon), tot
-    DeadKey = c6
-  } CompKey := PriorCompKey
+  if (Ebene = 1) and !CheckDeadUni("c1",0x0302)
+    deadUni(0x02C6, "c1") ; Zirkumflex, tot
+  else if (Ebene = 2) and !CheckDeadUni("c2",0x030C)
+    deadUni(0x02C7, "c2") ; Caron, tot
+  else if (Ebene = 3) and !CheckDeadUni("c3",0x0306)
+    deadUni(0x02D8, "c3") ; Brevis, tot
+  else if (Ebene = 4)
+    deadUni(0x00B7, "c4") ; Mittenpunkt, tot
+  else if (Ebene = 5) and !CheckDeadUni("c5",0x0335)
+    deadUni(0x002D, "c5") ; Querstrich, tot
+  else if (Ebene = 6) and !CheckDeadUni("c6",0x0323)
+    deadUni(0x002E, "c6") ; Punkt drunter (Colon), tot
+  CompKey := PriorCompKey
 return
 
 neo_1:
   noCaps=1
   EbeneAktualisieren()
-  if Ebene12 {
+  if Ebene12
     if !(CheckDeadUni("c1",0x00B9) ; Hochgestellte 1
       or CheckDeadUni("c5",0x2081) ; Tiefgestellte 1
       or CheckComp3Uni("r_1",0x217A) ; Römisch xi
       or CheckComp3Uni("R_1",0x216A)) ; Römisch XI
-      outputChar(1,"°")
-    if !checkComp(1)
-      if (PriorCompKey == "r")
-        CompKey := "r_1"
-      else if (PriorCompkey == "R")
-        CompKey := "R_1"
-  } else if (Ebene = 3)
+      OutputChar12(1,"°")
+  else if (Ebene = 3)
     SendUnicodeChar(0x00B9) ; Hochgestellte 1
   else if (Ebene = 4)
     SendUnicodeChar(0x2022) ; Bullet
@@ -55,16 +44,16 @@ return
 neo_2:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) {
-    if !(CheckDeadUni("c1",0x00B2) ; Hochgestellte 2
-      or CheckDeadUni("c5",0x2082) ; Tiefgestellte 2
-      or CheckCompUni("r",0x2171) ; Römisch ii
-      or CheckCompUni("R",0x2161) ; Römisch II
-      or CheckComp3Uni("r_1",0x217B) ; Römisch xii
-      or CheckComp3Uni("R_1",0x216B)) ; Römisch XII
-      outputChar(2,"")
-    checkComp(2)
-  } else if (Ebene = 2)
+  if (Ebene = 1 and !(CheckDeadUni("c1",0x00B2) ; Hochgestellte 2
+                   or CheckDeadUni("c5",0x2082) ; Tiefgestellte 2
+                   or CheckCompUni("r",0x2171) ; Römisch ii
+                   or CheckCompUni("R",0x2161) ; Römisch II
+                   or CheckComp3Uni("r_1",0x217B) ; Römisch xii
+                   or CheckComp3Uni("R_1",0x216B) ; Römisch XII
+                   or CheckCompUni("{!}",0x203C) ; DOUBLE EXCLAMATION MARK
+                   or CheckCompUni("?",0x2047))) ; DOUBLE QUESTION MARK
+    OutputChar(2)
+  else if (Ebene = 2)
     SendUnicodeChar(0x2116) ; Numero
   else if (Ebene = 3)
     SendUnicodeChar(0x00B2) ; Hochgestellte 2
@@ -86,8 +75,7 @@ neo_3:
       or CheckCompUni("2",0x2154) ; 2/3
       or CheckCompUni("r",0x2172) ; Römisch iii
       or CheckCompUni("R",0x2162)) ; Römisch III
-      outputChar(3,"§")
-    checkComp(3)
+      OutputChar12(3,"§")
   } else if (Ebene = 3)
     SendUnicodeChar(0x00B3) ; Hochgestellte 3
   else if (Ebene = 4)
@@ -106,8 +94,7 @@ neo_4:
       or CheckDeadUni("c5",0x2084) ; Tiefgestellte 4
       or CheckCompUni("r",0x2173) ; Römisch iv
       or CheckCompUni("R",0x2163)) ; Römisch IV
-      outputChar(4,"")
-    checkComp(4)
+      OutputChar(4)
   } else if (Ebene = 2)
     SendUnicodeChar(0x00BB) ; Double guillemot right
   else if (Ebene = 3)
@@ -132,8 +119,7 @@ neo_5:
       or CheckCompUni("4",0x2158) ; 4/5
       or CheckCompUni("r",0x2174) ; Römisch v
       or CheckCompUni("R",0x2164)) ; Römisch V
-      outputChar(5,"")
-    checkComp(5)
+      OutputChar(5)
   } else if (Ebene = 2)
     SendUnicodeChar(0x00AB) ; Double guillemot left
   else if (Ebene = 3)
@@ -154,8 +140,7 @@ neo_6:
       or CheckCompUni("5",0x215A) ; 5/6
       or CheckCompUni("r",0x2175) ; Römisch vi
       or CheckCompUni("R",0x2165)) ; Römisch VI
-      outputChar(6,"")
-    checkComp(6)
+      OutputChar(6)
   } else if (Ebene = 2)
     SendUnicodeChar(0x20AC)
   else if (Ebene = 3)
@@ -174,8 +159,7 @@ neo_7:
       or CheckDeadUni("c5",0x2087) ; Tiefgestellte 7
       or CheckCompUni("r",0x2176) ; Römisch vii
       or CheckCompUni("R",0x2166)) ; Römisch VII
-      outputChar(7,"$")
-    checkComp(7)
+      OutputChar12(7,"$")
   } else if (Ebene = 3)
     send {blind}¥
   else if (Ebene = 4)
@@ -198,8 +182,7 @@ neo_8:
       or CheckCompUni("7",0x215E) ; 7/8
       or CheckCompUni("r",0x2177) ; Römisch viii
       or CheckCompUni("R",0x2167)) ; Römisch VIII
-      outputChar(8,"„")
-    checkComp(8)
+      OutputChar12(8,"„")
   } else if (Ebene = 3)
     send {blind}‚
   else if (Ebene = 4)
@@ -218,8 +201,7 @@ neo_9:
       or CheckDeadUni("c5",0x2089) ; Tiefgestellte 9
       or CheckCompUni("r",0x2178) ; Römisch ix
       or CheckCompUni("R",0x2168)) ; Römisch IX
-      outputChar(9,"“")
-    checkComp(9)
+      OutputChar12(9,"“")
   } else if (Ebene = 3)
     send {blind}‘
   else if (Ebene = 4)
@@ -238,8 +220,7 @@ neo_0:
       or CheckDeadUni("c5",0x2080) ; Tiefgestellte 0 
       or CheckDeadUni("r_1",0x2177) ; Römisch x
       or CheckComp3Uni("R_1",0x2169)) ; Römisch X
-      outputChar(0,"”")
-      checkComp(0)
+      OutputChar12(0,"”")
    } else if (Ebene = 3)
       send {blind}’
    else if (Ebene = 4)
@@ -252,7 +233,7 @@ neo_strich:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1)
-    outputChar("-","") ; Bindestrich-Minus
+    OutputChar("-") ; Bindestrich-Minus
   else if (Ebene = 2)
     SendUnicodeChar(0x2013) ; Gedankenstrich
   else if (Ebene = 3)
@@ -266,25 +247,19 @@ return
 neo_tot2:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) and !CheckDeadUni("a1",0x0301) {
-    deadAsc("{´}{space}") ; Akut, tot
-    DeadKey := "a1"
-  } else if (Ebene = 2) and !CheckDeadUni("a2",0x0300) {
-    deadAsc("``{space}") ; Gravis, tot
-    DeadKey := "a2"
-  } else if (Ebene = 3) and !CheckDeadUni("a3",0x0327) {
-    deadAsc("¸") ; Cedilla, tot
-    DeadKey := "a3"
-  } else if (Ebene = 4) and !CheckDeadUni("a4",0x0307) {
-    deadUni(0x02D9) ; Punkt oben
-    DeadKey := "a4"
-  } else if (Ebene = 5) and !CheckDeadUni("a5",0x0328) {
-    deadUni(0x02DB) ; Ogonek
-    DeadKey := "a5"
-  } else if (Ebene = 6) and !CheckDeadUni("a6",0x030A) {
-    deadUni(0x02DA) ; Ring oben
-    DeadKey := "a6"
-  } CompKey := PriorCompKey
+  if (Ebene = 1) and !CheckDeadUni("a1",0x0301)
+    deadAsc("{´}{space}", "a1") ; Akut, tot
+  else if (Ebene = 2) and !CheckDeadUni("a2",0x0300)
+    deadAsc("``{space}", "a2") ; Gravis, tot
+  else if (Ebene = 3) and !CheckDeadUni("a3",0x0327)
+    deadAsc("¸", "a3") ; Cedilla, tot
+  else if (Ebene = 4) and !CheckDeadUni("a4",0x0307)
+    deadUni(0x02D9, "a4") ; Punkt oben
+  else if (Ebene = 5) and !CheckDeadUni("a5",0x0328)
+    deadUni(0x02DB, "a5") ; Ogonek
+  else if (Ebene = 6) and !CheckDeadUni("a6",0x030A)
+    deadUni(0x02DA, "a6") ; Ring oben
+  CompKey := PriorCompKey
 return
 
 
@@ -296,8 +271,8 @@ return
 
 neo_x:
   EbeneAktualisieren()
-  if (Ebene12 or CheckCompUni12("G","",0x039D))
-    OutputChar("x","X")
+  if (Ebene12 and !CheckCompUni12("G","",0x039D))
+    OutputChar12("x","X")
   else if (Ebene = 3)
     SendUnicodeChar(0x2026) ; Ellipse horizontal
   else if (Ebene = 4)
@@ -312,7 +287,7 @@ return
 neo_v:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("c6",0x1E7F,0x1E7E)))
-    OutputChar("v","V")
+    OutputChar12("v","V")
   else if (Ebene = 3)
     send {blind}_
   else if (Ebene = 4) and (!lernModus or lernModus_neo_Backspace)
@@ -333,7 +308,7 @@ neo_l:
                  or CheckDeadUni12("t4",0x0142,0x0141)
                  or CheckCompUni("f",0xFB02)
                  or CheckCompUni("F",0xFB04)))
-    OutputChar("l","L")
+    OutputChar12("l","L")
   else if (Ebene = 3)
     send {blind}[
   else if (Ebene = 4)
@@ -353,7 +328,7 @@ neo_c:
                  or CheckDeadUni12("c1",0x0109,0x0108)
                  or CheckDeadUni12("c2",0x010D,0x010C)
                  or CheckCompAsc("o","©")))
-    OutputChar("c","C")
+    OutputChar12("c","C")
   else if (Ebene = 3)
     send {blind}]
   else if (Ebene = 4)
@@ -368,7 +343,7 @@ return
 neo_w:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("c1",0x0175,0x0174)))
-    OutputChar("w","W")
+    OutputChar12("w","W")
   else if (Ebene = 3)
     SendUnicodeChar(0x005E) ; Zirkumflex
   else if (Ebene = 4)
@@ -384,11 +359,11 @@ neo_k:
   if (Ebene12 and !(CheckDeadUni12("a3",0x0137,0x0136)
                  or CheckDeadUni12("c6",0x1E33,0x1E32)
                  or CheckCompUni12("G","",0x039A)))
-    OutputChar("k","K")
+    OutputChar12("k","K")
   else if (Ebene = 3)
-    send {blind}{!}
+    OutputChar("{!}")
   else if (Ebene = 4)
-    Send ¡
+    OutputChar("¡")
   else if (Ebene = 5)
     SendUnicodeChar(0x03F0) ; kappa symbol (varkappa)
   else if (Ebene = 6)
@@ -402,7 +377,7 @@ neo_h:
                  or CheckDeadUni12("c5",0x0127,0x0126)
                  or CheckDeadUni12("c6",0x1E25,0x1E24)
                  or CheckCompUni12("G","",0x0397)))
-    OutputChar("h","H")
+    OutputChar12("h","H")
   else if ((Ebene = 3) and !(CheckDeadUni("c5",0x2264))) ; kleiner gleich
     send {blind}<
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2077)
@@ -420,7 +395,7 @@ neo_g:
                  or CheckDeadUni12("a4",0x0121,0x0120)
                  or CheckDeadUni12("c1",0x011D,0x011C)
                  or CheckDeadUni12("c3",0x011F,0x011E)))
-    OutputChar("g","G")
+    OutputChar12("g","G")
   else if ((Ebene = 3) and !(CheckDeadUni("c5",0x2265))) ; größer gleich
     send {blind}>
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2078)
@@ -437,7 +412,7 @@ neo_f:
   if (Ebene12 and !(CheckDeadUni12("a4",0x1E1F,0x1E1E)
                  or CheckDeadUni12("t4",0x0192,0x0191)
                  or CheckCompUni("f",0xFB00)))
-    OutputChar("f","F")
+    OutputChar12("f","F")
   else if ((Ebene = 3) and !(CheckDeadUni("a6",0x2257) ; ring equal to
                           or CheckDeadUni("c1",0x2259) ; entspricht
                           or CheckDeadUni("c2",0x225A) ; EQUIANGULAR TO
@@ -457,7 +432,7 @@ return
 neo_q:
   EbeneAktualisieren()
   if (Ebene12)
-     OutputChar("q","Q")
+     OutputChar12("q","Q")
   else if (Ebene = 3)
      send {blind}{&}
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x207A)
@@ -473,7 +448,7 @@ neo_sz:
   EbeneAktualisieren()
   if (Ebene = 1)
     if LangSTastatur
-      outputChar("s","")
+      OutputChar("s")
     else send ß
   else if (Ebene = 2)
     SendUnicodeChar(0x1E9E) ; versal-ß
@@ -481,8 +456,7 @@ neo_sz:
     if LangSTastatur
       send ß
     else {
-      if !checkComp("lang_s")
-        SendUnicodeChar(0x017F) ; langes s
+      SendUnicodeChar(0x017F) ; langes s
   } else if (Ebene = 5)
     SendUnicodeChar(0x03C2) ; varsigma
   else if (Ebene = 6)
@@ -493,26 +467,18 @@ return
 neo_tot3:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) and !CheckDeadUni("t1",0x0303) {
-    deadUni(0x02DC) ; Tilde, tot
-    DeadKey := "t1"
-  } else if (Ebene = 2) and !CheckDeadUni("t2",0x0304) {
-    deadUni(0x00AF) ; Macron, tot
-    DeadKey := "t2"
-  } else if (Ebene = 3) and !CheckDeadUni("t3",0x0308) {
-    deadUni(0x00A8) ; Diärese
-    DeadKey := "t3"
-  } else if (Ebene = 4) and !CheckDeadUni("t4",0x0337) {
-    deadUni(0x002F) ; Schrägstrich, tot
-    DeadKey := "t4"
-  } else if (Ebene = 5) and !CheckDeadUni("t5",0x030B) {
-    deadUni(0x02DD) ; Doppelakut
-    DeadKey := "t5"
-  } else if (Ebene = 6) and !CheckDeadUni("t6",0x0326) {
-    deadUni(0x02CF) ; Komma drunter, tot
-    DeadKey := "t6"
-  }
-
+  if (Ebene = 1) and !CheckDeadUni("t1",0x0303)
+    deadUni(0x02DC, "t1") ; Tilde, tot
+  else if (Ebene = 2) and !CheckDeadUni("t2",0x0304)
+    deadUni(0x00AF, "t2") ; Macron, tot
+  else if (Ebene = 3) and !CheckDeadUni("t3",0x0308)
+    deadUni(0x00A8, "t3") ; Diärese
+  else if (Ebene = 4) and !CheckDeadUni("t4",0x0337)
+    deadUni(0x002F, "t4") ; Schrägstrich, tot
+  else if (Ebene = 5) and !CheckDeadUni("t5",0x030B)
+    deadUni(0x02DD, "t5") ; Doppelakut
+  else if (Ebene = 6) and !CheckDeadUni("t6",0x0326)
+    deadUni(0x02CF, "t6") ; Komma drunter, tot
 return
 
 
@@ -535,7 +501,7 @@ neo_u:
                  or CheckDeadUni12("t2",0x016B,0x016A)
                  or CheckDeadAsc12("t3","ü","Ü")
                  or CheckDeadUni12("t5",0x0171,0x0170)))
-    OutputChar("u","U")
+    OutputChar12("u","U")
   else if (Ebene = 3)
     send {blind}\
   else if (Ebene = 4)
@@ -562,7 +528,7 @@ neo_i:
                  or CheckCompUni("f",0xFB01)
                  or CheckCompUni("F",0xFB03)
                  or CheckCompUni12("G","",0x0399)))
-    OutputChar("i","I")
+    OutputChar12("i","I")
   else if (Ebene = 3)
     send {blind}`/
   else if (Ebene = 4)
@@ -586,7 +552,7 @@ neo_a:
                 or CheckDeadUni12("t2",0x0101,0x0100)
                 or CheckDeadAsc12("t3","ä","Ä")
                 or CheckCompUni12("G","",0x0391)))
-    OutputChar("a","A")
+    OutputChar12("a","A")
   else if (Ebene = 3)
     send {blind}{{}
   else if (Ebene = 4)
@@ -615,7 +581,7 @@ neo_e:
                  or CheckCompAsc12("O","Œ","Œ")
                  or CheckCompUni12("G","",0x0395)
                  or CheckCompUni12("E","",0x018F)))
-    OutputChar("e","E")
+    OutputChar12("e","E")
   else if (Ebene = 3)
     send {blind}{}}
   else if (Ebene = 4)
@@ -640,7 +606,7 @@ neo_o:
                  or CheckDeadUni12("t4",0x00F8,0x00D8)
                  or CheckDeadUni12("t5",0x0151,0x0150)
                  or CheckCompUni12("G","",0x039F)))
-    OutputChar("o","O")
+    OutputChar12("o","O")
   else if (Ebene = 3)
     send {blind}*
   else if (Ebene = 4)
@@ -658,16 +624,14 @@ neo_s:
                  or CheckDeadUni12("a4",0x1E61,0x1E60)
                  or CheckDeadUni12("c1",0x015D,0x015C)
                  or CheckDeadUni12("c2",0x0161,0x0160)
-                 or CheckDeadUni12("c6",0x1E63,0x1A62)))
-    {
-      if LangSTastatur and (Ebene = 1) {
-        if !checkComp("lang_s")
-          SendUnicodeChar(0x017F) ; langes s
-      } else outputChar("s","S")
-    } else if (Ebene = 3)
-    send {blind}?
+                 or CheckDeadUni12("c6",0x1E63,0x1A62))) {
+    if LangSTastatur and (Ebene = 1)
+      SendUnicodeChar(0x017F) ; langes s
+    else OutputChar12("s","S")
+  } else if (Ebene = 3)
+    OutputChar("?")
   else if (Ebene = 4)
-    Send ¿
+    OutputChar("¿")
   else if (Ebene = 5)
     SendUnicodeChar(0x03C3) ;sigma
   else if (Ebene = 6)
@@ -682,7 +646,7 @@ neo_n:
                  or CheckDeadUni12("c2",0x0148,0x0147)
                  or CheckDeadUni12("t1",0x00F1,0x00D1)
                  or CheckCompUni12("G","",0x039D)))
-    OutputChar("n","N")
+    OutputChar12("n","N")
   else if (Ebene = 3)
     send {blind}(
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2074)
@@ -703,7 +667,7 @@ neo_r:
                  or CheckDeadUni12("c6",0x1E5B,0x1E5A)
                  or CheckCompAsc12("o","®","®")
                  or CheckCompAsc12("O","®","®")))
-    OutputChar("r","R")
+    OutputChar12("r","R")
   else if (Ebene = 3)
     send {blind})
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2075)
@@ -722,10 +686,11 @@ neo_t:
                  or CheckDeadUni12("c2",0x0165,0x0164)
                  or CheckDeadUni12("c5",0x0167,0x0166)
                  or CheckDeadUni12("c6",0x1E6D,0x1E6C)
-                 or CheckCompUni("lang_s",0xFB05)
+                 or CheckDeadUni("t3",0x1E97)
+                 or CheckCompUni("0x017F",0xFB05)
                  or CheckCompUni("s",0xFB06)
                  or CheckCompUni12("G","",0x03A4)))
-    OutputChar("t","T")
+    OutputChar12("t","T")
   else if (Ebene = 3)
     send {blind}- ; Bisstrich
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2076)
@@ -744,7 +709,7 @@ neo_d:
                   or CheckDeadUni12("c5",0x0111,0x0110)
                   or CheckDeadUni12("c6",0x1E0D,0x1E0C)
                   or CheckDeadUni12("t4",0x00F0,0x00D0)))
-      OutputChar("d","D")
+      OutputChar12("d","D")
    else if (Ebene = 3)
       send {blind}:
    else if (Ebene = 4)
@@ -761,7 +726,7 @@ neo_y:
                  or CheckDeadUni12("c1",0x0177,0x0176)
                  or CheckDeadAsc12("t3","ÿ","Ÿ")
                  or CheckCompUni12("G","",0x03A5)))
-    OutputChar("y","Y")
+    OutputChar12("y","Y")
   else if (Ebene = 3)
     send {blind}@
   else if (Ebene = 4)
@@ -784,7 +749,7 @@ neo_ü:
                  or CheckDeadUni12("a2",0x01DC,0x01DB)
                  or CheckDeadUni12("c2",0x01DA,0x01D9)
                  or CheckDeadUni12("t2",0x01D6,0x01D5)))
-    OutputChar("ü","Ü")
+    OutputChar12("ü","Ü")
   else if (Ebene = 3)
     send {#}
   else if (Ebene = 4)
@@ -799,7 +764,7 @@ return
 neo_ö:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("t2",0x022B,0x022A)))
-    OutputChar("ö","Ö")
+    OutputChar12("ö","Ö")
   else if (Ebene = 3)
     send {blind}$
   else if (Ebene = 4)
@@ -814,7 +779,7 @@ return
 neo_ä:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("t2",0x01DF,0x01DE)))
-    OutputChar("ä","Ä")
+    OutputChar12("ä","Ä")
   else if (Ebene = 3)
     send {blind}|
   else if (Ebene = 4)
@@ -829,7 +794,7 @@ neo_p:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("a4",0x1E57,0x1E56)
                  or CheckCompUni12("G","",0x03A1)))
-    OutputChar("p","P")
+    OutputChar12("p","P")
   else if ((Ebene = 3) and !(CheckDeadUni("t1",0x2248)))
     send {blind}~
   else if (Ebene = 4)
@@ -849,7 +814,7 @@ neo_z:
                  or CheckCompUni("d",0x01C6)
                  or CheckCompUni12("D",0x01C5,0x01C4)
                  or CheckCompUni12("G","",0x0396)))
-    OutputChar("z","Z")
+    OutputChar12("z","Z")
   else if (Ebene = 3)
     send ``{space} ; untot
   else if (Ebene = 4) { ; leer
@@ -865,7 +830,7 @@ neo_b:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("a4",0x1E03,0x1E02)
                  or CheckCompUni12("G","",0x0392)))
-    OutputChar("b","B")
+    OutputChar12("b","B")
   else if (Ebene = 3)
     if isMod2Locked
       send {blind}{Shift Up}{+}
@@ -885,7 +850,7 @@ neo_m:
                       or CheckCompUni12("t",0x2122,0x2122) ; TM
                       or CheckCompUni12("s",0x2120,0x2120) ; SM
                       or CheckCompUni12("G","",0x039C)))
-    OutputChar("m","M")
+    OutputChar12("m","M")
   else if (Ebene = 3)
     send {blind}`%
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B9)
@@ -944,7 +909,7 @@ neo_j:
                  or CheckCompUni("n",0x01CC) ; nj
                  or CheckCompUni12("L",0x01C8,0x01C7) ; Lj/LJ
                  or CheckCompUni12("N",0x01CB,0x01CA))) ; Nj/NJ
-    OutputChar("j","J")
+    OutputChar12("j","J")
   else if (Ebene = 3)
     send {blind}`;
   else if (Ebene = 4)
@@ -1017,10 +982,9 @@ return
 
 neo_Numpad7:
   EbeneAktualisieren()
-  if (Ebene = 1) {
-    send {blind}{Numpad7}
-    checkComp(7)
-  } else if (Ebene = 2)
+  if (Ebene = 1)
+    OutputChar("{Numpad7}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2020) ; Kreuz
   else if (Ebene = 3)
     SendUnicodeChar(0x2195) ; Hoch-Runter-Pfeil
@@ -1030,13 +994,12 @@ return
 
 neo_Numpad8:
   EbeneAktualisieren()
-  if ((Ebene = 1) and !(CheckCompUni("1",0x215B) ; 1/8
-                     or CheckCompUni("3",0x215C) ; 3/8
-                     or CheckCompUni("5",0x215D) ; 5/8
-                     or CheckCompUni("7",0x215E))) { ; 7/8
-    send {blind}{Numpad8}
-    checkComp(8)
-  } else if (Ebene = 2)
+  if ((Ebene = 1) and !(CheckCompUni("{Numpad1}",0x215B) ; 1/8
+                     or CheckCompUni("{Numpad3}",0x215C) ; 3/8
+                     or CheckCompUni("{Numpad5}",0x215D) ; 5/8
+                     or CheckCompUni("{Numpad7}",0x215E))) ; 7/8
+    OutputChar("{Numpad8}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2229) ; Durchschnitt
   else if (Ebene = 3)
     SendUnicodeChar(0x2191) ; Hochpfeil
@@ -1046,10 +1009,9 @@ return
 
 neo_Numpad9:
   EbeneAktualisieren()
-  if (Ebene = 1) {
-    send {blind}{Numpad9}
-    checkComp(9)
-  } else if (Ebene = 2)
+  if (Ebene = 1)
+    OutputChar("{Numpad9}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2297) ; Tensorprodukt / Vektor in die Ebene zeigend
   else if (Ebene = 3)
     SendUnicodeChar(0x220D) ; Kleines umgekehrtes Elementzeichen
@@ -1059,11 +1021,10 @@ return
 
 neo_Numpad4:
   EbeneAktualisieren()
-  if ((Ebene = 1) and !(CheckCompUni("1",0x00BC) ; 1/4
-                     or CheckCompUni("3",0x00BE))) { ; 3/4
-    send {blind}{Numpad4}
-    checkComp(4)
-  } else if (Ebene = 2)
+  if ((Ebene = 1) and !(CheckCompUni("{Numpad1}",0x00BC) ; 1/4
+                     or CheckCompUni("{Numpad3}",0x00BE))) ; 3/4
+    OutputChar("{Numpad4}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2282) ; Teilmenge
   else if (Ebene = 3)
     SendUnicodeChar(0x2190) ; Linkspfeil
@@ -1073,13 +1034,12 @@ return
 
 neo_Numpad5:
   EbeneAktualisieren()
-  if ((Ebene = 1) and !(CheckCompUni("1",0x2155) ; 1/5
-                     or CheckCompUni("2",0x2156) ; 2/5
-                     or CheckCompUni("3",0x2157) ; 3/5
-                     or CheckCompUni("4",0x2158))) { ; 4/5
-    send {blind}{Numpad5}
-    checkComp(5)
-  } else if (Ebene = 2)
+  if ((Ebene = 1) and !(CheckCompUni("{Numpad1}",0x2155) ; 1/5
+                     or CheckCompUni("{Numpad2}",0x2156) ; 2/5
+                     or CheckCompUni("{Numpad3}",0x2157) ; 3/5
+                     or CheckCompUni("{Numpad4}",0x2158))) ; 4/5
+    OutputChar("{Numpad5}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x20AC) ; Euro
   else if (Ebene = 3)
     SendUnicodeChar(0x221E) ; Unendlich
@@ -1089,11 +1049,10 @@ return
 
 neo_Numpad6:
   EbeneAktualisieren()
-  if ((Ebene = 1) and !(CheckCompUni("1",0x2159) ; 1/6
-                     or CheckCompUni("5",0x215a))) { ; 5/6
-    send {blind}{Numpad6}
-    checkComp(6)
-  } else if (Ebene = 2)
+  if ((Ebene = 1) and !(CheckCompUni("{Numpad1}",0x2159) ; 1/6
+                     or CheckCompUni("{Numpad5}",0x215a))) ; 5/6
+    OutputChar("{Numpad6}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2283) ; Obermenge
   else if (Ebene = 3)
     SendUnicodeChar(0x2192) ; Rechtspfeil
@@ -1104,8 +1063,7 @@ return
 neo_Numpad1:
   EbeneAktualisieren()
   if (Ebene = 1) {
-    send {blind}{Numpad1}
-    checkComp(1)
+    OutputChar("{Numpad1}")
   } else if (Ebene = 2)
     SendUnicodeChar(0x2714) ; Häkchen
   else if (Ebene = 3)
@@ -1116,10 +1074,11 @@ return
 
 neo_Numpad2:
   EbeneAktualisieren()
-  if ((Ebene = 1) and !(CheckCompUni("1",0x00BD))) { ; 1/2
-    send {blind}{Numpad2}
-    checkComp(2)
-  } else if (Ebene = 2)
+  if ((Ebene = 1) and !(CheckCompUni("{Numpad1}",0x00BD) ; 1/2
+                     or CheckCompUni("{!}",0x203C) ; DOUBLE EXCLAMATION MARK
+                     or CheckCompUni("?",0x2047))) ; DOUBLE QUESTION MARK
+    OutputChar("{Numpad2}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x222A) ; Vereinigung
   else if (Ebene = 3)
     SendUnicodeChar(0x2192) ; Untenpfeil
@@ -1129,11 +1088,10 @@ return
 
 neo_Numpad3:
   EbeneAktualisieren()
-  if ((Ebene = 1) and !(CheckCompUni("1",0x2153) ; 1/3
-                     or CheckCompUni("5",0x2154))) { ; 2/3
-    send {blind}{Numpad3}
-    checkComp(2)
-  } else if (Ebene = 2)
+  if ((Ebene = 1) and !(CheckCompUni("{Numpad1}",0x2153) ; 1/3
+                     or CheckCompUni("{Numpad5}",0x2154))) ; 2/3
+    OutputChar("{Numpad3}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2718) ; Kreuzchen
   else if (Ebene = 3)
     SendUnicodeChar(0x2192) ; Rechtspfeil
@@ -1143,10 +1101,9 @@ return
 
 neo_Numpad0:
   EbeneAktualisieren()
-  if (Ebene = 1) {
-    send {blind}{Numpad0}
-    checkComp(0)
-  } else if (Ebene = 2)
+  if (Ebene = 1)
+    OutputChar("{Numpad0}")
+  else if (Ebene = 2)
     SendUnicodeChar(0x2030) ; Promille
   else if (Ebene = 3)
     SendUnicodeChar(0x0025) ; Prozent
