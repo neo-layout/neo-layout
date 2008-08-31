@@ -227,20 +227,20 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 //							|			|===============|================|===============|===============|================|
 {VK_OEM_1		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},//Tote Taste 1
 {0xff			,0			,'^'		,0x02c7		,0x02d8		,0x00b7		,'-'		,'.'		},
-{'1'			,0			,'1'		,0x00b0		,0x00B9		,0x2022		,0x2640		,0x00ac		},
-{'3'			,0			,'3'		,0x00a7		,0x00b3		,WCH_NONE	,0x2642		,0x2227		},
+{'1'			,0			,'1'		,0x00b0		,0x00B9		,0x2022		,0x2081		,0x00ac		},
+{'3'			,0			,'3'		,0x00a7		,0x00b3		,WCH_NONE	,0x2083		,0x2227		},
 {'4'			,0			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2113		,0x22a5		}, //WCH_NONE sollte »Bild auf« sein (AHK?)
-{'5'			,0			,'5'		,0x00ab		,0x2039		,WCH_NONE	,0x2020		,0x2221		},
+{'5'			,0			,'5'		,0x00ab		,0x2039		,WCH_NONE	,0x2640		,0x2221		},
 {'7'			,0			,'7'		,0x0024		,0x00a5		,0x00a4		,0x03f0		,0x2209		},
-{'8'			,0			,'8'		,0x201E		,0x201A		,0x002F		,WCH_NONE	,0x2204		},
-{'9'			,0			,'9'		,0x201C		,0x2018		,0x002A		,WCH_NONE	,0x2226		},
-{'0'			,0			,'0'		,0x201D		,0x2019		,0x002D		,WCH_NONE	,0x2205		},
+{'8'			,0			,'8'		,0x201E		,0x201A		,0x002F		,0x27E8		,0x2204		},
+{'9'			,0			,'9'		,0x201C		,0x2018		,0x002A		,0x27E9		,0x2226		},
+{'0'			,0			,'0'		,0x201D		,0x2019		,0x002D		,0x2080		,0x2205		},
 {VK_OEM_MINUS	,0			,'-'		,0x2013		,0x2014		,WCH_DEAD	,0x0011		,0x00ad		},
 {VK_OEM_2		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},//Tote Taste 2
 {0xff			,0			,0x00B4		,0x0060		,0x00b8		,0x02d9		,0x02DB		,0x02DA		},
 {VK_TAB			,0			,'\t'		,'\t'		,WCH_DEAD	,'\t'		,'\t'		,'\t'		},
 {0xff			,0			,WCH_NONE	,WCH_NONE	,0x266b		,WCH_NONE	,WCH_NONE	,WCH_NONE	},
-{'X'			,CAPLOK		,'x'		,'X'		,WCH_NONE	,WCH_NONE	,0x03BE		,0x039E		},
+{'X'			,CAPLOK		,'x'		,'X'		,0x2026		,0x22ee		,0x03BE		,0x039E		},
 {'V'			,CAPLOK		,'v'		,'V'		,'_'		,'\b'		,WCH_NONE	,0x2259		},
 {'L'			,CAPLOK		,'l'		,'L'		,'['		,WCH_NONE	,0x03BB		,0x039b		}, //WCH_NONE sollte »Pfeil hoch« sein (AHK?)
 {'C'			,CAPLOK		,'c'		,'C'		,']'		,0x007f		,0x03C7		,0x2102		}, //0x007f sollte »Entfernen« sein (AHK?)
@@ -265,9 +265,9 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {VK_OEM_7		,CAPLOK		,0x00E4		,0x00C4		,'|'		,WCH_NONE	,0x03B7		,0x211c		}, //WCH_NONE sollte »Bild runter« sein (AHK?)
 {'P'			,CAPLOK		,'p'		,'P'		,'~'		,'\r'		,0x03C0		,0x03A0		},
 {'Z'			,CAPLOK		,'z'		,'Z'		,'`'		,WCH_NONE	,0x03B6		,0x2124		},
-{'B'			,CAPLOK		,'b'		,'B'		,'+'		,':'		,0x03B2		,0x21d2		},
+{'B'			,CAPLOK		,'b'		,'B'		,'+'		,':'		,0x03B2		,0x21d0		},
 {'M'			,CAPLOK		,'m'		,'M'		,'%'		,'1'		,0x00b5		,0x21d4		},
-{VK_OEM_COMMA	,0			,','		,0x22ee		,'\"'		,'2'		,0x03c1		,0x21d0		},
+{VK_OEM_COMMA	,0			,','		,0x22ee		,'\"'		,'2'		,0x03c1		,0x21d2		},
 {VK_OEM_PERIOD	,0			,'.'		,0x2026		,'\''		,'3'		,0x03d1		,0x0398		},
 {0				,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
@@ -291,9 +291,9 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
 static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 //							|			|   SHIFT	          |   KANA                  |  NEU		|  KANA+Shift      |   NEU+Kana	 |  Control		|  Control+Shift	|
 //							|			|===============|================|===============|===============|================|===============|===============|
-{'2'			,0			,'2'		,0x2116		,0x00b2		,0x2023		,0x26A5		,0x2228		,WCH_NONE	,0x0000		},
-{'6'			,0			,'6'		,0x20ac		,0x00A2		,0x00a3		,WCH_NONE	,0x2225		,WCH_NONE	,0x001e		},
-{'J'			,CAPLOK		,'j'		,'J'		,';'		,WCH_NONE	,0x03b8		,0x2261		,WCH_NONE	,0x001f		},
+{'2'			,0			,'2'		,0x2116		,0x00b2		,0x2023		,0x2082		,0x2228		,WCH_NONE	,0x0000		},
+{'6'			,0			,'6'		,0x20ac		,0x00A2		,0x00a3		,0x2642		,0x2225		,WCH_NONE	,0x001e		},
+{'J'			,CAPLOK		,'j'		,'J'		,';'		,';'		,0x03b8		,0x2261		,WCH_NONE	,0x001f		},
 {0				,0			,0			,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
