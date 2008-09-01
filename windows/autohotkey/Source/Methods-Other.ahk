@@ -75,7 +75,6 @@ CheckCompAsc(d,val) {
     if !DeadCompose
       send {bs}
     send % val
-    isSecondCompKey = 0
     return 1
   }
 }
@@ -87,7 +86,6 @@ CheckCompAsc12(d,val1,val2) {
       if !DeadCompose
         send {bs}
       send % val1
-      isSecondCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       if !DeadCompose
@@ -104,8 +102,8 @@ CheckCompUni(d,val) {
     PriorCompKey =
     if !DeadCompose
       send {bs}
+    isFurtherCompkey = 0
     SendUnicodeChar(val)
-    isSecondCompKey = 0
     return 1
   }
 }
@@ -117,15 +115,15 @@ CheckCompUni12(d,val1,val2){
       PriorCompKey =
       if !DeadCompose
         send {bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val1)
-      isSecondCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
       if !DeadCompose
         send {bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val2)
-      isSecondCompKey = 0
       return 1
     }
   }
@@ -137,8 +135,8 @@ CheckComp3Uni(d,val) {
     PriorCompKey =
     if !DeadCompose
       send {bs}{bs}
+    isFurtherCompkey = 0
     SendUnicodeChar(val)
-    isSecondCompKey = 0
     return 1
   }
 }
@@ -150,15 +148,15 @@ CheckComp3Uni12(d,val1,val2) {
       PriorCompKey =
       if !DeadCompose
         send {bs}{bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val1)
-      isSecondCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
       if !DeadCompose
         send {bs}{bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val2)
-      isSecondCompKey = 0
       return 1
     }
   }
@@ -166,7 +164,7 @@ CheckComp3Uni12(d,val1,val2) {
 
 OutputChar(val) {
   global
-  if !((CheckComp(val) or PriorCompKey) and DeadCompose)
+  if !(CheckComp(val) and DeadCompose)
     send % "{blind}" . val
 }
 
@@ -175,7 +173,7 @@ OutputChar12(val1,val2) {
   if (Ebene = 1)
     c := val1
   else c := val2
-  if !((CheckComp(c) or PriorCompKey) and DeadCompose)
+  if !(CheckComp(c) and DeadCompose)
     if GetKeyState("Shift","P") and isMod2Locked
       send % "{blind}{Shift Up}" . c . "{Shift Down}"
     else send % "{blind}" . c
@@ -183,17 +181,23 @@ OutputChar12(val1,val2) {
 
 CheckComp(d) {
   global
+  if isFurtherCompkey {
+    PriorCompKey := CompKey := PriorCompKey . "_" . d
+    CheckCompose()
+    CompKey =
+    isFurtherCompkey := 0
+    return 1
+  }
+  else
+  if PriorCompKey {
+    PriorCompKey := CompKey := PriorCompKey . "_" . d
+    CheckCompose()
+    isFurtherCompKey := 1
+    return 1
+  }
+  else
   if (PriorDeadKey = "comp") {
     CompKey := d
-    return 1
-  } else if isSecondCompKey {
-    isSecondCompKey = 0
-    CompKey =
-    PriorCompKey =
-    ;goto neo_%lastHook%
-  } else if PriorCompKey {
-    CompKey := PriorCompKey . "_" . d
-    isSecondCompKey = 1
     return 1
   }
 }

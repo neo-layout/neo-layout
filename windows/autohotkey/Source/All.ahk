@@ -11,6 +11,7 @@
 #Include %a_scriptdir%\Keys-Neo.ahk
 #Include %a_scriptdir%\Methods-Lights.ahk
 #Include %a_scriptdir%\Methods-Other.ahk
+#Include %a_scriptdir%\Compose.ahk
 #Include %a_scriptdir%\Methods-Unicode.ahk
 #Include %a_scriptdir%\Methods-ScreenKeyboard.ahk
 ; Eines schönen Tages sollten auch die Compose-Kombinationen automatisch aus der Referenz erzeugt werden. 

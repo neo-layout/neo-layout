@@ -8,6 +8,7 @@ PriorDeadKey := ""
 PriorCompKey := ""
 Ebene12 = 0
 noCaps = 0
+isFurtherCompkey = 0
 
 EbeneAktualisieren()
 SetBatchLines -1

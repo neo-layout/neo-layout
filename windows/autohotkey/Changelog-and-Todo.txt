@@ -23,21 +23,25 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 838 (von Martin Roppelt)
+‐ Compose.ahk als zentralen Ort für Cokos geschaffen.
+‐ Weitere Vorbereitungen zur Aufnahme weiterer Cokos.
+‐ ›©‹ jetzt auch wieder mit großem ›o‹.
 Revision 833 (von Martin Roppelt)
-- Cokos: ›‼‹, ›⁇‹ über ♫?2/♫!2.
-- Blinde Compose jetzt auch bei SendUnicodeChar().
-- SendUnicodeChar belegt CompKey mit dem Argument.
-- Nicht-blinde Compose wiederhergestellt.
-- Vorbereitungen zur Aufnahme weiterer Cokos.
-- Begrenzung der (blinden) Compose auf 2 Zeichen, wenn keine Übereinstimmung mit Coko vorliegt.
-- »ẗ« zu den Tokos hinzugefügt.
-- "DeadKey :=" in die dead*-Methoden verschoben.
-- OutputChar in OutputChar12 umbenannt, OutputChar hat nur noch ein Argument.
-- Code zusammengefasst, Formatierungen angepasst.
-Revisionen 827-830 (von Martin Roppelt)
-- 2 Achtelnoten (Composesymbol) auf 3(4).
-- CapsLock-Bug Ⅱ.: CapsLock funktionierte nicht mehr, wenn eine Taste gedrückt wurde, auf die CapsLock nicht wirkt (Ziffernreihe/-block, Akzente, Punkt, Komma), da die Zeile »NoCaps = 0« in der isShiftPressed() nie ausgeführt wird.
-- CapsLock-Licht wird jetzt beim (Neu-)Laden des Treibers ausgeschaltet.
+‐ Cokos: ›‼‹, ›⁇‹ über ♫?2/♫!2.
+‐ Blinde Compose jetzt auch bei SendUnicodeChar().
+‐ SendUnicodeChar belegt CompKey mit dem Argument.
+‐ Nicht‐blinde Compose wiederhergestellt.
+‐ Vorbereitungen zur Aufnahme weiterer Cokos.
+‐ Begrenzung der (blinden) Compose auf 2 Zeichen, wenn keine Übereinstimmung mit Coko vorliegt.
+‐ »ẗ« zu den Tokos hinzugefügt.
+‐ "DeadKey :=" in die dead*‐Methoden verschoben.
+‐ OutputChar in OutputChar12 umbenannt, OutputChar hat nur noch ein Argument.
+‐ Code zusammengefasst, Formatierungen angepasst.
+Revisionen 827‐830 (von Martin Roppelt)
+‐ 2 Achtelnoten (Composesymbol) auf 3(4).
+‐ CapsLock‐Bug Ⅱ.: CapsLock funktionierte nicht mehr, wenn eine Taste gedrückt wurde, auf die CapsLock nicht wirkt (Ziffernreihe/‐block, Akzente, Punkt, Komma), da die Zeile »NoCaps = 0« in der isShiftPressed() nie ausgeführt wird.
+‐ CapsLock‐Licht wird jetzt beim (Neu‐)Laden des Treibers ausgeschaltet.
 Revision 820 (von Martin Roppelt)
 ‐ Weitere Cokos ergänzt: ›Ə‹, ›ǆ‹, ›ǅ‹, ›Ǆ‹, glyphengleiche griechische Majuskeln.
 ‐ Echter Bindestich durch Shift+Mod3+Zirkumflex, Leertaste.
