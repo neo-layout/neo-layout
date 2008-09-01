@@ -37,15 +37,15 @@
 <Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
 <Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
 <Multi_key> <c> <k>                      : ""   UE03A # LATIN SMALL LIGATURE CK
-<Multi_key> <c> <h>                      : ""   UE03A # LATIN SMALL LIGATURE CH
-<Multi_key> <t> <t>                      : ""   UE03A # LATIN SMALL LIGATURE TT
-<Multi_key> <c> <t>                      : ""   UE03A # LATIN SMALL LIGATURE CT
-<Multi_key> <ſ> <i>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S I
-<Multi_key> <ſ> <ſ>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S LONG S
-<Multi_key> <ſ> <l>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S L
-<Multi_key> <S> <i>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S LONG S I
-<Multi_key> <ſ> <s>                      : ""   UE03A # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
-<Multi_key> <t> <z>                      : ""   UE04F # LATIN SMALL LIGATURE TZ
+<Multi_key> <c> <h>                      : ""   UE03B # LATIN SMALL LIGATURE CH
+<Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
+<Multi_key> <c> <t>                      : ""   UE03D # LATIN SMALL LIGATURE CT
+<Multi_key> <ſ> <i>                      : ""   UE03E # LATIN SMALL LIGATURE LONG S I
+<Multi_key> <ſ> <ſ>                      : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
+<Multi_key> <ſ> <l>                      : ""   UE043 # LATIN SMALL LIGATURE LONG S L
+<Multi_key> <S> <i>                      : ""   UE044 # LATIN SMALL LIGATURE LONG S LONG S I
+<Multi_key> <ſ> <s>                      : ""   UE045 # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
+<Multi_key> <t> <z>                      : ""   UE04A # LATIN SMALL LIGATURE TZ (ALSO: UE04F)
 <Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
 <Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
 
