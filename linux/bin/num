@@ -4,7 +4,7 @@
 NEO_TXT=$HOME/neo/A-REFERENZ-A/neo20.txt
 
 if [ 0 = $# ]; then
-  grep -m 1 -B 15 "┴─────┘" $NEO_TXT
+  grep -m 1 -B 15 "┴───────┘" $NEO_TXT
 else 
 	for NUM in $@; do
 		if [ $(($NUM)) -ge 1  -a $(($NUM)) -le 6 ]; then
