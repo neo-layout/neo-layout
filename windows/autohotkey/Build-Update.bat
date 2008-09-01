@@ -7,7 +7,7 @@ REM tskill neo20-all-in-one
 
 echo Creating a new Driver from the Source code
 REM The order *is* important!
-copy "Warning.ahk" + "Global-Part.ahk" + "Methods-Layers.ahk" + "Keys-Qwert-to-Neo.ahk" + "Keys-Neo.ahk" + "Methods-Lights.ahk" + "Methods-Other.ahk" + "Methods-Unicode.ahk" + "Methods-ScreenKeyboard.ahk" "..\%fn%.ahk"
+copy "Warning.ahk" + "Global-Part.ahk" + "Methods-Layers.ahk" + "Keys-Qwert-to-Neo.ahk" + "Keys-Neo.ahk" + "Methods-Lights.ahk" + "Methods-Other.ahk" + "Compose.ahk" + "Methods-Unicode.ahk" + "Methods-ScreenKeyboard.ahk" "..\%fn%.ahk"
 REM if exist "..\Compose\Compose-all-in-one.ahk" copy "..\%fn%.ahk" + "..\Compose\Compose-all-in-one.ahk" "..\%fn%.ahk"
 
 echo Compiling the new Driver using AutoHotkey...

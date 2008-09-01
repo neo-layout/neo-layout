@@ -51,6 +51,7 @@ PriorDeadKey := ""
 PriorCompKey := ""
 Ebene12 = 0
 noCaps = 0
+isFurtherCompkey = 0
 
 EbeneAktualisieren()
 SetBatchLines -1
@@ -1075,7 +1076,8 @@ neo_c:
                  or CheckDeadUni12("a4",0x010B,0x010A)
                  or CheckDeadUni12("c1",0x0109,0x0108)
                  or CheckDeadUni12("c2",0x010D,0x010C)
-                 or CheckCompAsc("o","©")))
+                 or CheckCompAsc12("o","©","©")
+                 or CheckCompAsc12("O","©","©")))
     OutputChar12("c","C")
   else if (Ebene = 3)
     send {blind}]
@@ -1396,7 +1398,7 @@ neo_n:
                  or CheckCompUni12("G","",0x039D)))
     OutputChar12("n","N")
   else if (Ebene = 3)
-    send {blind}(
+    OutputChar("(")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2074)
                           or CheckDeadUni("c5",0x2084)))
     Send {blind}{NumPad4}
@@ -1417,7 +1419,7 @@ neo_r:
                  or CheckCompAsc12("O","®","®")))
     OutputChar12("r","R")
   else if (Ebene = 3)
-    send {blind})
+    OutputChar(")")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2075)
                           or CheckDeadUni("c5",0x2085)))
     Send {blind}{NumPad5}
@@ -1459,7 +1461,7 @@ neo_d:
                   or CheckDeadUni12("t4",0x00F0,0x00D0)))
       OutputChar12("d","D")
    else if (Ebene = 3)
-      send {blind}:
+      OutputChar(":")
    else if (Ebene = 4)
 		send `,
    else if (Ebene = 5)
@@ -1499,7 +1501,9 @@ neo_ü:
                  or CheckDeadUni12("t2",0x01D6,0x01D5)))
     OutputChar12("ü","Ü")
   else if (Ebene = 3)
-    send {#}
+    if isMod2Locked
+      send {blind}{Shift Up}{#}
+    else send {blind}{#}
   else if (Ebene = 4)
     Send {blind}{Esc}
   else if (Ebene = 5) { ; leer
@@ -1618,7 +1622,7 @@ neo_komma:
   else if (Ebene = 2)
      SendUnicodeChar(0x22EE) ; vertikale ellipse
   else if (Ebene = 3)
-    send {blind}"
+    OutputChar(Chr(34))
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B2)
                           or CheckDeadUni("c5",0x2082)))
     Send {blind}{NumPad2}
@@ -2194,7 +2198,6 @@ CheckCompAsc(d,val) {
     if !DeadCompose
       send {bs}
     send % val
-    isSecondCompKey = 0
     return 1
   }
 }
@@ -2206,7 +2209,6 @@ CheckCompAsc12(d,val1,val2) {
       if !DeadCompose
         send {bs}
       send % val1
-      isSecondCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       if !DeadCompose
@@ -2223,8 +2225,8 @@ CheckCompUni(d,val) {
     PriorCompKey =
     if !DeadCompose
       send {bs}
+    isFurtherCompkey = 0
     SendUnicodeChar(val)
-    isSecondCompKey = 0
     return 1
   }
 }
@@ -2236,15 +2238,15 @@ CheckCompUni12(d,val1,val2){
       PriorCompKey =
       if !DeadCompose
         send {bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val1)
-      isSecondCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
       if !DeadCompose
         send {bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val2)
-      isSecondCompKey = 0
       return 1
     }
   }
@@ -2256,8 +2258,8 @@ CheckComp3Uni(d,val) {
     PriorCompKey =
     if !DeadCompose
       send {bs}{bs}
+    isFurtherCompkey = 0
     SendUnicodeChar(val)
-    isSecondCompKey = 0
     return 1
   }
 }
@@ -2269,15 +2271,15 @@ CheckComp3Uni12(d,val1,val2) {
       PriorCompKey =
       if !DeadCompose
         send {bs}{bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val1)
-      isSecondCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
       if !DeadCompose
         send {bs}{bs}
+      isFurtherCompkey = 0
       SendUnicodeChar(val2)
-      isSecondCompKey = 0
       return 1
     }
   }
@@ -2285,7 +2287,7 @@ CheckComp3Uni12(d,val1,val2) {
 
 OutputChar(val) {
   global
-  if !((CheckComp(val) or PriorCompKey) and DeadCompose)
+  if !(CheckComp(val) and DeadCompose)
     send % "{blind}" . val
 }
 
@@ -2294,7 +2296,7 @@ OutputChar12(val1,val2) {
   if (Ebene = 1)
     c := val1
   else c := val2
-  if !((CheckComp(c) or PriorCompKey) and DeadCompose)
+  if !(CheckComp(c) and DeadCompose)
     if GetKeyState("Shift","P") and isMod2Locked
       send % "{blind}{Shift Up}" . c . "{Shift Down}"
     else send % "{blind}" . c
@@ -2302,19 +2304,64 @@ OutputChar12(val1,val2) {
 
 CheckComp(d) {
   global
+  if isFurtherCompkey {
+    PriorCompKey := CompKey := PriorCompKey . "_" . d
+    CheckCompose()
+    CompKey =
+    isFurtherCompkey := 0
+    return 1
+  }
+  else
+  if PriorCompKey {
+    PriorCompKey := CompKey := PriorCompKey . "_" . d
+    CheckCompose()
+    isFurtherCompKey := 1
+    return 1
+  }
+  else
   if (PriorDeadKey = "comp") {
     CompKey := d
     return 1
-  } else if isSecondCompKey {
-    isSecondCompKey = 0
-    CompKey =
-    PriorCompKey =
-    ;goto neo_%lastHook%
-  } else if PriorCompKey {
-    CompKey := PriorCompKey . "_" . d
-    isSecondCompKey = 1
-    return 1
   }
+}
+CheckCompose() {
+CheckCompAsc("p_{!}","¶")
+CheckCompAsc("P_{!}","¶")
+CheckCompAsc("P_P","¶")
+CheckCompAsc("t_h","þ")
+CheckCompAsc("T_H","Þ")
+CheckCompUni("f_b",0xE030)
+CheckCompUni("F_b",0xE031)
+CheckCompUni("F_h",0xE032)
+CheckCompUni("F_j",0xE033)
+CheckCompUni("F_k",0xE034)
+CheckCompUni("F_t",0xE035)
+CheckCompUni("f_h",0xE036)
+CheckCompUni("f_j",0xE037)
+CheckCompUni("f_k",0xE038)
+CheckCompUni("f_t",0xE039)
+CheckCompUni("c_k",0xE03A)
+CheckCompUni("c_h",0xE03B)
+CheckCompUni("t_t",0xE03C)
+CheckCompUni("c_t",0xE03D)
+CheckCompUni("0x017F_i",0xE03E)
+CheckCompUni("0x017F_0x017F",0xE03F)
+CheckCompUni("0x017F_l",0xE043)
+CheckCompUni("S_i",0xE044)
+CheckCompUni("0x017F_s",0xE045)
+CheckCompUni("t_z",0xE04A)
+CheckCompUni("Q_u",0xE048)
+CheckCompUni("T_h",0xE049)
+CheckCompUni("{!}_{Numpad2}",0x203C)
+CheckCompUni("2_{!}",0x203C)
+CheckCompUni("{Numpad2}_{!}",0x203C)
+CheckCompUni("?_{Numpad2}",0x2047)
+CheckCompUni("2_?",0x2047)
+CheckCompUni("{Numpad2}_?",0x2047)
+CheckCompUni("{!}_?",0x2049)
+CheckCompUni("?_{!}",0x2048)
+CheckCompUni("1_?_{!}",0x203D)
+CheckCompUni("1_{!}_?",0x203D)
 }
 /*
    ------------------------------------------------------
