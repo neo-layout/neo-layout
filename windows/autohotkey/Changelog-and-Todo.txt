@@ -23,9 +23,11 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 841 (von Martin Roppelt)
+‐ Ebenen 2‐6 der 1er-Taste wiederhergestellt (Klammern vergessen).
 Revision 840 (von Martin Roppelt)
-- Ein paar Bugs ausgebessert.
-- Blinde Compose als Standard (unschöne Ausgabe bei Cokos mit drei Tasten aus der Compose.ahk).
+‐ Ein paar Bugs ausgebessert.
+‐ Blinde Compose als Standard (unschöne Ausgabe bei Cokos mit drei Tasten aus der Compose.ahk).
 Revision 838 (von Martin Roppelt)
 ‐ Compose.ahk als zentralen Ort für Cokos geschaffen.
 ‐ Weitere Vorbereitungen zur Aufnahme weiterer Cokos.

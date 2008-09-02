@@ -774,8 +774,7 @@ return
 neo_1:
   noCaps=1
   EbeneAktualisieren()
-  if Ebene12
-    if !(CheckDeadUni("c1",0x00B9) ; Hochgestellte 1
+  if Ebene12 and !(CheckDeadUni("c1",0x00B9) ; Hochgestellte 1
       or CheckDeadUni("c5",0x2081) ; Tiefgestellte 1
       or CheckComp3Uni("r_1",0x217A) ; Römisch xi
       or CheckComp3Uni("R_1",0x216A)) ; Römisch XI
@@ -817,15 +816,14 @@ return
 neo_3:
   noCaps = 1
   EbeneAktualisieren()
-  if Ebene12 {
-    if !(CheckDeadUni("c1",0x00B3) ; Hochgestellte 3
+  if Ebene12 and !(CheckDeadUni("c1",0x00B3) ; Hochgestellte 3
       or CheckDeadUni("c5",0x2083) ; Tiefgestellte 3
       or CheckCompUni("1",0x2153) ; 1/3
       or CheckCompUni("2",0x2154) ; 2/3
       or CheckCompUni("r",0x2172) ; Römisch iii
       or CheckCompUni("R",0x2162)) ; Römisch III
       OutputChar12(3,"§")
-  } else if (Ebene = 3)
+  else if (Ebene = 3)
     SendUnicodeChar(0x00B3) ; Hochgestellte 3
   else if (Ebene = 4)
     SendUnicodeChar(0x266B) ; 2 Achtelnoten
