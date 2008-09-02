@@ -74,7 +74,7 @@ If LangSTastatur
 IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 
 ;Sollen Compose-Tasten blind angezeigt werden?
-IniRead,DeadCompose,%ini%,Global,DeadCompose,0
+IniRead,DeadCompose,%ini%,Global,DeadCompose,1
 
 ;Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0

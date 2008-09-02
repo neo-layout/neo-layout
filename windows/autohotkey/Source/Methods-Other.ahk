@@ -75,6 +75,7 @@ CheckCompAsc(d,val) {
     if !DeadCompose
       send {bs}
     send % val
+    isFurtherCompKey = 0
     return 1
   }
 }
@@ -86,12 +87,13 @@ CheckCompAsc12(d,val1,val2) {
       if !DeadCompose
         send {bs}
       send % val1
+      isFurtherCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       if !DeadCompose
         send {bs}
       send % val2
-      isSecondCompKey = 0
+      isFurtherCompKey = 0
       return 1
     }
 }
@@ -100,6 +102,7 @@ CheckCompUni(d,val) {
   global
   if (PriorCompKey == d) {
     PriorCompKey =
+    CompKey =
     if !DeadCompose
       send {bs}
     isFurtherCompkey = 0
@@ -113,6 +116,7 @@ CheckCompUni12(d,val1,val2){
   if (PriorCompKey == d) {
     if (Ebene = 1) and (val1 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}
       isFurtherCompkey = 0
@@ -120,6 +124,7 @@ CheckCompUni12(d,val1,val2){
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}
       isFurtherCompkey = 0
@@ -133,6 +138,7 @@ CheckComp3Uni(d,val) {
   global
   if (PriorCompKey == d) {
     PriorCompKey =
+    CompKey =
     if !DeadCompose
       send {bs}{bs}
     isFurtherCompkey = 0
@@ -146,6 +152,7 @@ CheckComp3Uni12(d,val1,val2) {
   if (PriorCompKey == d) {
     if (Ebene = 1) and (val1 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}{bs}
       isFurtherCompkey = 0
@@ -153,6 +160,7 @@ CheckComp3Uni12(d,val1,val2) {
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}{bs}
       isFurtherCompkey = 0
@@ -183,16 +191,18 @@ CheckComp(d) {
   global
   if isFurtherCompkey {
     PriorCompKey := CompKey := PriorCompKey . "_" . d
+    isFurtherCompkey = 0
     CheckCompose()
-    CompKey =
-    isFurtherCompkey := 0
-    return 1
+    if (CompKey = "")
+      return 1
+    else CompKey =
   }
   else
   if PriorCompKey {
     PriorCompKey := CompKey := PriorCompKey . "_" . d
     CheckCompose()
-    isFurtherCompKey := 1
+    if CompKey
+      isFurtherCompKey = 1
     return 1
   }
   else
