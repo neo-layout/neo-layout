@@ -117,7 +117,7 @@ If LangSTastatur
 IniRead,DeadSilence,%ini%,Global,DeadSilence,0
 
 ;Sollen Compose-Tasten blind angezeigt werden?
-IniRead,DeadCompose,%ini%,Global,DeadCompose,0
+IniRead,DeadCompose,%ini%,Global,DeadCompose,1
 
 ;Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
@@ -2198,6 +2198,7 @@ CheckCompAsc(d,val) {
     if !DeadCompose
       send {bs}
     send % val
+    isFurtherCompKey = 0
     return 1
   }
 }
@@ -2209,12 +2210,13 @@ CheckCompAsc12(d,val1,val2) {
       if !DeadCompose
         send {bs}
       send % val1
+      isFurtherCompKey = 0
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       if !DeadCompose
         send {bs}
       send % val2
-      isSecondCompKey = 0
+      isFurtherCompKey = 0
       return 1
     }
 }
@@ -2223,6 +2225,7 @@ CheckCompUni(d,val) {
   global
   if (PriorCompKey == d) {
     PriorCompKey =
+    CompKey =
     if !DeadCompose
       send {bs}
     isFurtherCompkey = 0
@@ -2236,6 +2239,7 @@ CheckCompUni12(d,val1,val2){
   if (PriorCompKey == d) {
     if (Ebene = 1) and (val1 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}
       isFurtherCompkey = 0
@@ -2243,6 +2247,7 @@ CheckCompUni12(d,val1,val2){
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}
       isFurtherCompkey = 0
@@ -2256,6 +2261,7 @@ CheckComp3Uni(d,val) {
   global
   if (PriorCompKey == d) {
     PriorCompKey =
+    CompKey =
     if !DeadCompose
       send {bs}{bs}
     isFurtherCompkey = 0
@@ -2269,6 +2275,7 @@ CheckComp3Uni12(d,val1,val2) {
   if (PriorCompKey == d) {
     if (Ebene = 1) and (val1 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}{bs}
       isFurtherCompkey = 0
@@ -2276,6 +2283,7 @@ CheckComp3Uni12(d,val1,val2) {
       return 1
     } else if (Ebene = 2) and (val2 != "") {
       PriorCompKey =
+      CompKey =
       if !DeadCompose
         send {bs}{bs}
       isFurtherCompkey = 0
@@ -2306,16 +2314,18 @@ CheckComp(d) {
   global
   if isFurtherCompkey {
     PriorCompKey := CompKey := PriorCompKey . "_" . d
+    isFurtherCompkey = 0
     CheckCompose()
-    CompKey =
-    isFurtherCompkey := 0
-    return 1
+    if (CompKey = "")
+      return 1
+    else CompKey =
   }
   else
   if PriorCompKey {
     PriorCompKey := CompKey := PriorCompKey . "_" . d
     CheckCompose()
-    isFurtherCompKey := 1
+    if CompKey
+      isFurtherCompKey = 1
     return 1
   }
   else
@@ -2361,7 +2371,41 @@ CheckCompUni("{Numpad2}_?",0x2047)
 CheckCompUni("{!}_?",0x2049)
 CheckCompUni("?_{!}",0x2048)
 CheckCompUni("1_?_{!}",0x203D)
-CheckCompUni("1_{!}_?",0x203D)
+CheckComp3Uni("1_{!}_?",0x203D)
+CheckComp3Uni("{Numpad1}_?_{!}",0x203D)
+CheckComp3Uni("{Numpad1}_{!}_?",0x203D)
+CheckComp3Uni("1_¿_¡",0x2E18)
+CheckComp3Uni("1_¡_¿",0x2E18)
+CheckComp3Uni("{Numpad1}_¿_¡",0x2E18)
+CheckComp3Uni("{Numpad1}_¡_¿",0x2E18)
+CheckCompUni("0x2020_0x2020",0x2021)
+CheckCompUni(":_:",0x2025)
+CheckCompUni("R_{Numpad1}_ ",0x2160)
+CheckCompUni("R_{Numpad2}",0x2161)
+CheckCompUni("R_{Numpad3}",0x2162)
+CheckCompUni("R_{Numpad4}",0x2163)
+CheckCompUni("R_{Numpad5}",0x2164)
+CheckCompUni("R_{Numpad6}",0x2165)
+CheckCompUni("R_{Numpad7}",0x2166)
+CheckCompUni("R_{Numpad8}",0x2167)
+CheckCompUni("R_{Numpad9}",0x2168)
+CheckCompUni("R_{Numpad1}_{Numpad0}",0x2169)
+CheckCompUni("R_{Numpad1}_{Numpad1}",0x216A)
+CheckCompUni("R_{Numpad1}_{Numpad2}",0x216B)
+CheckCompUni("r_{Numpad1}_ ",0x2170)
+CheckCompUni("r_{Numpad2}",0x2171)
+CheckCompUni("r_{Numpad3}",0x2172)
+CheckCompUni("r_{Numpad4}",0x2173)
+CheckCompUni("r_{Numpad5}",0x2174)
+CheckCompUni("r_{Numpad6}",0x2175)
+CheckCompUni("r_{Numpad7}",0x2176)
+CheckCompUni("r_{Numpad8}",0x2177)
+CheckCompUni("r_{Numpad9}",0x2178)
+CheckCompUni("r_{Numpad1}_{Numpad0}",0x2179)
+CheckCompUni("r_{Numpad1}_{Numpad1}",0x217A)
+CheckCompUni("r_{Numpad1}_{Numpad2}",0x217B)
+CheckCompUni(":_)",0x263A)
+CheckCompUni(":_(",0x2639)
 }
 /*
    ------------------------------------------------------
@@ -2376,7 +2420,7 @@ Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex m
 SendUnicodeChar(charCode) {
 
   global
-  if !((CheckComp(charCode) or PriorCompKey) and DeadCompose)
+  if !(CheckComp(charCode) and DeadCompose)
   IfWinActive,ahk_class gdkWindowToplevel
   {
     StringLower,charCode,charCode
