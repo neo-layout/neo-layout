@@ -1079,13 +1079,12 @@ neo_c:
     OutputChar12("c","C")
   else if (Ebene = 3)
     send {blind}]
-  else if (Ebene = 4)
-    if (not(lernModus) or lernModus_neo_Entf)
+  else if (Ebene = 4) and (not(lernModus) or lernModus_neo_Entf)
       Send {blind}{Del}
   else if (Ebene = 5)
     SendUnicodeChar(0x03C7) ; chi
   else if (Ebene = 6)
-    SendUnicodeChar(0x2102) ; C (Komplexe Zahlen)
+    SendUnicodeChar(0x2102) ; C (Komplexe Zahlen)]
 return
 
 neo_w:
