@@ -403,9 +403,9 @@ neo_sz:
   else if (Ebene = 3)
     if LangSTastatur
       send ß
-    else {
+    else
       SendUnicodeChar(0x017F) ; langes s
-  } else if (Ebene = 5)
+  else if (Ebene = 5)
     SendUnicodeChar(0x03C2) ; varsigma
   else if (Ebene = 6)
     SendUnicodeChar(0x2218) ; Verknüpfungsoperator
@@ -454,10 +454,7 @@ neo_u:
     send {blind}\
   else if (Ebene = 4)
     Send {blind}{Home}
-  else if (Ebene = 5) { ; leer
-     CompKey := PriorCompKey
-     DeadKey := PriorDeadKey
-  } else if (Ebene = 6)
+  else if (Ebene = 6)
     SendUnicodeChar(0x222E) ; contour integral
 return
 
@@ -567,7 +564,11 @@ neo_s:
     else OutputChar12("s","S")
   } else if (Ebene = 3)
     OutputChar("?")
-  else if (Ebene = 4)
+  else if Ebene7 {
+    if LangSTastatur
+      OutputChar("s")
+    else SendUnicodeChar(0x017F)
+  } else if (Ebene = 4)
     OutputChar("¿")
   else if (Ebene = 5)
     SendUnicodeChar(0x03C3) ;sigma
