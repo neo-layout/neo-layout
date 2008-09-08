@@ -18,7 +18,7 @@
   else {
     keypressed := 1
     goto %gespiegelt_7%
-  } 
+  }
 *VK38SC009::
   if !einHandNeo or !spacepressed
     goto neo_8

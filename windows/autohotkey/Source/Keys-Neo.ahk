@@ -283,8 +283,8 @@ neo_c:
     OutputChar12("c","C")
   else if (Ebene = 3)
     send {blind}]
-  else if (Ebene = 4) and (not(lernModus) or lernModus_neo_Entf)
-      Send {blind}{Del}
+  else if (Ebene = 4) and (!lernModus or lernModus_neo_Entf)
+    send {blind}{Del}
   else if (Ebene = 5)
     SendUnicodeChar(0x03C7) ; chi
   else if (Ebene = 6)

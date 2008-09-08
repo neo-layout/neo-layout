@@ -196,17 +196,13 @@ CheckComp(d) {
     if (CompKey = "")
       return 1
     else CompKey =
-  }
-  else
-  if PriorCompKey {
+  } else if PriorCompKey {
     PriorCompKey := CompKey := PriorCompKey . "_" . d
     CheckCompose()
     if CompKey
       isFurtherCompKey = 1
     return 1
-  }
-  else
-  if (PriorDeadKey = "comp") {
+  } else if (PriorDeadKey = "comp") {
     CompKey := d
     return 1
   }
