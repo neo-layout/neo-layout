@@ -65,7 +65,6 @@ EbeneAktualisieren() {
   DeadKey := ""
   CompKey := ""
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
-  noCaps := 0
   Ebene7 := 0
   Ebene8 := 0
   if      (Modstate = "000") ; Ebene 1: Ohne Mod
@@ -88,24 +87,24 @@ EbeneAktualisieren() {
     Ebene8 = 1
   } Ebene12 := ((Ebene = 1) or (Ebene = 2))
   Ebene14 := ((Ebene = 1) or (Ebene = 4))
-  NumLock := GetKeyState("NumLock","T")
+  NumLock := GetKeyState("NumLock", "T")
+  noCaps := 0
 }
 
 IsShiftPressed()
 {
   global
-  if striktesMod2Lock
-    noCaps = 0
-  if GetKeyState("Shift","P")
-    if isMod2Locked and !noCaps
-      return 0
-    else
+  if !(NoCaps and GetKeyState("Shift", "P") and (GetKeyState("Alt", "P") or GetKeyState("Strg", "P"))) {
+    if striktesMod2Lock
+      noCaps = 0
+    if GetKeyState("Shift","P")
+      if isMod2Locked and !noCaps
+        return 0
+      else return 1
+    else if isMod2Locked and !noCaps
       return 1
-  else
-    if isMod2Locked and !noCaps
-      return 1
-    else
-      return 0
+    else return 0
+  }
 }
 
 IsMod3Pressed()

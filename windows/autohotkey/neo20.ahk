@@ -445,7 +445,6 @@ EbeneAktualisieren() {
   DeadKey := ""
   CompKey := ""
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
-  noCaps := 0
   Ebene7 := 0
   Ebene8 := 0
   if      (Modstate = "000") ; Ebene 1: Ohne Mod
@@ -468,24 +467,24 @@ EbeneAktualisieren() {
     Ebene8 = 1
   } Ebene12 := ((Ebene = 1) or (Ebene = 2))
   Ebene14 := ((Ebene = 1) or (Ebene = 4))
-  NumLock := GetKeyState("NumLock","T")
+  NumLock := GetKeyState("NumLock", "T")
+  noCaps := 0
 }
 
 IsShiftPressed()
 {
   global
-  if striktesMod2Lock
-    noCaps = 0
-  if GetKeyState("Shift","P")
-    if isMod2Locked and !noCaps
-      return 0
-    else
+  if !(NoCaps and GetKeyState("Shift", "P") and (GetKeyState("Alt", "P") or GetKeyState("Strg", "P"))) {
+    if striktesMod2Lock
+      noCaps = 0
+    if GetKeyState("Shift","P")
+      if isMod2Locked and !noCaps
+        return 0
+      else return 1
+    else if isMod2Locked and !noCaps
       return 1
-  else
-    if isMod2Locked and !noCaps
-      return 1
-    else
-      return 0
+    else return 0
+  }
 }
 
 IsMod3Pressed()
@@ -528,7 +527,7 @@ IsMod4Pressed()
   else {
     keypressed := 1
     goto %gespiegelt_7%
-  } 
+  }
 *VK38SC009::
   if !einHandNeo or !spacepressed
     goto neo_8
@@ -1032,8 +1031,8 @@ neo_c:
     OutputChar12("c","C")
   else if (Ebene = 3)
     send {blind}]
-  else if (Ebene = 4) and (not(lernModus) or lernModus_neo_Entf)
-      Send {blind}{Del}
+  else if (Ebene = 4) and (!lernModus or lernModus_neo_Entf)
+    send {blind}{Del}
   else if (Ebene = 5)
     SendUnicodeChar(0x03C7) ; chi
   else if (Ebene = 6)
@@ -2219,17 +2218,13 @@ CheckComp(d) {
     if (CompKey = "")
       return 1
     else CompKey =
-  }
-  else
-  if PriorCompKey {
+  } else if PriorCompKey {
     PriorCompKey := CompKey := PriorCompKey . "_" . d
     CheckCompose()
     if CompKey
       isFurtherCompKey = 1
     return 1
-  }
-  else
-  if (PriorDeadKey = "comp") {
+  } else if (PriorDeadKey = "comp") {
     CompKey := d
     return 1
   }
