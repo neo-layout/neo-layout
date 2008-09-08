@@ -247,12 +247,10 @@ Um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gewährleist
 sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwendet werden!
 
 === Legende – Ziffernblock ===
-┌───────┐ 1 … 1. Ebene (kein Mod)
-│ 2 4 6 │ 2 … 2. Ebene (Umschalt)
-│ 1 3 5 │ 3 … 3. Ebene (Mod3)
-└───────┘ 4 … 4. Ebene (Mod4)
-          5 … 5. Ebene (Mod3+Umschalt) (z.Zt. noch nicht belegt)
-          6 … 6. Ebene (Mod3+Mod4) (z.Zt. noch nicht belegt)
+┌───────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
+│ 2 4 6 │ 2 … 2. Ebene (Umschalt)     │ 5 … 5. Ebene (Mod3+Umschalt) (noch nicht belegt)
+│ 1 3 5 │ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4) (noch nicht belegt)
+└───────┘
 
 === Rechenzeichen ===
 ┬───────┬ 1 … ASCII-Schrägstrich
