@@ -1,14 +1,32 @@
 #!/bin/sh
+CONSOLE_KEYMAP="/usr/share/kbd/keymaps/i386/qwertz/de.map.gz"	# leer für Standard-keymap (i.d.R. qwerty)
+
+NUM_LOCK_STATUS="ON"						# gewünschter Status für qwert
 
 if [ -n "$SSH_CONNECTION" ]; then
 	echo "Dude, du bist in einer SSH-Session. Wie soll ich das Tastaturlayout hier ändern?"
 	exit 1
 fi
 if [ -z "$DISPLAY" ]; then
-	echo "Dude, du bist auf der Textkonsole. Ich kann das Layout nur auf dem X-Server ändern!"
-	exit 1
+	echo "Um das Tastaturlayout auf der Textkonsole zu ändern, muss man root-Rechte besitzen!"
+	if [ $CONSOLE_KEYMAP ] ; then
+		sudo loadkeys $CONSOLE_KEYMAP
+	else
+		sudo loadkeys -d
+	fi
+	if [ NUM_LOCK_STATUS="ON" ] ; then
+		setleds +num
+	else
+		setleds -num
+	fi
+else
+	xset r 51; xset r 94					# Modifier
+	xset r 21; xset r 35; xset r 49				# tote Tasten (dead keys)
+	setxkbmap de
+	if [ NUM_LOCK_STATUS="ON" ] ; then
+		numlockx on
+	else
+		numlockx off
+	fi
 fi
 
-xset r 51
-xset r 94
-setxkbmap de
