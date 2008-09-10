@@ -317,20 +317,20 @@
 <Multi_key> <underbar> <Greek_chi>         : "ᵪ"   U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
 
 # script letters
-<Multi_key> <s> <c> <g>                    : "ℊ"	   U210A # SCRIPT SMALL G
-<Multi_key> <s> <c> <H>                    : "ℋ"	   U210B # SCRIPT CAPITAL H
-<Multi_key> <s> <c> <I>                    : "ℐ"	   U2110 # SCRIPT CAPITAL I
-<Multi_key> <s> <c> <L>                    : "ℒ"	   U2112 # SCRIPT CAPITAL L
-<Multi_key> <s> <c> <l>                    : "ℓ"	   U2113 # SCRIPT SMALL L
-<Multi_key> <e> <l> <l>                    : "ℓ"	   U2113 # SCRIPT SMALL L
-<Multi_key> <s> <c> <P>                    : "℘"	   U2118 # SCRIPT CAPITAL P
-<Multi_key> <s> <c> <R>                    : "ℛ"	   U211B # SCRIPT CAPITAL R
-<Multi_key> <s> <c> <B>                    : "ℬ"	   U212C # SCRIPT CAPITAL B
-<Multi_key> <s> <c> <e>                    : "ℯ"	   U212F # SCRIPT SMALL E
-<Multi_key> <s> <c> <E>                    : "ℰ"	   U2130 # SCRIPT CAPITAL E
-<Multi_key> <s> <c> <F>                    : "ℱ"	   U2131 # SCRIPT CAPITAL F
-<Multi_key> <s> <c> <M>                    : "ℳ"	   U2133 # SCRIPT CAPITAL M
-<Multi_key> <s> <c> <o>                    : "ℴ"	   U2134 # SCRIPT SMALL O
+<Multi_key> <s> <c> <g>                    : "ℊ"   U210A # SCRIPT SMALL G
+<Multi_key> <s> <c> <H>                    : "ℋ"   U210B # SCRIPT CAPITAL H
+<Multi_key> <s> <c> <I>                    : "ℐ"   U2110 # SCRIPT CAPITAL I
+<Multi_key> <s> <c> <L>                    : "ℒ"   U2112 # SCRIPT CAPITAL L
+<Multi_key> <s> <c> <l>                    : "ℓ"   U2113 # SCRIPT SMALL L
+<Multi_key> <e> <l> <l>                    : "ℓ"   U2113 # SCRIPT SMALL L
+<Multi_key> <s> <c> <P>                    : "℘"   U2118 # SCRIPT CAPITAL P
+<Multi_key> <s> <c> <R>                    : "ℛ"   U211B # SCRIPT CAPITAL R
+<Multi_key> <s> <c> <B>                    : "ℬ"   U212C # SCRIPT CAPITAL B
+<Multi_key> <s> <c> <e>                    : "ℯ"   U212F # SCRIPT SMALL E
+<Multi_key> <s> <c> <E>                    : "ℰ"   U2130 # SCRIPT CAPITAL E
+<Multi_key> <s> <c> <F>                    : "ℱ"   U2131 # SCRIPT CAPITAL F
+<Multi_key> <s> <c> <M>                    : "ℳ"   U2133 # SCRIPT CAPITAL M
+<Multi_key> <s> <c> <o>                    : "ℴ"   U2134 # SCRIPT SMALL O
 
 
 # physical symbols
@@ -415,50 +415,50 @@
 
 
 # diacritical marks
-<dead_circumflex> <nobreakspace>                  : "ˆ" U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
-<dead_caron> <nobreakspace>                       : "ˇ" U02C7 # CARON
-<dead_breve> <nobreakspace>                       : "˘" U02D8 # BREVE
-<dead_acute> <nobreakspace>                       : "´" U00B4 # ACUTE ACCENT
-<dead_grave> <nobreakspace>                       : "`" U0060 # GRAVE ACCENT
-<dead_cedilla> <nobreakspace>                     : "¸" U00B8 # CEDILLA
-<dead_ogonek> <nobreakspace>                      : "˛" U02DB # OGONEK
-<dead_abovedot> <nobreakspace>                    : "˙" U02D9 # DOT ABOVE
-<dead_abovering> <nobreakspace>                   : "˚" U02DA # RING ABOVE
-<dead_tilde> <nobreakspace>                       : "˜" U02DC # SMALL TILDE
-<dead_macron> <nobreakspace>                      : "¯" U00AF # MACRON
-<dead_diaeresis> <nobreakspace>                   : "¨" U00A8 # DIAERESIS
-<dead_stroke> <nobreakspace>                      : "/" U002F # SOLIDUS
-<dead_doubleacute> <nobreakspace>                 : "˝" U02DD # DOUBLE ACUTE ACCENT
-<U02CC> <nobreakspace>                            : " ̦" U0326 # SPACE with COMBINING COMMA BELOW
+<dead_circumflex> <nobreakspace>                  : "ˆ"   U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
+<dead_caron> <nobreakspace>                       : "ˇ"   U02C7 # CARON
+<dead_breve> <nobreakspace>                       : "˘"   U02D8 # BREVE
+<dead_acute> <nobreakspace>                       : "´"   U00B4 # ACUTE ACCENT
+<dead_grave> <nobreakspace>                       : "`"   U0060 # GRAVE ACCENT
+<dead_cedilla> <nobreakspace>                     : "¸"   U00B8 # CEDILLA
+<dead_ogonek> <nobreakspace>                      : "˛"   U02DB # OGONEK
+<dead_abovedot> <nobreakspace>                    : "˙"   U02D9 # DOT ABOVE
+<dead_abovering> <nobreakspace>                   : "˚"   U02DA # RING ABOVE
+<dead_tilde> <nobreakspace>                       : "˜"   U02DC # SMALL TILDE
+<dead_macron> <nobreakspace>                      : "¯"   U00AF # MACRON
+<dead_diaeresis> <nobreakspace>                   : "¨"   U00A8 # DIAERESIS
+<dead_stroke> <nobreakspace>                      : "/"   U002F # SOLIDUS
+<dead_doubleacute> <nobreakspace>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
+<U02CC> <nobreakspace>                            : " ̦"   U0326 # SPACE with COMBINING COMMA BELOW
 
 # combining characters
-<dead_circumflex> <dead_circumflex>        : "̂" U0302 # COMBINING CIRCUMFLEX ACCENT
-<dead_caron> <dead_caron>                  : "̌" U030c # COMBINING CARON
-<dead_breve> <dead_breve>                  : "̆" U0306 # COMBINING BREVE
-<U02D7> <U02D7>                            : "̶" U0336 # COMBINING LONG STROKE OVERLAY
-<U00B7> <U00B7>                            : "͘" U0358 # COMBINING DOT ABOVE RIGHT
-<dead_belowdot> <dead_belowdot>            : "̣" U0323 # COMBINING DOT BELOW
-<dead_acute> <dead_acute>                  : "́" U0301 # COMBINING ACUTE ACCENT
-<dead_grave> <dead_grave>                  : "̀" U0300 # COMBINING GRAVE ACCENT
-<dead_cedilla> <dead_cedilla>              : "̧" U0327 # COMBINING CEDILLA
-<dead_ogonek> <dead_ogonek>                : "̨" U0328 # COMBINING OGONEK
-<dead_abovedot> <dead_abovedot>            : "̇" U0307 # COMBINING DOT ABOVE
-<dead_abovering> <dead_abovering>          : "̊" U030A # COMBINING RING ABOVE
-<dead_tilde> <dead_tilde>                  : "̃" U0303 # COMBINING TILDE
-<dead_macron> <dead_macron>                : "̄" U0304 # COMBINING MACRON
-<dead_diaeresis> <dead_diaeresis>          : "̈" U0308 # COMBINING DIAERESIS
-<dead_stroke> <dead_stroke>                : "̷" U0337 # COMBINING SHORT SOLIDUS OVERLAY
-<dead_doubleacute> <dead_doubleacute>      : "̋" U030B # COMBINING DOUBLE ACUTE ACCENT
-<U02CC> <U02CC>                            : "̦" U0326 # COMBINING COMMA BELOW
-<Multi_key> <underscore> <underscore>      : "̲" U0332 # COMBINING LOW LINE
+<dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT
+<dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON
+<dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE
+<U02D7> <U02D7>                            : "̶"   U0336 # COMBINING LONG STROKE OVERLAY
+<U00B7> <U00B7>                            : "͘"   U0358 # COMBINING DOT ABOVE RIGHT
+<dead_belowdot> <dead_belowdot>            : "̣"   U0323 # COMBINING DOT BELOW
+<dead_acute> <dead_acute>                  : "́"   U0301 # COMBINING ACUTE ACCENT
+<dead_grave> <dead_grave>                  : "̀"   U0300 # COMBINING GRAVE ACCENT
+<dead_cedilla> <dead_cedilla>              : "̧"   U0327 # COMBINING CEDILLA
+<dead_ogonek> <dead_ogonek>                : "̨"   U0328 # COMBINING OGONEK
+<dead_abovedot> <dead_abovedot>            : "̇"   U0307 # COMBINING DOT ABOVE
+<dead_abovering> <dead_abovering>          : "̊"   U030A # COMBINING RING ABOVE
+<dead_tilde> <dead_tilde>                  : "̃"   U0303 # COMBINING TILDE
+<dead_macron> <dead_macron>                : "̄"   U0304 # COMBINING MACRON
+<dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS
+<dead_stroke> <dead_stroke>                : "̷"   U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT
+<U02CC> <U02CC>                            : "̦"   U0326 # COMBINING COMMA BELOW
+<Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
 
 
 # dead keys
-<U02D7> <space>                            : minus
-<U00B7> <space>                            : "·" U00B7 # MIDDLE DOT
-<dead_belowdot> <space>                    : period
-<dead_doubleacute> <space>                 : "˝" U02DD # DOUBLE ACUTE ACCENT
-<U02CC> <space>                            : comma # COMMA
+<U02D7> <space>                            : "-"   minus # HYPHEN-MINUS
+<U00B7> <space>                            : "·"   U00B7 # MIDDLE DOT
+<dead_belowdot> <space>                    : "."   period # FULL STOP
+<dead_doubleacute> <space>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
+<U02CC> <space>                            : ","   comma # COMMA
 
 
 # End of Definitions by Neo keyboard layout
