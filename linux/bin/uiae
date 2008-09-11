@@ -5,7 +5,7 @@
 ################################################################################
 # Ort, wo sich die Konsolen-Belegungen befinden:
 #CONSOLE_KEYMAP="/usr/share/kbd/keymaps/i386/qwertz/de.map.gz"	# Suse
-#CONSOLE_KEYMAP="/usr/share/keymaps/i386/qwertz/de.map.gz"	# Gentoo
+#CONSOLE_KEYMAP="/usr/share/keymaps/i386/qwertz/de.map.gz"	# Gentoo, Ubuntu
 CONSOLE_KEYMAP="/lib/kbd/keymaps/i386/qwertz/de.map.gz"	# Fedora, Red Hat
 #CONSOLE_KEYMAP=""		# leer für Standard-keymap (i.d.R. qwerty)
 
