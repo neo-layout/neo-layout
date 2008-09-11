@@ -60,10 +60,10 @@ Zu den Akzenten siehe auch
 T1 („Tote Taste 1“: Taste links neben der 1)
         1 … Toter Zirkumflex (sieht aus wie U+0302 COMBINING CIRCUMFLEX ACCENT)
 ┌─────┬ 2 … Toter Caron/Hatschek (sieht aus wie U+030C COMBINING CARON)
-│ˇ · .│ 3 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
-│ˆ ˘ -│ 4 … Toter Punkt in der Mitte, verwendet für ›ŀ‹, ›Ŀ‹
-├─────┴ 5 … Toter Querstrich (sieht aus wie U+0335 COMBINING SHORT STROKE OVERLAY)
-        6 … Toter Punkt darunter (sieht aus wie U+0323 COMBINING DOT BELOW)
+│ˇ    │ 3 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
+│ˆ ˘  │ 4 … 
+├─────┴ 5 … 
+        6 … 
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Akut (sieht aus wie U+0301 COMBINING ACUTE ACCENT)
@@ -148,8 +148,8 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ · .│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│ˆ ˘ -│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│´ ¸ ˛│    ⌫    │
+│ˇ    │° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
+│ˆ ˘  │1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│´ ¸ ˛│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│ˉ / ˏ│      │
 │Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│˜ ¨ ˝│Enter │
@@ -166,9 +166,9 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ^ │1│2│3│4│5│6│7│8│9│0│-│´│ Back │
+│ ˆ │1│2│3│4│5│6│7│8│9│0│-│´│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│~│ Ret │
+│Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│˜│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │u│i│a│e│o│s│n│r│t│d│y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -181,7 +181,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˇ │°│№│§│»│«│€│$│„│“│”│–│`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│ˉ│ Ret │
+│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¯│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -205,9 +205,9 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ · │•│‣│ │⇞│ │£│¤│/│*│-│ │˙│ Back │
+│   │•│‣│ │⇞│ │£│¤│/│*│-│ │˙│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │/│ Ret │
+│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -218,9 +218,9 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ - │₁│₂│₃│ℓ│♀│♂│κ│⟨│⟩│₀│‑│˛│ Back │
+│   │₁│₂│₃│ℓ│♀│♂│κ│⟨│⟩│₀│‑│˛│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │ξ│ │λ│χ│ω│ϰ│ψ│γ│φ│ϕ│ς│˝│ Ret │
+│    │ξ│ │λ│χ│ω│ϰ│ψ│γ│φ│ϕ│ς│/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │ │ι│α│ε│ο│σ│ν│ϱ│τ│δ│υ│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -231,7 +231,7 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 
 === Sechste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ . │¬│∨│∧│⊥│∡│∥│∉│∄│∦│∅│╌│˚│ Back │
+│   │¬│∨│∧│⊥│∡│∥│∉│∄│∦│∅│╌│˚̦│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │    │Ξ│≙│Λ│ℂ│Ω│√│Ψ│Γ│Φ│ℚ│∘│ˏ│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │

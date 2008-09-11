@@ -99,8 +99,8 @@ keycode 65 = space space space nobreakspace 0 0 U202F
 ! The first row (number Row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1          Ebene2     Ebene3      Ebene5      Ebene4         Ebene4+Sh      Ebene6
-keycode 49 = dead_circumflex dead_caron dead_breve  U02D7        U00B7       NoSymbol       dead_belowdot
-!		^		ˇ	˘		-	·				.
+keycode 49 = dead_circumflex dead_caron dead_breve  NoSymbol    NoSymbol       NoSymbol       NoSymbol
+!		^		ˇ	˘							
 
 keycode 10 = 1 degree         onesuperior   U2081	 enfilledcircbullet   NoSymbol       notsign
 !		°		¹	  subscript-1		•				¬
