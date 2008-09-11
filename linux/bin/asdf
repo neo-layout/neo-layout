@@ -13,7 +13,7 @@ PFAD="$HOME/neo"
 
 # Ort, wo sich die Konsolen-Belegungen befinden:
 #CONSOLE_KEYMAP="/usr/share/kbd/keymaps/i386/neo/neo.map"	# Suse
-#CONSOLE_KEYMAP="/usr/share/keymaps/i386/neo/neo.map"		# Gentoo
+#CONSOLE_KEYMAP="/usr/share/keymaps/i386/neo/neo.map"		# Gentoo, Ubuntu
 CONSOLE_KEYMAP="/lib/kbd/keymaps/i386/neo/neo.map"	# Fedora, Red Hat
 ################################################################################
 ################################################################################
