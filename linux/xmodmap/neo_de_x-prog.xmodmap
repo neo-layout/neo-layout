@@ -10,7 +10,7 @@
 !! Other Questions:
 !!      <mailinglist at neo-layout dot org>
 !! 
-!! $Revision: 589 $, $Date: 2008-07-01 10:22:24 +0200 (Di, 01 Jul 2008) $
+!! $Revision: 858 $, $Date: 2008-09-11 02:19:33 +0200 (Do, 11 Sep 2008) $
 !! http://pebbles.schattenlauf.de/layout.php
 !! 
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -20,8 +20,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Modifier definition
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-remove Lock = Caps_Lock
-remove Mod3 = ISO_Level3_Shift
+clear Lock
 clear Mod2
 ! Mod2 war NumLock !
 clear Mod3
@@ -59,6 +58,7 @@ keycode 116 = Multi_key Multi_key
 
 add Mod4 = Super_L Super_R
 
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Ebenen
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -82,6 +82,7 @@ add Mod4 = Super_L Super_R
 ! add Lock = ISO_Lock
 
 
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Tab as Multi_key (Compose)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -91,64 +92,64 @@ keycode 23 = Tab ISO_Left_Tab Multi_key ISO_Level3_Lock
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Space key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 65 = space space space nobreakspace KP_0 KP_0 U202F
+keycode 65 = space space space nobreakspace 0 0 U202F
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The first row (number Row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1          Ebene2     Ebene3     Ebene5      Ebene4         Ebene4+Sh      Ebene6
-keycode 49 = dead_circumflex dead_caron dead_breve dead_stroke dead_belowdot  NoSymbol       dead_belowdot
-!		^		ˇ	˘
+!            Ebene1          Ebene2     Ebene3      Ebene5      Ebene4         Ebene4+Sh      Ebene6
+keycode 49 = dead_circumflex dead_caron dead_breve  NoSymbol    NoSymbol       NoSymbol       NoSymbol
+!		^		ˇ	˘							
 
-keycode 10 = 1 degree         onesuperior   femalesymbol enfilledcircbullet   NoSymbol       notsign
-!		°		¹		♀		•				¬
-keycode 11 = 2 numerosign     twosuperior   U26A5                 U2023       NoSymbol       logicalor
-!		№		²		⚥ male&female	‣				∨
-keycode 12 = 3 section        threesuperior malesymbol            NoSymbol    NoSymbol       logicaland
-!		§		³		♂						∧
-keycode 13 = 4 guillemotright U203A         U2113                 KP_Prior       KP_Prior       U22A5
+keycode 10 = 1 degree         onesuperior   U2081	 enfilledcircbullet   NoSymbol       notsign
+!		°		¹	  subscript-1		•				¬
+keycode 11 = 2 numerosign     twosuperior   U2082                 U2023       NoSymbol       logicalor
+!		№		²	  subscript-2		‣				∨
+keycode 12 = 3 section        threesuperior U2083                 NoSymbol    NoSymbol       logicaland
+!		§		³	  subscript-3						∧
+keycode 13 = 4 guillemotright U203A         U2113                 Prior       Prior          U22A5
 !		»		›		ℓ liter						⊥ perpendicular
-keycode 14 = 5 guillemotleft  U2039         dagger                NoSymbol    NoSymbol       U2221
-!		«		‹		†						∡ angle sign
-keycode 15 = 6 EuroSign       cent          NoSymbol              sterling    NoSymbol       U2225
-!		€		¢				£				∥ parallel
+keycode 14 = 5 guillemotleft  U2039         femalesymbol          NoSymbol    NoSymbol       U2221
+!		«		‹		♀						∡ angle sign
+keycode 15 = 6 EuroSign       cent           malesymbol           sterling    NoSymbol       U2225
+!		€		¢		♂		£				∥ parallel
 
 keycode 16 = 7 dollar               	yen             	Greek_kappa	currency	NoSymbol  	notelementof
 !		$			¥			κ		¤				∉
-keycode 17 = 8 doublelowquotemark	singlelowquotemark   	NoSymbol	KP_Divide  	KP_Divide      	U2204
-!		„			‚					/				∄ not exist
-keycode 18 = 9 leftdoublequotemark	leftsinglequotemark  	NoSymbol    	KP_Multiply 	KP_Multiply    	U2226
-!		“			‘					*				∦ not parallel
-keycode 19 = 0 rightdoublequotemark	rightsinglequotemark 	NoSymbol    	minus       	NoSymbol       	emptyset
-!		”			’					-				∅
+keycode 17 = 8 doublelowquotemark	singlelowquotemark   	U27E8		slash   	slash          	U2204
+!		„			‚			⟨ (bra)		/				∄ not exist
+keycode 18 = 9 leftdoublequotemark	leftsinglequotemark  	U27E9    	asterisk 	asterisk       	U2226
+!		“			‘			⟩ (ket)		*				∦ not parallel
+keycode 19 = 0 rightdoublequotemark	rightsinglequotemark 	U2080    	minus       	NoSymbol       	emptyset
+!		”			’			subscript-0	-				∅
 
 keycode 20 = minus      endash      emdash              U2011      	NoSymbol    NoSymbol       hyphen
 !		-	–		—		‑ non-breaking					­ 
 keycode 21 = dead_acute dead_grave  dead_cedilla  	dead_ogonek	dead_abovedot NoSymbol     dead_abovering
-!		'	`		¸		˛		˙				°
+!		´	`		¸		˛		˙				°
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 24 = x      X     NoSymbol     Greek_xi           NoSymbol   NoSymbol   U039E
-!					ξ					Ξ Greek_XI
+keycode 24 = x      X     ellipsis     Greek_xi           U22EE      NoSymbol   U039E
+!				…	ξ		 ⋮ vert. ell		Ξ Greek_XI
 keycode 25 = v      V     underscore   NoSymbol           BackSpace  BackSpace  U2259
 !										≙ 
-keycode 26 = l      L     bracketleft  Greek_lambda       KP_Up         KP_Up      U039B
+keycode 26 = l      L     bracketleft  Greek_lambda       KP_Up      KP_Up      U039B
 !					λ					Λ Greek_LAMBDA
-keycode 27 = c      C     bracketright Greek_chi          KP_Delete     KP_Delete  U2102
+keycode 27 = c      C     bracketright Greek_chi          KP_Delete  KP_Delete  U2102
 !					χ					ℂ komplex
-keycode 28 = w      W     asciicircum  Greek_omega        KP_Insert     KP_Insert  U03A9
+keycode 28 = w      W     asciicircum  Greek_omega        KP_Insert  KP_Insert  U03A9
 !					ω					Ω Greek_OMEGA
 
 keycode 29 = k      K     exclam       U03F0              exclamdown NoSymbol   radical
 !				!	ϰ Greek_kappa		¡		√
-keycode 30 = h      H     less         Greek_psi          KP_7       KP_7       U03A8
+keycode 30 = h      H     less         Greek_psi          7          7          U03A8
 !				<	ψ					Ψ Greek_PSI
-keycode 31 = g      G     greater      Greek_gamma        KP_8       KP_8       U0393
+keycode 31 = g      G     greater      Greek_gamma        8          8          U0393
 !				>	γ					Γ Greek_GAMMA
-keycode 32 = f      F     equal        Greek_phi          KP_9       KP_9       U03A6
+keycode 32 = f      F     equal        Greek_phi          9          9          U03A6
 !				=	φ					Φ Greek_PHI
 keycode 33 = q      Q     ampersand    U03D5              plus       NoSymbol   U211A
 !				&	ϕ Greek_phi		+		ℚ rational
@@ -156,30 +157,30 @@ keycode 33 = q      Q     ampersand    U03D5              plus       NoSymbol   
 keycode 34 = ssharp	U1E9E 		U017F		Greek_finalsmallsigma	NoSymbol	NoSymbol	U2218
 !	     ß		ẞ Capital ß	ſ long s	ς							∘ ring operator
 
-keycode 35 = dead_tilde	dead_macron	dead_diaeresis	dead_doubleacute
-!		~	¯		"		˝
+keycode 35 = dead_tilde	dead_macron	dead_diaeresis	dead_stroke           dead_doubleacute  NoSymbol        U02CC
+!		~	¯		"		/			˝				,
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The home row (middle row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 38 = u 	U 	backslash	NoSymbol	KP_Home		KP_Home		U222E
 !			\								∮ contour integral
-keycode 39 = i 	I 	slash		Greek_iota	KP_Left    	KP_Left  	integral
+keycode 39 = i 	I 	slash		Greek_iota	KP_Left    	KP_Left		integral
 !			/		ι						∫
-keycode 40 = a	A 	braceleft  	Greek_alpha   	KP_Down    	KP_Down  	U2200
+keycode 40 = a	A 	braceleft  	Greek_alpha   	KP_Down    	KP_Down	 	U2200
 !			{		α						∀ for all
-keycode 41 = e 	E 	braceright 	Greek_epsilon 	KP_Right   	KP_Right 	U2203
+keycode 41 = e 	E 	braceright 	Greek_epsilon 	KP_Right   	KP_Right	U2203
 !			}		ε						∃ there exists
-keycode 42 = o 	O 	asterisk	Greek_omicron	KP_End		KP_End   	elementof
+keycode 42 = o 	O 	asterisk	Greek_omicron	KP_End		KP_End      	elementof
 !			*		ο						∈
 
 keycode 43 = s 	S 	question   	Greek_sigma   	questiondown 	NoSymbol     	U03A3
 !			?		σ		¿				Σ Greek_SIGMA
-keycode 44 = n 	N 	parenleft  	Greek_nu      	KP_4         	KP_4     	U2115
+keycode 44 = n 	N 	parenleft  	Greek_nu      	4         	4        	U2115
 !			(		ν						ℕ natural
-keycode 45 = r 	R 	parenright 	U03F1         	KP_5         	KP_5     	U211D
+keycode 45 = r 	R 	parenright 	U03F1         	5         	5        	U211D
 !			)		ϱ Greek_rho					ℝ real
-keycode 46 = t 	T 	minus      	Greek_tau     	KP_6         	KP_6     	partialderivative
+keycode 46 = t 	T 	minus      	Greek_tau     	6         	6        	partialderivative
 !			-		τ						∂
 keycode 47 = d 	D 	colon      	Greek_delta   	comma        	NoSymbol     	U0394
 !			:		δ		,				Δ Greek_DELTA	
@@ -195,19 +196,19 @@ keycode 53 = odiaeresis Odiaeresis 	dollar     	NoSymbol   	Tab		Tab		U2111
 !		ö	Ö		$								ℑ imaginary part
 keycode 54 = adiaeresis Adiaeresis 	bar        	Greek_eta  	KP_Next		KP_Next		U211C
 !		ä	Ä		|		η						ℜ real part
-keycode 55 = p          P          	asciitilde 	Greek_pi   	KP_Enter	KP_Enter	U03A0
+keycode 55 = p          P          	asciitilde 	Greek_pi   	KP_Enter 	KP_Enter	U03A0
 !					~		π						Π Greek_PI
-keycode 56 = z          Z          	grave      	Greek_zeta	Undo		Redo		U2124
+keycode 56 = z          Z          	grave      	Greek_zeta	Undo		Redo		  U2124
 !					`		ζ						ℤ integers
 
-keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol     	U21D2
-!					+		β		:				⇒ implies
-keycode 58 = m      	M        	percent    	Greek_mu    	KP_1       	KP_1    	ifonlyif
+keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol     	U21D0
+!					+		β		:				⇐
+keycode 58 = m      	M        	percent    	Greek_mu    	1       	1       	ifonlyif
 !					%		μ						⇔
-keycode 59 = comma  	U22EE    	quotedbl   	Greek_rho   	KP_2       	KP_2     	U21D0
-!		,	⋮ vert. ell.	"		ρ						⇐ 
-keycode 60 = period 	ellipsis 	apostrophe 	U03D1       	KP_3       	KP_3     	U0398
-!		.	…		'		ϑ Greek_theta					Θ Greek_THETA
+keycode 59 = comma  	NoSymbol	quotedbl   	Greek_rho   	2       	2        	U21D2
+!		,		.	"		ρ						⇒ implies 
+keycode 60 = period 	NoSymbol	apostrophe 	U03D1       	3       	3        	U0398
+!		.			'		ϑ Greek_theta					Θ Greek_THETA
 keycode 61 = j      	J        	semicolon  	Greek_theta 	semicolon  	NoSymbol     	identical
 !					;		θ		;				≡
 
@@ -219,57 +220,58 @@ keycode 61 = j      	J        	semicolon  	Greek_theta 	semicolon  	NoSymbol    
 ! The uppest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-keycode 77  = Tab	equal		U2248		notequal
-!			=		≈		≠
-keycode 112 = slash	slash		division	U2044
-!	      /		/		÷		 (für ⁶⁄₅₉)
-keycode 63  = asterisk	asterisk	multiply	U2219
-!	      *		*		×		∙
-keycode 82  = minus	minus		U2212		NoSymbol
-!	      -		-		− real minus	
+keycode 77  = equal		notequal		U2248		Pointer_EnableKeys    NoSymbol   NoSymbol  NoSymbol
+!		=		≠			≈ almost equal	(keypad-mouse mode)
+keycode 112 = KP_Divide		KP_Divide		division	U2044                 NoSymbol   NoSymbol  NoSymbol
+!	      /			/			÷		(für ⁶⁄₅₉)
+keycode 63  = KP_Multiply	KP_Multiply		U22C5		multiply              NoSymbol   NoSymbol  NoSymbol
+!	      *			*			⋅		×
+keycode 82  = KP_Subtract	KP_Subtract		minus		U2212                 NoSymbol   NoSymbol  NoSymbol
+!	      -			-			-		− real minus
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 79 =  7		U2714		U2195		U226A
-!			✔ check mark	↕ arrow		≪ much lower-than	
-keycode 80 =  8		asciicircum	uparrow		intersection
-!			^		↑		∩
-keycode 81 =  9		U2717		U2297		U226B
-!			✗ battol X	⊗		≫ much grater-than
-keycode 86 =  plus	NoSymbol	plusminus	U2213
-!	      +				±		∓ minus-plus
+keycode 79 =  KP_7	KP_Home		U2195		dagger                                NoSymbol   NoSymbol  NoSymbol
+!					↕ arrow		†
+keycode 80 =  KP_8	KP_Up		uparrow		intersection                          NoSymbol   NoSymbol  NoSymbol
+!					↑		∩	
+keycode 81 =  KP_9	KP_Prior	containsas	U2297                                 NoSymbol   NoSymbol  NoSymbol
+!					∋		⊗	
+keycode 86 =  KP_Add	KP_Add		plusminus	U2213                                 NoSymbol   NoSymbol  NoSymbol
+!	      +		+2		±		∓ minus-plus	
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 83 =  4		parenleft	leftarrow	includedin
-!			(		←		⊂
-keycode 84 =  5		EuroSign	infinity	containsas
-!			€		∞		∋
-keycode 85 =  6		parenright	rightarrow	includes
-!			)		→		⊃
+keycode 83 =  KP_4	KP_Left		leftarrow	includedin                            NoSymbol   NoSymbol  NoSymbol
+!					←		⊂	
+keycode 84 =  KP_5	KP_Begin	infinity	EuroSign                              NoSymbol   NoSymbol  NoSymbol
+!					∞		€
+keycode 85 =  KP_6	KP_Right	rightarrow	includes                              NoSymbol   NoSymbol  NoSymbol
+!					→		⊃
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 87 =  1		U2081		U2194		lessthanequal 
-!			₁ subscript-1	↔ arrow		≤
-keycode 88 =  2		U2082		downarrow	union
-!			₂ subscript-2	↓		∪ 
-keycode 89 =  3		U2083		U21CC		greaterthanequal 
-!			₃ subscript-3	⇌ arrow		≥
-keycode 108 = Return	Tab		notequal	U2248
-!					≠		≈ almost equal to
+keycode 87 =  KP_1	KP_End		U2194		U2714                                 NoSymbol   NoSymbol  NoSymbol
+!					↔ arrow		✔ check mark	
+keycode 88 =  KP_2	KP_Down		downarrow	union                                 NoSymbol   NoSymbol  NoSymbol
+!					↓		∪	
+keycode 89 =  KP_3	KP_Next		U21CC		U2717                                 NoSymbol   NoSymbol  NoSymbol
+!					⇌ arro		✗ battol X
+keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter                              NoSymbol   NoSymbol  NoSymbol
+!								
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 90 = 0	    enfilledcircbullet	percent		U2030
-!			• itemize	%		‰ per mille
-keycode 91 = comma	U2023		period		comma
-!	     ,		‣ itemize	.		,
+keycode 90 = KP_0	KP_Insert	percent		U2030                                 NoSymbol   NoSymbol  NoSymbol
+!					%		‰ per mille	
+keycode 91 = comma	KP_Delete	period		KP_Separator                          NoSymbol   NoSymbol  NoSymbol
+!	     ,				.		,/.		
+
 
 
 

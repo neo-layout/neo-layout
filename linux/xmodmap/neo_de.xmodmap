@@ -165,11 +165,11 @@ keycode 35 = dead_tilde	dead_macron	dead_diaeresis	dead_stroke           dead_do
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 keycode 38 = u 	U 	backslash	NoSymbol	Home		Home		U222E
 !			\								∮ contour integral
-keycode 39 = i 	I 	slash		Greek_iota	Left    	Left  	integral
+keycode 39 = i 	I 	slash		Greek_iota	Left    	Left  		integral
 !			/		ι						∫
-keycode 40 = a	A 	braceleft  	Greek_alpha   	Down    	Down  	U2200
+keycode 40 = a	A 	braceleft  	Greek_alpha   	Down    	Down 	 	U2200
 !			{		α						∀ for all
-keycode 41 = e 	E 	braceright 	Greek_epsilon 	Right   	Right 	U2203
+keycode 41 = e 	E 	braceright 	Greek_epsilon 	Right   	Right 		U2203
 !			}		ε						∃ there exists
 keycode 42 = o 	O 	asterisk	Greek_omicron	End		End      	elementof
 !			*		ο						∈

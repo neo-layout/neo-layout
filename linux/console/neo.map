@@ -296,10 +296,10 @@ compose as usual
            shiftl  keycode  26 = VoidSymbol            
    shift   shiftl  keycode  26 = VoidSymbol            
    altgr   shiftl  keycode  26 = U+2218                
-                   keycode  27 = dead_tilde            U+0304                dead_diaeresis        dead_doubleacute      
-           shiftl  keycode  27 = VoidSymbol            
+                   keycode  27 = dead_tilde            U+0304                dead_diaeresis        VoidSymbol            
+           shiftl  keycode  27 = dead_doubleacute      
    shift   shiftl  keycode  27 = VoidSymbol            
-   altgr   shiftl  keycode  27 = VoidSymbol            
+   altgr   shiftl  keycode  27 = U+02CC                
 
 ! --------------------------------------------------------------------------
 ! Row 3 (home row, middle row)
