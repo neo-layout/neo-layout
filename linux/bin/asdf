@@ -10,12 +10,16 @@ NEO_X_VARIANTE="xkbmap"
 
 # hier angeben, wo sich die Neo-Dateien befinden:
 PFAD="$HOME/neo"
+
+# Ort, wo sich die Konsolen-Belegungen befinden:
+#CONSOLE_KEYMAP="/usr/share/kbd/keymaps/i386/neo/neo.map"	# Suse
+#CONSOLE_KEYMAP="/usr/share/keymaps/i386/neo/neo.map"		# Gentoo
+CONSOLE_KEYMAP="/lib/kbd/keymaps/i386/neo/neo.map"	# Fedora, Red Hat
 ################################################################################
 ################################################################################
 ################################################################################
 
 
-CONSOLE_KEYMAP="/usr/share/kbd/keymaps/i386/neo/neo.map"
 XMODMAP="$PFAD/neo_de.xmodmap"
 XMODMAP_XPROG="$PFAD/neo_de_x-prog.xmodmap"
 XMODMAP_ALTERNATIVE="$PFAD/neo_de_alternative.xmodmap"
