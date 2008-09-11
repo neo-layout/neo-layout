@@ -1,24 +1,40 @@
 #!/bin/sh
-NEO_X_VARIANTE="xkbmap" 					# xkbmap, xmoadmap, xprog, alternative, evdev
+
+
+################################################################################
+####################### persönliche Einstellungen ##############################
+################################################################################
+# hier einstellen, welche Variante von Neo geladen werden soll:
+# xkbmap, xmoadmap, xprog, alternative, evdev
+NEO_X_VARIANTE="xkbmap"
+
+# hier angeben, wo sich die Neo-Dateien befinden:
+PFAD="$HOME/neo"
+################################################################################
+################################################################################
+################################################################################
+
 
 CONSOLE_KEYMAP="/usr/share/kbd/keymaps/i386/neo/neo.map"
-XMODMAP="$HOME/neo/neo_de.xmodmap"
-XMODMAP_XPROG="$HOME/neo/neo_de_x-prog.xmodmap"
-XMODMAP_ALTERNATIVE="$HOME/neo/neo_de_alternative.xmodmap"
-XMODMAP_EVDEV="$HOME/neo/neo_de_evdev.xmodmap"
+XMODMAP="$PFAD/neo_de.xmodmap"
+XMODMAP_XPROG="$PFAD/neo_de_x-prog.xmodmap"
+XMODMAP_ALTERNATIVE="$PFAD/neo_de_alternative.xmodmap"
+XMODMAP_EVDEV="$PFAD/neo_de_evdev.xmodmap"
 
 if [ -n "$SSH_CONNECTION" ]; then
-	echo "Dude, du bist in einer SSH-Session. Wie soll ich das Tastaturlayout hier ändern?"
+	echo -n "Dude, du bist in einer SSH-Session. Wie soll ich das "
+        echo    "Tastaturlayout hier ändern?"
 	exit 1
 fi
 if [ -z "$DISPLAY" ]; then
-	echo "Um das Tastaturlayout auf der Textkonsole zu ändern, muss man root-Rechte besitzen!"
+	echo -n "Um das Tastaturlayout auf der Textkonsole zu ändern, muss man"
+        echo    " root-Rechte besitzen!"
 	sudo loadkeys $CONSOLE_KEYMAP
 	setleds +num
 else
 	numlockx off
-	xset -r 51; xset -r 94					# Modifier
-	xset -r 21; xset -r 35; xset -r 49			# tote Tasten (dead keys)
+	xset -r 51; xset -r 94			# Modifier
+	xset -r 21; xset -r 35; xset -r 49	# tote Tasten (dead keys)
 	
 	case $NEO_X_VARIANTE in
 		xkbmap)
@@ -41,7 +57,8 @@ else
 			xmodmap $XMODMAP_EVDEV
 			;;
 		*)
-			echo "Die Variante "$NEO_X_VARIANTE "ist keine bekannte X-Variante des NEO-Layouts"
+			echo -n "Die Variante »${NEO_X_VARIANTE}« ist keine "
+                        echo    "bekannte X-Variante des NEO-Layouts."
 			exit 1
 			;;
 	esac
