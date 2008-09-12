@@ -244,7 +244,7 @@ neo_v:
   if (Ebene12 and !(CheckDeadUni12("c6",0x1E7F,0x1E7E)))
     OutputChar12("v","V")
   else if (Ebene = 3)
-    send {blind}_
+    OutputChar("_")
   else if (Ebene = 4) and (!lernModus or lernModus_neo_Backspace)
       Send {blind}{Backspace}
   else if (Ebene = 6)
@@ -263,7 +263,7 @@ neo_l:
                  or CheckDeadUni12("t4",0x0142,0x0141)))
     OutputChar12("l","L")
   else if (Ebene = 3)
-    send {blind}[
+    OutputChar("[")
   else if (Ebene = 4)
     Send {Blind}{Up}
   else if (Ebene = 5)
@@ -282,7 +282,7 @@ neo_c:
                  or CheckDeadUni12("c2",0x010D,0x010C)))
     OutputChar12("c","C")
   else if (Ebene = 3)
-    send {blind}]
+    OutputChar("]")
   else if (Ebene = 4) and (!lernModus or lernModus_neo_Entf)
     send {blind}{Del}
   else if (Ebene = 5)
@@ -810,7 +810,7 @@ neo_punkt:
   else if (Ebene = 2)
     SendUnicodeChar(0x2026) ; ellipse
   else if (Ebene = 3)
-    send {blind}'
+    OutputChar("'")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
                           or CheckDeadUni("c5",0x2083)))
     OutputChar("{Numpad3}")
@@ -1009,9 +1009,9 @@ neo_Numpad0:
   if (Ebene = 1)
     OutputChar("{Numpad0}")
   else if (Ebene = 2)
-    SendUnicodeChar(0x2030) ; Promille
-  else if (Ebene = 3)
     SendUnicodeChar(0x0025) ; Prozent
+  else if (Ebene = 3)
+    SendUnicodeChar(0x2030) ; Promille
   else if (Ebene = 4)
     send {blind}{NumpadIns}
 return

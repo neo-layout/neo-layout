@@ -1,4 +1,4 @@
-# Definitions by Neo keyboard layout
+﻿# Definitions by Neo keyboard layout
 
 # letters
 # capital greek letters
@@ -49,17 +49,17 @@
 <Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
 <Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
 
-<Multi_key> <I> <J>                      : "Ĳ"   0133 # LATIN CAPITAL LIGATURE IJ
-<Multi_key> <i> <j>                      : "ĳ"   0133 # LATIN SMALL LIGATURE IJ
+<Multi_key> <I> <J>                      : "Ĳ"   U0132 # LATIN CAPITAL LIGATURE IJ
+<Multi_key> <i> <j>                      : "ĳ"   U0133 # LATIN SMALL LIGATURE IJ
 <Multi_key> <D> <Z>                      : "Ǆ"   U01C4 # LATIN CAPITAL LETTER DZ WITH CARON
 <Multi_key> <D> <z>                      : "ǅ"   U01C5 # LATIN CAPITAL LETTER D WITH SMALL LETTER Z WITH CARON
 <Multi_key> <d> <z>                      : "ǆ"   U01C6 # LATIN SMALL LETTER DZ WITH CARON
 <Multi_key> <L> <J>                      : "Ǉ"   U01C7 # LATIN CAPITAL LETTER LJ
-<Multi_key> <L> <j>                      : "ǈ"   01C8 # LATIN CAPITAL LETTER L WITH SMALL LETTER J
-<Multi_key> <l> <j>                      : "ǉ"   01C9 # LATIN SMALL LETTER LJ
+<Multi_key> <L> <j>                      : "ǈ"   U01C8 # LATIN CAPITAL LETTER L WITH SMALL LETTER J
+<Multi_key> <l> <j>                      : "ǉ"   U01C9 # LATIN SMALL LETTER LJ
 <Multi_key> <N> <J>                      : "Ǌ"   U01CA # LATIN CAPITAL LETTER NJ
-<Multi_key> <N> <j>                      : "ǋ"   01CB # LATIN CAPITAL LETTER N WITH SMALL LETTER J
-<Multi_key> <n> <j>                      : "ǌ"   01CC # LATIN SMALL LETTER NJ
+<Multi_key> <N> <j>                      : "ǋ"   U01CB # LATIN CAPITAL LETTER N WITH SMALL LETTER J
+<Multi_key> <n> <j>                      : "ǌ"   U01CC # LATIN SMALL LETTER NJ
 
 # with stroke
 <dead_stroke> <h>                        : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
