@@ -399,7 +399,7 @@ xkb_symbols "neo" {
     // The lowest row
     ////////////////////////////////////////////////////
     key  <KP0> { [ KP_0,        KP_Insert,   percent,    U2030            ] };
-    key <KPDL> { [ KP_Delete,   KP_Decimal,  period,     comma            ] };
+    key <KPDL> { [ KP_Decimal,  KP_Delete,   period,     comma            ] };
 
 };
 
