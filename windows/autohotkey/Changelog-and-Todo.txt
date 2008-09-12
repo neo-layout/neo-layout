@@ -23,6 +23,8 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 864 (von Martin Roppelt)
+‐ 253/2822 Cokos ≙ 9%.
 Revision 849 (von Martin Roppelt)
 ‐ Ticket 31: Shift+(Strg und/oder Alt)+Ziffer sendet nicht mehr (Strg und/oder Alt)+(Ebene 2 der Ziffer).
 Revision 846 (von Martin Roppelt)
@@ -220,7 +222,7 @@ Revision 526 (von Matthias Berg):
 Revision 525 (von Matthias Berg):
 ‐ Capslock bei Zahlen und Sonderzeichen berücksichtigt.
 Revision 524 (von Matthias Berg):
-‐ umgekehrtes ^ für o, a, ü,i  sowie für die grossen vokale ( 3. ton chinesisch).
+‐ umgekehrtes ^ für o, a, ü,i  sowie für die großen vokale (3. Ton chinesisch).
   • damit wird jetzt PinYin vollständig unterstützt: caron, macron, akut, grave auf uiaeoü.
 ‐ Sonderzeichen senden wieder blind ‐> Shortcuts funktionieren, Capslock ist leider Shiftlock.
 Revision 523 (von Matthias Berg):

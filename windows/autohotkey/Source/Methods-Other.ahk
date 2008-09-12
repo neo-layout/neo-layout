@@ -75,27 +75,10 @@ CheckCompAsc(d,val) {
     if !DeadCompose
       send {bs}
     send % val
+    CompKey = 0
     isFurtherCompKey = 0
     return 1
   }
-}
-
-CheckCompAsc12(d,val1,val2) {
-  global
-  if (PriorCompKey == d)
-    if (Ebene = 1) and (val1 != "") {
-      if !DeadCompose
-        send {bs}
-      send % val1
-      isFurtherCompKey = 0
-      return 1
-    } else if (Ebene = 2) and (val2 != "") {
-      if !DeadCompose
-        send {bs}
-      send % val2
-      isFurtherCompKey = 0
-      return 1
-    }
 }
 
 CheckCompUni(d,val) {
@@ -108,65 +91,6 @@ CheckCompUni(d,val) {
     isFurtherCompkey = 0
     SendUnicodeChar(val)
     return 1
-  }
-}
-
-CheckCompUni12(d,val1,val2){
-  global
-  if (PriorCompKey == d) {
-    if (Ebene = 1) and (val1 != "") {
-      PriorCompKey =
-      CompKey =
-      if !DeadCompose
-        send {bs}
-      isFurtherCompkey = 0
-      SendUnicodeChar(val1)
-      return 1
-    } else if (Ebene = 2) and (val2 != "") {
-      PriorCompKey =
-      CompKey =
-      if !DeadCompose
-        send {bs}
-      isFurtherCompkey = 0
-      SendUnicodeChar(val2)
-      return 1
-    }
-  }
-}
-
-CheckComp3Uni(d,val) {
-  global
-  if (PriorCompKey == d) {
-    PriorCompKey =
-    CompKey =
-    if !DeadCompose
-      send {bs}{bs}
-    isFurtherCompkey = 0
-    SendUnicodeChar(val)
-    return 1
-  }
-}
-
-CheckComp3Uni12(d,val1,val2) {
-  global
-  if (PriorCompKey == d) {
-    if (Ebene = 1) and (val1 != "") {
-      PriorCompKey =
-      CompKey =
-      if !DeadCompose
-        send {bs}{bs}
-      isFurtherCompkey = 0
-      SendUnicodeChar(val1)
-      return 1
-    } else if (Ebene = 2) and (val2 != "") {
-      PriorCompKey =
-      CompKey =
-      if !DeadCompose
-        send {bs}{bs}
-      isFurtherCompkey = 0
-      SendUnicodeChar(val2)
-      return 1
-    }
   }
 }
 
