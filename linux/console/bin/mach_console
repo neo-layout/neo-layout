@@ -6,6 +6,14 @@ schreiben () {
 	printf "           shiftl  keycode %3s = %-22s\n" $1 $6
 	printf "   shift   shiftl  keycode %3s = %-22s\n" $1 $7
 	printf "   altgr   shiftl  keycode %3s = %-22s\n" $1 $8
+
+	if [ `grep ^$2$ console.control` ]; then
+		printf "           control keycode %3s = Control_%-22s\n" $1 $2
+		printf "   shift   control keycode %3s = Control_%-22s\n" $1 $2
+		printf "           alt     keycode %3s = Meta_%-22s\n" $1 $2
+		printf "   shift   alt     keycode %3s = Meta_%-22s\n" $1 $3
+		printf "   control alt     keycode %3s = Meta_Control_%-22s\n" $1 $2
+	fi
 }
 
 lesen() {
@@ -88,11 +96,13 @@ echo "! Keypad Row 5 (lowest row)"
 echo "! --------------------------------------------------------------------------"
 lesen 2 62 82
 
+cat console.more_control
+
 echo
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Strings and Compose"
 echo "! --------------------------------------------------------------------------"
-echo "string F100 = \"setleds +num\n\""
+echo "# string F100 = \"setleds +num\n\""
 
 #cat console.string_compose
