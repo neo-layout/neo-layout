@@ -17,40 +17,24 @@ compose as usual
 ! Modifier definitions
 ! --------------------------------------------------------------------------
                    keycode  42 = Shift           
+#          shift   keycode  42 = Caps_Lock       
                    keycode  54 = Shift           
+#          shift   keycode  54 = Caps_Lock       
                    keycode  58 = AltGr           
+#          altgr   keycode  58 = AltGr_Lock      
                    keycode  43 = AltGr           
+#          altgr   keycode  43 = AltGr_Lock      
                    keycode  86 = ShiftL          
+#          shiftl  keycode  86 = ShiftL_Lock     
                    keycode 100 = ShiftL          
+#          shiftl  keycode 100 = ShiftL_Lock     
 
-                   keycode   1 = Escape           Escape          
+                   keycode   1 = Escape           Escape          Escape          Escape          
+           shiftl  keycode  57 = Escape           
+   shift   shiftl  keycode  57 = Escape           
+   altgr   shiftl  keycode  57 = Escape           
            alt     keycode   1 = Meta_Escape     
    shift   altgr   keycode   1 = Meta_Escape     
-
-! --------------------------------------------------------------------------
-! Keys with control function (has to be edited manually!!!!)
-! --------------------------------------------------------------------------
-           control keycode  33 = Control_e       
-   shift   control keycode  33 = Control_e       
-   altgr   control keycode  33 = Control_e       
-           alt     keycode  33 = Meta_e          
-   shift   alt     keycode  33 = Meta_E          
-   altgr   alt     keycode  33 = Meta_e          
-   control alt     keycode  33 = Meta_Control_e  
-           control keycode  19 = Control_c       
-   shift   control keycode  19 = Control_c       
-   altgr   control keycode  19 = Control_c       
-           alt     keycode  19 = Meta_c          
-   shift   alt     keycode  19 = Meta_C          
-   altgr   alt     keycode  19 = Meta_c          
-   control alt     keycode  19 = Meta_Control_c  
-           control keycode  50 = Control_m       
-   shift   control keycode  50 = Control_m       
-   altgr   control keycode  50 = Control_m       
-           alt     keycode  50 = Meta_m          
-   shift   alt     keycode  50 = Meta_M          
-   altgr   alt     keycode  50 = Meta_m          
-   control alt     keycode  50 = Meta_Control_m  
 
 ! --------------------------------------------------------------------------
 ! function keys
@@ -100,10 +84,10 @@ compose as usual
            alt     keycode 106 = Incr_Console    
                    keycode 108 = Down            
 ! ----Win keys--------------------------------------------------------------
-                   keycode 125 = Decr_Console    Last_Console      Incr_Console     Compose
-                   keycode 126 = Incr_Console    Last_Console      Decr_Console     Compose
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     
 ! ----menue key-------------------------------------------------------------
-                   keycode 127 = F100
+                   keycode 127 = Compose         F100
 ! ----F-keys----------------------------------------------------------------
                    keycode  59 = F1               F13              Console_13       F25             
            alt     keycode  59 = Console_1       
@@ -256,42 +240,92 @@ compose as usual
            shiftl  keycode  16 = U+22EE                
    shift   shiftl  keycode  16 = VoidSymbol            
    altgr   shiftl  keycode  16 = U+039E                
+           control keycode  16 = Control_x                     
+   shift   control keycode  16 = Control_x                     
+           alt     keycode  16 = Meta_x                     
+   shift   alt     keycode  16 = Meta_X                     
+   control alt     keycode  16 = Meta_Control_x                     
                    keycode  17 = v                     V                     underscore            VoidSymbol            
            shiftl  keycode  17 = BackSpace             
    shift   shiftl  keycode  17 = BackSpace             
    altgr   shiftl  keycode  17 = U+2259                
+           control keycode  17 = Control_v                     
+   shift   control keycode  17 = Control_v                     
+           alt     keycode  17 = Meta_v                     
+   shift   alt     keycode  17 = Meta_V                     
+   control alt     keycode  17 = Meta_Control_v                     
                    keycode  18 = l                     L                     bracketleft           U+03bb                
            shiftl  keycode  18 = Up                    
    shift   shiftl  keycode  18 = Up                    
    altgr   shiftl  keycode  18 = U+039B                
+           control keycode  18 = Control_l                     
+   shift   control keycode  18 = Control_l                     
+           alt     keycode  18 = Meta_l                     
+   shift   alt     keycode  18 = Meta_L                     
+   control alt     keycode  18 = Meta_Control_l                     
                    keycode  19 = c                     C                     bracketright          U+03c7                
            shiftl  keycode  19 = Delete                
    shift   shiftl  keycode  19 = Delete                
    altgr   shiftl  keycode  19 = U+2102                
+           control keycode  19 = Control_c                     
+   shift   control keycode  19 = Control_c                     
+           alt     keycode  19 = Meta_c                     
+   shift   alt     keycode  19 = Meta_C                     
+   control alt     keycode  19 = Meta_Control_c                     
                    keycode  20 = w                     W                     asciicircum           U+03c9                
            shiftl  keycode  20 = Insert                
    shift   shiftl  keycode  20 = Insert                
    altgr   shiftl  keycode  20 = U+03A9                
+           control keycode  20 = Control_w                     
+   shift   control keycode  20 = Control_w                     
+           alt     keycode  20 = Meta_w                     
+   shift   alt     keycode  20 = Meta_W                     
+   control alt     keycode  20 = Meta_Control_w                     
                    keycode  21 = k                     K                     exclam                U+03F0                
            shiftl  keycode  21 = exclamdown            
    shift   shiftl  keycode  21 = VoidSymbol            
    altgr   shiftl  keycode  21 = U+221a                
+           control keycode  21 = Control_k                     
+   shift   control keycode  21 = Control_k                     
+           alt     keycode  21 = Meta_k                     
+   shift   alt     keycode  21 = Meta_K                     
+   control alt     keycode  21 = Meta_Control_k                     
                    keycode  22 = h                     H                     less                  U+03c8                
            shiftl  keycode  22 = seven                 
    shift   shiftl  keycode  22 = seven                 
    altgr   shiftl  keycode  22 = U+03A8                
+           control keycode  22 = Control_h                     
+   shift   control keycode  22 = Control_h                     
+           alt     keycode  22 = Meta_h                     
+   shift   alt     keycode  22 = Meta_H                     
+   control alt     keycode  22 = Meta_Control_h                     
                    keycode  23 = g                     G                     greater               U+03b3                
            shiftl  keycode  23 = eight                 
    shift   shiftl  keycode  23 = eight                 
    altgr   shiftl  keycode  23 = U+0393                
+           control keycode  23 = Control_g                     
+   shift   control keycode  23 = Control_g                     
+           alt     keycode  23 = Meta_g                     
+   shift   alt     keycode  23 = Meta_G                     
+   control alt     keycode  23 = Meta_Control_g                     
                    keycode  24 = f                     F                     equal                 U+03c6                
            shiftl  keycode  24 = nine                  
    shift   shiftl  keycode  24 = nine                  
    altgr   shiftl  keycode  24 = U+03A6                
+           control keycode  24 = Control_f                     
+   shift   control keycode  24 = Control_f                     
+           alt     keycode  24 = Meta_f                     
+   shift   alt     keycode  24 = Meta_F                     
+   control alt     keycode  24 = Meta_Control_f                     
                    keycode  25 = q                     Q                     ampersand             U+03D5                
            shiftl  keycode  25 = plus                  
    shift   shiftl  keycode  25 = VoidSymbol            
    altgr   shiftl  keycode  25 = U+211A                
+           control keycode  25 = Control_q                     
+   shift   control keycode  25 = Control_q                     
+           alt     keycode  25 = Meta_q                     
+   shift   alt     keycode  25 = Meta_Q                     
+   control alt     keycode  25 = Meta_Control_q                     
                    keycode  26 = ssharp                U+1E9E                U+017F                U+03c2                
            shiftl  keycode  26 = VoidSymbol            
    shift   shiftl  keycode  26 = VoidSymbol            
@@ -308,46 +342,101 @@ compose as usual
            shiftl  keycode  30 = Home                  
    shift   shiftl  keycode  30 = Home                  
    altgr   shiftl  keycode  30 = U+222E                
+           control keycode  30 = Control_u                     
+   shift   control keycode  30 = Control_u                     
+           alt     keycode  30 = Meta_u                     
+   shift   alt     keycode  30 = Meta_U                     
+   control alt     keycode  30 = Meta_Control_u                     
                    keycode  31 = i                     I                     slash                 U+03b9                
            shiftl  keycode  31 = Left                  
    shift   shiftl  keycode  31 = Left                  
    altgr   shiftl  keycode  31 = U+222b                
+           control keycode  31 = Control_i                     
+   shift   control keycode  31 = Control_i                     
+           alt     keycode  31 = Meta_i                     
+   shift   alt     keycode  31 = Meta_I                     
+   control alt     keycode  31 = Meta_Control_i                     
                    keycode  32 = a                     A                     braceleft             U+03b1                
            shiftl  keycode  32 = Down                  
    shift   shiftl  keycode  32 = Down                  
    altgr   shiftl  keycode  32 = U+2200                
+           control keycode  32 = Control_a                     
+   shift   control keycode  32 = Control_a                     
+           alt     keycode  32 = Meta_a                     
+   shift   alt     keycode  32 = Meta_A                     
+   control alt     keycode  32 = Meta_Control_a                     
                    keycode  33 = e                     E                     braceright            U+03b5                
            shiftl  keycode  33 = Right                 
    shift   shiftl  keycode  33 = Right                 
    altgr   shiftl  keycode  33 = U+2203                
+           control keycode  33 = Control_e                     
+   shift   control keycode  33 = Control_e                     
+           alt     keycode  33 = Meta_e                     
+   shift   alt     keycode  33 = Meta_E                     
+   control alt     keycode  33 = Meta_Control_e                     
                    keycode  34 = o                     O                     asterisk              U+03bf                
            shiftl  keycode  34 = End                   
    shift   shiftl  keycode  34 = End                   
    altgr   shiftl  keycode  34 = VoidSymbol            
+           control keycode  34 = Control_o                     
+   shift   control keycode  34 = Control_o                     
+           alt     keycode  34 = Meta_o                     
+   shift   alt     keycode  34 = Meta_O                     
+   control alt     keycode  34 = Meta_Control_o                     
                    keycode  35 = s                     S                     question              U+03c3                
            shiftl  keycode  35 = questiondown          
    shift   shiftl  keycode  35 = VoidSymbol            
    altgr   shiftl  keycode  35 = U+03A3                
+           control keycode  35 = Control_s                     
+   shift   control keycode  35 = Control_s                     
+           alt     keycode  35 = Meta_s                     
+   shift   alt     keycode  35 = Meta_S                     
+   control alt     keycode  35 = Meta_Control_s                     
                    keycode  36 = n                     N                     parenleft             U+03bd                
            shiftl  keycode  36 = four                  
    shift   shiftl  keycode  36 = four                  
    altgr   shiftl  keycode  36 = U+2115                
+           control keycode  36 = Control_n                     
+   shift   control keycode  36 = Control_n                     
+           alt     keycode  36 = Meta_n                     
+   shift   alt     keycode  36 = Meta_N                     
+   control alt     keycode  36 = Meta_Control_n                     
                    keycode  37 = r                     R                     parenright            U+03F1                
            shiftl  keycode  37 = five                  
    shift   shiftl  keycode  37 = five                  
    altgr   shiftl  keycode  37 = U+211D                
+           control keycode  37 = Control_r                     
+   shift   control keycode  37 = Control_r                     
+           alt     keycode  37 = Meta_r                     
+   shift   alt     keycode  37 = Meta_R                     
+   control alt     keycode  37 = Meta_Control_r                     
                    keycode  38 = t                     T                     minus                 U+03c4                
            shiftl  keycode  38 = six                   
    shift   shiftl  keycode  38 = six                   
    altgr   shiftl  keycode  38 = U+2202                
+           control keycode  38 = Control_t                     
+   shift   control keycode  38 = Control_t                     
+           alt     keycode  38 = Meta_t                     
+   shift   alt     keycode  38 = Meta_T                     
+   control alt     keycode  38 = Meta_Control_t                     
                    keycode  39 = d                     D                     colon                 U+03b4                
            shiftl  keycode  39 = comma                 
    shift   shiftl  keycode  39 = VoidSymbol            
    altgr   shiftl  keycode  39 = U+0394                
+           control keycode  39 = Control_d                     
+   shift   control keycode  39 = Control_d                     
+           alt     keycode  39 = Meta_d                     
+   shift   alt     keycode  39 = Meta_D                     
+   control alt     keycode  39 = Meta_Control_d                     
                    keycode  40 = y                     Y                     at                    U+03c5                
            shiftl  keycode  40 = period                
    shift   shiftl  keycode  40 = VoidSymbol            
    altgr   shiftl  keycode  40 = U+2207                
+           control keycode  40 = Control_y                     
+   shift   control keycode  40 = Control_y                     
+           alt     keycode  40 = Meta_y                     
+   shift   alt     keycode  40 = Meta_Y                     
+   control alt     keycode  40 = Meta_Control_y                     
 
 ! --------------------------------------------------------------------------
 ! Row 4 (lower row)
@@ -368,18 +457,38 @@ compose as usual
            shiftl  keycode  47 = Return                
    shift   shiftl  keycode  47 = Return                
    altgr   shiftl  keycode  47 = U+03A0                
+           control keycode  47 = Control_p                     
+   shift   control keycode  47 = Control_p                     
+           alt     keycode  47 = Meta_p                     
+   shift   alt     keycode  47 = Meta_P                     
+   control alt     keycode  47 = Meta_Control_p                     
                    keycode  48 = z                     Z                     grave                 U+03b6                
            shiftl  keycode  48 = VoidSymbol            
    shift   shiftl  keycode  48 = VoidSymbol            
    altgr   shiftl  keycode  48 = U+2124                
+           control keycode  48 = Control_z                     
+   shift   control keycode  48 = Control_z                     
+           alt     keycode  48 = Meta_z                     
+   shift   alt     keycode  48 = Meta_Z                     
+   control alt     keycode  48 = Meta_Control_z                     
                    keycode  49 = b                     B                     plus                  U+03b2                
            shiftl  keycode  49 = colon                 
    shift   shiftl  keycode  49 = VoidSymbol            
    altgr   shiftl  keycode  49 = U+21D0                
+           control keycode  49 = Control_b                     
+   shift   control keycode  49 = Control_b                     
+           alt     keycode  49 = Meta_b                     
+   shift   alt     keycode  49 = Meta_B                     
+   control alt     keycode  49 = Meta_Control_b                     
                    keycode  50 = m                     M                     percent               U+03bc                
            shiftl  keycode  50 = one                   
    shift   shiftl  keycode  50 = one                   
    altgr   shiftl  keycode  50 = U+21d4                
+           control keycode  50 = Control_m                     
+   shift   control keycode  50 = Control_m                     
+           alt     keycode  50 = Meta_m                     
+   shift   alt     keycode  50 = Meta_M                     
+   control alt     keycode  50 = Meta_Control_m                     
                    keycode  51 = comma                 VoidSymbol            quotedbl              U+03c1                
            shiftl  keycode  51 = two                   
    shift   shiftl  keycode  51 = two                   
@@ -392,6 +501,11 @@ compose as usual
            shiftl  keycode  53 = semicolon             
    shift   shiftl  keycode  53 = VoidSymbol            
    altgr   shiftl  keycode  53 = U+2261                
+           control keycode  53 = Control_j                     
+   shift   control keycode  53 = Control_j                     
+           alt     keycode  53 = Meta_j                     
+   shift   alt     keycode  53 = Meta_J                     
+   control alt     keycode  53 = Meta_Control_j                     
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 1 (uppest row)
@@ -479,6 +593,23 @@ compose as usual
 
 
 ! --------------------------------------------------------------------------
+! additional Keys with control function (has to be edited manually!!!!)
+! --------------------------------------------------------------------------
+   control altgr   keycode  30 = Control_backslash
+   alt     altgr   keycode  30 = Control_backslash
+   control alt altgr keycode  30 = Meta_Control_backslash
+   control altgr   keycode  19 = Control_bracketright
+   alt     altgr   keycode  19 = Control_bracketright
+   control alt altgr keycode  19 = Meta_Control_bracketright
+   control altgr   keycode  17 = Control_underscore
+   alt     altgr   keycode  17 = Control_underscore
+   control alt altgr keycode  17 = Meta_Control_underscore
+   control altgr   keycode  20 = Control_asciicircum
+   alt     altgr   keycode  20 = Control_asciicircum
+   control alt altgr keycode  20 = Meta_Control_asciicircum
+
+
+! --------------------------------------------------------------------------
 ! Strings and Compose
 ! --------------------------------------------------------------------------
-string F100 = "setleds +num\n"
+# string F100 = "setleds +num\n"

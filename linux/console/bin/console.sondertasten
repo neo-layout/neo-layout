@@ -17,40 +17,24 @@ compose as usual
 ! Modifier definitions
 ! --------------------------------------------------------------------------
                    keycode  42 = Shift           
+#          shift   keycode  42 = Caps_Lock       
                    keycode  54 = Shift           
+#          shift   keycode  54 = Caps_Lock       
                    keycode  58 = AltGr           
+#          altgr   keycode  58 = AltGr_Lock      
                    keycode  43 = AltGr           
+#          altgr   keycode  43 = AltGr_Lock      
                    keycode  86 = ShiftL          
+#          shiftl  keycode  86 = ShiftL_Lock     
                    keycode 100 = ShiftL          
+#          shiftl  keycode 100 = ShiftL_Lock     
 
-                   keycode   1 = Escape           Escape          
+                   keycode   1 = Escape           Escape          Escape          Escape          
+           shiftl  keycode  57 = Escape           
+   shift   shiftl  keycode  57 = Escape           
+   altgr   shiftl  keycode  57 = Escape           
            alt     keycode   1 = Meta_Escape     
    shift   altgr   keycode   1 = Meta_Escape     
-
-! --------------------------------------------------------------------------
-! Keys with control function (has to be edited manually!!!!)
-! --------------------------------------------------------------------------
-           control keycode  33 = Control_e       
-   shift   control keycode  33 = Control_e       
-   altgr   control keycode  33 = Control_e       
-           alt     keycode  33 = Meta_e          
-   shift   alt     keycode  33 = Meta_E          
-   altgr   alt     keycode  33 = Meta_e          
-   control alt     keycode  33 = Meta_Control_e  
-           control keycode  19 = Control_c       
-   shift   control keycode  19 = Control_c       
-   altgr   control keycode  19 = Control_c       
-           alt     keycode  19 = Meta_c          
-   shift   alt     keycode  19 = Meta_C          
-   altgr   alt     keycode  19 = Meta_c          
-   control alt     keycode  19 = Meta_Control_c  
-           control keycode  50 = Control_m       
-   shift   control keycode  50 = Control_m       
-   altgr   control keycode  50 = Control_m       
-           alt     keycode  50 = Meta_m          
-   shift   alt     keycode  50 = Meta_M          
-   altgr   alt     keycode  50 = Meta_m          
-   control alt     keycode  50 = Meta_Control_m  
 
 ! --------------------------------------------------------------------------
 ! function keys
@@ -100,10 +84,10 @@ compose as usual
            alt     keycode 106 = Incr_Console    
                    keycode 108 = Down            
 ! ----Win keys--------------------------------------------------------------
-                   keycode 125 = Decr_Console    Last_Console      Incr_Console     Compose
-                   keycode 126 = Incr_Console    Last_Console      Decr_Console     Compose
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     
 ! ----menue key-------------------------------------------------------------
-                   keycode 127 = F100
+                   keycode 127 = Compose         F100
 ! ----F-keys----------------------------------------------------------------
                    keycode  59 = F1               F13              Console_13       F25             
            alt     keycode  59 = Console_1       

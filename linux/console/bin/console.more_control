@@ -1,0 +1,17 @@
+
+
+! --------------------------------------------------------------------------
+! additional Keys with control function (has to be edited manually!!!!)
+! --------------------------------------------------------------------------
+   control altgr   keycode  30 = Control_backslash
+   alt     altgr   keycode  30 = Control_backslash
+   control alt altgr keycode  30 = Meta_Control_backslash
+   control altgr   keycode  19 = Control_bracketright
+   alt     altgr   keycode  19 = Control_bracketright
+   control alt altgr keycode  19 = Meta_Control_bracketright
+   control altgr   keycode  17 = Control_underscore
+   alt     altgr   keycode  17 = Control_underscore
+   control alt altgr keycode  17 = Meta_Control_underscore
+   control altgr   keycode  20 = Control_asciicircum
+   alt     altgr   keycode  20 = Control_asciicircum
+   control alt altgr keycode  20 = Meta_Control_asciicircum
