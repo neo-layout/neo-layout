@@ -1,4 +1,4 @@
-﻿# Definitions by Neo keyboard layout
+# Definitions by Neo keyboard layout
 
 # letters
 # capital greek letters
@@ -270,6 +270,12 @@
 <Multi_key> <degree> <equal>               : "≗"   U2257 # RING EQUAL TO
 <dead_abovering> <equal>                   : "≗"   U2257 # RING EQUAL TO
 <dead_caron> <equal>                       : "≚"   U225A # EQUIANGULAR TO
+<Multi_key> <slash> <equal>                : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <equal>                      : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <KP_Divide> <KP_equal>         : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <KP_equal>                   : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <notsign> <equal>              : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <less> <greater>               : "≠"   U2260 # NOT EQUAL TO
 
 <Multi_key> <KP_Add> <KP_Subtract>         : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <KP_Subtract> <KP_Add>         : "∓"   U2213 # MINUS-OR-PLUS SIGN
