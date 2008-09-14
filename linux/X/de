@@ -1,4 +1,4 @@
-
+﻿
 // based on a keyboard map from an 'xkb/symbols/de' file
 //
 // $XKeyboardConfig: xkeyboard-config/symbols/de,v 1.17 2007/07/15 22:12:12 svu Exp $
@@ -296,8 +296,8 @@ xkb_symbols "neo" {
     key <AE06> { [ 6,           EuroSign,               cent,                   NoSymbol,           sterling,       NoSymbol,    U2225          ] };
 
     key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    notelementof   ] };
-    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     NoSymbol,           KP_Divide,      NoSymbol,    U2204          ] };
-    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    NoSymbol,           KP_Multiply,    NoSymbol,    U2226          ] };
+    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     U27E8,              KP_Divide,      NoSymbol,    U2204          ] };
+    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    U27E9,              KP_Multiply,    NoSymbol,    U2226          ] };
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   NoSymbol,           minus,          NoSymbol,    emptyset       ] };
 
     key <AE11> { [ minus,       endash,                 emdash,                 U2011,              NoSymbol,       NoSymbol,    hyphen         ] };
@@ -306,7 +306,7 @@ xkb_symbols "neo" {
     ////////////////////////////////////////////////////
     // The upper row
     ////////////////////////////////////////////////////
-    key <AD01> { [ x,           X,                      ellipsis,               Greek_xi,           NoSymbol,       NoSymbol,    Greek_XI         ] };
+    key <AD01> { [ x,           X,                      ellipsis,               Greek_xi,           U22EE,          NoSymbol,    Greek_XI         ] };
     key <AD02> { [ v,           V,                      underscore,             NoSymbol,           BackSpace,      BackSpace,   U2259            ] };
     key <AD03> { [ l,           L,                      bracketleft,            Greek_lambda,       Up,             Up,          Greek_LAMBDA     ] };
     key <AD04> { [ c,           C,                      bracketright,           Greek_chi,          Delete,         Delete,      U2102            ] };
@@ -374,32 +374,32 @@ xkb_symbols "neo" {
     ////////////////////////////////////////////////////
     // The upper row
     ////////////////////////////////////////////////////
-    key  <KP7> { [ KP_7,        KP_Home,     U2195,      U226A            ] };
-    key  <KP8> { [ KP_8,        KP_Up,       uparrow,    intersection     ] };
-    key  <KP9> { [ KP_9,        KP_Prior,    U2297,      U226B            ] };
+    key  <KP7> { [ KP_7,        dagger,      U2195,      KP_Home          ] };
+    key  <KP8> { [ KP_8,        intersection, uparrow,   KP_Up            ] };
+    key  <KP9> { [ KP_9,        U2297,       U220D,      KP_Prior         ] };
     key <KPAD> { [ KP_Add,      KP_Add,      plusminus,  U2213            ] };
 
     ////////////////////////////////////////////////////
     // The middle row
     ////////////////////////////////////////////////////
-    key  <KP4> { [ KP_4,        KP_Left,     leftarrow,  includedin       ] };
-    key  <KP5> { [ KP_5,        EuroSign,    infinity,   containsas       ] };
-    key  <KP6> { [ KP_6,        KP_Right,    rightarrow, includes         ] };
+    key  <KP4> { [ KP_4,        includedin,  leftarrow,  KP_Left          ] };
+    key  <KP5> { [ KP_5,        EuroSign,    infinity,   NoSymbol         ] };
+    key  <KP6> { [ KP_6,        includes,    rightarrow, KP_Right         ] };
 
     ////////////////////////////////////////////////////
     // The lower row
     ////////////////////////////////////////////////////
-    key  <KP1> { [ KP_1,        KP_End,      U2194,      lessthanequal    ] };
-    key  <KP2> { [ KP_2,        KP_Down,     downarrow,  union            ] };
-    key  <KP3> { [ KP_3,        KP_Next,     U21CC,      greaterthanequal ] };
-    key <KPEN> { [ KP_Enter,    KP_Enter,    notequal,   U2248            ] };
+    key  <KP1> { [ KP_1,        U2714,       U2194,      KP_End           ] };
+    key  <KP2> { [ KP_2,        union,       downarrow,  KP_Down          ] };
+    key  <KP3> { [ KP_3,        U2718,       U21CC,      KP_Next          ] };
+    key <KPEN> { [ KP_Enter                                               ] };
     key <KPEQ> { [ KP_Equal                                               ] };
 
     ////////////////////////////////////////////////////
     // The lowest row
     ////////////////////////////////////////////////////
-    key  <KP0> { [ KP_0,        KP_Insert,   percent,    U2030            ] };
-    key <KPDL> { [ KP_Decimal,  KP_Delete,   period,     comma            ] };
+    key  <KP0> { [ KP_0,        percent,     U2030,      KP_Insert        ] };
+    key <KPDL> { [ KP_Decimal,  comma,       period,     KP_Delete        ] };
 
 };
 
