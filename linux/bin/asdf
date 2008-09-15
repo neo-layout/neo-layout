@@ -23,6 +23,10 @@ XMODMAP_XPROG="$PFAD/neo_de_x-prog.xmodmap"
 XMODMAP_ALTERNATIVE="$PFAD/neo_de_alternative.xmodmap"
 XMODMAP_EVDEV="$PFAD/neo_de_evdev.xmodmap"
 
+
+NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
+
+
 if [ -n "$SSH_CONNECTION" ]; then
 	echo -n "Dude, du bist in einer SSH-Session. Wie soll ich das "
         echo    "Tastaturlayout hier ändern?"
