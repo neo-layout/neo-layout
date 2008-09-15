@@ -16,50 +16,6 @@
       • auch wenn es z.B. unter OpenOffice nicht läuft: wir haben auch den 
         Ziffernblock belegt – den sollte man also auch im Bild mit aufnehmen
 
-== Themen für das IRC-Treffen am Montag ==
-30) Homepage/Webpräsenz
-  c) Wir sollten Aufgaben verteilen (wer dokumentiert was, wer macht
-     Grafiken usw.)
-
-32) Griechische Buchstaben
-  a) Alle rein? Auch Omikron?
-  
-  Pro:
-0P.)  - Die Bedeutung und Aktualität des Griechischen ist erkennbar, da sich selbst eine sehr moderne Bewegung NEO und nicht NOUVEAU oder NEW nennt ;-)
-1P.)  - Unsere Abendländische Kultur ist geprägt vom Griechischen; egal ob Philosophie, Mathematik, Musik – jede Erklärung im Brockhaus oder der Wikipedia startet mit einem oftmals griechischen Wortursprung
-2P.)  - Braucht man für semantisch sinnvolle griechische Texte und korrekte Typographie
-3P.)  - Man muss beim Zitieren für jedes in der Wortmitte auftretende Omikron zweimal die Ebene wechseln (und selbst dann hat man nur ein o; typograpisch korrekt kann man nur umständlich oder per copy’n’paste schreiben – genau das will NEO vermeiden)
-4P.)  - Verwechslung unwahrscheinlich, da 5. Ebene(!) und inmitten griechischer Zeichen
-5P.)  - Verwechslungsgefahr (für Compiler) besteht nur, wenn versehentlich 2 Modifier zuviel gedrückt wurden
-        – (nur Shift) statt - ist gefährlicher (z.B. in Excel =A1–A2) → beides in den FAQ
-6P.)  - die kleinen griechischen Buchstaben wären dann komplett. Es ist der einzige, der ansonsten fehlt
-7P.)  - Das kleine Omega ω gleicht dem Ausweichbuchstaben w
-8P.)  - durch ω auf w (also auch Ω) verbleibt der bessere Platz für das wichtige ∈ neben E auf der Hauptreihe
-9P.)  - @1K) eine Frage der Gewöhnung, ebenso wie eta nicht auf e und theta nicht auf t liegt
-10P.) - @2K.) Argument ist einseitig und übersieht andere Bedürfnisse
-  
-  Kontra:
-1K.)  - Klangähnlichkeit (Wenn ich das Omega suche, werde ich beim O anfangen)
-2K.)  - Braucht man nicht für Formeln
-3K.)  - es sieht genauso aus wie das o → Verwechslung
-          - Nährboden für Compilerfehler („kann funktion »open()« nicht finden“) (!) 
-4K.)  - es macht die Ebene unnötig voll
-5K.)  - es versperrt den Platz für das Omega ω
-6K.)  - Omikron hat keinen Gegenpart in der Mat/Nat-Ebene
-7K.)  - wir haben eh nicht alle Großbuchstaben warum also die Kleinen voll machen
-
-  b) Omega (ω und Ω) wohin?
-  c) Was ist mit den ganzen Varianten? Wohin? Welche nötig? Alle?
-
-35) Nutzt niemand OS X? Treiber…?
-   http://developer.apple.com/technotes/tn2002/tn2056.html
-   
-   
-38) ‣ Logogestaltung? Kriterien? Welches nehmen wir (von den vorhandenen)? Oder ein neues?
-    ‣ logo für: Webseite (groß, klein), Aufkleber, Aufnäher, Plakate/Banner, was noch....?
-    Siehe Mail »Logogestaltung« vom 1.1.08; 16:08
-
-
 24) ‣ Liste der toten Tasten erweitern, so dass alle Möglichkeiten drin stehen.
       Denn auf viele Zeichen kommt man gar nicht, wenn man es nicht schon weiß
       (beispielsweise ^2 = ²).
@@ -86,11 +42,17 @@ Lateinische Buchstaben mit Akzenten
 
 39) Wie sollen die „toten Tasten“ genannt werden? tot1, tot2, tot3?
 
+    ‣ tote Striche (Akzente) – welche und wie viele sind nötig?,
+      Anordnung/Priorität
+    ‣ Fehlen noch irgendwelche Zeichen europäischer Sprachen?
+    ‣ Schwa, Thorn? Wie wichtig? Wie realisieren? Gibt es da was übliches? (beide schon in der Standard-Compose (nur das große Schwa wurde ergänzt)
+    ⇒ Erik kümmert sich um alles (oh Gott): Fragt Karl Pentzlin, Erkki aus
+      Finnland und die CDFG-Mailingliste
 
 40) Die Lizenzierung von NEO klären: In der Wikipedia steht nur das Folgende:
 »Die NEO-Tastaturbelegung wurde unter der GNU General Public License <http://de.wikipedia.org/wiki/GNU_General_Public_License> (GPL) veröffentlicht und ist somit in diesem Sinne frei. «
 
-Ist damit die GPLv2 oder die GPLv3 gemeint? Oder ist das für uns eher unwichtig? Oder gibt es da für uns relevante Unterschiede und wenn ja welche?
+Ist damit die GPLv2 oder die GPLv3 gemeint oder veröffentlichen wir sie unter beiden? Oder ist das für uns eher unwichtig? Oder gibt es da für uns relevante Unterschiede und wenn ja welche?
 
 Und was genau steht unter dieser Lizenz? »Nur« die abstrakte theoretische Referenz, oder alle konkreten Treiber, oder der gesamte Inhalt des SVNs? Oder steht beispielsweise die FAQ eher unter der GNU-Lizenz für freie Dokumentation?
 
@@ -105,3 +67,9 @@ Man muss das ganze eben unter eine Lizenz stellen. Wenn die Lizenz "Mach damit, 
 Und wenn wir eine CreativeCommons-Lizenz nutzen wollen: ¿Welche? Ist z.B. die kommerzielle Nutzung erlaubt oder nicht – darf z.B. Apple eine NEO2-Variante zum neuen Apple-Tastatur-Standard im OS 10.8 erklären und dann überteuerte, nur mit Apple-Rechnern funktionierende »NEO2ε«-Tastaturen verkaufen?
 
 41) Reihenfolge auf Ebene 6 tauschen:  ⇐⇔⇒ statt ⇒⇔⇐ (siehe Mails »Re: [neo] Antrag: Aufnahme der spitzen Klammern« vom 09.07.2008 00:10)
+
+42) Anleitung schreiben
+    Eine kurze und außerdem ausführliche Anleitung für die Zeichen und
+    deren Benutzung schreiben.
+    Die Kurzeinführung sollte solche Zeichen mitabdecken:
+ ( ) \ / ! ? ; : _ - @ ¢ = + und % und Gedankenstrich/Bisstrich 

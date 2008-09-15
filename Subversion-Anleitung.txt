@@ -100,14 +100,19 @@ Statt auschecken wie in Abschnitt 2.1 beschrieben:
 In diesem Abschnitt geht es weniger um technische Fragen, sondern eher darum, wie man sinnvoll/empfohlenerweise mit einem SVN arbeiten sollte. Diese Ratschläge haben sich in der Praxis als sinnvoll erwiesen:
 
 • Bevor man beginnt, die eigene SVN-Kopie zu bearbeiten, sollte immer erst ein Update durchgeführt werden (insbesondere, wenn das letzte Aus-checken schon länger her liegt). Dies vermeidet mögliche Konflikte.
-• Es ist vorteilhaft, inhaltlich Zusammengehörendes auch gemeinsam zu committen, und Dinge, die voneinander unabhängig sind, auch einzeln einzuchecken.
-• Die Änderungsbeschreibung sollte immer eingegeben werden und möglichst genau sein.
-• Längere Änderungsbeschreibungen sollten mit einer kurzen Zusammenfassung der Form »[Adjektiv] Subjekt Prädikat: …« begonnen werden, etwa »Neues Feature: …«, »Caps-Lock-Fehler behoben: …«, »Dokumentation ergänzt: …«
-• Inhaltliche (bzw. »programmiertechnische«) Änderungen (oder Fehlerkorrekturen) sollten unabhängig von ästhetischen Korrekturen (wie Einrückungen oder der Korrektur von Rechtschreibfehlern) eingecheckt werden. Mögliche Änderungsbeschreibungen wären etwa: [Revision 698:] »Doku erweitert: Wie man NEO auf dem C64 installieren kann«, [Revision 699:] »Formatierung korrigiert: Leere Zeilen entfernt, Einrückung angeglichen (r698)«
-• Größere Commits können auch aufgeteilt werden, wenn die Intention dazu aus den Änderungsbeschreibungen hervor geht.
-• Wenn man Angst um kostbare Änderungen durch einen Headcrash während einer intensiven Change-Session hat, muss man einen Branch für den Zeitraum der Änderungen eröffnen.
-• Änderungen an der Referenz sollten unbedingt vorher auf der Mailingliste besprochen bzw. ausdiskutiert werden. Unwesentlichen Änderungen sollten zumindestens auf der Liste erwähnt werden.
-• …
 
+• Es ist vorteilhaft, inhaltlich Zusammengehörendes auch gemeinsam zu committen, und Dinge, die voneinander unabhängig sind, auch einzeln einzuchecken.
+
+• Die Änderungsbeschreibung sollte immer eingegeben werden und möglichst genau sein.
+
+• Längere Änderungsbeschreibungen sollten mit einer kurzen Zusammenfassung der Form »[Adjektiv] Subjekt Prädikat: …« begonnen werden, etwa »Neues Feature: …«, »Caps-Lock-Fehler behoben: …«, »Dokumentation ergänzt: …«
+
+• Inhaltliche (bzw. »programmiertechnische«) Änderungen (oder Fehlerkorrekturen) sollten unabhängig von ästhetischen Korrekturen (wie Einrückungen oder der Korrektur von Rechtschreibfehlern) eingecheckt werden. Mögliche Änderungsbeschreibungen wären etwa: [Revision 698:] »Doku erweitert: Wie man NEO auf dem C64 installieren kann«, [Revision 699:] »Formatierung korrigiert: Leere Zeilen entfernt, Einrückung angeglichen (r698)«
+
+• Größere Commits können auch aufgeteilt werden, wenn die Intention dazu aus den Änderungsbeschreibungen hervor geht.
+
+• Wenn man Angst um kostbare Änderungen durch einen Headcrash während einer intensiven Change-Session hat, muss man einen Branch für den Zeitraum der Änderungen eröffnen.
+
+• Änderungen an der Referenz sollten unbedingt vorher auf der Mailingliste besprochen bzw. ausdiskutiert werden. Unwesentliche Änderungen sollten zumindestens auf der Liste erwähnt werden.
 ------------------------------------------------------------------------------
 
