@@ -92,7 +92,7 @@ keycode 23 = Tab ISO_Left_Tab Multi_key ISO_Level3_Lock
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Space key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 65 = space space space nobreakspace 0 0 U202F
+keycode 65 = space space space nobreakspace KP_0 KP_0 U202F
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
