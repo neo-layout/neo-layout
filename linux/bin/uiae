@@ -15,6 +15,9 @@ NUM_LOCK_STATUS="ON"
 ################################################################################
 
 
+CONSOLE_KEYMAP=${1-$CONSOLE_KEYMAP}
+
+
 if [ -n "$SSH_CONNECTION" ]; then
         echo -n "Dude, du bist in einer SSH-Session. Wie soll ich das "
         echo    "Tastaturlayout hier ändern?"
