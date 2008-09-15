@@ -36,10 +36,10 @@
 <Multi_key> <f> <j>                      : ""   UE037 # LATIN SMALL LIGATURE FJ
 <Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
 <Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
-<Multi_key> <c> <k>                      : ""   UE03A # LATIN SMALL LIGATURE CK
-<Multi_key> <c> <h>                      : ""   UE03B # LATIN SMALL LIGATURE CH
+# <Multi_key> <c> <k>                      : ""   UE03A # LATIN SMALL LIGATURE CK # wird die ck-Ligatur verwendet, wird c+k für ǩ (k mit Caron) überschrieben
+# <Multi_key> <c> <h>                      : ""   UE03B # LATIN SMALL LIGATURE CH # wird die ch-Ligatur verwendet, wird c+h für ȟ (h mit Caron) überschrieben
 <Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
-<Multi_key> <c> <t>                      : ""   UE03D # LATIN SMALL LIGATURE CT
+# <Multi_key> <c> <t>                      : ""   UE03D # LATIN SMALL LIGATURE CT # wird die ct-Ligatur verwendet, wird c+t für ť (t mit Caron) überschrieben
 <Multi_key> <ſ> <i>                      : ""   UE03E # LATIN SMALL LIGATURE LONG S I
 <Multi_key> <ſ> <ſ>                      : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
 <Multi_key> <ſ> <l>                      : ""   UE043 # LATIN SMALL LIGATURE LONG S L
@@ -270,16 +270,67 @@
 <Multi_key> <degree> <equal>               : "≗"   U2257 # RING EQUAL TO
 <dead_abovering> <equal>                   : "≗"   U2257 # RING EQUAL TO
 <dead_caron> <equal>                       : "≚"   U225A # EQUIANGULAR TO
-<Multi_key> <slash> <equal>                : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <equal>                      : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_Divide> <KP_equal>         : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <KP_equal>                   : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <notsign> <equal>              : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <less> <greater>               : "≠"   U2260 # NOT EQUAL TO
 
 <Multi_key> <KP_Add> <KP_Subtract>         : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <KP_Subtract> <KP_Add>         : "∓"   U2213 # MINUS-OR-PLUS SIGN
 <Multi_key> <minus> <plus>                 : "∓"   U2213 # MINUS-OR-PLUS SIGN
+
+# mathematical negations
+<Multi_key> <equal> <slash>                                 : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <equal>                                       : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <equal> <dead_stroke> <dead_stroke>             : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <KP_equal> <KP_Divide>                          : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <KP_equal>                                    : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <KP_equal> <dead_stroke> <dead_stroke>          : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <less> <greater>                                : "≠"   U2260 # NOT EQUAL TO
+
+<Multi_key> <U2203> <slash>                                 : "∄"   U2204 # THERE DOES NOT EXIST
+<dead_stroke> <U2203>                                       : "∄"   U2204 # THERE DOES NOT EXIST
+<Multi_key> <U2203> <dead_stroke> <dead_stroke>             : "∄"   U2204 # THERE DOES NOT EXIST
+
+<Multi_key> <elementof> <slash>                             : "∉"   U2209 # NOT AN ELEMENT OF
+<dead_stroke> <elementof>                                   : "∉"   U2209 # NOT AN ELEMENT OF
+<Multi_key> <elementof> <dead_stroke> <dead_stroke>         : "∉"   U2209 # NOT AN ELEMENT OF
+
+<Multi_key> <containsas> <slash>                            : "∌"   U220C # DOES NOT CONTAIN AS MEMBER
+<dead_stroke> <containsas>                                  : "∌"   U220C # DOES NOT CONTAIN AS MEMBER
+<Multi_key> <containsas> <dead_stroke> <dead_stroke>        : "∌"   U220C # DOES NOT CONTAIN AS MEMBER
+
+<Multi_key> <bar> <slash>                                   : "∤"   U2224 # DOES NOT DIVIDE
+<dead_stroke> <bar>                                         : "∤"   U2224 # DOES NOT DIVIDE
+<Multi_key> <bar> <dead_stroke> <dead_stroke>               : "∤"   U2224 # DOES NOT DIVIDE
+
+<Multi_key> <U2225> <slash>                                 : "∦"   U2226 # NOT PARALLEL TO
+<dead_stroke> <U2225>                                       : "∦"   U2226 # NOT PARALLEL TO
+<Multi_key> <U2225> <dead_stroke> <dead_stroke>             : "∦"   U2226 # NOT PARALLEL TO
+
+<Multi_key> <asciitilde> <slash>                            : "≁"   U2241 # NOT TILDE
+<dead_stroke> <asciitilde>                                  : "≁"   U2241 # NOT TILDE
+<Multi_key> <asciitilde> <dead_stroke> <dead_stroke>        : "≁"   U2241 # NOT TILDE
+
+<Multi_key> <less> <slash>                                  : "≮"   U226E # NOT LESS-THAN
+<dead_stroke> <less>                                        : "≮"   U226E # NOT LESS-THAN
+<Multi_key> <less> <dead_stroke> <dead_stroke>              : "≮"   U226E # NOT LESS-THAN
+
+<Multi_key> <greater> <slash>                               : "≯"   U226F # NOT GREATER-THAN
+<dead_stroke> <greater>                                     : "≯"   U226F # NOT GREATER-THAN
+<Multi_key> <greater> <dead_stroke> <dead_stroke>           : "≯"   U226F # NOT GREATER-THAN
+
+<Multi_key> <lessthanequal> <slash>                         : "≰"   U2270 # NEITHER LESS-THAN NOR EQUAL TO
+<dead_stroke> <lessthanequal>                               : "≰"   U2270 # NEITHER LESS-THAN NOR EQUAL TO
+<Multi_key> <lessthanequal> <dead_stroke> <dead_stroke>     : "≰"   U2270 # NEITHER LESS-THAN NOR EQUAL TO
+
+<Multi_key> <greaterthanequal> <slash>                      : "≱"   U2271 # NEITHER GREATER-THAN NOR EQUAL TO
+<dead_stroke> <greaterthanequal>                            : "≱"   U2271 # NEITHER GREATER-THAN NOR EQUAL TO
+<Multi_key> <greaterthanequal> <dead_stroke> <dead_stroke>  : "≱"   U2271 # NEITHER GREATER-THAN NOR EQUAL TO
+
+<Multi_key> <includedin> <slash>                            : "⊄"   U2284 # NOT A SUBSET OF
+<dead_stroke> <includedin>                                  : "⊄"   U2284 # NOT A SUBSET OF
+<Multi_key> <includedin> <dead_stroke> <dead_stroke>        : "⊄"   U2284 # NOT A SUBSET OF
+
+<Multi_key> <includes> <slash>                              : "⊅"   U2285 # NOT A SUPERSET OF
+<dead_stroke> <includes>                                    : "⊅"   U2285 # NOT A SUPERSET OF
+<Multi_key> <includes> <dead_stroke> <dead_stroke>          : "⊅"   U2285 # NOT A SUPERSET OF
 
 # Vector
 <dead_circumflex> <rightarrow>             : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
@@ -380,7 +431,7 @@
 <Multi_key> <H> <z>                       : "㎐"   U3390 # SQUARE HZ
 <Multi_key> <k> <H> <z>                   : "㎑"   U3391 # SQUARE KHZ
 <Multi_key> <M> <H> <z>                   : "㎒"   U3392 # SQUARE MHZ
-<Multi_key> <G> <H> <z>                   : "㎓"   U3393 # SQUARE GHZ
+# <Multi_key> <G> <H> <z>                   : "㎓"   U3393 # SQUARE GHZ  # wird Ghz verwendet, wird G+H für das griechische Eta Η überschrieben
 
 <Multi_key> <2> <m> <m>                   : "㎟"   U339F # SQUARE MM SQUARED
 <Multi_key> <2> <c> <m>                   : "㎠"   U33A0 # SQUARE CM SQUARED
