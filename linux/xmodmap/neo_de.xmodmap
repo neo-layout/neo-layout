@@ -117,7 +117,7 @@ keycode 15 = 6 EuroSign       cent           malesymbol           sterling    No
 
 keycode 16 = 7 dollar               	yen             	Greek_kappa	currency	NoSymbol  	notelementof
 !		$			¥			κ		¤				∉
-keycode 17 = 8 doublelowquotemark	singlelowquotemark   	U27E8		KP_Didide	KP_Didide	U2204
+keycode 17 = 8 doublelowquotemark	singlelowquotemark   	U27E8		KP_Divide	KP_Divide	U2204
 !		„			‚			⟨ (bra)		/		/		∄ not exist
 keycode 18 = 9 leftdoublequotemark	leftsinglequotemark  	U27E9    	KP_Multiply	KP_Multiply	U2226
 !		“			‘			⟩ (ket)		*		*		∦ not parallel
