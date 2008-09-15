@@ -16,13 +16,17 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 ‐ Ausgiebig testen … (besonders Vollständigkeit bei Deadkeys).
 ‐ Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?).
 ‐ Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
+‐ Bildschirmtastatur anpassen.
 
 === Ideen und Vorschläge ===
-‐ Die Compose‐Kombinationen sollen automatisch aus den Referenzdateien im Compose‐Verzeichnis erzeugt werden.
 ‐ Modi für vertauschte Ziffern in der Zahlenreihe und auf der 4. Ebene.
 
 === Änderungshistorie ===
 
+Revision 872 (von Martin Roppelt)
+‐ Alle Cokos automatisch eingefügt.
+‐ Compose-Playground gelöscht.
+‐ Anpassung an die Referenz.
 Revision 864 (von Martin Roppelt)
 ‐ 253/2822 Cokos ≙ 9%.
 Revision 849 (von Martin Roppelt)

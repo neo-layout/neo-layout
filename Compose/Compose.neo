@@ -450,7 +450,7 @@
 <dead_tilde> <dead_tilde>                  : "̃"   U0303 # COMBINING TILDE
 <dead_macron> <dead_macron>                : "̄"   U0304 # COMBINING MACRON
 <dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS
-<dead_stroke> <dead_stroke>                : "̷"   U0337 # COMBINING SHORT SOLIDUS OVERLAY
+<dead_stroke> <dead_stroke>                : "̷"   U0338 # COMBINING SHORT SOLIDUS OVERLAY
 <dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT
 <U02CC> <U02CC>                            : "̦"   U0326 # COMBINING COMMA BELOW
 <Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
