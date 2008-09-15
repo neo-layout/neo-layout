@@ -146,6 +146,11 @@ Siehe auch http://de.wikipedia.org/wiki/Dezimaltrennzeichen
 │b + β│
 ┴─────┴
 
+== Ziffern ==
+Die Ziffern auf der Ersten Ebene sind die »normalen« Zahlen (also nicht die KP_-Variante),
+wogegen für den Ziffernblock auf der vierten Ebene stets die KP_‐Varianten verwendet werden
+sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gewährleisten.
+
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
 │ˇ    │° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ∉│„ / ∄│“ * ∦│” - ∅│–   ╌│` ˙ ˚│Backspace│
