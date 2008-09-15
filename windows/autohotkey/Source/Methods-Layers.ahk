@@ -86,7 +86,6 @@ EbeneAktualisieren() {
     Ebene = 6
     Ebene8 = 1
   } Ebene12 := ((Ebene = 1) or (Ebene = 2))
-  Ebene14 := ((Ebene = 1) or (Ebene = 4))
   NumLock := GetKeyState("NumLock", "T")
   noCaps := 0
 }

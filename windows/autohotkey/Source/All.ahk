@@ -14,6 +14,3 @@
 #Include %a_scriptdir%\Compose.ahk
 #Include %a_scriptdir%\Methods-Unicode.ahk
 #Include %a_scriptdir%\Methods-ScreenKeyboard.ahk
-; Eines schönen Tages sollten auch die Compose-Kombinationen automatisch aus der Referenz erzeugt werden. 
-; Derzeitig gibt es nur den (höchst instabilen und experimentellen!) Compose-Playground:
-; #Include *i %a_scriptdir%\..\Compose\Compose-all-in-one.ahk

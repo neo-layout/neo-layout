@@ -1,14 +1,14 @@
-deadAsc(val, a) {
+deadAsc(val1, val2, a) {
   global
   if !DeadSilence
-    send % val
+    OutputChar(val1, val2)
   DeadKey := a
 }
 
-deadUni(val, a) {
+deadUni(val1, val2, a) {
   global
   if !DeadSilence
-    SendUnicodeChar(val)
+    SendUnicodeChar(val1, val2)
   DeadKey := a
 }
 
@@ -24,7 +24,7 @@ undeadUni(val){
   global
   if !DeadSilence
     send {bs}
-  SendUnicodeChar(val)
+  SendUnicodeChar(val, "")
 }
 
 CheckDeadAsc(d,val) {
@@ -69,43 +69,34 @@ CheckDeadUni12(d,val1,val2) {
   }
 }
 
-CheckCompAsc(d,val) {
-  global
-  if (PriorCompKey == d) {
-    if !DeadCompose
-      send {bs}
-    send % val
-    CompKey = 0
-    isFurtherCompKey = 0
-    return 1
-  }
-}
-
 CheckCompUni(d,val) {
   global
-  if (PriorCompKey == d) {
+  if (CompKey == d) {
     PriorCompKey =
     CompKey =
     if !DeadCompose
       send {bs}
     isFurtherCompkey = 0
-    SendUnicodeChar(val)
+    SendUnicodeChar(val, "")
     return 1
   }
 }
 
-OutputChar(val) {
+OutputChar(val1,val2) {
   global
-  if !(CheckComp(val) and DeadCompose)
-    send % "{blind}" . val
+  if !(CheckComp(val2) and DeadCompose)
+    send % "{blind}" . val1
 }
 
-OutputChar12(val1,val2) {
+OutputChar12(val1,val2,val3,val4) {
   global
   if (Ebene = 1)
     c := val1
   else c := val2
-  if !(CheckComp(c) and DeadCompose)
+  if (Ebene = 1)
+    d := val3
+  else d := val4
+  if !(CheckComp(d) and DeadCompose)
     if GetKeyState("Shift","P") and isMod2Locked
       send % "{blind}{Shift Up}" . c . "{Shift Down}"
     else send % "{blind}" . c
@@ -114,20 +105,20 @@ OutputChar12(val1,val2) {
 CheckComp(d) {
   global
   if isFurtherCompkey {
-    PriorCompKey := CompKey := PriorCompKey . "_" . d
+    CompKey := PriorCompKey . " " . "<" . d . ">"
     isFurtherCompkey = 0
     CheckCompose()
     if (CompKey = "")
       return 1
     else CompKey =
   } else if PriorCompKey {
-    PriorCompKey := CompKey := PriorCompKey . "_" . d
+    CompKey := PriorCompKey . " " . "<" . d . ">"
     CheckCompose()
     if CompKey
       isFurtherCompKey = 1
     return 1
   } else if (PriorDeadKey = "comp") {
-    CompKey := d
+    CompKey := "<" . d . ">"
     return 1
   }
 }
