@@ -22,23 +22,21 @@ beschlossen wurden.
   europäische Sprachen, da viel häufiger verwendet von deutschen Schreibern –
   also NEO-Benutzern.
 
-- Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“ eine Option des Layouts „de“ sein.
+- Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“   eine Option des Layouts „de“ sein.
 
-- ü und ö getauscht, am 15. Oktober wurde gezeigt, wie einstimmig der
-  Beschluss ist (siehe Mail von Erik an diesem Tag).
+- ü und ö getauscht.
 
-== 30. Juli 2007 ==
 - Pfeile (wie in der Druckvorlage von Philipp) als Symbole für die
   Modifikatortasten. Zusätzlich noch 2, 3, 5 in die Schäfte der Pfeile, damit
   man sie auch benennen kann. „Drück Pfeil3+f für »=«.“
 
-- Komponiertaste (Sympol: Note) auf Mod3+Tab (siehe Textgrafik neo20.txt).
+- Komponiertaste (Symbol: Note) auf Mod3+Tab (siehe Textgrafik neo20.txt).
 
 - Eth »Ð« und eth »ð« bzw. »đ« werden mit Komponiertaste erstellt,
-  wobei »ð« entweder mit Komp+/+d oder Komp+-+δ oder Komp+-+∂ erstellt
-  werden könnte. Dann das »đ« einfach nur mit Komp+-+d.
+  wobei »ð« entweder mit ♫/d oder ♫-δ oder ♫-∂ erstellt
+  werden könnte. Dann das »đ« einfach nur mit ♫-d.
 
-- Schmales Leerzeichen bleibt auf Leertaste (zu selten und so logischer)
+- Schmales Leerzeichen bleibt auf Leertaste (zu selten und so logischer).
 
 - Neo-Light auf Eis gelegt. Fürs Archiv trotzdem mal die Vorschläge der Namen:
     NEO carving / NEO race
@@ -62,62 +60,22 @@ beschlossen wurden.
     NEO World
     oder: NEO full --> das richtige und komplette NEO
 
+- 6. Ebene erreichbar mit Mod3+Mod4
 
+- Wer beteiligt sich noch an der Entwicklung des neuen Windowstreibers?
+  Kann der bisherige Entwickler (Florian) Interessierten vielleicht ’ne
+  kleine Einführung geben?
+  MartinBBBBBB wird Florian unterstützen bei der Treiberentwicklung unter Windows
 
--   Anleitung schreiben
-    Eine kurze und außerdem eine ausführliche Anleitung für die Zeichen und
-    deren Benutzung schreiben.
-    Die Kurzeinführung sollte solche Zeichen mitabdecken:
- ( )   \ /    ! ?  ; :  _  -   @  und  % und Gedankenstrich/Bisstrich (ist das
-gleiche, siehe FAQ)
-    Ergänzung: auch ¢ = + sollten erwähnt werden
-
-
-- Homepage/Webpräsenz
-  a) neo-layout.org allein, alles andere leitet darauf weiter, außerdem Bens
-Server benutzen, wenn Falk die Domain her gibt
-  b) wir setzen ein trac auf
-  d) Die Frontseite wird im wiki angelegt, wenn jemand Ressourcen übrig hat,
-darf er eine statische Seite nachreichen
-  
-
-- 6. Ebene
-  a) erreichbar mit Mod3+Mod4 (hat Erik in der neo20.txt geändert)
-  b) Welche Zeichen sollten verändert werden (Pascals Vorschlag liefert
-     hier Anregungen) (hat Erik gemacht, Omega/Omikron und Element müssen weiter diskutiert werden)
-
-- Mailingliste? gardak kann helfen
-
-
--   Wer beteiligt sich noch an der Entwicklung des neuen Windowstreibers?
-    Kann der bisherige Entwickler (Florian) Interessierten vielleicht ’ne
-    kleine Einführung geben?
-    MartinBBBBBB wird Florian unterstützen bei der Treiberentwicklung unter
-    Windows
-
-
--  Nutzt niemand OS X? Treiber…?
-   Leider nicht. Aber ein erster Ausgangspunkt ist vielleicht:
-   http://developer.apple.com/technotes/tn2002/tn2056.html
+- Nutzt niemand OS X? Treiber…?
+  Leider nicht. Aber ein erster Ausgangspunkt ist vielleicht:
+  http://developer.apple.com/technotes/tn2002/tn2056.html
 
    
--   ‣ Mod3_Lock wird nicht gebraucht
-    ‣ Shift+Shift zu Caps-Lock
-    ‣ Mod4+Mod4 zu Mod4-Lock
-
+- ‣ Mod3_Lock wird nicht gebraucht
+  ‣ Shift+Shift zu Caps-Lock
+  ‣ Mod4+Mod4 zu Mod4-Lock
     
--   ‣ tote Striche (Akzente) – welche und wie viele sind nötig?,
-      Anordnung/Priorität
-    ‣ Fehlen noch irgendwelche Zeichen europäischer Sprachen?
-    ‣ Schwa, Thorn? Wie wichtig? Wie realisieren? Gibt es da was übliches? (beide schon in der Standard-Compose (nur das große Schwa wurde ergänzt)
-    ⇒ Erik kümmert sich um alles (oh Gott): Fragt Karl Pentzlin, Erkki aus
-      Finnland und die CDFG-Mailingliste
-
-
 - Warum das ∞ auf dem Ziffernblock:
   das ∞ braucht man häufig im Zusammenhang mit dem → Zum Beispiel bei x→∞, darum
   wurde das ∞ neben das → gelegt
-
-16. Juli 2008:
-Benennung der Ebenen: Siehe FAQ (kurz: jeder wie er mag, es gibt keine
-Überschneidungen)
