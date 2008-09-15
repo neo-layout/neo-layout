@@ -1521,6 +1521,8 @@ neo_komma:
   EbeneAktualisieren()
   if (Ebene = 1)
     OutputChar(",", "comma")
+  else if (Ebene = 2)
+    SendUnicodeChar(0x22EE, "U22EE") ; vertikale Ellipse
   else if (Ebene = 3)
     OutputChar(Chr(34), "quotedbl")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B2)
@@ -1537,6 +1539,8 @@ neo_punkt:
   EbeneAktualisieren()
   if (Ebene = 1)
     OutputChar(".", "period")
+  else if (Ebene = 2)
+    SendUnicodeChar("0x2026", "U2026") ; Ellipse
   else if (Ebene = 3)
     OutputChar("'", "apostrophe")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
