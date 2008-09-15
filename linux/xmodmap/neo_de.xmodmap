@@ -117,12 +117,12 @@ keycode 15 = 6 EuroSign       cent           malesymbol           sterling    No
 
 keycode 16 = 7 dollar               	yen             	Greek_kappa	currency	NoSymbol  	notelementof
 !		$			¥			κ		¤				∉
-keycode 17 = 8 doublelowquotemark	singlelowquotemark   	U27E8		slash   	slash          	U2204
-!		„			‚			⟨ (bra)		/				∄ not exist
-keycode 18 = 9 leftdoublequotemark	leftsinglequotemark  	U27E9    	asterisk 	asterisk       	U2226
-!		“			‘			⟩ (ket)		*				∦ not parallel
-keycode 19 = 0 rightdoublequotemark	rightsinglequotemark 	U2080    	minus       	NoSymbol       	emptyset
-!		”			’			subscript-0	-				∅
+keycode 17 = 8 doublelowquotemark	singlelowquotemark   	U27E8		KP_Didide	KP_Didide	U2204
+!		„			‚			⟨ (bra)		/		/		∄ not exist
+keycode 18 = 9 leftdoublequotemark	leftsinglequotemark  	U27E9    	KP_Multiply	KP_Multiply	U2226
+!		“			‘			⟩ (ket)		*		*		∦ not parallel
+keycode 19 = 0 rightdoublequotemark	rightsinglequotemark 	U2080    	KP_Subtract	KP_Subtract	emptyset
+!		”			’			subscript-0	-			-	∅
 
 keycode 20 = minus      endash      emdash              U2011      	NoSymbol    NoSymbol       hyphen
 !		-	–		—		‑ non-breaking					­ 
@@ -145,14 +145,14 @@ keycode 28 = w      W     asciicircum  Greek_omega        Insert     Insert     
 
 keycode 29 = k      K     exclam       U03F0              exclamdown NoSymbol   radical
 !				!	ϰ Greek_kappa		¡		√
-keycode 30 = h      H     less         Greek_psi          7          7          U03A8
+keycode 30 = h      H     less         Greek_psi          KP_7       KP_7       U03A8
 !				<	ψ					Ψ Greek_PSI
-keycode 31 = g      G     greater      Greek_gamma        8          8          U0393
+keycode 31 = g      G     greater      Greek_gamma        KP_8       KP_8       U0393
 !				>	γ					Γ Greek_GAMMA
-keycode 32 = f      F     equal        Greek_phi          9          9          U03A6
+keycode 32 = f      F     equal        Greek_phi          KP_9       KP_9       U03A6
 !				=	φ					Φ Greek_PHI
-keycode 33 = q      Q     ampersand    U03D5              plus       NoSymbol   U211A
-!				&	ϕ Greek_phi		+		ℚ rational
+keycode 33 = q      Q     ampersand    U03D5              KP_Add     KP_Add     U211A
+!				&	ϕ Greek_phi		+	+	ℚ rational
 
 keycode 34 = ssharp	U1E9E 		U017F		Greek_finalsmallsigma	NoSymbol	NoSymbol	U2218
 !	     ß		ẞ Capital ß	ſ long s	ς							∘ ring operator
@@ -176,11 +176,11 @@ keycode 42 = o 	O 	asterisk	Greek_omicron	End		End      	elementof
 
 keycode 43 = s 	S 	question   	Greek_sigma   	questiondown 	NoSymbol     	U03A3
 !			?		σ		¿				Σ Greek_SIGMA
-keycode 44 = n 	N 	parenleft  	Greek_nu      	4         	4        	U2115
+keycode 44 = n 	N 	parenleft  	Greek_nu      	KP_4         	KP_4        	U2115
 !			(		ν						ℕ natural
-keycode 45 = r 	R 	parenright 	U03F1         	5         	5        	U211D
+keycode 45 = r 	R 	parenright 	U03F1         	KP_5         	KP_5        	U211D
 !			)		ϱ Greek_rho					ℝ real
-keycode 46 = t 	T 	minus      	Greek_tau     	6         	6        	partialderivative
+keycode 46 = t 	T 	minus      	Greek_tau     	KP_6         	KP_6        	partialderivative
 !			-		τ						∂
 keycode 47 = d 	D 	colon      	Greek_delta   	comma        	NoSymbol     	U0394
 !			:		δ		,				Δ Greek_DELTA	
@@ -203,11 +203,11 @@ keycode 56 = z          Z          	grave      	Greek_zeta	Undo		Redo		  U2124
 
 keycode 57 = b      	B        	plus       	Greek_beta  	colon      	NoSymbol     	U21D0
 !					+		β		:				⇐
-keycode 58 = m      	M        	percent    	Greek_mu    	1       	1       	ifonlyif
+keycode 58 = m      	M        	percent    	Greek_mu    	KP_1       	KP_1       	ifonlyif
 !					%		μ						⇔
-keycode 59 = comma  	NoSymbol	quotedbl   	Greek_rho   	2       	2        	U21D2
+keycode 59 = comma  	NoSymbol	quotedbl   	Greek_rho   	KP_2       	KP_2        	U21D2
 !		,		.	"		ρ						⇒ implies 
-keycode 60 = period 	NoSymbol	apostrophe 	U03D1       	3       	3        	U0398
+keycode 60 = period 	NoSymbol	apostrophe 	U03D1       	KP_3       	KP_3        	U0398
 !		.			'		ϑ Greek_theta					Θ Greek_THETA
 keycode 61 = j      	J        	semicolon  	Greek_theta 	semicolon  	NoSymbol     	identical
 !					;		θ		;				≡
