@@ -1540,7 +1540,7 @@ neo_punkt:
   if (Ebene = 1)
     OutputChar(".", "period")
   else if (Ebene = 2)
-    SendUnicodeChar("0x2026", "U2026") ; Ellipse
+    SendUnicodeChar("0x2026", "ellipsis") ; Ellipse
   else if (Ebene = 3)
     OutputChar("'", "apostrophe")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
@@ -2108,27 +2108,43 @@ OutputChar12(val1,val2,val3,val4) {
     else send % "{blind}" . c
 }
 
+;Folgende Funktion prüft, ob das eben geschriebene Zeichen eine gültige Coko 
+;fortsetzen KÖNNTE – falls ja, wird 1 zurückgegeben (die Eingabe soll blind erfolgen), 
+;andernfalls wird 0 zurückgegeben (das Zeichen soll ausgegeben werden).
+
 CheckComp(d) {
   global
-  if isFurtherCompkey {
-    CompKey := PriorCompKey . " " . "<" . d . ">"
-    isFurtherCompkey = 0
+  if (PriorDeadKey = "comp") {
+    CompKey := "<" . d . ">"
+    DeadKey =
+    TryThirdCompKey = 0
+    return 1
+  } else if TryFourthCompKey {
+    TryFourthCompKey = 0
+    CompKey := ThreeCompKeys . " " . "<" . d . ">"
+    ThreeCompKeys =
     CheckCompose()
-    if (CompKey = "")
+    if !(CompKey) {
+      send {left}{bs}{right}
       return 1
-    else CompKey =
+    } else CompKey =
+  } else if TryThirdCompKey {
+    TryThirdCompKey = 0
+    CompKey := PriorCompKey . " " . "<" . d . ">"
+    CheckCompose()
+    if CompKey {
+      TryFourthCompKey = 1
+      ThreeCompKeys := CompKey
+      CompKey =
+    } else return 1
   } else if PriorCompKey {
     CompKey := PriorCompKey . " " . "<" . d . ">"
     CheckCompose()
     if CompKey
-      isFurtherCompKey = 1
-    return 1
-  } else if (PriorDeadKey = "comp") {
-    CompKey := "<" . d . ">"
+      TryThirdCompKey = 1
     return 1
   }
-}
-CheckCompose() {
+}CheckCompose() {
 CheckCompUni("<G> <A>", 0x391)
 CheckCompUni("<G> <B>", 0x392)
 CheckCompUni("<G> <E>", 0x395)
