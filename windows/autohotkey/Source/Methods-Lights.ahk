@@ -104,3 +104,5 @@ InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4) {
   Loop %pSize%  ; Copy each byte in the integer into the structure as raw binary data. 
     DllCall("RtlFillMemory", "UInt", &pDest + pOffset + A_Index-1, "UInt", 1, "UChar", pInteger >> 8*(A_Index-1) & 0xFF) 
 }
+
+

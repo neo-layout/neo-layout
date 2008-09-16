@@ -31,3 +31,5 @@ SendUnicodeChar(charCode1, charCode2) {
 EncodeInteger(ref,val) {
   DllCall("ntdll\RtlFillMemoryUlong","Uint",ref,"Uint",4,"Uint",val)
 }
+
+

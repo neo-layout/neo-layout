@@ -237,3 +237,5 @@ VK09SC00F::goto neo_tab
 *VK2DSC052::goto neo_Numpad0   ; NumPadIns
 *VK6ESC053::                   ; NumPadDot
 *VK2ESC053::goto neo_NumpadDot ; NumPadIns
+
+

@@ -23,6 +23,9 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 897 (von Dennis Heidsiek)
+- Skript kompiliert wieder (alle .ahk-Dateien enden jetzt mit mindestens zwei Leezeilen)
+- Ein Überbleibsel aus dem Build-Skript entfernt (bezog sich noch auf den Compose-Playground).
 Revision 888 (von Martin Roppelt)
 - Cokos mit 4 Tasten möglich.
 - horizontalen Ellipsen-CompKey wiederhergestellt.
