@@ -2144,7 +2144,8 @@ CheckComp(d) {
       TryThirdCompKey = 1
     return 1
   }
-}CheckCompose() {
+}
+CheckCompose() {
 CheckCompUni("<G> <A>", 0x391)
 CheckCompUni("<G> <B>", 0x392)
 CheckCompUni("<G> <E>", 0x395)
