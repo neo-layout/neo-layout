@@ -110,7 +110,8 @@ CheckComp(d) {
   global
   if (PriorDeadKey = "comp") {
     CompKey := "<" . d . ">"
-    DeadKey =
+    PriorDeadKey := DeadKey =
+    CheckCompose()
     TryThirdCompKey = 0
     return 1
   } else if TryFourthCompKey {
