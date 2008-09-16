@@ -14,3 +14,5 @@
 #Include %a_scriptdir%\Compose.ahk
 #Include %a_scriptdir%\Methods-Unicode.ahk
 #Include %a_scriptdir%\Methods-ScreenKeyboard.ahk
+
+
