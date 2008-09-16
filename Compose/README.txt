@@ -40,6 +40,9 @@ Zudem scheint dieses Problem in aktuelleren Gnome-Versionen behoben worden zu se
 Falls einmal bereits vorhandene Kombinationen bewusst umdefiniert werden sollten, ist es 
 wichtig, dass die Compose.neo am Ende der Compose eingefügt wird, da bei mehrfach vorhandenen Kombinationen stets die letzte gültig ist.
 
+=== Die en_US.neo – Eine Liste essentieller Compose-Kombinationen (Cokos) ===
+In der Datei en_US.neo befinden sich alle Cokos, die nicht irgendwie arabisch, kyrillisch, weißrussisch, koreanisch, japanisch, chinesisch oder einer anderen nicht-europäischen Sprache behaftig sind, zusammengefasst. Auf diese Weise reduziert sich die Dateigröße um mehr als die Hälfte. Diese Liste kann etwa als Basis für die Implementierung von Compose unter Nicht-Linux-Betriebsſystemen genutzt werden; sie ist allerdings nur eine Teilmenge der Compose-Referenz und sollte nicht mit ihr verwechselt werden!
+
 === Zusätzliche Compose-Kombinationen (Cokos) ===
 Im dem Archiv »Numericals.tar.bz2« befinden sich optionale Compose-Kombinationen für Römische (Klein (Unicode): r1-r3999, Groß (Unicode): R1-R3999) und klingonische (Umschrift (ASCII): k0-k3999, pIqaD (Private Use Area of Unicode): K0-3999) Zahlen. Diese können – wenn gewünscht – wie oben beschrieben installiert werden. Ist die eingegebene Zahl nicht vierstellig, muss die Eingabe mit einem <space> terminiert werden (dies ist notwendig, um die Eindeutigkeit der Cokos zu erreichen).
 
