@@ -336,7 +336,7 @@
 
 # Vector
 <dead_circumflex> <rightarrow>             : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
-<Multi_key> <rightarrow> <rightarrow>      : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
+<Multi_key> <rightarrow>                   : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
 <dead_circumflex> <greater>                : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key> <asciicircum> <greater>        : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key> <asciicircum> <rightarrow>     : "⃗" U20D7 # COMBINING RIGHT ARROW ABOVE
