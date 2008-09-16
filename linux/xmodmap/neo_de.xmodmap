@@ -56,7 +56,7 @@ keycode 115 = Super_L
 ! keycode 116 = Super_R
 keycode 116 = Multi_key Multi_key
 
-add Mod4 = Super_L Super_R
+add Mod4 = Super_L
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
