@@ -41,6 +41,8 @@ Das war die letzte WARNUNG, ich hoffe nur, dass
 Sie wirklich wissen, was Sie hier tun wollen ...
 *******************************************
 */
+
+
 /******************
 * Initialisierung *
 *******************
@@ -378,6 +380,8 @@ return
 exitprogram:
   exitapp
 return
+
+
 ; LShift+RShift == CapsLock (simuliert)
 ; Es werden nur die beiden Tastenkombinationen abgefragt,
 ; daher kommen LShift und RShift ungehindert bis in die
@@ -506,6 +510,9 @@ IsMod4Pressed()
     else
       return (GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
 }
+
+
+
 /*
    ------------------------------------------------------
    QWERTZ->Neo umwandlung
@@ -745,6 +752,8 @@ VK09SC00F::goto neo_tab
 *VK2DSC052::goto neo_Numpad0   ; NumPadIns
 *VK6ESC053::                   ; NumPadDot
 *VK2ESC053::goto neo_NumpadDot ; NumPadIns
+
+
 /*
   Die eigentliche NEO-Belegung und der Hauptteil des AHK-Treibers.
 
@@ -1898,6 +1907,8 @@ neo_tab:
     DeadKey := ""
     CompKey := ""
   } return
+
+
 /* 
    ------------------------------------------------------
    Methode KeyboardLED zur Steuerung der Keyboard-LEDs
@@ -2004,6 +2015,8 @@ InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4) {
   Loop %pSize%  ; Copy each byte in the integer into the structure as raw binary data. 
     DllCall("RtlFillMemory", "UInt", &pDest + pOffset + A_Index-1, "UInt", 1, "UChar", pInteger >> 8*(A_Index-1) & 0xFF) 
 }
+
+
 deadAsc(val1, val2, a) {
   global
   if !DeadSilence
@@ -2145,6 +2158,8 @@ CheckComp(d) {
     return 1
   }
 }
+
+
 CheckCompose() {
 CheckCompUni("<G> <A>", 0x391)
 CheckCompUni("<G> <B>", 0x392)
@@ -4972,6 +4987,8 @@ CheckCompUni("<acute> <z>", 0x17A)
 CheckCompUni("<c> <Z>", 0x17D)
 CheckCompUni("<c> <z>", 0x17E)
 }
+
+
 /*
    ------------------------------------------------------
    Methoden zum Senden von Unicode-Zeichen
@@ -5005,6 +5022,8 @@ SendUnicodeChar(charCode1, charCode2) {
 EncodeInteger(ref,val) {
   DllCall("ntdll\RtlFillMemoryUlong","Uint",ref,"Uint",4,"Uint",val)
 }
+
+
 /*
    ------------------------------------------------------
    BildschirmTastatur
@@ -5161,4 +5180,6 @@ ToggleAlwaysOnTop:
     alwaysOnTop = 1
   }
 Return
+
+
 

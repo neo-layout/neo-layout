@@ -23,6 +23,8 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 898 (von Dennis Heidsiek)
+- Build-Skript überarbeitet, so dass die Pfade zentral geändert werden können.
 Revision 897 (von Dennis Heidsiek)
 - Skript kompiliert wieder (alle .ahk-Dateien enden jetzt mit mindestens zwei Leezeilen)
 - Ein Überbleibsel aus dem Build-Skript entfernt (bezog sich noch auf den Compose-Playground).
