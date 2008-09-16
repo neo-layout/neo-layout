@@ -1,4 +1,4 @@
-== Kleine Anleitung ==
+﻿== Kleine Anleitung ==
 Die Layout-Datei neo.keylayout kopiert man nach
     ~/Library/Keyboard Layouts
 und meldet sich ab und wieder an. Dann kann man es über die Systemsteuerung
