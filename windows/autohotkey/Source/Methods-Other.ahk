@@ -102,23 +102,40 @@ OutputChar12(val1,val2,val3,val4) {
     else send % "{blind}" . c
 }
 
+;Folgende Funktion prüft, ob das eben geschriebene Zeichen eine gültige Coko 
+;fortsetzen KÖNNTE – falls ja, wird 1 zurückgegeben (die Eingabe soll blind erfolgen), 
+;andernfalls wird 0 zurückgegeben (das Zeichen soll ausgegeben werden).
+
 CheckComp(d) {
   global
-  if isFurtherCompkey {
-    CompKey := PriorCompKey . " " . "<" . d . ">"
-    isFurtherCompkey = 0
+  if (PriorDeadKey = "comp") {
+    CompKey := "<" . d . ">"
+    DeadKey =
+    TryThirdCompKey = 0
+    return 1
+  } else if TryFourthCompKey {
+    TryFourthCompKey = 0
+    CompKey := ThreeCompKeys . " " . "<" . d . ">"
+    ThreeCompKeys =
     CheckCompose()
-    if (CompKey = "")
+    if !(CompKey) {
+      send {left}{bs}{right}
       return 1
-    else CompKey =
+    } else CompKey =
+  } else if TryThirdCompKey {
+    TryThirdCompKey = 0
+    CompKey := PriorCompKey . " " . "<" . d . ">"
+    CheckCompose()
+    if CompKey {
+      TryFourthCompKey = 1
+      ThreeCompKeys := CompKey
+      CompKey =
+    } else return 1
   } else if PriorCompKey {
     CompKey := PriorCompKey . " " . "<" . d . ">"
     CheckCompose()
     if CompKey
-      isFurtherCompKey = 1
-    return 1
-  } else if (PriorDeadKey = "comp") {
-    CompKey := "<" . d . ">"
+      TryThirdCompKey = 1
     return 1
   }
 }

@@ -793,7 +793,7 @@ neo_punkt:
   if (Ebene = 1)
     OutputChar(".", "period")
   else if (Ebene = 2)
-    SendUnicodeChar("0x2026", "U2026") ; Ellipse
+    SendUnicodeChar("0x2026", "ellipsis") ; Ellipse
   else if (Ebene = 3)
     OutputChar("'", "apostrophe")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
