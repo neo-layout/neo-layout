@@ -1,4 +1,4 @@
-== uiae, asdf ==
+﻿== uiae, asdf ==
 asdf (linke Hand auf der Grundreihe abrollen) schaltet von QWERTZ zu Neo um.
 uiae ( “      “   “   “       “        “    )    “      “  Neo zu QWERTZ um.
 
