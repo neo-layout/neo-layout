@@ -3,8 +3,8 @@ Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X 
 Dazu wird die keymap (leider als root!!) mit »loadkeys PFAD/neo.map« geladen.
 Mit »loadkeys -d« wird wieder die Standardbelegung verwendet.
 
-Die neo.map kann schon beim Booten verwendet werden, indem der Pfad zur »neo.map« in der Datei »/etc/sysconfig/keyboard« in der Variable »KEYTABLE« angegeben wird.
-z.B. KEYTABLE="/usr/share/kbd/keymaps/i386/neo/neo.map"
+Die neo.map kann schon beim Booten verwendet werden, indem der Pfad zur »neo.map« in der Datei »/etc/sysconfig/keyboard« in der Variable »KEYTABLE« angegeben wird. Dabei muss das ».map« allerdings weggelassen werden.
+Beispiel: KEYTABLE="/usr/share/kbd/keymaps/i386/neo/neo"
 Dennoch kann man mit »loadkeys -d« zur Standardbelegung wechseln, da diese als defkeymap.map laut manpage unter /usr/share/keymaps oder /usr/src/linux/drivers/char, bei mir aber unter /etc liegt.
 
 Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status von »Num_Lock« (den es unter NEO nicht mehr gibt). Um Num_Lock dennoch nachträglich einschalten zu können, muss die Menü-Taste (in der untersten Reihe) betätigt werden.

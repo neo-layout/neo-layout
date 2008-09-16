@@ -362,9 +362,12 @@ xkb_symbols "neo" {
     ////////////////////////////////////////////////////
     // The uppest row
     ////////////////////////////////////////////////////
-    key <NMLK> { [ equal,       notequal,    U2248,      Pointer_EnableKeys ] };
 
-    key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
+    // Num-Lock gibt es bei Neo nicht mehr:
+    //key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
+
+    // Die ehemalige Num-Lock-Taste erzeugt nun diverse Zeichen:
+    key <NMLK> { [ equal,       notequal,    U2248,      Pointer_EnableKeys ] };
 
     key <KPDV> { [ KP_Divide,   KP_Divide,   division,   U2044            ] };
     key <KPMU> { [ KP_Multiply, KP_Multiply, multiply,   U2219            ] };
