@@ -76,6 +76,8 @@
 
 # other letters
 <Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
+<Multi_key> <L> <period                  : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
+<Multi_key> <l> <period                  : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
 
 # interpunctation
 <Multi_key> <2> <exclam>                         : "‼"   U203C # DOUBLE EXCLAMATION MARK
