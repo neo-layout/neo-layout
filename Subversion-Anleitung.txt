@@ -38,14 +38,14 @@ Wenn es voraussichtlich bei einer einzigen Änderung bleiben wird, kann alternat
 ------------------------------------------------------------------------------
 1.3 Terminologie
 
-$REPOSITORY_HOME  Das Verzeichnis in dem das ausgecheckte Repository liegt
+$REPOSITORY_HOME – Das Verzeichnis in dem das ausgecheckte Repository liegt
 
 ------------------------------------------------------------------------------
 2. Was will ich machen?
 ------------------------------------------------------------------------------
 2.1 Das Repository lokal auf meinem Rechner haben
 
-Angenommen ich möchte Neo in das Verzeichnis $VERZEICHNIS/$NEO runterladen:
+Angenommen ich möchte Neo in das Verzeichnis »$VERZEICHNIS/$NEO« runterladen:
 
   cd $VERZEICHNIS
   svn checkout https://neo.eigenheimstrasse.de/svn $NEO
@@ -61,7 +61,7 @@ $REPOSITORY_HOME ist dann $VERZEICHNIS/$NEO
 ------------------------------------------------------------------------------
 2.3 Dateien im Repository ändern
 
-Einfach die Datei ändern und weiter gehts mit Abschnitt 2.7.
+Einfach die Datei ändern und weiter geht’s mit Abschnitt 2.7.
 
 ------------------------------------------------------------------------------
 2.4 Dem Repository neue Dateien hinzufügen
@@ -89,7 +89,7 @@ weiter mit Abschnitt 2.7
   svn commit -m "$ÄNDERUNGSBESCHREIBUNG" --username $USER
 
 Wenn man das Repository mit seinem Nutzernamen ausgecheckt hat, 
-kann --username $USER weggelassen werden.
+kann »--username $USER« weggelassen werden.
 Statt auschecken wie in Abschnitt 2.1 beschrieben:
   cd $VERZEICHNIS_WO_NEO_REIN_SOLL
   svn checkout https://$USER@neo.eigenheimstrasse.de/svn neo
@@ -99,20 +99,20 @@ Statt auschecken wie in Abschnitt 2.1 beschrieben:
 ------------------------------------------------------------------------------
 In diesem Abschnitt geht es weniger um technische Fragen, sondern eher darum, wie man sinnvoll/empfohlenerweise mit einem SVN arbeiten sollte. Diese Ratschläge haben sich in der Praxis als sinnvoll erwiesen:
 
- Bevor man beginnt, die eigene SVN-Kopie zu bearbeiten, sollte immer erst ein Update durchgeführt werden (insbesondere, wenn das letzte Aus-checken schon länger her liegt). Dies vermeidet mögliche Konflikte.
+‣ Bevor man beginnt, die eigene SVN-Kopie zu bearbeiten, sollte immer erst ein Update durchgeführt werden (insbesondere, wenn das letzte Aus-checken schon länger her liegt). Dies vermeidet mögliche Konflikte.
 
- Es ist vorteilhaft, inhaltlich Zusammengehörendes auch gemeinsam zu committen, und Dinge, die voneinander unabhängig sind, auch einzeln einzuchecken.
+‣ Es ist vorteilhaft, inhaltlich Zusammengehörendes auch gemeinsam zu committen, und Dinge, die voneinander unabhängig sind, auch einzeln einzuchecken.
 
- Die Änderungsbeschreibung sollte immer eingegeben werden und möglichst genau sein.
+‣ Die Änderungsbeschreibung sollte immer eingegeben werden und möglichst genau sein.
 
- Längere Änderungsbeschreibungen sollten mit einer kurzen Zusammenfassung der Form »[Adjektiv] Subjekt Prädikat: « begonnen werden, etwa »Neues Feature: «, »Caps-Lock-Fehler behoben: «, »Dokumentation ergänzt: «
+‣ Längere Änderungsbeschreibungen sollten mit einer kurzen Zusammenfassung der Form »[Adjektiv] Subjekt Prädikat: …« begonnen werden, etwa »Neues Feature: …«, »Caps-Lock-Fehler behoben: …«, »Dokumentation ergänzt: …«
 
- Inhaltliche (bzw. »programmiertechnische«) Änderungen (oder Fehlerkorrekturen) sollten unabhängig von ästhetischen Korrekturen (wie Einrückungen oder der Korrektur von Rechtschreibfehlern) eingecheckt werden. Mögliche Änderungsbeschreibungen wären etwa: [Revision 698:] »Doku erweitert: Wie man NEO auf dem C64 installieren kann«, [Revision 699:] »Formatierung korrigiert: Leere Zeilen entfernt, Einrückung angeglichen (r698)«
+‣ Inhaltliche (bzw. »programmiertechnische«) Änderungen (oder Fehlerkorrekturen) sollten unabhängig von ästhetischen Korrekturen (wie Einrückungen oder der Korrektur von Rechtschreibfehlern) eingecheckt werden. Mögliche Änderungsbeschreibungen wären etwa: [Revision 698:] »Doku erweitert: Wie man NEO auf dem C64 installieren kann«, [Revision 699:] »Formatierung korrigiert: Leere Zeilen entfernt, Einrückung angeglichen (r698)«
 
- Größere Commits können auch aufgeteilt werden, wenn die Intention dazu aus den Änderungsbeschreibungen hervor geht.
+‣ Größere Commits können auch aufgeteilt werden, wenn die Intention dazu aus den Änderungsbeschreibungen hervor geht.
 
- Wenn man Angst um kostbare Änderungen durch einen Headcrash während einer intensiven Change-Session hat, muss man einen Branch für den Zeitraum der Änderungen eröffnen.
+‣ Wenn man Angst um kostbare Änderungen durch einen Headcrash während einer intensiven Change-Session hat, muss man einen Branch für den Zeitraum der Änderungen eröffnen.
 
- Änderungen an der Referenz sollten unbedingt vorher auf der Mailingliste besprochen bzw. ausdiskutiert werden. Unwesentliche Änderungen sollten zumindestens auf der Liste erwähnt werden.
+‣ Änderungen an der Referenz sollten unbedingt vorher auf der Mailingliste besprochen bzw. ausdiskutiert werden. Unwesentliche Änderungen sollten zumindestens auf der Liste erwähnt werden.
 ------------------------------------------------------------------------------
 
