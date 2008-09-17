@@ -471,6 +471,8 @@
 <Multi_key> <femalesymbol> <malesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <malesymbol> <femalesymbol>    : "⚥"   U26A5 # MALE AND FEMALE SIGN
 
+<Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
+
 
 # diacritical marks
 <dead_circumflex> <nobreakspace>           : "ˆ"   U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
