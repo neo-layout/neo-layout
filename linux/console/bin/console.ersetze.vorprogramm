@@ -29,3 +29,6 @@ s/U7/U+7/g
 s/U8/U+8/g
 s/U9/U+9/g
 s/U0/U+0/g
+s/KP_Delete/Remove/g
+s/Delete/Remove/g
+
