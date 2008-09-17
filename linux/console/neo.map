@@ -173,8 +173,8 @@ compose as usual
 
 ! ----Space key-------------------------------------------------------------
                    keycode  57 = space                 space                 space                 nobreakspace          
-           shiftl  keycode  57 = zero                  
-   shift   shiftl  keycode  57 = zero                  
+           shiftl  keycode  57 = KP_0                  
+   shift   shiftl  keycode  57 = KP_0                  
    altgr   shiftl  keycode  57 = U+202F                
 
 ! --------------------------------------------------------------------------
@@ -213,16 +213,16 @@ compose as usual
    shift   shiftl  keycode   8 = VoidSymbol            
    altgr   shiftl  keycode   8 = VoidSymbol            
                    keycode   9 = eight                 U+201e                U+201a                U+27E8                
-           shiftl  keycode   9 = slash                 
-   shift   shiftl  keycode   9 = slash                 
+           shiftl  keycode   9 = KP_Divide             
+   shift   shiftl  keycode   9 = KP_Divide             
    altgr   shiftl  keycode   9 = U+2204                
                    keycode  10 = nine                  U+201c                U+2018                U+27E9                
-           shiftl  keycode  10 = asterisk              
-   shift   shiftl  keycode  10 = asterisk              
+           shiftl  keycode  10 = KP_Multiply           
+   shift   shiftl  keycode  10 = KP_Multiply           
    altgr   shiftl  keycode  10 = U+2226                
                    keycode  11 = zero                  U+201d                U+2019                U+2080                
-           shiftl  keycode  11 = minus                 
-   shift   shiftl  keycode  11 = VoidSymbol            
+           shiftl  keycode  11 = KP_Subtract           
+   shift   shiftl  keycode  11 = KP_Subtract           
    altgr   shiftl  keycode  11 = VoidSymbol            
                    keycode  12 = minus                 U+2013                U+2014                U+2011                
            shiftl  keycode  12 = VoidSymbol            
@@ -291,8 +291,8 @@ compose as usual
    shift   alt     keycode  21 = Meta_K                     
    control alt     keycode  21 = Meta_Control_k                     
                    keycode  22 = h                     H                     less                  U+03c8                
-           shiftl  keycode  22 = seven                 
-   shift   shiftl  keycode  22 = seven                 
+           shiftl  keycode  22 = KP_7                  
+   shift   shiftl  keycode  22 = KP_7                  
    altgr   shiftl  keycode  22 = U+03A8                
            control keycode  22 = Control_h                     
    shift   control keycode  22 = Control_h                     
@@ -300,8 +300,8 @@ compose as usual
    shift   alt     keycode  22 = Meta_H                     
    control alt     keycode  22 = Meta_Control_h                     
                    keycode  23 = g                     G                     greater               U+03b3                
-           shiftl  keycode  23 = eight                 
-   shift   shiftl  keycode  23 = eight                 
+           shiftl  keycode  23 = KP_8                  
+   shift   shiftl  keycode  23 = KP_8                  
    altgr   shiftl  keycode  23 = U+0393                
            control keycode  23 = Control_g                     
    shift   control keycode  23 = Control_g                     
@@ -309,8 +309,8 @@ compose as usual
    shift   alt     keycode  23 = Meta_G                     
    control alt     keycode  23 = Meta_Control_g                     
                    keycode  24 = f                     F                     equal                 U+03c6                
-           shiftl  keycode  24 = nine                  
-   shift   shiftl  keycode  24 = nine                  
+           shiftl  keycode  24 = KP_9                  
+   shift   shiftl  keycode  24 = KP_9                  
    altgr   shiftl  keycode  24 = U+03A6                
            control keycode  24 = Control_f                     
    shift   control keycode  24 = Control_f                     
@@ -318,8 +318,8 @@ compose as usual
    shift   alt     keycode  24 = Meta_F                     
    control alt     keycode  24 = Meta_Control_f                     
                    keycode  25 = q                     Q                     ampersand             U+03D5                
-           shiftl  keycode  25 = plus                  
-   shift   shiftl  keycode  25 = VoidSymbol            
+           shiftl  keycode  25 = KP_Add                
+   shift   shiftl  keycode  25 = KP_Add                
    altgr   shiftl  keycode  25 = U+211A                
            control keycode  25 = Control_q                     
    shift   control keycode  25 = Control_q                     
@@ -393,8 +393,8 @@ compose as usual
    shift   alt     keycode  35 = Meta_S                     
    control alt     keycode  35 = Meta_Control_s                     
                    keycode  36 = n                     N                     parenleft             U+03bd                
-           shiftl  keycode  36 = four                  
-   shift   shiftl  keycode  36 = four                  
+           shiftl  keycode  36 = KP_4                  
+   shift   shiftl  keycode  36 = KP_4                  
    altgr   shiftl  keycode  36 = U+2115                
            control keycode  36 = Control_n                     
    shift   control keycode  36 = Control_n                     
@@ -402,8 +402,8 @@ compose as usual
    shift   alt     keycode  36 = Meta_N                     
    control alt     keycode  36 = Meta_Control_n                     
                    keycode  37 = r                     R                     parenright            U+03F1                
-           shiftl  keycode  37 = five                  
-   shift   shiftl  keycode  37 = five                  
+           shiftl  keycode  37 = KP_5                  
+   shift   shiftl  keycode  37 = KP_5                  
    altgr   shiftl  keycode  37 = U+211D                
            control keycode  37 = Control_r                     
    shift   control keycode  37 = Control_r                     
@@ -411,8 +411,8 @@ compose as usual
    shift   alt     keycode  37 = Meta_R                     
    control alt     keycode  37 = Meta_Control_r                     
                    keycode  38 = t                     T                     minus                 U+03c4                
-           shiftl  keycode  38 = six                   
-   shift   shiftl  keycode  38 = six                   
+           shiftl  keycode  38 = KP_6                  
+   shift   shiftl  keycode  38 = KP_6                  
    altgr   shiftl  keycode  38 = U+2202                
            control keycode  38 = Control_t                     
    shift   control keycode  38 = Control_t                     
@@ -481,8 +481,8 @@ compose as usual
    shift   alt     keycode  49 = Meta_B                     
    control alt     keycode  49 = Meta_Control_b                     
                    keycode  50 = m                     M                     percent               U+03bc                
-           shiftl  keycode  50 = one                   
-   shift   shiftl  keycode  50 = one                   
+           shiftl  keycode  50 = KP_1                  
+   shift   shiftl  keycode  50 = KP_1                  
    altgr   shiftl  keycode  50 = U+21d4                
            control keycode  50 = Control_m                     
    shift   control keycode  50 = Control_m                     
@@ -490,12 +490,12 @@ compose as usual
    shift   alt     keycode  50 = Meta_M                     
    control alt     keycode  50 = Meta_Control_m                     
                    keycode  51 = comma                 VoidSymbol            quotedbl              U+03c1                
-           shiftl  keycode  51 = two                   
-   shift   shiftl  keycode  51 = two                   
+           shiftl  keycode  51 = KP_2                  
+   shift   shiftl  keycode  51 = KP_2                  
    altgr   shiftl  keycode  51 = U+21D2                
                    keycode  52 = period                VoidSymbol            apostrophe            U+03D1                
-           shiftl  keycode  52 = three                 
-   shift   shiftl  keycode  52 = three                 
+           shiftl  keycode  52 = KP_3                  
+   shift   shiftl  keycode  52 = KP_3                  
    altgr   shiftl  keycode  52 = U+0398                
                    keycode  53 = j                     J                     semicolon             U+03b8                
            shiftl  keycode  53 = semicolon             
@@ -586,7 +586,7 @@ compose as usual
            shiftl  keycode  82 = VoidSymbol            
    shift   shiftl  keycode  82 = VoidSymbol            
    altgr   shiftl  keycode  82 = VoidSymbol            
-                   keycode  83 = comma                 VoidSymbol            period                U+002c                
+                   keycode  83 = comma                 Remove                period                U+002c                
            shiftl  keycode  83 = VoidSymbol            
    shift   shiftl  keycode  83 = VoidSymbol            
    altgr   shiftl  keycode  83 = VoidSymbol            
