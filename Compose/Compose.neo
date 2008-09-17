@@ -1,4 +1,4 @@
-﻿# Definitions by Neo keyboard layout
+# Definitions by Neo keyboard layout
 
 # letters
 # capital greek letters
@@ -36,10 +36,10 @@
 <Multi_key> <f> <j>                      : ""   UE037 # LATIN SMALL LIGATURE FJ
 <Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
 <Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
-# <Multi_key> <c> <k>                      : ""   UE03A # LATIN SMALL LIGATURE CK # wird die ck-Ligatur verwendet, wird c+k für ǩ (k mit Caron) überschrieben
-# <Multi_key> <c> <h>                      : ""   UE03B # LATIN SMALL LIGATURE CH # wird die ch-Ligatur verwendet, wird c+h für ȟ (h mit Caron) überschrieben
+<Multi_key> <l> <c> <k>                  : ""   UE03A # LATIN SMALL LIGATURE CK
+<Multi_key> <l> <c> <h>                  : ""   UE03B # LATIN SMALL LIGATURE CH
 <Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
-# <Multi_key> <c> <t>                      : ""   UE03D # LATIN SMALL LIGATURE CT # wird die ct-Ligatur verwendet, wird c+t für ť (t mit Caron) überschrieben
+<Multi_key> <l> <c> <t>                  : ""   UE03D # LATIN SMALL LIGATURE CT
 <Multi_key> <ſ> <i>                      : ""   UE03E # LATIN SMALL LIGATURE LONG S I
 <Multi_key> <ſ> <ſ>                      : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
 <Multi_key> <ſ> <l>                      : ""   UE043 # LATIN SMALL LIGATURE LONG S L
@@ -433,7 +433,6 @@
 <Multi_key> <H> <z>                       : "㎐"   U3390 # SQUARE HZ
 <Multi_key> <k> <H> <z>                   : "㎑"   U3391 # SQUARE KHZ
 <Multi_key> <M> <H> <z>                   : "㎒"   U3392 # SQUARE MHZ
-# <Multi_key> <G> <H> <z>                   : "㎓"   U3393 # SQUARE GHZ  # wird Ghz verwendet, wird G+H für das griechische Eta Η überschrieben
 
 <Multi_key> <2> <m> <m>                   : "㎟"   U339F # SQUARE MM SQUARED
 <Multi_key> <2> <c> <m>                   : "㎠"   U33A0 # SQUARE CM SQUARED
