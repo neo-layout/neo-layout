@@ -106,8 +106,8 @@ keycode 10 = 1 degree         onesuperior   U2081	 enfilledcircbullet   NoSymbol
 !		°		¹	  subscript-1		•				¬
 keycode 11 = 2 numerosign     twosuperior   U2082                 U2023       NoSymbol       logicalor
 !		№		²	  subscript-2		‣				∨
-keycode 12 = 3 section        threesuperior U2083                 NoSymbol    NoSymbol       logicaland
-!		§		³	  subscript-3						∧
+keycode 12 = 3 section        threesuperior U2083                 U266B    NoSymbol       logicaland
+!		§		³	  subscript-3		♫				∧
 keycode 13 = 4 guillemotright U203A         U2113                 Prior       Prior          U22A5
 !		»		›		ℓ liter						⊥ perpendicular
 keycode 14 = 5 guillemotleft  U2039         femalesymbol          NoSymbol    NoSymbol       U2221
