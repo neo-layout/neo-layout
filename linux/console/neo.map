@@ -264,8 +264,8 @@ compose as usual
    shift   alt     keycode  18 = Meta_L                     
    control alt     keycode  18 = Meta_Control_l                     
                    keycode  19 = c                     C                     bracketright          U+03c7                
-           shiftl  keycode  19 = Delete                
-   shift   shiftl  keycode  19 = Delete                
+           shiftl  keycode  19 = Remove                
+   shift   shiftl  keycode  19 = Remove                
    altgr   shiftl  keycode  19 = U+2102                
            control keycode  19 = Control_c                     
    shift   control keycode  19 = Control_c                     
