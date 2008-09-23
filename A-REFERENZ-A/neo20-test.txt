@@ -269,14 +269,14 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Alle Ebenen – Ziffernblock ===
 ┌───────┬───────┬───────┬───────┐
-│ ⇤ ≠ ≡ │ / ⌀ ⁄ │ * ⊙ ⊗ │ - ⊖ − │
-│ ⇥ = ≈ │ / ÷ ∣ │ * ⋅ × │ - ∸ ∖ │
+│ ⇤ ≠ ≡ │ / ⌀ ⁄ │ * ⊙ ⊗ │ - ⊖ ∸ │
+│ ⇥ = ≈ │ / ÷ ∣ │ * ⋅ × │ - − ∖ │
 ├───────┼───────┼───────┼───────┤
 │✔ Hom ⌈│✘ KP↑ ⋂│† PgD ⌉│       │
 │7  ↕  ⌊│8  ↑  ∩│9 vec ⌋│       │
 ├───────┼───────┼───────┤       │
-│♣ KP← ⊆│€ Beg ⊷│¦ KP→ ⊇│ + ⊕ ∓ │
-│4  ←  ⊂│5  ∞  ⊶│6  →  ⊃│ + ∔ ± │
+│♣ KP← ⊆│€ Beg ⊷│¦ KP→ ⊇│ + ⊕ ∔ │
+│4  ←  ⊂│5  ∞  ⊶│6  →  ⊃│ + ± ∓ │
 ├───────┼───────┼───────┼───────┤
 │♦ End ≤│♥ KP↓ ⋃│♠ PgD ≥│       │
 │1  ↔  ≪│2  ↓  ∪│3  ⇌  ≫│       │
@@ -313,11 +313,11 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Dritte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ = │ ÷ │ ⋅ │ ∸ │
+│ = │ ÷ │ ⋅ │ − │
 ├───┼───┼───┼───┤
 │ ↕ │ ↑ │vec│   │
 ├───┼───┼───┤   │
-│ ← │ ∞ │ → │ ∔ │
+│ ← │ ∞ │ → │ ± │
 ├───┼───┼───┼───┤
 │ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
@@ -343,7 +343,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 ├───┼───┼───┼───┤
 │ ⌊ │ ∩ │ ⌋ │   │
 ├───┼───┼───┤   │
-│ ⊂ │ ⊶ │ ⊃ │ ± │
+│ ⊂ │ ⊶ │ ⊃ │ ∓ │
 ├───┼───┼───┼───┤
 │ ≪ │ ∪ │ ≫ │   │
 ├───┴───┼───┤   │
@@ -352,11 +352,11 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Sechste Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≡ │ ⁄ │ ⊗ │ − │
+│ ≡ │ ⁄ │ ⊗ │ ∸ │
 ├───┼───┼───┼───┤
 │ ⌈ │ ⋂ │ ⌉ │   │
 ├───┼───┼───┤   │
-│ ⊆ │ ⊷ │ ⊇ │ ∓ │
+│ ⊆ │ ⊷ │ ⊇ │ ∔ │
 ├───┼───┼───┼───┤
 │ ≤ │ ∪ │ ≥ │   │
 ├───┴───┼───┤   │
