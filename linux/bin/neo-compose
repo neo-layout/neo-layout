@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Was hier passiert: Zusammenfügen der alten Compose und der Neo-Ergänzungen
+# in die Datei ~/.XCompose, die normalerweise beim Starten der Desktopumgebung
+# geladen wird.
+# In der Datei ~/.Compose.eigene kann man noch eigene Ergänzungen der Compose
+# hinzufügen, falls einem die Erweiterungen durch Neo-Compose nicht ausreichen.
+
+# Verzeichnis, in dem sich die originale Compose befindet (hier Bsp. Fedora):
+COMP_ALT=/usr/share/X11/locale/en_US.UTF-8/Compose
+
+# Verzeichnis, in dem sich die Datei Compose.neo befindet:
+COMP_NEO=~/programmieren/Projekt/NEO/svn-neo/neo-layout.org/Compose/Compose.neo
+
+cat $COMP_ALT $COMP_NEO ~/.Compose.eigene > ~/.XCompose
+
