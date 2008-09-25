@@ -16,14 +16,17 @@ Unter Linux ist die zu ergänzende Datei auch direkt verfügbar unter
 === Installation/Anleitung zur Benutzung ===
 
 ==== Mit Root-/Administrator-Rechten ====
-Um die Ergänzungen systemweit zu benutzen, muss man die Datei Compose.neo an die alte Compose anhängen. Dies geht in der Konsole folgendermassen:
+Um die Ergänzungen systemweit zu benutzen, muss man die Datei Compose.neo an die alte Compose anhängen. Dies geht in der Konsole folgendermaßen:
+# Sicherung der alten Compose
 cp /usr/share/X11/locale/en_US.UTF-8/Compose \
 /usr/share/X11/locale/en_US.UTF-8/Compose.original
+# Zusammenfügen der alten Compose und der Neo-Ergänzungen
 cat /usr/share/X11/locale/en_US.UTF-8/Compose.original Compose.neo > \
 /usr/share/X11/locale/en_US.UTF-8/Compose
 
 ==== Ohne Root-Rechte/lokal ====
-Einfach den Inhalt der originalen Compose-Datei und die Compose.neo in eine Datei namens ~/.XCompose (also im HOME-Verzeichnis) kopieren. Dies geht in der Konsole folgendermassen:
+Einfach den Inhalt der originalen Compose-Datei und die Compose.neo in eine Datei namens ~/.XCompose (also im HOME-Verzeichnis) kopieren. Dies geht in der Konsole folgendermaßen:
+# Zusammenfügen der alten Compose und der Neo-Ergänzungen
 cat /usr/share/X11/locale/en_US.UTF-8/Compose Compose.neo > ~/.XCompose
 
 ==== Gnome macht Probleme ====
