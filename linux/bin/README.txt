@@ -34,3 +34,7 @@ Außerdem ist @ über Compose folgendermaßen darstellbar:
 
 == beschreibe ==
 Versucht, Zeichen anhand einer Beschreibung zu erraten und ruft »wiemitneo« auf
+
+== neo-compose ==
+Erstellt aus der originalen Compose und den Neo-Ergänzungen eine lokale
+Compose-Datei (~/XCompose).
