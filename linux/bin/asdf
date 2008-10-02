@@ -8,7 +8,7 @@
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/neo.conf"
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
