@@ -1392,7 +1392,7 @@ neo_d:
    else if (Ebene = 3)
      OutputChar(":", "colon")
    else if (Ebene = 4)
-     OutputChar("`,", "comma")
+     OutputChar("{NumpadDot}", "comma")
    else if (Ebene = 5)
       SendUnicodeChar(0x03B4, "Greek_delta") ; delta
    else if (Ebene = 6)
@@ -1815,8 +1815,11 @@ return
 */
 
 *Enter::
+  EbeneAktualisieren()
   if !lernModus or lernModus_std_Return {
-    send {Blind}{Enter}
+    if (Ebene = 4)
+      send {blind}{NumpadEnter}
+    else send {blind}{Enter}
     DeadKey := ""
     CompKey := ""
   } return
@@ -1847,7 +1850,7 @@ neo_tab:
     DeadKey := "comp"
     CompKey := ""
   } else {
-    send {blind}{Tab}
+    OutputChar("{Tab}","Tab")
     DeadKey := ""
     CompKey := ""
   } return
@@ -2193,7 +2196,10 @@ CheckCompUni("<f> <h>", 0xE036)
 CheckCompUni("<f> <j>", 0xE037)
 CheckCompUni("<f> <k>", 0xE038)
 CheckCompUni("<f> <t>", 0xE039)
+CheckCompUni("<l> <c> <k>", 0xE03A)
+CheckCompUni("<l> <c> <h>", 0xE03B)
 CheckCompUni("<t> <t>", 0xE03C)
+CheckCompUni("<l> <c> <t>", 0xE03D)
 CheckCompUni("<17F> <i>", 0xE03E)
 CheckCompUni("<17F> <17F>", 0xE03F)
 CheckCompUni("<17F> <l>", 0xE043)
@@ -2514,6 +2520,7 @@ CheckCompUni("<femalesymbol> <femalesymbol>", 0x26A2)
 CheckCompUni("<malesymbol> <malesymbol>", 0x26A3)
 CheckCompUni("<femalesymbol> <malesymbol>", 0x26A4)
 CheckCompUni("<malesymbol> <femalesymbol>", 0x26A5)
+CheckCompUni("<Tab>", 0x266B)
 CheckCompUni("<underscore> <underscore>", 0x332)
 CheckCompUni("<apostrophe> <space>", 0x27)
 CheckCompUni("<space> <greater>", 0x5E)

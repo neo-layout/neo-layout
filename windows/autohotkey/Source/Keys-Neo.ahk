@@ -636,7 +636,7 @@ neo_d:
    else if (Ebene = 3)
      OutputChar(":", "colon")
    else if (Ebene = 4)
-     OutputChar("`,", "comma")
+     OutputChar("{NumpadDot}", "comma")
    else if (Ebene = 5)
       SendUnicodeChar(0x03B4, "Greek_delta") ; delta
    else if (Ebene = 6)
@@ -1059,8 +1059,11 @@ return
 */
 
 *Enter::
+  EbeneAktualisieren()
   if !lernModus or lernModus_std_Return {
-    send {Blind}{Enter}
+    if (Ebene = 4)
+      send {blind}{NumpadEnter}
+    else send {blind}{Enter}
     DeadKey := ""
     CompKey := ""
   } return
@@ -1091,7 +1094,7 @@ neo_tab:
     DeadKey := "comp"
     CompKey := ""
   } else {
-    send {blind}{Tab}
+    OutputChar("{Tab}","Tab")
     DeadKey := ""
     CompKey := ""
   } return
