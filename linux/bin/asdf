@@ -82,7 +82,7 @@ if [ -z ${DISPLAY} ]; then
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 
 	if [ -e "${PATH_SETLEDS}" ]; then
-		"${PATH_SETLEDS}" -num || die "Failed to set NUM status."
+		"${PATH_SETLEDS}" +num || die "Failed to set NUM status."
 	else
 		die "setleds does not exist, cannot set NUM status."
 	fi
