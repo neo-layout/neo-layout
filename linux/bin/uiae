@@ -1,49 +1,128 @@
 #!/bin/sh
+# Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
+# Copyright 2008 Benjamin Kellermann
+# Copyright 2008 Pascal Hauck
+# Copyright 2008 Erik Streb del Toro
+# Distributed under the terms of the GNU General Public License v3
 
-################################################################################
-####################### persönliche Einstellungen ##############################
-################################################################################
-# Gewünschte Konsolen-Belegungen:
-CONSOLE_KEYMAP="de"
-#CONSOLE_KEYMAP=""		# leer für Standard-keymap (i.d.R. qwert)
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/neo.conf"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+	echo "No configuration file found. Using default values, this might fail!"
+fi
 
+# Default paths
+PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
+PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
+PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
+PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
+PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 
-# gewünschter Status für qwert
-NUM_LOCK_STATUS="ON"
-################################################################################
-################################################################################
-################################################################################
+# Default values
+STD_X_VARIANTE=${STD_X_VARIANTE:-xkbmap}
+STD_XKBMAP=${STD_XKBMAP:-de}
+STD_XKBVARIANT=${STD_XKBVARIANT:-nodeadkeys}
+STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-/usr/share/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz}"
+NUM_LOCK_STATUS=${NUM_LOCK_STATUS:-on}
 
+die() {
+	echo "$@" >&2
+	exit 1
+}
 
-CONSOLE_KEYMAP=${1-$CONSOLE_KEYMAP}
+set_xmodmap() {
+	if [ -e "${PATH_XMODMAP}" ]; then
+		if [ -f "$@" ]; then
+			"${PATH_XMODMAP}" "$@" || die "Failed to set xmodmap $@."
+		else
+			die "Cannot use $@ for xmodmap."
+		fi
+	else
+		die "xmodmap not found, cannot set xmodmap."
+	fi
+}
 
+set_xkbmap() {
+	if [ -e "${PATH_SETXKBMAP}" ]; then
+		"${PATH_SETXKBMAP}" "$@" || die "Failed to select xkbmap $@."
+	else
+		die "setxkbmap not found, cannot set xkbmap."
+	fi
+}
+
+set_keymap() {
+	if [ -e "${PATH_LOADKEYS}" ]; then
+		if [ -f "$@" ]; then
+			if [ "${EUID}" = 0 ]; then
+				"${PATH_LOADKEYS}" "$@" || die "Failed to set keymap $@."
+			elif [ -e "${PATH_SUDO}" ]; then
+				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Failed to set keymap using sudo."
+			else
+				die "You need root priviliges to change the keymap."
+			fi
+		else
+			die "keymap file $@ does not exist."
+		fi
+	else
+		die "loadkeys not found, cannot set keymap."
+	fi
+}
 
 if [ -n "$SSH_CONNECTION" ]; then
-        echo -n "Dude, du bist in einer SSH-Session. Wie soll ich das "
-        echo    "Tastaturlayout hier ändern?"
-	exit 1
+	die "Cannot set keybord layout in a ssh session."
 fi
-if [ -z "$DISPLAY" ]; then
-        echo -n "Um das Tastaturlayout auf der Textkonsole zu ändern, muss man"
-        echo    " root-Rechte besitzen!"
-	if [ $CONSOLE_KEYMAP ] ; then
-		sudo loadkeys $CONSOLE_KEYMAP
+
+if [ -z ${DISPLAY} ]; then
+	set_keymap "${NEO_CONSOLE_KEYMAP}"
+
+	if [ -e "${PATH_SETLEDS}" ]; then
+		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
+			"${PATH_SETLEDS}" +num || die "Failed to set num lock status to on."
+		else
+			"${PATH_SETLEDS}" -num || die "Failed to set num lock status to off."
+		fi
 	else
-		sudo loadkeys -d
-	fi
-	if [ NUM_LOCK_STATUS="ON" ] ; then
-		setleds +num
-	else
-		setleds -num
+		die "setleds does not exist, cannot set NUM status."
 	fi
 else
-	xset r 51; xset r 94			# Modifier
-	xset r 21; xset r 35; xset r 49		# tote Tasten (dead keys)
-	setxkbmap de
-	if [ NUM_LOCK_STATUS="ON" ] ; then
-		numlockx on
+	if [ -e "${PATH_XSET}" ]; then
+		for modifier in 51 94; do
+			"${PATH_XSET}" r ${modifier} || die "Failed to set repeat for modifier ${modifier}."
+		done
+		for deadkey in 21 35 49; do
+			"${PATH_XSET}" r ${deadkey} || die "Failed to set repeat for deadkey ${deakey}."
+		done
 	else
-		numlockx off
+		die "xset not found, cannot set modifiers and dead keys."
+	fi
+
+	case "${NEO_X_VARIANTE}" in
+		xkbmap)
+			set_xkbmap "${STD_XKBMAP}" "${STD_XKBVARIANT}"
+			;;
+		xmodmap)
+			set_xkbmap de
+			set_xmodmap "${STD_XMODMAP}"
+			;;
+		*)
+			die "Unknown standerd X variant ${STD_X_VARIANTE}."
+			;;
+	esac
+
+	if [ -e "${PATH_NUMLOCKX}" ]; then
+		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
+			"${PATH_NUMLOCKX}" on || die "Failed to set num lock status to on."
+		else
+			"${PATH_NUMLOCKX}" off || die "Failed to set num lock status to off."
+		fi
+	else
+		die "numlockx not found, cannot turn off Numlock."
 	fi
 fi
 
