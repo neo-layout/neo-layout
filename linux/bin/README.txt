@@ -1,10 +1,18 @@
-﻿== uiae, asdf ==
+== uiae, asdf ==
 asdf (linke Hand auf der Grundreihe abrollen) schaltet von QWERTZ zu Neo um.
 uiae ( “      “   “   “       “        “    )    “      “  Neo zu QWERTZ um.
 
 Verwendung:
 asdf [Variante] (Standard wird in der Datei definiert)
 uiae [Belegung] (Standard wird in der Datei definiert)
+
+Die Skripte ›asdf‹ und ›uiae‹ benutzten folgende Programme, die gegebenenfalls installiert werden müssen:
+– loadkeys (nur als root möglich)
+– setleds
+– xset
+– setxkbmap
+– numlockx
+
 
 == neo ==
 Gibt die Neo-Tastaturbelegung des Buchstabenfeldes aus. Beispiele:
