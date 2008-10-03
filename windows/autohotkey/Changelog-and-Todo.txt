@@ -25,7 +25,6 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 Revision 929 (von Martin Roppelt)
 - Compose.ahk aktualisiert.
-- Ctrl+. und Ctrl+, (auf Ebene 1) werden jetzt als Hotkey gesendet; Einhand-Modus liegt jetzt auf ?.
 - mod4+y sendet jetzt »KP+.« statt wie bisher ein einfaches ».«.
 - mod4+return sendet jetzt »KP+return«  (aka »enter«) statt wie bisher ein einfaches »return«.
 Revision 899 (von Dennis Heidsiek)
