@@ -1,14 +1,23 @@
 #!/bin/sh
 
-# Verzeichnis muss eventuell an den Ort der neo20.txt angepasst werden:
-NEO_TXT=$HOME/neo/A-REFERENZ-A/neo20.txt
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+	echo "No configuration file found. Using default values, this might fail!"
+fi
+
+NEO_REFERENCE=${NEO_REFERENCE:-/usr/share/neo-layout/neo20-reference.txt}
 
 if [ 0 = $# ]; then
-	grep -m 1 -B 15 "┴──────┘" $NEO_TXT
+	grep -m 1 -B 15 "┴──────┘" "${NEO_REFERENCE}"
 else 
 	for NUM in $@; do
 		if [ $(($NUM)) -ge 1  -a $(($NUM)) -le 6 ]; then
-			grep -B 11 -m "$NUM" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" $NEO_TXT | tail -n 12
+			grep -B 11 -m "$NUM" "└───┴──┴──┴───────────┴──┴──┴──┴───┘" "${NEO_REFERENCE}" | tail -n 12
 		else
 			echo "Benutzung: `basename $0` [1-6]"
 			echo "           Wenn der Aufruf ohne Zahl erfolgt, werden alle Ebenen ausgegeben."
