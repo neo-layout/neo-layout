@@ -23,6 +23,11 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === Änderungshistorie ===
 
+Revision 929 (von Martin Roppelt)
+- Compose.ahk aktualisiert.
+- Ctrl+. und Ctrl+, (auf Ebene 1) taten gar nichts.
+- mod4+y sendete „.“, sollte aber „KP+.“ senden.
+- mod4+return sendete „return“, sollte aber „KP+return“ (aka „enter“) senden. 
 Revision 899 (von Dennis Heidsiek)
 - Build-Skript überarbeitet, so dass die Pfade zentral geändert werden können.
 Revision 897 (von Dennis Heidsiek)
