@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
 # Copyright 2008 Pascal Hauck
@@ -28,7 +28,7 @@ PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 STD_X_VARIANTE=${STD_X_VARIANTE:-xkbmap}
 STD_XKBMAP=${STD_XKBMAP:-de}
 STD_XKBVARIANT=${STD_XKBVARIANT:-nodeadkeys}
-STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-/usr/share/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz}"
+STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-de-latin1-nodeadkeys}"
 NUM_LOCK_STATUS=${NUM_LOCK_STATUS:-on}
 
 die() {
@@ -102,7 +102,7 @@ else
 		die "xset not found, cannot set modifiers and dead keys."
 	fi
 
-	case "${NEO_X_VARIANTE}" in
+	case "${STD_X_VARIANTE}" in
 		xkbmap)
 			set_xkbmap "${STD_XKBMAP}" "${STD_XKBVARIANT}"
 			;;
@@ -111,7 +111,7 @@ else
 			set_xmodmap "${STD_XMODMAP}"
 			;;
 		*)
-			die "Unknown standerd X variant ${STD_X_VARIANTE}."
+			die "Unknown standard X variant ${STD_X_VARIANTE}."
 			;;
 	esac
 
