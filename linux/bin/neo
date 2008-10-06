@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
