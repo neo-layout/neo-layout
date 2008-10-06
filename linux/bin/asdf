@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
 # Copyright 2008 Pascal Hauck
@@ -28,8 +28,11 @@ PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 NEO_X_VARIANTE=${NEO_X_VARIANTE:-xkbmap}
 NEO_XKBMAP=${NEO_XKBMAP:-de}
 NEO_XKBVARIANT=${NEO_XKBVARIANT:-neo}
-NEO_XMODMAP="${NEO_XMODMAP:-/usr/share/neo-layout/xmodmap/neo_de.xmodmap}"
-NEO_CONSOLE_KEYMAP="${NEO_CONSOLE_KEYMAP:-/usr/share/keymaps/i386/neo/neo.map}"
+NEO_XMODMAP="${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}"
+NEO_XMODMAP_XPROG="${NEO_XMODMAP:-$HOME/neo/neo_de_x-prog.xmodmap}"
+NEO_XMODMAP_ALTERNATIVE="${NEO_XMODMAP:-$HOME/neo/neo_de_alternative.xmodmap}"
+NEO_XMODMAP_EVDEV="${NEO_XMODMAP:-$HOME/neo/neo_de_evdev.xmodmap}"
+NEO_CONSOLE_KEYMAP="${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo}" # for $HOME/neo/neo.map (without the „.map“)
 
 die() {
 	echo "$@" >&2
@@ -39,7 +42,8 @@ die() {
 set_xmodmap() {
 	if [ -e "${PATH_XMODMAP}" ]; then
 		if [ -f "$@" ]; then
-			"${PATH_XMODMAP}" "$@" || die "Failed to set xmodmap $@."
+			set_xkbmap ie
+			"${PATH_XMODMAP}" "$@" || set_xkbmap de; die "Failed to set xmodmap $@."
 		else
 			die "Cannot use $@ for xmodmap."
 		fi
@@ -109,8 +113,16 @@ else
 			set_xkbmap "${NEO_XKBMAP}" "${NEO_XKBVARIANT}"
 			;;
 		xmodmap)
-			set_xkbmap ie
 			set_xmodmap "${NEO_XMODMAP}"
+			;;
+		xprog)
+			set_xmodmap "${NEO_XMODMAP_XPROG}"
+			;;
+		alternative)
+			set_xmodmap "${NEO_XMODMAP_ALTERNATIVE}"
+			;;
+		evdev)
+			set_xmodmap "${NEO_XMODMAP_EVDEV}"
 			;;
 		*)
 			die "Unknown Neo X variant ${NEO_X_VARIANTE}."
