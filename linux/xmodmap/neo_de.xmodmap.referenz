@@ -1,4 +1,4 @@
-﻿!! ~/.xmodmap
+!! ~/.xmodmap
 !! 
 !! German NEO-Layout
 !! adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
@@ -6,6 +6,7 @@
 !! Authors: 
 !!      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !!      Erik Streb <mail at erikstreb dot de>
+!!      Pascal Hauck <pascal dot hauck at web dot de>
 !! 
 !! Other Questions:
 !!      <mailinglist at neo-layout dot org>
@@ -295,7 +296,7 @@ keycode 87 =  KP_1		diamond		U2194		U226A		KP_End		KP_End		lessthanequal
 keycode 88 =  KP_2		heart		downarrow	union		KP_Down		KP_Down		U22C3
 !				♥		↓		∪						⋃ n-ary union
 keycode 89 =  KP_3		U2660		U21CC		U226B		KP_Next		KP_Next		greaterthanequal
-!				♠		⇌ arro		≫ much greater					≥
+!				♠		⇌		≫ much greater					≥
 keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
 
