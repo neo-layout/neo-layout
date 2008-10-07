@@ -837,6 +837,8 @@ neo_NumLock:
     SendUnicodeChar(0x2260, "notequal") ; Ungleich zu
   else if (Ebene = 5)
     SendUnicodeChar(0x2248, "approxeq") ; Fast gleich
+  else if (Ebene = 6)
+    SendUnicodeChar(0x2261, "identical")
 return
 
 neo_NumpadDiv:
