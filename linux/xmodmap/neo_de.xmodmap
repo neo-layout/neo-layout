@@ -1,0 +1,328 @@
+﻿!! ~/.xmodmap
+!! 
+!! German NEO-Layout
+!! adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
+!! inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
+!! Authors: 
+!!      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
+!!      Erik Streb <mail at erikstreb dot de>
+!! 
+!! Other Questions:
+!!      <mailinglist at neo-layout dot org>
+!! 
+!! $Revision$, $Date$
+!! http://pebbles.schattenlauf.de/layout.php
+!! 
+!! To try the layout in this file, simply do xmodmap <file>.
+!! To load the layout in this file at X startup, simply store it as
+!! ~/.xmodmap
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Ebenen
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Ebene 1: normal
+! Ebene 2: Shift
+! Ebene 3: Mod3
+! Ebene 4: Mod4 (zum Markieren Shift+Mod4)
+! Ebene 5: Shift+Mod3
+! Ebene 6: Mod3+Mod4 (in dieser Reihenfolge!)
+! Multi_key=Compose (keine eigene Ebene): Mod3+Tab or right window key
+! Feststellen/Shift_Lock: Shift+Shift
+! Mod4_Lock: Mod4(rechts)+Mod4(links)
+
+! Reihenfolge der Ebenen in der Xmodmap:
+!            Ebene1  Ebene2  Ebene3  Ebene5  Ebene4  Ebene4+Sh  Ebene6
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Modifier definition
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+clear Lock
+clear Mod2
+! Mod2 war NumLock !
+clear Mod3
+clear Mod5
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Shift
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 50=left 62=right
+! Shift+Shift ergibt ein ShiftLock (wie Caps, wirkt aber auf alle Zeichen, nicht nur auf Großbuchstaben)
+! Der Lock lässt sich durch ein weiteres Shift lösen.
+! Eigentlich (siehe Referenz) sollte hier ein CapsLock stehen.
+keycode 50 =  Shift_L Shift_Lock
+keycode 62 =  Shift_R Shift_Lock
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Mod3
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 66=left 51=right
+! Make CapsLock an modifier called Mod3 (similar to AltGr) (Mode_switch or ISO_Group_Shift is for 3rd and 4th level)
+! Make former CapsLock and qwertz-# to Mode_switch or ISO_Group_Shift
+! Mod3(links) (=Qwertz-Caps) erlaubt nur 4 Ebenen
+! Ohne einen Eintrag in der zweiten Gruppe (=Ebene 3) ergäbe Mod3+Mod3=Group_Shift+Group_Shift=Gruppe 3=Ebene 6. Das ist nicht gewünscht.
+keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group
+keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Mod4
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 94=left 113=right
+! Make the former AltGr and qwertz-< to Mod4 (ISO_Level3_Shift)
+! Mod4(rechts)+Mod4(links) lässt Mod4 einrasten (Mod4Lock)
+! das funktioniert nur in dieser Reihenfolge, da Mod4(rechts) (=Qwertz-AltGr) nur 4 Ebenen hat
+! Der Lock lässt sich durch ein weiteres Mod4 lösen.
+keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
+keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! window keys
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 115 = Super_L
+! keycode 116 = Super_R
+keycode 116 = Multi_key Multi_key
+add Mod4 = Super_L
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! general Lock
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Einrasten über linke Win-Taste+Modifier, Lösen über nochmaliges Betätigen des Modifiers
+! Shift_Lock und Mo4_Lock funktionieren, Mod3_Lock lässt sich aber nicht mehr lösen!!!!
+! keycode 115 = ISO_Lock
+! add Lock = ISO_Lock
+
+
+! add Mod3 = ISO_Group_Shift
+! add Mod5 = ISO_Level3_Shift
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! main keyboard
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Tab key
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 23 = Tab  ISO_Left_Tab  Multi_key  ISO_Level3_Lock  NoSymbol  NoSymbol  NoSymbol
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Space key
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 65 = space  space  space  nobreakspace  KP_0  KP_0  U202F
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! dead keys
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 49 = dead_circumflex	dead_caron	dead_breve	NoSymbol	NoSymbol	NoSymbol	NoSymbol
+! called T1	^		ˇ		˘
+keycode 21 = dead_acute		dead_grave	dead_cedilla	NoSymbol	dead_abovedot	NoSymbol	dead_abovering
+! called T2	´		`		¸				˙					°
+keycode 35 = dead_tilde		dead_macron	dead_diaeresis	dead_stroke   dead_doubleacute	NoSymbol	NoSymbol
+! called T3	~		¯		"		/		˝
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The first row (number Row)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 10 = 1			degree		onesuperior	onesubscript  enfilledcircbullet  NoSymbol	notsign
+!				°		¹	  	₁		•				¬
+keycode 11 = 2			numerosign	twosuperior	twosubscript	U2023		NoSymbol	logicalor
+!				№		²	  	₂		‣				∨
+keycode 12 = 3			section		threesuperior	threesubscript	NoSymbol	NoSymbol	logicaland
+!				§		³	  	₃						∧
+keycode 13 = 4			guillemotright	U203A		U2113		Prior		Prior		downtack
+!				»		›		ℓ liter						⊥ perpendicular
+keycode 14 = 5			guillemotleft	U2039		femalesymbol	NoSymbol	NoSymbol	U2221
+!				«		‹		♀						∡ angle sign
+keycode 15 = 6			EuroSign	cent		malesymbol	sterling	NoSymbol	U2225
+!				€		¢		♂		£				∥ parallel
+
+keycode 16 = 7			dollar		yen		Greek_kappa	currency	NoSymbol	U21C8
+!				$		¥		κ		¤				⇈
+keycode 17 = 8 	   doublelowquotemark    singlelowquotemark	leftanglebracket  KP_Divide	KP_Divide	U21C5
+!				„		‚		⟨ (bra)		  /		/		⇅
+keycode 18 = 9     leftdoublequotemark   leftsinglequotemark	rightanglebracket KP_Multiply	KP_Multiply	containsas
+!				“		‘		⟩ (ket)		  *		*		∋
+keycode 19 = 0     rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Subtract	KP_Subtract	emptyset
+!			”			’	 ₀		-		-		∅
+keycode 20 = minus		endash		emdash		U2011		NoSymbol	NoSymbol	hyphen
+!		-		–		—		‑ non-breaking					­ soft hyphen 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 24 = x			X		ellipsis	Greek_xi	U22EE		NoSymbol	U039E
+!						…		ξ		⋮ vert. ell			Ξ Greek_XI
+keycode 25 = v			V		underscore	NoSymbol	BackSpace	BackSpace	U2259
+!														≙ 
+keycode 26 = l			L		bracketleft	Greek_lambda	Up		Up		U039B
+!								λ						Λ Greek_LAMBDA
+keycode 27 = c			C		bracketright	Greek_chi	Delete		Delete		U2102
+!								χ						ℂ komplex
+keycode 28 = w			W		asciicircum	Greek_omega	Insert		Insert		U03A9
+!								ω						Ω Greek_OMEGA
+
+keycode 29 = k			K		exclam		U03F0		exclamdown	NoSymbol	radical
+!						!		ϰ Greek_kappa	¡				√
+keycode 30 = h			H		less		Greek_psi	KP_7		KP_7		U03A8
+!						<		ψ						Ψ Greek_PSI
+keycode 31 = g			G		greater		Greek_gamma	KP_8		KP_8		U0393
+!						>		γ						Γ Greek_GAMMA
+keycode 32 = f			F		equal		Greek_phi	KP_9		KP_9		U03A6
+!						=		φ						Φ Greek_PHI
+keycode 33 = q			Q		ampersand	U03D5		KP_Add		KP_Add		U211A
+!						&		ϕ Greek_phi	+		+		ℚ rational
+keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  Pointer_EnableKeys  NoSymbol	jot
+!	     ß			ẞ Capital ß	ſ long s	ς		(keypad-mouse mode)		∘ ring operator
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The home row (middle row)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 38 = u			U		backslash	NoSymbol	Home		Home		U222E
+!						\								∮ contour integral
+keycode 39 = i			I		slash		Greek_iota	Left		Left		integral
+!						/		ι						∫
+keycode 40 = a			A		braceleft	Greek_alpha	Down		Down		U2200
+!						{		α						∀ for all
+keycode 41 = e			E		braceright	Greek_epsilon	Right		Right		U2203
+!						}		ε						∃ there exists
+keycode 42 = o			O		asterisk	Greek_omicron	End		End		elementof
+!						*		ο						∈
+
+keycode 43 = s			S		question	Greek_sigma	questiondown	NoSymbol	U03A3
+!						?		σ		¿				Σ Greek_SIGMA
+keycode 44 = n			N		parenleft	Greek_nu	KP_4		KP_4		U2115
+!						(		ν						ℕ natural
+keycode 45 = r			R		parenright	U03F1		KP_5		KP_5		U211D
+!						)		ϱ Greek_rho					ℝ real
+keycode 46 = t			T		minus		Greek_tau	KP_6		KP_6		partialderivative
+!				-		τ								∂
+keycode 47 = d			D		colon		Greek_delta	comma		NoSymbol	U0394
+!						:		δ		,				Δ Greek_DELTA	
+keycode 48 = y			Y		at		Greek_upsilon	period		NoSymbol	nabla
+!						@		υ		.				∇
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		U211C
+!		ü		Ü		#								ℜ real part
+keycode 53 = odiaeresis		Odiaeresis	dollar		NoSymbol	Tab		ISO_Left_Tab	U2111
+!		ö		Ö		$								ℑ imaginary part
+keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Next		Next		U2135
+!		ä		Ä		|		η						ℵ alef symbol
+keycode 55 = p			P		asciitilde	Greek_pi	Return		Return		U03A0
+!						~		π						Π Greek_PI
+keycode 56 = z			Z		grave		Greek_zeta	Undo		Redo		U2124
+!						`		ζ						ℤ integers
+
+keycode 57 = b			B		plus		Greek_beta	colon		NoSymbol	U21D0
+!						+		β		:				⇐
+keycode 58 = m			M		percent		Greek_mu	KP_1		KP_1		ifonlyif
+!						%		μ						⇔
+keycode 59 = comma		NoSymbol	quotedbl	Greek_rho	KP_2		KP_2		U21D2
+!		,			.	"		ρ						⇒ implies 
+keycode 60 = period		NoSymbol	apostrophe	U03D1		KP_3		KP_3		U0398
+!		.				'		ϑ Greek_theta					Θ Greek_THETA
+keycode 61 = j			J		semicolon	Greek_theta	semicolon	NoSymbol	variation
+!						;		θ		;				∝ proportional to
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Keypad
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The uppest row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 77  = Tab 		ISO_Left_Tab	equal		approxeq	notequal	NoSymbol	identical
+!						=		≈ almost equal	≠				≡ identical to
+keycode 112 = KP_Divide		KP_Divide	division	U2223		U2300		NoSymbol	U2044
+!		/		/		÷		∣ divides	⌀ diameter			(for ⁶⁄₅₉)
+keycode 63  = KP_Multiply	KP_Multiply	U22C5		multiply	U2299		NoSymbol	U2297
+!		*		*		⋅ dot		× times		⊙ cirled dot			⊗ circled times
+keycode 82  = KP_Subtract	KP_Subtract	U2212		U2216		U2296		NoSymbol	U2238
+!		-		-		− real minus	∖ set minus	⊖ cirled minus			∸ dot minus
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 79 =  KP_7		U2714		U2195		downstile	KP_Home		KP_Home		upstile
+!				✔ check mark	↕ arrow		⌊						⌈
+keycode 80 =  KP_8		U2718		uparrow		intersection	KP_Up		KP_Up		U22C2
+!				✘ ballot x	↑		∩						⋂ n-ary intersection
+keycode 81 =  KP_9		dagger		U20D7		U230B		KP_Prior	KP_Prior	U2309
+!				†		vector		⌋						⌉
+keycode 86 =  KP_Add		KP_Add		plusminus	U2213		U2295		NoSymbol	U2214
+!		+		+		±		∓ minus-plus	circled plus			dot plus
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The middle row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 83 =  KP_4		club		leftarrow	includedin	KP_Left		KP_Left		U2286	
+!				♣		←		⊂						⊆
+keycode 84 =  KP_5		EuroSign	infinity	U22B6 		KP_Begin	KP_Begin	U22B7	
+!				€		∞		⊶ original of					⊷ image of
+keycode 85 =  KP_6		brokenbar	rightarrow	includes	KP_Right	KP_Right	U2287
+!				¦ broken bar	→		⊃						⊇
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 87 =  KP_1		diamond		U2194		U226A		KP_End		KP_End		lessthanequal
+!				♦		↔ arrow		≪ much less					≤
+keycode 88 =  KP_2		heart		downarrow	union		KP_Down		KP_Down		U22C3
+!				♥		↓		∪						⋃ n-ary union
+keycode 89 =  KP_3		U2660		U21CC		U226B		KP_Next		KP_Next		greaterthanequal
+!				♠		⇌ arro		≫ much greater					≥
+keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
+!								
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lowest row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+
+keycode 90 = KP_0		U2423		percent		U2030		KP_Insert	KP_Insert	U25A1
+!				␣ space sign	%		‰ per mille					□ white square
+keycode 91 = comma		period		KP_Separator	minutes		KP_Delete	KP_Delete	seconds
+!		,		.		,/.		′ min,feets					″ sec,inches
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Bemerkungen
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 1.) Ebene 6 (hier: der 7. Eintrag) erreicht man über ISO_Group_Shift+ISO_Group_Shift
+!     (bzw. mode_switch+mode_switch) und über keine andere mir bekannte Kombination. Insbesondere legt
+!     ISO_Level3_Shift Level3 (Ebene 4, hier: Eintrag 5) fest, verschiebt also nicht. Darum kann man
+!     ISO_Level3_Shift nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über
+!     Mod3+Mod4 (in dieser Reihenfolge!) erreicht werden kann.
+!
+! 2.) Die KP_-Einträge ermöglichen die Steuerung des Mauscursors mit der Tastatur.
+!     Hierzu wird mittels Mod4+ß dieser Betriebsmodus ein- und später wieder ausgeschaltet.
+!     Die Steuerung des Cursors kann über den Ziffernblock (Ebene 4, eventuell mit
+!     eingerastetem Mod4) erfolgen.
