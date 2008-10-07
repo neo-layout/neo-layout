@@ -53,14 +53,14 @@ ED(pos,e1,e2,e3,e4,e5,e6,e7="",e8="") {
     CP8%pos% := e8
 }
 
-EDN(pos1,pos2,e1,e3,e4,e5,e6) {
+EDN(pos1,pos2,e1,e2,e3,e4,e5,e6) {
   global
   CPN%pos1% := 1
   CPN%pos2% := 1
-  ED(pos1 . "N1",e1,e1,e3,e4,e5,e6)
-  ED(pos2 . "N1",e1,e1,e3,e4,e5,e6)
-  ED(pos1 . "N0",e4,e4,e3,e1,e5,e6)
-  ED(pos2 . "N0",e4,e4,e3,e1,e5,e6)
+  ED(pos1 . "N1",e1,e2,e3,e4,e5,e6)
+  ED(pos2 . "N1",e1,e2,e3,e4,e5,e6)
+  ;ED(pos1 . "N0",e4,e4,e3,e1,e5,e6)
+  ;ED(pos2 . "N0",e4,e4,e3,e1,e5,e6)
 }
 
 ED1(pos,e1) {
@@ -123,26 +123,26 @@ ED("VKBCSC033","U002C","U22EE","U0022","SN__2","U03C1","U21D0") ; ,
 ED("VKBESC034","U002E","U2026","U0027","SN__3","U03D1","U0398") ; .
 ED("VKBDSC035","U006A","U004A","U003B","SNEnt","U03B8","U2261") ; j
 ; Numpad
-ED("VK90SC145","U003D",""     ,"U2248","U2260",""     ,""     ) ; NumLock
-ED("VK6FSC135","SNDiv","SNDiv","U00F7","SNDiv","U2215",""     ) ; NumpadDiv
-ED("VK6ASC037","SNMul","SNMul","U00D7","SNMul","U22C5",""     ) ; NumpadMult
-ED("VK6DSC04A","SNSub","SNSub","U2212","SNSub",""     ,""     ) ; NumpadSub
-ED("VK6BSC04E","SNAdd","SNAdd","U00B1","SNAdd","U2213",""     ) ; NumpadAdd
+ED("VK90SC145","U0009","U0009","U003D","U2260","U2248","U2261") ; NumLock
+ED("VK6FSC135","SNDiv","SNDiv","U00F7","U2300","U2223","U2044") ; NumpadDiv
+ED("VK6ASC037","SNMul","SNMul","U22C5","U2299","U00D7","U2297") ; NumpadMult
+ED("VK6DSC04A","SNSub","SNSub","U2212","U2296","U2216","U2238") ; NumpadSub
+ED("VK6BSC04E","SNAdd","SNAdd","U00B1","U2295","U2213","U2214") ; NumpadAdd
 
-EDN("VK67SC047","VK24SC047","SN__7","U2195","SNHom","U2020",""     ) ; Numpad7, NumpadHome
-EDN("VK68SC048","VK26SC048","SN__8","U2191","SN_Up","U2229",""     ) ; Numpad8, NumpadUp
-EDN("VK69SC049","VK21SC049","SN__9","U220D","SNPUp","U2297",""     ) ; Numpad9, NumpadPgUp
+EDN("VK67SC047","VK24SC047","SN__7","U2714","U2195","SNHom","U230A","U2308") ; Numpad7, NumpadHome
+EDN("VK68SC048","VK26SC048","SN__8","U2718","U2191","SN_Up","U2229","U22C2") ; Numpad8, NumpadUp
+EDN("VK69SC049","VK21SC049","SN__9","U2020","U22D7","SNPUp","U230B","U2309") ; Numpad9, NumpadPgUp
 
-EDN("VK64SC04B","VK25SC04B","SN__4","U2190","SN_Le","U2282",""     ) ; Numpad4, NumpadLeft
-EDN("VK65SC04C","VK0CSC04C","SN__5","U221E","SNClr","U20AC",""     ) ; Numpad5, NumpadClear
-EDN("VK66SC04D","VK27SC04D","SN__6","U2192","SN_Ri","U2283",""     ) ; Numpad6, NumpadRight
+EDN("VK64SC04B","VK25SC04B","SN__4","U2663","U2190","SN_Le","U2282","U2286") ; Numpad4, NumpadLeft
+EDN("VK65SC04C","VK0CSC04C","SN__5","U20AC","U221E","SNClr","U22B6","U22B7") ; Numpad5, NumpadClear
+EDN("VK66SC04D","VK27SC04D","SN__6","U00A6","U2192","SN_Ri","U2283","U2286") ; Numpad6, NumpadRight
 
-EDN("VK61SC04F","VK23SC04F","SN__1","U2194","SNEnd","U2714",""     ) ; Numpad1, NumpadEnd
-EDN("VK62SC050","VK28SC050","SN__2","U2193","SN_Dn","U222A",""     ) ; Numpad2, NumpadDown
-EDN("VK63SC051","VK22SC051","SN__3","U2192","SNPDn","U2283",""     ) ; Numpad3, NumpadPgDn
+EDN("VK61SC04F","VK23SC04F","SN__1","U2226","U2194","SNEnd","U226A","U2264") ; Numpad1, NumpadEnd
+EDN("VK62SC050","VK28SC050","SN__2","U2265","U2192","SN_Dn","U222A","U22C3") ; Numpad2, NumpadDown
+EDN("VK63SC051","VK22SC051","SN__3","U2660","U21CC","SNPDn","U226B","U226B") ; Numpad3, NumpadPgDn
 
-EDN("VK60SC052","VK2DSC052","SN__0","U0025","SNIns","U2030",""     ) ; Numpad0, NumpadIns
-EDN("VK6ESC053","VK2ESC053","SNDot","U002E","SNDel",""     ,""     ) ; NumpadDot, NumpadDel
+EDN("VK60SC052","VK2DSC052","SN__0","U2423","U0025","SNIns","U2030","U25A1") ; Numpad0, NumpadIns
+EDN("VK6ESC053","VK2ESC053","SNDot","U002E","U002C","SNDel","U2032","U2033") ; NumpadDot, NumpadDel
 
 
 ; other chars

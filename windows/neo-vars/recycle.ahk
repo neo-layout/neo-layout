@@ -372,7 +372,8 @@ EbeneAktualisieren()
     }
   Ebene12 := ((Ebene = 1) or (Ebene = 2))
   Ebene14 := ((Ebene = 1) or (Ebene = 4))
-  NumLock := GetKeyState("NumLock","T")
+  ;NumLock := GetKeyState("NumLock","T")
+  numlock = 1
 }
 
 IsShiftPressed()
