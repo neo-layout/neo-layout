@@ -1,8 +1,8 @@
 #!/bin/sh
-xmodmap=../../xmodmap/neo_de.xmodmap
+xmodmap=$HOME/neo/testing/neo_de.xmodmap2
+# xmodmap=../../xmodmap/neo_de.xmodmap
 
-grep -n ^keycode $xmodmap | grep ^[12] | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe
-grep space $xmodmap | grep ^keycode | tr -s [:blank:] ' '| cut -f2 -d = >> mach_kurzreferenz.hilfe
+grep -A1000 "! main keyboard" $xmodmap | grep ^keycode | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe
 
 sed -f console.ersetze mach_kurzreferenz.hilfe
 
