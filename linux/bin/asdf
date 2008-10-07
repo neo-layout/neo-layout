@@ -1,4 +1,4 @@
-﻿#!/bin/sh
+#!/bin/sh
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
 # Copyright 2008 Pascal Hauck
@@ -43,7 +43,7 @@ set_xmodmap() {
 	if [ -e "${PATH_XMODMAP}" ]; then
 		if [ -f "$@" ]; then
 			set_xkbmap ie
-			"${PATH_XMODMAP}" "$@" || set_xkbmap de; die "Failed to set xmodmap $@."
+			"${PATH_XMODMAP}" "$@" || ( set_xkbmap de ; die "Failed to set xmodmap $@." )
 		else
 			die "Cannot use $@ for xmodmap."
 		fi
