@@ -6,6 +6,7 @@
 !! Authors: 
 !!      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 !!      Erik Streb <mail at erikstreb dot de>
+!!      Pascal Hauck <pascal dot hauck at web dot de>
 !! 
 !! Other Questions:
 !!      <mailinglist at neo-layout dot org>
@@ -295,7 +296,7 @@ keycode 87 =  KP_1		diamond		U2194		U226A		lessthanequal
 keycode 88 =  KP_2		heart		downarrow	union		U22C3
 !				♥		↓		∪		⋃ n-ary union
 keycode 89 =  KP_3		U2660		U21CC		U226B		greaterthanequal
-!				♠		⇌ arro		≫ much greater	≥
+!				♠		⇌		≫ much greater	≥
 keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
 
