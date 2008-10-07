@@ -1,14 +1,24 @@
 #!/bin/sh
-xmodmap=../../xmodmap/neo_de.xmodmap
+xmodmap=$HOME/neo/testing/neo_de.xmodmap2
+# xmodmap=../../xmodmap/neo_de.xmodmap
 
-grep -n ^keycode $xmodmap | grep ^[12] | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe1
+echo -e "Schritt 1 von 4: Vorverarbeiten der Xmodmap\c" >&2
+
+grep -A1000 "! main keyboard" $xmodmap | grep ^keycode | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe1
 
 sed -f console.ersetze.vorprogramm mach_kurzreferenz.hilfe1 > mach_kurzreferenz.hilfe2
+
+echo -e "\rSchritt 1 von 4: Vorverarbeiten der Xmodmap [ \033[32m ok \033[30m ]" >&2
+
+
+
+echo -e "Schritt 2 von 4: Behandlung der keysyms\c" >&2
 
 anzahl=`wc -l mach_kurzreferenz.hilfe2 | cut -f1 -d \ `
 
 for i in $(seq 1 $anzahl)
 do
+echo -e "\rSchritt 2 von 4: Behandlung der keysyms     [ $(($i*100/$anzahl)) % ]\c" >&2
 	for j in $(seq 2 8)
 	do
 		a=`head -$i mach_kurzreferenz.hilfe2 | tail -1 | cut -f $j -d\ `
@@ -23,9 +33,9 @@ do
 					d=`grep -w $a console.keysyms | cut -f2 -d U | cut -c-4`
 					if [ "$d" ]
 					then
-						echo "s/"$a"/U+"$d"/g"
+						echo -e "s/"$a"/U+"$d"/g"
 					else
-						echo "s/"$a"/VoidSymbol/g"
+						echo -e "s/"$a"/VoidSymbol/g"
 					fi
 				fi
 			fi
@@ -33,5 +43,6 @@ do
 	done
 done
 
+echo -e "\rSchritt 2 von 4: Behandlung der keysyms     [ \033[32m ok \033[30m ] " >&2
 rm mach_kurzreferenz.hilfe1
 rm mach_kurzreferenz.hilfe2

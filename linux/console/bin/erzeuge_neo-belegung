@@ -1,8 +1,17 @@
-dumpkeys --long-info > dump
+#!/bin/sh
+
+#dumpkeys --long-info > dump || exit 1
+
 cat console.ersetze.vorprogramm > console.ersetze
 ./mach_kurzreferenz.vorprogramm >> console.ersetze
 #rm dump
+
+echo -e "Schritt 3 von 4: Erstellung einer Referenz\c" >&2
 ./mach_kurzreferenz > kurzreferenz
+echo -e "\rSchritt 3 von 4: Erstellung einer Referenz  [ \033[32m ok \033[30m ]" >&2
+
+echo -e "Schritt 4 von 4: Erzeugung der keymap\c" >&2
 ./mach_console
 rm kurzreferenz
 rm console.ersetze
+echo -e "\rSchritt 4 von 4: Erzeugung der keymap       [ \033[32m ok \033[30m ]" >&2
