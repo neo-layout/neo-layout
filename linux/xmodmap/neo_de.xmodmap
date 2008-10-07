@@ -105,7 +105,7 @@ add Mod4 = Super_L
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Tab key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 23 = Tab  ISO_Left_Tab  Multi_key  ISO_Level3_Lock  NoSymbol  NoSymbol  NoSymbol
+keycode 23 = Tab  ISO_Left_Tab  Multi_key  ISO_Level3_Lock
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Space key
@@ -248,67 +248,67 @@ keycode 61 = j			J		semicolon	Greek_theta	semicolon	NoSymbol	variation
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The uppest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6
 
-keycode 77  = Tab 		ISO_Left_Tab	equal		approxeq	notequal	NoSymbol	identical
-!						=		≈ almost equal	≠				≡ identical to
-keycode 112 = KP_Divide		KP_Divide	division	U2223		U2300		NoSymbol	U2044
-!		/		/		÷		∣ divides	⌀ diameter			(for ⁶⁄₅₉)
-keycode 63  = KP_Multiply	KP_Multiply	U22C5		multiply	U2299		NoSymbol	U2297
-!		*		*		⋅ dot		× times		⊙ cirled dot			⊗ circled times
-keycode 82  = KP_Subtract	KP_Subtract	U2212		U2216		U2296		NoSymbol	U2238
-!		-		-		− real minus	∖ set minus	⊖ cirled minus			∸ dot minus
+keycode 77  = Tab 		ISO_Left_Tab	equal		approxeq	identical
+!						=		≈ almost equal	≡ identical to
+keycode 112 = KP_Divide		KP_Divide	division	U2223		U2044
+!		/		/		÷		∣ divides	(for ⁶⁄₅₉)
+keycode 63  = KP_Multiply	KP_Multiply	U22C5		multiply	U2297
+!		*			*		⋅ dot		× times	⊗ circled times
+keycode 82  = KP_Subtract	KP_Subtract	U2212		U2216		U2238
+!		-		-		− real minus	∖ set minus	∸ dot minus
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6
 
-keycode 79 =  KP_7		U2714		U2195		downstile	KP_Home		KP_Home		upstile
-!				✔ check mark	↕ arrow		⌊						⌈
-keycode 80 =  KP_8		U2718		uparrow		intersection	KP_Up		KP_Up		U22C2
-!				✘ ballot x	↑		∩						⋂ n-ary intersection
-keycode 81 =  KP_9		dagger		U20D7		U230B		KP_Prior	KP_Prior	U2309
-!				†		vector		⌋						⌉
-keycode 86 =  KP_Add		KP_Add		plusminus	U2213		U2295		NoSymbol	U2214
-!		+		+		±		∓ minus-plus	circled plus			dot plus
+keycode 79 =  KP_7		U2714		U2195		downstile	upstile
+!				✔ check mark	↕ arrow		⌊		⌈
+keycode 80 =  KP_8		U2718		uparrow		intersection	U22C2
+!				✘ ballot x	↑		∩		⋂ n-ary intersection
+keycode 81 =  KP_9		dagger		U20D7		U230B		U2309
+!				†		vector		⌋		⌉
+keycode 86 =  KP_Add		KP_Add		plusminus	U2213		U2214
+!		+		+		±		∓ minus-plus	dot plus
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The middle row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6
 
-keycode 83 =  KP_4		club		leftarrow	includedin	KP_Left		KP_Left		U2286	
-!				♣		←		⊂						⊆
-keycode 84 =  KP_5		EuroSign	infinity	U22B6 		KP_Begin	KP_Begin	U22B7	
-!				€		∞		⊶ original of					⊷ image of
-keycode 85 =  KP_6		brokenbar	rightarrow	includes	KP_Right	KP_Right	U2287
-!				¦ broken bar	→		⊃						⊇
+keycode 83 =  KP_4		club		leftarrow	includedin	U2286	
+!				♣		←		⊂		⊆
+keycode 84 =  KP_5		EuroSign	infinity	U22B6 		U22B7	
+!				€		∞		⊶ original of	⊷ image of
+keycode 85 =  KP_6		brokenbar	rightarrow	includes	U2287
+!				¦ broken bar	→		⊃		⊇
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6
 
-keycode 87 =  KP_1		diamond		U2194		U226A		KP_End		KP_End		lessthanequal
-!				♦		↔ arrow		≪ much less					≤
-keycode 88 =  KP_2		heart		downarrow	union		KP_Down		KP_Down		U22C3
-!				♥		↓		∪						⋃ n-ary union
-keycode 89 =  KP_3		U2660		U21CC		U226B		KP_Next		KP_Next		greaterthanequal
-!				♠		⇌ arro		≫ much greater					≥
-keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
+keycode 87 =  KP_1		diamond		U2194		U226A		lessthanequal
+!				♦		↔ arrow		≪ much less	≤
+keycode 88 =  KP_2		heart		downarrow	union		U22C3
+!				♥		↓		∪		⋃ n-ary union
+keycode 89 =  KP_3		U2660		U21CC		U226B		greaterthanequal
+!				♠		⇌ arro		≫ much greater	≥
+keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lowest row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6
 
-keycode 90 = KP_0		U2423		percent		U2030		KP_Insert	KP_Insert	U25A1
-!				␣ space sign	%		‰ per mille					□ white square
-keycode 91 = comma		period		KP_Separator	minutes		KP_Delete	KP_Delete	seconds
-!		,		.		,/.		′ min,feets					″ sec,inches
+keycode 90 = KP_0		U2423		percent		U2030		U25A1
+!				␣ space sign	%		‰ per mille	□ white square
+keycode 91 = comma		period		KP_Separator	minutes		seconds
+!		,		.		,/.		′ min,feets	″ sec,inches
 
 
 
