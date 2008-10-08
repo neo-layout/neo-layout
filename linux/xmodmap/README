@@ -2,8 +2,9 @@
 /A-REFERENZ-A/neo20.txt das Layout als ASCII-Art
 neo_de.xmodmap          	Normale Version für die meisten Benutzer
 neo_de_evdev.xmodmap    	für KDE4 mit evdev¹
-neo_de_x-prog.xmodmap		ältere Programme (wie xedit, xpdf,…) haben Schwierigkeiten auf Ebene 4
-				werden solche Programme verwendet, sollte diese NEO-Datei verwendet werden
+neo_de_x-prog.xmodmap		bei älteren Programmen (wie xedit, xpdf,…) kann das Problem auftreten,
+				dass einige Tastan (4vlcwiaeäp) nicht funktionieren. Werden solche
+				Programme verwendet, sollte diese NEO-Datei bevorzugt werden.
 neo_de_alternative.xmodmap	falls neo_de.xmodmap nicht geladen werden kann (z.B. weil dead_stroke
 				dem System unbekannt ist) sollte diese NEO-Datei verwendet werden
 
