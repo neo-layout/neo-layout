@@ -163,7 +163,7 @@ keycode 20 = minus		endash		emdash		U2011		NoSymbol	NoSymbol	hyphen
 
 keycode 24 = x			X		ellipsis	Greek_xi	U22EE		NoSymbol	U039E
 !						…		ξ		⋮ vert. ell			Ξ Greek_XI
-keycode 25 = v			V		underscore	NoSymbol	BackSpace	BackSpace	U2259
+keycode 25 = v			V		underscore	NoSymbol	NoSymbol	NoSymbol	U2259
 !														≙ 
 keycode 26 = l			L		bracketleft	Greek_lambda	KP_Up		KP_Up		U039B
 !								λ						Λ Greek_LAMBDA
