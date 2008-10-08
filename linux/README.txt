@@ -52,15 +52,7 @@ hinzufügen:
   asdf xmodmap
   --------------------------
 
-ⅴ) In der Datei ›.bashrc‹ (zu finden im Homeverzeichnis) (die Bash ist die
-Standardshell unter den meisten Linuxen) folgende Zeile hinzufügen:
-  --------------------------
-  # Neo:
-  alias asdf="$HOME/neo/bin/asdf xmodmap"
-  --------------------------
-
-ⅵ) Alternativ zu ⅴ) kann in der Datei ›asdf‹ die Standardbelegung auf „xmodmap“
-geändert werden:
+ⅴ) Schließlich ändert man in der Datei ›asdf‹ die Standardbelegung auf „xmodmap“:
   --------------------------
   NEO_X_VARIANTE="xmodmap"
   --------------------------
