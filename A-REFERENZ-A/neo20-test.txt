@@ -264,13 +264,13 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 ┬───────┐ 1 … ASCII-Minus
 │ - ∖ ∸ │ 2 … ASCII-Minus
-│ - − ⌀ │ 3 … Minuszeichen (U+2212 MINUS SIGN)
+│ - − ⊖ │ 3 … Minuszeichen (U+2212 MINUS SIGN)
 ┼───────┤
 
 === Alle Ebenen – Ziffernblock ===
 ┌───────┬───────┬───────┬───────┐
 │ ⇤ ≠ ≡ │ / ⁄ ∣ │ * × ⊗ │ - ∖ ∸ │
-│ ⇥ = ≈ │ / ÷ ⌀ │ * ⋅ ⊙ │ - − ⌀ │
+│ ⇥ = ≈ │ / ÷ ⌀ │ * ⋅ ⊙ │ - − ⊖ │
 ├───────┼───────┼───────┼───────┤
 │✔ Hom ⌈│✘ KP↑ ⋂│† PgD ⌉│       │
 │7  ↕  ⌊│8  ↑  ∩│9 vec ⌋│       │
@@ -339,7 +339,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≈ │ ⌀ │ ⊙ │ ⌀ │
+│ ≈ │ ⌀ │ ⊙ │ ⊖ │
 ├───┼───┼───┼───┤
 │ ⌊ │ ∩ │ ⌋ │   │
 ├───┼───┼───┤   │
