@@ -60,27 +60,27 @@ Zu den Akzenten siehe auch
 
 T1 („Tote Taste 1“: Taste links neben der 1)
         1 … Toter Zirkumflex (sieht aus wie U+0302 COMBINING CIRCUMFLEX ACCENT)
-┌─────┬ 2 … Toter Caron/Hatschek (sieht aus wie U+030C COMBINING CARON)
-│ˇ    │ 3 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
-│ˆ ˘  │ 4 … 
-├─────┴ 5 … 
-        6 … 
+┌─────┬ 2 … Tote Tilde (sieht aus wie U+0303 COMBINING TILDE)
+│˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+030A COMBINING RING ABOVE)
+│ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+030C COMBINING CARON)
+├─────┴ 5 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
+        6 … Toter Makron (sieht aus wie U+0304 COMBINING MACRON)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
-        1 … Toter Akut (sieht aus wie U+0301 COMBINING ACUTE ACCENT)
-┬─────┬ 2 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
-│` ˙ ˚│ 3 … Tote Cedilla (sieht aus wie U+0327 COMBINING CEDILLA)
-│´ ¸  │ 4 … Toter Punkt darüber (sieht aus wie U+0307 COMBINING DOT ABOVE)
-┴──┬──┴ 5 … 
-        6 … Toter Ring (sieht aus wie U+030A COMBINING RING ABOVE)
+        1 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
+┬─────┬ 2 … 
+│     │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
+│` ¨ ῾│ 4 … 
+┴──┬──┴ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
+        6 … 
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
-        1 … Tote Tilde (sieht aus wie U+0303 COMBINING TILDE)
-┬──┴──┬ 2 … Toter Makron (sieht aus wie U+0304 COMBINING MACRON)
-│ˉ /  │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
-│˜ ¨ ˝│ 4 … Toter Schrägstrich (sieht aus wie U+0337 COMBINING SHORT SOLIDUS OVERLAY)
-┴┬────┴ 5 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
-        6 … 
+        1 … Toter Akut (sieht aus wie U+0301 COMBINING ACUTE ACCENT)
+┬──┴──┬ 2 … Tote Cedilla (sieht aus wie U+0327 COMBINING CEDILLA)
+│¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+0337 COMBINING SHORT SOLIDUS OVERLAY)
+│´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
+┴┬────┴ 5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
+        6 … Toter Punkt darüber (sieht aus wie U+0307 COMBINING DOT ABOVE)
 
 ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
 gleich erscheinen, sondern nur in Kombination mit einem weiteren Buchstaben) werden
@@ -147,11 +147,11 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│ˇ    │° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ⇈│„ / ⇅│“ * ∋│” - ∅│–   ╌│` ˙ ˚│Backspace│
-│ˆ ˘  │1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│´ ¸  │    ⌫    │
+│˜ ˇ ¯│° • ¬│№ ‣ ∨│§   ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ ⇈│„ / ⇅│“ * ∋│” - ∅│–   ╌│     │Backspace│
+│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ℓ│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ ⍓ ∘│ˉ /  │      │
-│Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│˜ ¨ ˝│Enter │
+│Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ ⍓ ∘│¸ ˝ ˙│      │
+│Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3   │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
@@ -165,9 +165,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˆ │1│2│3│4│5│6│7│8│9│0│-│´│ Back │
+│ ˆ │1│2│3│4│5│6│7│8│9│0│-│`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│˜│ Ret │
+│Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│´│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │u│i│a│e│o│s│n│r│t│d│y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -178,9 +178,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Zweite Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │°│№│§│»│«│€│$│„│“│”│–│`│ Back │
+│ ˜ │°│№│§│»│«│€│$│„│“│”│–│ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¯│ Ret │
+│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¸│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -191,9 +191,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Dritte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˘ │¹│²│³│›│‹│¢│¥│‚│‘│’│—│¸│ Back │
+│ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│—│¨│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│¨│ Ret │
+│ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │\│/│{│}│*│?│(│)│-│:│@│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -204,7 +204,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│   │•│‣│ │⇞│ │£│¤│/│*│-│ │˙│ Back │
+│ ˇ │•│‣│ │⇞│ │£│¤│/│*│-│ │ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│⍓│˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -217,9 +217,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│   │₁│₂│₃│ℓ│♀│♂│κ│⟨│⟩│₀│‑│ │ Back │
+│ ˘ │₁│₂│₃│ℓ│♀│♂│κ│⟨│⟩│₀│‑│῾│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │ξ│ │λ│χ│ω│ϰ│ψ│γ│φ│ϕ│ς│/│ Ret │
+│    │ξ│ │λ│χ│ω│ϰ│ψ│γ│φ│ϕ│ς│᾿│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │ │ι│α│ε│ο│σ│ν│ϱ│τ│δ│υ│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -230,9 +230,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Sechste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│   │¬│∨│∧│⊥│∡│∥│⇈│⇅│∋│∅│╌│˚̦│ Back │
+│ ¯ │¬│∨│∧│⊥│∡│∥│⇈│⇅│∋│∅│╌│ ̦│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │Ξ│≙│Λ│ℂ│Ω│√│Ψ│Γ│Φ│ℚ│∘│ │ Ret │
+│    │Ξ│≙│Λ│ℂ│Ω│√│Ψ│Γ│Φ│ℚ│∘│˙│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │∮│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -253,30 +253,30 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Rechenzeichen ===
 ┬───────┬ 1 … ASCII-Schrägstrich
-│ / ⌀ ⁄ │ 2 … ASCII-Schrägstrich
-│ / ÷ ∣ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
-┼───────┼ 6 … Geteiltstrich (U+2215 DIVISION SLASH)
+│ / ⁄ ∣ │ 2 … ASCII-Schrägstrich
+│ / ÷ ⌀ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
+┼───────┼ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
 
 ┬───────┬ 1 … ASCII-Malzeichen
-│ * ⊙ ⊗ │ 2 … ASCII-Malzeichen
-│ * ∙ × │ 3 … Malpunkt (U+2219 BULLET OPERATOR)
-┼───────┼ 5 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
+│ * × ⊗ │ 2 … ASCII-Malzeichen
+│ * ⋅ ⊙ │ 3 … Malpunkt (U+2219 BULLET OPERATOR)
+┼───────┼ 4 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
 
 ┬───────┐ 1 … ASCII-Minus
-│ - ⊖ ∸ │ 2 … ASCII-Minus
-│ - − ∖ │ 3 … Minuszeichen (U+2212 MINUS SIGN)
+│ - ∖ ∸ │ 2 … ASCII-Minus
+│ - − ⊖ │ 3 … Minuszeichen (U+2212 MINUS SIGN)
 ┼───────┤
 
 === Alle Ebenen – Ziffernblock ===
 ┌───────┬───────┬───────┬───────┐
-│ ⇤ ≠ ≡ │ / ⌀ ⁄ │ * ⊙ ⊗ │ - ⊖ ∸ │
-│ ⇥ = ≈ │ / ÷ ∣ │ * ⋅ × │ - − ∖ │
+│ ⇤ ≠ ≡ │ / ⁄ ∣ │ * × ⊗ │ - ∖ ∸ │
+│ ⇥ = ≈ │ / ÷ ⌀ │ * ⋅ ⊙ │ - − ⊖ │
 ├───────┼───────┼───────┼───────┤
 │✔ Hom ⌈│✘ KP↑ ⋂│† PgD ⌉│       │
 │7  ↕  ⌊│8  ↑  ∩│9 vec ⌋│       │
 ├───────┼───────┼───────┤       │
-│♣ KP← ⊆│€ Beg ⊷│¦ KP→ ⊇│ + ⊕ ∔ │
-│4  ←  ⊂│5  ∞  ⊶│6  →  ⊃│ + ± ∓ │
+│♣ KP← ⊆│€ Beg ⊷│¦ KP→ ⊇│ + ∓ ∔ │
+│4  ←  ⊂│5  ∞  ⊶│6  →  ⊃│ + ± ⊕ │
 ├───────┼───────┼───────┼───────┤
 │♦ End ≤│♥ KP↓ ⋃│♠ PgD ≥│       │
 │1  ↔  ≪│2  ↓  ∪│3  ⇌  ≫│       │
@@ -326,11 +326,11 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Vierte Ebene – Miniatur === 
 ┌───┬───┬───┬───┐
-│ ≠ │ ⌀ │ ⊙ │ ⊖ │ 
+│ ≠ │ ⁄ │ × │ ∖ │ 
 ├───┼───┼───┼───┤ frc means fraction slash ⁄
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│ ⊕ │ Beg invokes click of the keyboard mouse
+│KP←│Beg│KP→│ ∓ │ Beg invokes click of the keyboard mouse
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
@@ -339,11 +339,11 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≈ │ ∣ │ × │ ∖ │
+│ ≈ │ ⌀ │ ⊙ │ ⊖ │
 ├───┼───┼───┼───┤
 │ ⌊ │ ∩ │ ⌋ │   │
 ├───┼───┼───┤   │
-│ ⊂ │ ⊶ │ ⊃ │ ∓ │
+│ ⊂ │ ⊶ │ ⊃ │ ⊕ │
 ├───┼───┼───┼───┤
 │ ≪ │ ∪ │ ≫ │   │
 ├───┴───┼───┤   │
@@ -352,7 +352,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 
 === Sechste Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≡ │ ⁄ │ ⊗ │ ∸ │
+│ ≡ │ ∣ │ ⊗ │ ∸ │
 ├───┼───┼───┼───┤
 │ ⌈ │ ⋂ │ ⌉ │   │
 ├───┼───┼───┤   │
