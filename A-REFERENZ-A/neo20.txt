@@ -256,16 +256,29 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 │ / ⁄ ∣ │ 2 … ASCII-Schrägstrich
 │ / ÷ ⌀ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
 ┼───────┼ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
+          5 … Durchmesser (U+2300 DIAMETER SIGN)
+          6 … ist ein Teiler von (U+2223 DIVIDES)
 
 ┬───────┬ 1 … ASCII-Malzeichen
 │ * × ⊗ │ 2 … ASCII-Malzeichen
 │ * ⋅ ⊙ │ 3 … Malpunkt (U+2219 BULLET OPERATOR)
 ┼───────┼ 4 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
+          5 … (U+2299 CIRCLED DOT OPERATOR)
+          6 … (U+2297 CIRCLED TIMES)
 
 ┬───────┐ 1 … ASCII-Minus
 │ - ∖ ∸ │ 2 … ASCII-Minus
 │ - − ⊖ │ 3 … Minuszeichen (U+2212 MINUS SIGN)
-┼───────┤
+┼───────┤ 4 … ohne (U+2216 SET MINUS)
+          5 … (U+2296 CIRCLED MINUS)
+          6 … (U+2238 DOT MINUS)
+
+┤       │ 1 … ASCII-Plus
+│ + ∓ ∔ │ 2 … ASCII-Plus
+│ + ± ⊕ │ 3 … Plus-Minus (U+00B1 PLUS-MINUS SIGN)
+┼───────┤ 4 … Minus-Plus (U+2213 MINUS-OR-PLUS SIGN)
+          5 … (U+2295 CIRCLED PLUS)
+          6 … (U+2214 DOT PLUS)
 
 === Alle Ebenen – Ziffernblock ===
 ┌───────┬───────┬───────┬───────┐
@@ -408,6 +421,7 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 ≡ … identisch (U2261)
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Ziffernblock ==
+⊙ … direkte Summe ; Vektor aus der Ebene zeigend (U2299)
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
 ∋ … enthält das Element (U220B)
