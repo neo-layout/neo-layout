@@ -263,8 +263,8 @@ xkb_symbols "neo" {
     // general Lock
     // -----------------
     // Einrasten über linke Win-Taste+Modifier, Lösen über nochmaliges Betätigen des Modifiers
-    // ShiftLock und Mod5Lock funktionieren, Mod3Lock lässt sich aber nicht mehr lösen!!!!
-    // TODO
+    // ShiftLock und Mod5Lock funktionieren, aber Achtung:
+    // FIXME Mod3Lock lässt sich aber nicht mehr lösen!!!!
 
 
     // Tab as Multi_key (Compose)
@@ -284,7 +284,7 @@ xkb_symbols "neo" {
  
     key <AE01> { [ 1,           degree,                 onesuperior,            U2081,          enfilledcircbullet, NoSymbol,    notsign        ] };
     key <AE02> { [ 2,           numerosign,             twosuperior,            U2082,              U2023,          NoSymbol,    logicalor      ] };
-    key <AE03> { [ 3,           section,                threesuperior,          U2083,              ISO_Left_Tab,   ISO_Left_Tab,logicaland     ] };
+    key <AE03> { [ 3,           section,                threesuperior,          U2083,              NoSymbol,       NoSymbol,    logicaland     ] };
     key <AE04> { [ 4,           guillemotright,         U203A,                  U2113,              Prior,          Prior,       downtack       ] };
     key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       NoSymbol,       NoSymbol,    U2221          ] };
     key <AE06> { [ 6,           EuroSign,               cent,                   malesymbol,         sterling,       NoSymbol,    U2225          ] };
