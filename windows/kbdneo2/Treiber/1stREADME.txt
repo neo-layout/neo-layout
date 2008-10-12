@@ -1,50 +1,50 @@
-== Installation der Windows-Treiber ==
-Zur Zeit gibt es leider noch keine eigene Installationsroutine für diese Treiber.
+ï»¿== Installation der Windows-Treiber ==
+Zur Zeit gibt es leider noch keine eigene Installationsroutine fÃ¼r diese Treiber.
 Deshalb muss der Treiber noch von Hand registriert werden.
 
 Installation:
-1.) reg_backup.bat ausführen.
-    Dies sichert einen bereits vorhandenen Schlüssel. Wenn der Schlüssel bislang
+1.) reg_backup.bat ausfÃ¼hren.
+    Dies sichert einen bereits vorhandenen SchlÃ¼ssel. Wenn der SchlÃ¼ssel bislang
     noch nicht vorhanden war wird auch keine Sicherungsdatei angelegt.
 2.) kbdneo2.dll (Windowsversion beachten) nach \%SystemRoot%\system32\ (in der
     Regel C:\Windows\system32\) kopieren.
-3.) kbdneo2_install.reg ausführen.
-4.) Nun kann das in den Sprachoptionen Neo 2.0 ausgewählt werden. D(Start->
-    Einstellungen->Systemsteuerung) unter „Regions- und Sprachoptionen“-> Reiter
-    „Sprachen“ -> „Details“ -> „Hinzufügen“ -> „Tastaturlayout/IME“ -> „Deutsch
-    (NEO ergonomisch 2.0)“ hinzugefügt werden.
+3.) kbdneo2_install.reg ausfÃ¼hren.
+4.) Nun kann das in den Sprachoptionen Neo 2.0 ausgewÃ¤hlt werden. D(Start->
+    Einstellungen->Systemsteuerung) unter Â»Regions- und SprachoptionenÂ«-> Reiter
+    Â»SprachenÂ« -> Â»DetailsÂ« -> Â»HinzufÃ¼genÂ« -> Â»Tastaturlayout/IMEÂ« -> Â»Deutsch
+    (NEO ergonomisch 2.0)Â« hinzugefÃ¼gt werden.
 
 Deinstallation:
 1.) Neo 2.0 nicht mehr als Tastaturlayout verwenden. Dazu das Layout in den
-    „Regions- und Sprachoptionen“ entfernen.
-2.) kbdneo2_uninstall.reg ausführen. Hierbei werden alle vorgenommenen Einträge in
-    der Registry gelöscht.
-3.) Falls vorhanden die gesicherten Schlüssel zurückspielen (backup1.reg,
-    backup2.reg und backup3reg –soweit vorhanden– ausführen)
+    Â»Regions- und SprachoptionenÂ« entfernen.
+2.) kbdneo2_uninstall.reg ausfÃ¼hren. Hierbei werden alle vorgenommenen EintrÃ¤ge in
+    der Registry gelÃ¶scht.
+3.) Falls vorhanden die gesicherten SchlÃ¼ssel zurÃ¼ckspielen (backup1.reg,
+    backup2.reg und backup3reg â€“ soweit vorhanden â€“ ausfÃ¼hren)
 
-Je nach Windows-Version sind für die einzelnen Schritte Administrator-Rechte nötig.
+Je nach Windows-Version sind fÃ¼r die einzelnen Schritte Administrator-Rechte nÃ¶tig.
 
 
-== Einschränkungen dieser Treiberversion ==
+== EinschrÃ¤nkungen dieser Treiberversion ==
 1.) Einige spezielle Funktionen lassen sich nicht belegen und sind deshalb nicht
-    verfügbar.
-    Dazu gehören leider die Pfeiltasten, Entf, Seite hoch/runter, Einfg, Pos1 und
+    verfÃ¼gbar.
+    Dazu gehÃ¶ren leider die Pfeiltasten, Entf, Seite hoch/runter, Einfg, Pos1 und
     Ende.
-2.) Ein Einrasten von Modifiern ist treibertechnisch leider nicht möglich.
-3.) Die Kombo-/Komponier-/Compose-Taste wird von Windows nicht unterstützt.
+2.) Ein Einrasten von Modifiern ist treibertechnisch leider nicht mÃ¶glich.
+3.) Die Kombo-/Komponier-/Compose-Taste wird von Windows nicht unterstÃ¼tzt.
 
-Diese Mängel sollen durch einen spezielle AutoHotKey-Treiber noch behoben werden.
+Diese MÃ¤ngel sollen durch einen spezielle AutoHotKey-Treiber noch behoben werden.
 
 
 == Entfernen einer evtl. vorhandenen MSKLC-Treibers ==
 1. Setup des MSKLC aufrufen
-2. „Remove the keyboard layout“ auswählen und mit „Finish“ bestätigen.
+2. Â»Remove the keyboard layoutÂ« auswÃ¤hlen und mit Â»FinishÂ« bestÃ¤tigen.
 
 
-== NEO auf dem Benutzerkonto-Anmeldebildschirm verfügbar machen (Vista) ==
-Vista erlaubt jedem Benutzer, die Regions- Sprachoptionen individuell anzupassen. Allerdings ist der Zugriff auf Systemkonten aus Sicherheitsgründen beschränkt, deshalb müssen die Einstellungen manuell und mit Adminrechten auf das allgemeine Systemkonto übertragen werden: 
+== NEO auf dem Benutzerkonto-Anmeldebildschirm verfÃ¼gbar machen (Vista) ==
+Vista erlaubt jedem Benutzer, die Regions- Sprachoptionen individuell anzupassen. Allerdings ist der Zugriff auf Systemkonten aus SicherheitsgrÃ¼nden beschrÃ¤nkt, deshalb mÃ¼ssen die Einstellungen manuell und mit Adminrechten auf das allgemeine Systemkonto Ã¼bertragen werden: 
 
-Start / Systemsteuerung / Regions- und Sprachoptionen / Reiter »Verwaltung« / Button »Zu reservierten Konten kopieren…« / »Systemkonten« markieren / OK
+Start / Systemsteuerung / Regions- und Sprachoptionen / Reiter Â»VerwaltungÂ« / Button Â»Zu reservierten Konten kopierenÂ« / Â»SystemkontenÂ« markieren / OK
 
-Ausführlich steht das ganze in der Hilfe unter dem Titel »Ändern des Tastaturlayouts«.
+AusfÃ¼hrlich steht das ganze in der Windows-Hilfe unter dem Titel Â»Ã„ndern des TastaturlayoutsÂ«.
 
