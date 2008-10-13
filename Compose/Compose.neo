@@ -179,6 +179,25 @@
 <Multi_key> <a> <KP_8>                   : "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
 <Multi_key> <a> <KP_9>                   : "٩"   U0669 # ARABIC-INDIC DIGIT NINE
 
+# ordinal numbers
+# english
+<Multi_key> <1> <s> <t>                  : "1ˢᵗ"
+<Multi_key> <KP_1> <s> <t>               : "1ˢᵗ"
+<Multi_key> <2> <n> <d>                  : "2ⁿᵈ"
+<Multi_key> <KP_2> <n> <d>               : "2ⁿᵈ"
+<Multi_key> <3> <r> <d>                  : "3ʳᵈ"
+<Multi_key> <KP_3> <r> <d>               : "3ʳᵈ"
+<Multi_key> <4> <t> <h>                  : "4ᵗʰ"
+<Multi_key> <KP_4> <t> <h>               : "4ᵗʰ"
+
+#frensh
+<Multi_key> <1> <e> <r>                  : "1ᵉʳ"
+<Multi_key> <KP_1> <e> <r>               : "1ᵉʳ"
+<Multi_key> <1> <r> <e>                  : "1ʳᵉ"
+<Multi_key> <KP_1> <r> <e>               : "1ʳᵉ"
+<Multi_key> <2> <e>                      : "2ᵉ"
+<Multi_key> <KP_2> <e>                   : "2ᵉ"
+
 
 # mathematical symbols
 # Fractions
@@ -359,17 +378,56 @@
 <Multi_key> <underscore> <KP_Subtract>     : "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underbar> <KP_Subtract>       : "₋"   U208B # SUBSCRIPT MINUS
 
-<dead_circumflex> <Greek_beta>             : "ᵝ"   U1D5D # MODIFIER LETTER SMALL BETA
+<Multi_key> <asciicircum> <a>              :"ᵃ"   U1D43 # MODIFIER LETTER SMALL A
+<Multi_key> <asciicircum> <b>              :"ᵇ"   U1D47 # MODIFIER LETTER SMALL B
+<Multi_key> <asciicircum> <c>              :"ᶜ"   U1D9C # MODIFIER LETTER SMALL C
+<Multi_key> <asciicircum> <d>              :"ᵈ"   U1D48 # MODIFIER LETTER SMALL D
+<Multi_key> <asciicircum> <e>              :"ᵉ"   U1D49 # MODIFIER LETTER SMALL E
+<Multi_key> <asciicircum> <f>              :"ᶠ"   U1DA0 # MODIFIER LETTER SMALL F
+<Multi_key> <asciicircum> <g>              :"ᵍ"   U1D4D # MODIFIER LETTER SMALL G
+<Multi_key> <asciicircum> <h>              :"ʰ"   U02B0 # MODIFIER LETTER SMALL H
+<Multi_key> <asciicircum> <i>              :"ⁱ"    U2071 # SUPERSCRIPT LATIN SMALL LETTER I
+<Multi_key> <asciicircum> <j>              :"ʲ"   U02B2 # MODIFIER LETTER SMALL J
+<Multi_key> <asciicircum> <k>              :"ᵏ"   U1D4F # MODIFIER LETTER SMALL K
+<Multi_key> <asciicircum> <l>              :"ˡ"   U02E1 # MODIFIER LETTER SMALL L
+<Multi_key> <asciicircum> <m>              :"ᵐ"   U1D50 # MODIFIER LETTER SMALL M
+<Multi_key> <asciicircum> <n>              :"ⁿ"   U207F # SUPERSCRIPT LATIN SMALL LETTER N
+<Multi_key> <asciicircum> <o>              :"ᵒ"   U1D52 # MODIFIER LETTER SMALL O
+<Multi_key> <asciicircum> <p>              :"ᵖ"   U1D56 # MODIFIER LETTER SMALL P
+<Multi_key> <asciicircum> <r>              :"ʳ"   U02B3 # MODIFIER LETTER SMALL R
+<Multi_key> <asciicircum> <s>              :"ˢ"   U02E2 # MODIFIER LETTER SMALL S
+<Multi_key> <asciicircum> <t>              :"ᵗ"   U1D57 # MODIFIER LETTER SMALL T
+<Multi_key> <asciicircum> <u>              :"ᵘ"   U1D58 # MODIFIER LETTER SMALL U
+<Multi_key> <asciicircum> <v>              :"ᵛ"   U1D5B # MODIFIER LETTER SMALL V
+<Multi_key> <asciicircum> <w>              :"ʷ"   U02B7 # MODIFIER LETTER SMALL W
+<Multi_key> <asciicircum> <x>              :"ˣ"   U02E3 # MODIFIER LETTER SMALL X
+<Multi_key> <asciicircum> <y>              :"ʸ"   U02B8 # MODIFIER LETTER SMALL Y
+<Multi_key> <asciicircum> <z>              :"ᶻ"   U1DBB # MODIFIER LETTER SMALL Z
+
+<Multi_key> <asciicircum> <A>              :"ᴬ"   U+1D2C MODIFIER LETTER CAPITAL A
+<Multi_key> <asciicircum> <B>              :"ᴮ"   U+1D2E MODIFIER LETTER CAPITAL B
+<Multi_key> <asciicircum> <D>              :"ᴰ"   U+1D30 MODIFIER LETTER CAPITAL D
+<Multi_key> <asciicircum> <E>              :"ᴱ"   U+1D31 MODIFIER LETTER CAPITAL E
+<Multi_key> <asciicircum> <G>              :"ᴳ"   U+1D33 MODIFIER LETTER CAPITAL G
+<Multi_key> <asciicircum> <H>              :"ᴴ"   U+1D34 MODIFIER LETTER CAPITAL H
+<Multi_key> <asciicircum> <I>              :"ᴵ"   U+1D35 MODIFIER LETTER CAPITAL I
+<Multi_key> <asciicircum> <J>              :"ᴶ"   U+1D36 MODIFIER LETTER CAPITAL J
+<Multi_key> <asciicircum> <K>              :"ᴷ"   U+1D37 MODIFIER LETTER CAPITAL K
+<Multi_key> <asciicircum> <L>              :"ᴸ"   U+1D38 MODIFIER LETTER CAPITAL L
+<Multi_key> <asciicircum> <M>              :"ᴹ"   U+1D39 MODIFIER LETTER CAPITAL M
+<Multi_key> <asciicircum> <N>              :"ᴺ"   U+1D3A MODIFIER LETTER CAPITAL N
+<Multi_key> <asciicircum> <O>              :"ᴼ"   U+1D3C MODIFIER LETTER CAPITAL O
+<Multi_key> <asciicircum> <P>              :"ᴾ"   U+1D3E MODIFIER LETTER CAPITAL P
+<Multi_key> <asciicircum> <R>              :"ᴿ"   U+1D3F MODIFIER LETTER CAPITAL R
+<Multi_key> <asciicircum> <T>              :"ᵀ"   U+1D40 MODIFIER LETTER CAPITAL T
+<Multi_key> <asciicircum> <U>              :"ᵁ"   U+1D41 MODIFIER LETTER CAPITAL U
+<Multi_key> <asciicircum> <W>              :"ᵂ"   U+1D42 MODIFIER LETTER CAPITAL W
+
 <Multi_key> <asciicircum> <Greek_beta>     : "ᵝ"   U1D5D # MODIFIER LETTER SMALL BETA
-<dead_circumflex> <Greek_gamma>            : "ᵞ"   U1D5E # MODIFIER LETTER SMALL GREEK GAMMA  
-<Multi_key> <asciicircum> <Greek_gamma>    : "ᵞ"   U1D5E # MODIFIER LETTER SMALL GREEK GAMMA  
-<dead_circumflex> <Greek_delta>            : "ᵟ"   U1D5F # MODIFIER LETTER SMALL DELTA
+<Multi_key> <asciicircum> <Greek_gamma>    : "ᵞ"   U1D5E # MODIFIER LETTER SMALL GREEK GAMMA
 <Multi_key> <asciicircum> <Greek_delta>    : "ᵟ"   U1D5F # MODIFIER LETTER SMALL DELTA
-<dead_circumflex> <Greek_phi>              : "ᵠ"   U1D60 # MODIFIER LETTER SMALL GREEK PHI
 <Multi_key> <asciicircum> <Greek_phi>      : "ᵠ"   U1D60 # MODIFIER LETTER SMALL GREEK PHI
-<dead_circumflex> <Greek_chi>              : "ᵡ"   U1D61 # MODIFIER LETTER SMALL CHI
 <Multi_key> <asciicircum> <Greek_chi>      : "ᵡ"   U1D61 # MODIFIER LETTER SMALL CHI
-<dead_circumflex> <Greek_theta>            : "ᶿ"   U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key> <asciicircum> <Greek_theta>    : "ᶿ"   U1DBF # MODIFIER LETTER SMALL THETA
 
 <Multi_key> <underscore> <Greek_beta>      : "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
