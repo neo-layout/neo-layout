@@ -294,7 +294,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 │♦ End ≤│♥ KP↓ ⋃│♠ PgD ≥│       │
 │1  ↔  ≪│2  ↓  ∪│3  ⇌  ≫│       │
 ├───────┴───────┼───────┤       │
-│  ␣   Ins   □  │. Del ″│       │
+│  ␣   Ins   ◻  │. Del ″│       │
 │  0    %    ‱  │, ,/. ′│ Enter │
 └───────────────┴───────┴───────┘
 
@@ -373,7 +373,7 @@ sollten für alle Elemente auf dem Keypad wenn möglch die KP_‐Variante verwen
 ├───┼───┼───┼───┤
 │ ≤ │ ∪ │ ≥ │   │
 ├───┴───┼───┤   │
-│ □     │ ″ │Ent│
+│ ◻     │ ″ │Ent│
 └───────┴───┴───┘
 == Tipp ==
 Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
@@ -419,6 +419,7 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 ⇐ … notwendig für ; nur dann, wenn (U21D0)
 Θ … Theta, griechischer Majuskel (U0398)
 ≡ … identisch (U2261)
+◻ … Beweisende (qed) (U25FB)
 
 == Zeichenerläuterungen zur Mat-/Nat-Ebene – Ziffernblock ==
 ⊙ … direkte Summe ; Vektor aus der Ebene zeigend (U2299)
