@@ -1,4 +1,4 @@
 [autorun]
-OPEN = neo\neo20-all-in-one.exe
-ACTION = neo\neo20-all-in-one.exe
+OPEN = neo\neo20.exe
+ACTION = neo\neo2.exe
 ICON = neo\neo.ico
