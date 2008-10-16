@@ -36,6 +36,15 @@ http://dejavu.sourceforge.net/
   HINWEIS: Unter Linux ist es momentan noch nicht möglich die Feststellung
   zu lösen, indem man beide Mods drückt. Man muss dort nur einen drücken!
 
+=== Maustastatursteuerung ===
+Die Maustastatursteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
+Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
+die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
+Am besten geeignet ist dazu die Ebene 4 des Keypads (z.B. mit Mod4_Lock). Verzichtet man auf
+Markierungen ist auch Ebene 1 des Keypads geeignet.
+Des Weiteren kann man die Zahlen auf Ebene 4 des Haupttastaturfelds benutzen, jedoch ist die
+Bedienung dort weniger komfortabel.
+
 === Symbole ===                            
 ⇞⇟   … Bild auf/Bild ab                  
 ⇱⇲   … Pos1/Ende                         
@@ -49,7 +58,6 @@ http://dejavu.sourceforge.net/
 ␣    … Leerzeichen (SPACE)
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
-⍓    … (de)aktiviert die Maussteuerung über die Tastatur (Navigationsblock)
 ↶    … undo-Funktion
 
 === Akzenttasten ===
@@ -150,7 +158,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 │˜ ˇ ¯│° º ¬│§ ª ∨│ℓ № ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ →│„ / ∞│“ * ∋│” - ∅│–   ╌│     │Backspace│
 │ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ ⍓ ∘│¸ ˝ ˙│      │
+│Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
 │Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3   │  ↲  │
@@ -206,7 +214,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˇ │º│ª│№│⇞│ │£│¤│/│*│-│ │ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│⍓│˝│ Ret │
+│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -386,7 +394,7 @@ Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
 Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalität.
 
-== Zeichenerläuterungen zur Mat-/Nat-Ebene – Haupttastatur ==
+== Zeichenerläuterungen ==
 Ξ … Xi, griechischer Majuskel (U039E)
 ≙ … entspricht (U2259)
 Λ … Lambda, griechischer Majuskel (U039B)
@@ -419,8 +427,6 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 ⇐ … notwendig für ; nur dann, wenn (U21D0)
 Θ … Theta, griechischer Majuskel (U0398)
 ≡ … identisch (U2261)
-
-== Zeichenerläuterungen zur Mat-/Nat-Ebene – Ziffernblock ==
 ⊙ … direkte Summe ; Vektor aus der Ebene zeigend (U2299)
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
