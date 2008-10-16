@@ -9,11 +9,16 @@ neo_tot1:
   EbeneAktualisieren()
   if (Ebene = 1) and !CheckDeadUni("c1",0x0302)
     deadUni(0x02C6, "dead_circumflex", "c1") ; Zirkumflex, tot
-  else if (Ebene = 2) and !CheckDeadUni("c2",0x030C)
-    deadUni(0x02C7, "dead_caron", "c2") ; Caron, tot
-  else if (Ebene = 3) and !CheckDeadUni("c3",0x0306)
-    deadUni(0x02D8, "dead_breve", "c3") ; Brevis, tot
-  ;CompKey := PriorCompKey
+  else if (Ebene = 2) and !CheckDeadUni("c2",0x0303)
+    deadUni(0x02DC, "dead_tilde", "c2") ; Tilde, tot
+  else if (Ebene = 3) and !CheckDeadUni("c3",0x030A)
+    deadUni(0x02DA, "dead_breve", "c3") ; Ring, tot
+  else if (Ebene = 4) and !CheckDeadUni("c4",0x030C)
+    deadUni(0x02C7, "dead_caron", "c4") ; Caron, tot
+  else if (Ebene = 5) and !CheckDeadUni("c5",0x0306)
+    deadUni(0x02D8, "dead_breve", "c5") ; Brevis, tot
+  else if (Ebene = 6) and !CheckDeadUni("c6",0x0304)
+    deadUni(0x00AF, "dead_macron", "c6") ; Makron, tot
 return
 
 neo_1:
@@ -198,19 +203,12 @@ return
 neo_tot2:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) and !CheckDeadUni("a1",0x0301)
-    deadAsc("{´}{space}", "dead_acute", "a1") ; Akut, tot
-  else if (Ebene = 2) and !CheckDeadUni("a2",0x0300)
-    deadAsc("``{space}", "dead_grave", "a2") ; Gravis, tot
-  else if (Ebene = 3) and !CheckDeadUni("a3",0x0327)
-    deadAsc("¸", "dead_cedilla", "a3") ; Cedilla, tot
-  else if (Ebene = 4) and !CheckDeadUni("a4",0x0307)
-    deadUni(0x02D9, "dead_abovedot", "a4") ; Punkt oben
-  else if (Ebene = 5) and !CheckDeadUni("a5",0x0328)
-    deadUni(0x02DB, "dead_ogonek", "a5") ; Ogonek
-  else if (Ebene = 6) and !CheckDeadUni("a6",0x030A)
-    deadUni(0x02DA, "dead_abovering", "a6") ; Ring oben
-  CompKey := PriorCompKey
+  if (Ebene = 1) and !CheckDeadUni("a1",0x0300)
+    deadAsc("``{space}", "dead_grave", "a1") ; Gravis, tot
+  else if (Ebene = 3) and !CheckDeadUni("a3",0x0308)
+    deadAsc(0x00A8, "dead_diaeresis", "a3") ; Diärese, tot
+  else if (Ebene = 5) and !CheckDeadUni("a5",0x0485)
+    deadUni(0x1FFE, "dead_dasia", "a5") ; Ogonek
 return
 
 
@@ -406,18 +404,18 @@ return
 neo_tot3:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1) and !CheckDeadUni("t1",0x0303)
-    deadUni(0x02DC, "dead_tilde", "t1") ; Tilde, tot
-  else if (Ebene = 2) and !CheckDeadUni("t2",0x0304)
-    deadUni(0x00AF, "dead_macron", "t2") ; Macron, tot
-  else if (Ebene = 3) and !CheckDeadUni("t3",0x0308)
-    deadUni(0x00A8, "dead_diaeresis", "t3") ; Diärese
+  if (Ebene = 1) and !CheckDeadUni("t1",0x0301)
+    deadUni({´}{space}, "dead_acute", "t1") ; Akut, tot
+  else if (Ebene = 2) and !CheckDeadUni("t2",0x0327)
+    deadUni("¸", "dead_cedilla", "t2") ; Cedille, tot
+  else if (Ebene = 3) and !CheckDeadUni("t3",0x0337)
+    deadUni(0x002F, "dead_stroke", "t3") ; Strich, tot
   else if (Ebene = 4) and !CheckDeadUni("t4",0x0338)
-    deadUni(0x002F, "", "t4") ; Schrägstrich, tot
-  else if (Ebene = 5) and !CheckDeadUni("t5",0x030B)
-    deadUni(0x02DD, "dead_doubleacute", "t5") ; Doppelakut
-  else if (Ebene = 6) and !CheckDeadUni("t6",0x0326)
-    deadUni(0x02CF, "", "t6") ; Komma drunter, tot
+    deadUni(0x02DD, "dead_doubleacute", "t4") ; Doppelakut, tot
+  else if (Ebene = 5) and !CheckDeadUni("t5",0x0486)
+    deadUni(0x1FBF, "", "t5") ; Spiritus lenis, tot
+  else if (Ebene = 6) and !CheckDeadUni("t6",0x0307)
+    deadUni(0x02D9, "dead_abovedot", "t6") ; Punkt darüber, tot
 return
 
 
