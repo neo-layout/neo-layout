@@ -1,4 +1,4 @@
-!! ~/.xmodmap
+﻿!! ~/.xmodmap
 !! 
 !! German NEO-Layout
 !! adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
@@ -28,6 +28,7 @@
 ! Ebene 4: Mod4 (zum Markieren Shift+Mod4)
 ! Ebene 5: Shift+Mod3
 ! Ebene 6: Mod3+Mod4 (in dieser Reihenfolge!)
+! Ebene 7: wird (bis auf technisch bedingte Ausnahmen) nicht belegt
 ! Multi_key=Compose (keine eigene Ebene): Mod3+Tab or right window key
 ! Feststellen/Shift_Lock: Shift+Shift
 ! Mod4_Lock: Mod4(rechts)+Mod4(links)
@@ -63,8 +64,8 @@ keycode 62 =  Shift_R Shift_Lock
 ! Make former CapsLock and qwertz-# to Mode_switch or ISO_Group_Shift
 ! Mod3(links) (=Qwertz-Caps) erlaubt nur 4 Ebenen
 ! Ohne einen Eintrag in der zweiten Gruppe (=Ebene 3) ergäbe Mod3+Mod3=Group_Shift+Group_Shift=Gruppe 3=Ebene 6. Das ist nicht gewünscht.
-keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
 keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
+keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Mod4
@@ -74,8 +75,8 @@ keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
 ! Mod4(rechts)+Mod4(links) lässt Mod4 einrasten (Mod4Lock)
 ! das funktioniert nur in dieser Reihenfolge, da Mod4(rechts) (=Qwertz-AltGr) nur 4 Ebenen hat
 ! Der Lock lässt sich durch ein weiteres Mod4 lösen.
+keycode 94  = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
 keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
-keycode 94 =  ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! window keys
@@ -130,7 +131,7 @@ keycode 35 = dead_tilde		dead_macron	dead_diaeresis	dead_stroke   dead_doubleacu
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The first row (number Row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
 keycode 10 = 1			degree		onesuperior	onesubscript  enfilledcircbullet  NoSymbol	notsign		NoSymbol
 !				°		¹	  	₁		•				¬
@@ -159,7 +160,7 @@ keycode 20 = minus		endash		emdash		U2011		NoSymbol	NoSymbol	hyphen		NoSymbol
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
 keycode 24 = x			X		ellipsis	Greek_xi	U22EE		NoSymbol	Greek_XI	Greek_XI
 !						…		ξ		⋮ vert. ell			Ξ
@@ -188,7 +189,7 @@ keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  Pointer_EnableKeys  No
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The home row (middle row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
 keycode 38 = u			U		backslash	NoSymbol	Home		Home		U222E		NoSymbol
 !						\								∮ contour integral
@@ -217,7 +218,7 @@ keycode 48 = y			Y		at		Greek_upsilon	period		NoSymbol	nabla		NoSymbol
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
 keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		U211C		NoSymbol
 !		ü		Ü		#								ℜ real part
