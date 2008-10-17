@@ -420,6 +420,7 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 ∝ … proportional zu (U221D)
 ℑ … Imaginärteil einer komplexen Zahl (U2111)
 ℜ … Realteil einer komplexen Zahl (U211C)
+ℵ … Kardinalzahlen, Aleph-Symbol (U2135)
 Π … Pi, griechischer Majuskel (U03A0)
 ℤ … Menge der ganzen Zahlen (U2124)
 ⇒ … Implikation ; daraus folgt ; hinreichend für (U21D2)
@@ -432,6 +433,8 @@ Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalit
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
 ∋ … enthält das Element (U220B)
+ª … weiblicher Ordinalindikator (2ª) (00AA)
+º … männlicher Ordinalindikator (1º) (00BA)
 
 == Hinweise zu Doppelbelegungen in Unicode ==
 Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.
