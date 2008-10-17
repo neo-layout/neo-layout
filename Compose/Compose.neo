@@ -423,7 +423,7 @@
 <Multi_key> <asciicircum> <U>              :"ᵁ"   U+1D41 MODIFIER LETTER CAPITAL U
 <Multi_key> <asciicircum> <W>              :"ᵂ"   U+1D42 MODIFIER LETTER CAPITAL W
 
-<Multi_key> <asciicircum> <Greek_alpha>    " "ᵅ"   U1D45 # MODIFIER LETTER SMALL ALPHA
+<Multi_key> <asciicircum> <Greek_alpha>    : "ᵅ"   U1D45 # MODIFIER LETTER SMALL ALPHA
 <Multi_key> <asciicircum> <Greek_beta>     : "ᵝ"   U1D5D # MODIFIER LETTER SMALL BETA
 <Multi_key> <asciicircum> <Greek_gamma>    : "ᵞ"   U1D5E # MODIFIER LETTER SMALL GREEK GAMMA
 <Multi_key> <asciicircum> <Greek_delta>    : "ᵟ"   U1D5F # MODIFIER LETTER SMALL DELTA
@@ -433,6 +433,23 @@
 <Multi_key> <asciicircum> <Greek_chi>      : "ᵡ"   U1D61 # MODIFIER LETTER SMALL CHI
 <Multi_key> <asciicircum> <Greek_theta>    : "ᶿ"   U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key> <asciicircum> <Greek_upsilon>  : "ᶷ"   U1DB7 # MODIFIER LETTER SMALL UPSILON
+
+<Multi_key> <underscore> <a>               : "ₐ"   U2090 # LATIN SUBSCRIPT SMALL LETTER A
+<Multi_key> <underbar> <a>                 : "ₐ"   U2090 # LATIN SUBSCRIPT SMALL LETTER A
+<Multi_key> <underscore> <e>               : "ₑ"   U2091 # LATIN SUBSCRIPT SMALL LETTER E
+<Multi_key> <underbar> <e>                 : "ₑ"   U2091 # LATIN SUBSCRIPT SMALL LETTER E
+<Multi_key> <underscore> <i>               : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I
+<Multi_key> <underbar> <i>                 : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I
+<Multi_key> <underscore> <o>               : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O
+<Multi_key> <underbar> <o>                 : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O
+<Multi_key> <underscore> <r>               : "ᵣ"   U1D63 # LATIN SUBSCRIPT SMALL LETTER R
+<Multi_key> <underbar> <r>                 : "ᵣ"   U1D63 # LATIN SUBSCRIPT SMALL LETTER R
+<Multi_key> <underscore> <u>               : "ᵤ"   U1D64 # LATIN SUBSCRIPT SMALL LETTER U
+<Multi_key> <underbar> <u>                 : "ᵤ"   U1D64 # LATIN SUBSCRIPT SMALL LETTER U
+<Multi_key> <underscore> <v>               : "ᵥ"   U1D65 # LATIN SUBSCRIPT SMALL LETTER V
+<Multi_key> <underbar> <v>                 : "ᵥ"   U1D65 # LATIN SUBSCRIPT SMALL LETTER V
+<Multi_key> <underscore> <x>               : "ₓ"   U2093 # LATIN SUBSCRIPT SMALL LETTER X
+<Multi_key> <underbar> <x>                 : "ₓ"   U2093 # LATIN SUBSCRIPT SMALL LETTER X
 
 <Multi_key> <underscore> <Greek_beta>      : "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
 <Multi_key> <underbar> <Greek_beta>        : "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
