@@ -76,9 +76,9 @@ T1 („Tote Taste 1“: Taste links neben der 1)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
-┬─────┬ 2 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
-│˵    │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
-│` ¨ ῾│ 4 … 
+┬─────┬ 2 … 
+│  ˵  │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
+│` ¨ ῾│ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
 ┴──┬──┴ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 … 
 
@@ -97,7 +97,7 @@ folgendermaßen bedient (Beispiel):
 2. Danach »n«.
 3. Es erscheint das »ñ«.
 
-TIPP: Mit den toten Tasten Zirkumflex und Querstrich kann man hoch(ˆ)- und tiefgestellte(-) Ziffern erzeugen.
+TIPP: Mit den toten Tasten Zirkumflex und Querstrich kann man hoch(ˆ)- und tiefgestellte(/) Ziffern erzeugen.
 
 === Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
@@ -155,7 +155,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° º ¬│§ ª ∨│ℓ № ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ →│„ / ∞│“ * ∋│” - ∅│–   ╌│˵    │Backspace│
+│˜ ˇ ¯│° º ¬│§ ª ∨│ℓ № ∧│» ⇞ ⊥│«   ∡│€ £ ∥│$ ¤ →│„ / ∞│“ * ∋│” - ∅│–   ╌│  ˵  │Backspace│
 │ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
@@ -186,7 +186,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Zweite Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˜ │°│§│ℓ│»│«│€│$│„│“│”│–│˵│ Back │
+│ ˜ │°│§│ℓ│»│«│€│$│„│“│”│–│ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¸│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -212,7 +212,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │º│ª│№│⇞│ │£│¤│/│*│-│ │ │ Back │
+│ ˇ │º│ª│№│⇞│ │£│¤│/│*│-│ │˵│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
