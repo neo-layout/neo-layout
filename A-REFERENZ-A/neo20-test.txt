@@ -76,7 +76,7 @@ T1 („Tote Taste 1“: Taste links neben der 1)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
-┬─────┬ 2 … 
+┬─────┬ 2 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
 │     │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
 │` ¨ ῾│ 4 … 
 ┴──┬──┴ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
