@@ -67,28 +67,28 @@ Zu den Akzenten siehe auch
 • http://de.wikipedia.org/wiki/Liste_lateinisch-basierter_Alphabete
 
 T1 („Tote Taste 1“: Taste links neben der 1)
-        1 … Toter Zirkumflex (sieht aus wie U+0302 COMBINING CIRCUMFLEX ACCENT)
-┌─────┬ 2 … Tote Tilde (sieht aus wie U+0303 COMBINING TILDE)
-│˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+030A COMBINING RING ABOVE)
-│ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+030C COMBINING CARON)
-├─────┴ 5 … Toter Breve/Brevis (sieht aus wie U+0306 COMBINING BREVE)
-        6 … Toter Makron (sieht aus wie U+0304 COMBINING MACRON)
+        1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
+┌─────┬ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
+│˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
+│ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
+├─────┴ 5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
+        6 … Toter Makron (sieht aus wie U+00AF MACRON)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
-        1 … Toter Grave (sieht aus wie U+0300 COMBINING GRAVE ACCENT)
+        1 … Toter Grave (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
 ┬─────┬ 2 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
-│˵    │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+0308 COMBINING DIAERESIS)
+│˵    │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
 │` ¨ ῾│ 4 … 
 ┴──┬──┴ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 … 
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
-        1 … Toter Akut (sieht aus wie U+0301 COMBINING ACUTE ACCENT)
-┬──┴──┬ 2 … Tote Cedilla (sieht aus wie U+0327 COMBINING CEDILLA)
-│¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+0337 COMBINING SHORT SOLIDUS OVERLAY)
-│´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+030B COMBINING DOUBLE ACUTE ACCENT)
+        1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
+┬──┴──┬ 2 … Tote Cedilla (sieht aus wie U+00B8 CEDILLA)
+│¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
+│´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
 ┴┬────┴ 5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
-        6 … Toter Punkt darüber (sieht aus wie U+0307 COMBINING DOT ABOVE)
+        6 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
 
 ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
 gleich erscheinen, sondern nur in Kombination mit einem weiteren Buchstaben) werden
