@@ -23,7 +23,7 @@ neo_tot1:
 
   else if (Ebene = 6) and !CheckDeadUni("c6",0x0304) ; Makron, tot
 
-    deadUni(0x00AF, "dead_macron", "c6")
+    deadAsc("¯", "dead_macron", "c6")
 return
 
 neo_tot2:
@@ -51,7 +51,7 @@ neo_tot3:
   EbeneAktualisieren()
   if (Ebene = 1) and !CheckDeadUni("a1",0x0301)      ; Akut, tot
 
-    deadUni("{´}{space}", "dead_acute", "a1")
+    deadAsc("{´}{space}", "dead_acute", "a1")
 
   else if (Ebene = 2) and !CheckDeadUni("a2",0x0327) ; Cedille, tot
 
