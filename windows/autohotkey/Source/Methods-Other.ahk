@@ -2,6 +2,7 @@ deadAsc(val1, val2, a) {
   global
   if !DeadSilence
     OutputChar(val1, val2)
+  else CheckComp(val2)
   DeadKey := a
 }
 
@@ -9,6 +10,7 @@ deadUni(val1, val2, a) {
   global
   if !DeadSilence
     SendUnicodeChar(val1, val2)
+  else CheckComp(val2)
   DeadKey := a
 }
 

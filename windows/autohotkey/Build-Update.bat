@@ -14,7 +14,7 @@ rem tskill %fn%
 echo Creating a new joined script from the Source code
 cd "%svn%\Source"
 REM The order *is* important!
-copy "Warning.ahk" + "Global-Part.ahk" + "Methods-Layers.ahk" + "Keys-Qwert-to-Neo.ahk" + "Keys-Neo.ahk"+ "Methods-Lights.ahk" + "Methods-Other.ahk" + "Compose.ahk" + "Methods-Unicode.ahk" + "Methods-ScreenKeyboard.ahk" "..\%fn%.ahk"
+copy "Warning.ahk" + "Global-Part.ahk" + "Methods-Layers.ahk" + "Keys-Qwert-to-Neo.ahk" + "Keys-Neo.ahk" + "Keys-Numbers.ahk" + "Keys-Special.ahk" + "Keys-Numpad.ahk" + "Keys-DeadKeys.ahk" + "Methods-Lights.ahk" + "Methods-Other.ahk" + "Compose.ahk" + "Methods-Unicode.ahk" + "Methods-ScreenKeyboard.ahk" "..\%fn%.ahk"
 cd..
 
 echo Compiling the new Driver using Autohotkey
