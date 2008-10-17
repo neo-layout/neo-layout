@@ -1,4 +1,4 @@
-== Kleine Anleitung ==
+﻿== Kleine Anleitung ==
 Die neue, an NEO2 angepasste Tastaturdefinitionsdatei de.neo2.keyboard für
 KTouch muss man nach der Installation von KTouch manuell installieren, da
 KTouch bisher nur die alte NEO-Belegung mitliefert.
