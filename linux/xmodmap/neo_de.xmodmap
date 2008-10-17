@@ -133,23 +133,23 @@ keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	   dead_doubleacute	NoSy
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 10 = 	1		degree		onesuperior	onesubscript  enfilledcircbullet  NoSymbol	notsign		NoSymbol
-!				°		¹	  	₁		•				¬
-keycode 11 = 	2		numerosign	twosuperior	twosubscript	U2023		NoSymbol	logicalor	NoSymbol
-!				№		²	  	₂		‣				∨
-keycode 12 = 	3		section		threesuperior	threesubscript	NoSymbol	NoSymbol	logicaland	NoSymbol
-!				§		³	  	₃						∧
-keycode 13 = 	4		guillemotright	U203A		U2113		Prior		Prior		downtack	NoSymbol
-!				»		›		ℓ liter						⊥ perpendicular
+keycode 10 = 	1		degree		onesuperior	onesubscript  	U00BA	   Pointer_EnableKeys	notsign		NoSymbol
+!				°		¹	  	₁		º	  (keypad-mouse mode)	¬
+keycode 11 = 	2		section		twosuperior	twosubscript	U00AA		NoSymbol	logicalor	NoSymbol
+!				§		²	  	₂		ª				∨
+keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logicaland	NoSymbol
+!				ℓ liter		³	  	₃		№				∧
+keycode 13 = 	4		guillemotright	U203A		NoSymbol	Prior		Prior		downtack	NoSymbol
+!				»		›								⊥ perpendicular
 keycode 14 = 	5		guillemotleft	U2039		femalesymbol	NoSymbol	NoSymbol	U2221		NoSymbol
 !				«		‹		♀						∡ angle sign
 keycode 15 = 	6		EuroSign	cent		malesymbol	sterling	NoSymbol	U2225		NoSymbol
 !				€		¢		♂		£				∥ parallel
 
-keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	U21C8		NoSymbol
-!				$		¥		κ		¤				⇈
-keycode 17 = 	8   doublelowquotemark    singlelowquotemark	leftanglebracket  KP_Divide	KP_Divide	U21C5		NoSymbol
-!				„		‚		⟨ (bra)		  /		/		⇅
+keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
+!				$		¥		κ		¤				→
+keycode 17 = 	8   doublelowquotemark    singlelowquotemark	leftanglebracket  KP_Divide	KP_Divide	infinity	NoSymbol
+!				„		‚		⟨ (bra)		  /		/		∞
 keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark	rightanglebracket KP_Multiply	KP_Multiply	containsas	NoSymbol
 !				“		‘		⟩ (ket)		  *		*		∋
 keycode 19 = 	0   rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Subtract	KP_Subtract	emptyset	NoSymbol
@@ -183,8 +183,8 @@ keycode 32 = 	f		F		equal		Greek_phi	KP_9		KP_9		Greek_PHI	Greek_PHI
 !						=		φ						Φ
 keycode 33 = 	q		Q		ampersand	U03D5		KP_Add		KP_Add		U211A		NoSymbol
 !						&		ϕ Greek_phi	+		+		ℚ rational
-keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  Pointer_EnableKeys  NoSymbol	jot		NoSymbol
-!	     	ß		ẞ Capital ß	ſ long s	ς		(keypad-mouse mode)		∘ ring operator
+keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  NoSymbol	NoSymbol	jot		NoSymbol
+!	     	ß		ẞ Capital ß	ſ long s	ς						∘ ring operator
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The home row (middle row)
@@ -235,10 +235,10 @@ keycode 57 = 	b		B		plus		Greek_beta	colon		NoSymbol	U21D0		NoSymbol
 !						+		β		:				⇐
 keycode 58 = 	m		M		percent		Greek_mu	KP_1		KP_1		ifonlyif	NoSymbol
 !						%		μ						⇔
-keycode 59 = comma		NoSymbol	quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
-!		,			.	"		ρ						⇒ implies 
-keycode 60 = period		NoSymbol	apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
-!		.				'		ϑ Greek_theta					Θ
+keycode 59 = comma	   enfilledcircbullet	quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
+!		,		•		"		ρ						⇒ implies 
+keycode 60 = period		U2023		apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
+!		.		‣		'		ϑ Greek_theta					Θ
 keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	variation	NoSymbol
 !						;		θ		;				∝ proportional to
 
