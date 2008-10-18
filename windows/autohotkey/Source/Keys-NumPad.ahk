@@ -203,7 +203,7 @@ return
 neo_NumpadSub:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni("c1",0x207B)
-                 or CheckDeadUni("t4",0x208B)))
+                 or CheckDeadUni("a3",0x208B)))
     send {blind}{NumpadSub}
   else if (Ebene = 3)
     SendUnicodeChar(0x2212, "U2212") ; Echtes Minus
@@ -218,7 +218,7 @@ return
 neo_NumpadAdd:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni("c1",0x207A)
-                 or CheckDeadUni("c5",0x208A)))
+                 or CheckDeadUni("a3",0x208A)))
     send {blind}{NumpadAdd}
   else if (Ebene = 3)
     OutputChar("±", "plusminus")
