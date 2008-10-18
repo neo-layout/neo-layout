@@ -65,12 +65,12 @@ return
 
 neo_SpaceUp:
   EbeneAktualisieren()
-  if (Ebene = 1) and !CheckDeadUni("t4",0x2010)  ; Echter Bindestrich
+  if (Ebene = 1) and !CheckDeadUni("a3",0x2010)  ; Echter Bindestrich
     OutputChar("{Space}", "Space")
   else if (Ebene = 2) or (Ebene = 3)
     Send {blind}{Space}
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x2070)
-                        or CheckDeadUni("c5",0x2080)))
+                        or CheckDeadUni("a3",0x2080)))
    OutputChar("{Numpad0}", "KP_0")
   else if (Ebene = 5)
     SendUnicodeChar(0x00A0, "U00A0") ; geschütztes Leerzeichen

@@ -2,12 +2,12 @@ neo_0:
   noCaps = 1
   EbeneAktualisieren()
   if Ebene12 and !(CheckDeadUni("c1",0x2070) ; Hochgestellte 0
-      or CheckDeadUni("c5",0x2080)) ; Tiefgestellte 0 
+                or CheckDeadUni("a3",0x2080)) ; Tiefgestellte 0 
     OutputChar12(0,"”",0,"rightdoublequotemark")
    else if (Ebene = 3)
      OutputChar("’", "rightsingleqoutemark")
    else if (Ebene = 4)
-     OutputChar("{NumpadSub}", "minus") ; s. Mail vom Sun, 14 Sep 2008 00:33:47 +0200
+     OutputChar("{NumpadSub}", "KP_Minus")
    else if (Ebene = 6)
      SendUnicodeChar(0x2205, "emptyset") ; leere Menge
 return
@@ -16,7 +16,7 @@ neo_1:
   noCaps=1
   EbeneAktualisieren()
   if Ebene12 and !(CheckDeadUni("c1",0x00B9) ; Hochgestellte 1
-                or CheckDeadUni("c5",0x2081)) ; Tiefgestellte 1
+                or CheckDeadUni("a3",0x2081)) ; Tiefgestellte 1
     OutputChar12(1,"°",1,"degree")
   else if (Ebene = 3)
     SendUnicodeChar(0x00B9, "onesuperior") ; Hochgestellte 1
@@ -32,7 +32,7 @@ neo_2:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1 and !(CheckDeadUni("c1",0x00B2) ; Hochgestellte 2
-                   or CheckDeadUni("c5",0x2082))) ; Tiefgestellte 2
+                   or CheckDeadUni("a3",0x2082))) ; Tiefgestellte 2
     OutputChar(2,2)
   else if (Ebene = 2)
     SendUnicodeChar(0x2116, "numerosign") ; Numero
@@ -50,7 +50,7 @@ neo_3:
   noCaps = 1
   EbeneAktualisieren()
   if Ebene12 and !(CheckDeadUni("c1",0x00B3) ; Hochgestellte 3
-                or CheckDeadUni("c5",0x2083)) ; Tiefgestellte 3
+                or CheckDeadUni("a3",0x2083)) ; Tiefgestellte 3
     OutputChar12(3,"§",3,"section")
   else if (Ebene = 3)
     SendUnicodeChar(0x00B3, "threesuperior") ; Hochgestellte 3
@@ -66,7 +66,7 @@ neo_4:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1) and !(CheckDeadUni("c1",0x2074) ; Hochgestellte 4
-                    or CheckDeadUni("c5",0x2084)) ; Tiefgestellte 4
+                    or CheckDeadUni("a3",0x2084)) ; Tiefgestellte 4
     OutputChar(4,4)
   else if (Ebene = 2)
     SendUnicodeChar(0x00BB, "guillemotright") ; Double guillemot right
@@ -84,7 +84,7 @@ neo_5:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1) and !(CheckDeadUni("c1",0x2075) ; Hochgestellte 5
-                    or CheckDeadUni("c5",0x2085)) ; Tiefgestellte 5
+                    or CheckDeadUni("a3",0x2085)) ; Tiefgestellte 5
     OutputChar(5,5)
   else if (Ebene = 2)
     SendUnicodeChar(0x00AB, "guillemotleft") ; Double guillemot left
@@ -100,7 +100,7 @@ neo_6:
   noCaps = 1
   EbeneAktualisieren()
   if (Ebene = 1) and !(CheckDeadUni("c1",0x2076) ; Hochgestellte 6
-                    or CheckDeadUni("c5",0x2086)) ; Tiefgestellte 6
+                    or CheckDeadUni("a3",0x2086)) ; Tiefgestellte 6
     OutputChar(6,6)
   else if (Ebene = 2)
     SendUnicodeChar(0x20AC, "EuroSign")
@@ -118,7 +118,7 @@ neo_7:
   noCaps = 1
   EbeneAktualisieren()
   if Ebene12 and !(CheckDeadUni("c1",0x2077) ; Hochgestellte 7
-                or CheckDeadUni("c5",0x2087)) ; Tiefgestellte 7
+                or CheckDeadUni("a3",0x2087)) ; Tiefgestellte 7
     OutputChar12(7,"$",7,"dollar")
   else if (Ebene = 3)
     OutputChar("¥", "yen")
@@ -134,7 +134,7 @@ neo_8:
   noCaps = 1
   EbeneAktualisieren()
   if Ebene12 and !(CheckDeadUni("c1",0x2078) ; Hochgestellte 8
-            or CheckDeadUni("c5",0x2088)) ; Tiefgestellte 8
+                or CheckDeadUni("a3",0x2088)) ; Tiefgestellte 8
     OutputChar12(8,"„",8,"doublelowquotemark")
   else if (Ebene = 3)
     OutputChar("‚", "singlelowquotemark")
@@ -150,7 +150,7 @@ neo_9:
   noCaps = 1
   EbeneAktualisieren()
   if Ebene12 and !(CheckDeadUni("c1",0x2079) ; Hochgestellte 9
-      or CheckDeadUni("c5",0x2089)) ; Tiefgestellte 9
+                or CheckDeadUni("a3",0x2089)) ; Tiefgestellte 9
     OutputChar12(9,"“",9,"leftdoublequotemark")
   else if (Ebene = 3)
     OutputChar("‘", "leftsinglequotemark")
