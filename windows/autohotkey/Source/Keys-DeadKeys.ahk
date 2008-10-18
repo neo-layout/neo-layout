@@ -33,13 +33,13 @@ neo_tot2:
 
     deadAsc("``{space}", "dead_grave", "g1")
 
-  if (Ebene = 2) and !CheckDeadUni("g2",0x030F)      ; Doppelgravis, tot
-
-    deadUni(0x02F5, "dead_doublegrave", "g2")
-
   else if (Ebene = 3) and !CheckDeadUni("g3",0x0308) ; Diärese, tot
 
     deadUni(0x00A8, "dead_diaeresis", "g3")
+
+  else if (Ebene = 4) and !CheckDeadUni("g4",0x030F)      ; Doppelgravis, tot
+
+    deadUni(0x02F5, "dead_doublegrave", "g4")
 
   else if (Ebene = 5) and !CheckDeadUni("g5",0x0485) ; Spiritus asper, tot
 
