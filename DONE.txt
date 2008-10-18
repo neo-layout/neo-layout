@@ -22,7 +22,7 @@ beschlossen wurden.
   europäische Sprachen, da viel häufiger verwendet von deutschen Schreibern –
   also NEO-Benutzern.
 
-- Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“   eine Option des Layouts „de“ sein.
+- Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“ eine Option des Layouts „de“ sein.
 
 - ü und ö getauscht.
 
@@ -70,7 +70,6 @@ beschlossen wurden.
 - Nutzt niemand OS X? Treiber…?
   Leider nicht. Aber ein erster Ausgangspunkt ist vielleicht:
   http://developer.apple.com/technotes/tn2002/tn2056.html
-
    
 - ‣ Mod3_Lock wird nicht gebraucht
   ‣ Shift+Shift zu Caps-Lock
