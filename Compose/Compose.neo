@@ -155,6 +155,10 @@
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
 
+# if you want to have ð and Ð with dead stroke instead of đ and Đ you should uncomment the next two lines
+# <dead_stroke> <d>                      : "ð"   U00F0 # LATIN SMALL LETTER ETH
+# <dead_stroke> <D>                      : "Ð"   U00D0 # LATIN CAPITAL LETTER ETH
+
 # other letters
 <Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
 <Multi_key> <L> <period>                 : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
