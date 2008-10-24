@@ -52,7 +52,8 @@ kann man anschließend mittels drücken beider Strg-Tasten zwischen qwertz und
 NEO wechseln.
 	Option "XkbLayout"  "de,de"
 	Option "XkbVariant" "neo,nodeadkeys"
-	Option "XkbOptions" "grp:ctrls_toggle"
+#	Option "XkbOptions" "grp:ctrls_toggle" # defekt im neuen X-Server!
+	Option "XkbOptions" "grp:shifts_toggle,grp_led:scroll" # das geht noch
 
 Alternativ auch hier in die ~/.bashrc, ~/.zshrc oder vergleichbares:
     alias asdf='setxkbmap de neo'
