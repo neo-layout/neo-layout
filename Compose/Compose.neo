@@ -70,6 +70,8 @@
 <Multi_key> <g> <O>                      : "Ο"   U039F # GREEK CAPITAL LETTER OMICRON
 <Multi_key> <G> <P>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
 <Multi_key> <g> <P>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <G> <R>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <g> <R>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
 <Multi_key> <G> <T>                      : "Τ"   U03A4 # GREEK CAPITAL LETTER TAU
 <Multi_key> <g> <T>                      : "Τ"   U03A4 # GREEK CAPITAL LETTER TAU
 <Multi_key> <G> <Y>                      : "Υ"   U03A5 # GREEK CAPITAL LETTER UPSILON
