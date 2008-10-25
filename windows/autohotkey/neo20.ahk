@@ -763,13 +763,11 @@ neo_a:
                  or CheckDeadUni12("c5",0x0103,0x0102)
                  or CheckDeadUni12("c6",0x0101,0x0100)
                  or CheckDeadUni12("g1",0x00E0,0x00C0)
-                 or CheckDeadUni12("g2",0x0201,0x0200)
                  or CheckDeadAsc12("g3","ä","Ä")
-                 or CheckDeadUni12("g5",0x1F01,0x1F09)
+                 or CheckDeadUni12("g4",0x0201,0x0200)
                  or CheckDeadUni12("a1",0x00E1,0x00C1)
                  or CheckDeadUni12("a2",0x0105,0x0104)
                  or CheckDeadUni12("a3",0x2C65,0x023A)
-                 or CheckDeadUni12("a5",0x1F00,0x1F08)
                  or CheckDeadUni12("a6",0x0227,0x0226)))
     OutputChar12("a","A","a","A")
   else if (Ebene = 3)
@@ -847,16 +845,17 @@ return
 
 neo_e:
   EbeneAktualisieren()
-  if (Ebene12 and !(CheckDeadUni12("a1",0x00E9,0x00C9)
-                 or CheckDeadUni12("a2",0x00E8,0x00C8)
-                 or CheckDeadUni12("a4",0x0117,0x0116)
-                 or CheckDeadUni12("a5",0x0119,0x0118)
-                 or CheckDeadUni12("c1",0x00EA,0x00CA)
-                 or CheckDeadUni12("c2",0x011B,0x011A)
-                 or CheckDeadUni12("c3",0x0115,0x0114)
-                 or CheckDeadUni12("t1",0x1EBD,0x1EBC)
-                 or CheckDeadUni12("t2",0x0113,0x0112)
-                 or CheckDeadAsc12("t3","ë","Ë")))
+  if (Ebene12 and !(CheckDeadUni12("c1",0x00EA,0x00CA)
+                 or CheckDeadUni12("c2",0x1EBD,0x1EBC)
+                 or CheckDeadUni12("c4",0x011B,0x011A)
+                 or CheckDeadUni12("c5",0x0115,0x0114)
+                 or CheckDeadUni12("c6",0x0113,0x0112)
+                 or CheckDeadUni12("g1",0x00E8,0x00C8)
+                 or CheckDeadAsc12("g3","ë","Ë")
+                 or CheckDeadUni12("g4",0x0205,0x0204)
+                 or CheckDeadUni12("a1",0x00E9,0x00C9)
+                 or CheckDeadUni12("a2",0x0119,0x0118)
+                 or CheckDeadUni12("a6",0x0117,0x0116)))
     OutputChar12("e","E","e","E")
   else if (Ebene = 3)
     OutputChar("{}}", "braceright")
@@ -932,9 +931,11 @@ neo_i:
                  or CheckDeadUni12("c6",0x012B,0x012A)
                  or CheckDeadUni12("g1",0x00EC,0x00CC)
                  or CheckDeadAsc12("g3","ï","Ï")
+                 or CheckDeadUni12("g4",0x0209,0x0208)
                  or CheckDeadUni12("a1",0x00ED,0x00CD)
-                 or CheckDeadUni12("a2",0x0131,0x0130)
-                 or CheckDeadUni12("a6",0x012F,0x012E)))
+                 or CheckDeadUni12("a2",0x012F,0x012E)
+                 or CheckDeadUni12("a3",0x0268,0x0197)
+                 or CheckDeadUni12("a6",0x0131,0x0130)))
     OutputChar12("i","I","i","I")
   else if (Ebene = 3)
     OutputChar("`/", "slash")
@@ -949,7 +950,8 @@ return
 neo_j:
   EbeneAktualisieren()
   if (Ebene12 and !(CheckDeadUni12("c1",0x0135,0x0134)
-                 or CheckDeadUni(  "c4",0x01F0)))
+                 or CheckDeadUni(  "c4",0x01F0)
+                 or CheckDeadUni12("a3",0x0249,0x0248)))
     OutputChar12("j","J","j","J")
   else if (Ebene = 3)
     OutputChar("`;", "semicolon")
@@ -1102,22 +1104,18 @@ return
 
 neo_s:
   EbeneAktualisieren()
-  if (Ebene12 and !LangSTastatur and !(CheckDeadUni12("a1",0x015B,0x015A)
+  if (Ebene12 and !(CheckDeadUni12("a1",0x015B,0x015A)
                  or CheckDeadUni12("a2",0x015F,0x015E)
                  or CheckDeadUni12("a6",0x1E61,0x1E60)
                  or CheckDeadUni12("c1",0x015D,0x015C)
                  or CheckDeadUni12("c4",0x0161,0x0160)
                  or CheckDeadUni12("a6",0x1E63,0x1A62))) {
-    if LangSTastatur and (Ebene = 1)
+    if (LangSTastatur and (Ebene = 1))
       SendUnicodeChar(0x017F, "17F") ; langes s
     else OutputChar12("s","S","s","S")
   } else if (Ebene = 3)
     OutputChar("?", "question")
-  else if Ebene7 {
-    if LangSTastatur
-      OutputChar("s", "s")
-    else SendUnicodeChar(0x017F, "17F")
-  } else if (Ebene = 4)
+  else if (Ebene = 4)
     OutputChar("¿", "questiondown")
   else if (Ebene = 5)
     SendUnicodeChar(0x03C3, "Greek_sigma") ;sigma
@@ -1926,13 +1924,13 @@ neo_tot2:
 
     deadAsc("``{space}", "dead_grave", "g1")
 
-  if (Ebene = 2) and !CheckDeadUni("g2",0x030F)      ; Doppelgravis, tot
-
-    deadUni(0x02F5, "dead_doublegrave", "g2")
-
   else if (Ebene = 3) and !CheckDeadUni("g3",0x0308) ; Diärese, tot
 
     deadUni(0x00A8, "dead_diaeresis", "g3")
+
+  else if (Ebene = 4) and !CheckDeadUni("g4",0x030F)      ; Doppelgravis, tot
+
+    deadUni(0x02F5, "dead_doublegrave", "g4")
 
   else if (Ebene = 5) and !CheckDeadUni("g5",0x0485) ; Spiritus asper, tot
 
