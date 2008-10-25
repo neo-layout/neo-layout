@@ -348,22 +348,18 @@ return
 
 neo_s:
   EbeneAktualisieren()
-  if (Ebene12 and !LangSTastatur and !(CheckDeadUni12("a1",0x015B,0x015A)
+  if (Ebene12 and !(CheckDeadUni12("a1",0x015B,0x015A)
                  or CheckDeadUni12("a2",0x015F,0x015E)
                  or CheckDeadUni12("a6",0x1E61,0x1E60)
                  or CheckDeadUni12("c1",0x015D,0x015C)
                  or CheckDeadUni12("c4",0x0161,0x0160)
                  or CheckDeadUni12("a6",0x1E63,0x1A62))) {
-    if LangSTastatur and (Ebene = 1)
+    if (LangSTastatur and (Ebene = 1))
       SendUnicodeChar(0x017F, "17F") ; langes s
     else OutputChar12("s","S","s","S")
   } else if (Ebene = 3)
     OutputChar("?", "question")
-  else if Ebene7 {
-    if LangSTastatur
-      OutputChar("s", "s")
-    else SendUnicodeChar(0x017F, "17F")
-  } else if (Ebene = 4)
+  else if (Ebene = 4)
     OutputChar("¿", "questiondown")
   else if (Ebene = 5)
     SendUnicodeChar(0x03C3, "Greek_sigma") ;sigma
