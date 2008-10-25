@@ -1,4 +1,4 @@
-Hier, im Verzeichnis grafik befinden sich Grafiken, die man ausdrucken kann,
+﻿Hier, im Verzeichnis grafik befinden sich Grafiken, die man ausdrucken kann,
 oder mit denen man (Aufsteller) die Tastaturbelegung lernen kann.
 
 == neo20-aufsteller.pdf – Zum Lernen ==
