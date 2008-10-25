@@ -1,4 +1,4 @@
-== Anleitung zur Benutzung von (NEO-)Unicode-Zeichen in Latex ==
+﻿== Anleitung zur Benutzung von (NEO-)Unicode-Zeichen in Latex ==
 Einige seltenere Unicodezeichen werden schon von aktuellen Latex-Distributionen
 unterstützt, jedoch sind auf der NEO-Tastaturbelegung noch einige, die noch
 nicht direkt unterstützt werden (zum Beispiel griechische Buchstaben oder
