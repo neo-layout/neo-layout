@@ -116,7 +116,7 @@ If LangSTastatur
   KeyboardLED(2,"on")
 
 ; Sollen tote Tasten blind angezeigt werden?
-IniRead,DeadSilence,%ini%,Global,DeadSilence,0
+IniRead,DeadSilence,%ini%,Global,DeadSilence,1
 
 ;Sollen Compose-Tasten blind angezeigt werden?
 IniRead,DeadCompose,%ini%,Global,DeadCompose,1
@@ -756,19 +756,21 @@ VK09SC00F::goto neo_tab
 
 neo_a:
   EbeneAktualisieren()
-  if (Ebene12 and !(CheckDeadUni12("c1",0x00E2,0x00C2)
-                 or CheckDeadUni12("c2",0x00E3,0x00C3)
-                 or CheckDeadAsc12("c3","å","Å")
-                 or CheckDeadUni12("c4",0x01CE,0x01CD)
-                 or CheckDeadUni12("c5",0x0103,0x0102)
-                 or CheckDeadUni12("c6",0x0101,0x0100)
-                 or CheckDeadUni12("g1",0x00E0,0x00C0)
-                 or CheckDeadAsc12("g3","ä","Ä")
-                 or CheckDeadUni12("g4",0x0201,0x0200)
-                 or CheckDeadUni12("a1",0x00E1,0x00C1)
-                 or CheckDeadUni12("a2",0x0105,0x0104)
-                 or CheckDeadUni12("a3",0x2C65,0x023A)
-                 or CheckDeadUni12("a6",0x0227,0x0226)))
+  if (((Ebene = 2) and !(CheckDeadUni("a5g1",0x1F02)
+                      or CheckDeadUni("g5g1",0x1F03)))
+       or (Ebene12 and !(CheckDeadUni12("c1",0x00E2,0x00C2)
+                      or CheckDeadUni12("c2",0x00E3,0x00C3)
+                      or CheckDeadAsc12("c3","å","Å")
+                      or CheckDeadUni12("c4",0x01CE,0x01CD)
+                      or CheckDeadUni12("c5",0x0103,0x0102)
+                      or CheckDeadUni12("c6",0x0101,0x0100)
+                      or CheckDeadUni12("g1",0x00E0,0x00C0)
+                      or CheckDeadAsc12("g3","ä","Ä")
+                      or CheckDeadUni12("g4",0x0201,0x0200)
+                      or CheckDeadUni12("a1",0x00E1,0x00C1)
+                      or CheckDeadUni12("a2",0x0105,0x0104)
+                      or CheckDeadUni12("a3",0x2C65,0x023A)
+                      or CheckDeadUni12("a6",0x0227,0x0226))))
     OutputChar12("a","A","a","A")
   else if (Ebene = 3)
     OutputChar("{{}", "braceleft")
@@ -801,7 +803,7 @@ neo_b:
   else if (Ebene = 5)
     SendUnicodeChar(0x03B2, "Greek_beta") ; beta
   else if (Ebene = 6)
-    SendUnicodeChar(0x21D2, "implies") ; Doppel-Pfeil rechts
+    SendUnicodeChar(0x21D0, "U21D0") ; Doppelpfeil links
 return
 
 neo_c:
@@ -960,7 +962,7 @@ neo_j:
   else if (Ebene = 5)
     SendUnicodeChar(0x03B8, "Greek_theta") ; theta
   else if (Ebene = 6)
-    SendUnicodeChar(0x2261, "identical") ; identisch
+    SendUnicodeChar(0x221D, "variation") ; proportional
 return
 
 neo_k:
@@ -1180,7 +1182,7 @@ neo_w:
   if (Ebene12 and !(CheckDeadUni12("c1",0x0175,0x0174)))
     OutputChar12("w","W","w","W")
   else if (Ebene = 3)
-    SendUnicodeChar(0x005E, "asciicircum") ; Zirkumflex
+    OutputChar("{^}{space}", "asciicircum") ; Zirkumflex
   else if (Ebene = 4)
     OutputChar("{Insert}", "Insert") ; Einfg
   else if (Ebene = 5)
@@ -1194,7 +1196,7 @@ neo_x:
   if Ebene12
     OutputChar12("x","X","x","X")
   else if (Ebene = 3)
-    SendUnicodeChar(0x2026, "ellipsis") ; Ellipse horizontal
+    OutputChar("…", "ellipsis") ; Ellipse horizontal
   else if (Ebene = 4)
     SendUnicodeChar(0x22EE, "U22EE") ; Ellipse vertikal
   else if (Ebene = 5)
@@ -1246,7 +1248,7 @@ neo_ä:
   else if (Ebene = 5)
     SendUnicodeChar(0x03B7, "Greek_eta") ; eta
   else if (Ebene = 6)
-    SendUnicodeChar(0x211C, "U221C") ; Fraktur R
+    SendUnicodeChar(0x2135, "U2135") ; Kardinalzahlen, Aleph-Symbol
 return
 
 neo_ö:
@@ -1275,7 +1277,7 @@ neo_ü:
   else if (Ebene = 4)
     OutputChar("{Esc}", "Escape")
   else if (Ebene = 6)
-    SendUnicodeChar(0x221D, "variation") ; proportional
+    SendUnicodeChar(0x211C, "U221C") ; Fraktur R
 return
 
 neo_sz:
@@ -1306,6 +1308,8 @@ neo_0:
      OutputChar("’", "rightsingleqoutemark")
    else if (Ebene = 4)
      OutputChar("{NumpadSub}", "KP_Minus")
+   else if (Ebene = 5)
+     SendUnicodeChar(0x2080, "U2080")
    else if (Ebene = 6)
      SendUnicodeChar(0x2205, "emptyset") ; leere Menge
 return
@@ -1317,27 +1321,25 @@ neo_1:
                 or CheckDeadUni("a3",0x2081)) ; Tiefgestellte 1
     OutputChar12(1,"°",1,"degree")
   else if (Ebene = 3)
-    SendUnicodeChar(0x00B9, "onesuperior") ; Hochgestellte 1
+    OutputChar("¹", "onesuperior") ; Hochgestellte 1
   else if (Ebene = 4)
-    SendUnicodeChar(0x2022, "enfilledcircbullet") ; Bullet
+    OutputChar("º", "U00BA") ; männlicher Ordinalindikator (º)
   else if (Ebene = 5)
     SendUnicodeChar(0x2081, "U2081") ; Tiefgestellte 1
   else if (Ebene = 6)
-    SendUnicodeChar(0x00AC, "notsign") ; Nicht-Symbol
+    OutputChar("¬", "notsign") ; Nicht-Symbol
 return
 
 neo_2:
   noCaps = 1
   EbeneAktualisieren()
-  if (Ebene = 1 and !(CheckDeadUni("c1",0x00B2) ; Hochgestellte 2
-                   or CheckDeadUni("a3",0x2082))) ; Tiefgestellte 2
-    OutputChar(2,2)
-  else if (Ebene = 2)
-    SendUnicodeChar(0x2116, "numerosign") ; Numero
+  if Ebene12 and !(CheckDeadUni("c1",0x00B2) ; Hochgestellte 2
+                or CheckDeadUni("a3",0x2082)) ; Tiefgestellte 2
+    OutputChar12(2,"§",2,"section")
   else if (Ebene = 3)
-    SendUnicodeChar(0x00B2, "twosuperior") ; Hochgestellte 2
+    OutputChar("²", "twosuperior") ; Hochgestellte 2
   else if (Ebene = 4)
-    SendUnicodeChar(0x2023, "U2023") ; Aufzählungspfeil
+    OutputChar("ª", "U00AA") ; weiblicher Ordinalindikator (ª)
   else if (Ebene = 5)
     SendUnicodeChar(0x2082, "U2082") ; Tiefgestellte 2
   else if (Ebene = 6)
@@ -1347,13 +1349,15 @@ return
 neo_3:
   noCaps = 1
   EbeneAktualisieren()
-  if Ebene12 and !(CheckDeadUni("c1",0x00B3) ; Hochgestellte 3
-                or CheckDeadUni("a3",0x2083)) ; Tiefgestellte 3
-    OutputChar12(3,"§",3,"section")
+  if (Ebene = 1) and !(CheckDeadUni("c1",0x00B3) ; Hochgestellte 3
+                    or CheckDeadUni("a3",0x2083)) ; Tiefgestellte 3
+    OutputChar(3,3)
+  else if (Ebene = 2)
+    SendUnicodeChar(0x2113, "U2113") ; kleines l (Skript)
   else if (Ebene = 3)
-    SendUnicodeChar(0x00B3, "threesuperior") ; Hochgestellte 3
+    OutputChar("³", "threesuperior") ; Hochgestellte 3
   else if (Ebene = 4)
-    SendUnicodeChar(0x266B, "U226B") ; 2 Achtelnoten
+    SendUnicodeChar(0x2116, "numerosign") ; Numero
   else if (Ebene = 5)
     SendUnicodeChar(0x2083, "U2083") ; Tiefgestellte 3
   else if (Ebene = 6)
@@ -1367,13 +1371,13 @@ neo_4:
                     or CheckDeadUni("a3",0x2084)) ; Tiefgestellte 4
     OutputChar(4,4)
   else if (Ebene = 2)
-    SendUnicodeChar(0x00BB, "guillemotright") ; Double guillemot right
+    OutputChar("»", "guillemotright")
   else if (Ebene = 3)
     OutputChar("›", "U230A") ; Single guillemot right
   else if (Ebene = 4)
     OutputChar("{PgUp}", "Prior") ; Bild auf
   else if (Ebene = 5)
-    SendUnicodeChar(0x2113, "U2213") ; Script small L
+    OutputChar("†", "dagger") ; Kreuz
   else if (Ebene = 6)
     SendUnicodeChar(0x22A5, "uptack") ; Senkrecht
 return
@@ -1385,11 +1389,11 @@ neo_5:
                     or CheckDeadUni("a3",0x2085)) ; Tiefgestellte 5
     OutputChar(5,5)
   else if (Ebene = 2)
-    SendUnicodeChar(0x00AB, "guillemotleft") ; Double guillemot left
+    OutputChar("«", "guillemotleft") ; Double guillemot left
   else if (Ebene = 3)
     OutputChar("‹", "U2039") ; Single guillemot left
   else if (Ebene = 5)
-    SendUnicodeChar(0x0AF8, "femalesymbol") ; Kreuz (Dagger)
+    SendUnicodeChar(0x2640, "femalesymbol")
   else if (Ebene = 6)
     SendUnicodeChar(0x2221, "U2221") ; Winkel
 return
@@ -1407,7 +1411,7 @@ neo_6:
   else if (Ebene = 4)
     OutputChar("£", "sterling")
   else if (Ebene = 5)
-    SendUnicodeChar(0x0AF7, "malesymbol")
+    SendUnicodeChar(0x2642, "malesymbol")
   else if (Ebene = 6)
     SendUnicodeChar(0x2225, "U2225") ; parallel
 return
@@ -1425,7 +1429,7 @@ neo_7:
   else if (Ebene = 5)
     SendUnicodeChar(0x03BA, "Greek_kappa") ; greek small letter kappa
   else if (Ebene = 6)
-    SendUnicodeChar(0x2209, "notelementof") ; nicht Element von
+    SendUnicodeChar(0x2192, "rightarrow") ; Rechtspfeil
 return
 
 neo_8:
@@ -1441,7 +1445,7 @@ neo_8:
   else if (Ebene = 5)
     SendUnicodeChar(0x27E8, "U27E8") ; bra (öffnende spitze Klammer)
   else if (Ebene = 6)
-    SendUnicodeChar(0x2204, "U2204") ; es existiert nicht
+    SendUnicodeChar(0x221E, "infinity")
 return
 
 neo_9:
@@ -1466,7 +1470,7 @@ neo_punkt:
   if (Ebene = 1)
     OutputChar(".", "period")
   else if (Ebene = 2)
-    SendUnicodeChar("0x2026", "ellipsis") ; Ellipse
+    SendUnicodeChar(0x2023, "") ; Dreieckiges Aufzählungszeichen
   else if (Ebene = 3)
     OutputChar("'", "apostrophe")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
@@ -1484,7 +1488,7 @@ neo_komma:
   if (Ebene = 1)
     OutputChar(",", "comma")
   else if (Ebene = 2)
-    SendUnicodeChar(0x22EE, "U22EE") ; vertikale Ellipse
+    OutputChar("•", "enfilledcircbullet") ; Bullet
   else if (Ebene = 3)
     OutputChar(Chr(34), "quotedbl")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B2)
@@ -1493,7 +1497,7 @@ neo_komma:
   else if (Ebene = 5)
     SendUnicodeChar(0x03C1, "Greek_rho") ; rho
   else if (Ebene = 6)
-    SendUnicodeChar(0x21D0, "U21D0") ; Doppelpfeil links
+    SendUnicodeChar(0x21D2, "implies") ; Doppelpfeil rechts
 return
 
 neo_strich:
@@ -1572,11 +1576,12 @@ return
 return
 
 neo_tab:
-  if (IsMod3Pressed()) { ; Compose!
+  EbeneAktualisieren()
+  if IsMod3Pressed() { ; Compose!
     DeadKey := "comp"
     CompKey := ""
   } else {
-    OutputChar("{Tab}","Tab")
+    OutputChar("{Tab}", "Tab")
     DeadKey := ""
     CompKey := ""
   } return
@@ -1648,7 +1653,7 @@ neo_Numpad0:
   else if (Ebene = 4)
     send {blind}{NumpadIns}
   else if (Ebene = 5)
-    SendUnicodeChar(0x2030, "U2030") ; Promille
+    OutputChar("‰", "U2030") ; Promille
   else if (Ebene = 6)
     SendUnicodeChar(0x25A1, "U25A1") ; white square
 return
@@ -1664,9 +1669,9 @@ neo_Numpad1:
   else if (Ebene = 4)
     send {blind}{NumpadEnd}
   else if (Ebene = 5)
-    SendUnicodeChar(0x226A, "U226A") ; much less
-  else if (Ebene = 6)
     SendUnicodeChar(0x2264, "lessthanequal")
+  else if (Ebene = 6)
+    SendUnicodeChar(0x230A, "downstile") ;linke Untergrenze
 return
 
 neo_Numpad2:
@@ -1696,9 +1701,9 @@ neo_Numpad3:
   else if (Ebene = 4)
     send {blind}{NumpadPgDn}
   else if (Ebene = 5)
-    SendUnicodeChar(0x226B, "U226B") ; much greater
-  else if (Ebene = 6)
     SendUnicodeChar(0x2265, "greaterthanequal")
+  else if (Ebene = 6)
+    SendUnicodeChar(0x230B, "U230B") ; rechte Untergrenze
 return
 
 neo_Numpad4:
@@ -1724,7 +1729,7 @@ neo_Numpad5:
   else if (Ebene = 2)
     SendUnicodeChar(0x20AC, "EuroSign") ; Euro
   else if (Ebene = 3)
-    SendUnicodeChar(0x221E, "infinity") ; Unendlich
+    SendUnicodeChar(0x00A6, "brokenbar")
   else if (Ebene = 4)
     send {blind}{NumPadClear} ; begin
   else if (Ebene = 5)
@@ -1737,8 +1742,6 @@ neo_Numpad6:
   EbeneAktualisieren()
   if (Ebene = 1)
     OutputChar("{Numpad6}", "KP_6")
-  if (Ebene = 2)
-    OutputChar("¦", "brokenbar")
   else if (Ebene = 3)
     SendUnicodeChar(0x2192, "rightarrow") ; Rechtspfeil
   else if (Ebene = 4)
@@ -1760,7 +1763,7 @@ neo_Numpad7:
   else if (Ebene = 4)
     send {blind}{NumpadHome}
   else if (Ebene = 5)
-    SendUnicodeChar(0x230A, "downstile") ;linke Untergrenze
+    SendUnicodeChar(0x226A, "U226A") ; much less
   else if (Ebene = 6)
     SendUnicodeChar(0x2308, "upstile") ; linke Obergrenze
 return
@@ -1792,7 +1795,7 @@ neo_Numpad9:
   else if (Ebene = 4)
     send {blind}{NumpadPgUp}
   else if (Ebene = 5)
-    SendUnicodeChar(0x230B, "U230B") ; rechte Untergrenze
+    SendUnicodeChar(0x226B, "U226B") ; much greater
   else if (Ebene = 6)
     SendUnicodeChar(0x2309, "U2309") ; rechte Obergrenze
 return
@@ -1928,7 +1931,7 @@ neo_tot2:
 
     deadUni(0x00A8, "dead_diaeresis", "g3")
 
-  else if (Ebene = 4) and !CheckDeadUni("g4",0x030F)      ; Doppelgravis, tot
+  else if (Ebene = 4) and !CheckDeadUni("g4",0x030F) ; Doppelgravis, tot
 
     deadUni(0x02F5, "dead_doublegrave", "g4")
 
@@ -2218,7 +2221,46 @@ CheckComp(d) {
   }
 }
 
-
+CumulateDeadKey(a) {
+  if DeadKey = a5
+  { if a = g1
+      DeadKey = a5g1
+    else if a = a1
+      DeadKey = a5a1
+    else if a = a2
+      DeadKey = a5a2
+    else if a = g1a2
+      DeadKey = a5g1a2
+    else if a = a1a2
+      DeadKey = a5a1a2
+    else if a = c1a2
+      DeadKey = a5c1a2
+  } else if DeadKey = g5
+  { if a = g1
+      DeadKey = g5g1
+    else if a = a1
+      DeadKey = g5a1
+    else if a = a2
+      DeadKey = g5a2
+    else if a = g1a2
+      DeadKey = g5g1a2
+    else if a = a1a2
+      DeadKey = g5a1a2
+    else if a = c1a2
+      DeadKey = g5c1a2
+  } else if DeadKey = g1
+  { if a = a5
+      DeadKey = a5g1
+    else if a = g5
+      DeadKey = g5g1
+    else if a = a2
+      DeadKey = g1a2
+    else if a = a5a2
+      DeadKey = a5g1a2
+    else if a = g5a2
+      DeadKey = g5g1a2
+  }
+}
 CheckCompose() {
 CheckCompUni("<G> <A>", 0x391)
 CheckCompUni("<G> <B>", 0x392)
@@ -2575,7 +2617,6 @@ CheckCompUni("<femalesymbol> <femalesymbol>", 0x26A2)
 CheckCompUni("<malesymbol> <malesymbol>", 0x26A3)
 CheckCompUni("<femalesymbol> <malesymbol>", 0x26A4)
 CheckCompUni("<malesymbol> <femalesymbol>", 0x26A5)
-CheckCompUni("<Tab>", 0x266B)
 CheckCompUni("<underscore> <underscore>", 0x332)
 CheckCompUni("<apostrophe> <space>", 0x27)
 CheckCompUni("<space> <greater>", 0x5E)

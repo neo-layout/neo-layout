@@ -1,18 +1,20 @@
 neo_a:
   EbeneAktualisieren()
-  if (Ebene12 and !(CheckDeadUni12("c1",0x00E2,0x00C2)
-                 or CheckDeadUni12("c2",0x00E3,0x00C3)
-                 or CheckDeadAsc12("c3","å","Å")
-                 or CheckDeadUni12("c4",0x01CE,0x01CD)
-                 or CheckDeadUni12("c5",0x0103,0x0102)
-                 or CheckDeadUni12("c6",0x0101,0x0100)
-                 or CheckDeadUni12("g1",0x00E0,0x00C0)
-                 or CheckDeadAsc12("g3","ä","Ä")
-                 or CheckDeadUni12("g4",0x0201,0x0200)
-                 or CheckDeadUni12("a1",0x00E1,0x00C1)
-                 or CheckDeadUni12("a2",0x0105,0x0104)
-                 or CheckDeadUni12("a3",0x2C65,0x023A)
-                 or CheckDeadUni12("a6",0x0227,0x0226)))
+  if (((Ebene = 2) and !(CheckDeadUni("a5g1",0x1F02)
+                      or CheckDeadUni("g5g1",0x1F03)))
+       or (Ebene12 and !(CheckDeadUni12("c1",0x00E2,0x00C2)
+                      or CheckDeadUni12("c2",0x00E3,0x00C3)
+                      or CheckDeadAsc12("c3","å","Å")
+                      or CheckDeadUni12("c4",0x01CE,0x01CD)
+                      or CheckDeadUni12("c5",0x0103,0x0102)
+                      or CheckDeadUni12("c6",0x0101,0x0100)
+                      or CheckDeadUni12("g1",0x00E0,0x00C0)
+                      or CheckDeadAsc12("g3","ä","Ä")
+                      or CheckDeadUni12("g4",0x0201,0x0200)
+                      or CheckDeadUni12("a1",0x00E1,0x00C1)
+                      or CheckDeadUni12("a2",0x0105,0x0104)
+                      or CheckDeadUni12("a3",0x2C65,0x023A)
+                      or CheckDeadUni12("a6",0x0227,0x0226))))
     OutputChar12("a","A","a","A")
   else if (Ebene = 3)
     OutputChar("{{}", "braceleft")
@@ -45,7 +47,7 @@ neo_b:
   else if (Ebene = 5)
     SendUnicodeChar(0x03B2, "Greek_beta") ; beta
   else if (Ebene = 6)
-    SendUnicodeChar(0x21D2, "implies") ; Doppel-Pfeil rechts
+    SendUnicodeChar(0x21D0, "U21D0") ; Doppelpfeil links
 return
 
 neo_c:
@@ -204,7 +206,7 @@ neo_j:
   else if (Ebene = 5)
     SendUnicodeChar(0x03B8, "Greek_theta") ; theta
   else if (Ebene = 6)
-    SendUnicodeChar(0x2261, "identical") ; identisch
+    SendUnicodeChar(0x221D, "variation") ; proportional
 return
 
 neo_k:
@@ -424,7 +426,7 @@ neo_w:
   if (Ebene12 and !(CheckDeadUni12("c1",0x0175,0x0174)))
     OutputChar12("w","W","w","W")
   else if (Ebene = 3)
-    SendUnicodeChar(0x005E, "asciicircum") ; Zirkumflex
+    OutputChar("{^}{space}", "asciicircum") ; Zirkumflex
   else if (Ebene = 4)
     OutputChar("{Insert}", "Insert") ; Einfg
   else if (Ebene = 5)
@@ -438,7 +440,7 @@ neo_x:
   if Ebene12
     OutputChar12("x","X","x","X")
   else if (Ebene = 3)
-    SendUnicodeChar(0x2026, "ellipsis") ; Ellipse horizontal
+    OutputChar("…", "ellipsis") ; Ellipse horizontal
   else if (Ebene = 4)
     SendUnicodeChar(0x22EE, "U22EE") ; Ellipse vertikal
   else if (Ebene = 5)
@@ -490,7 +492,7 @@ neo_ä:
   else if (Ebene = 5)
     SendUnicodeChar(0x03B7, "Greek_eta") ; eta
   else if (Ebene = 6)
-    SendUnicodeChar(0x211C, "U221C") ; Fraktur R
+    SendUnicodeChar(0x2135, "U2135") ; Kardinalzahlen, Aleph-Symbol
 return
 
 neo_ö:
@@ -519,7 +521,7 @@ neo_ü:
   else if (Ebene = 4)
     OutputChar("{Esc}", "Escape")
   else if (Ebene = 6)
-    SendUnicodeChar(0x221D, "variation") ; proportional
+    SendUnicodeChar(0x211C, "U221C") ; Fraktur R
 return
 
 neo_sz:

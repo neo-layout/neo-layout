@@ -143,4 +143,44 @@ CheckComp(d) {
   }
 }
 
+CumulateDeadKey(a) {
+  if DeadKey = a5
+  { if a = g1
+      DeadKey = a5g1
+    else if a = a1
+      DeadKey = a5a1
+    else if a = a2
+      DeadKey = a5a2
+    else if a = g1a2
+      DeadKey = a5g1a2
+    else if a = a1a2
+      DeadKey = a5a1a2
+    else if a = c1a2
+      DeadKey = a5c1a2
+  } else if DeadKey = g5
+  { if a = g1
+      DeadKey = g5g1
+    else if a = a1
+      DeadKey = g5a1
+    else if a = a2
+      DeadKey = g5a2
+    else if a = g1a2
+      DeadKey = g5g1a2
+    else if a = a1a2
+      DeadKey = g5a1a2
+    else if a = c1a2
+      DeadKey = g5c1a2
+  } else if DeadKey = g1
+  { if a = a5
+      DeadKey = a5g1
+    else if a = g5
+      DeadKey = g5g1
+    else if a = a2
+      DeadKey = g1a2
+    else if a = a5a2
+      DeadKey = a5g1a2
+    else if a = g5a2
+      DeadKey = g5g1a2
+  }
+}
 

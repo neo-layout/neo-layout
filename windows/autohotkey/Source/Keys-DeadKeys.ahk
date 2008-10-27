@@ -37,7 +37,7 @@ neo_tot2:
 
     deadUni(0x00A8, "dead_diaeresis", "g3")
 
-  else if (Ebene = 4) and !CheckDeadUni("g4",0x030F)      ; Doppelgravis, tot
+  else if (Ebene = 4) and !CheckDeadUni("g4",0x030F) ; Doppelgravis, tot
 
     deadUni(0x02F5, "dead_doublegrave", "g4")
 

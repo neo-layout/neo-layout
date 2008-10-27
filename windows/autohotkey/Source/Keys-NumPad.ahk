@@ -9,7 +9,7 @@ neo_Numpad0:
   else if (Ebene = 4)
     send {blind}{NumpadIns}
   else if (Ebene = 5)
-    SendUnicodeChar(0x2030, "U2030") ; Promille
+    OutputChar("‰", "U2030") ; Promille
   else if (Ebene = 6)
     SendUnicodeChar(0x25A1, "U25A1") ; white square
 return
@@ -25,9 +25,9 @@ neo_Numpad1:
   else if (Ebene = 4)
     send {blind}{NumpadEnd}
   else if (Ebene = 5)
-    SendUnicodeChar(0x226A, "U226A") ; much less
-  else if (Ebene = 6)
     SendUnicodeChar(0x2264, "lessthanequal")
+  else if (Ebene = 6)
+    SendUnicodeChar(0x230A, "downstile") ;linke Untergrenze
 return
 
 neo_Numpad2:
@@ -57,9 +57,9 @@ neo_Numpad3:
   else if (Ebene = 4)
     send {blind}{NumpadPgDn}
   else if (Ebene = 5)
-    SendUnicodeChar(0x226B, "U226B") ; much greater
-  else if (Ebene = 6)
     SendUnicodeChar(0x2265, "greaterthanequal")
+  else if (Ebene = 6)
+    SendUnicodeChar(0x230B, "U230B") ; rechte Untergrenze
 return
 
 neo_Numpad4:
@@ -85,7 +85,7 @@ neo_Numpad5:
   else if (Ebene = 2)
     SendUnicodeChar(0x20AC, "EuroSign") ; Euro
   else if (Ebene = 3)
-    SendUnicodeChar(0x221E, "infinity") ; Unendlich
+    SendUnicodeChar(0x00A6, "brokenbar")
   else if (Ebene = 4)
     send {blind}{NumPadClear} ; begin
   else if (Ebene = 5)
@@ -98,8 +98,6 @@ neo_Numpad6:
   EbeneAktualisieren()
   if (Ebene = 1)
     OutputChar("{Numpad6}", "KP_6")
-  if (Ebene = 2)
-    OutputChar("¦", "brokenbar")
   else if (Ebene = 3)
     SendUnicodeChar(0x2192, "rightarrow") ; Rechtspfeil
   else if (Ebene = 4)
@@ -121,7 +119,7 @@ neo_Numpad7:
   else if (Ebene = 4)
     send {blind}{NumpadHome}
   else if (Ebene = 5)
-    SendUnicodeChar(0x230A, "downstile") ;linke Untergrenze
+    SendUnicodeChar(0x226A, "U226A") ; much less
   else if (Ebene = 6)
     SendUnicodeChar(0x2308, "upstile") ; linke Obergrenze
 return
@@ -153,7 +151,7 @@ neo_Numpad9:
   else if (Ebene = 4)
     send {blind}{NumpadPgUp}
   else if (Ebene = 5)
-    SendUnicodeChar(0x230B, "U230B") ; rechte Untergrenze
+    SendUnicodeChar(0x226B, "U226B") ; much greater
   else if (Ebene = 6)
     SendUnicodeChar(0x2309, "U2309") ; rechte Obergrenze
 return
