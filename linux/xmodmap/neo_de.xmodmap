@@ -75,16 +75,16 @@ keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
 ! Mod4(rechts)+Mod4(links) lässt Mod4 einrasten (Mod4Lock)
 ! das funktioniert nur in dieser Reihenfolge, da Mod4(rechts) (=Qwertz-AltGr) nur 4 Ebenen hat
 ! Der Lock lässt sich durch ein weiteres Mod4 lösen.
-keycode 94  = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
-keycode 113 = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
+keysym less = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
+keysym ISO_Level3_Shift = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! window keys
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 115 = Super_L
+! keysym Super_L = Super_L
 ! keycode 116 = Super_R
-keycode 116 = Multi_key Multi_key
-add Mod4 = Super_L
+! keysym Multi_key = Multi_key Multi_key
+! add Mod4 = Super_L
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! general Lock
@@ -254,7 +254,7 @@ keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	variation	NoSymbol
 
 keycode 77  = Tab 		ISO_Left_Tab	equal		approxeq	identical	NoSymbol
 !						=		≈ almost equal	≡ identical to
-keycode 112 = KP_Divide		KP_Divide	division	U2300		U2223		NoSymbol
+keysym KP_Divide = KP_Divide		KP_Divide	division	U2300		U2223		NoSymbol
 !		/		/		÷		⌀ diameter	∣ divides
 keycode 63  = KP_Multiply	KP_Multiply	U22C5		U2299		U2297		NoSymbol
 !		*		*		⋅ dot		⊙ cirled dot	⊗ circled times
@@ -298,7 +298,7 @@ keycode 88 =  KP_2		heart		downarrow	union		U22C3		NoSymbol
 !				♥		↓		∪		⋃ n-ary union
 keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol
 !				♠		⇌		≥		⌋
-keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
+! keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
 
 
