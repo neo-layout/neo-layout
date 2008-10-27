@@ -4,7 +4,7 @@ neo_punkt:
   if (Ebene = 1)
     OutputChar(".", "period")
   else if (Ebene = 2)
-    SendUnicodeChar("0x2026", "ellipsis") ; Ellipse
+    SendUnicodeChar(0x2023, "") ; Dreieckiges Aufzählungszeichen
   else if (Ebene = 3)
     OutputChar("'", "apostrophe")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B3)
@@ -22,7 +22,7 @@ neo_komma:
   if (Ebene = 1)
     OutputChar(",", "comma")
   else if (Ebene = 2)
-    SendUnicodeChar(0x22EE, "U22EE") ; vertikale Ellipse
+    OutputChar("•", "enfilledcircbullet") ; Bullet
   else if (Ebene = 3)
     OutputChar(Chr(34), "quotedbl")
   else if ((Ebene = 4) and !(CheckDeadUni("c1",0x00B2)
@@ -31,7 +31,7 @@ neo_komma:
   else if (Ebene = 5)
     SendUnicodeChar(0x03C1, "Greek_rho") ; rho
   else if (Ebene = 6)
-    SendUnicodeChar(0x21D0, "U21D0") ; Doppelpfeil links
+    SendUnicodeChar(0x21D2, "implies") ; Doppelpfeil rechts
 return
 
 neo_strich:
@@ -110,11 +110,12 @@ return
 return
 
 neo_tab:
-  if (IsMod3Pressed()) { ; Compose!
+  EbeneAktualisieren()
+  if IsMod3Pressed() { ; Compose!
     DeadKey := "comp"
     CompKey := ""
   } else {
-    OutputChar("{Tab}","Tab")
+    OutputChar("{Tab}", "Tab")
     DeadKey := ""
     CompKey := ""
   } return

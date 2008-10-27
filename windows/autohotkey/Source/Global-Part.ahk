@@ -71,7 +71,7 @@ If LangSTastatur
   KeyboardLED(2,"on")
 
 ; Sollen tote Tasten blind angezeigt werden?
-IniRead,DeadSilence,%ini%,Global,DeadSilence,0
+IniRead,DeadSilence,%ini%,Global,DeadSilence,1
 
 ;Sollen Compose-Tasten blind angezeigt werden?
 IniRead,DeadCompose,%ini%,Global,DeadCompose,1
