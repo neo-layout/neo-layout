@@ -74,7 +74,7 @@ ED1(pos,e1) {
 ******************************************************
 */
 ; Reihe 1
-ED("VKDCSC029","TC__1","TC__2","TC__3","TC__4","TC__5","TC__6","U0302","U0306") ; circumflex
+ED("VKDCSC029","Tcflx","Ttlde","Tobrg","Tcron","Tbrve","Tmcrn") ; circumflex
 ED("VK31SC002","U0031","U00B0","U00B9","U2022","U2640","U00AC") ; 1
 ED("VK32SC003","U0032","U2116","U00B2","U2023","U26A5","U2228") ; 2
 ED("VK33SC004","U0033","U00A7","U00B3",""     ,"U2642","U2227") ; 3
@@ -86,7 +86,7 @@ ED("VK38SC009","U0038","U201E","U201A","SNDiv","U27E8","U2204") ; 8
 ED("VK39SC00A","U0039","U201C","U2018","SNMul","U27E9","U2226") ; 9
 ED("VK30SC00B","U0030","U201D","U2019","SNSub",""     ,"U2205") ; 0
 ED("VKDBSC00C","U002D","U2013","U2014",""     ,"U2011","U00AD") ; -
-ED("VKDDSC00D","TA__1","TA__2","TA__3","TA__4","TA__5","TA__6") ; akut
+ED("VKDDSC00D","Tgrav",""     ,"Tdrss","Tdgrv","U1FFE",""     ) ; grave
 ; Reihe 2
 ED("VK51SC010","U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
 ED("VK57SC011","U0076","U0056","U005F","SBack",""     ,"U2259") ; v
@@ -99,7 +99,7 @@ ED("VK49SC017","U0067","U0047","U003E","SN__8","U03B3","U0393") ; g
 ED("VK4FSC018","U0066","U0046","U003D","SN__9","U03C6","U03A6") ; f
 ED("VK50SC019","U0071","U0051","U0026","SNAdd","U03D5","U211A") ; q
 ED("VKBASC01A","U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
-ED("VKBBSC01B","TT__1","TT__2","TT__3","TT__4","TT__5","TT__6","U0308") ; tilde
+ED("VKBBSC01B","Tacut","Tcedi","Tstrk","Tdbac","U1FBF","Tabdt") ; acute
 ; Reihe 3
 ED("VK41SC01E","U0075","U0055","U005C","SHome",""     ,"U222E") ; u
 ED("VK53SC01F","U0069","U0049","U002F","SLeft","U03B9","U222B") ; i
