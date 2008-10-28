@@ -365,14 +365,14 @@ TONOS <Multi_key> <g> <A>                                  : "Ά" U0386 # GREEK 
 <U1FFE> <dead_grave> <Multi_key> <g> <A>                   : "Ἃ" U1F0B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
 <dead_grave> <U1FFE> <Multi_key> <G> <A>                   : "Ἃ" U1F0B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
 <dead_grave> <U1FFE> <Multi_key> <g> <A>                   : "Ἃ" U1F0B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA
-<U1FBF> <dead_acute <Multi_key> <G> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
-<U1FBF> <dead_acute <Multi_key> <g> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
-<dead_acute <U1FBF> <Multi_key> <G> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
-<dead_acute <U1FBF> <Multi_key> <g> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
-<U1FFE> <dead_acute <Multi_key> <G> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
-<U1FFE> <dead_acute <Multi_key> <g> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
-<dead_acute <U1FFE> <Multi_key> <G> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
-<dead_acute <U1FFE> <Multi_key> <g> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+<U1FBF> <dead_acute> <Multi_key> <G> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+<U1FBF> <dead_acute> <Multi_key> <g> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+<dead_acute> <U1FBF> <Multi_key> <G> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+<dead_acute> <U1FBF> <Multi_key> <g> <A>                    : "Ἄ" U1F0C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA
+<U1FFE> <dead_acute> <Multi_key> <G> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+<U1FFE> <dead_acute> <Multi_key> <g> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+<dead_acute> <U1FFE> <Multi_key> <G> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
+<dead_acute> <U1FFE> <Multi_key> <g> <A>                    : "Ἅ" U1F0D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA
 <U1FBF> <dead_tilde> <Multi_key> <G> <A>                   : "Ἆ" U1F0E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
 <U1FBF> <dead_tilde> <Multi_key> <g> <A>                   : "Ἆ" U1F0E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
 <dead_tilde> <U1FBF> <Multi_key> <G> <A>                   : "Ἆ" U1F0E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI
@@ -413,30 +413,30 @@ TONOS <Multi_key> <g> <A>                                  : "Ά" U0386 # GREEK 
 <dead_cedilla> <U1FFE> <dead_grave> <Multi_key> <g> <A>    : "ᾋ" U1F8B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
 <dead_cedilla> <dead_grave> <U1FFE> <Multi_key> <G> <A>    : "ᾋ" U1F8B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
 <dead_cedilla> <dead_grave> <U1FFE> <Multi_key> <g> <A>    : "ᾋ" U1F8B # GREEK CAPITAL LETTER ALPHA WITH DASIA AND VARIA AND PROSGEGRAMMENI
-<U1FBF> <dead_acute <dead_cedilla> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<U1FBF> <dead_acute <dead_cedilla> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<U1FBF> <dead_cedilla> <dead_acute <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<U1FBF> <dead_cedilla> <dead_acute <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_acute <U1FBF> <dead_cedilla> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_acute <U1FBF> <dead_cedilla> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_acute <dead_cedilla> <U1FBF> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_acute <dead_cedilla> <U1FBF> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <U1FBF> <dead_acute <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <U1FBF> <dead_acute <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <dead_acute <U1FBF> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <dead_acute <U1FBF> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
-<U1FFE> <dead_acute <dead_cedilla> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<U1FFE> <dead_acute <dead_cedilla> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<U1FFE> <dead_cedilla> <dead_acute <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<U1FFE> <dead_cedilla> <dead_acute <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_acute <U1FFE> <dead_cedilla> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_acute <U1FFE> <dead_cedilla> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_acute <dead_cedilla> <U1FFE> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_acute <dead_cedilla> <U1FFE> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <U1FFE> <dead_acute <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <U1FFE> <dead_acute <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <dead_acute <U1FFE> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
-<dead_cedilla> <dead_acute <U1FFE> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<U1FBF> <dead_acute> <dead_cedilla> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<U1FBF> <dead_acute> <dead_cedilla> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<U1FBF> <dead_cedilla> <dead_acute> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<U1FBF> <dead_cedilla> <dead_acute> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <U1FBF> <dead_cedilla> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <U1FBF> <dead_cedilla> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <dead_cedilla> <U1FBF> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <dead_cedilla> <U1FBF> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <U1FBF> <dead_acute> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <U1FBF> <dead_acute> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <dead_acute> <U1FBF> <Multi_key> <G> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <dead_acute> <U1FBF> <Multi_key> <g> <A>     : "ᾌ" U1F8C # GREEK CAPITAL LETTER ALPHA WITH PSILI AND OXIA AND PROSGEGRAMMENI
+<U1FFE> <dead_acute> <dead_cedilla> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<U1FFE> <dead_acute> <dead_cedilla> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<U1FFE> <dead_cedilla> <dead_acute> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<U1FFE> <dead_cedilla> <dead_acute> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <U1FFE> <dead_cedilla> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <U1FFE> <dead_cedilla> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <dead_cedilla> <U1FFE> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_acute> <dead_cedilla> <U1FFE> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <U1FFE> <dead_acute> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <U1FFE> <dead_acute> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <dead_acute> <U1FFE> <Multi_key> <G> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
+<dead_cedilla> <dead_acute> <U1FFE> <Multi_key> <g> <A>     : "ᾍ" U1F8D # GREEK CAPITAL LETTER ALPHA WITH DASIA AND OXIA AND PROSGEGRAMMENI
 <U1FBF> <dead_tilde> <dead_cedilla> <Multi_key> <G> <A>    : "ᾎ" U1F8E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
 <U1FBF> <dead_tilde> <dead_cedilla> <Multi_key> <g> <A>    : "ᾎ" U1F8E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
 <U1FBF> <dead_cedilla> <dead_tilde> <Multi_key> <G> <A>    : "ᾎ" U1F8E # GREEK CAPITAL LETTER ALPHA WITH PSILI AND PERISPOMENI AND PROSGEGRAMMENI
@@ -467,8 +467,8 @@ TONOS <Multi_key> <g> <A>                                  : "Ά" U0386 # GREEK 
 <dead_macron> <Multi_key> <g> <A>                          : "Ᾱ" U1FB9 # GREEK CAPITAL LETTER ALPHA WITH MACRON
 <dead_grave> <Multi_key> <G> <A>                           : "Ὰ" U1FBA # GREEK CAPITAL LETTER ALPHA WITH VARIA
 <dead_grave> <Multi_key> <g> <A>                           : "Ὰ" U1FBA # GREEK CAPITAL LETTER ALPHA WITH VARIA
-<dead_acute <Multi_key> <G> <A>                            : "Ά" U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA
-<dead_acute <Multi_key> <g> <A>                            : "Ά" U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA
+<dead_acute> <Multi_key> <G> <A>                            : "Ά" U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA
+<dead_acute> <Multi_key> <g> <A>                            : "Ά" U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA
 <dead_cedilla> <Multi_key> <G> <A>                         : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
 <dead_cedilla> <Multi_key> <g> <A>                         : "ᾼ" U1FBC # GREEK CAPITAL LETTER ALPHA WITH PROSGEGRAMMENI
 
@@ -509,9 +509,9 @@ TONOS <Multi_key> <g> <A>                                  : "Ά" U0386 # GREEK 
 <U1FFE> <Greek_omega>                    : "ὡ"   U1F61 # GREEK SMALL LETTER OMEGA WITH DASIA
 <U1FBF> <Greek_OMEGA>                    : "Ὠ"   U1F68 # GREEK CAPITAL LETTER OMEGA WITH PSILI
 <U1FBF> <Greek_OMEGA>                    : "Ὡ"   U1F69 # GREEK CAPITAL LETTER OMEGA WITH DASIA
-<U1FBF> <Greek_U03F1>                    : "ῤ"   U1FE4 # GREEK SMALL LETTER RHO WITH PSILI
+<U1FBF> <U03F1>                          : "ῤ"   U1FE4 # GREEK SMALL LETTER RHO WITH PSILI
 <U1FBF> <Greek_rho>                      : "ῤ"   U1FE4 # GREEK SMALL LETTER RHO WITH PSILI
-<U1FFE> <Greek_U03F1>                    : "ῥ"   U1FE5 # GREEK SMALL LETTER RHO WITH DASIA
+<U1FFE> <U03F1>                          : "ῥ"   U1FE5 # GREEK SMALL LETTER RHO WITH DASIA
 <U1FFE> <Greek_rho>                      : "ῥ"   U1FE5 # GREEK SMALL LETTER RHO WITH DASIA
 
 # letters with ogonek (simplifying the keyboard ogonek and cedilla are on the same place)
