@@ -1,3 +1,4 @@
+#MaxThreadsPerHotKey 4
 /*
 CM* == 1: Await more compose chars after this sequence? 
 CD*     : Replace compose sequence by this character
@@ -165,19 +166,19 @@ ED1("left"     ,"SLeft")
 ED1("right"    ,"SRght")
 ED1("numpadenter","SNEnt")
 
+; ###### Shortcuts für alle ASCII-Zeichen (0x21 bis 0x7E)
 SetFormat, integer, hex
-char := 0x20
+char := 0x21
 loop {
   s1 := SubStr(char,3)
-  if ((char < 0x80) or (char > 0x9F))
-    CSU00%s1% := chr(char)
+  CSU00%s1% := chr(char)
   char += 1
-  if (char = 255)
+  if (char = 0x7E)
     break
 }
 SetFormat, integer, d
 
-
+; #### weitere Shortcuts
 CSU0009 := "tab"
 CSU001B := "esc"
 CSU0020 := "space"
@@ -185,33 +186,47 @@ DNCSU005E := "{^}{space}"
 DNCSU0060 := "{``}{space}"
 DNCSU007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
 DNCSU00B4 := "{´}{space}"
-CSU20AC := "€"
-CSU201A := chr(130)
-CSU0192 := chr(131)
-CSU201E := chr(132)
-CSU2026 := chr(133)
-; CSU2020 := chr(134)
-CSU2021 := chr(135)
-CSU02C6 := chr(136)
-CSU2030 := chr(137)
-CSU0160 := chr(138)
-CSU2039 := chr(139)
-CSU0152 := chr(140)
-CSU017D := chr(142)
-CSU2018 := chr(145)
-CSU2019 := chr(146)
-CSU201C := chr(147)
-CSU201D := chr(148)
-CSU2022 := chr(149)
-CSU2013 := chr(150)
-CSU2014 := chr(151)
-CSU02DC := chr(152)
-CSU2122 := chr(153)
-CSU0161 := chr(154)
-CSU203A := chr(155)
-CSU0153 := chr(156)
-CSU017E := chr(158)
-CSU0178 := chr(159)
+CSU20AC := chr(128) ; €
+; CSU201A := chr(130) ; ‚
+; CSU0192 := chr(131) ; ƒ
+; CSU201E := chr(132) ; „
+; CSU2026 := chr(133) ; …
+; CSU2020 := chr(134) ; †
+; CSU2021 := chr(135) ; ‡
+; CSU02C6 := chr(136) ; ˆ
+; CSU2030 := chr(137) ; ‰
+; CSU0160 := chr(138) ; Š
+; CSU2039 := chr(139) ; ‹
+; CSU0152 := chr(140) ; Œ
+; CSU017D := chr(142) ; Ž
+; CSU2018 := chr(145) ; ‘
+; CSU2019 := chr(146) ; ’
+; CSU201C := chr(147) ; “
+; CSU201D := chr(148) ; ”
+; CSU2022 := chr(149) ; •
+; CSU2013 := chr(150) ; –
+; CSU2014 := chr(151) ; —
+; CSU02DC := chr(152) ; ˜
+; CSU2122 := chr(153) ; ™
+; CSU0161 := chr(154) ; š
+; CSU203A := chr(155) ; ›
+; CSU0153 := chr(156) ; œ
+; CSU017E := chr(158) ; ž
+; CSU0178 := chr(159) ; Ÿ
+CSU00A7 := chr(167)   ; §
+CSU00B0 := chr(176)   ; °
+CSU00B2 := chr(178)   ; ²
+CSU00B3 := chr(179)   ; ³
+CSU00B4 := chr(180)   ; ´
+CSU00B5 := chr(181)   ; µ
+CSU00C4 := chr(196)   ; Ä
+CSU00D6 := chr(214)   ; Ö
+CSU00DC := chr(220)   ; Ü
+CSU00DF := chr(223)   ; ß
+CSU00E4 := chr(228)   ; ä
+CSU00F6 := chr(246)   ; ö
+CSU00FC := chr(252)   ; ü
+CSU00FF := chr(255)   ; ÿ
 
 CSSEntr := "Enter"
 CSS_Esc := "Esc"
