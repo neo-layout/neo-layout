@@ -43,7 +43,7 @@ die() {
 set_xmodmap() {
 	if [ -e "${PATH_XMODMAP}" ]; then
 		if [ -f "$@" ]; then
-			set_xkbmap ie
+			set_xkbmap lv
 			"${PATH_XMODMAP}" "$@" || ( set_xkbmap de ; die "Failed to set xmodmap $@." )
 		else
 			die "Cannot use $@ for xmodmap."
