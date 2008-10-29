@@ -31,7 +31,13 @@ convertXkbsym(X) {
   check("Page_Down"         ,"SPgDn")
   check("End"               ,"S_End")
   check("Insert"            ,"S_Ins")
+  check("KP_Space"          ,"SNSpc") ; not
+  check("KP_Tab"            ,"SNTab") ; not
   check("KP_Enter"          ,"SNEnt")
+  check("KP_F1"             ,"SNF_1") ; not
+  check("KP_F2"             ,"SNF_2") ; not
+  check("KP_F3"             ,"SNF_3") ; not
+  check("KP_F4"             ,"SNF_4") ; not
   check("KP_Home"           ,"SNHom")
   check("KP_Left"           ,"SN_Le")
   check("KP_Up"             ,"SN_Up")
@@ -42,13 +48,16 @@ convertXkbsym(X) {
   check("KP_Next"           ,"SNPDn")
   check("KP_Page_Down"      ,"SNPDn")
   check("KP_End"            ,"SNEnd")
+  check("KP_Begin"          ,"SNBgn") ; not
   check("KP_Insert"         ,"SNIns")
   check("KP_Delete"         ,"SNDel")
-  check("KP_Add"            ,"SNAdd")
-  check("KP_Subtract"       ,"SNSub")
+  check("KP_Equal"          ,"SNEql") ; not
   check("KP_Multiply"       ,"SNMul")
-  check("KP_Divide"         ,"SNDiv")
+  check("KP_Add"            ,"SNAdd")
+  check("KP_Separator"      ,"SNSep") ; not
+  check("KP_Subtract"       ,"SNSub")
   check("KP_Decimal"        ,"SNDot")
+  check("KP_Divide"         ,"SNDiv")
   check("KP_0"              ,"SN__0")
   check("KP_1"              ,"SN__1")
   check("KP_2"              ,"SN__2")
@@ -75,7 +84,7 @@ convertXkbsym(X) {
   check("dead_doubleacute"  ,"Tdbac")
   check("dead_stroke"       ,"Tstrk")
   check("space"             ,"U0020")
-  check("dead_space"        ,"U0020")
+  check("dead_space"        ,"U00A0")
   check("exclam"            ,"U0021")
   check("quotedbl"          ,"U0022")
   check("numbersign"        ,"U0023")
