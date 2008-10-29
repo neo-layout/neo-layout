@@ -210,10 +210,10 @@ keycode 45 = 	r		R		parenright	U03F1		KP_5		KP_5		U211D		NoSymbol
 !						)		ϱ Greek_rho					ℝ real
 keycode 46 = 	t		T		minus		Greek_tau	KP_6		KP_6		partialderivative
 !						-		τ						∂
-keycode 47 = 	d		D		colon		Greek_delta	comma		NoSymbol	Greek_DELTA	Greek_DELTA
-!						:		δ		,				Δ		Δ
-keycode 48 = 	y		Y		at		Greek_upsilon	period		NoSymbol	nabla		NoSymbol
-!						@		υ		.				∇
+keycode 47 = 	d		D		colon		Greek_delta	KP_Separator	NoSymbol	Greek_DELTA	Greek_DELTA
+!						:		δ		,/.				Δ		Δ
+keycode 48 = 	y		Y		at		Greek_upsilon	KP_Decimal	NoSymbol	nabla		NoSymbol
+!						@		υ		./,				∇
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
