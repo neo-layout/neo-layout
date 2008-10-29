@@ -14,15 +14,19 @@ Matthias Wächter <matthias (at) waechter.wiz. a t>
 
 === To Do ===
 ‐ Ausgiebig testen … (besonders Vollständigkeit bei Deadkeys).
-‐ Compose vollständig implementieren (Welche Methode ist hierzu am besten geeignet?).
+  • Griechische Buchstaben ergänzen…
 ‐ Bessere Lösung für das Leeren von PriorDeadKey finden, damit die Sondertasten nicht mehr abgefangen werden müssen.
-‐ Bildschirmtastatur anpassen.
+‐ Compose vollständig implementieren: Kombination mit Deadkeys.
+  • ♫Tab ermöglichen.
+- Bildschirmtastatur in der All.ahk auch ohne vorherigen Aufruf der neo20.exe verfügbar machen.
 
 === Ideen und Vorschläge ===
 ‐ Modi für vertauschte Ziffern in der Zahlenreihe und auf der 4. Ebene.
 
 === Änderungshistorie ===
 
+Revision 1057 (von Martin Roppelt)
+- Bildschirmtastatur aktualisiert.
 Revision 1046 (von Martin Roppelt)
 - Anpassung an Referenz.
 Revision 1039 (von Dennis Heidsiek)
