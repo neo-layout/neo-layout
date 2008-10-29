@@ -807,7 +807,7 @@ Return
 
 ; Numpad
 
-VK90SC145:: ; NumLock
+*VK90SC145:: ; NumLock
 *VK6FSC135:: ; NumpadDiv
 *VK6ASC037:: ; NumpadMult
 *VK6DSC04A:: ; NumpadSub
@@ -914,7 +914,7 @@ numpadenter::
 
 ; Numpad
 
-VK90SC145 up:: ; NumLock
+*VK90SC145 up:: ; NumLock
 *VK6FSC135 up:: ; NumpadDiv
 *VK6ASC037 up:: ; NumpadMult
 *VK6DSC04A up:: ; NumpadSub
