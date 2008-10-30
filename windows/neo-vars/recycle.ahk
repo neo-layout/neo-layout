@@ -45,9 +45,6 @@ bildschirmTastaturEinbinden := 1
 
 ; Syntaxhinweis: IniRead, Variable, InputFilename, Section, Key [, DefaultValue]
 
-; Sollen Ebenen 1-4 ignoriert werden (kann z.B. vom dll Treiber übernommen werden)?
-IniRead,ahkTreiberKombi,%ini%,Global,ahkTreiberKombi,0
-
 ; Soll der Treiber im Einhandmodus betrieben werden?
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 
@@ -301,6 +298,8 @@ return
 ;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
 *VKBFSC02B:: ; #
 *VK14SC03A:: ; CapsLock
+  if GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")
+    CharStarDown("", "", "SComp")
 return
 
 ;Mod4+Mod4 == Mod4-Lock
@@ -335,45 +334,31 @@ return
 EbeneAktualisieren()
 {
   global
-  PriorDeadKey := DeadKey
-  PriorCompKey := CompKey
-  DeadKey := ""
-  CompKey := ""
   Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
   Ebene7 := 0
   Ebene8 := 0
-  if ahkTreiberKombi
-    if ( Modstate = "001")
-      Ebene = 6
-    else
-      Ebene = -1
-  else
-    if      (Modstate = "000") ; Ebene 1: Ohne Mod
-      Ebene = 1
-    else if (Modstate = "001") ; Ebene 2: Shift
-      Ebene = 2
-    else if (Modstate = "010") ; Ebene 3: Mod3
-      Ebene = 3
-    else if (Modstate = "100") ; Ebene 4: Mod4
-      Ebene = 4
-    else if (Modstate = "011") ; Ebene 5: Shift+Mod3
-      Ebene = 5
-    else if (Modstate = "110") ; Ebene 6: Mod3+Mod4
-      Ebene = 6
-    else if (Modstate = "101") ; Ebene 7: Shift+Mod4 impliziert Ebene 4
-    {
-      Ebene = 4
-      Ebene7 = 1
-    }
-    else if (Modstate = "111") ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
-    {
-      Ebene = 6
-      Ebene8 = 1
-    }
-  Ebene12 := ((Ebene = 1) or (Ebene = 2))
-  Ebene14 := ((Ebene = 1) or (Ebene = 4))
-  ;NumLock := GetKeyState("NumLock","T")
-  numlock = 1
+  if      (Modstate = "000") ; Ebene 1: Ohne Mod
+    Ebene = 1
+  else if (Modstate = "001") ; Ebene 2: Shift
+    Ebene = 2
+  else if (Modstate = "010") ; Ebene 3: Mod3
+    Ebene = 3
+  else if (Modstate = "100") ; Ebene 4: Mod4
+    Ebene = 4
+  else if (Modstate = "011") ; Ebene 5: Shift+Mod3
+    Ebene = 5
+  else if (Modstate = "110") ; Ebene 6: Mod3+Mod4
+    Ebene = 6
+  else if (Modstate = "101") ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+  {
+    Ebene = 4
+    Ebene7 = 1
+  }
+  else if (Modstate = "111") ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+  {
+    Ebene = 6
+    Ebene8 = 1
+  }
 }
 
 IsShiftPressed()
@@ -976,7 +961,7 @@ return
      keypressed := 0
      spacepressed := 0
     } else {
-      AllStar("space")
+      AllStar("space")    ;???
       AllStar("space up")
     }
   } else

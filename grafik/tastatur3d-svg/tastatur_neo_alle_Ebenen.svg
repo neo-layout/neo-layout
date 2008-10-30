@@ -15,7 +15,7 @@
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.46"
-   sodipodi:docname="ebenen.svg"
+   sodipodi:docname="tastatur_neo_alle_Ebenen.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    sodipodi:docbase="G:\NEO"
    style="display:inline">
@@ -27,6 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:description>png-Export: x₀,x₁,y₀,y₁,b=(4,9;1361;687;1167;564)px,8-Bit-Indizierung.</dc:description>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,7 +44,7 @@
      pagecolor="#ffffff"
      id="base"
      inkscape:zoom="0.5"
-     inkscape:cx="905.52692"
+     inkscape:cx="157.37115"
      inkscape:cy="1153.4922"
      inkscape:window-x="182"
      inkscape:window-y="28"
@@ -61,6 +62,13 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 713.82953 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="2093.5378 : 713.82953 : 1"
+       inkscape:persp3d-origin="1046.7689 : 475.88635 : 1"
+       id="perspective2053" />
     <linearGradient
        id="linearGradient6536">
       <stop
@@ -10041,7 +10049,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="ebene1"
-     style="display:none">
+     style="display:inline">
     <text
        x="168.44073"
        y="407.97638"
@@ -13394,7 +13402,7 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="ebene6"
-     style="display:inline">
+     style="display:none">
     <text
        x="45.444523"
        y="217.73325"

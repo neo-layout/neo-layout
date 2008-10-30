@@ -30,10 +30,11 @@ AllStar(This_HotKey) {
     IsDown := 0
   } else
     IsDown := 1
-  ActKey := Transform(PhysKey)
-  if (Ebene7 and (CP7%ActKey% != ""))
+;  ActKey := Transform(PhysKey)
+  ActKey := PhysKey
+  if Ebene7 and (CP7%ActKey% != "")
     Char := CP7%ActKey%
-  else if (Ebene8 and (CP8%ActKey% != ""))
+  else if Ebene8 and (CP8%ActKey% != "")
     Char := CP8%ActKey%
   else
     Char := CP%Ebene%%ActKey%
@@ -392,7 +393,3 @@ SetFormat, Integer, hex
   return result
 }
 
-Transform(key) {
-  global
-  return key
-}
