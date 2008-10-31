@@ -1,3 +1,14 @@
+/*
+CM* == 1: Await more compose chars after this sequence? 
+CD*     : Replace compose sequence by this character
+CPx*    : Key press for * in Ebene x
+CPNx*   : Key press for numpad * in Ebene x
+CS*     : shortcut to output instead of *
+PP*     : repeat code for key *
+PR*     : release code for key *
+*/
+
+; ein wenig COMPOSE
 CMSCompU002D := 1
 CDSCompU002DSLeft := "U2190"
 CDSCompU002DS__Up := "U2191"
