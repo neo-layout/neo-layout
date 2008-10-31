@@ -1,23 +1,21 @@
 #MaxThreadsPerHotKey 4
 
-/*
-CM* == 1: Await more compose chars after this sequence? 
-CD*     : Replace compose sequence by this character
-CPx*    : Key press for * in Ebene x
-CPNx*   : Key press for numpad * in Ebene x
-CS*     : shortcut to output instead of *
-PP*     : repeat code for key *
-PR*     : release code for key *
-*/
-
-; ein wenig COMPOSE
+; die Compose-Definitionen
 #Include %a_scriptdir%\en_us.ahk
 #Include %a_scriptdir%\neocomp.ahk
 #Include %a_scriptdir%\neovarscomp.ahk
 
+Comp := ""
+
+; Hier liegt die Tastaturbelegung
 #Include %a_scriptdir%\keydefinitions.ahk
+
+; Shortcuts, um die Zeichen wieder sauber zur Applikation bringen zu können
 #Include %a_scriptdir%\shortcuts.ahk
+
+; Good-old AHK-Skripts
 #Include %a_scriptdir%\recycle.ahk
+
 
 AllStar(This_HotKey) {
   global
@@ -30,11 +28,10 @@ AllStar(This_HotKey) {
     IsDown := 0
   } else
     IsDown := 1
-;  ActKey := Transform(PhysKey)
-  ActKey := PhysKey
-  if Ebene7 and (CP7%ActKey% != "")
+  ActKey := PhysKey ; das könnte später für eine Transformation benutzt werden
+  if (Ebene7 and (CP7%ActKey% != ""))
     Char := CP7%ActKey%
-  else if Ebene8 and (CP8%ActKey% != "")
+  else if (Ebene8 and (CP8%ActKey% != ""))
     Char := CP8%ActKey%
   else
     Char := CP%Ebene%%ActKey%

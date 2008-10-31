@@ -1,3 +1,14 @@
+/* SHORTCUTS
+   Da in diesem AHK-Skript sämtliche Tastendrücke zur weiteren Verarbeitung
+   in Unicode- und Spezialzeichen umgewandelt werden, müssen sie für eine
+   effiziente Tasten-Ausgabe, wo möglich, zurück gewandelt werden. Dazu
+   dienen Shortcuts: Soll beispielsweise das Unicode-Zeichen U0061 (kleines
+   a) ausgegeben werden, muss dieses durch "send {a}" ersetzt werden. Die
+   dafür notwendigen Rückwandlungskonstanten werden hier, teilweise
+   automatisiert, definiert und im entsprechenden Unterprogramm zur Anwendung
+   gebracht.
+*/
+
 ; ###### Shortcuts für alle ASCII-Zeichen (0x21 bis 0x7E)
 SetFormat, integer, hex
 char := 0x21
@@ -11,13 +22,27 @@ loop {
 SetFormat, integer, d
 
 ; #### weitere Shortcuts
+CSU0008 := "Backspace"
 CSU0009 := "tab"
+CSU000D := "Enter"
 CSU001B := "esc"
 CSU0020 := "space"
+
+/**** die folgenden Shortcuts ersetzen die automatische Wahl entsprechender
+ **** down- und up-Sendezeichen, da die Zeichenerzeugung entweder aufwändiger
+ **** ist (wie bei den diversen toten Zeichen) oder schlicht mit AHK nicht
+ **** geht (wie das Key-Repeat der schließenden Klammer).
+*/
 DNCSU005E := "{^}{space}"
 DNCSU0060 := "{``}{space}"
 DNCSU007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
 DNCSU00B4 := "{´}{space}"
+
+/**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
+ **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
+ **** Programme nutzbar, also auskommentiert und als Unicode-Zeichen
+ **** geschickt.
+*/
 CSU20AC := chr(128)   ; €
 ; CSU201A := chr(130) ; ‚
 ; CSU0192 := chr(131) ; ƒ
@@ -60,9 +85,6 @@ CSU00F6 := chr(246)   ; ö
 CSU00FC := chr(252)   ; ü
 CSU00FF := chr(255)   ; ÿ
 
-CSU000D := "Enter"
-CSS_Esc := "Esc"
-CSU0008 := "Backspace"
 CSS_Del := "Delete"
 CSS_Ins := "Insert"
 CSS__Up := "Up"
@@ -107,5 +129,3 @@ CSSNPDn := "NumpadPgDn"
 CSSNHom := "NumpadHome"
 CSSNEnd := "NumpadEnd"
 CSSNClr := "NumpadClear"
-
-Comp := ""
