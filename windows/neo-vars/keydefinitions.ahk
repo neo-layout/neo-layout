@@ -1,3 +1,4 @@
+;  KeyCode     Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
 ; Reihe 1
 ED("VKDCSC029","Tcflx","Ttlde","Tobrg","Tcron","Tbrve","Tmcrn") ; circumflex
 ED("VK31SC002","U0031","U00B0","U00B9","U00BA","U2081","U00AC") ; 1
@@ -38,7 +39,7 @@ ED("VK4CSC026","U0074","U0054","U002D","SN__6","U03C4","U2202") ; t
 ED("VKC0SC027","U0064","U0044","U003A","SNDot","U03B4","U0394") ; d
 ED("VKDESC028","U0079","U0059","U0040","U002E","U03C5","U2207") ; y
 ; Reihe 4
-ED("VK59SC02C","U00FC","U00DC","U0023","S_Esc",""     ,"U221C") ; ü
+ED("VK59SC02C","U00FC","U00DC","U0023","U001B",""     ,"U221C") ; ü
 ED("VK58SC02D","U00F6","U00D6","U0024","U0009",""     ,"U2111") ; ö
 ED("VK43SC02E","U00E4","U00C4","U007C","SPgDn","U03B7","U2135") ; ä
 ED("VK56SC02F","U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
