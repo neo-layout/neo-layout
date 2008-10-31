@@ -180,156 +180,6 @@ lernModus_neo_Backspace := 0
 lernModus_neo_Entf := 1
 
 
-/**********************
-* Tastenkombinationen *
-***********************
-*/
-
-+pause::
-Suspend, Permit
-  goto togglesuspend
-
-/*****************
-* Menüfunktionen *
-******************
-*/
-togglesuspend:
-  if A_IsSuspended {
-    menu, tray, rename, %enable%, %disable%
-    menu, tray, tip, %name%
-    if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo.ico,,1
-    suspend , off ; Schaltet Suspend aus -> NEO
-  } else {
-    menu, tray, rename, %disable%, %enable%
-    menu, tray, tip, %name% : Deaktiviert
-    if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
-    suspend , on  ; Schaltet Suspend ein -> QWERTZ
-  } return
-
-help:
-  Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
-return
-
-about:
-  msgbox, 64, %name% – Ergonomische Tastaturbelegung, 
-  (
-  %name% 
-  `nDas Neo-Layout ersetzt das übliche deutsche 
-  Tastaturlayout mit der Alternative Neo, 
-  beschrieben auf http://neo-layout.org/. 
-  `nDazu sind keine Administratorrechte nötig. 
-  `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
-  `nDies geschieht transparent für den Anwender, 
-  es muss nichts installiert werden. 
-  `nDie Zeichenübersetzung kann leicht über das Icon im 
-  Systemtray deaktiviert werden.  `n
-  )
-return
-
-neo:
-  run http://neo-layout.org/
-return
-
-autohotkey:
-  run http://autohotkey.com/
-return
-
-open:
-  ListLines ; shows the Autohotkey window
-return
-
-edit:
-  edit
-return
-
-reload:
-  Reload
-return
-
-hide:
-  menu, tray, noicon
-return
-
-exitprogram:
-  exitapp
-return
-
-/**************************
-* lernModus Konfiguration *
-* nur relevant wenn       *
-* lernModus = 1           *
-* Strg+Komma schaltet um  *
-***************************
-*/
-^,::lernModus := not(lernModus)
-
-; 0 = aus, 1 = an
-
-; LShift+RShift == CapsLock (simuliert)
-; Es werden nur die beiden Tastenkombinationen abgefragt,
-; daher kommen LShift und RShift ungehindert bis in die
-; Applikation. Dies ist aber merkwürdig, da beide Shift-
-; Tasten nun /modifier keys/ werden und, wie in der AHK-
-; Hilfe beschrieben, eigentlich nicht mehr bis zur App
-; durchkommen sollten.
-; KeyboardLED(4,"switch") hatte ich zuerst genommen, aber
-; das schaltet, oh Wunder, die LED nicht wieder aus.
-
-VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
-VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
-  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
-  {
-    if isMod2Locked
-    {
-      isMod2Locked = 0
-      KeyboardLED(4,"off")
-    }
-    else
-    {
-      isMod2Locked = 1
-      KeyBoardLED(4,"on")
-    }
-  }
-return
-
-;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
-*VKBFSC02B:: ; #
-*VK14SC03A:: ; CapsLock
-  if GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")
-    CharStarDown("", "", "SComp")
-return
-
-;Mod4+Mod4 == Mod4-Lock
-; Im Gegensatz zu LShift+RShift werden die beiden Tasten
-; _nicht_ zur Applikation weitergeleitet, und nur bei
-; gleichzeitigem Drücken wird der Mod4-Lock aktiviert und
-; angezeigt.
-
-*VKA5SC138::
-*VKE2SC056::
-  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
-  {
-    if IsMod4Locked
-    {
-      if zeigeLockBox
-        MsgBox Mod4-Feststellung aufgebehoben!
-       IsMod4Locked = 0
-      if UseMod4Light
-        KeyboardLED(1,"off")
-    }
-    else
-    {
-      if zeigeLockBox
-        MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
-      IsMod4Locked = 1
-      if UseMod4Light
-        KeyboardLED(1,"on")
-    }
-  }
-return
 
 EbeneAktualisieren()
 {
@@ -565,6 +415,157 @@ SendUnicodeCharUp(charCode){
 EncodeInteger(ref,val){
   DllCall("ntdll\RtlFillMemoryUlong","Uint",ref,"Uint",4,"Uint",val)
 }
+
+/**********************
+* Tastenkombinationen *
+***********************
+*/
+
++pause::
+Suspend, Permit
+  goto togglesuspend
+
+/*****************
+* Menüfunktionen *
+******************
+*/
+togglesuspend:
+  if A_IsSuspended {
+    menu, tray, rename, %enable%, %disable%
+    menu, tray, tip, %name%
+    if (iconBenutzen)
+      menu, tray, icon, %ResourceFolder%\neo.ico,,1
+    suspend , off ; Schaltet Suspend aus -> NEO
+  } else {
+    menu, tray, rename, %disable%, %enable%
+    menu, tray, tip, %name% : Deaktiviert
+    if (iconBenutzen)
+      menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
+    suspend , on  ; Schaltet Suspend ein -> QWERTZ
+  } return
+
+help:
+  Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
+return
+
+about:
+  msgbox, 64, %name% – Ergonomische Tastaturbelegung, 
+  (
+  %name% 
+  `nDas Neo-Layout ersetzt das übliche deutsche 
+  Tastaturlayout mit der Alternative Neo, 
+  beschrieben auf http://neo-layout.org/. 
+  `nDazu sind keine Administratorrechte nötig. 
+  `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
+  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
+  `nDies geschieht transparent für den Anwender, 
+  es muss nichts installiert werden. 
+  `nDie Zeichenübersetzung kann leicht über das Icon im 
+  Systemtray deaktiviert werden.  `n
+  )
+return
+
+neo:
+  run http://neo-layout.org/
+return
+
+autohotkey:
+  run http://autohotkey.com/
+return
+
+open:
+  ListLines ; shows the Autohotkey window
+return
+
+edit:
+  edit
+return
+
+reload:
+  Reload
+return
+
+hide:
+  menu, tray, noicon
+return
+
+exitprogram:
+  exitapp
+return
+
+/**************************
+* lernModus Konfiguration *
+* nur relevant wenn       *
+* lernModus = 1           *
+* Strg+Komma schaltet um  *
+***************************
+*/
+^,::lernModus := not(lernModus)
+
+; 0 = aus, 1 = an
+
+; LShift+RShift == CapsLock (simuliert)
+; Es werden nur die beiden Tastenkombinationen abgefragt,
+; daher kommen LShift und RShift ungehindert bis in die
+; Applikation. Dies ist aber merkwürdig, da beide Shift-
+; Tasten nun /modifier keys/ werden und, wie in der AHK-
+; Hilfe beschrieben, eigentlich nicht mehr bis zur App
+; durchkommen sollten.
+; KeyboardLED(4,"switch") hatte ich zuerst genommen, aber
+; das schaltet, oh Wunder, die LED nicht wieder aus.
+
+VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
+VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
+  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
+  {
+    if isMod2Locked
+    {
+      isMod2Locked = 0
+      KeyboardLED(4,"off")
+    }
+    else
+    {
+      isMod2Locked = 1
+      KeyBoardLED(4,"on")
+    }
+  }
+return
+
+;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
+*VKBFSC02B:: ; #
+*VK14SC03A:: ; CapsLock
+  if GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")
+    CharStarDown("", "", "SComp")
+return
+
+;Mod4+Mod4 == Mod4-Lock
+; Im Gegensatz zu LShift+RShift werden die beiden Tasten
+; _nicht_ zur Applikation weitergeleitet, und nur bei
+; gleichzeitigem Drücken wird der Mod4-Lock aktiviert und
+; angezeigt.
+
+*VKA5SC138::
+*VKE2SC056::
+  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
+  {
+    if IsMod4Locked
+    {
+      if zeigeLockBox
+        MsgBox Mod4-Feststellung aufgebehoben!
+       IsMod4Locked = 0
+      if UseMod4Light
+        KeyboardLED(1,"off")
+    }
+    else
+    {
+      if zeigeLockBox
+        MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
+      IsMod4Locked = 1
+      if UseMod4Light
+        KeyboardLED(1,"on")
+    }
+  }
+return
 /*
    ------------------------------------------------------
    BildschirmTastatur
@@ -730,240 +731,3 @@ ToggleAlwaysOnTop:
       alwaysOnTop = 1
     }
 Return
-
-;;;;;; DOWN EVENTS
-; Reihe 1
-
-*VKDCSC029:: ; Zirkumflex
-*VK31SC002:: ; 1
-*VK32SC003:: ; 2
-*VK33SC004:: ; 3
-*VK34SC005:: ; 4
-*VK35SC006:: ; 5
-*VK36SC007:: ; 6
-*VK37SC008:: ; 7
-*VK38SC009:: ; 8
-*VK39SC00A:: ; 9
-*VK30SC00B:: ; 0
-*VKDBSC00C:: ; ß
-*VKDDSC00D:: ; Akut
-
-; Reihe 2
-
-*VK51SC010:: ; q (x)
-*VK57SC011:: ; w (v)x
-*VK45SC012:: ; e (l)
-*VK52SC013:: ; r (c)
-*VK54SC014:: ; t (w)
-*VK5ASC015:: ; z (k) 
-*VK55SC016:: ; u (h)
-*VK49SC017:: ; i (g)
-*VK4FSC018:: ; o (f)
-*VK50SC019:: ; p (q)
-*VKBASC01A:: ; ü (ß)
-*VKBBSC01B:: ; + (tot3)
-
-; Reihe 3
-
-*VK41SC01E:: ; a (u)
-*VK53SC01F:: ; s (i)
-*VK44SC020:: ; d (a)
-*VK46SC021:: ; f (e)
-*VK47SC022:: ; g (o)
-*VK48SC023:: ; h (s)
-*VK4ASC024:: ; j (n)
-*VK4BSC025:: ; k (r)
-*VK4CSC026:: ; l (t)
-*VKC0SC027:: ; ö (d)
-*VKDESC028:: ; ä (y)
-
-; Reihe 4
-
-*VK59SC02C:: ; y (ü)
-*VK58SC02D:: ; x (ö)
-*VK43SC02E:: ; c (ä)
-*VK56SC02F:: ; v (p)
-*VK42SC030:: ; b (z)
-*VK4ESC031:: ; n (b)
-*VK4DSC032:: ; m (m)
-*VKBCSC033:: ; , (,)
-*VKBESC034:: ; . (.)
-*VKBDSC035:: ; - (j)
-
-; Numpad
-
-*VK90SC145:: ; NumLock
-*VK6FSC135:: ; NumpadDiv
-*VK6ASC037:: ; NumpadMult
-*VK6DSC04A:: ; NumpadSub
-*VK6BSC04E:: ; NumpadAdd
-; *VK0DSC11C:: ; NumpadEnter
-*VK67SC047:: ; NumPad7
-*VK24SC047:: ; NumPadHome
-*VK68SC048:: ; NumPad8
-*VK26SC048:: ; NumPadUp
-*VK69SC049:: ; NumPad9
-*VK21SC049:: ; NumPadPgUp
-*VK64SC04B:: ; NumPad4
-*VK25SC04B:: ; NumPadLeft
-*VK65SC04C:: ; NumPad5
-*VK0CSC04C:: ; NumPadClear
-*VK66SC04D:: ; NumPad6
-*VK27SC04D:: ; NumPadRight
-*VK61SC04F:: ; NumPad1
-*VK23SC04F:: ; NumPadEnd
-*VK62SC050:: ; NumPad2
-*VK28SC050:: ; NumPadDown
-*VK63SC051:: ; NumPad3
-*VK22SC051:: ; NumPadPgDn
-*VK60SC052:: ; NumPad0
-*VK2DSC052:: ; NumPadIns
-*VK6ESC053:: ; NumPadDot
-*VK2ESC053:: ; NumPadDel
-tab::
-esc::
-*enter::
-*backspace::
-*del::
-*ins::
-*home::
-*end::
-*pgup::
-*pgdn::
-*up::
-*down::
-*left::
-*right::
-F10::
-F11::
-numpadenter::
-
-;;;;;; UP EVENTS
-; Reihe 1
-
-*VKDCSC029 up:: ; Zirkumflex
-*VK31SC002 up:: ; 1
-*VK32SC003 up:: ; 2
-*VK33SC004 up:: ; 3
-*VK34SC005 up:: ; 4
-*VK35SC006 up:: ; 5
-*VK36SC007 up:: ; 6
-*VK37SC008 up:: ; 7
-*VK38SC009 up:: ; 8
-*VK39SC00A up:: ; 9
-*VK30SC00B up:: ; 0
-*VKDBSC00C up:: ; ß
-*VKDDSC00D up:: ; Akut
-
-; Reihe 2
-
-*VK51SC010 up:: ; q (x)
-*VK57SC011 up:: ; w (v)x
-*VK45SC012 up:: ; e (l)
-*VK52SC013 up:: ; r (c)
-*VK54SC014 up:: ; t (w)
-*VK5ASC015 up:: ; z (k) 
-*VK55SC016 up:: ; u (h)
-*VK49SC017 up:: ; i (g)
-*VK4FSC018 up:: ; o (f)
-*VK50SC019 up:: ; p (q)
-*VKBASC01A up:: ; ü (ß)
-*VKBBSC01B up:: ; + (tot3)
-
-; Reihe 3
-
-*VK41SC01E up:: ; a (u)
-*VK53SC01F up:: ; s (i)
-*VK44SC020 up:: ; d (a)
-*VK46SC021 up:: ; f (e)
-*VK47SC022 up:: ; g (o)
-*VK48SC023 up:: ; h (s)
-*VK4ASC024 up:: ; j (n)
-*VK4BSC025 up:: ; k (r)
-*VK4CSC026 up:: ; l (t)
-*VKC0SC027 up:: ; ö (d)
-*VKDESC028 up:: ; ä (y)
-
-; Reihe 4
-
-*VK59SC02C up:: ; y (ü)
-*VK58SC02D up:: ; x (ö)
-*VK43SC02E up:: ; c (ä)
-*VK56SC02F up:: ; v (p)
-*VK42SC030 up:: ; b (z)
-*VK4ESC031 up:: ; n (b)
-*VK4DSC032 up:: ; m (m)
-*VKBCSC033 up:: ; , (,)
-*VKBESC034 up:: ; . (.)
-*VKBDSC035 up:: ; - (j)
-
-; Numpad
-
-*VK90SC145 up:: ; NumLock
-*VK6FSC135 up:: ; NumpadDiv
-*VK6ASC037 up:: ; NumpadMult
-*VK6DSC04A up:: ; NumpadSub
-*VK6BSC04E up:: ; NumpadAdd
-; *VK0DSC11C up:: ; NumpadEnter
-*VK67SC047 up:: ; NumPad7
-*VK24SC047 up:: ; NumPadHome
-*VK68SC048 up:: ; NumPad8
-*VK26SC048 up:: ; NumPadUp
-*VK69SC049 up:: ; NumPad9
-*VK21SC049 up:: ; NumPadPgUp
-*VK64SC04B up:: ; NumPad4
-*VK25SC04B up:: ; NumPadLeft
-*VK65SC04C up:: ; NumPad5
-*VK0CSC04C up:: ; NumPadClear
-*VK66SC04D up:: ; NumPad6
-*VK27SC04D up:: ; NumPadRight
-*VK61SC04F up:: ; NumPad1
-*VK23SC04F up:: ; NumPadEnd
-*VK62SC050 up:: ; NumPad2
-*VK28SC050 up:: ; NumPadDown
-*VK63SC051 up:: ; NumPad3
-*VK22SC051 up:: ; NumPadPgDn
-*VK60SC052 up:: ; NumPad0
-*VK2DSC052 up:: ; NumPadIns
-*VK6ESC053 up:: ; NumPadDot
-*VK2ESC053 up:: ; NumPadDel
-tab up::
-esc up::
-*enter up::
-*backspace up::
-*del up::
-*ins up::
-*home up::
-*end up::
-*pgup up::
-*pgdn up::
-*up up::
-*down up::
-*left up::
-*right up::
-F10 up::
-F11 up::
-numpadenter up::
-
-  AllStar(A_ThisHotkey)
-return
-
-*space::
-  if ((einHandNeo))
-   spacepressed := 1
-  else
-   AllStar(A_ThisHotkey)
-return
-
-*space up::
-  if ((einHandNeo)) {
-    if ((keypressed)) {
-     keypressed := 0
-     spacepressed := 0
-    } else {
-      AllStar("space")    ;???
-      AllStar("space up")
-    }
-  } else
-    AllStar(A_ThisHotkey)
-return
