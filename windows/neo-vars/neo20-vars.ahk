@@ -13,9 +13,13 @@ Comp := ""
 ; Shortcuts, um die Zeichen wieder sauber zur Applikation bringen zu können
 #Include %a_scriptdir%\shortcuts.ahk
 
-; Good-old AHK-Skripts
+; Good-old AHK-Skripts, enthalten die ersten Key-Hooks für Mod-Tasten
+; Achtung: Hinter dem ersten Keyboard-Hook werden keine globalen Variablen
+; mehr gesetzt!
 #Include %a_scriptdir%\recycle.ahk
 
+; Normale Keyboard-Hooks
+#Include %a_scriptdir%\keyhooks.ahk
 
 AllStar(This_HotKey) {
   global
