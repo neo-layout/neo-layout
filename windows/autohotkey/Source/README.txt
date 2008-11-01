@@ -32,3 +32,21 @@ http://www.kikizas.net/en/usbapps.ahk.html
 
 Eine alphabetische Liste aller erlaubten Kommandos findet man online unter
 http://www.autohotkey.com/docs/commands.htm
+
+=== Coding-Style ===
+Der Programmcode sollte möglichst einheitlich formatiert werden, um mögliche Fehlerquellen auszuschließen und um optimale Lesbarkeit zu erreichen:
+
+== Zuweisungen mit ":=" ==
+AHK erlaubt mehrere Arten der Zuweisung. Um Missverständnissen vorzubeugen, möge ausschließlich die Zuweisung mittels ":=" Verwendung finden. Die Zuweisung mit einem "=" funktioniert zwar auch und erspart bei Zuweisung konstanter Zeichenfolgen auch die Anführungszeichen, sorgt aber spätestens bei Berechnungen für Verwirrung.
+
+== Funktionale If-Abfrage ==
+Abfragen mittels "if" können in AHK auf zwei unterschiedliche Arten erfolgen, die sich durch die Klammerung des Ausdrucks unterscheiden. Um auch hier Missverständnissen vorzubeugen, mögen sämtliche Abfragen in eine gemeinsame Klammer gefasst werden.
+
+== Möglichst auf %-Variablen verzichten ==
+Gibt es von einer Funktion oder Methode zwei Varianten, so ist die Variante vorzuziehen, bei der Variablen nicht mit %varname% escaped werden müssen (analog zur Zuweisung mit ":="), um Missverständnissen vorzubeugen.
+
+== Einrückung ==
+Einrückung einheitlich 2 Zeichen vor dem Beginn der Zeile, dazwischen einheitlich 1 Zeichen. Dient es der Lesbarkeit, z.B. die Abfragen einer "if"-Abfrage mit der darunter liegenden "else if"-Abfrage auszurichten, darf dies stattfinden.
+
+== Geschwungene Klammern ==
+Geschwungene Klammern zum Zusammenhalten eines Funktionsblocks oder If-Zweiges mögen dem Funktionsnamen bzw. if-Zweig folgen. Bei If-Abfragen möge "else" mit einem Leerzeichen Abstand an die schließende Klammer angehängt werden, woran dann gegebenenfalls die nächste öffnende Klammer mit einem Leerzeichen angehängt wird.
