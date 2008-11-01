@@ -157,8 +157,17 @@ Sonstige Variablen
 */
 guiErstellt := 0
 alwaysOnTop := 1
-IsMod4Locked := 0
+isShiftRPressed := 0
+isShiftLPressed := 0
+isShiftPressed := 0
 isMod2Locked := 0
+IsMod3RPressed := 0
+IsMod3LPressed := 0
+IsMod3Pressed := 0
+IsMod4RPressed := 0
+IsMod4LPressed := 0
+IsMod4Pressed := 0
+IsMod4Locked := 0
 ; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
 lernModus_std_Return := 0
 lernModus_std_Backspace := 0
@@ -184,68 +193,85 @@ lernModus_neo_Entf := 1
 EbeneAktualisieren()
 {
   global
-  Modstate := IsMod4Pressed() . IsMod3Pressed() . IsShiftPressed()
+  Modstate := IsMod4Active() . IsMod3Active() . IsShiftActive()
   Ebene7 := 0
   Ebene8 := 0
-  if      (Modstate = "000") ; Ebene 1: Ohne Mod
-    Ebene = 1
-  else if (Modstate = "001") ; Ebene 2: Shift
-    Ebene = 2
-  else if (Modstate = "010") ; Ebene 3: Mod3
-    Ebene = 3
-  else if (Modstate = "100") ; Ebene 4: Mod4
-    Ebene = 4
-  else if (Modstate = "011") ; Ebene 5: Shift+Mod3
-    Ebene = 5
-  else if (Modstate = "110") ; Ebene 6: Mod3+Mod4
-    Ebene = 6
-  else if (Modstate = "101") ; Ebene 7: Shift+Mod4 impliziert Ebene 4
-  {
-    Ebene = 4
-    Ebene7 = 1
+  if        (Modstate = "000")   ; Ebene 1: Ohne Mod
+    Ebene := 1
+  else if   (Modstate = "001")   ; Ebene 2: Shift
+    Ebene := 2
+  else if   (Modstate = "010")   ; Ebene 3: Mod3
+    Ebene := 3
+  else if   (Modstate = "100")   ; Ebene 4: Mod4
+    Ebene := 4
+  else if   (Modstate = "011")   ; Ebene 5: Shift+Mod3
+    Ebene := 5
+  else if   (Modstate = "110")   ; Ebene 6: Mod3+Mod4
+    Ebene := 6
+  else if   (Modstate = "101") { ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+    Ebene := 4
+    Ebene7 := 1
+  } else if (Modstate = "111") { ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+    Ebene := 6
+    Ebene8 := 1
   }
-  else if (Modstate = "111") ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
-  {
-    Ebene = 6
-    Ebene8 = 1
+
+  ; jetzt für Tasten, die Mod2Locked ignorieren
+  Modstate := IsMod4Active() . IsMod3Active() . IsShiftPressed
+  Ebene7C := 0
+  Ebene8C := 0
+  if        (Modstate = "000")   ; Ebene 1: Ohne Mod
+    EbeneC := 1
+  else if   (Modstate = "001")   ; Ebene 2: Shift
+    EbeneC := 2
+  else if   (Modstate = "010")   ; Ebene 3: Mod3
+    EbeneC := 3
+  else if   (Modstate = "100")   ; Ebene 4: Mod4
+    EbeneC := 4
+  else if   (Modstate = "011")   ; Ebene 5: Shift+Mod3
+    EbeneC := 5
+  else if   (Modstate = "110")   ; Ebene 6: Mod3+Mod4
+    EbeneC := 6
+  else if   (Modstate = "101") { ; Ebene 7: Shift+Mod4 impliziert Ebene 4
+    EbeneC := 4
+    Ebene7C := 1
+  } else if (Modstate = "111") { ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
+    EbeneC := 6
+    Ebene8C := 1
   }
 }
 
-IsShiftPressed()
-{
+IsShiftActive() {
   global
-  if GetKeyState("Shift","P")
-    if isMod2Locked and !noCaps
+  if (isMod2Locked)
+    if (isShiftPressed)
       return 0
     else
       return 1
   else
-    if isMod2Locked and !noCaps
+    if (isShiftPressed)
       return 1
     else
       return 0
-  noCaps = 0
 }
 
-IsMod3Pressed()
-{
+IsMod3Active() {
    global
-   return ((GetKeyState("CapsLock","P")) or (GetKeyState("#","P")))
+   return isMod3Pressed
 }
 
-IsMod4Pressed()
-{
-   global
-   if( not(einHandNeo) or not(spacepressed))
-     if IsMod4Locked
-         return (not ( GetKeyState("<","P") or GetKeyState("SC138","P")))
-     else
-         return ( GetKeyState("<","P") or GetKeyState("SC138","P"))
-   else
-     if IsMod4Lock
-       return (not ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P")))
-     else
-       return ( GetKeyState("<","P") or GetKeyState("SC138","P") or GetKeyState("ä","P"))
+IsMod4Active() {
+  global
+  if (isMod4Locked)
+    if (isMod4Pressed)
+      return 0
+    else
+      return 1
+  else
+    if (isMod4Pressed)
+      return 1
+    else
+      return 0
 }
 
 /* 
@@ -514,28 +540,71 @@ return
 ; KeyboardLED(4,"switch") hatte ich zuerst genommen, aber
 ; das schaltet, oh Wunder, die LED nicht wieder aus.
 
-VKA1SC136 & VKA0SC02A:: ; RShift, dann LShift
-VKA0SC02A & VKA1SC136:: ; LShift, dann RShift
-  if (GetKeyState("VKA1SC136", "P") and GetKeyState("VKA0SC02A", "P"))
-  {
-    if isMod2Locked
-    {
-      isMod2Locked = 0
-      KeyboardLED(4,"off")
-    }
-    else
-    {
-      isMod2Locked = 1
-      KeyBoardLED(4,"on")
-    }
-  }
+~*VKA1SC136::
+  if (isShiftLPressed and !isShiftRPressed)
+    ToggleMod2Lock()
+  isShiftRPressed := 1
+  isShiftPressed := 1
 return
 
-;Mod3-Tasten (Wichtig, sie werden sonst nicht verarbeitet!)
-*VKBFSC02B:: ; #
-*VK14SC03A:: ; CapsLock
-  if GetKeyState("VKBFSC02B", "P") and GetKeyState("VK14SC03A", "P")
-    CharStarDown("", "", "SComp")
+~*VKA1SC136 up::
+  isShiftRPressed := 0
+  isShiftPressed := isShiftLPressed
+return
+
+~*VKA0SC02A::
+  if (isShiftRPressed and !isShiftLPressed)
+    ToggleMod2Lock()
+  isShiftLPressed := 1
+  isShiftPressed := 1
+return
+
+~*VKA0SC02A up::
+  isShiftLPressed := 0
+  isShiftPressed := isShiftRPressed
+return
+
+ToggleMod2Lock() {
+  global
+  if (isMod2Locked)
+  {
+    isMod2Locked := 0
+    KeyboardLED(4,"off")
+  }
+  else
+  {
+    isMod2Locked := 1
+    KeyBoardLED(4,"on")
+  }
+}
+
+
+*VKBFSC02B::
+  if (isMod3LPressed and !isMod3RPressed)
+    CharStarDown("MOD3", "MOD3", "SComp")
+  isMod3RPressed := 1
+  isMod3Pressed := 1
+return
+
+*VKBFSC02B up::
+  if (isMod3LPressed)
+    CharStarUp("MOD3")
+  isMod3RPressed := 0
+  isMod3Pressed := isMod3LPressed
+return
+
+*VK14SC03A::
+  if (isMod3RPressed and !isMod3LPressed)
+    CharStarDown("MOD3", "MOD3", "SComp")
+  isMod3LPressed := 1
+  isMod3Pressed := 1
+return
+
+*VK14SC03A up::
+  if (isMod3RPressed)
+    CharStarUp("MOD3")
+  isMod3LPressed := 0
+  isMod3Pressed := isMod3RPressed
 return
 
 ;Mod4+Mod4 == Mod4-Lock
@@ -545,27 +614,48 @@ return
 ; angezeigt.
 
 *VKA5SC138::
-*VKE2SC056::
-  if (GetKeyState("VKA5SC138", "P") and GetKeyState("VKE2SC056", "P"))
-  {
-    if IsMod4Locked
-    {
-      if zeigeLockBox
-        MsgBox Mod4-Feststellung aufgebehoben!
-       IsMod4Locked = 0
-      if UseMod4Light
-        KeyboardLED(1,"off")
-    }
-    else
-    {
-      if zeigeLockBox
-        MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
-      IsMod4Locked = 1
-      if UseMod4Light
-        KeyboardLED(1,"on")
-    }
-  }
+  wasMod4RPressed := isMod4RPressed
+  isMod4RPressed := 1
+  isMod4Pressed := 1
+  if (isMod4LPressed and !wasMod4RPressed)
+    ToggleMod4Lock()
 return
+
+*VKA5SC138 up::
+  isMod4RPressed := 0
+  isMod4Pressed := isMod4LPressed
+return
+
+*VKE2SC056::
+  wasMod4LPressed := isMod4LPressed
+  isMod4LPressed := 1
+  isMod4Pressed := 1
+  if (isMod4RPressed and !wasMod4LPressed)
+    ToggleMod4Lock()
+return
+
+*VKE2SC056 up::
+  isMod4LPressed := 0
+  isMod4Pressed := isMod4RPressed
+return
+
+ToggleMod4Lock() {
+  global
+  if (IsMod4Locked) {
+    IsMod4Locked := 0
+    if (UseMod4Light)
+      KeyboardLED(1,"off")
+    if (zeigeLockBox)
+      MsgBox Mod4-Feststellung aufgehoben!
+  } else {
+    IsMod4Locked := 1
+    if (UseMod4Light)
+      KeyboardLED(1,"on")
+    if (zeigeLockBox)
+      MsgBox Mod4 festgestellt: Um Mod4 wieder zu lösen, drücke beide Mod4-Tasten gleichzeitig!
+  }
+}
+
 /*
    ------------------------------------------------------
    BildschirmTastatur
@@ -573,49 +663,49 @@ return
 */
 
 F1::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Switch1
   else send {blind}{F1}
 return
 
 F2::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Switch2
   else send {blind}{F2}
 return
 
 F3::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Switch3
   else send {blind}{F3}
 return
 
 F4::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Switch4
   else send {blind}{F4}
 return
 
 F5::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Switch5
   else send {blind}{F5}
 return
 
 F6::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Switch6
   else send {blind}{F6}
 return
 
 F7::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto Show
   else send {blind}{F7}
 return
 
 F8::
-  if(isMod4Pressed()&&zeigeBildschirmTastatur)
+  if(isMod4Active() && zeigeBildschirmTastatur)
     goto ToggleAlwaysOnTop
   else send {blind}{F8}
 return
