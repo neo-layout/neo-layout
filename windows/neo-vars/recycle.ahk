@@ -68,11 +68,9 @@ IniRead,isVM,%ini%,Global,isVM,0
 if (isVM)
   CharProc("_VM1")
 
-; Sollen tote Tasten blind angezeigt werden?
-IniRead,DeadCompose,%ini%,Global,DeadCompose,0
-
-;Sollen Compose-Tasten blind angezeigt werden?
-IniRead,DeadSilence,%ini%,Global,DeadSilence,0
+;Soll der Mod2Lock auch auf die Akzente, die Ziffernreihe und das Numpad angewandt werden?
+; Wird striktesMod2Lock auf 1 gesetzt, wirkt CapsLock wie ShiftLock
+IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 
 
 /***********************
