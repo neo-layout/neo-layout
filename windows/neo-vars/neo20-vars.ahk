@@ -124,13 +124,13 @@ CharOut(char) {
   global
   if (DNCS%char% != "") {
     seq := DNCS%char% . UPCS%char%
-    if (isShiftPressed and (isMod2Locked or (char == "U00B4")))
-      seq := "{Shift Up}" . seq . "{Shift Down}"
+    if (isShiftPressed and UNSH%char%)
+      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
     send % "{blind}" . seq
   } else if (CS%char% != "") {
     seq := "{" . CS%char% . "}"
-    if (isShiftPressed and (isMod2Locked or (char == "U20AC")))
-      seq := "{Shift Up}" . seq . "{Shift Down}"
+    if (isShiftPressed and UNSH%char%)
+      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
     send % "{blind}" . seq
   } else
     SendUnicodeChar("0x" . SubStr(char,2))
@@ -140,14 +140,14 @@ CharOutDown(char) {
   global
   if (DNCS%char% != "") {
     seq := DNCS%char%
-    if (isShiftPressed and (isMod2Locked or (char == "U00B4")))
-      seq := "{Shift Up}" . seq . "{Shift Down}"
+    if (isShiftPressed and UNSH%char%)
+      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
     send % "{blind}" . seq
   } else if (CS%char% != "") {
     seq := CS%char%
     seq := "{". seq . " down}"
-    if (isShiftPressed and (isMod2Locked or (char == "U20AC")))
-      seq := "{Shift Up}" . seq . "{Shift Down}"
+    if (isShiftPressed and UNSH%char%)
+      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
     send % "{blind}" . seq
   } else
     SendUnicodeCharDown("0x" . SubStr(char,2))
@@ -157,17 +157,26 @@ CharOutUp(char) {
   global
   if (DNCS%char% != "") {
     seq := UPCS%char%
-    if (isShiftPressed and isMod2Locked)
-      seq := "{Shift Up}" . seq . "{Shift Down}"
+    if (isShiftPressed and UNSH%char%)
+      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
     send % "{blind}" . seq
   } else if (CS%char% != "") {
     seq := CS%char%
     seq := "{". seq . " up}"
-    if (isShiftPressed and (isMod2Locked or (char == "U20AC")))
-      seq := "{Shift Up}" . seq . "{Shift Down}"
+    if (isShiftPressed and UNSH%char%)
+      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
     send % "{blind}" . seq
   } else
     SendUnicodeCharUp("0x" . SubStr(char,2))
+}
+
+FixSeq(seq,LP,RP) {
+  ret := seq
+  if (LP)
+    ret := "{Shift Up}" . ret . "{Shift Down}"
+  if (RP)
+    ret := "{RShift Up}" . ret . "{RShift Down}"
+  return ret
 }
 
 CharProc(subroutine) {
