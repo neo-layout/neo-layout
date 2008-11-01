@@ -37,6 +37,7 @@ DNCSU005E := "{^}{space}"
 DNCSU0060 := "{``}{space}"
 DNCSU007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
 DNCSU00B4 := "{´}{space}"
+UNSHU00B4 := 1
 
 /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
  **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
@@ -44,6 +45,7 @@ DNCSU00B4 := "{´}{space}"
  **** geschickt.
 */
 CSU20AC := chr(128)   ; €
+UNSHU20AC := 1
 ; CSU201A := chr(130) ; ‚
 ; CSU0192 := chr(131) ; ƒ
 ; CSU201E := chr(132) ; „
@@ -85,6 +87,9 @@ CSU00F6 := chr(246)   ; ö
 CSU00FC := chr(252)   ; ü
 CSU00FF := chr(255)   ; ÿ
 
+CSSSh_L := "LShift"
+CSSSh_R := "RShift"
+CSSCaps := "CapsLock"
 CSS_Del := "Delete"
 CSS_Ins := "Insert"
 CSS__Up := "Up"
