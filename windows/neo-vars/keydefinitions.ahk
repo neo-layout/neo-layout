@@ -96,6 +96,10 @@ ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   global
   if (caps == 0)
     NOC%pos% := 1
+  else {
+    if (e1 != "")
+      UNSH%e1% := 1 ; unshift wenn caps lock + Shift?
+  }
   if (e1 != "") 
     CP1%pos% := e1
   if (e2 != "") 
@@ -120,5 +124,5 @@ EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
 }
 
 ED1(pos,e1) {
- ED(pos,1,e1,e1,e1,e1,e1,e1)
+ ED(pos,0,e1,e1,e1,e1,e1,e1)
 }
