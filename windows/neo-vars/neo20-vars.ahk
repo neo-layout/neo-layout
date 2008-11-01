@@ -33,6 +33,11 @@ AllStar(This_HotKey) {
   } else
     IsDown := 1
   ActKey := PhysKey ; das könnte später für eine Transformation benutzt werden
+  if (NOC%ActKey% == 1) {
+    Ebene := EbeneC
+    Ebene7 := Ebene7C
+    Ebene8 := Ebene8C
+  }
   if (Ebene7 and (CP7%ActKey% != ""))
     Char := CP7%ActKey%
   else if (Ebene8 and (CP8%ActKey% != ""))
@@ -58,7 +63,6 @@ CharStarDown(PhysKey, ActKey, char) {
 
   tosend := ""
   PP%PhysKey% := ""
-  PR%PhysKey% := ""
 
   if (CD%Comp% != "") {
     tosend := CD%Comp%
@@ -73,7 +77,10 @@ CharStarDown(PhysKey, ActKey, char) {
   }
 
   if (strlen(tosend) > 5) { ; multiple chars
-    PP%PhysKey% := ""
+    if (PR%PhysKey% != "")
+      CharOutUp(PR%PhysKey%)
+    PR%PhysKey% := ""
+
     loop {
       if (tosend == "") 
         break                ; erledigt
@@ -86,12 +93,21 @@ CharStarDown(PhysKey, ActKey, char) {
     }
   } else if (tosend != "")
     if (SubStr(tosend,1,1)=="P") {
-      PP%PhysKey% := ""
+      if (PR%PhysKey% != "")
+        CharOutUp(PR%PhysKey%)
+      PR%PhysKey% := ""
       CharProc(SubStr(tosend,2))
     } else {
+      if ((PR%PhysKey% != "") and (PR%PhysKey% != tosend))
+        CharOutUp(PR%PhysKey%)
       PR%PhysKey% := tosend
       CharOutDown(tosend)
     }
+  else {
+    if (PR%PhysKey% != "")
+      CharOutUp(PR%PhysKey%)
+    PR%PhysKey% := ""
+  }
 }
 
 CharStarUp(PhysKey) {
@@ -181,12 +197,12 @@ CharProc(subroutine) {
     else
       CharProc("LnS0")
   } else if (subroutine == "LnS1") {
-    ED("VKBASC01A","U0073","U1E9E","U00DF",""     ,"U03C2","U2218") ; ß
-    ED("VK48SC023","U017F","U0053","U003F","U00BF","U03C3","U03A3","U0073") ; s
+    ED("VKBASC01A",1,"U0073","U1E9E","U00DF",""     ,"U03C2","U2218") ; ß
+    ED("VK48SC023",1,"U017F","U0053","U003F","U00BF","U03C3","U03A3","U0073") ; s
     KeyboardLED(2,"on")
   } else if (subroutine == "LnS0") {
-    ED("VKBASC01A","U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
-    ED("VK48SC023","U0073","U0053","U003F","U00BF","U03C3","U03A3","U017F") ; s
+    ED("VKBASC01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
+    ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3","U017F") ; s
     KeyboardLED(2,"off")
   } else if (subroutine == "_VMt") {
     ; Belegungsvariante VM
@@ -196,29 +212,29 @@ CharProc(subroutine) {
     else
       CharProc("_VM0")
   } else if (subroutine == "_VM1") {
-    ED("VK51SC010","U0079","U0059","U2026","U22EE","U03C5","U2207") ; y
-    ED("VK57SC011","U006F","U004F","U005F","U0008","U03BF","U2208") ; o
-    ED("VK45SC012","U0061","U0041","U005B","S__Up","U03B1","U2200") ; a
-    ED("VK52SC013","U0070","U0050","U005D","S_Del","U03C0","U03A0") ; p
-    ED("VK41SC01E","U0069","U0049","U005C","SHome","U03B9","U222B") ; i
-    ED("VK53SC01F","U0075","U0055","U002F","SLeft","P_Uni","U222E") ; u
-    ED("VK44SC020","U0065","U0045","U007B","SDown","U03B5","U2203") ; e
-    ED("VK46SC021","U0063","U0043","U007D","SRght","U03C7","U2102") ; c
-    ED("VK47SC022","U006C","U004C","U002A","S_End","U03BB","U039B") ; l
-    ED("VKDESC028","U0078","U0058","U0040","U002E","U03BE","U039E") ; x
-    ED("VK56SC02F","U0076","U0056","U007E","U000D",""     ,"U2259") ; v
+    ED("VK51SC010",1,"U0079","U0059","U2026","U22EE","U03C5","U2207") ; y
+    ED("VK57SC011",1,"U006F","U004F","U005F","U0008","U03BF","U2208") ; o
+    ED("VK45SC012",1,"U0061","U0041","U005B","S__Up","U03B1","U2200") ; a
+    ED("VK52SC013",1,"U0070","U0050","U005D","S_Del","U03C0","U03A0") ; p
+    ED("VK41SC01E",1,"U0069","U0049","U005C","SHome","U03B9","U222B") ; i
+    ED("VK53SC01F",1,"U0075","U0055","U002F","SLeft","P_Uni","U222E") ; u
+    ED("VK44SC020",1,"U0065","U0045","U007B","SDown","U03B5","U2203") ; e
+    ED("VK46SC021",1,"U0063","U0043","U007D","SRght","U03C7","U2102") ; c
+    ED("VK47SC022",1,"U006C","U004C","U002A","S_End","U03BB","U039B") ; l
+    ED("VKDESC028",1,"U0078","U0058","U0040","U002E","U03BE","U039E") ; x
+    ED("VK56SC02F",1,"U0076","U0056","U007E","U000D",""     ,"U2259") ; v
   } else if (subroutine == "_VM0") {
-    ED("VK51SC010","U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
-    ED("VK57SC011","U0076","U0056","U005F","U0008",""     ,"U2259") ; v
-    ED("VK45SC012","U006C","U004C","U005B","S__Up","U03BB","U039B") ; l
-    ED("VK52SC013","U0063","U0043","U005D","S_Del","U03C7","U2102") ; c
-    ED("VK41SC01E","U0075","U0055","U005C","SHome","P_Uni","U222E") ; u
-    ED("VK53SC01F","U0069","U0049","U002F","SLeft","U03B9","U222B") ; i
-    ED("VK44SC020","U0061","U0041","U007B","SDown","U03B1","U2200") ; a
-    ED("VK46SC021","U0065","U0045","U007D","SRght","U03B5","U2203") ; e
-    ED("VK47SC022","U006F","U004F","U002A","S_End","U03BF","U2208") ; o
-    ED("VKDESC028","U0079","U0059","U0040","U002E","U03C5","U2207") ; y
-    ED("VK56SC02F","U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
+    ED("VK51SC010",1,"U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
+    ED("VK57SC011",1,"U0076","U0056","U005F","U0008",""     ,"U2259") ; v
+    ED("VK45SC012",1,"U006C","U004C","U005B","S__Up","U03BB","U039B") ; l
+    ED("VK52SC013",1,"U0063","U0043","U005D","S_Del","U03C7","U2102") ; c
+    ED("VK41SC01E",1,"U0075","U0055","U005C","SHome","P_Uni","U222E") ; u
+    ED("VK53SC01F",1,"U0069","U0049","U002F","SLeft","U03B9","U222B") ; i
+    ED("VK44SC020",1,"U0061","U0041","U007B","SDown","U03B1","U2200") ; a
+    ED("VK46SC021",1,"U0065","U0045","U007D","SRght","U03B5","U2203") ; e
+    ED("VK47SC022",1,"U006F","U004F","U002A","S_End","U03BF","U2208") ; o
+    ED("VKDESC028",1,"U0079","U0059","U0040","U002E","U03C5","U2207") ; y
+    ED("VK56SC02F",1,"U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
   }
 }
 
