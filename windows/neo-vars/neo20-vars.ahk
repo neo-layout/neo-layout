@@ -33,11 +33,8 @@ AllStar(This_HotKey) {
   } else
     IsDown := 1
   ActKey := PhysKey ; das könnte später für eine Transformation benutzt werden
-  if ((striktesMod2Lock == 0) && (NOC%ActKey% == 1)) {
+  if ((striktesMod2Lock == 0) && (NOC%ActKey% == 1))
     Ebene := EbeneNC
-    Ebene7 := Ebene7NC
-    Ebene8 := Ebene8NC
-  }
   if (Ebene7 and (CP7%ActKey% != ""))
     Char := CP7%ActKey%
   else if (Ebene8 and (CP8%ActKey% != ""))
