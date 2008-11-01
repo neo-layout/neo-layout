@@ -191,51 +191,39 @@ lernModus_neo_Entf := 1
 EbeneAktualisieren()
 {
   global
-  Modstate := IsMod4Active() . IsMod3Active() . IsShiftActive()
+  Modstate := IsMod4Active() . IsMod3Active()
   Ebene7 := 0
   Ebene8 := 0
-  if        (Modstate = "000")   ; Ebene 1: Ohne Mod
-    Ebene := 1
-  else if   (Modstate = "001")   ; Ebene 2: Shift
-    Ebene := 2
-  else if   (Modstate = "010")   ; Ebene 3: Mod3
-    Ebene := 3
-  else if   (Modstate = "100")   ; Ebene 4: Mod4
+  Ebene7NC := 0
+  Ebene8NC := 0
+  if        (Modstate == "00") { ; Ebene 1 oder 2
+    if (IsShiftActive())         ; Ebene 2: Shift oder CapsLock
+      Ebene := 2
+    else                         ; Ebene 1: Ohne Mod oder CapsLock mit Shift
+      Ebene := 1
+    if (IsShiftPressed)          ; NC: Ebene 2: Shift (ignoriert CapsLock)
+      EbeneNC := 2
+    else                         ; NC: Ebene 1: Ohne Mod (ignoriert CapsLock)
+      EbeneNC := 1
+  } else if (Modstate == "01") { ; Ebene 3 oder 5 (ignoriert CapsLock)
+    if (IsShiftPressed)          ; Ebene 5: Shift+Mod3
+      Ebene := 5
+    else                         ; Ebene 3: Mod3
+      Ebene := 3
+    EbeneNC := Ebene             ; NC: gleich
+  } else if (Modstate == "10") { ; Ebene 4 (Mit Shift: Auch Ebene 7) (ignoriert CapsLock)
     Ebene := 4
-  else if   (Modstate = "011")   ; Ebene 5: Shift+Mod3
-    Ebene := 5
-  else if   (Modstate = "110")   ; Ebene 6: Mod3+Mod4
+    if (IsShiftPressed)          ; Ebene 7: Shift+Mod4
+      Ebene7 := 1
+    EbeneNC := Ebene
+    Ebene7NC := Ebene7
+  } else if (ModState == "11") { ; Ebene 6 (Mit Shift Xoder CapsLock: Auch Ebene 8)
     Ebene := 6
-  else if   (Modstate = "101") { ; Ebene 7: Shift+Mod4 impliziert Ebene 4
-    Ebene := 4
-    Ebene7 := 1
-  } else if (Modstate = "111") { ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
-    Ebene := 6
-    Ebene8 := 1
-  }
-
-  ; jetzt für Tasten, die Mod2Locked ignorieren
-  Modstate := IsMod4Active() . IsMod3Active() . IsShiftPressed
-  Ebene7C := 0
-  Ebene8C := 0
-  if        (Modstate = "000")   ; Ebene 1: Ohne Mod
-    EbeneC := 1
-  else if   (Modstate = "001")   ; Ebene 2: Shift
-    EbeneC := 2
-  else if   (Modstate = "010")   ; Ebene 3: Mod3
-    EbeneC := 3
-  else if   (Modstate = "100")   ; Ebene 4: Mod4
-    EbeneC := 4
-  else if   (Modstate = "011")   ; Ebene 5: Shift+Mod3
-    EbeneC := 5
-  else if   (Modstate = "110")   ; Ebene 6: Mod3+Mod4
-    EbeneC := 6
-  else if   (Modstate = "101") { ; Ebene 7: Shift+Mod4 impliziert Ebene 4
-    EbeneC := 4
-    Ebene7C := 1
-  } else if (Modstate = "111") { ; Ebene 8: Shift+Mod3+Mod4 impliziert Ebene 6
-    EbeneC := 6
-    Ebene8C := 1
+    if (IsShiftActive())         ; Ebene 8: Shift Xoder CapsLock, nicht beides
+      Ebene8 := 1
+    if (IsShiftPressed)          ; NC: Ebene 8: Shift (ignoriert CapsLock)
+      Ebene8NC := 1
+    EbeneNC := Ebene
   }
 }
 
