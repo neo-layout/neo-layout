@@ -5126,7 +5126,6 @@ Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex m
 */
 
 SendUnicodeChar(charCode1, charCode2) {
-
   global
   if !(CheckComp(charCode2) and DeadCompose)
   IfWinActive,ahk_class gdkWindowToplevel
