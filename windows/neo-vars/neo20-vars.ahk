@@ -33,7 +33,7 @@ AllStar(This_HotKey) {
   } else
     IsDown := 1
   ActKey := PhysKey ; das könnte später für eine Transformation benutzt werden
-  if (NOC%ActKey% == 1) {
+  if ((striktesMod2Lock == 0) && (NOC%ActKey% == 1)) {
     Ebene := EbeneC
     Ebene7 := Ebene7C
     Ebene8 := Ebene8C
@@ -124,12 +124,12 @@ CharOut(char) {
   global
   if (DNCS%char% != "") {
     seq := DNCS%char% . UPCS%char%
-    if (GetKeyState("Shift","P") and (isMod2Locked or (char == "U00B4")))
+    if (isShiftPressed and (isMod2Locked or (char == "U00B4")))
       seq := "{Shift Up}" . seq . "{Shift Down}"
     send % "{blind}" . seq
   } else if (CS%char% != "") {
     seq := "{" . CS%char% . "}"
-    if (GetKeyState("Shift","P") and (isMod2Locked or (char == "U20AC")))
+    if (isShiftPressed and (isMod2Locked or (char == "U20AC")))
       seq := "{Shift Up}" . seq . "{Shift Down}"
     send % "{blind}" . seq
   } else
@@ -140,13 +140,13 @@ CharOutDown(char) {
   global
   if (DNCS%char% != "") {
     seq := DNCS%char%
-    if (GetKeyState("Shift","P") and (isMod2Locked or (char == "U00B4")))
+    if (isShiftPressed and (isMod2Locked or (char == "U00B4")))
       seq := "{Shift Up}" . seq . "{Shift Down}"
     send % "{blind}" . seq
   } else if (CS%char% != "") {
     seq := CS%char%
     seq := "{". seq . " down}"
-    if (GetKeyState("Shift","P") and (isMod2Locked or (char == "U20AC")))
+    if (isShiftPressed and (isMod2Locked or (char == "U20AC")))
       seq := "{Shift Up}" . seq . "{Shift Down}"
     send % "{blind}" . seq
   } else
@@ -157,13 +157,13 @@ CharOutUp(char) {
   global
   if (DNCS%char% != "") {
     seq := UPCS%char%
-    if GetKeyState("Shift","P") and isMod2Locked
+    if (isShiftPressed and isMod2Locked)
       seq := "{Shift Up}" . seq . "{Shift Down}"
     send % "{blind}" . seq
   } else if (CS%char% != "") {
     seq := CS%char%
     seq := "{". seq . " up}"
-    if (GetKeyState("Shift","P") and (isMod2Locked or (char == "U20AC")))
+    if (isShiftPressed and (isMod2Locked or (char == "U20AC")))
       seq := "{Shift Up}" . seq . "{Shift Down}"
     send % "{blind}" . seq
   } else
