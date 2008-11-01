@@ -33,7 +33,7 @@ NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
 NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
 NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
 NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
-NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo} # for $HOME/neo/neo.map (without the „.map“)
+NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
 
 die() {
 	echo "$@" >&2
