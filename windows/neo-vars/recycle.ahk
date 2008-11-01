@@ -194,8 +194,6 @@ EbeneAktualisieren()
   Modstate := IsMod4Active() . IsMod3Active()
   Ebene7 := 0
   Ebene8 := 0
-  Ebene7NC := 0
-  Ebene8NC := 0
   if        (Modstate == "00") { ; Ebene 1 oder 2
     if (IsShiftActive())         ; Ebene 2: Shift oder CapsLock
       Ebene := 2
@@ -215,15 +213,12 @@ EbeneAktualisieren()
     Ebene := 4
     if (IsShiftPressed)          ; Ebene 7: Shift+Mod4
       Ebene7 := 1
-    EbeneNC := Ebene
-    Ebene7NC := Ebene7
+    EbeneNC := Ebene             ; NC: gleich
   } else if (ModState == "11") { ; Ebene 6 (Mit Shift Xoder CapsLock: Auch Ebene 8)
     Ebene := 6
-    if (IsShiftActive())         ; Ebene 8: Shift Xoder CapsLock, nicht beides
+    if (IsShiftPressed)          ; Ebene 8: Shift (ignoriert CapsLock)
       Ebene8 := 1
-    if (IsShiftPressed)          ; NC: Ebene 8: Shift (ignoriert CapsLock)
-      Ebene8NC := 1
-    EbeneNC := Ebene
+    EbeneNC := Ebene             ; NC: gleich
   }
 }
 
