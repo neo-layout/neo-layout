@@ -428,6 +428,7 @@ EncodeInteger(ref,val){
 ***********************
 */
 
+
 +pause::
 Suspend, Permit
   goto togglesuspend
@@ -449,7 +450,8 @@ togglesuspend:
     if (iconBenutzen)
       menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
     suspend , on  ; Schaltet Suspend ein -> QWERTZ
-  } return
+  }
+return
 
 help:
   Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm

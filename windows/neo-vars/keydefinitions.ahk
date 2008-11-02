@@ -76,7 +76,7 @@ EDN("VK6ESC053","VK2ESC053",0,"SNDot","U002E","U002C","SNDel","U2032","U2033") ;
 ED("space",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
 ED("esc"  ,0,"U001B","U001B","U001B","PRlod","U001B","U001B")
 ED("tab"  ,0,"U0009","U0009","SComp","U0009","U0009","U0009")
-ED("F10"  ,0,"S_F10","S_F10","S_F10","P_VMt","S_F10","S_F10")
+ED("F10"  ,0,"S_F10","S_F10","P_EHt","P_VMt","S_F10","S_F10")
 ED("F11"  ,0,"S_F11","S_F11","S_F11","PLnSt","S_F11","S_F11")
 ED1("enter"    ,"U000D")
 ED1("backspace","U0008")

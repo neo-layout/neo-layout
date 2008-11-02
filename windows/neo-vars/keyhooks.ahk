@@ -56,6 +56,7 @@
 *VKBCSC033:: ; , (,)
 *VKBESC034:: ; . (.)
 *VKBDSC035:: ; - (j)
+*space::
 
 ; Numpad
 
@@ -163,6 +164,7 @@ numpadenter::
 *VKBCSC033 up:: ; , (,)
 *VKBESC034 up:: ; . (.)
 *VKBDSC035 up:: ; - (j)
+*space up::
 
 ; Numpad
 
@@ -213,24 +215,4 @@ F11 up::
 numpadenter up::
 
   AllStar(A_ThisHotkey)
-return
-
-*space::
-  if ((einHandNeo))
-   spacepressed := 1
-  else
-   AllStar(A_ThisHotkey)
-return
-
-*space up::
-  if ((einHandNeo)) {
-    if ((keypressed)) {
-     keypressed := 0
-     spacepressed := 0
-    } else {
-      AllStar("space")    ;???
-      AllStar("space up")
-    }
-  } else
-    AllStar(A_ThisHotkey)
 return
