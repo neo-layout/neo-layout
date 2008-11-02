@@ -74,7 +74,7 @@ IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 
 
 /***********************
-* Recourcen-Verwaltung *
+* Resourcen-Verwaltung *
 ************************
 */
 if(FileExist("ResourceFolder")<>false){
