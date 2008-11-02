@@ -25,7 +25,7 @@ This is an experimental package providing for Unicode maths glyphs in \XeTeX+\La
 \end{quote}
 
 \section{Installation}
-Zuerst sollten alle Dateien aus dem unicode-math-SVN heruntergeladen und in dem selben Verzeichnis, in dem sich auch die \verb|Beispiel.tex| befindet, abgespeichert werden.\footnote{Wenn dieses Paket jedoch dauerhaft oder für mehrere Dateien verwendet werden soll, bietet es sich an, die Dateien stattdessen in ein lokales \TeX-Root-Directory zu installieren.} Die Dateien sind noch nicht kompiliert, was man aber durch den Aufruf von \verb|xelatex unicode-math.dtx| auf der Kommandozeile selbst erledigen kann. Das dauert zwar u.\,U.\ eine Weile und läuft auch noch nicht so ganz glatt (zumindest bricht er bei mir mit der Fehlermeldung ab, dass er die Datei \verb|FPL N.cfg| nicht finden könne), produziert aber alle notwendigen Dateien.
+Zuerst sollten alle Dateien aus dem unicode-math-SVN heruntergeladen und in dem selben Verzeichnis, in dem sich auch die \verb|Beispiel.tex| befindet, abgespeichert werden.\footnote{Wenn dieses Paket jedoch dauerhaft oder für mehrere Dateien verwendet werden soll, bietet es sich an, die Dateien stattdessen in ein lokales \TeX-Root-Directory zu installieren.} Die Dateien sind noch nicht kompiliert, was man aber durch den Aufruf von \verb|xelatex unicode-math.ins| auf der Kommandozeile selbst erledigen kann. Das dauert zwar u.\,U.\ eine Weile und läuft auch noch nicht so ganz glatt (zumindest bricht er bei mir mit der Fehlermeldung ab, dass er die Datei \verb|FPL N.cfg| nicht finden könne), produziert aber alle notwendigen Dateien. Zudem ist es ratsam, sich mit \verb|xelatex unicode-math.dtx| die Dokumentation des Packetes erzeugen zu lassen.3
 
 Anschließend sollte man die Beispieldatei mit dem Kommando \verb|xelatex Beispiel.tex| problemlos kompilieren können. Unter einem Linux-System muss \emph{eventuell} zuvor noch das ByteOrderMark (\verb|ï»¿|) am Beginn der UTF-8 kodierten Datei entfernt werden.
 
@@ -58,10 +58,10 @@ Die Zeichenklasse gibt dabei sozusagen den »Typ« des Zeichens im Mathematikmod
 Auf diese Weise kann beispielsweise die fehlende Ellipse dem Mathematikmodus hinzugefügt werden: \verb|\UnicodeMathSymbol{"02026}{\ldots}{\mathpunct}{Horizontal ellipsis}|
 Anschließend kann einfach \verb|$a_1, …, a_n$| geschrieben werden.
 
-\section*{Fazit: ¡\XeTeX\ rocks!}
+\subsection{Fazit: ¡\XeTeX\ rocks!}
 Gerade im Mathematikmodus geht es viel schneller, mithilfe des NEO-Tastaturlayoutes einfach ∀ ε>0 ∃ δ>0 statt \verb|\forall \epsilon>0 \exists \delta>0| schreiben zu können – und es sieht auch noch viel übersichtlicher aus. \verb|\epsilon>0| ist tot, lang lebe ε>0!
 
-\subsection*{Links}
+\section{Links}
 Alle Links führen auf Websiten in englischer Sprache.
 \begin{itemize}
 \item Die offizielle \XeTeX−Homepage: \url{http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=XeTeX}
