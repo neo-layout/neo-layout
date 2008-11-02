@@ -32,7 +32,7 @@ AllStar(This_HotKey) {
     IsDown := 0
   } else
     IsDown := 1
-  ActKey := PhysKey ; das könnte später für eine Transformation benutzt werden
+  ActKey := TransformKey(PhysKey)
   if ((striktesMod2Lock == 0) && (NOC%ActKey% == 1))
     Ebene := EbeneNC
   if (Ebene7 and (CP7%ActKey% != ""))
@@ -109,9 +109,13 @@ CharStarDown(PhysKey, ActKey, char) {
 
 CharStarUp(PhysKey) {
   global
-  if (PR%PhysKey% != "")
-    CharOutUp(PR%PhysKey%)     ; resulting from key repeat
-
+  if (PR%PhysKey% != "") {
+    tosend := PR%PhysKey%
+    if (SubStr(tosend,1,1)=="P")
+      CharProc(SubStr(tosend,2))
+    else
+      CharOutUp(tosend)
+  }
   PR%PhysKey% := ""
   PP%PhysKey% := ""
 }
@@ -179,45 +183,57 @@ FixSeq(seq,LP,RP) {
 CharProc(subroutine) {
   global
   if (subroutine == "_Rom") {
+    ; starte groß geschriebene römische Zahlen
     IsPressHooked := 1
     PressHookRoutine := "Roman"
     RomanSum := 0
   } else if (subroutine == "_rom") {
+    ; starte klein geschriebene römische Zahlen
     IsPressHooked := 1
     PressHookRoutine := "roman"
     RomanSum := 0
   } else if (subroutine == "_Uni") {
+    ; starte Unicode-Hex-in-Zeichen-Umwandlung
     IsPressHooked := 1
     PressHookRoutine := "Uni"
     UniSum := ""
   } else if (subroutine == "DUni") {
+    ; starte Unicode-Zeichen-in-Hex-Umwandlung
     IsPressHooked := 1
     PressHookRoutine := "DUni"
-  }  else if (subroutine == "Rlod")
+  }  else if (subroutine == "Rlod") {
+    ; Neustart des AHK-Skripts
     reload
-  else if (subroutine == "LnSt") {
-    ;Lang-s-Tastatur:
+  } else if (subroutine == "LnSt") {
+    ;Lang-s-Tastatur: Toggle
     LangSTastatur := !(LangSTastatur)
     if (LangSTastatur)
       CharProc("LnS1")
     else
       CharProc("LnS0")
   } else if (subroutine == "LnS1") {
+    ; Lange-s-Tastatur aktivieren
     ED("VKBASC01A",1,"U0073","U1E9E","U00DF",""     ,"U03C2","U2218") ; ß
     ED("VK48SC023",1,"U017F","U0053","U003F","U00BF","U03C3","U03A3","U0073") ; s
     KeyboardLED(2,"on")
   } else if (subroutine == "LnS0") {
+    ; Lange-s-Tastatur deaktivieren
     ED("VKBASC01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
     ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3","U017F") ; s
     KeyboardLED(2,"off")
   } else if (subroutine == "_VMt") {
+    ; VM-Tastaturbelegungsvariante togglen
     ; Belegungsvariante VM
     isVM := !(isVM)
-    if (isVM)
+    if (isVM) {
       CharProc("_VM1")
-    else
+      MsgBox,Willkommen bei der NEO-VM-Belegungsvariante! Zum Deaktivieren, Mod4+F10 drücken
+    } else {
       CharProc("_VM0")
+      MsgBox,NEO-VM-Belegungsvariante deaktiviert
+    }
   } else if (subroutine == "_VM1") {
+    ; VM-Tastaturbelegungsvariante aktivieren
     ED("VK51SC010",1,"U0079","U0059","U2026","U22EE","U03C5","U2207") ; y
     ED("VK57SC011",1,"U006F","U004F","U005F","U0008","U03BF","U2208") ; o
     ED("VK45SC012",1,"U0061","U0041","U005B","S__Up","U03B1","U2200") ; a
@@ -230,6 +246,7 @@ CharProc(subroutine) {
     ED("VKDESC028",1,"U0078","U0058","U0040","U002E","U03BE","U039E") ; x
     ED("VK56SC02F",1,"U0076","U0056","U007E","U000D",""     ,"U2259") ; v
   } else if (subroutine == "_VM0") {
+    ; VM-Tastaturbelegungsvariante deaktivieren
     ED("VK51SC010",1,"U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
     ED("VK57SC011",1,"U0076","U0056","U005F","U0008",""     ,"U2259") ; v
     ED("VK45SC012",1,"U006C","U004C","U005B","S__Up","U03BB","U039B") ; l
@@ -241,6 +258,90 @@ CharProc(subroutine) {
     ED("VK47SC022",1,"U006F","U004F","U002A","S_End","U03BF","U2208") ; o
     ED("VKDESC028",1,"U0079","U0059","U0040","U002E","U03C5","U2207") ; y
     ED("VK56SC02F",1,"U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
+  } else if (subroutine == "_EHt") {
+    ; Einhandmodus togglen
+    einHandNeo := !(einHandNeo)
+    if (einHandNeo) {
+      CharProc("_EH1")
+      MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod3+F10 drücken
+    } else {
+      CharProc("_EH0")
+      MsgBox,NEO-Einhand-Modus deaktiviert
+    }
+  } else if (subroutine == "_EH1") {
+    ; Einhand-NEO aktivieren
+    ; Reihe 1
+    TKEH_VK37SC008 := "VK36SC007" ; 7 -> 6
+    TKEH_VK38SC009 := "VK35SC006" ; 8 -> 5
+    TKEH_VK39SC00A := "VK34SC005" ; 9 -> 4
+    TKEH_VK30SC00B := "VK33SC004" ; 0 -> 3
+    TKEH_VKDBSC00C := "VK32SC003" ; ß -> 2
+    TKEH_VKDDSC00D := "VK31SC002" ; tot2 -> 1
+    ; Reihe 2
+    TKEH_VK5ASC015 := "VK54SC014" ; k -> w
+    TKEH_VK55SC016 := "VK52SC013" ; h -> c
+    TKEH_VK49SC017 := "VK45SC012" ; g -> l
+    TKEH_VK4FSC018 := "VK57SC011" ; f -> v
+    TKEH_VK50SC019 := "VK51SC010" ; q -> x
+    TKEH_VKBASC01A := "VK09SC00F" ; ß -> tab
+    TKEH_VKBBSC01B := "VKDCSC029" ; tot3 -> tot1
+    ; Reihe 3
+    TKEH_VK48SC023 := "VK47SC022" ; s -> o
+    TKEH_VK4ASC024 := "VK46SC021" ; n -> e
+    TKEH_VK4BSC025 := "VK44SC020" ; r -> a
+    TKEH_VK4CSC026 := "VK53SC01F" ; t -> i
+    TKEH_VKC0SC027 := "VK41SC01E" ; d -> u
+    ; Reihe 4
+    TKEH_VK4ESC031 := "VK42SC030" ; b -> z
+    TKEH_VK4DSC032 := "VK56SC02F" ; m -> p
+    TKEH_VKBCSC033 := "VK43SC02E" ; , -> ä
+    TKEH_VKBESC034 := "VK58SC02D" ; . -> ö
+    TKEH_VKBDSC035 := "VK59SC02C" ; j -> ü
+    ; Modify Space
+    ED1("space","PEHSd")
+    ED("EHSpace",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
+  } else if (subroutine == "_EH0") {
+    ; Einhand-NEO deaktivieren
+    ; Reihe 1
+    TKEH_VK37SC008 := "" ; 7
+    TKEH_VK38SC009 := "" ; 8
+    TKEH_VK39SC00A := "" ; 9
+    TKEH_VK30SC00B := "" ; 0
+    TKEH_VKDBSC00C := "" ; ß
+    TKEH_VKDDSC00D := "" ; tot2
+    ; Reihe 2
+    TKEH_VK5ASC015 := "" ; k
+    TKEH_VK55SC016 := "" ; h
+    TKEH_VK49SC017 := "" ; g
+    TKEH_VK4FSC018 := "" ; f
+    TKEH_VK50SC019 := "" ; q
+    TKEH_VKBASC01A := "" ; ß
+    TKEH_VKBBSC01B := "" ; tot3
+    ; Reihe 3
+    TKEH_VK48SC023 := "" ; s
+    TKEH_VK4ASC024 := "" ; n
+    TKEH_VK4BSC025 := "" ; r
+    TKEH_VK4CSC026 := "" ; t
+    TKEH_VKC0SC027 := "" ; d
+    ; Reihe 4
+    TKEH_VK4ESC031 := "" ; b
+    TKEH_VK4DSC032 := "" ; m
+    TKEH_VKBCSC033 := "" ; ,
+    TKEH_VKBESC034 := "" ; .
+    TKEH_VKBDSC035 := "" ; j
+    ED("space",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
+  } else if (subroutine == "EHSd") {
+    ; Space im Einhandmodus gedrückt
+    EHSpacePressed := 1
+    PRspace := "PEHSu"
+  } else if (subroutine == "EHSu") {
+    ; Space im Einhandmodus losgelassen
+    if (!EHKeyPressed) {
+      AllStar("*EHSpace")
+      AllStar("*EHSpace up")
+    }
+    EHKeyPressed := 0
+    EHSpacePressed := 0
   }
 }
 
@@ -416,3 +517,14 @@ SetFormat, Integer, hex
   return result
 }
 
+TransformKey(PhysKey) {
+  global
+  if (einHandNeo and EHSpacePressed and (TKEH_%PhysKey% != "")) {
+    ActKey := TKEH_%PhysKey%
+    EHKeyPressed := 1
+  } else if (TK_%PhysKey% != "")
+    ActKey := TK_%PhysKey%
+  else
+    ActKey := PhysKey
+  return ActKey
+}
