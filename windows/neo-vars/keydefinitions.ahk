@@ -77,7 +77,7 @@ ED("space",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
 ED("esc"  ,0,"U001B","U001B","U001B","PRlod","U001B","U001B")
 ED("tab"  ,0,"U0009","U0009","SComp","U0009","U0009","U0009")
 ED("F10"  ,0,"S_F10","S_F10","P_EHt","P_VMt","S_F10","S_F10")
-ED("F11"  ,0,"S_F11","S_F11","S_F11","PLnSt","S_F11","S_F11")
+ED("F11"  ,0,"S_F11","S_F11","P_LMt","PLnSt","S_F11","S_F11")
 ED1("enter"    ,"U000D")
 ED1("backspace","U0008")
 ED1("del"      ,"S_Del")
@@ -100,22 +100,14 @@ ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
     if (e1 != "")
       UNSH%e1% := 1 ; unshift wenn caps lock + Shift?
   }
-  if (e1 != "") 
-    CP1%pos% := e1
-  if (e2 != "") 
-    CP2%pos% := e2
-  if (e3 != "") 
-    CP3%pos% := e3
-  if (e4 != "") 
-    CP4%pos% := e4
-  if (e5 != "") 
-    CP5%pos% := e5
-  if (e6 != "") 
-    CP6%pos% := e6
-  if (e7 != "") 
-    CP7%pos% := e7
-  if (e8 != "") 
-    CP8%pos% := e8
+  CP1%pos% := e1
+  CP2%pos% := e2
+  CP3%pos% := e3
+  CP4%pos% := e4
+  CP5%pos% := e5
+  CP6%pos% := e6
+  CP7%pos% := e7
+  CP8%pos% := e8
 }
 
 EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
