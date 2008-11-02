@@ -342,6 +342,62 @@ CharProc(subroutine) {
     }
     EHKeyPressed := 0
     EHSpacePressed := 0
+  } else if (subroutine == "_LMt") {
+    ; Lernmodus togglen
+    lernModus := !(lernModus)
+    if (lernModus) {
+      CharProc("_LM1")
+      MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod3+F11 drücken
+    } else {
+      CharProc("_LM0")
+      MsgBox,NEO-Lernmodus deaktiviert
+    }
+  } else if (subroutine == "_LM1") {
+    ; Lernmodus aktivieren
+    if (!lernModus_std_Return)
+      ED1("enter","")
+    if (!lernModus_std_Backspace)
+      ED1("backspace","")
+    if (!lernModus_std_PgUp)
+      ED1("pgup","")
+    if (!lernModus_std_PgDn)
+      ED1("pgdn","")
+    if (!lernModus_std_Einf)
+      ED1("ins","")
+    if (!lernModus_std_Entf)
+      ED1("del","")
+    if (!lernModus_std_Pos0)
+      ED1("home","")
+    if (!lernModus_std_Ende)
+      ED1("end","")
+    if (!lernModus_std_Hoch)
+      ED1("up","")
+    if (!lernModus_std_Runter)
+      ED1("down","")
+    if (!lernModus_std_Links)
+      ED1("left","")
+    if (!lernModus_std_Rechts)
+      ED1("right","")
+    if (!lernModus_neo_Backspace)
+      CP4VK57SC011 := "" ; Ebene 4 unter v (QWERTZ: w)
+    if (!lernModus_neo_Entf)
+      CP4VK52SC013 := "" ; Ebene 4 unter c (QWERTZ: r)
+  } else if (subroutine == "_LM0") {
+    ; Lernmodus deaktivieren
+    ED1("enter"    ,"U000D")
+    ED1("backspace","U0008")
+    ED1("pgup"     ,"SPgUp")
+    ED1("pgdn"     ,"SPgDn")
+    ED1("ins"      ,"S_Ins")
+    ED1("del"      ,"S_Del")
+    ED1("home"     ,"SHome")
+    ED1("end"      ,"S_End")
+    ED1("up"       ,"S__Up")
+    ED1("down"     ,"SDown")
+    ED1("left"     ,"SLeft")
+    ED1("right"    ,"SRght")
+    CP4VK57SC011 := "U0008"
+    CP4VK52SC013 := "S_Del"
   }
 }
 
