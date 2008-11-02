@@ -86,7 +86,7 @@ CheckCompUni(d,val) {
 
 OutputChar(val1,val2) {
   global
-  if !(CheckComp(val2) and DeadCompose)
+  if (!CheckComp(val2))
     send % "{blind}" . val1
 }
 
@@ -98,7 +98,7 @@ OutputChar12(val1,val2,val3,val4) {
   if (Ebene = 1)
     d := val3
   else d := val4
-  if !(CheckComp(d) and DeadCompose)
+  if (!CheckComp(d))
     if GetKeyState("Shift","P") and isMod2Locked
       send % "{blind}{Shift Up}" . c . "{Shift Down}"
     else send % "{blind}" . c
