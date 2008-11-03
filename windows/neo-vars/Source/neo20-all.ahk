@@ -1,9 +1,12 @@
-; Revision Information
-#Include %a_scriptdir%\_subwcrev.ahk
+; Change working dir
+#Include %a_scriptdir%\..
+
+; Revision Information (don't moun)
+#Include *i %a_scriptdir%\_subwcrev.ahk
 
 ; die Compose-Definitionen
-#Include %a_scriptdir%\en_us.ahk
-#Include %a_scriptdir%\neocomp.ahk
+#Include *i %a_scriptdir%\en_us.ahk
+#Include *i %a_scriptdir%\neocomp.ahk
 #Include %a_scriptdir%\neovarscomp.ahk
 
 ; Hier liegt die Tastaturbelegung

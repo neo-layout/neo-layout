@@ -10,10 +10,11 @@ set  Ahk2Exe=%ahkpath%\Compiler\Ahk2Exe.exe
 
 REM The path to the authohotkey directory in the local svn copy, MUST be "."
 set srcdir=.
-set ahkrevtemplate=%srcdir%\_subwcrev.tmpl.ahk
-set   ahkrevoutput=%srcdir%\_subwcrev.ahk
-set batrevtemplate=%srcdir%\_subwcrev.tmpl.bat
-set   batrevoutput=%srcdir%\_subwcrev.bat
+set Ssrcdir=%srcdir%\Source
+set ahkrevtemplate=%Ssrcdir%\_subwcrev.tmpl.ahk
+set   ahkrevoutput=%Ssrcdir%\_subwcrev.ahk
+set batrevtemplate=%Ssrcdir%\_subwcrev.tmpl.bat
+set   batrevoutput=%Ssrcdir%\_subwcrev.bat
 
 REM The path to the directory used for generating a consistent SVN version (revision number)
 set svnversiondir=..
@@ -31,7 +32,7 @@ call "%batrevoutput%"
 set fn=%srcdir%\neo20-r%Revision%
 
 echo Compiling Compose sequences
-%srcdir%\makecompose.ahk
+%Ssrcdir%\makecompose.ahk
 
 rem echo Killing the old (AHK)Driver
 rem tskill %fn%
@@ -39,8 +40,13 @@ rem tskill %fn%
 echo removing old version(s) of NEO AHK Exe file
 del %srcdir%\neo20-r*.exe 2> nul
 
+echo creating all-in-one script
+echo ; Gesamtdatei > %fn%.ahk
+
+for %%i in (_subwcrev en_us neocomp neovarscomp keydefinitions shortcuts recycle keyhooks varsfunctions) do (type "%Ssrcdir%\%%i.ahk" >> "%fn%.ahk")
+
 echo Compiling the new Driver using Autohotkey
-"%Ahk2Exe%" /in "neo20-all.ahk" /out "%fn%.exe" /icon "%srcdir%\neo.ico"
+"%Ahk2Exe%" /in "%fn%.ahk" /out "%fn%.exe" /icon "%srcdir%\neo.ico"
 
 echo Driver Update complete! You can now close this log-window.
 pause
