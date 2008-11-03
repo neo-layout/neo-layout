@@ -81,7 +81,7 @@ IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 */
 if(FileExist("ResourceFolder")<>false){
   ; Versuche, alle möglicherweise in die EXE eingebundenen Dateien zu extrahieren 
-  FileInstall,neo.ico,%ResourceFolder%\neo.ico,1
+  FileInstall,neo_enabled.ico,%ResourceFolder%\neo_enabled.ico,1
   FileInstall,neo_disabled.ico,%ResourceFolder%\neo_disabled.ico,1
   iconBenutzen=1
   if (bildschirmTastaturEinbinden=1){
@@ -100,7 +100,7 @@ if(FileExist("ResourceFolder")<>false){
 ; Benutze die Dateien auch dann, wenn sie eventuell im aktuellen Verzeichnis vorhanden sind 
 if(FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
   zeigeBildschirmTastatur=1
-if(FileExist("neo.ico")&&FileExist("neo_disabled.ico"))
+if(FileExist("neo_enabled.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
 /*******************************************
@@ -132,7 +132,7 @@ if (inputlocalealias<>inputlocale=%inputlocalealias% and inputlocale<>00000407) 
 **************************
 */
 if (iconBenutzen)
-  menu,tray,icon,%ResourceFolder%\neo.ico,,1
+  menu,tray,icon,%ResourceFolder%\neo_enabled.ico,,1
 menu,tray,nostandard
 menu,tray,add,Öffnen,open
   menu,helpmenu,add,About,about
@@ -444,7 +444,7 @@ togglesuspend:
     menu, tray, rename, %enable%, %disable%
     menu, tray, tip, %name%
     if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo.ico,,1
+      menu, tray, icon, %ResourceFolder%\neo_enabled.ico,,1
     suspend , off ; Schaltet Suspend aus -> NEO
   } else {
     menu, tray, rename, %disable%, %enable%
