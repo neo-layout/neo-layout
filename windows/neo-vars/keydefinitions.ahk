@@ -118,3 +118,5 @@ EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
 ED1(pos,e1) {
  ED(pos,0,e1,e1,e1,e1,e1,e1)
 }
+
+Comp := ""

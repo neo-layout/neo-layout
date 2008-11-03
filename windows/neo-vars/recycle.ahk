@@ -3,6 +3,8 @@
 *******************
 */
 
+#MaxThreadsPerHotKey 4
+
 EbeneAktualisieren()
 SetBatchLines -1
 SetCapsLockState Off
