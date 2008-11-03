@@ -1,5 +1,8 @@
 #MaxThreadsPerHotKey 4
 
+; Revision Information
+#Include %a_scriptdir%\_subwcrev.ahk
+
 ; die Compose-Definitionen
 #Include %a_scriptdir%\en_us.ahk
 #Include %a_scriptdir%\neocomp.ahk
