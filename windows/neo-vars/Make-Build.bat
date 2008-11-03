@@ -38,7 +38,7 @@ rem echo Killing the old (AHK)Driver
 rem tskill %fn%
 
 echo removing old version(s) of NEO AHK Exe file
-del %srcdir%\neo20-r*.exe 2> nul
+del %srcdir%\neo20-r*.exe %srcdir%\neo20-r*.ahk 2> nul
 
 echo creating all-in-one script
 echo ; Gesamtdatei > %fn%.ahk
