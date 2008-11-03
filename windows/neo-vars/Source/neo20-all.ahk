@@ -2,7 +2,8 @@
 #Include %a_scriptdir%\..
 
 ; Revision Information (don't moun)
-#Include *i %a_scriptdir%\_subwcrev.ahk
+#Include *i %a_scriptdir%\_subwcrev1.ahk
+#Include *i %a_scriptdir%\_subwcrev2.ahk
 
 ; die Compose-Definitionen
 #Include *i %a_scriptdir%\en_us.ahk

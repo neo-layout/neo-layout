@@ -11,7 +11,7 @@ SetCapsLockState Off
 SetNumLockState Off
 SetScrollLockState Off
 
-name=Neo 2.0 (%A_ScriptName%) (r%Revision%)
+name=Neo 2.0 (%A_ScriptName%) (r%Revision%-r%CompRevision%)
 enable=Aktiviere %name%
 disable=Deaktiviere %name%
 #usehook on
