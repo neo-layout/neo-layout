@@ -48,7 +48,7 @@ echo removing old version(s) of NEO AHK Exe file
 del %outdir%\neo20-r*.exe %srcdir%\neo20-r*.ahk 2> nul
 
 echo creating all-in-one script
-echo ; Gesamtdatei > %fn%.ahk
+echo ; Gesamtdatei > %fnahk%
 
 for %%i in (_subwcrev1 _subwcrev2 en_us neocomp neovarscomp keydefinitions shortcuts recycle keyhooks varsfunctions) do (type "%Ssrcdir%\%%i.ahk" >> "%fnahk%")
 
