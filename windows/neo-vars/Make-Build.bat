@@ -46,7 +46,7 @@ echo ; Gesamtdatei > %fn%.ahk
 for %%i in (_subwcrev en_us neocomp neovarscomp keydefinitions shortcuts recycle keyhooks varsfunctions) do (type "%Ssrcdir%\%%i.ahk" >> "%fn%.ahk")
 
 echo Compiling the new Driver using Autohotkey
-"%Ahk2Exe%" /in "%fn%.ahk" /out "%fn%.exe" /icon "%srcdir%\neo.ico"
+"%Ahk2Exe%" /in "%fn%.ahk" /out "%fn%.exe" /icon "%srcdir%\neo_enabled.ico"
 
 echo Driver Update complete! You can now close this log-window.
 pause
