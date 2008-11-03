@@ -40,7 +40,7 @@ echo removing old version(s) of NEO AHK Exe file
 del %srcdir%\neo20-r*.exe 2> nul
 
 echo Compiling the new Driver using Autohotkey
-"%Ahk2Exe%" /in "neo20-vars.ahk" /out "%fn%.exe" /icon "%srcdir%\neo.ico"
+"%Ahk2Exe%" /in "neo20-all.ahk" /out "%fn%.exe" /icon "%srcdir%\neo.ico"
 
 echo Driver Update complete! You can now close this log-window.
 pause
