@@ -1,3 +1,5 @@
+#NoEnv
+
 AllStar(This_HotKey) {
   global
   PhysKey := This_HotKey
