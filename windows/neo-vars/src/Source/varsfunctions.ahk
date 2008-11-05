@@ -191,12 +191,12 @@ CharProc(subroutine) {
   } else if (subroutine == "LnS1") {
     ; Lange-s-Tastatur aktivieren
     ED("VKBASC01A",1,"U0073","U1E9E","U00DF",""     ,"U03C2","U2218") ; ß
-    ED("VK48SC023",1,"U017F","U0053","U003F","U00BF","U03C3","U03A3","U0073") ; s
+    ED("VK48SC023",1,"U017F","U0053","U003F","U00BF","U03C3","U03A3") ; s
     KeyboardLED(2,"on")
   } else if (subroutine == "LnS0") {
     ; Lange-s-Tastatur deaktivieren
     ED("VKBASC01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
-    ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3","U017F") ; s
+    ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3") ; s
     KeyboardLED(2,"off")
   } else if (subroutine == "_VMt") {
     ; VM-Tastaturbelegungsvariante togglen
