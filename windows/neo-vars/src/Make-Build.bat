@@ -39,7 +39,7 @@ if errorlevel 1 (
 )
 
 echo Compiling Compose sequences
-rem %ahkpath%\AutoHotkey %Ssrcdir%\makecompose.ahk
+%ahkpath%\AutoHotkey %Ssrcdir%\makecompose.ahk
 
 rem echo Killing the old (AHK)Driver
 rem tskill %fn%
