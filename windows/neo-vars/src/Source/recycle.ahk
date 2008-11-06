@@ -725,6 +725,11 @@ Switch6:
   goto Switch
 Return
 
+SwitchDK:
+  tImage := ResourceFolder . "\deadkeys.png"
+  goto Switch
+Return
+
 Switch:
   if (guiErstellt) 
   {
@@ -773,6 +778,7 @@ Show:
     Gui, Add, Text, y+3, Aus
     Gui, Add, Button, x+10 y+-30 gShow, F8
     Gui, Add, Text, x+5, OnTop
+    Gui, Add, Button, xm+5 gSwitchDK, Deadkeys
     Gui, Add, Picture,AltSubmit ys w729 h199 vPicture, %Image%
     Gui, +AlwaysOnTop
     Gui, Show, y%yposition% Autosize
