@@ -3,9 +3,8 @@
 *******************
 */
 
-#MaxThreadsPerHotKey 4
+#MaxThreadsPerHotKey 1
 
-EbeneAktualisieren()
 SetBatchLines -1
 SetCapsLockState Off
 SetNumLockState Off
@@ -168,6 +167,7 @@ IsMod4RPressed := 0
 IsMod4LPressed := 0
 IsMod4Pressed := 0
 IsMod4Locked := 0
+EbeneAktualisieren()
 ; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
 lernModus_std_Return := 0
 lernModus_std_Backspace := 0
@@ -530,11 +530,13 @@ return
     ToggleMod2Lock()
   isShiftRPressed := 1
   isShiftPressed := 1
+  EbeneAktualisieren()
 return
 
 ~*VKA1SC136 up::
   isShiftRPressed := 0
   isShiftPressed := isShiftLPressed
+  EbeneAktualisieren()
 return
 
 ~*VKA0SC02A::
@@ -542,11 +544,13 @@ return
     ToggleMod2Lock()
   isShiftLPressed := 1
   isShiftPressed := 1
+  EbeneAktualisieren()
 return
 
 ~*VKA0SC02A up::
   isShiftLPressed := 0
   isShiftPressed := isShiftRPressed
+  EbeneAktualisieren()
 return
 
 ToggleMod2Lock() {
@@ -569,6 +573,7 @@ ToggleMod2Lock() {
     CharStarDown("MOD3", "MOD3", "SComp")
   isMod3RPressed := 1
   isMod3Pressed := 1
+  EbeneAktualisieren()
 return
 
 *VKBFSC02B up::
@@ -576,6 +581,7 @@ return
     CharStarUp("MOD3")
   isMod3RPressed := 0
   isMod3Pressed := isMod3LPressed
+  EbeneAktualisieren()
 return
 
 *VK14SC03A::
@@ -583,6 +589,7 @@ return
     CharStarDown("MOD3", "MOD3", "SComp")
   isMod3LPressed := 1
   isMod3Pressed := 1
+  EbeneAktualisieren()
 return
 
 *VK14SC03A up::
@@ -590,6 +597,7 @@ return
     CharStarUp("MOD3")
   isMod3LPressed := 0
   isMod3Pressed := isMod3RPressed
+  EbeneAktualisieren()
 return
 
 ;Mod4+Mod4 == Mod4-Lock
@@ -602,6 +610,7 @@ return
   wasMod4RPressed := isMod4RPressed
   isMod4RPressed := 1
   isMod4Pressed := 1
+  EbeneAktualisieren()
   if (isMod4LPressed and !wasMod4RPressed)
     ToggleMod4Lock()
 return
@@ -609,12 +618,14 @@ return
 *VKA5SC138 up::
   isMod4RPressed := 0
   isMod4Pressed := isMod4LPressed
+  EbeneAktualisieren()
 return
 
 *VKE2SC056::
   wasMod4LPressed := isMod4LPressed
   isMod4LPressed := 1
   isMod4Pressed := 1
+  EbeneAktualisieren()
   if (isMod4RPressed and !wasMod4LPressed)
     ToggleMod4Lock()
 return
@@ -622,6 +633,7 @@ return
 *VKE2SC056 up::
   isMod4LPressed := 0
   isMod4Pressed := isMod4RPressed
+  EbeneAktualisieren()
 return
 
 ToggleMod4Lock() {

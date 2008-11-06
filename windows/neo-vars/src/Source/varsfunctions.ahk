@@ -3,7 +3,6 @@
 AllStar(This_HotKey) {
   global
   PhysKey := This_HotKey
-  EbeneAktualisieren()
   if (SubStr(PhysKey,1,1) == "*")
     PhysKey := SubStr(PhysKey,2)
   if (SubStr(PhysKey,-2) == " up") {
@@ -31,47 +30,52 @@ AllStar(This_HotKey) {
 
 CharStarDown(PhysKey, ActKey, char) {
   global
-  CompEntry := Comp
   if (PP%PhysKey% != "")
-    Comp := PP%PhysKey%     ; resulting from key repeat
+    CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
   else
-    Comp := Comp . char  ; normal compositum
+    CompNew := Comp . char           ; Hängen wir mal das neue Zeichen zum Compositum an
 
-  tosend := ""
-  PP%PhysKey% := ""
-
-  if (CD%Comp% != "") {
-    tosend := CD%Comp%
-    PP%PhysKey% := Comp
+  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gelöscht
+    tosend := CD%CompNew%
+    PP%PhysKey% := CompNew
     Comp := ""
-  } else if (CM%Comp% != 1) {
+  } else if (CM%CompNew% == 1) {     ; Compose muss sich noch was merken: Jetzt noch nichts schicken.
+    tosend := ""
+    PP%PhysKey% := ""
+    Comp := CompNew
+  } else if (Comp == "") {           ; noch kein Zeichen in der Compose-Queue: Ein einzelnes Zeichen wird geschickt
+    tosend := char
+    PP%PhysKey% := char
+  } else {                           ; Compose hat verfehlt: nichts schicken, auch aktuelles Zeichen nicht schicken
+    tosend := ""
+    PP%PhysKey% := ""
     Comp := ""
-    if (CompEntry == "") {
-      tosend := char
-      PP%PhysKey% := char
-    }
   }
 
-  if (strlen(tosend) > 5) { ; multiple chars
-    if (PR%PhysKey% != "")
+
+
+  if (strlen(tosend) > 5) {          ; Ausgabe mehrerer Zeichen
+    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufräumen
       CharOutUp(PR%PhysKey%)
-    PR%PhysKey% := ""
+      PR%PhysKey% := ""
+    }
 
     loop {
-      if (tosend == "") 
-        break                ; erledigt
       if (SubStr(tosend,1,1)=="P") {
         CharProc(SubStr(tosend,2,4))
       } else {
         CharOut(SubStr(tosend,1,5))
       }
       tosend := SubStr(tosend,6)
+      if (tosend == "") 
+        break                ; erledigt
     }
-  } else if (tosend != "")
+  } else if (tosend != "") {
     if (SubStr(tosend,1,1)=="P") {
-      if (PR%PhysKey% != "")
+      if (PR%PhysKey% != "") {
         CharOutUp(PR%PhysKey%)
-      PR%PhysKey% := ""
+        PR%PhysKey% := ""
+      }
       CharProc(SubStr(tosend,2))
     } else {
       if ((PR%PhysKey% != "") and (PR%PhysKey% != tosend))
@@ -79,9 +83,8 @@ CharStarDown(PhysKey, ActKey, char) {
       PR%PhysKey% := tosend
       CharOutDown(tosend)
     }
-  else {
-    if (PR%PhysKey% != "")
-      CharOutUp(PR%PhysKey%)
+  } else if (PR%PhysKey% != "") {
+    CharOutUp(PR%PhysKey%)
     PR%PhysKey% := ""
   }
 }
@@ -90,73 +93,62 @@ CharStarUp(PhysKey) {
   global
   if (PR%PhysKey% != "") {
     tosend := PR%PhysKey%
+    PR%PhysKey% := ""
     if (SubStr(tosend,1,1)=="P")
       CharProc(SubStr(tosend,2))
     else
       CharOutUp(tosend)
   }
-  PR%PhysKey% := ""
   PP%PhysKey% := ""
 }
 
 
 CharOut(char) {
   global
-  if (DNCS%char% != "") {
-    seq := DNCS%char% . UPCS%char%
-    if (isShiftPressed and UNSH%char%)
-      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
-    send % "{blind}" . seq
-  } else if (CS%char% != "") {
-    seq := "{" . CS%char% . "}"
-    if (isShiftPressed and UNSH%char%)
-      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
-    send % "{blind}" . seq
-  } else
+  if (DNCS%char% != "")
+    SendBlindShiftFixed(DNCS%char% . UPCS%char%)
+  else if (CS%char% != "")
+    SendBlindShiftFixed("{" . CS%char% . "}")
+  else
     SendUnicodeChar("0x" . SubStr(char,2))
 }
 
 CharOutDown(char) {
   global
-  if (DNCS%char% != "") {
-    seq := DNCS%char%
-    if (isShiftPressed and UNSH%char%)
-      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
-    send % "{blind}" . seq
-  } else if (CS%char% != "") {
-    seq := CS%char%
-    seq := "{". seq . " down}"
-    if (isShiftPressed and UNSH%char%)
-      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
-    send % "{blind}" . seq
-  } else
+  if (DNCS%char% != "")
+    SendBlindShiftFixed(DNCS%char%)
+  else if (CS%char% != "")
+    SendBlindShiftFixed("{" . CS%char% . " down}")
+  else
     SendUnicodeCharDown("0x" . SubStr(char,2))
 }
 
 CharOutUp(char) {
   global
   if (DNCS%char% != "") {
-    seq := UPCS%char%
-    if (isShiftPressed and UNSH%char%)
-      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
-    send % "{blind}" . seq
-  } else if (CS%char% != "") {
-    seq := CS%char%
-    seq := "{". seq . " up}"
-    if (isShiftPressed and UNSH%char%)
-      seq := FixSeq(seq,isShiftLPressed,isShiftRPressed)
-    send % "{blind}" . seq
-  } else
+    if (UPCS%char% != "")
+      SendBlindShiftFixed(UPCS%char%)
+  } else if (CS%char% != "")
+    SendBlindShiftFixed("{" . CS%char% . " up}")
+  else
     SendUnicodeCharUp("0x" . SubStr(char,2))
 }
 
-FixSeq(seq,LP,RP) {
-  ret := seq
-  if (LP)
-    ret := "{Shift Up}" . ret . "{Shift Down}"
-  if (RP)
-    ret := "{RShift Up}" . ret . "{RShift Down}"
-  return ret
+SendBlindShiftFixed(theseq) {
+  global
+  if (UNSH%char%)
+    if (IsShiftLPressed)
+      if (IsShiftRPressed)
+        send % "{blind}{RShift Up}{Shift Up}" . theseq . "{Shift Down}{RShift Down}"
+      else
+        send % "{blind}{Shift Up}" . theseq . "{Shift Down}"
+    else
+      if (IsShiftRPressed)
+        send % "{blind}{RShift Up}" . theseq . "{RShift Down}"
+      else
+        send % "{blind}" . theseq
+  else
+    send % "{blind}" . theseq
 }
 
 CharProc(subroutine) {
@@ -555,11 +547,8 @@ SetFormat, Integer, hex
 TransformKey(PhysKey) {
   global
   if (einHandNeo and EHSpacePressed and (TKEH_%PhysKey% != "")) {
-    ActKey := TKEH_%PhysKey%
     EHKeyPressed := 1
-  } else if (TK_%PhysKey% != "")
-    ActKey := TK_%PhysKey%
-  else
-    ActKey := PhysKey
-  return ActKey
+    return TKEH_%PhysKey%
+  }
+  return PhysKey
 }
