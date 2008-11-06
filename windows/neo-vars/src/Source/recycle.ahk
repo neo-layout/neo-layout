@@ -430,6 +430,7 @@ EncodeInteger(ref,val){
 ***********************
 */
 
+~F24::return
 
 +pause::
 Suspend, Permit
