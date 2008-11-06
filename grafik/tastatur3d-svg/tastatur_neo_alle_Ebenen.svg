@@ -14,13 +14,12 @@
    height="484.42859"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46+devel, revision 20105"
+   inkscape:version="0.46"
    sodipodi:docname="tastatur_neo_alle_Ebenen.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline"
-   inkscape:export-filename="C:\Dokumente und Einstellungen\Dennis Heidsiek\Eigene Dateien\0 Hobbies\Informatik\0 PC Tipps\0 NEO-Tastaturlayout\5 SVN-Kopie\grafik\tastatur3d-svg\ebene6.png"
-   inkscape:export-xdpi="37.141876"
-   inkscape:export-ydpi="37.141876">
+   inkscape:export-xdpi="37.16"
+   inkscape:export-ydpi="37.16">
   <metadata
      id="metadata2757">
     <rdf:RDF>
@@ -29,14 +28,14 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:description>png-Export: x₀,x₁,y₀,y₁,b=(4,9;1361;687;1167;564)px,8-Bit-Indizierung.</dc:description>
-        <dc:title></dc:title>
+        <dc:description></dc:description>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:window-height="980"
-     inkscape:window-width="1680"
+     inkscape:window-height="841"
+     inkscape:window-width="1431"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10.0"
@@ -46,12 +45,12 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.77558439"
-     inkscape:cx="1838.4261"
-     inkscape:cy="268.0013"
+     inkscape:zoom="0.52758889"
+     inkscape:cx="1044.3738"
+     inkscape:cy="242.2143"
      inkscape:window-x="0"
-     inkscape:window-y="30"
-     inkscape:current-layer="layer5"
+     inkscape:window-y="24"
+     inkscape:current-layer="layer12"
      showgrid="true"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -11256,14 +11255,14 @@
          id="tspan17888"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">X</tspan></text>
     <text
-       x="261.98447"
-       y="407.54102"
+       x="258.3006"
+       y="407.82516"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text17890"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="261.98447"
-         y="407.54102"
+         x="258.3006"
+         y="407.82516"
          id="tspan17892"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">V</tspan></text>
     <text
@@ -11531,7 +11530,7 @@
          id="tspan18012"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">M</tspan></text>
     <text
-       x="984.38928"
+       x="989.91504"
        y="601.90314"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial Unicode MS;-inkscape-font-specification:Arial Unicode MS"
        id="text18018"
@@ -11539,7 +11538,7 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5658"
-         x="984.38928"
+         x="989.91504"
          y="601.90314">‣</tspan></text>
     <text
        x="1078.9845"
@@ -11838,17 +11837,6 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
-       x="1140"
-       y="307.65906"
-       id="text33034"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan33036"
-         x="1140"
-         y="307.65906">◌</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        x="1175.5964"
        y="404.87238"
        id="text33038"
@@ -11858,25 +11846,25 @@
          x="1175.5964"
          y="404.87238">◌</tspan></text>
     <path
-       d="m 96.00947,547.65906 c 0,0 13.41848,4.6428 16.44836,7.85711 3.02999,3.2143 3.89574,73.92857 2.16437,79.28578 -1.7315,5.3571 -7.79137,8.57141 -7.79137,8.57141 l -90.466439,-0.7143 c 0,0 -9.9557334,-0.35711 -9.9557334,-5.35711 0,-5.00001 -2.8253665,-77.05368 0.6375026,-79.19648 3.4628688,-2.1429 20.5723458,-10.44641 20.5723458,-10.44641 l 68.390964,0 z"
+       d="M 96.00947,547.65906 C 96.00947,547.65906 109.42795,552.30186 112.45783,555.51617 C 115.48782,558.73047 116.35357,629.44474 114.6222,634.80195 C 112.8907,640.15905 106.83083,643.37336 106.83083,643.37336 L 16.364391,642.65906 C 16.364391,642.65906 6.4086576,642.30195 6.4086576,637.30195 C 6.4086576,632.30194 3.5832911,560.24827 7.0461602,558.10547 C 10.509029,555.96257 27.618506,547.65906 27.618506,547.65906 L 96.00947,547.65906 L 96.00947,547.65906 z"
        style="fill:#808080;fill-opacity:0.50196078;fill-rule:evenodd;stroke:none;display:inline"
        id="path43925" />
     <path
-       d="m 1345,547.65906 c 0,0 12.3411,6.7857 15,10 2.6589,3.2143 0,35 0,80 0,5.5684 -5,5 -5,5 l -213.9094,-10e-5 c 0,0 -8.7366,-0.3571 -8.7366,-5.3571 0,-5 -2.4794,-77.0536 0.5594,-79.1964 3.0388,-2.1429 18.0531,-10.4464 18.0531,-10.4464 l 194.0335,0 z"
+       d="M 1345,547.65906 C 1345,547.65906 1357.3411,554.44476 1360,557.65906 C 1362.6589,560.87336 1360,592.65906 1360,637.65906 C 1360,643.22746 1355,642.65906 1355,642.65906 L 1141.0906,642.65896 C 1141.0906,642.65896 1132.354,642.30186 1132.354,637.30186 C 1132.354,632.30186 1129.8746,560.24826 1132.9134,558.10546 C 1135.9522,555.96256 1150.9665,547.65906 1150.9665,547.65906 L 1345,547.65906 L 1345,547.65906 z"
        style="fill:#808080;fill-opacity:0.50196078;fill-rule:evenodd;stroke:none;display:inline"
        id="path43927"
        sodipodi:nodetypes="cssccsscc" />
     <text
-       x="1085.5571"
-       y="408.46088"
-       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine O;-inkscape-font-specification:Linux Libertine O"
+       x="1083.7152"
+       y="407.14517"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine O;-inkscape-font-specification:Linux Libertine O"
        id="text6522"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6526"
-         x="1085.5571"
-         y="408.46088">ẞ</tspan></text>
+         x="1083.7152"
+         y="407.14517">ẞ</tspan></text>
     <text
        x="1756.6625"
        y="408.4989"
@@ -12641,11 +12629,11 @@
          id="tspan18016"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">'</tspan></text>
     <path
-       d="m 1260.968,452.65906 c 0,0 10.897,4.6429 13.3575,7.85721 2.4606,3.21429 3.1637,73.92848 1.7576,79.28569 -1.4061,5.3571 -6.3272,8.5714 -6.3272,8.5714 l -73.4664,-0.7143 c 0,0 -8.0849,-0.3571 -8.0849,-5.3571 0,-5 -2.2945,-77.0536 0.5177,-79.19639 2.8121,-2.14291 16.7065,-10.44651 16.7065,-10.44651 l 55.5392,0 z"
+       d="M 1260.968,452.65906 C 1260.968,452.65906 1271.865,457.30196 1274.3255,460.51627 C 1276.7861,463.73056 1277.4892,534.44475 1276.0831,539.80196 C 1274.677,545.15906 1269.7559,548.37336 1269.7559,548.37336 L 1196.2895,547.65906 C 1196.2895,547.65906 1188.2046,547.30196 1188.2046,542.30196 C 1188.2046,537.30196 1185.9101,465.24836 1188.7223,463.10557 C 1191.5344,460.96266 1205.4288,452.65906 1205.4288,452.65906 L 1260.968,452.65906 L 1260.968,452.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43933" />
     <path
-       d="m 160,452.65906 c 0,0 11.72642,6.29332 10,10 -2.71889,5.83755 5,70 0,80 -2.48132,4.96264 -5,5 -5,5 l -151.4393,-5e-5 c 0,0 -8.305,-0.3571 -8.305,-5.3571 0,-5 -2.3569,-77.05355 0.5318,-79.19635 2.8887,-2.1429 17.1613,-10.4465 17.1613,-10.4465 l 137.0512,0 z"
+       d="M 160,452.65906 C 160,452.65906 171.72642,458.95238 170,462.65906 C 167.28111,468.49661 175,532.65906 170,542.65906 C 167.51868,547.6217 165,547.65906 165,547.65906 L 13.5607,547.65901 C 13.5607,547.65901 5.2557,547.30191 5.2557,542.30191 C 5.2557,537.30191 2.8988,465.24836 5.7875,463.10556 C 8.6762,460.96266 22.9488,452.65906 22.9488,452.65906 L 160,452.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43935"
        sodipodi:nodetypes="cssccsscc" />
@@ -12723,16 +12711,16 @@
          x="1846.8419"
          y="410.18665">↑</tspan></text>
     <text
-       x="1963.3662"
-       y="420.0517"
+       x="1969.0079"
+       y="408.76825"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6540-8"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5091"
-         x="1963.3662"
-         y="420.0517">⃗</tspan></text>
+         x="1969.0079"
+         y="408.76825">⃗</tspan></text>
     <text
        x="1757.2251"
        y="506.34009"
@@ -12745,7 +12733,7 @@
          x="1757.2251"
          y="506.34009">←</tspan></text>
     <text
-       x="1857.4604"
+       x="1857.4606"
        y="499.104"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6556-5"
@@ -12753,10 +12741,10 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5095"
-         x="1857.4604"
+         x="1857.4606"
          y="499.104">¦</tspan></text>
     <text
-       x="1938.4418"
+       x="1944.3026"
        y="504.81552"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6560-7"
@@ -12764,7 +12752,7 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5097"
-         x="1938.4418"
+         x="1944.3026"
          y="504.81552">→</tspan></text>
     <text
        x="1940.8921"
@@ -12778,7 +12766,7 @@
          x="1940.8921"
          y="601.51208">⇌</tspan></text>
     <text
-       x="1848.7871"
+       x="1846.7871"
        y="601.38507"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6568-27"
@@ -12786,7 +12774,7 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5101"
-         x="1848.7871"
+         x="1846.7871"
          y="601.38507">↓</tspan></text>
     <text
        x="1757.4043"
@@ -12824,36 +12812,36 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="1946.4536"
-       y="311.95807"
+       x="1952.5951"
+       y="313.83865"
        id="text5463-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5083"
-         x="1946.4536"
-         y="311.95807">⋅</tspan></text>
+         x="1952.5951"
+         y="313.83865">⋅</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="2030.5664"
+       x="2034.3275"
        y="311.42999"
        id="text5467-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5085"
-         x="2030.5664"
+         x="2034.3275"
          y="311.42999">−</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       x="2036.2526"
-       y="453.74542"
+       x="2034.4915"
+       y="457.50656"
        id="text5494-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5071"
-         x="2036.2526"
-         y="453.74542">±</tspan></text>
+         x="2034.4915"
+         y="457.50656">±</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
@@ -13016,14 +13004,14 @@
          id="tspan29612"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">⇣</tspan></text>
     <text
-       x="481.25397"
-       y="503.67651"
+       x="484.93781"
+       y="502.99255"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text29614"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="481.25397"
-         y="503.67651"
+         x="484.93781"
+         y="502.99255"
          id="tspan29616"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans">⇢</tspan></text>
     <text
@@ -13049,13 +13037,13 @@
          id="tspan29624"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">¿</tspan></text>
     <text
-       x="759.25397"
+       x="764.2536"
        y="503.67651"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text29626"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="759.25397"
+         x="764.2536"
          y="503.67651"
          id="tspan29628"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans">4</tspan></text>
@@ -13442,11 +13430,11 @@
          y="594.18384"
          style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">⇧</tspan></text>
     <path
-       d="m 190.5392,547.65906 c 0,0 10.897,4.73991 13.3575,8.02139 2.4606,3.28145 3.1637,75.47325 1.7576,80.94241 -1.4061,5.46904 -6.3272,8.7505 -6.3272,8.7505 l -73.4664,-0.72923 c 0,0 -8.0849,-0.36456 -8.0849,-5.46904 0,-5.10447 -2.2945,-78.66367 0.5177,-80.85124 C 121.1056,556.13617 135,547.65906 135,547.65906 l 55.5392,0 z"
+       d="M 190.5392,547.65906 C 190.5392,547.65906 201.4362,552.39897 203.8967,555.68045 C 206.3573,558.9619 207.0604,631.1537 205.6543,636.62286 C 204.2482,642.0919 199.3271,645.37336 199.3271,645.37336 L 125.8607,644.64413 C 125.8607,644.64413 117.7758,644.27957 117.7758,639.17509 C 117.7758,634.07062 115.4813,560.51142 118.2935,558.32385 C 121.1056,556.13617 135,547.65906 135,547.65906 L 190.5392,547.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43941" />
     <path
-       d="m 1135,645.05243 c 0,0 11.4218,5.7109 12.5048,10.18458 1.3852,5.72219 2.4952,87.42205 2.4952,77.42205 0,0 -5,7.36966 -5,7.36966 l -115,0.23697 c 0,0 -6.2785,-2.94494 -6.2785,-7.68178 0,-4.73684 -1.7506,-72.99814 0.3949,-75.02817 C 1026.262,655.52562 1040,645.05243 1040,645.05243 l 95,0 z"
+       d="M 1135,645.05243 C 1135,645.05243 1146.4218,650.76333 1147.5048,655.23701 C 1148.89,660.9592 1150,742.65906 1150,732.65906 C 1150,732.65906 1145,740.02872 1145,740.02872 L 1030,740.26569 C 1030,740.26569 1023.7215,737.32075 1023.7215,732.58391 C 1023.7215,727.84707 1021.9709,659.58577 1024.1164,657.55574 C 1026.262,655.52562 1040,645.05243 1040,645.05243 L 1135,645.05243 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43943"
        sodipodi:nodetypes="cssccsscc" />
@@ -13872,13 +13860,13 @@
          id="tspan21121"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">σ</tspan></text>
     <text
-       x="762.46399"
+       x="765.46442"
        y="503.98221"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text21123"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="762.46399"
+         x="765.46442"
          y="503.98221"
          id="tspan21125"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans">ν</tspan></text>
@@ -14252,20 +14240,20 @@
          x="44.814281"
          y="308.06085">˘</tspan></text>
     <path
-       d="m 1260.0192,453.65906 c 0,0 10.897,4.6429 13.3575,7.85721 2.4606,3.21429 3.1637,73.92848 1.7576,79.28569 -1.4061,5.3571 -6.3272,8.5714 -6.3272,8.5714 l -73.4664,-0.7143 c 0,0 -8.0849,-0.3571 -8.0849,-5.3571 0,-5 -2.2945,-77.0536 0.5177,-79.19639 2.8121,-2.14291 16.7065,-10.44651 16.7065,-10.44651 l 55.5392,0 z"
+       d="M 1260.0192,453.65906 C 1260.0192,453.65906 1270.9162,458.30196 1273.3767,461.51627 C 1275.8373,464.73056 1276.5404,535.44475 1275.1343,540.80196 C 1273.7282,546.15906 1268.8071,549.37336 1268.8071,549.37336 L 1195.3407,548.65906 C 1195.3407,548.65906 1187.2558,548.30196 1187.2558,543.30196 C 1187.2558,538.30196 1184.9613,466.24836 1187.7735,464.10557 C 1190.5856,461.96266 1204.48,453.65906 1204.48,453.65906 L 1260.0192,453.65906 L 1260.0192,453.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43953" />
     <path
-       d="m 159.0512,453.65906 c 0,0 11.72642,6.29332 10,10 -2.71889,5.83755 5,70 0,80 -2.48132,4.96264 -5,5 -5,5 l -151.4393,-5e-5 c 0,0 -8.305,-0.3571 -8.305,-5.3571 0,-5 -2.3569,-77.05355 0.5318,-79.19635 C 7.7274,461.96266 22,453.65906 22,453.65906 l 137.0512,0 z"
+       d="M 159.0512,453.65906 C 159.0512,453.65906 170.77762,459.95238 169.0512,463.65906 C 166.33231,469.49661 174.0512,533.65906 169.0512,543.65906 C 166.56988,548.6217 164.0512,548.65906 164.0512,548.65906 L 12.6119,548.65901 C 12.6119,548.65901 4.3069,548.30191 4.3069,543.30191 C 4.3069,538.30191 1.95,466.24836 4.8387,464.10556 C 7.7274,461.96266 22,453.65906 22,453.65906 L 159.0512,453.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43955"
        sodipodi:nodetypes="cssccsscc" />
     <path
-       d="m 94.918872,548.65916 c 0,0 13.418478,4.6428 16.448358,7.85711 3.02999,3.2143 3.89574,73.92857 2.16437,79.28578 -1.7315,5.3571 -7.79137,8.57141 -7.79137,8.57141 l -90.46644,-0.7143 c 0,0 -9.95573,-0.35711 -9.95573,-5.35711 0,-5.00001 -2.82537,-77.05368 0.6375,-79.19648 3.46287,-2.1429 20.57235,-10.44641 20.57235,-10.44641 l 68.390962,0 z"
+       d="M 94.918872,548.65916 C 94.918872,548.65916 108.33735,553.30196 111.36723,556.51627 C 114.39722,559.73057 115.26297,630.44484 113.5316,635.80205 C 111.8001,641.15915 105.74023,644.37346 105.74023,644.37346 L 15.27379,643.65916 C 15.27379,643.65916 5.31806,643.30205 5.31806,638.30205 C 5.31806,633.30204 2.49269,561.24837 5.95556,559.10557 C 9.41843,556.96267 26.52791,548.65916 26.52791,548.65916 L 94.918872,548.65916 L 94.918872,548.65916 z"
        style="fill:#808080;fill-opacity:0.50196078;fill-rule:evenodd;stroke:none;display:inline"
        id="path43957" />
     <path
-       d="m 1343.9094,548.65916 c 0,0 12.3411,6.7857 15,10 2.6589,3.2143 0,35 0,80 0,5.5684 -5,5 -5,5 L 1140,643.65906 c 0,0 -8.7366,-0.3571 -8.7366,-5.3571 0,-5 -2.4794,-77.0536 0.5594,-79.1964 3.0388,-2.1429 18.0531,-10.4464 18.0531,-10.4464 l 194.0335,0 z"
+       d="M 1343.9094,548.65916 C 1343.9094,548.65916 1356.2505,555.44486 1358.9094,558.65916 C 1361.5683,561.87346 1358.9094,593.65916 1358.9094,638.65916 C 1358.9094,644.22756 1353.9094,643.65916 1353.9094,643.65916 L 1140,643.65906 C 1140,643.65906 1131.2634,643.30196 1131.2634,638.30196 C 1131.2634,633.30196 1128.784,561.24836 1131.8228,559.10556 C 1134.8616,556.96266 1149.8759,548.65916 1149.8759,548.65916 L 1343.9094,548.65916 L 1343.9094,548.65916 z"
        style="fill:#808080;fill-opacity:0.50196078;fill-rule:evenodd;stroke:none;display:inline"
        id="path43959"
        sodipodi:nodetypes="cssccsscc" />
@@ -14346,16 +14334,16 @@
          x="963.45123"
          y="314.57367">₀</tspan></text>
     <text
-       x="1761.0333"
-       y="407.69943"
+       x="1751.8237"
+       y="409.54135"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5772"
-         x="1761.0333"
-         y="407.69943">?</tspan></text>
+         id="tspan4655"
+         x="1751.8237"
+         y="409.54135">≪</tspan></text>
     <text
        x="1804.2041"
        y="698.34009"
@@ -14369,14 +14357,15 @@
          y="698.34009">0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;display:inline"
-       x="1856.4232"
-       y="311.1376"
-       id="text4736-35-7"><tspan
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="1858.2651"
+       y="307.45374"
+       id="text4736-35-7"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4738-9-1"
-         x="1856.4232"
-         y="311.1376">/</tspan></text>
+         id="tspan4649"
+         x="1858.2651"
+         y="307.45374">⌀</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
@@ -14385,9 +14374,9 @@
        id="text5463-8-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5762"
+         id="tspan4651"
          x="1943.9061"
-         y="312.72736">?</tspan></text>
+         y="312.72736">⊙</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
@@ -14396,20 +14385,20 @@
        id="text5467-0-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5764"
+         id="tspan4653"
          x="2041.2822"
-         y="310.82938">?</tspan></text>
+         y="310.82938">⊖</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        x="2037.0912"
        y="451.98276"
        id="text5494-63-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5498-6-3"
+         id="tspan4673"
          x="2037.0912"
-         y="451.98276">+</tspan></text>
+         y="451.98276">⊕</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
@@ -14429,12 +14418,12 @@
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5450"
+         id="tspan4647"
          x="1760.7007"
-         y="310.20248">≠</tspan></text>
+         y="310.20248">≈</tspan></text>
     <text
        x="1950.9622"
-       y="698.08197"
+       y="670.45306"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text7789-4-0-1"
        xml:space="preserve"
@@ -14442,18 +14431,18 @@
          sodipodi:role="line"
          id="tspan5462"
          x="1950.9622"
-         y="698.08197">,</tspan></text>
+         y="670.45306">,</tspan></text>
     <text
-       x="1946.4065"
-       y="408.59808"
+       x="1935.355"
+       y="410.44"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7-1"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="408.59808"
-         x="1946.4065"
          sodipodi:role="line"
-         id="tspan5772-5">?</tspan></text>
+         id="tspan4659"
+         x="1935.355"
+         y="410.44">≫</tspan></text>
     <text
        x="1854.3802"
        y="408.59811"
@@ -14461,32 +14450,32 @@
        id="text6528-8-7-6"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="408.59811"
-         x="1854.3802"
          sodipodi:role="line"
-         id="tspan5772-1">?</tspan></text>
+         id="tspan4657"
+         x="1854.3802"
+         y="408.59811">∩</tspan></text>
     <text
-       x="1762.5154"
-       y="598.7746"
+       x="1756.9896"
+       y="602.45844"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7-9"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="598.7746"
-         x="1762.5154"
          sodipodi:role="line"
-         id="tspan5772-2">?</tspan></text>
+         id="tspan4667"
+         x="1756.9896"
+         y="602.45844">≤</tspan></text>
     <text
-       x="1947.8885"
-       y="599.67328"
+       x="1938.679"
+       y="601.5152"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7-1-4"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="599.67328"
-         x="1947.8885"
          sodipodi:role="line"
-         id="tspan5772-5-6">?</tspan></text>
+         id="tspan4671"
+         x="1938.679"
+         y="601.5152">≥</tspan></text>
     <text
        x="1855.8623"
        y="599.67328"
@@ -14494,43 +14483,43 @@
        id="text6528-8-7-6-1"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="599.67328"
-         x="1855.8623"
          sodipodi:role="line"
-         id="tspan5772-1-8">?</tspan></text>
+         id="tspan4669"
+         x="1855.8623"
+         y="599.67328">∪</tspan></text>
     <text
-       x="1761.6937"
+       x="1756.168"
        y="505.92667"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7-11"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="505.92667"
-         x="1761.6937"
          sodipodi:role="line"
-         id="tspan5772-9">?</tspan></text>
+         id="tspan4661"
+         x="1756.168"
+         y="505.92667">⊂</tspan></text>
     <text
-       x="1947.0669"
+       x="1937.8573"
        y="506.82532"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7-1-7"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="506.82532"
-         x="1947.0669"
          sodipodi:role="line"
-         id="tspan5772-5-62">?</tspan></text>
+         id="tspan4665"
+         x="1937.8573"
+         y="506.82532">⊃</tspan></text>
     <text
-       x="1855.0406"
-       y="506.82535"
+       x="1845.8311"
+       y="504.98343"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6528-8-7-6-9"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         y="506.82535"
-         x="1855.0406"
          sodipodi:role="line"
-         id="tspan5772-1-5">?</tspan></text>
+         id="tspan4663"
+         x="1845.8311"
+         y="504.98343">⊶</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -14691,13 +14680,13 @@
          id="tspan38113"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">∀</tspan></text>
     <text
-       x="485.897"
+       x="487.89691"
        y="502.90671"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text38115"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="485.897"
+         x="487.89691"
          y="502.90671"
          id="tspan38117"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans">∃</tspan></text>
@@ -14724,13 +14713,13 @@
          id="tspan38125"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">Σ</tspan></text>
     <text
-       x="755.89703"
+       x="760.89752"
        y="502.90671"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text38127"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="755.89703"
+         x="760.89752"
          y="502.90671"
          id="tspan38129"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans">ℕ</tspan></text>
@@ -14981,7 +14970,7 @@
        xml:space="preserve"
        sodipodi:linespacing="125%">∥</text>
     <text
-       x="685.95166"
+       x="681.95154"
        y="313.14734"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text38217"
@@ -14989,7 +14978,7 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6512"
-         x="685.95166"
+         x="681.95154"
          y="313.14734">→</tspan></text>
     <text
        x="775.16357"
@@ -15014,16 +15003,16 @@
          x="960.89709"
          y="309.88934">∅</tspan></text>
     <text
-       x="1049.9824"
-       y="311.64423"
+       x="1054.2078"
+       y="309.80231"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Everson Mono;-inkscape-font-specification:Everson Mono"
        id="text38223"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6518"
-         x="1049.9824"
-         y="311.64423">╌</tspan></text>
+         x="1054.2078"
+         y="309.80231">╌</tspan></text>
     <text
        x="45.028843"
        y="309.25613"
@@ -15164,17 +15153,6 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
-       x="1140.1372"
-       y="307.49435"
-       id="text24845"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan24847"
-         x="1140.1372"
-         y="307.49435">◌</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        x="1175.0948"
        y="405.40558"
        id="text24849"
@@ -15184,20 +15162,20 @@
          x="1175.0948"
          y="405.40558">◌</tspan></text>
     <path
-       d="m 191.2121,547.94476 c 0,0 10.897,4.73991 13.3575,8.02139 2.4606,3.28145 3.1637,75.47325 1.7576,80.94241 -1.4061,5.46904 -6.3272,8.7505 -6.3272,8.7505 l -73.4664,-0.72923 c 0,0 -8.0849,-0.36456 -8.0849,-5.46904 0,-5.10447 -2.2945,-78.66367 0.5177,-80.85124 2.8121,-2.18768 16.7065,-10.66479 16.7065,-10.66479 l 55.5392,0 z"
+       d="M 191.2121,547.94476 C 191.2121,547.94476 202.1091,552.68467 204.5696,555.96615 C 207.0302,559.2476 207.7333,631.4394 206.3272,636.90856 C 204.9211,642.3776 200,645.65906 200,645.65906 L 126.5336,644.92983 C 126.5336,644.92983 118.4487,644.56527 118.4487,639.46079 C 118.4487,634.35632 116.1542,560.79712 118.9664,558.60955 C 121.7785,556.42187 135.6729,547.94476 135.6729,547.94476 L 191.2121,547.94476 L 191.2121,547.94476 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43945" />
     <path
-       d="m 1135.6729,645.33813 c 0,0 11.4218,5.7109 12.5048,10.18458 1.3852,5.72219 2.4952,87.42205 2.4952,77.42205 0,0 -5,7.36966 -5,7.36966 l -115,0.23697 c 0,0 -6.2785,-2.94494 -6.2785,-7.68178 0,-4.73684 -1.7506,-72.99814 0.3949,-75.02817 2.1456,-2.03012 15.8836,-12.50331 15.8836,-12.50331 l 95,0 z"
+       d="M 1135.6729,645.33813 C 1135.6729,645.33813 1147.0947,651.04903 1148.1777,655.52271 C 1149.5629,661.2449 1150.6729,742.94476 1150.6729,732.94476 C 1150.6729,732.94476 1145.6729,740.31442 1145.6729,740.31442 L 1030.6729,740.55139 C 1030.6729,740.55139 1024.3944,737.60645 1024.3944,732.86961 C 1024.3944,728.13277 1022.6438,659.87147 1024.7893,657.84144 C 1026.9349,655.81132 1040.6729,645.33813 1040.6729,645.33813 L 1135.6729,645.33813 L 1135.6729,645.33813 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43947"
        sodipodi:nodetypes="cssccsscc" />
     <path
-       d="m 1262,451.65906 c 0,0 10.897,4.6429 13.3575,7.85721 2.4606,3.21429 3.1637,73.92848 1.7576,79.28569 -1.4061,5.3571 -6.3272,8.5714 -6.3272,8.5714 l -73.4664,-0.7143 c 0,0 -8.0849,-0.3571 -8.0849,-5.3571 0,-5 -2.2945,-77.0536 0.5177,-79.19639 2.8121,-2.14291 16.7065,-10.44651 16.7065,-10.44651 l 55.5392,0 z"
+       d="M 1262,451.65906 C 1262,451.65906 1272.897,456.30196 1275.3575,459.51627 C 1277.8181,462.73056 1278.5212,533.44475 1277.1151,538.80196 C 1275.709,544.15906 1270.7879,547.37336 1270.7879,547.37336 L 1197.3215,546.65906 C 1197.3215,546.65906 1189.2366,546.30196 1189.2366,541.30196 C 1189.2366,536.30196 1186.9421,464.24836 1189.7543,462.10557 C 1192.5664,459.96266 1206.4608,451.65906 1206.4608,451.65906 L 1262,451.65906 L 1262,451.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43949" />
     <path
-       d="m 161.03205,451.65906 c 0,0 11.72642,6.29332 10,10 -2.71889,5.83755 5,70 0,80 -2.48132,4.96264 -5,5 -5,5 l -151.4393,-5e-5 c 0,0 -8.305,-0.3571 -8.305,-5.3571 0,-5 -2.3569,-77.05355 0.5318,-79.19635 2.8887,-2.1429 17.1613,-10.4465 17.1613,-10.4465 l 137.0512,0 z"
+       d="M 161.03205,451.65906 C 161.03205,451.65906 172.75847,457.95238 171.03205,461.65906 C 168.31316,467.49661 176.03205,531.65906 171.03205,541.65906 C 168.55073,546.6217 166.03205,546.65906 166.03205,546.65906 L 14.59275,546.65901 C 14.59275,546.65901 6.28775,546.30191 6.28775,541.30191 C 6.28775,536.30191 3.93085,464.24836 6.81955,462.10556 C 9.70825,459.96266 23.98085,451.65906 23.98085,451.65906 L 161.03205,451.65906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43951"
        sodipodi:nodetypes="cssccsscc" />
@@ -15242,9 +15220,9 @@
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5766"
+         id="tspan4675"
          x="1759.5662"
-         y="503.99643">?</tspan></text>
+         y="503.99643">⊆</tspan></text>
     <text
        x="1848.7625"
        y="505.4754"
@@ -15253,9 +15231,9 @@
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5768"
+         id="tspan4677"
          x="1848.7625"
-         y="505.4754">?</tspan></text>
+         y="505.4754">⊷</tspan></text>
     <text
        x="1940.7828"
        y="504.21487"
@@ -15264,9 +15242,9 @@
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5770"
+         id="tspan4679"
          x="1940.7828"
-         y="504.21487">?</tspan></text>
+         y="504.21487">⊇</tspan></text>
     <text
        x="1940.9092"
        y="599.74945"
@@ -15301,27 +15279,27 @@
          x="1758.0024"
          y="600.27747">⌊</tspan></text>
     <text
-       x="1803.3823"
-       y="698.34009"
+       x="1799.6985"
+       y="692.81433"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text6586-9-1"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan6590-1-6"
-         x="1803.3823"
-         y="698.34009">0</tspan></text>
+         id="tspan4681"
+         x="1799.6985"
+         y="692.81433">□</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
-       x="1855.6014"
-       y="311.1376"
+       x="1864.811"
+       y="314.82147"
        id="text4736-35-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5426"
-         x="1855.6014"
-         y="311.1376">⁄</tspan></text>
+         x="1864.811"
+         y="314.82147">⁄</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
@@ -15385,8 +15363,8 @@
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan5446"
+         id="tspan4683"
          x="1950.1404"
-         y="698.08197">0</tspan></text>
+         y="698.08197">″</tspan></text>
   </g>
 </svg>
