@@ -4,6 +4,7 @@
 */
 
 #MaxThreadsPerHotKey 1
+Thread,Interrupt,-1,-1
 
 SetBatchLines -1
 SetCapsLockState Off
