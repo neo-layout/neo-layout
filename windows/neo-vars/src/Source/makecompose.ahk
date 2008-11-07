@@ -1896,7 +1896,7 @@ FileDelete,%FTo%
 FileAppend,%Composita%,%FTo%
 }
 
-; EncodeUnicodeFile("..\..\..\Compose\en_US.UTF-8","Source\en_us.ahk"   ,5609)
+EncodeUnicodeFile("..\..\..\Compose\en_US.UTF-8","Source\en_us.ahk"   ,5609)
 EncodeUnicodeFile("..\..\..\Compose\Compose.neo","Source\neocomp.ahk" ,1067)
 
 ; MsgBox % EncodeUni(DecodeUni("U20ACU0041U0070"))
