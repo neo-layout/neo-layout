@@ -1788,7 +1788,7 @@ SetFormat, Integer, hex
     char := SubStr(str,1,1)
     str  := SubStr(str,2)
     if (asc(char) < 0x80)
-      result := result . "U00" . SubStr(asc(char),3)
+      result := result . "U" . SubStr("0000" . SubStr(asc(char),3),-3)
     else if (asc(char) < 0xC0) {
       ; error
     } else if (asc(char) < 0xE0) {
@@ -1841,7 +1841,21 @@ Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windo
     Line := RegExReplace(Line,"[\t ]*(<[^>]*>)[\t ]*","$1")
     RegExMatch(Line,"([^:]*):[\t ]*""((\\.|[^""])*)"".*",OutputVar)
     ReplaceLeft := OutputVar1
-    ReplaceRight := RegExReplace(OutputVar2,"\\(.)","$1")
+    ReplaceRight := ""
+    loop {
+      thechar := SubStr(OutputVar2,1,1)
+      OutputVar2 := SubStr(OutputVar2,2)
+      if (thechar == "\") {
+        thechar := SubStr(OutputVar2,1,1)
+        OutputVar2 := SubStr(OutputVar2,2)
+        if (thechar == "n")
+          thechar := chr(0x000d) ; Line-Feed
+        ReplaceRight := ReplaceRight . thechar
+      } else
+        ReplaceRight := ReplaceRight . thechar
+      if (OutputVar2 == "")
+        break
+    }
 
     ; care for replaceleft
     modkeys := ""
@@ -1882,7 +1896,7 @@ FileDelete,%FTo%
 FileAppend,%Composita%,%FTo%
 }
 
-EncodeUnicodeFile("..\..\..\Compose\en_US.UTF-8","Source\en_us.ahk"   ,5609)
+; EncodeUnicodeFile("..\..\..\Compose\en_US.UTF-8","Source\en_us.ahk"   ,5609)
 EncodeUnicodeFile("..\..\..\Compose\Compose.neo","Source\neocomp.ahk" ,1067)
 
 ; MsgBox % EncodeUni(DecodeUni("U20ACU0041U0070"))
