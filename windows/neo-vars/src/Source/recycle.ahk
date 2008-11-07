@@ -574,10 +574,11 @@ ToggleMod2Lock() {
 
 
 *VKBFSC02B::
-  if (isMod3LPressed and !isMod3RPressed)
+  if (isMod3LPressed and !isMod3RPressed and !wasNonShiftKeyPressed)
     CharStarDown("MOD3", "MOD3", "SComp")
   isMod3RPressed := 1
   isMod3Pressed := 1
+  wasNonShiftKeyPressed := 0
   EbeneAktualisieren()
 return
 
@@ -590,10 +591,11 @@ return
 return
 
 *VK14SC03A::
-  if (isMod3RPressed and !isMod3LPressed)
+  if (isMod3RPressed and !isMod3LPressed and !wasNonShiftKeyPressed)
     CharStarDown("MOD3", "MOD3", "SComp")
   isMod3LPressed := 1
   isMod3Pressed := 1
+  wasNonShiftKeyPressed := 0
   EbeneAktualisieren()
 return
 
@@ -615,8 +617,10 @@ return
   wasMod4RPressed := isMod4RPressed
   isMod4RPressed := 1
   isMod4Pressed := 1
+  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
+  wasNonShiftKeyPressed := 0
   EbeneAktualisieren()
-  if (isMod4LPressed and !wasMod4RPressed)
+  if (isMod4LPressed and !wasMod4RPressed and !waswasNonShiftKeyPressed)
     ToggleMod4Lock()
 return
 
@@ -630,8 +634,10 @@ return
   wasMod4LPressed := isMod4LPressed
   isMod4LPressed := 1
   isMod4Pressed := 1
+  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
+  wasNonShiftKeyPressed := 0
   EbeneAktualisieren()
-  if (isMod4RPressed and !wasMod4LPressed)
+  if (isMod4RPressed and !wasMod4LPressed and !waswasNonShiftKeyPressed)
     ToggleMod4Lock()
 return
 
