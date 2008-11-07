@@ -157,6 +157,7 @@ Sonstige Variablen
 */
 guiErstellt := 0
 alwaysOnTop := 1
+wasNonShiftKeyPressed := 0
 isShiftRPressed := 0
 isShiftLPressed := 0
 isShiftPressed := 0
@@ -528,10 +529,11 @@ return
 ; das schaltet, oh Wunder, die LED nicht wieder aus.
 
 ~*VKA1SC136::
-  if (isShiftLPressed and !isShiftRPressed)
+  if (isShiftLPressed and !isShiftRPressed and !wasNonShiftKeyPressed)
     ToggleMod2Lock()
   isShiftRPressed := 1
   isShiftPressed := 1
+  wasNonShiftKeyPressed := 0
   EbeneAktualisieren()
 return
 
@@ -542,10 +544,11 @@ return
 return
 
 ~*VKA0SC02A::
-  if (isShiftRPressed and !isShiftLPressed)
+  if (isShiftRPressed and !isShiftLPressed and !wasNonShiftKeyPressed)
     ToggleMod2Lock()
   isShiftLPressed := 1
   isShiftPressed := 1
+  wasNonShiftKeyPressed := 0
   EbeneAktualisieren()
 return
 

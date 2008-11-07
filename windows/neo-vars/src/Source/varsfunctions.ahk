@@ -30,6 +30,7 @@ AllStar(This_HotKey) {
 
 CharStarDown(PhysKey, ActKey, char) {
   global
+  wasNonShiftKeyPressed := 1
   if (PP%PhysKey% != "")
     CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
   else
