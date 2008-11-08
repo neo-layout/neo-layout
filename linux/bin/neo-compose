@@ -10,12 +10,7 @@
 COMP_ALT=/usr/share/X11/locale/en_US.UTF-8/Compose
 
 # Verzeichnis, in dem sich die Datei Compose.neo befindet:
-COMP_NEO=../../Compose/Compose.neo
+COMP_NEO=~/programmieren/Projekt/NEO/svn-neo/neo-layout.org/Compose/Compose.neo
 
-# eigene Ergänzungen falls vorhanden
-if [ -f ~/.Compose.eigene ]; then
-    COMP_EIGENE=~/.Compose.eigene
-fi
-
-cat $COMP_ALT $COMP_NEO $COMP_EIGENE > ~/.XCompose
+cat $COMP_ALT $COMP_NEO ~/.Compose.eigene > ~/.XCompose
 
