@@ -102,8 +102,10 @@ esc::
 *down::
 *left::
 *right::
+F9::
 F10::
 F11::
+F12::
 numpadenter::
 
 ;;;;;; UP EVENTS
@@ -210,8 +212,10 @@ esc up::
 *down up::
 *left up::
 *right up::
+F9 up::
 F10 up::
 F11 up::
+F12 up::
 numpadenter up::
 
   AllStar(A_ThisHotkey)
