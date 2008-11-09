@@ -235,7 +235,7 @@ CharProc(subroutine) {
     einHandNeo := !(einHandNeo)
     if (einHandNeo) {
       CharProc("_EH1")
-      MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod3+F10 drücken
+      MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod4+F9 drücken
     } else {
       CharProc("_EH0")
       MsgBox,NEO-Einhand-Modus deaktiviert
@@ -319,7 +319,7 @@ CharProc(subroutine) {
     lernModus := !(lernModus)
     if (lernModus) {
       CharProc("_LM1")
-      MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod3+F11 drücken
+      MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod4+F12 drücken
     } else {
       CharProc("_LM0")
       MsgBox,NEO-Lernmodus deaktiviert
