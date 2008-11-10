@@ -378,6 +378,7 @@ InsertIntegerLED(pInteger, ByRef pDest, pOffset = 0, pSize = 4){
 Über den GTK-Workaround:
 Dieser basiert auf http://www.autohotkey.com/forum/topic32947.html
 Der Aufruf von »SubStr(charCode,3)« geht davon aus, dass alle charCodes in Hex mit führendem „0x“ angegeben sind. Die abenteuerliche „^+u“-Konstruktion benötigt im Übrigen den Hex-Wert in Kleinschrift, was derzeit nicht bei den Zeichendefinitionen umgesetzt ist, daher zentral und weniger fehlerträchtig an dieser Stelle. Außerdem ein abschließend gesendetes Space, sonst bleibt der „eingetippte“ Unicode-Wert noch kurz sichtbar stehen, bevor er sich GTK-sei-dank in das gewünschte Zeichen verwandelt.
+Optimierungen von http://fmate14.web.elte.hu/autohotkey/SendU/SendU.ahk
 */
 
 SendUnicodeChar(charCode){
@@ -385,14 +386,15 @@ SendUnicodeChar(charCode){
   {
     StringLower,charCode,charCode
     send % "^+u" . SubStr(charCode,3) . " "
-  }else{
-    VarSetCapacity(ki,28*2,0)
-    EncodeInteger(&ki+0,1)
-    EncodeInteger(&ki+6,charCode)
-    EncodeInteger(&ki+8,4)
-    EncodeInteger(&ki+28,1)
-    EncodeInteger(&ki+34,charCode)
-    EncodeInteger(&ki+36,4|2)
+  } else {
+    static ki := "#"
+    if (ki =="#") {
+      VarSetCapacity(ki,28*2,0)
+      DllCall("RtlFillMemory","uint",&ki+   0,"uint",1,"uint",1)
+      DllCall("RtlFillMemory","uint",&ki+28+0,"uint",1,"uint",1)
+    }
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+28+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
     DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
   }
 }
@@ -402,12 +404,13 @@ SendUnicodeCharDown(charCode){
   {
     StringLower,charCode,charCode
     send % "^+u" . SubStr(charCode,3) . " "
-  }else{
-    VarSetCapacity(ki,28,0)
-    EncodeInteger(&ki+0,1)
-    EncodeInteger(&ki+6,charCode)
-    EncodeInteger(&ki+8,4)
-
+  } else {
+    static ki := "#"
+    if (ki =="#") {
+      VarSetCapacity(ki,28,0)
+      DllCall("RtlFillMemory","uint",&ki,"uint",1,"uint",1)
+    }
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
     DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
   }
 }
@@ -416,18 +419,15 @@ SendUnicodeCharUp(charCode){
   IfWinActive,ahk_class gdkWindowToplevel
   {
     ; nothing
-  }else{
-    VarSetCapacity(ki,28,0)
-    EncodeInteger(&ki+0,1)
-    EncodeInteger(&ki+6,charCode)
-    EncodeInteger(&ki+8,4|2)
-
+  } else {
+    static ki := "#"
+    if (ki =="#") {
+      VarSetCapacity(ki,28,0)
+      DllCall("RtlFillMemory","uint",&ki,"uint",1,"uint",1)
+    }
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
     DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
   }
-}
-
-EncodeInteger(ref,val){
-  DllCall("ntdll\RtlFillMemoryUlong","Uint",ref,"Uint",4,"Uint",val)
 }
 
 /**********************
@@ -435,6 +435,9 @@ EncodeInteger(ref,val){
 ***********************
 */
 
+; dieser Hook fixt einen AHK-Bug, dass dieses bei Reload und gedruecktem Mod4
+; den ersten hook ausfuehrt, als waere dieser tatsaechlich aufgerufen worden.
+; Wenn man hier einen unverfaenglichen Hook eintraegt, gibt es keine Broesel.
 ~F24::return
 
 +pause::
