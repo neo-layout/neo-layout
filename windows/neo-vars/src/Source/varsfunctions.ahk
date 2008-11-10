@@ -179,10 +179,15 @@ CharProc(subroutine) {
   } else if (subroutine == "LnSt") {
     ;Lang-s-Tastatur: Toggle
     LangSTastatur := !(LangSTastatur)
-    if (LangSTastatur)
+    if (LangSTastatur) {
       CharProc("LnS1")
-    else
+      if (zeigeModusBox)
+        TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F11 drücken.,10,1
+    } else {
       CharProc("LnS0")
+      if (zeigeModusBox)
+        TrayTip,Lange-s-Tastatur,Lange-s-Belegungsvariante wurde deaktiviert.,10,1
+    }
   } else if (subroutine == "LnS1") {
     ; Lange-s-Tastatur aktivieren
     ED("VKBASC01A",1,"U0073","U1E9E","U00DF",""     ,"U03C2","U2218") ; ß
@@ -193,6 +198,8 @@ CharProc(subroutine) {
     ED("VKBASC01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
     ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3") ; s
     KeyboardLED(2,"off")
+    if (zeigeModusBox)
+      TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F11 drücken.,10,1
   } else if (subroutine == "_VMt") {
     ; VM-Tastaturbelegungsvariante togglen
     ; Belegungsvariante VM
@@ -200,11 +207,11 @@ CharProc(subroutine) {
     if (isVM) {
       CharProc("_VM1")
       if (zeigeModusBox)
-        MsgBox,Willkommen bei der NEO-VM-Belegungsvariante! Zum Deaktivieren, Mod4+F12 drücken
+        TrayTip,NEO-VM-Belegungsvariante,Die VM-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F12 drücken.,10,1
     } else {
       CharProc("_VM0")
       if (zeigeModusBox)
-        MsgBox,NEO-VM-Belegungsvariante deaktiviert
+        TrayTip,NEO-VM-Belegungsvariante,NEO-VM wurde deaktiviert.,10,1
     }
   } else if (subroutine == "_VM1") {
     ; VM-Tastaturbelegungsvariante aktivieren
@@ -238,11 +245,11 @@ CharProc(subroutine) {
     if (einHandNeo) {
       CharProc("_EH1")
       if (zeigeModusBox)
-        MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod4+F10 drücken
+        TrayTip,NEO-Einhandmodus,Der NEO-Einhand-Modus wurde aktiviert. Zum Deaktivieren Mod4+F10 drücken.,10,1
     } else {
       CharProc("_EH0")
       if (zeigeModusBox)
-        MsgBox,NEO-Einhand-Modus deaktiviert
+        TrayTip,NEO-Einhand-Modus,Der Einhandmodus wurde deaktiviert.,10,1
     }
   } else if (subroutine == "_EH1") {
     ; Einhand-NEO aktivieren
@@ -324,11 +331,11 @@ CharProc(subroutine) {
     if (lernModus) {
       CharProc("_LM1")
       if (zeigeModusBox)
-        MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod4+F9 drücken
+        TrayTip,NEO-Lernmodus,NEO-Lernmodus wurde aktiviert. Zum Deaktivieren`, Mod4+F9 drücken.,10,1
     } else {
       CharProc("_LM0")
       if (zeigeModusBox)
-        MsgBox,NEO-Lernmodus deaktiviert
+        TrayTip,NEO-Lernmodus,Lernmodus wurde deaktiviert.,10,1
     }
   } else if (subroutine == "_LM1") {
     ; Lernmodus aktivieren
