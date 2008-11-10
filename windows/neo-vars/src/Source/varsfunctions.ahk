@@ -199,10 +199,12 @@ CharProc(subroutine) {
     isVM := !(isVM)
     if (isVM) {
       CharProc("_VM1")
-      MsgBox,Willkommen bei der NEO-VM-Belegungsvariante! Zum Deaktivieren, Mod4+F12 drücken
+      if (zeigeModusBox)
+        MsgBox,Willkommen bei der NEO-VM-Belegungsvariante! Zum Deaktivieren, Mod4+F12 drücken
     } else {
       CharProc("_VM0")
-      MsgBox,NEO-VM-Belegungsvariante deaktiviert
+      if (zeigeModusBox)
+        MsgBox,NEO-VM-Belegungsvariante deaktiviert
     }
   } else if (subroutine == "_VM1") {
     ; VM-Tastaturbelegungsvariante aktivieren
@@ -235,10 +237,12 @@ CharProc(subroutine) {
     einHandNeo := !(einHandNeo)
     if (einHandNeo) {
       CharProc("_EH1")
-      MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod4+F10 drücken
+      if (zeigeModusBox)
+        MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod4+F10 drücken
     } else {
       CharProc("_EH0")
-      MsgBox,NEO-Einhand-Modus deaktiviert
+      if (zeigeModusBox)
+        MsgBox,NEO-Einhand-Modus deaktiviert
     }
   } else if (subroutine == "_EH1") {
     ; Einhand-NEO aktivieren
@@ -319,10 +323,12 @@ CharProc(subroutine) {
     lernModus := !(lernModus)
     if (lernModus) {
       CharProc("_LM1")
-      MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod4+F9 drücken
+      if (zeigeModusBox)
+        MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod4+F9 drücken
     } else {
       CharProc("_LM0")
-      MsgBox,NEO-Lernmodus deaktiviert
+      if (zeigeModusBox)
+        MsgBox,NEO-Lernmodus deaktiviert
     }
   } else if (subroutine == "_LM1") {
     ; Lernmodus aktivieren

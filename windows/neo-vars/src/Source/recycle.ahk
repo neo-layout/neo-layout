@@ -56,6 +56,9 @@ IniRead,lernModus,%ini%,Global,lernModus,0
 ; Soll mit einer MsgBox explizit auf das Ein- und Ausschalten des Mod4-Locks hingewiesen werden?
 IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1
 
+; Soll mit einer MsgBox explizit auf das Ein- und Ausschalten der alternativen Modi (Lernmodus, Einhandmodus, lang-s-Modus, VM-Belegung) hingewiesen werden?
+IniRead,zeigeLockBox,%ini%,Global,zeigeModusBox,1
+
 ; Soll aktivierter Mod4-Lock über die Rollen-LED des Keybord angezeigt werden (analog zu CapsLock)?
 IniRead,UseMod4Light,%ini%,Global,UseMod4Light,1
 
