@@ -199,7 +199,7 @@ CharProc(subroutine) {
     isVM := !(isVM)
     if (isVM) {
       CharProc("_VM1")
-      MsgBox,Willkommen bei der NEO-VM-Belegungsvariante! Zum Deaktivieren, Mod4+F10 drücken
+      MsgBox,Willkommen bei der NEO-VM-Belegungsvariante! Zum Deaktivieren, Mod4+F12 drücken
     } else {
       CharProc("_VM0")
       MsgBox,NEO-VM-Belegungsvariante deaktiviert
@@ -235,7 +235,7 @@ CharProc(subroutine) {
     einHandNeo := !(einHandNeo)
     if (einHandNeo) {
       CharProc("_EH1")
-      MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod4+F9 drücken
+      MsgBox,Willkommen beim NEO-Einhand-Modus! Zum Deaktivieren, Mod4+F10 drücken
     } else {
       CharProc("_EH0")
       MsgBox,NEO-Einhand-Modus deaktiviert
@@ -255,7 +255,7 @@ CharProc(subroutine) {
     TKEH_VK49SC017 := "VK45SC012" ; g -> l
     TKEH_VK4FSC018 := "VK57SC011" ; f -> v
     TKEH_VK50SC019 := "VK51SC010" ; q -> x
-    TKEH_VKBASC01A := "VK09SC00F" ; ß -> tab
+    TKEH_VKBASC01A := "tab"       ; ß -> tab
     TKEH_VKBBSC01B := "VKDCSC029" ; tot3 -> tot1
     ; Reihe 3
     TKEH_VK48SC023 := "VK47SC022" ; s -> o
@@ -319,7 +319,7 @@ CharProc(subroutine) {
     lernModus := !(lernModus)
     if (lernModus) {
       CharProc("_LM1")
-      MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod4+F12 drücken
+      MsgBox,Willkommen im NEO-Lernmodus! Zum Deaktivieren, Mod4+F9 drücken
     } else {
       CharProc("_LM0")
       MsgBox,NEO-Lernmodus deaktiviert
