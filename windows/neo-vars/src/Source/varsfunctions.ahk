@@ -13,6 +13,8 @@ AllStar(This_HotKey) {
   ActKey := TransformKey(PhysKey)
   if ((striktesMod2Lock == 0) && (NOC%ActKey% == 1))
     Ebene := EbeneNC
+  else
+    Ebene := EbeneC
   if (Ebene7 and (CP7%ActKey% != ""))
     Char := CP7%ActKey%
   else if (Ebene8 and (CP8%ActKey% != ""))
@@ -383,6 +385,10 @@ CharProc(subroutine) {
     ED1("right"    ,"SRght")
     CP4VK57SC011 := "U0008"
     CP4VK52SC013 := "S_Del"
+  } else if (subroutine == "M2LT") {
+    ; Mod2Lock Toggle
+    ToggleMod2Lock()
+    EbeneAktualisieren()
   }
 }
 

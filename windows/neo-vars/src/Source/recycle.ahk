@@ -195,37 +195,36 @@ lernModus_neo_Entf := 1
 
 
 
-EbeneAktualisieren()
-{
+EbeneAktualisieren() {
   global
   Modstate := IsMod4Active() . IsMod3Active()
   Ebene7 := 0
   Ebene8 := 0
   if        (Modstate == "00") { ; Ebene 1 oder 2
     if (IsShiftActive())         ; Ebene 2: Shift oder CapsLock
-      Ebene := 2
+      EbeneC := 2
     else                         ; Ebene 1: Ohne Mod oder CapsLock mit Shift
-      Ebene := 1
+      EbeneC := 1
     if (IsShiftPressed)          ; NC: Ebene 2: Shift (ignoriert CapsLock)
       EbeneNC := 2
     else                         ; NC: Ebene 1: Ohne Mod (ignoriert CapsLock)
       EbeneNC := 1
   } else if (Modstate == "01") { ; Ebene 3 oder 5 (ignoriert CapsLock)
     if (IsShiftPressed)          ; Ebene 5: Shift+Mod3
-      Ebene := 5
+      EbeneC := 5
     else                         ; Ebene 3: Mod3
-      Ebene := 3
-    EbeneNC := Ebene             ; NC: gleich
+      EbeneC := 3
+    EbeneNC := EbeneC            ; NC: gleich
   } else if (Modstate == "10") { ; Ebene 4 (Mit Shift: Auch Ebene 7) (ignoriert CapsLock)
-    Ebene := 4
+    EbeneC := 4
     if (IsShiftPressed)          ; Ebene 7: Shift+Mod4
       Ebene7 := 1
-    EbeneNC := Ebene             ; NC: gleich
+    EbeneNC := EbeneC            ; NC: gleich
   } else if (ModState == "11") { ; Ebene 6 (Mit Shift Xoder CapsLock: Auch Ebene 8)
-    Ebene := 6
+    EbeneC := 6
     if (IsShiftPressed)          ; Ebene 8: Shift (ignoriert CapsLock)
       Ebene8 := 1
-    EbeneNC := Ebene             ; NC: gleich
+    EbeneNC := EbeneC            ; NC: gleich
   }
 }
 
