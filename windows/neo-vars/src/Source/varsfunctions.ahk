@@ -108,6 +108,10 @@ CharStarUp(PhysKey) {
 
 CharOut(char) {
   global
+  if (DecodeUnicodeNext == 1) {
+    DecodeUnicodeNext := 0
+    TrayTip,Unicode-Zeichen,%char%,10,1
+  }
   if (DNCS%char% != "")
     SendBlindShiftFixed(DNCS%char% . UPCS%char%)
   else if (CS%char% != "")
@@ -118,6 +122,10 @@ CharOut(char) {
 
 CharOutDown(char) {
   global
+  if (DecodeUnicodeNext == 1) {
+    DecodeUnicodeNext := 0
+    TrayTip,Unicode-Zeichen,%char%,10,1
+  }
   if (DNCS%char% != "")
     SendBlindShiftFixed(DNCS%char%)
   else if (CS%char% != "")
@@ -173,8 +181,7 @@ CharProc(subroutine) {
     UniSum := ""
   } else if (subroutine == "DUni") {
     ; starte Unicode-Zeichen-in-Hex-Umwandlung
-    IsPressHooked := 1
-    PressHookRoutine := "DUni"
+    DecodeUnicodeNext := 1
   }  else if (subroutine == "Rlod") {
     ; Neustart des AHK-Skripts
     reload
@@ -507,15 +514,6 @@ PressHookProc(HookRoutine, PhysKey, ActKey, Char) {
       IsPressHooked := 0
     } else
       IsPressHooked := 0
-  } else if (HookRoutine == "DUni") {
-    OutStr := EncodeUni(Char)
-    loop {
-      if (OutStr == "") 
-        break ; erledigt
-      CharOut(SubStr(OutStr,1,5))
-      OutStr := SubStr(OutStr,6)
-    }
-    IsPressHooked := 0
   } else
     IsPressHooked := 0
 }
