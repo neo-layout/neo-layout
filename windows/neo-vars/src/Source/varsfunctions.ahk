@@ -184,11 +184,11 @@ CharProc(subroutine) {
     if (LangSTastatur) {
       CharProc("LnS1")
       if (zeigeModusBox)
-        TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F11 drücken.,10,1
+        TrayTip,Lange-s-Tastatur,Die Lang-S-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F11 drücken.,10,1
     } else {
       CharProc("LnS0")
       if (zeigeModusBox)
-        TrayTip,Lange-s-Tastatur,Lange-s-Belegungsvariante wurde deaktiviert.,10,1
+        TrayTip,Lange-s-Tastatur,Lang-S-Belegungsvariante wurde deaktiviert.,10,1
     }
   } else if (subroutine == "LnS1") {
     ; Lange-s-Tastatur aktivieren
