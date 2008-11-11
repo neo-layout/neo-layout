@@ -513,17 +513,6 @@ exitprogram:
   exitapp
 return
 
-/**************************
-* lernModus Konfiguration *
-* nur relevant wenn       *
-* lernModus = 1           *
-* Strg+Komma schaltet um  *
-***************************
-*/
-^,::lernModus := not(lernModus)
-
-; 0 = aus, 1 = an
-
 ; LShift+RShift == CapsLock (simuliert)
 ; Es werden nur die beiden Tastenkombinationen abgefragt,
 ; daher kommen LShift und RShift ungehindert bis in die
