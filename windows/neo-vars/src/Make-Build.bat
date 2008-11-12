@@ -16,18 +16,13 @@ set ahkrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.ahk
 set   ahkrevoutput1=%Ssrcdir%\_subwcrev1.ahk
 set batrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.bat
 set   batrevoutput1=%Ssrcdir%\_subwcrev1.bat
-set ahkrevtemplate2=%Ssrcdir%\_subwcrev2.tmpl.ahk
-set   ahkrevoutput2=%Ssrcdir%\_subwcrev2.ahk
 
 REM The path to the directory used for generating a consistent SVN version (revision number)
 set svnversiondir1=.
-set svnversiondir2=..\..\..\Compose
 
-:next1
 echo Generating Version File
 "%SubWCRev%" "%svnversiondir1%" "%ahkrevtemplate1%" "%ahkrevoutput1%"
 "%SubWCRev%" "%svnversiondir1%" "%batrevtemplate1%" "%batrevoutput1%"
-"%SubWCRev%" "%svnversiondir2%" "%ahkrevtemplate2%" "%ahkrevoutput2%"
 call "%batrevoutput1%"
 
 set fnexe=%outdir%\neo20.exe
@@ -35,19 +30,9 @@ set fnexe=%outdir%\neo20.exe
 if errorlevel 1 (
   set fnexe=%outdir%\neo20-r%Revision%.exe
 )
-"%SubWCRev%" "%svnversiondir2%" -nm
-if errorlevel 1 (
-  set fnexe=%outdir%\neo20-r%Revision%.exe
-)
-
-echo Compiling Compose sequences
-%ahkpath%\AutoHotkey %Ssrcdir%\makecompose.ahk
-
-rem echo Killing the old (AHK)Driver
-rem tskill %fn%
 
 echo removing old version(s) of NEO AHK Exe file
-del %outdir%\neo20-r*.exe 2> nul
+del "%outdir%\neo20-r*.exe" 2> nul
 
 set fnahk=%srcdir%\neo20-all.ahk
 
