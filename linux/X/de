@@ -296,7 +296,7 @@ xkb_symbols "neo" {
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   U2080,              minus,          NoSymbol,    emptyset       ] };
 
     key <AE11> { [ minus,       endash,                 emdash,                 U2011,              NoSymbol,       NoSymbol,    hyphen         ] };
-    key <AE12> { [ dead_grave,  NoSymbol,               dead_diaresis,          dead_dasia,         dead_doublegrave,NoSymbol,   NoSymbol       ] };
+    key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,         U030F,          NoSymbol,    NoSymbol       ] };
 
     // top row
     // ------------
