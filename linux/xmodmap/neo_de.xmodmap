@@ -141,8 +141,8 @@ keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logical
 !				ℓ liter		³	  	₃		№				∧
 keycode 13 = 	4		guillemotright	U203A		dagger		Prior		Prior		downtack	NoSymbol
 !				»		›		†						⊥ perpendicular
-keycode 14 = 	5		guillemotleft	U2039		femalesymbol	NoSymbol	NoSymbol	U2221		NoSymbol
-!				«		‹		♀						∡ angle sign
+keycode 14 = 	5		guillemotleft	U2039		femalesymbol	periodcentered	NoSymbol	U2221		NoSymbol
+!				«		‹		♀		·				∡ angle sign
 keycode 15 = 	6		EuroSign	cent		malesymbol	sterling	NoSymbol	U2225		NoSymbol
 !				€		¢		♂		£				∥ parallel
 
