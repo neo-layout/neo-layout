@@ -1,4 +1,4 @@
-// based on a keyboard map from an 'xkb/symbols/de' file
+﻿// based on a keyboard map from an 'xkb/symbols/de' file
 //
 // $XKeyboardConfig: xkeyboard-config/symbols/de,v 1.17 2007/07/15 22:12:12 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/de,v 1.6 2003/09/08 13:12:51 pascal Exp $
@@ -286,7 +286,7 @@ xkb_symbols "neo" {
     key <AE02> { [ 2,           numerosign,             twosuperior,            U2082,              U2023,          NoSymbol,    logicalor      ] };
     key <AE03> { [ 3,           section,                threesuperior,          U2083,              NoSymbol,       NoSymbol,    logicaland     ] };
     key <AE04> { [ 4,           guillemotright,         U203A,                  U2113,              Prior,          Prior,       uptack         ] };
-    key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       NoSymbol,       NoSymbol,    U2221          ] };
+    key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       U00B7,          NoSymbol,    U2221          ] };
     key <AE06> { [ 6,           EuroSign,               cent,                   malesymbol,         sterling,       NoSymbol,    U2225          ] };
 
     key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    U21C8          ] };
