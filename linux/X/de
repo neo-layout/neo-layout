@@ -290,7 +290,7 @@ xkb_symbols "neo" {
     key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       U00B7,          NoSymbol,    U2221          ] };
     key <AE06> { [ 6,           EuroSign,               cent,                   malesymbol,         sterling,       NoSymbol,    U2225          ] };
 
-    key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    U21C8          ] };
+    key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
     key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     U27E8,              KP_Divide,      NoSymbol,    U221E          ] };
     key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    U27E9,              KP_Multiply,    NoSymbol,    U220B          ] };
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   U2080,              minus,          NoSymbol,    emptyset       ] };
