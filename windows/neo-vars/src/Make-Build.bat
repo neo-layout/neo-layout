@@ -31,11 +31,14 @@ echo Generating Version File
 call "%batrevoutput1%"
 
 set fnahk=%srcdir%\neo20-r%Revision%.ahk
+set fnexe=%outdir%\neo20.exe
 "%SubWCRev%" "%svnversiondir1%" -nm
 if errorlevel 1 (
   set fnexe=%outdir%\neo20-r%Revision%.exe
-) else (
-  set fnexe=%outdir%\neo20.exe
+)
+"%SubWCRev%" "%svnversiondir2%" -nm
+if errorlevel 1 (
+  set fnexe=%outdir%\neo20-r%Revision%.exe
 )
 
 echo Compiling Compose sequences
