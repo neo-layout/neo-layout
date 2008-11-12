@@ -1823,14 +1823,20 @@ SetFormat, Integer, d
 
 VarSetCapacity(Composita,10240000) ; 10 MB
 
-EncodeUnicodeFile(FFrom,FTo,NumLines) {
-Composita := ""
-Count := 0
-Miss := 0
-FileRead, FileContents, %FFrom%
-ProgressTop := "Converting " . FFrom . "..."
-Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
-{
+EncodeUnicodeFile(FFrom,FTo) {
+  Composita := ""
+  Miss := 0
+  FileRead, FileContents, %FFrom%
+  ProgressTop := "Converting " . FFrom . "..."
+
+  Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
+  {
+    NumLines := A_Index
+  }
+
+  Count := 0
+  Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
+  {
     Count := Count + 1
     ProgressVal := Count/NumLines*100
     ProgressInd := "Lines: " . Count . ", Errors: " . Miss
@@ -1891,13 +1897,28 @@ Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windo
       Composita := Composita "; illegal " Xkbsym " in " A_LoopField "`r`n"
       Miss := Miss + 1
     }
-}
-FileDelete,%FTo%
-FileAppend,%Composita%,%FTo%
+  }
+  Progress,off
+  FileAppend,%Composita%,%FTo%
 }
 
-EncodeUnicodeFile("..\..\..\Compose\en_US.UTF-8","Source\en_us.ahk"   ,5609)
-EncodeUnicodeFile("..\..\..\Compose\Compose.neo","Source\neocomp.ahk" ,1067)
+NumPars = %0%
+if (NumPars < 2) {
+  MsgBox,Zu wenige Parameter`, Minimum=2
+  exit
+}
+
+CompRevision = %1%
+OutputFile = %2%
+
+FileDelete,%OutputFile%
+FileAppend,CompRevision := "%CompRevision%"`r`n, %OutputFile%
+
+loop %Numpars% {
+  if (A_Index < 3)
+    continue
+  EncodeUnicodeFile(%A_Index%, OutputFile)
+}
 
 ; MsgBox % EncodeUni(DecodeUni("U20ACU0041U0070"))
 

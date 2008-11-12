@@ -4,11 +4,10 @@ SetWorkingDir, %A_ScriptDir%
 
 ; Revision Information (don't moun)
 #Include *i Source\_subwcrev1.ahk
-#Include *i Source\_subwcrev2.ahk
 
 ; die Compose-Definitionen
-#Include *i Source\en_us.ahk
-#Include *i Source\neocomp.ahk
+#Include *i Source\Compose.generated.ahk
+#Include *i Source\Compose-tainted.generated.ahk
 #Include    Source\neovarscomp.ahk
 
 ; Hier liegt die Tastaturbelegung
