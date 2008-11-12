@@ -1,5 +1,5 @@
-SetWorkingDir, %A_ScriptDir%\..
-#Include %A_ScriptDir%\..\
+SetWorkingDir, %A_ScriptDir%
+#Include %A_ScriptDir%\
 
 
 ; Revision Information (don't moun)
