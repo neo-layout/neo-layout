@@ -24,6 +24,8 @@ AllStar(This_HotKey) {
   if (IsPressHooked == 1) {
     if (IsDown == 1)
       PressHookProc(PressHookRoutine, PhysKey, ActKey, Char)
+    else
+      CharStarUp(PhysKey)
   } else if (IsDown == 1)
     CharStarDown(PhysKey, ActKey, Char)
   else
