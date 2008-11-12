@@ -30,7 +30,6 @@ echo Generating Version File
 "%SubWCRev%" "%svnversiondir2%" "%ahkrevtemplate2%" "%ahkrevoutput2%"
 call "%batrevoutput1%"
 
-set fnahk=%srcdir%\neo20-r%Revision%.ahk
 set fnexe=%outdir%\neo20.exe
 "%SubWCRev%" "%svnversiondir1%" -nm
 if errorlevel 1 (
@@ -48,12 +47,9 @@ rem echo Killing the old (AHK)Driver
 rem tskill %fn%
 
 echo removing old version(s) of NEO AHK Exe file
-del %outdir%\neo20-r*.exe %srcdir%\neo20-r*.ahk 2> nul
+del %outdir%\neo20-r*.exe 2> nul
 
-echo creating all-in-one script
-echo ; Gesamtdatei > %fnahk%
-
-for %%i in (_subwcrev1 _subwcrev2 en_us neocomp neovarscomp keydefinitions shortcuts recycle keyhooks varsfunctions) do (type "%Ssrcdir%\%%i.ahk" >> "%fnahk%")
+set fnahk=%srcdir%\neo20-all.ahk
 
 echo Compiling the new Driver using Autohotkey
 "%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
