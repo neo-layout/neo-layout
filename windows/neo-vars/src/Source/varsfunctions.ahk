@@ -236,7 +236,7 @@ CharProc(subroutine) {
     ED("VKDESC028",1,"U0078","U0058","U0040","U002E","U03BE","U039E") ; x
     ED("VK56SC02F",1,"U0076","U0056","U007E","U000D",""     ,"U2259") ; v
     ED("VK34SC005",0,"U0034","U00AB","U2039","SPgUp","U2020","U22A5") ; 4
-    ED("VK35SC006",0,"U0035","U00BB","U203A",""     ,"U2640","U2221") ; 5
+    ED("VK35SC006",0,"U0035","U00BB","U203A","U00B7","U2640","U2221") ; 5
   } else if (subroutine == "_VM0") {
     ; VM-Tastaturbelegungsvariante deaktivieren
     ED("VK51SC010",1,"U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
@@ -251,7 +251,7 @@ CharProc(subroutine) {
     ED("VKDESC028",1,"U0079","U0059","U0040","U002E","U03C5","U2207") ; y
     ED("VK56SC02F",1,"U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
     ED("VK34SC005",0,"U0034","U00BB","U203A","SPgUp","U2020","U22A5") ; 4
-    ED("VK35SC006",0,"U0035","U00AB","U2039",""     ,"U2640","U2221") ; 5
+    ED("VK35SC006",0,"U0035","U00AB","U2039","U00B7","U2640","U2221") ; 5
   } else if (subroutine == "_EHt") {
     ; Einhandmodus togglen
     einHandNeo := !(einHandNeo)
