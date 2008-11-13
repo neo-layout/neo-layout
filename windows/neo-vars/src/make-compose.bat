@@ -11,7 +11,7 @@ set  AutoHotKey=%ahkpath%\AutoHotKey.exe
 REM The path to the authohotkey directory in the local svn copy, MUST be "."
 set srcdir=.
 set outdir=..\out
-set Ssrcdir=%srcdir%\Source
+set Ssrcdir=%srcdir%\source
 set batrevtemplate2=%Ssrcdir%\_subwcrev2.tmpl.bat
 set   batrevoutput2=%Ssrcdir%\_subwcrev2.bat
 
