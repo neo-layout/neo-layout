@@ -11,7 +11,7 @@ set  Ahk2Exe=%ahkpath%\Compiler\Ahk2Exe.exe
 REM The path to the authohotkey directory in the local svn copy, MUST be "."
 set srcdir=.
 set outdir=..\out
-set Ssrcdir=%srcdir%\source_
+set Ssrcdir=%srcdir%\source
 set ahkrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.ahk
 set   ahkrevoutput1=%Ssrcdir%\_subwcrev1.ahk
 set batrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.bat
