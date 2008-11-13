@@ -6,7 +6,7 @@ SetWorkingDir, %A_ScriptDir%
 #include *i source\_subwcrev1.ahk
 
 ; die Compose-Definitionen
-#include *i source\compose.generated.ahk_
+#include *i source\compose.generated.ahk
 #include *i source\compose-tainted.generated.ahk
 #include    source\neovarscompose.ahk
 
