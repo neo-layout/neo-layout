@@ -38,6 +38,7 @@ set fnahk=%srcdir%\neo20-all.ahk
 
 echo Compiling the new Driver using Autohotkey
 "%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
+copy "%ahkrevoutput1%" "%Ssrcdir%\_subwcrev1.generated.ahk"
 
 echo Driver Update complete! You can now close this log-window.
 pause
