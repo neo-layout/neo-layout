@@ -14,6 +14,7 @@ SetWorkingDir, %A_ScriptDir%
 #Include    Source\keydefinitions.ahk
 
 ; Shortcuts, um die Zeichen wieder sauber zur Applikation bringen zu können
+#Include    Source\performance.ahk
 #Include    Source\shortcuts.ahk
 
 ; Good-old AHK-Skripts, enthalten die ersten Key-Hooks für Mod-Tasten

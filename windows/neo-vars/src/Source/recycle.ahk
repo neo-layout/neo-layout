@@ -3,10 +3,6 @@
 *******************
 */
 
-#MaxThreadsPerHotKey 1
-Thread,Interrupt,-1,-1
-
-SetBatchLines -1
 SetCapsLockState Off
 SetNumLockState Off
 SetScrollLockState Off
@@ -14,12 +10,7 @@ SetScrollLockState Off
 name=Neo 2.0 (%A_ScriptName%) (r%Revision%-r%CompRevision%)
 enable=Aktiviere %name%
 disable=Deaktiviere %name%
-#usehook on
-#singleinstance force
 #LTrim ; Quelltext kann eingerückt werden, 
-Process,Priority,,High
-Sendmode Input
-#MaxHotkeysPerInterval 2000
 
 /****************
 * Verzeichnisse *
