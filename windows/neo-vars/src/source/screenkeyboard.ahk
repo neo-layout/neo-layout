@@ -41,12 +41,10 @@ Show:
     Gui, Add, Text, x+5, Sprachen
     Gui, Add, Button, xm+5 gSwitch6, F6
     Gui, Add, Text, x+5, Mathesymbole
-    Gui, Add, Button, xm+5 gShow, F7
-    Gui, Add, Text, x+5, An /
-    Gui, Add, Text, y+3, Aus
-    Gui, Add, Button, x+10 y+-30 gShow, F8
+    Gui, Add, Button, xm+5 gSwitchDK, F7
+    Gui, Add, Text, x+5, Deadkeys
+    Gui, Add, Button, x+15 y+-13 gShow, F8
     Gui, Add, Text, x+5, OnTop
-    Gui, Add, Button, xm+5 gSwitchDK, Deadkeys
     Gui, Add, Picture,AltSubmit ys w729 h199 vPicture, %Image%
     Gui, +AlwaysOnTop
     Gui, Show, y%yposition% Autosize
