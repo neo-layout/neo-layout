@@ -22,10 +22,10 @@ echo Generating Version File
 "%SubWCRev%" "%svnversiondir2%" "%batrevtemplate2%" "%batrevoutput2%"
 call "%batrevoutput2%"
 
-set fncomp=%Ssrcdir%\Compose.generated.ahk
+set fncomp=%Ssrcdir%\compose.generated.ahk
 "%SubWCRev%" "%svnversiondir2%" -nm
 if errorlevel 1 (
-  set fncomp=%Ssrcdir%\Compose-tainted.generated.ahk
+  set fncomp=%Ssrcdir%\compose-tainted.generated.ahk
 )
 
 echo Deleting old Compose sequences

@@ -1,29 +1,33 @@
 SetWorkingDir, %A_ScriptDir%
-#Include %A_ScriptDir%\
+#include %A_ScriptDir%\
 
 
 ; Revision Information (don't moun)
-#Include *i Source\_subwcrev1.ahk
+#include *i source_\_subwcrev1.ahk
 
 ; die Compose-Definitionen
-#Include *i Source\Compose.generated.ahk
-#Include *i Source\Compose-tainted.generated.ahk
-#Include    Source\neovarscomp.ahk
+#include *i source_\compose.generated.ahk_
+#include *i source_\compose-tainted.generated.ahk
+#include    source_\neovarscompose.ahk
 
 ; Hier liegt die Tastaturbelegung
-#Include    Source\keydefinitions.ahk
+#include    source_\keydefinitions.ahk
 
 ; Shortcuts, um die Zeichen wieder sauber zur Applikation bringen zu können
-#Include    Source\performance.ahk
-#Include    Source\shortcuts.ahk
+#include    source_\performance.ahk
+#include    source_\shortcuts.ahk
 
 ; Good-old AHK-Skripts, enthalten die ersten Key-Hooks für Mod-Tasten
 ; Achtung: Hinter dem ersten Keyboard-Hook werden keine globalen Variablen
 ; mehr gesetzt!
-#Include    Source\recycle.ahk
-
-; Normale Keyboard-Hooks
-#Include    Source\keyhooks.ahk
+#include    source_\initialize.ahk
+#include    source_\resources.ahk
+#include    source_\tray.ahk
+#include    source_\keyhooks.ahk
+#include    source_\trayfunctions.ahk
+#include    source_\levelfunctions.ahk
+#include    source_\keyboardleds.ahk
+#include    source_\screenkeyboard.ahk
 
 ; Das Herz von neo20.ahk: die Tasten- und Zeichen-Behandlungsroutinen
-#Include    Source\varsfunctions.ahk
+#include    source_\varsfunctions.ahk
