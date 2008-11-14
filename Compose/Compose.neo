@@ -38,7 +38,7 @@
 <Multi_key> <U1FBF> <U1FBF>                : "҆"   U0486 # COMBINING CYRILLIC PSILI PNEUMATA
 
 # in standard Compose missing dead keys with spaces
-<dead_stroke> <space>                      : "/"   U002F # SOLIDUS
+<dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
 <dead_doubleacute> <space>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
 <U1FBF> <space>                            : "᾿"   U1FBF # GREEK PSILI
 <U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
