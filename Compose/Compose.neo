@@ -953,6 +953,7 @@
 <Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
 <Multi_key> <colon> <colon>                      : "‥"   U2025 # TWO DOT LEADER
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
+<Multi_key> <ellipsis> <ellipsis>                : "[…]"
 
 
 # numerals
@@ -1340,6 +1341,7 @@
 <dead_stroke> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 
 # physical units
+<Multi_key> <m> <i> <c> <r> <o>           : "µ"   U00B5 # MICRO SIGN
 <Multi_key> <degree> <C>                  : "℃"   U2103 # DEGREE CELSIUS
 <Multi_key> <degree> <F>                  : "℉"   U2109 # DEGREE FAHRENHEIT
 <Multi_key> <w> <degree>                  : "°"   U00B0 # DEGREE SIGN
