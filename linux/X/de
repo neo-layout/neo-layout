@@ -232,8 +232,8 @@ xkb_symbols "neo" {
 
     // Definition des Neo-Mod4
     key.type[Group1]="ONE_LEVEL";
-    key <LSGT> { [ 0xfe11 ]};
-    key <RALT> { [ 0xfe11 ]};
+    key <LSGT> { [ ISO_Level5_Shift ]};
+    key <RALT> { [ ISO_Level5_Shift ]};
     modifier_map Mod3 { <LSGT>, <RALT> };
     // Achtung:  ^^^ Dies ist eine X-Server-Variable, nicht unser Mod3.
 
@@ -283,20 +283,22 @@ xkb_symbols "neo" {
 
     key <TLDE> { [ dead_circumflex, dead_tilde,         dead_abovering,         dead_breve,         dead_caron,     NoSymbol,    dead_macron    ] };
 
-    key <AE01> { [ 1,           degree,                 onesuperior,            U2081,              U00BA,          NoSymbol,    notsign        ] };
-    key <AE02> { [ 2,           numerosign,             twosuperior,            U2082,              U00AA,          NoSymbol,    logicalor      ] };
-    key <AE03> { [ 3,           section,                threesuperior,          U2083,              NoSymbol,       NoSymbol,    logicaland     ] };
-    key <AE04> { [ 4,           guillemotright,         U203A,                  U2113,              Prior,          Prior,       uptack         ] };
-    key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       U00B7,          NoSymbol,    U2221          ] };
+    key <AE01> { [ 1,           degree,                 onesuperior,            onesubscript,       masculine,      NoSymbol,    notsign        ] };
+    key <AE02> { [ 2,           section,                twosuperior,            twosubscript,       ordfeminine,    NoSymbol,    logicalor      ] };
+    key <AE03> { [ 3,           U2113,                  threesuperior,          threesubscript,     numerosign,     NoSymbol,    logicaland     ] };
+    key <AE04> { [ 4,           guillemotright,         U203A,                  dagger,             Prior,          Prior,       U22A5          ] };
+    key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       periodcentered, NoSymbol,    U2221          ] };
     key <AE06> { [ 6,           EuroSign,               cent,                   malesymbol,         sterling,       NoSymbol,    U2225          ] };
 
     key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
-    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     U27E8,              KP_Divide,      NoSymbol,    U221E          ] };
-    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    U27E9,              KP_Multiply,    NoSymbol,    U220B          ] };
-    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   U2080,              minus,          NoSymbol,    emptyset       ] };
+    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   KP_Divide,      NoSymbol,    U221E          ] };
+    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  KP_Multiply,    NoSymbol,    U220B          ] };
+    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      minus,          NoSymbol,    emptyset       ] };
 
     key <AE11> { [ minus,       endash,                 emdash,                 U2011,              NoSymbol,       NoSymbol,    hyphen         ] };
     key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,         U030F,          NoSymbol,    NoSymbol       ] };
+
+    key <BKSP> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
 
     // top row
     // ------------
@@ -335,9 +337,9 @@ xkb_symbols "neo" {
     // bottom row
     // ---------------
     // üöäpzbm,.j
-    key <AB01> { [ udiaeresis,  Udiaeresis,             numbersign,             NoSymbol,           Escape,         Escape,      variation         ] };
+    key <AB01> { [ udiaeresis,  Udiaeresis,             numbersign,             NoSymbol,           Escape,         Escape,      U211C             ] };
     key <AB02> { [ odiaeresis,  Odiaeresis,             dollar,                 NoSymbol,           Tab,            Tab,         U2111             ] };
-    key <AB03> { [ adiaeresis,  Adiaeresis,             bar,                    Greek_eta,          Next,           Next,        U211C             ] };
+    key <AB03> { [ adiaeresis,  Adiaeresis,             bar,                    Greek_eta,          Next,           Next,        U2135             ] };
     key <AB04> { [ p,           P,                      asciitilde,             Greek_pi,           Return,         Return,      Greek_PI          ] };
     key <AB05> { [ z,           Z,                      grave,                  Greek_zeta,         NoSymbol,       NoSymbol,    U2124             ] };
 
@@ -345,7 +347,7 @@ xkb_symbols "neo" {
     key <AB07> { [ m,           M,                      percent,                Greek_mu,           1,              NoSymbol,    ifonlyif          ] };
     key <AB08> { [ comma,       enfilledcircbullet,     quotedbl,               Greek_rho,          2,              NoSymbol,    U21D2             ] };
     key <AB09> { [ period,      U2023,                  apostrophe,             U03D1,              3,              NoSymbol,    Greek_THETA       ] };
-    key <AB10> { [ j,           J,                      semicolon,              Greek_theta,        semicolon,      NoSymbol,    U221D             ] };
+    key <AB10> { [ j,           J,                      semicolon,              Greek_theta,        semicolon,      NoSymbol,    variation         ] };
 
     // Space key
     // --------------
@@ -358,7 +360,7 @@ xkb_symbols "neo" {
     //key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
 
     // Die ehemalige Num-Lock-Taste erzeugt nun diverse Zeichen:
-    key <NMLK> { [ Tab,           ISO_Left_Tab,   equal,        U2248,        notequal,   NoSymbol,   U2261 ] };
+    key <NMLK> { [ Tab,           ISO_Left_Tab,   equal,        approxeq,     notequal,   NoSymbol,   identical ] };
 
     // topmost row
     // ----------------
@@ -368,29 +370,29 @@ xkb_symbols "neo" {
 
     // top row
     // ------------
-    key  <KP7> { [ KP_7,          U2714,          U2195,        U230A,        KP_Home,    KP_Home,    U2308 ] };
-    key  <KP8> { [ KP_8,          U2718,          U2191,        U2229,        KP_Up,      KP_Up,      U22C2 ] };
-    key  <KP9> { [ KP_9,          dagger,         U20D7,        U230B,        KP_Prior,   KP_Prior,   U2309 ] };
-    key <KPAD> { [ KP_Add,        KP_Add,         plusminus,    U2213,        U2295,      NoSymbol,   U2214 ] };
+    key  <KP7> { [ KP_7,          U2714,          U2195,        U226A,        KP_Home,    KP_Home,    upstile ] };
+    key  <KP8> { [ KP_8,          U2718,          uparrow,      intersection, KP_Up,      KP_Up,      U22C2   ] };
+    key  <KP9> { [ KP_9,          NoSymbol,       U20D7,        U226B,        KP_Prior,   KP_Prior,   U2309   ] };
+    key <KPAD> { [ KP_Add,        KP_Add,         plusminus,    U2213,        U2295,      NoSymbol,   U2214   ] };
 
     // middle row
     // ----------------
-    key  <KP4> { [ KP_4,          U2663,          leftarrow,    includedin,   KP_Left,    KP_Left,    U2286 ] };
+    key  <KP4> { [ KP_4,          club,           leftarrow,    includedin,   KP_Left,    KP_Left,    U2286 ] };
     key  <KP5> { [ KP_5,          EuroSign,       brokenbar,    U22B6,        KP_Begin,   KP_Begin,   U22B7 ] };
-    key  <KP6> { [ KP_6,          brokenbar,      rightarrow,   includes,     KP_Right,   KP_Right,   U2287 ] };
+    key  <KP6> { [ KP_6,          NoSymbol,       rightarrow,   includes,     KP_Right,   KP_Right,   U2287 ] };
 
     // bottom row
     // ---------------
-    key  <KP1> { [ KP_1,          U2666,          U2194,        U226A,        KP_End,     KP_End,     U2264    ] };
-    key  <KP2> { [ KP_2,          U2665,          downarrow,    union,        KP_Down,    KP_Down,    U22C3    ] };
-    key  <KP3> { [ KP_3,          U2660,          U21CC,        U226B,        KP_Next,    KP_Next,    U2265    ] };
-    key <KPEN> { [ KP_Enter,      KP_Enter,       KP_Enter,     KP_Enter,     KP_Enter,   KP_Enter,   KP_Enter ] };
+    key  <KP1> { [ KP_1,          diamond,        U2194,        lessthanequal,KP_End,     KP_End,     downstile ] };
+    key  <KP2> { [ KP_2,          heart,          downarrow,    union,        KP_Down,    KP_Down,    U22C3     ] };
+    key  <KP3> { [ KP_3,          U2660,          U21CC,     greaterthanequal,KP_Next,    KP_Next,    U230B     ] };
+    key <KPEN> { [ KP_Enter,      KP_Enter,       KP_Enter,     KP_Enter,     KP_Enter,   KP_Enter,   KP_Enter  ] };
     key <KPEQ> { [ KP_Equal ] };
 
     // bottommost row
     // -------------------
-    key  <KP0> { [ KP_0,         U2423,   percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
-    key <KPDL> { [ KP_Decimal,   comma,   period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
+    key  <KP0> { [ KP_0,         U2423,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
+    key <KPDL> { [ KP_Decimal,   comma,           period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
 
 };
 
