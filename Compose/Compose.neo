@@ -1,6 +1,7 @@
 # Definitions by Neo keyboard layout
 
 # diacritical marks
+
 <dead_circumflex> <nobreakspace>           : "ˆ"   U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
 <dead_caron> <nobreakspace>                : "ˇ"   U02C7 # CARON
 <dead_breve> <nobreakspace>                : "˘"   U02D8 # BREVE
@@ -19,6 +20,7 @@
 <U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
 
 # combining characters
+<Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
 <dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT
 <dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON
 <dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE
@@ -1193,7 +1195,6 @@
 
 # Vector
 <dead_circumflex> <rightarrow>             : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<Multi_key> <rightarrow>                   : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
 <dead_circumflex> <greater>                : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key> <asciicircum> <greater>        : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key> <asciicircum> <rightarrow>     : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
@@ -1231,6 +1232,7 @@
 <Multi_key> <underbar> <minus>             : "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underscore> <KP_Subtract>     : "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underbar> <KP_Subtract>       : "₋"   U208B # SUBSCRIPT MINUS
+<Multi_key> <asciicircum> <equal>          : "⁼"   U207C # SUPERSCRIPT EQUALS SIGN
 
 <Multi_key> <asciicircum> <a>              :"ᵃ"   U1D43 # MODIFIER LETTER SMALL A
 <Multi_key> <asciicircum> <b>              :"ᵇ"   U1D47 # MODIFIER LETTER SMALL B
