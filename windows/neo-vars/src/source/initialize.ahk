@@ -1,3 +1,33 @@
+if (A_IsCompiled) {
+; Revisionsinformation bereits verfügbar
+} else {
+; Revisionsinformation nicht verfügbar oder nicht zuverlässig, neu generieren
+  if (FileExist(".svn")<>False) {
+    ; .svn existiert, scheint also ausgecheckt worden zu sein
+    RegRead,TSVNPath,HKLM,SOFTWARE\TortoiseSVN,Directory
+    RegRead,SVNPath,HKLM,SOFTWARE\CollabNet\Subversion\1.5.4\Client,Install Location
+    if (TSVNPath<>"") {
+      ; fein, TSVN ist installiert!
+      RunWait, "%TSVNPath%bin\SubWCRev.exe" "." "Source\_subwcrev1.tmpl.ahk" "Source\_subwcrev1.generated.ahk",,Hide
+      FileRead,TSVNRevFull,Source\_subwcrev1.generated.ahk
+      RegExMatch(TSVNRevFull,"""(.*)""",SubPat)
+      Revision := SubPat1
+    } else if (SVNPath<>"") {
+      ; fein, CollabNet-SVN-Client ist installiert!
+      RunWait, %comspec% /c ""%SVNPath%\svnversion.exe" "." >"Source\_svnversion.generated.txt"",,Hide
+      FileRead,SVNRevFull,Source\_svnversion.generated.txt
+      RegExMatch(SVNRevFull,"(.*)$",SubPat)
+      Revision := SubPat1
+    } else {
+      ; nichts installiert. Was jetzt?
+      Revision := "<unknown>"
+    }
+  } else {
+    ; kein .svn-Verzeichnis. Was jetzt?
+    Revision := "<unknown>"
+  }
+}
+
 name=Neo 2.0 r%Revision%-r%CompRevision% (%A_ScriptName%)
 enable=Aktiviere %name%
 disable=Deaktiviere %name%
