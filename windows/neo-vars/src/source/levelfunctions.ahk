@@ -29,6 +29,8 @@ EbeneAktualisieren() {
       Ebene8 := 1
     EbeneNC := EbeneC            ; NC: gleich
   }
+  if (guiErstellt)
+    BSTSwitch(EbeneC)
 }
 
 IsShiftActive() {
