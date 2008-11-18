@@ -37,7 +37,6 @@ DNCSU005E := "{^}{space}"
 DNCSU0060 := "{``}{space}"
 DNCSU007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
 DNCSU00B4 := "{´}{space}"
-UNSHU00B4 := 1
 
 /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
  **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
@@ -45,7 +44,6 @@ UNSHU00B4 := 1
  **** geschickt.
 */
 CSU20AC := chr(128)   ; €
-UNSHU20AC := 1
 ; CSU201A := chr(130) ; ‚
 ; CSU0192 := chr(131) ; ƒ
 ; CSU201E := chr(132) ; „
@@ -136,3 +134,75 @@ CSSNPDn := "NumpadPgDn"
 CSSNHom := "NumpadHome"
 CSSNEnd := "NumpadEnd"
 CSSNClr := "NumpadClear"
+
+
+/*
+  Für alle Zeichen, die durch Tastendrücke ohne Shift-Taste zustande kommen,
+  muss eine gegebenenfalls gedrückte Shift-Taste vor dem Senden temporär
+  gelöst werden. Dafür werden für sämtliche relevante Zeichen die passenden
+  UNSHU.... Variablen gesetzt.
+*/
+; Reihe 1
+UNSHU005E := 1 ; ^
+UNSHU0031 := 1 ; 1
+UNSHU0032 := 1 ; 2
+UNSHU0033 := 1 ; 3
+UNSHU0034 := 1 ; 4
+UNSHU0035 := 1 ; 5
+UNSHU0036 := 1 ; 6
+UNSHU0037 := 1 ; 7
+UNSHU0038 := 1 ; 8
+UNSHU0039 := 1 ; 9
+UNSHU0030 := 1 ; 0
+UNSHU00DF := 1 ; ß
+UNSHU00B4 := 1 ; ´
+; Alphabet
+UNSHU0061 := 1 ; a
+UNSHU0062 := 1 ; b
+UNSHU0063 := 1 ; c
+UNSHU0064 := 1 ; d
+UNSHU0065 := 1 ; e
+UNSHU0066 := 1 ; f
+UNSHU0067 := 1 ; g
+UNSHU0068 := 1 ; h
+UNSHU0069 := 1 ; i
+UNSHU006A := 1 ; j
+UNSHU006B := 1 ; k
+UNSHU006C := 1 ; l
+UNSHU006D := 1 ; m
+UNSHU006E := 1 ; n
+UNSHU006F := 1 ; o
+UNSHU0070 := 1 ; p
+UNSHU0071 := 1 ; q
+UNSHU0072 := 1 ; r
+UNSHU0073 := 1 ; s
+UNSHU0074 := 1 ; t
+UNSHU0075 := 1 ; u
+UNSHU0076 := 1 ; v
+UNSHU0077 := 1 ; w
+UNSHU0078 := 1 ; x
+UNSHU0079 := 1 ; y
+UNSHU007A := 1 ; z
+UNSHU00E4 := 1 ; ä
+UNSHU00F6 := 1 ; ö
+UNSHU00FC := 1 ; ü
+; Rest
+UNSHU002B := 1 ; +
+UNSHU0023 := 1 ; #
+UNSHU003C := 1 ; <
+UNSHU002C := 1 ; ,
+UNSHU002E := 1 ; .
+UNSHU002D := 1 ; -
+; AltGr
+UNSHU00B2 := 1 ; ²
+UNSHU00B3 := 1 ; ³
+UNSHU007B := 1 ; {
+UNSHU005B := 1 ; [
+UNSHU005D := 1 ; ]
+UNSHU007D := 1 ; }
+UNSHU005C := 1 ; \
+UNSHU0040 := 1 ; @
+UNSHU20AC := 1 ; Euro
+UNSHU007E := 1 ; ~
+UNSHU007C := 1 ; |
+UNSHU00B5 := 1 ; µ
