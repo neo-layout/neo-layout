@@ -13,7 +13,7 @@ set srcdir=.
 set outdir=..\out
 set Ssrcdir=%srcdir%\source
 set ahkrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.ahk
-set   ahkrevoutput1=%Ssrcdir%\_subwcrev1.ahk
+set   ahkrevoutput1=%Ssrcdir%\_subwcrev1.generated.ahk
 set batrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.bat
 set   batrevoutput1=%Ssrcdir%\_subwcrev1.bat
 
@@ -38,7 +38,6 @@ set fnahk=%srcdir%\neo20-all.ahk
 
 echo Compiling the new Driver using Autohotkey
 "%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
-copy "%ahkrevoutput1%" "%Ssrcdir%\_subwcrev1.generated.ahk"
 
 echo Driver Update complete! You can now close this log-window.
 pause
