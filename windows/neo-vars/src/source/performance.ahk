@@ -8,4 +8,4 @@ Process,Priority,,High
 #MaxHotkeysPerInterval 2000
 
 #usehook on
-Sendmode Input
+Sendmode Event
