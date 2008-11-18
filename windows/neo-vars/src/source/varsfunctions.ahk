@@ -115,9 +115,9 @@ CharOut(char) {
     TrayTip,Unicode-Zeichen,%char%,10,1
   }
   if (DNCS%char% != "")
-    SendBlindShiftFixed(DNCS%char% . UPCS%char%)
+    SendBlindShiftFixed(char, DNCS%char% . UPCS%char%)
   else if (CS%char% != "")
-    SendBlindShiftFixed("{" . CS%char% . "}")
+    SendBlindShiftFixed(char, "{" . CS%char% . "}")
   else
     SendUnicodeChar("0x" . SubStr(char,2))
 }
@@ -129,9 +129,9 @@ CharOutDown(char) {
     TrayTip,Unicode-Zeichen,%char%,10,1
   }
   if (DNCS%char% != "")
-    SendBlindShiftFixed(DNCS%char%)
+    SendBlindShiftFixed(char, DNCS%char%)
   else if (CS%char% != "")
-    SendBlindShiftFixed("{" . CS%char% . " down}")
+    SendBlindShiftFixed(char, "{" . CS%char% . " down}")
   else
     SendUnicodeCharDown("0x" . SubStr(char,2))
 }
@@ -140,14 +140,14 @@ CharOutUp(char) {
   global
   if (DNCS%char% != "") {
     if (UPCS%char% != "")
-      SendBlindShiftFixed(UPCS%char%)
+      SendBlindShiftFixed(char, UPCS%char%)
   } else if (CS%char% != "")
-    SendBlindShiftFixed("{" . CS%char% . " up}")
+    SendBlindShiftFixed(char, "{" . CS%char% . " up}")
   else
     SendUnicodeCharUp("0x" . SubStr(char,2))
 }
 
-SendBlindShiftFixed(theseq) {
+SendBlindShiftFixed(char, theseq) {
   global
   if (UNSH%char%)
     if (IsShiftLPressed)
