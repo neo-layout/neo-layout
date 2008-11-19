@@ -1,3 +1,7 @@
+; Wir müssen F24 nicht hooken, aber bei einem Restart hat AHK den Bug,
+; dass manchmal der erste Hook ausgeführt wird, als wäre diese Taste
+; gedrückt worden. Da F24 auf den wenigsten Tastaturen vorkommt und daher für
+; NEO uninteressant ist, kehren wir einfach wieder zurück.
 ~F24::return
 
 +pause::
@@ -105,6 +109,22 @@ return
 
 
 ;;;;;; DOWN EVENTS
+
+; Funktionstasten
+
+F1::
+F2::
+F3::
+F4::
+F5::
+F6::
+F7::
+F8::
+F9::
+F10::
+F11::
+F12::
+
 ; Reihe 1
 
 *VKDCSC029:: ; Zirkumflex
@@ -194,6 +214,9 @@ return
 *VK2DSC052:: ; NumPadIns
 *VK6ESC053:: ; NumPadDot
 *VK2ESC053:: ; NumPadDel
+
+; Navigation, Sonstiges
+
 tab::
 esc::
 *enter::
@@ -208,13 +231,25 @@ esc::
 *down::
 *left::
 *right::
-F9::
-F10::
-F11::
-F12::
 numpadenter::
 
 ;;;;;; UP EVENTS
+
+; Funktionstasten
+
+F1 up::
+F2 up::
+F3 up::
+F4 up::
+F5 up::
+F6 up::
+F7 up::
+F8 up::
+F9 up::
+F10 up::
+F11 up::
+F12 up::
+
 ; Reihe 1
 
 *VKDCSC029 up:: ; Zirkumflex
@@ -304,6 +339,9 @@ numpadenter::
 *VK2DSC052 up:: ; NumPadIns
 *VK6ESC053 up:: ; NumPadDot
 *VK2ESC053 up:: ; NumPadDel
+
+; Navigation, Sonstiges
+
 tab up::
 esc up::
 *enter up::
@@ -318,10 +356,6 @@ esc up::
 *down up::
 *left up::
 *right up::
-F9 up::
-F10 up::
-F11 up::
-F12 up::
 numpadenter up::
 
   AllStar(A_ThisHotkey)

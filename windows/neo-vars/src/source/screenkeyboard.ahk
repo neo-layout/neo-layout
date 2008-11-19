@@ -25,11 +25,6 @@ BSTToggle() {
     Gui, Show, y%yposition% Autosize
     BSTEbeneAlt := 1
     guiErstellt := 1
+    BSTSwitch(EbeneC)
   }
 }
-
-F1::
-  if(isMod4Active() && zeigeBildschirmTastatur)
-    BSTToggle()
-  else send {blind}{F1}
-return

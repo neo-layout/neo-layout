@@ -268,6 +268,13 @@ CharProc(subroutine) {
     }
   } else if (subroutine == "_EH1") {
     ; Einhand-NEO aktivieren
+    ; Funktionstasten
+    TKEH_F7  := "F6"              ; F7  -> F6
+    TKEH_F8  := "F5"              ; F8  -> F5
+    TKEH_F9  := "F4"              ; F9  -> F4
+    TKEH_F10 := "F3"              ; F10 -> F3
+    TKEH_F11 := "F2"              ; F11 -> F2
+    TKEH_F12 := "F1"              ; F12 -> F1
     ; Reihe 1
     TKEH_VK37SC008 := "VK36SC007" ; 7 -> 6
     TKEH_VK38SC009 := "VK35SC006" ; 8 -> 5
@@ -300,6 +307,13 @@ CharProc(subroutine) {
     ED("EHSpace",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
   } else if (subroutine == "_EH0") {
     ; Einhand-NEO deaktivieren
+    ; Funktionstasten
+    TKEH_F7  := ""       ; F7
+    TKEH_F8  := ""       ; F8
+    TKEH_F9  := ""       ; F9
+    TKEH_F10 := ""       ; F10
+    TKEH_F11 := ""       ; F11
+    TKEH_F12 := ""       ; F12
     ; Reihe 1
     TKEH_VK37SC008 := "" ; 7
     TKEH_VK38SC009 := "" ; 8
@@ -402,6 +416,9 @@ CharProc(subroutine) {
     ; Mod2Lock Toggle
     ToggleMod2Lock()
     EbeneAktualisieren()
+  } else if (subroutine == "BSTt") {
+    ; Bildschirmtastatur Ein/Aus
+    BSTToggle()
   }
 }
 

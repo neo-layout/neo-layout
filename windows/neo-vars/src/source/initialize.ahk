@@ -42,7 +42,6 @@ ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
 FileCreateDir, %ApplicationFolder%
 ini = %ApplicationFolder%\NEO2.ini
 
-bildschirmTastaturEinbinden := 1
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 IniRead,lernModus,%ini%,Global,lernModus,0
 IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1

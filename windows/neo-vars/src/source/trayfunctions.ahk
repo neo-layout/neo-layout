@@ -2,14 +2,12 @@ togglesuspend:
   if A_IsSuspended {
     menu, tray, rename, %enable%, %disable%
     menu, tray, tip, %name%
-    if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo_enabled.ico,,1
+    menu, tray, icon, %ResourceFolder%\neo_enabled.ico,,1
     suspend , off ; Schaltet Suspend aus -> NEO
   } else {
     menu, tray, rename, %disable%, %enable%
     menu, tray, tip, %name% : Deaktiviert
-    if (iconBenutzen)
-      menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
+    menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
     suspend , on  ; Schaltet Suspend ein -> QWERTZ
   }
 return
