@@ -26,5 +26,17 @@ BSTToggle() {
     BSTEbeneAlt := 1
     guiErstellt := 1
     BSTSwitch(EbeneC)
+    alwaysOnTop := 1
+  }
+}
+
+BSTToggleAlwaysOnTop() {
+  global
+  if (alwaysOnTop) {
+    Gui, -AlwaysOnTop
+    alwaysOnTop := 0    
+  } else {
+    Gui, +AlwaysOnTop
+    alwaysOnTop := 1
   }
 }

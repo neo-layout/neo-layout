@@ -419,6 +419,10 @@ CharProc(subroutine) {
   } else if (subroutine == "BSTt") {
     ; Bildschirmtastatur Ein/Aus
     BSTToggle()
+  } else if (subroutine == "BSTA") {
+    ; Bildschirmtastatur AlwaysOnTop
+    if (guiErstellt)
+      BSTToggleAlwaysOnTop()
   }
 }
 
