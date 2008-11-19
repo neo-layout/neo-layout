@@ -1,5 +1,4 @@
-if (iconBenutzen)
-  menu,tray,icon,%ResourceFolder%\neo_enabled.ico,,1
+menu,tray,icon,%ResourceFolder%\neo_enabled.ico,,1
 menu,tray,nostandard
 menu,tray,add,Öffnen,open
   menu,helpmenu,add,About,about
