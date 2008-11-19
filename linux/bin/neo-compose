@@ -40,5 +40,10 @@ elif [ ! "a${NEO_OWN_COMPOSE}" = "a" ]; then
         fi
 fi
 
-cat "${NEO_ORIG_COMPOSE}" "${NEO_COMPOSE}" "${NEO_OWN_COMPOSE}" > ~/.XCompose
+if [ ! "a${NEO_OWN_COMPOSE}" = "a" ]; then
+        cat "${NEO_ORIG_COMPOSE}" "${NEO_COMPOSE}" "${NEO_OWN_COMPOSE}" > ~/.XCompose
+else
+        cat "${NEO_ORIG_COMPOSE}" "${NEO_COMPOSE}" > ~/.XCompose
+fi
+
 
