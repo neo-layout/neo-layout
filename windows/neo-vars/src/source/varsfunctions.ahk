@@ -193,7 +193,7 @@ CharProc(subroutine) {
     if (LangSTastatur) {
       CharProc("LnS1")
       if (zeigeModusBox)
-        TrayTip,Lange-s-Tastatur,Die Lang-S-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F11 drücken.,10,1
+        TrayTip,Lange-s-Tastatur,Die Lang-S-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F11 drücken.,10,1
     } else {
       CharProc("LnS0")
       if (zeigeModusBox)
@@ -210,7 +210,7 @@ CharProc(subroutine) {
     ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3") ; s
     KeyboardLED(2,"off")
     if (zeigeModusBox)
-      TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F11 drücken.,10,1
+      TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F11 drücken.,10,1
   } else if (subroutine == "_VMt") {
     ; VM-Tastaturbelegungsvariante togglen
     ; Belegungsvariante VM
@@ -218,7 +218,7 @@ CharProc(subroutine) {
     if (isVM) {
       CharProc("_VM1")
       if (zeigeModusBox)
-        TrayTip,NEO-VM-Belegungsvariante,Die VM-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod4+F12 drücken.,10,1
+        TrayTip,NEO-VM-Belegungsvariante,Die VM-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F12 drücken.,10,1
     } else {
       CharProc("_VM0")
       if (zeigeModusBox)
@@ -260,7 +260,7 @@ CharProc(subroutine) {
     if (einHandNeo) {
       CharProc("_EH1")
       if (zeigeModusBox)
-        TrayTip,NEO-Einhandmodus,Der NEO-Einhand-Modus wurde aktiviert. Zum Deaktivieren Mod4+F10 drücken.,10,1
+        TrayTip,NEO-Einhandmodus,Der NEO-Einhand-Modus wurde aktiviert. Zum Deaktivieren Mod3+F10 drücken.,10,1
     } else {
       CharProc("_EH0")
       if (zeigeModusBox)
@@ -360,7 +360,7 @@ CharProc(subroutine) {
     if (lernModus) {
       CharProc("_LM1")
       if (zeigeModusBox)
-        TrayTip,NEO-Lernmodus,NEO-Lernmodus wurde aktiviert. Zum Deaktivieren`, Mod4+F9 drücken.,10,1
+        TrayTip,NEO-Lernmodus,NEO-Lernmodus wurde aktiviert. Zum Deaktivieren`, Mod3+F9 drücken.,10,1
     } else {
       CharProc("_LM0")
       if (zeigeModusBox)

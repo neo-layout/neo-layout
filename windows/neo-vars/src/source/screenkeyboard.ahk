@@ -25,7 +25,7 @@ BSTToggle() {
     Gui, Show, y%yposition% Autosize
     BSTEbeneAlt := 1
     guiErstellt := 1
-    BSTSwitch(EbeneC)
+    BSTSwitch(EbeneNC)
     alwaysOnTop := 1
   }
 }
