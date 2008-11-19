@@ -1,16 +1,44 @@
 #!/bin/sh
 
-# Was hier passiert: Zusammenfügen der alten Compose und der Neo-Ergänzungen
+# Was hier passiert: Zusammenf체gen der alten Compose und der Neo-Erg채nzungen
 # in die Datei ~/.XCompose, die normalerweise beim Starten der Desktopumgebung
 # geladen wird.
-# In der Datei ~/.Compose.eigene kann man noch eigene Ergänzungen der Compose
-# hinzufügen, falls einem die Erweiterungen durch Neo-Compose nicht ausreichen.
+# Der Pfad zu den Dateien wird in den Umgebungsvariablen $NEO_COMPOSE und
+# $NEO_ORIG_COMPOSE festgelegt, wobei bei letzterer der Default-Pfad ausreichend
+# sein sollte.
+# In der Variablen $NEO_OWN_COMPOSE kann eine Datei definiert werden, in der 
+# man noch eigene Erg채nzungen der Compose hinzuf체gen kann, falls einem die
+# Erweiterungen durch Neo-Compose nicht ausreichen.
 
-# Verzeichnis, in dem sich die originale Compose befindet (hier Bsp. Fedora):
-COMP_ALT=/usr/share/X11/locale/en_US.UTF-8/Compose
+if [ -f "${NEO_CONFIG}" ]; then
+    . "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+    . "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+    . /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+    echo "No configuration file found. Using default values, this might fail!"
+fi
 
-# Verzeichnis, in dem sich die Datei Compose.neo befindet:
-COMP_NEO=~/programmieren/Projekt/NEO/svn-neo/neo-layout.org/Compose/Compose.neo
+# Default values
+NEO_COMPOSE=${NEO_COMPOSE:-$HOME/neo/Compose.neo}
+NEO_ORIG_COMPOSE=${NEO_ORIG_COMPOSE:-/usr/share/X11/locale/en_US.UTF-8/Compose}
 
-cat $COMP_ALT $COMP_NEO ~/.Compose.eigene > ~/.XCompose
+die() {
+    echo "$@" >&2
+    exit 1
+}
+
+
+if [ ! -f "${NEO_COMPOSE}" ]; then
+    die "Failed to read ${NEO_COMPOSE}. Check your configuration!"
+elif [ ! -f "${NEO_ORIG_COMPOSE}" ]; then
+    die "Failed to read ${NEO_ORIG_COMPOSE}. Check your configuration!"
+elif [ ! "a${NEO_OWN_COMPOSE}" = "a" ]; then
+        if [ ! -f "${NEO_OWN_COMPOSE}" ]; then
+            die "Failed to read ${NEO_OWN_COMPOSE}. Check your configuration!"
+        fi
+fi
+
+cat "${NEO_ORIG_COMPOSE}" "${NEO_COMPOSE}" "${NEO_OWN_COMPOSE}" > ~/.XCompose
 
