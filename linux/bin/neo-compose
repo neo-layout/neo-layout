@@ -1,13 +1,13 @@
 #!/bin/sh
 
-# Was hier passiert: Zusammenf체gen der alten Compose und der Neo-Erg채nzungen
+# Was hier passiert: Zusammenfügen der alten Compose und der Neo-Ergänzungen
 # in die Datei ~/.XCompose, die normalerweise beim Starten der Desktopumgebung
 # geladen wird.
 # Der Pfad zu den Dateien wird in den Umgebungsvariablen $NEO_COMPOSE und
 # $NEO_ORIG_COMPOSE festgelegt, wobei bei letzterer der Default-Pfad ausreichend
 # sein sollte.
 # In der Variablen $NEO_OWN_COMPOSE kann eine Datei definiert werden, in der 
-# man noch eigene Erg채nzungen der Compose hinzuf체gen kann, falls einem die
+# man noch eigene Ergänzungen der Compose hinzufügen kann, falls einem die
 # Erweiterungen durch Neo-Compose nicht ausreichen.
 
 if [ -f "${NEO_CONFIG}" ]; then
