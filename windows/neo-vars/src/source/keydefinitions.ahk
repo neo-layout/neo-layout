@@ -1,4 +1,4 @@
-;  KeyCode     Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
+;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
 ; Reihe 1
 ED("VKDCSC029",0,"Tcflx","Ttlde","Tobrg","Tcron","Tbrve","Tmcrn") ; circumflex
 ED("VK31SC002",0,"U0031","U00B0","U00B9","U00BA","U2081","U00AC") ; 1
@@ -7,9 +7,9 @@ ED("VK33SC004",0,"U0033","U2113","U00B3","U2116","U2083","U2227") ; 3
 ED("VK34SC005",0,"U0034","U00BB","U203A","SPgUp","U2020","U22A5") ; 4
 ED("VK35SC006",0,"U0035","U00AB","U2039","U00B7","U2640","U2221") ; 5
 ED("VK36SC007",0,"U0036","U20AC","U00A2","U00A3","U2642","U2225") ; 6
-ED("VK37SC008",0,"U0037","U0024","U00A5","U00A4","U03BA","U2209") ; 7
-ED("VK38SC009",0,"U0038","U201E","U201A","SNDiv","U27E8","U2204") ; 8
-ED("VK39SC00A",0,"U0039","U201C","U2018","SNMul","U27E9","U2226") ; 9
+ED("VK37SC008",0,"U0037","U0024","U00A5","U00A4","U03BA","U2192") ; 7
+ED("VK38SC009",0,"U0038","U201E","U201A","SNDiv","U27E8","U221E") ; 8
+ED("VK39SC00A",0,"U0039","U201C","U2018","SNMul","U27E9","U220B") ; 9
 ED("VK30SC00B",0,"U0030","U201D","U2019","SNSub","U2080","U2205") ; 0
 ED("VKDBSC00C",0,"U002D","U2013","U2014",""     ,"U2011","U00AD") ; -
 ED("VKDDSC00D",0,"Tgrav",""     ,"Tdrss","Tdgrv","U1FFE",""     ) ; grave
