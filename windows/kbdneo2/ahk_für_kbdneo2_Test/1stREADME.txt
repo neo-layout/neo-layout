@@ -5,7 +5,7 @@ Das AHK-Skript »ahk_kbdneo2.ahk« schließt die letzten Lücken vom nativen Treiber
 CapsLock durch Shift+Shift
 Mod4Lock durch Mod4+Mod4
 
-= bislang fehlende Funktionstasten =
+= Funktionstasten =
 »Bild auf«         Mod4+4
 »Pfeil hoch«       Mod4+L
 »Entfernen«        Mod4+C

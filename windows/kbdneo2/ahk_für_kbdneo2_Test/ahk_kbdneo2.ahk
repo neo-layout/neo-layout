@@ -135,7 +135,7 @@ doMod4() {
 }
 
 
-;Fehlende Funktionstasten
+;Funktionstasten
 
 ~4:: 
 if (isMod4Active and !isMod3Pressed)  
@@ -182,7 +182,7 @@ if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{END} 
 return 
  
-~':: 
+~ä:: 
 if (isMod4Active and !isMod3Pressed) 
 Sendinput {Blind}{PGDN} 
 return 
