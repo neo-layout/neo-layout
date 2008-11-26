@@ -17,6 +17,10 @@ set   ahkrevoutput1=%Ssrcdir%\_subwcrev1.generated.ahk
 set batrevtemplate1=%Ssrcdir%\_subwcrev1.tmpl.bat
 set   batrevoutput1=%Ssrcdir%\_subwcrev1.bat
 
+set     NEO2AppData=%APPDATA%\NEO2
+set       customahk=%NEO2AppData%\custom.ahk
+set  customahkbuild=%customahk%.buildtmp
+
 REM The path to the directory used for generating a consistent SVN version (revision number)
 set svnversiondir1=.
 
@@ -36,8 +40,16 @@ del "%outdir%\neo20-r*.exe" 2> nul
 
 set fnahk=%srcdir%\neo20-all.ahk
 
+if exist "%customahk%" (
+  ren "%customahk%" "%customahkbuild%"
+)
+
 echo Compiling the new Driver using Autohotkey
 "%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
+
+if exist "%customahkbuild%" (
+  ren "%customahkbuild%" "%customahk%"
+)
 
 echo Driver Update complete! You can now close this log-window.
 pause
