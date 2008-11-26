@@ -1,3 +1,19 @@
+guiErstellt := 0
+alwaysOnTop := 1
+
+if (FileExist("ResourceFolder")<>false) {
+  FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
+  FileInstall,ebene2.png,%ResourceFolder%\ebene2.png,1
+  FileInstall,ebene3.png,%ResourceFolder%\ebene3.png,1
+  FileInstall,ebene4.png,%ResourceFolder%\ebene4.png,1
+  FileInstall,ebene5.png,%ResourceFolder%\ebene5.png,1
+  FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
+  FileInstall,deadkeys.png,%ResourceFolder%\deadkeys.png,1
+}
+
+CP3F1 := "PBSTt"
+CP3F8 := "PBSTA"
+
 BSTSwitch(Eb) {
   global
   if (Eb <> EbeneAlt) {
@@ -40,3 +56,17 @@ BSTToggleAlwaysOnTop() {
     alwaysOnTop := 1
   }
 }
+
+CharProcBSTt() {
+  global
+  ; Bildschirmtastatur Ein/Aus
+  BSTToggle()
+}
+
+CharProcBSTA() {
+  global
+  ; Bildschirmtastatur AlwaysOnTop
+  if (guiErstellt)
+    BSTToggleAlwaysOnTop()
+}
+
