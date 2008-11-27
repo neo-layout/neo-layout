@@ -9,3 +9,4 @@ Process,Priority,,High
 
 #usehook on
 Sendmode Event
+SetKeyDelay,-1
