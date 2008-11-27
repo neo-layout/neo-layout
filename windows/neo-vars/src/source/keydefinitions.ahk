@@ -102,6 +102,14 @@ ED1("left"     ,"SLeft")
 ED1("right"    ,"SRght")
 ED1("numpadenter","SNEnt")
 
+; Die Modifier
+ED1("VKA0SC02A","PM2LD") ; Mod2L (ShiftL)
+ED1("VKA1SC136","PM2RD") ; Mod2R (ShiftR)
+ED1("VK14SC03A","PM3LD") ; Mod3L (CapsLock)
+ED1("VKBFSC02B","PM3RD") ; Mod3R (#')
+ED1("VKE2SC056","PM4LD") ; Mod4L (<>)
+ED1("VKA5SC138","PM4RD") ; Mod4R (AltGr)
+
 ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   global
   if (caps == 0)
