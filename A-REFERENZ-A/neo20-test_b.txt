@@ -104,10 +104,10 @@ Zu den Gedankenstrichen usw. siehe
 • http://de.wikipedia.org/wiki/Weicher_Trennstrich
 
 Taste rechts neben der 0
-        1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
+        1 … 
 ┬─────┬ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│— − ╌│ 3 … ‐ echter Bindestrich (U+2010 HYPHEN)
-│- ‐ ‑│ 4 … − echtes Minuszeichen (U+2212 MINUS SIGN)
+│—   ╌│ 3 … 
+│    ‑│ 4 … 
 ┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
@@ -173,7 +173,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˆ │1│2│3│4│5│6│7│8│9│0│-│`│ Back │
+│ ˆ │1│2│3│4│5│6│7│8│9│0│ │`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│´│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -192,16 +192,16 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│CpL│M4│Ü│Ö│Ä│P│Z│B│M│ │–│J│ Cps_Lk│
+│CpL│M4│Ü│Ö│Ä│P│Z│B│M│–│…│J│ Cps_Lk│
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Dritte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│‐│¨│ Back │
+│ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│ │¨│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
+│ ♫  │ │_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │\│/│{│}│*│?│(│)│-│:│@│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -212,9 +212,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │º│ª│№│⇞│·│£│¤│/│*│-│−│˵│ Back │
+│ ˇ │•│‣│№│⇞│·│£│¤│/│*│-│ │˵│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
+│ 4Lk│ │⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
