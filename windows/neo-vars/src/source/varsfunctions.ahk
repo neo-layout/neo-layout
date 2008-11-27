@@ -37,6 +37,11 @@ AllStar(This_HotKey) {
 
 CharStarDown(PhysKey, ActKey, char) {
   global
+  if (SubStr(char,1,1)=="P") {
+    SubProc := SubStr(char,2,4)
+    CharProc%SubProc%()
+    return
+  }
   wasNonShiftKeyPressed := 1
   if (PP%PhysKey% != "")
     CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
@@ -185,6 +190,127 @@ CharProcRlod() {
   global
   ; Neustart des AHK-Skripts
   reload
+}
+
+; Modifier
+CharProcM2LD() {
+  global
+  if (isShiftRPressed and !isShiftLPressed and !wasNonShiftKeyPressed)
+    ToggleMod2Lock()
+  isShiftLPressed := 1
+  isShiftPressed := 1
+  wasNonShiftKeyPressed := 0
+  EbeneAktualisieren()
+  PRVKA0SC02A := "PM2LU"
+  send {blind}{LShift Down}
+}
+
+CharProcM2LU() {
+  global
+  isShiftLPressed := 0
+  isShiftPressed := isShiftRPressed
+  EbeneAktualisieren()
+  send {blind}{LShift Up}
+}
+
+CharProcM2RD() {
+  global
+  if (isShiftLPressed and !isShiftRPressed and !wasNonShiftKeyPressed)
+    ToggleMod2Lock()
+  isShiftRPressed := 1
+  isShiftPressed := 1
+  wasNonShiftKeyPressed := 0
+  EbeneAktualisieren()
+  PRVKA1SC136 := "PM2RU"
+  send {blind}{RShift Down}
+}
+
+CharProcM2RU() {
+  global
+  isShiftRPressed := 0
+  isShiftPressed := isShiftLPressed
+  EbeneAktualisieren()
+  send {blind}{RShift Up}
+}
+
+CharProcM3LD() {
+  global
+  if (isMod3RPressed and !isMod3LPressed and !wasNonShiftKeyPressed)
+    CharStarDown("MOD3", "MOD3", "SComp")
+  isMod3LPressed := 1
+  isMod3Pressed := 1
+  wasNonShiftKeyPressed := 0
+  EbeneAktualisieren()
+  PRVK14SC03A := "PM3LU"
+}
+
+CharProcM3LU() {
+  global
+  if (isMod3RPressed)
+    CharStarUp("MOD3")
+  isMod3LPressed := 0
+  isMod3Pressed := isMod3RPressed
+  EbeneAktualisieren()
+}
+
+CharProcM3RD() {
+  global
+  if (isMod3LPressed and !isMod3RPressed and !wasNonShiftKeyPressed)
+    CharStarDown("MOD3", "MOD3", "SComp")
+  isMod3RPressed := 1
+  isMod3Pressed := 1
+  wasNonShiftKeyPressed := 0
+  EbeneAktualisieren()
+  PRVKBFSC02B := "PM3RU"
+}
+
+CharProcM3RU() {
+  global
+  if (isMod3LPressed)
+    CharStarUp("MOD3")
+  isMod3RPressed := 0
+  isMod3Pressed := isMod3LPressed
+  EbeneAktualisieren()
+}
+
+CharProcM4LD() {
+  global
+  wasMod4LPressed := isMod4LPressed
+  isMod4LPressed := 1
+  isMod4Pressed := 1
+  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
+  wasNonShiftKeyPressed := 0
+  EbeneAktualisieren()
+  PRVKE2SC056 := "PM4LU"
+  if (isMod4RPressed and !wasMod4LPressed and !waswasNonShiftKeyPressed)
+    ToggleMod4Lock()
+}
+
+CharProcM4LU() {
+  global
+  isMod4LPressed := 0
+  isMod4Pressed := isMod4RPressed
+  EbeneAktualisieren()
+}
+
+CharProcM4RD() {
+  global
+  wasMod4RPressed := isMod4RPressed
+  isMod4RPressed := 1
+  isMod4Pressed := 1
+  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
+  wasNonShiftKeyPressed := 0
+  EbeneAktualisieren()
+  PRVKA5SC138 := "PM4RU"
+  if (isMod4LPressed and !wasMod4RPressed and !waswasNonShiftKeyPressed)
+    ToggleMod4Lock()
+}
+
+CharProcM4RU() {
+  global
+  isMod4RPressed := 0
+  isMod4Pressed := isMod4LPressed
+  EbeneAktualisieren()
 }
 
 SendUnicodeChar(charCode){

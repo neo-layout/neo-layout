@@ -8,122 +8,22 @@
 Suspend, Permit
   goto togglesuspend
 
-~*VKA1SC136::
-  if (isShiftLPressed and !isShiftRPressed and !wasNonShiftKeyPressed)
-    ToggleMod2Lock()
-  isShiftRPressed := 1
-  isShiftPressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-return
-
-~*VKA1SC136 up::
-  isShiftRPressed := 0
-  isShiftPressed := isShiftLPressed
-  EbeneAktualisieren()
-return
-
-~*VKA0SC02A::
-  if (isShiftRPressed and !isShiftLPressed and !wasNonShiftKeyPressed)
-    ToggleMod2Lock()
-  isShiftLPressed := 1
-  isShiftPressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-return
-
-~*VKA0SC02A up::
-  isShiftLPressed := 0
-  isShiftPressed := isShiftRPressed
-  EbeneAktualisieren()
-return
-
-*VKBFSC02B::
-  if (isMod3LPressed and !isMod3RPressed and !wasNonShiftKeyPressed)
-    CharStarDown("MOD3", "MOD3", "SComp")
-  isMod3RPressed := 1
-  isMod3Pressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-return
-
-*VKBFSC02B up::
-  if (isMod3LPressed)
-    CharStarUp("MOD3")
-  isMod3RPressed := 0
-  isMod3Pressed := isMod3LPressed
-  EbeneAktualisieren()
-return
-
-*VK14SC03A::
-  if (isMod3RPressed and !isMod3LPressed and !wasNonShiftKeyPressed)
-    CharStarDown("MOD3", "MOD3", "SComp")
-  isMod3LPressed := 1
-  isMod3Pressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-return
-
-*VK14SC03A up::
-  if (isMod3RPressed)
-    CharStarUp("MOD3")
-  isMod3LPressed := 0
-  isMod3Pressed := isMod3RPressed
-  EbeneAktualisieren()
-return
-
-*VKA5SC138::
-  wasMod4RPressed := isMod4RPressed
-  isMod4RPressed := 1
-  isMod4Pressed := 1
-  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  if (isMod4LPressed and !wasMod4RPressed and !waswasNonShiftKeyPressed)
-    ToggleMod4Lock()
-return
-
-*VKA5SC138 up::
-  isMod4RPressed := 0
-  isMod4Pressed := isMod4LPressed
-  EbeneAktualisieren()
-return
-
-*VKE2SC056::
-  wasMod4LPressed := isMod4LPressed
-  isMod4LPressed := 1
-  isMod4Pressed := 1
-  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  if (isMod4RPressed and !wasMod4LPressed and !waswasNonShiftKeyPressed)
-    ToggleMod4Lock()
-return
-
-*VKE2SC056 up::
-  isMod4LPressed := 0
-  isMod4Pressed := isMod4RPressed
-  EbeneAktualisieren()
-return
-
-
-
 ;;;;;; DOWN EVENTS
 
 ; Funktionstasten
 
-F1::
-F2::
-F3::
-F4::
-F5::
-F6::
-F7::
-F8::
-F9::
-F10::
-F11::
-F12::
+*F1::
+*F2::
+*F3::
+*F4::
+*F5::
+*F6::
+*F7::
+*F8::
+*F9::
+*F10::
+*F11::
+*F12::
 
 ; Reihe 1
 
@@ -233,22 +133,30 @@ esc::
 *right::
 numpadenter::
 
+; Modifier
+*VKA0SC02A:: ; ShiftL
+*VKA1SC136:: ; ShiftR
+*VK14SC03A:: ; Mod3L
+*VKBFSC02B:: ; Mod3R
+*VKE2SC056:: ; Mod4L
+*VKA5SC138:: ; Mod4R
+
 ;;;;;; UP EVENTS
 
 ; Funktionstasten
 
-F1 up::
-F2 up::
-F3 up::
-F4 up::
-F5 up::
-F6 up::
-F7 up::
-F8 up::
-F9 up::
-F10 up::
-F11 up::
-F12 up::
+*F1 up::
+*F2 up::
+*F3 up::
+*F4 up::
+*F5 up::
+*F6 up::
+*F7 up::
+*F8 up::
+*F9 up::
+*F10 up::
+*F11 up::
+*F12 up::
 
 ; Reihe 1
 
@@ -357,6 +265,14 @@ esc up::
 *left up::
 *right up::
 numpadenter up::
+
+; Modifier
+*VKA0SC02A up:: ; ShiftL
+*VKA1SC136 up:: ; ShiftR
+*VK14SC03A up:: ; Mod3L
+*VKBFSC02B up:: ; Mod3R
+*VKE2SC056 up:: ; Mod4L
+*VKA5SC138 up:: ; Mod4R
 
   AllStar(A_ThisHotkey)
 return
