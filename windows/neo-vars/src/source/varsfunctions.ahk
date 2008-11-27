@@ -195,14 +195,16 @@ CharProcRlod() {
 ; Modifier
 CharProcM2LD() {
   global
-  if (isShiftRPressed and !isShiftLPressed and !wasNonShiftKeyPressed)
-    ToggleMod2Lock()
-  isShiftLPressed := 1
-  isShiftPressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  PRVKA0SC02A := "PM2LU"
-  send {blind}{LShift Down}
+  if (!isShiftLPressed) {
+    if (isShiftRPressed and !wasNonShiftKeyPressed)
+      ToggleMod2Lock()
+    isShiftLPressed := 1
+    isShiftPressed := 1
+    wasNonShiftKeyPressed := 0
+    EbeneAktualisieren()
+    PR%PhysKey% := "PM2LU"
+  }
+  CharOutDown("SL_M2")
 }
 
 CharProcM2LU() {
@@ -210,19 +212,21 @@ CharProcM2LU() {
   isShiftLPressed := 0
   isShiftPressed := isShiftRPressed
   EbeneAktualisieren()
-  send {blind}{LShift Up}
+  CharOutUp("SL_M2")
 }
 
 CharProcM2RD() {
   global
-  if (isShiftLPressed and !isShiftRPressed and !wasNonShiftKeyPressed)
-    ToggleMod2Lock()
-  isShiftRPressed := 1
-  isShiftPressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  PRVKA1SC136 := "PM2RU"
-  send {blind}{RShift Down}
+  if (!isShiftRPressed) {
+    if (isShiftLPressed and !wasNonShiftKeyPressed)
+      ToggleMod2Lock()
+    isShiftRPressed := 1
+    isShiftPressed := 1
+    wasNonShiftKeyPressed := 0
+    EbeneAktualisieren()
+    PR%PhysKey% := "PM2RU"
+  }
+  CharOutDown("SR_M2")
 }
 
 CharProcM2RU() {
@@ -230,18 +234,20 @@ CharProcM2RU() {
   isShiftRPressed := 0
   isShiftPressed := isShiftLPressed
   EbeneAktualisieren()
-  send {blind}{RShift Up}
+  CharOutUp("SR_M2")
 }
 
 CharProcM3LD() {
   global
-  if (isMod3RPressed and !isMod3LPressed and !wasNonShiftKeyPressed)
-    CharStarDown("MOD3", "MOD3", "SComp")
-  isMod3LPressed := 1
-  isMod3Pressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  PRVK14SC03A := "PM3LU"
+  if (!isMod3LPressed) {
+    if (isMod3RPressed and !wasNonShiftKeyPressed)
+      CharStarDown("MOD3", "MOD3", "SComp")
+    isMod3LPressed := 1
+    isMod3Pressed := 1
+    wasNonShiftKeyPressed := 0
+    EbeneAktualisieren()
+    PR%PhysKey% := "PM3LU"
+  }
 }
 
 CharProcM3LU() {
@@ -255,13 +261,15 @@ CharProcM3LU() {
 
 CharProcM3RD() {
   global
-  if (isMod3LPressed and !isMod3RPressed and !wasNonShiftKeyPressed)
-    CharStarDown("MOD3", "MOD3", "SComp")
-  isMod3RPressed := 1
-  isMod3Pressed := 1
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  PRVKBFSC02B := "PM3RU"
+  if (!Mod3RPressed) {
+    if (isMod3LPressed and !wasNonShiftKeyPressed)
+      CharStarDown("MOD3", "MOD3", "SComp")
+    isMod3RPressed := 1
+    isMod3Pressed := 1
+    wasNonShiftKeyPressed := 0
+    EbeneAktualisieren()
+    PR%PhysKey% := "PM3RU"
+  }
 }
 
 CharProcM3RU() {
@@ -275,15 +283,17 @@ CharProcM3RU() {
 
 CharProcM4LD() {
   global
-  wasMod4LPressed := isMod4LPressed
-  isMod4LPressed := 1
-  isMod4Pressed := 1
-  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  PRVKE2SC056 := "PM4LU"
-  if (isMod4RPressed and !wasMod4LPressed and !waswasNonShiftKeyPressed)
-    ToggleMod4Lock()
+  if (!isMod4LPressed) {
+    isMod4LPressed := 1
+    isMod4Pressed := 1
+    EbeneAktualisieren()
+    PR%PhysKey% := "PM4LU"
+    if (isMod4RPressed and !wasNonShiftKeyPressed) {
+      wasNonShiftKeyPressed := 0
+      ToggleMod4Lock()
+    } else
+      wasNonShiftKeyPressed := 0
+  }
 }
 
 CharProcM4LU() {
@@ -295,15 +305,17 @@ CharProcM4LU() {
 
 CharProcM4RD() {
   global
-  wasMod4RPressed := isMod4RPressed
-  isMod4RPressed := 1
-  isMod4Pressed := 1
-  waswasNonShiftKeyPressed := wasNonShiftKeyPressed
-  wasNonShiftKeyPressed := 0
-  EbeneAktualisieren()
-  PRVKA5SC138 := "PM4RU"
-  if (isMod4LPressed and !wasMod4RPressed and !waswasNonShiftKeyPressed)
-    ToggleMod4Lock()
+  if (!isMod4RPressed) {
+    isMod4RPressed := 1
+    isMod4Pressed := 1
+    EbeneAktualisieren()
+    PR%PhysKey% := "PM4RU"
+    if (isMod4LPressed and !wasNonShiftKeyPressed) {
+      wasNonShiftKeyPressed := 0
+      ToggleMod4Lock()
+    } else
+      wasNonShiftKeyPressed := 0
+  }
 }
 
 CharProcM4RU() {

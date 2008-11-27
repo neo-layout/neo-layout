@@ -143,6 +143,8 @@ CSSNHom := "NumpadHome"
 CSSNEnd := "NumpadEnd"
 CSSNClr := "NumpadClear"
 
+CSSL_M2 := "LShift"
+CSSR_M2 := "RShift"
 
 /*
   Für alle Zeichen, die durch Tastendrücke ohne Shift-Taste zustande kommen,
