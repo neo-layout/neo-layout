@@ -1,100 +1,130 @@
 #!/bin/sh
+# 
+# Dieses Skript unterstützt die Benutzung der NEO-Tastatur
+# Als Argument kann ein einzelnes Zeichen oder eine Beschrbeibung eines Zeichens übergeben werden
+#
+# Dieses Skript stammt von:
+#      Pascal Hauck <pascal dot hauck at web dot de>
+# 
+# Kontakt zu den Entwicklern der NEO-Tastatur:
+#      <mailinglist at neo-layout dot org>
 
-# Verzeichnis muss eventuell an den Ort der neo20.txt angepasst werden:
 COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
-REFERENZ=$HOME/neo/A-REFERENZ-A/neo20.txt
+REFERENZ=$HOME/neo/neo20.txt
 
-zeichen=`echo $1 | cut -c1`
-# suche nach diesem Zeichen
-typeset -i z s e
-# z=zeile, s=spalte, e=Ebene
+VON[1]=7; BIS[1]=82; RAND[1]="┌─────┬──";   ORT[1]=""			# HAUPTTASTATUR=1
+VON[2]=1; BIS[2]=33; RAND[2]="┌───────┬──"; ORT[2]="auf dem Keypad"	# KEYPAD=2
 
-find=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep [│\ ]$zeichen[│\ ] | head -1  | cut -f1 -d \ `
-anzahl=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep -n [│\ ]$zeichen[│\ ] | wc -l`
-if [ $find ]
-then
-# $zeichen gibt es direkt auf der Tastatur bei Ebene $e auf der Taste $ursprung
 
-	for i in $(seq 1 $anzahl)
+
+zeichen=$1								# suche nach diesem Zeichen
+typeset -i z s e j							# z=zeile, s=spalte, e=Ebene
+
+
+
+bild () {	# bild TASTATURTEIL , erzeugt das Bild des Tastaturteils wie die Skripte neo und num
+	grep -m 1 -A 15 ${RAND[$1]} $REFERENZ | cut -c ${VON[$1]}-${BIS[$1]}
+}
+
+teste () {	# teste TASTATURTEIL ZEILE SPALTE
+	bild $1 | head -$2 | tail -1 | cut -c $3
+}
+
+schau_auf_tastatur () {
+	zeichen=$1
+	j=0
+	for tastatur in 1 2
 	do
-#	eventuell mehrfach auf der Tastatur vorhanden
-		e=1
-		zeile=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep -n [│\ ]$zeichen[│\ ] | head -$i | tail -1 | cut -f1 -d:`
-		spalte=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | grep [│\ ]$zeichen[│\ ] | head -$i | tail -1| cut -f1 -d $zeichen | wc -m`
-		z=$((zeile))
-		s=$((spalte))
 
-		teste=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | head -$z | tail -1 | cut -c $s`
-		while [ ! "$teste" = "─" ] && [ ! "$teste" = "┬" ]
-		do
-#		finde Zeile z von $ursprung (=Tastenname), berechne die Ebene $e von $zeichen
-			z=z+1
-			e=e+1
-			ursprung=$teste
-			teste=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | head -$z | tail -1 | cut -c $s`
-		done
+		anzahl=`bild $tastatur | grep -n [│\ ]$zeichen[│\ ] | wc -l`	# wie häufig ist $zeichen auf der Tastatur?
 
-		teste=$ursprung
-		z=z-1
-		e=e-1
-		while [ ! "$teste" = "│" ]
-		do
-#		finde Spalte s von $ursprung (=Tastenname), berechne die Ebene $e von $zeichen
-			s=s-1
-			e=e+1
-			ursprung=$teste
-			teste=`grep -m 1 -B 15 "┴──────┘" $REFERENZ | head -$z | tail -1 | cut -c $s`
-		done	
-		e=e-1
+		if [ $anzahl -ge 1 ]
+		then
+#		$zeichen gibt es direkt auf der Tastatur bei Ebene $e auf der Taste $ursprung
+		[ $j -le 2 ] && echo • $zeichen gibt es  direkt auf der NEO-Tastatur: && j=3
 
-		case $e in
-			1)
-				echo $zeichen ist eine eigene Taste
-				;;
-			2)
-				echo $zeichen erreicht man mit Shift+$ursprung
-				;;
-			3)
-				echo $zeichen erreicht man mit Mod3+$ursprung
-				;;
-			4)
-				echo $zeichen erreicht man mit Mod4+$ursprung
-				;;
-			5)
-				echo $zeichen erreicht man mit Shift+Mod3+$ursprung
-				;;
-			6)
-				echo $zeichen erreicht man mit Mod3+Mod4+$ursprung
-				;;
-		esac
+			for i in $(seq 1 $anzahl)			# eventuell mehrfach auf der Tastatur vorhanden
+			do
+				j=j+1
+				z=`bild $tastatur | grep -n [│\ ]$zeichen[│\ ] | head -$i | tail -1 | cut -f1 -d:`
+				s=`bild $tastatur | grep [│\ ]$zeichen[│\ ] | head -$i | tail -1 | cut -f1 -d $zeichen | wc -m`
+
+				e=0
+				test=`teste $tastatur $z $s`
+				while [ ! "$test" = "─" ] && [ ! "$test" = "┬" ]
+				do
+#				finde Zeile z von $ursprung (=Tastenname), berechne die Ebene $e von $zeichen
+					z=z+1
+					e=e+1
+					ursprung=$test
+					test=`teste $tastatur $z $s`
+				done
+				z=z-1
+
+				ehilfe="1"
+				test=$ursprung
+				while [ ! "$test" = "│" ]
+				do
+					if [ "$test" = " " ]
+					then
+						ehilfe="0"
+					elif [ "$ehilfe" = "0" ]
+					then
+						e=e+2; ehilfe=1
+						ursprung=$test
+					fi
+				
+					s=s-1
+					test=`teste $tastatur $z $s`
+				done	
+				ursprung=`echo $ursprung ${ORT[$tastatur]}`
+
+#				gebe Position eines gefundenen Zeichens aus
+				case $e in
+					1)
+						echo $zeichen ist eine eigene Taste ${ORT[$tastatur]}
+						;;
+					2)
+						echo $zeichen erreicht man mit Shift+$ursprung
+						;;
+					3)
+						echo $zeichen erreicht man mit Mod3+$ursprung
+						;;
+					4)
+						echo $zeichen erreicht man mit Mod4+$ursprung
+						;;
+					5)
+						echo $zeichen erreicht man mit Shift+Mod3+$ursprung
+						;;
+					6)
+						echo ›$zeichen erreicht man mit Mod3+Mod4+$ursprung
+						;;
+				esac
 	
+			done
+
+		else
+# 		$zeichen gibt es nicht direkt auf der Haupttastatur
+			[ $j -eq 2 ] && echo • $zeichen gibt es nicht direkt auf der NEO-Tastatur && j=3
+		fi
 	done
-
-else
-# $zeichen gibt es nicht direkt auf der Tastatur
-	keinetaste=1
-fi
+}
 
 
-such=\"$zeichen\"
-find=`grep $such $COMPOSE | head -1 | cut -f1 -d \ `
+
+schau_auf_tastatur $zeichen
+
+
+
+find=`grep "\"$zeichen\"" $COMPOSE | head -1 | cut -f1 -d \ `
 if [ $find ]
 then
 # $zeichen gibt es als Compose
-	if [ "$keinetaste" = "1" ]
-	then
-		echo $zeichen ist nicht direkt auf der NEO-Tastatur
-		echo
-		echo Aber $zeichen ist über Compose folgendermaßen darstellbar:
-	else
-		echo
-		echo Außerdem ist $zeichen über Compose folgendermaßen darstellbar:
-	fi
-	grep ^\<.*$such $COMPOSE | cut -f1 -d: | sed -e 's/> </> + </g'
+	echo
+	echo  • $zeichen ist über Compose folgendermaßen darstellbar:
+	grep ^\<.*"\"$zeichen\"" $COMPOSE | cut -f1 -d: | sed -e 's/> </> + </g'
 else
 # $zeichen gibt es nicht als Compose
-	if [ "$keinetaste" = "1" ]
-	then
-		echo $zeichen kann man mit der NEO nicht erzeugen
-	fi
+	echo
+	echo • $zeichen kann man nicht über Compose erzeugen
 fi
