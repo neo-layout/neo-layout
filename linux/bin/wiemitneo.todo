@@ -1,0 +1,12 @@
+In dieser Datei sind Verhaltensweisen beschrieben, die noch nicht oder unzureichend im Skript ›wiemitneo‹ implementiert worden sind.
+
+Offene Punkte:
+• ›schau_auf_tastatur‹ nur dann ausführen, wenn nach einem einzelnen Zeichen gesucht wird
+• das Ergebnis der Suche in Compose in der Form ♫:) statt
+<Multi_key> + <colon> + <parenright> präsentieren
+• für tote Tasten schlage ich ⁽ˆ⁾ ⁽˜⁾ ₍¸₎ u.s.w. vor, also die Ausgabe von <totes Zeichen>+<Shift>+<Mod3>+<Space> umringt von hochgestellten (bzw. im Ausnahmefall ₍¸₎ tiefegstellten) Klammern
+• die Funktionalität von ›beschreibe‹ soll in ›wiemitneo‹ integriert werden
+• bei einer Eingabe wie ›wiemitneo root‹ sollen wie bei ›beschreibe root‹ die Ergebnisse ∛ und ∜ gefunden werden
+• gefundene Zeichen sollten jeweils nur einmal auftauchen
+• eventuell sollte eine Berschreibung (CUBE ROOT, FOURTH ROOT) ergänzt werden
+• neben Compose sollte auch sollte auch die keysymdef.h abgefragt werden, so dass ›wiemitneo integral‹ neben ∬, ∭, ⨌, ∯ auch ∫ anbietet
