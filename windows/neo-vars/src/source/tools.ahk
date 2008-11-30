@@ -58,7 +58,9 @@ GenRomanDigit(Pos, DigitIs, DigitTest, str0, str1, str2, str3, str4, str5) {
 
 PressHookRoman(PhysKey, ActKey, Char) {
   global
-  if ((Char == "U0030") or (Char == "SN__0"))
+  if (SubStr(Char,1,1) == "P")
+    CharStarDown(PhysKey, ActKey, Char)
+  else if ((Char == "U0030") or (Char == "SN__0"))
     RomanSum := 10*RomanSum
   else if ((Char == "U0031") or (Char == "SN__1"))
     RomanSum := 10*RomanSum + 1
@@ -191,7 +193,9 @@ CharProcDUni() {
 
 PressHookUni(PhysKey, ActKey, Char) {
   global
-  if ((Char == "U0030") or (Char == "SN__0"))
+  if (SubStr(Char,1,1) == "P")
+    CharStarDown(PhysKey, ActKey, Char)
+  else if ((Char == "U0030") or (Char == "SN__0"))
     UniSum := UniSum . "0"
   else if ((Char == "U0031") or (Char == "SN__1"))
     UniSum := UniSum . "1"
