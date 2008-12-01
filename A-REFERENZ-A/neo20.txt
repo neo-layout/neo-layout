@@ -1,4 +1,4 @@
-﻿-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -104,16 +104,15 @@ Zu den Gedankenstrichen usw. siehe
 • http://de.wikipedia.org/wiki/Weicher_Trennstrich
 
 Taste rechts neben der 0
-        1 … 
-┬─────┬ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│—   ╌│ 3 … 
-│    ‑│ 4 … 
-┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
-        6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
+        1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
+┬─────┬ 2 … – Gedankenstrich (U+2013 EN DASH)
+│–   ╌│ 3 … — Englischer Gedankenstrich (U+2014 EM DASH)
+│- — ‑│ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
+┴──┬──┴ 6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
-# Außerdem gibt es noch
-#  • den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzugt wird
-#  • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf dem Keypad
+Außerdem gibt es noch
+• den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzugt wird
+• das (echte) Minuszeichen (U+2212 MINUS SIGN) auf dem Keypad
 
 === Anführungszeichen ===
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
@@ -140,7 +139,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┬─────┬
 │” - ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
-│0 ’ ₀│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
+│0 ’  │ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
 === Dezimaltrennzeichen ===
@@ -155,16 +154,16 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° • ¬│§ ‣ ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„ / ∞│“ * ∋│” - ∅│—   ╌│  ˵  │Backspace│
-│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│    ‑│` ¨ ῾│    ⌫    │
+│˜ ˇ ¯│° º ¬│§ ª ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„ / ∞│“ * ∋│” - ∅│–   ╌│  ˵  │Backspace│
+│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│- — ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│Tab⇤    │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
-│Tab⇥ ♫  │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Enter │
+│Tab⇤    │X ⋮ Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
+│Tab⇥ ♫  │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Enter │
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3   │  ↲  │
 │         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│… 3 Θ│J ; ∝│   Caps_Lock  │
+│Cps_Lk│↙4   │Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│• 2 ⇒│‣ 3 Θ│J ; ∝│   Caps_Lock  │
 │Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
@@ -173,7 +172,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˆ │1│2│3│4│5│6│7│8│9│0│ │`│ Back │
+│ ˆ │1│2│3│4│5│6│7│8│9│0│-│`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│´│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -186,22 +185,22 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Zweite Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˜ │°│§│ℓ│»│«│€│$│„│“│”│—│ │ Back │
+│ ˜ │°│§│ℓ│»│«│€│$│„│“│”│–│ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¸│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│CpL│M4│Ü│Ö│Ä│P│Z│B│M│–│…│J│ Cps_Lk│
+│CpL│M4│Ü│Ö│Ä│P│Z│B│M│•│‣│J│ Cps_Lk│
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Dritte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│ │¨│ Back │
+│ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│—│¨│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ ♫  │ │_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
+│ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │\│/│{│}│*│?│(│)│-│:│@│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -212,9 +211,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │•│‣│№│⇞│·│£│¤│/│*│-│ │˵│ Back │
+│ ˇ │º│ª│№│⇞│·│£│¤│/│*│-│ │˵│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ 4Lk│ │⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
+│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -276,7 +275,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 
 ┬───────┐ 1 … ASCII-Minus
 │ - ∖ ∸ │ 2 … ASCII-Minus
-│ - − ⊖ │ 3 … echtes Minuszeichen (U+2212 MINUS SIGN)
+│ - − ⊖ │ 3 … Minuszeichen (U+2212 MINUS SIGN)
 ┼───────┤ 4 … ohne (U+2216 SET MINUS)
           5 … (U+2296 CIRCLED MINUS)
           6 … (U+2238 DOT MINUS)
