@@ -286,3 +286,148 @@ SetFormat, Integer, hex
   StringUpper,result,result
   return result
 }
+
+
+; Simple calculator
+
+CDSCompU0063U0063 := "PCal1"
+CDSCompU0043U0043 := "PCal2"
+
+CharProcCal1() {
+  global
+  ; starte Calculator ohne Echo
+  PressHookProc := "Calc"
+  CalcEcho := 0
+  CalcVar1 := "0"
+  CalcVar2 := "0"
+  CalcOp := ""
+  CalcPhase := 0
+}
+
+CharProcCal2() {
+  global
+  ; starte Calculator mit Echo
+  PressHookProc := "Calc"
+  CalcEcho := 1
+  CalcVar1 := "0"
+  CalcVar2 := "0"
+  CalcOp := ""
+  CalcPhase := 0
+}
+
+PressHookCalc(PhysKey, ActKey, Char) {
+  global
+  if (SubStr(Char,1,1) == "P")
+    CharStarDown(PhysKey, ActKey, Char)
+  else if (CalcPhase == 0) {
+    if      ((Char == "U0030") or (Char == "SN__0"))
+      CalcVar1 := CalcVar1 . "0"
+    else if ((Char == "U0031") or (Char == "SN__1"))
+      CalcVar1 := CalcVar1 . "1"
+    else if ((Char == "U0032") or (Char == "SN__2"))
+      CalcVar1 := CalcVar1 . "2"
+    else if ((Char == "U0033") or (Char == "SN__3"))
+      CalcVar1 := CalcVar1 . "3"
+    else if ((Char == "U0034") or (Char == "SN__4"))
+      CalcVar1 := CalcVar1 . "4"
+    else if ((Char == "U0035") or (Char == "SN__5"))
+      CalcVar1 := CalcVar1 . "5"
+    else if ((Char == "U0036") or (Char == "SN__6"))
+      CalcVar1 := CalcVar1 . "6"
+    else if ((Char == "U0037") or (Char == "SN__7"))
+      CalcVar1 := CalcVar1 . "7"
+    else if ((Char == "U0038") or (Char == "SN__8"))
+      CalcVar1 := CalcVar1 . "8"
+    else if ((Char == "U0039") or (Char == "SN__9"))
+      CalcVar1 := CalcVar1 . "9"
+    else if ((Char == "U002E") or (Char == "U002C") or (Char=="SNDot"))
+      CalcVar1 := CalcVar1 . "."
+    else if ((Char == "U002B") or (Char == "SNAdd")) {
+      CalcOp := "+"
+      CalcPhase := 1
+    } else if ((Char == "U002D") or (Char == "SNSub")) {
+      CalcOp := "-"
+      CalcPhase := 1
+    } else if ((Char == "U002A") or (Char == "SNMul")) {
+      CalcOp := "*"
+      CalcPhase := 1
+    } else if ((Char == "U002F") or (Char == "SNDiv")) {
+      CalcOp := "/"
+      CalcPhase := 1
+    } else
+      PressHookProc := ""
+    if (CalcEcho) {
+      PP%PhysKey% := Char
+      PR%PhysKey% := Char
+      CharOutDown(Char)
+    }
+  } else if (CalcPhase == 1) {
+    if      ((Char == "U0030") or (Char == "SN__0"))
+      CalcVar2 := CalcVar2 . "0"
+    else if ((Char == "U0031") or (Char == "SN__1"))
+      CalcVar2 := CalcVar2 . "1"
+    else if ((Char == "U0032") or (Char == "SN__2"))
+      CalcVar2 := CalcVar2 . "2"
+    else if ((Char == "U0033") or (Char == "SN__3"))
+      CalcVar2 := CalcVar2 . "3"
+    else if ((Char == "U0034") or (Char == "SN__4"))
+      CalcVar2 := CalcVar2 . "4"
+    else if ((Char == "U0035") or (Char == "SN__5"))
+      CalcVar2 := CalcVar2 . "5"
+    else if ((Char == "U0036") or (Char == "SN__6"))
+      CalcVar2 := CalcVar2 . "6"
+    else if ((Char == "U0037") or (Char == "SN__7"))
+      CalcVar2 := CalcVar2 . "7"
+    else if ((Char == "U0038") or (Char == "SN__8"))
+      CalcVar2 := CalcVar2 . "8"
+    else if ((Char == "U0039") or (Char == "SN__9"))
+      CalcVar2 := CalcVar2 . "9"
+    else if ((Char == "U002E") or (Char == "U002C") or (Char=="SNDot"))
+      CalcVar2 := CalcVar2 . "."
+    else if ((Char == "U000D") or (Char == "SNEnt") or (Char=="U0020") or (Char=="U003D")) {
+      if      (CalcOp == "+")
+        CalcResult := CalcVar1 + CalcVar2
+      else if (CalcOp == "-")
+        CalcResult := CalcVar1 - CalcVar2
+      else if (CalcOp == "*")
+        CalcResult := CalcVar1 * CalcVar2
+      else if (CalcOp == "/")
+        CalcResult := CalcVar1 / CalcVar2
+      else
+        CalcResult := "Invalid"
+      tosend := EncodeUni(CalcResult)
+      if (CalcEcho) {
+        Char := "U003D"
+        PP%PhysKey% := Char
+        PR%PhysKey% := Char
+        CharOutDown(Char)
+      }
+      loop {
+        if (SubStr(tosend,1,1)=="P") {
+          SubProc := SubStr(tosend,2,4)
+          CharProc%SubProc%()
+        } else {
+          CharOut(SubStr(tosend,1,5))
+        }
+        tosend := SubStr(tosend,6)
+        if (tosend == "") 
+          break                ; erledigt
+      }
+      PressHookProc := ""
+      return ; vermeide, bei CharEcho das aktuelle Zeichen nach dem Ergebnis noch einmal auszugeben
+    } else
+      PressHookProc := ""
+    if (CalcEcho) {
+      PP%PhysKey% := Char
+      PR%PhysKey% := Char
+      CharOutDown(Char)
+    }
+  } else {
+    PressHookProc := ""
+    if (CalcEcho) {
+      PP%PhysKey% := Char
+      PR%PhysKey% := Char
+      CharOutDown(Char)
+    }
+  }
+}
