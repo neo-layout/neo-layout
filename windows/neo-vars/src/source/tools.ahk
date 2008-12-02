@@ -290,8 +290,8 @@ SetFormat, Integer, hex
 
 ; Simple calculator
 
-CDSCompU0063U0063 := "PCal1"
-CDSCompU0043U0043 := "PCal2"
+CDSCompU0075U0063 := "PCal1"
+CDSCompU0055U0043 := "PCal2"
 
 CharProcCal1() {
   global
