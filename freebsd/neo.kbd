@@ -15,7 +15,7 @@
   005   '4'    '$'    nop    nop    '4'    '$'    nop    nop     O
   006   '5'    '%'    nop    nop    '5'    '%'    nop    nop     O
   007   '6'    '&'    nop    nop    '6'    '&'    nop    nop     O
-  008   '7'    '/'    nop    nop    '{'    '{'    nop    nop     O
+  008   '7'    '$'    nop    nop    '{'    '{'    nop    nop     O
   009   '8'    '('    esc    esc    '['    '['    esc    esc     O
   010   '9'    ')'    gs     gs     ']'    ']'    gs     gs      O
   011   '0'    '='    nop    nop    '}'    '}'    nop    nop     O
@@ -46,8 +46,8 @@
   036   'n'    'N'    nl     nl     '('    '('    nl     nl      C
   037   'r'    'R'    vt     vt     ')'    ')'    vt     vt      C
   038   't'    'T'    ff     ff     '-'    '-'    ff     ff      C
-  039   nop    nop    nop    nop    246    214    nop    nop     C
-  040   nop    nop    nop    nop    228    196    nop    nop     C
+  039   'd'    'D'    nop    nop    ':'    ':'    nop    nop     C
+  040   'y'    'Y'    nop    nop    '@'    '@'    nop    nop     C
   041   dcir   176    rs     rs     '^'    176    rs     rs      O
   042   lshift lshift lshift lshift lshift lshift lshift lshift  O
   043   '#'    '''    nop    nop    '#'    '''    nop    nop     O
