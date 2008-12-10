@@ -1,4 +1,4 @@
-= Neo 2 für FreeBSD =
+﻿= Neo 2 für FreeBSD =
 Von Haus aus bringt FreeBSD Unterstützung für Neo 1 in Xorg mit. Für die
 Konsole und für Neo 2 in X muss also ein Treiber installiert werden.
 
