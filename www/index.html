@@ -234,7 +234,7 @@ p         {  /* text-indent:1em;
 
 </head>
 <!-- Für Mittenpositionierung: padding: 0; margin: 0; text-align: center; ind bodystyle /-->
-<body style="background-color:#dceeee; background-image:url(./hintergrund.png); background-position: top center; background-repeat:no-repeat; padding: 0em; margin: 0em; text-align: center; ">
+<body style="background-color:#dceeee; padding: 0em; margin: 0em; text-align: center; ">
 
 
 <p style="position:absolute; display:block; width:100%; top:0em; left:0px; text-align:center; background-color:#F30; color:#FFF">
@@ -253,10 +253,14 @@ p         {  /* text-indent:1em;
 <!-- Logo /-->
 <!-- <div style="position:relative; top:2.25em; left:3.25em; width:522px; height:70px;  overflow:hidden; float:left;"> /-->
 <div style="position:relative; top:2.25em; left:3.25em; width:54em; height:70px;  overflow:hidden; "> 
-   <object data="./neo_kopf_trac_522x50.svg" type="image/svg+xml" style="width:522px; height:50px; ">
+<!--
+    <object data="./neo_kopf_trac_522x50.svg" type="image/svg+xml" style="width:522px; height:50px; "> 
             <param name="src" value="./neo_kopf_trac_522x50.svg">
+/-->
             <img src="./neo_kopf_trac_522x50.png"  alt="Neo – Ergonomisches Tastaturlayout">
+<!--
     </object>
+/-->
 <!-- </div> /-->
 
 <!-- Quicklinks /-->
@@ -267,26 +271,41 @@ p         {  /* text-indent:1em;
 
    <!-- Achtung: Die Links sind auch jeweils in den SVG-Dateien kodiert! /-->
 
+<!--
    <object data="./tastentier_laechelnd_quicklink_windows.svg" type="image/svg+xml" style="width:50px; height:34px;  overflow:hidden; ">
             <param name="src" value="./tastentier_laechelnd_quicklink_windows.svg">
+/-->
             <a href="http://wiki.neo-layout.org/browser/windows/neo-vars/out/neo20.exe?format=raw">
                <img src="./tastentier_laechelnd.png"  alt="quickdownload:Neo_Windows"  border="0">
             </a>
+<!--
     </object>
+/-->
 
+
+<!--
    <object data="./tastentier_linksblickend_quicklink_linux.svg" type="image/svg+xml" style="width:50px; height:34px;  overflow:hidden; ">
             <param name="src" value="./tastentier_linksblickend_quicklink_linux.svg">
+/-->
+
             <a href="http://wiki.neo-layout.org/browser/linux/xmodmap/neo_de.xmodmap?format=raw">
                <img src="./tastentier_linksblickend.png"  alt="quickdownload:Neo_Linux"  border="0">
             </a>
+<!--
     </object>
+/-->
 
-   <object data="./tastentier_grinsend_quicklink_osx.svg" type="image/svg+xml" style="width:50px; height:34px;  overflow:hidden; ">
+<!--
+   <object data="./tastentier_apfel.svg" type="image/svg+xml" style="width:50px; height:34px;  overflow:hidden; ">
             <param name="src" value="./tastentier_grinsend_quicklink_osx.svg">
+/-->
+
             <a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">
-               <img src="./tastentier_grinsend.png"  alt="quickdownload:Neo_OS-X"  border="0">
+               <img src="./tastentier_apfel.png"  alt="quickdownload:Neo_OS-X"  border="0">
             </a>
+<!--
     </object>
+/-->
 
 
 
@@ -306,7 +325,8 @@ p         {  /* text-indent:1em;
 /-->
 
   <a href="./neo_portable.zip">
-     <img src="./tastentier_usb.png"  width="40px" height="34px" alt="quickdownload:Neo-Portable für USB-Stick" title="quickdownload:Neo-Portable für USB-Stick" border="0">
+   <!--  <img src="./tastentier_usb.png"  width="46px" height="40px" alt="quickdownload:Neo-Portable für USB-Stick" title="quickdownload:Neo-Portable für USB-Stick" border="0"> /-->
+     <img src="./usb-stick.png"  width="40px" height="34px" alt="quickdownload:Neo-Portable für USB-Stick" title="quickdownload:Neo-Portable für USB-Stick" border="0">
   </a>
  </div>
 <!-- /Quicklinks /-->
@@ -352,6 +372,7 @@ p         {  /* text-indent:1em;
   </div>
 </div>
 
+<!--
 <div id="Navigationsleiste" style="border-color:#AAA; opacity:.2;">
  <div id="Navigationsthema" style="color:#AAA; border-color:#AAA;">FOSS-Links</div>
   <div id="Navigationsunterpunkte" >
@@ -363,7 +384,7 @@ p         {  /* text-indent:1em;
         href="http://dejavu.sourceforge.net"><img src="./signet_dejavu.png" border="0"  style=" opacity:.5;  width:50%;" ><br>DejaVu<br>Font</a>
   </div>
 </div>
-
+/-->
 
 
 </div>
@@ -489,12 +510,12 @@ p         {  /* text-indent:1em;
 <!--------------------------------------------------/-->
 <div id="Hauptfeld">
   <div id="Bildcontainer_rechts" >  <!-- style="margin-top:0em;" > /--> 
-    <img id="Bild" src="tastentierchen_zwinkert.gif" />
+    <img id="Bild" src="tastentier_grinsend.png" />
     <div id="Bildtext"> Ein Tasten&shy;tierchen als Quick&shy;download&shy;link. </div>
  </div>
 
  <div id="Bildcontainer_links" style="margin-top:1em;">
-    <img id="Bild" src="testbild.png" />
+    <img id="Bild" src="neo-logo.png" />
     <div id="Bildtext">Neo ist zu 86% fertig</div>
  </div>
 
