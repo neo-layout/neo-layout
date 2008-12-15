@@ -154,8 +154,8 @@ keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark	rightanglebracket KP
 !				“		‘		⟩ (ket)		  *		*		∋
 keycode 19 = 	0   rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Subtract	KP_Subtract	emptyset	NoSymbol
 !			”			’		₀		-		-		∅
-keycode 20 = minus		endash		emdash		U2011		NoSymbol	NoSymbol	hyphen		NoSymbol
-!		-		–		—		‑ non-breaking					­ soft hyphen 
+keycode 20 = minus		emdash		NoSymbol	U2011		NoSymbol	NoSymbol	hyphen		NoSymbol
+!		-		—				‑ non-breaking					­ soft hyphen 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
@@ -235,10 +235,10 @@ keycode 57 = 	b		B		plus		Greek_beta	colon		NoSymbol	U21D0		NoSymbol
 !						+		β		:				⇐
 keycode 58 = 	m		M		percent		Greek_mu	KP_1		KP_1		ifonlyif	NoSymbol
 !						%		μ						⇔
-keycode 59 = comma	   enfilledcircbullet	quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
-!		,		•		"		ρ						⇒ implies 
-keycode 60 = period		U2023		apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
-!		.		‣		'		ϑ Greek_theta					Θ
+keycode 59 = comma		endash		quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
+!		,		–		"		ρ						⇒ implies 
+keycode 60 = period	   enfilledcircbullet	apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
+!		.		•		'		ϑ Greek_theta					Θ
 keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	variation	NoSymbol
 !						;		θ		;				∝ proportional to
 
@@ -284,8 +284,8 @@ keycode 83 =  KP_4		club		leftarrow	includedin	U2286		NoSymbol
 !				♣		←		⊂		⊆
 keycode 84 =  KP_5		EuroSign	brokenbar	U22B6 		U22B7		NoSymbol
 !				€		¦		⊶ original of	⊷ image of
-keycode 85 =  KP_6		NoSymbol	rightarrow	includes	U2287		NoSymbol
-!						→		⊃		⊇
+keycode 85 =  KP_6		U2023		rightarrow	includes	U2287		NoSymbol
+!				‣		→		⊃		⊇
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
