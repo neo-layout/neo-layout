@@ -133,10 +133,10 @@ keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	     dead_doubleacute	No
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 10 = 	1		degree		onesuperior	onesubscript  	masculine   	NoSymbol	notsign		NoSymbol
-!				°		¹	  	₁		º	  			¬
-keycode 11 = 	2		section		twosuperior	twosubscript	ordfeminine	NoSymbol	logicalor	NoSymbol
-!				§		²	  	₂		ª				∨
+keycode 10 = 	1		degree		onesuperior	onesubscript enfilledcircbullet	NoSymbol	notsign		NoSymbol
+!				°		¹	  	₁		•	  			¬
+keycode 11 = 	2		section		twosuperior	twosubscript	U2023		NoSymbol	logicalor	NoSymbol
+!				§		²	  	₂		‣				∨
 keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logicaland	NoSymbol
 !				ℓ liter		³	  	₃		№				∧
 keycode 13 = 	4		guillemotright	U203A		dagger		Prior		Prior		downtack	NoSymbol
@@ -162,8 +162,8 @@ keycode 20 = minus		emdash		NoSymbol	U2011		NoSymbol	NoSymbol	hyphen		NoSymbol
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 24 = 	x		X		ellipsis	Greek_xi	U22EE		NoSymbol	Greek_XI	Greek_XI
-!						…		ξ		⋮ vert. ell			Ξ		Ξ
+keycode 24 = 	x		X		NoSymbol	Greek_xi	NoSymbol	NoSymbol	Greek_XI	Greek_XI
+!								ξ						Ξ		Ξ
 keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	U2259		NoSymbol
 !						_								≙		≙
 keycode 26 = 	l		L		bracketleft	Greek_lambda	Up		Up		Greek_LAMBDA	Greek_LAMBDA
@@ -237,8 +237,8 @@ keycode 58 = 	m		M		percent		Greek_mu	KP_1		KP_1		ifonlyif	NoSymbol
 !						%		μ						⇔
 keycode 59 = comma		endash		quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
 !		,		–		"		ρ						⇒ implies 
-keycode 60 = period	   enfilledcircbullet	apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
-!		.		•		'		ϑ Greek_theta					Θ
+keycode 60 = period		ellipsis	apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
+!		.		…		'		ϑ Greek_theta					Θ
 keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	variation	NoSymbol
 !						;		θ		;				∝ proportional to
 
@@ -284,8 +284,8 @@ keycode 83 =  KP_4		club		leftarrow	includedin	U2286		NoSymbol
 !				♣		←		⊂		⊆
 keycode 84 =  KP_5		EuroSign	brokenbar	U22B6 		U22B7		NoSymbol
 !				€		¦		⊶ original of	⊷ image of
-keycode 85 =  KP_6		U2023		rightarrow	includes	U2287		NoSymbol
-!				‣		→		⊃		⊇
+keycode 85 =  KP_6		NoSymbol	rightarrow	includes	U2287		NoSymbol
+!						→		⊃		⊇
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
