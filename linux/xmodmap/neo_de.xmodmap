@@ -148,14 +148,14 @@ keycode 15 = 	6		EuroSign	cent		malesymbol	sterling	NoSymbol	U2225		NoSymbol
 
 keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
 !				$		¥		κ		¤				→
-keycode 17 = 	8   doublelowquotemark    singlelowquotemark	leftanglebracket  KP_Divide	KP_Divide	infinity	NoSymbol
-!				„		‚		⟨ (bra)		  /		/		∞
-keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark	rightanglebracket KP_Multiply	KP_Multiply	containsas	NoSymbol
-!				“		‘		⟩ (ket)		  *		*		∋
-keycode 19 = 	0   rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Subtract	KP_Subtract	emptyset	NoSymbol
-!			”			’		₀		-		-		∅
-keycode 20 = minus		emdash		NoSymbol	U2011		NoSymbol	NoSymbol	hyphen		NoSymbol
-!		-		—				‑ non-breaking					­ soft hyphen 
+keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	NoSymbol	NoSymbol	infinity	NoSymbol
+!				„		‚		⟨ (bra)						∞
+keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	containsas	NoSymbol
+!				“		‘		⟩ (ket)		/		/		∋
+keycode 19 = 	0   rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Multiply	KP_Multiply	emptyset	NoSymbol
+!			”			’		₀		*		*		∅
+keycode 20 = minus		emdash		NoSymbol	U2011		KP_Subtract	KP_Subtract	hyphen		NoSymbol
+!		-		—				‑ non-breaking	-		-		­ soft hyphen 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The upper row
