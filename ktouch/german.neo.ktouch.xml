@@ -439,37 +439,41 @@ Homepage: http://pebbles.schattenlauf.de/
    <NewCharacters>Linker Umschalter</NewCharacters>
    <Line>nNe nNe Ne Ne Ne Nest Nest Nest</Line>
    <Line>rRa rRa Ra Ra Ra Rest Rest Rest</Line>
-   <Line>lLa lLa La La La Land Land Land</Line>
+   <Line>bBa bBa Ba Ba Ba Band Band Band</Line>
    <Line>dDa dDa Da Da Da Dach Dach Dach</Line>
-   <Line>Nest Rest Land Dach, Nest Rest,</Line>
+   <Line>Nest Rest Band Dach, Nest Rest,</Line>
    <Line>das Nest, das Nest, dieses Nest</Line>
    <Line>mit Rest, mit Rest, unser Rest,</Line>
-   <Line>das Land, das Land, unser Land,</Line>
+   <Line>das Band, das Band, unser Band,</Line>
    <Line>das Dach, das Dach, dieses Dach</Line>
   </Level>
   <Level>
    <NewCharacters>Wir üben</NewCharacters>
+   <Line>Gold Glas Gabe Gans Gang Gast Geld Grog Gut Gas Georg Gatte</Line>
+   <Line>Tube Turm Tier Teil Takt Teig Taue Teer Tat Tal Trieb Tasse</Line>
+   <Line>Ruhe Ruhm Rind Ritt Rose Rahm Rast Rabe Rum Rat Ruder Reise</Line>
+   <Line>Bild Bier Bude Bund Beil Bart Baum Bank Bau Bai Bibel Beere</Line>
    <Line>Haus Hase Haar Hass Halt Hast Halm Hand Hang Harz Hausstand</Line>
-   <Line>Zahl Zahn Zaum Zaun Zeit Zelt Zeug Ziel Zier Zink Zeitungen</Line>
-   <Line>Uter Ulla Ulmen Urteil Urlaub Urheber Uhr Uhrzeiger Unkraut</Line>
    <Line>Mann Maus Mahl Mais Mark Mein Mehl Mai Mus Mut Maler Makler</Line>
    <Line>Naht Name Nase Narr Neid Niere Namen Nager Natur Niederlage</Line>
-   <Line>Idee Ihre Irre Inder Islam Inhalt Inland Irrtum Intelligenz</Line>
   </Level>
   <Level>
    <NewCharacters>Groß und klein im Wechsel</NewCharacters>
+   <Line>die Gabe, die Gans, der Gang, der Gast, das Geld, aus Graz,</Line>
    <Line>das Haus, der Hase, das Haar, die Haut, der Halt, die Hast,</Line>
-   <Line>der Halm, die Hand, der Hang, das Harz, die Zahl, der Zaun,</Line>
-   <Line>die Zeit, das Zeug, das Ziel, das Zink, der Ural, die Ulme,</Line>
+   <Line>der Guss, das Glas, das Tier, der Turm, der Teil, der Takt,</Line>
    <Line>der Mann, die Maus, das Mahl, der Mais, die Mark, der Main,</Line>
+   <Line>der Teig, die Taue, die Tube, der Teer, die Ruhe, der Ruhm,</Line>
    <Line>das Mehl, die Naht, der Name, die Nase, der Narr, der Neid,</Line>
+   <Line>das Rind, der Ritt, der Rhein, der Rahm, die Rast, der Rabe,</Line>
+   <Line>der Halm, die Hand, der Hang, das Harz,</Line>
   </Level>
   <Level>
    <NewCharacters>Kurze Trainingssätze</NewCharacters>
-   <Line>Paul nimmt teil. Hans lernt eisern. Ute arbeitet schon mit.</Line>
-   <Line>Helene kam bald. Ideen hatten alle. Ihre Woche sagt mir zu.</Line>
-   <Line>Man sagte Karl. Nimm Kurz nun mit. Unser Haus steht schon.</Line>
-   <Line>Uns sagt sie es. Paul trank Bier. Ihr Name ist unbekannt.</Line>
+   <Line>Manni nimmt teil. Hans lernt eisern. Hanno arbeitet schon mit.</Line>
+   <Line>Helene kam bald. Geld hatten alle. Ihre Nase sagt mir zu.</Line>
+   <Line>Man sagte Karl. Nimm Kurt nun mit. Das Haus steht schon.</Line>
+   <Line>Dir sagt sie es. Torsten trank Bier. Sein Name ist unbekannt.</Line>
   </Level>
   <Level>
    <NewCharacters>Unser Sicherheitstest</NewCharacters>
@@ -499,27 +503,26 @@ Homepage: http://pebbles.schattenlauf.de/
   </Level>
   <Level>
    <NewCharacters>Wir üben</NewCharacters>
-   <Line>Gold Glas Gabe Gans Gang Gast Geld Grog Gut Gas Georg Gatte</Line>
-   <Line>Tube Turm Tier Teil Takt Teig Taue Teer Tat Tal Trieb Tasse</Line>
-   <Line>Ruhe Ruhm Rind Ritt Rose Rahm Rast Rabe Rum Rat Ruder Reise</Line>
+   <Line>Zahl Zahn Zaum Zaun Zeit Zelt Zeug Ziel Zier Zink Zeitungen</Line>
+   <Line>Uter Ulla Ulmen Urteil Urlaub Urheber Uhr Uhrzeiger Unkraut</Line>
+   <Line>Idee Ihre Irre Inder Islam Inhalt Inland Irrtum Intelligenz</Line>
    <Line>Wadi Ware Wehr Wien Woge Wurm Wust Wand Weg Wal Wachs Worte</Line>
-   <Line>Bild Bier Bude Bund Beil Bart Baum Bank Bau Bai Bibel Beere</Line>
    <Line>Eile Eier Ebbe Ewok Ehre Emma Emmi Else Eis Eid Esche Enkel</Line>
   </Level>
   <Level>
    <NewCharacters>Groß und klein im Wechsel</NewCharacters>
-   <Line>die Gabe, die Gans, der Gang, der Gast, das Geld, aus Graz,</Line>
-   <Line>der Guss, das Glas, das Tier, der Turm, der Teil, der Takt,</Line>
-   <Line>der Teig, die Taue, die Tube, der Teer, die Ruhe, der Ruhm,</Line>
-   <Line>das Rind, der Ritt, der Rhein, der Rahm, die Rast, der Rabe,</Line>
+   <Line>die Zeit, das Zeug, das Ziel, das Zink, der Ural, die Ulme,</Line>
+   <Line>die Zahl, der Zaun, die Idee, der Irre, das Inland, das Ihre,</Line>
+   <Line>das Wehr, die Woge, der Wurm, die Wurst, die Wand, das Wachs,</Line>
+   <Line>die Eier, die Ebbe, der Emmi, das Eis, die Esche, der Enkel,</Line>
   </Level>
   <Level>
    <NewCharacters>Kurze Trainingssätze</NewCharacters>
-   <Line>Willi nahm teil. Beate ist eisern. Rainer arbeitet bei uns.</Line>
-   <Line>Sie kann rennen. Alle rieten dazu. Er konnte heute kommen.</Line>
-   <Line>Der Rat ist gut. Bitte wiegen Sie. Der Papst hat abgesagt.</Line>
-   <Line>Er teilt es ein. Bedenke es immer. Sprechen Sie mit Walter.</Line>
-   <Line>Reise nach Trier. Bestelle es bald. Gib mir die Ersatzteile</Line>
+   <Line>Willi nahm teil. Ernst ist eisern. Arno arbeitet bei uns.</Line>
+   <Line>Er kann rennen. Alle rieten dazu. Ihr konntet heute kommen.</Line>
+   <Line>Ein Rat ist gut. Lieber wiegen Sie. Unser Papst hat abgesagt.</Line>
+   <Line>Er teilt es ein. Entferne es immer. Üben Sie mit Walter.</Line>
+   <Line>Ansicht des Essens. Informiere sie bald. Zeig mir die Ersatzteile</Line>
   </Level>
   <Level>
    <NewCharacters>Sicherheitstest</NewCharacters>
