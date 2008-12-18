@@ -391,7 +391,7 @@ Homepage: http://pebbles.schattenlauf.de/
    <Line>nmn r,r r,r r,r r,u r,i r,a r,e r,d r,t r,n r,d r,t r,t r,n</Line>
    <Line>da, da, da, na, na, na, da, da, na, na, da, da, na, na, da,</Line>
    <Line>aber, aber, aber, neues, neues, dann, dann, dann, aber, da,</Line>
-   <Line>bilde, jene, jene, jene, meine, meine, bis, ein, sein, bis,</Line>
+   <Line>bilde, deine, dein, diesen, meine, meine, bis, ein, sein, bis,</Line>
    <Line>bis, ein, sein, kein, dein, in, aus, ans, sein, bald, leer,</Line>
    <Line>an, mir, sei, denn, mehr, hier, am, aus, bis, ein, sei, an,</Line>
   </Level>
@@ -478,15 +478,15 @@ Homepage: http://pebbles.schattenlauf.de/
   <Level>
    <NewCharacters>Unser Sicherheitstest</NewCharacters>
    <Line>Herr Hauser bat uns, ihm bald das Bestellte zu senden.</Line>
-   <Line>Schon bittet er ihn, die Lage aber sehr genau zu studieren.</Line>
-   <Line>Unsere Idee hatte allen anderen Interessenten gut getan.</Line>
-   <Line>Hole nun die neuen Zeitungen am besten bei Herrn Meisters.</Line>
-   <Line>Ihr Name ist nun in Wehr, Hamburg und Dresden sehr bekannt.</Line>
+   <Line>Schon bittet er ihn, die Sache aber sehr genau zu studieren.</Line>
+   <Line>Dessen Idee hatte allen anderen Teilnehmern gut getan.</Line>
+   <Line>Hole nun die neuen Magazine am besten bei Herrn Meisters.</Line>
+   <Line>Sein Name ist nun in Todtnau, Hamburg und Dresden sehr bekannt.</Line>
   </Level>
   <Level>
    <NewCharacters>Wir wiederholen</NewCharacters>
    <Line>Nu Ru Tu Du Ku Hu Bu Mu Gu Nu Ru Tu Du Ku Hu Bu Mu Gu Nu Ru</Line>
-   <Line>Wagt Paul Land Pole Zahn Ulk Name Mann Idee Paar Kind Lamm</Line>
+   <Line>Name Mann Kind Daumen Rand Sand Mund Herrn Recht Tod Sau Niemand Schlau</Line>
    <Line>in Ulm, bis Kiel, aus Leer, in Linz, bis Mainz, in Hamburg,</Line>
    <Line>in Idstein, aus Immenstadt, bis Pilsen, aus Wahl, in Kassel</Line>
   </Level>
@@ -521,8 +521,8 @@ Homepage: http://pebbles.schattenlauf.de/
    <Line>Willi nahm teil. Ernst ist eisern. Arno arbeitet bei uns.</Line>
    <Line>Er kann rennen. Alle rieten dazu. Ihr konntet heute kommen.</Line>
    <Line>Ein Rat ist gut. Lieber wiegen Sie. Unser Papst hat abgesagt.</Line>
-   <Line>Er teilt es ein. Entferne es immer. Üben Sie mit Walter.</Line>
-   <Line>Ansicht des Essens. Informiere sie bald. Zeig mir die Ersatzteile</Line>
+   <Line>Er teilt es ein. Umgehe es immer. Üben Sie mit Walter.</Line>
+   <Line>Ansicht des Essens. Installiere sie bald. Zeig mir die Ersatzteile</Line>
   </Level>
   <Level>
    <NewCharacters>Sicherheitstest</NewCharacters>
@@ -534,10 +534,9 @@ Homepage: http://pebbles.schattenlauf.de/
   </Level>
   <Level>
    <NewCharacters>Wir wiederholen</NewCharacters>
-   <Line>ece nhn ala rgr epe nmn ala r,r ece nhn ala rgr epe nmn ala</Line>
-   <Line>ecepe nhnmn alala rgr,r ecepe nhnmn alala rgr,r ecepe nhnmn</Line>
-   <Line>nicht eines durch haben diese hatte seine unter ihnen meine</Line>
-   <Line>Herrn Recht Leben Jahre Seite Macht Waage Augen Pater Stadt</Line>
+   <Line>Ed Ud Ad Id Cd Ld Pd Zd Ed Ud Ad Id Ud Od Ud Ed Od Ud Ld Cd</Line>
+   <Line>Wagt Paul Eins Land Pole Zahn Einmal Ulk Innen Idee Paar Lamm Zaun</Line>
+   <Line>Leben Waage Augen Pater Unser Auf Elke</Line>
   </Level>
   <Level>
    <NewCharacters>Neuer Buchstabe: v</NewCharacters>
@@ -561,7 +560,7 @@ Homepage: http://pebbles.schattenlauf.de/
    <Line>vorkasse vorkasse vorlassen vorlassen verlassen verlassen</Line>
   </Level>
   <Level>
-   <NewCharacters>Neuer Buchstabe f (o)</NewCharacters>
+   <NewCharacters>Neuer Buchstabe f</NewCharacters>
    <Line>nhn rgr tft tft tft tfu tfi tfa</Line>
    <Line>nhn rgr tft tft tfd tfr tfn tft</Line>
    <Line>fiel fiel lief, lief frei frei,</Line>
@@ -650,7 +649,7 @@ Homepage: http://pebbles.schattenlauf.de/
    <Line>die Quelle kennen, die Quelle nennen, diese Quellenangaben,</Line>
    <Line>den Eingang quittieren, sofort quittieren, diese Quittungen</Line>
    <Line>im vorigen Quartal, im letzten Quartal, im vorigen Quartal.</Line>
-   <Line>Die Polster sind bequem, jedoch auch qualitativ ansprechend</Line>
+   <Line>Die Polster sind bequem, aber auch qualitativ ansprechend</Line>
    <Line>Auf die Anzeige haben sich qualifizierte Bewerber gemeldet.</Line>
    <Line>Die Querverbindung wurde im vorigen Quartal fertiggestellt.</Line>
   </Level>
