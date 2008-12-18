@@ -1,4 +1,4 @@
-﻿== Hinweise für Entwickler ==
+== Hinweise für Entwickler ==
 
 === AutoHotkey herunter laden ===
 Man sollte als erstes das Programm namens »AutoHotkey« (http://www.autohotkey.com/download/AutoHotkeyInstall.exe) herunterlanden. Es wird empfohlen, dieses Programm möglichst in dem vorgeschlagenen Standardverzeichnis zu installieren.

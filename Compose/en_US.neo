@@ -1,4 +1,4 @@
-﻿<Multi_key> <space> <apostrophe>	: "'"	apostrophe
+<Multi_key> <space> <apostrophe>	: "'"	apostrophe
 <Multi_key> <apostrophe> <space>	: "'"	apostrophe
 <Multi_key> <space> <greater>		: "^"	asciicircum
 <Multi_key> <greater> <space>		: "^"	asciicircum

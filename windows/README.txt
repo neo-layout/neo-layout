@@ -1,4 +1,4 @@
-﻿== Neo 2.0 für Windows ==
+== Neo 2.0 für Windows ==
 Für viele Windowsversionen sind hier Treiber zu finden.
 
 == autohotkey ==

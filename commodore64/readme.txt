@@ -1,4 +1,4 @@
-﻿= C64 Neo-Tastaturtreiber =
+= C64 Neo-Tastaturtreiber =
 Auch für den alten 64er ist jetzt ein Neo-Tastaturtreiber zu haben. Der Treiber (Version 1.0 von Neo, nicht das aktuellen Neo 2) befindet sich in einem Alphastadium, also ist weitgehend ungetestet, da ich hier zur Zeit noch keine Möglichkeit habe, die Dateien auf einen echten C64 zu übertragen (bitte berichten, wenn es Erfolge gibt). Deshalb beschränkt sich der (erfolgreiche) Test bislang auf den C64-Emulator VICE.
 
 Programmiert sind sie mit Hilfe von ACME (mehr zum 65xx-Crossassembler ACME findet man in der 64er-Ecke).

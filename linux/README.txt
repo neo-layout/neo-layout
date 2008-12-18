@@ -1,4 +1,4 @@
-﻿== Neo 2.0 für Linux ==
+== Neo 2.0 für Linux ==
 Für viele Linuxdistributionen sind hier Treiber zu finden.
 
 === X ===

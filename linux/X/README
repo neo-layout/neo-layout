@@ -1,4 +1,4 @@
-﻿    ______________________________________________________________________
+    ______________________________________________________________________
     Probleme gibt es bei Systemen mit Xorg Versionen vor 7.3 bzw. X-Server
     vor 1.3 (Fedora 6, Gentoo stable, Ubuntu 7.04 und andere).
     Außerdem muss man bei nicht ganz aktuellen Versionen des X-Servers in

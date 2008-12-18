@@ -1,4 +1,4 @@
-﻿NEO Tastaturlayout 2.0 (Version für Windows XP)
+NEO Tastaturlayout 2.0 (Version für Windows XP)
 ===============================================
 
 == Allgemeines ==

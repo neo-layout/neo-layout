@@ -1,4 +1,4 @@
-﻿Das Skript »erzeuge_neo-belegung« gibt die keymap für die NEO-Belegung auf der Standardausgabe aus.
+Das Skript »erzeuge_neo-belegung« gibt die keymap für die NEO-Belegung auf der Standardausgabe aus.
 Dazu werden verschiedene Skripte aufgerufen:
 
 • dumpkeys --long-info > dump

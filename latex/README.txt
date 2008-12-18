@@ -1,4 +1,4 @@
-﻿== LaTeX und Neo ==
+== LaTeX und Neo ==
 Der typische (La)TeX-Nutzer profitiert in vielfacher Weise vom NEO-Tastaturlayout: Neben den besseren Anordnung der Buchstaben sind beispielsweise auch die häufiger benötigten Sonderzeichen wie \{}[]|$ viel besser erreichbar.
 
 Die hier vorgestellten Pakete und Programme zielen darauf ab, darüber hinaus auch die Unicode-Zeichen auf der NEO-Tastatur direkt in LaTeX eingeben zu können.
