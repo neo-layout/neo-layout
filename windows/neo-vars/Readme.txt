@@ -1,4 +1,4 @@
-﻿NEO-vars
+NEO-vars
 ========
 
 NEO-vars ist die nunmehr zweite Implementierung des NEO-Tastaturlayouts

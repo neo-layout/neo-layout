@@ -1,4 +1,4 @@
-﻿
+
      Treiber zur Benutzung einer PLUM-Tastatur als Matrixtastatur
                Hans-Christoph Wirth <hcw*at*gmx*dot*de>
 

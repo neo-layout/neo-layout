@@ -1,4 +1,4 @@
-﻿=== Technische Hinweise ===
+=== Technische Hinweise ===
 Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X auf der Konsole benutzten zu können.
 Dazu wird die keymap (leider als root!!) mit »loadkeys PFAD/neo.map« geladen.
 Mit »loadkeys -d« wird wieder die Standardbelegung verwendet.

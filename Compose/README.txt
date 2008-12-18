@@ -1,4 +1,4 @@
-﻿== Ergänzungen der Compose-Datei unter Linux/BSD ==
+== Ergänzungen der Compose-Datei unter Linux/BSD ==
 Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die Compose-Taste bzw. tote Tasten für Linux.
 
 Die Kombinationen der gängigien Compose verändert NEO im Sinne erhaltender Kompatibilität nicht!

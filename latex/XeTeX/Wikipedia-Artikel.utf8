@@ -1,4 +1,4 @@
-﻿\section*{\XeTeX\ – aus Wikipedia, der freien Enzyklopädie}
+\section*{\XeTeX\ – aus Wikipedia, der freien Enzyklopädie}
 \XeTeX\ [ziːtɛç] ist eine von Jonathan Kew programmierte, auf e-TeX basierende Alternative für pdfTeX, ursprünglich für Mac OS X geschrieben, später auf Linux und Windows portiert, wenn auch mit geringerem Funktionsumfang.
 
 Es ist der Nachfolger von TeXGX, das für die von Apple inzwischen aufgegebene Technik QuickDraw GX geschrieben war. Im Gegensatz zu TeX bietet \XeTeX\ native Unicode\=Unterstützung und erweitert es zudem um die Schrifttechniken von Mac OS X, Apple Advanced Typography (AAT) und OpenType. Dadurch bietet \XeTeX\ ausgefeilte typographische Feinheiten wie automatische Ligaturen, langes s, Buchstabenvariation und Schmuckbuchstaben, soweit es die verwendete Schrift erlaubt. Außerdem kann \XeTeX\ mit Multiple Master Fonts umgehen.
