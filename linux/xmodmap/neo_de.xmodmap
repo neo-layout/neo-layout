@@ -254,7 +254,7 @@ keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	variation	NoSymbol
 
 keycode 77  = Tab 		ISO_Left_Tab	equal		approxeq	identical	NoSymbol
 !						=		≈ almost equal	≡ identical to
-keysym KP_Divide = KP_Divide		KP_Divide	division	U2300		U2223		NoSymbol
+keysym KP_Divide = KP_Divide	KP_Divide	division	U2300		U2223		NoSymbol
 !		/		/		÷		⌀ diameter	∣ divides
 keycode 63  = KP_Multiply	KP_Multiply	U22C5		U2299		U2297		NoSymbol
 !		*		*		⋅ dot		⊙ cirled dot	⊗ circled times
@@ -270,8 +270,8 @@ keycode 79 =  KP_7		U2714		U2195		U226A		upstile		NoSymbol
 !				✔ check mark	↕ arrow		≪ much less	⌈
 keycode 80 =  KP_8		U2718		uparrow		intersection	U22C2		NoSymbol
 !				✘ ballot x	↑		∩		⋂ n-ary intersection
-keycode 81 =  KP_9		NoSymbol	U20D7		U226B		U2309		NoSymbol
-!						vector		≫ much greater	⌉
+keycode 81 =  KP_9		club		U20D7		U226B		U2309		NoSymbol
+!				♣		vector		≫ much greater	⌉
 keycode 86 =  KP_Add		KP_Add		plusminus	U2295		U2214		NoSymbol
 !		+		+		±		circled plus	dot plus
 
@@ -280,25 +280,25 @@ keycode 86 =  KP_Add		KP_Add		plusminus	U2295		U2214		NoSymbol
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
 
-keycode 83 =  KP_4		club		leftarrow	includedin	U2286		NoSymbol
-!				♣		←		⊂		⊆
+keycode 83 =  KP_4		heart		leftarrow	includedin	U2286		NoSymbol
+!				♥		←		⊂		⊆
 keycode 84 =  KP_5		EuroSign	brokenbar	U22B6 		U22B7		NoSymbol
 !				€		¦		⊶ original of	⊷ image of
-keycode 85 =  KP_6		NoSymbol	rightarrow	includes	U2287		NoSymbol
-!						→		⊃		⊇
+keycode 85 =  KP_6		U2660		rightarrow	includes	U2287		NoSymbol
+!				♠		→		⊃		⊇
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
 
-keycode 87 =  KP_1		diamond		U2194		lessthanequal	downstile	NoSymbol
-!				♦		↔ arrow		≤		⌊
-keycode 88 =  KP_2		heart		downarrow	union		U22C3		NoSymbol
-!				♥		↓		∪		⋃ n-ary union
-keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol
-!				♠		⇌		≥		⌋
-! keycode 108 = KP_Enter		KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
+keycode 87 =  KP_1		ordfeminine	U2194		lessthanequal	downstile	NoSymbol
+!				ª		↔ arrow		≤		⌊
+keycode 88 =  KP_2		masculine	downarrow	union		U22C3		NoSymbol
+!				º		↓		∪		⋃ n-ary union
+keycode 89 =  KP_3		diamond		U21CC	      greaterthanequal	U230B		NoSymbol
+!				♦		⇌		≥		⌋
+! keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
 !								
 
 
