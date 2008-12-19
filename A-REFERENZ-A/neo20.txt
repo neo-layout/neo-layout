@@ -106,8 +106,8 @@ Zu den Gedankenstrichen usw. siehe
 Taste rechts neben der 0
         1 … 
 ┬─────┬ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│—   ╌│ 3 … 
-│    ‑│ 4 … 
+│— - ╌│ 3 … 
+│    ‑│ 4 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) (KP-Variante)
 ┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
@@ -131,17 +131,17 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 ┴──┬──┴
 
 ┬─────┬
-│„ / ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
+│„   ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
 │8 ‚ ⟨│ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│“ * ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
+│“ / ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
 │9 ‘ ⟩│ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
 ┬─────┬
-│” - ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
+│” * ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
 │0 ’ ₀│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 ┴──┬──┴
 
@@ -157,7 +157,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° • ¬│§ ‣ ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„ / ∞│“ * ∋│” - ∅│—   ╌│  ˵  │Backspace│
+│˜ ˇ ¯│° • ¬│§ ‣ ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„   ∞│“ / ∋│” * ∅│— - ╌│  ˵  │Backspace│
 │ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│    ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │Tab⇤    │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
@@ -214,7 +214,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │•│‣│№│⇞│·│£│¤│/│*│-│ │˵│ Back │
+│ ˇ │•│‣│№│⇞│·│£│¤│ │/│*│-│˵│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │ 4Lk│ │⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
