@@ -41,7 +41,7 @@ folgenden zweizeiligen Befehl eingeben (erstellt automatisch die ausführbare
 Datei auf dem USB-Stick – wobei /media/<USBSTICK> durch den echten Pfad des
 USB-Sticks ersetzt werden muss):
 
-  echo -e "#!/bin/sh\setxkbmap lv && xmodmap neo_de.xmodmap" > \
+  echo -e "#!/bin/sh\nsetxkbmap lv && xmodmap neo_de.xmodmap" > \
     /media/<USBSTICK>/autorun
 
 === Deaktivieren ===
