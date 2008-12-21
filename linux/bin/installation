@@ -2,19 +2,37 @@
 # Copyright 2008 Pascal Hauck <pascal.hauck@web.de>
 # Distributed under the terms of the GNU General Public License v3
 
+# ======= Installation =======
+# Um NEO auf Ihrem System zu (dauerhaft) zu installieren, genügt es, dieses Skript auszuführen
+# z.B. in der Konsole die folgenden beiden Zeilen eingeben:
+# chmod u+x installation
+# ./installation
+# Nun ist NEO auf Ihrem System dauerhaft installier
+# Ein Wechsel zurück zu QWERTZ ist jederzeit mit ›uiae‹ leicht möglich
+
+# Wenn NEO nicht automatisch nach dem Login gestartet werden soll, genügt es, die beiden Zeilen
+# # NEO:
+# asdf
+# in der Datei $HOME/.profile zu löschen
+# (siehe dazu auch den Abschnitt ›Deinstallation‹
+# ==============================
+
+
+# ======= Deinstallation =======
+# Um NEO wieder zu deinstallieren muss vor allem der Abschnitt ›#NEO:‹ in der .profile entfernt werden (2 Zeilen)
+# Das Verzeichnis $HOME/neo und die Datei $HOME/.neorc können einfach gelöscht werden 
+# ==============================
+
+
+# ======= Bemerkungen ==========
 # Dieses Skript ist eine rudimentäre Installation. Derzeit gibt es keine Konfigurationsmöglichkeit.
 # Es wird immer das Standardverzeichnis $HOME/neo verwendet
 # Bei mehrfacher Anwendung (trozt Warnung) werden Zeilen in der .profile doppelt erzeugt.
 # Es gibt keine graphische Installation
 # Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
 # Dieses Skript wird mit der Zeit verbessert werden.
-
-# ======= Deinstallation =======
-
-# Um NEO wieder zu deinstallieren muss vor allem der Abschnitt ›#NEO:‹ in der .profile entfernt werden (4 Zeilen)
-# Das Verzeichnis $HOME/neo und die Datei $HOME/.neorc können einfach gelöscht werden 
-
 # ==============================
+
 
 
 teil() {
@@ -1326,6 +1344,6 @@ NEO_CONSOLE_KEYMAP="$HOME/neo/neo" # if necessary add „.map“
 #neo: neorc --- Ende
 #neo: profile --- Beginn
 # Neo:
-asdf xmodmap
+asdf
 #neo: profile --- Ende
 
