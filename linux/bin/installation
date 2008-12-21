@@ -1,0 +1,1334 @@
+#!/bin/sh
+# Copyright 2008 Pascal Hauck <pascal.hauck@web.de>
+# Distributed under the terms of the GNU General Public License v3
+
+# Dieses Skript ist eine rudimentäre Installation. Derzeit gibt es keine Konfigurationsmöglichkeit.
+# Es wird immer das Standardverzeichnis $HOME/neo verwendet
+# Bei mehrfacher Anwendung (trozt Warnung) werden Zeilen in der .profile doppelt erzeugt.
+# Es gibt keine graphische Installation
+# Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
+# Dieses Skript wird mit der Zeit verbessert werden.
+
+# ======= Deinstallation =======
+
+# Um NEO wieder zu deinstallieren muss vor allem der Abschnitt ›#NEO:‹ in der .profile entfernt werden (4 Zeilen)
+# Das Verzeichnis $HOME/neo und die Datei $HOME/.neorc können einfach gelöscht werden 
+
+# ==============================
+
+
+teil() {
+	grep -A10000 "#neo: $1 --- Beginn" installation | grep -B10000 "#neo: $1 --- Ende" | grep -v "#neo:"
+}
+
+
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+	echo "No configuration file found. Installing NEO with xmodmap!"
+	mkdir $HOME/neo
+	teil xmodmap > $HOME/neo/neo_de.xmodmap
+	teil console > $HOME/neo/neo.map
+	teil asdf > $HOME/neo/asdf
+	chmod u+x $HOME/neo/asdf
+	ln -s $HOME/neo/asdf $HOME/bin
+	teil uiae > $HOME/neo/uiae
+	chmod u+x $HOME/neo/uiae
+	ln -s $HOME/neo/uiae $HOME/bin
+	teil neorc > $HOME/.neorc
+	teil profile > $HOME/neo/neo.profile
+	cd $HOME/neo
+	cat neo.profile >> $HOME/.profile
+	rm ./neo.profile
+	./asdf xmodmap
+	echo "To return to qwertz type ›uiae‹"
+	exit
+fi
+
+echo "There seems to exist an older NEO installation."
+echo "If you are sure you want to install NEO using this installation script, delete $HOME/.neorc and /etc/neo.conf"
+exit
+
+#neo: xmodmap --- Beginn
+!! ~/.xmodmap
+!! 
+!! German NEO-Layout
+!! adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
+!! inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
+!! Authors: 
+!!      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
+!!      Erik Streb <mail at erikstreb dot de>
+!!      Pascal Hauck <pascal dot hauck at web dot de>
+!! 
+!! Other Questions:
+!!      <mailinglist at neo-layout dot org>
+!! 
+!! $Revision: 1293 $, $Date: 2008-12-19 09:39:48 +0100 (Fr, 19 Dez 2008) $
+!! http://pebbles.schattenlauf.de/layout.php
+!! 
+!! To try the layout in this file, simply do xmodmap <file>.
+!! To load the layout in this file at X startup, simply store it as
+!! ~/.xmodmap
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Ebenen
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Ebene 1: normal
+! Ebene 2: Shift
+! Ebene 3: Mod3
+! Ebene 4: Mod4 (zum Markieren Shift+Mod4)
+! Ebene 5: Shift+Mod3
+! Ebene 6: Mod3+Mod4 (in dieser Reihenfolge!)
+! Ebene 7: wird (bis auf technisch bedingte Ausnahmen) nicht belegt
+! Multi_key=Compose (keine eigene Ebene): Mod3+Tab or right window key
+! Feststellen/Shift_Lock: Shift+Shift
+! Mod4_Lock: Mod4(rechts)+Mod4(links)
+
+! Reihenfolge der Ebenen in der Xmodmap:
+!            Ebene1  Ebene2  Ebene3  Ebene5  Ebene4  Ebene4+Sh  Ebene6 Ebene7
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Modifier definition
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+clear Lock
+clear Mod2
+! Mod2 war NumLock !
+clear Mod3
+clear Mod5
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Shift
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 50=left 62=right
+! Shift+Shift ergibt ein ShiftLock (wie Caps, wirkt aber auf alle Zeichen, nicht nur auf Großbuchstaben)
+! Der Lock lässt sich durch ein weiteres Shift lösen.
+! Eigentlich (siehe Referenz) sollte hier ein CapsLock stehen.
+keycode 50 =  Shift_L Shift_Lock
+keycode 62 =  Shift_R Shift_Lock
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Mod3
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 66=left 51=right
+! Make CapsLock an modifier called Mod3 (similar to AltGr) (Mode_switch or ISO_Group_Shift is for 3rd and 4th level)
+! Make former CapsLock and qwertz-# to Mode_switch or ISO_Group_Shift
+! Mod3(links) (=Qwertz-Caps) erlaubt nur 4 Ebenen
+! Ohne einen Eintrag in der zweiten Gruppe (=Ebene 3) ergäbe Mod3+Mod3=Group_Shift+Group_Shift=Gruppe 3=Ebene 6. Das ist nicht gewünscht.
+keycode 66 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
+keycode 51 =  ISO_Group_Shift ISO_Group_Shift ISO_First_Group  NoSymbol
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Mod4
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 94=left 113=right
+! Make the former AltGr and qwertz-< to Mod4 (ISO_Level3_Shift)
+! Mod4(rechts)+Mod4(links) lässt Mod4 einrasten (Mod4Lock)
+! das funktioniert nur in dieser Reihenfolge, da Mod4(rechts) (=Qwertz-AltGr) nur 4 Ebenen hat
+! Der Lock lässt sich durch ein weiteres Mod4 lösen.
+keysym less = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
+keysym ISO_Level3_Shift = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   ISO_Group_Shift  ISO_Level3_Lock  NoSymbol
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! window keys
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! keysym Super_L = Super_L
+! keycode 116 = Super_R
+keysym Super_R = Multi_key Multi_key
+! add Mod4 = Super_L
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! general Lock
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Einrasten über linke Win-Taste+Modifier, Lösen über nochmaliges Betätigen des Modifiers
+! Shift_Lock und Mo4_Lock funktionieren, Mod3_Lock lässt sich aber nicht mehr lösen!!!!
+! keycode 115 = ISO_Lock  NoSymbol
+! add Lock = ISO_Lock
+
+
+! add Mod3 = ISO_Group_Shift
+! add Mod5 = ISO_Level3_Shift
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! main keyboard
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Tab key
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 23 = Tab  ISO_Left_Tab  Multi_key  ISO_Level3_Lock
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Space key
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 65 = space  space  space  nobreakspace  KP_0  KP_0  U202F  NoSymbol
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! dead keys
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
+
+keycode 49 = dead_circumflex	dead_tilde	dead_abovering	dead_breve	dead_caron  Pointer_EnableKeys	dead_macron	NoSymbol
+! called T1	ˆ		˜		˚		˘		ˇ	   (keypad-mouse mode)	¯
+keycode 21 = dead_grave		NoSymbol	dead_diaeresis	U1FFE		NoSymbol	NoSymbol	NoSymbol	NoSymbol
+! called T2	`				¨		῾ dasia (asper)
+keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	     dead_doubleacute	NoSymbol	dead_abovedot	NoSymbol
+! called T3	´		¸		/		᾿ psili (lenis)	˝				˙
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The first row (number Row)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
+
+keycode 10 = 	1		degree		onesuperior	onesubscript	ordfeminine	NoSymbol	notsign		NoSymbol
+!				°		¹	  	₁		ª	  			¬
+keycode 11 = 	2		section		twosuperior	twosubscript	masculine	NoSymbol	logicalor	NoSymbol
+!				§		²	  	₂		º				∨
+keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logicaland	NoSymbol
+!				ℓ liter		³	  	₃		№				∧
+keycode 13 = 	4		guillemotright	U203A		dagger		Prior		Prior		downtack	NoSymbol
+!				»		›		†						⊥ perpendicular
+keycode 14 = 	5		guillemotleft	U2039		femalesymbol	periodcentered	NoSymbol	U2221		NoSymbol
+!				«		‹		♀		·				∡ angle sign
+keycode 15 = 	6		EuroSign	cent		malesymbol	sterling	NoSymbol	U2225		NoSymbol
+!				€		¢		♂		£				∥ parallel
+
+keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
+!				$		¥		κ		¤				→
+keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	NoSymbol	NoSymbol	infinity	NoSymbol
+!				„		‚		⟨ (bra)						∞
+keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	containsas	NoSymbol
+!				“		‘		⟩ (ket)		/		/		∋
+keycode 19 = 	0   rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Multiply	KP_Multiply	emptyset	NoSymbol
+!			”			’		₀		*		*		∅
+keycode 20 = minus		emdash		NoSymbol	U2011		KP_Subtract	KP_Subtract	hyphen		NoSymbol
+!		-		—				‑ non-breaking	-		-		­ soft hyphen 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
+
+keycode 24 = 	x		X		ellipsis	Greek_xi	U22EE		NoSymbol	Greek_XI	Greek_XI
+!						…		ξ		⋮				Ξ		Ξ
+keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	U2259		NoSymbol
+!						_								≙		≙
+keycode 26 = 	l		L		bracketleft	Greek_lambda	Up		Up		Greek_LAMBDA	Greek_LAMBDA
+!						[		λ						Λ		Λ
+keycode 27 = 	c		C		bracketright	Greek_chi	Delete		Delete		U2102		NoSymbol
+!						]		χ						ℂ komplex
+keycode 28 = 	w		W		asciicircum	Greek_omega	Insert		Insert		Greek_OMEGA	Greek_OMEGA
+!						^		ω						Ω		Ω
+
+keycode 29 = 	k		K		exclam		U03F0		exclamdown	NoSymbol	radical		NoSymbol
+!						!		ϰ Greek_kappa	¡				√
+keycode 30 = 	h		H		less		Greek_psi	KP_7		KP_7		Greek_PSI	Greek_PSI
+!						<		ψ						Ψ		Ψ
+keycode 31 = 	g		G		greater		Greek_gamma	KP_8		KP_8		Greek_GAMMA	Greek_GAMMA
+!						>		γ						Γ		Γ
+keycode 32 = 	f		F		equal		Greek_phi	KP_9		KP_9		Greek_PHI	Greek_PHI
+!						=		φ 						Φ		Φ
+keycode 33 = 	q		Q		ampersand	U03D5		KP_Add		KP_Add		U211A		NoSymbol
+!						&		ϕ Greek_phi	+		+		ℚ rational
+keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  NoSymbol	NoSymbol	jot		NoSymbol
+!	     	ß		ẞ Capital ß	ſ long s	ς						∘ ring operator
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The home row (middle row)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
+
+keycode 38 = 	u		U		backslash	NoSymbol	Home		Home		U222E		NoSymbol
+!						\								∮ contour integral
+keycode 39 = 	i		I		slash		Greek_iota	Left		Left		integral	NoSymbol
+!						/		ι						∫
+keycode 40 = 	a		A		braceleft	Greek_alpha	Down		Down		U2200		NoSymbol
+!						{		α						∀ for all
+keycode 41 = 	e		E		braceright	Greek_epsilon	Right		Right		U2203		NoSymbol
+!						}		ε						∃ there exists
+keycode 42 = 	o		O		asterisk	Greek_omicron	End		End		elementof	NoSymbol
+!						*		ο						∈
+
+keycode 43 = 	s		S		question	Greek_sigma	questiondown	NoSymbol	Greek_SIGMA	Greek_SIGMA
+!						?		σ		¿				Σ		Σ
+keycode 44 = 	n		N		parenleft	Greek_nu	KP_4		KP_4		U2115		NoSymbol
+!						(		ν						ℕ natural
+keycode 45 = 	r		R		parenright	U03F1		KP_5		KP_5		U211D		NoSymbol
+!						)		ϱ Greek_rho					ℝ real
+keycode 46 = 	t		T		minus		Greek_tau	KP_6		KP_6		partialderivative
+!						-		τ						∂
+keycode 47 = 	d		D		colon		Greek_delta	KP_Separator	NoSymbol	Greek_DELTA	Greek_DELTA
+!						:		δ		,/.				Δ		Δ
+keycode 48 = 	y		Y		at		Greek_upsilon	KP_Decimal	NoSymbol	nabla		NoSymbol
+!						@		υ		./,				∇
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
+
+keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		U211C		NoSymbol
+!		ü		Ü		#								ℜ real part
+keycode 53 = odiaeresis		Odiaeresis	dollar		NoSymbol	Tab		ISO_Left_Tab	U2111		NoSymbol
+!		ö		Ö		$								ℑ imaginary part
+keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Next		Next		U2135		NoSymbol
+!		ä		Ä		|		η						ℵ alef symbol
+keycode 55 = 	p		P		asciitilde	Greek_pi	Return		Return		Greek_PI	Greek_PI
+!						~		π						Π		Π
+keycode 56 = 	z		Z		grave		Greek_zeta	Undo		Redo		U2124		NoSymbol
+!						`		ζ						ℤ integers
+
+keycode 57 = 	b		B		plus		Greek_beta	colon		NoSymbol	U21D0		NoSymbol
+!						+		β		:				⇐
+keycode 58 = 	m		M		percent		Greek_mu	KP_1		KP_1		ifonlyif	NoSymbol
+!						%		μ						⇔
+keycode 59 = comma		endash		quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
+!		,		–		"		ρ						⇒ implies 
+keycode 60 = period	   enfilledcircbullet	apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
+!		.		•		'		ϑ Greek_theta					Θ
+keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	variation	NoSymbol
+!						;		θ		;				∝ proportional to
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Keypad
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The uppest row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
+
+keycode 77  = Tab 		ISO_Left_Tab	equal		approxeq	identical	NoSymbol
+!						=		≈ almost equal	≡ identical to
+keysym KP_Divide = KP_Divide	KP_Divide	division	U2300		U2223		NoSymbol
+!		/		/		÷		⌀ diameter	∣ divides
+keycode 63  = KP_Multiply	KP_Multiply	U22C5		U2299		U2297		NoSymbol
+!		*		*		⋅ dot		⊙ cirled dot	⊗ circled times
+keycode 82  = KP_Subtract	KP_Subtract	U2212		U2296		U2238		NoSymbol
+!		-		-		− real minus	⊖ cirled minus	∸ dot minus
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The upper row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
+
+keycode 79 =  KP_7		U2714		U2195		U226A		upstile		NoSymbol
+!				✔ check mark	↕ arrow		≪ much less	⌈
+keycode 80 =  KP_8		U2718		uparrow		intersection	U22C2		NoSymbol
+!				✘ ballot x	↑		∩		⋂ n-ary intersection
+keycode 81 =  KP_9		NoSymbol	U20D7		U226B		U2309		NoSymbol
+!						vector		≫ much greater	⌉
+keycode 86 =  KP_Add		KP_Add		plusminus	U2295		U2214		NoSymbol
+!		+		+		±		circled plus	dot plus
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The middle row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
+
+keycode 83 =  KP_4		club		leftarrow	includedin	U2286		NoSymbol
+!				♣		←		⊂		⊆
+keycode 84 =  KP_5		EuroSign	brokenbar	U22B6 		U22B7		NoSymbol
+!				€		¦		⊶ original of	⊷ image of
+keycode 85 =  KP_6		U2023		rightarrow	includes	U2287		NoSymbol
+!				‣		→		⊃		⊇
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lower row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
+
+keycode 87 =  KP_1		diamond		U2194		lessthanequal	downstile	NoSymbol
+!				♦		↔ arrow		≤		⌊
+keycode 88 =  KP_2		heart		downarrow	union		U22C3		NoSymbol
+!				♥		↓		∪		⋃ n-ary union
+keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol
+!				♠		⇌		≥		⌋
+! keycode 108 = KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter	KP_Enter
+!								
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! The lowest row
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7
+
+keycode 90 = KP_0		U2423		percent		U2030		U25A1		NoSymbol
+!				␣ space sign	%		‰ per mille	□ white square
+keycode 91 = comma		period		KP_Separator	minutes		seconds		NoSymbol
+!		,		.		,/.		′ min,feets	″ sec,inches
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Bemerkungen
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! 1.) Ebene 6 (hier: der 7. Eintrag) erreicht man über ISO_Group_Shift+ISO_Group_Shift
+!     (bzw. mode_switch+mode_switch) und über keine andere mir bekannte Kombination. Insbesondere legt
+!     ISO_Level3_Shift Level3 (Ebene 4, hier: Eintrag 5) fest, verschiebt also nicht. Darum kann man
+!     ISO_Level3_Shift nur mit Shift sinnvoll kombinieren. Daraus resultiert, dass Ebene 6 nur über
+!     Mod3+Mod4 (in dieser Reihenfolge!) erreicht werden kann.
+!
+! 2.) Die KP_-Einträge ermöglichen die Steuerung des Mauscursors mit der Tastatur.
+!     Hierzu wird mittels Mod4+ß dieser Betriebsmodus ein- und später wieder ausgeschaltet.
+!     Die Steuerung des Cursors kann über den Ziffernblock (Ebene 4, eventuell mit
+!     eingerastetem Mod4) erfolgen.
+#neo: xmodmap --- Ende
+
+#neo: console --- Beginn
+! neo.map - german NEO keyboard layout
+! 2008 Pascal Hauck, <pascal.hauck@web.de>
+!
+! Diese Datei ist experimentell!
+! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
+! anders verhalten als erwartet, sollte dies auf der Mailingliste
+! der NEO-Tastaturbelegung gemeldet werden.
+!
+! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap
+! erzeugt.
+!
+
+keymaps 0-18
+strings as usual
+compose as usual
+! --------------------------------------------------------------------------
+! Modifier definitions
+! --------------------------------------------------------------------------
+                   keycode  42 = Shift           
+#          shift   keycode  42 = Caps_Lock       
+                   keycode  54 = Shift           
+#          shift   keycode  54 = Caps_Lock       
+                   keycode  58 = AltGr           
+#          altgr   keycode  58 = AltGr_Lock      
+                   keycode  43 = AltGr           
+#          altgr   keycode  43 = AltGr_Lock      
+                   keycode  86 = ShiftL          
+#          shiftl  keycode  86 = ShiftL_Lock     
+                   keycode 100 = ShiftL          
+#          shiftl  keycode 100 = ShiftL_Lock     
+
+                   keycode   1 = Escape           Escape          Escape          Escape          
+           shiftl  keycode  57 = Escape           
+   shift   shiftl  keycode  57 = Escape           
+   altgr   shiftl  keycode  57 = Escape           
+           alt     keycode   1 = Meta_Escape     
+   shift   altgr   keycode   1 = Meta_Escape     
+
+! --------------------------------------------------------------------------
+! function keys
+! --------------------------------------------------------------------------
+! ----Backspace-------------------------------------------------------------
+                   keycode  14 = Delete           Delete          
+           alt	   keycode  14 = Meta_Delete     
+   shift   alt     keycode  14 = Meta_Delete     
+! ----Return Enter----------------------------------------------------------
+                   keycode  28 = Return          
+           alt     keycode  28 = Meta_Control_m  
+                   keycode  96 = KP_Enter        
+           altgr   keycode  96 = Hex_F           
+! ----Tab-------------------------------------------------------------------
+                   keycode  15 = Tab              Meta_Tab        
+           alt     keycode  15 = Meta_Tab        
+           altgr   keycode  15 = Compose
+! ----Control Alt-----------------------------------------------------------
+                   keycode  29 = Control         
+                   keycode  97 = Control         
+                   keycode  56 = Alt             
+! ----Prt SclLk Pause-------------------------------------------------------
+                   keycode  99 =
+           control keycode  99 = Control_backslash
+           alt     keycode  99 = Control_backslash
+   control alt	   keycode  99 = Meta_Control_backslash
+                   keycode  70 = Scroll_Lock      Show_Memory      Show_Registers   Show_State      
+           alt     keycode  70 = Scroll_Lock     
+                   keycode 119 = Pause           
+! ----Home block------------------------------------------------------------
+                   keycode 102 = Find            
+                   keycode 104 = Prior           
+           shift   keycode 104 = Scroll_Backward 
+                   keycode 107 = Select          
+                   keycode 109 = Next            
+           shift   keycode 109 = Scroll_Forward  
+                   keycode 111 = Remove          
+   altgr   control keycode 111 = Boot            
+   control alt     keycode 111 = Boot            
+                   keycode 110 = Insert          
+! ----Navigation block------------------------------------------------------
+                   keycode 103 = Up              
+           alt     keycode 103 = KeyboardSignal  
+                   keycode 105 = Left            
+           alt     keycode 105 = Decr_Console    
+                   keycode 106 = Right           
+           alt     keycode 106 = Incr_Console    
+                   keycode 108 = Down            
+! ----Win keys--------------------------------------------------------------
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     
+! ----menue key-------------------------------------------------------------
+                   keycode 127 = Compose         F100
+! ----F-keys----------------------------------------------------------------
+                   keycode  59 = F1               F13              Console_13       F25             
+           alt     keycode  59 = Console_1       
+   control alt     keycode  59 = Console_1       
+                   keycode  60 = F2               F14              Console_14       F26             
+           alt     keycode  60 = Console_2       
+   control alt     keycode  60 = Console_2       
+                   keycode  61 = F3               F15              Console_15       F27             
+           alt     keycode  61 = Console_3       
+   control alt     keycode  61 = Console_3       
+                   keycode  62 = F4               F16              Console_16       F28             
+           alt     keycode  62 = Console_4       
+   control alt     keycode  62 = Console_4       
+                   keycode  63 = F5               F17              Console_17       F29             
+           alt     keycode  63 = Console_5       
+   control alt     keycode  63 = Console_5       
+                   keycode  64 = F6               F18              Console_18       F30             
+           alt     keycode  64 = Console_6       
+   control alt     keycode  64 = Console_6       
+                   keycode  65 = F7               F19              Console_19       F31             
+           alt     keycode  65 = Console_7       
+   control alt     keycode  65 = Console_7       
+                   keycode  66 = F8               F20              Console_20       F32             
+           alt     keycode  66 = Console_8       
+   control alt     keycode  66 = Console_8       
+                   keycode  67 = F9               F21              Console_21       F33             
+           alt     keycode  67 = Console_9       
+   control alt     keycode  67 = Console_9       
+                   keycode  68 = F10              F22              Console_22       F34             
+           alt     keycode  68 = Console_10      
+   control alt     keycode  68 = Console_10      
+                   keycode  87 = F11              F23              Console_23       F35             
+           alt     keycode  87 = Console_11      
+   control alt     keycode  87 = Console_11      
+                   keycode  88 = F12              F24              Console_24       F36             
+           alt     keycode  88 = Console_12      
+   control alt     keycode  88 = Console_12      
+! ----unknown keys from defkeymap.map---------------------------------------
+                   keycode  84 = Last_Console    
+                   keycode  89 =
+                   keycode  90 =
+                   keycode  91 =
+                   keycode  92 =
+                   keycode  93 =
+                   keycode  94 =
+                   keycode  95 =
+                   keycode 101 = Break           
+                   keycode 112 = Macro           
+   altgr   control keycode 112 = VoidSymbol      
+   shift   alt     keycode 112 = VoidSymbol      
+   altgr   alt     keycode 112 = VoidSymbol      
+                   keycode 113 = F13             
+   altgr   control keycode 113 = VoidSymbol      
+   shift   alt     keycode 113 = VoidSymbol      
+   altgr   alt     keycode 113 = VoidSymbol      
+                   keycode 114 = F14             
+   altgr   control keycode 114 = VoidSymbol      
+   shift   alt     keycode 114 = VoidSymbol      
+   altgr   alt     keycode 114 = VoidSymbol      
+                   keycode 115 = Help            
+   altgr   control keycode 115 = VoidSymbol      
+   shift   alt     keycode 115 = VoidSymbol      
+   altgr   alt     keycode 115 = VoidSymbol      
+                   keycode 116 = Do              
+   altgr   control keycode 116 = VoidSymbol      
+   shift   alt     keycode 116 = VoidSymbol      
+   altgr   alt     keycode 116 = VoidSymbol      
+                   keycode 117 = F17             
+   altgr   control keycode 117 = VoidSymbol      
+   shift   alt     keycode 117 = VoidSymbol      
+   altgr   alt     keycode 117 = VoidSymbol      
+                   keycode 118 = KP_MinPlus      
+   altgr   control keycode 118 = VoidSymbol      
+   shift   alt     keycode 118 = VoidSymbol      
+   altgr   alt     keycode 118 = VoidSymbol      
+                   keycode 119 = Pause
+                   keycode 120 =
+                   keycode 121 =
+                   keycode 122 =
+                   keycode 123 =
+                   keycode 124 =
+
+
+! ----Space key-------------------------------------------------------------
+                   keycode  57 = space                 space                 space                 nobreakspace          
+           shiftl  keycode  57 = KP_0                  
+   shift   shiftl  keycode  57 = KP_0                  
+   altgr   shiftl  keycode  57 = U+202F                
+
+! ----dead keys-------------------------------------------------------------
+                   keycode  41 = dead_circumflex       dead_caron            dead_breve            VoidSymbol            
+           shiftl  keycode  41 = VoidSymbol            
+   shift   shiftl  keycode  41 = VoidSymbol            
+   altgr   shiftl  keycode  41 = VoidSymbol            
+                   keycode  13 = dead_acute            dead_grave            dead_cedilla          VoidSymbol            
+           shiftl  keycode  13 = U+0307                
+   shift   shiftl  keycode  13 = VoidSymbol            
+   altgr   shiftl  keycode  13 = U+030a                
+                   keycode  27 = dead_tilde            U+0304                dead_diaeresis        VoidSymbol            
+           shiftl  keycode  27 = dead_doubleacute      
+   shift   shiftl  keycode  27 = VoidSymbol            
+   altgr   shiftl  keycode  27 = VoidSymbol            
+
+! --------------------------------------------------------------------------
+! Row 1 (number row)
+! --------------------------------------------------------------------------
+                   keycode   2 = one                   degree                onesuperior           U+2081                
+           shiftl  keycode   2 = U+2022                
+   shift   shiftl  keycode   2 = VoidSymbol            
+   altgr   shiftl  keycode   2 = notsign               
+                   keycode   3 = two                   U+2116                twosuperior           U+2082                
+           shiftl  keycode   3 = U+2023                
+   shift   shiftl  keycode   3 = VoidSymbol            
+   altgr   shiftl  keycode   3 = U+2228                
+                   keycode   4 = three                 section               threesuperior         U+2083                
+           shiftl  keycode   4 = VoidSymbol            
+   shift   shiftl  keycode   4 = VoidSymbol            
+   altgr   shiftl  keycode   4 = U+2227                
+                   keycode   5 = four                  guillemotright        U+203A                U+2113                
+           shiftl  keycode   5 = Prior                 
+   shift   shiftl  keycode   5 = Prior                 
+   altgr   shiftl  keycode   5 = U+22a4                
+                   keycode   6 = five                  guillemotleft         U+2039                U+2640                
+           shiftl  keycode   6 = VoidSymbol            
+   shift   shiftl  keycode   6 = VoidSymbol            
+   altgr   shiftl  keycode   6 = U+2221                
+                   keycode   7 = six                   U+20ac                cent                  U+2642                
+           shiftl  keycode   7 = sterling              
+   shift   shiftl  keycode   7 = VoidSymbol            
+   altgr   shiftl  keycode   7 = U+2225                
+                   keycode   8 = seven                 dollar                yen                   U+03ba                
+           shiftl  keycode   8 = currency              
+   shift   shiftl  keycode   8 = VoidSymbol            
+   altgr   shiftl  keycode   8 = U+21C8                
+                   keycode   9 = eight                 U+201e                U+201a                U+2329                
+           shiftl  keycode   9 = KP_Divide             
+   shift   shiftl  keycode   9 = KP_Divide             
+   altgr   shiftl  keycode   9 = U+21C5                
+                   keycode  10 = nine                  U+201c                U+2018                U+232a                
+           shiftl  keycode  10 = KP_Multiply           
+   shift   shiftl  keycode  10 = KP_Multiply           
+   altgr   shiftl  keycode  10 = U+220B                
+                   keycode  11 = zero                  U+201d                U+2019                U+2080                
+           shiftl  keycode  11 = KP_Subtract           
+   shift   shiftl  keycode  11 = KP_Subtract           
+   altgr   shiftl  keycode  11 = U+2205                
+                   keycode  12 = minus                 U+2013                U+2014                U+2011                
+           shiftl  keycode  12 = VoidSymbol            
+   shift   shiftl  keycode  12 = VoidSymbol            
+   altgr   shiftl  keycode  12 = hyphen                
+
+! --------------------------------------------------------------------------
+! Row 2 (upper row)
+! --------------------------------------------------------------------------
+                   keycode  16 = x                     X                     U+2026                U+03be                
+           shiftl  keycode  16 = U+22EE                
+   shift   shiftl  keycode  16 = VoidSymbol            
+   altgr   shiftl  keycode  16 = U+039E                
+           control keycode  16 = Control_x                     
+   shift   control keycode  16 = Control_x                     
+           alt     keycode  16 = Meta_x                     
+   shift   alt     keycode  16 = Meta_X                     
+   control alt     keycode  16 = Meta_Control_x                     
+                   keycode  17 = v                     V                     underscore            VoidSymbol            
+           shiftl  keycode  17 = BackSpace             
+   shift   shiftl  keycode  17 = BackSpace             
+   altgr   shiftl  keycode  17 = U+2259                
+           control keycode  17 = Control_v                     
+   shift   control keycode  17 = Control_v                     
+           alt     keycode  17 = Meta_v                     
+   shift   alt     keycode  17 = Meta_V                     
+   control alt     keycode  17 = Meta_Control_v                     
+                   keycode  18 = l                     L                     bracketleft           U+03bb                
+           shiftl  keycode  18 = Up                    
+   shift   shiftl  keycode  18 = Up                    
+   altgr   shiftl  keycode  18 = U+039B                
+           control keycode  18 = Control_l                     
+   shift   control keycode  18 = Control_l                     
+           alt     keycode  18 = Meta_l                     
+   shift   alt     keycode  18 = Meta_L                     
+   control alt     keycode  18 = Meta_Control_l                     
+                   keycode  19 = c                     C                     bracketright          U+03c7                
+           shiftl  keycode  19 = Remove                
+   shift   shiftl  keycode  19 = Remove                
+   altgr   shiftl  keycode  19 = U+2102                
+           control keycode  19 = Control_c                     
+   shift   control keycode  19 = Control_c                     
+           alt     keycode  19 = Meta_c                     
+   shift   alt     keycode  19 = Meta_C                     
+   control alt     keycode  19 = Meta_Control_c                     
+                   keycode  20 = w                     W                     asciicircum           U+03c9                
+           shiftl  keycode  20 = Insert                
+   shift   shiftl  keycode  20 = Insert                
+   altgr   shiftl  keycode  20 = U+03A9                
+           control keycode  20 = Control_w                     
+   shift   control keycode  20 = Control_w                     
+           alt     keycode  20 = Meta_w                     
+   shift   alt     keycode  20 = Meta_W                     
+   control alt     keycode  20 = Meta_Control_w                     
+                   keycode  21 = k                     K                     exclam                U+03F0                
+           shiftl  keycode  21 = exclamdown            
+   shift   shiftl  keycode  21 = VoidSymbol            
+   altgr   shiftl  keycode  21 = U+221a                
+           control keycode  21 = Control_k                     
+   shift   control keycode  21 = Control_k                     
+           alt     keycode  21 = Meta_k                     
+   shift   alt     keycode  21 = Meta_K                     
+   control alt     keycode  21 = Meta_Control_k                     
+                   keycode  22 = h                     H                     less                  U+03c8                
+           shiftl  keycode  22 = KP_7                  
+   shift   shiftl  keycode  22 = KP_7                  
+   altgr   shiftl  keycode  22 = U+03A8                
+           control keycode  22 = Control_h                     
+   shift   control keycode  22 = Control_h                     
+           alt     keycode  22 = Meta_h                     
+   shift   alt     keycode  22 = Meta_H                     
+   control alt     keycode  22 = Meta_Control_h                     
+                   keycode  23 = g                     G                     greater               U+03b3                
+           shiftl  keycode  23 = KP_8                  
+   shift   shiftl  keycode  23 = KP_8                  
+   altgr   shiftl  keycode  23 = U+0393                
+           control keycode  23 = Control_g                     
+   shift   control keycode  23 = Control_g                     
+           alt     keycode  23 = Meta_g                     
+   shift   alt     keycode  23 = Meta_G                     
+   control alt     keycode  23 = Meta_Control_g                     
+                   keycode  24 = f                     F                     equal                 U+03c6                
+           shiftl  keycode  24 = KP_9                  
+   shift   shiftl  keycode  24 = KP_9                  
+   altgr   shiftl  keycode  24 = U+03A6                
+           control keycode  24 = Control_f                     
+   shift   control keycode  24 = Control_f                     
+           alt     keycode  24 = Meta_f                     
+   shift   alt     keycode  24 = Meta_F                     
+   control alt     keycode  24 = Meta_Control_f                     
+                   keycode  25 = q                     Q                     ampersand             U+03D5                
+           shiftl  keycode  25 = KP_Add                
+   shift   shiftl  keycode  25 = KP_Add                
+   altgr   shiftl  keycode  25 = U+211A                
+           control keycode  25 = Control_q                     
+   shift   control keycode  25 = Control_q                     
+           alt     keycode  25 = Meta_q                     
+   shift   alt     keycode  25 = Meta_Q                     
+   control alt     keycode  25 = Meta_Control_q                     
+                   keycode  26 = ssharp                U+1E9E                U+017F                U+03c2                
+           shiftl  keycode  26 = VoidSymbol            
+   shift   shiftl  keycode  26 = VoidSymbol            
+   altgr   shiftl  keycode  26 = U+2218                
+
+! --------------------------------------------------------------------------
+! Row 3 (home row, middle row)
+! --------------------------------------------------------------------------
+                   keycode  30 = u                     U                     backslash             VoidSymbol            
+           shiftl  keycode  30 = Home                  
+   shift   shiftl  keycode  30 = Home                  
+   altgr   shiftl  keycode  30 = U+222E                
+           control keycode  30 = Control_u                     
+   shift   control keycode  30 = Control_u                     
+           alt     keycode  30 = Meta_u                     
+   shift   alt     keycode  30 = Meta_U                     
+   control alt     keycode  30 = Meta_Control_u                     
+                   keycode  31 = i                     I                     slash                 U+03b9                
+           shiftl  keycode  31 = Left                  
+   shift   shiftl  keycode  31 = Left                  
+   altgr   shiftl  keycode  31 = U+222b                
+           control keycode  31 = Control_i                     
+   shift   control keycode  31 = Control_i                     
+           alt     keycode  31 = Meta_i                     
+   shift   alt     keycode  31 = Meta_I                     
+   control alt     keycode  31 = Meta_Control_i                     
+                   keycode  32 = a                     A                     braceleft             U+03b1                
+           shiftl  keycode  32 = Down                  
+   shift   shiftl  keycode  32 = Down                  
+   altgr   shiftl  keycode  32 = U+2200                
+           control keycode  32 = Control_a                     
+   shift   control keycode  32 = Control_a                     
+           alt     keycode  32 = Meta_a                     
+   shift   alt     keycode  32 = Meta_A                     
+   control alt     keycode  32 = Meta_Control_a                     
+                   keycode  33 = e                     E                     braceright            U+03b5                
+           shiftl  keycode  33 = Right                 
+   shift   shiftl  keycode  33 = Right                 
+   altgr   shiftl  keycode  33 = U+2203                
+           control keycode  33 = Control_e                     
+   shift   control keycode  33 = Control_e                     
+           alt     keycode  33 = Meta_e                     
+   shift   alt     keycode  33 = Meta_E                     
+   control alt     keycode  33 = Meta_Control_e                     
+                   keycode  34 = o                     O                     asterisk              U+03bf                
+           shiftl  keycode  34 = End                   
+   shift   shiftl  keycode  34 = End                   
+   altgr   shiftl  keycode  34 = U+2208                
+           control keycode  34 = Control_o                     
+   shift   control keycode  34 = Control_o                     
+           alt     keycode  34 = Meta_o                     
+   shift   alt     keycode  34 = Meta_O                     
+   control alt     keycode  34 = Meta_Control_o                     
+                   keycode  35 = s                     S                     question              U+03c3                
+           shiftl  keycode  35 = questiondown          
+   shift   shiftl  keycode  35 = VoidSymbol            
+   altgr   shiftl  keycode  35 = U+03A3                
+           control keycode  35 = Control_s                     
+   shift   control keycode  35 = Control_s                     
+           alt     keycode  35 = Meta_s                     
+   shift   alt     keycode  35 = Meta_S                     
+   control alt     keycode  35 = Meta_Control_s                     
+                   keycode  36 = n                     N                     parenleft             U+03bd                
+           shiftl  keycode  36 = KP_4                  
+   shift   shiftl  keycode  36 = KP_4                  
+   altgr   shiftl  keycode  36 = U+2115                
+           control keycode  36 = Control_n                     
+   shift   control keycode  36 = Control_n                     
+           alt     keycode  36 = Meta_n                     
+   shift   alt     keycode  36 = Meta_N                     
+   control alt     keycode  36 = Meta_Control_n                     
+                   keycode  37 = r                     R                     parenright            U+03F1                
+           shiftl  keycode  37 = KP_5                  
+   shift   shiftl  keycode  37 = KP_5                  
+   altgr   shiftl  keycode  37 = U+211D                
+           control keycode  37 = Control_r                     
+   shift   control keycode  37 = Control_r                     
+           alt     keycode  37 = Meta_r                     
+   shift   alt     keycode  37 = Meta_R                     
+   control alt     keycode  37 = Meta_Control_r                     
+                   keycode  38 = t                     T                     minus                 U+03c4                
+           shiftl  keycode  38 = KP_6                  
+   shift   shiftl  keycode  38 = KP_6                  
+   altgr   shiftl  keycode  38 = U+2202                
+           control keycode  38 = Control_t                     
+   shift   control keycode  38 = Control_t                     
+           alt     keycode  38 = Meta_t                     
+   shift   alt     keycode  38 = Meta_T                     
+   control alt     keycode  38 = Meta_Control_t                     
+                   keycode  39 = d                     D                     colon                 U+03b4                
+           shiftl  keycode  39 = comma                 
+   shift   shiftl  keycode  39 = VoidSymbol            
+   altgr   shiftl  keycode  39 = U+0394                
+           control keycode  39 = Control_d                     
+   shift   control keycode  39 = Control_d                     
+           alt     keycode  39 = Meta_d                     
+   shift   alt     keycode  39 = Meta_D                     
+   control alt     keycode  39 = Meta_Control_d                     
+                   keycode  40 = y                     Y                     at                    U+03c5                
+           shiftl  keycode  40 = period                
+   shift   shiftl  keycode  40 = VoidSymbol            
+   altgr   shiftl  keycode  40 = U+2207                
+           control keycode  40 = Control_y                     
+   shift   control keycode  40 = Control_y                     
+           alt     keycode  40 = Meta_y                     
+   shift   alt     keycode  40 = Meta_Y                     
+   control alt     keycode  40 = Meta_Control_y                     
+
+! --------------------------------------------------------------------------
+! Row 4 (lower row)
+! --------------------------------------------------------------------------
+                   keycode  44 = udiaeresis            Udiaeresis            numbersign            VoidSymbol            
+           shiftl  keycode  44 = Escape                
+   shift   shiftl  keycode  44 = Escape                
+   altgr   shiftl  keycode  44 = U+211C                
+                   keycode  45 = odiaeresis            Odiaeresis            dollar                VoidSymbol            
+           shiftl  keycode  45 = Tab                   
+   shift   shiftl  keycode  45 = Meta_Tab              
+   altgr   shiftl  keycode  45 = U+2111                
+                   keycode  46 = adiaeresis            Adiaeresis            bar                   U+03b7                
+           shiftl  keycode  46 = Next                  
+   shift   shiftl  keycode  46 = Next                  
+   altgr   shiftl  keycode  46 = U+2135                
+                   keycode  47 = p                     P                     asciitilde            U+03c0                
+           shiftl  keycode  47 = Return                
+   shift   shiftl  keycode  47 = Return                
+   altgr   shiftl  keycode  47 = U+03A0                
+           control keycode  47 = Control_p                     
+   shift   control keycode  47 = Control_p                     
+           alt     keycode  47 = Meta_p                     
+   shift   alt     keycode  47 = Meta_P                     
+   control alt     keycode  47 = Meta_Control_p                     
+                   keycode  48 = z                     Z                     grave                 U+03b6                
+           shiftl  keycode  48 = VoidSymbol            
+   shift   shiftl  keycode  48 = VoidSymbol            
+   altgr   shiftl  keycode  48 = U+2124                
+           control keycode  48 = Control_z                     
+   shift   control keycode  48 = Control_z                     
+           alt     keycode  48 = Meta_z                     
+   shift   alt     keycode  48 = Meta_Z                     
+   control alt     keycode  48 = Meta_Control_z                     
+                   keycode  49 = b                     B                     plus                  U+03b2                
+           shiftl  keycode  49 = colon                 
+   shift   shiftl  keycode  49 = VoidSymbol            
+   altgr   shiftl  keycode  49 = U+21D0                
+           control keycode  49 = Control_b                     
+   shift   control keycode  49 = Control_b                     
+           alt     keycode  49 = Meta_b                     
+   shift   alt     keycode  49 = Meta_B                     
+   control alt     keycode  49 = Meta_Control_b                     
+                   keycode  50 = m                     M                     percent               U+03bc                
+           shiftl  keycode  50 = KP_1                  
+   shift   shiftl  keycode  50 = KP_1                  
+   altgr   shiftl  keycode  50 = U+21d4                
+           control keycode  50 = Control_m                     
+   shift   control keycode  50 = Control_m                     
+           alt     keycode  50 = Meta_m                     
+   shift   alt     keycode  50 = Meta_M                     
+   control alt     keycode  50 = Meta_Control_m                     
+                   keycode  51 = comma                 VoidSymbol            quotedbl              U+03c1                
+           shiftl  keycode  51 = KP_2                  
+   shift   shiftl  keycode  51 = KP_2                  
+   altgr   shiftl  keycode  51 = U+21D2                
+                   keycode  52 = period                VoidSymbol            apostrophe            U+03D1                
+           shiftl  keycode  52 = KP_3                  
+   shift   shiftl  keycode  52 = KP_3                  
+   altgr   shiftl  keycode  52 = U+0398                
+                   keycode  53 = j                     J                     semicolon             U+03b8                
+           shiftl  keycode  53 = semicolon             
+   shift   shiftl  keycode  53 = VoidSymbol            
+   altgr   shiftl  keycode  53 = U+221d                
+           control keycode  53 = Control_j                     
+   shift   control keycode  53 = Control_j                     
+           alt     keycode  53 = Meta_j                     
+   shift   alt     keycode  53 = Meta_J                     
+   control alt     keycode  53 = Meta_Control_j                     
+
+! --------------------------------------------------------------------------
+! Keypad Row 1 (uppest row)
+! --------------------------------------------------------------------------
+                   keycode  69 = Tab                   Meta_Tab              equal                 U+2248                
+           shiftl  keycode  69 = U+2260                
+   shift   shiftl  keycode  69 = VoidSymbol            
+   altgr   shiftl  keycode  69 = U+2261                
+                   keycode  98 = KP_Divide             KP_Divide             division              U+2223                
+           shiftl  keycode  98 = U+2300                
+   shift   shiftl  keycode  98 = VoidSymbol            
+   altgr   shiftl  keycode  98 = U+2044                
+                   keycode  55 = KP_Multiply           KP_Multiply           U+22C5                multiply              
+           shiftl  keycode  55 = U+2299                
+   shift   shiftl  keycode  55 = VoidSymbol            
+   altgr   shiftl  keycode  55 = U+2297                
+                   keycode  74 = KP_Subtract           KP_Subtract           U+2212                U+2216                
+           shiftl  keycode  74 = U+2296                
+   shift   shiftl  keycode  74 = VoidSymbol            
+   altgr   shiftl  keycode  74 = U+2238                
+
+! --------------------------------------------------------------------------
+! Keypad Row 2 (upper row)
+! --------------------------------------------------------------------------
+                   keycode  71 = KP_7                  U+2714                U+2195                U+230a                
+           shiftl  keycode  71 = Home                  
+   shift   shiftl  keycode  71 = Home                  
+   altgr   shiftl  keycode  71 = U+2308                
+                   keycode  72 = KP_8                  U+2718                U+2191                U+2229                
+           shiftl  keycode  72 = Up                    
+   shift   shiftl  keycode  72 = Up                    
+   altgr   shiftl  keycode  72 = U+22C2                
+                   keycode  73 = KP_9                  U+2020                U+20D7                U+230B                
+           shiftl  keycode  73 = Prior                 
+   shift   shiftl  keycode  73 = Prior                 
+   altgr   shiftl  keycode  73 = U+2309                
+                   keycode  78 = KP_Add                KP_Add                plusminus             U+2213                
+           shiftl  keycode  78 = U+2295                
+   shift   shiftl  keycode  78 = VoidSymbol            
+   altgr   shiftl  keycode  78 = U+2214                
+
+! --------------------------------------------------------------------------
+! Keypad Row 3 (home row, middle row)
+! --------------------------------------------------------------------------
+                   keycode  75 = KP_4                  U+2663                U+2190                U+2282                
+           shiftl  keycode  75 = Left                  
+   shift   shiftl  keycode  75 = Left                  
+   altgr   shiftl  keycode  75 = U+2286                
+                   keycode  76 = KP_5                  U+20ac                U+221e                U+22B6                
+           shiftl  keycode  76 = VoidSymbol            
+   shift   shiftl  keycode  76 = VoidSymbol            
+   altgr   shiftl  keycode  76 = U+22B7                
+                   keycode  77 = KP_6                  brokenbar             U+2192                U+2283                
+           shiftl  keycode  77 = Right                 
+   shift   shiftl  keycode  77 = Right                 
+   altgr   shiftl  keycode  77 = U+2287                
+
+! --------------------------------------------------------------------------
+! Keypad Row 4 (lower row)
+! --------------------------------------------------------------------------
+                   keycode  79 = KP_1                  U+2666                U+2194                U+226A                
+           shiftl  keycode  79 = End                   
+   shift   shiftl  keycode  79 = End                   
+   altgr   shiftl  keycode  79 = U+2264                
+                   keycode  80 = KP_2                  U+2665                U+2193                U+222a                
+           shiftl  keycode  80 = Down                  
+   shift   shiftl  keycode  80 = Down                  
+   altgr   shiftl  keycode  80 = U+22C3                
+                   keycode  81 = KP_3                  U+2660                U+21CC                U+226B                
+           shiftl  keycode  81 = Next                  
+   shift   shiftl  keycode  81 = Next                  
+   altgr   shiftl  keycode  81 = U+2265                
+
+! --------------------------------------------------------------------------
+! Keypad Row 5 (lowest row)
+! --------------------------------------------------------------------------
+                   keycode  82 = KP_0                  U+2423                percent               U+2030                
+           shiftl  keycode  82 = Insert                
+   shift   shiftl  keycode  82 = Insert                
+   altgr   shiftl  keycode  82 = U+25A1                
+                   keycode  83 = comma                 period                U+002c                U+2032                
+           shiftl  keycode  83 = Remove                
+   shift   shiftl  keycode  83 = Remove                
+   altgr   shiftl  keycode  83 = U+2033                
+
+
+! --------------------------------------------------------------------------
+! additional Keys with control function (has to be edited manually!!!!)
+! --------------------------------------------------------------------------
+   control altgr   keycode  30 = Control_backslash
+   alt     altgr   keycode  30 = Control_backslash
+   control alt altgr keycode  30 = Meta_Control_backslash
+   control altgr   keycode  19 = Control_bracketright
+   alt     altgr   keycode  19 = Control_bracketright
+   control alt altgr keycode  19 = Meta_Control_bracketright
+   control altgr   keycode  17 = Control_underscore
+   alt     altgr   keycode  17 = Control_underscore
+   control alt altgr keycode  17 = Meta_Control_underscore
+   control altgr   keycode  20 = Control_asciicircum
+   alt     altgr   keycode  20 = Control_asciicircum
+   control alt altgr keycode  20 = Meta_Control_asciicircum
+
+
+! --------------------------------------------------------------------------
+! Strings and Compose
+! --------------------------------------------------------------------------
+# string F100 = "setleds +num\n"
+#neo: console --- Ende
+
+#neo: asdf --- Beginn
+#!/bin/sh
+# Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
+# Copyright 2008 Benjamin Kellermann
+# Copyright 2008 Pascal Hauck
+# Copyright 2008 Erik Streb del Toro
+# Distributed under the terms of the GNU General Public License v3
+
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+	echo "No configuration file found. Using default values, this might fail!"
+fi
+
+# Default paths
+PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
+PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
+PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
+PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
+PATH_XSET=${PATH_XSET:-/usr/bin/xset}
+
+# Default values
+NEO_X_VARIANTE=${NEO_X_VARIANTE:-xkbmap}
+NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
+NEO_XKBMAP=${NEO_XKBMAP:-de}
+NEO_XKBVARIANT=${NEO_XKBVARIANT:-neo}
+NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
+NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
+NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
+NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
+NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
+
+die() {
+	echo "$@" >&2
+	exit 1
+}
+
+set_xmodmap() {
+	if [ -e "${PATH_XMODMAP}" ]; then
+		if [ -f "$@" ]; then
+			set_xkbmap lv
+			"${PATH_XMODMAP}" "$@" || ( set_xkbmap de ; die "Failed to set xmodmap $@." )
+		else
+			die "Cannot use $@ for xmodmap."
+		fi
+	else
+		die "xmodmap not found, cannot set xmodmap."
+	fi
+}
+
+set_xkbmap() {
+	if [ -e "${PATH_SETXKBMAP}" ]; then
+		"${PATH_SETXKBMAP}" "$@" || die "Failed to select xkbmap $@."
+	else
+		die "setxkbmap not found, cannot set xkbmap."
+	fi
+}
+
+set_keymap() {
+	if [ -e "${PATH_LOADKEYS}" ]; then
+		if [ -f "$@" ]; then
+			if [ "${EUID}" = 0 ]; then
+				"${PATH_LOADKEYS}" "$@" || die "Failed to set keymap $@."
+			elif [ -e "${PATH_SUDO}" ]; then
+				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Failed to set keymap using sudo."
+			else
+				die "You need root priviliges to change the keymap."
+			fi
+		else
+			die "keymap file $@ does not exist."
+		fi
+	else
+		die "loadkeys not found, cannot set keymap."
+	fi
+}
+
+if [ -n "$SSH_CONNECTION" ]; then
+	die "Cannot set keybord layout in a ssh session."
+fi
+
+if [ -z ${DISPLAY} ]; then
+	set_keymap "${NEO_CONSOLE_KEYMAP}"
+
+	if [ -e "${PATH_SETLEDS}" ]; then
+		"${PATH_SETLEDS}" +num || die "Failed to set NUM status."
+	else
+		die "setleds does not exist, cannot set NUM status."
+	fi
+else
+	if [ -e "${PATH_NUMLOCKX}" ]; then
+		"${PATH_NUMLOCKX}" off || die "Failed to turn off Numlock."
+	else
+		die "numlockx not found, cannot turn off Numlock."
+	fi
+
+	if [ -e "${PATH_XSET}" ]; then
+		for modifier in 51 94; do
+			"${PATH_XSET}" -r ${modifier} || die "Failed to unset repeat for modifier ${modifier}."
+		done
+		for deadkey in 21 35 49; do
+			"${PATH_XSET}" -r ${deadkey} || die "Failed to unset repeat for deadkey ${deakey}."
+		done
+	else
+		die "xset not found, cannot set modifiers and dead keys."
+	fi
+
+	case "${NEO_X_VARIANTE}" in
+		xkbmap)
+			set_xkbmap "${NEO_XKBMAP}" "${NEO_XKBVARIANT}"
+			;;
+		xmodmap)
+			set_xmodmap "${NEO_XMODMAP}"
+			;;
+		xprog)
+			set_xmodmap "${NEO_XMODMAP_XPROG}"
+			;;
+		alternative)
+			set_xmodmap "${NEO_XMODMAP_ALTERNATIVE}"
+			;;
+		evdev)
+			set_xmodmap "${NEO_XMODMAP_EVDEV}"
+			;;
+		*)
+			die "Unknown Neo X variant ${NEO_X_VARIANTE}."
+			;;
+	esac
+fi
+#neo: asdf --- Ende
+
+#neo: uiae --- Beginn
+#!/bin/sh
+# Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
+# Copyright 2008 Benjamin Kellermann
+# Copyright 2008 Pascal Hauck
+# Copyright 2008 Erik Streb del Toro
+# Distributed under the terms of the GNU General Public License v3
+
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+	echo "No configuration file found. Using default values, this might fail!"
+fi
+
+# Default paths
+PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
+PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
+PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
+PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
+PATH_XSET=${PATH_XSET:-/usr/bin/xset}
+
+# Default values
+STD_X_VARIANTE=${STD_X_VARIANTE:-xkbmap}
+STD_XKBMAP=${STD_XKBMAP:-de}
+STD_XKBVARIANT=${STD_XKBVARIANT:-nodeadkeys}
+STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-de-latin1-nodeadkeys}"
+NUM_LOCK_STATUS=${NUM_LOCK_STATUS:-on}
+
+die() {
+	echo "$@" >&2
+	exit 1
+}
+
+set_xmodmap() {
+	if [ -e "${PATH_XMODMAP}" ]; then
+		if [ -f "$@" ]; then
+			"${PATH_XMODMAP}" "$@" || die "Failed to set xmodmap $@."
+		else
+			die "Cannot use $@ for xmodmap."
+		fi
+	else
+		die "xmodmap not found, cannot set xmodmap."
+	fi
+}
+
+set_xkbmap() {
+	if [ -e "${PATH_SETXKBMAP}" ]; then
+		"${PATH_SETXKBMAP}" "$@" || die "Failed to select xkbmap $@."
+	else
+		die "setxkbmap not found, cannot set xkbmap."
+	fi
+}
+
+set_keymap() {
+	if [ -e "${PATH_LOADKEYS}" ]; then
+		if [ -f "$@" ]; then
+			if [ "${EUID}" = 0 ]; then
+				"${PATH_LOADKEYS}" "$@" || die "Failed to set keymap $@."
+			elif [ -e "${PATH_SUDO}" ]; then
+				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Failed to set keymap using sudo."
+			else
+				die "You need root priviliges to change the keymap."
+			fi
+		else
+			die "keymap file $@ does not exist."
+		fi
+	else
+		die "loadkeys not found, cannot set keymap."
+	fi
+}
+
+if [ -n "$SSH_CONNECTION" ]; then
+	die "Cannot set keybord layout in a ssh session."
+fi
+
+if [ -z ${DISPLAY} ]; then
+	set_keymap "${NEO_CONSOLE_KEYMAP}"
+
+	if [ -e "${PATH_SETLEDS}" ]; then
+		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
+			"${PATH_SETLEDS}" -num || die "Failed to set num lock status to on."
+		else
+			"${PATH_SETLEDS}" +num || die "Failed to set num lock status to off."
+		fi
+	else
+		die "setleds does not exist, cannot set NUM status."
+	fi
+else
+	if [ -e "${PATH_XSET}" ]; then
+		for modifier in 51 94; do
+			"${PATH_XSET}" r ${modifier} || die "Failed to set repeat for modifier ${modifier}."
+		done
+		for deadkey in 21 35 49; do
+			"${PATH_XSET}" r ${deadkey} || die "Failed to set repeat for deadkey ${deakey}."
+		done
+	else
+		die "xset not found, cannot set modifiers and dead keys."
+	fi
+
+	case "${STD_X_VARIANTE}" in
+		xkbmap)
+			set_xkbmap "${STD_XKBMAP}" "${STD_XKBVARIANT}"
+			;;
+		xmodmap)
+			set_xkbmap de
+			set_xmodmap "${STD_XMODMAP}"
+			;;
+		*)
+			die "Unknown standard X variant ${STD_X_VARIANTE}."
+			;;
+	esac
+
+	if [ -e "${PATH_NUMLOCKX}" ]; then
+		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
+			"${PATH_NUMLOCKX}" on || die "Failed to set num lock status to on."
+		else
+			"${PATH_NUMLOCKX}" off || die "Failed to set num lock status to off."
+		fi
+	else
+		die "numlockx not found, cannot turn off Numlock."
+	fi
+fi
+#neo: uiae --- Ende
+
+#neo: neorc --- Beginn
+# This file contains the configuration for the Neo scripts
+
+# Select the neo Variant to be used when using an X Server
+# Values are "xkbmap", "xmodmap", "xprog", "alternative" or "evdev"
+# default is xkbmap, this variable should always be set
+NEO_X_VARIANTE="xkbmap"
+
+
+# When using xkbmap, you may specify which xkbmap should be used, the default
+# is "de" (This is useful if you installed the symbols file under a different 
+# name):
+#NEO_XKBMAP=de
+
+# You can also specify the xkbmap variant to be used, the default is "neo":
+#NEO_XKBVARIANT=neo
+
+
+# When using a xmodmap, you may specify the full path to the xmodmap to be used.
+# Default:
+#NEO_XMODMAP="$HOME/neo/neo_de.xmodmap"
+#NEO_XMODMAP_XPROG="$HOME/neo/neo_de_x-prog.xmodmap"
+#NEO_XMODMAP_ALTERNATIVE="$HOME/neo/neo_de_alternative.xmodmap"
+#NEO_XMODMAP_EVDEV="$HOME/neo/neo_de_evdev.xmodmap"
+
+
+# Standard keyboard layout to switch back to when executing "uiae":
+#STD_XKBMAP=de
+
+# Standard layout variant to switch back to when executing "uiae":
+#STD_XKBVARIANT=nodeadkeys
+
+# Numlock status when switching to standard keyboard layout using "uiae",
+# values are "on" and "off":
+#NUM_LOCK_STATUS=on
+
+
+# For Neo without an X System set the path to the console keymap
+#NEO_CONSOLE_KEYMAP="$HOME/neo/neo" # for $HOME/neo/neo.map (without the „.map“)
+
+# Set the standard console keymap to switch back to
+#STD_CONSOLE_KEYMAP="de-latin1-nodeadkeys"
+
+
+# If you installed one of these programs in a non-standard path you may,
+# uncomment the variable and change the path to the executable:
+#PATH_XMODMAP=/usr/bin/xmodmap
+#PATH_SETXKBMAP=/usr/bin/setxkbmap
+#PATH_LOADKEYS=/usr/bin/loadkeys
+#PATH_SUDO=/usr/bin/sudo
+#PATH_SETLEDS=/usr/bin/setleds
+#PATH_NUMLOCKX=/usr/bin/numlockx
+#PATH_XSET=/usr/bin/xset
+#neo: neorc --- Ende
+
+#neo: profile --- Beginn
+# Neo:
+PATH=$PATH:$HOME/neo/bin
+export PATH
+asdf xmodmap
+#neo: profile --- Ende
