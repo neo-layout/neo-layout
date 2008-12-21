@@ -21,23 +21,19 @@ zeichen=$1								# suche nach diesem Zeichen
 typeset -i z s e j							# z=zeile, s=spalte, e=Ebene
 
 
-# als TASTATURTEL wird immer 1 für die Haupttastatur und 2 für das Keypad verwendet
 
-bild () {	# Aufruf: bild TASTATURTEIL
-# erzeugt das Bild des Tastaturteils wie die Skripte neo und num
+bild () {	# bild TASTATURTEIL , erzeugt das Bild des Tastaturteils wie die Skripte neo und num
 	grep -m 1 -A 15 ${RAND[$1]} $REFERENZ | cut -c ${VON[$1]}-${BIS[$1]}
 }
 
-position () {	# Aufruf: position TASTATURTEIL ZEILE SPALTE
-# gibt das Zeichen aus, das an der durch $TASTATURTEIL, $ZEILE und $SPALTE spezifizierten stelle liegt
+teste () {	# teste TASTATURTEIL ZEILE SPALTE
 	bild $1 | head -$2 | tail -1 | cut -c $3
 }
 
-such_auf_tastatur () { # Aufruf: such_auf_tastatur ZEICHEN
-# sucht, ob das Zeichen $ZEICHEN irgendwo auf der Tastatur (Haupttastatur oder Keypad) zu finden ist
-	zeichen=$1							# zu suchendes Zeichen
-	j=0								# j=3, sobald das Zeichen gefunden wurde
-	for tastatur in 1 2						# durchsuche beide Tastaturteile
+schau_auf_tastatur () {
+	zeichen=$1
+	j=0
+	for tastatur in 1 2
 	do
 
 		anzahl=`bild $tastatur | grep -n [│\ ]$zeichen[│\ ] | wc -l`	# wie häufig ist $zeichen auf der Tastatur?
@@ -51,35 +47,27 @@ such_auf_tastatur () { # Aufruf: such_auf_tastatur ZEICHEN
 			do
 				j=j+1
 				z=`bild $tastatur | grep -n [│\ ]$zeichen[│\ ] | head -$i | tail -1 | cut -f1 -d:`
-#				Zeile, an der das gesuchte Zeichen gefunden worden ist
 				s=`bild $tastatur | grep [│\ ]$zeichen[│\ ] | head -$i | tail -1 | cut -f1 -d $zeichen | wc -m`
-#				Spalte, an der das gesuchte Zeichen gefunden worden ist
 
-				e=0					# e gibt am Ende die Ebene an, in der das gesuchte Zeichen liegt
-				test=`position $tastatur $z $s`
+				e=0
+				test=`teste $tastatur $z $s`
 				while [ ! "$test" = "─" ] && [ ! "$test" = "┬" ]
-#				suche in dem Kästchen bis der untere Rand gefunden ist
-#				Beispiel:	┬────┴┬
-#						│N 4 ℕ│
-#						│n ( ν│
-#						┴──┬──┴
 				do
-#				finde Zeile z von $ursprung (=Tastenname, im Beispiel also ›n‹), berechne die Ebene $e von $zeichen
+#				finde Zeile z von $ursprung (=Tastenname), berechne die Ebene $e von $zeichen
 					z=z+1
 					e=e+1
 					ursprung=$test
-					test=`position $tastatur $z $s`
+					test=`teste $tastatur $z $s`
 				done
 				z=z-1
 
-				ehilfe="1"				# ehilfe="1" - es gibt kein Leerzeichen neben dem Rand
+				ehilfe="1"
 				test=$ursprung
 				while [ ! "$test" = "│" ]
-#				suche in dem Kästchen bis der linke Rand gefunden ist
 				do
 					if [ "$test" = " " ]
 					then
-						ehilfe="0"		# ehilfe="0" - es gibt kein Leerzeichen - neben dem Rand?
+						ehilfe="0"
 					elif [ "$ehilfe" = "0" ]
 					then
 						e=e+2; ehilfe=1
@@ -87,7 +75,7 @@ such_auf_tastatur () { # Aufruf: such_auf_tastatur ZEICHEN
 					fi
 				
 					s=s-1
-					test=`position $tastatur $z $s`
+					test=`teste $tastatur $z $s`
 				done	
 				ursprung=`echo $ursprung ${ORT[$tastatur]}`
 
@@ -124,7 +112,7 @@ such_auf_tastatur () { # Aufruf: such_auf_tastatur ZEICHEN
 
 
 
-such_auf_tastatur $zeichen
+schau_auf_tastatur $zeichen
 
 
 
