@@ -21,6 +21,8 @@
 # ======= Deinstallation =======
 # Um NEO wieder zu deinstallieren muss vor allem der Abschnitt ›#NEO:‹ in der .profile entfernt werden (2 Zeilen)
 # Das Verzeichnis $HOME/neo und die Datei $HOME/.neorc können einfach gelöscht werden 
+# Achtung: dieses Skript kann NICHT dazu genutzt werden, NEO wieder zu deinstallieren oder QWERTZ wieder
+# zur Standardbelegung zu machen.
 # ==============================
 
 
@@ -29,6 +31,12 @@
 # Es wird immer das Standardverzeichnis $HOME/neo verwendet
 # Bei mehrfacher Anwendung (trozt Warnung) werden Zeilen in der .profile doppelt erzeugt.
 # Es gibt keine graphische Installation
+# Folgende Verzeichnisse und Dateien darf es vorher nicht geben:
+#  $HOME/neo/
+#  $HOME/.neorc
+#  etc/neo.conf
+#  $HOME/bin/asdf
+#  $HOME/bin/uiae
 # Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
 # Dieses Skript wird mit der Zeit verbessert werden.
 # ==============================
@@ -58,10 +66,34 @@ else
 	chmod u+x $HOME/neo/uiae
 	ln -s $HOME/neo/uiae $HOME/bin
 	teil neorc > $HOME/.neorc
-	teil profile > $HOME/neo/neo.profile
+
+	layout=""
+	while [ ! $layout ]
+	do
+		echo layout: $layout
+		read -p "Soll NEO [N] oder QWERTZ [Q] die Standardbelegung nacht dem Login sein? " -e layout
+		case $layout in 
+		N)
+			echo "Nach dem Login wird NEO die Standardbelegung sein."
+			echo "Um dies zu ändern bitte die Kurzanleitung am Anfang dieses Skriptes lesen."
+			teil profile.neo > $HOME/neo/neo.profile
+			cd $HOME/neo
+			cat neo.profile >> $HOME/.profile
+			rm ./neo.profile
+			;;
+		Q)
+			echo "Nach dem Login wird wie gehabt QWERTZ die Standardbelegung sein."
+			echo "Zu NEO kann man jederzeit mit der Abrollbewegung ›asdf‹ wechseln."
+#			teil profile.qwertz > $HOME/neo/neo.profile
+			;;
+		*)
+			echo "Bitte wählen Sie zwischen N für NEO und Q für QWERTZ"
+			layout=""
+			;;
+		esac
+	done
+
 	cd $HOME/neo
-	cat neo.profile >> $HOME/.profile
-	rm ./neo.profile
 	./asdf xmodmap
 	echo "To return to qwertz type ›uiae‹"
 	exit
@@ -70,7 +102,6 @@ fi
 echo "There seems to exist an older NEO installation."
 echo "If you are sure you want to install NEO using this installation script, delete $HOME/.neorc and /etc/neo.conf"
 exit
-
 #neo: xmodmap --- Beginn
 !! ~/.xmodmap
 !! 
@@ -1342,8 +1373,14 @@ NEO_CONSOLE_KEYMAP="$HOME/neo/neo" # if necessary add „.map“
 #PATH_XSET=/usr/bin/xset
 
 #neo: neorc --- Ende
-#neo: profile --- Beginn
+#neo: profile.neo --- Beginn
+
 # Neo:
-asdf
-#neo: profile --- Ende
+asdf xmodmap    # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+#neo: profile.neo --- Ende
+#neo: profile.qwertz --- Beginn
+
+# Neo:
+# asdf xmodmap    # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+#neo: profile.qwertz --- Ende
 
