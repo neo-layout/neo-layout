@@ -1,0 +1,4 @@
+Wenn NEO nur für einen Benutzter des Computers verwendet werden soll, empfiehlt es sich, den Inhalt der Datei neo.conf
+in die Datei $HOME/.neorc zu schreiben.
+Wenn NEO für ale Benutzer des Computers verwendet werden soll, sollte hingegen die Datei /etc/neo.conf bevorzugt werden.
+Individuelle Einstellungen können immer in der persönlichen $HOME/.neorc vorgenommen werden.
