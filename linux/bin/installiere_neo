@@ -29,43 +29,45 @@
 # Dieses Skript wird mit der Zeit verbessert werden.
 # ==============================
 
+
+# colours in the Bash
 B="\033[30m"
 R="\033[31m"
 G="\033[32m"
 
-datei() {
+datei() {  # cut files from the complete file ›installiere_neo‹
 	grep -A10000 "#neo: $1 --- Beginn" installation | grep -B10000 "#neo: $1 --- Ende" | grep -v "#neo:"
 }
 
-erzeuge() {
+erzeuge() {  # create directories, files and entries
 	case $1 in
 	d) # directory
-		if [ -d $2 ]
+		if [ -d $2 ]				# if already exists
 		then
 			echo -e "Das Verzeichnis ${R}$2${B} gibt es bereits – wird verwendet…"
 		else
 			echo -e "Erstelle $2"
-			mkdir $2
+			mkdir $2			# create
 		fi
 		;;
 	f) # file
-		if [ -f $3 ]
+		if [ -f $3 ]				# if already exists
 		then
 			echo -e "Die Datei ${R}$3${B} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
-			if [ "$overwrite" = "J" ]
+			if [ "$overwrite" = "J" ]	# overwrite?
 			then
 				echo "Datei $3 wird überschrieben!"
-				rm -f $3
+				rm -f $3		# remove if user wants to overwrite
 			else
 				echo -e "Datei ${R}$3${B} gibt es schon → Installation abgebrochen"
 				exit
 			fi
 		fi
-		echo "Erstelle Datei $3"
+		echo "Erstelle Datei $3"		# create
 		datei $2 > $3
 		;;
 	l) # soft link
-		if [ -d $HOME/bin/ ]
+		if [ -d $HOME/bin/ ]			# $HOME/bin has to exist!
 		then
 			echo "Verzeichnis $HOME/bin/ gefunden"
 		else
@@ -74,30 +76,30 @@ erzeuge() {
 			echo "Istallation wird abgebrochen."
 			exit
 		fi
-		if [ -f $HOME/bin/$2 ]
+		if [ -f $HOME/bin/$2 ]			# if already exists
 		then
 			echo -e "Datei ${R}$HOME/bin/$2${B} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
-			if [ "$overwrite" = "J" ]
+			if [ "$overwrite" = "J" ]	# overwrite?
 			then
 				echo "Datei $2 wird überschrieben!"
-				rm -f $HOME/bin/$2
+				rm -f $HOME/bin/$2	# remove if user wants to overwrite
 			else
 				echo -e "Datei ${R}$2${B} gibt es schon → Installation abgebrochen"
 				exit
 			fi
 		fi
 		echo "Erstelle Link $HOME/bin/$2"
-		ln -s $HOME/neo/$2 $HOME/bin
+		ln -s $HOME/neo/$2 $HOME/bin		# create
 		;;
 	esac
 }
 
-entferne(){
+entferne(){  # remove files for uninstall option
 	echo "Entferne $1"
 	rm $1 || echo -e "${R}Konnte die Datei $1 nicht entfernen!${B}"
 }
 
-deinstall() { #remove all NEO-directories and files
+deinstall() {  #remove all directories, files and entries made by ›installiere_neo‹
 	echo
 	echo
 	rmfromprofile
@@ -112,12 +114,14 @@ deinstall() { #remove all NEO-directories and files
 	rmdir $HOME/neo/ || echo -e "${R}Konnte das Verzeichenis $HOME/neo/ nicht entfernen!${B}"
 }
 
-rmfromprofile() {
+rmfromprofile() {  # remove the entry in $HOME/.profile
 	grep -v "^\# NEO:$" $HOME/.profile | grep -v "asdf   \# mit" > $HOME/profile.neo.tmp
 	rm /$HOME/.profile
 	mv $HOME/profile.neo.tmp $HOME/.profile
 }
 
+
+# *** main program ***
 clear
 echo
 echo "   *** NEO – Ergonomie und Zeichenvielfalt ***"
@@ -126,6 +130,7 @@ echo
 echo " Ihr System wird untersucht…"
 echo
 
+# check for an existing neo configuration
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
@@ -134,6 +139,7 @@ elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
 
+# no configuration file found → install NEO
 	echo "Bislang gibt es kein vollständig konfiguriertes NEO auf Ihrem System"
 	echo
 	echo "Sie haben folgende Möglichkeiten:"
@@ -151,8 +157,8 @@ else
 	echo
 
 	installoption=""
-	while [ ! $installoption ]
-	do
+	while [ ! $installoption ]			# choose between QWERTZ or NEO as standard
+	do						# switch with ›asdf‹ and ›uiae‹
 		echo
 		read -p "Wählen Sie eine Option [1,2]: " -e installoption
 	        case $installoption in
@@ -185,6 +191,9 @@ else
 	echo
 	echo
 
+# *** main installation process ***
+# creating a directory $HOME/neo with NEO files
+# linking ›asdf‹ and ›uiae‹ scripts to $HOME/bin
 	erzeuge d $HOME/neo
 	erzeuge f xmodmap $HOME/neo/neo_de.xmodmap
 	erzeuge f console $HOME/neo/neo.map
@@ -196,7 +205,7 @@ else
 	erzeuge l uiae
 	erzeuge f neorc $HOME/.neorc
 
-
+# entry in $HOME/.profile with NEO or QWERTZ as standard keyboard layout after login
 	case $installoption in 
 	2)
 		echo
@@ -218,16 +227,17 @@ else
 		;;
 	esac
 
-
-	cd $HOME/neo
+# starting NEO layout
 	echo
 	echo "Die Belegung wird nun auf NEO geändert…"	
+	cd $HOME/neo
 	./asdf xmodmap
 	echo -e "Um zu QWERTZ zurückzukehren, genügt es, die Abrollbewegung ${G}uiae${B} einzugeben."
 	exit
 fi
 
 
+# configuration file found → delete/deinstall options
 	echo "Es gibt auf Ihrem System bereits eine Konfiguration für NEO."
 	echo
 	echo "Sollte NEO nur für diesen Benutzer installiert sein, haben folgende Möglichkeiten:"
@@ -244,8 +254,8 @@ fi
 	echo
 
 	deinstalloption=""
-	while [ ! $deinstalloption ]
-	do
+	while [ ! $deinstalloption ]			# choose between deleting NEO as standard layout or delete NEO at all
+	do						# if deleted as standard layout only, ›asdf‹ is still working
 		echo
 		read -p "Wählen Sie eine Option [1,2]: " -e deinstalloption
 	        case $deinstalloption in
@@ -254,7 +264,7 @@ fi
                         echo -e "Alle zuvor von ${G}installiere_neo${B} vorgenommen Änderungen am System werden gelöscht!"
 			echo
 			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
-			deinstall
+			deinstall			# full deinstallation
                         ;;
                 1)
                         echo
@@ -263,8 +273,8 @@ fi
 			echo
 			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
 			echo
-			rmfromprofile
-			echo >> $HOME/.profile
+			rmfromprofile			# alter the entry in $HOME/.profile; first: remove old entry
+			echo >> $HOME/.profile		# write the new entry
 			echo "# NEO:" >> $HOME/.profile
 			echo "# asdf   # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO" >> $HOME/.profile
                         ;;
