@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE neo [
+  <!ELEMENT e EMPTY>  <!-- ebene -->
+  <!ATTLIST e
+    n CDATA #REQUIRED
+    l CDATA #IMPLIED
+    k CDATA #IMPLIED
+    a CDATA #IMPLIED
+    m CDATA #IMPLIED
+    i CDATA #REQUIRED
+    e CDATA ""
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+  >
+  <!--ATTLIST e
+    n nummer der ebene
+    l symbolischer linuxname
+    k kbdneo-name
+    a ahk-name
+    m mac-name
+    i beschriftung der tnebene
+    e beschreibung in der referenz
+    x buchsenposition relativ zur t
+    y buchsenposition relativ zur t -->
+  <!ELEMENT t (e)+>
+  <!ATTLIST t
+    xkbmap       CDATA #IMPLIED
+    keycode      CDATA #IMPLIED
+    kbdname      CDATA #IMPLIED
+    a            CDATA #IMPLIED
+    vb           CDATA "5"
+    b            CDATA "1"
+    h            CDATA "1"
+    e            CDATA ""
+    x            CDATA #IMPLIED
+    y            CDATA #IMPLIED
+    farbe        CDATA #IMPLIED
+    capslock     CDATA "1"
+  >
+  <!--ATTLIST t
+    keycode: xmodmap!, map, mac
+    a: ahkname
+    vb: (voll)breite in der tastaturübersicht
+    b: breite in der miniaturansicht
+    h: höhe
+    e: beschreibung
+    x: breite/position?
+    y: höhe/position? -->
+  <!ELEMENT r (t)+>
+  <!ATTLIST r n CDATA #IMPLIED>
+  <!ELEMENT hf (r)+> <!-- hauptfeld -->
+  <!ELEMENT nf (r)+> <!-- nummernfeld -->
+  <!ELEMENT neo (hf , nf)> ]>
+<neo>
+  <hf>
+    <r n="1">
+      <t xkbmap="TLDE" a="VKDCSC029" breite="3" beschreibung="T1 („Tote Taste 1“: Taste links neben der 1)">
+        <e n="1" l="dead_circumflex" a="Tcflx" i="ˆ" e="Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)"/>
+        <e n="2" l="dead_tilde" a="TTlde" i="˜" e="Tote Tilde (sieht aus wie U+02DC SMALL TILDE)"/>
+        <e n="3" l="dead_abovering" a="Tobrg" i="˚" e="Toter Ring (sieht aus wie U+02DA RING ABOVE)"/>
+        <e n="4" l="dead_caron" a="Tcron" i="ˇ" e="Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)"/>
+        <e n="5" l="dead_breve" a="Tbrve" i="˘" e="Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)"/>
+        <e n="6" l="dead_macron" a="Tmcrn" i="¯" e="Toter Makron (sieht aus wie U+00AF MACRON)"/>
+      </t>
+      <t xkbmap="AE01" a="VK31SC002">
+        <e n="1" l="1" a="U0031" i="1"/>
+        <e n="2" l="degree" a="U00B0" i="°"/>
+        <e n="3" l="onesuperior" a="U00B9" i="¹"/>
+        <e n="4" l="masculine" a="U00BA" i="º"/>
+        <e n="5" l="onesubscript" a="U2081" i="₁"/>
+        <e n="6" l="notsign" a="U00AC" i="¬"/>
+      </t>
+      <t xkbmap="AE02" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE03" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE04" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE05" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE06" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE07" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE08" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE09" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE10" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE11" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="AE12" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="BKSP" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="2">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="3">
+      <t xkbmap="u" keycode="38" kbdname="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="4">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="5">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+  </hf>
+  <nf>
+    <r n="1">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="2">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="3">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="4">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+    <r n="5">
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+      <t xkbmap="" a="">
+        <e n="1" l="" a="" i=""/>
+        <e n="2" l="" a="" i=""/>
+        <e n="3" l="" a="" i=""/>
+        <e n="4" l="" a="" i=""/>
+        <e n="5" l="" a="" i=""/>
+        <e n="6" l="" a="" i=""/>
+      </t>
+    </r>
+  </nf>
+</neo>
