@@ -298,10 +298,11 @@ CharProcCal1() {
   ; starte Calculator ohne Echo
   PressHookProc := "Calc"
   CalcEcho := 0
-  CalcVar1 := "0"
-  CalcVar2 := "0"
+  CalcVar1 := ""
+  CalcVar2 := ""
   CalcOp := ""
   CalcPhase := 0
+  CalcHexOut := 0
 }
 
 CharProcCal2() {
@@ -309,10 +310,11 @@ CharProcCal2() {
   ; starte Calculator mit Echo
   PressHookProc := "Calc"
   CalcEcho := 1
-  CalcVar1 := "0"
-  CalcVar2 := "0"
+  CalcVar1 := ""
+  CalcVar2 := ""
   CalcOp := ""
   CalcPhase := 0
+  CalcHexOut := 0
 }
 
 PressHookCalc(PhysKey, ActKey, Char) {
@@ -340,9 +342,26 @@ PressHookCalc(PhysKey, ActKey, Char) {
       CalcVar1 := CalcVar1 . "8"
     else if ((Char == "U0039") or (Char == "SN__9"))
       CalcVar1 := CalcVar1 . "9"
+    else if ((Char == "U0039") or (Char == "SN__9"))
+      CalcVar1 := CalcVar1 . "9"
+    else if ((Char == "U0041") or (Char == "U0061"))
+      CalcVar1 := CalcVar1 . "A"
+    else if ((Char == "U0042") or (Char == "U0062"))
+      CalcVar1 := CalcVar1 . "B"
+    else if ((Char == "U0043") or (Char == "U0063"))
+      CalcVar1 := CalcVar1 . "C"
+    else if ((Char == "U0044") or (Char == "U0064"))
+      CalcVar1 := CalcVar1 . "D"
+    else if ((Char == "U0045") or (Char == "U0065"))
+      CalcVar1 := CalcVar1 . "E"
+    else if ((Char == "U0046") or (Char == "U0066"))
+      CalcVar1 := CalcVar1 . "F"
     else if ((Char == "U002E") or (Char == "U002C") or (Char=="SNDot"))
       CalcVar1 := CalcVar1 . "."
-    else if ((Char == "U002B") or (Char == "SNAdd")) {
+    else if ((Char == "U0078") or (Char == "U0058")) {
+      CalcVar1 := CalcVar1 . "x"
+      CalcHexOut := 1
+    } else if ((Char == "U002B") or (Char == "SNAdd")) {
       CalcOp := "+"
       CalcPhase := 1
     } else if ((Char == "U002D") or (Char == "SNSub")) {
@@ -353,6 +372,12 @@ PressHookCalc(PhysKey, ActKey, Char) {
       CalcPhase := 1
     } else if ((Char == "U002F") or (Char == "SNDiv")) {
       CalcOp := "/"
+      CalcPhase := 1
+    } else if (Char == "U0026") {
+      CalcOp := "&"
+      CalcPhase := 1
+    } else if (Char == "U007C") {
+      CalcOp := "|"
       CalcPhase := 1
     } else
       PressHookProc := ""
@@ -382,9 +407,24 @@ PressHookCalc(PhysKey, ActKey, Char) {
       CalcVar2 := CalcVar2 . "8"
     else if ((Char == "U0039") or (Char == "SN__9"))
       CalcVar2 := CalcVar2 . "9"
+    else if ((Char == "U0041") or (Char == "U0061"))
+      CalcVar2 := CalcVar2 . "A"
+    else if ((Char == "U0042") or (Char == "U0062"))
+      CalcVar2 := CalcVar2 . "B"
+    else if ((Char == "U0043") or (Char == "U0063"))
+      CalcVar2 := CalcVar2 . "C"
+    else if ((Char == "U0044") or (Char == "U0064"))
+      CalcVar2 := CalcVar2 . "D"
+    else if ((Char == "U0045") or (Char == "U0065"))
+      CalcVar2 := CalcVar2 . "E"
+    else if ((Char == "U0046") or (Char == "U0066"))
+      CalcVar2 := CalcVar2 . "F"
     else if ((Char == "U002E") or (Char == "U002C") or (Char=="SNDot"))
       CalcVar2 := CalcVar2 . "."
-    else if ((Char == "U000D") or (Char == "SNEnt") or (Char=="U0020") or (Char=="U003D")) {
+    else if ((Char == "U0078") or (Char == "U0058")) {
+      CalcVar2 := CalcVar2 . "x"
+      CalcHexOut := 1
+    } else if ((Char == "U000D") or (Char == "SNEnt") or (Char=="U0020") or (Char=="U003D")) {
       if      (CalcOp == "+")
         CalcResult := CalcVar1 + CalcVar2
       else if (CalcOp == "-")
@@ -393,8 +433,17 @@ PressHookCalc(PhysKey, ActKey, Char) {
         CalcResult := CalcVar1 * CalcVar2
       else if (CalcOp == "/")
         CalcResult := CalcVar1 / CalcVar2
+      else if (CalcOp == "&")
+        CalcResult := CalcVar1 & CalcVar2
+      else if (CalcOp == "|")
+        CalcResult := CalcVar1 | CalcVar2
       else
         CalcResult := "Invalid"
+      if (CalcHexOut and (CalcResult != "")) {
+        SetFormat,Integer,h
+        CalcResult := CalcResult + 0
+        SetFormat,Integer,d
+      }
       tosend := EncodeUni(CalcResult)
       if (CalcEcho) {
         Char := "U003D"
