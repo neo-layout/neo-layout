@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Copyright 2008 Pascal Hauck <pascal.hauck@web.de>
 # Distributed under the terms of the GNU General Public License v3
 
@@ -31,22 +31,72 @@
 # Es wird immer das Standardverzeichnis $HOME/neo verwendet
 # Bei mehrfacher Anwendung (trozt Warnung) werden Zeilen in der .profile doppelt erzeugt.
 # Es gibt keine graphische Installation
-# Folgende Verzeichnisse und Dateien darf es vorher nicht geben:
-#  $HOME/neo/
-#  $HOME/.neorc
-#  etc/neo.conf
-#  $HOME/bin/asdf
-#  $HOME/bin/uiae
 # Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
 # Dieses Skript wird mit der Zeit verbessert werden.
 # ==============================
 
+B="\033[30m"
+R="\033[31m"
+G="\033[32m"
 
-
-teil() {
+datei() {
 	grep -A10000 "#neo: $1 --- Beginn" installation | grep -B10000 "#neo: $1 --- Ende" | grep -v "#neo:"
 }
 
+erzeuge() {
+	case $1 in
+	d) # directory
+		if [ -d $2 ]
+		then
+			echo -e "Das Verzeichnis ${R}$2${B} gibt es bereits – wird verwendet…"
+		else
+			echo -e "Erstelle $2"
+			mkdir $2
+		fi
+		;;
+	f) # file
+		if [ -f $3 ]
+		then
+			echo -e "Die Datei ${R}$3${B} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
+			if [ "$overwrite" = "J" ]
+			then
+				echo "Datei $3 wird überschrieben!"
+				rm -f $3
+			else
+				echo -e "Datei ${R}$3${B} gibt es schon → Installation abgebrochen"
+				exit
+			fi
+		fi
+		echo "Erstelle Datei $3"
+		datei $2 > $3
+		;;
+	l) # soft link
+		if [ -d $HOME/bin/ ]
+		then
+			echo "Verzeichnis $HOME/bin/ gefunden"
+		else
+			echo -e "Verzeichnis ${R}$HOME/bin${B} wird erwartet, ist aber nicht vorhanden"
+			echo "Außerdem wird erwartet, dass /$HOME/bin in der Umgebungsvariable \$PATH ist"
+			echo "Istallation wird abgebrochen."
+			exit
+		fi
+		if [ -f $HOME/bin/$2 ]
+		then
+			echo -e "Datei ${R}$HOME/bin/$2${B} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
+			if [ "$overwrite" = "J" ]
+			then
+				echo "Datei $2 wird überschrieben!"
+				rm -f $HOME/bin/$2
+			else
+				echo -e "Datei ${R}$2${B} gibt es schon → Installation abgebrochen"
+				exit
+			fi
+		fi
+		echo "Erstelle Link $HOME/bin/$2"
+		ln -s $HOME/neo/$2 $HOME/bin
+		;;
+	esac
+}
 
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
@@ -55,38 +105,40 @@ elif [ -f "${HOME}"/.neorc ]; then
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
-	echo "No configuration file found. Installing NEO with xmodmap!"
-	mkdir $HOME/neo
-	teil xmodmap > $HOME/neo/neo_de.xmodmap
-	teil console > $HOME/neo/neo.map
-	teil asdf > $HOME/neo/asdf
+	echo "NEO mit xmodmap wird installiert…"
+	erzeuge d $HOME/neo
+	erzeuge f xmodmap $HOME/neo/neo_de.xmodmap
+	erzeuge f console $HOME/neo/neo.map
+	erzeuge f asdf $HOME/neo/asdf
 	chmod u+x $HOME/neo/asdf
-	ln -s $HOME/neo/asdf $HOME/bin
-	teil uiae > $HOME/neo/uiae
+	erzeuge l asdf
+	erzeuge f uiae $HOME/neo/uiae
 	chmod u+x $HOME/neo/uiae
-	ln -s $HOME/neo/uiae $HOME/bin
-	teil neorc > $HOME/.neorc
+	erzeuge l uiae
+	erzeuge f neorc $HOME/.neorc
 
 	layout=""
 	while [ ! $layout ]
 	do
-		echo layout: $layout
-		read -p "Soll NEO [N] oder QWERTZ [Q] die Standardbelegung nacht dem Login sein? " -e layout
+		read -p "Soll NEO oder QWERTZ die Standardbelegung nacht dem Login sein? [N,Q] " -e layout
 		case $layout in 
 		N)
+			echo
 			echo "Nach dem Login wird NEO die Standardbelegung sein."
 			echo "Um dies zu ändern bitte die Kurzanleitung am Anfang dieses Skriptes lesen."
-			teil profile.neo > $HOME/neo/neo.profile
+			datei profile.neo > $HOME/neo/neo.profile
 			cd $HOME/neo
 			cat neo.profile >> $HOME/.profile
 			rm ./neo.profile
 			;;
 		Q)
-			echo "Nach dem Login wird wie gehabt QWERTZ die Standardbelegung sein."
-			echo "Zu NEO kann man jederzeit mit der Abrollbewegung ›asdf‹ wechseln."
-#			teil profile.qwertz > $HOME/neo/neo.profile
+			echo
+			echo "Das Standardlayout wird nich verändert."
+			echo -e "Zu NEO kann man jederzeit in der Konsole mit der Abrollbewegung ${G}asdf${B} wechseln."
+#			datei profile.qwertz > $HOME/neo/neo.profile
 			;;
 		*)
+			echo
 			echo "Bitte wählen Sie zwischen N für NEO und Q für QWERTZ"
 			layout=""
 			;;
@@ -95,12 +147,12 @@ else
 
 	cd $HOME/neo
 	./asdf xmodmap
-	echo "To return to qwertz type ›uiae‹"
+	echo -e "Um zu QWERTZ zurückzukehren, genügt es, die Abrollbewegung ${G}uiae${B} in die Konsole einzugeben."
 	exit
 fi
 
-echo "There seems to exist an older NEO installation."
-echo "If you are sure you want to install NEO using this installation script, delete $HOME/.neorc and /etc/neo.conf"
+echo "Es scheint schon eine Konfiguration für NEO auf Ihrem System zu geben."
+echo -e "Wenn sie sicher sind, NEO über dieses Skript installieren zu wollen, löschen Sie zuvor ${R}$HOME/.neorc${B} und ${R}/etc/neo.conf${B}"
 exit
 #neo: xmodmap --- Beginn
 !! ~/.xmodmap
