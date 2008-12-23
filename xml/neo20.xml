@@ -18,11 +18,11 @@
     k kbdneo-name
     a ahk-name
     m mac-name
-    i beschriftung der tnebene
+    i beschriftung der tastenebene
     e beschreibung in der referenz
-    x buchsenposition relativ zur t
-    y buchsenposition relativ zur t -->
-  <!ELEMENT t (e)+>
+    x buchstabenposition relativ zur taste
+    y buchstabenposition relativ zur taste -->
+  <!ELEMENT t (e)+> <!-- taste -->
   <!ATTLIST t
     xkbmap       CDATA #IMPLIED
     keycode      CDATA #IMPLIED
@@ -38,7 +38,7 @@
     capslock     CDATA "1"
   >
   <!--ATTLIST t
-    keycode: xmodmap!, map, mac
+    keycode: xmodmap!, mac
     a: ahkname
     vb: (voll)breite in der tastaturübersicht
     b: breite in der miniaturansicht
