@@ -48,16 +48,28 @@ wobei $NEO_PWD durch das Verzeichnis mit der „de“-Datei ersetzt werden muss.
 
 === Mit Root-Zugang ===
 Trägt man folgende Zeilen in seine xorg.conf (nur mit root-Zugang möglich) ein,
-kann man anschließend mittels drücken beider Strg-Tasten zwischen qwertz und
-NEO wechseln.
+kann man anschließend mittels drücken der Rollen-Taste zwischen qwertz und
+NEO wechseln. Die Rollen-LED zeigt den aktuellen Status an.
 	Option "XkbLayout"  "de,de"
 	Option "XkbVariant" "neo,nodeadkeys"
-#	Option "XkbOptions" "grp:ctrls_toggle" # defekt im neuen X-Server!
-	Option "XkbOptions" "grp:shifts_toggle,grp_led:scroll" # das geht noch
+	Option "XkbOptions" "grp:sclk_toggle,grp_led:scroll"
 
 Alternativ auch hier in die ~/.bashrc, ~/.zshrc oder vergleichbares:
     alias asdf='setxkbmap de neo'
     alias uiae='setxkbmap de'
+
+Seit X.org 7.3 wird die Tastatur von HAL verwaltet. um gleiche Einstellungen
+vorzunehmen erstellt man in /etc/hal/fdi/policy eine Datei namens 
+10-x11-input.fdi mit folgendem Inhalt:
+  <match key="info.capabilities" contains="input.keys">
+  	<merge key="input.x11_driver" type="string">evdev</merge>
+  	<merge key="input.x11_options.XkbModel" type="string">evdev</merge>
+  	<merge key="input.x11_options.XkbLayout" type="string">de,de</merge>
+  	<merge key="input.x11_options.XkbVariant" type="string">neo,nodeadkeys</merge>
+  	<merge key="input.x11_options.XkbOptions" type="string">grp:sclk_toggle,grp_led:scroll</merge>
+  </match>
+
+
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
