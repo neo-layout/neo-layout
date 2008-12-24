@@ -1,0 +1,53 @@
+# This file contains the configuration for the Neo scripts
+
+# Select the neo Variant to be used when using an X Server
+# Values are "xkbmap", "xmodmap", "xprog", "alternative" or "evdev"
+# default is xkbmap, this variable should always be set
+NEO_X_VARIANTE="xmodmap"
+
+
+# When using xkbmap, you may specify which xkbmap should be used, the default
+# is "de" (This is useful if you installed the symbols file under a different 
+# name):
+#NEO_XKBMAP=de
+
+# You can also specify the xkbmap variant to be used, the default is "neo":
+#NEO_XKBVARIANT=neo
+
+
+# When using a xmodmap, you may specify the full path to the xmodmap to be used.
+# Default:
+NEO_XMODMAP="$HOME/neo/neo_de.xmodmap"
+#NEO_XMODMAP_XPROG="$HOME/neo/neo_de_x-prog.xmodmap"
+#NEO_XMODMAP_ALTERNATIVE="$HOME/neo/neo_de_alternative.xmodmap"
+#NEO_XMODMAP_EVDEV="$HOME/neo/neo_de_evdev.xmodmap"
+
+
+# Standard keyboard layout to switch back to when executing "uiae":
+#STD_XKBMAP=de
+
+# Standard layout variant to switch back to when executing "uiae":
+#STD_XKBVARIANT=nodeadkeys
+
+# Numlock status when switching to standard keyboard layout using "uiae",
+# values are "on" and "off":
+#NUM_LOCK_STATUS=on
+
+
+# For Neo without an X System set the path to the console keymap
+NEO_CONSOLE_KEYMAP="$HOME/neo/neo" # if necessary add „.map“
+
+# Set the standard console keymap to switch back to
+#STD_CONSOLE_KEYMAP="de-latin1-nodeadkeys"
+
+
+# If you installed one of these programs in a non-standard path you may,
+# uncomment the variable and change the path to the executable:
+#PATH_XMODMAP=/usr/bin/xmodmap
+#PATH_SETXKBMAP=/usr/bin/setxkbmap
+#PATH_LOADKEYS=/usr/bin/loadkeys
+#PATH_SUDO=/usr/bin/sudo
+#PATH_SETLEDS=/usr/bin/setleds
+#PATH_NUMLOCKX=/usr/bin/numlockx
+#PATH_XSET=/usr/bin/xset
+
