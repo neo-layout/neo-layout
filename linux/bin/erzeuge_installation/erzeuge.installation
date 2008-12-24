@@ -1,0 +1,27 @@
+cat installation.1
+echo "#neo: xmodmap --- Beginn"
+cat ~/neo/svn-Arbeitsverzeichnis/neo/linux/xmodmap/neo_de.xmodmap
+echo "#neo: xmodmap --- Ende"
+echo "#neo: console --- Beginn"
+cat ~/neo/svn-Arbeitsverzeichnis/neo/linux/console/neo.map
+echo "#neo: console --- Ende"
+echo "#neo: asdf --- Beginn"
+cat ~/neo/svn-Arbeitsverzeichnis/neo/linux/bin/asdf
+echo "#neo: asdf --- Ende"
+echo "#neo: uiae --- Beginn"
+cat ~/neo/svn-Arbeitsverzeichnis/neo/linux/bin/uiae
+echo "#neo: uiae --- Ende"
+echo "#neo: neorc --- Beginn"
+cat ~/neo/svn-Arbeitsverzeichnis/neo/linux/bin/erzeuge_installation/neo.conf.installation
+echo "#neo: neorc --- Ende"
+echo "#neo: profile.neo --- Beginn"
+echo 
+echo "# NEO:"
+echo "asdf   # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO"
+echo "#neo: profile.neo --- Ende"
+echo "#neo: profile.qwertz --- Beginn"
+echo
+echo "# NEO:"
+echo "# asdf   # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO"
+echo "#neo: profile.qwertz --- Ende"
+echo
