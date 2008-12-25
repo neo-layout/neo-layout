@@ -292,11 +292,11 @@ xkb_symbols "neo" {
     key <AE06> { [ 6,           EuroSign,               cent,                   malesymbol,         sterling,       NoSymbol,    U2225          ] };
 
     key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
-    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   KP_Divide,      NoSymbol,    U221E          ] };
-    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  KP_Multiply,    NoSymbol,    U220B          ] };
-    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      minus,          NoSymbol,    emptyset       ] };
+    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   NoSymbol,       NoSymbol,    U221E          ] };
+    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  KP_Divide,      NoSymbol,    U220B          ] };
+    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      KP_Multiply,    NoSymbol,    emptyset       ] };
 
-    key <AE11> { [ NoSymbol,    emdash,                 NoSymbol,               U2011,              NoSymbol,       NoSymbol,    hyphen         ] };
+    key <AE11> { [ NoSymbol,    emdash,                 NoSymbol,               U2011,              KP_Subtract,    NoSymbol,    hyphen         ] };
     key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,         U030F,          NoSymbol,    NoSymbol       ] };
 
     key <BKSP> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
@@ -314,7 +314,7 @@ xkb_symbols "neo" {
     key <AD07> { [ h,           H,                      less,                   Greek_psi,          7,              NoSymbol,    Greek_PSI        ] };
     key <AD08> { [ g,           G,                      greater,                Greek_gamma,        8,              NoSymbol,    Greek_GAMMA      ] };
     key <AD09> { [ f,           F,                      equal,                  Greek_phi,          9,              NoSymbol,    Greek_PHI        ] };
-    key <AD10> { [ q,           Q,                      ampersand,              U03D5,              plus,           NoSymbol,    U211A            ] };
+    key <AD10> { [ q,           Q,                      ampersand,              U03D5,              KP_Add,         NoSymbol,    U211A            ] };
     key <AD11> { [ ssharp,      U1E9E,                  U017F,              Greek_finalsmallsigma,  NoSymbol,       NoSymbol,    jot              ] };
 
     key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,         dead_doubleacute,NoSymbol,   dead_abovedot    ] };
