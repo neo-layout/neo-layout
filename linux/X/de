@@ -209,75 +209,60 @@ xkb_symbols "sundeadkeys" {
 // Authors: 
 //      <lucky at zankt dot net>
 //      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
+//      Erik Streb <mail at erikstreb dot de>
+//        and many other contributers
+//
+//      http://www.neo-layout.org
 //
 // $Revision$, $Date$
-// http://www.neo-layout.org
 
 
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo" {
 
-    name[Group1]= "German Neostyle";
+    name[Group1]= "Germany - Neo 2";
 
-    // Modifier definition
-    // -----------------------
+    // Levels in Neo jargon
+    // --------------------------------------------------------------
+    // Ebene 1: normal
+    // Ebene 2: Shift
+    // Ebene 3: Mod3
+    // Ebene 4: Mod4 (for marking something use Shift+Mod4)
+    // Ebene 5: Shift+Mod3
+    // Ebene 6: Mod3+Mod4 (in this order)
+    // Compose (not a level): Mod3+Tab
+    // Feststelltaste (Capslock): Mod3+Mod3
+    //
+    // Levels in Xkbmap jargon to be found here in the definitions. 
+    // These are the levels used, and Xorg's translations with type="EIGHT_LEVEL":
+    // --------------------------------------------------------------
+    //   Modifier:        None    Shift   Mod3    Shift+Mod3  Mod4    Shift+Mod4    Mod3+Mod4
+    //   Xorg calls it:   Level1  Level2  Level3  Level4      Level5  Level6        Level7
+    //   Neo calls it:    Ebene1  Ebene2  Ebene3  Ebene5      Ebene4  Ebene4+Shift  Ebene6
 
-    // Mod3 (FIXME Nur CAPS+BKSL ist Caps_Lock – Nicht andersherum, siehe Ticket #30)
+    // Modifier definitions
+    // --------------------------------------------------------------
+    // Definition of the so called Neo-Mod3
+    // (FIXME Nur CAPS+BKSL ist Caps_Lock – Nicht andersherum, siehe Ticket #30)
     key.type[Group1]="THREE_LEVEL";
     key <BKSL> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock ] };
     key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock ] };
 
-    // Definition des Neo-Mod4
+    // Definition of the so called Neo-Mod4
     key.type[Group1]="ONE_LEVEL";
     key <LSGT> { [ ISO_Level5_Shift ]};
     key <RALT> { [ ISO_Level5_Shift ]};
     modifier_map Mod3 { <LSGT>, <RALT> };
-    // Achtung:  ^^^ Dies ist eine X-Server-Variable, nicht unser Mod3.
-
-    // Ebenen im Neo-Jargon, hier im Treiber andere Reihenfolge
-    // -------------------------------------------------------------
-    // Ebene 1: normal
-    // Ebene 2: Shift
-    // Ebene 3: Mod3
-    // Ebene 4: Mod4 (zum Markieren Shift+Mod4)
-    // Ebene 5: Shift+Mod3
-    // Ebene 6: Mod3+Mod4 (in dieser Reihenfolge)
-    // Compose (keine eigene Ebene): Mod3+Tab
-    // Feststelltaste (Capslock): Shift+Shift
-    //
-    // Ebenen im Xkeymap-Jargon, hier in der Treiberdatei
-    // -------------------------------------------------------
-    // Die von uns genannte Ebene 6 ist auf den X-Level 7 
-    // verschoben, da der X-Level 6 mit Shift+Mod4 zu erreichen ist.
-    // Die Navigationstasten von Ebene 4 (mit X-Mod4 bzw. X-Level 5)
-    // werden teilweise, um auch mit Shift+Mod4 zu funktionieren,
-    // nochmal im X-Level 6 wiederholt. Also so:
-    // Ebene1      Ebene2      Ebene3      Ebene5      Ebene4      Eb4+Shift      Ebene6
-    // X-Level1    X-Level2    X-Level3    X-Level4    X-Level5    X-Level6       X-Level7
+    // Attention: ^^^ This is a X server variable, not the Neo-Mod3.
 
     key.type[Group1]="EIGHT_LEVEL_ALPHABETIC" ;
 
-    // general Lock
-    // -----------------
-    // Einrasten über linke Win-Taste+Modifier, Lösen über nochmaliges Betätigen des Modifiers
-    // ShiftLock und Mod5Lock funktionieren, aber Achtung:
-    // FIXME Mod3Lock lässt sich aber nicht mehr lösen!!!!
-
-
     // Tab as Multi_key (Compose)
-    // -------------------------------
+    // --------------------------------------------------------------
     key  <TAB> { [ Tab, ISO_Left_Tab, Multi_key ] };
 
     // number row
-    // ---------------
-
-    // These are the levels used, and Xorg's translations with type="EIGHT_LEVEL":
-    //  Base    Shift   Mod3    Shift+Mod3  Mod4    Shift+Mod4  Mod3+Mod4
-    //                          Mod5                            Mod6
-    //  Level1  Level2  Level3  Level4      Level5  Level6      Level7
-    // ***
-    // in neo:     Ebene1       Ebene2                  Ebene3                  Ebene5              Ebene4          Ebene4+Shift Ebene6
-
+    // --------------------------------------------------------------
     key <TLDE> { [ dead_circumflex, dead_tilde,         dead_abovering,         dead_breve,         dead_caron,     NoSymbol,    dead_macron    ] };
 
     key <AE01> { [ 1,           degree,                 onesuperior,            onesubscript,       ordfeminine,    NoSymbol,    notsign        ] };
@@ -289,16 +274,16 @@ xkb_symbols "neo" {
 
     key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
     key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   NoSymbol,       NoSymbol,    U221E          ] };
-    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  KP_Divide,      NoSymbol,    U220B          ] };
-    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      KP_Multiply,    NoSymbol,    emptyset       ] };
+    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  slash,          NoSymbol,    U220B          ] };
+    key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      asterisk,       NoSymbol,    emptyset       ] };
 
-    key <AE11> { [ NoSymbol,    emdash,                 NoSymbol,               U2011,              KP_Subtract,    NoSymbol,    hyphen         ] };
+    key <AE11> { [ minus,       emdash,                 NoSymbol,               U2011,              minus,          NoSymbol,    hyphen         ] };
     key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,         U030F,          NoSymbol,    NoSymbol       ] };
 
     key <BKSP> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
 
     // top row
-    // ------------
+    // --------------------------------------------------------------
     // xvlcwkhgfqß
     key <AD01> { [ x,           X,                      ellipsis,               Greek_xi,           U22EE,          NoSymbol,    Greek_XI         ] };
     key <AD02> { [ v,           V,                      underscore,             NoSymbol,           BackSpace,      BackSpace,   U2259            ] };
@@ -310,13 +295,13 @@ xkb_symbols "neo" {
     key <AD07> { [ h,           H,                      less,                   Greek_psi,          7,              NoSymbol,    Greek_PSI        ] };
     key <AD08> { [ g,           G,                      greater,                Greek_gamma,        8,              NoSymbol,    Greek_GAMMA      ] };
     key <AD09> { [ f,           F,                      equal,                  Greek_phi,          9,              NoSymbol,    Greek_PHI        ] };
-    key <AD10> { [ q,           Q,                      ampersand,              U03D5,              KP_Add,         NoSymbol,    U211A            ] };
+    key <AD10> { [ q,           Q,                      ampersand,              U03D5,              plus,           NoSymbol,    U211A            ] };
     key <AD11> { [ ssharp,      U1E9E,                  U017F,              Greek_finalsmallsigma,  NoSymbol,       NoSymbol,    jot              ] };
 
     key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,         dead_doubleacute,NoSymbol,   dead_abovedot    ] };
 
     // middle row
-    // ---------------
+    // --------------------------------------------------------------
     // uiaeosnrtdy
     key <AC01> { [ u,           U,                      backslash,              NoSymbol,           Home,           Home,        U222E             ] };
     key <AC02> { [ i,           I,                      slash,                  Greek_iota,         Left,           Left,        integral          ] };
@@ -332,7 +317,7 @@ xkb_symbols "neo" {
     key <AC11> { [ y,           Y,                      at,                     Greek_upsilon,      period,         NoSymbol,    nabla             ] };
 
     // bottom row
-    // ---------------
+    // --------------------------------------------------------------
     // üöäpzbm,.j
     key <AB01> { [ udiaeresis,  Udiaeresis,             numbersign,             NoSymbol,           Escape,         Escape,      U211C             ] };
     key <AB02> { [ odiaeresis,  Odiaeresis,             dollar,                 NoSymbol,           Tab,            Tab,         U2111             ] };
@@ -347,39 +332,39 @@ xkb_symbols "neo" {
     key <AB10> { [ j,           J,                      semicolon,              Greek_theta,        semicolon,      NoSymbol,    variation         ] };
 
     // Space key
-    // --------------
+    // --------------------------------------------------------------
     key <SPCE> { [ space,       space,                  space,                  nobreakspace,       0,              NoSymbol,    U202F             ] };
 
     // Keypad
     // ===========
 
-    // Num-Lock gibt es bei Neo nicht mehr:
-    //key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD" ;
+    // Num-Lock is no longer used with Neo:
+    //key.type[Group1]="FOUR_LEVEL_MIXED_KEYPAD";
 
-    // Die ehemalige Num-Lock-Taste erzeugt nun diverse Zeichen:
+    // the former Numlock key:
     key <NMLK> { [ Tab,           ISO_Left_Tab,   equal,        approxeq,     notequal,   NoSymbol,   identical ] };
 
     // topmost row
-    // ----------------
+    // --------------------------------------------------------------
     key <KPDV> { [ KP_Divide,     KP_Divide,      division,     U2223,        U2300,      NoSymbol,   U2044 ] };
     key <KPMU> { [ KP_Multiply,   KP_Multiply,    U22C5,        multiply,     U2299,      NoSymbol,   U2297 ] };
     key <KPSU> { [ KP_Subtract,   KP_Subtract,    U2212,        U2216,        U2296,      NoSymbol,   U2238 ] };
 
     // top row
-    // ------------
+    // --------------------------------------------------------------
     key  <KP7> { [ KP_7,          U2714,          U2195,        U226A,        KP_Home,    KP_Home,    upstile ] };
     key  <KP8> { [ KP_8,          U2718,          uparrow,      intersection, KP_Up,      KP_Up,      U22C2   ] };
     key  <KP9> { [ KP_9,          NoSymbol,       U20D7,        U226B,        KP_Prior,   KP_Prior,   U2309   ] };
     key <KPAD> { [ KP_Add,        KP_Add,         plusminus,    U2213,        U2295,      NoSymbol,   U2214   ] };
 
     // middle row
-    // ----------------
+    // --------------------------------------------------------------
     key  <KP4> { [ KP_4,          club,           leftarrow,    includedin,   KP_Left,    KP_Left,    U2286 ] };
     key  <KP5> { [ KP_5,          EuroSign,       brokenbar,    U22B6,        KP_Begin,   KP_Begin,   U22B7 ] };
     key  <KP6> { [ KP_6,          NoSymbol,       rightarrow,   includes,     KP_Right,   KP_Right,   U2287 ] };
 
     // bottom row
-    // ---------------
+    // --------------------------------------------------------------
     key  <KP1> { [ KP_1,          diamond,        U2194,        lessthanequal,KP_End,     KP_End,     downstile ] };
     key  <KP2> { [ KP_2,          heart,          downarrow,    union,        KP_Down,    KP_Down,    U22C3     ] };
     key  <KP3> { [ KP_3,          U2660,          U21CC,     greaterthanequal,KP_Next,    KP_Next,    U230B     ] };
@@ -387,7 +372,7 @@ xkb_symbols "neo" {
     key <KPEQ> { [ KP_Equal ] };
 
     // bottommost row
-    // -------------------
+    // --------------------------------------------------------------
     key  <KP0> { [ KP_0,         U2423,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
     key <KPDL> { [ KP_Decimal,   comma,           period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
 
