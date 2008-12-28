@@ -202,8 +202,7 @@ xkb_symbols "sundeadkeys" {
     name[Group1]="Germany - Sun dead keys";
 };
 
-
-// German NEO-Layout
+// German NEO-Layout Version 2
 // adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
 // inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
 //
@@ -211,11 +210,8 @@ xkb_symbols "sundeadkeys" {
 //      <lucky at zankt dot net>
 //      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 //
-// Other Questions:
-//      <mailinglist at neo-layout dot org>
-//
 // $Revision$, $Date$
-// http://pebbles.schattenlauf.de/layout.php
+// http://www.neo-layout.org
 
 
 partial alphanumeric_keys modifier_keys keypad_keys
