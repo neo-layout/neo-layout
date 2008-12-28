@@ -1,9 +1,161 @@
-body    {
-	margin-left:50px; margin-right:50px; margin-top:100px; margin-bottom:0px;
-	background-color:#bb5957; background-image:url(./hintergrund.png);
-	background-color:#dceeee; 
-	background-repeat:no-repeat; background-position:50% 0px;
-	}
+#Hauptfeld {
+  width:39em;
+  border-width:thin;
+  border-color:#444;
+  border-style:solid;
+  margin-left:12em;
+  margin-right:0em;
+  margin-top:2em;
+  padding-left:2.5em;
+  padding-right:4em;
+  padding-top:2em;
+  padding-bottom:2.4em;
+/* text-align:justify;  */
+/* font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif; */
+/*  font-family: LinuxLibertine, Libertine, Linux-Libertine, sans;
+  line-height:1.35em;
+  font-size:1em;*/
+  background-color:White;
+  color:Black;
+}
+
+#Hauptfeldlink_rechtsunten {
+  position:relative; top:.8em; left:.5em;
+  text-align:right;
+  margin-bottom:0em;
+}
+
+#Navigationsleiste {
+  background-color:#F8F8FA;
+  color:WindowText;
+  position:relative; 
+  width:10em; 
+/* float:left;  */
+  text-align:center; 
+  margin:2em;
+  margin-left:0em;
+  margin-top:2em;
+  border-width:thin;  
+  border-style:solid;  
+  border-color:green; 
+  border-top-width:0px;
+
+}
+
+#Navigationsthema {
+  border-bottom-width:1px;
+  border-bottom-style:solid;
+  border-color:black;
+  border-top-width:1px;
+  border-top-style:solid;
+  border-color:black;
+  text-align:center;
+  font-weight:bold;
+  background-color:#FAFBF8;
+  color:InfoText;
+  padding-top:.2em;
+  padding-bottom:.2em;
+}
+
+#Navigationsunterpunkte {
+  padding-top:.5em;
+  padding-bottom:.75em;
+}
+
+#Navigationseintrag {
+  display:block;
+  text-align:left;
+  padding-left:1em;
+  padding-right:1em;
+  padding-top:.25em;
+  padding-bottom:.25em;
+}
+
+#Bildcontainer_links {
+  width:10em;
+  border-width:thin;
+  border-color:#DDD;
+  border-style:solid;
+  margin-right: 1.2em;
+  margin-bottom: .8em;
+  margin-left: 0em;
+  margin-top: 1em;
+  float:left;
+  text-align:center;
+
+}
+
+
+#Bildcontainer_oben {
+  width:39em;
+  border-width:thin;
+  border-color:#DDD;
+  border-style:solid;
+  margin-left: 0em;
+  margin-bottom: 1.75em;
+  margin-right: 0em;
+  margin-top: 0em;
+/*  float:left; */
+  display:block; 
+  text-align:center;
+}
+
+
+#Bildcontainer_rechts {
+  width:10em;
+  border-width:thin;
+  border-color:#DDD;
+  border-style:solid;
+  margin-left: 1.2em;
+  margin-bottom: .8em;
+  margin-right: 0em;
+  margin-top: 1em;
+  float:right;
+  text-align:center;
+
+}
+
+#Bild {
+  text-align:center;
+  padding:.5em;
+  width:9em;
+}
+
+
+#Bild_oben {
+  text-align:center;
+  padding:.5em;
+  width:38em;
+}
+
+
+
+#Bildtext {
+  padding:.5em;
+  font-size:small;
+  text-align:left;
+  background-color:#EEE; 
+}
+
+#Hintergrundverlauf_von { 
+  background-color:#F30;
+}
+
+#Hintergrundverlauf_nach { 
+  background-color:transparent;
+}
+
+a         {  text-decoration:none;  }
+a:hover   {  color:HighlightText; background-color:Highlight; }
+
+h1        {  margin-bottom:1em; margin-top:0em;   font-size:1.5em; }
+h2        {  margin-bottom:.5em; margin-top:1.5em;  font-size:1.2em; /* padding-left:1em; */ }
+
+p         {  /* text-indent:1em;  
+                text-align:justify; */
+               margin-bottom:-.5em;}
+
+/* Altbestand: */
 
 #linkbutton
 	{
@@ -16,7 +168,7 @@ body    {
 	border-width:2px; border-style:solid;
 	border-color:#aaaaaa;
 	padding-top:.25em; padding-bottom:.25em;
-	background-image:url(./linkhintergrund.jpg);
+	background-color:#FAFAFA;
 	padding-left:1em; padding-right:1em;
 	}
 
@@ -25,8 +177,14 @@ body    {
 #linkbutton a:focus   {  color:#223; text-decoration:underline; }
 #linkbutton a:active  {  color:#8b2121; text-decoration:none;  }
 #linkbutton a:hover   {  color:#020; text-decoration:none;
-			 background-image:url(./hintergrund_button_hover.png);
-			 background-position:top left;          
+			 background-color:Highlight;          
 		      }
 
-hr	{ margin-left:2em; margin-right:2em; margin-top:3ex; margin-bottom:4ex;  height:15px; border:0px;   background-image:url(taste_schraeg2.png);}
+#Gesamtzentrierung { 
+        background-color: transparent; 
+        text-align: left;  
+        margin: 0px auto 0; 
+        width: 57.5em; 
+}
+
+

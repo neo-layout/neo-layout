@@ -4,7 +4,10 @@
 <title>Neo – Ergonomisches Tastaturlayout</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
  <link rel="shortcut icon" href="./favicon.ico">
-<!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> /-->
+ <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<!--[if lte IE 7]>
+ <link rel="stylesheet" type="text/css" href="stylesheet_ie7.css">
+<![endif]-->
 
 <script type="text/javascript">
 function Tastaturbildwechsel_nach (Zielebene) {
@@ -17,221 +20,6 @@ function Tastaturbildwechsel_nach (Zielebene) {
   }
 </script>
 
-
-
-<style type="text/css">
-
-#Hauptfeld {
-  width:39em;
-  border-width:thin;
-  border-color:#444;
-  border-style:solid;
-  margin-left:12em;
-  margin-right:0em;
-  margin-top:2em;
-  padding-left:2.5em;
-  padding-right:4em;
-  padding-top:2em;
-  padding-bottom:2.4em;
-/* text-align:justify;  */
-/* font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif; */
-/*  font-family: LinuxLibertine, Libertine, Linux-Libertine, sans;
-  line-height:1.35em;
-  font-size:1em;*/
-  background-color:White;
-  color:Black;
-}
-
-#Hauptfeldlink_rechtsunten {
-  position:relative; top:.8em; left:.5em;
-  text-align:right;
-  margin-bottom:0em;
-}
-
-#Navigationsleiste {
-  background-color:#F8F8FA;
-  color:WindowText;
-  position:relative; 
-  width:10em; 
-/* float:left;  */
-  text-align:center; 
-  margin:2em;
-  margin-left:0em;
-  margin-top:2em;
-  border-width:thin;  
-  border-style:solid;  
-  border-color:green; 
-  border-top-width:0px;
-
-}
-
-#Navigationsthema {
-  border-bottom-width:1px;
-  border-bottom-style:solid;
-  border-color:black;
-  border-top-width:1px;
-  border-top-style:solid;
-  border-color:black;
-  text-align:center;
-  font-weight:bold;
-  background-color:#FAFBF8;
-  color:InfoText;
-  padding-top:.2em;
-  padding-bottom:.2em;
-}
-
-#Navigationsunterpunkte {
-  padding-top:.5em;
-  padding-bottom:.75em;
-}
-
-#Navigationseintrag {
-  display:block;
-  text-align:left;
-  padding-left:1em;
-  padding-right:1em;
-  padding-top:.25em;
-  padding-bottom:.25em;
-}
-
-#Bildcontainer_links {
-  width:10em;
-  border-width:thin;
-  border-color:#DDD;
-  border-style:solid;
-  margin-right: 1.2em;
-  margin-bottom: .8em;
-  margin-left: 0em;
-  margin-top: 1em;
-  float:left;
-  text-align:center;
-
-}
-
-
-#Bildcontainer_oben {
-  width:39em;
-  border-width:thin;
-  border-color:#DDD;
-  border-style:solid;
-  margin-left: 0em;
-  margin-bottom: 1.75em;
-  margin-right: 0em;
-  margin-top: 0em;
-/*  float:left; */
-  display:block; 
-  text-align:center;
-}
-
-
-#Bildcontainer_rechts {
-  width:10em;
-  border-width:thin;
-  border-color:#DDD;
-  border-style:solid;
-  margin-left: 1.2em;
-  margin-bottom: .8em;
-  margin-right: 0em;
-  margin-top: 1em;
-  float:right;
-  text-align:center;
-
-}
-
-#Bild {
-  text-align:center;
-  padding:.5em;
-  width:9em;
-}
-
-
-#Bild_oben {
-  text-align:center;
-  padding:.5em;
-  width:38em;
-}
-
-
-
-#Bildtext {
-  padding:.5em;
-  font-size:small;
-  text-align:left;
-  background-color:#EEE; 
-}
-
-#Hintergrundverlauf_von { 
-  background-color:#F30;
-}
-
-#Hintergrundverlauf_nach { 
-  background-color:transparent;
-}
-
-a         {  text-decoration:none;  }
-a:hover   {  color:HighlightText; background-color:Highlight; }
-
-h1        {  margin-bottom:1em; margin-top:0em;   font-size:1.5em; }
-h2        {  margin-bottom:.5em; margin-top:1.5em;  font-size:1.2em; /* padding-left:1em; */ }
-
-p         {  /* text-indent:1em;  
-                text-align:justify; */
-               margin-bottom:-.5em;}
-
-/* Altbestand: */
-
-#linkbutton
-	{
-	line-height:2em;
-	text-align:left; color:#000;
-	}
-
-#linkbutton a
-	{
-	border-width:2px; border-style:solid;
-	border-color:#aaaaaa;
-	padding-top:.25em; padding-bottom:.25em;
-	background-color:#FAFAFA;
-	padding-left:1em; padding-right:1em;
-	}
-
-#linkbutton a:link    {  color:#000; text-decoration:none;      }
-#linkbutton a:visited {  color:#4a4a4a; text-decoration:none;   }
-#linkbutton a:focus   {  color:#223; text-decoration:underline; }
-#linkbutton a:active  {  color:#8b2121; text-decoration:none;  }
-#linkbutton a:hover   {  color:#020; text-decoration:none;
-			 background-color:Highlight;          
-		      }
-
-#Gesamtzentrierung { 
-        background-color: transparent; 
-        text-align: left;  
-        margin: 0px auto 0; 
-        width: 57.5em; 
-}
-/*-------------*/
-
-</style>
-
-<!--[if lte IE 7]>
-    <style type="text/css">
-
-#Bild_oben {
-  width:31em;
-}
-
-#Bildcontainer_oben {
-  width:32em;
-}	
-#IE6-Bildweitenkorrektur {
-  width:32em;
-}
-
-
-    </style>
-<![endif]-->
-
-
 </head>
 <!-- Für Mittenpositionierung: padding: 0; margin: 0; text-align: center; ind bodystyle /-->
 <body style="background-color:#dceeee; padding: 0em; margin: 0em; text-align: center; ">
@@ -243,103 +31,39 @@ p         {  /* text-indent:1em;
 
 
 
-
 <div id="Gesamtzentrierung"> 
 
-
-
-
-
 <!-- Logo /-->
-<!-- <div style="position:relative; top:2.25em; left:3.25em; width:522px; height:70px;  overflow:hidden; float:left;"> /-->
 <div style="position:relative; top:2.25em; left:3.25em; width:54em; height:70px;  overflow:hidden; "> 
-<!--
-    <object data="./neo_kopf_trac_522x50.svg" type="image/svg+xml" style="width:522px; height:50px; "> 
-            <param name="src" value="./neo_kopf_trac_522x50.svg">
-/-->
-            <img src="./neo_kopf_trac_522x50.png"  alt="Neo – Ergonomisches Tastaturlayout">
-<!--
-    </object>
-/-->
-<!-- </div> /-->
+	<img src="./neo_kopf_trac_522x50.png"  alt="Neo – Ergonomisches Tastaturlayout">
 
 <!-- Quicklinks /-->
 
+	<!--Wird per post-commit hook immer aktuell gehalten!-->
+	<a href="neo_de.xmodmap">
+		 <img src="./tastentierchen_pingu.png"  title="quickdownload:Neo_Linux" alt="quickdownload:Neo_Linux"  border="0">
+	</a>
 
 
-<!-- <div style="position:relative; top:-1.65em; left:43em; width:200px; height:40px;"> /-->
+	<!--Wird per post-commit hook immer aktuell gehalten!-->
+	<a href="neo20.exe">
+		 <img src="./tastentierchen_fenster.png"  title="quickdownload:Neo_Windows" alt="quickdownload:Neo_Windows"  border="0">
+	</a>
 
-   <!-- Achtung: Die Links sind auch jeweils in den SVG-Dateien kodiert! /-->
+	<!--Wird per post-commit hook immer aktuell gehalten!-->
+	<a href="neo.keylayout">
+		 <img src="./tastentier_apfel.png"  title="quickdownload:Neo_OS-X" alt="quickdownload:Neo_OS-X"  border="0">
+	</a>
 
-<!--
-   <object data="./tastentier_linksblickend_quicklink_linux.svg" type="image/svg+xml" style="width:61px; height:37px;  overflow:hidden; ">
-            <param name="src" value="./tastentier_linksblickend_quicklink_linux.svg">
-/-->
-
-						<!--Wird per post-commit hook immer aktuell gehalten!-->
-            <a href="neo_de.xmodmap">
-               <img src="./tastentierchen_pingu.png"  title="quickdownload:Neo_Linux" alt="quickdownload:Neo_Linux"  border="0">
-            </a>
-<!--
-    </object>
-/-->
-
-
-<!--
-   <object data="./tastentier_laechelnd_quicklink_windows.svg" type="image/svg+xml" style="width:50px; height:34px;  overflow:hidden; ">
-            <param name="src" value="./tastentier_laechelnd_quicklink_windows.svg">
-/-->
-						<!--Wird per post-commit hook immer aktuell gehalten!-->
-            <a href="neo20.exe">
-               <img src="./tastentierchen_fenster.png"  title="quickdownload:Neo_Windows" alt="quickdownload:Neo_Windows"  border="0">
-            </a>
-<!--
-    </object>
-/-->
-
-<!--
-   <object data="./tastentier_apfel.svg" type="image/svg+xml" style="width:50px; height:34px;  overflow:hidden; ">
-            <param name="src" value="./tastentier_grinsend_quicklink_osx.svg">
-/-->
-						<!--Wird per post-commit hook immer aktuell gehalten!-->
-            <a href="neo.keylayout">
-               <img src="./tastentier_apfel.png"  title="quickdownload:Neo_OS-X" alt="quickdownload:Neo_OS-X"  border="0">
-            </a>
-<!--
-    </object>
-/-->
-
-
-
-
-
-<!--
-
-  <a href="https://svn.neo-layout.org/windows/neo-vars/out/neo20.exe">
-     <img src="./tastentier_laechelnd.png" width="50px" height="34px" title="quickdownload:Neo_Windows" alt="quickdownload:Neo_Windows" border="0">
-  </a>
-  <a href="./neo_de.xmodmap">
-     <img src="./tastentier_linksblickend.png" width="50px" height="37px" title="quickdownload:Neo für Linux" alt="quickdownload:Neo für Linux" border="0">
-  </a>
-  <a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">
-     <img src="./tastentier_grinsend.png"  width="50px" height="34px" title="quickdownload:Neo für Mac OS-X" alt="quickdownload:Neo für Mac OS-X" border="0">
-  </a>
-/-->
 
 	<!--Wird per post-commit hook immer aktuell gehalten!-->
   <a href="neo_portable.zip">
-   <!--  <img src="./tastentier_usb.png"  width="46px" height="40px" title="quickdownload:Neo-Portable für USB-Stick" alt="quickdownload:Neo-Portable für USB-Stick" border="0"> /-->
-     <img src="./usb-stick.png"  width="40px" height="34px" title="quickdownload:Neo-Portable für USB-Stick" alt="quickdownload:Neo-Portable für USB-Stick" border="0">
-  </a>
- </div>
-<!-- /Quicklinks /-->
-
-<!--
-<div style="height:2em; width:1em;">
+	 <img src="./usb-stick.png"  width="40px" height="34px" title="quickdownload:Neo-Portable für USB-Stick" alt="quickdownload:Neo-Portable für USB-Stick" border="0">
+	</a>
 </div>
- /-->
-
-
+ 
+ 
+<!-- /Quicklinks /-->
 <div style="float:left; width:12em;">
 
 <div id="Navigationsleiste" >
@@ -362,7 +86,6 @@ p         {  /* text-indent:1em;
    <a id="Navigationseintrag" href="http://wiki.neo-layout.org/browser/grafik/druckvorlage-svg/neo-druckvorlage.pdf?format=raw">Druckvorlage</a>
  <div id="Navigationsthema">Download</div>
   <div id="Navigationsunterpunkte">
-<!-- <a id="Navigationseintrag" href="./download.html">Download</a> -->
    <a id="Navigationseintrag" href="http://wiki.neo-layout.org/browser/windows/">Windows-Treiber</a>
    <a id="Navigationseintrag" href="http://wiki.neo-layout.org/browser/linux/">Linux-Treiber</a>
    <a id="Navigationseintrag" href="http://wiki.neo-layout.org/browser/mac_osx/">Mac&nbsp;OS&nbsp;X-Treiber</a>
@@ -375,20 +98,6 @@ p         {  /* text-indent:1em;
   </div>
 </div>
 
-<!--
-<div id="Navigationsleiste" style="border-color:#AAA; opacity:.2;">
- <div id="Navigationsthema" style="color:#AAA; border-color:#AAA;">FOSS-Links</div>
-  <div id="Navigationsunterpunkte" >
-   <a id="Navigationseintrag" 
-      style="text-align:center; padding-top:.5em; padding-bottom:.5em; border-bottom-color:#EEE; border-bottom-style:solid;" 
-       href="http://linuxlibertine.sf.net"><img src="./signet_linuxlibertine.png" border="0" style=" opacity:.5; width:50%;"><br>Libertine<br>Open Fonts</a>
-   <a id="Navigationseintrag" 
-      style="text-align:center; padding-top:.5em; padding-bottom:.5em; border-bottom-color:#EEE; border-bottom-style:solid;" 
-        href="http://dejavu.sourceforge.net"><img src="./signet_dejavu.png" border="0"  style=" opacity:.5;  width:50%;" ><br>DejaVu<br>Font</a>
-  </div>
-</div>
-/-->
-
 
 </div>
 
@@ -399,8 +108,9 @@ p         {  /* text-indent:1em;
  <h1>Neo - Ergonomisches Tastaturlayout</h1>
 
  <p>
-   <font style="color:#222">Neo ist ein neue Tastaturbelegung, die </font>extra für die Deutsche Sprache<font style="color:#222"> optimiert ist:
-   <!--. Ihre Hauptmerkmale sind: /--> </font> 
+  <font style="color:#222">Neo ist ein neue Tastaturbelegung, die </font>
+  extra für die Deutsche Sprache
+  <font style="color:#222"> optimiert ist:</font> 
  </p>
 
  <ul>
@@ -422,12 +132,12 @@ p         {  /* text-indent:1em;
 
   <div style="min-width:650px; overflow:visible;">
     <div id="linkbutton" style="text-align:center; ">
-        <a href="./index_ebene1.html"  style="border-color:#56b; color:#23b" onclick="Tastaturbildwechsel_nach(1); return false;" id="ebenenreiter1" > Ebene1</a>
-        <a href="./index_ebene2.html" onclick="Tastaturbildwechsel_nach(2); return false;"  style="" id="ebenenreiter2">Ebene2</a>
-        <a href="./index_ebene3.html" onclick="Tastaturbildwechsel_nach(3); return false;"  style="" id="ebenenreiter3">Ebene3</a>
-        <a href="./index_ebene4.html" onclick="Tastaturbildwechsel_nach(4); return false;"  style="" id="ebenenreiter4">Ebene4</a>
-        <a href="./index_ebene5.html" onclick="Tastaturbildwechsel_nach(5); return false;"  style="" id="ebenenreiter5">Ebene5</a>
-        <a href="./index_ebene6.html" onclick="Tastaturbildwechsel_nach(6); return false;"  style="" id="ebenenreiter6">Ebene6</a>
+      <a href="./index_ebene1.html"  style="border-color:#56b; color:#23b" onclick="Tastaturbildwechsel_nach(1); return false;" id="ebenenreiter1" > Ebene1</a>
+      <a href="./index_ebene2.html" onclick="Tastaturbildwechsel_nach(2); return false;"  style="" id="ebenenreiter2">Ebene2</a>
+      <a href="./index_ebene3.html" onclick="Tastaturbildwechsel_nach(3); return false;"  style="" id="ebenenreiter3">Ebene3</a>
+      <a href="./index_ebene4.html" onclick="Tastaturbildwechsel_nach(4); return false;"  style="" id="ebenenreiter4">Ebene4</a>
+      <a href="./index_ebene5.html" onclick="Tastaturbildwechsel_nach(5); return false;"  style="" id="ebenenreiter5">Ebene5</a>
+      <a href="./index_ebene6.html" onclick="Tastaturbildwechsel_nach(6); return false;"  style="" id="ebenenreiter6">Ebene6</a>
     </div>
   </div>
 
@@ -512,7 +222,7 @@ p         {  /* text-indent:1em;
 
 <!--------------------------------------------------/-->
 <div id="Hauptfeld">
-  <div id="Bildcontainer_rechts" >  <!-- style="margin-top:0em;" > /--> 
+  <div id="Bildcontainer_rechts" >  
     <img id="Bild" src="tastentier_grinsend.png" />
     <div id="Bildtext"> Ein Tasten&shy;tierchen als Quick&shy;download&shy;link. </div>
  </div>
@@ -544,7 +254,6 @@ Dies ist ein Bei&shy;spiel für die Po&shy;si&shy;tio&shy;nie&shy;rung von Bilde
 
 
 
-<!-- </div>  rechts /-->
 
 </div>
 
