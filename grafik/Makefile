@@ -1,4 +1,4 @@
-SVGFILES=${wildcard tastatur2d-svg/*.svg} ${wildcard tastatur3d-svg/*.svg}
+SVGFILES=${wildcard */*.svg} ${wildcard */*/*.svg} ${wildcard */*/*.svg}
 
 PDFFILES=${addsuffix .pdf,${basename ${SVGFILES}}}
 PNGFILES=${addsuffix .png,${basename ${SVGFILES}}}
