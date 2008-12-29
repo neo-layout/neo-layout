@@ -1,17 +1,114 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>#98: console.more_control - NEO-Layout - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" /><link rel="icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="up" href="/ticket/98" title="Ticket #98" /><link rel="alternate" href="/attachment/ticket/98/console.more_control?format=raw" title="Original Format" /><style type="text/css">
+</style>
+ <script type="text/javascript" src="/chrome/common/js/trac.js"></script>
+</head>
+<body>
 
 
-! --------------------------------------------------------------------------
-! additional Keys with control function (has to be edited manually!!!!)
-! --------------------------------------------------------------------------
-   control altgr   keycode  30 = Control_backslash
-   alt     altgr   keycode  30 = Control_backslash
-   control alt altgr keycode  30 = Meta_Control_backslash
-   control altgr   keycode  19 = Control_bracketright
-   alt     altgr   keycode  19 = Control_bracketright
-   control alt altgr keycode  19 = Meta_Control_bracketright
-   control altgr   keycode  17 = Control_underscore
-   alt     altgr   keycode  17 = Control_underscore
-   control alt altgr keycode  17 = Meta_Control_underscore
-   control altgr   keycode  20 = Control_asciicircum
-   alt     altgr   keycode  20 = Control_asciicircum
-   control alt altgr keycode  20 = Meta_Control_asciicircum
+<div id="banner">
+
+<div id="header"><a id="logo" href="http://neo-layout.org/"><img src="http://neo-layout.org/neo_kopf_trac_522x50.png" alt="" /></a><hr /></div>
+
+<form id="search" action="/search" method="get">
+ <div>
+  <label for="proj-search">Search:</label>
+  <input type="text" id="proj-search" name="q" size="10" accesskey="f" value="" />
+  <input type="submit" value="Search" />
+  <input type="hidden" name="wiki" value="on" />
+  <input type="hidden" name="changeset" value="on" />
+  <input type="hidden" name="ticket" value="on" />
+ </div>
+</form>
+
+
+
+<div id="metanav" class="nav"><ul><li class="first">logged in as erik</li><li><a href="/logout">Logout</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/about">About Trac</a></li></ul></div>
+</div>
+
+<div id="mainnav" class="nav"><ul><li class="first"><a accesskey="1" href="/wiki">Wiki</a></li><li><a accesskey="2" href="/timeline">Timeline</a></li><li><a accesskey="3" href="/roadmap">Roadmap</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li><a accesskey="7" href="/newticket">New Ticket</a></li><li><a accesskey="4" href="/search">Search</a></li><li class="last"><a href="/admin">Admin</a></li></ul></div>
+<div id="main">
+
+
+
+
+<div id="ctxtnav" class="nav"></div>
+
+<div id="content" class="attachment">
+
+
+ <h1><a href="/ticket/98">Ticket #98</a>: console.more_control</h1>
+ <table id="info" summary="Description"><tbody><tr>
+   <th scope="col">
+    File console.more_control, 0.6 kB 
+    (added by Elias Oltmanns &lt;eo@nebensachen.de&gt;,  1 day ago)
+   </th></tr><tr>
+   <td class="message"><p>
+console.more_control
+</p>
+</td>
+  </tr>
+ </tbody></table>
+ <div id="preview">
+   <table class="code"><thead><tr><th class="lineno">Line</th><th class="content">&nbsp;</th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th>
+<td></td>
+</tr><tr><th id="L2"><a href="#L2">2</a></th>
+<td></td>
+</tr><tr><th id="L3"><a href="#L3">3</a></th>
+<td>! --------------------------------------------------------------------------</td>
+</tr><tr><th id="L4"><a href="#L4">4</a></th>
+<td>! additional Keys with control function (has to be edited manually!!!!)</td>
+</tr><tr><th id="L5"><a href="#L5">5</a></th>
+<td>! --------------------------------------------------------------------------</td>
+</tr><tr><th id="L6"><a href="#L6">6</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;control keycode&nbsp; 57 = nul</td>
+</tr><tr><th id="L7"><a href="#L7">7</a></th>
+<td># for some obscure reason, this is required even when we set alt_is_meta</td>
+</tr><tr><th id="L8"><a href="#L8">8</a></th>
+<td>&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;control keycode&nbsp; 57 = Meta_nul</td>
+</tr><tr><th id="L9"><a href="#L9">9</a></th>
+<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 30 = Control_backslash</td>
+</tr><tr><th id="L10"><a href="#L10">10</a></th>
+<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 19 = Control_bracketright</td>
+</tr><tr><th id="L11"><a href="#L11">11</a></th>
+<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 17 = Control_underscore</td>
+</tr><tr><th id="L12"><a href="#L12">12</a></th>
+<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 20 = Control_asciicircum</td>
+</tr></tbody></table>
+ </div>
+ <div class="buttons">
+  <form method="get" action=""><div id="delete">
+   <input type="hidden" name="action" value="delete" />
+   <input type="submit" value="Delete attachment" />
+  </div></form>
+ </div>
+
+
+</div>
+<script type="text/javascript">searchHighlight()</script>
+<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first last"><a href="/attachment/ticket/98/console.more_control?format=raw">Original Format</a></li></ul></div>
+
+</div>
+
+<div id="footer">
+ <hr />
+ <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107"
+   alt="Trac Powered"/></a>
+ <p class="left">
+  Powered by <a href="/about"><strong>Trac 0.10.4</strong></a><br />
+  By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+ </p>
+ <p class="right">
+  
+ </p>
+</div>
+
+
+
+ </body>
+</html>
+
