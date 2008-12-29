@@ -1,113 +1,316 @@
-#!/bin/sh
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+ <title>#98: mach_console - NEO-Layout - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" /><link rel="icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="up" href="/ticket/98" title="Ticket #98" /><link rel="alternate" href="/attachment/ticket/98/mach_console?format=raw" title="Original Format" type="application/x-sh; charset=utf8" /><style type="text/css">
+</style>
+ <script type="text/javascript" src="/chrome/common/js/trac.js"></script>
+</head>
+<body>
 
 
-schreiben () {
-	printf "                   keycode %3s = %-22s%-22s%-22s%-22s\n" $1 $2 $3 $4 $5
-	printf "           shiftl  keycode %3s = %-22s\n" $1 $6
-	printf "   shift   shiftl  keycode %3s = %-22s\n" $1 $7
-	printf "   altgr   shiftl  keycode %3s = %-22s\n" $1 $8
+<div id="banner">
 
-	if [ `grep ^$2$ console.control` ]; then
-		printf "           control keycode %3s = Control_%-22s\n" $1 $2
-		printf "   shift   control keycode %3s = Control_%-22s\n" $1 $2
-		printf "           alt     keycode %3s = Meta_%-22s\n" $1 $2
-		printf "   shift   alt     keycode %3s = Meta_%-22s\n" $1 $3
-		printf "   control alt     keycode %3s = Meta_Control_%-22s\n" $1 $2
-	fi
-}
+<div id="header"><a id="logo" href="http://neo-layout.org/"><img src="http://neo-layout.org/neo_kopf_trac_522x50.png" alt="" /></a><hr /></div>
 
-lesen() {
-# Aufruf: lesen <Anzahl> <Zeilennummer in der Kurzreferenz> <Keycode der ersten Taste>
-	typeset -i zeile keycode
-	zeile=$2
-	keycode=$3
-	for i in $(seq 1 $1)
-	do
-		a=`head -$zeile kurzreferenz | tail -1`
-		schreiben $keycode $a
-		zeile=zeile+1
-		keycode=keycode+1
-	done
-}
-
-cat console.sondertasten
-echo
-echo
-echo "! ----Space key-------------------------------------------------------------"
-lesen 1 2 57
-
-echo
-echo "! ----dead keys-------------------------------------------------------------"
-lesen 1 3 41
-lesen 1 4 13
-lesen 1 5 27
-
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Row 1 (number row)"
-echo "! --------------------------------------------------------------------------"
-lesen 11 6 2
-
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Row 2 (upper row)"
-echo "! --------------------------------------------------------------------------"
-lesen 11 17 16
+<form id="search" action="/search" method="get">
+ <div>
+  <label for="proj-search">Search:</label>
+  <input type="text" id="proj-search" name="q" size="10" accesskey="f" value="" />
+  <input type="submit" value="Search" />
+  <input type="hidden" name="wiki" value="on" />
+  <input type="hidden" name="changeset" value="on" />
+  <input type="hidden" name="ticket" value="on" />
+ </div>
+</form>
 
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Row 3 (home row, middle row)"
-echo "! --------------------------------------------------------------------------"
-lesen 11 28 30
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Row 4 (lower row)"
-echo "! --------------------------------------------------------------------------"
-lesen 10 39 44
+<div id="metanav" class="nav"><ul><li class="first">logged in as erik</li><li><a href="/logout">Logout</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/about">About Trac</a></li></ul></div>
+</div>
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Keypad Row 1 (uppest row)"
-echo "! --------------------------------------------------------------------------"
-lesen 1 49 69
-lesen 1 50 98
-lesen 1 51 55
-lesen 1 52 74
+<div id="mainnav" class="nav"><ul><li class="first"><a accesskey="1" href="/wiki">Wiki</a></li><li><a accesskey="2" href="/timeline">Timeline</a></li><li><a accesskey="3" href="/roadmap">Roadmap</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li><a accesskey="7" href="/newticket">New Ticket</a></li><li><a accesskey="4" href="/search">Search</a></li><li class="last"><a href="/admin">Admin</a></li></ul></div>
+<div id="main">
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Keypad Row 2 (upper row)"
-echo "! --------------------------------------------------------------------------"
-lesen 3 53 71
-lesen 1 56 78
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Keypad Row 3 (home row, middle row)"
-echo "! --------------------------------------------------------------------------"
-lesen 3 57 75
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Keypad Row 4 (lower row)"
-echo "! --------------------------------------------------------------------------"
-lesen 3 60 79
 
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Keypad Row 5 (lowest row)"
-echo "! --------------------------------------------------------------------------"
-lesen 2 64 82
+<div id="ctxtnav" class="nav"></div>
 
-cat console.more_control
+<div id="content" class="attachment">
 
-echo
-echo
-echo "! --------------------------------------------------------------------------"
-echo "! Strings and Compose"
-echo "! --------------------------------------------------------------------------"
-echo "# string F100 = \"setleds +num\n\""
 
-#cat console.string_compose
+ <h1><a href="/ticket/98">Ticket #98</a>: mach_console</h1>
+ <table id="info" summary="Description"><tbody><tr>
+   <th scope="col">
+    File mach_console, 3.4 kB 
+    (added by Elias Oltmanns &lt;eo@nebensachen.de&gt;,  1 day ago)
+   </th></tr><tr>
+   <td class="message"><p>
+mach_console
+</p>
+</td>
+  </tr>
+ </tbody></table>
+ <div id="preview">
+   <table class="code"><thead><tr><th class="lineno">Line</th><th class="content">&nbsp;</th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th>
+<td>#!/bin/sh</td>
+</tr><tr><th id="L2"><a href="#L2">2</a></th>
+<td>LC_COLLATE=C</td>
+</tr><tr><th id="L3"><a href="#L3">3</a></th>
+<td></td>
+</tr><tr><th id="L4"><a href="#L4">4</a></th>
+<td>schreiben () {</td>
+</tr><tr><th id="L5"><a href="#L5">5</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; if [[ $2 == [a-z] ]]; then</td>
+</tr><tr><th id="L6"><a href="#L6">6</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode %3s = %-22s\n&#34; $1 $2</td>
+</tr><tr><th id="L7"><a href="#L7">7</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode %3s = %-22s\n&#34; $1 $4</td>
+</tr><tr><th id="L8"><a href="#L8">8</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode %3s = %-22s\n&#34; $1 $5</td>
+</tr><tr><th id="L9"><a href="#L9">9</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; else</td>
+</tr><tr><th id="L10"><a href="#L10">10</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode %3s = %-22s%-22s%-22s%-22s\n&#34; $1 $2 $3 $4 $5</td>
+</tr><tr><th id="L11"><a href="#L11">11</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; fi</td>
+</tr><tr><th id="L12"><a href="#L12">12</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode %3s = %-22s\n&#34; $1 $6</td>
+</tr><tr><th id="L13"><a href="#L13">13</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode %3s = %-22s\n&#34; $1 $7</td>
+</tr><tr><th id="L14"><a href="#L14">14</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; if [[ $8 ]]; then</td>
+</tr><tr><th id="L15"><a href="#L15">15</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf &#34;&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode %3s = %-22s\n&#34; $1 $8</td>
+</tr><tr><th id="L16"><a href="#L16">16</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; fi</td>
+</tr><tr><th id="L17"><a href="#L17">17</a></th>
+<td>}</td>
+</tr><tr><th id="L18"><a href="#L18">18</a></th>
+<td></td>
+</tr><tr><th id="L19"><a href="#L19">19</a></th>
+<td>lesen() {</td>
+</tr><tr><th id="L20"><a href="#L20">20</a></th>
+<td># Aufruf: lesen &lt;Anzahl&gt; &lt;Zeilennummer in der Kurzreferenz&gt; &lt;Keycode der ersten Taste&gt;</td>
+</tr><tr><th id="L21"><a href="#L21">21</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; typeset -i zeile keycode</td>
+</tr><tr><th id="L22"><a href="#L22">22</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; zeile=$2</td>
+</tr><tr><th id="L23"><a href="#L23">23</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; keycode=$3</td>
+</tr><tr><th id="L24"><a href="#L24">24</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; for i in $(seq 1 $1)</td>
+</tr><tr><th id="L25"><a href="#L25">25</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; do</td>
+</tr><tr><th id="L26"><a href="#L26">26</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a=`head -$zeile kurzreferenz | tail -1`</td>
+</tr><tr><th id="L27"><a href="#L27">27</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; schreiben $keycode $a</td>
+</tr><tr><th id="L28"><a href="#L28">28</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; zeile=zeile+1</td>
+</tr><tr><th id="L29"><a href="#L29">29</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; keycode=keycode+1</td>
+</tr><tr><th id="L30"><a href="#L30">30</a></th>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; done</td>
+</tr><tr><th id="L31"><a href="#L31">31</a></th>
+<td>}</td>
+</tr><tr><th id="L32"><a href="#L32">32</a></th>
+<td></td>
+</tr><tr><th id="L33"><a href="#L33">33</a></th>
+<td>cat console.sondertasten</td>
+</tr><tr><th id="L34"><a href="#L34">34</a></th>
+<td>echo</td>
+</tr><tr><th id="L35"><a href="#L35">35</a></th>
+<td>echo</td>
+</tr><tr><th id="L36"><a href="#L36">36</a></th>
+<td>echo &#34;! ----Space key-------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L37"><a href="#L37">37</a></th>
+<td>lesen 1 2 57</td>
+</tr><tr><th id="L38"><a href="#L38">38</a></th>
+<td></td>
+</tr><tr><th id="L39"><a href="#L39">39</a></th>
+<td>echo</td>
+</tr><tr><th id="L40"><a href="#L40">40</a></th>
+<td>echo &#34;! ----dead keys-------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L41"><a href="#L41">41</a></th>
+<td>lesen 1 3 41</td>
+</tr><tr><th id="L42"><a href="#L42">42</a></th>
+<td>lesen 1 4 13</td>
+</tr><tr><th id="L43"><a href="#L43">43</a></th>
+<td>lesen 1 5 27</td>
+</tr><tr><th id="L44"><a href="#L44">44</a></th>
+<td></td>
+</tr><tr><th id="L45"><a href="#L45">45</a></th>
+<td>echo</td>
+</tr><tr><th id="L46"><a href="#L46">46</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L47"><a href="#L47">47</a></th>
+<td>echo &#34;! Row 1 (number row)&#34;</td>
+</tr><tr><th id="L48"><a href="#L48">48</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L49"><a href="#L49">49</a></th>
+<td>lesen 11 6 2</td>
+</tr><tr><th id="L50"><a href="#L50">50</a></th>
+<td></td>
+</tr><tr><th id="L51"><a href="#L51">51</a></th>
+<td>echo</td>
+</tr><tr><th id="L52"><a href="#L52">52</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L53"><a href="#L53">53</a></th>
+<td>echo &#34;! Row 2 (upper row)&#34;</td>
+</tr><tr><th id="L54"><a href="#L54">54</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L55"><a href="#L55">55</a></th>
+<td>lesen 11 17 16</td>
+</tr><tr><th id="L56"><a href="#L56">56</a></th>
+<td></td>
+</tr><tr><th id="L57"><a href="#L57">57</a></th>
+<td></td>
+</tr><tr><th id="L58"><a href="#L58">58</a></th>
+<td>echo</td>
+</tr><tr><th id="L59"><a href="#L59">59</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L60"><a href="#L60">60</a></th>
+<td>echo &#34;! Row 3 (home row, middle row)&#34;</td>
+</tr><tr><th id="L61"><a href="#L61">61</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L62"><a href="#L62">62</a></th>
+<td>lesen 11 28 30</td>
+</tr><tr><th id="L63"><a href="#L63">63</a></th>
+<td></td>
+</tr><tr><th id="L64"><a href="#L64">64</a></th>
+<td>echo</td>
+</tr><tr><th id="L65"><a href="#L65">65</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L66"><a href="#L66">66</a></th>
+<td>echo &#34;! Row 4 (lower row)&#34;</td>
+</tr><tr><th id="L67"><a href="#L67">67</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L68"><a href="#L68">68</a></th>
+<td>lesen 10 39 44</td>
+</tr><tr><th id="L69"><a href="#L69">69</a></th>
+<td></td>
+</tr><tr><th id="L70"><a href="#L70">70</a></th>
+<td>echo</td>
+</tr><tr><th id="L71"><a href="#L71">71</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L72"><a href="#L72">72</a></th>
+<td>echo &#34;! Keypad Row 1 (uppest row)&#34;</td>
+</tr><tr><th id="L73"><a href="#L73">73</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L74"><a href="#L74">74</a></th>
+<td>lesen 1 49 69</td>
+</tr><tr><th id="L75"><a href="#L75">75</a></th>
+<td>lesen 1 50 98</td>
+</tr><tr><th id="L76"><a href="#L76">76</a></th>
+<td>lesen 1 51 55</td>
+</tr><tr><th id="L77"><a href="#L77">77</a></th>
+<td>lesen 1 52 74</td>
+</tr><tr><th id="L78"><a href="#L78">78</a></th>
+<td></td>
+</tr><tr><th id="L79"><a href="#L79">79</a></th>
+<td>echo</td>
+</tr><tr><th id="L80"><a href="#L80">80</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L81"><a href="#L81">81</a></th>
+<td>echo &#34;! Keypad Row 2 (upper row)&#34;</td>
+</tr><tr><th id="L82"><a href="#L82">82</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L83"><a href="#L83">83</a></th>
+<td>lesen 3 53 71</td>
+</tr><tr><th id="L84"><a href="#L84">84</a></th>
+<td>lesen 1 56 78</td>
+</tr><tr><th id="L85"><a href="#L85">85</a></th>
+<td></td>
+</tr><tr><th id="L86"><a href="#L86">86</a></th>
+<td>echo</td>
+</tr><tr><th id="L87"><a href="#L87">87</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L88"><a href="#L88">88</a></th>
+<td>echo &#34;! Keypad Row 3 (home row, middle row)&#34;</td>
+</tr><tr><th id="L89"><a href="#L89">89</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L90"><a href="#L90">90</a></th>
+<td>lesen 3 57 75</td>
+</tr><tr><th id="L91"><a href="#L91">91</a></th>
+<td></td>
+</tr><tr><th id="L92"><a href="#L92">92</a></th>
+<td>echo</td>
+</tr><tr><th id="L93"><a href="#L93">93</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L94"><a href="#L94">94</a></th>
+<td>echo &#34;! Keypad Row 4 (lower row)&#34;</td>
+</tr><tr><th id="L95"><a href="#L95">95</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L96"><a href="#L96">96</a></th>
+<td>lesen 3 60 79</td>
+</tr><tr><th id="L97"><a href="#L97">97</a></th>
+<td></td>
+</tr><tr><th id="L98"><a href="#L98">98</a></th>
+<td>echo</td>
+</tr><tr><th id="L99"><a href="#L99">99</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L100"><a href="#L100">100</a></th>
+<td>echo &#34;! Keypad Row 5 (lowest row)&#34;</td>
+</tr><tr><th id="L101"><a href="#L101">101</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L102"><a href="#L102">102</a></th>
+<td>lesen 2 64 82</td>
+</tr><tr><th id="L103"><a href="#L103">103</a></th>
+<td></td>
+</tr><tr><th id="L104"><a href="#L104">104</a></th>
+<td>cat console.more_control</td>
+</tr><tr><th id="L105"><a href="#L105">105</a></th>
+<td></td>
+</tr><tr><th id="L106"><a href="#L106">106</a></th>
+<td>echo</td>
+</tr><tr><th id="L107"><a href="#L107">107</a></th>
+<td>echo</td>
+</tr><tr><th id="L108"><a href="#L108">108</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L109"><a href="#L109">109</a></th>
+<td>echo &#34;! Strings and Compose&#34;</td>
+</tr><tr><th id="L110"><a href="#L110">110</a></th>
+<td>echo &#34;! --------------------------------------------------------------------------&#34;</td>
+</tr><tr><th id="L111"><a href="#L111">111</a></th>
+<td>echo &#34;# string F100 = \&#34;setleds +num\n\&#34;&#34;</td>
+</tr><tr><th id="L112"><a href="#L112">112</a></th>
+<td></td>
+</tr><tr><th id="L113"><a href="#L113">113</a></th>
+<td>#cat console.string_compose</td>
+</tr></tbody></table>
+ </div>
+ <div class="buttons">
+  <form method="get" action=""><div id="delete">
+   <input type="hidden" name="action" value="delete" />
+   <input type="submit" value="Delete attachment" />
+  </div></form>
+ </div>
+
+
+</div>
+<script type="text/javascript">searchHighlight()</script>
+<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first last"><a href="/attachment/ticket/98/mach_console?format=raw">Original Format</a></li></ul></div>
+
+</div>
+
+<div id="footer">
+ <hr />
+ <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107"
+   alt="Trac Powered"/></a>
+ <p class="left">
+  Powered by <a href="/about"><strong>Trac 0.10.4</strong></a><br />
+  By <a href="http://www.edgewall.org/">Edgewall Software</a>.
+ </p>
+ <p class="right">
+  
+ </p>
+</div>
+
+
+
+ </body>
+</html>
+
