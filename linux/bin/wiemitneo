@@ -1,7 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 # 
 # Dieses Skript unterstützt die Benutzung der NEO-Tastatur
-# Als Argument kann ein einzelnes Zeichen oder eine Beschrbeibung eines Zeichens übergeben werden
+# Als Argument kann ein einzelnes Zeichen oder eine Beschreibung eines 
+# Zeichens übergeben werden
 #
 # Dieses Skript stammt von:
 #      Pascal Hauck <pascal dot hauck at web dot de>

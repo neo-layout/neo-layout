@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Verzeichnis muss eventuell an den Ort der Compose angepasst werden:
 COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
@@ -15,7 +15,7 @@ do
 		exit;;
 	--help)
 		echo Aufruf: $0 [OPTION] BESCHREIBUNG
-		echo »$0« versucht ein Zeichen anhand einer Beschreibung zu idetifizieren
+		echo »$0« versucht ein Zeichen anhand einer Beschreibung zu identifizieren
 		echo Option:
 		echo -e "  -n               gibt maximal 2n statt 10 Vorschläge aus"
 		exit;;
