@@ -40,9 +40,9 @@ http://dejavu.sourceforge.net/
 Die Maustastatursteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
 Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
 die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
-Am besten geeignet ist dazu die Ebene 4 des Keypads (z.B. mit Mod4_Lock). Verzichtet man auf
-Markierungen ist auch Ebene 1 des Keypads geeignet.
-Des Weiteren kann man die Zahlen auf Ebene 4 des Haupttastaturfelds benutzen, jedoch ist die
+Am besten geeignet ist dazu die Ebene 4 des Keypads (z.B. mit Mod4_Lock). Verzichtet man auf
+Markierungen ist auch Ebene 1 des Keypads geeignet.
+Des Weiteren kann man die Zahlen auf Ebene 4 des Haupttastaturfelds benutzen, jedoch ist die
 Bedienung dort weniger komfortabel.
 
 === Symbole ===                            
@@ -68,8 +68,8 @@ Zu den Akzenten siehe auch
 T1 („Tote Taste 1“: Taste links neben der 1)
         1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
 ┌─────┬ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
-│˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
-│ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
+│˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
+│ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
 ├─────┴ 5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
         6 … Toter Makron (sieht aus wie U+00AF MACRON)
 
@@ -77,15 +77,15 @@ T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Grave (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
 ┬─────┬ 2 … 
 │  ˵  │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
-│` ¨ ῾│ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
+│` ¨ ῾│ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
 ┴──┬──┴ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 … 
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
         1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
 ┬──┴──┬ 2 … Tote Cedilla (sieht aus wie U+00B8 CEDILLA)
-│¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
-│´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
+│¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
+│´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
 ┴┬────┴ 5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
         6 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
 
@@ -157,20 +157,20 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° • ¬│§ ‣ ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„   ∞│“ / ∋│” * ∅│— - ╌│  ˵  │Backspace│
-│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│    ‑│` ¨ ῾│    ⌫    │
+│˜ ˇ ¯│° • ¬│§ ‣ ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„   ∞│“ / ∋│” * ∅│— - ╌│  ˵  │Backspace│
+│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│    ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│Tab⇤    │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
-│Tab⇥ ♫  │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Enter │
+│ Tab⇤   │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
+│ Tab⇥ ♫ │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Return│
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│ ↘3 ♫    │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│↘3   │  ↲  │
-│         │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│     │     │
+│   Mod   │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│ Mod │  ↲  │
+│    3    │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│  3  │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│Cps_Lk│↙4   │Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│… 3 Θ│J ; ∝│   Caps_Lock  │
-│Umsch │4Lock│ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
+│CapsLk│ Mod │Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│… 3 Θ│J ; ∝│   CapsLock   │
+│Umsch │  4  │ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
-│ Strg │ Fen- │ Alt  │ Leerz.␣        0         schmal.Lz.¦ │↙4    │ Fen- │ Menu │ Strg │
-│      │ ster │      │ Leerz.␣     Leerz.␣    geschütz.Lz.⍽ │ 4Lock│ ster │      │      │
+│ Strg │      │ Alt  │Leerzeichen␣      0         schmal ¦  │ Lock │      │ Menü │ Strg │
+│      │      │      │Leerzeichen␣ Leerzeichen␣ geschützt ⍽ │ Mod4 │      │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
 === Erste Ebene – Miniatur ===
