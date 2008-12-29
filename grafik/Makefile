@@ -1,4 +1,4 @@
-SVGFILES=${wildcard */*.svg} ${wildcard */*/*.svg} ${wildcard */*/*.svg}
+SVGFILES=${wildcard *.svg} ${wildcard */*.svg} ${wildcard */*/*.svg}
 
 PDFFILES=${addsuffix .pdf,${basename ${SVGFILES}}}
 PNGFILES=${addsuffix .png,${basename ${SVGFILES}}}
