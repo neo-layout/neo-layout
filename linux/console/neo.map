@@ -1,1114 +1,512 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
- <title>#98: neo20.map - NEO-Layout - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" /><link rel="icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="up" href="/ticket/98" title="Ticket #98" /><link rel="alternate" href="/attachment/ticket/98/neo20.map?format=raw" title="Original Format" /><style type="text/css">
-</style>
- <script type="text/javascript" src="/chrome/common/js/trac.js"></script>
-</head>
-<body>
+! neo.map - german NEO keyboard layout
+! 2008 Pascal Hauck, <pascal.hauck@web.de>
+!
+! Diese Datei ist experimentell!
+! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
+! anders verhalten als erwartet, sollte dies auf der Mailingliste
+! der NEO-Tastaturbelegung gemeldet werden.
+!
+! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap
+! erzeugt.
+!
+
+keymaps 0-18
+strings as usual
+compose as usual
+alt_is_meta
+! --------------------------------------------------------------------------
+! Modifier definitions
+! --------------------------------------------------------------------------
+                   keycode  42 = Shift           
+#          shift   keycode  42 = Caps_Lock       
+                   keycode  54 = Shift           
+#          shift   keycode  54 = Caps_Lock       
+                   keycode  58 = AltGr           
+#          altgr   keycode  58 = AltGr_Lock      
+                   keycode  43 = AltGr           
+#          altgr   keycode  43 = AltGr_Lock      
+                   keycode  86 = ShiftL          
+#          shiftl  keycode  86 = ShiftL_Lock     
+                   keycode 100 = ShiftL          
+#          shiftl  keycode 100 = ShiftL_Lock     
+
+                   keycode   1 = Escape          
+   shift   altgr   keycode   1 = Meta_Escape     
+
+! --------------------------------------------------------------------------
+! function keys
+! --------------------------------------------------------------------------
+! ----Backspace-------------------------------------------------------------
+                   keycode  14 = Delete          
+! ----Return Enter----------------------------------------------------------
+                   keycode  28 = Return          
+           alt     keycode  28 = Meta_Control_m  
+                   keycode  96 = KP_Enter        
+           altgr   keycode  96 = Hex_F           
+! ----Tab-------------------------------------------------------------------
+                   keycode  15 = Tab              Meta_Tab        
+           altgr   keycode  15 = Compose
+! ----Control Alt-----------------------------------------------------------
+                   keycode  29 = Control         
+                   keycode  97 = Control         
+                   keycode  56 = Alt             
+! ----Prt SclLk Pause-------------------------------------------------------
+                   keycode  99 =
+           control keycode  99 = Control_backslash
+           alt     keycode  99 = Control_backslash
+   control alt	   keycode  99 = Meta_Control_backslash
+                   keycode  70 = Scroll_Lock      Show_Memory      Show_Registers   Show_State      
+           alt     keycode  70 = Scroll_Lock     
+                   keycode 119 = Pause           
+! ----Home block------------------------------------------------------------
+                   keycode 102 = Find            
+                   keycode 104 = Prior           
+           shift   keycode 104 = Scroll_Backward 
+                   keycode 107 = Select          
+                   keycode 109 = Next            
+           shift   keycode 109 = Scroll_Forward  
+                   keycode 111 = Remove          
+   altgr   control keycode 111 = Boot            
+   control alt     keycode 111 = Boot            
+                   keycode 110 = Insert          
+! ----Navigation block------------------------------------------------------
+                   keycode 103 = Up              
+           alt     keycode 103 = KeyboardSignal  
+                   keycode 105 = Left            
+           alt     keycode 105 = Decr_Console    
+                   keycode 106 = Right           
+           alt     keycode 106 = Incr_Console    
+                   keycode 108 = Down            
+! ----Win keys--------------------------------------------------------------
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     
+! ----menue key-------------------------------------------------------------
+                   keycode 127 = Compose         F100
+! ----F-keys----------------------------------------------------------------
+                   keycode  59 = F1               F13              Console_13       F25             
+           alt     keycode  59 = Console_1       
+   control alt     keycode  59 = Console_1       
+                   keycode  60 = F2               F14              Console_14       F26             
+           alt     keycode  60 = Console_2       
+   control alt     keycode  60 = Console_2       
+                   keycode  61 = F3               F15              Console_15       F27             
+           alt     keycode  61 = Console_3       
+   control alt     keycode  61 = Console_3       
+                   keycode  62 = F4               F16              Console_16       F28             
+           alt     keycode  62 = Console_4       
+   control alt     keycode  62 = Console_4       
+                   keycode  63 = F5               F17              Console_17       F29             
+           alt     keycode  63 = Console_5       
+   control alt     keycode  63 = Console_5       
+                   keycode  64 = F6               F18              Console_18       F30             
+           alt     keycode  64 = Console_6       
+   control alt     keycode  64 = Console_6       
+                   keycode  65 = F7               F19              Console_19       F31             
+           alt     keycode  65 = Console_7       
+   control alt     keycode  65 = Console_7       
+                   keycode  66 = F8               F20              Console_20       F32             
+           alt     keycode  66 = Console_8       
+   control alt     keycode  66 = Console_8       
+                   keycode  67 = F9               F21              Console_21       F33             
+           alt     keycode  67 = Console_9       
+   control alt     keycode  67 = Console_9       
+                   keycode  68 = F10              F22              Console_22       F34             
+           alt     keycode  68 = Console_10      
+   control alt     keycode  68 = Console_10      
+                   keycode  87 = F11              F23              Console_23       F35             
+           alt     keycode  87 = Console_11      
+   control alt     keycode  87 = Console_11      
+                   keycode  88 = F12              F24              Console_24       F36             
+           alt     keycode  88 = Console_12      
+   control alt     keycode  88 = Console_12      
+! ----unknown keys from defkeymap.map---------------------------------------
+                   keycode  84 = Last_Console    
+                   keycode  89 =
+                   keycode  90 =
+                   keycode  91 =
+                   keycode  92 =
+                   keycode  93 =
+                   keycode  94 =
+                   keycode  95 =
+                   keycode 101 = Break           
+                   keycode 112 = Macro           
+   altgr   control keycode 112 = VoidSymbol      
+   shift   alt     keycode 112 = VoidSymbol      
+   altgr   alt     keycode 112 = VoidSymbol      
+                   keycode 113 = F13             
+   altgr   control keycode 113 = VoidSymbol      
+   shift   alt     keycode 113 = VoidSymbol      
+   altgr   alt     keycode 113 = VoidSymbol      
+                   keycode 114 = F14             
+   altgr   control keycode 114 = VoidSymbol      
+   shift   alt     keycode 114 = VoidSymbol      
+   altgr   alt     keycode 114 = VoidSymbol      
+                   keycode 115 = Help            
+   altgr   control keycode 115 = VoidSymbol      
+   shift   alt     keycode 115 = VoidSymbol      
+   altgr   alt     keycode 115 = VoidSymbol      
+                   keycode 116 = Do              
+   altgr   control keycode 116 = VoidSymbol      
+   shift   alt     keycode 116 = VoidSymbol      
+   altgr   alt     keycode 116 = VoidSymbol      
+                   keycode 117 = F17             
+   altgr   control keycode 117 = VoidSymbol      
+   shift   alt     keycode 117 = VoidSymbol      
+   altgr   alt     keycode 117 = VoidSymbol      
+                   keycode 118 = KP_MinPlus      
+   altgr   control keycode 118 = VoidSymbol      
+   shift   alt     keycode 118 = VoidSymbol      
+   altgr   alt     keycode 118 = VoidSymbol      
+                   keycode 119 = Pause
+                   keycode 120 =
+                   keycode 121 =
+                   keycode 122 =
+                   keycode 123 =
+                   keycode 124 =
 
 
-<div id="banner">
+! ----Space key-------------------------------------------------------------
+                   keycode  57 = space                 space                 space                 nobreakspace          
+           shiftl  keycode  57 = KP_0                  
+   shift   shiftl  keycode  57 = KP_0                  
+   altgr   shiftl  keycode  57 = U+202F                
 
-<div id="header"><a id="logo" href="http://neo-layout.org/"><img src="http://neo-layout.org/neo_kopf_trac_522x50.png" alt="" /></a><hr /></div>
+! ----dead keys-------------------------------------------------------------
+                   keycode  41 = dead_circumflex       dead_tilde            U+030a                dead_breve            
+           shiftl  keycode  41 = dead_caron            
+   shift   shiftl  keycode  41 = VoidSymbol            
+   altgr   shiftl  keycode  41 = U+0304                
+                   keycode  13 = dead_grave            VoidSymbol            dead_diaeresis        U+1FFE                
+           shiftl  keycode  13 = VoidSymbol            
+   shift   shiftl  keycode  13 = VoidSymbol            
+   altgr   shiftl  keycode  13 = VoidSymbol            
+                   keycode  27 = dead_acute            dead_cedilla          VoidSymbol            U+1FBF                
+           shiftl  keycode  27 = dead_doubleacute      
+   shift   shiftl  keycode  27 = VoidSymbol            
+   altgr   shiftl  keycode  27 = U+0307                
 
-<form id="search" action="/search" method="get">
- <div>
-  <label for="proj-search">Search:</label>
-  <input type="text" id="proj-search" name="q" size="10" accesskey="f" value="" />
-  <input type="submit" value="Search" />
-  <input type="hidden" name="wiki" value="on" />
-  <input type="hidden" name="changeset" value="on" />
-  <input type="hidden" name="ticket" value="on" />
- </div>
-</form>
+! --------------------------------------------------------------------------
+! Row 1 (number row)
+! --------------------------------------------------------------------------
+                   keycode   2 = one                   degree                onesuperior           VoidSymbol            
+           shiftl  keycode   2 = U+2022                
+   shift   shiftl  keycode   2 = VoidSymbol            
+   altgr   shiftl  keycode   2 = notsign               
+                   keycode   3 = two                   section               twosuperior           VoidSymbol            
+           shiftl  keycode   3 = U+2023                
+   shift   shiftl  keycode   3 = VoidSymbol            
+   altgr   shiftl  keycode   3 = U+2228                
+                   keycode   4 = three                 U+2113                threesuperior         VoidSymbol            
+           shiftl  keycode   4 = U+2116                
+   shift   shiftl  keycode   4 = VoidSymbol            
+   altgr   shiftl  keycode   4 = U+2227                
+                   keycode   5 = four                  guillemotright        U+203A                U+2020                
+           shiftl  keycode   5 = Prior                 
+   shift   shiftl  keycode   5 = Prior                 
+   altgr   shiftl  keycode   5 = U+22a4                
+                   keycode   6 = five                  guillemotleft         U+2039                U+2640                
+           shiftl  keycode   6 = periodcentered        
+   shift   shiftl  keycode   6 = VoidSymbol            
+   altgr   shiftl  keycode   6 = U+2221                
+                   keycode   7 = six                   U+20ac                cent                  U+2642                
+           shiftl  keycode   7 = sterling              
+   shift   shiftl  keycode   7 = VoidSymbol            
+   altgr   shiftl  keycode   7 = U+2225                
+                   keycode   8 = seven                 dollar                yen                   U+03ba                
+           shiftl  keycode   8 = currency              
+   shift   shiftl  keycode   8 = VoidSymbol            
+   altgr   shiftl  keycode   8 = U+2192                
+                   keycode   9 = eight                 U+201e                U+201a                U+2329                
+           shiftl  keycode   9 = VoidSymbol            
+   shift   shiftl  keycode   9 = VoidSymbol            
+   altgr   shiftl  keycode   9 = U+221e                
+                   keycode  10 = nine                  U+201c                U+2018                U+232a                
+           shiftl  keycode  10 = KP_Divide             
+   shift   shiftl  keycode  10 = KP_Divide             
+   altgr   shiftl  keycode  10 = VoidSymbol            
+                   keycode  11 = zero                  U+201d                U+2019                VoidSymbol            
+           shiftl  keycode  11 = KP_Multiply           
+   shift   shiftl  keycode  11 = KP_Multiply           
+   altgr   shiftl  keycode  11 = VoidSymbol            
+                   keycode  12 = minus                 U+2014                VoidSymbol            U+2011                
+           shiftl  keycode  12 = KP_Subtract           
+   shift   shiftl  keycode  12 = KP_Subtract           
+   altgr   shiftl  keycode  12 = hyphen                
 
+! --------------------------------------------------------------------------
+! Row 2 (upper row)
+! --------------------------------------------------------------------------
+                   keycode  16 = x                     
+           altgr   keycode  16 = VoidSymbol            
+   shift   altgr   keycode  16 = U+03be                
+           shiftl  keycode  16 = VoidSymbol            
+   shift   shiftl  keycode  16 = VoidSymbol            
+   altgr   shiftl  keycode  16 = U+039e                
+                   keycode  17 = v                     
+           altgr   keycode  17 = underscore            
+   shift   altgr   keycode  17 = VoidSymbol            
+           shiftl  keycode  17 = BackSpace             
+   shift   shiftl  keycode  17 = BackSpace             
+   altgr   shiftl  keycode  17 = U+2259                
+                   keycode  18 = l                     
+           altgr   keycode  18 = bracketleft           
+   shift   altgr   keycode  18 = U+03bb                
+           shiftl  keycode  18 = Up                    
+   shift   shiftl  keycode  18 = Up                    
+   altgr   shiftl  keycode  18 = U+039b                
+                   keycode  19 = c                     
+           altgr   keycode  19 = bracketright          
+   shift   altgr   keycode  19 = U+03c7                
+           shiftl  keycode  19 = Remove                
+   shift   shiftl  keycode  19 = Remove                
+   altgr   shiftl  keycode  19 = U+2102                
+                   keycode  20 = w                     
+           altgr   keycode  20 = asciicircum           
+   shift   altgr   keycode  20 = U+03c9                
+           shiftl  keycode  20 = Insert                
+   shift   shiftl  keycode  20 = Insert                
+   altgr   shiftl  keycode  20 = U+03a9                
+                   keycode  21 = k                     
+           altgr   keycode  21 = exclam                
+   shift   altgr   keycode  21 = U+03F0                
+           shiftl  keycode  21 = exclamdown            
+   shift   shiftl  keycode  21 = VoidSymbol            
+   altgr   shiftl  keycode  21 = U+221a                
+                   keycode  22 = h                     
+           altgr   keycode  22 = less                  
+   shift   altgr   keycode  22 = U+03c8                
+           shiftl  keycode  22 = KP_7                  
+   shift   shiftl  keycode  22 = KP_7                  
+   altgr   shiftl  keycode  22 = U+03a8                
+                   keycode  23 = g                     
+           altgr   keycode  23 = greater               
+   shift   altgr   keycode  23 = U+03b3                
+           shiftl  keycode  23 = KP_8                  
+   shift   shiftl  keycode  23 = KP_8                  
+   altgr   shiftl  keycode  23 = U+0393                
+                   keycode  24 = f                     
+           altgr   keycode  24 = equal                 
+   shift   altgr   keycode  24 = U+03c6                
+           shiftl  keycode  24 = KP_9                  
+   shift   shiftl  keycode  24 = KP_9                  
+   altgr   shiftl  keycode  24 = U+03a6                
+                   keycode  25 = q                     
+           altgr   keycode  25 = ampersand             
+   shift   altgr   keycode  25 = U+03D5                
+           shiftl  keycode  25 = KP_Add                
+   shift   shiftl  keycode  25 = KP_Add                
+   altgr   shiftl  keycode  25 = U+211A                
+                   keycode  26 = ssharp                U+1E9E                U+017F                U+03c2                
+           shiftl  keycode  26 = VoidSymbol            
+   shift   shiftl  keycode  26 = VoidSymbol            
+   altgr   shiftl  keycode  26 = U+2218                
 
+! --------------------------------------------------------------------------
+! Row 3 (home row, middle row)
+! --------------------------------------------------------------------------
+                   keycode  30 = u                     
+           altgr   keycode  30 = backslash             
+   shift   altgr   keycode  30 = VoidSymbol            
+           shiftl  keycode  30 = Home                  
+   shift   shiftl  keycode  30 = Home                  
+   altgr   shiftl  keycode  30 = U+222E                
+                   keycode  31 = i                     
+           altgr   keycode  31 = slash                 
+   shift   altgr   keycode  31 = U+03b9                
+           shiftl  keycode  31 = Left                  
+   shift   shiftl  keycode  31 = Left                  
+   altgr   shiftl  keycode  31 = U+222b                
+                   keycode  32 = a                     
+           altgr   keycode  32 = braceleft             
+   shift   altgr   keycode  32 = U+03b1                
+           shiftl  keycode  32 = Down                  
+   shift   shiftl  keycode  32 = Down                  
+   altgr   shiftl  keycode  32 = U+2200                
+                   keycode  33 = e                     
+           altgr   keycode  33 = braceright            
+   shift   altgr   keycode  33 = U+03b5                
+           shiftl  keycode  33 = Right                 
+   shift   shiftl  keycode  33 = Right                 
+   altgr   shiftl  keycode  33 = U+2203                
+                   keycode  34 = o                     
+           altgr   keycode  34 = asterisk              
+   shift   altgr   keycode  34 = U+03bf                
+           shiftl  keycode  34 = End                   
+   shift   shiftl  keycode  34 = End                   
+   altgr   shiftl  keycode  34 = VoidSymbol            
+                   keycode  35 = s                     
+           altgr   keycode  35 = question              
+   shift   altgr   keycode  35 = U+03c3                
+           shiftl  keycode  35 = questiondown          
+   shift   shiftl  keycode  35 = VoidSymbol            
+   altgr   shiftl  keycode  35 = U+03a3                
+                   keycode  36 = n                     
+           altgr   keycode  36 = parenleft             
+   shift   altgr   keycode  36 = U+03bd                
+           shiftl  keycode  36 = KP_4                  
+   shift   shiftl  keycode  36 = KP_4                  
+   altgr   shiftl  keycode  36 = U+2115                
+                   keycode  37 = r                     
+           altgr   keycode  37 = parenright            
+   shift   altgr   keycode  37 = U+03F1                
+           shiftl  keycode  37 = KP_5                  
+   shift   shiftl  keycode  37 = KP_5                  
+   altgr   shiftl  keycode  37 = U+211D                
+                   keycode  38 = t                     
+           altgr   keycode  38 = minus                 
+   shift   altgr   keycode  38 = U+03c4                
+           shiftl  keycode  38 = KP_6                  
+   shift   shiftl  keycode  38 = KP_6                  
+   altgr   shiftl  keycode  38 = U+2202                
+                   keycode  39 = d                     
+           altgr   keycode  39 = colon                 
+   shift   altgr   keycode  39 = U+03b4                
+           shiftl  keycode  39 = U+002c                
+   shift   shiftl  keycode  39 = VoidSymbol            
+   altgr   shiftl  keycode  39 = U+0394                
+                   keycode  40 = y                     
+           altgr   keycode  40 = at                    
+   shift   altgr   keycode  40 = U+03c5                
+           shiftl  keycode  40 = U+002e                
+   shift   shiftl  keycode  40 = VoidSymbol            
+   altgr   shiftl  keycode  40 = U+2207                
 
-<div id="metanav" class="nav"><ul><li class="first">logged in as erik</li><li><a href="/logout">Logout</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/about">About Trac</a></li></ul></div>
-</div>
+! --------------------------------------------------------------------------
+! Row 4 (lower row)
+! --------------------------------------------------------------------------
+                   keycode  44 = udiaeresis            Udiaeresis            numbersign            VoidSymbol            
+           shiftl  keycode  44 = Escape                
+   shift   shiftl  keycode  44 = Escape                
+   altgr   shiftl  keycode  44 = U+211C                
+                   keycode  45 = odiaeresis            Odiaeresis            dollar                VoidSymbol            
+           shiftl  keycode  45 = Tab                   
+   shift   shiftl  keycode  45 = VoidSymbol            
+   altgr   shiftl  keycode  45 = U+2111                
+                   keycode  46 = adiaeresis            Adiaeresis            bar                   U+03b7                
+           shiftl  keycode  46 = Next                  
+   shift   shiftl  keycode  46 = Next                  
+   altgr   shiftl  keycode  46 = U+2135                
+                   keycode  47 = p                     
+           altgr   keycode  47 = asciitilde            
+   shift   altgr   keycode  47 = U+03c0                
+           shiftl  keycode  47 = Return                
+   shift   shiftl  keycode  47 = Return                
+   altgr   shiftl  keycode  47 = U+03a0                
+                   keycode  48 = z                     
+           altgr   keycode  48 = grave                 
+   shift   altgr   keycode  48 = U+03b6                
+           shiftl  keycode  48 = VoidSymbol            
+   shift   shiftl  keycode  48 = VoidSymbol            
+   altgr   shiftl  keycode  48 = U+2124                
+                   keycode  49 = b                     
+           altgr   keycode  49 = plus                  
+   shift   altgr   keycode  49 = U+03b2                
+           shiftl  keycode  49 = colon                 
+   shift   shiftl  keycode  49 = VoidSymbol            
+   altgr   shiftl  keycode  49 = U+21D0                
+                   keycode  50 = m                     
+           altgr   keycode  50 = percent               
+   shift   altgr   keycode  50 = U+03bc                
+           shiftl  keycode  50 = KP_1                  
+   shift   shiftl  keycode  50 = KP_1                  
+   altgr   shiftl  keycode  50 = U+21d4                
+                   keycode  51 = comma                 U+2013                quotedbl              U+03c1                
+           shiftl  keycode  51 = KP_2                  
+   shift   shiftl  keycode  51 = KP_2                  
+   altgr   shiftl  keycode  51 = U+21D2                
+                   keycode  52 = period                U+2026                apostrophe            U+03D1                
+           shiftl  keycode  52 = KP_3                  
+   shift   shiftl  keycode  52 = KP_3                  
+   altgr   shiftl  keycode  52 = U+0398                
+                   keycode  53 = j                     
+           altgr   keycode  53 = semicolon             
+   shift   altgr   keycode  53 = U+03b8                
+           shiftl  keycode  53 = semicolon             
+   shift   shiftl  keycode  53 = VoidSymbol            
+   altgr   shiftl  keycode  53 = U+221d                
 
-<div id="mainnav" class="nav"><ul><li class="first"><a accesskey="1" href="/wiki">Wiki</a></li><li><a accesskey="2" href="/timeline">Timeline</a></li><li><a accesskey="3" href="/roadmap">Roadmap</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li><a accesskey="7" href="/newticket">New Ticket</a></li><li><a accesskey="4" href="/search">Search</a></li><li class="last"><a href="/admin">Admin</a></li></ul></div>
-<div id="main">
+! --------------------------------------------------------------------------
+! Keypad Row 1 (uppest row)
+! --------------------------------------------------------------------------
+                   keycode  69 = Tab                   VoidSymbol            equal                 VoidSymbol            
+           shiftl  keycode  69 = U+2261                
+   shift   shiftl  keycode  69 = VoidSymbol            
+                   keycode  98 = KP_Multiply           KP_Multiply           U+22C5                U+2299                
+           shiftl  keycode  98 = U+2297                
+   shift   shiftl  keycode  98 = VoidSymbol            
+                   keycode  55 = KP_Subtract           KP_Subtract           U+2212                U+2296                
+           shiftl  keycode  55 = U+2238                
+   shift   shiftl  keycode  55 = VoidSymbol            
+                   keycode  74 = KP_7                  U+2714                U+2195                U+226A                
+           shiftl  keycode  74 = U+2308                
+   shift   shiftl  keycode  74 = VoidSymbol            
 
+! --------------------------------------------------------------------------
+! Keypad Row 2 (upper row)
+! --------------------------------------------------------------------------
+                   keycode  71 = KP_8                  U+2718                U+2191                U+2229                
+           shiftl  keycode  71 = U+22C2                
+   shift   shiftl  keycode  71 = VoidSymbol            
+                   keycode  72 = KP_9                  U+2663                U+20D7                U+226B                
+           shiftl  keycode  72 = U+2309                
+   shift   shiftl  keycode  72 = VoidSymbol            
+                   keycode  73 = KP_Add                KP_Add                plusminus             U+2295                
+           shiftl  keycode  73 = U+2214                
+   shift   shiftl  keycode  73 = VoidSymbol            
+                   keycode  78 = KP_4                  U+2665                U+2190                U+2282                
+           shiftl  keycode  78 = U+2286                
+   shift   shiftl  keycode  78 = VoidSymbol            
 
+! --------------------------------------------------------------------------
+! Keypad Row 3 (home row, middle row)
+! --------------------------------------------------------------------------
+                   keycode  75 = KP_5                  U+20ac                brokenbar             U+22B6                
+           shiftl  keycode  75 = U+22B7                
+   shift   shiftl  keycode  75 = VoidSymbol            
+                   keycode  76 = KP_6                  U+2660                U+2192                U+2283                
+           shiftl  keycode  76 = U+2287                
+   shift   shiftl  keycode  76 = VoidSymbol            
+                   keycode  77 = KP_1                  ordfeminine           U+2194                U+2264                
+           shiftl  keycode  77 = U+230a                
+   shift   shiftl  keycode  77 = VoidSymbol            
 
+! --------------------------------------------------------------------------
+! Keypad Row 4 (lower row)
+! --------------------------------------------------------------------------
+                   keycode  79 = KP_2                  masculine             U+2193                U+222a                
+           shiftl  keycode  79 = U+22C3                
+   shift   shiftl  keycode  79 = VoidSymbol            
+                   keycode  80 = KP_3                  U+2666                U+21CC                U+2265                
+           shiftl  keycode  80 = U+230B                
+   shift   shiftl  keycode  80 = VoidSymbol            
+                   keycode  81 = KP_0                  U+2423                percent               U+2030                
+           shiftl  keycode  81 = U+25A1                
+   shift   shiftl  keycode  81 = VoidSymbol            
 
-<div id="ctxtnav" class="nav"></div>
-
-<div id="content" class="attachment">
-
-
- <h1><a href="/ticket/98">Ticket #98</a>: neo20.map</h1>
- <table id="info" summary="Description"><tbody><tr>
-   <th scope="col">
-    File neo20.map, 29.1 kB 
-    (added by Elias Oltmanns &lt;eo@nebensachen.de&gt;,  1 day ago)
-   </th></tr><tr>
-   <td class="message"><p>
-neo.map
-</p>
-</td>
-  </tr>
- </tbody></table>
- <div id="preview">
-   <table class="code"><thead><tr><th class="lineno">Line</th><th class="content">&nbsp;</th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th>
-<td>! neo.map - german NEO keyboard layout</td>
-</tr><tr><th id="L2"><a href="#L2">2</a></th>
-<td>! 2008 Pascal Hauck, &lt;pascal.hauck@web.de&gt;</td>
-</tr><tr><th id="L3"><a href="#L3">3</a></th>
-<td>!</td>
-</tr><tr><th id="L4"><a href="#L4">4</a></th>
-<td>! Diese Datei ist experimentell!</td>
-</tr><tr><th id="L5"><a href="#L5">5</a></th>
-<td>! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen</td>
-</tr><tr><th id="L6"><a href="#L6">6</a></th>
-<td>! anders verhalten als erwartet, sollte dies auf der Mailingliste</td>
-</tr><tr><th id="L7"><a href="#L7">7</a></th>
-<td>! der NEO-Tastaturbelegung gemeldet werden.</td>
-</tr><tr><th id="L8"><a href="#L8">8</a></th>
-<td>!</td>
-</tr><tr><th id="L9"><a href="#L9">9</a></th>
-<td>! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap</td>
-</tr><tr><th id="L10"><a href="#L10">10</a></th>
-<td>! erzeugt.</td>
-</tr><tr><th id="L11"><a href="#L11">11</a></th>
-<td>!</td>
-</tr><tr><th id="L12"><a href="#L12">12</a></th>
-<td></td>
-</tr><tr><th id="L13"><a href="#L13">13</a></th>
-<td>keymaps 0-18</td>
-</tr><tr><th id="L14"><a href="#L14">14</a></th>
-<td>strings as usual</td>
-</tr><tr><th id="L15"><a href="#L15">15</a></th>
-<td>compose as usual</td>
-</tr><tr><th id="L16"><a href="#L16">16</a></th>
-<td>alt_is_meta</td>
-</tr><tr><th id="L17"><a href="#L17">17</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L18"><a href="#L18">18</a></th>
-<td>! Modifier definitions</td>
-</tr><tr><th id="L19"><a href="#L19">19</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L20"><a href="#L20">20</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 42 = Shift&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L21"><a href="#L21">21</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shift&nbsp; &nbsp;keycode&nbsp; 42 = Caps_Lock&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L22"><a href="#L22">22</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 54 = Shift&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L23"><a href="#L23">23</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shift&nbsp; &nbsp;keycode&nbsp; 54 = Caps_Lock&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L24"><a href="#L24">24</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 58 = AltGr&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L25"><a href="#L25">25</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; altgr&nbsp; &nbsp;keycode&nbsp; 58 = AltGr_Lock&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L26"><a href="#L26">26</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 43 = AltGr&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L27"><a href="#L27">27</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; altgr&nbsp; &nbsp;keycode&nbsp; 43 = AltGr_Lock&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L28"><a href="#L28">28</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 86 = ShiftL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L29"><a href="#L29">29</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shiftl&nbsp; keycode&nbsp; 86 = ShiftL_Lock&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L30"><a href="#L30">30</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 100 = ShiftL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L31"><a href="#L31">31</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shiftl&nbsp; keycode 100 = ShiftL_Lock&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L32"><a href="#L32">32</a></th>
-<td></td>
-</tr><tr><th id="L33"><a href="#L33">33</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;1 = Escape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L34"><a href="#L34">34</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; &nbsp;1 = Meta_Escape&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L35"><a href="#L35">35</a></th>
-<td></td>
-</tr><tr><th id="L36"><a href="#L36">36</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L37"><a href="#L37">37</a></th>
-<td>! function keys</td>
-</tr><tr><th id="L38"><a href="#L38">38</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L39"><a href="#L39">39</a></th>
-<td>! ----Backspace-------------------------------------------------------------</td>
-</tr><tr><th id="L40"><a href="#L40">40</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 14 = Delete&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L41"><a href="#L41">41</a></th>
-<td>! ----Return Enter----------------------------------------------------------</td>
-</tr><tr><th id="L42"><a href="#L42">42</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 28 = Return&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L43"><a href="#L43">43</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 28 = Meta_Control_m&nbsp; </td>
-</tr><tr><th id="L44"><a href="#L44">44</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 96 = KP_Enter&nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L45"><a href="#L45">45</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 96 = Hex_F&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L46"><a href="#L46">46</a></th>
-<td>! ----Tab-------------------------------------------------------------------</td>
-</tr><tr><th id="L47"><a href="#L47">47</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 15 = Tab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Meta_Tab&nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L48"><a href="#L48">48</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 15 = Compose</td>
-</tr><tr><th id="L49"><a href="#L49">49</a></th>
-<td>! ----Control Alt-----------------------------------------------------------</td>
-</tr><tr><th id="L50"><a href="#L50">50</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 29 = Control&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L51"><a href="#L51">51</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 97 = Control&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L52"><a href="#L52">52</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 56 = Alt&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L53"><a href="#L53">53</a></th>
-<td>! ----Prt SclLk Pause-------------------------------------------------------</td>
-</tr><tr><th id="L54"><a href="#L54">54</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 99 =</td>
-</tr><tr><th id="L55"><a href="#L55">55</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;control keycode&nbsp; 99 = Control_backslash</td>
-</tr><tr><th id="L56"><a href="#L56">56</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 99 = Control_backslash</td>
-</tr><tr><th id="L57"><a href="#L57">57</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 99 = Meta_Control_backslash</td>
-</tr><tr><th id="L58"><a href="#L58">58</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 70 = Scroll_Lock&nbsp; &nbsp; &nbsp; Show_Memory&nbsp; &nbsp; &nbsp; Show_Registers&nbsp; &nbsp;Show_State&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L59"><a href="#L59">59</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 70 = Scroll_Lock&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L60"><a href="#L60">60</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 119 = Pause&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L61"><a href="#L61">61</a></th>
-<td>! ----Home block------------------------------------------------------------</td>
-</tr><tr><th id="L62"><a href="#L62">62</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 102 = Find&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L63"><a href="#L63">63</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 104 = Prior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L64"><a href="#L64">64</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shift&nbsp; &nbsp;keycode 104 = Scroll_Backward </td>
-</tr><tr><th id="L65"><a href="#L65">65</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 107 = Select&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L66"><a href="#L66">66</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 109 = Next&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L67"><a href="#L67">67</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shift&nbsp; &nbsp;keycode 109 = Scroll_Forward&nbsp; </td>
-</tr><tr><th id="L68"><a href="#L68">68</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 111 = Remove&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L69"><a href="#L69">69</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 111 = Boot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L70"><a href="#L70">70</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode 111 = Boot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L71"><a href="#L71">71</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 110 = Insert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L72"><a href="#L72">72</a></th>
-<td>! ----Navigation block------------------------------------------------------</td>
-</tr><tr><th id="L73"><a href="#L73">73</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 103 = Up&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L74"><a href="#L74">74</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 103 = KeyboardSignal&nbsp; </td>
-</tr><tr><th id="L75"><a href="#L75">75</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 105 = Left&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L76"><a href="#L76">76</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 105 = Decr_Console&nbsp; &nbsp; </td>
-</tr><tr><th id="L77"><a href="#L77">77</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 106 = Right&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L78"><a href="#L78">78</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 106 = Incr_Console&nbsp; &nbsp; </td>
-</tr><tr><th id="L79"><a href="#L79">79</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 108 = Down&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L80"><a href="#L80">80</a></th>
-<td>! ----Win keys--------------------------------------------------------------</td>
-</tr><tr><th id="L81"><a href="#L81">81</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 125 = Decr_Console&nbsp; &nbsp; Last_Console&nbsp; &nbsp; &nbsp; Incr_Console&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L82"><a href="#L82">82</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 126 = Incr_Console&nbsp; &nbsp; Last_Console&nbsp; &nbsp; &nbsp; Decr_Console&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L83"><a href="#L83">83</a></th>
-<td>! ----menue key-------------------------------------------------------------</td>
-</tr><tr><th id="L84"><a href="#L84">84</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 127 = Compose&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F100</td>
-</tr><tr><th id="L85"><a href="#L85">85</a></th>
-<td>! ----F-keys----------------------------------------------------------------</td>
-</tr><tr><th id="L86"><a href="#L86">86</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 59 = F1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F13&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_13&nbsp; &nbsp; &nbsp; &nbsp;F25&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L87"><a href="#L87">87</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 59 = Console_1&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L88"><a href="#L88">88</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 59 = Console_1&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L89"><a href="#L89">89</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 60 = F2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_14&nbsp; &nbsp; &nbsp; &nbsp;F26&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L90"><a href="#L90">90</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 60 = Console_2&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L91"><a href="#L91">91</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 60 = Console_2&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L92"><a href="#L92">92</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 61 = F3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F15&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_15&nbsp; &nbsp; &nbsp; &nbsp;F27&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L93"><a href="#L93">93</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 61 = Console_3&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L94"><a href="#L94">94</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 61 = Console_3&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L95"><a href="#L95">95</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 62 = F4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F16&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_16&nbsp; &nbsp; &nbsp; &nbsp;F28&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L96"><a href="#L96">96</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 62 = Console_4&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L97"><a href="#L97">97</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 62 = Console_4&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L98"><a href="#L98">98</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 63 = F5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F17&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_17&nbsp; &nbsp; &nbsp; &nbsp;F29&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L99"><a href="#L99">99</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 63 = Console_5&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L100"><a href="#L100">100</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 63 = Console_5&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L101"><a href="#L101">101</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 64 = F6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F18&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_18&nbsp; &nbsp; &nbsp; &nbsp;F30&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L102"><a href="#L102">102</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 64 = Console_6&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L103"><a href="#L103">103</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 64 = Console_6&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L104"><a href="#L104">104</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 65 = F7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F19&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_19&nbsp; &nbsp; &nbsp; &nbsp;F31&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L105"><a href="#L105">105</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 65 = Console_7&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L106"><a href="#L106">106</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 65 = Console_7&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L107"><a href="#L107">107</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 66 = F8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F20&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_20&nbsp; &nbsp; &nbsp; &nbsp;F32&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L108"><a href="#L108">108</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 66 = Console_8&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L109"><a href="#L109">109</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 66 = Console_8&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L110"><a href="#L110">110</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 67 = F9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F21&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_21&nbsp; &nbsp; &nbsp; &nbsp;F33&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L111"><a href="#L111">111</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 67 = Console_9&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L112"><a href="#L112">112</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 67 = Console_9&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L113"><a href="#L113">113</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 68 = F10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_22&nbsp; &nbsp; &nbsp; &nbsp;F34&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L114"><a href="#L114">114</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 68 = Console_10&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L115"><a href="#L115">115</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 68 = Console_10&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L116"><a href="#L116">116</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 87 = F11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F23&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_23&nbsp; &nbsp; &nbsp; &nbsp;F35&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L117"><a href="#L117">117</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 87 = Console_11&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L118"><a href="#L118">118</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 87 = Console_11&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L119"><a href="#L119">119</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 88 = F12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F24&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_24&nbsp; &nbsp; &nbsp; &nbsp;F36&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L120"><a href="#L120">120</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 88 = Console_12&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L121"><a href="#L121">121</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 88 = Console_12&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L122"><a href="#L122">122</a></th>
-<td>! ----unknown keys from defkeymap.map---------------------------------------</td>
-</tr><tr><th id="L123"><a href="#L123">123</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 84 = Last_Console&nbsp; &nbsp; </td>
-</tr><tr><th id="L124"><a href="#L124">124</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 89 =</td>
-</tr><tr><th id="L125"><a href="#L125">125</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 90 =</td>
-</tr><tr><th id="L126"><a href="#L126">126</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 91 =</td>
-</tr><tr><th id="L127"><a href="#L127">127</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 92 =</td>
-</tr><tr><th id="L128"><a href="#L128">128</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 93 =</td>
-</tr><tr><th id="L129"><a href="#L129">129</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 94 =</td>
-</tr><tr><th id="L130"><a href="#L130">130</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 95 =</td>
-</tr><tr><th id="L131"><a href="#L131">131</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 101 = Break&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L132"><a href="#L132">132</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 112 = Macro&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L133"><a href="#L133">133</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 112 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L134"><a href="#L134">134</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 112 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L135"><a href="#L135">135</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 112 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L136"><a href="#L136">136</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 113 = F13&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L137"><a href="#L137">137</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 113 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L138"><a href="#L138">138</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 113 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L139"><a href="#L139">139</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 113 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L140"><a href="#L140">140</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 114 = F14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L141"><a href="#L141">141</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 114 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L142"><a href="#L142">142</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 114 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L143"><a href="#L143">143</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 114 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L144"><a href="#L144">144</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 115 = Help&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L145"><a href="#L145">145</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 115 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L146"><a href="#L146">146</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 115 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L147"><a href="#L147">147</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 115 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L148"><a href="#L148">148</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 116 = Do&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L149"><a href="#L149">149</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 116 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L150"><a href="#L150">150</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 116 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L151"><a href="#L151">151</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 116 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L152"><a href="#L152">152</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 117 = F17&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L153"><a href="#L153">153</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 117 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L154"><a href="#L154">154</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 117 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L155"><a href="#L155">155</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 117 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L156"><a href="#L156">156</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 118 = KP_MinPlus&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L157"><a href="#L157">157</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 118 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L158"><a href="#L158">158</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 118 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L159"><a href="#L159">159</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 118 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L160"><a href="#L160">160</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 119 = Pause</td>
-</tr><tr><th id="L161"><a href="#L161">161</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 120 =</td>
-</tr><tr><th id="L162"><a href="#L162">162</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 121 =</td>
-</tr><tr><th id="L163"><a href="#L163">163</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 122 =</td>
-</tr><tr><th id="L164"><a href="#L164">164</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 123 =</td>
-</tr><tr><th id="L165"><a href="#L165">165</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 124 =</td>
-</tr><tr><th id="L166"><a href="#L166">166</a></th>
-<td></td>
-</tr><tr><th id="L167"><a href="#L167">167</a></th>
-<td></td>
-</tr><tr><th id="L168"><a href="#L168">168</a></th>
-<td>! ----Space key-------------------------------------------------------------</td>
-</tr><tr><th id="L169"><a href="#L169">169</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 57 = space&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;space&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;space&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nobreakspace&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L170"><a href="#L170">170</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 57 = KP_0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L171"><a href="#L171">171</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 57 = KP_0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L172"><a href="#L172">172</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 57 = U+202F&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L173"><a href="#L173">173</a></th>
-<td></td>
-</tr><tr><th id="L174"><a href="#L174">174</a></th>
-<td>! ----dead keys-------------------------------------------------------------</td>
-</tr><tr><th id="L175"><a href="#L175">175</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 41 = dead_circumflex&nbsp; &nbsp; &nbsp; &nbsp;dead_tilde&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+030a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dead_breve&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L176"><a href="#L176">176</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 41 = dead_caron&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L177"><a href="#L177">177</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 41 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L178"><a href="#L178">178</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 41 = U+0304&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L179"><a href="#L179">179</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 13 = dead_grave&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dead_diaeresis&nbsp; &nbsp; &nbsp; &nbsp; U+1FFE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L180"><a href="#L180">180</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 13 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L181"><a href="#L181">181</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 13 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L182"><a href="#L182">182</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 13 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L183"><a href="#L183">183</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 27 = dead_acute&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dead_cedilla&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+1FBF&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L184"><a href="#L184">184</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 27 = dead_doubleacute&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L185"><a href="#L185">185</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 27 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L186"><a href="#L186">186</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 27 = U+0307&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L187"><a href="#L187">187</a></th>
-<td></td>
-</tr><tr><th id="L188"><a href="#L188">188</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L189"><a href="#L189">189</a></th>
-<td>! Row 1 (number row)</td>
-</tr><tr><th id="L190"><a href="#L190">190</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L191"><a href="#L191">191</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;2 = one&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;degree&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; onesuperior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L192"><a href="#L192">192</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;2 = U+2022&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L193"><a href="#L193">193</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;2 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L194"><a href="#L194">194</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;2 = notsign&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L195"><a href="#L195">195</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;3 = two&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;section&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;twosuperior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L196"><a href="#L196">196</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;3 = U+2023&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L197"><a href="#L197">197</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;3 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L198"><a href="#L198">198</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;3 = U+2228&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L199"><a href="#L199">199</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;4 = three&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2113&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; threesuperior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L200"><a href="#L200">200</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;4 = U+2116&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L201"><a href="#L201">201</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;4 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L202"><a href="#L202">202</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;4 = U+2227&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L203"><a href="#L203">203</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;5 = four&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guillemotright&nbsp; &nbsp; &nbsp; &nbsp; U+203A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2020&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L204"><a href="#L204">204</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;5 = Prior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L205"><a href="#L205">205</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;5 = Prior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L206"><a href="#L206">206</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;5 = U+22a4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L207"><a href="#L207">207</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;6 = five&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; guillemotleft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2039&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2640&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L208"><a href="#L208">208</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;6 = periodcentered&nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L209"><a href="#L209">209</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;6 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L210"><a href="#L210">210</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;6 = U+2221&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L211"><a href="#L211">211</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;7 = six&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+20ac&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2642&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L212"><a href="#L212">212</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;7 = sterling&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L213"><a href="#L213">213</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;7 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L214"><a href="#L214">214</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;7 = U+2225&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L215"><a href="#L215">215</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;8 = seven&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dollar&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; yen&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+03ba&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L216"><a href="#L216">216</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;8 = currency&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L217"><a href="#L217">217</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;8 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L218"><a href="#L218">218</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;8 = U+2192&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L219"><a href="#L219">219</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;9 = eight&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+201e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+201a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2329&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L220"><a href="#L220">220</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;9 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L221"><a href="#L221">221</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;9 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L222"><a href="#L222">222</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; &nbsp;9 = U+221e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L223"><a href="#L223">223</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 10 = nine&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+201c&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2018&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+232a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L224"><a href="#L224">224</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 10 = KP_Divide&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L225"><a href="#L225">225</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 10 = KP_Divide&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L226"><a href="#L226">226</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 10 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L227"><a href="#L227">227</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 11 = zero&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+201d&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2019&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L228"><a href="#L228">228</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 11 = KP_Multiply&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L229"><a href="#L229">229</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 11 = KP_Multiply&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L230"><a href="#L230">230</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 11 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L231"><a href="#L231">231</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 12 = minus&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2014&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2011&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L232"><a href="#L232">232</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 12 = KP_Subtract&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L233"><a href="#L233">233</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 12 = KP_Subtract&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L234"><a href="#L234">234</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 12 = hyphen&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L235"><a href="#L235">235</a></th>
-<td></td>
-</tr><tr><th id="L236"><a href="#L236">236</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L237"><a href="#L237">237</a></th>
-<td>! Row 2 (upper row)</td>
-</tr><tr><th id="L238"><a href="#L238">238</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L239"><a href="#L239">239</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 16 = x&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L240"><a href="#L240">240</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 16 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L241"><a href="#L241">241</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 16 = U+03be&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L242"><a href="#L242">242</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 16 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L243"><a href="#L243">243</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 16 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L244"><a href="#L244">244</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 16 = U+039e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L245"><a href="#L245">245</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 17 = v&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L246"><a href="#L246">246</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 17 = underscore&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L247"><a href="#L247">247</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 17 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L248"><a href="#L248">248</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 17 = BackSpace&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L249"><a href="#L249">249</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 17 = BackSpace&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L250"><a href="#L250">250</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 17 = U+2259&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L251"><a href="#L251">251</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 18 = l&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L252"><a href="#L252">252</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 18 = bracketleft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L253"><a href="#L253">253</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 18 = U+03bb&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L254"><a href="#L254">254</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 18 = Up&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L255"><a href="#L255">255</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 18 = Up&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L256"><a href="#L256">256</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 18 = U+039b&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L257"><a href="#L257">257</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 19 = c&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L258"><a href="#L258">258</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 19 = bracketright&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L259"><a href="#L259">259</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 19 = U+03c7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L260"><a href="#L260">260</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 19 = Remove&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L261"><a href="#L261">261</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 19 = Remove&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L262"><a href="#L262">262</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 19 = U+2102&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L263"><a href="#L263">263</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 20 = w&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L264"><a href="#L264">264</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 20 = asciicircum&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L265"><a href="#L265">265</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 20 = U+03c9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L266"><a href="#L266">266</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 20 = Insert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L267"><a href="#L267">267</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 20 = Insert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L268"><a href="#L268">268</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 20 = U+03a9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L269"><a href="#L269">269</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 21 = k&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L270"><a href="#L270">270</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 21 = exclam&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L271"><a href="#L271">271</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 21 = U+03F0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L272"><a href="#L272">272</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 21 = exclamdown&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L273"><a href="#L273">273</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 21 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L274"><a href="#L274">274</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 21 = U+221a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L275"><a href="#L275">275</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 22 = h&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L276"><a href="#L276">276</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 22 = less&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L277"><a href="#L277">277</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 22 = U+03c8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L278"><a href="#L278">278</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 22 = KP_7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L279"><a href="#L279">279</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 22 = KP_7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L280"><a href="#L280">280</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 22 = U+03a8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L281"><a href="#L281">281</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 23 = g&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L282"><a href="#L282">282</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 23 = greater&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L283"><a href="#L283">283</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 23 = U+03b3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L284"><a href="#L284">284</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 23 = KP_8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L285"><a href="#L285">285</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 23 = KP_8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L286"><a href="#L286">286</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 23 = U+0393&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L287"><a href="#L287">287</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 24 = f&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L288"><a href="#L288">288</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 24 = equal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L289"><a href="#L289">289</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 24 = U+03c6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L290"><a href="#L290">290</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 24 = KP_9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L291"><a href="#L291">291</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 24 = KP_9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L292"><a href="#L292">292</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 24 = U+03a6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L293"><a href="#L293">293</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 25 = q&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L294"><a href="#L294">294</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 25 = ampersand&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L295"><a href="#L295">295</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 25 = U+03D5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L296"><a href="#L296">296</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 25 = KP_Add&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L297"><a href="#L297">297</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 25 = KP_Add&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L298"><a href="#L298">298</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 25 = U+211A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L299"><a href="#L299">299</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 26 = ssharp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+1E9E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+017F&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+03c2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L300"><a href="#L300">300</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 26 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L301"><a href="#L301">301</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 26 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L302"><a href="#L302">302</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 26 = U+2218&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L303"><a href="#L303">303</a></th>
-<td></td>
-</tr><tr><th id="L304"><a href="#L304">304</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L305"><a href="#L305">305</a></th>
-<td>! Row 3 (home row, middle row)</td>
-</tr><tr><th id="L306"><a href="#L306">306</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L307"><a href="#L307">307</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 30 = u&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L308"><a href="#L308">308</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 30 = backslash&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L309"><a href="#L309">309</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 30 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L310"><a href="#L310">310</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 30 = Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L311"><a href="#L311">311</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 30 = Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L312"><a href="#L312">312</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 30 = U+222E&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L313"><a href="#L313">313</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 31 = i&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L314"><a href="#L314">314</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 31 = slash&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L315"><a href="#L315">315</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 31 = U+03b9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L316"><a href="#L316">316</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 31 = Left&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L317"><a href="#L317">317</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 31 = Left&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L318"><a href="#L318">318</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 31 = U+222b&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L319"><a href="#L319">319</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 32 = a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L320"><a href="#L320">320</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 32 = braceleft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L321"><a href="#L321">321</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 32 = U+03b1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L322"><a href="#L322">322</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 32 = Down&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L323"><a href="#L323">323</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 32 = Down&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L324"><a href="#L324">324</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 32 = U+2200&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L325"><a href="#L325">325</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 33 = e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L326"><a href="#L326">326</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 33 = braceright&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L327"><a href="#L327">327</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 33 = U+03b5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L328"><a href="#L328">328</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 33 = Right&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L329"><a href="#L329">329</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 33 = Right&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L330"><a href="#L330">330</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 33 = U+2203&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L331"><a href="#L331">331</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 34 = o&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L332"><a href="#L332">332</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 34 = asterisk&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L333"><a href="#L333">333</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 34 = U+03bf&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L334"><a href="#L334">334</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 34 = End&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L335"><a href="#L335">335</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 34 = End&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L336"><a href="#L336">336</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 34 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L337"><a href="#L337">337</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 35 = s&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L338"><a href="#L338">338</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 35 = question&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L339"><a href="#L339">339</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 35 = U+03c3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L340"><a href="#L340">340</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 35 = questiondown&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L341"><a href="#L341">341</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 35 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L342"><a href="#L342">342</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 35 = U+03a3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L343"><a href="#L343">343</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 36 = n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L344"><a href="#L344">344</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 36 = parenleft&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L345"><a href="#L345">345</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 36 = U+03bd&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L346"><a href="#L346">346</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 36 = KP_4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L347"><a href="#L347">347</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 36 = KP_4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L348"><a href="#L348">348</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 36 = U+2115&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L349"><a href="#L349">349</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 37 = r&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L350"><a href="#L350">350</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 37 = parenright&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L351"><a href="#L351">351</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 37 = U+03F1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L352"><a href="#L352">352</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 37 = KP_5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L353"><a href="#L353">353</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 37 = KP_5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L354"><a href="#L354">354</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 37 = U+211D&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L355"><a href="#L355">355</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 38 = t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L356"><a href="#L356">356</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 38 = minus&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L357"><a href="#L357">357</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 38 = U+03c4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L358"><a href="#L358">358</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 38 = KP_6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L359"><a href="#L359">359</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 38 = KP_6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L360"><a href="#L360">360</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 38 = U+2202&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L361"><a href="#L361">361</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 39 = d&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L362"><a href="#L362">362</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 39 = colon&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L363"><a href="#L363">363</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 39 = U+03b4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L364"><a href="#L364">364</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 39 = U+002c&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L365"><a href="#L365">365</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 39 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L366"><a href="#L366">366</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 39 = U+0394&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L367"><a href="#L367">367</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 40 = y&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L368"><a href="#L368">368</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 40 = at&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L369"><a href="#L369">369</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 40 = U+03c5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L370"><a href="#L370">370</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 40 = U+002e&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L371"><a href="#L371">371</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 40 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L372"><a href="#L372">372</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 40 = U+2207&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L373"><a href="#L373">373</a></th>
-<td></td>
-</tr><tr><th id="L374"><a href="#L374">374</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L375"><a href="#L375">375</a></th>
-<td>! Row 4 (lower row)</td>
-</tr><tr><th id="L376"><a href="#L376">376</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L377"><a href="#L377">377</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 44 = udiaeresis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Udiaeresis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; numbersign&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L378"><a href="#L378">378</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 44 = Escape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L379"><a href="#L379">379</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 44 = Escape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L380"><a href="#L380">380</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 44 = U+211C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L381"><a href="#L381">381</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 45 = odiaeresis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Odiaeresis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dollar&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L382"><a href="#L382">382</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 45 = Tab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L383"><a href="#L383">383</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 45 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L384"><a href="#L384">384</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 45 = U+2111&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L385"><a href="#L385">385</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 46 = adiaeresis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Adiaeresis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bar&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+03b7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L386"><a href="#L386">386</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 46 = Next&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L387"><a href="#L387">387</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 46 = Next&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L388"><a href="#L388">388</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 46 = U+2135&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L389"><a href="#L389">389</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 47 = p&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L390"><a href="#L390">390</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 47 = asciitilde&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L391"><a href="#L391">391</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 47 = U+03c0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L392"><a href="#L392">392</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 47 = Return&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L393"><a href="#L393">393</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 47 = Return&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L394"><a href="#L394">394</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 47 = U+03a0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L395"><a href="#L395">395</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 48 = z&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L396"><a href="#L396">396</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 48 = grave&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L397"><a href="#L397">397</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 48 = U+03b6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L398"><a href="#L398">398</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 48 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L399"><a href="#L399">399</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 48 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L400"><a href="#L400">400</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 48 = U+2124&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L401"><a href="#L401">401</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 49 = b&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L402"><a href="#L402">402</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 49 = plus&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L403"><a href="#L403">403</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 49 = U+03b2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L404"><a href="#L404">404</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 49 = colon&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L405"><a href="#L405">405</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 49 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L406"><a href="#L406">406</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 49 = U+21D0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L407"><a href="#L407">407</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 50 = m&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L408"><a href="#L408">408</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 50 = percent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L409"><a href="#L409">409</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 50 = U+03bc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L410"><a href="#L410">410</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 50 = KP_1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L411"><a href="#L411">411</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 50 = KP_1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L412"><a href="#L412">412</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 50 = U+21d4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L413"><a href="#L413">413</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 51 = comma&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2013&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; quotedbl&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+03c1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L414"><a href="#L414">414</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 51 = KP_2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L415"><a href="#L415">415</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 51 = KP_2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L416"><a href="#L416">416</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 51 = U+21D2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L417"><a href="#L417">417</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 52 = period&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2026&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; apostrophe&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+03D1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L418"><a href="#L418">418</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 52 = KP_3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L419"><a href="#L419">419</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 52 = KP_3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L420"><a href="#L420">420</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 52 = U+0398&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L421"><a href="#L421">421</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 53 = j&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L422"><a href="#L422">422</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 53 = semicolon&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L423"><a href="#L423">423</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 53 = U+03b8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L424"><a href="#L424">424</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 53 = semicolon&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L425"><a href="#L425">425</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 53 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L426"><a href="#L426">426</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 53 = U+221d&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L427"><a href="#L427">427</a></th>
-<td></td>
-</tr><tr><th id="L428"><a href="#L428">428</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L429"><a href="#L429">429</a></th>
-<td>! Keypad Row 1 (uppest row)</td>
-</tr><tr><th id="L430"><a href="#L430">430</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L431"><a href="#L431">431</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 69 = Tab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; equal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L432"><a href="#L432">432</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 69 = U+2261&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L433"><a href="#L433">433</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 69 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L434"><a href="#L434">434</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 98 = KP_Multiply&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;KP_Multiply&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+22C5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2299&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L435"><a href="#L435">435</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 98 = U+2297&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L436"><a href="#L436">436</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 98 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L437"><a href="#L437">437</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 55 = KP_Subtract&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;KP_Subtract&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2212&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2296&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L438"><a href="#L438">438</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 55 = U+2238&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L439"><a href="#L439">439</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 55 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L440"><a href="#L440">440</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 74 = KP_7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2714&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2195&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+226A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L441"><a href="#L441">441</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 74 = U+2308&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L442"><a href="#L442">442</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 74 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L443"><a href="#L443">443</a></th>
-<td></td>
-</tr><tr><th id="L444"><a href="#L444">444</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L445"><a href="#L445">445</a></th>
-<td>! Keypad Row 2 (upper row)</td>
-</tr><tr><th id="L446"><a href="#L446">446</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L447"><a href="#L447">447</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 71 = KP_8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2718&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2191&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2229&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L448"><a href="#L448">448</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 71 = U+22C2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L449"><a href="#L449">449</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 71 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L450"><a href="#L450">450</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 72 = KP_9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2663&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+20D7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+226B&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L451"><a href="#L451">451</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 72 = U+2309&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L452"><a href="#L452">452</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 72 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L453"><a href="#L453">453</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 73 = KP_Add&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; KP_Add&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; plusminus&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2295&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L454"><a href="#L454">454</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 73 = U+2214&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L455"><a href="#L455">455</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 73 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L456"><a href="#L456">456</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 78 = KP_4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2665&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2190&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2282&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L457"><a href="#L457">457</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 78 = U+2286&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L458"><a href="#L458">458</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 78 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L459"><a href="#L459">459</a></th>
-<td></td>
-</tr><tr><th id="L460"><a href="#L460">460</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L461"><a href="#L461">461</a></th>
-<td>! Keypad Row 3 (home row, middle row)</td>
-</tr><tr><th id="L462"><a href="#L462">462</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L463"><a href="#L463">463</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 75 = KP_5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+20ac&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; brokenbar&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+22B6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L464"><a href="#L464">464</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 75 = U+22B7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L465"><a href="#L465">465</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 75 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L466"><a href="#L466">466</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 76 = KP_6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2660&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2192&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2283&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L467"><a href="#L467">467</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 76 = U+2287&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L468"><a href="#L468">468</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 76 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L469"><a href="#L469">469</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 77 = KP_1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ordfeminine&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2194&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2264&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L470"><a href="#L470">470</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 77 = U+230a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L471"><a href="#L471">471</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 77 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L472"><a href="#L472">472</a></th>
-<td></td>
-</tr><tr><th id="L473"><a href="#L473">473</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L474"><a href="#L474">474</a></th>
-<td>! Keypad Row 4 (lower row)</td>
-</tr><tr><th id="L475"><a href="#L475">475</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L476"><a href="#L476">476</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 79 = KP_2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; masculine&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2193&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+222a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L477"><a href="#L477">477</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 79 = U+22C3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L478"><a href="#L478">478</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 79 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L479"><a href="#L479">479</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 80 = KP_3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2666&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+21CC&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2265&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L480"><a href="#L480">480</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 80 = U+230B&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L481"><a href="#L481">481</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 80 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L482"><a href="#L482">482</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 81 = KP_0&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2423&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; percent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;U+2030&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L483"><a href="#L483">483</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 81 = U+25A1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L484"><a href="#L484">484</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 81 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L485"><a href="#L485">485</a></th>
-<td></td>
-</tr><tr><th id="L486"><a href="#L486">486</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L487"><a href="#L487">487</a></th>
-<td>! Keypad Row 5 (lowest row)</td>
-</tr><tr><th id="L488"><a href="#L488">488</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L489"><a href="#L489">489</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 82 = comma&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;period&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+002c&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2032&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L490"><a href="#L490">490</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 82 = U+2033&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L491"><a href="#L491">491</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 82 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L492"><a href="#L492">492</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 83 = comma&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;period&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+002c&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; U+2032&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L493"><a href="#L493">493</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 83 = U+2033&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L494"><a href="#L494">494</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;shiftl&nbsp; keycode&nbsp; 83 = VoidSymbol&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L495"><a href="#L495">495</a></th>
-<td></td>
-</tr><tr><th id="L496"><a href="#L496">496</a></th>
-<td></td>
-</tr><tr><th id="L497"><a href="#L497">497</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L498"><a href="#L498">498</a></th>
-<td>! additional Keys with control function (has to be edited manually!!!!)</td>
-</tr><tr><th id="L499"><a href="#L499">499</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L500"><a href="#L500">500</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;control keycode&nbsp; 57 = nul</td>
-</tr><tr><th id="L501"><a href="#L501">501</a></th>
-<td># for some obscure reason, this is required even when we set alt_is_meta</td>
-</tr><tr><th id="L502"><a href="#L502">502</a></th>
-<td>&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;control keycode&nbsp; 57 = Meta_nul</td>
-</tr><tr><th id="L503"><a href="#L503">503</a></th>
-<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 30 = Control_backslash</td>
-</tr><tr><th id="L504"><a href="#L504">504</a></th>
-<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 19 = Control_bracketright</td>
-</tr><tr><th id="L505"><a href="#L505">505</a></th>
-<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 17 = Control_underscore</td>
-</tr><tr><th id="L506"><a href="#L506">506</a></th>
-<td>&nbsp; &nbsp;control altgr&nbsp; &nbsp;keycode&nbsp; 20 = Control_asciicircum</td>
-</tr><tr><th id="L507"><a href="#L507">507</a></th>
-<td></td>
-</tr><tr><th id="L508"><a href="#L508">508</a></th>
-<td></td>
-</tr><tr><th id="L509"><a href="#L509">509</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L510"><a href="#L510">510</a></th>
-<td>! Strings and Compose</td>
-</tr><tr><th id="L511"><a href="#L511">511</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L512"><a href="#L512">512</a></th>
-<td># string F100 = &#34;setleds +num\n&#34;</td>
-</tr></tbody></table>
- </div>
- <div class="buttons">
-  <form method="get" action=""><div id="delete">
-   <input type="hidden" name="action" value="delete" />
-   <input type="submit" value="Delete attachment" />
-  </div></form>
- </div>
+! --------------------------------------------------------------------------
+! Keypad Row 5 (lowest row)
+! --------------------------------------------------------------------------
+                   keycode  82 = comma                 period                U+002c                U+2032                
+           shiftl  keycode  82 = U+2033                
+   shift   shiftl  keycode  82 = VoidSymbol            
+                   keycode  83 = comma                 period                U+002c                U+2032                
+           shiftl  keycode  83 = U+2033                
+   shift   shiftl  keycode  83 = VoidSymbol            
 
 
-</div>
-<script type="text/javascript">searchHighlight()</script>
-<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first last"><a href="/attachment/ticket/98/neo20.map?format=raw">Original Format</a></li></ul></div>
-
-</div>
-
-<div id="footer">
- <hr />
- <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107"
-   alt="Trac Powered"/></a>
- <p class="left">
-  Powered by <a href="/about"><strong>Trac 0.10.4</strong></a><br />
-  By <a href="http://www.edgewall.org/">Edgewall Software</a>.
- </p>
- <p class="right">
-  
- </p>
-</div>
+! --------------------------------------------------------------------------
+! additional Keys with control function (has to be edited manually!!!!)
+! --------------------------------------------------------------------------
+           control keycode  57 = nul
+# for some obscure reason, this is required even when we set alt_is_meta
+   alt     control keycode  57 = Meta_nul
+   control altgr   keycode  30 = Control_backslash
+   control altgr   keycode  19 = Control_bracketright
+   control altgr   keycode  17 = Control_underscore
+   control altgr   keycode  20 = Control_asciicircum
 
 
-
- </body>
-</html>
-
+! --------------------------------------------------------------------------
+! Strings and Compose
+! --------------------------------------------------------------------------
+# string F100 = "setleds +num\n"

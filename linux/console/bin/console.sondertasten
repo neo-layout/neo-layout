@@ -1,420 +1,165 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
- <title>#98: console.sondertasten - NEO-Layout - Trac</title><link rel="start" href="/wiki" /><link rel="search" href="/search" /><link rel="help" href="/wiki/TracGuide" /><link rel="stylesheet" href="/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/chrome/common/css/code.css" type="text/css" /><link rel="icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" /><link rel="up" href="/ticket/98" title="Ticket #98" /><link rel="alternate" href="/attachment/ticket/98/console.sondertasten?format=raw" title="Original Format" /><style type="text/css">
-</style>
- <script type="text/javascript" src="/chrome/common/js/trac.js"></script>
-</head>
-<body>
+! neo.map - german NEO keyboard layout
+! 2008 Pascal Hauck, <pascal.hauck@web.de>
+!
+! Diese Datei ist experimentell!
+! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
+! anders verhalten als erwartet, sollte dies auf der Mailingliste
+! der NEO-Tastaturbelegung gemeldet werden.
+!
+! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap
+! erzeugt.
+!
 
+keymaps 0-18
+strings as usual
+compose as usual
+alt_is_meta
+! --------------------------------------------------------------------------
+! Modifier definitions
+! --------------------------------------------------------------------------
+                   keycode  42 = Shift           
+#          shift   keycode  42 = Caps_Lock       
+                   keycode  54 = Shift           
+#          shift   keycode  54 = Caps_Lock       
+                   keycode  58 = AltGr           
+#          altgr   keycode  58 = AltGr_Lock      
+                   keycode  43 = AltGr           
+#          altgr   keycode  43 = AltGr_Lock      
+                   keycode  86 = ShiftL          
+#          shiftl  keycode  86 = ShiftL_Lock     
+                   keycode 100 = ShiftL          
+#          shiftl  keycode 100 = ShiftL_Lock     
 
-<div id="banner">
+                   keycode   1 = Escape          
+   shift   altgr   keycode   1 = Meta_Escape     
 
-<div id="header"><a id="logo" href="http://neo-layout.org/"><img src="http://neo-layout.org/neo_kopf_trac_522x50.png" alt="" /></a><hr /></div>
-
-<form id="search" action="/search" method="get">
- <div>
-  <label for="proj-search">Search:</label>
-  <input type="text" id="proj-search" name="q" size="10" accesskey="f" value="" />
-  <input type="submit" value="Search" />
-  <input type="hidden" name="wiki" value="on" />
-  <input type="hidden" name="changeset" value="on" />
-  <input type="hidden" name="ticket" value="on" />
- </div>
-</form>
-
-
-
-<div id="metanav" class="nav"><ul><li class="first">logged in as erik</li><li><a href="/logout">Logout</a></li><li><a href="/settings">Settings</a></li><li><a accesskey="6" href="/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/about">About Trac</a></li></ul></div>
-</div>
-
-<div id="mainnav" class="nav"><ul><li class="first"><a accesskey="1" href="/wiki">Wiki</a></li><li><a accesskey="2" href="/timeline">Timeline</a></li><li><a accesskey="3" href="/roadmap">Roadmap</a></li><li><a href="/browser">Browse Source</a></li><li><a href="/report">View Tickets</a></li><li><a accesskey="7" href="/newticket">New Ticket</a></li><li><a accesskey="4" href="/search">Search</a></li><li class="last"><a href="/admin">Admin</a></li></ul></div>
-<div id="main">
-
-
-
-
-<div id="ctxtnav" class="nav"></div>
-
-<div id="content" class="attachment">
-
-
- <h1><a href="/ticket/98">Ticket #98</a>: console.sondertasten</h1>
- <table id="info" summary="Description"><tbody><tr>
-   <th scope="col">
-    File console.sondertasten, 8.5 kB 
-    (added by Elias Oltmanns &lt;eo@nebensachen.de&gt;,  1 day ago)
-   </th></tr><tr>
-   <td class="message"><p>
-console.sondertasten
-</p>
-</td>
-  </tr>
- </tbody></table>
- <div id="preview">
-   <table class="code"><thead><tr><th class="lineno">Line</th><th class="content">&nbsp;</th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th>
-<td>! neo.map - german NEO keyboard layout</td>
-</tr><tr><th id="L2"><a href="#L2">2</a></th>
-<td>! 2008 Pascal Hauck, &lt;pascal.hauck@web.de&gt;</td>
-</tr><tr><th id="L3"><a href="#L3">3</a></th>
-<td>!</td>
-</tr><tr><th id="L4"><a href="#L4">4</a></th>
-<td>! Diese Datei ist experimentell!</td>
-</tr><tr><th id="L5"><a href="#L5">5</a></th>
-<td>! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen</td>
-</tr><tr><th id="L6"><a href="#L6">6</a></th>
-<td>! anders verhalten als erwartet, sollte dies auf der Mailingliste</td>
-</tr><tr><th id="L7"><a href="#L7">7</a></th>
-<td>! der NEO-Tastaturbelegung gemeldet werden.</td>
-</tr><tr><th id="L8"><a href="#L8">8</a></th>
-<td>!</td>
-</tr><tr><th id="L9"><a href="#L9">9</a></th>
-<td>! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap</td>
-</tr><tr><th id="L10"><a href="#L10">10</a></th>
-<td>! erzeugt.</td>
-</tr><tr><th id="L11"><a href="#L11">11</a></th>
-<td>!</td>
-</tr><tr><th id="L12"><a href="#L12">12</a></th>
-<td></td>
-</tr><tr><th id="L13"><a href="#L13">13</a></th>
-<td>keymaps 0-18</td>
-</tr><tr><th id="L14"><a href="#L14">14</a></th>
-<td>strings as usual</td>
-</tr><tr><th id="L15"><a href="#L15">15</a></th>
-<td>compose as usual</td>
-</tr><tr><th id="L16"><a href="#L16">16</a></th>
-<td>alt_is_meta</td>
-</tr><tr><th id="L17"><a href="#L17">17</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L18"><a href="#L18">18</a></th>
-<td>! Modifier definitions</td>
-</tr><tr><th id="L19"><a href="#L19">19</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L20"><a href="#L20">20</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 42 = Shift&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L21"><a href="#L21">21</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shift&nbsp; &nbsp;keycode&nbsp; 42 = Caps_Lock&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L22"><a href="#L22">22</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 54 = Shift&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L23"><a href="#L23">23</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shift&nbsp; &nbsp;keycode&nbsp; 54 = Caps_Lock&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L24"><a href="#L24">24</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 58 = AltGr&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L25"><a href="#L25">25</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; altgr&nbsp; &nbsp;keycode&nbsp; 58 = AltGr_Lock&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L26"><a href="#L26">26</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 43 = AltGr&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L27"><a href="#L27">27</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; altgr&nbsp; &nbsp;keycode&nbsp; 43 = AltGr_Lock&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L28"><a href="#L28">28</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 86 = ShiftL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L29"><a href="#L29">29</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shiftl&nbsp; keycode&nbsp; 86 = ShiftL_Lock&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L30"><a href="#L30">30</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 100 = ShiftL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L31"><a href="#L31">31</a></th>
-<td>#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shiftl&nbsp; keycode 100 = ShiftL_Lock&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L32"><a href="#L32">32</a></th>
-<td></td>
-</tr><tr><th id="L33"><a href="#L33">33</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; &nbsp;1 = Escape&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L34"><a href="#L34">34</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; &nbsp;1 = Meta_Escape&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L35"><a href="#L35">35</a></th>
-<td></td>
-</tr><tr><th id="L36"><a href="#L36">36</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L37"><a href="#L37">37</a></th>
-<td>! function keys</td>
-</tr><tr><th id="L38"><a href="#L38">38</a></th>
-<td>! --------------------------------------------------------------------------</td>
-</tr><tr><th id="L39"><a href="#L39">39</a></th>
-<td>! ----Backspace-------------------------------------------------------------</td>
-</tr><tr><th id="L40"><a href="#L40">40</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 14 = Delete&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L41"><a href="#L41">41</a></th>
-<td>! ----Return Enter----------------------------------------------------------</td>
-</tr><tr><th id="L42"><a href="#L42">42</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 28 = Return&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L43"><a href="#L43">43</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 28 = Meta_Control_m&nbsp; </td>
-</tr><tr><th id="L44"><a href="#L44">44</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 96 = KP_Enter&nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L45"><a href="#L45">45</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 96 = Hex_F&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L46"><a href="#L46">46</a></th>
-<td>! ----Tab-------------------------------------------------------------------</td>
-</tr><tr><th id="L47"><a href="#L47">47</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 15 = Tab&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Meta_Tab&nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L48"><a href="#L48">48</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;altgr&nbsp; &nbsp;keycode&nbsp; 15 = Compose</td>
-</tr><tr><th id="L49"><a href="#L49">49</a></th>
-<td>! ----Control Alt-----------------------------------------------------------</td>
-</tr><tr><th id="L50"><a href="#L50">50</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 29 = Control&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L51"><a href="#L51">51</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 97 = Control&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L52"><a href="#L52">52</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 56 = Alt&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L53"><a href="#L53">53</a></th>
-<td>! ----Prt SclLk Pause-------------------------------------------------------</td>
-</tr><tr><th id="L54"><a href="#L54">54</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 99 =</td>
-</tr><tr><th id="L55"><a href="#L55">55</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;control keycode&nbsp; 99 = Control_backslash</td>
-</tr><tr><th id="L56"><a href="#L56">56</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 99 = Control_backslash</td>
-</tr><tr><th id="L57"><a href="#L57">57</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 99 = Meta_Control_backslash</td>
-</tr><tr><th id="L58"><a href="#L58">58</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 70 = Scroll_Lock&nbsp; &nbsp; &nbsp; Show_Memory&nbsp; &nbsp; &nbsp; Show_Registers&nbsp; &nbsp;Show_State&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L59"><a href="#L59">59</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 70 = Scroll_Lock&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L60"><a href="#L60">60</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 119 = Pause&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L61"><a href="#L61">61</a></th>
-<td>! ----Home block------------------------------------------------------------</td>
-</tr><tr><th id="L62"><a href="#L62">62</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 102 = Find&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L63"><a href="#L63">63</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 104 = Prior&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L64"><a href="#L64">64</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shift&nbsp; &nbsp;keycode 104 = Scroll_Backward </td>
-</tr><tr><th id="L65"><a href="#L65">65</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 107 = Select&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L66"><a href="#L66">66</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 109 = Next&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L67"><a href="#L67">67</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shift&nbsp; &nbsp;keycode 109 = Scroll_Forward&nbsp; </td>
-</tr><tr><th id="L68"><a href="#L68">68</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 111 = Remove&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L69"><a href="#L69">69</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 111 = Boot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L70"><a href="#L70">70</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode 111 = Boot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L71"><a href="#L71">71</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 110 = Insert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L72"><a href="#L72">72</a></th>
-<td>! ----Navigation block------------------------------------------------------</td>
-</tr><tr><th id="L73"><a href="#L73">73</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 103 = Up&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L74"><a href="#L74">74</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 103 = KeyboardSignal&nbsp; </td>
-</tr><tr><th id="L75"><a href="#L75">75</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 105 = Left&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L76"><a href="#L76">76</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 105 = Decr_Console&nbsp; &nbsp; </td>
-</tr><tr><th id="L77"><a href="#L77">77</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 106 = Right&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L78"><a href="#L78">78</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 106 = Incr_Console&nbsp; &nbsp; </td>
-</tr><tr><th id="L79"><a href="#L79">79</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 108 = Down&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L80"><a href="#L80">80</a></th>
-<td>! ----Win keys--------------------------------------------------------------</td>
-</tr><tr><th id="L81"><a href="#L81">81</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 125 = Decr_Console&nbsp; &nbsp; Last_Console&nbsp; &nbsp; &nbsp; Incr_Console&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L82"><a href="#L82">82</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 126 = Incr_Console&nbsp; &nbsp; Last_Console&nbsp; &nbsp; &nbsp; Decr_Console&nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L83"><a href="#L83">83</a></th>
-<td>! ----menue key-------------------------------------------------------------</td>
-</tr><tr><th id="L84"><a href="#L84">84</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 127 = Compose&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F100</td>
-</tr><tr><th id="L85"><a href="#L85">85</a></th>
-<td>! ----F-keys----------------------------------------------------------------</td>
-</tr><tr><th id="L86"><a href="#L86">86</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 59 = F1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F13&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_13&nbsp; &nbsp; &nbsp; &nbsp;F25&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L87"><a href="#L87">87</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 59 = Console_1&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L88"><a href="#L88">88</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 59 = Console_1&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L89"><a href="#L89">89</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 60 = F2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_14&nbsp; &nbsp; &nbsp; &nbsp;F26&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L90"><a href="#L90">90</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 60 = Console_2&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L91"><a href="#L91">91</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 60 = Console_2&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L92"><a href="#L92">92</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 61 = F3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F15&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_15&nbsp; &nbsp; &nbsp; &nbsp;F27&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L93"><a href="#L93">93</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 61 = Console_3&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L94"><a href="#L94">94</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 61 = Console_3&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L95"><a href="#L95">95</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 62 = F4&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F16&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_16&nbsp; &nbsp; &nbsp; &nbsp;F28&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L96"><a href="#L96">96</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 62 = Console_4&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L97"><a href="#L97">97</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 62 = Console_4&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L98"><a href="#L98">98</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 63 = F5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F17&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_17&nbsp; &nbsp; &nbsp; &nbsp;F29&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L99"><a href="#L99">99</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 63 = Console_5&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L100"><a href="#L100">100</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 63 = Console_5&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L101"><a href="#L101">101</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 64 = F6&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F18&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_18&nbsp; &nbsp; &nbsp; &nbsp;F30&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L102"><a href="#L102">102</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 64 = Console_6&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L103"><a href="#L103">103</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 64 = Console_6&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L104"><a href="#L104">104</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 65 = F7&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F19&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_19&nbsp; &nbsp; &nbsp; &nbsp;F31&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L105"><a href="#L105">105</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 65 = Console_7&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L106"><a href="#L106">106</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 65 = Console_7&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L107"><a href="#L107">107</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 66 = F8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F20&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_20&nbsp; &nbsp; &nbsp; &nbsp;F32&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L108"><a href="#L108">108</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 66 = Console_8&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L109"><a href="#L109">109</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 66 = Console_8&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L110"><a href="#L110">110</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 67 = F9&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F21&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_21&nbsp; &nbsp; &nbsp; &nbsp;F33&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L111"><a href="#L111">111</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 67 = Console_9&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L112"><a href="#L112">112</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 67 = Console_9&nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L113"><a href="#L113">113</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 68 = F10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_22&nbsp; &nbsp; &nbsp; &nbsp;F34&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L114"><a href="#L114">114</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 68 = Console_10&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L115"><a href="#L115">115</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 68 = Console_10&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L116"><a href="#L116">116</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 87 = F11&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F23&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_23&nbsp; &nbsp; &nbsp; &nbsp;F35&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L117"><a href="#L117">117</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 87 = Console_11&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L118"><a href="#L118">118</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 87 = Console_11&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L119"><a href="#L119">119</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 88 = F12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; F24&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console_24&nbsp; &nbsp; &nbsp; &nbsp;F36&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L120"><a href="#L120">120</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 88 = Console_12&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L121"><a href="#L121">121</a></th>
-<td>&nbsp; &nbsp;control alt&nbsp; &nbsp; &nbsp;keycode&nbsp; 88 = Console_12&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L122"><a href="#L122">122</a></th>
-<td>! ----unknown keys from defkeymap.map---------------------------------------</td>
-</tr><tr><th id="L123"><a href="#L123">123</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 84 = Last_Console&nbsp; &nbsp; </td>
-</tr><tr><th id="L124"><a href="#L124">124</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 89 =</td>
-</tr><tr><th id="L125"><a href="#L125">125</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 90 =</td>
-</tr><tr><th id="L126"><a href="#L126">126</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 91 =</td>
-</tr><tr><th id="L127"><a href="#L127">127</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 92 =</td>
-</tr><tr><th id="L128"><a href="#L128">128</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 93 =</td>
-</tr><tr><th id="L129"><a href="#L129">129</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 94 =</td>
-</tr><tr><th id="L130"><a href="#L130">130</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode&nbsp; 95 =</td>
-</tr><tr><th id="L131"><a href="#L131">131</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 101 = Break&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L132"><a href="#L132">132</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 112 = Macro&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L133"><a href="#L133">133</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 112 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L134"><a href="#L134">134</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 112 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L135"><a href="#L135">135</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 112 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L136"><a href="#L136">136</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 113 = F13&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L137"><a href="#L137">137</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 113 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L138"><a href="#L138">138</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 113 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L139"><a href="#L139">139</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 113 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L140"><a href="#L140">140</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 114 = F14&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L141"><a href="#L141">141</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 114 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L142"><a href="#L142">142</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 114 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L143"><a href="#L143">143</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 114 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L144"><a href="#L144">144</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 115 = Help&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L145"><a href="#L145">145</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 115 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L146"><a href="#L146">146</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 115 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L147"><a href="#L147">147</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 115 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L148"><a href="#L148">148</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 116 = Do&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L149"><a href="#L149">149</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 116 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L150"><a href="#L150">150</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 116 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L151"><a href="#L151">151</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 116 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L152"><a href="#L152">152</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 117 = F17&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-</tr><tr><th id="L153"><a href="#L153">153</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 117 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L154"><a href="#L154">154</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 117 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L155"><a href="#L155">155</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 117 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L156"><a href="#L156">156</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 118 = KP_MinPlus&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L157"><a href="#L157">157</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;control keycode 118 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L158"><a href="#L158">158</a></th>
-<td>&nbsp; &nbsp;shift&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 118 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L159"><a href="#L159">159</a></th>
-<td>&nbsp; &nbsp;altgr&nbsp; &nbsp;alt&nbsp; &nbsp; &nbsp;keycode 118 = VoidSymbol&nbsp; &nbsp; &nbsp; </td>
-</tr><tr><th id="L160"><a href="#L160">160</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 119 = Pause</td>
-</tr><tr><th id="L161"><a href="#L161">161</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 120 =</td>
-</tr><tr><th id="L162"><a href="#L162">162</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 121 =</td>
-</tr><tr><th id="L163"><a href="#L163">163</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 122 =</td>
-</tr><tr><th id="L164"><a href="#L164">164</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 123 =</td>
-</tr><tr><th id="L165"><a href="#L165">165</a></th>
-<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keycode 124 =</td>
-</tr></tbody></table>
- </div>
- <div class="buttons">
-  <form method="get" action=""><div id="delete">
-   <input type="hidden" name="action" value="delete" />
-   <input type="submit" value="Delete attachment" />
-  </div></form>
- </div>
-
-
-</div>
-<script type="text/javascript">searchHighlight()</script>
-<div id="altlinks"><h3>Download in other formats:</h3><ul><li class="first last"><a href="/attachment/ticket/98/console.sondertasten?format=raw">Original Format</a></li></ul></div>
-
-</div>
-
-<div id="footer">
- <hr />
- <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/chrome/common/trac_logo_mini.png" height="30" width="107"
-   alt="Trac Powered"/></a>
- <p class="left">
-  Powered by <a href="/about"><strong>Trac 0.10.4</strong></a><br />
-  By <a href="http://www.edgewall.org/">Edgewall Software</a>.
- </p>
- <p class="right">
-  
- </p>
-</div>
-
-
-
- </body>
-</html>
-
+! --------------------------------------------------------------------------
+! function keys
+! --------------------------------------------------------------------------
+! ----Backspace-------------------------------------------------------------
+                   keycode  14 = Delete          
+! ----Return Enter----------------------------------------------------------
+                   keycode  28 = Return          
+           alt     keycode  28 = Meta_Control_m  
+                   keycode  96 = KP_Enter        
+           altgr   keycode  96 = Hex_F           
+! ----Tab-------------------------------------------------------------------
+                   keycode  15 = Tab              Meta_Tab        
+           altgr   keycode  15 = Compose
+! ----Control Alt-----------------------------------------------------------
+                   keycode  29 = Control         
+                   keycode  97 = Control         
+                   keycode  56 = Alt             
+! ----Prt SclLk Pause-------------------------------------------------------
+                   keycode  99 =
+           control keycode  99 = Control_backslash
+           alt     keycode  99 = Control_backslash
+   control alt	   keycode  99 = Meta_Control_backslash
+                   keycode  70 = Scroll_Lock      Show_Memory      Show_Registers   Show_State      
+           alt     keycode  70 = Scroll_Lock     
+                   keycode 119 = Pause           
+! ----Home block------------------------------------------------------------
+                   keycode 102 = Find            
+                   keycode 104 = Prior           
+           shift   keycode 104 = Scroll_Backward 
+                   keycode 107 = Select          
+                   keycode 109 = Next            
+           shift   keycode 109 = Scroll_Forward  
+                   keycode 111 = Remove          
+   altgr   control keycode 111 = Boot            
+   control alt     keycode 111 = Boot            
+                   keycode 110 = Insert          
+! ----Navigation block------------------------------------------------------
+                   keycode 103 = Up              
+           alt     keycode 103 = KeyboardSignal  
+                   keycode 105 = Left            
+           alt     keycode 105 = Decr_Console    
+                   keycode 106 = Right           
+           alt     keycode 106 = Incr_Console    
+                   keycode 108 = Down            
+! ----Win keys--------------------------------------------------------------
+                   keycode 125 = Decr_Console    Last_Console      Incr_Console     
+                   keycode 126 = Incr_Console    Last_Console      Decr_Console     
+! ----menue key-------------------------------------------------------------
+                   keycode 127 = Compose         F100
+! ----F-keys----------------------------------------------------------------
+                   keycode  59 = F1               F13              Console_13       F25             
+           alt     keycode  59 = Console_1       
+   control alt     keycode  59 = Console_1       
+                   keycode  60 = F2               F14              Console_14       F26             
+           alt     keycode  60 = Console_2       
+   control alt     keycode  60 = Console_2       
+                   keycode  61 = F3               F15              Console_15       F27             
+           alt     keycode  61 = Console_3       
+   control alt     keycode  61 = Console_3       
+                   keycode  62 = F4               F16              Console_16       F28             
+           alt     keycode  62 = Console_4       
+   control alt     keycode  62 = Console_4       
+                   keycode  63 = F5               F17              Console_17       F29             
+           alt     keycode  63 = Console_5       
+   control alt     keycode  63 = Console_5       
+                   keycode  64 = F6               F18              Console_18       F30             
+           alt     keycode  64 = Console_6       
+   control alt     keycode  64 = Console_6       
+                   keycode  65 = F7               F19              Console_19       F31             
+           alt     keycode  65 = Console_7       
+   control alt     keycode  65 = Console_7       
+                   keycode  66 = F8               F20              Console_20       F32             
+           alt     keycode  66 = Console_8       
+   control alt     keycode  66 = Console_8       
+                   keycode  67 = F9               F21              Console_21       F33             
+           alt     keycode  67 = Console_9       
+   control alt     keycode  67 = Console_9       
+                   keycode  68 = F10              F22              Console_22       F34             
+           alt     keycode  68 = Console_10      
+   control alt     keycode  68 = Console_10      
+                   keycode  87 = F11              F23              Console_23       F35             
+           alt     keycode  87 = Console_11      
+   control alt     keycode  87 = Console_11      
+                   keycode  88 = F12              F24              Console_24       F36             
+           alt     keycode  88 = Console_12      
+   control alt     keycode  88 = Console_12      
+! ----unknown keys from defkeymap.map---------------------------------------
+                   keycode  84 = Last_Console    
+                   keycode  89 =
+                   keycode  90 =
+                   keycode  91 =
+                   keycode  92 =
+                   keycode  93 =
+                   keycode  94 =
+                   keycode  95 =
+                   keycode 101 = Break           
+                   keycode 112 = Macro           
+   altgr   control keycode 112 = VoidSymbol      
+   shift   alt     keycode 112 = VoidSymbol      
+   altgr   alt     keycode 112 = VoidSymbol      
+                   keycode 113 = F13             
+   altgr   control keycode 113 = VoidSymbol      
+   shift   alt     keycode 113 = VoidSymbol      
+   altgr   alt     keycode 113 = VoidSymbol      
+                   keycode 114 = F14             
+   altgr   control keycode 114 = VoidSymbol      
+   shift   alt     keycode 114 = VoidSymbol      
+   altgr   alt     keycode 114 = VoidSymbol      
+                   keycode 115 = Help            
+   altgr   control keycode 115 = VoidSymbol      
+   shift   alt     keycode 115 = VoidSymbol      
+   altgr   alt     keycode 115 = VoidSymbol      
+                   keycode 116 = Do              
+   altgr   control keycode 116 = VoidSymbol      
+   shift   alt     keycode 116 = VoidSymbol      
+   altgr   alt     keycode 116 = VoidSymbol      
+                   keycode 117 = F17             
+   altgr   control keycode 117 = VoidSymbol      
+   shift   alt     keycode 117 = VoidSymbol      
+   altgr   alt     keycode 117 = VoidSymbol      
+                   keycode 118 = KP_MinPlus      
+   altgr   control keycode 118 = VoidSymbol      
+   shift   alt     keycode 118 = VoidSymbol      
+   altgr   alt     keycode 118 = VoidSymbol      
+                   keycode 119 = Pause
+                   keycode 120 =
+                   keycode 121 =
+                   keycode 122 =
+                   keycode 123 =
+                   keycode 124 =
