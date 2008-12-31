@@ -1,4 +1,4 @@
-#Hauptfeld {
+div.Hauptfeld {
   width:39em;
   border-width:thin;
   border-color:#444;
@@ -42,7 +42,7 @@
 
 }
 
-#Navigationsthema {
+div.Navigationsthema {
   border-bottom-width:1px;
   border-bottom-style:solid;
   border-color:black;
@@ -57,12 +57,12 @@
   padding-bottom:.2em;
 }
 
-#Navigationsunterpunkte {
+div.Navigationsunterpunkte {
   padding-top:.5em;
   padding-bottom:.75em;
 }
 
-#Navigationseintrag {
+a.Navigationseintrag {
   display:block;
   text-align:left;
   padding-left:1em;
