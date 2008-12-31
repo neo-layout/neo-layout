@@ -10,18 +10,6 @@
 	<!--[if lte IE 7]>
 		<link rel="stylesheet" type="text/css" href="stylesheet_ie7.css">
 	<![endif]-->
-
-	<script type="text/javascript">
-	function Tastaturbildwechsel_nach (Zielebene) {
-		self.document.tastaturbild.src="./tastatur_neo_Ebene" + Zielebene +".png";
-		for (var Nr = 1; Nr <= 6; Nr++) self.document.getElementById("ebenenreiter" + Nr).style.color="";
-		for (var Nr = 1; Nr <= 6; Nr++) self.document.getElementById("ebenenreiter" + Nr).style.borderColor="";
-		self.document.getElementById("ebenenreiter" + Zielebene).style.borderColor="#56b";
-		self.document.getElementById("ebenenreiter" + Zielebene).style.Color="#23b";
-		return false;
-		}
-	</script>
-
 </head>
 
 <!-- Für Mittenpositionierung: padding: 0; margin: 0; text-align: center; ind bodystyle /-->
@@ -122,20 +110,19 @@
 <div class="Hauptfeld">
 	<div style="display:block; line-height:2em;" >
 		<div style="text-align:center; ">
-
-
 			<div style="min-width:650px; overflow:visible;">
-				<div id="linkbutton" style="text-align:center; ">
-					<a href="" style="border-color:#56b; color:#23b" onclick="Tastaturbildwechsel_nach(1); return false;" id="ebenenreiter1" > Ebene1</a>
-					<a href="" onclick="Tastaturbildwechsel_nach(2); return false;" style="" id="ebenenreiter2">Ebene2</a>
-					<a href="" onclick="Tastaturbildwechsel_nach(3); return false;" style="" id="ebenenreiter3">Ebene3</a>
-					<a href="" onclick="Tastaturbildwechsel_nach(4); return false;" style="" id="ebenenreiter4">Ebene4</a>
-					<a href="" onclick="Tastaturbildwechsel_nach(5); return false;" style="" id="ebenenreiter5">Ebene5</a>
-					<a href="" onclick="Tastaturbildwechsel_nach(6); return false;" style="" id="ebenenreiter6">Ebene6</a>
+				<div id="linkbutton" style="text-align:center;">
+<?php 
+$e = empty($_GET['ebene']) ? 1 : $_GET['ebene']; 
+for ($i = 1; $i < 7; $i++) {
+	$style = ($i == $e) ? "border-color:#56b; color:#23b;" : "";
+	echo "<a href='?ebene=$i' style='$style'>Ebene $i</a>";
+}
+?>
 				</div>
 			</div>
 			<div>
-				<img src="./tastatur_neo_Ebene1.png" alt="tastaturbild" id="IE6-Bildweitenkorrektur" />
+				<img src="./tastatur_neo_Ebene<?php echo $e; ?>.png" alt="tastaturbild" id="IE6-Bildweitenkorrektur" />
 			</div>
 		</div>
 	</div>
