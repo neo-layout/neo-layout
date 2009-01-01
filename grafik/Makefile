@@ -22,7 +22,7 @@ tastatur3d/tastatur_neo_Ebene%.svg: tastatur3d/tastatur_neo_alle_Ebenen.svg
 WWWPIC=$(addsuffix .png, $(basename $(foreach file, ${EBENENSVG}, ../www/${file})))
 www: ${WWWPIC}
 ../www/%.png: tastatur3d/%.svg
-	inkscape --without-gui --export-area=0:0:1360,747:457,673 --export-png=$@ -w650 $<
+	inkscape --without-gui --export-id="Haupttastaturfeld" --export-png=$@ -w650 $<
 
 cleanwww:
 	rm -f ${WWWPIC}
