@@ -122,7 +122,7 @@ for ($i = 1; $i < 7; $i++) {
 				</div>
 			</div>
 			<div>
-				<img src="./tastatur_neo_Ebene<?php echo $e; ?>.png" alt="tastaturbild" id="IE6-Bildweitenkorrektur" />
+				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene<?php echo $e; ?>.png" alt="tastaturbild" id="IE6-Bildweitenkorrektur" />
 			</div>
 		</div>
 	</div>
