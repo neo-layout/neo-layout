@@ -1,18 +1,20 @@
 #!/bin/bash
 # Copyright 2008 Pascal Hauck <pascal.hauck@web.de>
-# Distributed under the terms of the GNU General Public License v3
 
 # ======= Installation =======
 # Um NEO auf Ihrem System zu (dauerhaft) zu installieren, genügt es, dieses Skript auszuführen
 # z.B. in der Konsole die folgenden beiden Zeilen eingeben:
-# chmod u+x installation
-# ./installation
-# Nun ist NEO auf Ihrem System dauerhaft installier
-# Ein Wechsel zurück zu QWERTZ ist jederzeit mit ›uiae‹ leicht möglich
+# chmod u+x installiere_neo
+# ./installiere_neo
+# Nun ist NEO auf Ihrem System installiert
+# Nach Eingabe von ›. starte_neo‹ oder nach dem nächsten Login ist:
+# ein Wechsel von NEO zu QWERTZ ist jederzeit mit ›uiae‹ leicht möglich und
+# ein Wechsel von QWERTZ zu NEO ist jederzeit mit ›asdf‹ ebenso leicht möglich
 
-# Wenn NEO nicht automatisch nach dem Login gestartet werden soll, genügt es, vor die Zeile, die mit
-# asdf   # mit einem # am Zeilenanfang
-# beginnt und sich in der Datei $HOME/.profile befinden, ein # zu setzen
+# Wenn NEO nicht automatisch nach dem Login gestartet werden soll, genügt es, vor die Zeile
+# asdf			# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+# in der Datei $HOME/.profile ein # zu setzen
+# Alternativ kann das Skript ›installiere_neo‹ ein weiteres mal aufgerufen werden
 # ==============================
 
 
@@ -22,8 +24,8 @@
 
 
 # ======= Bemerkungen ==========
-# Dieses Skript ist eine rudimentäre Installation. Derzeit gibt es keine Konfigurationsmöglichkeit.
-# Es wird immer das Standardverzeichnis $HOME/neo verwendet
+# Dieses Skript ist eine rudimentäre Installation.
+# Es wird immer das Standardverzeichnis $inst_dir verwendet
 # Es gibt keine graphische Installation
 # Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
 # Dieses Skript wird mit der Zeit verbessert werden.
@@ -31,115 +33,42 @@
 
 
 # colours in the Bash
-B="\033[30m"
-R="\033[31m"
-G="\033[32m"
+normal="\033[0m"
+red="\033[31m"
+green="\033[32m"
 
-datei() {  # cut files from the complete file ›installiere_neo‹
-	grep -A10000 "#neo: $1 --- Beginn" installation | grep -B10000 "#neo: $1 --- Ende" | grep -v "#neo:"
-}
+inst_dir=$HOME/neo
 
-erzeuge() {  # create directories, files and entries
-	case $1 in
-	d) # directory
-		if [ -d $2 ]				# if already exists
-		then
-			echo -e "Das Verzeichnis ${R}$2${B} gibt es bereits – wird verwendet…"
-		else
-			echo -e "Erstelle $2"
-			mkdir $2			# create
-		fi
-		;;
-	f) # file
-		if [ -f $3 ]				# if already exists
-		then
-			echo -e "Die Datei ${R}$3${B} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
-			if [ "$overwrite" = "J" ]	# overwrite?
-			then
-				echo "Datei $3 wird überschrieben!"
-				rm -f $3		# remove if user wants to overwrite
-			else
-				echo -e "Datei ${R}$3${B} gibt es schon → Installation abgebrochen"
-				exit
-			fi
-		fi
-		echo "Erstelle Datei $3"		# create
-		datei $2 > $3
-		;;
-	l) # soft link
-		if [ -d $HOME/bin/ ]			# $HOME/bin has to exist!
-		then
-			echo "Verzeichnis $HOME/bin/ gefunden"
-		else
-			echo -e "Verzeichnis ${R}$HOME/bin${B} wird erwartet, ist aber nicht vorhanden"
-			echo "Außerdem wird erwartet, dass /$HOME/bin in der Umgebungsvariable \$PATH ist"
-			echo "Istallation wird abgebrochen."
-			exit
-		fi
-		if [ -f $HOME/bin/$2 ]			# if already exists
-		then
-			echo -e "Datei ${R}$HOME/bin/$2${B} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
-			if [ "$overwrite" = "J" ]	# overwrite?
-			then
-				echo "Datei $2 wird überschrieben!"
-				rm -f $HOME/bin/$2	# remove if user wants to overwrite
-			else
-				echo -e "Datei ${R}$2${B} gibt es schon → Installation abgebrochen"
-				exit
-			fi
-		fi
-		echo "Erstelle Link $HOME/bin/$2"
-		ln -s $HOME/neo/$2 $HOME/bin		# create
-		;;
-	esac
-}
-
-entferne(){  # remove files for uninstall option
-	echo "Entferne $1"
-	rm $1 || echo -e "${R}Konnte die Datei $1 nicht entfernen!${B}"
-}
-
-deinstall() {  #remove all directories, files and entries made by ›installiere_neo‹
-	echo
-	echo
-	rmfromprofile
-	entferne $HOME/.neorc
-	entferne $HOME/bin/uiae
-	entferne $HOME/neo/uiae
-	entferne $HOME/bin/asdf
-	entferne $HOME/neo/asdf
-	entferne $HOME/neo/neo.map
-	entferne $HOME/neo/neo_de.xmodmap
-	echo "Entferne $HOME/neo/"
-	rmdir $HOME/neo/ || echo -e "${R}Konnte das Verzeichenis $HOME/neo/ nicht entfernen!${B}"
-}
-
-rmfromprofile() {  # remove the entry in $HOME/.profile
-	grep -v "^\# NEO:$" $HOME/.profile | grep -v "asdf   \# mit" > $HOME/profile.neo.tmp
+# remove the entry in $HOME/.profile
+rmfromprofile()
+{
+	grep -v "^\# NEO:$" $HOME/.profile | grep -v "asdf   \# mit" | grep -v "asdf" > $HOME/profile.neo.tmp
 	rm /$HOME/.profile
 	mv $HOME/profile.neo.tmp $HOME/.profile
 }
 
+# create directories, files and entries
+create()
+{
+	if [ -f $2 ]					# if already exists
+	then
+		echo -e "Die Datei ${red}$2${normal} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
+		if [ "$overwrite" = "J" ]	# overwrite?
+		then
+			echo "Datei $2 wird überschrieben!"
+			rm -f $2			# remove if user wants to overwrite
+		else
+			echo -e "Datei ${red}$2${normal} gibt es schon → Installation abgebrochen"
+			exit
+		fi
+	fi
+	echo "Erstelle Datei $2"			# create
+	$1 > $2						# call subroutine $1 and write to file $2
+}
 
-# *** main program ***
-clear
-echo
-echo "   *** NEO – Ergonomie und Zeichenvielfalt ***"
-echo
-echo
-echo " Ihr System wird untersucht…"
-echo
-
-# check for an existing neo configuration
-if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
-elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
-elif [ -f /etc/neo.conf ]; then
-	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
-else
-
-# no configuration file found → install NEO
+## show options if NEO is not installed so far
+install_options()
+{
 	echo "Bislang gibt es kein vollständig konfiguriertes NEO auf Ihrem System"
 	echo
 	echo "Sie haben folgende Möglichkeiten:"
@@ -153,7 +82,7 @@ else
 	echo "       Login automatisch aktiviert"
 	echo
 	echo
-	echo -e " Wenn ${G}installiere_neo${B} ein weiteres Mal aufgerufen wird, haben weitere Optionen – z.B. die Deinstallation von NEO"
+	echo -e " Wenn ${green}installiere_neo${normal} ein weiteres Mal aufgerufen wird, haben weitere Optionen – z.B. die Deinstallation von NEO"
 	echo
 
 	installoption=""
@@ -165,16 +94,18 @@ else
                 2)
                         echo
                         echo "Nach dem Login wird NEO die Standardbelegung sein."
-                        echo -e "Um dies zu ändern, kann ${G}installiere_neo${B} ein weiteres Mal ausgeführt werden."
-			echo
+                        echo -e "Um dies zu ändern, kann ${green}installiere_neo${normal} ein weiteres Mal ausgeführt werden."
+			echo -e ${red}
 			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			echo -e ${normal}
                         ;;
                 1)
                         echo
-                        echo "Das Standardlayout wird nich verändert."
-                        echo -e "Zu NEO kann man jederzeit mit der Abrollbewegung ${G}asdf${B} wechseln."
-			echo
+                        echo "Das Standardlayout wird nicht verändert."
+                        echo -e "Zu NEO kann man jederzeit mit der Abrollbewegung ${green}asdf${normal} wechseln."
+			echo -e ${red}
 			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			echo -e ${normal}
                         ;;
                 *)
                         echo
@@ -186,97 +117,118 @@ else
 
 
 	echo
-	echo
-	echo " Installation von NEO mit xmodmap wird gestartet…"
+	echo "Installation von NEO mit xmodmap wird gestartet…"
 	echo
 	echo
 
 # *** main installation process ***
-# creating a directory $HOME/neo with NEO files
-# linking ›asdf‹ and ›uiae‹ scripts to $HOME/bin
-	erzeuge d $HOME/neo
-	erzeuge f xmodmap $HOME/neo/neo_de.xmodmap
-	erzeuge f console $HOME/neo/neo.map
-	erzeuge f asdf $HOME/neo/asdf
-	chmod u+x $HOME/neo/asdf
-	erzeuge l asdf
-	erzeuge f uiae $HOME/neo/uiae
-	chmod u+x $HOME/neo/uiae
-	erzeuge l uiae
-	erzeuge f neorc $HOME/.neorc
+# creating a directory $inst_dir
+	if [ -d $inst_dir ]
+	then
+		echo -e "Das Verzeichnis ${red}$inst_dir${normal} gibt es bereits – wird verwendet…"
+	else
+		echo -e "Erstelle $inst_dir"
+		mkdir $inst_dir
+	fi
+
+# creating NEO files in $inst_dir
+	create neo_xmodmap $inst_dir/neo_de.xmodmap
+	create neo_console $inst_dir/neo.map
+	create neo_asdf $inst_dir/asdf
+	chmod u+x $inst_dir/asdf
+	create neo_uiae $inst_dir/uiae
+	chmod u+x $inst_dir/uiae
+	create neorc $HOME/.neorc
 
 # entry in $HOME/.profile with NEO or QWERTZ as standard keyboard layout after login
 	case $installoption in 
 	2)
 		echo
 		echo "Nach dem Login wird NEO die Standardbelegung sein."
-		echo -e "Um dies zu ändern, kann ${G}installiere_neo${B} ein weiteres Mal ausgeführt werden."
+		echo -e "Um dies zu ändern, kann ${green}installiere_neo${normal} ein weiteres Mal ausgeführt werden."
 		rmfromprofile
-		datei profile.neo > $HOME/neo/neo.profile
-		cat $HOME/neo/neo.profile >> $HOME/.profile
-		rm $HOME/neo/neo.profile
+		profile_neo >> $HOME/.profile
 		;;
 	1)
 		echo
 		echo "Das Standardlayout wird nich verändert."
-		echo -e "Zu NEO kann man jederzeit mit der Abrollbewegung ${G}asdf${B} wechseln."
 		rmfromprofile
-		datei profile.qwertz > $HOME/neo/neo.profile
-		cat $HOME/neo/neo.profile >> $HOME/.profile
-		rm $HOME/neo/neo.profile
+		profile_qwertz >> $HOME/.profile
 		;;
 	esac
+}
 
-# starting NEO layout
+# remove files for uninstall option
+remove()
+{
+	echo "Entferne $1"
+	rm $1 || echo -e "${red}Konnte die Datei $1 nicht entfernen!${normal}"
+}
+
+# remove all directories, files and entries made by ›installiere_neo‹
+deinstall()
+{
 	echo
-	echo "Die Belegung wird nun auf NEO geändert…"	
-	cd $HOME/neo
-	./asdf xmodmap
-	echo -e "Um zu QWERTZ zurückzukehren, genügt es, die Abrollbewegung ${G}uiae${B} einzugeben."
-	exit
-fi
+	echo
+	rmfromprofile
+	remove $HOME/.neorc
+	remove $inst_dir/starte_neo
+	remove $inst_dir/uiae
+	remove $inst_dir/asdf
+	remove $inst_dir/neo.map
+	remove $inst_dir/neo_de.xmodmap
+	echo "Entferne $inst_dir/"
+	rmdir $inst_dir/ || echo -e "${red}Konnte das Verzeichenis $inst_dir/ nicht entfernen!${normal}"
+}
 
-
-# configuration file found → delete/deinstall options
+# show options if NEO is already installed
+deinstall_options()
+{
 	echo "Es gibt auf Ihrem System bereits eine Konfiguration für NEO."
 	echo
 	echo "Sollte NEO nur für diesen Benutzer installiert sein, haben folgende Möglichkeiten:"
 	echo
 	echo " [1]  NEO zukünftig nicht mehr als Standardbelegung"
-	echo -e "       NEO wird nicht länger direkt nach dem Login zur Verfügung stehen, wohl aber nach Eingabe von ${G}adsf${B}."
+	echo -e "       NEO wird nicht länger direkt nach dem Login zur Verfügung stehen, wohl aber nach Eingabe von ${green}adsf${normal}."
 	echo
 	echo
 	echo " [2] NEO vollständig vom System entfernen"
 	echo "       Dieso Option entfernt alle zuvor angelegten Verzeichnisse, Datein und Einträge zur NEO-Belegung"
 	echo
 	echo
-	echo " Diese Optionen funktionieren nur dann zuverlässig, wenn NEO auch mit ${G}installiere_neo${B} installiert wurde"
+	echo -e " Diese Optionen funktionieren nur dann zuverlässig, wenn NEO auch mit ${green}installiere_neo${normal} installiert wurde"
 	echo
 
 	deinstalloption=""
-	while [ ! $deinstalloption ]			# choose between deleting NEO as standard layout or delete NEO at all
-	do						# if deleted as standard layout only, ›asdf‹ is still working
+	while [ ! $deinstalloption ]					# choose between deleting NEO as standard layout or delete NEO at all
+	do								# if deleted as standard layout only, ›asdf‹ is still working
 		echo
 		read -p "Wählen Sie eine Option [1,2]: " -e deinstalloption
 	        case $deinstalloption in
                 2)
                         echo
-                        echo -e "Alle zuvor von ${G}installiere_neo${B} vorgenommen Änderungen am System werden gelöscht!"
-			echo
+                        echo -e "Alle zuvor von ${green}installiere_neo${normal} vorgenommen Änderungen am System werden gelöscht!"
+			echo -e ${red}
 			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
-			deinstall			# full deinstallation
+			echo -e ${normal}
+			cd $inst_dir
+			./uiae
+			deinstall					# full deinstallation
+			echo
+			echo -e "Alle von ${green}installiere_neo${normal} gemachten Änderungen an Ihrem System wurden entfernt."
                         ;;
                 1)
                         echo
                         echo "NEO wird als Standardbelegung entfernt"
-                        echo -e "Zu NEO kann man weiterhin jederzeit mit der Abrollbewegung ${G}asdf${B} wechseln."
-			echo
+                        echo -e "Zu NEO kann man weiterhin jederzeit mit der Abrollbewegung ${green}asdf${normal} wechseln."
+			echo -e ${red}
 			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			echo -e ${normal}
 			echo
-			rmfromprofile			# alter the entry in $HOME/.profile; first: remove old entry
-			echo >> $HOME/.profile		# write the new entry
-			echo "# NEO:" >> $HOME/.profile
-			echo "# asdf   # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO" >> $HOME/.profile
+			rmfromprofile					# alter the entry in $HOME/.profile; first: remove old entry
+			profile_qwertz >> $HOME/.profile		# write the new entry
+			echo
+			echo "Nach dem nächsten Login wird NEO nicht mehr die Standardbelegung sein. "
                         ;;
                 *)
                         echo
@@ -286,9 +238,11 @@ fi
                         ;;
                 esac
 	done
-exit
+}
 
-#neo: xmodmap --- Beginn
+neo_xmodmap ()
+{
+cat <<NEO_XMODMAP
 !! ~/.xmodmap
 !! 
 !! German NEO-Layout
@@ -302,7 +256,7 @@ exit
 !! Other Questions:
 !!      <mailinglist at neo-layout dot org>
 !! 
-!! $Revision: 1293 $, $Date: 2008-12-19 09:39:48 +0100 (Fr, 19 Dez 2008) $
+!! \$Revision: 1293 \$, \$Date: 2008-12-19 09:39:48 +0100 (Fr, 19 Dez 2008) \$
 !! http://pebbles.schattenlauf.de/layout.php
 !! 
 !! To try the layout in this file, simply do xmodmap <file>.
@@ -413,7 +367,7 @@ keycode 65 = space  space  space  nobreakspace  KP_0  KP_0  U202F  NoSymbol
 keycode 49 = dead_circumflex	dead_tilde	dead_abovering	dead_breve	dead_caron  Pointer_EnableKeys	dead_macron	NoSymbol
 ! called T1	ˆ		˜		˚		˘		ˇ	   (keypad-mouse mode)	¯
 keycode 21 = dead_grave		NoSymbol	dead_diaeresis	U1FFE		NoSymbol	NoSymbol	NoSymbol	NoSymbol
-! called T2	`				¨		῾ dasia (asper)
+! called T2	\`				¨		῾ dasia (asper)
 keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	     dead_doubleacute	NoSymbol	dead_abovedot	NoSymbol
 ! called T3	´		¸		/		᾿ psili (lenis)	˝				˙
 
@@ -438,7 +392,7 @@ keycode 15 = 	6		EuroSign	cent		malesymbol	sterling	NoSymbol	U2225		NoSymbol
 !				€		¢		♂		£				∥ parallel
 
 keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
-!				$		¥		κ		¤				→
+!				\$		¥		κ		¤				→
 keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	NoSymbol	NoSymbol	infinity	NoSymbol
 !				„		‚		⟨ (bra)						∞
 keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	containsas	NoSymbol
@@ -514,13 +468,13 @@ keycode 48 = 	y		Y		at		Greek_upsilon	KP_Decimal	NoSymbol	nabla		NoSymbol
 keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		U211C		NoSymbol
 !		ü		Ü		#								ℜ real part
 keycode 53 = odiaeresis		Odiaeresis	dollar		NoSymbol	Tab		ISO_Left_Tab	U2111		NoSymbol
-!		ö		Ö		$								ℑ imaginary part
+!		ö		Ö		\$								ℑ imaginary part
 keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Next		Next		U2135		NoSymbol
 !		ä		Ä		|		η						ℵ alef symbol
 keycode 55 = 	p		P		asciitilde	Greek_pi	Return		Return		Greek_PI	Greek_PI
 !						~		π						Π		Π
 keycode 56 = 	z		Z		grave		Greek_zeta	Undo		Redo		U2124		NoSymbol
-!						`		ζ						ℤ integers
+!						\`		ζ						ℤ integers
 
 keycode 57 = 	b		B		plus		Greek_beta	colon		NoSymbol	U21D0		NoSymbol
 !						+		β		:				⇐
@@ -619,8 +573,12 @@ keycode 91 = comma		period		KP_Separator	minutes		seconds		NoSymbol
 !     Hierzu wird mittels Mod4+ß dieser Betriebsmodus ein- und später wieder ausgeschaltet.
 !     Die Steuerung des Cursors kann über den Ziffernblock (Ebene 4, eventuell mit
 !     eingerastetem Mod4) erfolgen.
-#neo: xmodmap --- Ende
-#neo: console --- Beginn
+NEO_XMODMAP
+}
+
+neo_console ()
+{
+cat <<NEO_CONSOLE
 ! neo.map - german NEO keyboard layout
 ! 2008 Pascal Hauck, <pascal.hauck@web.de>
 !
@@ -1238,8 +1196,12 @@ compose as usual
 ! Strings and Compose
 ! --------------------------------------------------------------------------
 # string F100 = "setleds +num\n"
-#neo: console --- Ende
-#neo: asdf --- Beginn
+NEO_CONSOLE
+}
+
+neo_asdf ()
+{
+cat <<NEO_ASDF
 #!/bin/sh
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
@@ -1247,10 +1209,10 @@ compose as usual
 # Copyright 2008 Erik Streb del Toro
 # Distributed under the terms of the GNU General Public License v3
 
-if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
-elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+if [ -f "\${NEO_CONFIG}" ]; then
+	. "\${NEO_CONFIG}" || die "Failed to source \${NEO_CONFIG}"
+elif [ -f "\${HOME}"/.neorc ]; then
+	. "\${HOME}"/.neorc || die "Failed to source \${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
@@ -1258,37 +1220,37 @@ else
 fi
 
 # Default paths
-PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
-PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
-PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
-PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
-PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
-PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
-PATH_XSET=${PATH_XSET:-/usr/bin/xset}
+PATH_XMODMAP=\${PATH_XMODMAP:-/usr/bin/xmodmap}
+PATH_SETXKBMAP=\${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
+PATH_LOADKEYS=\${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_SUDO=\${PATH_SUDO:-/usr/bin/sudo}
+PATH_SETLEDS=\${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_NUMLOCKX=\${PATH_NUMLOCKX:-/usr/bin/numlockx}
+PATH_XSET=\${PATH_XSET:-/usr/bin/xset}
 
 # Default values
-NEO_X_VARIANTE=${NEO_X_VARIANTE:-xkbmap}
-NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
-NEO_XKBMAP=${NEO_XKBMAP:-de}
-NEO_XKBVARIANT=${NEO_XKBVARIANT:-neo}
-NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
-NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
-NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
-NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
-NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
+NEO_X_VARIANTE=\${NEO_X_VARIANTE:-xkbmap}
+NEO_X_VARIANTE=\${1-\$NEO_X_VARIANTE}
+NEO_XKBMAP=\${NEO_XKBMAP:-de}
+NEO_XKBVARIANT=\${NEO_XKBVARIANT:-neo}
+NEO_XMODMAP=\${NEO_XMODMAP:-\$HOME/neo/neo_de.xmodmap}
+NEO_XMODMAP_XPROG=\${NEO_XMODMAP_XPROG:-\$HOME/neo/neo_de_x-prog.xmodmap}
+NEO_XMODMAP_ALTERNATIVE=\${NEO_XMODMAP_ALTERNATIVE:-\$HOME/neo/neo_de_alternative.xmodmap}
+NEO_XMODMAP_EVDEV=\${NEO_XMODMAP_EVDEV:-\$HOME/neo/neo_de_evdev.xmodmap}
+NEO_CONSOLE_KEYMAP=\${NEO_CONSOLE_KEYMAP:-\$HOME/neo/neo.map}
 
 die() {
-	echo "$@" >&2
+	echo "\$@" >&2
 	exit 1
 }
 
 set_xmodmap() {
-	if [ -e "${PATH_XMODMAP}" ]; then
-		if [ -f "$@" ]; then
+	if [ -e "\${PATH_XMODMAP}" ]; then
+		if [ -f "\$@" ]; then
 			set_xkbmap lv
-			"${PATH_XMODMAP}" "$@" || ( set_xkbmap de ; die "Failed to set xmodmap $@." )
+			"\${PATH_XMODMAP}" "\$@" || ( set_xkbmap de ; die "Failed to set xmodmap \$@." )
 		else
-			die "Cannot use $@ for xmodmap."
+			die "Cannot use \$@ for xmodmap."
 		fi
 	else
 		die "xmodmap not found, cannot set xmodmap."
@@ -1296,85 +1258,89 @@ set_xmodmap() {
 }
 
 set_xkbmap() {
-	if [ -e "${PATH_SETXKBMAP}" ]; then
-		"${PATH_SETXKBMAP}" "$@" || die "Failed to select xkbmap $@."
+	if [ -e "\${PATH_SETXKBMAP}" ]; then
+		"\${PATH_SETXKBMAP}" "\$@" || die "Failed to select xkbmap \$@."
 	else
 		die "setxkbmap not found, cannot set xkbmap."
 	fi
 }
 
 set_keymap() {
-	if [ -e "${PATH_LOADKEYS}" ]; then
-		if [ -f "$@" ]; then
-			if [ "${EUID}" = 0 ]; then
-				"${PATH_LOADKEYS}" "$@" || die "Failed to set keymap $@."
-			elif [ -e "${PATH_SUDO}" ]; then
-				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Failed to set keymap using sudo."
+	if [ -e "\${PATH_LOADKEYS}" ]; then
+		if [ -f "\$@" ]; then
+			if [ "\${EUID}" = 0 ]; then
+				"\${PATH_LOADKEYS}" "\$@" || die "Failed to set keymap \$@."
+			elif [ -e "\${PATH_SUDO}" ]; then
+				"\${PATH_SUDO}" "\${PATH_LOADKEYS}" "\$@" || die "Failed to set keymap using sudo."
 			else
 				die "You need root priviliges to change the keymap."
 			fi
 		else
-			die "keymap file $@ does not exist."
+			die "keymap file \$@ does not exist."
 		fi
 	else
 		die "loadkeys not found, cannot set keymap."
 	fi
 }
 
-if [ -n "$SSH_CONNECTION" ]; then
+if [ -n "\$SSH_CONNECTION" ]; then
 	die "Cannot set keybord layout in a ssh session."
 fi
 
-if [ -z ${DISPLAY} ]; then
-	set_keymap "${NEO_CONSOLE_KEYMAP}"
+if [ -z \${DISPLAY} ]; then
+	set_keymap "\${NEO_CONSOLE_KEYMAP}"
 
-	if [ -e "${PATH_SETLEDS}" ]; then
-		"${PATH_SETLEDS}" +num || die "Failed to set NUM status."
+	if [ -e "\${PATH_SETLEDS}" ]; then
+		"\${PATH_SETLEDS}" +num || die "Failed to set NUM status."
 	else
 		die "setleds does not exist, cannot set NUM status."
 	fi
 else
-	if [ -e "${PATH_NUMLOCKX}" ]; then
-		"${PATH_NUMLOCKX}" off || die "Failed to turn off Numlock."
+	if [ -e "\${PATH_NUMLOCKX}" ]; then
+		"\${PATH_NUMLOCKX}" off || die "Failed to turn off Numlock."
 	else
 		die "numlockx not found, cannot turn off Numlock."
 	fi
 
-	if [ -e "${PATH_XSET}" ]; then
+	if [ -e "\${PATH_XSET}" ]; then
 		for modifier in 51 94; do
-			"${PATH_XSET}" -r ${modifier} || die "Failed to unset repeat for modifier ${modifier}."
+			"\${PATH_XSET}" -r \${modifier} || die "Failed to unset repeat for modifier \${modifier}."
 		done
 		for deadkey in 21 35 49; do
-			"${PATH_XSET}" -r ${deadkey} || die "Failed to unset repeat for deadkey ${deakey}."
+			"\${PATH_XSET}" -r \${deadkey} || die "Failed to unset repeat for deadkey \${deakey}."
 		done
 	else
 		die "xset not found, cannot set modifiers and dead keys."
 	fi
 
-	case "${NEO_X_VARIANTE}" in
+	case "\${NEO_X_VARIANTE}" in
 		xkbmap)
-			set_xkbmap "${NEO_XKBMAP}" "${NEO_XKBVARIANT}"
+			set_xkbmap "\${NEO_XKBMAP}" "\${NEO_XKBVARIANT}"
 			;;
 		xmodmap)
-			set_xmodmap "${NEO_XMODMAP}"
+			set_xmodmap "\${NEO_XMODMAP}"
 			;;
 		xprog)
-			set_xmodmap "${NEO_XMODMAP_XPROG}"
+			set_xmodmap "\${NEO_XMODMAP_XPROG}"
 			;;
 		alternative)
-			set_xmodmap "${NEO_XMODMAP_ALTERNATIVE}"
+			set_xmodmap "\${NEO_XMODMAP_ALTERNATIVE}"
 			;;
 		evdev)
-			set_xmodmap "${NEO_XMODMAP_EVDEV}"
+			set_xmodmap "\${NEO_XMODMAP_EVDEV}"
 			;;
 		*)
-			die "Unknown Neo X variant ${NEO_X_VARIANTE}."
+			die "Unknown Neo X variant \${NEO_X_VARIANTE}."
 			;;
 	esac
 fi
 
-#neo: asdf --- Ende
-#neo: uiae --- Beginn
+NEO_ASDF
+}
+
+neo_uiae ()
+{
+cat <<NEO_UIAE
 #!/bin/sh
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
@@ -1382,10 +1348,10 @@ fi
 # Copyright 2008 Erik Streb del Toro
 # Distributed under the terms of the GNU General Public License v3
 
-if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
-elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+if [ -f "\${NEO_CONFIG}" ]; then
+	. "\${NEO_CONFIG}" || die "Failed to source \${NEO_CONFIG}"
+elif [ -f "\${HOME}"/.neorc ]; then
+	. "\${HOME}"/.neorc || die "Failed to source \${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
@@ -1393,32 +1359,32 @@ else
 fi
 
 # Default paths
-PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
-PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
-PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
-PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
-PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
-PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
-PATH_XSET=${PATH_XSET:-/usr/bin/xset}
+PATH_XMODMAP=\${PATH_XMODMAP:-/usr/bin/xmodmap}
+PATH_SETXKBMAP=\${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
+PATH_LOADKEYS=\${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_SUDO=\${PATH_SUDO:-/usr/bin/sudo}
+PATH_SETLEDS=\${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_NUMLOCKX=\${PATH_NUMLOCKX:-/usr/bin/numlockx}
+PATH_XSET=\${PATH_XSET:-/usr/bin/xset}
 
 # Default values
-STD_X_VARIANTE=${STD_X_VARIANTE:-xkbmap}
-STD_XKBMAP=${STD_XKBMAP:-de}
-STD_XKBVARIANT=${STD_XKBVARIANT:-nodeadkeys}
-STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-de-latin1-nodeadkeys}"
-NUM_LOCK_STATUS=${NUM_LOCK_STATUS:-on}
+STD_X_VARIANTE=\${STD_X_VARIANTE:-xkbmap}
+STD_XKBMAP=\${STD_XKBMAP:-de}
+STD_XKBVARIANT=\${STD_XKBVARIANT:-nodeadkeys}
+STD_CONSOLE_KEYMAP="\${STD_CONSOLE_KEYMAP:-de-latin1-nodeadkeys}"
+NUM_LOCK_STATUS=\${NUM_LOCK_STATUS:-on}
 
 die() {
-	echo "$@" >&2
+	echo "\$@" >&2
 	exit 1
 }
 
 set_xmodmap() {
-	if [ -e "${PATH_XMODMAP}" ]; then
-		if [ -f "$@" ]; then
-			"${PATH_XMODMAP}" "$@" || die "Failed to set xmodmap $@."
+	if [ -e "\${PATH_XMODMAP}" ]; then
+		if [ -f "\$@" ]; then
+			"\${PATH_XMODMAP}" "\$@" || die "Failed to set xmodmap \$@."
 		else
-			die "Cannot use $@ for xmodmap."
+			die "Cannot use \$@ for xmodmap."
 		fi
 	else
 		die "xmodmap not found, cannot set xmodmap."
@@ -1426,85 +1392,89 @@ set_xmodmap() {
 }
 
 set_xkbmap() {
-	if [ -e "${PATH_SETXKBMAP}" ]; then
-		"${PATH_SETXKBMAP}" "$@" || die "Failed to select xkbmap $@."
+	if [ -e "\${PATH_SETXKBMAP}" ]; then
+		"\${PATH_SETXKBMAP}" "\$@" || die "Failed to select xkbmap \$@."
 	else
 		die "setxkbmap not found, cannot set xkbmap."
 	fi
 }
 
 set_keymap() {
-	if [ -e "${PATH_LOADKEYS}" ]; then
-		if [ -f "$@" ]; then
-			if [ "${EUID}" = 0 ]; then
-				"${PATH_LOADKEYS}" "$@" || die "Failed to set keymap $@."
-			elif [ -e "${PATH_SUDO}" ]; then
-				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Failed to set keymap using sudo."
+	if [ -e "\${PATH_LOADKEYS}" ]; then
+		if [ -f "\$@" ]; then
+			if [ "\${EUID}" = 0 ]; then
+				"\${PATH_LOADKEYS}" "\$@" || die "Failed to set keymap \$@."
+			elif [ -e "\${PATH_SUDO}" ]; then
+				"\${PATH_SUDO}" "\${PATH_LOADKEYS}" "\$@" || die "Failed to set keymap using sudo."
 			else
 				die "You need root priviliges to change the keymap."
 			fi
 		else
-			die "keymap file $@ does not exist."
+			die "keymap file \$@ does not exist."
 		fi
 	else
 		die "loadkeys not found, cannot set keymap."
 	fi
 }
 
-if [ -n "$SSH_CONNECTION" ]; then
+if [ -n "\$SSH_CONNECTION" ]; then
 	die "Cannot set keybord layout in a ssh session."
 fi
 
-if [ -z ${DISPLAY} ]; then
-	set_keymap "${NEO_CONSOLE_KEYMAP}"
+if [ -z \${DISPLAY} ]; then
+	set_keymap "\${NEO_CONSOLE_KEYMAP}"
 
-	if [ -e "${PATH_SETLEDS}" ]; then
-		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-			"${PATH_SETLEDS}" -num || die "Failed to set num lock status to on."
+	if [ -e "\${PATH_SETLEDS}" ]; then
+		if [ "\${NUM_LOCK_STATUS}" = "on" ]; then
+			"\${PATH_SETLEDS}" -num || die "Failed to set num lock status to on."
 		else
-			"${PATH_SETLEDS}" +num || die "Failed to set num lock status to off."
+			"\${PATH_SETLEDS}" +num || die "Failed to set num lock status to off."
 		fi
 	else
 		die "setleds does not exist, cannot set NUM status."
 	fi
 else
-	if [ -e "${PATH_XSET}" ]; then
+	if [ -e "\${PATH_XSET}" ]; then
 		for modifier in 51 94; do
-			"${PATH_XSET}" r ${modifier} || die "Failed to set repeat for modifier ${modifier}."
+			"\${PATH_XSET}" r \${modifier} || die "Failed to set repeat for modifier \${modifier}."
 		done
 		for deadkey in 21 35 49; do
-			"${PATH_XSET}" r ${deadkey} || die "Failed to set repeat for deadkey ${deakey}."
+			"\${PATH_XSET}" r \${deadkey} || die "Failed to set repeat for deadkey \${deakey}."
 		done
 	else
 		die "xset not found, cannot set modifiers and dead keys."
 	fi
 
-	case "${STD_X_VARIANTE}" in
+	case "\${STD_X_VARIANTE}" in
 		xkbmap)
-			set_xkbmap "${STD_XKBMAP}" "${STD_XKBVARIANT}"
+			set_xkbmap "\${STD_XKBMAP}" "\${STD_XKBVARIANT}"
 			;;
 		xmodmap)
 			set_xkbmap de
-			set_xmodmap "${STD_XMODMAP}"
+			set_xmodmap "\${STD_XMODMAP}"
 			;;
 		*)
-			die "Unknown standard X variant ${STD_X_VARIANTE}."
+			die "Unknown standard X variant \${STD_X_VARIANTE}."
 			;;
 	esac
 
-	if [ -e "${PATH_NUMLOCKX}" ]; then
-		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-			"${PATH_NUMLOCKX}" on || die "Failed to set num lock status to on."
+	if [ -e "\${PATH_NUMLOCKX}" ]; then
+		if [ "\${NUM_LOCK_STATUS}" = "on" ]; then
+			"\${PATH_NUMLOCKX}" on || die "Failed to set num lock status to on."
 		else
-			"${PATH_NUMLOCKX}" off || die "Failed to set num lock status to off."
+			"\${PATH_NUMLOCKX}" off || die "Failed to set num lock status to off."
 		fi
 	else
 		die "numlockx not found, cannot turn off Numlock."
 	fi
 fi
 
-#neo: uiae --- Ende
-#neo: neorc --- Beginn
+NEO_UIAE
+}
+
+neorc ()
+{
+cat <<NEORC
 # This file contains the configuration for the Neo scripts
 
 # Select the neo Variant to be used when using an X Server
@@ -1524,10 +1494,10 @@ NEO_X_VARIANTE="xmodmap"
 
 # When using a xmodmap, you may specify the full path to the xmodmap to be used.
 # Default:
-NEO_XMODMAP="$HOME/neo/neo_de.xmodmap"
-#NEO_XMODMAP_XPROG="$HOME/neo/neo_de_x-prog.xmodmap"
-#NEO_XMODMAP_ALTERNATIVE="$HOME/neo/neo_de_alternative.xmodmap"
-#NEO_XMODMAP_EVDEV="$HOME/neo/neo_de_evdev.xmodmap"
+NEO_XMODMAP="\$HOME/neo/neo_de.xmodmap"
+#NEO_XMODMAP_XPROG="\$HOME/neo/neo_de_x-prog.xmodmap"
+#NEO_XMODMAP_ALTERNATIVE="\$HOME/neo/neo_de_alternative.xmodmap"
+#NEO_XMODMAP_EVDEV="\$HOME/neo/neo_de_evdev.xmodmap"
 
 
 # Standard keyboard layout to switch back to when executing "uiae":
@@ -1542,7 +1512,7 @@ NEO_XMODMAP="$HOME/neo/neo_de.xmodmap"
 
 
 # For Neo without an X System set the path to the console keymap
-NEO_CONSOLE_KEYMAP="$HOME/neo/neo" # if necessary add „.map“
+NEO_CONSOLE_KEYMAP="\$HOME/neo/neo" # if necessary add „.map“
 
 # Set the standard console keymap to switch back to
 #STD_CONSOLE_KEYMAP="de-latin1-nodeadkeys"
@@ -1558,15 +1528,68 @@ NEO_CONSOLE_KEYMAP="$HOME/neo/neo" # if necessary add „.map“
 #PATH_NUMLOCKX=/usr/bin/numlockx
 #PATH_XSET=/usr/bin/xset
 
-#neo: neorc --- Ende
-#neo: profile.neo --- Beginn
+NEORC
+}
+#!/bin/bash
+
+profile_neo() {
+cat <<PROFIL
 
 # NEO:
-asdf   # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
-#neo: profile.neo --- Ende
-#neo: profile.qwertz --- Beginn
+PATH=\$PATH:$inst_dir/	# für asdf und uiae
+export PATH		# für asdf und uiae
+asdf			# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+PROFIL
+}
+
+profile_qwertz() {
+cat <<PROFIL
 
 # NEO:
-# asdf   # mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
-#neo: profile.qwertz --- Ende
+PATH=\$PATH:$inst_dir/	# für asdf und uiae
+export PATH		# für asdf und uiae
+# asdf			# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+PROFIL
+}
+
+neo_path() {
+cat <<NEO_PATH
+PATH=$PATH:$inst_dir
+export PATH
+echo "Die Belegung wird nun auf NEO geändert…"
+asdf
+NEO_PATH
+}
+
+# *** main program ***
+clear
+echo
+echo "   *** NEO – Ergonomie und Zeichenvielfalt ***"
+echo
+echo
+echo " Ihr System wird untersucht…"
+echo
+
+# check for an existing neo configuration
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+else
+
+# no configuration file found → install NEO
+	install_options
+	neo_path > $inst_dir/starte_neo
+	echo
+	echo -e "Um NEO nun jetzt zu aktivieren geben Sie bitte »${green}. $inst_dir/starte_neo${normal}« (mit Punkt und Leerzeichen!) ein."
+	echo -e "Danach oder nach dem nächsten Login kann jederzeit mit ${green}asdf${normal} von QWERTZ zu NEO und mit ${green}uiae${normal} von NEO zu QWERTZ gewechselt werden."
+	exit
+fi
+
+
+# configuration file found → delete/deinstall options
+deinstall_options
+exit
 

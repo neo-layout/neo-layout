@@ -1,0 +1,32 @@
+#!/bin/bash
+
+fuege_ein() {
+datei=$2
+name=$1
+name_gross=`echo $name | tr [:lower:] [:upper:]`
+
+cp $datei ./erzeuge_installiere_neo.bak1
+sed s/\\$/\\\\$/g erzeuge_installiere_neo.bak1 > erzeuge_installiere_neo.bak2
+sed s/\`/\\\\\`/g erzeuge_installiere_neo.bak2 > erzeuge_installiere_neo.bak3
+
+echo
+echo "$name ()"
+echo "{"
+echo "cat <<$name_gross"
+cat ./erzeuge_installiere_neo.bak3
+echo $name_gross
+echo "}"
+rm ./erzeuge_installiere_neo.bak[123]
+}
+
+
+cat installiere_neo.1
+echo 
+
+fuege_ein neo_xmodmap ../../xmodmap/neo_de.xmodmap
+fuege_ein neo_console ../../console/neo.map
+fuege_ein neo_asdf ../asdf
+fuege_ein neo_uiae ../uiae
+fuege_ein neorc neo.conf.erzeuge.installiere_neo
+
+cat installiere_neo.2
