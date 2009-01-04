@@ -166,7 +166,7 @@ for ($i = 1; $i < 7; $i++) {
 
 	<h2>Kontakt</h2>
 
-	<p>Kontakt zu den Neo-Ent&shy;wicklern kann man über die Mailing&shy;liste <b><a href="mailto:mailinglist@neo-layout.org?subject=Bitte den Betreff so setzen, dass man auf das Thema schließen kann!&amp;body=Bitte (wenn möglich) folgende Dinge angeben:%0D- Nutzt Du Neo oder noch nicht%3F%0D- Welches Betriebsystem%3F%0D- Welchen Treiber (Xmodmap, Xkbmap, AHK, kbdneo2, usw.)%3F%0D%0D">mailinglist@neo-layout.org</a></b> bzw. über den IRC-Kanal <b>#NEO</b> bei <b>freenode.net</b> bekommen. Ver&shy;besserungs&shy;vorschläge sind im&shy;mer will&shy;kom&shy;men! Da wir sehr viele Ab&shy;hängig&shy;keiten haben, kann es aber sein, dass sie nicht un&shy;bedingt ein&shy;ge&shy;pflegt werden.</p>
+	<p>Kontakt zu den Neo-Ent&shy;wicklern kann man über die Mailing&shy;liste <b><a href="mailto:mailinglist@neo-layout.org?subject=Bitte den Betreff so setzen, dass man auf das Thema schließen kann!&amp;body=Bitte (wenn möglich) folgende Dinge angeben:%0D- Nutzt Du Neo oder noch nicht%3F%0D- Welches Betriebsystem%3F%0D- Welchen Treiber (Xmodmap, Xkbmap, AHK, kbdneo2, usw.)%3F%0D%0D">mailinglist@neo-layout.org</a></b> bzw. über den IRC-Kanal <a href="irc://freenode.net/neo" title="IRC-Channel">#NEO</a> bei <b>freenode.net</b> bekommen. Ver&shy;besserungs&shy;vorschläge sind im&shy;mer will&shy;kom&shy;men! Da wir sehr viele Ab&shy;hängig&shy;keiten haben, kann es aber sein, dass sie nicht un&shy;bedingt ein&shy;ge&shy;pflegt werden.</p>
 
 	<p>Danke fürs Interesse!</p>
 	<p>Euer Neo-Team</p>
