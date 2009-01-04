@@ -40,6 +40,12 @@ die() {
 	exit 1
 }
 
+numlock_manually() {
+	echo "$1"
+	echo "Please turn Numlock $2 and press ›Enter‹ to continue."
+	read
+}
+
 set_xmodmap() {
 	if [ -e "${PATH_XMODMAP}" ]; then
 		if [ -f "$@" ]; then
@@ -87,15 +93,15 @@ if [ -z ${DISPLAY} ]; then
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 
 	if [ -e "${PATH_SETLEDS}" ]; then
-		"${PATH_SETLEDS}" +num || die "Failed to set NUM status."
+		"${PATH_SETLEDS}" +num || numlock_manually "Failed to set NUM status." on
 	else
-		die "setleds does not exist, cannot set NUM status."
+		numlock_manually "setleds does not exist, cannot set NUM status." on
 	fi
 else
 	if [ -e "${PATH_NUMLOCKX}" ]; then
-		"${PATH_NUMLOCKX}" off || die "Failed to turn off Numlock."
+		"${PATH_NUMLOCKX}" off || numlock_manually "Failed to turn off Numlock." off
 	else
-		die "numlockx not found, cannot turn off Numlock."
+		numlock_manually "numlockx not found, cannot turn off Numlock." off
 	fi
 
 	if [ -e "${PATH_XSET}" ]; then
