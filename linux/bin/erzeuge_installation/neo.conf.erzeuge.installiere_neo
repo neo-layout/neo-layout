@@ -1,5 +1,10 @@
 # This file contains the configuration for the Neo scripts
 
+# To use the scripts ›neo‹ and ›num‹ you should specify the full path to the
+# Neo reference
+NEO_REFERENCE="$HOME/neo/neo20.txt"
+
+
 # Select the neo Variant to be used when using an X Server
 # Values are "xkbmap", "xmodmap", "xprog", "alternative" or "evdev"
 # default is xkbmap, this variable should always be set
