@@ -31,7 +31,7 @@ Ein einfacher Weg, NEO unter dem eigenen Benutzer zu testen oder zu verwenden,
 ist, die Datei ›installiere_neo‹ aus dem Ordner bin herunterzuladen,
 ausführbar zu machen und auszuführen:
 
-Datei herunterladen: https://svn.neo-layout.org/linux/bin/installiere_neo
+wget http://neo-layout.org/installiere_neo
 chmod u+x installiere_neo
 ./installiere_neo
 
