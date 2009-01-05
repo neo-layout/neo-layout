@@ -1,4 +1,19 @@
 #!/bin/bash
+# Copyright 2008 Pascal Hauck <pascal.hauck@web.de>
+
+# NEO-Tastaturbelegung
+
+# Diese Datei erzeugt das Skript ›installiere_neo‹, in dem alle Komponenten von NEO zusammengefasst sind.
+# Das Ausführen dieses Skripts ›installiere_neo‹ erzeugt auf einfache Weise eine vollständige und saubere Installation für einen Benutzer eines Linuxsystems
+# Die beinhalteten Komponenten sind:
+# • Xmodmap-Tastaturbelegung
+# • Textkonsolenbelegung
+# • Compose-Erweiterung von NEO
+# • die Skripte ›asdf‹, ›uiae‹, um die Belegung zwischen NEO und QWERTZ zu wechseln
+# • die Skripte ›num‹ und ›neo‹, um ein Bild der Tastatur zu erzeugen
+# • die Referenz
+# • die Konfigurationsdatei neorc.conf
+
 
 fuege_ein() {
 datei=$2

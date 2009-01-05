@@ -1,15 +1,17 @@
 #!/bin/bash
 # Copyright 2008 Pascal Hauck <pascal.hauck@web.de>
 
+# NEO-Tastaturbelegung
+
 # ======= Installation =======
-# Um NEO auf Ihrem System zu (dauerhaft) zu installieren, genügt es, dieses Skript auszuführen
+# Um NEO auf Ihrem System zu (dauerhaft oder testweise) zu installieren, genügt es, dieses Skript auszuführen
 # z.B. in der Konsole die folgenden beiden Zeilen eingeben:
 # chmod u+x installiere_neo
 # ./installiere_neo
-# Nun ist NEO auf Ihrem System installiert
-# Nach Eingabe von ›. starte_neo‹ oder nach dem nächsten Login ist:
-# ein Wechsel von NEO zu QWERTZ ist jederzeit mit ›uiae‹ leicht möglich und
-# ein Wechsel von QWERTZ zu NEO ist jederzeit mit ›asdf‹ ebenso leicht möglich
+# Für die restliche Installation weden mehrere Optionen angeboten.
+# Nach der Installation und Eingabe von ›. starte_neo‹ oder nach dem nächsten Login ist:
+# • ein Wechsel von NEO zu QWERTZ ist jederzeit mit ›uiae‹ leicht möglich und
+# • ein Wechsel von QWERTZ zu NEO ist jederzeit mit ›asdf‹ ebenso leicht möglich
 
 # Wenn NEO nicht automatisch nach dem Login gestartet werden soll, genügt es, vor die Zeile
 # asdf			# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
@@ -23,8 +25,19 @@
 # ==============================
 
 
+# ========= Inhalte ============
+# Das Ausführen dieses Skripts erzeugt auf einfache Weise eine vollständige und saubere Installation für einen Benutzer eines Linuxsystems
+# Die beinhalteten Komponenten sind:
+# • Xmodmap-Tastaturbelegung
+# • Textkonsolenbelegung
+# • Compose-Erweiterung von NEO
+# • die Skripte ›asdf‹, ›uiae‹, um die Belegung zwischen NEO und QWERTZ zu wechseln
+# • die Skripte ›num‹ und ›neo‹, um ein Bild der Tastatur zu erzeugen
+# • die Referenz
+# • die Konfigurationsdatei neorc.conf
+# ==============================
+
 # ======= Bemerkungen ==========
-# Dieses Skript ist eine rudimentäre Installation.
 # Es wird immer das Standardverzeichnis $inst_dir verwendet
 # Es gibt keine graphische Installation
 # Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
