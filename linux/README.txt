@@ -26,7 +26,29 @@ bzw. »asdf« einfach zwischen NEO und QWERT* hin- und herzuwechseln.
 
 
 
-=== Verwenden von NEO ===
+=== Verwenden von NEO (einfacher Weg) ===
+Ein einfacher Weg, NEO unter dem eigenen Benutzer zu testen oder zu verwenden,
+ist, die Datei ›installiere_neo‹ aus dem Ordner bin herunterzuladen,
+ausführbar zu machen und auszuführen:
+
+wget https://svn.neo-layout.org/linux/bin/installiere_neo
+chmod u+x installiere_neo
+./installiere_neo
+
+Die Installation stellt mehrere Optionen vor – u.a. NEO nur zu testen, die
+Standartbelegung aber bei QWERTZ zu belassen.
+
+Der Vorteil von ›installiere_neo‹ ist, dass NEO im vollem Umfang genutzt wird;
+dazu zählt z.B.: NEO-Tastaturbelegung, Compose-Erweiterung von NEO, Skripte
+zum Darstellen der NEO-Belegung und zum leichten Wechel zwischen NEO und QWERTZ
+
+Ein weiter Aufruf von ›installiere_neo‹ bietet u.a. die Optionen, NEO gänzlich
+vom eigenen System zu entfernen, sofern NEO zuvor auch mit ›installiere_neo‹
+installiert worden ist.
+
+
+
+=== Verwenden von NEO (von Hand) ===
 Vorab: zwischen den Strichzeilen (--------------------------) stehen Zeilen, die
 in Dateien stehen, dort eingegeben oder verändert werden müssen. Die
 Strichzeilen selbst sind jedoch nie mit einzugeben!

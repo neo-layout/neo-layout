@@ -53,7 +53,7 @@ create()
 	if [ -f $2 ]					# if already exists
 	then
 		echo -e "Die Datei ${red}$2${normal} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
-		if [ "$overwrite" = "J" ]	# overwrite?
+		if [ "$overwrite" = "J" ]		# overwrite?
 		then
 			echo "Datei $2 wird überschrieben!"
 			rm -f $2			# remove if user wants to overwrite
@@ -143,6 +143,21 @@ install_options()
 	chmod u+x $inst_dir/neo
 	create neo_num $inst_dir/num
 	chmod u+x $inst_dir/num
+
+	echo "Ergängze die Compose-Erweiterung von NEO…"
+	create neo_compose $inst_dir/Compose.neo
+	if [ -f $HOME/.XCompose ]
+	then
+		echo -e "Die Datei ${red}$HOME/.XCompose${normal} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
+		if [ "$overwrite" = "J" ]		# overwrite?
+		then
+			echo "Datei $HOME/.XCompose wird überschrieben!"
+			cat /usr/share/X11/locale/en_US.UTF-8/Compose $inst_dir/Compose.neo > $HOME/.XCompose
+		else
+			echo -e "Datei ${red}$HOME/.XCompose${normal} bleibt erhalten, jedoch kann die Compos-Erweiterung von NEO nicht genutzt werden."
+		fi
+	fi
+
 	create neorc $HOME/.neorc
 
 # entry in $HOME/.profile with NEO or QWERTZ as standard keyboard layout after login
@@ -178,6 +193,10 @@ deinstall()
 	rmfromprofile
 	remove $HOME/.neorc
 	remove $inst_dir/starte_neo
+	remove $inst_dir/Compose.neo
+	remove $inst_dir/neo20.txt
+	remove $inst_dir/num
+	remove $inst_dir/neo
 	remove $inst_dir/uiae
 	remove $inst_dir/asdf
 	remove $inst_dir/neo.map
