@@ -27,6 +27,9 @@ fuege_ein neo_xmodmap ../../xmodmap/neo_de.xmodmap
 fuege_ein neo_console ../../console/neo.map
 fuege_ein neo_asdf ../asdf
 fuege_ein neo_uiae ../uiae
+fuege_ein neo_referenz ../../../A-REFERENZ-A/neo20.txt
+fuege_ein neo_neo ../neo
+fuege_ein neo_num ../num
 fuege_ein neorc neo.conf.erzeuge.installiere_neo
 
 cat installiere_neo.2
