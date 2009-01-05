@@ -1,13 +1,13 @@
-SVGFILES=$(filter-out ./tastatur3d/tastatur_neo_alle_Ebenen.svg, $(shell find -name "*.svg")) 
-PDFFILES=$(addsuffix .pdf,$(basename ${SVGFILES}))
-PNGFILES=$(addsuffix .png,$(basename ${SVGFILES})) 
-
 EBENEN=$(foreach i, 1 2 3 4 5 6, tastatur_neo_Ebene${i}.svg)
 EBENENSVG=$(foreach file, ${EBENEN}, tastatur3d/${file})
 HAUPT=$(foreach file, ${EBENEN}, tastatur3d/hauptfeld/${file})
 ZIFFERN=$(foreach file, ${EBENEN}, tastatur3d/ziffernfeld/${file})
 HAUPTZIFFERN=$(foreach file, ${EBENEN}, tastatur3d/haupt_ziffern_feld/${file})
 EBENENPNG=$(addsuffix .png,$(basename ${EBENENSVG} ${HAUPT} ${ZIFFERN} ${HAUPTZIFFERN}))
+
+SVGFILES=$(filter-out ./tastatur3d/tastatur_neo_%.svg, $(shell find -name "*.svg")) 
+PDFFILES=$(addsuffix .pdf,$(basename ${SVGFILES}))
+PNGFILES=$(addsuffix .png,$(basename ${SVGFILES})) 
 
 default: pdf png 
 pdf: ${PDFFILES}
