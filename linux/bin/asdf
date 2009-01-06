@@ -42,8 +42,8 @@ die() {
 
 numlock_manually() {
 	echo "$1" >&2
-	echo "Please turn Numlock $2 and press ›Enter‹ to continue." >&2
-	read
+	echo "Please turn Numlock $2 now and press ›Enter‹ to continue." >&2
+	read enter
 }
 
 set_xmodmap() {
