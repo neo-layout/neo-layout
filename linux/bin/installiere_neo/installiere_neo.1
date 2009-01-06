@@ -34,6 +34,7 @@
 # • die Skripte ›asdf‹, ›uiae‹, um die Belegung zwischen NEO und QWERTZ zu wechseln
 # • die Skripte ›num‹ und ›neo‹, um ein Bild der Tastatur zu erzeugen
 # • die Referenz
+# • die Skripte ›wiemitneo‹ und ›beschreibe‹, um nach Erzeugungsmöglichkeit von Zeichen zu suchen
 # • die Konfigurationsdatei neorc.conf
 # ==============================
 
@@ -156,6 +157,10 @@ install_options()
 	chmod u+x $inst_dir/neo
 	create neo_num $inst_dir/num
 	chmod u+x $inst_dir/num
+	create neo_wiemitneo $inst_dir/wiemitneo
+	chmod u+x $inst_dir/wiemitneo
+	create neo_beschreibe $inst_dir/beschreibe
+	chmod u+x $inst_dir/beschreibe
 
 	echo "Ergängze die Compose-Erweiterung von NEO…"
 	create neo_compose $inst_dir/Compose.neo
@@ -169,6 +174,8 @@ install_options()
 		else
 			echo -e "Datei ${red}$HOME/.XCompose${normal} bleibt erhalten, jedoch kann die Compos-Erweiterung von NEO nicht genutzt werden."
 		fi
+	else
+		cat /usr/share/X11/locale/en_US.UTF-8/Compose $inst_dir/Compose.neo > $HOME/.XCompose
 	fi
 
 	create neorc $HOME/.neorc
