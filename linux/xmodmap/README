@@ -1,5 +1,4 @@
 == Dateien ==
-/A-REFERENZ-A/neo20.txt das Layout als ASCII-Art
 neo_de.xmodmap          	Normale Version für die meisten Benutzer
 neo_de_evdev.xmodmap    	für KDE4 mit evdev¹ (unter KDE4 funktioniert jedoch auch die normal
 				neo_de.xmodmap einwandfrei)
@@ -14,21 +13,21 @@ neo_de_alternative.xmodmap	falls neo_de.xmodmap nicht geladen werden kann (z.B. 
 Zu aktivieren mit dem Kommando (im Verzeichnis, in dem sich die Datei befindet):
 	xmodmap neo_de.xmodmap
 
-Besser ist jedoch die Verwendung des Skripts „asdf“, das (mögliche) Probleme vermeidet.
+Besser ist jedoch die Verwendung des Skripts ›asdf‹, da so (mögliche) Probleme vermieden werden.
+Siehe dazu auch die README im Ordner /linux/bin.
+
 
 ==== Automatisch aktivieren ====
-Um die NEO-Tastaturbelegung automatisch zu aktivieren, kann man die obige
-Befehlszeile in ein Startscript seines Desktop Environments (z.B.
-gnome-session-properties oder ~/GNUstep/Library/WindowMaker/autostart)
-eintragen.
+Um die NEO-Tastaturbelegung automatisch zu aktivieren, gibt es mehrere (alternative) Wege
+• die Xmodmap nach ~/.Xmodmap kopieren, wo sie automatisch geladen wird
+• die Befehlszeile in ein  Datei eingeben, die automatisch ausgeführt wird, z.B.:
+	– gnome-session-properties
+	– ~/GNUstep/Library/WindowMaker/autostart
+	– ~/.Xsession
 
-Oder die Befehlszeile in die ~/.Xsession (falls nicht KDE oder Gnome geladen)
+Der bessere Weg ist jedoch das Skript ›asdf‹ in der Datei ›~/.profile‹ einzutragen.
+Siehe dazu auch die README im Ordner /linux/bin.
 
-Oder die Xmodmap nach ~/.Xmodmap spielen (wo sie automatisch geladen wird) und
-die Standard Tastaturbelegung auf „lv“ festsetzen (in GNOME/KDE/XFCE/.Xsession).
-
-Besser ist auch hier die Verwendung des Skripts. Dazu wird in der Datei ›.profile‹, die sich im
-Homeverzeichnis befindet, der Befehl ›asdf xmodmap‹ eingetragen.
 
 ==== Automatischen Linux-NEO-USB-Stick erstellen ====
 Diese Datei auf einen USB-Stick kopieren
@@ -44,18 +43,13 @@ USB-Sticks ersetzt werden muss):
   echo -e "#!/bin/sh\nsetxkbmap lv && xmodmap neo_de.xmodmap" > \
     /media/<USBSTICK>/autorun
 
+
 === Deaktivieren ===
 Zurück zu qwertz geht es mit:
 	setxkbmap de
 
-Besser ist auch hier die Verwendung des Skripts „uiae“.
+Besser ist auch hier die Verwendung des Skripts ›uiae‹.
 
-=== Tipp ===
-Trägt man folgende Zeilen in die ~/.profile ein, kann man anschließend mittels Abrollen
-der linken Hand auf der Grundreihe zwischen qwertz und NEO wechseln.
-
-PATH=$PATH:$(Pfad zu den Skripten „asdf“ und „uiae“) 
-export PATH
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.

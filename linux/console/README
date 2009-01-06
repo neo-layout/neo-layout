@@ -1,10 +1,26 @@
-=== Technische Hinweise ===
+=== NEO in der Textkonsole (ohne X) ===
 Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X auf der Konsole benutzten zu können.
-Dazu wird die keymap (leider als root!!) mit »loadkeys PFAD/neo.map« geladen.
+
+Dazu wird die keymap (nur als root möglich!!) mit »loadkeys PFAD/neo.map« geladen.
 Mit »loadkeys -d« wird wieder die Standardbelegung verwendet.
 
-Die neo.map kann schon beim Booten verwendet werden, indem der Pfad zur »neo.map« in der Datei »/etc/sysconfig/keyboard« in der Variable »KEYTABLE« angegeben wird. Dabei muss das ».map« allerdings weggelassen werden.
-Beispiel: KEYTABLE="/usr/share/kbd/keymaps/i386/neo/neo"
+Der einfachste Weg ist jedoch die Verwendung des Skriptes ›asdf‹ (siehe Ordner /linux/bin)
+
+
+=== Technische Hinweise ===
+Soll NEO systemweit auf der Textkonsole zur Verfügung stehen, muss in der
+Datei ›/etc/sysconfig/keyboard‹ die Zeile (oder eine ähnlich klingende):
+  --------------------------
+  KEYTABLE="de-latin1-nodeadkeys.map.gz"
+  --------------------------
+ersetzen durch:
+  --------------------------
+  # KEYTABLE="de-latin1-nodeadkeys.map.gz"
+  KEYTABLE="/home/gerhard/neo/neo"
+  --------------------------
+Statt /home/gerhard ist das eigene Homeverzeichnis einzugeben. Dadurch wird auf
+die Datei ›neo.map‹ verwiesen, die zuvor nach $HOME/neo gelegt wurde.
+
 Dennoch kann man mit »loadkeys -d« zur Standardbelegung wechseln, da diese als defkeymap.map laut manpage unter /usr/share/keymaps oder /usr/src/linux/drivers/char, bei mir aber unter /etc liegt.
 
 Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status von »Num_Lock« (den es unter NEO nicht mehr gibt). Um Num_Lock dennoch nachträglich einschalten zu können, muss die Menü-Taste (in der untersten Reihe) betätigt werden.
@@ -29,3 +45,4 @@ Was (noch) nicht geht:
 • Bisher funktioniert keiner der Modifier_Lock.
 • die große Menge an Compose-Kombinationen, die unter X möglich sind, werden längst nicht alle unterstützt.
 • Auch die Compose-Erweiterungen von NEO sind noch nicht verfügbar.
+

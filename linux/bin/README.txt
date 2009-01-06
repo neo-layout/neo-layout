@@ -1,25 +1,48 @@
+== installiere_neo ==
+Das Skript ›installiere_neo‹ erlaubt eine einfache und saubere Installation von NEO
+für einen Benutzer (keine root-Rechte erforderlich)
+
+
+== Skriptordner in .profile eintragen ==
+Der Ordner mit diesen Skripten sollte in der Variable $PATH eingetregen sein, um von überall verfügbar zu sein
+Dazu sollte in der Datei ›.profile‹, die beim Login gelesen wird, folgende Zeilen eingetragen sein:
+-------------------------------
+# NEO:
+PATH=$PATH:$(Pfad zu den Skripten)	# für NEO-Skripte wie ›asdf‹ und ›uiae‹
+export PATH				# für NEO-Skripte wie ›asdf‹ und ›uiae‹
+# asdf					# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+-------------------------------
+
+Man beachte, dass die Skripte ausführbar sein müssen (chmod u+x ›Datei‹)
+
+
 == uiae, asdf ==
 asdf (linke Hand auf der Grundreihe abrollen) schaltet von QWERTZ zu Neo um.
 uiae ( “      “   “   “       “        “    )    “      “  Neo zu QWERTZ um.
 
 Verwendung:
-asdf [Variante] (Standard wird in der Datei definiert)
-uiae [Belegung] (Standard wird in der Datei definiert)
+asdf [Variante]
+uiae [Belegung]
+
+Nach beide Angaben (Variante, Belegung) wird in folgender Reihenfolge gesucht:
+ⅰ) direkte Angabe hinter dem Skriptnamen
+ⅱ) Definition in der neo.conf bzw. der .neorc
+ⅲ) in der Skriptdatei angegebene Standardbelegung
 
 Die Skripte ›asdf‹ und ›uiae‹ benutzten folgende Programme, die gegebenenfalls installiert werden müssen:
-– loadkeys (nur als root möglich)
-– setleds
-– xset
-– setxkbmap
-– numlockx
+• numlockx
+• setleds
+• xset
+• setxkbmap
+• loadkeys (nur als root möglich)
 
 
 == neo ==
 Gibt die Neo-Tastaturbelegung des Buchstabenfeldes aus. Beispiele:
-  »neo« – gibt die Tastaturbelegung mit allen Ebenen aus
-  »neo 1« – gibt die erste Ebene der Tastaturbelegung aus
-  »neo 3« – gibt die dritte Ebene der Tastaturbelegung aus
-  »neo 2 3 4« – gibt die zweite, dritte und vierte Ebene aus
+  »neo«		gibt die Tastaturbelegung mit allen Ebenen aus
+  »neo 1«	gibt die erste Ebene der Tastaturbelegung aus
+  »neo 3«	gibt die dritte Ebene der Tastaturbelegung aus
+  »neo 2 3 6«	gibt die zweite, dritte und sechste Ebene aus
 usw.
 
 == num ==
@@ -27,21 +50,34 @@ Gibt die Neo-Tastaturbelegung des Ziffernblocks aus. Beispiele:
   »num« – gibt die Tastaturbelegung mit allen Ebenen aus
   »num 1« – gibt die erste Ebene der Tastaturbelegung aus
   »num 3« – gibt die dritte Ebene der Tastaturbelegung aus
-  »num 2 3 4« – gibt die zweite, dritte und vierte Ebene aus
+  »num 2 3 6« – gibt die zweite, dritte und sechste Ebene aus
 usw.
 
+
 == wiemitneo ==
-Gibt an, ob und wie ein Zeichen mit NEO ermöglicht werden kann. Beispiele:
-  »wiemitneo @« ergibt:
+Gibt an, ob und wie ein Zeichen mit NEO ermöglicht werden kann.
+Beispiel:  »wiemitneo @«
 -------------------------------
+• @ gibt es direkt auf der NEO-Tastatur:
 @ erreicht man mit Mod3+y
 
-Außerdem ist @ über Compose folgendermaßen darstellbar:
+• @ ist über Compose folgendermaßen darstellbar:
 <Multi_key> + <A> + <T>
 -------------------------------
 
 == beschreibe ==
 Versucht, Zeichen anhand einer Beschreibung zu erraten und ruft »wiemitneo« auf
+Beispiel:  »beschreibe face«
+-------------------------------
+1) ☺
+2) ☹
+welches Zeichen suchen Sie: 1
+
+
+• ☺ ist über Compose folgendermaßen darstellbar:
+<Multi_key> + <colon> + <parenright>
+-------------------------------
+
 
 == neo-compose ==
 Erstellt aus der originalen Compose und den Neo-Ergänzungen eine lokale
