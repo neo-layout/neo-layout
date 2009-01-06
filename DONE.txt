@@ -1,44 +1,40 @@
 In dieser Datei stehen lang diskutierte Sachen, die irgendwann mal fest 
 beschlossen wurden.
 
-- ß bleibt auf Ebene 1
+• ß bleibt auf Ebene 1
 
-- Der „Wundervorschlag“ für das symmetrische Mod3 ist jetzt erfüllt, wenn man
+• Der „Wundervorschlag“ für das symmetrische Mod3 ist jetzt erfüllt, wenn man
   das zweite Mod3 auf die QWERTZ-#-Taste legt. Das zweite Mod4 kommt dann
   auf QWERTZ-AltGr rechts neben der Leertaste.
 
-- j und q wurden getauscht, da der kleine Finger besser in die untere Reihe
+• j und q wurden getauscht, da der kleine Finger besser in die untere Reihe
   kommt als in die obere und das j häufiger ist. Hier trifft das Paradigma,
   dass die obere Reihe immer besser ist als die untere Reihe, nicht zu.
 
-- Die Zahlen bleiben wie sie sind und werden nicht wie das französische Layout
+• Die Zahlen bleiben wie sie sind und werden nicht wie das französische Layout
   umgekehrt.
 
-- Die drei Striche »-«, »–« und »—« sind alle auf der Taste rechts neben der
-  Null. Eine Verwechslung sollte durch die FAQ, eine Anleitung und eine
-  Kurzanleitung ausgeschlossen werden.
-
-- Vietnamesisch mit lateinischen Buchstaben wird nicht aufgenommen. Nur
+• Vietnamesisch mit lateinischen Buchstaben wird nicht aufgenommen. Nur
   europäische Sprachen, da viel häufiger verwendet von deutschen Schreibern –
   also NEO-Benutzern.
 
-- Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“ eine Option des Layouts „de“ sein.
+• Linux: Der Name des Layouts sollte in den Treibern »de_neo« sein und im X-Server „neo“ eine Option des Layouts „de“ sein.
 
-- ü und ö getauscht.
+• ü und ö getauscht.
 
-- Pfeile (wie in der Druckvorlage von Philipp) als Symbole für die
+• Pfeile (wie in der Druckvorlage von Philipp) als Symbole für die
   Modifikatortasten. Zusätzlich noch 2, 3, 5 in die Schäfte der Pfeile, damit
   man sie auch benennen kann. „Drück Pfeil3+f für »=«.“
 
-- Komponiertaste (Symbol: Note) auf Mod3+Tab (siehe Textgrafik neo20.txt).
+• Komponiertaste (Symbol: Note) auf Mod3+Tab (siehe Textgrafik neo20.txt).
 
-- Eth »Ð« und eth »ð« bzw. »đ« werden mit Komponiertaste erstellt,
+• Eth »Ð« und eth »ð« bzw. »đ« werden mit Komponiertaste erstellt,
   wobei »ð« entweder mit ♫/d oder ♫-δ oder ♫-∂ erstellt
   werden könnte. Dann das »đ« einfach nur mit ♫-d.
 
-- Schmales Leerzeichen bleibt auf Leertaste (zu selten und so logischer).
+• Schmales Leerzeichen bleibt auf Leertaste (zu selten und so logischer).
 
-- Neo-Light auf Eis gelegt. Fürs Archiv trotzdem mal die Vorschläge der Namen:
+• Neo-Light auf Eis gelegt. Fürs Archiv trotzdem mal die Vorschläge der Namen:
     NEO carving / NEO race
     NEO-light / NEO-full
     NEO-basic / NEO-enhanced
@@ -60,21 +56,17 @@ beschlossen wurden.
     NEO World
     oder: NEO full --> das richtige und komplette NEO
 
-- 6. Ebene erreichbar mit Mod3+Mod4
+• 6. Ebene erreichbar mit Mod3+Mod4
 
-- Wer beteiligt sich noch an der Entwicklung des neuen Windowstreibers?
+• Wer beteiligt sich noch an der Entwicklung des neuen Windowstreibers?
   Kann der bisherige Entwickler (Florian) Interessierten vielleicht ’ne
   kleine Einführung geben?
   MartinBBBBBB wird Florian unterstützen bei der Treiberentwicklung unter Windows
 
-- Nutzt niemand OS X? Treiber…?
+• Nutzt niemand OS X? Treiber…?
   Leider nicht. Aber ein erster Ausgangspunkt ist vielleicht:
   http://developer.apple.com/technotes/tn2002/tn2056.html
-   
-- ‣ Mod3_Lock wird nicht gebraucht
+
+• ‣ Mod3_Lock wird nicht gebraucht
   ‣ Shift+Shift zu Caps-Lock
   ‣ Mod4+Mod4 zu Mod4-Lock
-    
-- Warum das ∞ auf dem Ziffernblock:
-  das ∞ braucht man häufig im Zusammenhang mit dem → Zum Beispiel bei x→∞, darum
-  wurde das ∞ neben das → gelegt
