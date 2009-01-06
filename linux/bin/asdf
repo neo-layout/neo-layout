@@ -152,7 +152,7 @@ else
 	if [ -e "${PATH_NUMLOCKX}" ]; then
 		"${PATH_NUMLOCKX}" off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 	else
-		numlock_manually "Der Befehl ›setleds‹ wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
+		numlock_manually "Der Befehl ›numlockx‹ wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
 	fi
 
 	if [ -e "${PATH_XSET}" ]; then
