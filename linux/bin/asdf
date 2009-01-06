@@ -1,18 +1,24 @@
-#!/bin/sh
+#!/bin/bash
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
 # Copyright 2008 Pascal Hauck
 # Copyright 2008 Erik Streb del Toro
 # Distributed under the terms of the GNU General Public License v3
 
+
+# colours in the Bash
+normal="\033[0m"
+red="\033[31m"
+green="\033[32m"
+
 if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+	. "${HOME}"/.neorc || die "Fehler beim Verwenden der Konfigurationsdatei ${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
-	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	echo "No configuration file found. Using default values, this might fail!"
+	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}"
 fi
 
 # Default paths
@@ -25,8 +31,6 @@ PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
 PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 
 # Default values
-NEO_X_VARIANTE=${NEO_X_VARIANTE:-xkbmap}
-NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
 NEO_XKBMAP=${NEO_XKBMAP:-de}
 NEO_XKBVARIANT=${NEO_XKBVARIANT:-neo}
 NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
@@ -35,14 +39,43 @@ NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.
 NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
 NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
 
+help() {
+cat <<HELP
+Aufruf: $0 [-q] [NEO-X-Variante]
+Aktiviert die NEO-Tastaturbelegung.
+
+  NEO-X-Variante	als NEO-X-Variante kann verwendet werden:
+				xkmbap		i.d.R. wenn Rootrechte vorhanden sind
+				xmodmap		i.d.R. wenn NEO nur für einen Benutzer verwendet werden soll 
+				alternative	sollte geladen werden, wenn das Laden der Xmodmap fehl schlägt
+				xprog		falls ältere X-Programme (wie xedit oder xfig) verwendet werden
+				evdev		falls der evdev-Treiber verwendet wird
+
+			Das Skript erkennt, falls sich der Benutzer nur auf einer Textkonsole befindet und ändert
+			auch dort die Belegung (hierfür sind allerdings Rootrechte erforderlich!)
+
+  -q, --quiet		gibt – abgesehen von Fehlern – keine Meldungen aus
+
+NEO-Tastaturbelegung
+Homepage: http://neo-layout.org/
+
+HELP
+exit 0
+}
+
 die() {
-	echo "$@" >&2
+	echo -e "${red}$@${normal}" >&2
 	exit 1
+}
+
+die2() {
+	set_xkbmap de
+	die "Fehler beim Laden der Xmodmap $@."
 }
 
 numlock_manually() {
 	echo "$1" >&2
-	echo "Please turn Numlock $2 now and press ›Enter‹ to continue." >&2
+	echo "Bitte jetzt NumLock von Hand auf $2 schalten und ›Enter‹ drücken um fortzufahren…" >&2
 	read enter
 }
 
@@ -50,20 +83,20 @@ set_xmodmap() {
 	if [ -e "${PATH_XMODMAP}" ]; then
 		if [ -f "$@" ]; then
 			set_xkbmap lv
-			"${PATH_XMODMAP}" "$@" || ( set_xkbmap de ; die "Failed to set xmodmap $@." )
+			"${PATH_XMODMAP}" "$@" || die2 $@
 		else
-			die "Cannot use $@ for xmodmap."
+			die "Die Xmodmap-Datei $@ gibt es nicht."
 		fi
 	else
-		die "xmodmap not found, cannot set xmodmap."
+		die "Der Befehl ›xmodmap‹ wurde nicht gefunden, die Belegung kann nicht verändert werden."
 	fi
 }
 
 set_xkbmap() {
 	if [ -e "${PATH_SETXKBMAP}" ]; then
-		"${PATH_SETXKBMAP}" "$@" || die "Failed to select xkbmap $@."
+		"${PATH_SETXKBMAP}" "$@" || die "Die xkbmap $@ wurde nicht gefunden."
 	else
-		die "setxkbmap not found, cannot set xkbmap."
+		die "Der Befehl ›setxkbmap‹ wurde nicht gefunden, die Belegung kann nicht verändert werden."
 	fi
 }
 
@@ -71,69 +104,98 @@ set_keymap() {
 	if [ -e "${PATH_LOADKEYS}" ]; then
 		if [ -f "$@" ]; then
 			if [ "${EUID}" = 0 ]; then
-				"${PATH_LOADKEYS}" "$@" || die "Failed to set keymap $@."
+				"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap $@."
 			elif [ -e "${PATH_SUDO}" ]; then
-				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Failed to set keymap using sudo."
+				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ›sudo‹, um die Belegung zu ändern."
 			else
-				die "You need root priviliges to change the keymap."
+				die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
 			fi
 		else
-			die "keymap file $@ does not exist."
+			die "Die keymap-Datei $@ gibt es nicht."
 		fi
 	else
-		die "loadkeys not found, cannot set keymap."
+		die "Der Befehl ›loadkeys‹ wurde nicht gefunden, die Belegung kann nicht verändert werden."
 	fi
 }
 
+
+while [ ! -z "$1" ]; do
+	case $1 in
+		-h | --help )
+			help
+			;;
+		-q | --quiet )
+			quiet=1
+			;;
+		* )
+			NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
+			shift $#
+			;;
+	esac
+	shift
+done
+
+
 if [ -n "$SSH_CONNECTION" ]; then
-	die "Cannot set keybord layout in a ssh session."
+	die "In einer ssh-session kann die Belegung nicht geändert werden."
 fi
 
 if [ -z ${DISPLAY} ]; then
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 
 	if [ -e "${PATH_SETLEDS}" ]; then
-		"${PATH_SETLEDS}" +num || numlock_manually "Failed to set NUM status." on
+		"${PATH_SETLEDS}" +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
 	else
-		numlock_manually "setleds does not exist, cannot set NUM status." on
+		numlock_manually "Der Befehl ›setleds‹ wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." an
 	fi
 else
 	if [ -e "${PATH_NUMLOCKX}" ]; then
-		"${PATH_NUMLOCKX}" off || numlock_manually "Failed to turn off Numlock." off
+		"${PATH_NUMLOCKX}" off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 	else
-		numlock_manually "numlockx not found, cannot turn off Numlock." off
+		numlock_manually "Der Befehl ›setleds‹ wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
 	fi
 
 	if [ -e "${PATH_XSET}" ]; then
 		for modifier in 51 94; do
-			"${PATH_XSET}" -r ${modifier} || echo "Failed to unset repeat for modifier ${modifier}." >&2
+			"${PATH_XSET}" -r ${modifier} || echo "Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}." >&2
 		done
 		for deadkey in 21 35 49; do
-			"${PATH_XSET}" -r ${deadkey} || echo "Failed to unset repeat for deadkey ${deakey}." >&2
+			"${PATH_XSET}" -r ${deadkey} || echo "Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}." >&2
 		done
 	else
-		echo "xset not found, cannot set modifiers and dead keys." >&2
+		echo "Der Befehl ›xset‹ wurde nicht gefunden. Der Status von autorepeat kann für Modifier und tote Tasten nicht geändert werden." >&2
 	fi
 
 	case "${NEO_X_VARIANTE}" in
 		xkbmap)
+			[ $quiet ] || echo "Die xkbmap wird geladen…"
 			set_xkbmap "${NEO_XKBMAP}" "${NEO_XKBVARIANT}"
 			;;
 		xmodmap)
+			[ $quiet ] || echo "Das Laden der Xmodmap kann einige Sekunden dauern…"
 			set_xmodmap "${NEO_XMODMAP}"
 			;;
 		xprog)
+			[ $quiet ] || echo "Das Laden der Xmodmap (Variante für X-Programme) kann einige Sekunden dauern…"
 			set_xmodmap "${NEO_XMODMAP_XPROG}"
 			;;
 		alternative)
+			[ $quiet ] || echo "Das Laden der alternativen Xmodmap kann einige Sekunden dauern…"
 			set_xmodmap "${NEO_XMODMAP_ALTERNATIVE}"
 			;;
 		evdev)
+			[ $quiet ] || echo "Das Laden der Xmodmap (evdev-Variante) kann einige Sekunden dauern…"
 			set_xmodmap "${NEO_XMODMAP_EVDEV}"
 			;;
 		*)
-			die "Unknown Neo X variant ${NEO_X_VARIANTE}."
+			die "${NEO_X_VARIANTE} ist eine unbekannte X-Variante der NEO-Belegung."
 			;;
 	esac
 fi
 
+if [ ! "$quiet" ]; then
+	echo
+	echo "Die Tastaturbelegung wurde auf NEO geändert."
+	echo -e "Mit ${green}neo${normal} und ${green}num${normal} erhält man ein Bild der NEO-Belegung."
+	echo -e "Durch ${green}uiae${normal} kehrt man wieder zur Standardbelegung zurück."
+fi
