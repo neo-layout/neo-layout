@@ -12,6 +12,7 @@
 # • die Skripte ›asdf‹, ›uiae‹, um die Belegung zwischen NEO und QWERTZ zu wechseln
 # • die Skripte ›num‹ und ›neo‹, um ein Bild der Tastatur zu erzeugen
 # • die Referenz
+# • die Skripte ›wiemitneo‹ und ›beschreibe‹, um nach Erzeugungsmöglichkeit von Zeichen zu suchen
 # • die Konfigurationsdatei neorc.conf
 
 
@@ -45,6 +46,8 @@ fuege_ein neo_uiae ../uiae
 fuege_ein neo_referenz ../../../A-REFERENZ-A/neo20.txt
 fuege_ein neo_neo ../neo
 fuege_ein neo_num ../num
+fuege_ein neo_wiemitneo ../wiemitneo
+fuoge_ein neo_beschreibe ../beschreibe
 fuege_ein neo_compose ../../../Compose/Compose.neo
 fuege_ein neorc ../../etc/neo.conf
 
