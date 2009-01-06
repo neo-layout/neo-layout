@@ -24,10 +24,11 @@ Verwendung:
 asdf [Variante]
 uiae [Belegung]
 
-Nach beide Angaben (Variante, Belegung) wird in folgender Reihenfolge gesucht:
+Bei beiden Angaben (Variante, Belegung) gelten folgende Prioritäten:
 ⅰ) direkte Angabe hinter dem Skriptnamen
-ⅱ) Definition in der neo.conf bzw. der .neorc
-ⅲ) in der Skriptdatei angegebene Standardbelegung
+ⅱ) Definition in der persönlichen $HOME/.neorc
+ⅲ) Definition in der systemweiten neo.conf
+ⅳ) in der Skriptdatei angegebene Standardbelegung
 
 Die Skripte ›asdf‹ und ›uiae‹ benutzten folgende Programme, die gegebenenfalls installiert werden müssen:
 • numlockx
