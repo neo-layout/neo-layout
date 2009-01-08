@@ -66,6 +66,7 @@ exit 0
 
 die() {
 	echo -e "${red}$@${normal}" >&2
+	echo -e "${red}Die Belegung konnte nicht auf NEO geändert werden.${normal}"
 	exit 1
 }
 
@@ -102,20 +103,20 @@ set_xkbmap() {
 }
 
 set_keymap() {
-	if [ -e "${PATH_LOADKEYS}" ]; then
-		if [ -f "$@" ]; then
-			if [ "${EUID}" = 0 ]; then
-				"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
-			elif [ -e "${PATH_SUDO}" ]; then
-				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
-			else
-				die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
-			fi
+	if [ ! -e "${PATH_LOADKEYS}" ]; then
+		echo -e "${orange}Der Befehl ${red}loadkeys${orange} wurde nicht im angegebenen Verzeichnis gefunden, versuche es ohne explizite Angabe.${normal}"
+		PATH_LOADKEYS=loadkeys
+	fi
+	if [ -f "$@" ]; then
+		if [ "${EUID}" = 0 ]; then
+			"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
+		elif [ -e "${PATH_SUDO}" ]; then
+			"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
 		else
-			die "Die keymap-Datei ${orange}$@${red} gibt es nicht."
+			die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
 		fi
 	else
-		die "Der Befehl ${orange}loadkeys${red} wurde nicht gefunden, die Belegung kann nicht verändert werden."
+		die "Die keymap-Datei ${orange}$@${red} gibt es nicht."
 	fi
 }
 
