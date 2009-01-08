@@ -31,8 +31,9 @@ bzw. ›asdf‹ einfach zwischen NEO und QWERT* hin- und herzuwechseln.
 
 
 === Verwenden von NEO ===
-Ein einfacher Weg, NEO unter dem eigenen Benutzer zu testen oder zu verwenden, ist,
-die Datei ›installiere_neo‹ herunterzuladen, ausführbar zu machen und auszuführen:
+Ein einfacher Weg, NEO unter dem eigenen Benutzer zu testen oder dauerhaft zu
+verwenden, ist, die Datei ›installiere_neo‹ herunterzuladen, ausführbar zu
+machen und auszuführen:
 
 wget http://neo-layout.org/installiere_neo
 chmod u+x installiere_neo
