@@ -9,6 +9,7 @@
 # colours in the Bash
 normal="\033[0m"
 red="\033[31m"
+orange="\033[33m"
 green="\033[32m"
 
 if [ -f "${NEO_CONFIG}" ]; then
@@ -74,8 +75,8 @@ die2() {
 }
 
 numlock_manually() {
-	echo "$1" >&2
-	echo "Bitte jetzt NumLock von Hand auf $2 schalten und ›Enter‹ drücken um fortzufahren…" >&2
+	echo -e "$1" >&2
+	echo -e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$2${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
 	read enter
 }
 
@@ -88,7 +89,7 @@ set_xmodmap() {
 			die "Die Xmodmap-Datei $@ gibt es nicht."
 		fi
 	else
-		die "Der Befehl ›xmodmap‹ wurde nicht gefunden, die Belegung kann nicht verändert werden."
+		die "Der Befehl ${orange}xmodmap${red} wurde nicht gefunden, die Belegung kann nicht verändert werden."
 	fi
 }
 
@@ -96,7 +97,7 @@ set_xkbmap() {
 	if [ -e "${PATH_SETXKBMAP}" ]; then
 		"${PATH_SETXKBMAP}" "$@" || die "Die xkbmap $@ wurde nicht gefunden."
 	else
-		die "Der Befehl ›setxkbmap‹ wurde nicht gefunden, die Belegung kann nicht verändert werden."
+		die "Der Befehl ${orange}setxkbmap${red} wurde nicht gefunden, die Belegung kann nicht verändert werden."
 	fi
 }
 
@@ -104,17 +105,17 @@ set_keymap() {
 	if [ -e "${PATH_LOADKEYS}" ]; then
 		if [ -f "$@" ]; then
 			if [ "${EUID}" = 0 ]; then
-				"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap $@."
+				"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
 			elif [ -e "${PATH_SUDO}" ]; then
-				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ›sudo‹, um die Belegung zu ändern."
+				"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
 			else
 				die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
 			fi
 		else
-			die "Die keymap-Datei $@ gibt es nicht."
+			die "Die keymap-Datei ${orange}$@${red} gibt es nicht."
 		fi
 	else
-		die "Der Befehl ›loadkeys‹ wurde nicht gefunden, die Belegung kann nicht verändert werden."
+		die "Der Befehl ${orange}loadkeys${red} wurde nicht gefunden, die Belegung kann nicht verändert werden."
 	fi
 }
 
@@ -141,18 +142,17 @@ if [ -n "$SSH_CONNECTION" ]; then
 fi
 
 if [ -z ${DISPLAY} ]; then
-	set_keymap "${NEO_CONSOLE_KEYMAP}"
-
 	if [ -e "${PATH_SETLEDS}" ]; then
 		"${PATH_SETLEDS}" +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
 	else
-		numlock_manually "Der Befehl ›setleds‹ wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." an
+		numlock_manually "Der Befehl ${red}setleds${normal} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." an
 	fi
+	set_keymap "${NEO_CONSOLE_KEYMAP}"
 else
 	if [ -e "${PATH_NUMLOCKX}" ]; then
 		"${PATH_NUMLOCKX}" off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 	else
-		numlock_manually "Der Befehl ›numlockx‹ wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
+		numlock_manually "Der Befehl ${red}numlockx${normal} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
 	fi
 
 	if [ -e "${PATH_XSET}" ]; then
@@ -163,7 +163,7 @@ else
 			"${PATH_XSET}" -r ${deadkey} || echo "Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}." >&2
 		done
 	else
-		echo "Der Befehl ›xset‹ wurde nicht gefunden. Der Status von autorepeat kann für Modifier und tote Tasten nicht geändert werden." >&2
+		echo "Der Befehl ${red}xset${normal} wurde nicht gefunden. Der Status von autorepeat kann für Modifier und tote Tasten nicht geändert werden." >&2
 	fi
 
 	case "${NEO_X_VARIANTE}" in
