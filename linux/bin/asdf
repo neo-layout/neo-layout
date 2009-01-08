@@ -25,9 +25,9 @@ fi
 # Default paths
 PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
 PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
-PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_LOADKEYS=${PATH_LOADKEYS:-loadkeys}
 PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
-PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_SETLEDS=${PATH_SETLEDS:-setleds}
 PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
 PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 
@@ -103,11 +103,6 @@ set_xkbmap() {
 }
 
 set_keymap() {
-	if [ ! -e "${PATH_LOADKEYS}" ]; then
-		echo -e "${orange}Der Befehl ${red}loadkeys${orange} wurde nicht im angegebenen Verzeichnis gefunden, versuche es ohne explizite Angabe.${normal}"
-		PATH_LOADKEYS=loadkeys
-	fi
-
 	if [ -f "$@" ]; then
 		if [ "${EUID}" = 0 ]; then
 			"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
@@ -144,11 +139,7 @@ if [ -n "$SSH_CONNECTION" ]; then
 fi
 
 if [ -z ${DISPLAY} ]; then
-	if [ -e "${PATH_SETLEDS}" ]; then
-		"${PATH_SETLEDS}" +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
-	else
-		numlock_manually "Der Befehl ${red}setleds${orange} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." an
-	fi
+	"${PATH_SETLEDS}" +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 else
 	if [ -e "${PATH_NUMLOCKX}" ]; then
