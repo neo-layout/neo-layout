@@ -76,7 +76,7 @@ die2() {
 }
 
 numlock_manually() {
-	echo -e "$1" >&2
+	echo -e "${orange}$1${normal}" >&2
 	echo -e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$2${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
 	read enter
 }
@@ -107,6 +107,7 @@ set_keymap() {
 		echo -e "${orange}Der Befehl ${red}loadkeys${orange} wurde nicht im angegebenen Verzeichnis gefunden, versuche es ohne explizite Angabe.${normal}"
 		PATH_LOADKEYS=loadkeys
 	fi
+
 	if [ -f "$@" ]; then
 		if [ "${EUID}" = 0 ]; then
 			"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
@@ -146,14 +147,14 @@ if [ -z ${DISPLAY} ]; then
 	if [ -e "${PATH_SETLEDS}" ]; then
 		"${PATH_SETLEDS}" +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
 	else
-		numlock_manually "Der Befehl ${red}setleds${normal} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." an
+		numlock_manually "Der Befehl ${red}setleds${orange} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." an
 	fi
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 else
 	if [ -e "${PATH_NUMLOCKX}" ]; then
 		"${PATH_NUMLOCKX}" off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 	else
-		numlock_manually "Der Befehl ${red}numlockx${normal} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
+		numlock_manually "Der Befehl ${red}numlockx${orange} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
 	fi
 
 	if [ -e "${PATH_XSET}" ]; then
