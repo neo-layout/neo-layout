@@ -25,9 +25,9 @@ fi
 # Default paths
 PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
 PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
-PATH_LOADKEYS=${PATH_LOADKEYS:-/usr/bin/loadkeys}
+PATH_LOADKEYS=${PATH_LOADKEYS:-loadkeys}
 PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
-PATH_SETLEDS=${PATH_SETLEDS:-/usr/bin/setleds}
+PATH_SETLEDS=${PATH_SETLEDS:-setleds}
 PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
 PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 
@@ -79,23 +79,13 @@ set_xkbmap() {
 }
 
 set_keymap() {
-	if [ ! -e "${PATH_LOADKEYS}" ]; then
-		echo -e "${orange}Der Befehl ${red}loadkeys${orange} wurde nicht im angegebenen Verzeichnis gefunden, versuche es ohne explizite Angabe.${normal}"
-		PATH_LOADKEYS=loadkeys
-	fi
-
-	if [ -f "$@" ]; then
-		if [ "${EUID}" = 0 ]; then
-			"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
-		elif [ -e "${PATH_SUDO}" ]; then
-			"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
-		else
-			die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
-		fi
+	if [ "${EUID}" = 0 ]; then
+		"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
+	elif [ -e "${PATH_SUDO}" ]; then
+		"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
 	else
-		die "Die keymap-Datei ${orange}$@${red} gibt es nicht."
+		die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
 	fi
-
 }
 
 if [ -n "$SSH_CONNECTION" ]; then
@@ -105,15 +95,12 @@ fi
 if [ -z ${DISPLAY} ]; then
 	set_keymap "${STD_CONSOLE_KEYMAP}"
 
-	if [ -e "${PATH_SETLEDS}" ]; then
-		if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-			"${PATH_SETLEDS}" -num || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
-		else
-			"${PATH_SETLEDS}" +num || echo "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
-		fi
+	if [ "${NUM_LOCK_STATUS}" = "on" ]; then
+		"${PATH_SETLEDS}" -num || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	else
-		echo "${orange}Der Befehl ${red}setleds${orange} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden.${normal}" >&2
+		"${PATH_SETLEDS}" +num || echo "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	fi
+
 else
 	if [ -e "${PATH_XSET}" ]; then
 		for modifier in 51 94; do
