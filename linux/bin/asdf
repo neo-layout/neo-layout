@@ -5,6 +5,8 @@
 # Copyright 2008 Erik Streb del Toro
 # Distributed under the terms of the GNU General Public License v3
 
+#prevent CapsLock while ›asdf‹ is running
+#xmodmap -e "clear Lock" 2> /dev/null
 
 # colours in the Bash
 normal="\033[0m"
@@ -22,14 +24,6 @@ else
 	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}"
 fi
 
-# Default paths
-PATH_XMODMAP=${PATH_XMODMAP:-/usr/bin/xmodmap}
-PATH_SETXKBMAP=${PATH_SETXKBMAP:-/usr/bin/setxkbmap}
-PATH_LOADKEYS=${PATH_LOADKEYS:-loadkeys}
-PATH_SUDO=${PATH_SUDO:-/usr/bin/sudo}
-PATH_SETLEDS=${PATH_SETLEDS:-setleds}
-PATH_NUMLOCKX=${PATH_NUMLOCKX:-/usr/bin/numlockx}
-PATH_XSET=${PATH_XSET:-/usr/bin/xset}
 
 # Default values
 NEO_XKBMAP=${NEO_XKBMAP:-de}
@@ -82,34 +76,24 @@ numlock_manually() {
 }
 
 set_xmodmap() {
-	if [ -e "${PATH_XMODMAP}" ]; then
-		if [ -f "$@" ]; then
-			set_xkbmap lv
-			"${PATH_XMODMAP}" "$@" || die2 $@
-		else
-			die "Die Xmodmap-Datei $@ gibt es nicht."
-		fi
+	if [ -f "$@" ]; then
+		set_xkbmap lv
+		xmodmap "$@" || die2 $@
 	else
-		die "Der Befehl ${orange}xmodmap${red} wurde nicht gefunden, die Belegung kann nicht verändert werden."
+		die "Die Xmodmap-Datei $@ gibt es nicht."
 	fi
 }
 
 set_xkbmap() {
-	if [ -e "${PATH_SETXKBMAP}" ]; then
-		"${PATH_SETXKBMAP}" "$@" || die "Die xkbmap $@ wurde nicht gefunden."
-	else
-		die "Der Befehl ${orange}setxkbmap${red} wurde nicht gefunden, die Belegung kann nicht verändert werden."
-	fi
+	setxkbmap "$@" || die "Die xkbmap $@ wurde nicht gefunden."
 }
 
 set_keymap() {
 	if [ -f "$@" ]; then
 		if [ "${EUID}" = 0 ]; then
-			"${PATH_LOADKEYS}" "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
-		elif [ -e "${PATH_SUDO}" ]; then
-			"${PATH_SUDO}" "${PATH_LOADKEYS}" "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
+			loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
 		else
-			die "Die Belegung auf der Textkonsole kann nur mir Rootrechten geändert werden."
+			sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
 		fi
 	else
 		die "Die keymap-Datei ${orange}$@${red} gibt es nicht."
@@ -139,25 +123,18 @@ if [ -n "$SSH_CONNECTION" ]; then
 fi
 
 if [ -z ${DISPLAY} ]; then
-	"${PATH_SETLEDS}" +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
+	setleds +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
+	setleds -caps
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 else
-	if [ -e "${PATH_NUMLOCKX}" ]; then
-		"${PATH_NUMLOCKX}" off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
-	else
-		numlock_manually "Der Befehl ${red}numlockx${orange} wurde nicht gefunden. Darum kann der Status von NumLock nicht automatisch geändert werden." aus
-	fi
+	numlockx off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 
-	if [ -e "${PATH_XSET}" ]; then
-		for modifier in 51 94; do
-			"${PATH_XSET}" -r ${modifier} || echo "Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}." >&2
-		done
-		for deadkey in 21 35 49; do
-			"${PATH_XSET}" -r ${deadkey} || echo "Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}." >&2
-		done
-	else
-		echo "Der Befehl ${red}xset${normal} wurde nicht gefunden. Der Status von autorepeat kann für Modifier und tote Tasten nicht geändert werden." >&2
-	fi
+	for modifier in 51 94; do
+		xset -r ${modifier} || echo "Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}." >&2
+	done
+	for deadkey in 21 35 49; do
+		xset -r ${deadkey} || echo "Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}." >&2
+	done
 
 	case "${NEO_X_VARIANTE}" in
 		xkbmap)
