@@ -20,17 +20,6 @@ else
   ECHO_e="echo"
 fi
 
-if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
-elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Fehler beim Verwenden der Konfigurationsdatei ${HOME}/.neorc"
-elif [ -f /etc/neo.conf ]; then
-	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
-else
-	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
-fi
-
-
 # Default values
 STD_X_VARIANTE=${STD_X_VARIANTE:-xkbmap}
 STD_XKBMAP=${STD_XKBMAP:-de}
@@ -44,21 +33,45 @@ cat <<HELP
 Aufruf: $0 [-q] [Standard-X-Variante]
 Aktiviert die Standard-Tastaturbelegung.
 
-  NEO-X-Variante	als Standard-X-Variante kann verwendet werden:
-				xkmbap		in den meisten Fällen richtig (Standardeinstellung)
-				xmodmap		nur sinnvoll, wenn eine eigene Xmodmap als Standardbelegung verwendet wird
+  NEO-X-Variante:
+  xkmbap	in den meisten Fällen richtig (Standardeinstellung)
+  xmodmap	nur sinnvoll, wenn eine eigene Xmodmap als Standardbelegung verwendet wird
 
-			Das Skript erkennt, falls sich der Benutzer nur auf einer Textkonsole befindet und ändert
-			auch dort die Belegung (hierfür sind allerdings Rootrechte erforderlich!)
+  Das Skript erkennt, falls sich der Benutzer nur auf einer Textkonsole befindet 
+  und ändert auch dort die Belegung (hierfür sind allerdings Rootrechte erforderlich!)
 
   -q, --quiet		gibt – abgesehen von Fehlern – keine Meldungen aus
 
-NEO-Tastaturbelegung
 Homepage: http://neo-layout.org/
-
 HELP
 exit 0
 }
+
+while [ ! -z "$1" ]; do
+	case $1 in
+		-h | --help )
+			help
+			;;
+		-q | --quiet )
+			quiet=1
+			;;
+		* )
+			STD_X_VARIANTE=${1-$STD_X_VARIANTE}
+			shift $#
+			;;
+	esac
+	shift
+done
+
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Fehler beim Verwenden der Konfigurationsdatei ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
+else
+	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden.\nDas Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
+fi
 
 die() {
 	$ECHO_e "${red}$@${normal}" >&2
@@ -85,24 +98,6 @@ set_keymap() {
 		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern." >&2
 	fi
 }
-
-
-while [ ! -z "$1" ]; do
-	case $1 in
-		-h | --help )
-			help
-			;;
-		-q | --quiet )
-			quiet=1
-			;;
-		* )
-			STD_X_VARIANTE=${1-$STD_X_VARIANTE}
-			shift $#
-			;;
-	esac
-	shift
-done
-
 
 if [ -n "$SSH_CONNECTION" ]; then
 	die "In einer ssh-session kann die Belegung nicht geändert werden."
