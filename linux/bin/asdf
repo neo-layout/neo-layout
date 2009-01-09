@@ -22,6 +22,44 @@ else
   ECHO_e="echo"
 fi
 
+help() {
+cat <<HELP
+Aufruf: $0 [-q] [NEO-X-Variante]
+Aktiviert die NEO-Tastaturbelegung.
+
+  NEO-X-Variante: 
+  xkmbap	i.d.R. wenn Rootrechte vorhanden sind
+  xmodmap	i.d.R. wenn NEO nur für einen Benutzer verwendet werden soll 
+  alternative	sollte geladen werden, wenn das Laden der Xmodmap fehl schlägt
+  xprog		falls ältere X-Programme (wie xedit oder xfig) verwendet werden
+  evdev		falls der evdev-Treiber verwendet wird
+
+  Das Skript erkennt, falls sich der Benutzer nur auf einer Textkonsole befindet 
+  und ändert auch dort die Belegung (hierfür sind allerdings Rootrechte erforderlich!)
+
+  -q, --quiet		gibt – abgesehen von Fehlern – keine Meldungen aus
+
+Homepage: http://neo-layout.org/
+HELP
+exit 0
+}
+
+while [ ! -z "$1" ]; do
+	case $1 in
+		-h | --help )
+			help
+			;;
+		-q | --quiet )
+			quiet=1
+			;;
+		* )
+			NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
+			shift $#
+			;;
+	esac
+	shift
+done
+
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
@@ -29,7 +67,7 @@ elif [ -f "${HOME}"/.neorc ]; then
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
+	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden.\nDas Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
 
 # Default values
@@ -40,30 +78,6 @@ NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
 NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
 NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
 NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
-
-help() {
-cat <<HELP
-Aufruf: $0 [-q] [NEO-X-Variante]
-Aktiviert die NEO-Tastaturbelegung.
-
-  NEO-X-Variante	als NEO-X-Variante kann verwendet werden:
-				xkmbap		i.d.R. wenn Rootrechte vorhanden sind
-				xmodmap		i.d.R. wenn NEO nur für einen Benutzer verwendet werden soll 
-				alternative	sollte geladen werden, wenn das Laden der Xmodmap fehl schlägt
-				xprog		falls ältere X-Programme (wie xedit oder xfig) verwendet werden
-				evdev		falls der evdev-Treiber verwendet wird
-
-			Das Skript erkennt, falls sich der Benutzer nur auf einer Textkonsole befindet und ändert
-			auch dort die Belegung (hierfür sind allerdings Rootrechte erforderlich!)
-
-  -q, --quiet		gibt – abgesehen von Fehlern – keine Meldungen aus
-
-NEO-Tastaturbelegung
-Homepage: http://neo-layout.org/
-
-HELP
-exit 0
-}
 
 die() {
 	$ECHO_e "${red}$@${normal}" >&2
@@ -106,23 +120,6 @@ set_keymap() {
 		die "Die keymap-Datei ${orange}$@${red} gibt es nicht."
 	fi
 }
-
-
-while [ ! -z "$1" ]; do
-	case $1 in
-		-h | --help )
-			help
-			;;
-		-q | --quiet )
-			quiet=1
-			;;
-		* )
-			NEO_X_VARIANTE=${1-$NEO_X_VARIANTE}
-			shift $#
-			;;
-	esac
-	shift
-done
 
 if [ -n "$SSH_CONNECTION" ]; then
 	die "In einer ssh-session kann die Belegung nicht geändert werden."
