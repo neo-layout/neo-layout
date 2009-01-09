@@ -58,7 +58,7 @@ green="\033[32m"
 # remove the entry in $HOME/.profile
 rmfromprofile()
 {
-	grep -v "^\# NEO:$" $HOME/.profile | grep -v "asdf   \# mit" | grep -v "asdf" > $HOME/profile.neo.tmp
+	grep -v "\# NEO Tastaturbelegung" $HOME/.profile > $HOME/profile.neo.tmp
 	rm /$HOME/.profile
 	mv $HOME/profile.neo.tmp $HOME/.profile
 }
