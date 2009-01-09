@@ -14,6 +14,14 @@ red="\033[31m"
 orange="\033[33m"
 green="\033[32m"
 
+if [ "foo`echo -e bar`" = "foobar" ];then
+  # GNU echo
+  ECHO_e="echo -e"
+else
+  # POSIX echo
+  ECHO_e="echo"
+fi
+
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
@@ -21,9 +29,8 @@ elif [ -f "${HOME}"/.neorc ]; then
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
+	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
-
 
 # Default values
 NEO_XKBMAP=${NEO_XKBMAP:-de}
@@ -59,8 +66,8 @@ exit 0
 }
 
 die() {
-	echo -e "${red}$@${normal}" >&2
-	echo -e "${red}Die Belegung konnte nicht auf NEO geändert werden.${normal}" >&2
+	$ECHO_e "${red}$@${normal}" >&2
+	$ECHO_e "${red}Die Belegung konnte nicht auf NEO geändert werden.${normal}" >&2
 	exit 1
 }
 
@@ -70,8 +77,8 @@ die2() {
 }
 
 numlock_manually() {
-	echo -e "${orange}$1${normal}" >&2
-	echo -e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$2${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
+	$ECHO_e "${orange}$1${normal}" >&2
+	$ECHO_e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$2${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
 	read enter
 }
 
@@ -117,7 +124,6 @@ while [ ! -z "$1" ]; do
 	shift
 done
 
-
 if [ -n "$SSH_CONNECTION" ]; then
 	die "In einer ssh-session kann die Belegung nicht geändert werden."
 fi
@@ -130,11 +136,19 @@ else
 	numlockx off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 
 	for modifier in 51 94; do
-		xset -r ${modifier} || echo -e "${orange}Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}.${normal}" >&2
+		xset -r ${modifier} || $ECHO_e "${orange}Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}.${normal}" >&2
 	done
 	for deadkey in 21 35 49; do
-		xset -r ${deadkey} || echo -e "${orange}Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}.${normal}" >&2
+		xset -r ${deadkey} || $ECHO_e "${orange}Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}.${normal}" >&2
 	done
+
+	if [ -z $NEO_X_VARIANTE ]; then
+		if [ -f $NEO_XMODMAP ]; then
+			NEO_X_VARIANTE=xmodmap
+		else
+			NEO_X_VARIANTE=xkbmap
+		fi
+	fi
 
 	case "${NEO_X_VARIANTE}" in
 		xkbmap)
@@ -166,6 +180,6 @@ fi
 if [ ! "$quiet" ]; then
 	echo
 	echo "Die Tastaturbelegung wurde auf NEO geändert."
-	echo -e "Mit ${green}neo${normal} und ${green}num${normal} erhält man ein Bild der NEO-Belegung."
-	echo -e "Durch ${green}uiae${normal} kehrt man wieder zur Standardbelegung zurück."
+	$ECHO_e "Mit ${green}neo${normal} und ${green}num${normal} erhält man ein Bild der NEO-Belegung."
+	$ECHO_e "Durch ${green}uiae${normal} kehrt man wieder zur Standardbelegung zurück."
 fi

@@ -12,6 +12,14 @@ red="\033[31m"
 orange="\033[33m"
 green="\033[32m"
 
+if [ "foo`echo -e bar`" = "foobar" ];then
+  # GNU echo
+  ECHO_e="echo -e"
+else
+  # POSIX echo
+  ECHO_e="echo"
+fi
+
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
@@ -19,7 +27,7 @@ elif [ -f "${HOME}"/.neorc ]; then
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
+	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
 
 
@@ -53,8 +61,8 @@ exit 0
 }
 
 die() {
-	echo -e "${red}$@${normal}" >&2
-	echo -e "${red}Die Belegung konnte nicht geändert werden.${normal}" >&2
+	$ECHO_e "${red}$@${normal}" >&2
+	$ECHO_e "${red}Die Belegung konnte nicht geändert werden.${normal}" >&2
 	exit 1
 }
 
@@ -104,17 +112,17 @@ if [ -z ${DISPLAY} ]; then
 	set_keymap "${STD_CONSOLE_KEYMAP}"
 
 	if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-		setleds -num || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+		setleds -num || $ECHO_e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	else
-		setleds +num || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+		setleds +num || $ECHO_e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	fi
 
 else
 	for modifier in 51 94; do
-		xset r ${modifier} || echo -e "${orange}Fehler beim Wiederherstellen von Autorepeat beim Modifier ${modifier}.${normal}" >&2
+		xset r ${modifier} || $ECHO_e "${orange}Fehler beim Wiederherstellen von Autorepeat beim Modifier ${modifier}.${normal}" >&2
 	done
 	for deadkey in 21 35 49; do
-		xset r ${deadkey} || echo -e "${orange}Fehler beim Wiederherstellen von Autorepead bei der toten Taste ${deakey}.${normal}" >&2
+		xset r ${deadkey} || $ECHO_e "${orange}Fehler beim Wiederherstellen von Autorepead bei der toten Taste ${deakey}.${normal}" >&2
 	done
 
 
@@ -128,7 +136,7 @@ else
 				[ $quiet ] || echo "Die Standard-Xmodmap wird geladen…"
 				set_xmodmap "${STD_XMODMAP}"
 			else
-				echo -e "${red}Es wurde keine Standard-Xmodmap definiert.${normal}" >&2
+				$ECHO_e "${red}Es wurde keine Standard-Xmodmap definiert.${normal}" >&2
 				die "In der Regel ist ${green}uiae${red} ohne weitere Angaben erfolgreich."
 			fi
 			;;
@@ -138,14 +146,14 @@ else
 	esac
 
 	if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-		numlockx on || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+		numlockx on || $ECHO_e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	else
-		numlockx off || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+		numlockx off || $ECHO_e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	fi
 fi
 
 if [ ! "$quiet" ]; then
 	echo
 	echo "Die Tastaturbelegung wurde auf die Standardbelegung geändert."
-	echo -e "Durch ${green}asdf${normal} kehrt man wieder zur NEO-Belegung zurück."
+	$ECHO_e "Durch ${green}asdf${normal} kehrt man wieder zur NEO-Belegung zurück."
 fi
