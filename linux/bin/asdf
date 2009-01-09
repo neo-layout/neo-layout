@@ -6,7 +6,7 @@
 # Distributed under the terms of the GNU General Public License v3
 
 #prevent CapsLock while ›asdf‹ is running
-#xmodmap -e "clear Lock" 2> /dev/null
+xmodmap -e "clear Lock" 2> /dev/null
 
 # colours in the Bash
 normal="\033[0m"
@@ -80,12 +80,12 @@ set_xmodmap() {
 		set_xkbmap lv
 		xmodmap "$@" || die2 $@
 	else
-		die "Die Xmodmap-Datei $@ gibt es nicht."
+		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht."
 	fi
 }
 
 set_xkbmap() {
-	setxkbmap "$@" || die "Die xkbmap $@ wurde nicht gefunden."
+	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden."
 }
 
 set_keymap() {
@@ -130,10 +130,10 @@ else
 	numlockx off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
 
 	for modifier in 51 94; do
-		xset -r ${modifier} || echo "Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}." >&2
+		xset -r ${modifier} || echo -e "${orange}Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}.${normal}" >&2
 	done
 	for deadkey in 21 35 49; do
-		xset -r ${deadkey} || echo "Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}." >&2
+		xset -r ${deadkey} || echo -e "${orange}Fehler beim Ausschalten von Autorepead bei der toten Taste ${deakey}.${normal}" >&2
 	done
 
 	case "${NEO_X_VARIANTE}" in

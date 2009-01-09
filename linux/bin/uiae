@@ -13,13 +13,13 @@ orange="\033[33m"
 green="\033[32m"
 
 if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
+	. "${HOME}"/.neorc || die "Fehler beim Verwenden der Konfigurationsdatei ${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
-	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
+	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	echo "No configuration file found. Using default values, this might fail!"
+	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}"
 fi
 
 
@@ -27,13 +27,21 @@ fi
 STD_X_VARIANTE=${STD_X_VARIANTE:-xkbmap}
 STD_XKBMAP=${STD_XKBMAP:-de}
 STD_XKBVARIANT=${STD_XKBVARIANT:-nodeadkeys}
+STD_XMODMAP=${STD_XMODMAP:-""}
 STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-de-latin1-nodeadkeys}"
 NUM_LOCK_STATUS=${NUM_LOCK_STATUS:-on}
 
 help() {
 cat <<HELP
-Aufruf: $0 [-q]
+Aufruf: $0 [-q] [Standard-X-Variante]
 Aktiviert die Standard-Tastaturbelegung.
+
+  NEO-X-Variante	als Standard-X-Variante kann verwendet werden:
+				xkmbap		in den meisten Fällen richtig (Standardeinstellung)
+				xmodmap		nur sinnvoll, wenn eine eigene Xmodmap als Standardbelegung verwendet wird
+
+			Das Skript erkennt, falls sich der Benutzer nur auf einer Textkonsole befindet und ändert
+			auch dort die Belegung (hierfür sind allerdings Rootrechte erforderlich!)
 
   -q, --quiet		gibt – abgesehen von Fehlern – keine Meldungen aus
 
@@ -52,14 +60,14 @@ die() {
 
 set_xmodmap() {
 	if [ -f "$@" ]; then
-		xmodmap "$@" || die "Failed to set xmodmap $@."
+		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@."
 	else
-		die "Cannot use $@ for xmodmap."
+		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht."
 	fi
 }
 
 set_xkbmap() {
-	setxkbmap "$@" || die "Failed to select xkbmap $@."
+	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden."
 }
 
 set_keymap() {
@@ -69,6 +77,24 @@ set_keymap() {
 		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
 	fi
 }
+
+
+while [ ! -z "$1" ]; do
+	case $1 in
+		-h | --help )
+			help
+			;;
+		-q | --quiet )
+			quiet=1
+			;;
+		* )
+			STD_X_VARIANTE=${1-$STD_X_VARIANTE}
+			shift $#
+			;;
+	esac
+	shift
+done
+
 
 if [ -n "$SSH_CONNECTION" ]; then
 	die "In einer ssh-session kann die Belegung nicht geändert werden."
@@ -85,30 +111,41 @@ if [ -z ${DISPLAY} ]; then
 
 else
 	for modifier in 51 94; do
-		xset r ${modifier} || echo "Failed to set repeat for modifier ${modifier}." >&2
+		xset r ${modifier} || echo -e "${orange}Fehler beim Wiederherstellen von Autorepeat beim Modifier ${modifier}.${normal}" >&2
 	done
 	for deadkey in 21 35 49; do
-		xset r ${deadkey} || echo "Failed to set repeat for deadkey ${deakey}." >&2
+		xset r ${deadkey} || echo -e "${orange}Fehler beim Wiederherstellen von Autorepead bei der toten Taste ${deakey}.${normal}" >&2
 	done
 
 
 	case "${STD_X_VARIANTE}" in
 		xkbmap)
+			[ $quiet ] || echo "Die Standardbelegung wird geladen…"
 			set_xkbmap "${STD_XKBMAP}" "${STD_XKBVARIANT}"
 			;;
 		xmodmap)
-			set_xkbmap de
-			set_xmodmap "${STD_XMODMAP}"
+			if [ "${STD_XMODMAP}" ]; then
+				[ $quiet ] || echo "Die Standard-Xmodmap wird geladen…"
+				set_xmodmap "${STD_XMODMAP}"
+			else
+				echo -e "${red}Es wurde keine Standard-Xmodmap definiert." >&2
+				die "${red}In der Regel ist ${green}uiae${red} ohne weitere Angaben erfolgreich."
+			fi
 			;;
 		*)
-			die "Unknown standard X variant ${STD_X_VARIANTE}."
+			die "${orange}${STD_X_VARIANTE}${red} ist eine unbekannte X-Variante der NEO-Belegung."
 			;;
 	esac
 
 	if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-		numlockx on || die "Failed to set num lock status to on."
+		numlockx on || echo -e "${orange}Fehler beim setzen des Status von NumLock." >&2
 	else
-		numlockx off || die "Failed to set num lock status to off."
+		numlockx off || echo -e "${orange}Fehler beim setzen des Status von NumLock." >&2
 	fi
 fi
 
+if [ ! "$quiet" ]; then
+	echo
+	echo "Die Tastaturbelegung wurde auf die Standardbelegung geändert."
+	echo -e "Durch ${green}asdf${normal} kehrt man wieder zur NEO-Belegung zurück."
+fi
