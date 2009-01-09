@@ -19,7 +19,7 @@ elif [ -f "${HOME}"/.neorc ]; then
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}"
+	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
 
 
@@ -54,27 +54,27 @@ exit 0
 
 die() {
 	echo -e "${red}$@${normal}" >&2
-	echo -e "${red}Die Belegung konnte nicht geändert werden.${normal}"
+	echo -e "${red}Die Belegung konnte nicht geändert werden.${normal}" >&2
 	exit 1
 }
 
 set_xmodmap() {
 	if [ -f "$@" ]; then
-		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@."
+		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@." >&2
 	else
-		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht."
+		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht." >&2
 	fi
 }
 
 set_xkbmap() {
-	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden."
+	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden." >&2
 }
 
 set_keymap() {
 	if [ "${EUID}" = 0 ]; then
-		loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
+		loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}." >&2
 	else
-		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
+		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern." >&2
 	fi
 }
 
@@ -106,7 +106,7 @@ if [ -z ${DISPLAY} ]; then
 	if [ "${NUM_LOCK_STATUS}" = "on" ]; then
 		setleds -num || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	else
-		setleds +num || echo "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+		setleds +num || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	fi
 
 else
@@ -128,8 +128,8 @@ else
 				[ $quiet ] || echo "Die Standard-Xmodmap wird geladen…"
 				set_xmodmap "${STD_XMODMAP}"
 			else
-				echo -e "${red}Es wurde keine Standard-Xmodmap definiert." >&2
-				die "${red}In der Regel ist ${green}uiae${red} ohne weitere Angaben erfolgreich."
+				echo -e "${red}Es wurde keine Standard-Xmodmap definiert.${normal}" >&2
+				die "In der Regel ist ${green}uiae${red} ohne weitere Angaben erfolgreich."
 			fi
 			;;
 		*)
@@ -138,9 +138,9 @@ else
 	esac
 
 	if [ "${NUM_LOCK_STATUS}" = "on" ]; then
-		numlockx on || echo -e "${orange}Fehler beim setzen des Status von NumLock." >&2
+		numlockx on || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	else
-		numlockx off || echo -e "${orange}Fehler beim setzen des Status von NumLock." >&2
+		numlockx off || echo -e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
 	fi
 fi
 

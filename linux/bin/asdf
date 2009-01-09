@@ -21,7 +21,7 @@ elif [ -f "${HOME}"/.neorc ]; then
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
 else
-	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}"
+	echo "${red}Keine Konfigurationsdatei für NEO gefunden. Das Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
 
 
@@ -60,7 +60,7 @@ exit 0
 
 die() {
 	echo -e "${red}$@${normal}" >&2
-	echo -e "${red}Die Belegung konnte nicht auf NEO geändert werden.${normal}"
+	echo -e "${red}Die Belegung konnte nicht auf NEO geändert werden.${normal}" >&2
 	exit 1
 }
 
