@@ -28,8 +28,8 @@ div.Hauptfeld {
   background-color:#F8F8FA;
   color:WindowText;
   position:relative; 
-  width:10em; 
-/* float:left;  */
+  width:11em; 
+  float:left;
   text-align:center; 
   margin:2em;
   margin-left:0em;
