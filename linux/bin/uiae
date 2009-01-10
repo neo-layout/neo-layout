@@ -81,21 +81,21 @@ die() {
 
 set_xmodmap() {
 	if [ -f "$@" ]; then
-		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@." >&2
+		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@."
 	else
-		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht." >&2
+		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht." 
 	fi
 }
 
 set_xkbmap() {
-	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden." >&2
+	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden."
 }
 
 set_keymap() {
 	if [ "${EUID}" = 0 ]; then
-		loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}." >&2
+		loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}." 
 	else
-		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern." >&2
+		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern." 
 	fi
 }
 
