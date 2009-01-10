@@ -6,14 +6,6 @@ KEYSYM=/usr/include/X11/keysymdef.h
 n=10
 typeset -i j=0
 
-if [ "foo`echo -e bar`" = "foobar" ];then
-  # GNU echo
-  ECHO_e="echo -e"
-else
-  # POSIX echo
-  ECHO_e="echo"
-fi
-
 while [ ! "$beschreibung" ]
 do
 	case ${1-" "} in
@@ -25,7 +17,7 @@ do
 		echo Aufruf: $0 [OPTION] BESCHREIBUNG
 		echo »$0« versucht ein Zeichen anhand einer Beschreibung zu identifizieren
 		echo Option:
-		echo "  -n               gibt maximal 2n statt 10 Vorschläge aus"
+		echo -e "  -n               gibt maximal 2n statt 10 Vorschläge aus"
 		exit;;
 	\ )
 		echo $0: Kein Suchkriterium eingegeben!
@@ -65,7 +57,7 @@ then
 		00)
 			j=j+1
 			ausgabe=1
-			a[$j]=`$ECHO_e \\\x${c2}`
+			a[$j]=`echo -e \\\x${c2}`
 			echo $j\) ${a[$j]}
 			;;
 		03)	
@@ -73,13 +65,13 @@ then
 			then
 				j=j+1
 				ausgabe=1
-				a[$j]=`$ECHO_e \\\xcf\\\x8${c3}`
+				a[$j]=`echo -e \\\xcf\\\x8${c3}`
 				echo $j\) ${a[$j]}
 
 			else
 				j=j+1
 				ausgabe=1
-				a[$j]=`$ECHO_e \\\xce\\\x${c2}${c3}`
+				a[$j]=`echo -e \\\xce\\\x${c2}${c3}`
 				echo $j\) ${a[$j]}
 			fi
 			;;
