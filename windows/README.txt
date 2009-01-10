@@ -1,12 +1,16 @@
 == Neo 2.0 für Windows ==
 Für viele Windowsversionen sind hier Treiber zu finden.
 
-== autohotkey ==
+
+== neo-vars ==
 Hier befindet sich ein Treiber, der mit der Autohotkey-Skriptsprache (http://www.autohotkey.com) erstellt wurde. Hierfür muss lediglich eine ausführbare EXE-Datei heruntergeladen und gestartet werden.
-Dazu benötigt man insbesondere keine Administratorrechte, wenn man das Programm beispielsweise in dem Verzeichnis „Eigene Dateien“ abspeichert, so dass sich dieser Treiber gut zum schnellen Ausprobieren von NEO eignet. Zudem kann man diesen Treiber etwa von einem USB-Stick aus starten, wenn man auf einem fremden Rechner arbeiten muss/will:
+Dazu benötigt man insbesondere keine Administratorrechte, wenn man das Programm beispielsweise in dem Verzeichnis „Eigene Dateien“ abspeichert, so dass sich dieser Treiber gut zum schnellen Ausprobieren von NEO eignet. Zudem kann man diesen Treiber etwa von einem USB-Stick aus starten, wenn man auf einem fremden Rechner arbeiten muss/will.
 
 == neo_portable.zip ==
 Wenn man den Inhalt dieses zip-Archives auf einen USB-Stick entpackt, startet sich der Autohotkey-Treiber automatisch, sobald man den USB-Stick in den USB-Port steckt.
+
+== ahk-auslaufend ==
+Dies ist der »klassische« autohotkey-Treiber. Er ist jedoch als veraltend anzusehen; Nutzer sollten stattdessen seinen Nachfolger neo-vars benutzen.
 
 == kbdneo2 ==
 Hier entsteht mit Hilfe des WinDDK (http://www.microsoft.com/whdc/devtools/ddk/default.mspx) ein nativer Windowstreiber mit allen 6 Ebenen, um Neo dauerhaft als Tastaturlayout auf einem Windows-PC zu installieren.
