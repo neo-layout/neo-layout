@@ -1,9 +1,28 @@
 #!/bin/sh
 
+# colour definitions
+normal="\033[0m"
+red="\033[31m"
+orange="\033[33m"
+green="\033[32m"
+
+if [ "foo`echo -e bar`" = "foobar" ];then
+  # GNU echo
+  ECHO_e="echo -e"
+else
+  # POSIX echo
+  ECHO_e="echo"
+fi
+
+die() {
+	$ECHO_e "${red}$@${normal}" >&2
+	exit 1
+}
+
 if [ -f "${NEO_CONFIG}" ]; then
 	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Failed to source ${HOME}/neo.conf"
+	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
