@@ -5,8 +5,7 @@
 # Copyright 2008 Erik Streb del Toro
 # Distributed under the terms of the GNU General Public License v3
 
-
-# colours in the Bash
+# colour definitions
 normal="\033[0m"
 red="\033[31m"
 orange="\033[33m"
@@ -27,6 +26,31 @@ STD_XKBVARIANT=${STD_XKBVARIANT:-nodeadkeys}
 STD_XMODMAP=${STD_XMODMAP:-""}
 STD_CONSOLE_KEYMAP="${STD_CONSOLE_KEYMAP:-de-latin1-nodeadkeys}"
 NUM_LOCK_STATUS=${NUM_LOCK_STATUS:-on}
+die() {
+	$ECHO_e "${red}$@${normal}" >&2
+	$ECHO_e "${red}Die Belegung konnte nicht geändert werden.${normal}" >&2
+	exit 1
+}
+
+set_xmodmap() {
+	if [ -f "$@" ]; then
+		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@."
+	else
+		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht." 
+	fi
+}
+
+set_xkbmap() {
+	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden."
+}
+
+set_keymap() {
+	if [ "${EUID}" = 0 ]; then
+		loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}." 
+	else
+		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern." 
+	fi
+}
 
 help() {
 cat <<HELP
@@ -72,32 +96,6 @@ elif [ -f /etc/neo.conf ]; then
 else
 	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden.\nDas Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
-
-die() {
-	$ECHO_e "${red}$@${normal}" >&2
-	$ECHO_e "${red}Die Belegung konnte nicht geändert werden.${normal}" >&2
-	exit 1
-}
-
-set_xmodmap() {
-	if [ -f "$@" ]; then
-		xmodmap "$@" || die "Fehler beim Laden der Xmodmap $@."
-	else
-		die "Die Xmodmap-Datei ${orange}$@${red} gibt es nicht." 
-	fi
-}
-
-set_xkbmap() {
-	setxkbmap "$@" || die "Die xkbmap ${orange}$@${red} wurde nicht gefunden."
-}
-
-set_keymap() {
-	if [ "${EUID}" = 0 ]; then
-		loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}." 
-	else
-		sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern." 
-	fi
-}
 
 if [ -n "$SSH_CONNECTION" ]; then
 	die "In einer ssh-session kann die Belegung nicht geändert werden."
