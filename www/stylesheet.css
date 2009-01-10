@@ -187,3 +187,26 @@ p         {  /* text-indent:1em;
 }
 
 .aktiveEbene { border-color:#56b; color:#23b; }
+
+/* Interaktive Tastaturebenen */
+
+.Ebene_button {
+  border:1px solid black;
+  padding:0.25em 1em;
+  position:absolute;
+  cursor:pointer;
+  z-index:2;
+}
+
+.Ebenen_box { position: relative;}
+
+.Ebene_bild { padding-top:2em; }
+
+.Ebene_wrapper { position:absolute; top:0px; background-color: white; }
+
+.Ebene_wrapper > .Ebene_bild { display:none; }
+.Ebene_wrapper:hover > .Ebene_bild { display:block; }
+.Ebene_wrapper:hover > .Ebene_button,.Ebene1_wrapper:hover > .Ebene_button { 
+	background-color:Highlight; 
+}
+
