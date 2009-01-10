@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Copyright 2008 Bernd Steinhauser <berniyh@exherbo.org>
 # Copyright 2008 Benjamin Kellermann
 # Copyright 2008 Pascal Hauck
@@ -21,6 +21,15 @@ else
   # POSIX echo
   ECHO_e="echo"
 fi
+
+# Default values
+NEO_XKBMAP=${NEO_XKBMAP:-de}
+NEO_XKBVARIANT=${NEO_XKBVARIANT:-neo}
+NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
+NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
+NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
+NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
+NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
 
 help() {
 cat <<HELP
@@ -69,15 +78,6 @@ elif [ -f /etc/neo.conf ]; then
 else
 	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden.\nDas Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
 fi
-
-# Default values
-NEO_XKBMAP=${NEO_XKBMAP:-de}
-NEO_XKBVARIANT=${NEO_XKBVARIANT:-neo}
-NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
-NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
-NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
-NEO_XMODMAP_EVDEV=${NEO_XMODMAP_EVDEV:-$HOME/neo/neo_de_evdev.xmodmap}
-NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
 
 die() {
 	$ECHO_e "${red}$@${normal}" >&2
