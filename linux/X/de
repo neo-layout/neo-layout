@@ -278,7 +278,7 @@ xkb_symbols "neo" {
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      asterisk,       NoSymbol,    emptyset       ] };
 
     key <AE11> { [ minus,       emdash,                 NoSymbol,               U2011,              minus,          NoSymbol,    hyphen         ] };
-    key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,         U030F,          NoSymbol,    NoSymbol       ] };
+    key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,       dead_doublegrave, NoSymbol,    NoSymbol       ] };
 
     key <BKSP> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
 
@@ -298,7 +298,7 @@ xkb_symbols "neo" {
     key <AD10> { [ q,           Q,                      ampersand,              U03D5,              plus,           NoSymbol,    U211A            ] };
     key <AD11> { [ ssharp,      U1E9E,                  U017F,              Greek_finalsmallsigma,  NoSymbol,       NoSymbol,    jot              ] };
 
-    key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,         dead_doubleacute,NoSymbol,   dead_abovedot    ] };
+    key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,       dead_doubleacute, NoSymbol,   dead_abovedot    ] };
 
     // middle row
     // --------------------------------------------------------------
