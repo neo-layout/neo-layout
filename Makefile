@@ -1,18 +1,24 @@
-all: 
-	make -C portable deploy
-	make -C grafik 
-	make -C linux/bin/installiere_neo
+all: portable grafik linux/bin/installiere_neo
+
+portable:
+	make -kC portable deploy
+
+grafik:
+	make -kC grafik 
+
+linux/bin/installiere_neo:
+	make -kC linux/bin/installiere_neo
 
 svnclean:
 	make -C portable clean
 	make -C linux/bin/installiere_neo clean
 
 clean: svnclean 
-	make -C grafik clean
+	make -kC grafik clean
 
 svnupdate: 
 	make svnclean
 	svn up
-	make 
+	make -k
 
-.PHONY: all clean svnupdate svnclean
+.PHONY: all clean svnupdate svnclean portable grafik linux/bin/installiere_neo
