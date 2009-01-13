@@ -236,7 +236,7 @@ xkb_symbols "neo" {
     // Levels in Xkbmap jargon to be found here in the definitions. 
     // These are the levels used, and Xorg's translations with type="EIGHT_LEVEL":
     // --------------------------------------------------------------
-    //   Modifier:        None    Shift   Mod3    Shift+Mod3  Mod4    Shift+Mod4    Mod3+Mod4
+a    //   Modifier:        None    Shift   Mod3    Shift+Mod3  Mod4    Shift+Mod4    Mod3+Mod4
     //   Xorg calls it:   Level1  Level2  Level3  Level4      Level5  Level6        Level7
     //   Neo calls it:    Ebene1  Ebene2  Ebene3  Ebene5      Ebene4  Ebene4+Shift  Ebene6
 
@@ -250,8 +250,9 @@ xkb_symbols "neo" {
 
     // Definition of the so called Neo-Mod4
     key.type[Group1]="ONE_LEVEL";
-    key <LSGT> { [ ISO_Level5_Shift ]};
-    key <RALT> { [ ISO_Level5_Shift ]};
+    // ISO_Level5_Shift was causing problems, though it's defined in my /usr/include/X11/keysymdef.h on Ubuntu 8.10 (ticket #33), using hexcode again for now
+    key <LSGT> { [ 0xfe11 ]};
+    key <RALT> { [ 0xfe11 ]};
     modifier_map Mod3 { <LSGT>, <RALT> };
     // Attention: ^^^ This is a X server variable, not the Neo-Mod3.
 
