@@ -236,7 +236,7 @@ xkb_symbols "neo" {
     // Levels in Xkbmap jargon to be found here in the definitions. 
     // These are the levels used, and Xorg's translations with type="EIGHT_LEVEL":
     // --------------------------------------------------------------
-a    //   Modifier:        None    Shift   Mod3    Shift+Mod3  Mod4    Shift+Mod4    Mod3+Mod4
+    //   Modifier:        None    Shift   Mod3    Shift+Mod3  Mod4    Shift+Mod4    Mod3+Mod4
     //   Xorg calls it:   Level1  Level2  Level3  Level4      Level5  Level6        Level7
     //   Neo calls it:    Ebene1  Ebene2  Ebene3  Ebene5      Ebene4  Ebene4+Shift  Ebene6
 
