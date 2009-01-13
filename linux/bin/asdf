@@ -65,6 +65,8 @@ set_keymap() {
 		if [ "${EUID}" = 0 ]; then
 			loadkeys "$@" || die "Fehler beim Laden der Keymap ${orange}$@${red}."
 		else
+			echo
+			echo "Um die NEO-Belegung zu aktivieren muss das Root-Passwort eingegeben werden."
 			sudo loadkeys "$@" || die "Fehler bei der Verwendung von ${orange}sudo${red}, um die Belegung zu ändern."
 		fi
 	else
