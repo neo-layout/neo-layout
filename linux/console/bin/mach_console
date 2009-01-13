@@ -1,7 +1,7 @@
 #!/bin/sh
 LC_COLLATE=C
 
-schreiben () {
+schreiben1 () {
 	if [[ $2 == [a-z] ]]; then
 		printf "                   keycode %3s = %-22s\n" $1 $2
 		printf "           altgr   keycode %3s = %-22s\n" $1 $4
@@ -16,15 +16,30 @@ schreiben () {
 	fi
 }
 
+schreiben2 () {
+	if [[ $2 == [a-z] ]]; then
+		printf "                   keycode %3s = %-22s\n" $1 $2
+		printf "           altgr   keycode %3s = %-22s\n" $1 $4
+		printf "   shift   altgr   keycode %3s = %-22s\n" $1 $7
+	else
+		printf "                   keycode %3s = %-22s%-22s%-22s%-22s\n" $1 $2 $3 $4 $7
+	fi
+	printf "           shiftl  keycode %3s = %-22s\n" $1 $8
+	printf "   shift   shiftl  keycode %3s = %-22s\n" $1 $5
+	if [[ $6 ]]; then
+		printf "   altgr   shiftl  keycode %3s = %-22s\n" $1 $6
+	fi
+}
+
 lesen() {
-# Aufruf: lesen <Anzahl> <Zeilennummer in der Kurzreferenz> <Keycode der ersten Taste>
+# Aufruf: lesen <Anzahl> <Zeilennummer in der Kurzreferenz> <Keycode der ersten Taste> <Tastaturfeld>
 	typeset -i zeile keycode
 	zeile=$2
 	keycode=$3
 	for i in $(seq 1 $1)
 	do
 		a=`head -$zeile kurzreferenz | tail -1`
-		schreiben $keycode $a
+		schreiben$4 $keycode $a
 		zeile=zeile+1
 		keycode=keycode+1
 	done
@@ -34,72 +49,72 @@ cat console.sondertasten
 echo
 echo
 echo "! ----Space key-------------------------------------------------------------"
-lesen 1 2 57
+lesen 1 2 57 1
 
 echo
 echo "! ----dead keys-------------------------------------------------------------"
-lesen 1 3 41
-lesen 1 4 13
-lesen 1 5 27
+lesen 1 3 41 1
+lesen 1 4 13 1
+lesen 1 5 27 1
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Row 1 (number row)"
 echo "! --------------------------------------------------------------------------"
-lesen 11 6 2
+lesen 11 6 2 1
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Row 2 (upper row)"
 echo "! --------------------------------------------------------------------------"
-lesen 11 17 16
+lesen 11 17 16 1
 
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Row 3 (home row, middle row)"
 echo "! --------------------------------------------------------------------------"
-lesen 11 28 30
+lesen 11 28 30 1
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Row 4 (lower row)"
 echo "! --------------------------------------------------------------------------"
-lesen 10 39 44
+lesen 10 39 44 1
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Keypad Row 1 (uppest row)"
 echo "! --------------------------------------------------------------------------"
-lesen 1 49 69
-lesen 1 50 98
-lesen 1 51 55
-lesen 1 52 74
+lesen 1 49 69 2
+lesen 1 50 98 2
+lesen 1 51 55 2
+lesen 1 52 74 2
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Keypad Row 2 (upper row)"
 echo "! --------------------------------------------------------------------------"
-lesen 3 53 71
-lesen 1 56 78
+lesen 3 53 71 2
+lesen 1 56 78 2
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Keypad Row 3 (home row, middle row)"
 echo "! --------------------------------------------------------------------------"
-lesen 3 57 75
+lesen 3 57 75 2
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Keypad Row 4 (lower row)"
 echo "! --------------------------------------------------------------------------"
-lesen 3 60 79
+lesen 3 60 79 2
 
 echo
 echo "! --------------------------------------------------------------------------"
 echo "! Keypad Row 5 (lowest row)"
 echo "! --------------------------------------------------------------------------"
-lesen 2 64 82
+lesen 2 64 82 2
 
 cat console.more_control
 
