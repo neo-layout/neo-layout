@@ -429,69 +429,85 @@ alt_is_meta
 ! Keypad Row 1 (uppest row)
 ! --------------------------------------------------------------------------
                    keycode  69 = Tab                   VoidSymbol            equal                 VoidSymbol            
-           shiftl  keycode  69 = U+2261                
+           shiftl  keycode  69 =                       
    shift   shiftl  keycode  69 = VoidSymbol            
-                   keycode  98 = KP_Multiply           KP_Multiply           U+22C5                U+2299                
-           shiftl  keycode  98 = U+2297                
-   shift   shiftl  keycode  98 = VoidSymbol            
-                   keycode  55 = KP_Subtract           KP_Subtract           U+2212                U+2296                
-           shiftl  keycode  55 = U+2238                
-   shift   shiftl  keycode  55 = VoidSymbol            
-                   keycode  74 = KP_7                  U+2714                U+2195                U+226A                
-           shiftl  keycode  74 = U+2308                
-   shift   shiftl  keycode  74 = VoidSymbol            
+   altgr   shiftl  keycode  69 = U+2261                
+                   keycode  98 = KP_Divide             KP_Divide             division              VoidSymbol            
+           shiftl  keycode  98 =                       
+   shift   shiftl  keycode  98 = U+2300                
+   altgr   shiftl  keycode  98 = U+2223                
+                   keycode  55 = KP_Multiply           KP_Multiply           U+22C5                VoidSymbol            
+           shiftl  keycode  55 =                       
+   shift   shiftl  keycode  55 = U+2299                
+   altgr   shiftl  keycode  55 = U+2297                
+                   keycode  74 = KP_Subtract           KP_Subtract           U+2212                VoidSymbol            
+           shiftl  keycode  74 =                       
+   shift   shiftl  keycode  74 = U+2296                
+   altgr   shiftl  keycode  74 = U+2238                
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 2 (upper row)
 ! --------------------------------------------------------------------------
-                   keycode  71 = KP_8                  U+2718                U+2191                U+2229                
-           shiftl  keycode  71 = U+22C2                
-   shift   shiftl  keycode  71 = VoidSymbol            
-                   keycode  72 = KP_9                  U+2663                U+20D7                U+226B                
-           shiftl  keycode  72 = U+2309                
-   shift   shiftl  keycode  72 = VoidSymbol            
-                   keycode  73 = KP_Add                KP_Add                plusminus             U+2295                
-           shiftl  keycode  73 = U+2214                
-   shift   shiftl  keycode  73 = VoidSymbol            
-                   keycode  78 = KP_4                  U+2665                U+2190                U+2282                
-           shiftl  keycode  78 = U+2286                
-   shift   shiftl  keycode  78 = VoidSymbol            
+                   keycode  71 = KP_7                  U+2714                U+2195                VoidSymbol            
+           shiftl  keycode  71 =                       
+   shift   shiftl  keycode  71 = U+226A                
+   altgr   shiftl  keycode  71 = U+2308                
+                   keycode  72 = KP_8                  U+2718                U+2191                VoidSymbol            
+           shiftl  keycode  72 =                       
+   shift   shiftl  keycode  72 = U+2229                
+   altgr   shiftl  keycode  72 = U+22C2                
+                   keycode  73 = KP_9                  U+2663                U+20D7                VoidSymbol            
+           shiftl  keycode  73 =                       
+   shift   shiftl  keycode  73 = U+226B                
+   altgr   shiftl  keycode  73 = U+2309                
+                   keycode  78 = KP_Add                KP_Add                plusminus             VoidSymbol            
+           shiftl  keycode  78 =                       
+   shift   shiftl  keycode  78 = U+2295                
+   altgr   shiftl  keycode  78 = U+2214                
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 3 (home row, middle row)
 ! --------------------------------------------------------------------------
-                   keycode  75 = KP_5                  U+20ac                brokenbar             U+22B6                
-           shiftl  keycode  75 = U+22B7                
-   shift   shiftl  keycode  75 = VoidSymbol            
-                   keycode  76 = KP_6                  U+2660                U+2192                U+2283                
-           shiftl  keycode  76 = U+2287                
-   shift   shiftl  keycode  76 = VoidSymbol            
-                   keycode  77 = KP_1                  ordfeminine           U+2194                U+2264                
-           shiftl  keycode  77 = U+230a                
-   shift   shiftl  keycode  77 = VoidSymbol            
+                   keycode  75 = KP_4                  U+2665                U+2190                VoidSymbol            
+           shiftl  keycode  75 =                       
+   shift   shiftl  keycode  75 = U+2282                
+   altgr   shiftl  keycode  75 = U+2286                
+                   keycode  76 = KP_5                  U+20ac                brokenbar             VoidSymbol            
+           shiftl  keycode  76 =                       
+   shift   shiftl  keycode  76 = U+22B6                
+   altgr   shiftl  keycode  76 = U+22B7                
+                   keycode  77 = KP_6                  U+2660                U+2192                VoidSymbol            
+           shiftl  keycode  77 =                       
+   shift   shiftl  keycode  77 = U+2283                
+   altgr   shiftl  keycode  77 = U+2287                
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 4 (lower row)
 ! --------------------------------------------------------------------------
-                   keycode  79 = KP_2                  masculine             U+2193                U+222a                
-           shiftl  keycode  79 = U+22C3                
-   shift   shiftl  keycode  79 = VoidSymbol            
-                   keycode  80 = KP_3                  U+2666                U+21CC                U+2265                
-           shiftl  keycode  80 = U+230B                
-   shift   shiftl  keycode  80 = VoidSymbol            
-                   keycode  81 = KP_0                  U+2423                percent               U+2030                
-           shiftl  keycode  81 = U+25A1                
-   shift   shiftl  keycode  81 = VoidSymbol            
+                   keycode  79 = KP_1                  ordfeminine           U+2194                VoidSymbol            
+           shiftl  keycode  79 =                       
+   shift   shiftl  keycode  79 = U+2264                
+   altgr   shiftl  keycode  79 = U+230a                
+                   keycode  80 = KP_2                  masculine             U+2193                VoidSymbol            
+           shiftl  keycode  80 =                       
+   shift   shiftl  keycode  80 = U+222a                
+   altgr   shiftl  keycode  80 = U+22C3                
+                   keycode  81 = KP_3                  U+2666                U+21CC                VoidSymbol            
+           shiftl  keycode  81 =                       
+   shift   shiftl  keycode  81 = U+2265                
+   altgr   shiftl  keycode  81 = U+230B                
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 5 (lowest row)
 ! --------------------------------------------------------------------------
-                   keycode  82 = comma                 period                U+002c                U+2032                
-           shiftl  keycode  82 = U+2033                
-   shift   shiftl  keycode  82 = VoidSymbol            
-                   keycode  83 = comma                 period                U+002c                U+2032                
-           shiftl  keycode  83 = U+2033                
-   shift   shiftl  keycode  83 = VoidSymbol            
+                   keycode  82 = comma                 period                U+002c                VoidSymbol            
+           shiftl  keycode  82 =                       
+   shift   shiftl  keycode  82 = U+2032                
+   altgr   shiftl  keycode  82 = U+2033                
+                   keycode  83 = comma                 period                U+002c                VoidSymbol            
+           shiftl  keycode  83 =                       
+   shift   shiftl  keycode  83 = U+2032                
+   altgr   shiftl  keycode  83 = U+2033                
 
 
 ! --------------------------------------------------------------------------
