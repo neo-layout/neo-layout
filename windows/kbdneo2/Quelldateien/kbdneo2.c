@@ -132,12 +132,12 @@ static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
 \***************************************************************************/
 // Es wird nicht zwischen linken und/oder rechtem Modifier unterschieden
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
-    { VK_SHIFT        ,   KBDSHIFT    },
-    { VK_CONTROL    ,   KBDCTRL        },    
-    { VK_MENU        ,   KBDALT        },
-    { VK_KANA        ,   KBDKANA        }, //Mod 3
-    { VK_OEM_102    ,   16            }, //Mod 4
-    { 0                ,   0            }
+    { VK_SHIFT		,	KBDSHIFT	},
+    { VK_CONTROL	,	KBDCTRL		},    
+    { VK_MENU		,	KBDALT		},
+    { VK_KANA		,	KBDKANA		}, //Mod 3
+    { VK_OEM_102	,	16			}, //Mod 4
+    { 0				,	0			}
 };
 
 /***************************************************************************\
@@ -148,47 +148,46 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 \***************************************************************************/
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
-    &aVkToBits[0],
-    25, //Anzahl der verwendeten Ebenen (inklusive der INVALIDen!)
-    {
-    //  Modifier NEO 
-    //  Ebene 0 - nix
-    //  Ebene 1 - Shift
-    //  Ebene 2 - Kana = Mod 3
-    //  Ebene 3 - Neu = Mod 4
-    //  Ebene 4 - Kana+Shift 
-    //  Ebene 5 - Neu+Kana
-    //  
-    //  Modification# //  Keys Pressed
-    //  ============= // ===========    Neu    Kana    Alt    Strg    Shift
-        0,                //     0    0    0    0    0
-        1,                //     0    0    0    0    1
-        6,                //     0    0    0    1    0
-        7,                //     0    0    0    1    1
-        SHFT_INVALID,    //     0    0    1    0    0
-        SHFT_INVALID,    //     0    0    1    0    1
-        SHFT_INVALID,    //     0    0    1    1    0
-        SHFT_INVALID,    //     0    0    1    1    1
-        2,                //     0    1    0    0    0
-        4,                //     0    1    0    0    1
-        SHFT_INVALID,    //     0    1    0    1    0
-        SHFT_INVALID,    //     0    1    0    1    1
-        SHFT_INVALID,    //     0    1    1    0    0
-        SHFT_INVALID,    //     0    1    1    0    1
-        SHFT_INVALID,    //     0    1    1    1    0
-        SHFT_INVALID,    //     0    1    1    1    1
-        3,                //     1    0    0    0    0
-        8,                //     1    0    0    0    1  
-        SHFT_INVALID,    //     1    0    0    1    0
-        SHFT_INVALID,    //     1    0    0    1    1
-        SHFT_INVALID,    //     1    0    1    0    0
-        SHFT_INVALID,    //     1    0    1    0    1
-        SHFT_INVALID,    //     1    0    1    1    0
-        SHFT_INVALID,    //     1    0    1    1    1
-        5,                //     1    1    0    0    0
-    }
-};                      
-
+	&aVkToBits[0],
+	25, //Anzahl der verwendeten Ebenen (inklusive der INVALIDen!)
+	{
+	//  Modifier NEO 
+	//  Ebene 0 - nix
+	//  Ebene 1 - Shift
+	//  Ebene 2 - Kana = Mod 3
+	//  Ebene 3 - Neu = Mod 4
+	//  Ebene 4 - Kana+Shift 
+	//  Ebene 5 - Neu+Kana
+	//  
+	//  Modification#	// Keys Pressed
+	//  =============	//===========
+						//	Neu		Kana	Alt		Strg	Shift
+		0,				//	0		0		0		0		0
+		1,				//	0		0		0		0		1
+		6,				//	0		0		0		1		0
+		7,				//	0		0		0		1		1
+		SHFT_INVALID,	//	0		0		1		0		0
+		SHFT_INVALID,	//	0		0		1		0		1
+		SHFT_INVALID,	//	0		0		1		1		0
+		SHFT_INVALID,	//	0		0		1		1		1
+		2,				//	0		1		0		0		0
+		4,				//	0		1		0		0		1
+		SHFT_INVALID,	//	0		1		0		1		0
+		SHFT_INVALID,	//	0		1		0		1		1
+		SHFT_INVALID,	//	0		1		1		0		0
+		SHFT_INVALID,	//	0		1		1		0		1
+		SHFT_INVALID,	//	0		1		1		1		0
+		SHFT_INVALID,	//	0		1		1		1		1
+		3,				//	1		0		0		0		0
+		8,				//	1		0		0		0		1
+		SHFT_INVALID,	//	1		0		0		1		0
+		SHFT_INVALID,	//	1		0		0		1		1
+		SHFT_INVALID,	//	1		0		1		0		0
+		SHFT_INVALID,	//	1		0		1		0		1
+		SHFT_INVALID,	//	1		0		1		1		0
+		SHFT_INVALID,	//	1		0		1		1		1
+		5,				//	1		1		0		0		0
+	}
 
 /***************************************************************************\
 *
@@ -220,82 +219,81 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 \***************************************************************************/
 
-//    Reihenfolge der Ebene wie oben ( ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {    &aVkToBits[0],)… festgelegt
+// Reihenfolge der Ebene wie oben ( ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {    &aVkToBits[0],)… festgelegt
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
-//                            |            |   SHIFT              |   KANA                  |  NEU        |  KANA+Shift      |   NEU+Kana     | 
-//                            |            |===============|================|===============|===============|================|
-{VK_OEM_1        ,0            ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    },//Tote Taste 1
-{0xff            ,0            ,'^'        ,0x02c7        ,0x02d8        ,0x00b7        ,'-'        ,'.'        },
-{'1'            ,0            ,'1'        ,0x00b0        ,0x00B9        ,0x2022        ,0x2081        ,0x00ac        },
-{'3'            ,0            ,'3'        ,0x00a7        ,0x00b3        ,WCH_NONE    ,0x2083        ,0x2227        },
-{'4'            ,0            ,'4'        ,0x00bb        ,0x203A        ,WCH_NONE    ,0x2113        ,0x22a5        }, //WCH_NONE sollte »Bild auf« sein (AHK?)
-{'5'            ,0            ,'5'        ,0x00ab        ,0x2039        ,WCH_NONE    ,0x2640        ,0x2221        },
-{'7'            ,0            ,'7'        ,0x0024        ,0x00a5        ,0x00a4        ,0x03f0        ,0x2209        },
-{'8'            ,0            ,'8'        ,0x201E        ,0x201A        ,0x002F        ,0x27E8        ,0x2204        },
-{'9'            ,0            ,'9'        ,0x201C        ,0x2018        ,0x002A        ,0x27E9        ,0x2226        },
-{'0'            ,0            ,'0'        ,0x201D        ,0x2019        ,0x002D        ,0x2080        ,0x2205        },
-{VK_OEM_MINUS    ,0            ,'-'        ,0x2013        ,0x2014        ,WCH_DEAD    ,0x0011        ,0x00ad        },
-{VK_OEM_2        ,0            ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    },//Tote Taste 2
-{0xff            ,0            ,0x00B4        ,0x0060        ,0x00b8        ,0x02d9        ,0x02DB        ,0x02DA        },
-{VK_TAB            ,0            ,'\t'        ,'\t'        ,WCH_DEAD    ,'\t'        ,'\t'        ,'\t'        },
-{0xff            ,0            ,WCH_NONE    ,WCH_NONE    ,0x266b        ,WCH_NONE    ,WCH_NONE    ,WCH_NONE    },
-{'X'            ,CAPLOK        ,'x'        ,'X'        ,0x2026        ,0x22ee        ,0x03BE        ,0x039E        },
-{'V'            ,CAPLOK        ,'v'        ,'V'        ,'_'        ,'\b'        ,WCH_NONE    ,0x2259        },
-{'L'            ,CAPLOK        ,'l'        ,'L'        ,'['        ,WCH_NONE    ,0x03BB        ,0x039b        }, //WCH_NONE sollte »Pfeil hoch« sein (AHK?)
-{'C'            ,CAPLOK        ,'c'        ,'C'        ,']'        ,0x007f        ,0x03C7        ,0x2102        }, //0x007f sollte »Entfernen« sein (AHK?)
-{'W'            ,CAPLOK        ,'w'        ,'W'        ,0x005E        ,WCH_NONE    ,0x03c9        ,0x03a9        }, //WCH_NONE sollte »Einfügen« sein (AHK?)
-{'K'            ,CAPLOK        ,'k'        ,'K'        ,'!'        ,0x00A1        ,0x03BA        ,0x221a        },
-{'H'            ,CAPLOK        ,'h'        ,'H'        ,'<'        ,'7'        ,0x03C8        ,0x03A8        },
-{'G'            ,CAPLOK        ,'g'        ,'G'        ,'>'        ,'8'        ,0x03B3        ,0x0393        },
-{'F'            ,CAPLOK        ,'f'        ,'F'        ,'='        ,'9'        ,0x03C6        ,0x03A6        },
-{'Q'            ,CAPLOK        ,'q'        ,'Q'        ,'&'        ,'+'        ,0x03d5        ,0x211a        },
-{'U'            ,CAPLOK        ,'u'        ,'U'        ,'\\'        ,WCH_NONE    ,WCH_NONE    ,0x222e        }, //1. WCH_NONE sollte »Pos 1« sein (AHK?)
-{'I'            ,CAPLOK        ,'i'        ,'I'        ,'/'        ,WCH_NONE    ,0x03B9        ,0x222b        }, //WCH_NONE sollte »Pfeil links« sein (AHK?)
-{'A'            ,CAPLOK        ,'a'        ,'A'        ,'{'        ,WCH_NONE    ,0x03B1        ,0x2200        }, //WCH_NONE sollte »Pfeil runter« sein (AHK?)
-{'E'            ,CAPLOK        ,'e'        ,'E'        ,'}'        ,WCH_NONE    ,0x03B5        ,0x2203        }, //WCH_NONE sollte »Pfeil rechts« sein (AHK?)
-{'O'            ,CAPLOK        ,'o'        ,'O'        ,'*'        ,WCH_NONE    ,0x03bf        ,0x2208        }, //WCH_NONE sollte »Ende« sein (AHK?)
-{'S'            ,CAPLOK        ,'s'        ,'S'        ,'?'        ,0x00BF        ,0x03C3        ,0x03A3        },
-{'N'            ,CAPLOK        ,'n'        ,'N'        ,'('        ,'4'        ,0x03BD        ,0x2115        },
-{'R'            ,CAPLOK        ,'r'        ,'R'        ,')'        ,'5'        ,0x03f1        ,0x211d        },
-{'T'            ,CAPLOK        ,'t'        ,'T'        ,'-'        ,'6'        ,0x03C4        ,0x2202        },
-{'D'            ,CAPLOK        ,'d'        ,'D'        ,':'        ,','        ,0x03B4        ,0x0394        },
-{VK_OEM_5        ,CAPLOK        ,0x00FC        ,0x00DC        ,'#'        ,0x001b        ,WCH_NONE    ,0x221d        },
-
-{VK_OEM_7        ,CAPLOK        ,0x00E4        ,0x00C4        ,'|'        ,WCH_NONE    ,0x03B7        ,0x211c        }, //WCH_NONE sollte »Bild runter« sein (AHK?)
-{'P'            ,CAPLOK        ,'p'        ,'P'        ,'~'        ,'\r'        ,0x03C0        ,0x03A0        },
-{'Z'            ,CAPLOK        ,'z'        ,'Z'        ,'`'        ,WCH_NONE    ,0x03B6        ,0x2124        },
-{'B'            ,CAPLOK        ,'b'        ,'B'        ,'+'        ,':'        ,0x03B2        ,0x21d0        },
-{'M'            ,CAPLOK        ,'m'        ,'M'        ,'%'        ,'1'        ,0x00b5        ,0x21d4        },
-{VK_OEM_COMMA    ,0            ,','        ,0x22ee        ,'\"'        ,'2'        ,0x03c1        ,0x21d2        },
-{VK_OEM_PERIOD    ,0            ,'.'        ,0x2026        ,'\''        ,'3'        ,0x03d1        ,0x0398        },
-{0                ,0            ,0            ,0            ,0            ,0            ,0            ,0            }
-};                                                                  
+//				| CapsLock	|			| SHIFT		| KANA		| NEU		| KANA+Shift| NEU+Kana	|
+//				|===========|===========|===========|===========|===========|===========|===========|
+{VK_OEM_1		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},	//Tote Taste 1
+{0xff			,0			,'^'		,0x02c7		,0x02d8		,0x00b7		,'-'		,'.'		}, Zirkumflex
+{'1'			,0			,'1'		,0x00b0		,0x00B9		,0x2022		,0x2081		,0x00ac		},
+{'3'			,0			,'3'		,0x00a7		,0x00b3		,WCH_NONE	,0x2083		,0x2227		},
+{'4'			,0			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2113		,0x22a5		},	//WCH_NONE sollte »Bild auf« sein (AHK?)
+{'5'			,0			,'5'		,0x00ab		,0x2039		,WCH_NONE	,0x2640		,0x2221		},
+{'7'			,0			,'7'		,0x0024		,0x00a5		,0x00a4		,0x03f0		,0x2209		},
+{'8'			,0			,'8'		,0x201E		,0x201A		,0x002F		,0x27E8		,0x2204		},
+{'9'			,0			,'9'		,0x201C		,0x2018		,0x002A		,0x27E9		,0x2226		},
+{'0'			,0			,'0'		,0x201D		,0x2019		,0x002D		,0x2080		,0x2205		},
+{VK_OEM_MINUS	,0			,'-'		,0x2013		,0x2014		,WCH_DEAD	,0x0011		,0x00ad		},
+{VK_OEM_2		,0			,WCH_DEAD	,WCH_DEAD 	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},	//Tote Taste 2
+{0xff			,0			,0x00B4		,0x0060		,0x00b8		,0x02d9		,0x02DB		,0x02DA		},
+{VK_TAB			,0			,'\t'		,'\t'		,WCH_DEAD	,'\t'		,'\t'		,'\t'		},
+{0xff			,0			,WCH_NONE	,WCH_NONE	,0x266b		,WCH_NONE	,WCH_NONE	,WCH_NONE	},
+{'X'			,CAPLOK		,'x'		,'X'		,0x2026		,0x22ee		,0x03BE		,0x039E		},
+{'V'			,CAPLOK		,'v'		,'V'		,'_'		,'\b'		,WCH_NONE	,0x2259		},
+{'L'			,CAPLOK		,'l'		,'L'		,'['		,WCH_NONE	,0x03BB		,0x039b		},	//WCH_NONE sollte »Pfeil hoch« sein (AHK?)
+{'C'			,CAPLOK		,'c'		,'C'		,']'		,0x007f		,0x03C7		,0x2102		},	//0x007f sollte »Entfernen« sein (AHK?)
+{'W'			,CAPLOK		,'w'		,'W'		,0x005E		,WCH_NONE	,0x03c9		,0x03a9		},	//WCH_NONE sollte »Einfügen« sein (AHK?)
+{'K'			,CAPLOK		,'k'		,'K'		,'!'		,0x00A1		,0x03BA		,0x221a		},
+{'H'			,CAPLOK		,'h'		,'H'		,'<'		,'7'		,0x03C8		,0x03A8		},
+{'G'			,CAPLOK		,'g'		,'G'		,'>'		,'8'		,0x03B3		,0x0393		},
+{'F'			,CAPLOK		,'f'		,'F'		,'='		,'9'		,0x03C6		,0x03A6		},
+{'Q'			,CAPLOK		,'q'		,'Q'		,'&'		,'+'		,0x03d5		,0x211a		},
+{'U'			,CAPLOK		,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x222e		},	//WCH_NONE sollte »Pos 1« sein (AHK?)
+{'I'			,CAPLOK		,'i'		,'I'		,'/'		,WCH_NONE	,0x03B9		,0x222b		},	//WCH_NONE sollte »Pfeil links« sein (AHK?)
+{'A'			,CAPLOK		,'a'		,'A'		,'{'		,WCH_NONE	,0x03B1		,0x2200		},	//WCH_NONE sollte »Pfeil runter« sein (AHK?)
+{'E'			,CAPLOK		,'e'		,'E'		,'}'		,WCH_NONE	,0x03B5		,0x2203		},	//WCH_NONE sollte »Pfeil rechts« sein (AHK?)
+{'O'			,CAPLOK		,'o'		,'O'		,'*'		,WCH_NONE	,0x03bf		,0x2208		},	//WCH_NONE sollte »Ende« sein (AHK?)
+{'S'			,CAPLOK		,'s'		,'S'		,'?'		,0x00BF		,0x03C3		,0x03A3		},
+{'N'			,CAPLOK		,'n'		,'N'		,'('		,'4'		,0x03BD		,0x2115		},
+{'R'			,CAPLOK		,'r'		,'R'		,')'		,'5'		,0x03f1		,0x211d		},
+{'T'			,CAPLOK		,'t'		,'T'		,'-'		,'6'		,0x03C4		,0x2202		},
+{'D'			,CAPLOK		,'d'		,'D'		,':'		,','		,0x03B4		,0x0394		},
+{VK_OEM_5		,CAPLOK		,0x00FC		,0x00DC		,'#'		,0x001b		,WCH_NONE	,0x221d		},
+{VK_OEM_7		,CAPLOK		,0x00E4		,0x00C4		,'|'		,WCH_NONE	,0x03B7		,0x211c		},	//WCH_NONE sollte »Bild runter« sein (AHK?)
+{'P'			,CAPLOK		,'p'		,'P'		,'~'		,'\r'		,0x03C0		,0x03A0		},
+{'Z'			,CAPLOK		,'z'		,'Z'		,'`'		,WCH_NONE	,0x03B6		,0x2124		},
+{'B'			,CAPLOK		,'b'		,'B'		,'+'		,':'		,0x03B2		,0x21d0		},
+{'M'			,CAPLOK		,'m'		,'M'		,'%'		,'1'		,0x00b5		,0x21d4		},
+{VK_OEM_COMMA	,0			,','		,0x22ee		,'\"'		,'2'		,0x03c1		,0x21d2		},
+{VK_OEM_PERIOD	,0			,'.'		,0x2026		,'\''		,'3'		,0x03d1		,0x0398		},
+{0				,0			,0			,0			,0			,0			,0			,0			}
+};
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
-//                            |            |   SHIFT              |   KANA                  |  NEU        |  KANA+Shift      |   NEU+Kana     |  Control        | 
-//                            |            |===============|================|===============|===============|================|===============|
-{VK_OEM_3        ,CAPLOK        ,0x00df        ,0x1E9E     ,0x017F        ,WCH_NONE    ,0x03C2        ,0x2218        ,0x2218        },
-{VK_OEM_4        ,0            ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,WCH_DEAD    ,0x001d        },//Tote Taste 3
-{0xff            ,0            ,0x007E        ,0x00AF        ,0x00A8        ,0x002F        ,0x02DD        ,','        ,WCH_NONE    },
-{'Y'            ,CAPLOK        ,'y'        ,'Y'        ,'@'        ,'.'        ,0x03C5        ,0x2207        ,0x001c        },
-{VK_OEM_6        ,CAPLOK        ,0x00F6        ,0x00D6        ,'$'        ,'\t'        ,WCH_NONE    ,0x2111        ,WCH_NONE    },
-{VK_SPACE        ,0          ,' '        ,' '        ,' '        ,'0'        ,0x00a0        ,0x2009        ,' '        },
-{VK_BACK        ,0            ,'\b'        ,'\b'        ,'\b'        ,'\b'        ,'\b'        ,'\b'        ,0x007f        },
-{VK_ESCAPE        ,0            ,0x001b        ,0x001b        ,0x001b        ,0x001b        ,0x001b        ,0x001b        ,0x001b        },
-{VK_RETURN        ,0            ,'\r'        ,'\r'        ,WCH_NONE    ,WCH_NONE    ,WCH_NONE    ,WCH_NONE    ,'\n'        },
-{VK_CANCEL        ,0            ,0x0003        ,0x0003        ,WCH_NONE    ,WCH_NONE    ,WCH_NONE    ,WCH_NONE    ,0x0003        },
-{0                ,0            ,0            ,0            ,0            ,0            ,0            ,0            ,0            }
+//				| CapsLock	|			| SHIFT		| KANA		| NEU		| KANA+Shift| NEU+Kana	| Control	|
+//				|===========|===========|===========|===========|===========|===========|===========|===========|
+{VK_OEM_3		,CAPLOK		,0x00df		,0x1E9E	 ,0x017F		,WCH_NONE	,0x03C2		,0x2218		,0x2218		},
+{VK_OEM_4		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,0x001d		},	//Tote Taste 3
+{0xff			,0			,0x007E		,0x00AF		,0x00A8		,0x002F		,0x02DD		,','		,WCH_NONE	},
+{'Y'			,CAPLOK		,'y'		,'Y'		,'@'		,'.'		,0x03C5		,0x2207		,0x001c		},
+{VK_OEM_6		,CAPLOK		,0x00F6		,0x00D6		,'$'		,'\t'		,WCH_NONE	,0x2111		,WCH_NONE	},
+{VK_SPACE		,0			,' '		,' '		,' '		,'0'		,0x00a0		,0x2009		,' '		},
+{VK_BACK		,0			,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,0x007f		},
+{VK_ESCAPE		,0			,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		},
+{VK_RETURN		,0			,'\r'		,'\r'		,WCH_NONE	,WCH_NONE	,WCH_NONE	,WCH_NONE	,'\n'		},
+{VK_CANCEL		,0			,0x0003		,0x0003		,WCH_NONE	,WCH_NONE	,WCH_NONE	,WCH_NONE	,0x0003		},
+{0				,0			,0			,0			,0			,0			,0			,0			,0			}
 };                                                                  
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
-//                            |            |   SHIFT              |   KANA                  |  NEU        |  KANA+Shift      |   NEU+Kana     |  Control        |  Control+Shift    |
-//                            |            |===============|================|===============|===============|================|===============|===============|
-{'2'            ,0            ,'2'        ,0x2116        ,0x00b2        ,0x2023        ,0x2082        ,0x2228        ,WCH_NONE    ,0x0000        },
-{'6'            ,0            ,'6'        ,0x20ac        ,0x00A2        ,0x00a3        ,0x2642        ,0x2225        ,WCH_NONE    ,0x001e        },
-{'J'            ,CAPLOK        ,'j'        ,'J'        ,';'        ,';'        ,0x03b8        ,0x2261        ,WCH_NONE    ,0x001f        },
-{0                ,0            ,0            ,0            ,0            ,0            ,0            ,0            ,0            ,0            }
-};                                                                  
+//				| CapsLock	|			| SHIFT		| KANA		| NEU		| KANA+Shift| NEU+Kana	| Control	| Control+Shift|
+//				|===========|===========|===========|===========|===========|===========|===========|===========|==============|
+{'2'			,0			,'2'		,0x2116		,0x00b2		,0x2023		,0x2082		,0x2228		,WCH_NONE	,0x0000		},
+{'6'			,0			,'6'		,0x20ac		,0x00A2		,0x00a3		,0x2642		,0x2225		,WCH_NONE	,0x001e		},
+{'J'			,CAPLOK		,'j'		,'J'		,';'		,';'		,0x03b8		,0x2261		,WCH_NONE	,0x001f		},
+{0				,0			,0			,0			,0			,0			,0			,0			,0			,0			}
+};
 
 // Put this last so that VkKeyScan interprets number characters
 // as coming from the main section of the kbd  before considering
@@ -309,33 +307,33 @@ Entgegen der neo20.txt vorgesehene Belegung 1,2,3,5 ist hier 1,2,3,4 umgesetzt:
 ¦ 1  4 ¦  
 ¦ 2  3 ¦ 
  +-----+ 
-1. Ebene (kein Mod)     (Ziffern)
-2. Ebene (Umschalt)    (Steuertasten)
-3. Ebene (Mod3)        (Pfeile u.ä.)
-4. Ebene (Mod4)        (anderes Zeug)
+1. Ebene (kein Mod)		(Ziffern)
+2. Ebene (Umschalt)		(Steuertasten)
+3. Ebene (Mod3)			(Pfeile u.ä.)
+4. Ebene (Mod4)			(anderes Zeug)
 */
 
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
 //                            |            |   SHIFT        |   KANA        |      NEU        |
 //                            |            |===============|================|===============|
-{VK_ADD            ,0            ,'+'        ,'+'        ,0x00b1        ,0x2213        },
-{VK_DIVIDE        ,0            ,'/'        ,'/'        ,0x00f7        ,0x2215        },
-{VK_MULTIPLY    ,0            ,'*'        ,'*'        ,0x00d7        ,0x2219        },
-{VK_SUBTRACT    ,0            ,'-'        ,'-'        ,0x2052        ,WCH_NONE    },
-{VK_DECIMAL        ,0            ,','        ,','        ,'.'        ,','        },
-{VK_NUMPAD0        ,0          ,'0'          ,'0'          ,0x0025        ,0x2030        },
-{VK_NUMPAD1        ,0          ,'1'          ,'1'          ,0x2194        ,0x2264       },
-{VK_NUMPAD2        ,0          ,'2'          ,'2'          ,0x2193        ,0x222a        },
-{VK_NUMPAD3        ,0          ,'3'          ,'3'          ,0x21cc        ,0x2265        },
-{VK_NUMPAD4        ,0          ,'4'          ,'4'          ,0x2190        ,0x2282        },
-{VK_NUMPAD5        ,0          ,'5'          ,'5'          ,0x221e        ,0x220B        },
-{VK_NUMPAD6        ,0          ,'6'          ,'6'          ,0x2192        ,0x2283        },
-{VK_NUMPAD7        ,0          ,'7'          ,'7'          ,0x2195        ,0x226a        },
-{VK_NUMPAD8        ,0          ,'8'          ,'8'          ,0x2191        ,0x2229        },
-{VK_NUMPAD9        ,0          ,'9'          ,'9'          ,0x2297        ,0x226b        },
-{0                ,0             ,0            ,0            ,0            ,0            }
-};                                                      
+{VK_ADD			,0			,'+'		,'+'		,0x00b1		,0x2213		},
+{VK_DIVIDE		,0			,'/'		,'/'		,0x00f7		,0x2215		},
+{VK_MULTIPLY	,0			,'*'		,'*'		,0x00d7		,0x2219		},
+{VK_SUBTRACT	,0			,'-'		,'-'		,0x2052		,WCH_NONE	},
+{VK_DECIMAL		,0			,','		,','		,'.'		,','		},
+{VK_NUMPAD0		,0			,'0'		,'0'		,0x0025		,0x2030		},
+{VK_NUMPAD1		,0			,'1'		,'1'		,0x2194		,0x2264		},
+{VK_NUMPAD2		,0			,'2'		,'2'		,0x2193		,0x222a		},
+{VK_NUMPAD3		,0			,'3'		,'3'		,0x21cc		,0x2265		},
+{VK_NUMPAD4		,0			,'4'		,'4'		,0x2190		,0x2282		},
+{VK_NUMPAD5		,0			,'5'		,'5'		,0x221e		,0x220B		},
+{VK_NUMPAD6		,0			,'6'		,'6'		,0x2192		,0x2283		},
+{VK_NUMPAD7		,0			,'7'		,'7'		,0x2195		,0x226a		},
+{VK_NUMPAD8		,0			,'8'		,'8'		,0x2191		,0x2229		},
+{VK_NUMPAD9		,0			,'9'		,'9'		,0x2297		,0x226b		},
+{0				,0			,0			,0			,0			,0			}
+};
 
 // Hier müssen die verwendeten WChar_Tables vorkommen; Numpad MUSS letzte Zeile sein.
 static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
