@@ -1,7 +1,5 @@
 == Dateien ==
 neo_de.xmodmap          	Normale Version für die meisten Benutzer
-neo_de_evdev.xmodmap    	für KDE4 mit evdev¹ (unter KDE4 funktioniert jedoch auch die normal
-				neo_de.xmodmap einwandfrei)
 neo_de_x-prog.xmodmap		bei älteren Programmen (wie xedit, xpdf,…) kann das Problem auftreten,
 				dass einige Tastan (4vlcwiaeäp) nicht funktionieren. Werden solche
 				Programme verwendet, sollte diese NEO-Datei bevorzugt werden.
@@ -54,5 +52,7 @@ Besser ist auch hier die Verwendung des Skripts ›uiae‹.
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
 
-¹ um die evdev auf dem laufenden zu halten kann folgende auf die neo_de.xmodmap anwenden:
-  sed -e 's/^keycode 112/keycode 106/;s/^keycode 108/keycode 104/;s/^keycode 113/keycode 108/' neo_de.xmodmap > neo_de_evdev.xmodmap
+• Wo ist die neo_de_evdev.xmodmap hinverschwunden?
+
+  Für evdev wird keine eigene xmodmap mehr benötigt.
+  Es kann die normale neo_de.xmodmap verwendet werden.
