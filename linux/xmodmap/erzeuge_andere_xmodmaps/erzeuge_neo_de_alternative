@@ -1,0 +1,1 @@
+cat ../neo_de.xmodmap | sed s/U202F/NoSymbol/g | sed s/dead_stroke/NoSymbol/g
