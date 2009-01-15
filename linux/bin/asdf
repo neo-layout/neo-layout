@@ -29,6 +29,7 @@ NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
 NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
 NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
 NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
+
 die() {
 	$ECHO_e "${red}$@${normal}" >&2
 	$ECHO_e "${red}Die Belegung konnte nicht auf NEO geändert werden.${normal}" >&2
@@ -95,6 +96,16 @@ HELP
 exit 0
 }
 
+if [ -f "${NEO_CONFIG}" ]; then
+	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
+elif [ -f "${HOME}"/.neorc ]; then
+	. "${HOME}"/.neorc || die "Fehler beim Verwenden der Konfigurationsdatei ${HOME}/.neorc"
+elif [ -f /etc/neo.conf ]; then
+	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
+else
+	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden.\nDas Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
+fi
+
 while [ ! -z "$1" ]; do
 	case $1 in
 		-h | --help )
@@ -110,16 +121,6 @@ while [ ! -z "$1" ]; do
 	esac
 	shift
 done
-
-if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Fehler beim Verwenden der Konfigurationsdatei ${NEO_CONFIG}"
-elif [ -f "${HOME}"/.neorc ]; then
-	. "${HOME}"/.neorc || die "Fehler beim Verwenden der Konfigurationsdatei ${HOME}/.neorc"
-elif [ -f /etc/neo.conf ]; then
-	. /etc/neo.conf || die "Fehler beim Verwenden der Konfigurationsdatei /etc/neo.conf"
-else
-	$ECHO_e "${red}Keine Konfigurationsdatei für NEO gefunden.\nDas Verwenden der Standardwerte kann fehlschlagen!${normal}" >&2
-fi
 
 if [ -n "$SSH_CONNECTION" ]; then
 	die "In einer ssh-session kann die Belegung nicht geändert werden."
