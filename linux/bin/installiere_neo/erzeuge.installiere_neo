@@ -24,15 +24,16 @@ name_gross=`echo $name | tr [:lower:] [:upper:]`
 cp $datei ./erzeuge_installiere_neo.bak1
 sed s/\\$/\\\\$/g erzeuge_installiere_neo.bak1 > erzeuge_installiere_neo.bak2
 sed s/\`/\\\\\`/g erzeuge_installiere_neo.bak2 > erzeuge_installiere_neo.bak3
+sed s/\\\\\$HOME\\/neo/\\\$inst_dir/g erzeuge_installiere_neo.bak3 > erzeuge_installiere_neo.bak4
 
 echo
 echo "$name ()"
 echo "{"
 echo "cat <<$name_gross"
-cat ./erzeuge_installiere_neo.bak3
+cat ./erzeuge_installiere_neo.bak4
 echo $name_gross
 echo "}"
-rm ./erzeuge_installiere_neo.bak[123]
+rm ./erzeuge_installiere_neo.bak[1234]
 }
 
 
