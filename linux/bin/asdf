@@ -5,9 +5,6 @@
 # Copyright 2008 Erik Streb del Toro
 # Distributed under the terms of the GNU General Public License v3
 
-#prevent CapsLock while ›asdf‹ is running
-xmodmap -e "clear Lock" 2> /dev/null
-
 # colour definitions
 normal="\033[0m"
 red="\033[31m"
@@ -128,9 +125,15 @@ fi
 
 if [ -z ${DISPLAY} ]; then
 	setleds +num || numlock_manually an
-	setleds -caps
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
+	# schalte versehentlich angeschaltetes CapsLock aus
+	# keymap hat nur shiftlock => man kommt nicht mehr raus…
+	setleds -caps
 else
+	# versuche in letzter Sekunde versehentliches CapsLock anschalten zu verhindern
+	# xmodmap hat nur shiftlock => man kommt nicht mehr raus…
+	xmodmap -e "clear Lock"
+
 	numlockx off || numlock_manually aus
 
 	for modifier in 51 94; do
