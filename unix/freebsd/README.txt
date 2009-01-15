@@ -37,10 +37,11 @@ Auch hier ergeben sich Probleme mit den Modifiern und bisher scheinen nur
 Ebene 1 und 2 verfügbar zu sein.
 
 === Xmodmap ===
-Auch das Laden von neo_de.xmodmap ist möglich aber es ergeben sich ähnliche
-Probleme wie bei Xkb.
+Die neo_de.xmodmap aus dem Linux-Verzeichnis sollte mit 7.1 fast alle
+bekannten Funktionen liefern. Genaueres wird in Kürze ergänzt.
 
 == Todo  ==
 
-* Funktionierender X-Treiber
+* Modifier für Xmodmap durchtesten 
+* Probleme bei Xkb identifizieren
 * Test der Treiber auf Systemen die auf FreeBSD beruhen wie PC-BSD, etc
