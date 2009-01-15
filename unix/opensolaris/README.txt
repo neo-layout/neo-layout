@@ -2,7 +2,15 @@
 
 == Neo 2 an der Konsole ==
 
-Bisher existiert kein Treiber für die Konsole.
+Bisher existiert kein Treiber für die Konsole. Es wird vermutlich auch in
+abschaubarer Zeit keiner verfügbar sein durch die Architektur von Solaris,
+welche unterschiedliche Layouts im Kernel implementiert. 
+
+Aus man kbd:
+  To set the language by default, set the LAYOUT  variable in
+  the  file /etc/default/kbd to the expected language. These
+  languages supported in kernel can be found by running kbd
+  -s. Other values are ignored. 
 
 == Neo 2 unter X ==
 
@@ -25,6 +33,7 @@ gute Möglichkeit Sonderzeichen dargestellt zu bekommen auch ohne die Locale
 korrekt zu setzen.
 
 == TODO ==
+* Durchtesten der Modifier für Xmodmap
 * Fehlersuche für linux/X/de
-* Ist NEO 1 in xkb/symbols?
-* Treiber für Konsolenmodus
+* Ist NEO 1 in xkb/symbols? (Nein)
+* Treiber für Konsolenmodus (bleibt aus)
