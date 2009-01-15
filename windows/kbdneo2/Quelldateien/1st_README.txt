@@ -1,6 +1,6 @@
 1. WinDDK installieren (Bestandteil von WDK, über das MSDN zu erhalten).
 
-2. Im Ordner \src\input\layout\all_kbds\kbdneo2 des WDKs einen neuen Ordner namens 'kbdneo2' anlegen.
+2. Im Ordner \src\input\layout\all_kbds\ des WDKs einen neuen Ordner namens 'kbdneo2' anlegen.
 
 3. Alle Quelldateien in diesen Ordner kopieren.
 
@@ -9,6 +9,8 @@
 >     kbdfr \
 >     kbdgr \
 >     kbdneo2
+
+Bei der neusten Version des WDKs ist dies anscheinend nicht mehr nötig
 
 5. Mit einem normalem Texteditor können nun die Quelldateien bearbeitet werden. Kommentare befinden sich in den jeweiligen Dateien.
 

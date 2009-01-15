@@ -188,6 +188,7 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 		SHFT_INVALID,	//	1		0		1		1		1
 		5,				//	1		1		0		0		0
 	}
+};
 
 /***************************************************************************\
 *
@@ -219,9 +220,8 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 *
 \***************************************************************************/
 
-// Reihenfolge der Ebene wie oben ( ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {    &aVkToBits[0],)… festgelegt
-
 static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
+// Reihenfolge der Ebene wie oben ( ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {    &aVkToBits[0],)… festgelegt
 //				| CapsLock	|			| SHIFT		| KANA		| NEU		| KANA+Shift| NEU+Kana	|
 //				|===========|===========|===========|===========|===========|===========|===========|
 {VK_OEM_1		,0			,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},	//Tote Taste 1
