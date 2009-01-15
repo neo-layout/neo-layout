@@ -42,8 +42,8 @@ die2() {
 }
 
 numlock_manually() {
-	$ECHO_e "${orange}$1${normal}" >&2
-	$ECHO_e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$2${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
+	$ECHO_e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+	$ECHO_e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$1${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
 	read enter
 }
 
@@ -127,11 +127,11 @@ if [ -n "$SSH_CONNECTION" ]; then
 fi
 
 if [ -z ${DISPLAY} ]; then
-	setleds +num || numlock_manually "Fehler beim setzen des Status von NumLock." an
+	setleds +num || numlock_manually an
 	setleds -caps
 	set_keymap "${NEO_CONSOLE_KEYMAP}"
 else
-	numlockx off || numlock_manually "Fehler beim setzen des Status von NumLock." aus
+	numlockx off || numlock_manually aus
 
 	for modifier in 51 94; do
 		xset -r ${modifier} || $ECHO_e "${orange}Fehler beim Ausschalten von Autorepeat beim Modifier ${modifier}.${normal}" >&2
