@@ -6,13 +6,13 @@ zeile() {
 
 
 grep -B 1000 "! Keypad" ../neo_de.xmodmap
-grep -A 1000 "! Keypad" ../neo_de.xmodmap | tail +2 > erzeuge_neo_de_referenz.1
+grep -A 1000 "! Keypad" ../neo_de.xmodmap | tail -n +2 > erzeuge_neo_de_referenz.1
 
 anzahl=`wc -l erzeuge_neo_de_referenz.1 | cut -f 1 -d \ `
-for i in $(seq 1 $anzahl)
+for i in `seq 1 $anzahl`
 do
 	anfang=`zeile $i | cut -c 1-3`
-	if [ "$anfang" == "key" ]
+	if [ "FOO$anfang" = "FOOkey" ]
 	then
 		tausche0=`zeile $i | tr [:blank:] " "`
 		tausche1=`echo $tausche0 | cut -f 8 -d \ `
