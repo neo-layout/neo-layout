@@ -7,11 +7,11 @@ grafik:
 	make -kC grafik 
 
 linux/bin/installiere_neo:
-	make -kC linux/bin/installiere_neo
+	make -kC linux
 
 svnclean:
 	make -C portable clean
-	make -C linux/bin/installiere_neo clean
+	make -C linux clean
 
 clean: svnclean 
 	make -kC grafik clean
