@@ -1,4 +1,4 @@
-FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap xmodmap/neo_de_alternative.xmodmap
+FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap xmodmap/neo_de_alternative.xmodmap xmodmap/neo_de.xmodmap.referenz
 
 all:${FILES}
 
