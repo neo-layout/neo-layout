@@ -164,8 +164,8 @@ keycode 20 = minus		emdash		NoSymbol	U2011		KP_Subtract	KP_Subtract	hyphen		NoSy
 
 keycode 24 = 	x		X		ellipsis	Greek_xi	U22EE		NoSymbol	Greek_XI	Greek_XI
 !						…		ξ		⋮				Ξ		Ξ
-keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	U2259		NoSymbol
-!						_								≙		≙
+keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	U222E		NoSymbol
+!						_								∮ contour integral	
 keycode 26 = 	l		L		bracketleft	Greek_lambda	Up		Up		Greek_LAMBDA	Greek_LAMBDA
 !						[		λ						Λ		Λ
 keycode 27 = 	c		C		bracketright	Greek_chi	Delete		Delete		U2102		NoSymbol
@@ -191,8 +191,8 @@ keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  NoSymbol	NoSymbol	jot	
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 38 = 	u		U		backslash	NoSymbol	Home		Home		U222E		NoSymbol
-!						\								∮ contour integral
+keycode 38 = 	u		U		backslash	NoSymbol	Home		Home		U00B5		NoSymbol
+!						\								µ
 keycode 39 = 	i		I		slash		Greek_iota	Left		Left		integral	NoSymbol
 !						/		ι						∫
 keycode 40 = 	a		A		braceleft	Greek_alpha	Down		Down		U2200		NoSymbol
