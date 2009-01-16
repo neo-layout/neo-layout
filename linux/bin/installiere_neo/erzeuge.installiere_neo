@@ -21,19 +21,19 @@ datei=$2
 name=$1
 name_gross=`echo $name | tr [:lower:] [:upper:]`
 
-cp $datei ./erzeuge_installiere_neo.bak1
-sed s/\\$/\\\\$/g erzeuge_installiere_neo.bak1 > erzeuge_installiere_neo.bak2
-sed s/\`/\\\\\`/g erzeuge_installiere_neo.bak2 > erzeuge_installiere_neo.bak3
-sed s/\\\\\$HOME\\/neo/\\\$inst_dir/g erzeuge_installiere_neo.bak3 > erzeuge_installiere_neo.bak4
+cp $datei ./erzeuge_installiere_neo.bak
+sed -i 's%\$%\\$%g' erzeuge_installiere_neo.bak
+sed -i 's%`%\\`%g' erzeuge_installiere_neo.bak
+sed -i 's%\\$HOME/neo%$inst_dir%g' erzeuge_installiere_neo.bak
 
 echo
 echo "$name ()"
 echo "{"
 echo "cat <<$name_gross"
-cat ./erzeuge_installiere_neo.bak4
+cat ./erzeuge_installiere_neo.bak
 echo $name_gross
 echo "}"
-rm ./erzeuge_installiere_neo.bak[1234]
+rm -f ./erzeuge_installiere_neo.bak
 }
 
 
