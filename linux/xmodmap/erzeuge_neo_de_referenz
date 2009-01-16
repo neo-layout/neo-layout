@@ -5,8 +5,8 @@ zeile() {
 }
 
 
-grep -B 1000 "! Keypad" ../neo_de.xmodmap
-grep -A 1000 "! Keypad" ../neo_de.xmodmap | tail -n +2 > erzeuge_neo_de_referenz.1
+grep -B 1000 "! Keypad" neo_de.xmodmap
+grep -A 1000 "! Keypad" neo_de.xmodmap | tail -n +2 > erzeuge_neo_de_referenz.1
 
 anzahl=`wc -l erzeuge_neo_de_referenz.1 | cut -f 1 -d \ `
 for i in `seq 1 $anzahl`
