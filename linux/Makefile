@@ -1,0 +1,32 @@
+FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap xmodmap/neo_de_alternative.xmodmap
+
+all:${FILES}
+
+bin/installiere_neo/installiere_neo: xmodmap/neo_de.xmodmap console/neo.map bin/asdf bin/uiae ../A-REFERENZ-A/neo20.txt bin/neo bin/num bin/wiemitneo bin/beschreibe ../Compose/Compose.neo etc/neo.conf bin/installiere_neo/erzeuge.installiere_neo bin/installiere_neo/installiere_neo.1 bin/installiere_neo/installiere_neo.2 
+	cd bin/installiere_neo; ./erzeuge.installiere_neo > installiere_neo
+	chmod a+x $@
+
+xmodmap/neo_de_x-prog.xmodmap:xmodmap/neo_de.xmodmap
+	sed -e 's/\x09Up/\x9KP_Up/g'\
+      -e 's/BackSpace/NoSymbol/g'\
+      -e 's/\x09Delete/\x09KP_Delete/g'\
+      -e 's/\x09Insert/\x09KP_Insert/g'\
+      -e 's/\x09Home/\x09KP_Home/g'\
+      -e 's/\x09Left/\x09KP_Left/g'\
+      -e 's/\x09Down/\x09KP_Down/g'\
+      -e 's/\x09Right/\x09KP_Right/g'\
+      -e 's/\x09End/\x09KP_End/g'\
+      -e 's/\x09Next/\x09KP_Next/g'\
+      -e 's/\x09Return/\x09KP_Enter/g' $< > $@
+
+
+xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
+	 sed -e s/U202F/NoSymbol/g -e s/dead_stroke/NoSymbol/g $< > $@
+
+xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
+	cd xmodmap/erzeuge_andere_xmodmaps; ./erzeuge_neo_de_referenz > ../neo_de.xmodmap.referenz
+
+clean: 
+	rm -f ${FILES}
+
+.PHONY: clean
