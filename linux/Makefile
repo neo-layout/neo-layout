@@ -24,7 +24,7 @@ xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
 	 sed -e s/U202F/NoSymbol/g -e s/dead_stroke/NoSymbol/g $< > $@
 
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
-	cd xmodmap/erzeuge_andere_xmodmaps; ./erzeuge_neo_de_referenz > ../neo_de.xmodmap.referenz
+	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
 
 clean: 
 	rm -f ${FILES}
