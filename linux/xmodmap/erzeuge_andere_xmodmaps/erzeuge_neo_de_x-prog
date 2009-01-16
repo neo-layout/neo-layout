@@ -1,1 +1,3 @@
-sed -f erzeuge_neo_de_x-prog.sed ../my.neo_de.xmodmap
+#!/bin/sh
+
+sed -f erzeuge_neo_de_x-prog.sed ../neo_de.xmodmap
