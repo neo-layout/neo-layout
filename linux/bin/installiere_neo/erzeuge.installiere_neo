@@ -21,10 +21,7 @@ datei=$2
 name=$1
 name_gross=`echo $name | tr [:lower:] [:upper:]`
 
-cp $datei ./erzeuge_installiere_neo.bak
-sed -i 's%\$%\\$%g' erzeuge_installiere_neo.bak
-sed -i 's%`%\\`%g' erzeuge_installiere_neo.bak
-sed -i 's%\\$HOME/neo%$inst_dir%g' erzeuge_installiere_neo.bak
+sed -e 's%\$%\\$%g' -e 's%`%\\`%g' -e 's%\\$HOME/neo%$inst_dir%g' "$datei" > ./erzeuge_installiere_neo.bak
 
 echo
 echo "$name ()"
