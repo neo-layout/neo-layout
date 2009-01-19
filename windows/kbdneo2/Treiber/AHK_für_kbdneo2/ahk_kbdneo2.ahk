@@ -13,7 +13,6 @@ isMod4Locked := 0
 isMod4Active := 0
 
 
-
 ~F24::return
 
 
@@ -142,47 +141,53 @@ if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{PGUP} 
 return 
  
-~l:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{UP} 
-return 
- 
-~c:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{DEL} 
-return 
- 
-~w:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{INS} 
-return 
- 
-~u:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{HOME} 
-return 
- 
-~i:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{LEFT} 
-return 
- 
-~a:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{DOWN} 
-return 
- 
-~e:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{RIGHT} 
-return 
- 
-~o:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{END} 
-return 
- 
-~ä:: 
-if (isMod4Active and !isMod3Pressed) 
-Sendinput {Blind}{PGDN} 
-return 
+~v::
+if (isMod4Active and !isMod3Pressed)
+Ifwinactive ahk_class Notepad++
+Sendinput {Blind}{BACKSPACE}{BACKSPACE}
+return
+
+~l::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{UP}
+return
+
+~c::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{DEL}
+return
+
+~w::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{INS}
+return
+
+~u::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{HOME}
+return
+
+~i::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{LEFT}
+return
+
+~a::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{DOWN}
+return
+
+~e::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{RIGHT}
+return
+
+~o::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{END}
+return
+
+~ä::
+if (isMod4Active and !isMod3Pressed)
+Sendinput {Blind}{PGDN}
+return
