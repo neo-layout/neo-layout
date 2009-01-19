@@ -12,6 +12,8 @@ isMod4Pressed := 0
 isMod4Locked := 0
 isMod4Active := 0
 
+#include %A_ScriptDir%
+#include *i icon.ahk
 
 ~F24::return
 
@@ -187,7 +189,19 @@ if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{END}
 return
 
+~ö::
+if (isMod4Active and !isMod3Pressed)
+Ifwinactive ahk_class Notepad++
+Sendinput {Blind}{BACKSPACE}{TAB}
+return
+
 ~ä::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{PGDN}
+return
+
+~p::
+if (isMod4Active and !isMod3Pressed)
+Ifwinactive ahk_class Notepad++
+Sendinput {Blind}{BACKSPACE}{ENTER}
 return
