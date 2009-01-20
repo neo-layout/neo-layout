@@ -18,6 +18,7 @@ http://dejavu.sourceforge.net/
 │2 4 6│ 2 … 2. Ebene (Umschalt)     │ 5 … 5. Ebene (Mod3+Umschalt)
 │1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
+
 • Ebene 1: Kleinbuchstaben                   (kein Mod) 
 • Ebene 2: Großbuchstaben                    (Umschalt)
 • Ebene 3: Sonderzeichen                     (Mod3)
@@ -67,26 +68,26 @@ Zu den Akzenten siehe auch
 
 T1 („Tote Taste 1“: Taste links neben der 1)
         1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
-┌─────┬ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
+┌─────┐ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
 │˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
 │ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
-├─────┴ 5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
+└─────┘ 5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
         6 … Toter Makron (sieht aus wie U+00AF MACRON)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Grave (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
-┬─────┬ 2 … 
-│  ˵  │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
+┌─────┐ 2 … 
+│  ̏   │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
 │` ¨ ῾│ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
-┴──┬──┴ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
+└─────┘ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 … 
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
         1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
-┬──┴──┬ 2 … Tote Cedilla (sieht aus wie U+00B8 CEDILLA)
+┌─────┐ 2 … Tote Cedilla (sieht aus wie U+00B8 CEDILLA)
 │¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
 │´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
-┴┬────┴ 5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
+└─────┘ 5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
         6 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
 
 ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
@@ -105,10 +106,10 @@ Zu den Gedankenstrichen usw. siehe
 
 Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
-┬─────┬ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
+┌─────┐ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
 │—   ╌│ 3 … 
 │-   ‑│ 4 … 
-┴──┬──┴ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
+└─────┘ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 # Außerdem gibt es noch
@@ -120,30 +121,30 @@ Taste rechts neben der 0
 === Anführungszeichen ===
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
-┬─────┬
+┌─────┐
 │» ⇞ ⊥│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
 │4 › ℓ│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
-┴──┬──┴
+└─────┘
 
-┬─────┬
+┌─────┐
 │« · ∡│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
 │5 ‹ †│ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
-┴──┬──┴
+└─────┘
 
-┬─────┬
-│„ / ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
+┌─────┐
+│„   ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
 │8 ‚ ⟨│ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
-┴──┬──┴
+└─────┘
 
-┬─────┬
-│“ * ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
+┌─────┐
+│“ / ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
 │9 ‘ ⟩│ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
-┴──┬──┴
+└─────┘
 
-┬─────┬
-│” - ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
+┌─────┐
+│” * ∅│ 2 … ” englisches schließendes Gänsefüßchen (U+201D RIGHT DOUBLE QUOTATION MARK)
 │0 ’ ₀│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
-┴──┬──┴
+└─────┘
 
 === Dezimaltrennzeichen ===
 Das Dezimaltrennzeichen ist auf englischen und südamerikanischen Systemen ein Punkt ».«.
@@ -166,11 +167,11 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 │   Mod   │U ⇱ µ│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│ Mod │  ↲  │
 │    3    │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│  3  │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│CapsLk│ Mod │Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 Θ│J ; ∝│   CapsLock   │
-│Umsch │  4  │ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
+│CapsLk│ Lock│Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 Θ│J ; ∝│   CapsLock   │
+│Umsch │Mod4 │ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │      │ Alt  │Leerzeichen␣      0         schmal ¦  │ Lock │      │ Menü │ Strg │
-│      │      │      │Leerzeichen␣ Leerzeichen␣ geschützt ⍽ │ Mod4 │      │      │      │
+│      │      │      │Leerzeichen␣ Leerzeichen␣ geschützt ⍽ │Mod4  │      │      │      │
 └──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘
 
 === Erste Ebene – Miniatur ===
@@ -214,7 +215,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │º│ª│№│⇞│·│£│¤│/│*│-│ │˵│ Back │
+│ ˇ │º│ª│№│⇞│·│£│¤│ │/│*│-│˵│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -235,7 +236,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │Ums│M4│ │ │η│π│ζ│β│μ│ρ│ϑ│θ│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
-│Str│Fe│Al│geschütz.Lz│M4│Fe│Me│Str│
+│Str│Fe│Al│geschützt ⍽│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Sechste Ebene – Miniatur ===
@@ -248,7 +249,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │Ums│M4│ℜ│ℑ│ℵ│Π│ℤ│⇐│⇔│⇒│Θ│∝│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
-│Str│Fe│Al│ schmal.Lz.│M4│Fe│Me│Str│
+│Str│Fe│Al│  schmal ¦ │M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 == Ziffernblock ==
@@ -262,31 +263,31 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 └───────┘
 
 === Rechenzeichen ===
-┬───────┬ 1 … ASCII-Schrägstrich
+┌───────┐ 1 … ASCII-Schrägstrich
 │ / ⁄ ∣ │ 2 … ASCII-Schrägstrich
 │ / ÷ ⌀ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
-┼───────┼ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
+└───────┘ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
           5 … Durchmesser (U+2300 DIAMETER SIGN)
           6 … ist ein Teiler von (U+2223 DIVIDES)
 
-┬───────┬ 1 … ASCII-Malzeichen
+┌───────┐ 1 … ASCII-Malzeichen
 │ * × ⊗ │ 2 … ASCII-Malzeichen
 │ * ⋅ ⊙ │ 3 … Malpunkt (U+2219 BULLET OPERATOR)
-┼───────┼ 4 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
+└───────┘ 4 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
           5 … (U+2299 CIRCLED DOT OPERATOR)
           6 … (U+2297 CIRCLED TIMES)
 
-┬───────┐ 1 … ASCII-Minus
+┌───────┐ 1 … ASCII-Minus
 │ - ∖ ∸ │ 2 … ASCII-Minus
 │ - − ⊖ │ 3 … echtes Minuszeichen (U+2212 MINUS SIGN)
-┼───────┤ 4 … ohne (U+2216 SET MINUS)
+└───────┘ 4 … ohne (U+2216 SET MINUS)
           5 … (U+2296 CIRCLED MINUS)
           6 … (U+2238 DOT MINUS)
 
-┬───────┐ 1 … ASCII-Plus
+┌───────┐ 1 … ASCII-Plus
 │ + ∓ ∔ │ 2 … ASCII-Plus
 │ + ± ⊕ │ 3 … Plus-Minus (U+00B1 PLUS-MINUS SIGN)
-┼───────┤ 4 … Minus-Plus (U+2213 MINUS-OR-PLUS SIGN)
+└───────┘ 4 … Minus-Plus (U+2213 MINUS-OR-PLUS SIGN)
           5 … (U+2295 CIRCLED PLUS)
           6 … (U+2214 DOT PLUS)
 
@@ -385,6 +386,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ├───┴───┼───┤   │
 │ □     │ ″ │Ent│
 └───────┴───┴───┘
+
 == Tipp ==
 Trägt man unter Linux/Mac/BSD folgende Zeilen in die ~/.bashrc, ~/.zshrc oder
 vergleichbares ein, bekommt man anschließend mittels Eingabe von »neo« oder
