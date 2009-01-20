@@ -18,6 +18,7 @@
 <dead_doubleacute> <nobreakspace>          : "˝"   U02DD # DOUBLE ACUTE ACCENT
 <U1FBF> <nobreakspace>                     : "᾿"   U1FBF # GREEK PSILI
 <U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
+<U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 
 # combining characters
 <Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
@@ -38,6 +39,7 @@
 <Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
 <Multi_key> <U1FFE> <U1FFE>                : "҅"   U0485 # COMBINING CYRILLIC DASIA PNEUMATA
 <Multi_key> <U1FBF> <U1FBF>                : "҆"   U0486 # COMBINING CYRILLIC PSILI PNEUMATA
+<U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 
 # in standard Compose missing dead keys with spaces
 <dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
@@ -881,6 +883,20 @@
 <dead_stroke> <O>                        : "Ø"   Lstroke # LATIN CAPITAL LETTER O WITH STROKE
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+
+# letters with double grave
+<U02F5> <A>                              : "Ȁ"   U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
+<U02F5> <a>                              : "ȁ"   U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
+<U02F5> <E>                              : "Ȅ"   U0204 # LATIN CAPITAL LETTER E WITH DOUBLE GRAVE
+<U02F5> <e>                              : "ȅ"   U0205 # LATIN SMALL LETTER E WITH DOUBLE GRAVE
+<U02F5> <I>                              : "Ȉ"   U0208 # LATIN CAPITAL LETTER I WITH DOUBLE GRAVE
+<U02F5> <i>                              : "ȉ"   U0209 # LATIN SMALL LETTER I WITH DOUBLE GRAVE
+<U02F5> <O>                              : "Ȍ"   U020C # LATIN CAPITAL LETTER O WITH DOUBLE GRAVE
+<U02F5> <o>                              : "ȍ"   U020D # LATIN SMALL LETTER O WITH DOUBLE GRAVE
+<U02F5> <R>                              : "Ȑ"   U0210 # LATIN CAPITAL LETTER R WITH DOUBLE GRAVE
+<U02F5> <r>                              : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
+<U02F5> <U>                              : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
+<U02F5> <u>                              : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 
 # if you want to have ð and Ð with dead stroke instead of đ and Đ you should uncomment the next two lines
 # <dead_stroke> <d>                      : "ð"   U00F0 # LATIN SMALL LETTER ETH
