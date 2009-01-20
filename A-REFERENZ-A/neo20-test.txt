@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG: 
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -107,8 +107,8 @@ Zu den Gedankenstrichen usw. siehe
 Taste rechts neben der 0
         1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
 ┌─────┐ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│—   ╌│ 3 … 
-│-   ‑│ 4 … 
+│— - ╌│ 3 … 
+│-   ‑│ 4 … - KP_Minus
 └─────┘ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
