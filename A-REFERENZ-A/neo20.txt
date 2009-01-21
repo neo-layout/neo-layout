@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
-ACHTUNG: 
-Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
+ACHTUNG:
+Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
 
 Im Browser (Firefox) muss man unter Ansicht, Zeichenkodierung auf Unicode
 (UTF-8) stellen.
 
-Unter Windows ist in der Grundinstallation leider keine dicktengleiche Schrift 
+Unter Windows ist in der Grundinstallation leider keine dicktengleiche Schrift
 installiert, die befriedigend viele Unicodezeichen beinhaltet.
-Abhilfe schafft z. B. DejaVu Sans Mono (ist z. B. bei OpenOffice dabei):
+Abhilfe schafft z. B. DejaVu Sans Mono (ist z. B. bei OpenOffice dabei):
 http://dejavu.sourceforge.net/
 -------------------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ http://dejavu.sourceforge.net/
 │1 3 5│ 3 … 3. Ebene (Mod3)         │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
 
-• Ebene 1: Kleinbuchstaben                   (kein Mod) 
+• Ebene 1: Kleinbuchstaben                   (kein Mod)
 • Ebene 2: Großbuchstaben                    (Umschalt)
 • Ebene 3: Sonderzeichen                     (Mod3)
 • Ebene 4: Navigation und Ziffernblock       (Mod4)
@@ -46,11 +46,11 @@ Markierungen ist auch Ebene 1 des Keypads geeignet.
 Des Weiteren kann man die Zahlen auf Ebene 4 des Haupttastaturfelds benutzen, jedoch ist die
 Bedienung dort weniger komfortabel.
 
-=== Symbole ===                            
-⇞⇟   … Bild auf/Bild ab                  
-⇱⇲   … Pos1/Ende                         
-⌫ ⌦  … Backspace/Entf                    
-⌧    … Esc                               
+=== Symbole ===
+⇞⇟   … Bild auf/Bild ab
+⇱⇲   … Pos1/Ende
+⌫ ⌦  … Backspace/Entf
+⌧    … Esc
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
 ♫    … Steht als Symbol für die Kombotaste (Compose)
@@ -76,11 +76,11 @@ T1 („Tote Taste 1“: Taste links neben der 1)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         1 … Toter Grave (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
-┌─────┐ 2 … 
+┌─────┐ 2 …
 │  ̏   │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
 │` ¨ ῾│ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
 └─────┘ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
-        6 … 
+        6 …
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
         1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
@@ -105,9 +105,9 @@ Zu den Gedankenstrichen usw. siehe
 • http://de.wikipedia.org/wiki/Weicher_Trennstrich
 
 Taste rechts neben der 0
-        1 … 
+        1 …
 ┌─────┐ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│— - ╌│ 3 … 
+│— - ╌│ 3 …
 │    ‑│ 4 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) (KP-Variante)
 └─────┘ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
@@ -138,7 +138,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┌─────┐
 │“ / ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
-│9 ‘ ⟩│ 3   ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
+│9 ‘ ⟩│ 3 … ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
 └─────┘
 
 ┌─────┐
@@ -348,9 +348,9 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 │ %     │,/.│Ent│
 └───────┴───┴───┘
 
-=== Vierte Ebene – Miniatur === 
+=== Vierte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
-│ ≠ │ ⁄ │ × │ ∖ │ 
+│ ≠ │ ⁄ │ × │ ∖ │
 ├───┼───┼───┼───┤ frc means fraction slash ⁄
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
@@ -393,7 +393,7 @@ vergleichbares ein, bekommt man anschließend mittels Eingabe von »neo« oder
 »num« die aktuelle Belegung in der Konsole angezeigt:
 alias num='grep -m 1 -B 15 "┴───────┘"  PFAD_ZUR_DATEI/neo20.txt'
 alias neo='grep -m 1 -B 15 "┴──────┘" PFAD_ZUR_DATEI/neo20.txt'
- 
+
 Dazu muss »PFAD_ZUR_DATEI« durch den Pfad zu dieser Datei ersetzt werden.
 
 Im Verzeichnis linux/bin sind umfangreichere Skripte mit größerer Funktionalität.
