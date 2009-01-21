@@ -67,27 +67,27 @@ Zu den Akzenten siehe auch
 • http://de.wikipedia.org/wiki/Liste_lateinisch-basierter_Alphabete
 
 T1 („Tote Taste 1“: Taste links neben der 1)
-        1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
-┌─────┐ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
-│˜ ˇ ¯│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
-│ˆ ˚ ˘│ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
-└─────┘ 5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
+┌─────┐ 1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
+│˜ ˇ ¯│ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
+│ˆ ˚ ˘│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
+└─────┘ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
+        5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
         6 … Toter Makron (sieht aus wie U+00AF MACRON)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
-        1 … Toter Grave (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
-┌─────┐ 2 …
-│  ̏   │ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
-│` ¨ ῾│ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
-└─────┘ 5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
+┌─────┐ 1 … Toter Grave (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
+│  ̏   │ 2 …
+│` ¨ ῾│ 3 … Tote(s) Trema/Diärese/Diaeresis (sieht aus wie U+00A8 DIAERESIS)
+└─────┘ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
+        5 … Toter spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 …
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
-        1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
-┌─────┐ 2 … Tote Cedilla (sieht aus wie U+00B8 CEDILLA)
-│¸ ˝ ˙│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
-│´ / ᾿│ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
-└─────┘ 5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
+┌─────┐ 1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
+│¸ ˝ ˙│ 2 … Tote Cedilla (sieht aus wie U+00B8 CEDILLA)
+│´ / ᾿│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
+└─────┘ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
+        5 … Toter spiritus lenis (sieht aus wie U+1FBF GREEK PSILI)
         6 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
 
 ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
@@ -105,11 +105,11 @@ Zu den Gedankenstrichen usw. siehe
 • http://de.wikipedia.org/wiki/Weicher_Trennstrich
 
 Taste rechts neben der 0
-        1 …
-┌─────┐ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│— - ╌│ 3 …
-│    ‑│ 4 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) (KP-Variante)
-└─────┘ 5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
+┌─────┐ 1 …
+│— - ╌│ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
+│    ‑│ 3 …
+└─────┘ 4 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) (KP-Variante)
+        5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 # Außerdem gibt es noch
