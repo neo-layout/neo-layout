@@ -1,4 +1,4 @@
-﻿== Installationsanleitung ==
+== Installationsanleitung ==
 Die Layout-Datei neo.keylayout kopiert man mit dem Terminal nach
     cp ~/Downloads/neo.keylayout.txt ~/Library/Keyboard\ Layouts/neo.keylayout
 und meldet sich ab und wieder an. Dann kann man es über die 
