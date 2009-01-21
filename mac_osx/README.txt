@@ -1,4 +1,4 @@
-== Installationsanleitung ==
+﻿== Installationsanleitung ==
 Die Layout-Datei neo.keylayout kopiert man mit dem Terminal nach
     cp ~/Downloads/neo.keylayout.txt ~/Library/Keyboard\ Layouts/neo.keylayout
 und meldet sich ab und wieder an. Dann kann man es über die 
@@ -10,7 +10,7 @@ Systemsteuerung>Ländereinstellungen>Tastaturmenü aktivieren.
 │1 3 5│ 3 … 3. Ebene (Mod3) ⌥        │ 6 … 6. Ebene (Mod3+Mod4)
 └─────┘
 
-Die cmd ⌘ Ebene hat das neo2 Layout. Die ctrl Ebene hat das Quertz—Layout.
+Die cmd ⌘ Ebene hat das neo2 Layout. Die ctrl Ebene hat das Qwertz—Layout.
 
 === Einschränkungen ===
 Die Ebenen 4 und 6 sind mit MacOS 10.5.6 nicht erreichbar.
