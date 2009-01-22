@@ -38,6 +38,8 @@ cat installiere_neo.1
 echo 
 
 fuege_ein neo_xmodmap ../../xmodmap/neo_de.xmodmap
+fuege_ein neo_alternative ../../xmodmap/neo_de_alternative.xmodmap
+fuege_ein neo_xprog ../../xmodmap/neo_de_x-prog.xmodmap
 fuege_ein neo_console ../../console/neo.map
 fuege_ein neo_asdf ../asdf
 fuege_ein neo_uiae ../uiae
