@@ -21,7 +21,10 @@ xmodmap/neo_de_x-prog.xmodmap:xmodmap/neo_de.xmodmap
 
 
 xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
-	 sed -e s/U202F/NoSymbol/g -e s/dead_stroke/NoSymbol/g $< > $@
+	 sed -e s/U202F/NoSymbol/g\
+      -e s/dead_stroke/NoSymbol/g\
+      -e s/dead_doublegrave/U02F5/g\
+      -e s/dead_dasia/U1FFE/g $< > $@
 
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
