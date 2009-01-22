@@ -63,7 +63,7 @@ EDN("VK69SC049","VK21SC049",0,"SN__9",""     ,"U20D7","SNPUp","U226B","U2309") ;
 
 EDN("VK64SC04B","VK25SC04B",0,"SN__4","U2663","U2190","SN_Le","U2282","U2286") ; Numpad4, NumpadLeft
 EDN("VK65SC04C","VK0CSC04C",0,"SN__5","U20AC","U00A6","SNClr","U22B6","U22B7") ; Numpad5, NumpadClear
-EDN("VK66SC04D","VK27SC04D",0,"SN__6",""     ,"U2192","SN_Ri","U2283","U2287") ; Numpad6, NumpadRight
+EDN("VK66SC04D","VK27SC04D",0,"SN__6","U2023","U2192","SN_Ri","U2283","U2287") ; Numpad6, NumpadRight
 
 EDN("VK61SC04F","VK23SC04F",0,"SN__1","U2666","U2194","SNEnd","U2264","U230A") ; Numpad1, NumpadEnd
 EDN("VK62SC050","VK28SC050",0,"SN__2","U2665","U2193","SN_Dn","U222A","U22C3") ; Numpad2, NumpadDown
