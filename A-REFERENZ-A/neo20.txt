@@ -105,10 +105,10 @@ Zu den Gedankenstrichen usw. siehe
 • http://de.wikipedia.org/wiki/Weicher_Trennstrich
 
 Taste rechts neben der 0
-┌─────┐ 1 …
+┌─────┐ 1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
 │— - ╌│ 2 … — Englischer Gedankenstrich (U+2014 EM DASH)
-│    ‑│ 3 …
-└─────┘ 4 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) (KP-Variante)
+│-   ‑│ 3 …
+└─────┘ 4 … - KP_Minus
         5 … ‑ Geschützter Bindestrich (U+2011 NON-BREAKING HYPHEN)
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
@@ -158,16 +158,16 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° • ¬│§ ‣ ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„   ∞│“ / ∋│” * ∅│— - ╌│  ̏   │Backspace│
-│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│    ‑│` ¨ ῾│    ⌫    │
+│˜ ˇ ¯│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│€ £ ∥│$ ¤ →│„   ∞│“ / ∋│” * ∅│— - ╌│  ̏   │Backspace│
+│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › †│5 ‹ ♀│6 ¢ ♂│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│-   ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab⇤   │X   Ξ│V ⌫ ≙│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
-│ Tab⇥ ♫ │x   ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Return│
+│ Tab⇤   │X ⋮ Ξ│V ⌫ ∮│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ √│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ   ∘│¸ ˝ ˙│      │
+│ Tab⇥ ♫ │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Return│
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
-│   Mod   │U ⇱ ∮│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│ Mod │  ↲  │
+│   Mod   │U ⇱ µ│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│ Mod │  ↲  │
 │    3    │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│  3  │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│CapsLk│ Lock│Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│… 3 Θ│J ; ∝│   CapsLock   │
+│CapsLk│ Lock│Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 Θ│J ; ∝│   CapsLock   │
 │Umsch │Mod4 │ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │      │ Alt  │Leerzeichen␣      0         schmal ¦  │ Lock │      │ Menü │ Strg │
@@ -176,7 +176,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Erste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˆ │1│2│3│4│5│6│7│8│9│0│ │`│ Back │
+│ ˆ │1│2│3│4│5│6│7│8│9│0│-│`│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │Tab⇥│x│v│l│c│w│k│h│g│f│q│ß│´│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -195,7 +195,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│CpL│M4│Ü│Ö│Ä│P│Z│B│M│–│…│J│ Cps_Lk│
+│CpL│M4│Ü│Ö│Ä│P│Z│B│M│–│•│J│ Cps_Lk│
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -204,7 +204,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│ │¨│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ ♫  │ │_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
+│ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │\│/│{│}│*│?│(│)│-│:│@│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -215,9 +215,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │•│‣│№│⇞│·│£│¤│ │/│*│-│̏ │ Back │
+│ ˇ │º│ª│№│⇞│·│£│¤│ │/│*│-│̏ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│ 4Lk│ │⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
+│ 4Lk│⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│ │˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -243,9 +243,9 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ¯ │¬│∨│∧│⊥│∡│∥│→│∞│∋│∅│╌│ ̦│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │Ξ│≙│Λ│ℂ│Ω│√│Ψ│Γ│Φ│ℚ│∘│˙│ Ret │
+│    │Ξ│∮│Λ│ℂ│Ω│√│Ψ│Γ│Φ│ℚ│∘│˙│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
-│ M3  │∮│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
+│ M3  │µ│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
 │Ums│M4│ℜ│ℑ│ℵ│Π│ℤ│⇐│⇔│⇒│Θ│∝│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
@@ -299,7 +299,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 │✔ Hom ⌈│✘ KP↑ ⋂│  PgU ⌉│       │
 │7  ↕  ≪│8  ↑  ∩│9 vec ≫│       │
 ├───────┼───────┼───────┤       │
-│♣ KP← ⊆│€ Beg ⊷│  KP→ ⊇│ + ∓ ∔ │
+│♣ KP← ⊆│€ Beg ⊷│‣ KP→ ⊇│ + ∓ ∔ │
 │4  ←  ⊂│5  ¦  ⊶│6  →  ⊃│ + ± ⊕ │
 ├───────┼───────┼───────┼───────┤
 │♦ End ⌊│♥ KP↓ ⋃│♠ PgD ⌋│       │
@@ -328,7 +328,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ├───┼───┼───┼───┤
 │ ✔ │ ✘ │   │   │
 ├───┼───┼───┤   │
-│ ♣ │ € │   │ + │
+│ ♣ │ € │ ‣ │ + │
 ├───┼───┼───┼───┤
 │ ♦ │ ♥ │ ♠ │   │
 ├───┴───┼───┤   │
