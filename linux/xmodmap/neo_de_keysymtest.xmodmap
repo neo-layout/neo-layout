@@ -121,7 +121,7 @@ keycode 65 = space  space  space  nobreakspace  KP_0  KP_0  U202F  NoSymbol
 
 keycode 49 = dead_circumflex	dead_tilde	dead_abovering	dead_breve	dead_caron  Pointer_EnableKeys	dead_macron	NoSymbol
 ! called T1	ˆ		˜		˚		˘		ˇ	   (keypad-mouse mode)	¯
-keycode 21 = dead_grave		NoSymbol	dead_diaeresis	U1FFE		U02F5		NoSymbol	NoSymbol	NoSymbol
+keycode 21 = dead_grave		NoSymbol	dead_diaeresis	dead_dasia	dead_doublegrave	NoSymbol	NoSymbol	NoSymbol
 ! called T2	\`				¨		῾ dasia (asper)	˵
 keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	     dead_doubleacute	NoSymbol	dead_abovedot	NoSymbol
 ! called T3	´		¸		/		᾿ psili (lenis)	˝				˙
