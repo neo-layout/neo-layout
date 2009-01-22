@@ -2,7 +2,7 @@ FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap xmodmap/
 
 all:${FILES}
 
-bin/installiere_neo/installiere_neo: xmodmap/neo_de.xmodmap console/neo.map bin/asdf bin/uiae ../A-REFERENZ-A/neo20.txt bin/neo bin/num bin/wiemitneo bin/beschreibe ../Compose/Compose.neo etc/neo.conf bin/installiere_neo/erzeuge.installiere_neo bin/installiere_neo/installiere_neo.1 bin/installiere_neo/installiere_neo.2 
+bin/installiere_neo/installiere_neo: xmodmap/neo_de.xmodmap xmodmap/neo_de_alternative.xmodmap xmodmap/neo_de_x-prog.xmodmap console/neo.map bin/asdf bin/uiae ../A-REFERENZ-A/neo20.txt bin/neo bin/num bin/wiemitneo bin/beschreibe ../Compose/Compose.neo etc/neo.conf bin/installiere_neo/erzeuge.installiere_neo bin/installiere_neo/installiere_neo.1 bin/installiere_neo/installiere_neo.2 
 	cd bin/installiere_neo; ./erzeuge.installiere_neo > installiere_neo
 	chmod a+x $@
 

@@ -37,7 +37,7 @@ rm -f ./erzeuge_installiere_neo.bak
 cat installiere_neo.1
 echo 
 
-fuege_ein neo_xmodmap ../../xmodmap/neo_de.xmodmap
+fuege_ein neo_standard_xmodmap ../../xmodmap/neo_de.xmodmap
 fuege_ein neo_alternative ../../xmodmap/neo_de_alternative.xmodmap
 fuege_ein neo_xprog ../../xmodmap/neo_de_x-prog.xmodmap
 fuege_ein neo_console ../../console/neo.map

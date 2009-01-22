@@ -226,6 +226,8 @@ deinstall()
 	remove $inst_dir/uiae
 	remove $inst_dir/asdf
 	remove $inst_dir/neo.map
+	remove $inst_dir/neo_de_alternative.xmodmap
+	remove $inst_dir/neo_de_x-prog.xmodmap
 	remove $inst_dir/neo_de.xmodmap
 	echo "Entferne $inst_dir/"
 	rmdir $inst_dir/ || echo -e "${red}Konnte das Verzeichenis $inst_dir/ nicht entfernen!${normal}"
