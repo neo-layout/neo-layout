@@ -250,7 +250,9 @@ xkb_symbols "neo" {
 
     // Definition of the so called Neo-Mod4
     key.type[Group1]="ONE_LEVEL";
-    // ISO_Level5_Shift was causing problems, though it's defined in my /usr/include/X11/keysymdef.h on Ubuntu 8.10 (ticket #33), using hexcode again for now
+    // ISO_Level5_Shift was causing problems, though it's defined in
+    // /usr/include/X11/keysymdef.h on Ubuntu 8.10 (ticket #33),
+    // using hexcode again for now
     key <LSGT> { [ 0xfe11 ]};
     key <RALT> { [ 0xfe11 ]};
     modifier_map Mod3 { <LSGT>, <RALT> };
@@ -299,7 +301,7 @@ xkb_symbols "neo" {
     key <AD10> { [ q,           Q,                      ampersand,              U03D5,              plus,           NoSymbol,    U211A            ] };
     key <AD11> { [ ssharp,      U1E9E,                  U017F,              Greek_finalsmallsigma,  NoSymbol,       NoSymbol,    jot              ] };
 
-    key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,       dead_doubleacute, NoSymbol,   dead_abovedot    ] };
+    key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,       dead_doubleacute, NoSymbol,    dead_abovedot    ] };
 
     // middle row
     // --------------------------------------------------------------
@@ -362,7 +364,7 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     key  <KP4> { [ KP_4,          club,           leftarrow,    includedin,   KP_Left,    KP_Left,    U2286 ] };
     key  <KP5> { [ KP_5,          EuroSign,       brokenbar,    U22B6,        KP_Begin,   KP_Begin,   U22B7 ] };
-    key  <KP6> { [ KP_6,          NoSymbol,       rightarrow,   includes,     KP_Right,   KP_Right,   U2287 ] };
+    key  <KP6> { [ KP_6,          U2023,          rightarrow,   includes,     KP_Right,   KP_Right,   U2287 ] };
 
     // bottom row
     // --------------------------------------------------------------
