@@ -12,8 +12,6 @@ isMod4Pressed := 0
 isMod4Locked := 0
 isMod4Active := 0
 
-#include %A_ScriptDir%
-#include *i icon.ahk
 
 ~F24::return
 
@@ -138,69 +136,69 @@ doMod4() {
 
 ;Funktionstasten
 
-~4:: 
+~*4:: 
 if (isMod4Active and !isMod3Pressed)  
 Sendinput {Blind}{PGUP} 
 return 
  
-~v::
+~*v::
 if (isMod4Active and !isMod3Pressed)
 Ifwinactive ahk_class Notepad++
 Sendinput {Blind}{BACKSPACE}{BACKSPACE}
 return
 
-~l::
+~*l::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{UP}
 return
 
-~c::
+~*c::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{DEL}
 return
 
-~w::
+~*w::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{INS}
 return
 
-~u::
+~*u::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{HOME}
 return
 
-~i::
+~*i::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{LEFT}
 return
 
-~a::
+~*a::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{DOWN}
 return
 
-~e::
+~*e::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{RIGHT}
 return
 
-~o::
+~*o::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{END}
 return
 
-~ö::
+~*ö::
 if (isMod4Active and !isMod3Pressed)
 Ifwinactive ahk_class Notepad++
 Sendinput {Blind}{BACKSPACE}{TAB}
 return
 
-~ä::
+~*ä::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{PGDN}
 return
 
-~p::
+~*p::
 if (isMod4Active and !isMod3Pressed)
 Ifwinactive ahk_class Notepad++
 Sendinput {Blind}{BACKSPACE}{ENTER}
