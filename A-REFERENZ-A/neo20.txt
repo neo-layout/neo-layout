@@ -115,8 +115,8 @@ Taste rechts neben der 0
 # Außerdem gibt es noch
 #  • den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzugt wird
 #  • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf dem Keypad
-#  • den (deutschen) Gedankenstrich (U+2013 EN DASH)
-#  • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
+#  • den (deutschen) Gedankenstrich (U+2013 EN DASH) über Shift + Komma
+#  • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) über Mod3 + t
 
 === Anführungszeichen ===
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
