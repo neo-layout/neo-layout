@@ -7,12 +7,11 @@ disable=Deaktiviere %name%
 #usehook on
 #LTrim
 
-; Benutze Bilder wennsie im aktuellen Verzeichnis vorhanden sind 
+; *** Benutze Bilder wennsie im aktuellen Verzeichnis vorhanden sind ***
 if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
   zeigeBildschirmTastatur = 1
 if (FileExist("neo_enabled.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
-
 
   
 ;*************************
@@ -55,12 +54,11 @@ isMod4Pressed := 0
 isMod4Locked := 0
 isMod4Active := 0
 
-~F24::return
 
-
-
-; benötigte Modifier werden gehookt
-
+;***********************
+; Fehlende Funktionen  *
+;***********************
+; *** benötigte Modifier werden gehookt ***
 ~*SC136::
   if (isShiftLPressed and !isShiftRPressed)
   ToggleMod2Lock()
@@ -133,9 +131,7 @@ return
   doMod4()
 return
 
-
-;Welcher Modifier ist aktiv und CapsLock und Mod4Lock
-
+; *** Welcher Modifier ist aktiv und CapsLock und Mod4Lock ***
 ToggleMod2Lock() {
   global
   if (isMod2Locked)
@@ -176,9 +172,7 @@ doMod4() {
   }
 }
 
-
-;Funktionstasten
-
+; *** Funktionstasten ***
 ~*4:: 
 if (isMod4Active and !isMod3Pressed)  
 Sendinput {Blind}{PGUP} 
@@ -248,9 +242,6 @@ Sendinput {Blind}{BACKSPACE}{ENTER}
 return
 
 
-
-
-
 ;*****************
 ; Menüfunktionen *
 ;*****************
@@ -309,12 +300,9 @@ exitprogram:
 return
 
 
-
-
 ;*********************
 ; BildschirmTastatur *
 ;*********************
-
 guiErstellt = 0
 alwaysOnTop = 1
 
