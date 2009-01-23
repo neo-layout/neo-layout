@@ -10,7 +10,7 @@ disable=Deaktiviere %name%
 ; Benutze Bilder wennsie im aktuellen Verzeichnis vorhanden sind 
 if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
   zeigeBildschirmTastatur = 1
-if (FileExist("neo.ico")&&FileExist("neo_aus.ico"))
+if (FileExist("neo_enabled.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
 
@@ -19,7 +19,7 @@ if (FileExist("neo.ico")&&FileExist("neo_aus.ico"))
 ; Menü des Systray-Icons *
 ;*************************
 if (iconBenutzen)
-  menu,tray,icon,neo.ico,,1
+  menu,tray,icon,neo_enabled.ico,,1
 menu,tray,nostandard
 menu,tray,add,AHK öffnen,open
   menu,helpmenu,add,Info,about
@@ -259,13 +259,13 @@ togglesuspend:
     menu,tray,rename,%enable%,%disable%
     menu,tray,tip,%name%
     if (iconBenutzen)
-      menu,tray,icon,neo.ico,,1
+      menu,tray,icon,neo_enabled.ico,,1
     suspend,off ; Schaltet Suspend aus
   } else {
     menu,tray,rename,%disable%, %enable%
     menu,tray,tip,%name% : Deaktiviert
     if (iconBenutzen)
-      menu,tray,icon,neo_aus.ico,,1
+      menu,tray,icon,neo_disabled.ico,,1
     suspend,on ; Schaltet Suspend ein
   } return
 
