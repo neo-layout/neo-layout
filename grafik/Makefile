@@ -43,7 +43,7 @@ tastatur3d/ziffernfeld/%.png: tastatur3d/%.svg
 
 tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/%.svg tastatur3d/hauptfeld/%.png tastatur3d/ziffernfeld/%.png
 	mkdir -p tastatur3d/haupt_ziffern_feld
-	convert -splice 20x0 -background transparent tastatur3d/ziffernfeld/$*.png /tmp/$*_tmp.png
+	convert -splice 20x0 -background transparent -alpha off -alpha on tastatur3d/ziffernfeld/$*.png /tmp/$*_tmp.png
 	convert +append tastatur3d/hauptfeld/$*.png /tmp/$*_tmp.png $@
 	rm /tmp/$*_tmp.png
 	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
