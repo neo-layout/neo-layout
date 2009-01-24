@@ -34,6 +34,16 @@
         <dc:title>Neo-Tastaturlayout</dc:title>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title></dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>NEO-Tastaturlayout-Entwicklerteam</dc:title>
+          </cc:Agent>
+        </dc:publisher>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
