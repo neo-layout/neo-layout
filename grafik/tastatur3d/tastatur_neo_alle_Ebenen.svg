@@ -36,7 +36,7 @@
            rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
         <dc:creator>
           <cc:Agent>
-            <dc:title></dc:title>
+            <dc:title />
           </cc:Agent>
         </dc:creator>
         <dc:publisher>
@@ -44,6 +44,12 @@
             <dc:title>NEO-Tastaturlayout-Entwicklerteam</dc:title>
           </cc:Agent>
         </dc:publisher>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>NEO</rdf:li>
+            <rdf:li>tastatur3d</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
@@ -77,8 +83,8 @@
      inkscape:zoom="0.6563742"
      inkscape:cx="1303.6108"
      inkscape:cy="260.25543"
-     inkscape:window-x="54"
-     inkscape:window-y="70"
+     inkscape:window-x="74"
+     inkscape:window-y="67"
      inkscape:current-layer="layer8"
      showgrid="true"
      showguides="true"
