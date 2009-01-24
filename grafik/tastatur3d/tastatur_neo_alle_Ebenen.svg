@@ -50,6 +50,7 @@
             <rdf:li>tastatur3d</rdf:li>
           </rdf:Bag>
         </dc:subject>
+        <dc:source>https://svn.neo-layout.org/grafik/tastatur3d/tastatur_neo_alle_Ebenen.svg</dc:source>
       </cc:Work>
       <cc:License
          rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
