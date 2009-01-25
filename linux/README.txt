@@ -12,7 +12,7 @@ keine Administrator-Rechte (root-Rechte), um diesen zu nutzen. Allerdings hat
 man hiermit bei der Anmeldung keine Neo-Tastaturbelegung (bei der
 Passworteingabe bedenken!).
 Vorteile der Xmodmap sind:
-• hoher Portabilität: 
+• hohe Portabilität: 
   Beispielsweise die Xmodmap-Datei auf einen USB-Stick kopieren und in den
   fremden Linux-Rechner einstecken, schon kann man mit Neo tippen.
 • einfache Installation:
@@ -40,7 +40,7 @@ chmod u+x installiere_neo
 ./installiere_neo
 
 Die Installation stellt mehrere Optionen vor – u.a. NEO nur zu testen, die
-Standartbelegung aber bei QWERTZ zu belassen.
+Standardbelegung aber bei QWERTZ zu belassen.
 
 Der Vorteil von ›installiere_neo‹ ist, dass NEO im vollem Umfang genutzt wird;
 dazu zählt z.B.: NEO-Tastaturbelegung, Compose-Erweiterung von NEO, Skripte

@@ -8,5 +8,5 @@ Offene Punkte:
 • die Funktionalität von ›beschreibe‹ soll in ›wiemitneo‹ integriert werden
 • bei einer Eingabe wie ›wiemitneo root‹ sollen wie bei ›beschreibe root‹ die Ergebnisse ∛ und ∜ gefunden werden
 • gefundene Zeichen sollten jeweils nur einmal auftauchen
-• eventuell sollte eine Berschreibung (CUBE ROOT, FOURTH ROOT) ergänzt werden
+• eventuell sollte eine Beschreibung (CUBE ROOT, FOURTH ROOT) ergänzt werden
 • neben Compose sollte auch sollte auch die keysymdef.h abgefragt werden, so dass ›wiemitneo integral‹ neben ∬, ∭, ⨌, ∯ auch ∫ anbietet
