@@ -73,12 +73,12 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.5"
-     inkscape:cx="804.65893"
+     inkscape:zoom="0.63697123"
+     inkscape:cx="884.65533"
      inkscape:cy="254.68504"
-     inkscape:window-x="0"
-     inkscape:window-y="14"
-     inkscape:current-layer="ebene1"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="ebene5"
      showgrid="true"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -93,6 +93,13 @@
   </sodipodi:namedview>
   <defs
      id="defs">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 241.21429 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1769.3107 : 241.21429 : 1"
+       inkscape:persp3d-origin="884.65533 : 160.80953 : 1"
+       id="perspective2092" />
     <linearGradient
        id="linearGradient6536">
       <stop
@@ -9100,7 +9107,7 @@
      inkscape:groupmode="layer"
      id="ebene1"
      inkscape:label="Ebene 1"
-     style="display:inline"
+     style="display:none"
      transform="translate(-3.4008115,-258.53258)">
     <text
        x="168.44073"
@@ -12384,17 +12391,6 @@
          y="407.98221"
          id="tspan21065"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">ξ</tspan></text>
-    <text
-       x="258.46399"
-       y="407.98221"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
-       id="text21067"
-       xml:space="preserve"
-       sodipodi:linespacing="125%"><tspan
-         x="258.46399"
-         y="407.98221"
-         id="tspan21069"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">ϵ</tspan></text>
     <text
        x="350.46399"
        y="407.98221"
