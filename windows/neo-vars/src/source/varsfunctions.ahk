@@ -46,9 +46,9 @@ CharStarDown(PhysKey, ActKey, char) {
   if (PP%PhysKey% != "")
     CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
   else
-    CompNew := Comp . char           ; Hängen wir mal das neue Zeichen zum Compositum an
+    CompNew := Comp . char           ; Hï¿½ngen wir mal das neue Zeichen zum Compositum an
 
-  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gelöscht
+  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gelï¿½scht
     tosend := CD%CompNew%
     PP%PhysKey% := CompNew
     Comp := ""
@@ -68,7 +68,7 @@ CharStarDown(PhysKey, ActKey, char) {
 
 
   if (strlen(tosend) > 5) {          ; Ausgabe mehrerer Zeichen
-    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufräumen
+    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufrï¿½umen
       CharOutUp(PR%PhysKey%)
       PR%PhysKey% := ""
     }
@@ -136,6 +136,8 @@ CharOut(char) {
 
 CharOutDown(char) {
   global
+  if (CharOutFilterProc == "DUni" and (char == "SL_M2" or char == "SR_M2"))
+    return
   if (CharOutFilterProc != "") {
     char := CharOutFilter%CharOutFilterProc%(char,1,0)
     if (char == "")
