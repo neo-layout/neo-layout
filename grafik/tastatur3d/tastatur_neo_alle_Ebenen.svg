@@ -14,7 +14,7 @@
    height="459.57001"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46+devel, revision 20105"
+   inkscape:version="0.46"
    sodipodi:docname="tastatur_neo_alle_Ebenen.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline"
@@ -41,7 +41,7 @@
         </dc:creator>
         <dc:publisher>
           <cc:Agent>
-            <dc:title>NEO-Tastaturlayout-Entwicklerteam</dc:title>
+            <dc:title>N/A</dc:title>
           </cc:Agent>
         </dc:publisher>
         <dc:subject>
@@ -97,10 +97,10 @@
      pagecolor="#ffffff"
      id="base"
      inkscape:zoom="0.53941138"
-     inkscape:cx="1044.6572"
+     inkscape:cx="828.68104"
      inkscape:cy="260.25543"
-     inkscape:window-x="27"
-     inkscape:window-y="35"
+     inkscape:window-x="0"
+     inkscape:window-y="14"
      inkscape:current-layer="layer6"
      showgrid="true"
      showguides="true"
@@ -13942,14 +13942,14 @@
     <text
        x="836.96765"
        y="515.98218"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text21127"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4652"
          x="836.96765"
-         y="515.98218"
-         id="tspan21129"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">ρ</tspan></text>
+         y="515.98218">ϱ</tspan></text>
     <text
        x="926.96765"
        y="515.98218"
@@ -14030,36 +14030,36 @@
     <text
        x="880.63031"
        y="607.98218"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text21159"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4656"
          x="880.63031"
-         y="607.98218"
-         id="tspan21161"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">ϱ</tspan></text>
+         y="607.98218">ρ</tspan></text>
     <text
        x="974.63031"
        y="607.98218"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text21163"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4658"
          x="974.63031"
-         y="607.98218"
-         id="tspan21165"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">θ</tspan></text>
+         y="607.98218">ϑ</tspan></text>
     <text
        x="1066.6302"
        y="607.98218"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text21167"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4660"
          x="1066.6302"
-         y="607.98218"
-         id="tspan21169"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">ϑ</tspan></text>
+         y="607.98218">θ</tspan></text>
     <text
        xml:space="preserve"
        id="text21171"
@@ -14081,10 +14081,14 @@
     <text
        x="685.73053"
        y="334.48428"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text21183"
        xml:space="preserve"
-       sodipodi:linespacing="125%">ϰ</text>
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4646"
+         x="685.73053"
+         y="334.48428">κ</tspan></text>
     <text
        x="594.52081"
        y="691.42871"
@@ -14137,14 +14141,14 @@
     <text
        x="623.46417"
        y="421.98221"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
        id="text21199"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4648"
          x="623.46417"
-         y="421.98221"
-         id="tspan21201"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">κ</tspan></text>
+         y="421.98221">ϰ</tspan></text>
     <text
        x="1114.9677"
        y="515.98218"
