@@ -292,16 +292,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8441002"
-     inkscape:cx="79.132591"
-     inkscape:cy="16.861761"
+     inkscape:zoom="16.891594"
+     inkscape:cx="26.699671"
+     inkscape:cy="18.390361"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="1139"
-     inkscape:window-x="-5"
-     inkscape:window-y="-3" />
+     inkscape:window-width="1278"
+     inkscape:window-height="989"
+     inkscape:window-x="0"
+     inkscape:window-y="1" />
   <metadata
      id="metadata5953">
     <rdf:RDF>
@@ -314,30 +314,30 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-62.072517,-496.09423)">
+     id="layer2"
+     inkscape:label="fenster"
+     style="display:inline">
     <g
        id="g2478"
-       transform="matrix(0.9462539,0,0,0.9462539,8.0926666,70.103295)"
-       style="opacity:1;stroke:#565656;stroke-width:0.77952754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+       transform="matrix(0.7805842,0.1028427,-0.1029504,0.7797682,10.34337,-356.74403)"
+       style="opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <rect
          y="470.57648"
          x="58.214287"
          height="15.357142"
          width="24.848379"
          id="rect2470"
-         style="opacity:1;fill:#cfc7ff;fill-opacity:1;stroke:#565656;stroke-width:0.77952754;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#cfc7ff;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
-         style="opacity:1;fill:#ffcfc6;fill-opacity:1;stroke:#565656;stroke-width:0.77952754;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#ffcfc6;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect2472"
          width="24.848379"
          height="15.357142"
          x="58.214287"
          y="450.57648" />
       <rect
-         style="opacity:1;fill:#ffffc7;fill-opacity:1;stroke:#565656;stroke-width:0.77952754;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="opacity:1;fill:#ffffc7;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect2474"
          width="24.848379"
          height="15.357142"
@@ -349,8 +349,14 @@
          height="15.357142"
          width="24.848379"
          id="rect2476"
-         style="opacity:1;fill:#c2ffae;fill-opacity:1;stroke:#565656;stroke-width:0.77952754;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="opacity:1;fill:#c2ffae;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+  </g>
+  <g
+     inkscape:label="tastentierchen"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.072517,-496.09423)">
     <g
        id="g5823"
        transform="matrix(0.737631,0,0,0.737631,-31.94855,253.78393)">
