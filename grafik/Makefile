@@ -11,8 +11,9 @@ PNGFILES=$(addsuffix .png,$(basename ${SVGFILES}))
 
 default: pdf png 
 pdf: ${PDFFILES}
-png: ${PNGFILES} ebenen
+png: ${PNGFILES} ebenen www
 ebenen: ${EBENENPNG}
+www: $(addsuffix .png,$(basename $(shell find ../www -name "*.svg")))
 
 clean: cleanpng cleanpdf
 
@@ -35,6 +36,7 @@ tastatur3d/hauptfeld/%.png: tastatur3d/%.svg
 	mkdir -p  tastatur3d/hauptfeld
 	inkscape --without-gui --export-id="Haupttastaturfeld" --export-png=$@ -h200 tastatur3d/$*.svg
 	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
+	mogrify -depth 8 $@
 
 tastatur3d/ziffernfeld/%.png: tastatur3d/%.svg
 	mkdir -p tastatur3d/ziffernfeld
@@ -52,6 +54,11 @@ tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/%.svg tastatur3d/hauptfeld/%.png
 
 %.pdf: %.svg
 	inkscape --without-gui --export-pdf=$@ $<
+
+../www/%.png: ../www/%.svg
+	inkscape --without-gui --export-png=$@ $<
+	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
+	mogrify -depth 8 $@
 
 %.png: %.svg
 	inkscape --without-gui --export-png=$@ -w1000 $<
