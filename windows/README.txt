@@ -1,6 +1,6 @@
 == Neo 2.0 für Windows ==
-Für viele Windowsversionen sind hier Treiber zu finden.
-
+Für viele Windowsversionen sind hier Treiber zu finden. Weitergehende Hinweise und Anleitungen befinden sich hier:
+http://wiki.neo-layout.org/wiki/Neo%20unter%20Windows%20einrichten
 
 == neo-vars ==
 Hier befindet sich ein Treiber, der mit der Autohotkey-Skriptsprache (http://www.autohotkey.com) erstellt wurde. Hierfür muss lediglich eine ausführbare EXE-Datei heruntergeladen und gestartet werden.
