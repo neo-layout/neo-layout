@@ -3,12 +3,15 @@ togglesuspend:
     menu, tray, rename, %enable%, %disable%
     menu, tray, tip, %name%
     menu, tray, icon, %ResourceFolder%\neo_enabled.ico,,1
-    suspend , off ; Schaltet Suspend aus -> NEO
+    Gosub, SaveNumLockState
+    SetNumLockState Off
+    suspend, off ; Schaltet Suspend aus -> NEO
   } else {
     menu, tray, rename, %disable%, %enable%
     menu, tray, tip, %name% : Deaktiviert
     menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
-    suspend , on  ; Schaltet Suspend ein -> QWERTZ
+    SetNumLockState, %SavedNumLockState%
+    suspend, on  ; Schaltet Suspend ein -> QWERTZ
   }
 return
 
@@ -17,18 +20,18 @@ help:
 return
 
 about:
-  msgbox, 64, %name% – Ergonomische Tastaturbelegung, 
+  msgbox, 64, %name% ï¿½ Ergonomische Tastaturbelegung, 
   (
   %name% 
-  `nDas Neo-Layout ersetzt das übliche deutsche 
+  `nDas Neo-Layout ersetzt das ï¿½bliche deutsche 
   Tastaturlayout mit der Alternative Neo, 
   beschrieben auf http://neo-layout.org/. 
-  `nDazu sind keine Administratorrechte nötig. 
+  `nDazu sind keine Administratorrechte nï¿½tig. 
   `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
-  `nDies geschieht transparent für den Anwender, 
+  abgefangen und statt dessen eine ï¿½bersetzung weitergeschickt. 
+  `nDies geschieht transparent fï¿½r den Anwender, 
   es muss nichts installiert werden. 
-  `nDie Zeichenübersetzung kann leicht über das Icon im 
+  `nDie Zeichenï¿½bersetzung kann leicht ï¿½ber das Icon im 
   Systemtray deaktiviert werden.  `n
   )
 return
@@ -58,6 +61,14 @@ hide:
 return
 
 exitprogram:
+  SetNumLockState, %SavedNumLockState%
   exitapp
+return
+
+SaveNumLockState:
+  if GetKeyState("NumLock","T")
+    SavedNumLockState = On
+  else
+    SavedNumLockState = Off
 return
 
