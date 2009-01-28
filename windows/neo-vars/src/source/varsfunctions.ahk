@@ -136,8 +136,6 @@ CharOut(char) {
 
 CharOutDown(char) {
   global
-  if (CharOutFilterProc == "DUni" and (char == "SL_M2" or char == "SR_M2"))
-    return
   if (CharOutFilterProc != "") {
     char := CharOutFilter%CharOutFilterProc%(char,1,0)
     if (char == "")
