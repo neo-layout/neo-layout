@@ -239,7 +239,7 @@ PressHookUni(PhysKey, ActKey, Char) {
 
 CharOutFilterDUni(char,down,up) {
   global
-  if (!down)
+  if (!down or char == "SL_M2" or char == "SR_M2")
     return char
   CharOutFilterProc := ""
   TrayTip,Unicode-Zeichen,%char%,10,1
