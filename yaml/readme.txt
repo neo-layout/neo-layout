@@ -36,4 +36,26 @@ rasch aus Belegungen Neo-3-Treiber und Forks erstellen.
 Projektstatus:
 Zur Zeit entwickele ich einen Parser für die Referenz. Danach möchte ich ein 
 Skript für die Erstellung der neo20.txt aus der maschinenlesbaren Referenz 
-schreiben. 
+schreiben. Dann soll ein Skript zur Umwandlung des Models in xkbmap, xmodmap, 
+ahk und kbdneo folgen, unter berücksichtigung der verwendeten Tastatur (Qwertz, 
+Qwerty, Plum, Kbdneo).
+
+Abriss:
+neo_import.py
+neo_parse.py
+neo_edit.py
+neo_make.py
+ahk_make.py
+ahk_parse.py
+hex_parse.py
+kbd_parse.py
+kbd_make.py
+xkb_parse.py
+xkb_parse.py
+mod_parse.py
+mod_make.py
+mac_parse.py
+mac_make.py
+map_parse.py
+svg_parse.py
+svg_make.py
