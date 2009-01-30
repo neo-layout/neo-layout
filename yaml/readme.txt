@@ -38,15 +38,16 @@ Zur Zeit entwickele ich einen Parser für die Referenz. Danach möchte ich ein
 Skript für die Erstellung der neo20.txt aus der maschinenlesbaren Referenz 
 schreiben. Dann soll ein Skript zur Umwandlung des Models in xkbmap, xmodmap, 
 ahk und kbdneo folgen, unter berücksichtigung der verwendeten Tastatur (Qwertz, 
-Qwerty, Plum, Kbdneo).
+Qwerty, Plum, Kbdneo). Danach nehme ich die Erzeugung der svgs und odss in 
+Angriff.
 
 Abriss:
 neo_import.py
-neo_parse.py
-neo_edit.py
-neo_make.py
-ahk_make.py
-ahk_parse.py
+parse_neo.py
+edit_neo.py
+make_neo.py
+make_ahk.py
+parse_ahk.py
 hex_parse.py
 kbd_parse.py
 kbd_make.py

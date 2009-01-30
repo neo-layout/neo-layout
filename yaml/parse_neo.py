@@ -49,7 +49,8 @@ options = OptionParser(usage = 'example: %prog -ti -astest', description = 'YAML
     make_option('-W', '--key-level-delimiter-width', type = 'int', metavar = 'int', default = 1, help = 'default = %default'),
     make_option('-f', '--key-level-delimiter-filler', metavar = 'char',default = " ", help = 'default = %default'),
     make_option('-D', '--key-level-delimiter', metavar = 'char'),
-    make_option('-l', '--key-levels-per-line', type = 'int', metavar = 'int', default = 3, help = 'default = %default')
+    make_option('-l', '--key-levels-per-line', type = 'int', metavar = 'int', default = 3, help = 'default = %default'),
+    make_option('-L', '--no-level-disorder',dest = 'level_disorder', action = 'store_false', default = True, help = 'Level 4 and 5 are not swapped')
     ]).parse_args()[0]
 if options.destination_file == None:
     options.destination_file = options.source_file.rsplit(file_name_standard_extension)[0]
@@ -79,39 +80,46 @@ def parse_key_panel(key_panel, key_width = 5):
     
     '''
     return_model = []; return_view = []; key_row = []; key_row_index = 0 # initialization
-    for row in [row[:key_panel.index(box_drawings[3])] for row in key_panel.splitlines()[1:]]: # omit beginning and ending box drawings
-        if row[0] in (box_drawings[12], box_drawings[14]): # if row begins with ├ or │,
-            return_model.append([]); return_view.append([]) # create key row list
-            key_lines = []
+    for row in [row[:key_panel.index(box_drawings[3])] for row in key_panel.splitlines()[1:]]: # omit the first line and from closing box drawings
+        if row[0] not in (box_drawings[12], box_drawings[14]): # if row begins not with “├” or “└”:
+            key_lines = []; key_row.append(row) # push line (sic)
+        else:
+            return_model.append([]); return_view.append([]) # create key row lists
             for key_line_index, key_line in enumerate(key_row[:: - 1]): # reverse lines
-                for key_index, key in enumerate(key_line[1:].split(box_drawings[10])): # split key line into keys
+                for key_index, key in enumerate(key_line[1:].split(box_drawings[10])): # omit beginning key delimiter and split key line into key lines:
                     if key_line_index == 0: # if bottom line,
-                        return_model[key_row_index].append([]); key_lines.append([]); return_view[key_row_index].append([]) # create key list
-                    if len(key) == key_width: # if default key, parse line levels:
-                        if options.key_level_width == 1 and key_width == 7: # if Neo 2 keypad key:
-                            if key[1] == key[5] == options.key_level_delimiter:
-                                key_lines[key_index].extend([key[0], key[2:5], key[6]])
-                            elif key[::2] == options.key_level_delimiter * 4:
-                                key_lines[key_index].extend(key[1::2])
+                        if key_width == 5 or key_width == 7:
+                            key_lines.append([])
+                        return_model[key_row_index].append([]); return_view[key_row_index].append([]) # create key lists
+                    if len(key) == key_width: # if standard key, parse line levels:
+                        if key_width == options.key_level_width * options.key_levels_per_line + (options.key_levels_per_line - 1) * options.key_level_delimiter_width and key[1::options.key_level_width + options.key_level_delimiter_width] == options.key_level_delimiter * (options.key_levels_per_line - 1): # else if standard key:
+                            key_lines[key_index].append([key[key_level_start:key_level_start + options.key_level_width] for key_level_start in range(0, len(key), options.key_level_width + options.key_level_delimiter_width)])
+                        elif key_width == options.key_level_width: # else if standard miniature key:
+                            return_model[key_row_index][key_index].append(key)
+                        elif options.key_level_width == 1 and key_width == 7: # if Neo 2 keypad key:
+                            if key[1] == key[5] == options.key_level_delimiter: # if long middle line level:
+                                key_lines[key_index].append([key[0], key[2:5], key[6]])
+                            elif key[::2] == options.key_level_delimiter * 4: # else if spaced levels:
+                                key_lines[key_index].append(list(key[1::2]))
                             else:
                                 return_view[key_row_index][key_index].append(key)
-                        elif key_width == options.key_level_width * options.key_levels_per_line + (options.key_levels_per_line - 1) * options.key_level_delimiter_width:
-                            key_lines[key_index].extend([key[:options.key_level_width] for key in key[:key_width:options.key_level_width + options.key_level_delimiter_width]])
-                        elif key_width == options.key_level_width:
-                            key_lines[key_index].append(key)
-                    else:
+                    else: # else non-standard key:
                         if options.key_level_width == 1 and key_width == 7 and len(key) == 15: # if Neo 2 keypad key:
-                            key_lines[key_index].extend([key[2], key[6:9], key[12]])
-                        else:
+                            key_lines[key_index].append([key[2], key[6:9], key[12]])
+                        else: # else special key:
                             return_view[key_row_index][key_index].append(key)
-                    if key_lines != []:
-                        for key_level_index, level in enumerate(key_lines[0]):
-                            for key_line_index, line_index in enumerate(key_lines):
-                                return_model[key_row_index][key_index].append(key_lines[key_line_index][key_level_index])
+            if key_lines != []:
+                for key_index, key in enumerate(key_lines): #sort key levels:
+                    if key_lines[key_index] != []:
+                        for key_level_index, level in enumerate(key_lines[key_index][0]):
+                            for key_line_index, line_index in enumerate(key_lines[key_index]):
+                                if len(key_lines[key_index]) != 0:
+                                    return_model[key_row_index][key_index].append(key_lines[key_index][key_line_index][key_level_index])
+                        if options.level_disorder and len(return_model[key_row_index][key_index]) == 6:
+                            return_model[key_row_index][key_index].insert(3, return_model[key_row_index][key_index].pop(4))
             key_row_index += 1; key_row = []
-        else:
-            key_row.append(row)
     return return_model, return_view
+    
 
 def compare_model(model, miniature_model):
     '''
@@ -140,7 +148,7 @@ if options.without_legend == False:
 model = [parse_key_panel(key_panels[9]), parse_key_panel(key_panels[20], 7)]
 miniature_models = []
 for miniature_models_index in range(6):
-    miniature_models.append([parse_key_panel(key_panels[10 + miniature_models_index], 1), parse_key_panel(key_panels[21 + miniature_models_index], 7)])
+    miniature_models.append([parse_key_panel(key_panels[10 + miniature_models_index], 1), parse_key_panel(key_panels[21 + miniature_models_index], 3)])
 view = compare_model(model, miniature_models) # complete views via comparing key widths
 model = [model[0] for model in model] # strip views
 
