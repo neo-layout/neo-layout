@@ -96,11 +96,11 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="2.2166436"
-     inkscape:cx="547.57189"
-     inkscape:cy="309.46985"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:zoom="0.77537396"
+     inkscape:cx="1018.8632"
+     inkscape:cy="255.57901"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
      inkscape:current-layer="layer10"
      showgrid="true"
      showguides="true"
@@ -6790,6 +6790,20 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4970"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5045"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -10499,15 +10513,6 @@
            id="tspan43898"
            sodipodi:role="line">_</tspan></text>
     </g>
-    <text
-       xml:space="preserve"
-       id="text21179-4"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       y="334.72266"
-       x="587.79352"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5008">⚥</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -13806,7 +13811,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Ebene 5"
-     style="display:inline"
+     style="display:none"
      transform="translate(-3.4008115,-283.39115)">
     <text
        x="157.46417"
@@ -14617,6 +14622,17 @@
          id="tspan4663"
          x="1845.8311"
          y="516.9834">⊶</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text21179-7"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       y="335.37939"
+       x="587.0481"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5059"
+         x="587.0481"
+         y="335.37939">⚥</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
