@@ -9,7 +9,6 @@ div.Hauptfeld {
   padding-right:4em;
   padding-top:2em;
   padding-bottom:2.4em;
-  max-width:70em;
 /* text-align:justify;  */
 /* font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif; */
 /*  font-family: LinuxLibertine, Libertine, Linux-Libertine, sans;
@@ -201,7 +200,7 @@ p         {  /* text-indent:1em;
 
 .Ebenen_box { position: relative;}
 
-.Ebene_bild { padding-top:2em; }
+.Ebene_bild { padding-top:2em; width:24em; }
 
 .Ebene_wrapper { position:absolute; top:0px; background-color: white; }
 
