@@ -96,7 +96,7 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.77537396"
+     inkscape:zoom="0.77537395"
      inkscape:cx="1018.8632"
      inkscape:cy="255.57901"
      inkscape:window-x="0"
@@ -6799,6 +6799,13 @@
        sodipodi:type="inkscape:persp3d" />
     <inkscape:perspective
        id="perspective5045"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4972"
        inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
        inkscape:vp_z="1 : 0.5 : 1"
        inkscape:vp_y="0 : 1000 : 0"
@@ -14633,6 +14640,17 @@
          id="tspan5059"
          x="587.0481"
          y="335.37939">⚥</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       xml:space="preserve"
+       id="text4989"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       y="609.4248"
+       x="329.79901"><tspan
+         sodipodi:role="line"
+         id="tspan4993"
+         x="329.79901"
+         y="609.4248">ϵ</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
