@@ -200,7 +200,7 @@ p         {  /* text-indent:1em;
 
 .Ebenen_box { position: relative;}
 
-.Ebene_bild { padding-top:2em; max-width:55em; }
+.Ebene_bild { padding-top:2em; width:55em; }
 
 .Ebene_wrapper { position:absolute; top:0px; background-color: white; }
 
