@@ -198,9 +198,9 @@ p         {  /* text-indent:1em;
   z-index:2;
 }
 
-.Ebenen_box { position: relative;}
+.Ebenen_box { position: relative; width:50em;}
 
-.Ebene_bild { padding-top:2em; width:50em; }
+.Ebene_bild { padding-top:2em; }
 
 .Ebene_wrapper { position:absolute; top:0px; background-color: white; }
 
