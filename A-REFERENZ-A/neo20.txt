@@ -1,4 +1,4 @@
--------------------------------------------------------------------------------
+﻿-------------------------------------------------------------------------------
 ACHTUNG:
 Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
 Texteditor eine dicktengleiche Schrift einstellen!
@@ -168,7 +168,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 │    3    │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│  3  │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
 │CapsLk│ Lock│Ü ⌧ ℜ│Ö ⇥ ℑ│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 Θ│J ; ∝│   CapsLock   │
-│Umsch │Mod4 │ü #  │ö $  │ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
+│Umsch │Mod4 │ü #  │ö $ ϵ│ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │      │ Alt  │Leerzeichen␣      0         schmal ¦  │ Lock │      │ Menü │ Strg │
 │      │      │      │Leerzeichen␣ Leerzeichen␣ geschützt ⍽ │Mod4  │      │      │      │
@@ -234,7 +234,7 @@ sollten, um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gew
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │ │ι│α│ε│ο│σ│ν│ϱ│τ│δ│υ│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│M4│ │ │η│π│ζ│β│μ│ρ│ϑ│θ│ Umsch │
+│Ums│M4│ │ϵ│η│π│ζ│β│μ│ρ│ϑ│θ│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│geschützt ⍽│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
