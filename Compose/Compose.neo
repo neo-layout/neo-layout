@@ -1419,7 +1419,7 @@
 <Multi_key> <femalesymbol> <femalesymbol>  : "⚢"   U26A2 # DOUBLED FEMALE SIGN
 <Multi_key> <malesymbol> <malesymbol>      : "⚣"   U26A3 # DOUBLED MALE SIGN
 <Multi_key> <femalesymbol> <malesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
-<Multi_key> <malesymbol> <femalesymbol>    : "⚥"   U26A5 # MALE AND FEMALE SIGN
+<Multi_key> <malesymbol> <femalesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
 
 # box drawings

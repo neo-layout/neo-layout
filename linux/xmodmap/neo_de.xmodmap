@@ -139,12 +139,12 @@ keycode 11 = 	2		section		twosuperior	twosubscript	masculine	NoSymbol	logicalor	
 !				§		²	  	₂		º				∨
 keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logicaland	NoSymbol
 !				ℓ liter		³	  	₃		№				∧
-keycode 13 = 	4		guillemotright	U203A		dagger		Prior		Prior		downtack	NoSymbol
-!				»		›		†						⊥ perpendicular
-keycode 14 = 	5		guillemotleft	U2039		femalesymbol	periodcentered	NoSymbol	U2221		NoSymbol
-!				«		‹		♀		·				∡ angle sign
-keycode 15 = 	6		EuroSign	cent		malesymbol	sterling	NoSymbol	U2225		NoSymbol
-!				€		¢		♂		£				∥ parallel
+keycode 13 = 	4		guillemotright	U203A		femalesymbol	Prior		Prior		downtack	NoSymbol
+!				»		›		♀						⊥ perpendicular
+keycode 14 = 	5		guillemotleft	U2039		malesymbol	periodcentered	NoSymbol	U2221		NoSymbol
+!				«		‹		♂		·				∡ angle sign
+keycode 15 = 	6		EuroSign	cent		U26A5		sterling	NoSymbol	U2225		NoSymbol
+!				€		¢		⚥		£				∥ parallel
 
 keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
 !				$		¥		κ		¤				→
@@ -270,8 +270,8 @@ keycode 79 =  KP_7		U2714		U2195		U226A		upstile		NoSymbol	KP_Home		KP_Home
 !				✔ check mark	↕ arrow		≪ much less	⌈						
 keycode 80 =  KP_8		U2718		uparrow		intersection	U22C2		NoSymbol	KP_Up		KP_Up
 !				✘ ballot x	↑		∩		⋂ n-ary intersection				
-keycode 81 =  KP_9		NoSymbol	U20D7		U226B		U2309		NoSymbol	KP_Prior	KP_Prior
-!						vector		≫ much greater	⌉						
+keycode 81 =  KP_9		dagger		U20D7		U226B		U2309		NoSymbol	KP_Prior	KP_Prior
+!				†		vector		≫ much greater	⌉						
 keycode 86 =  KP_Add		KP_Add		plusminus	U2295		U2214		NoSymbol	U2213		NoSymbol
 !		+		+		±		circled plus	dot plus			∓ minus-plus	
 
