@@ -354,7 +354,7 @@ alt_is_meta
            shiftl  keycode  44 = Escape                
    shift   shiftl  keycode  44 = Escape                
    altgr   shiftl  keycode  44 = U+211C                
-                   keycode  45 = odiaeresis            Odiaeresis            dollar                VoidSymbol            
+                   keycode  45 = odiaeresis            Odiaeresis            dollar                U+03F5                
            shiftl  keycode  45 = Tab                   
    altgr   shiftl  keycode  45 = U+2111                
                    keycode  46 = adiaeresis            Adiaeresis            bar                   U+03b7                
