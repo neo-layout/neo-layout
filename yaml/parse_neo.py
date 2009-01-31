@@ -1,3 +1,5 @@
+#!usr/bin/python
+# -*- coding: utf8 -*-
 #===============================================================================
 # YAML Parser for the Neo reference
 # Copyright 2009 Martin Roppelt (m.p.roppelt ἢτ web in Germany)
@@ -24,7 +26,7 @@ for automated creating of keyboard drivers, pictures and references.
 # To Do:
 #===============================================================================
 
-from neo_import import * #neo shared, settings and function module
+from neo_import import * #neo shared and settings module
 from optparse import make_option, OptionParser #command line analyzing module
 import re #regular expression processing module: compile
 import sys #system module: stdout
