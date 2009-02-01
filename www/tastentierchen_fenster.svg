@@ -306,16 +306,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="21.451455"
-     inkscape:cx="25.767334"
-     inkscape:cy="19.322699"
+     inkscape:zoom="10.725728"
+     inkscape:cx="41.567416"
+     inkscape:cy="7.7878793"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1680"
      inkscape:window-height="980"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4" />
+     inkscape:window-x="0"
+     inkscape:window-y="30" />
   <metadata
      id="metadata5953">
     <rdf:RDF>
@@ -332,38 +332,41 @@
      id="layer2"
      inkscape:label="fenster"
      style="display:inline">
-    <rect
-       style="fill:#87cefa;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect2470"
-       width="19.563871"
-       height="12.078929"
-       x="9.3936214"
-       y="15.086232"
-       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
-    <rect
-       y="-0.6444664"
-       x="9.3936214"
-       height="12.078929"
-       width="19.563871"
-       id="rect2472"
-       style="fill:#ff591f;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
-    <rect
-       y="15.086232"
-       x="33.013519"
-       height="12.078929"
-       width="19.563871"
-       id="rect2474"
-       style="fill:#fffd3e;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
-    <rect
-       style="fill:#42da42;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect2476"
-       width="19.563871"
-       height="12.078929"
-       x="33.013519"
-       y="-0.6444664"
-       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
+    <g
+       id="g2765">
+      <rect
+         transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)"
+         y="15.086232"
+         x="9.3936214"
+         height="12.078929"
+         width="19.563871"
+         id="rect2470"
+         style="fill:#87cefa;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)"
+         style="fill:#ff591f;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect2472"
+         width="19.563871"
+         height="12.078929"
+         x="9.3936214"
+         y="-0.6444664" />
+      <rect
+         transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)"
+         style="fill:#fffd3e;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect2474"
+         width="19.563871"
+         height="12.078929"
+         x="33.013519"
+         y="15.086232" />
+      <rect
+         transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)"
+         y="-0.6444664"
+         x="33.013519"
+         height="12.078929"
+         width="19.563871"
+         id="rect2476"
+         style="fill:#42da42;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
   </g>
   <g
      inkscape:label="tastentierchen"
