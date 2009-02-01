@@ -44,12 +44,18 @@ if exist "%customahk%" (
   ren "%customahk%" "%customahkbuild%"
 )
 
+echo download the latest images for the screen keyboard
+for /L %%e in (1,1,6) do wget.exe -O ebene%%e.png http://neo-layout.org/grafik/tastatur3d/haupt_ziffern_feld/tastatur_neo_Ebene%%e.png
+
 echo Compiling the new Driver using Autohotkey
 "%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
 
 if exist "%customahkbuild%" (
   ren "%customahkbuild%" "%customahk%"
 )
+
+echo cleanup images
+del ebene*.png
 
 echo Driver Update complete! You can now close this log-window.
 pause
