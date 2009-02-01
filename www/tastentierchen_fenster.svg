@@ -13,7 +13,7 @@
    height="37"
    id="svg5948"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.46+devel, revision 20105"
    sodipodi:docname="tastentierchen_fenster.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0">
@@ -281,6 +281,20 @@
        inkscape:vp_z="744.09448 : 526.18109 : 1"
        inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
        id="perspective5956" />
+    <inkscape:perspective
+       id="perspective3267"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3267-7"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -292,16 +306,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16.891594"
-     inkscape:cx="26.699671"
-     inkscape:cy="18.390361"
+     inkscape:zoom="21.451455"
+     inkscape:cx="25.767334"
+     inkscape:cy="19.322699"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
-     inkscape:window-width="1278"
-     inkscape:window-height="989"
-     inkscape:window-x="0"
-     inkscape:window-y="1" />
+     inkscape:window-width="1680"
+     inkscape:window-height="980"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
   <metadata
      id="metadata5953">
     <rdf:RDF>
@@ -318,39 +332,38 @@
      id="layer2"
      inkscape:label="fenster"
      style="display:inline">
-    <g
-       id="g2478"
-       transform="matrix(0.7805842,0.1028427,-0.1029504,0.7797682,10.34337,-356.74403)"
-       style="opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-      <rect
-         y="470.57648"
-         x="58.214287"
-         height="15.357142"
-         width="24.848379"
-         id="rect2470"
-         style="opacity:1;fill:#cfc7ff;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         style="opacity:1;fill:#ffcfc6;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect2472"
-         width="24.848379"
-         height="15.357142"
-         x="58.214287"
-         y="450.57648" />
-      <rect
-         style="opacity:1;fill:#ffffc7;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect2474"
-         width="24.848379"
-         height="15.357142"
-         x="88.214287"
-         y="470.57648" />
-      <rect
-         y="450.57648"
-         x="88.214287"
-         height="15.357142"
-         width="24.848379"
-         id="rect2476"
-         style="opacity:1;fill:#c2ffae;fill-opacity:1;stroke:#565656;stroke-width:0.93735003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
+    <rect
+       style="fill:#87cefa;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2470"
+       width="19.563871"
+       height="12.078929"
+       x="9.3936214"
+       y="15.086232"
+       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
+    <rect
+       y="-0.6444664"
+       x="9.3936214"
+       height="12.078929"
+       width="19.563871"
+       id="rect2472"
+       style="fill:#ff591f;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
+    <rect
+       y="15.086232"
+       x="33.013519"
+       height="12.078929"
+       width="19.563871"
+       id="rect2474"
+       style="fill:#fffd3e;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
+    <rect
+       style="fill:#42da42;fill-opacity:0.78431374;stroke:#565656;stroke-width:0.73763102000000003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2476"
+       width="19.563871"
+       height="12.078929"
+       x="33.013519"
+       y="-0.6444664"
+       transform="matrix(0.99143223,0.13062213,-0.13089107,0.99139676,0,0)" />
   </g>
   <g
      inkscape:label="tastentierchen"
