@@ -143,11 +143,11 @@ keycode 13 = 	4		guillemotright	U203A		femalesymbol	Prior		Prior		downtack	NoSym
 !				»		›		♀						⊥ perpendicular
 keycode 14 = 	5		guillemotleft	U2039		malesymbol	periodcentered	NoSymbol	U2221		NoSymbol
 !				«		‹		♂		·				∡ angle sign
-keycode 15 = 	6		EuroSign	cent		U26A5		sterling	NoSymbol	U2225		NoSymbol
-!				€		¢		⚥		£				∥ parallel
+keycode 15 = 	6		dollar		cent		U26A5		sterling	NoSymbol	U2225		NoSymbol
+!				$		¢		⚥		£				∥ parallel
 
-keycode 16 = 	7		dollar		yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
-!				$		¥		κ		¤				→
+keycode 16 = 	7		EuroSign	yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
+!				€		¥		κ		¤				→
 keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	NoSymbol	NoSymbol	infinity	NoSymbol
 !				„		‚		⟨ (bra)						∞
 keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	containsas	NoSymbol
