@@ -30,7 +30,10 @@ EbeneAktualisieren() {
     EbeneNC := EbeneC            ; NC: gleich
   }
   if (guiErstellt)
-    BSTSwitch(EbeneC)
+    if ((EbeneNC < 3) and (EbeneNC != EbeneC))
+      BSTSwitch(EbeneNC . "C")
+    else
+      BSTSwitch(EbeneNC)
 }
 
 IsShiftActive() {
