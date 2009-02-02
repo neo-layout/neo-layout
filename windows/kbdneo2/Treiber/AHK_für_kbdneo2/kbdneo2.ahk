@@ -149,9 +149,15 @@ ToggleMod2Lock() {
 ToggleMod4Lock() {
   global
   if (isMod4Locked)
-    isMod4Locked := 0
+  {
+   isMod4Locked := 0
+   send {vk15}
+  }
   else
+  {
    isMod4Locked := 1
+   send {vk15}
+  }
 }
 
 doMod4() {
@@ -180,8 +186,7 @@ return
  
 ~*v::
 if (isMod4Active and !isMod3Pressed)
-Ifwinactive ahk_class Notepad++
-Sendinput {Blind}{BACKSPACE}{BACKSPACE}
+Sendinput {Blind}{BACKSPACE}
 return
 
 ~*l::
@@ -226,8 +231,7 @@ return
 
 ~*ö::
 if (isMod4Active and !isMod3Pressed)
-Ifwinactive ahk_class Notepad++
-Sendinput {Blind}{BACKSPACE}{TAB}
+Sendinput {Blind}{TAB}
 return
 
 ~*ä::
@@ -237,8 +241,7 @@ return
 
 ~*p::
 if (isMod4Active and !isMod3Pressed)
-Ifwinactive ahk_class Notepad++
-Sendinput {Blind}{BACKSPACE}{ENTER}
+Send {Blind}{ENTER}
 return
 
 
