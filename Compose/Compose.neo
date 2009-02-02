@@ -884,6 +884,10 @@
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
 
+# if you want to have ð and Ð with dead stroke instead of đ and Đ you should uncomment the next two lines
+# <dead_stroke> <d>                      : "ð"   U00F0 # LATIN SMALL LETTER ETH
+# <dead_stroke> <D>                      : "Ð"   U00D0 # LATIN CAPITAL LETTER ETH
+
 # letters with double grave
 <U02F5> <A>                              : "Ȁ"   U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
 <U02F5> <a>                              : "ȁ"   U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
@@ -897,10 +901,6 @@
 <U02F5> <r>                              : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
 <U02F5> <U>                              : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
 <U02F5> <u>                              : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
-
-# if you want to have ð and Ð with dead stroke instead of đ and Đ you should uncomment the next two lines
-# <dead_stroke> <d>                      : "ð"   U00F0 # LATIN SMALL LETTER ETH
-# <dead_stroke> <D>                      : "Ð"   U00D0 # LATIN CAPITAL LETTER ETH
 
 # other letters
 <Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
@@ -1421,6 +1421,12 @@
 <Multi_key> <femalesymbol> <malesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <malesymbol> <femalesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
+<Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U25A1> <U2718>                : "☒"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U2718> <U25A1>                : "☒"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U2423> <U2423>                : "⍽"   U237D # SHOULDERED OPEN BOX
+
 
 # box drawings
 <Multi_key> <x> <1> <1>      : "┌──────────┐\n│          │\n└──────────┘\n"
