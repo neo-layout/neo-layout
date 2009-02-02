@@ -29,11 +29,14 @@ EbeneAktualisieren() {
       Ebene8 := 1
     EbeneNC := EbeneC            ; NC: gleich
   }
-  if (guiErstellt)
-    if ((EbeneNC < 3) and (EbeneNC != EbeneC))
+  if (guiErstellt) {
+    if (striktesMod2Lock)
+      BSTSwitch(EbeneC)
+    else if ((EbeneNC < 3) and (EbeneNC != EbeneC))
       BSTSwitch(EbeneNC . "C")
     else
       BSTSwitch(EbeneNC)
+  }
 }
 
 IsShiftActive() {
