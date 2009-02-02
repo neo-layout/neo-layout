@@ -12,7 +12,7 @@ lernModus_std_Runter := 0
 lernModus_std_Links := 0
 lernModus_std_Rechts := 0
 lernModus_std_ZahlenReihe := 0
-lernModus_neo_Backspace := 0
+lernModus_neo_Backspace := 1
 lernModus_neo_Entf := 1
 
 CP3F9 := "P_LMt"
