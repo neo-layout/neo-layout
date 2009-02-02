@@ -54,8 +54,5 @@ if exist "%customahkbuild%" (
   ren "%customahkbuild%" "%customahk%"
 )
 
-echo cleanup images
-for /L %%e in (1,1,6) do del ebene%%e.png
-
 echo Driver Update complete! You can now close this log-window.
 pause
