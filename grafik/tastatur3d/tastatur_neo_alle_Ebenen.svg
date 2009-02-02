@@ -96,12 +96,12 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.77537395"
-     inkscape:cx="913.07534"
-     inkscape:cy="284.66961"
+     inkscape:zoom="1.5507479"
+     inkscape:cx="1071.1478"
+     inkscape:cy="314.61796"
      inkscape:window-x="0"
      inkscape:window-y="30"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer8"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -6832,6 +6832,27 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5127"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5158"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5158-9"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -12159,17 +12180,6 @@
          id="tspan17976-8"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">Y</tspan></text>
     <text
-       x="1173.5994"
-       y="142.65131"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
-       id="text5017-3"
-       xml:space="preserve"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-4"
-         x="1173.5994"
-         y="142.65131">¸</tspan></text>
-    <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
        x="1167.1958"
@@ -12202,6 +12212,17 @@
          id="tspan33040-98"
          x="1167.1958"
          y="135.48123">◌</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       xml:space="preserve"
+       id="text5144"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       y="142.3172"
+       x="1078.5685"><tspan
+         sodipodi:role="line"
+         id="tspan5148"
+         x="1078.5685"
+         y="142.3172">ẞ</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -13012,6 +13033,28 @@
          id="tspan4983"
          x="1945.608"
          y="424.52917">†</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       xml:space="preserve"
+       id="text5144-4"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       y="142.3172"
+       x="1078.5685"><tspan
+         sodipodi:role="line"
+         id="tspan5148-0"
+         x="1078.5685"
+         y="142.3172">ẞ</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       xml:space="preserve"
+       id="text5144-48"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       y="424.41833"
+       x="1082.0465"><tspan
+         sodipodi:role="line"
+         id="tspan5148-8"
+         x="1082.0465"
+         y="424.41833">ẞ</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
