@@ -101,7 +101,7 @@
      inkscape:cy="446.88403"
      inkscape:window-x="0"
      inkscape:window-y="30"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -11408,7 +11408,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Ebene 1Caps"
-     style="display:none">
+     style="display:inline">
     <text
        x="885.2063"
        y="324.58524"
@@ -11674,17 +11674,6 @@
          id="tspan7888-1"
          x="35.301617"
          y="45.815819">◌</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
-       x="1166.2172"
-       y="136.88374"
-       id="text7890-8"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan7892-4"
-         x="1166.2172"
-         y="136.88374">◌</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
