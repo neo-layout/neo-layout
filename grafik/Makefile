@@ -1,4 +1,4 @@
-EBENEN=$(foreach i, 1 2 3 4 5 6, tastatur_neo_Ebene${i}.svg)
+EBENEN=$(foreach i, 1 12 2 3 4 5 6, tastatur_neo_Ebene${i}.svg)
 EBENENSVG=$(foreach file, ${EBENEN}, tastatur3d/${file})
 HAUPT=$(foreach file, ${EBENEN}, tastatur3d/hauptfeld/${file})
 ZIFFERN=$(foreach file, ${EBENEN}, tastatur3d/ziffernfeld/${file})
