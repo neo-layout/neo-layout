@@ -1423,8 +1423,8 @@
 <Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
-<Multi_key> <U25A1> <U2718>                : "☒"   U2611 # BALLOT BOX WITH CHECK
-<Multi_key> <U2718> <U25A1>                : "☒"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U25A1> <U2718>                : "☒"   U2612 # BALLOT BOX WITH X
+<Multi_key> <U2718> <U25A1>                : "☒"   U2612 # BALLOT BOX WITH X
 <Multi_key> <U2423> <U2423>                : "⍽"   U237D # SHOULDERED OPEN BOX
 
 
