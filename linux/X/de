@@ -271,11 +271,11 @@ xkb_symbols "neo" {
     key <AE01> { [ 1,           degree,                 onesuperior,            onesubscript,       ordfeminine,    NoSymbol,    notsign        ] };
     key <AE02> { [ 2,           section,                twosuperior,            twosubscript,       masculine,      NoSymbol,    logicalor      ] };
     key <AE03> { [ 3,           U2113,                  threesuperior,          threesubscript,     numerosign,     NoSymbol,    logicaland     ] };
-    key <AE04> { [ 4,           guillemotright,         U203A,                  dagger,             Prior,          Prior,       U22A5          ] };
-    key <AE05> { [ 5,           guillemotleft,          U2039,                  femalesymbol,       periodcentered, NoSymbol,    U2221          ] };
-    key <AE06> { [ 6,           EuroSign,               cent,                   malesymbol,         sterling,       NoSymbol,    U2225          ] };
+    key <AE04> { [ 4,           guillemotright,         U203A,                  femalesymbol,       Prior,          Prior,       U22A5          ] };
+    key <AE05> { [ 5,           guillemotleft,          U2039,                  malesymbol,         periodcentered, NoSymbol,    U2221          ] };
+    key <AE06> { [ 6,           dollar,                 cent,                   U26A5,              sterling,       NoSymbol,    U2225          ] };
 
-    key <AE07> { [ 7,           dollar,                 yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
+    key <AE07> { [ 7,           EuroSign,               yen,                    Greek_kappa,        currecny,       NoSymbol,    rightarrow     ] };
     key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   NoSymbol,       NoSymbol,    U221E          ] };
     key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  slash,          NoSymbol,    U220B          ] };
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      asterisk,       NoSymbol,    emptyset       ] };
@@ -306,7 +306,7 @@ xkb_symbols "neo" {
     // middle row
     // --------------------------------------------------------------
     // uiaeosnrtdy
-    key <AC01> { [ u,           U,                      backslash,              NoSymbol,           Home,           Home,        U222E             ] };
+    key <AC01> { [ u,           U,                      backslash,              mu,                 Home,           Home,        U222E             ] };
     key <AC02> { [ i,           I,                      slash,                  Greek_iota,         Left,           Left,        integral          ] };
     key <AC03> { [ a,           A,                      braceleft,              Greek_alpha,        Down,           Down,        U2200             ] };
     key <AC04> { [ e,           E,                      braceright,             Greek_epsilon,      Right,          Right,       U2203             ] };
@@ -357,7 +357,7 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     key  <KP7> { [ KP_7,          U2714,          U2195,        U226A,        KP_Home,    KP_Home,    upstile ] };
     key  <KP8> { [ KP_8,          U2718,          uparrow,      intersection, KP_Up,      KP_Up,      U22C2   ] };
-    key  <KP9> { [ KP_9,          NoSymbol,       U20D7,        U226B,        KP_Prior,   KP_Prior,   U2309   ] };
+    key  <KP9> { [ KP_9,          dagger,         U20D7,        U226B,        KP_Prior,   KP_Prior,   U2309   ] };
     key <KPAD> { [ KP_Add,        KP_Add,         plusminus,    U2213,        U2295,      NoSymbol,   U2214   ] };
 
     // middle row
