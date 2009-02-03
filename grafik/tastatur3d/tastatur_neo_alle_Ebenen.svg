@@ -96,12 +96,12 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.54842099"
-     inkscape:cx="809.50044"
-     inkscape:cy="446.88403"
+     inkscape:zoom="0.3877922"
+     inkscape:cx="442.78937"
+     inkscape:cy="-96.140822"
      inkscape:window-x="0"
      inkscape:window-y="30"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -6874,6 +6874,13 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5286"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -12636,15 +12643,15 @@
        xml:space="preserve"
        sodipodi:linespacing="125%">«</text>
     <text
-       x="590.25098"
-       y="334.01965"
+       x="684.37354"
+       y="336.59833"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text4931"
        xml:space="preserve"
        sodipodi:linespacing="125%">€</text>
     <text
-       x="680.25098"
-       y="334.04309"
+       x="592.57513"
+       y="333.39844"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        id="text4933"
        xml:space="preserve"
@@ -13147,20 +13154,6 @@
        id="text4929-1"
        xml:space="preserve"
        sodipodi:linespacing="125%">«</text>
-    <text
-       x="586.85016"
-       y="50.628506"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
-       id="text4931-3"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">€</text>
-    <text
-       x="676.85016"
-       y="50.651943"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
-       id="text4933-8"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">$</text>
     <text
        x="765.85034"
        y="50.628506"
@@ -13839,6 +13832,20 @@
          y="138.58524"
          id="tspan7932-3"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">k</tspan></text>
+    <text
+       x="680.97272"
+       y="53.207184"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
+       id="text4931-1"
+       xml:space="preserve"
+       sodipodi:linespacing="125%">€</text>
+    <text
+       x="589.17432"
+       y="50.007294"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
+       id="text4933-7"
+       xml:space="preserve"
+       sodipodi:linespacing="125%">$</text>
   </g>
   <g
      inkscape:groupmode="layer"
