@@ -275,7 +275,7 @@ xkb_symbols "neo" {
     key <AE05> { [ 5,           guillemotleft,          U2039,                  malesymbol,         periodcentered, NoSymbol,    U2221          ] };
     key <AE06> { [ 6,           dollar,                 cent,                   U26A5,              sterling,       NoSymbol,    U2225          ] };
 
-    key <AE07> { [ 7,           EuroSign,               yen,                    Greek_kappa,        currecny,       NoSymbol,    rightarrow     ] };
+    key <AE07> { [ 7,           EuroSign,               yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
     key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   NoSymbol,       NoSymbol,    U221E          ] };
     key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  slash,          NoSymbol,    U220B          ] };
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      asterisk,       NoSymbol,    emptyset       ] };
