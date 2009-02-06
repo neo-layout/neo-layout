@@ -1426,6 +1426,7 @@
 <Multi_key> <U25A1> <U2718>                : "☒"   U2612 # BALLOT BOX WITH X
 <Multi_key> <U2718> <U25A1>                : "☒"   U2612 # BALLOT BOX WITH X
 <Multi_key> <U2423> <U2423>                : "⍽"   U237D # SHOULDERED OPEN BOX
+<Multi_key> <p> <f>                        : "₰"   U20B0 # GERMAN PENNY SIGN	
 
 
 # box drawings
