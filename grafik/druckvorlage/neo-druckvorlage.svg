@@ -132,7 +132,7 @@
         <dc:title>NEO-Tastatur-Layout Version 2.0 als Druckvorlage</dc:title>
         <dc:creator>
           <cc:Agent>
-            <dc:title>Philipp H. Poll</dc:title>
+            <dc:title>Philipp H. Poll (siehe http://linuxlibertine.sourceforge.net/)</dc:title>
           </cc:Agent>
         </dc:creator>
         <dc:source>https://neo.eigenheimstrasse.de/svn/grafik/svg/neo20_Farbe_Ebene_1_bis_4.svg</dc:source>
@@ -151,7 +151,7 @@
             <rdf:li>neo-layout.org</rdf:li>
           </rdf:Bag>
         </dc:subject>
-        <dc:description>Grafik der Tastaturbelegung „Neo 2.0“, angepasst mit Inkscape, gedacht als Druckvorlage für Tastaturaufkleber</dc:description>
+        <dc:description>Eine Grafik der Tastaturbelegung „Neo 2.0“, angepasst mit Inkscape. Diese Druckvorlage soll es als Aufkleber geben, wenn die Tastaturbelegung Neo in Version 2 endgültig ist (es entstehen vorausſichtlich Konsten von circa 5 Euro pro Aufkleber).</dc:description>
         <dc:date>2008-03-14</dc:date>
         <dc:relation>https://neo.eigenheimstrasse.de/svn/A-REFERENZ-A/neo20.txt</dc:relation>
         <dc:identifier>https://neo.eigenheimstrasse.de/svn/grafik/druckvorlage-svg/neo-druckvorlage.svg</dc:identifier>
