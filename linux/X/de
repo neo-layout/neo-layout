@@ -323,7 +323,7 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     // üöäpzbm,.j
     key <AB01> { [ udiaeresis,  Udiaeresis,             numbersign,             NoSymbol,           Escape,         Escape,      U211C             ] };
-    key <AB02> { [ odiaeresis,  Odiaeresis,             dollar,                 NoSymbol,           Tab,            Tab,         U2111             ] };
+    key <AB02> { [ odiaeresis,  Odiaeresis,             dollar,                 U03F5,              Tab,            Tab,         U2111             ] };
     key <AB03> { [ adiaeresis,  Adiaeresis,             bar,                    Greek_eta,          Next,           Next,        U2135             ] };
     key <AB04> { [ p,           P,                      asciitilde,             Greek_pi,           Return,         Return,      Greek_PI          ] };
     key <AB05> { [ z,           Z,                      grave,                  Greek_zeta,         NoSymbol,       NoSymbol,    U2124             ] };
