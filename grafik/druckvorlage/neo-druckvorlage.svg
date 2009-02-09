@@ -12,7 +12,7 @@
    height="332"
    id="svg2559"
    sodipodi:version="0.32"
-   inkscape:version="0.46+devel, revision 20105"
+   inkscape:version="0.46"
    version="1.0"
    sodipodi:docname="neo-druckvorlage.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
@@ -39,7 +39,7 @@
      inkscape:zoom="1.6632833"
      inkscape:cx="463.80057"
      inkscape:cy="181.6923"
-     inkscape:current-layer="layer11"
+     inkscape:current-layer="layer8"
      id="namedview2563"
      width="935px"
      height="332px"
@@ -58,10 +58,10 @@
      inkscape:object-paths="false"
      inkscape:guide-bbox="true"
      inkscape:grid-bbox="false"
-     inkscape:window-width="1680"
+     inkscape:window-width="1280"
      inkscape:window-height="980"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
      inkscape:object-bbox="true"
      showguides="true"
      inkscape:snap-bbox="false"
@@ -4940,7 +4940,7 @@
          id="tspan7590"
          x="753.59637"
          y="651.26239"
-         style="font-size:9.82734966px;fill:#3879dc;fill-opacity:1;font-family:DejaVu Sans Condensed">Leerzeichen ⍽</tspan></text>
+         style="font-size:9.82734966px;fill:#3879dc;fill-opacity:1;font-family:DejaVu Sans Condensed">   Leerzeichen ⍽</tspan></text>
     <g
        id="g13426"
        transform="matrix(0.75595,0,0,0.75595,340.44469,156.14938)">
@@ -5271,7 +5271,7 @@
          style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">η</tspan></text>
     <path
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       d="M 783.74844,671.9845 L 785.37972,671.9845 L 785.37972,669.80649 L 787.79964,669.80649 L 787.79964,670.80259 L 786.3641,670.80259 L 786.3641,672.98059 L 782.76407,672.98059 L 782.76407,670.80259 L 781.32266,670.80259 L 781.32266,669.80649 L 783.74844,669.80649 L 783.74844,671.9845"
+       d="M 791.74844,671.9845 L 793.37972,671.9845 L 793.37972,669.80649 L 795.79964,669.80649 L 795.79964,670.80259 L 794.3641,670.80259 L 794.3641,672.98059 L 790.76407,672.98059 L 790.76407,670.80259 L 789.32266,670.80259 L 789.32266,669.80649 L 791.74844,669.80649 L 791.74844,671.9845"
        id="text6657"
        sodipodi:nodetypes="ccccccccccccc" />
     <g
@@ -5411,7 +5411,7 @@
          id="tspan13135"
          x="503.32111"
          y="258.22089"
-         style="font-size:9.82734966px;font-weight:bold;fill:#e31515;fill-opacity:1;font-family:DejaVu Sans Condensed">schm.     Leerzeichen</tspan></text>
+         style="font-size:9.82734966px;font-weight:bold;fill:#e31515;fill-opacity:1;font-family:DejaVu Sans Condensed"> schm.    Leerzeichen</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18.29399109px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
