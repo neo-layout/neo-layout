@@ -184,11 +184,6 @@ if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{PGUP} 
 return 
  
-~*v::
-if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{BACKSPACE}
-return
-
 ~*l::
 if (isMod4Active and !isMod3Pressed)
 Sendinput {Blind}{UP}
