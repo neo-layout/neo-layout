@@ -179,64 +179,74 @@ doMod4() {
 }
 
 ; *** Funktionstasten ***
-~*4:: 
-if (isMod4Active and !isMod3Pressed)  
-Sendinput {Blind}{PGUP} 
-return 
+~*4::
+if (isMod4Active and !isMod3Pressed)
+Send {Blind}{PGUP}
+return
+
+~*v::
+if (isMod4Active and !isMod3Pressed) 
+Send {Blind}{BACKSPACE}
+return
  
 ~*l::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{UP}
+Send {Blind}{UP}
 return
 
 ~*c::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{DEL}
+Send {Blind}{DEL}
 return
 
 ~*w::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{INS}
+Send {Blind}{INS}
 return
 
 ~*u::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{HOME}
+Send {Blind}{HOME}
 return
 
 ~*i::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{LEFT}
+Send {Blind}{LEFT}
 return
 
 ~*a::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{DOWN}
+Send {Blind}{DOWN}
 return
 
 ~*e::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{RIGHT}
+Send {Blind}{RIGHT}
 return
 
 ~*o::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{END}
+Send {Blind}{END}
+return
+
+~*ü::
+if (isMod4Active and !isMod3Pressed)
+Send {esc}
 return
 
 ~*ö::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{TAB}
+Send {Blind}{TAB}
 return
 
 ~*ä::
 if (isMod4Active and !isMod3Pressed)
-Sendinput {Blind}{PGDN}
+Send {Blind}{PGDN}
 return
 
 ~*p::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{ENTER}
+Send {ENTER}
 return
 
 
