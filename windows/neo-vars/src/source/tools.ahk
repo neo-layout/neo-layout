@@ -486,7 +486,6 @@ CDSCompU0075U0077 := "P_WMN"
 
 CharProc_WMN() {
   global
-  TrayTip,Wie mit NEO, Here we are!,10,1
   ok := DllCall("OpenClipboard")
   if (!ok) {
     TrayTip,Wie mit NEO,Fehler in OpenClipboard,10,1
@@ -519,6 +518,7 @@ SetFormat,Integer,d
     TrayTip,Wie mit NEO,Keine Information`, wie %a% eingegeben werden kann!,10,1
     return
   }
+;  MsgBox,% wtt
 
   wmn := ""
   loop,parse,wtt,%A_Space%
