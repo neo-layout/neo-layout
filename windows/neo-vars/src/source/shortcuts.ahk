@@ -226,13 +226,13 @@ UNSHU00B5 := 1 ; µ
 /*
   Jetzt noch ein paar Verschönerungsabkürzungen
 */
-CBS__M2 := "(Shift)+"
-CBS__M3 := "(Mod3)+"
-CBS__M4 := "(Mod4)+"
-CBS__M5 := "(Mod5=Shift+Mod3)+"
-CBS__M6 := "(Mod6=Mod3+Mod4)+"
-CBS__M7 := "(Mod7=Shift+Mod4)+"
-CBS__M8 := "(Mod8=Shift+Mod3+Mod4)+"
+CBS__M2 := "Shift+"
+CBS__M3 := "Mod3+"
+CBS__M4 := "Mod4+"
+CBS__M5 := "Mod5=Shift+Mod3+"
+CBS__M6 := "Mod6=Mod3+Mod4+"
+CBS__M7 := "Mod7=Shift+Mod4+"
+CBS__M8 := "Mod8=Shift+Mod3+Mod4+"
 
 CBSComp := "Compose"
 CBTAcut := "Akut"
