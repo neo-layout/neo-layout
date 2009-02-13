@@ -1891,9 +1891,12 @@ EncodeUnicodeFile(FFrom,FTo) {
         break
       }
     }
-    if (modkeys != "")
-      Composita := Composita "CD" modkeys ":=""" EncodeUni(ReplaceRight) """`r`n"
-    else {
+    if (modkeys != "") {
+      ressymb := EncodeUni(ReplaceRight)
+      Composita .= "CD" . modkeys . ":="""  . ressymb . """`r`n"
+      if (StrLen(ressymb)==5)
+        Composita .= "CRC" . ressymb . ".="" " . modkeys . """`r`n" 
+    } else {
       Composita := Composita "; illegal " Xkbsym " in " A_LoopField "`r`n"
       Miss := Miss + 1
     }

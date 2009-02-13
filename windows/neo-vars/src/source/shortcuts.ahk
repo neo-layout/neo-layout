@@ -33,10 +33,16 @@ CSU0020 := "space"
  **** ist (wie bei den diversen toten Zeichen) oder schlicht mit AHK nicht
  **** geht (wie das Key-Repeat der schließenden Klammer).
 */
-DNCSU005E := "{^}{space}"
-DNCSU0060 := "{``}{space}"
+; DNCSU005E := "{^}{space}"
+; DNCSU0060 := "{``}{space}"
+; DNCSU00B4 := "{´}{space}"
+
+CSU005E := ""
+CSU0060 := ""
+CSU00B4 := ""
+
 DNCSU007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
-DNCSU00B4 := "{´}{space}"
+; CSU007D := ""
 
 /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
  **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
@@ -216,3 +222,30 @@ UNSHU20AC := 1 ; Euro
 UNSHU007E := 1 ; ~
 UNSHU007C := 1 ; |
 UNSHU00B5 := 1 ; µ
+
+/*
+  Jetzt noch ein paar Verschönerungsabkürzungen
+*/
+CBS__M2 := "(Shift)+"
+CBS__M3 := "(Mod3)+"
+CBS__M4 := "(Mod4)+"
+CBS__M5 := "(Mod5=Shift+Mod3)+"
+CBS__M6 := "(Mod6=Mod3+Mod4)+"
+CBS__M7 := "(Mod7=Shift+Mod4)+"
+CBS__M8 := "(Mod8=Shift+Mod3+Mod4)+"
+
+CBSComp := "Compose"
+CBTAcut := "Akut"
+CBTgrav := "Grave"
+CBTcedi := "Cedilla"
+CBTabdt := "Abovedot"
+CBTogon := "Ogonek"
+CBTcflx := "Circumflex"
+CBTcron := "Caron"
+CBTbrve := "Breve"
+CBTbldt := "Belowdot"
+CBTtlde := "Tilde"
+CBTmcrn := "Macron"
+CBTdrss := "Diaeresis"
+CBTdbac := "Doubleacute"
+CBTstrk := "Stroke"

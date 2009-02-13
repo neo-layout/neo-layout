@@ -126,6 +126,22 @@ ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   CP6%pos% := e6
   CP7%pos% := e7
   CP8%pos% := e8
+  if (e1 != "")
+    CRK%e1% .= " " . e1
+  if (e2 != "")
+    CRK%e2% .= " S__M2" . e1
+  if (e3 != "")
+    CRK%e3% .= " S__M3" . e1
+  if (e4 != "")
+    CRK%e4% .= " S__M4" . e1
+  if (e5 != "")
+    CRK%e5% .= " S__M5" . e1
+  if (e6 != "")
+    CRK%e6% .= " S__M6" . e1
+  if (e7 != "")
+    CRK%e7% .= " S__M7" . e1
+  if (e8 != "")
+    CRK%e8% .= " S__M8" . e1
 }
 
 EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {

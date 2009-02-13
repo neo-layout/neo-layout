@@ -480,3 +480,71 @@ PressHookCalc(PhysKey, ActKey, Char) {
     }
   }
 }
+
+CDSCompU0055U0057 := "P_WMN"
+CDSCompU0075U0077 := "P_WMN"
+
+CharProc_WMN() {
+  global
+  TrayTip,Wie mit NEO, Here we are!,10,1
+  ok := DllCall("OpenClipboard")
+  if (!ok) {
+    TrayTip,Wie mit NEO,Fehler in OpenClipboard,10,1
+    return
+  }
+  uclph:=DllCall("GetClipboardData","uint",CF_UNICODETEXT:=13)
+  if (uclph == 0) {
+    DllCall("CloseClipboard")
+    TrayTip,Wie mit NEO,Fehler in GetClipboardData,10,1
+    return
+  }
+  uclp := DllCall("GlobalLock","uint",uclph)
+  if (uclp == 0) {
+    DllCall("CloseClipboard")
+    TrayTip,Wie mit NEO,Fehler in GlobalLock,10,1
+    return
+  }
+  a := *(uclp+0)
+  b := *(uclp+1)
+
+  DllCall("GlobalUnlock","uint",uclph)
+  DllCall("CloseClipboard")
+
+SetFormat,Integer,h
+    a += 256*b
+SetFormat,Integer,d
+  a := "U" . substr("0000" . substr(a,3),-3)
+  wtt := CRC%a% . " " . CRK%a% . " "
+  if (wtt=="") {
+    TrayTip,Wie mit NEO,Keine Information`, wie %a% eingegeben werden kann!,10,1
+    return
+  }
+
+  wmn := ""
+  loop,parse,wtt,%A_Space%
+  {
+    this_wmn := ""
+    this_wtt := A_LoopField
+    if (this_wtt == "")
+      continue ; probably at first or last entry
+    loop {
+      if (this_wtt == "")
+        break
+      this_char := substr(this_wtt,1,5)
+      this_wtt := substr(this_wtt,6)
+      if (CB%this_char% != "")
+        this_char := CB%this_char%
+      else if (CS%this_char% != "")
+        this_char := CS%this_char%
+      ; this_char will contain Uxxxx if no shortcut is present. Fix this here.
+      if (substr(this_char,-1) == ")+")
+        this_wmn .= this_char
+      else if (substr(this_wmn,-1) == ")+")
+        this_wmn .= "<" . this_char . ">"
+      else
+        this_wmn .= " <" . this_char . ">"
+    }
+    wmn .= this_wmn . "`r`n"
+  }
+  TrayTip,Wie mit NEO,% wmn,10,1
+}
