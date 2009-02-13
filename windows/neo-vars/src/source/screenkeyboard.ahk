@@ -32,14 +32,14 @@ BSTToggle() {
   } else {
     yPosition := A_ScreenHeight -270
     Gui, Color, FFFFFF
-    Gui, Add, Picture,AltSubmit x0   y0   w776 h200        vPicture1, % ResourceFolder . "\ebene1.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture1C,% ResourceFolder . "\ebene1Caps.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture2, % ResourceFolder . "\ebene2.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture2C,% ResourceFolder . "\ebene2Caps.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture3, % ResourceFolder . "\ebene3.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture4, % ResourceFolder . "\ebene4.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture5, % ResourceFolder . "\ebene5.png"
-    Gui, Add, Picture,AltSubmit xp+0 yp+0 w776 h200 Hidden vPicture6, % ResourceFolder . "\ebene6.png"
+    Gui, Add, Picture,AltSubmit x0   y0          vPicture1, % ResourceFolder . "\ebene1.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture1C,% ResourceFolder . "\ebene1Caps.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture2, % ResourceFolder . "\ebene2.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture2C,% ResourceFolder . "\ebene2Caps.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture3, % ResourceFolder . "\ebene3.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture4, % ResourceFolder . "\ebene4.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture5, % ResourceFolder . "\ebene5.png"
+    Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture6, % ResourceFolder . "\ebene6.png"
     Gui, +AlwaysOnTop
     Gui, Show, y%yposition% Autosize
     BSTEbeneAlt := 1
