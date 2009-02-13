@@ -514,7 +514,10 @@ SetFormat,Integer,h
 SetFormat,Integer,d
   a := "U" . substr("0000" . substr(a,3),-3)
 
-  wmn := "Das Zeichen " . a . " kann wie folgt eingegeben werden:`r`n"
+  Gui,2:Destroy
+  Gui,2:Font,,DejaVu Sans
+  Gui,2:Margin,10,0
+  Gui,2:Add,Text,,% "`r`nDas Zeichen " . a . " kann wie folgt eingegeben werden:"
   loop,parse,CRC%a%,%A_Space%
   {
     this_wmn := ""
@@ -545,23 +548,32 @@ SetFormat,Integer,d
       this_wmn := SubStr(this_wmn,2)
     if (this_wmnk != "")
       this_wmnk := SubStr(this_wmnk,2)
+    Gui,2:Font,,Dejavu Sans Bold
     if (nthis == 1)
-      wmn .= "Wegen fehlender Tastenbelegung: Nicht als Compose:`r`n"
+      Gui,2:Add,Text,,% "Wegen fehlender Tastenbelegung nicht als Compose:"
     else
-      wmn .= "Als Compose:`r`n"
-    wmn .= this_wmn . "`r`noder`r`n" . this_wmnk . "`r`n`r`n"
+      Gui,2:Add,Text,,% "Als Compose:"
+    Gui,2:Font,,Dejavu Sans
+    Gui,2:Add,Text,,% this_wmn . "`r`noder`r`n" . this_wmnk
   }
 
   wmnk := KeyLong(CRK%a%)
-  if (wmnk != "")
-    wmn .= "Als Tastendruck:`r`n" . wmnk
-  else
-    wmn .= "Als Tastendruck nicht verfügbar!"
+  Gui,2:Font,,Dejavu Sans Bold
+  if (wmnk != "") {
+    Gui,2:Add,Text,,% "Als Tastendruck:"
+    Gui,2:Font,,Dejavu Sans
+    Gui,2:Add,Text,,% wmnk
+  } else
+    Gui,2:Add,Text,,% "Als Tastendruck nicht verfuegbar"
 
-  if (wmn != "")
-    MsgBox,0,Wie mit NEO,% wmn
-  else
-    TrayTip,Wie mit NEO,Keine Information über %a% gefunden,10,1
+  Gui,2:Add, Button, Default xp+100 yp+40, OK
+  Gui,2:Show
+  return
+
+  2ButtonOK:
+  2GuiEscape:
+    Gui,2:Destroy
+    return
 }
 
 KeyLong(key) {
