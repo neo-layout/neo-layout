@@ -816,8 +816,8 @@
 <dead_grave> <Multi_key> <G> <Y>                                   : "Ὺ"   U1FEA # GREEK CAPITAL LETTER UPSILON WITH VARIA
 <dead_acute> <Multi_key> <g> <Y>                                   : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA
 <dead_acute> <Multi_key> <G> <Y>                                   : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA
-<U1FFE> <Multi_key> <g> <RHO>                                      : "Ῥ"   U1FEC # GREEK CAPITAL LETTER RHO WITH DASIA
-<U1FFE> <Multi_key> <G> <RHO>                                      : "Ῥ"   U1FEC # GREEK CAPITAL LETTER RHO WITH DASIA
+<U1FFE> <Multi_key> <g> <Greek_RHO>                                : "Ῥ"   U1FEC # GREEK CAPITAL LETTER RHO WITH DASIA
+<U1FFE> <Multi_key> <G> <Greek_RHO>                                : "Ῥ"   U1FEC # GREEK CAPITAL LETTER RHO WITH DASIA
 <dead_grave> <Multi_key> <g> <O>                                   : "Ὸ"   U1FF8 # GREEK CAPITAL LETTER OMICRON WITH VARIA
 <dead_grave> <Multi_key> <G> <O>                                   : "Ὸ"   U1FF8 # GREEK CAPITAL LETTER OMICRON WITH VARIA
 <dead_acute> <Multi_key> <g> <O>                                   : "Ό"   U1FF9 # GREEK CAPITAL LETTER OMICRON WITH OXIA
@@ -1165,9 +1165,9 @@
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
 <dead_stroke> <equal>                                       : "≠"   U2260 # NOT EQUAL TO
 <Multi_key> <equal> <dead_stroke> <dead_stroke>             : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_Divide> <KP_equal>                          : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <KP_equal>                                    : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_equal> <dead_stroke> <dead_stroke>          : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <KP_Divide> <KP_Equal>                          : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <KP_Equal>                                    : "≠"   U2260 # NOT EQUAL TO
+<Multi_key> <KP_Equal> <dead_stroke> <dead_stroke>          : "≠"   U2260 # NOT EQUAL TO
 <Multi_key> <less> <greater>                                : "≠"   U2260 # NOT EQUAL TO
 <Multi_key> <slash> <U2203>                                 : "∄"   U2204 # THERE DOES NOT EXIST
 <dead_stroke> <U2203>                                       : "∄"   U2204 # THERE DOES NOT EXIST
