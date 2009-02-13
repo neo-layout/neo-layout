@@ -110,6 +110,17 @@ ED1("VKBFSC02B","PM3RD") ; Mod3R (#')
 ED1("VKE2SC056","PM4LD") ; Mod4L (<>)
 ED1("VKA5SC138","PM4RD") ; Mod4R (AltGr)
 
+SetKeyPos(pos,char) {
+  global
+  current := %pos%
+  if (current != "")
+    StringReplace,CRK%current%,CRK%current%,% " " . pos . " ",% " "
+  if (SubStr(CRK%char%,0) != " ")
+    CRK%char% .= " "
+  CRK%char% .= pos . " "
+  %pos% := char
+}
+
 ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   global
   if (caps == 0)
@@ -118,30 +129,14 @@ ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
     if (e1 != "")
       UNSH%e1% := 1 ; unshift wenn caps lock + Shift?
   }
-  CP1%pos% := e1
-  CP2%pos% := e2
-  CP3%pos% := e3
-  CP4%pos% := e4
-  CP5%pos% := e5
-  CP6%pos% := e6
-  CP7%pos% := e7
-  CP8%pos% := e8
-  if (e1 != "")
-    CRK%e1% .= " " . e1
-  if (e2 != "")
-    CRK%e2% .= " S__M2" . e1
-  if (e3 != "")
-    CRK%e3% .= " S__M3" . e1
-  if (e4 != "")
-    CRK%e4% .= " S__M4" . e1
-  if (e5 != "")
-    CRK%e5% .= " S__M5" . e1
-  if (e6 != "")
-    CRK%e6% .= " S__M6" . e1
-  if (e7 != "")
-    CRK%e7% .= " S__M7" . e1
-  if (e8 != "")
-    CRK%e8% .= " S__M8" . e1
+  SetKeyPos("CP1" . pos,e1)
+  SetKeyPos("CP2" . pos,e2)
+  SetKeyPos("CP3" . pos,e3)
+  SetKeyPos("CP4" . pos,e4)
+  SetKeyPos("CP5" . pos,e5)
+  SetKeyPos("CP6" . pos,e6)
+  SetKeyPos("CP7" . pos,e7)
+  SetKeyPos("CP8" . pos,e8)
 }
 
 EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {

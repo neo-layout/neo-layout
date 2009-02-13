@@ -513,38 +513,83 @@ SetFormat,Integer,h
     a += 256*b
 SetFormat,Integer,d
   a := "U" . substr("0000" . substr(a,3),-3)
-  wtt := CRC%a% . " " . CRK%a% . " "
-  if (wtt=="") {
-    TrayTip,Wie mit NEO,Keine Information`, wie %a% eingegeben werden kann!,10,1
-    return
-  }
-;  MsgBox,% wtt
 
-  wmn := ""
-  loop,parse,wtt,%A_Space%
+  wmn := "Das Zeichen " . a . " kann wie folgt eingegeben werden:`r`n"
+  loop,parse,CRC%a%,%A_Space%
   {
     this_wmn := ""
+    this_wmnk := ""
+    nthis := 0
     this_wtt := A_LoopField
     if (this_wtt == "")
       continue ; probably at first or last entry
     loop {
       if (this_wtt == "")
         break
-      this_char := substr(this_wtt,1,5)
+      this_char5 := substr(this_wtt,1,5)
+      this_char  := this_char5
       this_wtt := substr(this_wtt,6)
       if (CB%this_char% != "")
         this_char := CB%this_char%
       else if (CS%this_char% != "")
         this_char := CS%this_char%
       ; this_char will contain Uxxxx if no shortcut is present. Fix this here.
-      if (substr(this_char,-1) == ")+")
-        this_wmn .= this_char
-      else if (substr(this_wmn,-1) == ")+")
-        this_wmn .= "<" . this_char . ">"
-      else
-        this_wmn .= " <" . this_char . ">"
+      this_wmn .= " <" . this_char . ">"
+      if (CRK%this_char5% == "") {
+        nthis := 1
+        this_wmnk .= " <" . this_char5 . ">"
+      } else
+        this_wmnk .= " " . KeyLong(CRK%this_char5%)
     }
-    wmn .= this_wmn . "`r`n"
+    if (this_wmn != "")
+      this_wmn := SubStr(this_wmn,2)
+    if (this_wmnk != "")
+      this_wmnk := SubStr(this_wmnk,2)
+    if (nthis == 1)
+      wmn .= "Wegen fehlender Tastenbelegung: Nicht als Compose:`r`n"
+    else
+      wmn .= "Als Compose:`r`n"
+    wmn .= this_wmn . "`r`noder`r`n" . this_wmnk . "`r`n`r`n"
   }
-  TrayTip,Wie mit NEO,% wmn,10,1
+
+  wmnk := KeyLong(CRK%a%)
+  if (wmnk != "")
+    wmn .= "Als Tastendruck:`r`n" . wmnk
+  else
+    wmn .= "Als Tastendruck nicht verfügbar!"
+
+  if (wmn != "")
+    MsgBox,0,Wie mit NEO,% wmn
+  else
+    TrayTip,Wie mit NEO,Keine Information über %a% gefunden,10,1
+}
+
+KeyLong(key) {
+  global
+  num := 0
+  twmnk := ""
+  loop,parse,key,%A_Space%
+  {
+    tis_wmn := ""
+    tis_wtt := A_LoopField
+    if (tis_wtt == "")
+      continue ; probably at first or last entry
+    tis_layer := substr(tis_wtt,3,1)
+    base_key_pos := "CP1" . substr(tis_wtt,4)
+
+    base_key := %base_key_pos%
+    if (CB%base_key% != "")
+      base_key := CB%base_key%
+    else if (CS%base_key% != "")
+      base_key := CS%base_key%
+
+    twmnk .= "/<" . CBS__M%tis_layer% . base_key . ">"
+    num := num + 1
+  }
+  if (num == 0)
+    return ""
+  else if (num == 1)
+    return SubStr(twmnk,2)
+  else
+    return "(" . SubStr(twmnk,2) . ")"
 }
