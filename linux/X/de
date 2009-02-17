@@ -289,7 +289,7 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     // xvlcwkhgfqß
     key <AD01> { [ x,           X,                      ellipsis,               Greek_xi,           U22EE,          NoSymbol,    Greek_XI         ] };
-    key <AD02> { [ v,           V,                      underscore,             NoSymbol,           BackSpace,      BackSpace,   U2259            ] };
+    key <AD02> { [ v,           V,                      underscore,             NoSymbol,           BackSpace,      BackSpace,   U222E            ] };
     key <AD03> { [ l,           L,                      bracketleft,            Greek_lambda,       Up,             Up,          Greek_LAMBDA     ] };
     key <AD04> { [ c,           C,                      bracketright,           Greek_chi,          Delete,         Delete,      U2102            ] };
     key <AD05> { [ w,           W,                      asciicircum,            Greek_omega,        Insert,         Insert,      Greek_OMEGA      ] };
@@ -306,7 +306,7 @@ xkb_symbols "neo" {
     // middle row
     // --------------------------------------------------------------
     // uiaeosnrtdy
-    key <AC01> { [ u,           U,                      backslash,              mu,                 Home,           Home,        U222E             ] };
+    key <AC01> { [ u,           U,                      backslash,              NoSymbol,           Home,           Home,        mu                ] };
     key <AC02> { [ i,           I,                      slash,                  Greek_iota,         Left,           Left,        integral          ] };
     key <AC03> { [ a,           A,                      braceleft,              Greek_alpha,        Down,           Down,        U2200             ] };
     key <AC04> { [ e,           E,                      braceright,             Greek_epsilon,      Right,          Right,       U2203             ] };
@@ -358,7 +358,7 @@ xkb_symbols "neo" {
     key  <KP7> { [ KP_7,          U2714,          U2195,        U226A,        KP_Home,    KP_Home,    upstile ] };
     key  <KP8> { [ KP_8,          U2718,          uparrow,      intersection, KP_Up,      KP_Up,      U22C2   ] };
     key  <KP9> { [ KP_9,          dagger,         U20D7,        U226B,        KP_Prior,   KP_Prior,   U2309   ] };
-    key <KPAD> { [ KP_Add,        KP_Add,         plusminus,    U2213,        U2295,      NoSymbol,   U2214   ] };
+    key <KPAD> { [ KP_Add,        KP_Add,         plusminus,    U2295,        U2213,      NoSymbol,   U2214   ] };
 
     // middle row
     // --------------------------------------------------------------
@@ -376,7 +376,7 @@ xkb_symbols "neo" {
 
     // bottommost row
     // --------------------------------------------------------------
-    key  <KP0> { [ KP_0,         U2423,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
+    key  <KP0> { [ KP_0,         space,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
     key <KPDL> { [ KP_Decimal,   comma,           period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
 
 };
