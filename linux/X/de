@@ -376,7 +376,7 @@ xkb_symbols "neo" {
 
     // bottommost row
     // --------------------------------------------------------------
-    key  <KP0> { [ KP_0,         space,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
+    key  <KP0> { [ KP_0,         U2423,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
     key <KPDL> { [ KP_Decimal,   comma,           period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
 
 };
