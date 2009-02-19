@@ -1155,7 +1155,6 @@
 <dead_abovering> <equal>                   : "≗"   U2257 # RING EQUAL TO
 <dead_caron> <equal>                       : "≚"   U225A # EQUIANGULAR TO
 <dead_circumflex> <equal>                  : "≙"   U2259 # ESTIMATES
-<Multi_key> <asciicircum> <equal>          : "≙"   U2259 # ESTIMATES
 <Multi_key> <equal> <asciicircum>          : "≙"   U2259 # ESTIMATES
 <Multi_key> <KP_Add> <KP_Subtract>         : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <KP_Subtract> <KP_Add>         : "∓"   U2213 # MINUS-OR-PLUS SIGN
