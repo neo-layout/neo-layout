@@ -249,11 +249,11 @@ xkb_symbols "neo" {
     key <CAPS> { [ ISO_Level3_Shift, ISO_Level3_Shift,  Caps_Lock ] };
 
     // Definition of the so called Neo-Mod4
-    key.type[Group1]="ONE_LEVEL";
-    // ISO_Level5_Shift was causing problems, though it's defined in
+    // FIXME ISO_Level5_Shift was causing problems, though it's defined in
     // /usr/include/X11/keysymdef.h on Ubuntu 8.10 (ticket #33),
-    // using hexcode again for now
-    key <LSGT> { [ 0xfe11 ]};
+    // using hexcode 0xfe11 again for now
+    key.type[Group1]="ONE_LEVEL";
+    key <LSGT> { key.type[Group1]="ONE_LEVEL", [ 0xfe11 ]};
     key <RALT> { [ 0xfe11 ]};
     modifier_map Mod3 { <LSGT>, <RALT> };
     // Attention: ^^^ This is a X server variable, not the Neo-Mod3.
