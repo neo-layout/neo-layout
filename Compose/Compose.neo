@@ -1160,6 +1160,9 @@
 <Multi_key> <KP_Add> <KP_Subtract>         : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <KP_Subtract> <KP_Add>         : "∓"   U2213 # MINUS-OR-PLUS SIGN
 <Multi_key> <minus> <plus>                 : "∓"   U2213 # MINUS-OR-PLUS SIGN
+<Multi_key> <s> <u> <m>                    : "∑"   U2211 # N-ARY SUMMATION
+<Multi_key> <i> <n> <r>                    : "∫"   U222B # INTEGRAL
+<Multi_key> <p> <r> <o> <d>                : "∏"   U220F # N-ARY PRODUCT
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
@@ -1428,7 +1431,7 @@
 <Multi_key> <U2423> <U2423>                : "⍽"   U237D # SHOULDERED OPEN BOX
 <Multi_key> <p> <f>                        : "₰"   U20B0 # GERMAN PENNY SIGN
 <Multi_key> <p> <o> <i>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
-
+<Multi_key> <m> <a> <c>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
 
 
 # box drawings
