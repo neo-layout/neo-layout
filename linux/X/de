@@ -276,8 +276,8 @@ xkb_symbols "neo" {
     key <AE06> { [ 6,           dollar,                 cent,                   U26A5,              sterling,       NoSymbol,    U2225          ] };
 
     key <AE07> { [ 7,           EuroSign,               yen,                    Greek_kappa,        currency,       NoSymbol,    rightarrow     ] };
-    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     leftanglebracket,   NoSymbol,       NoSymbol,    U221E          ] };
-    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    rightanglebracket,  slash,          NoSymbol,    U220B          ] };
+    key <AE08> { [ 8,           doublelowquotemark,     singlelowquotemark,     U27E8,              NoSymbol,       NoSymbol,    U221E          ] };
+    key <AE09> { [ 9,           leftdoublequotemark,    leftsinglequotemark,    U27E9,              slash,          NoSymbol,    U220B          ] };
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      asterisk,       NoSymbol,    emptyset       ] };
 
     key <AE11> { [ minus,       emdash,                 NoSymbol,               U2011,              minus,          NoSymbol,    hyphen         ] };
@@ -349,9 +349,9 @@ xkb_symbols "neo" {
 
     // topmost row
     // --------------------------------------------------------------
-    key <KPDV> { [ KP_Divide,     KP_Divide,      division,     U2223,        U2300,      NoSymbol,   U2044 ] };
-    key <KPMU> { [ KP_Multiply,   KP_Multiply,    U22C5,        multiply,     U2299,      NoSymbol,   U2297 ] };
-    key <KPSU> { [ KP_Subtract,   KP_Subtract,    U2212,        U2216,        U2296,      NoSymbol,   U2238 ] };
+    key <KPDV> { [ KP_Divide,     KP_Divide,      division,     U2300,        U2215,      NoSymbol,   U2223 ] };
+    key <KPMU> { [ KP_Multiply,   KP_Multiply,    U2219,        U2299,        multiply,   NoSymbol,   U2297 ] };
+    key <KPSU> { [ KP_Subtract,   KP_Subtract,    U2212,        U2296,        U2216,      NoSymbol,   U2238 ] };
 
     // top row
     // --------------------------------------------------------------
