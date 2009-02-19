@@ -913,7 +913,7 @@
 <Multi_key> <f> <l>                      : "ﬂ"   UFB02 # LATIN SMALL LIGATURE FL
 <Multi_key> <F> <i>                      : "ﬃ"   UFB03 # LATIN SMALL LIGATURE FFI
 <Multi_key> <F> <l>                      : "ﬄ"   UFB04 # LATIN SMALL LIGATURE FFL
-<Multi_key> <ſ> <t>                      : "ﬅ"   UFB05 # LATIN SMALL LIGATURE LONG S T
+<Multi_key> <U017F> <t>                  : "ﬅ"   UFB05 # LATIN SMALL LIGATURE LONG S T
 <Multi_key> <s> <t>                      : "ﬆ"   UFB06 # LATIN SMALL LIGATURE ST
 <Multi_key> <f> <b>                      : ""   UE030 # LATIN SMALL LIGATURE FB
 <Multi_key> <F> <b>                      : ""   UE031 # LATIN SMALL LIGATURE FFB
@@ -929,11 +929,11 @@
 <Multi_key> <l> <c> <h>                  : ""   UE03B # LATIN SMALL LIGATURE CH
 <Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
 <Multi_key> <l> <c> <t>                  : ""   UE03D # LATIN SMALL LIGATURE CT
-<Multi_key> <ſ> <i>                      : ""   UE03E # LATIN SMALL LIGATURE LONG S I
-<Multi_key> <ſ> <ſ>                      : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
-<Multi_key> <ſ> <l>                      : ""   UE043 # LATIN SMALL LIGATURE LONG S L
+<Multi_key> <U017F> <i>                  : ""   UE03E # LATIN SMALL LIGATURE LONG S I
+<Multi_key> <U017F> <U017F>              : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
+<Multi_key> <U017F> <l>                  : ""   UE043 # LATIN SMALL LIGATURE LONG S L
 <Multi_key> <S> <i>                      : ""   UE044 # LATIN SMALL LIGATURE LONG S LONG S I
-<Multi_key> <ſ> <s>                      : ""   UE045 # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
+<Multi_key> <U017F> <s>                  : ""   UE045 # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
 <Multi_key> <t> <z>                      : ""   UE04A # LATIN SMALL LIGATURE TZ (ALSO: UE04F)
 <Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
 <Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
