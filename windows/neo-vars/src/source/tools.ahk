@@ -1,7 +1,7 @@
 ; äöü
 
 ; Römische Zahlen
-
+CMSComp := 1
 CMSCompU0072 := 1
 CMSCompU0052 := 1
 CDSCompU0072U0072 := "PRom1"
