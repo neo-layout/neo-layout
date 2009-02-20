@@ -1907,7 +1907,7 @@ EncodeUnicodeFile(FFrom,FTo) {
         if (ReplaceLeft != "") {
           if (CM%modkeys% != 1) {
             CM%modkeys% := 1
-            Composita := Composita . "CM" modkeys . ":=1`r`n"
+            Composita := Composita . "  CM" modkeys . ":=1`r`n"
           }
         }
         else
@@ -1921,11 +1921,11 @@ EncodeUnicodeFile(FFrom,FTo) {
     }
     if (modkeys != "") {
       ressymb := EncodeUni(ReplaceRight)
-      Composita .= "CD" . modkeys . ":="""  . ressymb . """`r`n"
+      Composita .= "  CD" . modkeys . ":="""  . ressymb . """`r`n"
       if (StrLen(ressymb)==5)
-        Composita .= "CRC" . ressymb . ".="" " . modkeys . """`r`n" 
+        Composita .= "  CRC" . ressymb . ".="" " . modkeys . """`r`n" 
     } else {
-      Composita .= "; illegal " . Xkbsym . " in " . A_LoopField . "`r`n"
+      Composita .= "  `; illegal " . Xkbsym . " in " . A_LoopField . "`r`n"
       Miss := Miss + 1
     }
   }
@@ -1945,13 +1945,16 @@ CompRevision = %1%
 OutputFile = %2%
 
 FileDelete,%OutputFile%
-FileAppend,CompRevision := "%CompRevision%"`r`n, %OutputFile%
+FileAppend,CompRevision := "%CompRevision%"`r`n`r`nLoadDefaultCompose() {`r`n  global`r`n`r`n, %OutputFile%    ; }
 
 loop %Numpars% {
   if (A_Index < 3)
     continue
   EncodeUnicodeFile(%A_Index%, OutputFile)
 }
+
+; {
+FileAppend,},%OutputFile%
 
 ; MsgBox % EncodeUni(DecodeUni("U20ACU0041U0070"))
 

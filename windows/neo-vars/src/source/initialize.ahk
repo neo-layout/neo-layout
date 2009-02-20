@@ -83,4 +83,4 @@ IsMod4LPressed := 0
 IsMod4Pressed := 0
 IsMod4Locked := 0
 EbeneAktualisieren()
-
+LoadDefaultCompose()
