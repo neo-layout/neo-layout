@@ -9,6 +9,7 @@ SetWorkingDir, %A_ScriptDir%
 #include *i source\compose.generated.ahk
 #include *i source\compose-tainted.generated.ahk
 #include    source\neovarscompose.ahk
+#include    source\compose-gen.ahk
 
 ; Hier liegt die Tastaturbelegung
 #include    source\keydefinitions.ahk
