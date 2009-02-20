@@ -49,6 +49,7 @@ IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1
 IniRead,zeigeModusBox,%ini%,Global,zeigeModusBox,1
 IniRead,UseMod4Light,%ini%,Global,UseMod4Light,1
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
+IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
 
 regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1
 regread,inputlocalealias,HKEY_CURRENT_USER,Keyboard Layout\Substitutes,%inputlocale%
@@ -83,4 +84,9 @@ IsMod4LPressed := 0
 IsMod4Pressed := 0
 IsMod4Locked := 0
 EbeneAktualisieren()
-LoadDefaultCompose()
+
+
+if (dynamischesCompose)
+  LoadCurrentCompose()
+else
+  LoadDefaultCompose()
