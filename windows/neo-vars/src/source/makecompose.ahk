@@ -1813,32 +1813,32 @@ SetFormat, Integer, hex
 ;  MsgBox % Asc(SubStr(str,1,1)) . Asc(SubStr(str,2,1))
   result := ""
   loop {
-    char := SubStr(str,1,1)
-    str  := SubStr(str,2)
-    if (asc(char) < 0x80)
-      result := result . "U" . SubStr("0000" . SubStr(asc(char),3),-3)
-    else if (asc(char) < 0xC0) {
+    achar := asc(SubStr(str,1,1))
+    str   := SubStr(str,2)
+    if (achar < 0x80)
+      result .= "U" . SubStr("0000" . SubStr(achar,3),-3)
+    else if (achar < 0xC0) {
       ; error
-    } else if (asc(char) < 0xE0) {
-       char2 := Substr(str,1,1)
-       str   := SubStr(str,2)
-       if ((asc(char2) < 0x80) or (asc(char2) > 0xBF)) {
+    } else if (achar < 0xE0) {
+       achar2 := asc(Substr(str,1,1))
+       str    := SubStr(str,2)
+       if ((achar2 < 0x80) or (achar2 > 0xBF)) {
          ; error
        } else {
-         result := result . "U" . SubStr("0000" . SubStr((((asc(char) & 0x1F) << 6) + (asc(char2) & 0x3F)),3),-3)
+         result .= "U" . SubStr("0000" . SubStr((((achar & 0x1F) << 6) + (achar2 & 0x3F)),3),-3)
        }
-    } else if (asc(char) < 0xF8) {
-       char2 := SubStr(str,1,1)
-       char3 := SubStr(str,2,1)
-       str   := SubStr(str,3)
-;       MsgBox % "chars: " . char . ", " . char2 . ", " . char3 . ", str: " . str
-       if ((asc(char2) < 0x80) or (asc(char2) > 0xBF)
-           or (asc(char3) < 0x80) or (asc(char3) > 0xBF)) {
+    } else if (achar < 0xF8) {
+       achar2 := asc(SubStr(str,1,1))
+       achar3 := asc(SubStr(str,2,1))
+       str    := SubStr(str,3)
+;       MsgBox % "chars: " . achar . ", " . achar2 . ", " . achar3 . ", str: " . str
+       if ((achar2 < 0x80) or (achar2 > 0xBF)
+           or (achar3 < 0x80) or (achar3 > 0xBF)) {
          ; error
        } else {
-;         MsgBox % asc(char) . asc(char2) . asc(char3)
-;         MsgBox % (((asc(char) & 0x0F) << 12) + ((asc(char2) & 0x3F) << 6) + (asc(char3) & 0x3F))
-         result := result . "U" . SubStr("0000" . SubStr((((asc(char) & 0x0F) << 12) + ((asc(char2) & 0x3F) << 6) + (asc(char3) & 0x3F)),3),-3)
+;         MsgBox % achar . achar2 . achar3
+;         MsgBox % (((achar & 0x0F) << 12) + ((achar2 & 0x3F) << 6) + (achar3 & 0x3F))
+         result .= "U" . SubStr("0000" . SubStr((((achar & 0x0F) << 12) + ((achar2 & 0x3F) << 6) + (achar3 & 0x3F)),3),-3)
        }
     }
     if (str == "")
@@ -1849,30 +1849,39 @@ SetFormat, Integer, d
   return result
 }
 
+Composita := ""
+Compsize := 0
 VarSetCapacity(Composita,10240000) ; 10 MB
 
 EncodeUnicodeFile(FFrom,FTo) {
   Composita := ""
+  Compsize := 0
   Miss := 0
   FileRead, FileContents, %FFrom%
   ProgressTop := "Converting " . FFrom . "..."
+
+  FileContents := RegExReplace(FileContents,"[\t ]*(<[^>]*>)[\t ]*","$1")
 
   Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
   {
     NumLines := A_Index
   }
 
-  Count := 0
+  NLP := NumLines/20 ; 20 steps on the bar
+  OldCount := -NumLines
   Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
   {
-    Count := Count + 1
-    ProgressVal := Count/NumLines*100
-    ProgressInd := "Lines: " . Count . ", Errors: " . Miss
-    Progress,%ProgressVal%,%ProgressInd%,%ProgressTop%
+    TA := ""
+    Count := A_Index
     Line := A_LoopField
+    if (Count >= (OldCount + NLP)) { ; Progress the bar not with every line
+      OldCount := Count
+      ProgressVal := Count/NumLines*100
+      ProgressInd := "Lines: " . Count . ", Errors: " . Miss
+      Progress,%ProgressVal%,%ProgressInd%,%ProgressTop%
+    }
     if ((Line == "") or (SubStr(Line,1,5) == "XCOMM") or (SubStr(Line,1,1) == "#"))
       continue
-    Line := RegExReplace(Line,"[\t ]*(<[^>]*>)[\t ]*","$1")
     RegExMatch(Line,"([^:]*):[\t ]*""((\\.|[^""])*)"".*",OutputVar)
     ReplaceLeft := OutputVar1
     ReplaceRight := ""
@@ -1904,14 +1913,12 @@ EncodeUnicodeFile(FFrom,FTo) {
           break
         }
         modkeys := modkeys . modkey 
-        if (ReplaceLeft != "") {
-          if (CM%modkeys% != 1) {
-            CM%modkeys% := 1
-            Composita := Composita . "  CM" modkeys . ":=1`r`n"
-          }
-        }
-        else
+        if (ReplaceLeft == "")
           break
+        if (CM%modkeys% != 1) {
+          CM%modkeys% := 1
+          TA .= "  CM" . modkeys . ":=1`r`n"
+        }
       }
       else {
         Xkbsym := "*entry*" ; make a non-fancy name from parsing error
@@ -1921,12 +1928,19 @@ EncodeUnicodeFile(FFrom,FTo) {
     }
     if (modkeys != "") {
       ressymb := EncodeUni(ReplaceRight)
-      Composita .= "  CD" . modkeys . ":="""  . ressymb . """`r`n"
+      TA .= "  CD" . modkeys . ":="""  . ressymb . """`r`n"
       if (StrLen(ressymb)==5)
-        Composita .= "  CRC" . ressymb . ".="" " . modkeys . """`r`n" 
+        TA .= "  CRC" . ressymb . ".="" " . modkeys . """`r`n" 
     } else {
-      Composita .= "  `; illegal " . Xkbsym . " in " . A_LoopField . "`r`n"
+      TA .= "  `; illegal " . Xkbsym . " in " . A_LoopField . "`r`n"
       Miss := Miss + 1
+    }
+    Composita .= TA
+    Compsize := Compsize + 1
+    if (Compsize > 100) {
+      FileAppend,%Composita%,%FTo%
+      Compsize := 0
+      Composita := ""
     }
   }
   Progress,off
