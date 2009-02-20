@@ -564,7 +564,7 @@ SetFormat,Integer,d
     Gui,2:Font,,Dejavu Sans
     Gui,2:Add,Text,,% wmnk
   } else
-    Gui,2:Add,Text,,% "Als Tastendruck nicht verfuegbar"
+    Gui,2:Add,Text,,% "Als Tastendruck nicht verfügbar"
 
   Gui,2:Add, Button, Default xp+100 yp+40, OK
   Gui,2:Show
@@ -590,7 +590,9 @@ KeyLong(key) {
     base_key_pos := "CP1" . substr(tis_wtt,4)
 
     base_key := %base_key_pos%
-    if (CB%base_key% != "")
+    if (CB%base_key_pos% != "")
+      base_key := CB%base_key_pos%
+    else if (CB%base_key% != "")
       base_key := CB%base_key%
     else if (CS%base_key% != "")
       base_key := CS%base_key%

@@ -249,3 +249,8 @@ CBTmcrn := "Makron"
 CBTdrss := "Trema"
 CBTdbac := "Doppelakut"
 CBTstrk := "Schrägstrich"
+
+CBU005E := "^"
+CBU0060 := "``"
+CBU00B4 := "´"
+CBCP1VK90SC145 := "Ntab"
