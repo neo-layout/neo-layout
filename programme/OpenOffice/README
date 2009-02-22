@@ -16,6 +16,12 @@ Entsprechend könne folgende Listenzeichen verwendet werden:
 
 
 ¹ dieser Ordner kann sich z.B. an folgenden Positionen befinden:
-~/.openoffice.org2/user/autotext (Linux)
-~/.ooo-2.0/user/autotext (Linux)
-%appdata%\OpenOffice.org\3\user\autotext (Windows)
+Linux:
+~/.openoffice.org2/user/autotext (kubuntu 8.04)
+~/.ooo-2.0/user/autotext (openSUSE 10.3)
+
+Windows:
+%appdata%\OpenOffice.org\3\user\autotext
+Wobei %appdata% jeweils von der verwendeten Windowsversion abhängt:
+C:\Dokumente und Einstellungen\<BENUTZERNAME>\Anwendungsdaten (Windows XP)
+C:\Users\<BENUTZERNAME>\AppData\Local (Windows Vista)
