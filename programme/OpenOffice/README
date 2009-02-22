@@ -16,5 +16,6 @@ Entsprechend könne folgende Listenzeichen verwendet werden:
 
 
 ¹ dieser Ordner kann sich z.B. an folgenden Positionen befinden:
-~/.openoffice.org2/user/autotext
-~/.ooo-2.0/user/autotext
+~/.openoffice.org2/user/autotext (Linux)
+~/.ooo-2.0/user/autotext (Linux)
+%appdata%\OpenOffice.org\3\user\autotext (Windows)
