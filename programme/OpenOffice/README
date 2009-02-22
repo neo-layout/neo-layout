@@ -1,0 +1,20 @@
+OpenOffice Writer bietet die Möglichkeit, auf einfache Weise Aufzählungslisten
+einzuleiten, indem man eine der folgenden Zeilen eingibt:
+- <Leerzeichen> TEXT
+– <Leerzeichen> TEXT
+* <Leerzeichen> TEXT
+
+Leider werden z.B. die durch Neo ermöglichten und von Unicode vorgeschlagenen
+Aufzählungszeichen • und ‣ nicht unterstützt.
+Kopiert man die Datei ›Neo_AutoText.bau‹ in den Ordner ›autotext‹¹, so kann
+die derzeitige Situation zumindest verbessert werden. Eine Liste wird auf
+auf folgende Weise gestartet:
+• <F3> <Mausklick an die markierte Stelle, um Text einzugeben>
+
+Entsprechend könne folgende Listenzeichen verwendet werden:
+• ‣ → ♦ ✔ ✘
+
+
+¹ dieser Ordner kann sich z.B. an folgenden Positionen befinden:
+~/.openoffice.org2/user/autotext
+~/.ooo-2.0/user/autotext
