@@ -21,6 +21,7 @@ Linux:
 ~/.openoffice.org2/user/autotext (kubuntu 8.04)
 ~/.ooo-2.0/user/autotext (openSUSE 10.3)
 ~/.ooo3/user/autotext (openSUSE 11.1)
+~/.openoffice{2,3}/user/autotext (arch linux)
 
 Windows:
 %appdata%\OpenOffice.org\3\user\autotext
