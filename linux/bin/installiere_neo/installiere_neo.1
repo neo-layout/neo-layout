@@ -10,23 +10,23 @@
 # ./installiere_neo
 # Für die restliche Installation werden mehrere Optionen angeboten.
 # Nach der Installation und Eingabe von ›. starte_neo‹ oder nach dem nächsten Login ist:
-# • ein Wechsel von NEO zu QWERTZ ist jederzeit mit ›uiae‹ leicht möglich und
-# • ein Wechsel von QWERTZ zu NEO ist jederzeit mit ›asdf‹ ebenso leicht möglich
+# • ein Wechsel von NEO zu QWERTZ jederzeit mit ›uiae‹ leicht möglich und
+# • ein Wechsel von QWERTZ zu NEO jederzeit mit ›asdf‹ ebenso leicht möglich.
 
 # Wenn NEO nicht automatisch nach dem Login gestartet werden soll, genügt es, vor die Zeile
 # asdf			# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
 # in der Datei $HOME/.profile ein # zu setzen
-# Alternativ kann das Skript ›installiere_neo‹ ein weiteres mal aufgerufen werden
+# Alternativ kann das Skript ›installiere_neo‹ ein weiteres Mal aufgerufen werden.
 # ==============================
 
 
 # ======= Deinstallation =======
-# Um NEO wieder zu deinstallieren, kann das Skript ›installiere_neo‹ ein weiteres Mal aufgerufen werden
+# Um NEO wieder zu deinstallieren, kann das Skript ›installiere_neo‹ ein weiteres Mal aufgerufen werden.
 # ==============================
 
 
 # ========= Inhalte ============
-# Das Ausführen dieses Skripts erzeugt auf einfache Weise eine vollständige und saubere Installation für einen Benutzer eines Linuxsystems
+# Das Ausführen dieses Skripts erzeugt auf einfache Weise eine vollständige und saubere Installation für einen Benutzer eines Linuxsystems.
 # Die beinhalteten Komponenten sind:
 # • Xmodmap-Tastaturbelegung
 # • Textkonsolenbelegung
@@ -39,8 +39,8 @@
 # ==============================
 
 # ======= Bemerkungen ==========
-# Es wird immer das Standardverzeichnis $inst_dir verwendet
-# Es gibt keine graphische Installation
+# Es wird immer das Standardverzeichnis $inst_dir verwendet.
+# Es gibt keine graphische Installation.
 # Dennoch kann dieses Skrip helfen, NEO auf eine einfache Weise zu installieren.
 # Dieses Skript wird mit der Zeit verbessert werden.
 # ==============================
@@ -85,12 +85,12 @@ create()
 ## show options if NEO is not installed so far
 install_options()
 {
-	echo "Bislang gibt es kein vollständig konfiguriertes NEO auf Ihrem System"
+	echo "Bislang gibt es kein vollständig konfiguriertes NEO auf Ihrem System."
 	echo
 	echo "Sie haben folgende Möglichkeiten:"
 	echo
 	echo " [1]  NEO nur testen"
-	echo "       Sie haben die Möglichkeit, NEO zu Testen, ihre Standardbelegung (in der Regel QWERTZ) bleibt erhalten"
+	echo "       Sie haben die Möglichkeit, NEO zu testen, ihre Standardbelegung (in der Regel QWERTZ) bleibt erhalten."
 	echo
 	echo
 	echo " [2] NEO als Standardbelegung"
@@ -98,7 +98,7 @@ install_options()
 	echo "       Login automatisch aktiviert"
 	echo
 	echo
-	echo -e " Wenn ${green}installiere_neo${normal} ein weiteres Mal aufgerufen wird, haben weitere Optionen – z.B. die Deinstallation von NEO"
+	echo -e " Wenn ${green}installiere_neo${normal} ein weiteres Mal aufgerufen wird, haben Sie weitere Optionen – z.B. die Deinstallation von NEO"
 	echo
 
 	installoption=""
@@ -112,7 +112,7 @@ install_options()
                         echo "Nach dem Login wird NEO die Standardbelegung sein."
                         echo -e "Um dies zu ändern, kann ${green}installiere_neo${normal} ein weiteres Mal ausgeführt werden."
 			echo -e ${red}
-			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			read -n1 -p "Drücken Sie eine Taste um fortzufahren oder STRG+C zum Abbrechen"
 			echo -e ${normal}
                         ;;
                 1)
@@ -120,7 +120,7 @@ install_options()
                         echo "Das Standardlayout wird nicht verändert."
                         echo -e "Zu NEO kann man jederzeit mit der Abrollbewegung ${green}asdf${normal} wechseln."
 			echo -e ${red}
-			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			read -n1 -p "Drücken Sie eine Taste um fortzufahren oder STRG+C zum Abbrechen"
 			echo -e ${normal}
                         ;;
                 *)
@@ -166,7 +166,7 @@ install_options()
 	create neo_beschreibe $inst_dir/beschreibe
 	chmod u+x $inst_dir/beschreibe
 
-	echo "Ergängze die Compose-Erweiterung von NEO…"
+	echo "Ergänze die Compose-Erweiterung von NEO…"
 	create neo_compose $inst_dir/Compose.neo
 	if [ -f $HOME/.XCompose ]
 	then
@@ -195,7 +195,7 @@ install_options()
 		;;
 	1)
 		echo
-		echo "Das Standardlayout wird nich verändert."
+		echo "Das Standardlayout wird nicht verändert."
 		rmfromprofile
 		profile_qwertz >> $HOME/.profile
 		;;
@@ -238,14 +238,14 @@ deinstall_options()
 {
 	echo "Es gibt auf Ihrem System bereits eine Konfiguration für NEO."
 	echo
-	echo "Sollte NEO nur für diesen Benutzer installiert sein, haben folgende Möglichkeiten:"
+	echo "Sollte NEO nur für diesen Benutzer installiert sein, haben Sie folgende Möglichkeiten:"
 	echo
 	echo " [1]  NEO zukünftig nicht mehr als Standardbelegung"
 	echo -e "       NEO wird nicht länger direkt nach dem Login zur Verfügung stehen, wohl aber nach Eingabe von ${green}adsf${normal}."
 	echo
 	echo
 	echo " [2] NEO vollständig vom System entfernen"
-	echo "       Dieso Option entfernt alle zuvor angelegten Verzeichnisse, Datein und Einträge zur NEO-Belegung"
+	echo "       Dieso Option entfernt alle zuvor angelegten Verzeichnisse, Datein und Einträge zur NEO-Belegung."
 	echo
 	echo
 	echo -e " Diese Optionen funktionieren nur dann zuverlässig, wenn NEO auch mit ${green}installiere_neo${normal} installiert wurde"
@@ -261,7 +261,7 @@ deinstall_options()
                         echo
                         echo -e "Alle zuvor von ${green}installiere_neo${normal} vorgenommen Änderungen am System werden gelöscht!"
 			echo -e ${red}
-			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			read -n1 -p "Drücken Sie eine Taste um fortzufahren oder STRG+C zum Abbrechen"
 			echo -e ${normal}
 			cd $inst_dir
 			./uiae
@@ -274,7 +274,7 @@ deinstall_options()
                         echo "NEO wird als Standardbelegung entfernt"
                         echo -e "Zu NEO kann man weiterhin jederzeit mit der Abrollbewegung ${green}asdf${normal} wechseln."
 			echo -e ${red}
-			read -n1 -p "Drücke eine Taste um fortzufahren oder STRG+C zum Abbrechen"
+			read -n1 -p "Drücken Sie eine Taste um fortzufahren oder STRG+C zum Abbrechen"
 			echo -e ${normal}
 			echo
 			rmfromprofile					# alter the entry in $HOME/.profile; first: remove old entry
@@ -285,7 +285,7 @@ deinstall_options()
                 *)
                         echo
                         echo "Bitte wählen Sie die Optionen 1, um NEO nicht länger als Standardbelegung zu nutzen"
-			echo " oder 2, um NEO vollständig zu entfernen"
+			echo " oder 2, um NEO vollständig zu entfernen."
 			deinstalloption=""
                         ;;
                 esac
