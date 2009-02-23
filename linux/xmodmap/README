@@ -1,30 +1,36 @@
 == Dateien ==
-neo_de.xmodmap          	Normale Version für die meisten Benutzer
-neo_de_x-prog.xmodmap		bei älteren Programmen (wie xedit, xpdf,…) kann das Problem auftreten,
-				dass einige Tastan (4vlcwiaeäp) nicht funktionieren. Werden solche
-				Programme verwendet, sollte diese NEO-Datei bevorzugt werden.
-neo_de_alternative.xmodmap	falls neo_de.xmodmap nicht geladen werden kann (z.B. weil dead_stroke
-				dem System unbekannt ist) sollte diese NEO-Datei verwendet werden
+neo_de.xmodmap              Normale Version für die meisten Benutzer
+
+neo_de_x-prog.xmodmap       bei älteren Programmen (wie xedit, xpdf,…) kann das
+                            Problem auftreten, dass einige Tastan (4vlcwiaeäp)
+                            nicht funktionieren. Werden solche Programme
+                            verwendet, sollte diese NEO-Datei bevorzugt werden.
+
+neo_de_alternative.xmodmap  falls neo_de.xmodmap nicht geladen werden kann
+                            (z.B. weil dead_stroke dem System unbekannt ist)
+                            sollte diese NEO-Datei verwendet werden
 
 
 === Aktivieren ===
 Zu aktivieren mit dem Kommando (im Verzeichnis, in dem sich die Datei befindet):
 	xmodmap neo_de.xmodmap
 
-Besser ist jedoch die Verwendung des Skripts ›asdf‹, da so (mögliche) Probleme vermieden werden.
-Siehe dazu auch die README im Ordner /linux/bin.
+Besser ist jedoch die Verwendung des Skripts ›asdf‹, da so (mögliche) Probleme
+vermieden werden.  Siehe dazu auch die README im Ordner /linux/bin.
 
 
 ==== Automatisch aktivieren ====
-Um die NEO-Tastaturbelegung automatisch zu aktivieren, gibt es mehrere (alternative) Wege
+Um die NEO-Tastaturbelegung automatisch zu aktivieren, gibt es mehrere
+(alternative) Wege
 • die Xmodmap nach ~/.Xmodmap kopieren, wo sie automatisch geladen wird
-• die Befehlszeile in ein  Datei eingeben, die automatisch ausgeführt wird, z.B.:
+• die Befehlszeile in ein  Datei eingeben, die automatisch ausgeführt wird,
+  z.B.:
 	– gnome-session-properties
 	– ~/GNUstep/Library/WindowMaker/autostart
 	– ~/.Xsession
 
-Der bessere Weg ist jedoch das Skript ›asdf‹ in der Datei ›~/.profile‹ einzutragen.
-Siehe dazu auch die README im Ordner /linux/bin.
+Der bessere Weg ist jedoch das Skript ›asdf‹ in der Datei ›~/.profile‹
+einzutragen.  Siehe dazu auch die README im Ordner /linux/bin.
 
 
 ==== Automatischen Linux-NEO-USB-Stick erstellen ====
@@ -44,7 +50,7 @@ USB-Sticks ersetzt werden muss):
 
 === Deaktivieren ===
 Zurück zu qwertz geht es mit:
-	setxkbmap de
+  setxkbmap de
 
 Besser ist auch hier die Verwendung des Skripts ›uiae‹.
 
@@ -56,3 +62,4 @@ Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
 
   Für evdev wird keine eigene xmodmap mehr benötigt.
   Es kann die normale neo_de.xmodmap verwendet werden.
+
