@@ -1833,11 +1833,6 @@ ProcessComposeFile(FFrom) {
 
   Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
   {
-    NumLines := A_Index
-  }
-
-  Loop, parse, FileContents, `n, `r  ; Specifying `n prior to `r allows both Windows and Unix files to be parsed.
-  {
     Line := A_LoopField
     if ((Line == "") or (SubStr(Line,1,5) == "XCOMM") or (SubStr(Line,1,1) == "#"))
       continue
