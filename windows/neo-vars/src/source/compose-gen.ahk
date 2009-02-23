@@ -1887,7 +1887,7 @@ ProcessComposeFile(FFrom) {
       ressymb := EncodeUniCompose(ReplaceRight)
       CD%modkeys% := ressymb
       if (StrLen(ressymb)==5)
-        CRC%ressymb% .= modkeys
+        CRC%ressymb% .= " " . modkeys
     }
   }
 
