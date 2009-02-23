@@ -1,9 +1,9 @@
-﻿Neo-Projekt: Maschinenlesbare Referenz
+Neo-Projekt: Maschinenlesbare Referenz (neo_yaml)
 
 Martin Roppelt (m.p.roppelt ät web in Deutschland)
 
 Ressourcen:
-- https://svn.neo-layout.org/grafik/xml-vorschlag/, Revision 200
+- https://svn.neo-layout.org/grafik/xml-vorschlag/@200
 - http://www.eigenheimstrasse.de/~ben/layoutgen/layoutgen/
 - svn://svn.tuxfamily.org/svnroot/dvorak/svn/pilotes/trunk/configGenerator/
 - http://pyyaml.org/

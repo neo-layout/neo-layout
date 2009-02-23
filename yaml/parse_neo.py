@@ -1,15 +1,15 @@
-#!usr/bin/python
-# -*- coding: utf8 -*-
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 #===============================================================================
-# YAML Parser for the Neo reference
+# YAML Parser for the Neo reference (neo_yaml)
 # Copyright 2009 Martin Roppelt (m.p.roppelt ἢτ web in Germany)
 # 
-# This file is part of German NEO-Layout Version 2.
-# German Neo Layout Version 2 is free software: you can redistribute it and/or 
+# This file is part of German Neo-Layout Version 2.
+# German Neo-Layout Version 2 is free software: you can redistribute it and/or 
 # modify it under the terms of the GNU General Public License as published by 
 # the Free Software Foundation, either version 3 of the License, or (at your 
 # option) any later version. You should have received a copy of the GNU General 
-# Public License along with German NEO-Layout Version 2. If not, see 
+# Public License along with German Neo-Layout Version 2. If not, see 
 # <http://www.gnu.org/licenses/>.
 #===============================================================================
 '''
@@ -17,8 +17,9 @@ Converts the reference into both human and machine readable and editable files
 for automated creating of keyboard drivers, pictures and references.
 '''
 #===============================================================================
-# Needs at least Phyton 3.0 and PyYAML 3.08 (pyyaml.org) to run.
-# 
+# Needs at least Phyton 3.0 and PyYAML 3.08 (pyyaml.org) to run (In GNU/Linux
+# you can run get_dependencies.sh to install them.)
+#  
 # Call with -h|--help to print command line options.
 #===============================================================================
 
@@ -52,7 +53,7 @@ options = OptionParser(usage = 'example: %prog -ti -astest', description = 'YAML
     make_option('-f', '--key-level-delimiter-filler', metavar = 'char',default = " ", help = 'default = %default'),
     make_option('-D', '--key-level-delimiter', metavar = 'char'),
     make_option('-l', '--key-levels-per-line', type = 'int', metavar = 'int', default = 3, help = 'default = %default'),
-    make_option('-L', '--no-level-disorder',dest = 'level_disorder', action = 'store_false', default = True, help = 'Level 4 and 5 are not swapped')
+    make_option('-L', '--no-level-disorder', dest = 'level_disorder', action = 'store_false', default = True, help = 'Level 4 and 5 are not swapped')
     ]).parse_args()[0]
 if options.destination_file == None:
     options.destination_file = options.source_file.rsplit(file_name_standard_extension)[0]
