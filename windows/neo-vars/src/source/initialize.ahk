@@ -53,7 +53,11 @@ IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
 
 regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1
 regread,inputlocalealias,HKEY_CURRENT_USER,Keyboard Layout\Substitutes,%inputlocale%
-if (inputlocalealias<>inputlocale=%inputlocalealias% and inputlocale<>00000407) {
+
+if (inputlocalealias<>"")
+  inputlocale:=inputlocalealias
+
+if (inputlocale<>"00000407") {
   suspend   
   regread,inputlocale,HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%,Layout Text
   msgbox, 48, Warnung!,
