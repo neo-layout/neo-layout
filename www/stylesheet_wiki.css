@@ -70,6 +70,10 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 }
 #mainnav :link, #mainnav :visited { background: url(http://wiki.neo-layout.org/chrome/common/dots.gif) 0 0 no-repeat; }
 
+#mainnav .active :link, #mainnav .active :visited {
+ background: #333 url(http://wiki.neo-layout.org/chrome/common/topbar_gradient2.png) 0 0 repeat-x;
+}
+
 /* Context-dependent navigation links */
 
 /* Alternate links */
@@ -105,7 +109,7 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 #altlinks li :link, #altlinks li :visited {
  background-position: 0 -1px;
  }
-#altlinks li a.rss { background-image: url(../xml.png); padding-left: 42px }
+#altlinks li a.rss { background-image: url(http://wiki.neo-layout.org/chrome/common/feed.png); padding-left: 42px }
 
 /* Footer */
 #footer {
@@ -135,10 +139,8 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 }
 
 /* Version information (browser, wiki, attachments) */
-
-
-.wikitoolbar {
- width: 208px;
+.wikitoolbar :link, .wikitoolbar :visited {
+ background: transparent url(http://wiki.neo-layout.org/chrome/common/edit_toolbar.png) no-repeat;
 }
 /* Styles for the form for adding attachments. */
 
@@ -155,6 +157,9 @@ table.listing thead th {
 table.listing tbody td, table.listing tbody th {
  padding: .33em .5em;
 }
+table.listing th.asc a { background-image: url(http://wiki.neo-layout.org/chrome/common/asc.png) }
+table.listing th.desc a { background-image: url(http://wiki.neo-layout.org/chrome/common/desc.png) }
+
 /* Styles for the error page (and rst errors) */
 #content.error pre, div.system-message pre { margin-left: 1em; overflow: auto }
 
