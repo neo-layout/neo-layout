@@ -55,7 +55,7 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 .nav ul { font-size: .75em; list-style: none; margin: 0; text-align: right }
 
  #metanav, #ctxtnav, #search {
- width:67em; 
+ max-width:67em; 
  font: normal 1em verdana,'Bitstream Vera Sans',helvetica,arial,sans-serif;
  margin:  0 auto;
  padding: .2em 0;
@@ -63,7 +63,7 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 
 /* Main navigation bar */
 #mainnav {
- width:67em; 
+ max-width:67em; 
  background: #f7f7f7 url(http://wiki.neo-layout.org/chrome/common/topbar_gradient.png) 0 0;
  font: normal 1em verdana,'Bitstream Vera Sans',helvetica,arial,sans-serif;
  margin:  0 auto;
@@ -172,7 +172,7 @@ width:522px; height:50px;  position:relative; left:-261px;
 
 }
 #content {
-  width:61em;
+  max-width:61em;
   border-width:thin;
   border-color:#444;
   border-style:solid;
