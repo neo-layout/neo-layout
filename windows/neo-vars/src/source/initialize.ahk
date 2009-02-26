@@ -1,7 +1,7 @@
 if (A_IsCompiled) {
-; Revisionsinformation bereits verfï¿½gbar
+; Revisionsinformation bereits verf?gbar
 } else {
-; Revisionsinformation nicht verfï¿½gbar oder nicht zuverlï¿½ssig, neu generieren
+; Revisionsinformation nicht verf?gbar oder nicht zuverl?ssig, neu generieren
   if (FileExist(".svn")<>False) {
     ; .svn existiert, scheint also ausgecheckt worden zu sein
     RegRead,TSVNPath,HKLM,SOFTWARE\TortoiseSVN,Directory
@@ -31,7 +31,7 @@ if (A_IsCompiled) {
 name=Neo 2.0 r%Revision%-r%CompRevision% (%A_ScriptName%)
 enable=Aktiviere %name%
 disable=Deaktiviere %name%
-#LTrim ; Quelltext kann eingerï¿½ckt werden
+#LTrim ; Quelltext kann einger?ckt werden
 
 SetCapsLockState Off
 Gosub, SaveNumLockState
@@ -66,7 +66,7 @@ if (inputlocale<>"00000407" and inputlocale<>"00000807") {
     `t%inputlocale%   
     `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
     sein, damit %name% wie erwartet funktioniert.   
-    `nï¿½ndern Sie die Tastatureinstellung unter 
+    `nÄndern Sie die Tastatureinstellung unter 
     `tSystemsteuerung   
     `t-> Regions- und Sprachoptionen   
     `t-> Sprachen 
