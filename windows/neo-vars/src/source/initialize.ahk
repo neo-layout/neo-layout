@@ -1,7 +1,7 @@
 if (A_IsCompiled) {
-; Revisionsinformation bereits verf?gbar
+; Revisionsinformation bereits verfügbar
 } else {
-; Revisionsinformation nicht verf?gbar oder nicht zuverl?ssig, neu generieren
+; Revisionsinformation nicht verfügbar oder nicht zuverlässig, neu generieren
   if (FileExist(".svn")<>False) {
     ; .svn existiert, scheint also ausgecheckt worden zu sein
     RegRead,TSVNPath,HKLM,SOFTWARE\TortoiseSVN,Directory
@@ -31,7 +31,7 @@ if (A_IsCompiled) {
 name=Neo 2.0 r%Revision%-r%CompRevision% (%A_ScriptName%)
 enable=Aktiviere %name%
 disable=Deaktiviere %name%
-#LTrim ; Quelltext kann einger?ckt werden
+#LTrim ; Quelltext kann eingerückt werden
 
 SetCapsLockState Off
 Gosub, SaveNumLockState
