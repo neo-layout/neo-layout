@@ -1,54 +1,57 @@
+; äüö
+
+thekeys() {
 ;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
 ; Reihe 1
-ED("VKDCSC029",0,"Tcflx","Ttlde","Tobrg","Tcron","Tbrve","Tmcrn") ; circumflex
-ED("VK31SC002",0,"U0031","U00B0","U00B9","U00AA","U2081","U00AC") ; 1
-ED("VK32SC003",0,"U0032","U00A7","U00B2","U00BA","U2082","U2228") ; 2
-ED("VK33SC004",0,"U0033","U2113","U00B3","U2116","U2083","U2227") ; 3
-ED("VK34SC005",0,"U0034","U00BB","U203A","SPgUp","U2640","U22A5") ; 4
-ED("VK35SC006",0,"U0035","U00AB","U2039","U00B7","U2642","U2221") ; 5
-ED("VK36SC007",0,"U0036","U0024","U00A2","U00A3","U26A5","U2225") ; 6
-ED("VK37SC008",0,"U0037","U20AC","U00A5","U00A4","U03BA","U2192") ; 7
-ED("VK38SC009",0,"U0038","U201E","U201A",""     ,"U27E8","U221E") ; 8
-ED("VK39SC00A",0,"U0039","U201C","U2018","SNDiv","U27E9","U220B") ; 9
-ED("VK30SC00B",0,"U0030","U201D","U2019","SNMul","U2080","U2205") ; 0
-ED("VKDBSC00C",0,"U002D","U2014",""     ,"SNSub","U2011","U00AD") ; -
-ED("VKDDSC00D",0,"Tgrav",""     ,"Tdrss","Tdgrv","U1FFE",""     ) ; grave
+EDS("029",0,"Tcflx","Ttlde","Tobrg","Tcron","Tbrve","Tmcrn") ; circumflex
+EDS("002",0,"U0031","U00B0","U00B9","U00AA","U2081","U00AC") ; 1
+EDS("003",0,"U0032","U00A7","U00B2","U00BA","U2082","U2228") ; 2
+EDS("004",0,"U0033","U2113","U00B3","U2116","U2083","U2227") ; 3
+EDS("005",0,"U0034","U00BB","U203A","SPgUp","U2640","U22A5") ; 4
+EDS("006",0,"U0035","U00AB","U2039","U00B7","U2642","U2221") ; 5
+EDS("007",0,"U0036","U0024","U00A2","U00A3","U26A5","U2225") ; 6
+EDS("008",0,"U0037","U20AC","U00A5","U00A4","U03BA","U2192") ; 7
+EDS("009",0,"U0038","U201E","U201A",""     ,"U27E8","U221E") ; 8
+EDS("00A",0,"U0039","U201C","U2018","SNDiv","U27E9","U220B") ; 9
+EDS("00B",0,"U0030","U201D","U2019","SNMul","U2080","U2205") ; 0
+EDS("00C",0,"U002D","U2014",""     ,"SNSub","U2011","U00AD") ; -
+EDS("00D",0,"Tgrav",""     ,"Tdrss","Tdgrv","U1FFE",""     ) ; grave
 ; Reihe 2
-ED("VK51SC010",1,"U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
-ED("VK57SC011",1,"U0076","U0056","U005F","U0008",""     ,"U222E") ; v
-ED("VK45SC012",1,"U006C","U004C","U005B","S__Up","U03BB","U039B") ; l
-ED("VK52SC013",1,"U0063","U0043","U005D","S_Del","U03C7","U2102") ; c
-ED("VK54SC014",1,"U0077","U0057","U005E","S_Ins","U03C9","U03A9") ; w
-ED("VK5ASC015",1,"U006B","U004B","U0021","U00A1","U03F0","U221A") ; k
-ED("VK55SC016",1,"U0068","U0048","U003C","SN__7","U03C8","U03A8") ; h
-ED("VK49SC017",1,"U0067","U0047","U003E","SN__8","U03B3","U0393") ; g
-ED("VK4FSC018",1,"U0066","U0046","U003D","SN__9","U03C6","U03A6") ; f
-ED("VK50SC019",1,"U0071","U0051","U0026","SNAdd","U03D5","U211A") ; q
-ED("VKBASC01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; �
-ED("VKBBSC01B",0,"Tacut","Tcedi","Tstrk","Tdbac","U1FBF","Tabdt") ; acute
+EDS("010",1,"U0078","U0058","U2026","U22EE","U03BE","U039E") ; x
+EDS("011",1,"U0076","U0056","U005F","U0008",""     ,"U222E") ; v
+EDS("012",1,"U006C","U004C","U005B","S__Up","U03BB","U039B") ; l
+EDS("013",1,"U0063","U0043","U005D","S_Del","U03C7","U2102") ; c
+EDS("014",1,"U0077","U0057","U005E","S_Ins","U03C9","U03A9") ; w
+EDS("015",1,"U006B","U004B","U0021","U00A1","U03F0","U221A") ; k
+EDS("016",1,"U0068","U0048","U003C","SN__7","U03C8","U03A8") ; h
+EDS("017",1,"U0067","U0047","U003E","SN__8","U03B3","U0393") ; g
+EDS("018",1,"U0066","U0046","U003D","SN__9","U03C6","U03A6") ; f
+EDS("019",1,"U0071","U0051","U0026","SNAdd","U03D5","U211A") ; q
+EDS("01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
+EDS("01B",0,"Tacut","Tcedi","Tstrk","Tdbac","U1FBF","Tabdt") ; acute
 ; Reihe 3
-ED("VK41SC01E",1,"U0075","U0055","U005C","SHome",""     ,"U00B5") ; u
-ED("VK53SC01F",1,"U0069","U0049","U002F","SLeft","U03B9","U222B") ; i
-ED("VK44SC020",1,"U0061","U0041","U007B","SDown","U03B1","U2200") ; a
-ED("VK46SC021",1,"U0065","U0045","U007D","SRght","U03B5","U2203") ; e
-ED("VK47SC022",1,"U006F","U004F","U002A","S_End","U03BF","U2208") ; o
-ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3") ; s
-ED("VK4ASC024",1,"U006E","U004E","U0028","SN__4","U03BD","U2115") ; n
-ED("VK4BSC025",1,"U0072","U0052","U0029","SN__5","U03F1","U211D") ; r
-ED("VK4CSC026",1,"U0074","U0054","U002D","SN__6","U03C4","U2202") ; t
-ED("VKC0SC027",1,"U0064","U0044","U003A","SNDot","U03B4","U0394") ; d
-ED("VKDESC028",1,"U0079","U0059","U0040","U002E","U03C5","U2207") ; y
+EDS("01E",1,"U0075","U0055","U005C","SHome",""     ,"U00B5") ; u
+EDS("01F",1,"U0069","U0049","U002F","SLeft","U03B9","U222B") ; i
+EDS("020",1,"U0061","U0041","U007B","SDown","U03B1","U2200") ; a
+EDS("021",1,"U0065","U0045","U007D","SRght","U03B5","U2203") ; e
+EDS("022",1,"U006F","U004F","U002A","S_End","U03BF","U2208") ; o
+EDS("023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3") ; s
+EDS("024",1,"U006E","U004E","U0028","SN__4","U03BD","U2115") ; n
+EDS("025",1,"U0072","U0052","U0029","SN__5","U03F1","U211D") ; r
+EDS("026",1,"U0074","U0054","U002D","SN__6","U03C4","U2202") ; t
+EDS("027",1,"U0064","U0044","U003A","SNDot","U03B4","U0394") ; d
+EDS("028",1,"U0079","U0059","U0040","U002E","U03C5","U2207") ; y
 ; Reihe 4
-ED("VK59SC02C",1,"U00FC","U00DC","U0023","U001B",""     ,"U221C") ; �
-ED("VK58SC02D",1,"U00F6","U00D6","U0024","U0009","U03F5","U2111") ; �
-ED("VK43SC02E",1,"U00E4","U00C4","U007C","SPgDn","U03B7","U2135") ; �
-ED("VK56SC02F",1,"U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
-ED("VK42SC030",1,"U007A","U005A","U0060",""     ,"U03B6","U2124") ; z
-ED("VK4ESC031",1,"U0062","U0042","U002B","U003A","U03B2","U21D0") ; b
-ED("VK4DSC032",1,"U006D","U004D","U0025","SN__1","U03BC","U21D4") ; m
-ED("VKBCSC033",0,"U002C","U2013","U0022","SN__2","U03C1","U21D2") ; ,
-ED("VKBESC034",0,"U002E","U2022","U0027","SN__3","U03D1","U0398") ; .
-ED("VKBDSC035",1,"U006A","U004A","U003B","U003B","U03B8","U221D") ; j
+EDS("02C",1,"U00FC","U00DC","U0023","U001B",""     ,"U221C") ; ü
+EDS("02D",1,"U00F6","U00D6","U0024","U0009","U03F5","U2111") ; ö
+EDS("02E",1,"U00E4","U00C4","U007C","SPgDn","U03B7","U2135") ; ä
+EDS("02F",1,"U0070","U0050","U007E","U000D","U03C0","U03A0") ; p
+EDS("030",1,"U007A","U005A","U0060",""     ,"U03B6","U2124") ; z
+EDS("031",1,"U0062","U0042","U002B","U003A","U03B2","U21D0") ; b
+EDS("032",1,"U006D","U004D","U0025","SN__1","U03BC","U21D4") ; m
+EDS("033",0,"U002C","U2013","U0022","SN__2","U03C1","U21D2") ; ,
+EDS("034",0,"U002E","U2022","U0027","SN__3","U03D1","U0398") ; .
+EDS("035",1,"U006A","U004A","U003B","U003B","U03B8","U221D") ; j
 
 ; Numpad
 ED("VK90SC145",0,"U0009","U0009","U003D","U2260","U2248","U2261") ; NumLock
@@ -103,12 +106,13 @@ ED1("right"    ,"SRght")
 ED1("numpadenter","SNEnt")
 
 ; Die Modifier
-ED1("VKA0SC02A","PM2LD") ; Mod2L (ShiftL)
-ED1("VKA1SC136","PM2RD") ; Mod2R (ShiftR)
-ED1("VK14SC03A","PM3LD") ; Mod3L (CapsLock)
-ED1("VKBFSC02B","PM3RD") ; Mod3R (#')
-ED1("VKE2SC056","PM4LD") ; Mod4L (<>)
-ED1("VKA5SC138","PM4RD") ; Mod4R (AltGr)
+ED1S("02A","PM2LD") ; Mod2L (ShiftL)
+ED1S("136","PM2RD") ; Mod2R (ShiftR)
+ED1S("03A","PM3LD") ; Mod3L (CapsLock)
+ED1S("02B","PM3RD") ; Mod3R (#')
+ED1S("056","PM4LD") ; Mod4L (<>)
+ED1S("138","PM4RD") ; Mod4R (AltGr)
+}
 
 SetKeyPos(pos,char) {
   global
@@ -144,8 +148,412 @@ EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
   ED(pos2,caps,e1,e2,e3,e4,e5,e6)
 }
 
+EDS(scpos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
+  global
+  ED(vksc%scpos%,caps,e1,e2,e3,e4,e5,e6,e7,e8)
+}
+
 ED1(pos,e1) {
  ED(pos,0,e1,e1,e1,e1,e1,e1)
 }
 
+ED1S(scpos,e1) {
+ EDS(scpos,0,e1,e1,e1,e1,e1,e1)
+}
+
 Comp := ""
+
+; RegisterAndHookSC
+RSC(sc,vk) {
+  global
+  vksc%sc% := "VK" . vk . "SC" . sc
+  dnkey := "*" . vksc%sc%
+  upkey := dnkey . " up"
+  Hotkey,% dnkey,allstarhook
+  Hotkey,% upkey,allstarhook
+}
+
+Layout00000407() {
+  global
+; Reihe 1
+  RSC("029","DC")
+  RSC("002","31")
+  RSC("003","32")
+  RSC("004","33")
+  RSC("005","34")
+  RSC("006","35")
+  RSC("007","36")
+  RSC("008","37")
+  RSC("009","38")
+  RSC("00A","39")
+  RSC("00B","30")
+  RSC("00C","DB")
+  RSC("00D","DD")
+; Reihe 2
+  RSC("010","51")
+  RSC("011","57")
+  RSC("012","45")
+  RSC("013","52")
+  RSC("014","54")
+  RSC("015","5A")
+  RSC("016","55")
+  RSC("017","49")
+  RSC("018","4F")
+  RSC("019","50")
+  RSC("01A","BA")
+  RSC("01B","BB")
+  RSC("00D","DD")
+; Reihe 3
+  RSC("01E","41")
+  RSC("01F","53")
+  RSC("020","44")
+  RSC("021","46")
+  RSC("022","47")
+  RSC("023","48")
+  RSC("024","4A")
+  RSC("025","4B")
+  RSC("026","4C")
+  RSC("027","C0")
+  RSC("028","DE")
+; Reihe 4
+  RSC("02C","59")
+  RSC("02D","58")
+  RSC("02E","43")
+  RSC("02F","56")
+  RSC("030","42")
+  RSC("031","4E")
+  RSC("032","4D")
+  RSC("033","BC")
+  RSC("034","BE")
+  RSC("035","BD")
+; Modifier
+  RSC("02A","A0") ; M2L
+  RSC("136","A1") ; M2R
+  RSC("03A","14") ; M3L
+  RSC("02B","BF") ; M3R
+  RSC("056","E2") ; M4L
+  RSC("138","A5") ; M4R
+
+  /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
+   **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
+   **** Programme nutzbar, also auskommentiert und als Unicode-Zeichen
+   **** geschickt.
+  */
+  ; DNCSU005E := "{^}{space}"
+  ; DNCSU0060 := "{``}{space}"
+  ; DNCSU00B4 := "{´}{space}"
+
+  CSU005E := ""
+  CSU0060 := ""
+  CSU00B4 := ""
+
+  CSU20AC := chr(128)   ; €
+  ; CSU201A := chr(130) ; ‚
+  ; CSU0192 := chr(131) ; ƒ
+  ; CSU201E := chr(132) ; „
+  ; CSU2026 := chr(133) ; …
+  ; CSU2020 := chr(134) ; †
+  ; CSU2021 := chr(135) ; ‡
+  ; CSU02C6 := chr(136) ; ˆ
+  ; CSU2030 := chr(137) ; ‰
+  ; CSU0160 := chr(138) ; Š
+  ; CSU2039 := chr(139) ; ‹
+  ; CSU0152 := chr(140) ; Œ
+  ; CSU017D := chr(142) ; Ž
+  ; CSU2018 := chr(145) ; ‘
+  ; CSU2019 := chr(146) ; ’
+  ; CSU201C := chr(147) ; “
+  ; CSU201D := chr(148) ; ”
+  ; CSU2022 := chr(149) ; •
+  ; CSU2013 := chr(150) ; –
+  ; CSU2014 := chr(151) ; —
+  ; CSU02DC := chr(152) ; ˜
+  ; CSU2122 := chr(153) ; ™
+  ; CSU0161 := chr(154) ; š
+  ; CSU203A := chr(155) ; ›
+  ; CSU0153 := chr(156) ; œ
+  ; CSU017E := chr(158) ; ž
+  ; CSU0178 := chr(159) ; Ÿ
+  CSU00A7 := chr(167)   ; §
+  CSU00B0 := chr(176)   ; °
+  CSU00B2 := chr(178)   ; ²
+  CSU00B3 := chr(179)   ; ³
+  ; CSU00B4 := chr(180)   ; ´
+  CSU00B5 := chr(181)   ; µ
+  CSU00C4 := chr(196)   ; Ä
+  CSU00D6 := chr(214)   ; Ö
+  CSU00DC := chr(220)   ; Ü
+  CSU00DF := chr(223)   ; ß
+  CSU00E4 := chr(228)   ; ä
+  CSU00F6 := chr(246)   ; ö
+  CSU00FC := chr(252)   ; ü
+  CSU00FF := chr(255)   ; ÿ
+
+  /*
+    Für alle Zeichen, die durch Tastendrücke ohne Shift-Taste zustande kommen,
+    muss eine gegebenenfalls gedrückte Shift-Taste vor dem Senden temporär
+    gelöst werden. Dafür werden für sämtliche relevante Zeichen die passenden
+    UNSHU.... Variablen gesetzt.
+  */
+  ; Reihe 1
+  UNSHU005E := 1 ; ^
+  UNSHU0031 := 1 ; 1
+  UNSHU0032 := 1 ; 2
+  UNSHU0033 := 1 ; 3
+  UNSHU0034 := 1 ; 4
+  UNSHU0035 := 1 ; 5
+  UNSHU0036 := 1 ; 6
+  UNSHU0037 := 1 ; 7
+  UNSHU0038 := 1 ; 8
+  UNSHU0039 := 1 ; 9
+  UNSHU0030 := 1 ; 0
+  UNSHU00DF := 1 ; ß
+  UNSHU00B4 := 1 ; ´
+  ; Alphabet
+  UNSHU0061 := 1 ; a
+  UNSHU0062 := 1 ; b
+  UNSHU0063 := 1 ; c
+  UNSHU0064 := 1 ; d
+  UNSHU0065 := 1 ; e
+  UNSHU0066 := 1 ; f
+  UNSHU0067 := 1 ; g
+  UNSHU0068 := 1 ; h
+  UNSHU0069 := 1 ; i
+  UNSHU006A := 1 ; j
+  UNSHU006B := 1 ; k
+  UNSHU006C := 1 ; l
+  UNSHU006D := 1 ; m
+  UNSHU006E := 1 ; n
+  UNSHU006F := 1 ; o
+  UNSHU0070 := 1 ; p
+  UNSHU0071 := 1 ; q
+  UNSHU0072 := 1 ; r
+  UNSHU0073 := 1 ; s
+  UNSHU0074 := 1 ; t
+  UNSHU0075 := 1 ; u
+  UNSHU0076 := 1 ; v
+  UNSHU0077 := 1 ; w
+  UNSHU0078 := 1 ; x
+  UNSHU0079 := 1 ; y
+  UNSHU007A := 1 ; z
+  UNSHU00E4 := 1 ; ä
+  UNSHU00F6 := 1 ; ö
+  UNSHU00FC := 1 ; ü
+  ; Rest
+  UNSHU002B := 1 ; +
+  UNSHU0023 := 1 ; #
+  UNSHU003C := 1 ; <
+  UNSHU002C := 1 ; ,
+  UNSHU002E := 1 ; .
+  UNSHU002D := 1 ; -
+  ; AltGr
+  UNSHU00B2 := 1 ; ²
+  UNSHU00B3 := 1 ; ³
+  UNSHU007B := 1 ; {
+  UNSHU005B := 1 ; [
+  UNSHU005D := 1 ; ]
+  UNSHU007D := 1 ; }
+  UNSHU005C := 1 ; \
+  UNSHU0040 := 1 ; @
+  UNSHU20AC := 1 ; Euro
+  UNSHU007E := 1 ; ~
+  UNSHU007C := 1 ; |
+  UNSHU00B5 := 1 ; µ
+}
+
+Layout00000807() {
+  global
+; Reihe 1
+  RSC("029","BF")
+  RSC("002","31")
+  RSC("003","32")
+  RSC("004","33")
+  RSC("005","34")
+  RSC("006","35")
+  RSC("007","36")
+  RSC("008","37")
+  RSC("009","38")
+  RSC("00A","39")
+  RSC("00B","30")
+  RSC("00C","DB")
+  RSC("00D","DD")
+; Reihe 2
+  RSC("010","51")
+  RSC("011","57")
+  RSC("012","45")
+  RSC("013","52")
+  RSC("014","54")
+  RSC("015","5A")
+  RSC("016","55")
+  RSC("017","49")
+  RSC("018","4F")
+  RSC("019","50")
+  RSC("01A","BA")
+  RSC("01B","C0")
+  RSC("00D","DD")
+; Reihe 3
+  RSC("01E","41")
+  RSC("01F","53")
+  RSC("020","44")
+  RSC("021","46")
+  RSC("022","47")
+  RSC("023","48")
+  RSC("024","4A")
+  RSC("025","4B")
+  RSC("026","4C")
+  RSC("027","DE")
+  RSC("028","DC")
+; Reihe 4
+  RSC("02C","59")
+  RSC("02D","58")
+  RSC("02E","43")
+  RSC("02F","56")
+  RSC("030","42")
+  RSC("031","4E")
+  RSC("032","4D")
+  RSC("033","BC")
+  RSC("034","BE")
+  RSC("035","BD")
+; Modifier
+  RSC("02A","A0") ; M2L
+  RSC("136","A1") ; M2R
+  RSC("03A","14") ; M3L
+  RSC("02B","DF") ; M3R
+  RSC("056","E2") ; M4L
+  RSC("138","A5") ; M4R
+
+  /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
+   **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
+   **** Programme nutzbar, also auskommentiert und als Unicode-Zeichen
+   **** geschickt.
+  */
+  ; DNCSU005E := "{^}{space}"
+  ; DNCSU0060 := "{``}{space}"
+  ; DNCSU00B4 := "{´}{space}"
+
+  CSU005E := ""
+  CSU0060 := ""
+  CSU00B4 := ""
+
+  CSU20AC := chr(128)   ; €
+  ; CSU201A := chr(130) ; ‚
+  ; CSU0192 := chr(131) ; ƒ
+  ; CSU201E := chr(132) ; „
+  ; CSU2026 := chr(133) ; …
+  ; CSU2020 := chr(134) ; †
+  ; CSU2021 := chr(135) ; ‡
+  ; CSU02C6 := chr(136) ; ˆ
+  ; CSU2030 := chr(137) ; ‰
+  ; CSU0160 := chr(138) ; Š
+  ; CSU2039 := chr(139) ; ‹
+  ; CSU0152 := chr(140) ; Œ
+  ; CSU017D := chr(142) ; Ž
+  ; CSU2018 := chr(145) ; ‘
+  ; CSU2019 := chr(146) ; ’
+  ; CSU201C := chr(147) ; “
+  ; CSU201D := chr(148) ; ”
+  ; CSU2022 := chr(149) ; •
+  ; CSU2013 := chr(150) ; –
+  ; CSU2014 := chr(151) ; —
+  ; CSU02DC := chr(152) ; ˜
+  ; CSU2122 := chr(153) ; ™
+  ; CSU0161 := chr(154) ; š
+  ; CSU203A := chr(155) ; ›
+  ; CSU0153 := chr(156) ; œ
+  ; CSU017E := chr(158) ; ž
+  ; CSU0178 := chr(159) ; Ÿ
+  CSU00A7 := chr(167)   ; §
+  CSU00B0 := chr(176)   ; °
+  ; CSU00B2 := chr(178)   ; ²
+  ; CSU00B3 := chr(179)   ; ³
+  ; CSU00B4 := chr(180)   ; ´
+  ; CSU00B5 := chr(181)   ; µ
+  ; CSU00C4 := chr(196)   ; Ä
+  ; CSU00D6 := chr(214)   ; Ö
+  ; CSU00DC := chr(220)   ; Ü
+  ; CSU00DF := chr(223)   ; ß
+  CSU00E0 := chr(224)   ; à
+  CSU00E4 := chr(228)   ; ä
+  CSU00E8 := chr(232)   ; è
+  CSU00E9 := chr(233)   ; é
+  CSU00F6 := chr(246)   ; ö
+  CSU00FC := chr(252)   ; ü
+  ; CSU00FF := chr(255)   ; ÿ
+
+  /*
+    Für alle Zeichen, die durch Tastendrücke ohne Shift-Taste zustande kommen,
+    muss eine gegebenenfalls gedrückte Shift-Taste vor dem Senden temporär
+    gelöst werden. Dafür werden für sämtliche relevante Zeichen die passenden
+    UNSHU.... Variablen gesetzt.
+  */
+  ; Reihe 1
+  UNSHU00A7 := 1 ; §
+  UNSHU0031 := 1 ; 1
+  UNSHU0032 := 1 ; 2
+  UNSHU0033 := 1 ; 3
+  UNSHU0034 := 1 ; 4
+  UNSHU0035 := 1 ; 5
+  UNSHU0036 := 1 ; 6
+  UNSHU0037 := 1 ; 7
+  UNSHU0038 := 1 ; 8
+  UNSHU0039 := 1 ; 9
+  UNSHU0030 := 1 ; 0
+  UNSHU0027 := 1 ; '
+  UNSHU005E := 1 ; ^
+  ; Alphabet
+  UNSHU0061 := 1 ; a
+  UNSHU0062 := 1 ; b
+  UNSHU0063 := 1 ; c
+  UNSHU0064 := 1 ; d
+  UNSHU0065 := 1 ; e
+  UNSHU0066 := 1 ; f
+  UNSHU0067 := 1 ; g
+  UNSHU0068 := 1 ; h
+  UNSHU0069 := 1 ; i
+  UNSHU006A := 1 ; j
+  UNSHU006B := 1 ; k
+  UNSHU006C := 1 ; l
+  UNSHU006D := 1 ; m
+  UNSHU006E := 1 ; n
+  UNSHU006F := 1 ; o
+  UNSHU0070 := 1 ; p
+  UNSHU0071 := 1 ; q
+  UNSHU0072 := 1 ; r
+  UNSHU0073 := 1 ; s
+  UNSHU0074 := 1 ; t
+  UNSHU0075 := 1 ; u
+  UNSHU0076 := 1 ; v
+  UNSHU0077 := 1 ; w
+  UNSHU0078 := 1 ; x
+  UNSHU0079 := 1 ; y
+  UNSHU007A := 1 ; z
+  UNSHU00E4 := 1 ; ä
+  UNSHU00F6 := 1 ; ö
+  UNSHU00FC := 1 ; ü
+  ; Rest
+  UNSHU00A8 := 1 ; ¨
+  UNSHU0024 := 1 ; $
+  UNSHU003C := 1 ; <
+  UNSHU002C := 1 ; ,
+  UNSHU002E := 1 ; .
+  UNSHU002D := 1 ; -
+  ; AltGr
+  UNSHU00A6 := 1 ; ¦
+  UNSHU0040 := 1 ; @
+  UNSHU0023 := 1 ; #
+  UNSHU00AC := 1 ; ¬
+  UNSHU007C := 1 ; |
+  UNSHU00A2 := 1 ; ¢
+  UNSHU00B4 := 1 ; ´
+  UNSHU007E := 1 ; ~
+  UNSHU20AC := 1 ; Euro
+  UNSHU005B := 1 ; [
+  UNSHU005D := 1 ; ]
+  UNSHU007B := 1 ; {
+  UNSHU007D := 1 ; }
+  UNSHU005C := 1 ; \
+}
+
+ActivateLayOut(layout) {
+  Layout%layout%()
+}
