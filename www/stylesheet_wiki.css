@@ -60,7 +60,7 @@ h4:hover .anchor, h5:hover .anchor, h6:hover .anchor {
 
 @media screen {
 a.ext-link:before {content: "\2197\A0";}
-a[href^="http://www.neo-layout.org"]:before { content: "";}
+a[href*="neo-layout.org"]:before { content: "";}
   a.ext-link .icon {
   background: none;
   padding-left:0;
