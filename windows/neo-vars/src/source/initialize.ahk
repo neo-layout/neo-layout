@@ -57,7 +57,7 @@ regread,inputlocalealias,HKEY_CURRENT_USER,Keyboard Layout\Substitutes,%inputloc
 if (inputlocalealias<>"")
   inputlocale:=inputlocalealias
 
-if (inputlocale<>"00000407") {
+if (inputlocale<>"00000407" and inputlocale<>"00000807") {
   suspend   
   regread,inputlocale,HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%,Layout Text
   msgbox, 48, Warnung!,
@@ -89,6 +89,9 @@ IsMod4Pressed := 0
 IsMod4Locked := 0
 EbeneAktualisieren()
 
+ActivateLayOut(inputlocale)
+
+TheKeys()
 
 if (dynamischesCompose)
   LoadCurrentCompose()
