@@ -59,8 +59,8 @@ h4:hover .anchor, h5:hover .anchor, h6:hover .anchor {
 }
 
 @media screen {
-a.ext-link:before {content: "\2197\A0";} // vor jeden externen Link ein ›? ‹eingefügt.
-a[href^="http://www.neo-layout.org"]:before { content: "";} // kleiner Trick damit Links, die außerhalb des Wikis aber auf neo-layout.org sind, nicht als extern angezeigt werden.
+a.ext-link:before {content: "\2197\A0";}
+a[href^="http://www.neo-layout.org"]:before { content: "";}
   a.ext-link .icon {
   background: none;
   padding-left:0;
