@@ -20,18 +20,18 @@ help:
 return
 
 about:
-  msgbox, 64, %name% ï¿½ Ergonomische Tastaturbelegung, 
+  msgbox, 64, %name%  Ergonomische Tastaturbelegung, 
   (
   %name% 
-  `nDas Neo-Layout ersetzt das ï¿½bliche deutsche 
+  `nDas Neo-Layout ersetzt das übliche deutsche 
   Tastaturlayout mit der Alternative Neo, 
   beschrieben auf http://neo-layout.org/. 
-  `nDazu sind keine Administratorrechte nï¿½tig. 
+  `nDazu sind keine Administratorrechte nötig. 
   `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-  abgefangen und statt dessen eine ï¿½bersetzung weitergeschickt. 
-  `nDies geschieht transparent fï¿½r den Anwender, 
+  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
+  `nDies geschieht transparent für den Anwender, 
   es muss nichts installiert werden. 
-  `nDie Zeichenï¿½bersetzung kann leicht ï¿½ber das Icon im 
+  `nDie Zeichenübersetzung kann leicht über das Icon im 
   Systemtray deaktiviert werden.  `n
   )
 return
