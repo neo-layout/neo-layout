@@ -42,6 +42,7 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 
 /* Header */
 #header h1 { margin: 0em 0 0em; }
+#header img {margin-right: 35em }
 
 /* Quick search */
 #search {
@@ -51,7 +52,6 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 
 
 /* Navigation */
-
 .nav ul { font-size: .75em; list-style: none; margin: 0; text-align: right }
 
  #metanav, #ctxtnav, #search {
@@ -74,8 +74,6 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
  background: #333 url(http://wiki.neo-layout.org/chrome/common/topbar_gradient2.png) 0 0 repeat-x;
 }
 
-/* Context-dependent navigation links */
-
 /* Alternate links */
 #altlinks { 
   clear: both;
@@ -85,23 +83,21 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
   border-style:solid;
   margin-left:0em;
   margin-right:0em;
-        margin: 0em  auto 0; 
+  margin: 0em  auto 0; 
   margin-top:-2em;
   padding-left:2.5em;
   padding-right:4em;
   padding-top:2em;
   padding-bottom:2.4em;
-// text-align:justify;  
-//font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif;
   font-family: LinuxLibertine, Libertine, Linux-Libertine, sans;
   line-height:1.35em;
   font-size:1em;
   background-color:White;
   color:Black;
   text-align:center;
-
  }
-#altlinks h3 { font-size: 1em; letter-spacing: normal; margin: 0 }
+
+ #altlinks h3 { font-size: 1em; letter-spacing: normal; margin: 0 }
 #altlinks li {
  font-size: 1em;
  line-height: 1.5em;
@@ -142,12 +138,6 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 .wikitoolbar :link, .wikitoolbar :visited {
  background: transparent url(http://wiki.neo-layout.org/chrome/common/edit_toolbar.png) no-repeat;
 }
-/* Styles for the form for adding attachments. */
-
-
-/* Styles for the list of attachments. */
-
-
 
 /* Styles for tabular listings such as those used for displaying directory
    contents and report results. */
@@ -163,14 +153,6 @@ table.listing th.desc a { background-image: url(http://wiki.neo-layout.org/chrom
 /* Styles for the error page (and rst errors) */
 #content.error pre, div.system-message pre { margin-left: 1em; overflow: auto }
 
-/* Styles for search word highlighting */
-
-#logo { width:62em; margin:  0 auto; }
-
-#logo img {
-width:522px; height:50px;  position:relative; left:-261px;
-
-}
 #content {
   max-width:61em;
   border-width:thin;
@@ -178,21 +160,15 @@ width:522px; height:50px;  position:relative; left:-261px;
   border-style:solid;
   margin-left:0em;
   margin-right:0em;
-        margin: 0em  auto 0; 
+  margin: 0em  auto 0; 
   margin-top:2em;
   padding-left:2.5em;
   padding-right:4em;
   padding-top:2em;
   padding-bottom:2.4em;
-/*
- text-align:justify;  
- font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif;
-*/
-/*  font-family: LinuxLibertine, Libertine, Linux-Libertine, sans; */
   line-height:1.35em;
   font-size:1em;
   background-color:White;
   color:Black;
   text-align:left;
-
 }
