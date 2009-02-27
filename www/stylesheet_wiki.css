@@ -150,6 +150,10 @@ table.listing tbody td, table.listing tbody th {
 table.listing th.asc a { background-image: url(http://wiki.neo-layout.org/chrome/common/asc.png) }
 table.listing th.desc a { background-image: url(http://wiki.neo-layout.org/chrome/common/desc.png) }
 
+#dirlist td.name { width: auto }
+#dirlist td.change {   white-space: normal }
+
+
 /* Styles for the error page (and rst errors) */
 #content.error pre, div.system-message pre { margin-left: 1em; overflow: auto }
 
