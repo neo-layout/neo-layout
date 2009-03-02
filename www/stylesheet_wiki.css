@@ -43,7 +43,7 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 /* Header */
 #header h1 { margin: 0em 0 0em; }
 #header {
-max-width: 61em;
+max-width: 67em;
 margin: 0 auto 0em;
 }
 #header img{
@@ -62,17 +62,19 @@ margin-left:-2em;
 .nav ul { font-size: .75em; list-style: none; margin: 0; text-align: right }
 
  #metanav, #ctxtnav, #search {
+ font: normal 10pt 'Segoe UI','Bitstream Vera Sans',verdana,helvetica,arial,sans-serif;
  max-width:67em; 
  margin:  0 auto;
- padding: .2em 0;
 }
 
 /* Main navigation bar */
 #mainnav {
+ font: normal 10pt 'Segoe UI','Bitstream Vera Sans',verdana,helvetica,arial,sans-serif;
  max-width:67em; 
+ margin: .66em auto .33em;
  background: #f7f7f7 url(http://wiki.neo-layout.org/chrome/common/topbar_gradient.png) 0 0;
- margin:  0 auto;
 }
+ 
 #mainnav :link, #mainnav :visited { background: url(http://wiki.neo-layout.org/chrome/common/dots.gif) 0 0 no-repeat; }
 
 #mainnav .active :link, #mainnav .active :visited {
@@ -80,16 +82,18 @@ margin-left:-2em;
 }
 
 /* Alternate links */
-#altlinks { 
+#altlinks{
   clear: both;
-  max-width:59em;
+  max-width:61em;
   border-width:thin;
   border-color:#444;
   border-style:solid;
   margin-left:0em;
   margin-right:0em;
-  margin: 0em  auto 0; 
+  margin: 0em  auto 0em; 
   margin-top:-2em;
+  padding-left:2.5em;
+  padding-right:4em;
   padding-top:2em;
   padding-bottom:2.4em;
   line-height:1.35em;
