@@ -3,7 +3,7 @@ body {
  background-color:#dceeee; 
  margin: 2em 2em 2em 2em; 
  text-align: center;
- font: normal 10pt 'Bitstream Vera Sans',verdana,helvetica,arial,sans-serif;
+ font: normal 10pt 'Segoe UI','Bitstream Vera Sans',verdana,helvetica,arial,sans-serif;
  line-height:1.35em;
 }
 
@@ -42,9 +42,13 @@ fieldset.iefix { background: transparent; border: none; padding: 0; margin: 0 }
 
 /* Header */
 #header h1 { margin: 0em 0 0em; }
-#header img {
-float:left;
-margin-left: -2em;
+#header {
+max-width: 61em;
+margin: 0 auto 0em;
+}
+#header img{
+float: left;
+margin-left:-2em;
 }
 
 /* Quick search */
@@ -78,7 +82,7 @@ margin-left: -2em;
 /* Alternate links */
 #altlinks { 
   clear: both;
-  max-width:61em;
+  max-width:59em;
   border-width:thin;
   border-color:#444;
   border-style:solid;
@@ -86,17 +90,14 @@ margin-left: -2em;
   margin-right:0em;
   margin: 0em  auto 0; 
   margin-top:-2em;
-  padding-left:2.5em;
-  padding-right:4em;
   padding-top:2em;
   padding-bottom:2.4em;
-  font-family: LinuxLibertine, Libertine, Linux-Libertine, sans;
   line-height:1.35em;
   font-size:1em;
   background-color:White;
   color:Black;
   text-align:center;
- }
+}
 
  #altlinks h3 { font-size: 1em; letter-spacing: normal; margin: 0 }
 #altlinks li {
@@ -106,7 +107,7 @@ margin-left: -2em;
 #altlinks li :link, #altlinks li :visited {
  background-position: 0 -1px;
  }
-#altlinks li a.rss { background-image: url(http://wiki.neo-layout.org/chrome/common/feed.png); padding-left: 42px }
+#altlinks li a.rss { background-image: url(http://wiki.neo-layout.org/chrome/common/feed.png); padding-left: 24px }
 
 /* Footer */
 #footer {
