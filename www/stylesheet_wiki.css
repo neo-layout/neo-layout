@@ -159,6 +159,10 @@ table.listing th.desc a { background-image: url(http://wiki.neo-layout.org/chrom
 #dirlist td.name { width: auto }
 #dirlist td.change {   white-space: normal }
 
+div.report {
+overflow-y: hidden;
+overflow:auto;
+}
 
 /* Styles for the error page (and rst errors) */
 #content.error pre, div.system-message pre { margin-left: 1em; overflow: auto }
