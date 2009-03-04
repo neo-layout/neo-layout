@@ -186,3 +186,5 @@ overflow:auto;
   color:Black;
   text-align:left;
 }
+
+#content.ticket  { width: 100%; max-width:61em}
