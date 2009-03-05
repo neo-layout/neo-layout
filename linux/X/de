@@ -281,7 +281,8 @@ xkb_symbols "neo" {
     key <AE10> { [ 0,           rightdoublequotemark,   rightsinglequotemark,   zerosubscript,      KP_Multiply,    NoSymbol,    emptyset       ] };
 
     key <AE11> { [ minus,       emdash,                 NoSymbol,               U2011,              KP_Subtract,    NoSymbol,    hyphen         ] };
-    key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,       dead_doublegrave, NoSymbol,    NoSymbol       ] };
+    key <AE12> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,         U030F,          NoSymbol,    
+NoSymbol       ] };
 
     key <BKSP> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
 
