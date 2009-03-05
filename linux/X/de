@@ -253,7 +253,7 @@ xkb_symbols "neo" {
     // /usr/include/X11/keysymdef.h on Ubuntu 8.10 (ticket #33),
     // using hexcode 0xfe11 again for now
     key.type[Group1]="ONE_LEVEL";
-    key <LSGT> { key.type[Group1]="ONE_LEVEL", [ 0xfe11 ]};
+    key <LSGT> { [ 0xfe11 ]};
     key <RALT> { [ 0xfe11 ]};
     modifier_map Mod3 { <LSGT>, <RALT> };
     // Attention: ^^^ This is a X server variable, not the Neo-Mod3.
