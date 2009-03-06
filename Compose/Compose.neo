@@ -872,6 +872,25 @@
 <Multi_key> <macron> <dead_cedilla> <o>      : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
 <Multi_key> <underscore> <dead_cedilla> <o>  : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
 
+# latin letters with line below (simplifying the keyboard line below and macron are on the same place)
+<dead_macron> <B>                            : "Ḇ"   U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
+<dead_macron> <b>                            : "ḇ"   U1E07 # LATIN SMALL LETTER B WITH LINE BELOW
+<dead_macron> <D>                            : "Ḏ"   U1E0E # LATIN CAPITAL LETTER D WITH LINE BELOW
+<dead_macron> <d>                            : "ḏ"   U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
+<dead_macron> <K>                            : "Ḵ"   U1E34 # LATIN CAPITAL LETTER K WITH LINE BELOW
+<dead_macron> <k>                            : "ḵ"   U1E35 # LATIN SMALL LETTER K WITH LINE BELOW
+<dead_macron> <L>                            : "Ḻ"   U1E3A # LATIN CAPITAL LETTER L WITH LINE BELOW
+<dead_macron> <l>                            : "ḻ"   U1E3B # LATIN SMALL LETTER L WITH LINE BELOW
+<dead_macron> <N>                            : "Ṉ"   U1E48 # LATIN CAPITAL LETTER N WITH LINE BELOW
+<dead_macron> <n>                            : "ṉ"   U1E49 # LATIN SMALL LETTER N WITH LINE BELOW
+<dead_macron> <R>                            : "Ṟ"   U1E5E # LATIN CAPITAL LETTER R WITH LINE BELOW
+<dead_macron> <r>                            : "ṟ"   U1E5F # LATIN SMALL LETTER R WITH LINE BELOW
+<dead_macron> <T>                            : "Ṯ"   U1E6E # LATIN CAPITAL LETTER T WITH LINE BELOW
+<dead_macron> <t>                            : "ṯ"   U1E6F # LATIN SMALL LETTER T WITH LINE BELOW
+<dead_macron> <Z>                            : "Ẕ"   U1E94 # LATIN CAPITAL LETTER Z WITH LINE BELOW
+<dead_macron> <z>                            : "ẕ"   U1E95 # LATIN SMALL LETTER Z WITH LINE BELOW
+<dead_macron> <h>                            : "ẖ"   U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
+
 # letters with stroke
 <dead_stroke> <h>                        : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
 <dead_stroke> <H>                        : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
