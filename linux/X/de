@@ -317,7 +317,7 @@ NoSymbol       ] };
     key <AC07> { [ n,           N,                      parenleft,              Greek_nu,           KP_4,           NoSymbol,    U2115             ] };
     key <AC08> { [ r,           R,                      parenright,             U03F1,              KP_5,           NoSymbol,    U211D             ] };
     key <AC09> { [ t,           T,                      minus,                  Greek_tau,          KP_6,           NoSymbol,    partialderivative ] };
-    key <AC10> { [ d,           D,                      colon,                  Greek_delta,        comma,          NoSymbol,    Greek_DELTA       ] };
+    key <AC10> { [ d,           D,                      colon,                  Greek_delta,        KP_Separator,   NoSymbol,    Greek_DELTA       ] };
     key <AC11> { [ y,           Y,                      at,                     Greek_upsilon,      KP_Decimal,     NoSymbol,    nabla             ] };
 
     // bottom row
@@ -378,7 +378,7 @@ NoSymbol       ] };
     // bottommost row
     // --------------------------------------------------------------
     key  <KP0> { [ KP_0,         U2423,           percent,   U2030,        KP_Insert,   KP_Insert,   U25A1    ] };
-    key <KPDL> { [ KP_Decimal,   comma,           period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
+    key <KPDL> { [ KP_Separator, KP_Decimal,      period,    apostrophe,   KP_Delete,   KP_Delete,   quotedbl ] };
 
 };
 
