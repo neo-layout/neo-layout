@@ -1181,6 +1181,7 @@
 <Multi_key> <s> <u> <m>                    : "∑"   U2211 # N-ARY SUMMATION
 <Multi_key> <i> <n> <r>                    : "∫"   U222B # INTEGRAL
 <Multi_key> <p> <r> <o> <d>                : "∏"   U220F # N-ARY PRODUCT
+<Multi_key> <p> <r> <o> <p>                : "∝"   U221D # PROPORTIONAL TO
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
