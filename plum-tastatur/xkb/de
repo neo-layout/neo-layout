@@ -211,6 +211,8 @@ xkb_symbols "sundeadkeys" {
 //      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 //      Erik Streb <mail at erikstreb dot de>
 //        and many other contributers
+//	modified for plum keyboard  by
+//	  Björn Seifert <bseifert@oern.de>
 //
 //      http://www.neo-layout.org
 //
@@ -264,7 +266,6 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     key  <AC10> { [ Tab, ISO_Left_Tab, Multi_key ] };
 
-    key <AE12> { type="CTRL+ALT", symbols[Group1]= [ BackSpace, Terminate_Server ] };
     key <CAPS> { [ Shift_L	]};
     key <AD11> { [ Shift_R	]};
 
@@ -287,7 +288,7 @@ xkb_symbols "neo" {
     key <AE10> { [ minus,       emdash,                 NoSymbol,               U2011,              KP_Subtract,    NoSymbol,    hyphen         ] };
     key <AE11> { [ dead_grave,  NoSymbol,               dead_diaeresis,         dead_dasia,       dead_doublegrave, NoSymbol,    NoSymbol       ] };
 
-    key <BKSP> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
+    key <AE12> { [ BackSpace,   BackSpace,              BackSpace,              BackSpace,          BackSpace,      BackSpace,   BackSpace      ] };
 
     // top row
     // --------------------------------------------------------------
