@@ -925,6 +925,8 @@
 <Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
 <Multi_key> <L> <period>                 : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <Multi_key> <l> <period>                 : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+<dead_abovedot> <L>                      : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
+<dead_abovedot> <l>                      : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
 
 # ligatures
 <Multi_key> <f> <f>                      : "ﬀ"   UFB00 # LATIN SMALL LIGATURE FF
