@@ -927,6 +927,8 @@
 <Multi_key> <l> <period>                 : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
 <dead_abovedot> <L>                      : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <dead_abovedot> <l>                      : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+<dead_breve> <H>                         : "Ḫ"   U1E2A # LATIN CAPITAL LETTER H WITH BREVE BELOW
+<dead_breve> <h>                         : "ḫ"   U1E2B # LATIN SMALL LETTER H WITH BREVE BELOW
 
 # ligatures
 <Multi_key> <f> <f>                      : "ﬀ"   UFB00 # LATIN SMALL LIGATURE FF
