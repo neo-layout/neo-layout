@@ -110,9 +110,10 @@ keysym ISO_Level3_Shift = ISO_Level3_Shift  ISO_Level3_Shift  ISO_Group_Shift   
 keycode 23 = Tab  ISO_Left_Tab  Multi_key  ISO_Level3_Lock
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Space key
+! Space and Return key
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-keycode 65 = space  space  space  nobreakspace  KP_0  KP_0  U202F  NoSymbol
+keycode 65 = space		space		space		nobreakspace	KP_0		KP_0		U202F		NoSymbol
+keycode 36 = Return		Return		Return		Return		KP_Enter	KP_Enter	Return		Return
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! dead keys
@@ -210,10 +211,10 @@ keycode 45 = 	r		R		parenright	U03F1		KP_5		KP_5		U211D		NoSymbol
 !						)		ϱ Greek_rho					ℝ real
 keycode 46 = 	t		T		minus		Greek_tau	KP_6		KP_6		partialderivative
 !						-		τ						∂
-keycode 47 = 	d		D		colon		Greek_delta	KP_Separator	NoSymbol	Greek_DELTA	Greek_DELTA
-!						:		δ		,/.				Δ		Δ
-keycode 48 = 	y		Y		at		Greek_upsilon	KP_Decimal	NoSymbol	nabla		NoSymbol
-!						@		υ		./,				∇
+keycode 47 = 	d		D		colon		Greek_delta	KP_Separator	comma		Greek_DELTA	Greek_DELTA
+!						:		δ		,		,		Δ		Δ
+keycode 48 = 	y		Y		at		Greek_upsilon	period		KP_Decimal	nabla		NoSymbol
+!						@		υ		.		.		∇
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The lower row
@@ -309,8 +310,8 @@ keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol	KP_Next	
 
 keycode 90 = KP_0		U2423		percent		U2030		U25A1		NoSymbol	KP_Insert	KP_Insert
 !				␣ space sign	%		‰ per mille	□ white square					
-keycode 91 = comma		period		KP_Separator	minutes		seconds		NoSymbol	KP_Delete	KP_Delete
-!		,		.		,/.		′ min,feets	″ sec,inches					
+keycode 91 = KP_Separator	period		NoSymbol	minutes		seconds		NoSymbol	KP_Delete	KP_Delete
+!		,		.				′ min,feets	″ sec,inches					
 
 
 
