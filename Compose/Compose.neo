@@ -929,6 +929,8 @@
 <dead_abovedot> <l>                      : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
 <dead_breve> <H>                         : "Ḫ"   U1E2A # LATIN CAPITAL LETTER H WITH BREVE BELOW
 <dead_breve> <h>                         : "ḫ"   U1E2B # LATIN SMALL LETTER H WITH BREVE BELOW
+<Multi_key> <i> <i>                      : "ı"   U0131 # LATIN SMALL LETTER DOTLESS I
+<Multi_key> <I> <I>                      : "İ"   U0130 # LATIN CAPITAL LETTER I WITH DOT ABOVE
 
 # ligatures
 <Multi_key> <f> <f>                      : "ﬀ"   UFB00 # LATIN SMALL LIGATURE FF
