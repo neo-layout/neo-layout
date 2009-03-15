@@ -38,6 +38,13 @@ Dies geht in der Konsole folgendermaßen:
 	# Zusammenfügen der alten Compose und der Neo-Ergänzungen
 	cat /usr/share/X11/locale/en_US.UTF-8/Compose Compose.neo > ~/.XCompose
 
+==== Inkrafttreten der Änderungen ====
+Die Änderungen werden sofort wirksam, allerdings nur für Programme, die nach 
+dem Ändern der Compose gestartet wurden. Die Folge ist, dass unterschiedliche 
+Programme mit unterschiedlichen Versionen der Compose arbeiten können. Das 
+heißt, die Compose wird nicht zentral verwaltet und kann darum nicht für 
+bereits laufende Programme erneut eingelesen werden.
+
 ==== Gnome macht Probleme ====
 Wenn man unter Gnome Kombinationen wie ^+1, ^+2 oder ^+3 eingibt, erscheinen
 die entsprechenden Hochgestellten ¹²³. Aber mit ^+4, ^+5 geht das nicht. 
