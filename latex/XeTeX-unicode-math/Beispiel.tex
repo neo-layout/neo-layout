@@ -1,14 +1,12 @@
 \documentclass{article}
 
-\usepackage{xunicode}
-\usepackage{xltxtra}
+\usepackage{xltxtra} % lädt auch fixltx2e, etex, fontspec, xunicode …
 
-\usepackage{fontspec}
 \setmainfont{Cambria} % [Mapping=tex-text]
-
-\usepackage{unicode-math}
 \setmathfont{Cambria Math}
 
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=new, latesthyphen=true]{german}
 
 % \mathrel \mathord \mathalpha …
 \UnicodeMathSymbol{"02026}{\ldots    }{\mathpunct}{Horizontal ellipsis}

@@ -1,0 +1,35 @@
+﻿\documentclass[xcolor=dvipsnames]{beamer}
+\usepackage[ngerman]{babel}
+\usepackage{beamerthemesplit}
+
+% Grundfarbe
+\usecolortheme[named=Brown]{structure}
+% kräftige Farben
+\usecolortheme{orchid}
+\usecolortheme{whale}
+% Rundungen
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+% keine Navigationsleiste
+\setbeamertemplate{navigation symbols}{}
+% schmale Infoleisten
+\useoutertheme{infolines}
+% keine Schriftanpassung wegen Verwendung von Linux Biolinum als Schriftart (s.u.)
+\usefonttheme{professionalfonts}
+% Schriftart (vierte und fünfte Zeile eigentlich überflüssig)
+
+\usepackage{xltxtra} % lädt auch fixltx2e, etex, fontspec, xunicode …
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=new, latesthyphen=true]{german}
+\setmainfont{Linux Libertine}
+\setmainfont[Mapping=tex−text]{Linux Libertine}%
+\setromanfont[Mapping=tex−text]{Linux Libertine}%
+\setsansfont[Mapping=tex−text]{Calibri}%
+
+\setcounter{tocdepth}{1}
+
+\begin{document}
+\begin{frame}{Test}
+Hier folgt ausſchließlich Text …
+\end{frame}
+\end{document}
