@@ -300,7 +300,7 @@ NoSymbol       ] };
     key <AD08> { [ g,           G,                      greater,                Greek_gamma,        KP_8,           NoSymbol,    Greek_GAMMA      ] };
     key <AD09> { [ f,           F,                      equal,                  Greek_phi,          KP_9,           NoSymbol,    Greek_PHI        ] };
     key <AD10> { [ q,           Q,                      ampersand,              U03D5,              KP_Add,         NoSymbol,    U211A            ] };
-    key <AD11> { [ ssharp,      U1E9E,                  U017F,              Greek_finalsmallsigma,  NoSymbol,       NoSymbol,    jot              ] };
+    key <AD11> { [ ssharp,      U1E9E,                  U017F,              Greek_finalsmallsigma,  NoSymbol,Pointer_EnableKeys, jot              ] };
 
     key <AD12> { [ dead_acute,  dead_cedilla,           dead_stroke,            dead_psili,       dead_doubleacute, NoSymbol,    dead_abovedot    ] };
 
