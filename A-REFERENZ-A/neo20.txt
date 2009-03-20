@@ -37,8 +37,8 @@ http://dejavu.sourceforge.net/
   HINWEIS: Unter Linux ist es momentan noch nicht möglich die Feststellung
   zu lösen, indem man beide Mods drückt. Man muss dort nur einen drücken!
 
-=== Maustastatursteuerung ===
-Die Maustastatursteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
+=== Tastaturmaussteuerung ===
+Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
 Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
 die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
 Am besten geeignet ist dazu die Ebene 4 des Keypads (z.B. mit Mod4_Lock). Verzichtet man auf
