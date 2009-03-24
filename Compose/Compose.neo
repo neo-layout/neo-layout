@@ -1189,6 +1189,13 @@
 <Multi_key> <p> <r> <o> <d>                : "∏"   U220F # N-ARY PRODUCT
 <Multi_key> <p> <r> <o> <p>                : "∝"   U221D # PROPORTIONAL TO
 <Multi_key> <a> <x>                        : "∝"   U221D # PROPORTIONAL TO
+<Multi_key> <R> <e>                        : "ℜ"   U211C # BLACK-LETTER CAPITAL R
+<Multi_key> <r> <e>                        : "ℜ"   U211C # BLACK-LETTER CAPITAL R
+<Multi_key> <I> <m>                        : "ℑ"   U2111 # BLACK-LETTER CAPITAL I
+<Multi_key> <i> <m>                        : "ℑ"   U2111 # BLACK-LETTER CAPITAL I
+<Multi_key> <elementof> <elementof>        : "∋"   U220B # CONTAINS AS MEMBER
+<Multi_key> <a> <l> <e> <p> <h>            : "ℵ"   U2135 # ALEF SYMBOL
+<Multi_key> <h> <a>                        : "ℵ"   U2135 # ALEF SYMBOL
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
