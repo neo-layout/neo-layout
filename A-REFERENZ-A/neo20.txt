@@ -97,7 +97,8 @@ folgendermaßen bedient (Beispiel):
 2. Danach »n«.
 3. Es erscheint das »ñ«.
 
-TIPP: Mit den toten Tasten Zirkumflex und Querstrich kann man hoch(ˆ)- und tiefgestellte(/) Ziffern erzeugen.
+TIPP: Mit der toten Tasten Zirkumflex (ˆ) kann man hochgestellte Ziffern erzeugen. Eigentlich werden hoch- und
+tiefgestellte Zeichen jedoch mit ♫^ (für hochgestellt, z.B. ⁻⁵ˣᵅ) und ♫_ (für tiefgestellt ₊₅ₓ) erzeugt.
 
 === Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
