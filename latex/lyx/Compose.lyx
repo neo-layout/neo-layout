@@ -24,7 +24,7 @@
 #
 # Man beachte:
 #  Alle Programme, die nach der Zusammenstellung der Neo-lyx-Compose gestartet werden,
-#  nutzen diese auch. Das heißt, dass z.B. das Zeichen ›…‹ durch ›\\dots ‹ ersetzt wird.
+#  nutzen diese auch. Das heißt, dass z.B. das Zeichen ›…‹ durch ›\\ldots ‹ ersetzt wird.
 #  Da dies nicht gewünscht ist, sollte nach dem Starten von lyx erst nann weitere Programme
 #  gestartet werden, wenn die bisherige Compose-Datei wieder hergestellt ist und einige
 #  Sekunden Zeit vergangen ist.
@@ -127,7 +127,7 @@
 <U20D7>                        : "\\vec "
 <rightarrow>                   : "\\rightarrow "
 <leftarrow>                    : "\\leftarrow "
-<ellipsis>                     : "\\dots "
+<ellipsis>                     : "\\ldots "
 <U2221>                        : "\\measuredangle "
 <U2225>                        : "\\parallel "
 <downtack>                     : "\\bot "
