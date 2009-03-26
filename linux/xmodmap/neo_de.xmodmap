@@ -151,8 +151,8 @@ keycode 16 = 	7		EuroSign	yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
 !				€		¥		κ		¤				→
 keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	NoSymbol	NoSymbol	infinity	NoSymbol
 !				„		‚		⟨ (bra)						∞
-keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	containsas	NoSymbol
-!				“		‘		⟩ (ket)		/		/		∋
+keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	U21A6		NoSymbol
+!				“		‘		⟩ (ket)		/		/		↦
 keycode 19 = 	0   rightdoublequotemark  rightsinglequotemark  zerosubscript	KP_Multiply	KP_Multiply	emptyset	NoSymbol
 !			”			’		₀		*		*		∅
 keycode 20 = minus		emdash		NoSymbol	U2011		KP_Subtract	KP_Subtract	hyphen		NoSymbol
@@ -165,8 +165,8 @@ keycode 20 = minus		emdash		NoSymbol	U2011		KP_Subtract	KP_Subtract	hyphen		NoSy
 
 keycode 24 = 	x		X		ellipsis	Greek_xi	U22EE		NoSymbol	Greek_XI	Greek_XI
 !						…		ξ		⋮				Ξ		Ξ
-keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	U222E		NoSymbol
-!						_								∮ contour integral	
+keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	radical		NoSymbol
+!						_								√	
 keycode 26 = 	l		L		bracketleft	Greek_lambda	Up		Up		Greek_LAMBDA	Greek_LAMBDA
 !						[		λ						Λ		Λ
 keycode 27 = 	c		C		bracketright	Greek_chi	Delete		Delete		U2102		NoSymbol
@@ -174,8 +174,8 @@ keycode 27 = 	c		C		bracketright	Greek_chi	Delete		Delete		U2102		NoSymbol
 keycode 28 = 	w		W		asciicircum	Greek_omega	Insert		Insert		Greek_OMEGA	Greek_OMEGA
 !						^		ω						Ω		Ω
 
-keycode 29 = 	k		K		exclam		U03F0		exclamdown	NoSymbol	radical		NoSymbol
-!						!		ϰ Greek_kappa	¡				√
+keycode 29 = 	k		K		exclam		U03F0		exclamdown	NoSymbol	multiply	NoSymbol
+!						!		ϰ Greek_kappa	¡				× times
 keycode 30 = 	h		H		less		Greek_psi	KP_7		KP_7		Greek_PSI	Greek_PSI
 !						<		ψ						Ψ		Ψ
 keycode 31 = 	g		G		greater		Greek_gamma	KP_8		KP_8		Greek_GAMMA	Greek_GAMMA
@@ -184,16 +184,16 @@ keycode 32 = 	f		F		equal		Greek_phi	KP_9		KP_9		Greek_PHI	Greek_PHI
 !						=		φ 						Φ		Φ
 keycode 33 = 	q		Q		ampersand	U03D5		KP_Add		KP_Add		U211A		NoSymbol
 !						&		ϕ Greek_phi	+		+		ℚ rational
-keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  NoSymbol	NoSymbol	jot		NoSymbol
-!	     	ß		ẞ Capital ß	ſ long s	ς						∘ ring operator
+keycode 34 = ssharp		U1E9E		U017F	 Greek_finalsmallsigma  U2212		NoSymbol	jot		NoSymbol
+!	     	ß		ẞ Capital ß	ſ long s	ς		− real minus			∘ ring operator
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! The home row (middle row)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 38 = 	u		U		backslash	NoSymbol	Home		Home		U00B5		NoSymbol
-!						\								µ
+keycode 38 = 	u		U		backslash	NoSymbol	Home		Home		U222E		NoSymbol
+!						\								∮ contour integral
 keycode 39 = 	i		I		slash		Greek_iota	Left		Left		integral	NoSymbol
 !						/		ι						∫
 keycode 40 = 	a		A		braceleft	Greek_alpha	Down		Down		U2200		NoSymbol
@@ -221,12 +221,12 @@ keycode 48 = 	y		Y		at		Greek_upsilon	period		KP_Decimal	nabla		NoSymbol
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		U211C		NoSymbol
-!		ü		Ü		#								ℜ real part
-keycode 53 = odiaeresis		Odiaeresis	dollar		U03F5		Tab		ISO_Left_Tab	U2111		NoSymbol
-!		ö		Ö		$		ϵ						ℑ imaginary part
-keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Next		Next		U2135		NoSymbol
-!		ä		Ä		|		η						ℵ alef symbol
+keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		union		NoSymbol
+!		ü		Ü		#								∪
+keycode 53 = odiaeresis		Odiaeresis	dollar		U03F5		Tab		ISO_Left_Tab	intersection	NoSymbol
+!		ö		Ö		$		ϵ						∩
+keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Next		Next		includedin	NoSymbol
+!		ä		Ä		|		η						⊂
 keycode 55 = 	p		P		asciitilde	Greek_pi	Return		Return		Greek_PI	Greek_PI
 !						~		π						Π		Π
 keycode 56 = 	z		Z		grave		Greek_zeta	Undo		Redo		U2124		NoSymbol
@@ -308,7 +308,7 @@ keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol	KP_Next	
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7		Ebene4		Ebene4+Sh
 
-keycode 90 = KP_0		U2423		percent		U2030		U25A1		NoSymbol	KP_Insert	KP_Insert
+keycode 90 = KP_0		signifblank	percent		U2030		U25A1		NoSymbol	KP_Insert	KP_Insert
 !				␣ space sign	%		‰ per mille	□ white square					
 keycode 91 = KP_Separator	period		NoSymbol	minutes		seconds		NoSymbol	KP_Delete	KP_Delete
 !		,		.				′ min,feets	″ sec,inches					
