@@ -1149,15 +1149,25 @@
 <Multi_key> <4> <integral>                 : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key> <integral> <KP_4>              : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
 <Multi_key> <KP_4> <integral>              : "⨌"   U2A0C # QUADRUPLE INTEGRAL OPERATOR
-<Multi_key> <U222E> <2>                    : "∯"   U222F # SURFACE INTEGRAL
-<Multi_key> <2> <U222E>                    : "∯"   U222F # SURFACE INTEGRAL
-<Multi_key> <U222E> <U222E>                : "∯"   U222F # SURFACE INTEGRAL
-<Multi_key> <U222E> <KP_2>                 : "∯"   U222F # SURFACE U222E
-<Multi_key> <KP_2> <U222E>                 : "∯"   U222F # SURFACE U222E
-<Multi_key> <U222E> <3>                    : "∰"   U2230 # VOLUME U222E
-<Multi_key> <3> <U222E>                    : "∰"   U2230 # VOLUME U222E
-<Multi_key> <U222E> <KP_3>                 : "∰"   U2230 # VOLUME U222E
-<Multi_key> <KP_3> <U222E>                 : "∰"   U2230  # VOLUME U222E
+<dead_abovering> <integral>                : "∮"   U222E # CONTOUR INTEGRAL
+<Multi_key> <o> <integral>                 : "∮"   U222E # CONTOUR INTEGRAL
+<Multi_key> <jot> <integral>               : "∮"   U222E # CONTOUR INTEGRAL
+<dead_abovering> <o> <2> <integral>        : "∯"   U222F # SURFACE INTEGRAL
+<dead_abovering> <o> <KP_2> <integral>     : "∯"   U222F # SURFACE INTEGRAL
+<dead_abovering> <jot> <2> <integral>      : "∯"   U222F # SURFACE INTEGRAL
+<dead_abovering> <jot> <KP_2> <integral>   : "∯"   U222F # SURFACE INTEGRAL
+<Multi_key> <o> <2> <integral>             : "∯"   U222F # SURFACE INTEGRAL
+<Multi_key> <o> <KP_2> <integral>          : "∯"   U222F # SURFACE INTEGRAL
+<Multi_key> <jot> <2> <integral>           : "∯"   U222F # SURFACE INTEGRAL
+<Multi_key> <jot> <KP_2> <integral>        : "∯"   U222F # SURFACE INTEGRAL
+<dead_abovering> <o> <3> <integral>        : "∰"   U2230 # VOLUME U222E
+<dead_abovering> <o> <KP_3> <integral>     : "∰"   U2230 # VOLUME U222E
+<dead_abovering> <jot> <3> <integral>      : "∰"   U2230 # VOLUME U222E
+<dead_abovering> <jot> <KP_3> <integral>   : "∰"   U2230 # VOLUME U222E
+<Multi_key> <o> <3> <integral>             : "∰"   U2230 # VOLUME U222E
+<Multi_key> <o> <KP_3> <integral>          : "∰"   U2230 # VOLUME U222E
+<Multi_key> <jot> <3> <integral>           : "∰"   U2230 # VOLUME U222E
+<Multi_key> <jot> <KP_3> <integral>        : "∰"   U2230 # VOLUME U222E
 <Multi_key> <l> <n>                        : "㏑"   U33D1 # SQUARE LN
 <Multi_key> <l> <o> <g>                    : "㏒"   U33D2 # SQUARE LOG
 <Multi_key> <asciicircum> <bracketleft>    : "⌈"   U2308 # LEFT CEILING
@@ -1196,6 +1206,21 @@
 <Multi_key> <elementof> <elementof>        : "∋"   U220B # CONTAINS AS MEMBER
 <Multi_key> <a> <l> <e> <p> <h>            : "ℵ"   U2135 # ALEF SYMBOL
 <Multi_key> <h> <a>                        : "ℵ"   U2135 # ALEF SYMBOL
+<Multi_key> <logicalor> <logicalor>        : "⋁"   U22C1 # N-ARY LOGICAL OR
+<Multi_key> <logicaland> <logicaland>      : "⋀"   U22C0 # N-ARY LOGICAL AND
+<Multi_key> <union> <union>                : "⋃"   U22C3 # N-ARY UNION
+<Multi_key> <intersection> <intersection>  : "⋂"   U22C2 # N-ARY INTERSECTION
+<Multi_key> <Greek_SIGMA> <Greek_SIGMA>    : "∑"   U2211 # N-ARY SUMMATION
+<Multi_key> <Greek_PI> <Greek_PI>          : "∏"   U220F # N-ARY PRODUCT
+<Multe_key> <U2299> <U2299>                : "⨀"   U2A00 # N-ARY CIRCLED DOT OPERATOR
+<Multe_key> <U2295> <U2295>                : "⨁"   U2A01 # N-ARY CIRCLED PLUS OPERATOR
+<Multe_key> <U2297> <U2297>                : "⨂"   U2A02 # N-ARY CIRCLED TIMES OPERATOR
+<Multe_key> <equal> <equal>                : "≡"   U2261 # IDENTICAL TO
+<Multe_key> <colon> <equal>                : "≔"   U2254 # COLON EQUALS
+<dead_macron> <less>                       : "≤"   U2264 # LESS-THAN OR EQUAL TO
+<dead_macron> <greater>                    : "≥"   U2265 # GREATER-THAN OR EQUAL TO
+<dead_macron> <includedin>                 : "⊆"   U2286 # SUBSET OF OR EQUAL TO
+<dead_macron> <includes>                   : "⊇"   U2287 # SUPERSET OF OR EQUAL TO
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
