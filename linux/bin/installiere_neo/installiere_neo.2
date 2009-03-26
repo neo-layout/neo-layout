@@ -2,56 +2,56 @@
 profile_neo() {
 cat <<PROFIL
 
-# NEO:                          # NEO Tastaturbelegung
-PATH=\$PATH:$inst_dir/    # NEO Tastaturbelegung
-export PATH                     # NEO Tastaturbelegung
-asdf                            # NEO Tastaturbelegung; mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+# Neo:                          # Neo Tastaturbelegung
+PATH=\$PATH:$inst_dir/    # Neo Tastaturbelegung
+export PATH                     # Neo Tastaturbelegung
+asdf                            # Neo Tastaturbelegung; mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es Neo
 PROFIL
 }
 
 profile_qwertz() {
 cat <<PROFIL
 
-# NEO:                          # NEO Tastaturbelegung
-PATH=\$PATH:$inst_dir/    # NEO Tastaturbelegung
-export PATH                     # NEO Tastaturbelegung
-#asdf                           # NEO Tastaturbelegung; mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+# Neo:                          # Neo Tastaturbelegung
+PATH=\$PATH:$inst_dir/    # Neo Tastaturbelegung
+export PATH                     # Neo Tastaturbelegung
+#asdf                           # Neo Tastaturbelegung; mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es Neo
 PROFIL
 }
 
 neo_path() {
-cat <<NEO_PATH
+cat <<Neo_PATH
 PATH=$PATH:$inst_dir
 export PATH
-echo "Die Belegung wird nun auf NEO geändert…"
+echo "Die Belegung wird nun auf Neo geändert…"
 asdf
-NEO_PATH
+Neo_PATH
 }
 
 # *** main program ***
 clear
 echo
-echo "   *** NEO – Ergonomie und Zeichenvielfalt ***"
+echo "   *** Neo – Ergonomie und Zeichenvielfalt ***"
 echo
 echo
 echo " Ihr System wird untersucht…"
 echo
 
 # check for an existing neo configuration
-if [ -f "${NEO_CONFIG}" ]; then
-	. "${NEO_CONFIG}" || die "Failed to source ${NEO_CONFIG}"
+if [ -f "${Neo_CONFIG}" ]; then
+	. "${Neo_CONFIG}" || die "Failed to source ${Neo_CONFIG}"
 elif [ -f "${HOME}"/.neorc ]; then
 	. "${HOME}"/.neorc || die "Failed to source ${HOME}/.neorc"
 elif [ -f /etc/neo.conf ]; then
 	. /etc/neo.conf || die "Failed to source /etc/neo.conf"
 else
 
-# no configuration file found → install NEO
+# no configuration file found → install Neo
 	install_options
 	neo_path > $inst_dir/starte_neo
 	echo
-	echo -e "Um NEO jetzt zu aktivieren geben Sie bitte »${green}. $inst_dir/starte_neo${normal}« (mit Punkt und Leerzeichen!) ein."
-	echo -e "Danach oder nach dem nächsten Login kann jederzeit mit ${green}asdf${normal} von QWERTZ zu NEO und mit ${green}uiae${normal} von NEO zu QWERTZ gewechselt werden."
+	echo -e "Um Neo jetzt zu aktivieren geben Sie bitte »${green}. $inst_dir/starte_neo${normal}« (mit Punkt und Leerzeichen!) ein."
+	echo -e "Danach oder nach dem nächsten Login kann jederzeit mit ${green}asdf${normal} von QWERTZ zu Neo und mit ${green}uiae${normal} von Neo zu QWERTZ gewechselt werden."
 	exit
 fi
 
