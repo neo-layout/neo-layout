@@ -1212,11 +1212,11 @@
 <Multi_key> <intersection> <intersection>  : "⋂"   U22C2 # N-ARY INTERSECTION
 <Multi_key> <Greek_SIGMA> <Greek_SIGMA>    : "∑"   U2211 # N-ARY SUMMATION
 <Multi_key> <Greek_PI> <Greek_PI>          : "∏"   U220F # N-ARY PRODUCT
-<Multe_key> <U2299> <U2299>                : "⨀"   U2A00 # N-ARY CIRCLED DOT OPERATOR
-<Multe_key> <U2295> <U2295>                : "⨁"   U2A01 # N-ARY CIRCLED PLUS OPERATOR
-<Multe_key> <U2297> <U2297>                : "⨂"   U2A02 # N-ARY CIRCLED TIMES OPERATOR
-<Multe_key> <equal> <equal>                : "≡"   U2261 # IDENTICAL TO
-<Multe_key> <colon> <equal>                : "≔"   U2254 # COLON EQUALS
+<Multi_key> <U2299> <U2299>                : "⨀"   U2A00 # N-ARY CIRCLED DOT OPERATOR
+<Multi_key> <U2295> <U2295>                : "⨁"   U2A01 # N-ARY CIRCLED PLUS OPERATOR
+<Multi_key> <U2297> <U2297>                : "⨂"   U2A02 # N-ARY CIRCLED TIMES OPERATOR
+<Multi_key> <equal> <equal>                : "≡"   U2261 # IDENTICAL TO
+<Multi_key> <colon> <equal>                : "≔"   U2254 # COLON EQUALS
 <dead_macron> <less>                       : "≤"   U2264 # LESS-THAN OR EQUAL TO
 <dead_macron> <greater>                    : "≥"   U2265 # GREATER-THAN OR EQUAL TO
 <dead_macron> <includedin>                 : "⊆"   U2286 # SUBSET OF OR EQUAL TO
