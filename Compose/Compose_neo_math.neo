@@ -1,3 +1,360 @@
+# standard Definitions by Neo keyboard layout
+
+# diacritical marks
+<dead_circumflex> <nobreakspace>           : "ˆ"   U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
+<dead_caron> <nobreakspace>                : "ˇ"   U02C7 # CARON
+<dead_breve> <nobreakspace>                : "˘"   U02D8 # BREVE
+<dead_acute> <nobreakspace>                : "´"   U00B4 # ACUTE ACCENT
+<dead_grave> <nobreakspace>                : "`"   U0060 # GRAVE ACCENT
+<dead_cedilla> <nobreakspace>              : "¸"   U00B8 # CEDILLA
+<dead_ogonek> <nobreakspace>               : "˛"   U02DB # OGONEK
+<dead_abovedot> <nobreakspace>             : "˙"   U02D9 # DOT ABOVE
+<dead_abovering> <nobreakspace>            : "˚"   U02DA # RING ABOVE
+<dead_tilde> <nobreakspace>                : "˜"   U02DC # SMALL TILDE
+<dead_macron> <nobreakspace>               : "¯"   U00AF # MACRON
+<dead_diaeresis> <nobreakspace>            : "¨"   U00A8 # DIAERESIS
+<dead_stroke> <nobreakspace>               : "/"   U002F # SOLIDUS
+<dead_doubleacute> <nobreakspace>          : "˝"   U02DD # DOUBLE ACUTE ACCENT
+<U1FBF> <nobreakspace>                     : "᾿"   U1FBF # GREEK PSILI
+<U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
+<U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+
+# combining characters
+<Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
+<dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT
+<dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON
+<dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE
+<dead_acute> <dead_acute>                  : "́"   U0301 # COMBINING ACUTE ACCENT
+<dead_grave> <dead_grave>                  : "̀"   U0300 # COMBINING GRAVE ACCENT
+<dead_cedilla> <dead_cedilla>              : "̧"   U0327 # COMBINING CEDILLA
+<dead_ogonek> <dead_ogonek>                : "̨"   U0328 # COMBINING OGONEK
+<dead_abovedot> <dead_abovedot>            : "̇"   U0307 # COMBINING DOT ABOVE
+<dead_abovering> <dead_abovering>          : "̊"   U030A # COMBINING RING ABOVE
+<dead_tilde> <dead_tilde>                  : "̃"   U0303 # COMBINING TILDE
+<dead_macron> <dead_macron>                : "̄"   U0304 # COMBINING MACRON
+<dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS
+<dead_stroke> <dead_stroke>                : "̷"   U0338 # COMBINING SHORT SOLIDUS OVERLAY
+<dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT
+<Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
+<Multi_key> <U1FFE> <U1FFE>                : "҅"   U0485 # COMBINING CYRILLIC DASIA PNEUMATA
+<Multi_key> <U1FBF> <U1FBF>                : "҆"   U0486 # COMBINING CYRILLIC PSILI PNEUMATA
+<U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
+
+# in standard Compose missing dead keys with spaces
+<dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
+<dead_doubleacute> <space>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
+<U1FBF> <space>                            : "᾿"   U1FBF # GREEK PSILI
+<U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
+
+
+# letters
+# latin letters with ogonek (simplifying the keyboard ogonek and cedilla are on the same place)
+<dead_cedilla> <A>                           : "Ą"   U0104 # LATIN CAPITAL LETTER A WITH OGONEK
+<dead_cedilla> <a>                           : "ą"   U0105 # LATIN SMALL LETTER A WITH OGONEK
+<dead_cedilla> <E>                           : "Ę"   U0118 # LATIN CAPITAL LETTER E WITH OGONEK
+<dead_cedilla> <e>                           : "ę"   U0119 # LATIN SMALL LETTER E WITH OGONEK
+<dead_cedilla> <I>                           : "Į"   U012E # LATIN CAPITAL LETTER I WITH OGONEK
+<dead_cedilla> <i>                           : "į"   U012F # LATIN SMALL LETTER I WITH OGONEK
+<dead_cedilla> <U>                           : "Ų"   U0172 # LATIN CAPITAL LETTER U WITH OGONEK
+<dead_cedilla> <u>                           : "ų"   U0173 # LATIN SMALL LETTER U WITH OGONEK
+<dead_cedilla> <O>                           : "Ǫ"   U01EA # LATIN CAPITAL LETTER O WITH OGONEK
+<dead_cedilla> <o>                           : "ǫ"   U01EB # LATIN SMALL LETTER O WITH OGONEK
+<dead_macron> <dead_cedilla> <O>             : "Ǭ"   U01EC # LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
+<Multi_key> <macron> <dead_cedilla> <O>      : "Ǭ"   U01EC # LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
+<Multi_key> <underscore> <dead_cedilla> <O>  : "Ǭ"   U01EC # LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
+<dead_macron> <dead_cedilla> <o>             : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
+<Multi_key> <macron> <dead_cedilla> <o>      : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
+<Multi_key> <underscore> <dead_cedilla> <o>  : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
+
+# latin letters with line below (simplifying the keyboard line below and macron are on the same place)
+<dead_macron> <B>                            : "Ḇ"   U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
+<dead_macron> <b>                            : "ḇ"   U1E07 # LATIN SMALL LETTER B WITH LINE BELOW
+<dead_macron> <D>                            : "Ḏ"   U1E0E # LATIN CAPITAL LETTER D WITH LINE BELOW
+<dead_macron> <d>                            : "ḏ"   U1E0F # LATIN SMALL LETTER D WITH LINE BELOW
+<dead_macron> <K>                            : "Ḵ"   U1E34 # LATIN CAPITAL LETTER K WITH LINE BELOW
+<dead_macron> <k>                            : "ḵ"   U1E35 # LATIN SMALL LETTER K WITH LINE BELOW
+<dead_macron> <L>                            : "Ḻ"   U1E3A # LATIN CAPITAL LETTER L WITH LINE BELOW
+<dead_macron> <l>                            : "ḻ"   U1E3B # LATIN SMALL LETTER L WITH LINE BELOW
+<dead_macron> <N>                            : "Ṉ"   U1E48 # LATIN CAPITAL LETTER N WITH LINE BELOW
+<dead_macron> <n>                            : "ṉ"   U1E49 # LATIN SMALL LETTER N WITH LINE BELOW
+<dead_macron> <R>                            : "Ṟ"   U1E5E # LATIN CAPITAL LETTER R WITH LINE BELOW
+<dead_macron> <r>                            : "ṟ"   U1E5F # LATIN SMALL LETTER R WITH LINE BELOW
+<dead_macron> <T>                            : "Ṯ"   U1E6E # LATIN CAPITAL LETTER T WITH LINE BELOW
+<dead_macron> <t>                            : "ṯ"   U1E6F # LATIN SMALL LETTER T WITH LINE BELOW
+<dead_macron> <Z>                            : "Ẕ"   U1E94 # LATIN CAPITAL LETTER Z WITH LINE BELOW
+<dead_macron> <z>                            : "ẕ"   U1E95 # LATIN SMALL LETTER Z WITH LINE BELOW
+<dead_macron> <h>                            : "ẖ"   U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
+
+# letters with stroke
+<dead_stroke> <h>                        : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
+<dead_stroke> <H>                        : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
+<dead_stroke> <d>                        : "đ"   dstroke # LATIN SMALL LETTER D WITH STROKE
+<dead_stroke> <D>                        : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
+<dead_stroke> <l>                        : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
+<dead_stroke> <L>                        : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
+<dead_stroke> <o>                        : "ø"   lstroke # LATIN SMALL LETTER O WITH STROKE
+<dead_stroke> <O>                        : "Ø"   Lstroke # LATIN CAPITAL LETTER O WITH STROKE
+<Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+<Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
+
+# if you want to have ð and Ð with dead stroke instead of đ and Đ you should uncomment the next two lines
+# <dead_stroke> <d>                      : "ð"   U00F0 # LATIN SMALL LETTER ETH
+# <dead_stroke> <D>                      : "Ð"   U00D0 # LATIN CAPITAL LETTER ETH
+
+# letters with double grave
+<U02F5> <A>                              : "Ȁ"   U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
+<U02F5> <a>                              : "ȁ"   U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
+<U02F5> <E>                              : "Ȅ"   U0204 # LATIN CAPITAL LETTER E WITH DOUBLE GRAVE
+<U02F5> <e>                              : "ȅ"   U0205 # LATIN SMALL LETTER E WITH DOUBLE GRAVE
+<U02F5> <I>                              : "Ȉ"   U0208 # LATIN CAPITAL LETTER I WITH DOUBLE GRAVE
+<U02F5> <i>                              : "ȉ"   U0209 # LATIN SMALL LETTER I WITH DOUBLE GRAVE
+<U02F5> <O>                              : "Ȍ"   U020C # LATIN CAPITAL LETTER O WITH DOUBLE GRAVE
+<U02F5> <o>                              : "ȍ"   U020D # LATIN SMALL LETTER O WITH DOUBLE GRAVE
+<U02F5> <R>                              : "Ȑ"   U0210 # LATIN CAPITAL LETTER R WITH DOUBLE GRAVE
+<U02F5> <r>                              : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
+<U02F5> <U>                              : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
+<U02F5> <u>                              : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
+
+# other letters
+<Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
+<Multi_key> <L> <period>                 : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
+<Multi_key> <l> <period>                 : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+<dead_abovedot> <L>                      : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
+<dead_abovedot> <l>                      : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+<dead_breve> <H>                         : "Ḫ"   U1E2A # LATIN CAPITAL LETTER H WITH BREVE BELOW
+<dead_breve> <h>                         : "ḫ"   U1E2B # LATIN SMALL LETTER H WITH BREVE BELOW
+<Multi_key> <i> <i>                      : "ı"   U0131 # LATIN SMALL LETTER DOTLESS I
+<Multi_key> <I> <I>                      : "İ"   U0130 # LATIN CAPITAL LETTER I WITH DOT ABOVE
+
+# ligatures
+<Multi_key> <f> <f>                      : "ﬀ"   UFB00 # LATIN SMALL LIGATURE FF
+<Multi_key> <f> <i>                      : "ﬁ"   UFB01 # LATIN SMALL LIGATURE FI
+<Multi_key> <f> <l>                      : "ﬂ"   UFB02 # LATIN SMALL LIGATURE FL
+<Multi_key> <F> <i>                      : "ﬃ"   UFB03 # LATIN SMALL LIGATURE FFI
+<Multi_key> <F> <l>                      : "ﬄ"   UFB04 # LATIN SMALL LIGATURE FFL
+<Multi_key> <U017F> <t>                  : "ﬅ"   UFB05 # LATIN SMALL LIGATURE LONG S T
+<Multi_key> <s> <t>                      : "ﬆ"   UFB06 # LATIN SMALL LIGATURE ST
+<Multi_key> <f> <b>                      : ""   UE030 # LATIN SMALL LIGATURE FB
+<Multi_key> <F> <b>                      : ""   UE031 # LATIN SMALL LIGATURE FFB
+<Multi_key> <F> <h>                      : ""   UE032 # LATIN SMALL LIGATURE FFH
+<Multi_key> <F> <j>                      : ""   UE033 # LATIN SMALL LIGATURE FFJ
+<Multi_key> <F> <k>                      : ""   UE034 # LATIN SMALL LIGATURE FFK
+<Multi_key> <F> <t>                      : ""   UE035 # LATIN SMALL LIGATURE FFT
+<Multi_key> <f> <h>                      : ""   UE036 # LATIN SMALL LIGATURE FH
+<Multi_key> <f> <j>                      : ""   UE037 # LATIN SMALL LIGATURE FJ
+<Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
+<Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
+<Multi_key> <l> <c> <k>                  : ""   UE03A # LATIN SMALL LIGATURE CK
+<Multi_key> <l> <c> <h>                  : ""   UE03B # LATIN SMALL LIGATURE CH
+<Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
+<Multi_key> <l> <c> <t>                  : ""   UE03D # LATIN SMALL LIGATURE CT
+<Multi_key> <U017F> <i>                  : ""   UE03E # LATIN SMALL LIGATURE LONG S I
+<Multi_key> <U017F> <U017F>              : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
+<Multi_key> <U017F> <l>                  : ""   UE043 # LATIN SMALL LIGATURE LONG S L
+<Multi_key> <S> <i>                      : ""   UE044 # LATIN SMALL LIGATURE LONG S LONG S I
+<Multi_key> <U017F> <s>                  : ""   UE045 # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
+<Multi_key> <t> <z>                      : ""   UE04A # LATIN SMALL LIGATURE TZ (ALSO: UE04F)
+<Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
+<Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
+<Multi_key> <I> <J>                      : "Ĳ"   U0132 # LATIN CAPITAL LIGATURE IJ
+<Multi_key> <i> <j>                      : "ĳ"   U0133 # LATIN SMALL LIGATURE IJ
+<Multi_key> <D> <Z>                      : "Ǆ"   U01C4 # LATIN CAPITAL LETTER DZ WITH CARON
+<Multi_key> <D> <z>                      : "ǅ"   U01C5 # LATIN CAPITAL LETTER D WITH SMALL LETTER Z WITH CARON
+<Multi_key> <d> <z>                      : "ǆ"   U01C6 # LATIN SMALL LETTER DZ WITH CARON
+<Multi_key> <L> <J>                      : "Ǉ"   U01C7 # LATIN CAPITAL LETTER LJ
+<Multi_key> <L> <j>                      : "ǈ"   U01C8 # LATIN CAPITAL LETTER L WITH SMALL LETTER J
+<Multi_key> <l> <j>                      : "ǉ"   U01C9 # LATIN SMALL LETTER LJ
+<Multi_key> <N> <J>                      : "Ǌ"   U01CA # LATIN CAPITAL LETTER NJ
+<Multi_key> <N> <j>                      : "ǋ"   U01CB # LATIN CAPITAL LETTER N WITH SMALL LETTER J
+<Multi_key> <n> <j>                      : "ǌ"   U01CC # LATIN SMALL LETTER NJ
+
+# interpunctation
+<Multi_key> <2> <exclam>                         : "‼"   U203C # DOUBLE EXCLAMATION MARK
+<Multi_key> <exclam> <2>                         : "‼"   U203C # DOUBLE EXCLAMATION MARK
+<Multi_key> <KP_2> <exclam>                      : "‼"   U203C # DOUBLE EXCLAMATION MARK
+<Multi_key> <exclam> <KP_2>                      : "‼"   U203C # DOUBLE EXCLAMATION MARK
+<Multi_key> <2> <question>                       : "⁇"   U2047 # DOUBLE QUESTION MARK
+<Multi_key> <question> <2>                       : "⁇"   U2047 # DOUBLE QUESTION MARK
+<Multi_key> <KP_2> <question>                    : "⁇"   U2047 # DOUBLE QUESTION MARK
+<Multi_key> <question> <KP_2>                    : "⁇"   U2047 # DOUBLE QUESTION MARK
+<Multi_key> <question> <exclam>                  : "⁈"   U2048 # QUESTION EXCLAMATION MARK
+<Multi_key> <exclam> <question>                  : "⁉"   U2049 # EXCLAMATION QUESTION MARK
+<Multi_key> <1> <question> <exclam>              : "‽"   U203D # INTERROBANG
+<Multi_key> <1> <exclam> <question>              : "‽"   U203D # INTERROBANG
+<Multi_key> <KP_1> <question> <exclam>           : "‽"   U203D # INTERROBANG
+<Multi_key> <KP_1> <exclam> <question>           : "‽"   U203D # INTERROBANG
+<Multi_key> <1> <questiondown> <exclamdown>      : "⸘"   U2E18 # INVERTED INTERROBANG
+<Multi_key> <1> <exclamdown> <questiondown>      : "⸘"   U2E18 # INVERTED INTERROBANG
+<Multi_key> <KP_1> <questiondown> <exclamdown>   : "⸘"   U2E18 # INVERTED INTERROBANG
+<Multi_key> <KP_1> <exclamdown> <questiondown>   : "⸘"   U2E18 # INVERTED INTERROBANG
+<Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
+<Multi_key> <colon> <colon>                      : "‥"   U2025 # TWO DOT LEADER
+<Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
+<Multi_key> <ellipsis> <ellipsis>                : "[…]"
+
+
+# numerals
+# roman
+<Multi_key> <R> <1> <space>              : "Ⅰ"   U2160 # ROMAN NUMERAL ONE
+<Multi_key> <R> <2>                      : "Ⅱ"   U2161 # ROMAN NUMERAL TWO
+<Multi_key> <R> <3>                      : "Ⅲ"   U2162 # ROMAN NUMERAL THREE
+<Multi_key> <R> <4>                      : "Ⅳ"   U2163 # ROMAN NUMERAL FOUR
+<Multi_key> <R> <5>                      : "Ⅴ"   U2164 # ROMAN NUMERAL FIVE
+<Multi_key> <R> <6>                      : "Ⅵ"   U2165 # ROMAN NUMERAL SIX
+<Multi_key> <R> <7>                      : "Ⅶ"   U2166 # ROMAN NUMERAL SEVEN
+<Multi_key> <R> <8>                      : "Ⅷ"   U2167 # ROMAN NUMERAL EIGHT
+<Multi_key> <R> <9>                      : "Ⅸ"   U2168 # ROMAN NUMERAL NINE
+<Multi_key> <R> <1> <0>                  : "Ⅹ"   U2169 # ROMAN NUMERAL TEN
+<Multi_key> <R> <1> <1>                  : "Ⅺ"   U216A # ROMAN NUMERAL ELEVEN
+<Multi_key> <R> <1> <2>                  : "Ⅻ"   U216B # ROMAN NUMERAL TWELVE
+<Multi_key> <R> <KP_1> <space>           : "Ⅰ"   U2160 # ROMAN NUMERAL ONE
+<Multi_key> <R> <KP_2>                   : "Ⅱ"   U2161 # ROMAN NUMERAL TWO
+<Multi_key> <R> <KP_3>                   : "Ⅲ"   U2162 # ROMAN NUMERAL THREE
+<Multi_key> <R> <KP_4>                   : "Ⅳ"   U2163 # ROMAN NUMERAL FOUR
+<Multi_key> <R> <KP_5>                   : "Ⅴ"   U2164 # ROMAN NUMERAL FIVE
+<Multi_key> <R> <KP_6>                   : "Ⅵ"   U2165 # ROMAN NUMERAL SIX
+<Multi_key> <R> <KP_7>                   : "Ⅶ"   U2166 # ROMAN NUMERAL SEVEN
+<Multi_key> <R> <KP_8>                   : "Ⅷ"   U2167 # ROMAN NUMERAL EIGHT
+<Multi_key> <R> <KP_9>                   : "Ⅸ"   U2168 # ROMAN NUMERAL NINE
+<Multi_key> <R> <KP_1> <KP_0>            : "Ⅹ"   U2169 # ROMAN NUMERAL TEN
+<Multi_key> <R> <KP_1> <KP_1>            : "Ⅺ"   U216A # ROMAN NUMERAL ELEVEN
+<Multi_key> <R> <KP_1> <KP_2>            : "Ⅻ"   U216B # ROMAN NUMERAL TWELVE
+
+<Multi_key> <r> <1>  <space>             : "ⅰ"   U2170 # SMALL ROMAN NUMERAL ONE
+<Multi_key> <r> <1>  <period>            : "ⅰ."
+<Multi_key> <r> <1>  <parentright>       : "ⅰ)"
+<Multi_key> <r> <2>                      : "ⅱ"   U2171 # SMALL ROMAN NUMERAL TWO
+<Multi_key> <r> <3>                      : "ⅲ"   U2172 # SMALL ROMAN NUMERAL THREE
+<Multi_key> <r> <4>                      : "ⅳ"   U2173 # SMALL ROMAN NUMERAL FOUR
+<Multi_key> <r> <5>                      : "ⅴ"   U2174 # SMALL ROMAN NUMERAL FIVE
+<Multi_key> <r> <6>                      : "ⅵ"   U2175 # SMALL ROMAN NUMERAL SIX
+<Multi_key> <r> <7>                      : "ⅶ"   U2176 # SMALL ROMAN NUMERAL SEVEN
+<Multi_key> <r> <8>                      : "ⅷ"   U2177 # SMALL ROMAN NUMERAL EIGHT
+<Multi_key> <r> <9>                      : "ⅸ"   U2178 # SMALL ROMAN NUMERAL NINE
+<Multi_key> <r> <1> <0>                  : "ⅹ"   U2179 # SMALL ROMAN NUMERAL TEN
+<Multi_key> <r> <1> <1>                  : "ⅺ"   U217A # SMALL ROMAN NUMERAL ELEVEN
+<Multi_key> <r> <1> <2>                  : "ⅻ"   U217B # SMALL ROMAN NUMERAL TWELVE
+<Multi_key> <r> <KP_1> <space>           : "ⅰ"   U2170 # SMALL ROMAN NUMERAL ONE
+<Multi_key> <r> <KP_2>                   : "ⅱ"   U2171 # SMALL ROMAN NUMERAL TWO
+<Multi_key> <r> <KP_3>                   : "ⅲ"   U2172 # SMALL ROMAN NUMERAL THREE
+<Multi_key> <r> <KP_4>                   : "ⅳ"   U2173 # SMALL ROMAN NUMERAL FOUR
+<Multi_key> <r> <KP_5>                   : "ⅴ"   U2174 # SMALL ROMAN NUMERAL FIVE
+<Multi_key> <r> <KP_6>                   : "ⅵ"   U2175 # SMALL ROMAN NUMERAL SIX
+<Multi_key> <r> <KP_7>                   : "ⅶ"   U2176 # SMALL ROMAN NUMERAL SEVEN
+<Multi_key> <r> <KP_8>                   : "ⅷ"   U2177 # SMALL ROMAN NUMERAL EIGHT
+<Multi_key> <r> <KP_9>                   : "ⅸ"   U2178 # SMALL ROMAN NUMERAL NINE
+<Multi_key> <r> <KP_1> <KP_0>            : "ⅹ"   U2179 # SMALL ROMAN NUMERAL TEN
+<Multi_key> <r> <KP_1> <KP_1>            : "ⅺ"   U217A # SMALL ROMAN NUMERAL ELEVEN
+<Multi_key> <r> <KP_1> <KP_2>            : "ⅻ"   U217B # SMALL ROMAN NUMERAL TWELVE
+
+# arabic
+<Multi_key> <a> <0>                      : "٠"   U0660 # ARABIC-INDIC DIGIT ZERO
+<Multi_key> <a> <1>                      : "١"   U0661 # ARABIC-INDIC DIGIT ONE
+<Multi_key> <a> <2>                      : "٢"   U0662 # ARABIC-INDIC DIGIT TWO
+<Multi_key> <a> <3>                      : "٣"   U0663 # ARABIC-INDIC DIGIT THREE
+<Multi_key> <a> <4>                      : "٤"   U0664 # ARABIC-INDIC DIGIT FOUR
+<Multi_key> <a> <5>                      : "٥"   U0665 # ARABIC-INDIC DIGIT FIVE
+<Multi_key> <a> <6>                      : "٦"   U0666 # ARABIC-INDIC DIGIT SIX
+<Multi_key> <a> <7>                      : "٧"   U0667 # ARABIC-INDIC DIGIT SEVEN
+<Multi_key> <a> <8>                      : "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
+<Multi_key> <a> <9>                      : "٩"   U0669 # ARABIC-INDIC DIGIT NINE
+<Multi_key> <a> <KP_0>                   : "٠"   U0660 # ARABIC-INDIC DIGIT ZERO
+<Multi_key> <a> <KP_1>                   : "١"   U0661 # ARABIC-INDIC DIGIT ONE
+<Multi_key> <a> <KP_2>                   : "٢"   U0662 # ARABIC-INDIC DIGIT TWO
+<Multi_key> <a> <KP_3>                   : "٣"   U0663 # ARABIC-INDIC DIGIT THREE
+<Multi_key> <a> <KP_4>                   : "٤"   U0664 # ARABIC-INDIC DIGIT FOUR
+<Multi_key> <a> <KP_5>                   : "٥"   U0665 # ARABIC-INDIC DIGIT FIVE
+<Multi_key> <a> <KP_6>                   : "٦"   U0666 # ARABIC-INDIC DIGIT SIX
+<Multi_key> <a> <KP_7>                   : "٧"   U0667 # ARABIC-INDIC DIGIT SEVEN
+<Multi_key> <a> <KP_8>                   : "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
+<Multi_key> <a> <KP_9>                   : "٩"   U0669 # ARABIC-INDIC DIGIT NINE
+
+# ordinal numbers
+# english
+<Multi_key> <1> <s> <t>                  : "1ˢᵗ"
+<Multi_key> <KP_1> <s> <t>               : "1ˢᵗ"
+<Multi_key> <2> <n> <d>                  : "2ⁿᵈ"
+<Multi_key> <KP_2> <n> <d>               : "2ⁿᵈ"
+<Multi_key> <3> <r> <d>                  : "3ʳᵈ"
+<Multi_key> <KP_3> <r> <d>               : "3ʳᵈ"
+<Multi_key> <4> <t> <h>                  : "4ᵗʰ"
+<Multi_key> <KP_4> <t> <h>               : "4ᵗʰ"
+
+# frensh
+<Multi_key> <1> <e> <r>                  : "1ᵉʳ"
+<Multi_key> <KP_1> <e> <r>               : "1ᵉʳ"
+<Multi_key> <1> <r> <e>                  : "1ʳᵉ"
+<Multi_key> <KP_1> <r> <e>               : "1ʳᵉ"
+<Multi_key> <2> <e>                      : "2ᵉ"
+<Multi_key> <KP_2> <e>                   : "2ᵉ"
+
+# Fractions
+<Multi_key> <1> <3>                        : "⅓"   U2153 # VULGAR FRACTION ONE THIRD
+<Multi_key> <2> <3>                        : "⅔"   U2154 # VULGAR FRACTION TWO THIRDS
+<Multi_key> <1> <5>                        : "⅕"   U2155 # VULGAR FRACTION ONE FIFTH
+<Multi_key> <2> <5>                        : "⅖"   U2156 # VULGAR FRACTION TWO FIFTHS
+<Multi_key> <3> <5>                        : "⅗"   U2157 # VULGAR FRACTION THREE FIFTHS
+<Multi_key> <4> <5>                        : "⅘"   U2158 # VULGAR FRACTION FOUR FIFTHS
+<Multi_key> <1> <6>                        : "⅙"   U2159 # VULGAR FRACTION ONE SIXTH
+<Multi_key> <5> <6>                        : "⅚"   U215A # VULGAR FRACTION FIVE SIXTHS
+<Multi_key> <1> <8>                        : "⅛"   U215B # VULGAR FRACTION ONE EIGHTH
+<Multi_key> <3> <8>                        : "⅜"   U215C # VULGAR FRACTION THREE EIGHTHS
+<Multi_key> <5> <8>                        : "⅝"   U215D # VULGAR FRACTION FIVE EIGHTHS
+<Multi_key> <7> <8>                        : "⅞"   U215E # VULGAR FRACTION SEVEN EIGHTHS
+<Multi_key> <1> <slash>                    : "⅟"   U215F # FRACTION NUMERATOR ONE
+<Multi_key> <1> <KP_Divide>                : "⅟"   U215F # FRACTION NUMERATOR ONE
+<Multi_key> <KP_1> <KP_3>                  : "⅓"   U2153 # VULGAR FRACTION ONE THIRD
+<Multi_key> <KP_2> <KP_3>                  : "⅔"   U2154 # VULGAR FRACTION TWO THIRDS
+<Multi_key> <KP_1> <KP_5>                  : "⅕"   U2155 # VULGAR FRACTION ONE FIFTH
+<Multi_key> <KP_2> <KP_5>                  : "⅖"   U2156 # VULGAR FRACTION TWO FIFTHS
+<Multi_key> <KP_3> <KP_5>                  : "⅗"   U2157 # VULGAR FRACTION THREE FIFTHS
+<Multi_key> <KP_4> <KP_5>                  : "⅘"   U2158 # VULGAR FRACTION FOUR FIFTHS
+<Multi_key> <KP_1> <KP_6>                  : "⅙"   U2159 # VULGAR FRACTION ONE SIXTH
+<Multi_key> <KP_5> <KP_6>                  : "⅚"   U215A # VULGAR FRACTION FIVE SIXTHS
+<Multi_key> <KP_1> <KP_8>                  : "⅛"   U215B # VULGAR FRACTION ONE EIGHTHS
+<Multi_key> <KP_3> <KP_8>                  : "⅜"   U215C # VULGAR FRACTION THREE EIGHTHS
+<Multi_key> <KP_5> <KP_8>                  : "⅝"   U215D # VULGAR FRACTION FIVE EIGHTHS
+<Multi_key> <KP_7> <KP_8>                  : "⅞"   U215E # VULGAR FRACTION SEVEN EIGHTHS
+<Multi_key> <KP_1> <slash>                 : "⅟"   U215F # FRACTION NUMERATOR ONE
+<Multi_key> <KP_1> <KP_Divide>             : "⅟"   U215F # FRACTION NUMERATOR ONE
+<Multi_key> <KP_1> <KP_4>                  : "¼"   U00BC # VULGAR FRACTION ONE QUARTER
+<Multi_key> <KP_1> <KP_2>                  : "½"   U00BD # VULGAR FRACTION ONE HALF
+<Multi_key> <KP_3> <KP_4>                  : "¾"   U00BE # VULGAR FRACTION THREE QUARTERS
+
+
+# other symbols
+<Multi_key> <colon> <parenright>           : "☺"   U263A # WHITE SMILING FACE
+<Multi_key> <colon> <parenleft>            : "☹"   U2639 # WHITE FROWNING FACE
+<Multi_key> <t> <m>                        : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <c> <KP_Divide> <o>            : "℅"   U2105 # CARE OF
+<Multi_key> <femalesymbol> <femalesymbol>  : "⚢"   U26A2 # DOUBLED FEMALE SIGN
+<Multi_key> <malesymbol> <malesymbol>      : "⚣"   U26A3 # DOUBLED MALE SIGN
+<Multi_key> <femalesymbol> <malesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
+<Multi_key> <malesymbol> <femalesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
+<Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
+<Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
+<Multi_key> <U25A1> <U2718>                : "☒"   U2612 # BALLOT BOX WITH X
+<Multi_key> <U2718> <U25A1>                : "☒"   U2612 # BALLOT BOX WITH X
+<Multi_key> <U2423> <U2423>                : "⍽"   U237D # SHOULDERED OPEN BOX
+<Multi_key> <p> <f>                        : "₰"   U20B0 # GERMAN PENNY SIGN
+<Multi_key> <p> <o> <i>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
+<Multi_key> <o> <p> <t>                    : "⌥"   U2325 # OPTION KEY
+
+
+# box drawings
+<Multi_key> <x> <1> <1>      : "┌──────────┐\n│          │\n└──────────┘\n"
+<Multi_key> <x> <2> <1>  : "┌──────────┬──────────┐\n│          │          │\n└──────────┴──────────┘\n"
+<Multi_key> <x> <3> <1>  : "┌──────────┬──────────┬──────────┐\n│          │          │          │\n└──────────┴──────────┴──────────┘\n"
+<Multi_key> <x> <1> <2>  : "┌──────────┐\n│          │\n├──────────┤\n│          │\n└──────────┘\n"
+<Multi_key> <x> <2> <2>  : "┌──────────┬──────────┐\n│          │          │\n├──────────┼──────────┤\n│          │          │\n└──────────┴──────────┘\n"
+<Multi_key> <x> <3> <2>  : "┌──────────┬──────────┬──────────┐\n│          │          │          │\n├──────────┼──────────┼──────────┤\n│          │          │          │\n└──────────┴──────────┴──────────┘\n"
+<Multi_key> <x> <1> <3>  : "┌──────────┐\n│          │\n├──────────┤\n│          │\n├──────────┤\n│          │\n└──────────┘\n"
+<Multi_key> <x> <2> <3>  : "┌──────────┬──────────┐\n│          │          │\n├──────────┼──────────┤\n│          │          │\n├──────────┼──────────┤\n│          │          │\n└──────────┴──────────┘\n"
+<Multi_key> <x> <3> <3>  : "┌──────────┬──────────┬──────────┐\n│          │          │          │\n├──────────┼──────────┼──────────┤\n│          │          │          │\n├──────────┼──────────┼──────────┤\n│          │          │          │\n└──────────┴──────────┴──────────┘\n"
+
+
+# End of standard Definitions by Neo keyboard layout
 
 
 # additional Definitions by Neo keyboard layout - mathematical symbols
