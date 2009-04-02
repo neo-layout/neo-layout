@@ -1,34 +1,40 @@
 #!/bin/sh
 
 pfad=..
-g=1									# mit graphischer Menüauswahl
+g=1									# mit graphischer Menüauswahl (g=1 mit GUI, g=0 ohne GUI )
 
-# Compose-Module
-anzahl=4
+# Anzahl der Compose-Module
+anzahl=5
 
-m[1]=mathephysik							# Modul
-b[1]="mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)"		# Beschreibung
-d[1]=Compose_math_and_physics.neo					# Datei
-a[1]=off								# Standard-Auswahl
+m[2]=mathephysik							# Modul
+b[2]="mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)"		# Beschreibung
+d[2]=Compose_math_and_physics.neo					# Datei
+a[2]=off								# Standard-Auswahl
 
-m[2]=griechisch
-b[2]="griechische Buchstaben (A ἀ)"
-d[2]=Compose_greek.neo
-a[2]=off
-
-m[3]=roemisch
-b[3]="römische Zahlen >12 (große Datei!) (1868→ⅿⅾⅽⅽⅽⅼⅹⅴⅰⅰⅰ)"
-d[3]=Compose_many_roman_numericals.neo
+m[3]=griechisch
+b[3]="griechische Buchstaben (A ἀ)"
+d[3]=Compose_greek.neo
 a[3]=off
 
-m[4]=klingonisch
-b[4]="klingonische Zahlen (große Datei!) (1984→wa'SaD Hutvatlh chorghmaH loS)"
-d[4]=Compose_many_klingon_numericals.neo
+m[4]=roemisch
+b[4]="römische Zahlen >12 (große Datei!) (1868→ⅿⅾⅽⅽⅽⅼⅹⅴⅰⅰⅰ)"
+d[4]=Compose_many_roman_numericals.neo
 a[4]=off
+
+m[5]=klingonisch
+b[5]="klingonische Zahlen (große Datei!) (1984→wa'SaD Hutvatlh chorghmaH loS)"
+d[5]=Compose_many_klingon_numericals.neo
+a[5]=off
+
 
 m[0]=standard
 d[0]=Compose.neo
 auswahl=${m[0]}
+
+m[1]=optional
+d[1]=Compose_opt.neo
+#auswahl=${m[0]}\ ${m[1]}						# Bei Verwendung einer eigenen (optionalen) Compose das Kommentarzeichen (#) entfernen
+
 
 while [ ! "$module" ]
 do
@@ -40,7 +46,7 @@ do
       echo Aufruf: compose.sh [-g] [COMPOSEMODULE]
       echo Mit »compose.sh« können die Compose-Module von Neo zusammengesetzt werden.
       echo Folgende Module sind verfügbar:
-      for i in $(seq 1 $anzahl)
+      for i in $(seq 2 $anzahl)
       do
        echo -e "  ${m[$i]}\t\t${b[$i]}"
       done
@@ -72,15 +78,15 @@ done
 
 if [ $g = 1 ]
 then
-	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[1]} "${b[1]}" ${a[1]} ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]}`
-	auswahl=`echo \"${m[0]}\" $menu`
+	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]} ${m[5]} "${b[5]}" ${a[5]}`
+	auswahl=$auswahl\ $menu
 fi
 
-echo -e "# with additional definitions by Neo keyboard\n" > $pfad/XCompose
-cat  /usr/share/X11/locale/en_US.UTF-8/Compose >> $pfad/XCompose
+echo -e "# with additional definitions by Neo keyboard\n" > XCompose
+cat  /usr/share/X11/locale/en_US.UTF-8/Compose >> XCompose
 for i in $(seq 0 $anzahl)
 do
-	echo $auswahl | grep ${m[$i]} > /dev/null && cat $pfad/${d[$i]} >> $pfad/XCompose
+	echo $auswahl | grep ${m[$i]} > /dev/null && cat $pfad/${d[$i]} >> XCompose
 done
 
-echo -e "\n# End of Definitions by Neo keyboard layout" >> $pfad/XCompose
+echo -e "\n# End of Definitions by Neo keyboard layout" >> XCompose
