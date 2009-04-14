@@ -12,8 +12,8 @@ if (FileExist("ResourceFolder")<>false) {
   FileInstall,ebene6.png,%ResourceFolder%\ebene6.png,1
 }
 
-CP3F1 := "PBSTt"
-CP3F8 := "PBSTA"
+CP3F1 := "P__BSTt"
+CP3F8 := "P__BSTA"
 
 BSTSwitch(Eb) {
   global
@@ -60,13 +60,13 @@ BSTToggleAlwaysOnTop() {
   }
 }
 
-CharProcBSTt() {
+CharProc__BSTt() {
   global
   ; Bildschirmtastatur Ein/Aus
   BSTToggle()
 }
 
-CharProcBSTA() {
+CharProc__BSTA() {
   global
   ; Bildschirmtastatur AlwaysOnTop
   if (guiErstellt)

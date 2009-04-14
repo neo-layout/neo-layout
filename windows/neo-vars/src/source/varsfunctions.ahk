@@ -38,7 +38,7 @@ AllStar(This_HotKey) {
 CharStarDown(PhysKey, ActKey, char) {
   global
   if (SubStr(char,1,1)=="P") {
-    SubProc := SubStr(char,2,4)
+    SubProc := SubStr(char,2,6)
     CharProc%SubProc%()
     return
   }
@@ -67,7 +67,7 @@ CharStarDown(PhysKey, ActKey, char) {
 
 
 
-  if (strlen(tosend) > 5) {          ; Ausgabe mehrerer Zeichen
+  if (strlen(tosend) > 7) {          ; Ausgabe mehrerer Zeichen
     if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufr�umen
       CharOutUp(PR%PhysKey%)
       PR%PhysKey% := ""
@@ -75,12 +75,12 @@ CharStarDown(PhysKey, ActKey, char) {
 
     loop {
       if (SubStr(tosend,1,1)=="P") {
-        SubProc := SubStr(tosend,2,4)
+        SubProc := SubStr(tosend,2,6)
         CharProc%SubProc%()
       } else {
-        CharOut(SubStr(tosend,1,5))
+        CharOut(SubStr(tosend,1,7))
       }
-      tosend := SubStr(tosend,6)
+      tosend := SubStr(tosend,8)
       if (tosend == "") 
         break                ; erledigt
     }
@@ -90,7 +90,7 @@ CharStarDown(PhysKey, ActKey, char) {
         CharOutUp(PR%PhysKey%)
         PR%PhysKey% := ""
       }
-      SubProc := SubStr(tosend,2,4)
+      SubProc := SubStr(tosend,2,6)
       CharProc%SubProc%()
     } else {
       if ((PR%PhysKey% != "") and (PR%PhysKey% != tosend))
@@ -110,7 +110,7 @@ CharStarUp(PhysKey) {
     tosend := PR%PhysKey%
     PR%PhysKey% := ""
     if (SubStr(tosend,1,1)=="P") {
-      SubProc := SubStr(tosend,2,4)
+      SubProc := SubStr(tosend,2,6)
       CharProc%SubProc%()
     } else
       CharOutUp(tosend)
@@ -186,14 +186,14 @@ CharProc(name) {
   CharProc%name%()
 }
 
-CharProcRlod() {
+CharProc__Rlod() {
   global
   ; Neustart des AHK-Skripts
   reload
 }
 
 ; Modifier
-CharProcM2LD() {
+CharProc__M2LD() {
   global
   if (!isShiftLPressed) {
     if (isShiftRPressed and !wasNonShiftKeyPressed)
@@ -202,20 +202,20 @@ CharProcM2LD() {
     isShiftPressed := 1
     wasNonShiftKeyPressed := 0
     EbeneAktualisieren()
-    PR%PhysKey% := "PM2LU"
+    PR%PhysKey% := "P__M2LU"
   }
-  CharOutDown("SL_M2")
+  CharOutDown("S__L_M2")
 }
 
-CharProcM2LU() {
+CharProc__M2LU() {
   global
   isShiftLPressed := 0
   isShiftPressed := isShiftRPressed
   EbeneAktualisieren()
-  CharOutUp("SL_M2")
+  CharOutUp("S__L_M2")
 }
 
-CharProcM2RD() {
+CharProc__M2RD() {
   global
   if (!isShiftRPressed) {
     if (isShiftLPressed and !wasNonShiftKeyPressed)
@@ -224,33 +224,33 @@ CharProcM2RD() {
     isShiftPressed := 1
     wasNonShiftKeyPressed := 0
     EbeneAktualisieren()
-    PR%PhysKey% := "PM2RU"
+    PR%PhysKey% := "P__M2RU"
   }
-  CharOutDown("SR_M2")
+  CharOutDown("S__R_M2")
 }
 
-CharProcM2RU() {
+CharProc__M2RU() {
   global
   isShiftRPressed := 0
   isShiftPressed := isShiftLPressed
   EbeneAktualisieren()
-  CharOutUp("SR_M2")
+  CharOutUp("S__R_M2")
 }
 
-CharProcM3LD() {
+CharProc__M3LD() {
   global
   if (!isMod3LPressed) {
     if (isMod3RPressed and !wasNonShiftKeyPressed)
-      CharStarDown("MOD3", "MOD3", "SComp")
+      CharStarDown("MOD3", "MOD3", "S__Comp")
     isMod3LPressed := 1
     isMod3Pressed := 1
     wasNonShiftKeyPressed := 0
     EbeneAktualisieren()
-    PR%PhysKey% := "PM3LU"
+    PR%PhysKey% := "P__M3LU"
   }
 }
 
-CharProcM3LU() {
+CharProc__M3LU() {
   global
   if (isMod3RPressed)
     CharStarUp("MOD3")
@@ -259,20 +259,20 @@ CharProcM3LU() {
   EbeneAktualisieren()
 }
 
-CharProcM3RD() {
+CharProc__M3RD() {
   global
   if (!Mod3RPressed) {
     if (isMod3LPressed and !wasNonShiftKeyPressed)
-      CharStarDown("MOD3", "MOD3", "SComp")
+      CharStarDown("MOD3", "MOD3", "S__Comp")
     isMod3RPressed := 1
     isMod3Pressed := 1
     wasNonShiftKeyPressed := 0
     EbeneAktualisieren()
-    PR%PhysKey% := "PM3RU"
+    PR%PhysKey% := "P__M3RU"
   }
 }
 
-CharProcM3RU() {
+CharProc__M3RU() {
   global
   if (isMod3LPressed)
     CharStarUp("MOD3")
@@ -281,13 +281,13 @@ CharProcM3RU() {
   EbeneAktualisieren()
 }
 
-CharProcM4LD() {
+CharProc__M4LD() {
   global
   if (!isMod4LPressed) {
     isMod4LPressed := 1
     isMod4Pressed := 1
     EbeneAktualisieren()
-    PR%PhysKey% := "PM4LU"
+    PR%PhysKey% := "P__M4LU"
     if (isMod4RPressed and !wasNonShiftKeyPressed) {
       wasNonShiftKeyPressed := 0
       ToggleMod4Lock()
@@ -296,20 +296,20 @@ CharProcM4LD() {
   }
 }
 
-CharProcM4LU() {
+CharProc__M4LU() {
   global
   isMod4LPressed := 0
   isMod4Pressed := isMod4RPressed
   EbeneAktualisieren()
 }
 
-CharProcM4RD() {
+CharProc__M4RD() {
   global
   if (!isMod4RPressed) {
     isMod4RPressed := 1
     isMod4Pressed := 1
     EbeneAktualisieren()
-    PR%PhysKey% := "PM4RU"
+    PR%PhysKey% := "P__M4RU"
     if (isMod4LPressed and !wasNonShiftKeyPressed) {
       wasNonShiftKeyPressed := 0
       ToggleMod4Lock()
@@ -318,7 +318,7 @@ CharProcM4RD() {
   }
 }
 
-CharProcM4RU() {
+CharProc__M4RU() {
   global
   isMod4RPressed := 0
   isMod4Pressed := isMod4LPressed
@@ -333,13 +333,25 @@ SendUnicodeChar(charCode){
   } else {
     static ki := "#"
     if (ki =="#") {
-      VarSetCapacity(ki,28*2,0)
-      DllCall("RtlFillMemory","uint",&ki+   0,"uint",1,"uint",1)
-      DllCall("RtlFillMemory","uint",&ki+28+0,"uint",1,"uint",1)
+      VarSetCapacity(ki,28*4,0)
+      DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
+      DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
+      DllCall("RtlFillMemory","uint",&ki+2*28+0,"uint",1,"uint",1)
+      DllCall("RtlFillMemory","uint",&ki+3*28+0,"uint",1,"uint",1)
     }
-    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
-    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+28+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-    DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
+    if (charCode < 0x10000) {
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+28+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+      DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
+    } else {
+      hi_surrogate := 0xD800|((charCode-0x10000)/1024)
+      lo_surrogate := 0xDC00|((charCode-0x10000)&0x3FF)
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x40000|hi_surrogate) ;KEYEVENTF_UNICODE
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x40000|lo_surrogate) ;KEYEVENTF_UNICODE
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+2*28+6,"uint",4,"uint",0x60000|hi_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+3*28+6,"uint",4,"uint",0x60000|lo_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+      DllCall("SendInput","UInt",4,"UInt",&ki,"Int",28)
+    }
   }
 }
 
@@ -351,11 +363,20 @@ SendUnicodeCharDown(charCode){
   } else {
     static ki := "#"
     if (ki =="#") {
-      VarSetCapacity(ki,28,0)
-      DllCall("RtlFillMemory","uint",&ki,"uint",1,"uint",1)
+      VarSetCapacity(ki,28*2,0)
+      DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
+      DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
     }
-    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
-    DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
+    if (charCode < 0x10000) {
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
+      DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
+    } else {
+      hi_surrogate := 0xD800|((charCode-0x10000)/1024)
+      lo_surrogate := 0xDC00|((charCode-0x10000) & 0x3FF)
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x40000|hi_surrogate) ;KEYEVENTF_UNICODE
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x40000|lo_surrogate) ;KEYEVENTF_UNICODE
+      DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
+    }
   }
 }
 
@@ -366,11 +387,20 @@ SendUnicodeCharUp(charCode){
   } else {
     static ki := "#"
     if (ki =="#") {
-      VarSetCapacity(ki,28,0)
-      DllCall("RtlFillMemory","uint",&ki,"uint",1,"uint",1)
+      VarSetCapacity(ki,28*2,0)
+      DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
+      DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
     }
-    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-    DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
+    if (charCode < 0x10000) {
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+      DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
+    } else {
+      hi_surrogate := 0xD800|((charCode-0x10000)/1024)
+      lo_surrogate := 0xDC00|((charCode-0x10000)&0x3FF)
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x60000|hi_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x60000|lo_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+      DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
+    }
   }
 }
 

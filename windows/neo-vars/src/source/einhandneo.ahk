@@ -2,27 +2,27 @@
 
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 If (einHandNeo)
-  CharProc_EH1()
+  CharProc___EH1()
 
-CP3F10 := "P_EHt"
-CP5TAB := "PM2LT"
+CP3F10 := "P___EHt"
+CP5TAB := "P__M2LT"
 
-CharProc_EHt() {
+CharProc___EHt() {
   global
   ; Einhandmodus togglen
   einHandNeo := !(einHandNeo)
   if (einHandNeo) {
-    CharProc_EH1()
+    CharProc___EH1()
     if (zeigeModusBox)
       TrayTip,NEO-Einhandmodus,Der NEO-Einhand-Modus wurde aktiviert. Zum Deaktivieren Mod3+F10 drücken.,10,1
   } else {
-    CharProc_EH0()
+    CharProc___EH0()
     if (zeigeModusBox)
       TrayTip,NEO-Einhand-Modus,Der Einhandmodus wurde deaktiviert.,10,1
   }
 }
 
-CharProc_EH1() {
+CharProc___EH1() {
   global
   ; Einhand-NEO aktivieren
   ; Funktionstasten
@@ -60,12 +60,12 @@ CharProc_EH1() {
   TKEH_VKBESC034 := "VK58SC02D" ; . -> ö
   TKEH_VKBDSC035 := "VK59SC02C" ; j -> ü
   ; Modify Space
-  ED1("space","PEHSd")
-  ED("EHSpace",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
+  ED1("space","P__EHSd")
+  ED("EHSpace",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
   TransformProc := "Einhand"
 }
 
-CharProc_EH0() {
+CharProc___EH0() {
   global
   ; Einhand-NEO deaktivieren
   ; Funktionstasten
@@ -102,18 +102,18 @@ CharProc_EH0() {
   TKEH_VKBCSC033 := "" ; ,
   TKEH_VKBESC034 := "" ; .
   TKEH_VKBDSC035 := "" ; j
-  ED("space",0,"U0020","U0020","U0020","SN__0","U00A0","U202F")
+  ED("space",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
   TransformProc := ""
 }
 
-CharProcEHSd() {
+CharProc__EHSd() {
   global
   ; Space im Einhandmodus gedrückt
   EHSpacePressed := 1
-  PRspace := "PEHSu"
+  PRspace := "P__EHSu"
 }
 
-CharProcEHSu() {
+CharProc__EHSu() {
   global
   ; Space im Einhandmodus losgelassen
   if (!EHKeyPressed) {
@@ -124,7 +124,7 @@ CharProcEHSu() {
   EHSpacePressed := 0
 }
 
-CharProcM2LT() {
+CharProc__M2LT() {
   global
   ; Mod2Lock Toggle
   ToggleMod2Lock()

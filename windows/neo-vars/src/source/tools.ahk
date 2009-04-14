@@ -1,23 +1,23 @@
 ; äöü
 
 ; Römische Zahlen
-CMSComp := 1
-CMSCompU0072 := 1
-CMSCompU0052 := 1
-CDSCompU0072U0072 := "PRom1"
-CDSCompU0072U0031 := "PRom1"
-CDSCompU0052U0031 := "PRom1"
-CDSCompU0072U0052 := "PRom2"
-CDSCompU0072U0032 := "PRom2"
-CDSCompU0052U0032 := "PRom2"
-CDSCompU0052U0072 := "PRom3"
-CDSCompU0072U0033 := "PRom3"
-CDSCompU0052U0033 := "PRom3"
-CDSCompU0052U0052 := "PRom4"
-CDSCompU0072U0034 := "PRom4"
-CDSCompU0052U0034 := "PRom4"
+CMS__Comp := 1
+CMS__CompU000072 := 1
+CMS__CompU000052 := 1
+CDS__CompU000072U000072 := "P_Rom1"
+CDS__CompU000072U000031 := "P_Rom1"
+CDS__CompU000052U000031 := "P_Rom1"
+CDS__CompU000072U000052 := "P_Rom2"
+CDS__CompU000072U000032 := "P_Rom2"
+CDS__CompU000052U000032 := "P_Rom2"
+CDS__CompU000052U000072 := "P_Rom3"
+CDS__CompU000072U000033 := "P_Rom3"
+CDS__CompU000052U000033 := "P_Rom3"
+CDS__CompU000052U000052 := "P_Rom4"
+CDS__CompU000072U000034 := "P_Rom4"
+CDS__CompU000052U000034 := "P_Rom4"
 
-CharProcRom1() {
+CharProc_Rom1() {
   global
   ; starte groß geschriebene römische Zahlen, verwende U2160++
   PressHookProc := "Roman"
@@ -25,7 +25,7 @@ CharProcRom1() {
   RomanSum := 0
 }
 
-CharProcRom2() {
+CharProc_Rom2() {
   global
   ; starte klein geschriebene römische Zahlen, verwende U2160++
   PressHookProc := "Roman"
@@ -33,7 +33,7 @@ CharProcRom2() {
   RomanSum := 0
 }
 
-CharProcRom3() {
+CharProc_Rom3() {
   global
   ; starte groß geschriebene römische Zahlen, verwende Buchstaben
   PressHookProc := "Roman"
@@ -41,7 +41,7 @@ CharProcRom3() {
   RomanSum := 0
 }
 
-CharProcRom4() {
+CharProc_Rom4() {
   global
   ; starte klein geschriebene römische Zahlen, verwende Buchstaben
   PressHookProc := "Roman"
@@ -60,27 +60,27 @@ PressHookRoman(PhysKey, ActKey, Char) {
   global
   if (SubStr(Char,1,1) == "P")
     CharStarDown(PhysKey, ActKey, Char)
-  else if ((Char == "U0030") or (Char == "SN__0"))
+  else if ((Char == "U000030") or (Char == "S__N__0"))
     RomanSum := 10*RomanSum
-  else if ((Char == "U0031") or (Char == "SN__1"))
+  else if ((Char == "U000031") or (Char == "S__N__1"))
     RomanSum := 10*RomanSum + 1
-  else if ((Char == "U0032") or (Char == "SN__2"))
+  else if ((Char == "U000032") or (Char == "S__N__2"))
     RomanSum := 10*RomanSum + 2
-  else if ((Char == "U0033") or (Char == "SN__3"))
+  else if ((Char == "U000033") or (Char == "S__N__3"))
     RomanSum := 10*RomanSum + 3
-  else if ((Char == "U0034") or (Char == "SN__4"))
+  else if ((Char == "U000034") or (Char == "S__N__4"))
     RomanSum := 10*RomanSum + 4
-  else if ((Char == "U0035") or (Char == "SN__5"))
+  else if ((Char == "U000035") or (Char == "S__N__5"))
     RomanSum := 10*RomanSum + 5
-  else if ((Char == "U0036") or (Char == "SN__6"))
+  else if ((Char == "U000036") or (Char == "S__N__6"))
     RomanSum := 10*RomanSum + 6
-  else if ((Char == "U0037") or (Char == "SN__7"))
+  else if ((Char == "U000037") or (Char == "S__N__7"))
     RomanSum := 10*RomanSum + 7
-  else if ((Char == "U0038") or (Char == "SN__8"))
+  else if ((Char == "U000038") or (Char == "S__N__8"))
     RomanSum := 10*RomanSum + 8
-  else if ((Char == "U0039") or (Char == "SN__9"))
+  else if ((Char == "U000039") or (Char == "S__N__9"))
     RomanSum := 10*RomanSum + 9
-  else if ((Char == "U000D") or (Char == "U0020")) {
+  else if ((Char == "U00000D") or (Char == "U000020")) {
     RomanSum := mod(RomanSum,400000)
     RomanStr := ""
     RomanPos := 0
@@ -88,15 +88,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U2170","U2179","U217D","U217F","U2182","U2188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U2170U2170","U2179U2179","U217DU217D","U217FU217F","U2182U2182","U2188U2188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U2170U2170U2170","U2179U2179U2179","U217DU217DU217D","U217FU217FU217F","U2182U2182U2182","U2188U2188U2188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U2170U2174","U2179U217C","U217DU217E","U2180U2181","U2182U2187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U2174","U217C","U217E","U2181","U2187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U2174U2170","U217CU2179","U217EU217D","U2181U2180","U2187U2182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U2174U2170U2170","U217CU2179U2179","U217EU217DU217D","U2181U2180U2180","U2187U2182U2182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U2174U2170U2170U2170","U217CU2179U2179U2179","U217EU217DU217DU217D","U2181U2180U2180U2180","U2187U2182U2182U2182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U2178","U2179U217D","U217DU217F","U2180U2182","U2182U2188","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U002170","U002179","U00217D","U00217F","U002182","U002188") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U002170U002170","U002179U002179","U00217DU00217D","U00217FU00217F","U002182U002182","U002188U002188") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U002170U002170U002170","U002179U002179U002179","U00217DU00217DU00217D","U00217FU00217FU00217F","U002182U002182U002182","U002188U002188U002188") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U002170U002174","U002179U00217C","U00217DU00217E","U002180U002181","U002182U002187","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U002174","U00217C","U00217E","U002181","U002187","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U002174U002170","U00217CU002179","U00217EU00217D","U002181U002180","U002187U002182","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U002174U002170U002170","U00217CU002179U002179","U00217EU00217DU00217D","U002181U002180U002180","U002187U002182U002182","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U002174U002170U002170U002170","U00217CU002179U002179U002179","U00217EU00217DU00217DU00217D","U002181U002180U002180U002180","U002187U002182U002182U002182","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U002178","U002179U00217D","U00217DU00217F","U002180U002182","U002182U002188","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -105,15 +105,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U2160","U2169","U216D","U216F","U2182","U2188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U2160U2160","U2169U2169","U216DU216D","U216FU216F","U2182U2182","U2188U2188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U2160U2160U2160","U2169U2169U2169","U216DU216DU216D","U216FU216FU216F","U2182U2182U2182","U2188U2188U2188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U2160U2164","U2169U216C","U216DU216E","U2180U2181","U2182U2187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U2164","U216C","U216E","U2181","U2187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U2164U2160","U216CU2169","U216EU216D","U2181U2180","U2187U2182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U2164U2160U2160","U216CU2169U2169","U216EU216DU216D","U2181U2180U2180","U2187U2182U2182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U2164U2160U2160U2160","U216CU2169U2169U2169","U216EU216DU216DU216D","U2181U2180U2180U2180","U2187U2182U2182U2182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U2160U2169","U2169U216D","U216DU216F","U2180U2182","U2182U2188","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U002160","U002169","U00216D","U00216F","U002182","U002188") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U002160U002160","U002169U002169","U00216DU00216D","U00216FU00216F","U002182U002182","U002188U002188") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U002160U002160U002160","U002169U002169U002169","U00216DU00216DU00216D","U00216FU00216FU00216F","U002182U002182U002182","U002188U002188U002188") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U002160U002164","U002169U00216C","U00216DU00216E","U002180U002181","U002182U002187","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U002164","U00216C","U00216E","U002181","U002187","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U002164U002160","U00216CU002169","U00216EU00216D","U002181U002180","U002187U002182","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U002164U002160U002160","U00216CU002169U002169","U00216EU00216DU00216D","U002181U002180U002180","U002187U002182U002182","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U002164U002160U002160U002160","U00216CU002169U002169U002169","U00216EU00216DU00216DU00216D","U002181U002180U002180U002180","U002187U002182U002182U002182","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U002160U002169","U002169U00216D","U00216DU00216F","U002180U002182","U002182U002188","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -122,15 +122,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U0069","U0078","U0063","U006D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U0069U0069","U0078U0078","U0063U0063","U006DU006D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U0069U0069U0069","U0078U0078U0078","U0063U0063U0063","U006DU006DU006D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U0069U0076","U0078U006C","U0063U0064","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U0076","U006C","U0064","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U0076U0069","U006CU0078","U0064U0063","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U0076U0069U0069","U006CU0078U0078","U0064U0063U0063","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U0076U0069U0069U0069","U006CU0078U0078U0078","U0064U0063U0063U0063","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U0069U0078","U0078U0063","U0063U006D","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U000069","U000078","U000063","U00006D","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U000069U000069","U000078U000078","U000063U000063","U00006DU00006D","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U000069U000069U000069","U000078U000078U000078","U000063U000063U000063","U00006DU00006DU00006D","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U000069U000076","U000078U00006C","U000063U000064","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U000076","U00006C","U000064","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U000076U000069","U00006CU000078","U000064U000063","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U000076U000069U000069","U00006CU000078U000078","U000064U000063U000063","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U000076U000069U000069U000069","U00006CU000078U000078U000078","U000064U000063U000063U000063","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U000069U000078","U000078U000063","U000063U00006D","","","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -139,15 +139,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U0049","U0058","U0043","U004D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U0049U0049","U0058U0058","U0043U0043","U004DU004D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U0049U0049U0049","U0058U0058U0058","U0043U0043U0043","U004DU004DU004D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U0049U0056","U0058U004C","U0043U0044","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U0056","U004C","U0044","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U0056U0049","U004CU0058","U0044U0043","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U0056U0049U0049","U004CU0058U0058","U0044U0043U0043","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U0056U0049U0049U0049","U004CU0058U0058U0058","U0044U0043U0043U0043","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U0049U0058","U0058U0043","U0043U004D","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U000049","U000058","U000043","U00004D","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U000049U000049","U000058U000058","U000043U000043","U00004DU00004D","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U000049U000049U000049","U000058U000058U000058","U000043U000043U000043","U00004DU00004DU00004D","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U000049U000056","U000058U00004C","U000043U000044","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U000056","U00004C","U000044","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U000056U000049","U00004CU000058","U000044U000043","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U000056U000049U000049","U00004CU000058U000058","U000044U000043U000043","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U000056U000049U000049U000049","U00004CU000058U000058U000058","U000044U000043U000043U000043","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U000049U000058","U000058U000043","U000043U00004D","","","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -155,37 +155,37 @@ PressHookRoman(PhysKey, ActKey, Char) {
     loop {
       if (RomanStr == "") 
         break ; erledigt
-      CharOut(SubStr(RomanStr,1,5))
-      RomanStr := SubStr(RomanStr,6)
+      CharOut(SubStr(RomanStr,1,7))
+      RomanStr := SubStr(RomanStr,8)
     }
     PressHookProc := ""
   } else
     PressHookProc := ""
 }
 
-CMSCompU0075 := 1
-CMSCompU0055 := 1
-CDSCompU0075U0075 := "P_Uni"
-CDSCompU0075U0055 := "P_Uni"
-CDSCompU0055U0075 := "P_Uni"
-CDSCompU0055U0055 := "P_Uni"
-CMSCompU0064 := 1
-CMSCompU0044 := 1
-CDSCompU0064U0064 := "PDUni"
-CDSCompU0064U0044 := "PDUni"
-CDSCompU0044U0064 := "PDUni"
-CDSCompU0044U0044 := "PDUni"
+CMS__CompU000075 := 1
+CMS__CompU000055 := 1
+CDS__CompU000075U000075 := "P___Uni"
+CDS__CompU000075U000055 := "P___Uni"
+CDS__CompU000055U000075 := "P___Uni"
+CDS__CompU000055U000055 := "P___Uni"
+CMS__CompU000064 := 1
+CMS__CompU000044 := 1
+CDS__CompU000064U000064 := "P__DUni"
+CDS__CompU000064U000044 := "P__DUni"
+CDS__CompU000044U000064 := "P__DUni"
+CDS__CompU000044U000044 := "P__DUni"
 
-CP5VK41SC01E := "P_Uni"
+CP5VK41SC01E := "P___Uni"
 
-CharProc_Uni() {
+CharProc___Uni() {
   global
   ; starte Unicode-Hex-in-Zeichen-Umwandlung
   PressHookProc := "Uni"
   UniSum := ""
 }
 
-CharProcDUni() {
+CharProc__DUni() {
   global
   ; starte Unicode-Zeichen-in-Hex-Umwandlung
   CharOutFilterProc := "DUni"
@@ -195,40 +195,40 @@ PressHookUni(PhysKey, ActKey, Char) {
   global
   if (SubStr(Char,1,1) == "P")
     CharStarDown(PhysKey, ActKey, Char)
-  else if ((Char == "U0030") or (Char == "SN__0"))
+  else if ((Char == "U000030") or (Char == "S__N__0"))
     UniSum := UniSum . "0"
-  else if ((Char == "U0031") or (Char == "SN__1"))
+  else if ((Char == "U000031") or (Char == "S__N__1"))
     UniSum := UniSum . "1"
-  else if ((Char == "U0032") or (Char == "SN__2"))
+  else if ((Char == "U000032") or (Char == "S__N__2"))
     UniSum := UniSum . "2"
-  else if ((Char == "U0033") or (Char == "SN__3"))
+  else if ((Char == "U000033") or (Char == "S__N__3"))
     UniSum := UniSum . "3"
-  else if ((Char == "U0034") or (Char == "SN__4"))
+  else if ((Char == "U000034") or (Char == "S__N__4"))
     UniSum := UniSum . "4"
-  else if ((Char == "U0035") or (Char == "SN__5"))
+  else if ((Char == "U000035") or (Char == "S__N__5"))
     UniSum := UniSum . "5"
-  else if ((Char == "U0036") or (Char == "SN__6"))
+  else if ((Char == "U000036") or (Char == "S__N__6"))
     UniSum := UniSum . "6"
-  else if ((Char == "U0037") or (Char == "SN__7"))
+  else if ((Char == "U000037") or (Char == "S__N__7"))
     UniSum := UniSum . "7"
-  else if ((Char == "U0038") or (Char == "SN__8"))
+  else if ((Char == "U000038") or (Char == "S__N__8"))
     UniSum := UniSum . "8"
-  else if ((Char == "U0039") or (Char == "SN__9"))
+  else if ((Char == "U000039") or (Char == "S__N__9"))
     UniSum := UniSum . "9"
-  else if ((Char == "U0041") or (Char == "U0061"))
+  else if ((Char == "U000041") or (Char == "U000061"))
     UniSum := UniSum . "A"
-  else if ((Char == "U0042") or (Char == "U0062"))
+  else if ((Char == "U000042") or (Char == "U000062"))
     UniSum := UniSum . "B"
-  else if ((Char == "U0043") or (Char == "U0063"))
+  else if ((Char == "U000043") or (Char == "U000063"))
     UniSum := UniSum . "C"
-  else if ((Char == "U0044") or (Char == "U0064"))
+  else if ((Char == "U000044") or (Char == "U000064"))
     UniSum := UniSum . "D"
-  else if ((Char == "U0045") or (Char == "U0065"))
+  else if ((Char == "U000045") or (Char == "U000065"))
     UniSum := UniSum . "E"
-  else if ((Char == "U0046") or (Char == "U0066"))
+  else if ((Char == "U000046") or (Char == "U000066"))
     UniSum := UniSum . "F"
-  else if ((Char == "U000D") or (Char == "U0020")) {
-    UniSum := "U" . SubStr("0000" . UniSum, -3)
+  else if ((Char == "U00000D") or (Char == "U000020")) {
+    UniSum := "U" . SubStr("000000" . UniSum, -5)
     PP%PhysKey% := UniSum
     PR%PhysKey% := UniSum
     CharOutDown(UniSum)
@@ -239,10 +239,13 @@ PressHookUni(PhysKey, ActKey, Char) {
 
 CharOutFilterDUni(char,down,up) {
   global
-  if (!down or char == "SL_M2" or char == "SR_M2")
+  if (!down or char == "S__L_M2" or char == "S__R_M2")
     return char
   CharOutFilterProc := ""
-  TrayTip,Unicode-Zeichen,%char%,10,1
+  dchar := char
+  if (substr(dchar,1,3) == "U00")
+    dchar := "U" . substr(dchar,4)
+  TrayTip,Unicode-Zeichen,%dchar%,10,1
   return char
 }
 
@@ -251,32 +254,41 @@ SetFormat, Integer, hex
 ;  MsgBox % Asc(SubStr(str,1,1)) . Asc(SubStr(str,2,1))
   result := ""
   loop {
-    char := SubStr(str,1,1)
+    char := asc(SubStr(str,1,1))
     str  := SubStr(str,2)
-    if (asc(char) < 0x80)
-      result := result . "U00" . SubStr(asc(char),3)
-    else if (asc(char) < 0xC0) {
+    if (char < 0x80)
+      result .= "U" . SubStr("000000" . SubStr(char,3),-5)
+    else if (char < 0xC0) {
       ; error
-    } else if (asc(char) < 0xE0) {
-       char2 := Substr(str,1,1)
+    } else if (char < 0xE0) {
+       char2 := asc(Substr(str,1,1))
        str   := SubStr(str,2)
-       if ((asc(char2) < 0x80) or (asc(char2) > 0xBF)) {
+       if ((char2 < 0x80) or (char2 > 0xBF)) {
          ; error
        } else {
-         result := result . "U" . SubStr("0000" . SubStr((((asc(char) & 0x1F) << 6) + (asc(char2) & 0x3F)),3),-3)
+         result .= "U" . SubStr("000000" . SubStr((((char & 0x1F) << 6) + (char2 & 0x3F)),3),-5)
        }
-    } else if (asc(char) < 0xF8) {
-       char2 := SubStr(str,1,1)
-       char3 := SubStr(str,2,1)
+    } else if (char < 0xF8) {
+       char2 := asc(SubStr(str,1,1))
+       char3 := asc(SubStr(str,2,1))
        str   := SubStr(str,3)
-;       MsgBox % "chars: " . char . ", " . char2 . ", " . char3 . ", str: " . str
-       if ((asc(char2) < 0x80) or (asc(char2) > 0xBF)
-           or (asc(char3) < 0x80) or (asc(char3) > 0xBF)) {
+       if ((char2 < 0x80) or (char2 > 0xBF)
+           or (char3 < 0x80) or (char3 > 0xBF)) {
          ; error
        } else {
-;         MsgBox % asc(char) . asc(char2) . asc(char3)
-;         MsgBox % (((asc(char) & 0x0F) << 12) + ((asc(char2) & 0x3F) << 6) + (asc(char3) & 0x3F))
-         result := result . "U" . SubStr("0000" . SubStr((((asc(char) & 0x0F) << 12) + ((asc(char2) & 0x3F) << 6) + (asc(char3) & 0x3F)),3),-3)
+         result .= "U" . SubStr("000000" . SubStr((((char & 0x0F) << 12) + ((char2 & 0x3F) << 6) + (char3 & 0x3F)),3),-5)
+       }
+    } else if (char < 0xFC) {
+       char2 := asc(SubStr(str,1,1))
+       char3 := asc(SubStr(str,2,1))
+       char3 := asc(SubStr(str,3,1))
+       str   := SubStr(str,4)
+       if (   (char2 < 0x80) or (char2 > 0xBF)
+           or (char3 < 0x80) or (char3 > 0xBF)
+           or (char4 < 0x80) or (char4 > 0xBF)) {
+         ; error
+       } else {
+         result .= "U" . SubStr("000000" . SubStr((((char & 0x07) << 18) + ((char2 & 0x3F) << 12) + ((char3 & 0x3F) << 6) + (char4 & 0x3F)),3),-5)
        }
     }
     if (str == "")
@@ -290,10 +302,10 @@ SetFormat, Integer, hex
 
 ; Simple calculator
 
-CDSCompU0075U0063 := "PCal1"
-CDSCompU0055U0043 := "PCal2"
+CDS__CompU000075U000063 := "P__Cal1"
+CDS__CompU000055U000043 := "P__Cal2"
 
-CharProcCal1() {
+CharProc__Cal1() {
   global
   ; starte Calculator ohne Echo
   PressHookProc := "Calc"
@@ -305,7 +317,7 @@ CharProcCal1() {
   CalcHexOut := 0
 }
 
-CharProcCal2() {
+CharProc__Cal2() {
   global
   ; starte Calculator mit Echo
   PressHookProc := "Calc"
@@ -322,61 +334,61 @@ PressHookCalc(PhysKey, ActKey, Char) {
   if (SubStr(Char,1,1) == "P")
     CharStarDown(PhysKey, ActKey, Char)
   else if (CalcPhase == 0) {
-    if      ((Char == "U0030") or (Char == "SN__0"))
+    if      ((Char == "U000030") or (Char == "S__N__0"))
       CalcVar1 := CalcVar1 . "0"
-    else if ((Char == "U0031") or (Char == "SN__1"))
+    else if ((Char == "U000031") or (Char == "S__N__1"))
       CalcVar1 := CalcVar1 . "1"
-    else if ((Char == "U0032") or (Char == "SN__2"))
+    else if ((Char == "U000032") or (Char == "S__N__2"))
       CalcVar1 := CalcVar1 . "2"
-    else if ((Char == "U0033") or (Char == "SN__3"))
+    else if ((Char == "U000033") or (Char == "S__N__3"))
       CalcVar1 := CalcVar1 . "3"
-    else if ((Char == "U0034") or (Char == "SN__4"))
+    else if ((Char == "U000034") or (Char == "S__N__4"))
       CalcVar1 := CalcVar1 . "4"
-    else if ((Char == "U0035") or (Char == "SN__5"))
+    else if ((Char == "U000035") or (Char == "S__N__5"))
       CalcVar1 := CalcVar1 . "5"
-    else if ((Char == "U0036") or (Char == "SN__6"))
+    else if ((Char == "U000036") or (Char == "S__N__6"))
       CalcVar1 := CalcVar1 . "6"
-    else if ((Char == "U0037") or (Char == "SN__7"))
+    else if ((Char == "U000037") or (Char == "S__N__7"))
       CalcVar1 := CalcVar1 . "7"
-    else if ((Char == "U0038") or (Char == "SN__8"))
+    else if ((Char == "U000038") or (Char == "S__N__8"))
       CalcVar1 := CalcVar1 . "8"
-    else if ((Char == "U0039") or (Char == "SN__9"))
+    else if ((Char == "U000039") or (Char == "S__N__9"))
       CalcVar1 := CalcVar1 . "9"
-    else if ((Char == "U0039") or (Char == "SN__9"))
+    else if ((Char == "U000039") or (Char == "S__N__9"))
       CalcVar1 := CalcVar1 . "9"
-    else if ((Char == "U0041") or (Char == "U0061"))
+    else if ((Char == "U000041") or (Char == "U000061"))
       CalcVar1 := CalcVar1 . "A"
-    else if ((Char == "U0042") or (Char == "U0062"))
+    else if ((Char == "U000042") or (Char == "U000062"))
       CalcVar1 := CalcVar1 . "B"
-    else if ((Char == "U0043") or (Char == "U0063"))
+    else if ((Char == "U000043") or (Char == "U000063"))
       CalcVar1 := CalcVar1 . "C"
-    else if ((Char == "U0044") or (Char == "U0064"))
+    else if ((Char == "U000044") or (Char == "U000064"))
       CalcVar1 := CalcVar1 . "D"
-    else if ((Char == "U0045") or (Char == "U0065"))
+    else if ((Char == "U000045") or (Char == "U000065"))
       CalcVar1 := CalcVar1 . "E"
-    else if ((Char == "U0046") or (Char == "U0066"))
+    else if ((Char == "U000046") or (Char == "U000066"))
       CalcVar1 := CalcVar1 . "F"
-    else if ((Char == "U002E") or (Char == "U002C") or (Char=="SNDot"))
+    else if ((Char == "U00002E") or (Char == "U00002C") or (Char=="S__NDot"))
       CalcVar1 := CalcVar1 . "."
-    else if ((Char == "U0078") or (Char == "U0058")) {
+    else if ((Char == "U000078") or (Char == "U000058")) {
       CalcVar1 := CalcVar1 . "x"
       CalcHexOut := 1
-    } else if ((Char == "U002B") or (Char == "SNAdd")) {
+    } else if ((Char == "U00002B") or (Char == "S__NAdd")) {
       CalcOp := "+"
       CalcPhase := 1
-    } else if ((Char == "U002D") or (Char == "SNSub")) {
+    } else if ((Char == "U00002D") or (Char == "S__NSub")) {
       CalcOp := "-"
       CalcPhase := 1
-    } else if ((Char == "U002A") or (Char == "SNMul")) {
+    } else if ((Char == "U00002A") or (Char == "S__NMul")) {
       CalcOp := "*"
       CalcPhase := 1
-    } else if ((Char == "U002F") or (Char == "SNDiv")) {
+    } else if ((Char == "U00002F") or (Char == "S__NDiv")) {
       CalcOp := "/"
       CalcPhase := 1
-    } else if (Char == "U0026") {
+    } else if (Char == "U000026") {
       CalcOp := "&"
       CalcPhase := 1
-    } else if (Char == "U007C") {
+    } else if (Char == "U00007C") {
       CalcOp := "|"
       CalcPhase := 1
     } else
@@ -387,44 +399,44 @@ PressHookCalc(PhysKey, ActKey, Char) {
       CharOutDown(Char)
     }
   } else if (CalcPhase == 1) {
-    if      ((Char == "U0030") or (Char == "SN__0"))
+    if      ((Char == "U000030") or (Char == "S__N__0"))
       CalcVar2 := CalcVar2 . "0"
-    else if ((Char == "U0031") or (Char == "SN__1"))
+    else if ((Char == "U000031") or (Char == "S__N__1"))
       CalcVar2 := CalcVar2 . "1"
-    else if ((Char == "U0032") or (Char == "SN__2"))
+    else if ((Char == "U000032") or (Char == "S__N__2"))
       CalcVar2 := CalcVar2 . "2"
-    else if ((Char == "U0033") or (Char == "SN__3"))
+    else if ((Char == "U000033") or (Char == "S__N__3"))
       CalcVar2 := CalcVar2 . "3"
-    else if ((Char == "U0034") or (Char == "SN__4"))
+    else if ((Char == "U000034") or (Char == "S__N__4"))
       CalcVar2 := CalcVar2 . "4"
-    else if ((Char == "U0035") or (Char == "SN__5"))
+    else if ((Char == "U000035") or (Char == "S__N__5"))
       CalcVar2 := CalcVar2 . "5"
-    else if ((Char == "U0036") or (Char == "SN__6"))
+    else if ((Char == "U000036") or (Char == "S__N__6"))
       CalcVar2 := CalcVar2 . "6"
-    else if ((Char == "U0037") or (Char == "SN__7"))
+    else if ((Char == "U000037") or (Char == "S__N__7"))
       CalcVar2 := CalcVar2 . "7"
-    else if ((Char == "U0038") or (Char == "SN__8"))
+    else if ((Char == "U000038") or (Char == "S__N__8"))
       CalcVar2 := CalcVar2 . "8"
-    else if ((Char == "U0039") or (Char == "SN__9"))
+    else if ((Char == "U000039") or (Char == "S__N__9"))
       CalcVar2 := CalcVar2 . "9"
-    else if ((Char == "U0041") or (Char == "U0061"))
+    else if ((Char == "U000041") or (Char == "U000061"))
       CalcVar2 := CalcVar2 . "A"
-    else if ((Char == "U0042") or (Char == "U0062"))
+    else if ((Char == "U000042") or (Char == "U000062"))
       CalcVar2 := CalcVar2 . "B"
-    else if ((Char == "U0043") or (Char == "U0063"))
+    else if ((Char == "U000043") or (Char == "U000063"))
       CalcVar2 := CalcVar2 . "C"
-    else if ((Char == "U0044") or (Char == "U0064"))
+    else if ((Char == "U000044") or (Char == "U000064"))
       CalcVar2 := CalcVar2 . "D"
-    else if ((Char == "U0045") or (Char == "U0065"))
+    else if ((Char == "U000045") or (Char == "U000065"))
       CalcVar2 := CalcVar2 . "E"
-    else if ((Char == "U0046") or (Char == "U0066"))
+    else if ((Char == "U000046") or (Char == "U000066"))
       CalcVar2 := CalcVar2 . "F"
-    else if ((Char == "U002E") or (Char == "U002C") or (Char=="SNDot"))
+    else if ((Char == "U00002E") or (Char == "U00002C") or (Char=="S__NDot"))
       CalcVar2 := CalcVar2 . "."
-    else if ((Char == "U0078") or (Char == "U0058")) {
+    else if ((Char == "U000078") or (Char == "U000058")) {
       CalcVar2 := CalcVar2 . "x"
       CalcHexOut := 1
-    } else if ((Char == "U000D") or (Char == "SNEnt") or (Char=="U0020") or (Char=="U003D")) {
+    } else if ((Char == "U00000D") or (Char == "S__NEnt") or (Char=="U000020") or (Char=="U00003D")) {
       if      (CalcOp == "+")
         CalcResult := CalcVar1 + CalcVar2
       else if (CalcOp == "-")
@@ -446,19 +458,19 @@ PressHookCalc(PhysKey, ActKey, Char) {
       }
       tosend := EncodeUni(CalcResult)
       if (CalcEcho) {
-        Char := "U003D"
+        Char := "U00003D"
         PP%PhysKey% := Char
         PR%PhysKey% := Char
         CharOutDown(Char)
       }
       loop {
         if (SubStr(tosend,1,1)=="P") {
-          SubProc := SubStr(tosend,2,4)
+          SubProc := SubStr(tosend,2,6)
           CharProc%SubProc%()
         } else {
-          CharOut(SubStr(tosend,1,5))
+          CharOut(SubStr(tosend,1,7))
         }
-        tosend := SubStr(tosend,6)
+        tosend := SubStr(tosend,8)
         if (tosend == "") 
           break                ; erledigt
       }
@@ -481,10 +493,10 @@ PressHookCalc(PhysKey, ActKey, Char) {
   }
 }
 
-CDSCompU0055U0057 := "P_WMN"
-CDSCompU0075U0077 := "P_WMN"
+CDS__CompU000055U000057 := "P___WMN"
+CDS__CompU000075U000077 := "P___WMN"
 
-CharProc_WMN() {
+CharProc___WMN() {
   global
   ok := DllCall("OpenClipboard")
   if (!ok) {
@@ -506,18 +518,36 @@ CharProc_WMN() {
   a := *(uclp+0)
   b := *(uclp+1)
 
+  a += 256*b
+
+  if ((a >= 0xD800) and (a <= 0xDBFF)) {
+    c := *(uclp+2)
+    d := *(uclp+3)
+
+    c += 256*d
+    if ((c >= 0xDC00) and (c <= 0xDFFF)) {
+      a := (a & 0x3FF) * 1024 + (c & 0x3FF) + 65536
+    }
+  }
+
   DllCall("GlobalUnlock","uint",uclph)
   DllCall("CloseClipboard")
 
 SetFormat,Integer,h
-    a += 256*b
+  a += 0
 SetFormat,Integer,d
-  a := "U" . substr("0000" . substr(a,3),-3)
+  if (a < 0x10000) {
+    ap := "U" . substr("000000" . substr(a,3),-3)
+    a  := "U" . substr("000000" . substr(a,3),-5)
+  } else {
+    ap := "U" . substr("000000" . substr(a,3),-5)
+    a  := ap
+  }
 
   Gui,2:Destroy
   Gui,2:Font,,DejaVu Sans
   Gui,2:Margin,10,0
-  Gui,2:Add,Text,,% "`r`nDas Zeichen " . a . " kann wie folgt eingegeben werden:"
+  Gui,2:Add,Text,,% "`r`nDas Zeichen " . ap . " kann wie folgt eingegeben werden:"
   loop,parse,CRC%a%,%A_Space%
   {
     this_wmn := ""
@@ -529,20 +559,20 @@ SetFormat,Integer,d
     loop {
       if (this_wtt == "")
         break
-      this_char5 := substr(this_wtt,1,5)
-      this_char  := this_char5
-      this_wtt := substr(this_wtt,6)
+      this_char7 := substr(this_wtt,1,7)
+      this_char  := this_char7
+      this_wtt := substr(this_wtt,8)
       if (CB%this_char% != "")
         this_char := CB%this_char%
       else if (CS%this_char% != "")
         this_char := CS%this_char%
       ; this_char will contain Uxxxx if no shortcut is present. Fix this here.
       this_wmn .= " <" . this_char . ">"
-      if (CRK%this_char5% == "") {
+      if (CRK%this_char7% == "") {
         nthis := 1
-        this_wmnk .= " <" . this_char5 . ">"
+        this_wmnk .= " <" . this_char7 . ">"
       } else
-        this_wmnk .= " " . KeyLong(CRK%this_char5%)
+        this_wmnk .= " " . KeyLong(CRK%this_char7%)
     }
     if (this_wmn != "")
       this_wmn := SubStr(this_wmn,2)
@@ -597,7 +627,7 @@ KeyLong(key) {
     else if (CS%base_key% != "")
       base_key := CS%base_key%
 
-    twmnk .= "/<" . CBS__M%tis_layer% . base_key . ">"
+    twmnk .= "/<" . CBS____M%tis_layer% . base_key . ">"
     num := num + 1
   }
   if (num == 0)
