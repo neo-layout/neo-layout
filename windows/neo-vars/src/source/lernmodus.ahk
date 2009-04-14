@@ -15,28 +15,28 @@ lernModus_std_ZahlenReihe := 0
 lernModus_neo_Backspace := 1
 lernModus_neo_Entf := 1
 
-CP3F9 := "P_LMt"
+CP3F9 := "P___LMt"
 IniRead,lernModus,%ini%,Global,lernModus,0
 If (lernModus)
-  CharProc_LM1()
+  CharProc___LM1()
 
 
-CharProc_LMt() {
+CharProc___LMt() {
   global
   ; Lernmodus togglen
   lernModus := !(lernModus)
   if (lernModus) {
-    CharProc_LM1()
+    CharProc___LM1()
     if (zeigeModusBox)
       TrayTip,NEO-Lernmodus,NEO-Lernmodus wurde aktiviert. Zum Deaktivieren`, Mod3+F9 drücken.,10,1
   } else {
-    CharProc_LM0()
+    CharProc___LM0()
     if (zeigeModusBox)
       TrayTip,NEO-Lernmodus,Lernmodus wurde deaktiviert.,10,1
   }
 }
 
-CharProc_LM1() {
+CharProc___LM1() {
   global
   ; Lernmodus aktivieren
   if (!lernModus_std_Return)
@@ -69,21 +69,21 @@ CharProc_LM1() {
     CP4VK52SC013 := "" ; Ebene 4 unter c (QWERTZ: r)
 }
 
-CharProc_LM0() {
+CharProc___LM0() {
   global
   ; Lernmodus deaktivieren
-  ED1("enter"    ,"U000D")
-  ED1("backspace","U0008")
-  ED1("pgup"     ,"SPgUp")
-  ED1("pgdn"     ,"SPgDn")
-  ED1("ins"      ,"S_Ins")
-  ED1("del"      ,"S_Del")
-  ED1("home"     ,"SHome")
-  ED1("end"      ,"S_End")
-  ED1("up"       ,"S__Up")
-  ED1("down"     ,"SDown")
-  ED1("left"     ,"SLeft")
-  ED1("right"    ,"SRght")
-  CP4VK57SC011 := "U0008"
-  CP4VK52SC013 := "S_Del"
+  ED1("enter"    ,"U00000D")
+  ED1("backspace","U000008")
+  ED1("pgup"     ,"S__PgUp")
+  ED1("pgdn"     ,"S__PgDn")
+  ED1("ins"      ,"S___Ins")
+  ED1("del"      ,"S___Del")
+  ED1("home"     ,"S__Home")
+  ED1("end"      ,"S___End")
+  ED1("up"       ,"S____Up")
+  ED1("down"     ,"S__Down")
+  ED1("left"     ,"S__Left")
+  ED1("right"    ,"S__Rght")
+  CP4VK57SC011 := "U000008"
+  CP4VK52SC013 := "S___Del"
 }

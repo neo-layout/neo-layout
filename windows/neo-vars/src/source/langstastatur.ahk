@@ -1,37 +1,37 @@
 IniRead,LangSTastatur,%ini%,Global,LangSTastatur,0
 If (LangSTastatur)
-  CharProcLnS1()
+  CharProc__LnS1()
 
-CP3F11 := "PLnSt"
+CP3F11 := "P__LnSt"
 
-CharProcLnSt() {
+CharProc__LnSt() {
   global
   ;Lang-s-Tastatur: Toggle
   LangSTastatur := !(LangSTastatur)
   if (LangSTastatur) {
-    CharProcLnS1()
+    CharProc__LnS1()
     if (zeigeModusBox)
       TrayTip,Lang-S-Tastatur,Die Lang-S-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F11 drücken.,10,1
   } else {
-    CharProcLnS0()
+    CharProc__LnS0()
     if (zeigeModusBox)
       TrayTip,Lang-S-Tastatur,Lang-S-Belegungsvariante wurde deaktiviert.,10,1
   }
 } 
 
-CharProcLnS1() {
+CharProc__LnS1() {
   global
   ; Lange-s-Tastatur aktivieren
-  ED("VKBASC01A",1,"U0073","U1E9E","U00DF",""     ,"U03C2","U2218") ; ß
-  ED("VK48SC023",1,"U017F","U0053","U003F","U00BF","U03C3","U03A3") ; s
+  ED("VKBASC01A",1,"U000073","U001E9E","U0000DF",""       ,"U0003C2","U002218") ; ß
+  ED("VK48SC023",1,"U00017F","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
   KeyboardLED(2,"on")
 }
 
-CharProcLnS0() {
+CharProc__LnS0() {
   global
   ; Lange-s-Tastatur deaktivieren
-  ED("VKBASC01A",1,"U00DF","U1E9E","U017F",""     ,"U03C2","U2218") ; ß
-  ED("VK48SC023",1,"U0073","U0053","U003F","U00BF","U03C3","U03A3") ; s
+  ED("VKBASC01A",1,"U0000DF","U001E9E","U00017F",""       ,"U0003C2","U002218") ; ß
+  ED("VK48SC023",1,"U000073","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
   KeyboardLED(2,"off")
   if (zeigeModusBox)
     TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F11 drücken.,10,1
