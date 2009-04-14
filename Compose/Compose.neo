@@ -222,7 +222,7 @@
 
 <Multi_key> <r> <1>  <space>             : "ⅰ"   U2170 # SMALL ROMAN NUMERAL ONE
 <Multi_key> <r> <1>  <period>            : "ⅰ."
-<Multi_key> <r> <1>  <parentright>       : "ⅰ)"
+<Multi_key> <r> <1>  <parenright>        : "ⅰ)"
 <Multi_key> <r> <2>                      : "ⅱ"   U2171 # SMALL ROMAN NUMERAL TWO
 <Multi_key> <r> <3>                      : "ⅲ"   U2172 # SMALL ROMAN NUMERAL THREE
 <Multi_key> <r> <4>                      : "ⅳ"   U2173 # SMALL ROMAN NUMERAL FOUR
