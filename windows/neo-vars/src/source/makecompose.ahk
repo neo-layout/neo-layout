@@ -1817,25 +1817,26 @@ SetFormat, Integer, hex
   result := ""
   loop {
     achar := asc(SubStr(str,1,1))
-    str   := SubStr(str,2)
-    if (achar < 0x80)
+    if (achar < 0x80) {
+      str   := SubStr(str,2)
       result .= "U" . SubStr("000000" . SubStr(achar,3),-5)
-    else if (achar < 0xC0) {
+    } else if (achar < 0xC0) {
+      str   := SubStr(str,2)
       ; error
     } else if (achar < 0xE0) {
-       achar2 := asc(Substr(str,1,1))
-       str    := SubStr(str,2)
+       achar2 := asc(Substr(str,2,1))
+       str    := SubStr(str,3)
        if ((achar2 < 0x80) or (achar2 > 0xBF)) {
          ; error
        } else {
          result .= "U" . SubStr("000000" . SubStr((((achar & 0x1F) << 6) + (achar2 & 0x3F)),3),-5)
        }
-    } else if (achar < 0xF8) {
-       achar2 := asc(SubStr(str,1,1))
-       achar3 := asc(SubStr(str,2,1))
-       str    := SubStr(str,3)
+    } else if (achar < 0xF0) {
+       achar2 := asc(SubStr(str,2,1))
+       achar3 := asc(SubStr(str,3,1))
+       str    := SubStr(str,4)
 ;       MsgBox % "chars: " . achar . ", " . achar2 . ", " . achar3 . ", str: " . str
-       if ((achar2 < 0x80) or (achar2 > 0xBF)
+       if (   (achar2 < 0x80) or (achar2 > 0xBF)
            or (achar3 < 0x80) or (achar3 > 0xBF)) {
          ; error
        } else {
@@ -1843,11 +1844,11 @@ SetFormat, Integer, hex
 ;         MsgBox % (((achar & 0x0F) << 12) + ((achar2 & 0x3F) << 6) + (achar3 & 0x3F))
          result .= "U" . SubStr("000000" . SubStr((((achar & 0x0F) << 12) + ((achar2 & 0x3F) << 6) + (achar3 & 0x3F)),3),-5)
        }
-    } else if (char < 0xFC) {
-       achar2 := asc(SubStr(str,1,1))
-       achar3 := asc(SubStr(str,2,1))
+    } else if (achar < 0xF8) {
+       achar2 := asc(SubStr(str,2,1))
        achar3 := asc(SubStr(str,3,1))
-       str   := SubStr(str,4)
+       achar4 := asc(SubStr(str,4,1))
+       str   := SubStr(str,5)
        if (   (achar2 < 0x80) or (achar2 > 0xBF)
            or (achar3 < 0x80) or (achar3 > 0xBF)
            or (achar4 < 0x80) or (achar4 > 0xBF)) {
@@ -1855,7 +1856,8 @@ SetFormat, Integer, hex
        } else {
          result .= "U" . SubStr("000000" . SubStr((((achar & 0x07) << 18) + ((achar2 & 0x3F) << 12) + ((achar3 & 0x3F) << 6) + (achar4 & 0x3F)),3),-5)
        }
-    }
+    } else
+      str := SubStr(str,2)
     if (str == "")
       break
   }
