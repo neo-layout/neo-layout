@@ -1,4 +1,4 @@
-CompRevision := "1790"
+CompRevision := "1793"
 
 LoadDefaultCompose() {
   global
@@ -14925,7 +14925,8 @@ LoadDefaultCompose() {
   CRCU002295.=" S__CompU00006FS__NAdd"
   CDS__CompU00006FU00002D:="U002296"
   CRCU002296.=" S__CompU00006FU00002D"
-  ; illegal KP_Substract in <Multi_key><o><KP_Substract>: "⊖"   U2296 # CIRCLED MINUS
+  CDS__CompU00006FS__NSub:="U002296"
+  CRCU002296.=" S__CompU00006FS__NSub"
   CDS__CompU00006FU0000D7:="U002297"
   CRCU002297.=" S__CompU00006FU0000D7"
   CDS__CompU00006FU00002F:="U002298"
@@ -15078,7 +15079,9 @@ LoadDefaultCompose() {
   CMT__strkS__CompU00003C:=1
   CDT__strkS__CompU00003CU00007C:="U0022EA"
   CRCU0022EA.=" T__strkS__CompU00003CU00007C"
-  ; illegal <dead_stroke in <<dead_stroke><Multi_key><bar><greater>: "⋫"   U22EB # DOES NOT CONTAIN AS NORMAL SUBGROUP
+  CMT__strkS__CompU00007C:=1
+  CDT__strkS__CompU00007CU00003E:="U0022EB"
+  CRCU0022EB.=" T__strkS__CompU00007CU00003E"
   CMT__strkS__CompU00003D:=1
   CMT__strkS__CompU00003DU00003C:=1
   CDT__strkS__CompU00003DU00003CU00007C:="U0022EC"
