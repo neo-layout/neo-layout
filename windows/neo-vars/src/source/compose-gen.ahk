@@ -1805,7 +1805,7 @@ SetFormat, Integer, hex
        } else {
          result .= "U" . SubStr("000000" . SubStr((((char & 0x1F) << 6) + (char2 & 0x3F)),3),-5)
        }
-    } else if (char < 0xF8) {
+    } else if (char < 0xF0) {
        char2 := asc(SubStr(str,1,1))
        char3 := asc(SubStr(str,2,1))
        str   := SubStr(str,3)
@@ -1815,10 +1815,10 @@ SetFormat, Integer, hex
        } else {
          result .= "U" . SubStr("000000" . SubStr((((char & 0x0F) << 12) + ((char2 & 0x3F) << 6) + (char3 & 0x3F)),3),-5)
        }
-    } else if (char < 0xFC) {
+    } else if (char < 0xF8) {
        char2 := asc(SubStr(str,1,1))
        char3 := asc(SubStr(str,2,1))
-       char3 := asc(SubStr(str,3,1))
+       char4 := asc(SubStr(str,3,1))
        str   := SubStr(str,4)
        if (   (char2 < 0x80) or (char2 > 0xBF)
            or (char3 < 0x80) or (char3 > 0xBF)
