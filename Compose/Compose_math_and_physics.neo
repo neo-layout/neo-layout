@@ -121,7 +121,7 @@
 <Multi_key> <o> <plus>                     : "⊕"   U2295 # CIRCLED PLUS
 <Multi_key> <o> <KP_Add>                   : "⊕"   U2295 # CIRCLED PLUS
 <Multi_key> <o> <minus>                    : "⊖"   U2296 # CIRCLED MINUS
-<Multi_key> <o> <KP_Substract>             : "⊖"   U2296 # CIRCLED MINUS
+<Multi_key> <o> <KP_Subtract>              : "⊖"   U2296 # CIRCLED MINUS
 <Multi_key> <o> <multiply>                 : "⊗"   U2297 # CIRCLED TIMES
 <Multi_key> <o> <slash>                    : "⊘"   U2298 # CIRCLED DIVISION SLASH
 <Multi_key> <o> <KP_Divide>                : "⊘"   U2298 # CIRCLED DIVISION SLASH
@@ -185,7 +185,7 @@
 <dead_stroke> <0>                                           : "∅"   U2205 # EMPTY SET
 <Multi_key> <0> <dead_stroke> <dead_stroke>                 : "∅"   U2205 # EMPTY SET
 <dead_stroke> <Multi_key> <less> <bar>                      : "⋪"   U22EA # NOT NORMAL SUBGROUP OF
-<<dead_stroke> <Multi_key> <bar> <greater>                  : "⋫"   U22EB # DOES NOT CONTAIN AS NORMAL SUBGROUP
+<dead_stroke> <Multi_key> <bar> <greater>                   : "⋫"   U22EB # DOES NOT CONTAIN AS NORMAL SUBGROUP
 <dead_stroke> <Multi_key> <equal> <less> <bar>              : "⋬"   U22EC # NOT NORMAL SUBGROUP OF OR EQUAL TO
 <dead_stroke> <Multi_key> <KP_Equal> <less> <bar>           : "⋬"   U22EC # NOT NORMAL SUBGROUP OF OR EQUAL TO
 <dead_stroke> <Multi_key> <equal> <bar> <greater>           : "⋭"   U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
