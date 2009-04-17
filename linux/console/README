@@ -1,10 +1,13 @@
 === NEO in der Textkonsole (ohne X) ===
-Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X auf der Konsole benutzten zu können.
+Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X
+auf der Konsole benutzten zu können.
 
-Dazu wird die keymap (nur als root möglich!!) mit »loadkeys PFAD/neo.map« geladen.
+Dazu wird die keymap (nur als root möglich!!) mit »loadkeys PFAD/neo.map«
+geladen.
 Mit »loadkeys -d« wird wieder die Standardbelegung verwendet.
 
-Der einfachste Weg ist jedoch die Verwendung des Skriptes ›asdf‹ (siehe Ordner /linux/bin)
+Der einfachste Weg ist jedoch die Verwendung des Skriptes ›asdf‹ (siehe Ordner
+/linux/bin)
 
 
 === Technische Hinweise ===
@@ -21,11 +24,18 @@ ersetzen durch:
 Statt /home/gerhard ist das eigene Homeverzeichnis einzugeben. Dadurch wird auf
 die Datei ›neo.map‹ verwiesen, die zuvor nach $HOME/neo gelegt wurde.
 
-Dennoch kann man mit »loadkeys -d« zur Standardbelegung wechseln, da diese als defkeymap.map laut manpage unter /usr/share/keymaps oder /usr/src/linux/drivers/char, bei mir aber unter /etc liegt.
+Dennoch kann man mit »loadkeys -d« zur Standardbelegung wechseln, da diese als
+defkeymap.map laut manpage unter /usr/share/keymaps oder
+/usr/src/linux/drivers/char, bei mir aber unter /etc liegt.
 
-Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status von »Num_Lock« (den es unter NEO nicht mehr gibt). Um Num_Lock dennoch nachträglich einschalten zu können, muss die Menü-Taste (in der untersten Reihe) betätigt werden.
+Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status
+von »Num_Lock« (den es unter NEO nicht mehr gibt). Um Num_Lock dennoch
+nachträglich einschalten zu können, muss die Menü-Taste (in der untersten Reihe)
+betätigt werden.
 
-Diese Keymap ist für ein MS Natural Keyboard Elite erstellt worden. Sollten andere Tastaturen andere keycodes verwenden (z.B. Laptoptastaturen), sollte dies auf den Mailingliste der NEO-Tastaturbelegung gemeldet werden.
+Diese Keymap ist für ein MS Natural Keyboard Elite erstellt worden. Sollten
+andere Tastaturen andere keycodes verwenden (z.B. Laptoptastaturen), sollte dies
+auf der Mailingliste der NEO-Tastaturbelegung gemeldet werden.
 
 
 Ergänzung: die keymaps liegen in folgenden Verzeichnissen:
@@ -36,13 +46,16 @@ Fedora, Red Hat: /lib/kbd/keymaps/i386/
 
 === Unterstützte Funktionalität ===
 Was schon geht:
-• Prinzipiell gehen alle 6 Ebenen, auch wenn seltene Zeichen mit der Konsolenschriftart nicht dargestellt werden können.
+• Prinzipiell gehen alle 6 Ebenen, auch wenn seltene Zeichen mit der
+  Konsolenschriftart nicht dargestellt werden können.
 • Die Konsolen-Compose-Kombinationen sind möglich.
 
 Was (noch) nicht geht:
-• einige Zeichen unterstützt die Konsole überhaupt nicht – z.B. den dead_stroke.
-• einige Zeichen werden noch nicht automatisch durch Unicode-Nummern ersetzt (das ist aber leicht zu beheben)
+• Einige Zeichen unterstützt die Konsole überhaupt nicht – z.B. den dead_stroke.
+• Einige Zeichen werden noch nicht automatisch durch Unicode-Nummern ersetzt
+  (das ist aber leicht zu beheben).
 • Bisher funktioniert keiner der Modifier_Lock.
-• die große Menge an Compose-Kombinationen, die unter X möglich sind, werden längst nicht alle unterstützt.
+• Die große Menge an Compose-Kombinationen, die unter X möglich sind, werden
+  längst nicht alle unterstützt.
 • Auch die Compose-Erweiterungen von NEO sind noch nicht verfügbar.
 
