@@ -308,7 +308,7 @@ keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol	KP_Next	
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7		Ebene4		Ebene4+Sh
 
-keycode 90 = KP_0		signifblank	percent		U2030		U25A1		NoSymbol	KP_Insert	KP_Insert
+keycode 90 = KP_0		U2423		percent		U2030		U25A1		NoSymbol	KP_Insert	KP_Insert
 !				␣ space sign	%		‰ per mille	□ white square					
 keycode 91 = KP_Separator	period		NoSymbol	minutes		seconds		NoSymbol	KP_Delete	KP_Delete
 !		,		.				′ min,feets	″ sec,inches					
