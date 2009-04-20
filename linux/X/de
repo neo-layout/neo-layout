@@ -238,7 +238,8 @@ xkb_symbols "neo" {
 
     // Legend
     // ===============
-    // I don't think we need EIGHT_LEVEL_ALPHABETIC because the Lock gets deaktivated as soon as a Shift-key is pressed
+    // I don't think we need EIGHT_LEVEL_ALPHABETIC because the Lock gets deactivated
+    // as soon as a Shift-key is pressed.
     // Therefore there is no need for Lock + Shift.
     // key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key.type[Group1] = "EIGHT_LEVEL";
@@ -267,7 +268,8 @@ xkb_symbols "neo" {
     // Mod3 + Mod3 = Mod3_Lock
     key <CAPS> { [ ISO_Level3_Shift,        ISO_Level3_Shift,        ISO_Level3_Lock,         ISO_Level3_Lock,         ISO_Level3_Shift,        ISO_Level3_Shift,        ISO_Level3_Lock,         ISO_Level3_Lock          ] };
     key <BKSL> { [ ISO_Level3_Shift,        ISO_Level3_Shift,        ISO_Level3_Lock,         ISO_Level3_Lock,         ISO_Level3_Shift,        ISO_Level3_Shift,        ISO_Level3_Lock,         ISO_Level3_Lock          ] };
-    // The following is also done somewhere else, but I couldn't find where and since the modifier_map is needed by ISO_Level5 too (see below) I'm adding it here.
+    // The following is also done somewhere else, but I couldn't find where and since the
+    // modifier_map is needed by ISO_Level5 too (see below) I'm adding it here.
     // Also see how Level-switching is done in "symbols/level3(ralt_switch)"
     modifier_map Mod5   { ISO_Level3_Shift }; // optional
     //      This ^^^^ has nothing to do with the "Neo-Mod-Keys"!
@@ -279,7 +281,8 @@ xkb_symbols "neo" {
     // https://bugs.launchpad.net/ubuntu/+source/console-setup/+bug/363388
     key <LSGT> { [ ISO_Level5_Shift,        ISO_Level5_Shift,        ISO_Level5_Shift,        ISO_Level5_Shift,        ISO_Level5_Lock,         ISO_Level5_Lock,         ISO_Level5_Lock,         ISO_Level5_Lock          ] };
     key <RALT> { [ ISO_Level5_Shift,        ISO_Level5_Shift,        ISO_Level5_Shift,        ISO_Level5_Shift,        ISO_Level5_Lock,         ISO_Level5_Lock,         ISO_Level5_Lock,         ISO_Level5_Lock          ] };
-    // ISO_Level5_Shift alone won't have the desired effect in all applicitions, therefore adding the following as it is done in "symbols/level5(rctrl_switch)"
+    // ISO_Level5_Shift alone won't have the desired effect in all applicitions, therefore
+    // adding the following as it is done in "symbols/level5(rctrl_switch)".
     modifier_map Mod3   { ISO_Level5_Shift }; // mandatory
     //      This ^^^^ has nothing to do with the "Neo-Mod-Keys"!
 
@@ -300,8 +303,8 @@ xkb_symbols "neo" {
     key <AE03> { [ 3,                       U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,                logicaland,              NoSymbol                 ] };
     key <AE04> { [ 4,                       guillemotright,          U203A,                   femalesymbol,            Prior,                   Prior,                   U22A5,                   NoSymbol                 ] };
     key <AE05> { [ 5,                       guillemotleft,           U2039,                   malesymbol,              periodcentered,          NoSymbol,                U2221,                   NoSymbol                 ] };
-
     key <AE06> { [ 6,                       dollar,                  cent,                    U26A5,                   sterling,                NoSymbol,                U2225,                   NoSymbol                 ] };
+
     key <AE07> { [ 7,                       EuroSign,                yen,                     Greek_kappa,             currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
     key <AE08> { [ 8,                       doublelowquotemark,      singlelowquotemark,      U27E8,                   NoSymbol,                NoSymbol,                U221E,                   NoSymbol                 ] };
     key <AE09> { [ 9,                       leftdoublequotemark,     leftsinglequotemark,     U27E9,                   KP_Divide,               NoSymbol,                U220B,                   NoSymbol                 ] };
@@ -385,7 +388,7 @@ xkb_symbols "neo" {
     key  <KP9> { [ KP_9,                    dagger,                  U20D7,                   U226B,                   KP_Prior,                KP_Prior,                U2309,                   NoSymbol                 ] };
     key <KPAD> { [ KP_Add,                  KP_Add,                  plusminus,               U2295,                   U2213,                   NoSymbol,                U2214,                   NoSymbol                 ] };
  
-    // middle Row
+    // Middle Row
     // --------------------------------------------------------------
     key  <KP4> { [ KP_4,                    club,                    leftarrow,               includedin,              KP_Left,                 KP_Left,                 U2286,                   NoSymbol                 ] };
     key  <KP5> { [ KP_5,                    EuroSign,                brokenbar,               U22B6,                   KP_Begin,                KP_Begin,                U22B7,                   NoSymbol                 ] };
