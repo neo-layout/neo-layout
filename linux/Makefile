@@ -17,6 +17,8 @@ xmodmap/neo_de_x-prog.xmodmap:xmodmap/neo_de.xmodmap
       -e 's/\x09Right/\x09KP_Right/g'\
       -e 's/\x09End/\x09KP_End/g'\
       -e 's/\x09Next/\x09KP_Next/g'\
+      -e 's/\x09KP_Add/\x09plus/g'\
+      -e 's/\x09KP_Substract/\x09minus/g'\
       -e 's/\x09Return/\x09KP_Enter/g' $< > $@
 
 
