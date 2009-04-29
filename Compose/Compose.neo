@@ -115,6 +115,12 @@
 <U02F5> <U>                              : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
 <U02F5> <u>                              : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 
+# letters with comma below
+<Multi_key> <S> <comma>                  : "Ș"   U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
+<Multi_key> <s> <comma>                  : "ș"   U0219 # LATIN SMALL LETTER S WITH COMMA BELOW
+<Multi_key> <T> <comma>                  : "Ț"   U021A # LATIN CAPITAL LETTER T WITH COMMA BELOW
+<Multi_key> <t> <comma>                  : "ț"   U021B # LATIN SMALL LETTER T WITH COMMA BELOW
+
 # other letters
 <Multi_key> <E> <E>                      : "Ə"   U018F # LATIN CAPITAL LETTER SCHWA
 <Multi_key> <L> <period>                 : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
