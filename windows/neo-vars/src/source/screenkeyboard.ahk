@@ -17,10 +17,10 @@ CP3F8 := "P__BSTA"
 
 BSTSwitch(Eb) {
   global
-  if (Eb <> EbeneAlt) {
+  if (Eb <> BSTEbeneAlt) {
     GuiControl,Show,Picture%Eb%
-    GuiControl,Hide,Picture%EbeneAlt%
-    EbeneAlt := Eb
+    GuiControl,Hide,Picture%BSTEbeneAlt%
+    BSTEbeneAlt := Eb
   }
 }
 
@@ -30,7 +30,8 @@ BSTToggle() {
     guiErstellt := 0
     Gui, Destroy
   } else {
-    yPosition := A_ScreenHeight -270
+    SysGet, WorkArea, MonitorWorkArea
+    yPosition := WorkAreaBottom - 230
     Gui, Color, FFFFFF
     Gui, Add, Picture,AltSubmit x0   y0          vPicture1, % ResourceFolder . "\ebene1.png"
     Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture1C,% ResourceFolder . "\ebene1Caps.png"
@@ -40,8 +41,8 @@ BSTToggle() {
     Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture4, % ResourceFolder . "\ebene4.png"
     Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture5, % ResourceFolder . "\ebene5.png"
     Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture6, % ResourceFolder . "\ebene6.png"
-    Gui, +AlwaysOnTop
-    Gui, Show, y%yposition% Autosize
+    Gui, +AlwaysOnTop +ToolWindow
+    Gui, Show, y%yposition% Autosize NoActivate
     BSTEbeneAlt := 1
     guiErstellt := 1
     BSTSwitch(EbeneNC)
