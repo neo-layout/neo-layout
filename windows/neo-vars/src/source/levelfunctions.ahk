@@ -1,4 +1,4 @@
-EbeneAktualisieren() {
+NEOEbeneAktualisieren() {
   global
   Modstate := IsMod4Active() . IsMod3Active()
   Ebene7 := 0

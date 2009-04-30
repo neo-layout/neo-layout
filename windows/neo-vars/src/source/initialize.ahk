@@ -87,7 +87,9 @@ IsMod4RPressed := 0
 IsMod4LPressed := 0
 IsMod4Pressed := 0
 IsMod4Locked := 0
-EbeneAktualisieren()
+EbeneAktualisieren := "NEOEbeneAktualisieren"
+
+%EbeneAktualisieren%()
 
 ActivateLayOut(inputlocale)
 
