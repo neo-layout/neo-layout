@@ -128,7 +128,7 @@ CharProc__M2LT() {
   global
   ; Mod2Lock Toggle
   ToggleMod2Lock()
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
 }
 
 TransformEinhand(PhysKey) {

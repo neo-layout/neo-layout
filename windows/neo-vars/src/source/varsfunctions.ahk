@@ -201,7 +201,7 @@ CharProc__M2LD() {
     isShiftLPressed := 1
     isShiftPressed := 1
     wasNonShiftKeyPressed := 0
-    EbeneAktualisieren()
+    %EbeneAktualisieren%()
     PR%PhysKey% := "P__M2LU"
   }
   CharOutDown("S__L_M2")
@@ -211,7 +211,7 @@ CharProc__M2LU() {
   global
   isShiftLPressed := 0
   isShiftPressed := isShiftRPressed
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
   CharOutUp("S__L_M2")
 }
 
@@ -223,7 +223,7 @@ CharProc__M2RD() {
     isShiftRPressed := 1
     isShiftPressed := 1
     wasNonShiftKeyPressed := 0
-    EbeneAktualisieren()
+    %EbeneAktualisieren%()
     PR%PhysKey% := "P__M2RU"
   }
   CharOutDown("S__R_M2")
@@ -233,7 +233,7 @@ CharProc__M2RU() {
   global
   isShiftRPressed := 0
   isShiftPressed := isShiftLPressed
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
   CharOutUp("S__R_M2")
 }
 
@@ -245,7 +245,7 @@ CharProc__M3LD() {
     isMod3LPressed := 1
     isMod3Pressed := 1
     wasNonShiftKeyPressed := 0
-    EbeneAktualisieren()
+    %EbeneAktualisieren%()
     PR%PhysKey% := "P__M3LU"
   }
 }
@@ -256,7 +256,7 @@ CharProc__M3LU() {
     CharStarUp("MOD3")
   isMod3LPressed := 0
   isMod3Pressed := isMod3RPressed
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
 }
 
 CharProc__M3RD() {
@@ -267,7 +267,7 @@ CharProc__M3RD() {
     isMod3RPressed := 1
     isMod3Pressed := 1
     wasNonShiftKeyPressed := 0
-    EbeneAktualisieren()
+    %EbeneAktualisieren%()
     PR%PhysKey% := "P__M3RU"
   }
 }
@@ -278,7 +278,7 @@ CharProc__M3RU() {
     CharStarUp("MOD3")
   isMod3RPressed := 0
   isMod3Pressed := isMod3LPressed
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
 }
 
 CharProc__M4LD() {
@@ -286,7 +286,7 @@ CharProc__M4LD() {
   if (!isMod4LPressed) {
     isMod4LPressed := 1
     isMod4Pressed := 1
-    EbeneAktualisieren()
+    %EbeneAktualisieren%()
     PR%PhysKey% := "P__M4LU"
     if (isMod4RPressed and !wasNonShiftKeyPressed) {
       wasNonShiftKeyPressed := 0
@@ -300,7 +300,7 @@ CharProc__M4LU() {
   global
   isMod4LPressed := 0
   isMod4Pressed := isMod4RPressed
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
 }
 
 CharProc__M4RD() {
@@ -308,7 +308,7 @@ CharProc__M4RD() {
   if (!isMod4RPressed) {
     isMod4RPressed := 1
     isMod4Pressed := 1
-    EbeneAktualisieren()
+    %EbeneAktualisieren%()
     PR%PhysKey% := "P__M4RU"
     if (isMod4LPressed and !wasNonShiftKeyPressed) {
       wasNonShiftKeyPressed := 0
@@ -322,7 +322,7 @@ CharProc__M4RU() {
   global
   isMod4RPressed := 0
   isMod4Pressed := isMod4LPressed
-  EbeneAktualisieren()
+  %EbeneAktualisieren%()
 }
 
 SendUnicodeChar(charCode){
