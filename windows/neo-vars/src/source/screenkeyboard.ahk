@@ -42,7 +42,7 @@ BSTToggle() {
     Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture5, % ResourceFolder . "\ebene5.png"
     Gui, Add, Picture,AltSubmit xp+0 yp+0 Hidden vPicture6, % ResourceFolder . "\ebene6.png"
     Gui, +AlwaysOnTop +ToolWindow
-    Gui, Show, y%yposition% Autosize NoActivate
+    Gui, Show, y%yposition% w776 h200 NoActivate
     BSTEbeneAlt := 1
     guiErstellt := 1
     BSTSwitch(EbeneNC)
