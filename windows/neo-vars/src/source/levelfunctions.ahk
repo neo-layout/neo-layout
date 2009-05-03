@@ -29,10 +29,10 @@ NEOEbeneAktualisieren() {
       Ebene8 := 1
     EbeneNC := EbeneC            ; NC: gleich
   }
-  if (guiErstellt) {
+  if (BSTguiErstellt) {
     if (striktesMod2Lock)
       BSTSwitch(EbeneC)
-    else if ((EbeneNC < 3) and (EbeneNC != EbeneC))
+    else if (EbeneNC != EbeneC)
       BSTSwitch(EbeneNC . "C")
     else
       BSTSwitch(EbeneNC)
