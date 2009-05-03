@@ -1,5 +1,6 @@
-guiErstellt := 0
-alwaysOnTop := 1
+BSTguiErstellt := 0
+BSTalwaysOnTop := 1
+BSTcapsChars   := 0
 
 if (FileExist("ResourceFolder")<>false) {
   FileInstall,ebene1.png,%ResourceFolder%\ebene1.png,1
@@ -18,7 +19,14 @@ CP3F8 := "P__BSTA"
 BSTSwitch(Eb) {
   global
   if (Eb <> BSTEbeneAlt) {
-    GuiControl,Show,Picture%Eb%
+    BSTeb := Eb
+    if (BSTcapsChars) {
+      if (BSTeb == "1")
+        BSTeb := "1C"
+      else if (BSTeb == "2C")
+        BSTeb := "2"
+    }
+    GuiControl,Show,Picture%BSTeb%
     GuiControl,Hide,Picture%BSTEbeneAlt%
     BSTEbeneAlt := Eb
   }
@@ -26,8 +34,8 @@ BSTSwitch(Eb) {
 
 BSTToggle() {
   global
-  if (guiErstellt) {
-    guiErstellt := 0
+  if (BSTguiErstellt) {
+    BSTguiErstellt := 0
     Gui, Destroy
   } else {
     SysGet, WorkArea, MonitorWorkArea
@@ -44,20 +52,20 @@ BSTToggle() {
     Gui, +AlwaysOnTop +ToolWindow
     Gui, Show, y%yposition% w776 h200 NoActivate, NEO-Bildschirmtastatur
     BSTEbeneAlt := 1
-    guiErstellt := 1
+    BSTguiErstellt := 1
     BSTSwitch(EbeneNC)
-    alwaysOnTop := 1
+    BSTalwaysOnTop := 1
   }
 }
 
 BSTToggleAlwaysOnTop() {
   global
-  if (alwaysOnTop) {
+  if (BSTalwaysOnTop) {
     Gui, -AlwaysOnTop
-    alwaysOnTop := 0    
+    BSTalwaysOnTop := 0    
   } else {
     Gui, +AlwaysOnTop
-    alwaysOnTop := 1
+    BSTalwaysOnTop := 1
   }
 }
 
@@ -70,7 +78,6 @@ CharProc__BSTt() {
 CharProc__BSTA() {
   global
   ; Bildschirmtastatur AlwaysOnTop
-  if (guiErstellt)
+  if (BSTguiErstellt)
     BSTToggleAlwaysOnTop()
 }
-
