@@ -1,34 +1,25 @@
 NEOEbeneAktualisieren() {
   global
-  Modstate := IsMod4Active() . IsMod3Active()
   Ebene7 := 0
   Ebene8 := 0
-  if        (Modstate == "00") { ; Ebene 1 oder 2
-    if (IsShiftActive())         ; Ebene 2: Shift oder CapsLock
-      EbeneC := 2
-    else                         ; Ebene 1: Ohne Mod oder CapsLock mit Shift
-      EbeneC := 1
-    if (IsShiftPressed)          ; NC: Ebene 2: Shift (ignoriert CapsLock)
-      EbeneNC := 2
-    else                         ; NC: Ebene 1: Ohne Mod (ignoriert CapsLock)
-      EbeneNC := 1
-  } else if (Modstate == "01") { ; Ebene 3 oder 5 (ignoriert CapsLock)
-    if (IsShiftPressed)          ; Ebene 5: Shift+Mod3
-      EbeneC := 5
-    else                         ; Ebene 3: Mod3
-      EbeneC := 3
-    EbeneNC := EbeneC            ; NC: gleich
-  } else if (Modstate == "10") { ; Ebene 4 (Mit Shift: Auch Ebene 7) (ignoriert CapsLock)
-    EbeneC := 4
-    if (IsShiftPressed)          ; Ebene 7: Shift+Mod4
-      Ebene7 := 1
-    EbeneNC := EbeneC            ; NC: gleich
-  } else if (ModState == "11") { ; Ebene 6 (Mit Shift Xoder CapsLock: Auch Ebene 8)
-    EbeneC := 6
-    if (IsShiftPressed)          ; Ebene 8: Shift (ignoriert CapsLock)
-      Ebene8 := 1
-    EbeneNC := EbeneC            ; NC: gleich
-  }
+
+  ModPos  := 1 + (isMod4Locked   << 4)  ; plus 1, da SubStr() bei 1 beginnt
+               + (isMod4Pressed  << 3)
+               + (isMod3Pressed  << 2)
+               + (isMod2Locked   << 1)
+               + (isShiftPressed << 0)
+
+  ; isMod4Locked     00000000000000001111111111111111
+  ; isMod4Pressed    00000000111111110000000011111111
+  ; isMod3Pressed    00001111000011110000111100001111
+  ; isMod2Locked     00110011001100110011001100110011
+  ; isShiftPressed   01010101010101010101010101010101
+
+  EbeneNC := SubStr("12123535444466664444353512126666",ModPos,1) ; Für normale Tasten (reagieren nicht auf CapsLock)
+  EbeneC  := SubStr("12213535444466664444353512216666",ModPos,1) ; Für Buchstaben     (reagieren       auf CapsLock)
+  Ebene7  := SubStr("00000000010100000101000000000000",ModPos,1)
+  Ebene8  := SubStr("00000000000001010000000000000101",ModPos,1)
+
   if (BSTguiErstellt) {
     if (striktesMod2Lock)
       BSTSwitch(EbeneC)
