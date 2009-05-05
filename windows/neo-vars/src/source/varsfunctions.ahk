@@ -42,6 +42,7 @@ CharStarDown(PhysKey, ActKey, char) {
     CharProc%SubProc%()
     return
   }
+rerun:
   wasNonShiftKeyPressed := 1
   if (PP%PhysKey% != "")
     CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
@@ -56,6 +57,27 @@ CharStarDown(PhysKey, ActKey, char) {
     tosend := ""
     PP%PhysKey% := ""
     Comp := CompNew
+  } else if (CF%Comp% != "") {
+    tosend := CF%Comp%
+    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufr�umen
+      CharOutUp(PR%PhysKey%)
+      PR%PhysKey% := ""
+    }
+
+    loop {
+      if (SubStr(tosend,1,1)=="P") {
+        SubProc := SubStr(tosend,2,6)
+        CharProc%SubProc%()
+      } else {
+        CharOut(SubStr(tosend,1,7))
+      }
+      tosend := SubStr(tosend,8)
+      if (tosend == "") 
+        break                ; erledigt
+    }
+    Comp := ""
+    PP%PhysKey% := ""
+    goto rerun
   } else if (Comp == "") {           ; noch kein Zeichen in der Compose-Queue: Ein einzelnes Zeichen wird geschickt
     tosend := char
     PP%PhysKey% := char
