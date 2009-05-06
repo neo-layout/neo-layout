@@ -191,7 +191,7 @@
          id="flowPara2929">A: Es gibt eine Mailingliste. Auf dieser werden Fragen beantwortet und NEO weiter entwickelt. Im Webbrowser ist diese per http://lists.neo-layout.org/mailman/listinfo/mailinglist erreichbar. Ansonsten erst mal die FAQ (häufigen Fragen) durchlesen.</flowPara><flowPara
          id="flowPara2931" /><flowPara
          id="flowPara2933">F: Es gibt keine Feststell-/Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?</flowPara><flowPara
-         id="flowPara2935">A: Die Dauergroßschreib-Funktionalität erhält man, indem man beide Shift-Tasten kurz gleichzeitig drückt. Zum Ausschalten dann nur EINE der beiden Shift-Tasten drücken.</flowPara><flowPara
+         id="flowPara2935">A: Die Dauergroßschreib-Funktionalität erhält man, indem man beide Umschalt-Tasten kurz gleichzeitig drückt. Zum Ausschalten dann nur EINE der beiden Umschalt-Tasten drücken.</flowPara><flowPara
          id="flowPara2937" /><flowPara
          id="flowPara2939">F: Warum gibt es manche Tasten doppelt? Z. B. die Pfeiltasten, die Esc-Taste usw. Außerdem auch ~ und ^?</flowPara><flowPara
          id="flowPara2941">A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der Tastatur nehmen muss. Man drückt einfach die Mod4-Taste und schon hat man die gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.</flowPara><flowPara
@@ -220,15 +220,15 @@
            style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu LGC Serif Condensed" /></flowRegion><flowPara
          id="flowPara2632">F: Wann wird eigentlich in der deutschen Sprache welcher Binde-/Gedanken-Strich verwendet? Welcher ist der Bis-Strich?</flowPara><flowPara
          id="flowPara2634">A: Meist wird der Bindestrich (auf »Mod3« + »t« bzw.  »Taste-rechts-neben-der-Null«) verwendet. Und zwar für alle zusammen gesetzten Wörter: Brillen-Träger, NEO-Layout, Fußball-Fan, usw. Viele dieser Wörter kann und sollte man auch zusammen, das heißt ohne Bindestrich, schreiben.</flowPara><flowPara
-         id="flowPara2636">Der Gedankenstrich/Bis-Strich (auf »Shift« + »Taste-rechts-neben-der-Null«) wird verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiele:</flowPara><flowPara
+         id="flowPara2636">Der Gedankenstrich/Bis-Strich (auf »Umschalt« + »Komma«) wird verwendet, wenn man einen Gedanken hat, den man aufschreiben möchte. Beispiele:</flowPara><flowPara
          id="flowPara2638">  1. Mit NEO zu schreiben – das sage nicht nur ich – ist besser als mit QWERTZ.</flowPara><flowPara
          id="flowPara2640">  2. Öffnungszeiten: Mo–Fr 10–18 Uhr.</flowPara><flowPara
-         id="flowPara2642">Der englische Gedankenstrich (auf »Mod3« + »Taste-rechts-neben-der-Null«) kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen geschrieben.</flowPara><flowPara
+         id="flowPara2642">Der englische Gedankenstrich (auf »Umschalt« + »Taste-rechts-neben-der-Null«) kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen geschrieben.</flowPara><flowPara
          id="flowPara2644">Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das Pluszeichen. Dieses befindet sich auf »Mod3« + »Ziffernblock-Minus«.</flowPara><flowPara
          id="flowPara2646" /><flowPara
          id="flowPara2648">F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?</flowPara><flowPara
-         id="flowPara2650">A: Bei gedrückter »Shift-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Shift-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.</flowPara><flowPara
-         id="flowPara2652">Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Shift-Taste« auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.</flowPara><flowPara
+         id="flowPara2650">A: Bei gedrückter »Umschalt-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Umschalt-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.</flowPara><flowPara
+         id="flowPara2652">Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Umschalt-Taste« auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.</flowPara><flowPara
          id="flowPara2654">Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia: http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen</flowPara><flowPara
          id="flowPara2656">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen &quot; benutzen. Dieses ist per »Mod3« + ».« erreichbar.</flowPara><flowPara
          id="flowPara2658" /></flowRoot>  </g>
@@ -400,7 +400,7 @@
          sodipodi:role="line"
          id="tspan3576"
          x="-196.80078"
-         y="-139.49553">mit Shift</tspan><tspan
+         y="-139.49553">mit Umschalt</tspan><tspan
          sodipodi:role="line"
          x="-196.80078"
          y="-129.49553"
@@ -436,7 +436,7 @@
          sodipodi:role="line"
          id="tspan3564"
          x="-259.80078"
-         y="-135.32884">mit Shift</tspan></text>
+         y="-135.32884">mit Umschalt</tspan></text>
     <path
        style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.98360682;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;display:inline"
        d="M 287.57316,164.44865 L 168.55675,164.44865 L 168.55675,45.43226 L 287.57316,45.43226 L 287.57316,164.44865 z "
