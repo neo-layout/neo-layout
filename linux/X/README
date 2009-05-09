@@ -70,6 +70,22 @@ vorzunehmen erstellt man in /etc/hal/fdi/policy eine Datei namens
   </match>
 
 
+== Test-Version zum Ausprobieren ==
+
+Diese neue Version zielt darauf ab, die Referenz in Sachen Lock-Verhalten noch
+besser umzusetzen und in der neuen xkeyboard-config aufgenommen zu werden.
+Der einzige Nachteil ist der, dass zum Testen zwei Dateien verändert werden
+müssen.
+
+Sicherheitskopien falls benötigt vorher anfertigen.
+Die Datei „de-test“ zu „de“ umbenennen und nach „/usr/share/X11/xkb/symbols“
+kopieren.
+Außerdem die Datei „level5-test“ zu „level5“ umbenennen und nach
+„/usr/share/X11/xkb/types“ kopieren.
+
+Das Aktivieren funktioniert wie gehabt:
+    setxkbmap de neo
+
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
