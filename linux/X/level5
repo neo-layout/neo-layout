@@ -60,29 +60,35 @@ partial default xkb_types "default" {
         // 'NumLock' is used for the (Neo-)Mod4-Lock.
         modifiers = Shift + LevelThree + NumLock + LevelFive;
 
-        map[None]                                        = Level1;
-        map[Shift]                                       = Level2;
-        map[LevelThree]                                  = Level3;
-        map[LevelThree+Shift]                            = Level4;
-        map[NumLock]                                     = Level3;
-        map[NumLock+Shift]                               = Level4;
-        map[NumLock+LevelThree]                          = Level1;
-        map[NumLock+LevelThree+Shift]                    = Level2;
-        map[LevelFive]                                   = Level5;
-        map[LevelFive+Shift]                             = Level6;
-        map[LevelFive+LevelThree]                        = Level7;
-        map[LevelFive+LevelThree+Shift]                  = Level8;
-        map[LevelFive+NumLock]                           = Level7;
-        map[LevelFive+NumLock+Shift]                     = Level8;
-        map[LevelFive+NumLock+LevelThree]                = Level5;
-        map[LevelFive+NumLock+LevelThree+Shift]          = Level6;
+        preserve[LevelFive+Shift] = Shift;
+        preserve[NumLock+Shift] = Shift;
+
+        map[None]                                    = Level1;
+        map[Shift]                                   = Level2;
+        map[LevelThree]                              = Level3;
+        map[LevelThree+Shift]                        = Level4;
+
+        map[LevelFive]                               = Level5;
+        map[LevelFive+Shift]                         = Level6;
+        map[LevelFive+LevelThree]                    = Level7;
+        map[LevelFive+LevelThree+Shift]              = Level8;
+
+        map[NumLock]                                 = Level5;
+        map[NumLock+Shift]                           = Level6;
+        map[NumLock+LevelThree]                      = Level7;
+        map[NumLock+LevelThree+Shift]                = Level8;
+
+        map[NumLock+LevelFive]                       = Level1;
+        map[NumLock+LevelFive+Shift]                 = Level2;
+        map[NumLock+LevelFive+LevelThree]            = Level3;
+        map[NumLock+LevelFive+LevelThree+Shift]      = Level4;
 
         level_name[Level1] = "Neo Level1";
         level_name[Level2] = "Neo Level2";
-        level_name[Level3] = "Neo Level4";
-        level_name[Level4] = "Neo Level4 Shift";
-        level_name[Level5] = "Neo Level3";
-        level_name[Level6] = "Neo Level5";
+        level_name[Level3] = "Neo Level3";
+        level_name[Level4] = "Neo Level5";
+        level_name[Level5] = "Neo Level4";
+        level_name[Level6] = "Neo Level4 Shift";
         level_name[Level7] = "Neo Level6";
         level_name[Level8] = "Neo Level6 Shift";
     };
@@ -91,46 +97,56 @@ partial default xkb_types "default" {
         // 'NumLock' is used for the (Neo-)Mod4-Lock.
         modifiers = Shift + Lock + LevelThree + NumLock + LevelFive;
 
-        map[None]                                        = Level1;
-        map[Shift]                                       = Level2;
-        map[LevelThree]                                  = Level3;
-        map[LevelThree+Shift]                            = Level4;
-        map[NumLock]                                     = Level3;
-        map[NumLock+Shift]                               = Level4;
-        map[NumLock+LevelThree]                          = Level1;
-        map[NumLock+LevelThree+Shift]                    = Level2;
-        map[LevelFive]                                   = Level5;
-        map[LevelFive+Shift]                             = Level6;
-        map[LevelFive+LevelThree]                        = Level7;
-        map[LevelFive+LevelThree+Shift]                  = Level8;
-        map[LevelFive+NumLock]                           = Level7;
-        map[LevelFive+NumLock+Shift]                     = Level8;
-        map[LevelFive+NumLock+LevelThree]                = Level5;
-        map[LevelFive+NumLock+LevelThree+Shift]          = Level6;
+        preserve[LevelFive+Shift] = Shift;
+        preserve[NumLock+Shift] = Shift;
+    
+        map[None]                                    = Level1;
+        map[Shift]                                   = Level2;
+        map[LevelThree]                              = Level3;
+        map[LevelThree+Shift]                        = Level4;
+
+        map[LevelFive]                               = Level5;
+        map[LevelFive+Shift]                         = Level6;
+        map[LevelFive+LevelThree]                    = Level7;
+        map[LevelFive+LevelThree+Shift]              = Level8;
+
+        map[NumLock]                                 = Level5;
+        map[NumLock+Shift]                           = Level6;
+        map[NumLock+LevelThree]                      = Level7;
+        map[NumLock+LevelThree+Shift]                = Level8;
+
+        map[NumLock+LevelFive]                       = Level1;
+        map[NumLock+LevelFive+Shift]                 = Level2;
+        map[NumLock+LevelFive+LevelThree]            = Level3;
+        map[NumLock+LevelFive+LevelThree+Shift]      = Level4;
+
         // Lock interchanges Level1 and Level2
-        map[Lock]                                        = Level2;
-        map[Lock+Shift]                                  = Level1;
-        map[Lock+LevelThree]                             = Level3;
-        map[Lock+LevelThree+Shift]                       = Level4;
-        map[Lock+NumLock]                                = Level3;
-        map[Lock+NumLock+Shift]                          = Level4;
-        map[Lock+NumLock+LevelThree]                     = Level2;
-        map[Lock+NumLock+LevelThree+Shift]               = Level1;
-        map[Lock+LevelFive]                              = Level5;
-        map[Lock+LevelFive+Shift]                        = Level6;
-        map[Lock+LevelFive+LevelThree]                   = Level7;
-        map[Lock+LevelFive+LevelThree+Shift]             = Level8;
-        map[Lock+LevelFive+NumLock]                      = Level7;
-        map[Lock+LevelFive+NumLock+Shift]                = Level8;
-        map[Lock+LevelFive+NumLock+LevelThree]           = Level5;
-        map[Lock+LevelFive+NumLock+LevelThree+Shift]     = Level6;
+        map[Lock]                                    = Level2;
+        map[Lock+Shift]                              = Level1;
+        map[Lock+LevelThree]                         = Level3;
+        map[Lock+LevelThree+Shift]                   = Level4;
+
+        map[Lock+LevelFive]                          = Level5;
+        map[Lock+LevelFive+Shift]                    = Level6;
+        map[Lock+LevelFive+LevelThree]               = Level7;
+        map[Lock+LevelFive+LevelThree+Shift]         = Level8;
+
+        map[Lock+NumLock]                            = Level5;
+        map[Lock+NumLock+Shift]                      = Level6;
+        map[Lock+NumLock+LevelThree]                 = Level7;
+        map[Lock+NumLock+LevelThree+Shift]           = Level8;
+
+        map[Lock+NumLock+LevelFive]                  = Level2;
+        map[Lock+NumLock+LevelFive+Shift]            = Level1;
+        map[Lock+NumLock+LevelFive+LevelThree]       = Level3;
+        map[Lock+NumLock+LevelFive+LevelThree+Shift] = Level4;
 
         level_name[Level1] = "Neo Level1";
         level_name[Level2] = "Neo Level2";
-        level_name[Level3] = "Neo Level4";
-        level_name[Level4] = "Neo Level4 Shift";
-        level_name[Level5] = "Neo Level3";
-        level_name[Level6] = "Neo Level5";
+        level_name[Level3] = "Neo Level3";
+        level_name[Level4] = "Neo Level5";
+        level_name[Level5] = "Neo Level4";
+        level_name[Level6] = "Neo Level4 Shift";
         level_name[Level7] = "Neo Level6";
         level_name[Level8] = "Neo Level6 Shift";
     };
