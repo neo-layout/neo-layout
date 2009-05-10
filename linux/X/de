@@ -220,7 +220,7 @@ xkb_symbols "sundeadkeys" {
 //      <lucky at zankt dot net>
 //      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 //      Erik Streb <mail at erikstreb dot de>
-//        and many other contributers
+//        and many other contributors
 //
 //      http://www.neo-layout.org
 //
@@ -314,7 +314,7 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     key  <TAB> { [ Tab,                     ISO_Left_Tab,            NoSymbol,                NoSymbol,                Multi_key,               NoSymbol,                NoSymbol,                NoSymbol                 ] };
 
-    // Number Row
+    // Number row
     // --------------------------------------------------------------
     key <TLDE> { [ dead_circumflex,         dead_tilde,              dead_caron,              Pointer_EnableKeys,      dead_abovering,          dead_breve,              dead_macron,             NoSymbol                 ] };
 
@@ -334,9 +334,9 @@ xkb_symbols "neo" {
     key <AE12> { [ dead_grave,              NoSymbol,                dead_doublegrave,        NoSymbol,                dead_diaeresis,          dead_dasia,              NoSymbol,                NoSymbol                 ] };
     key <BKSP> { [ BackSpace,               BackSpace,               BackSpace,               BackSpace,               BackSpace,               BackSpace,               BackSpace,               NoSymbol                 ] };
 
-    // Top Row
+    // Top row
     // --------------------------------------------------------------
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUATERALPHABETIC";
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
     key <AD01> { [ x,                       X,                       U22EE,                   NoSymbol,                ellipsis,                Greek_xi,                Greek_XI,                NoSymbol                 ] };
     key <AD02> { [ v,                       V,                       BackSpace,               BackSpace,               underscore,              NoSymbol,                U222E,                   NoSymbol                 ] };
     key <AD03> { [ l,                       L,                       Up,                      Up,                      bracketleft,             Greek_lambda,            Greek_LAMBDA,            NoSymbol                 ] };
@@ -354,9 +354,9 @@ xkb_symbols "neo" {
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
     key <AD12> { [ dead_acute,              dead_cedilla,            dead_doubleacute,        NoSymbol,                dead_stroke,             dead_psili,              dead_abovedot,           NoSymbol                 ] };
 
-    // Middle Row
+    // Middle row
     // --------------------------------------------------------------
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUATERALPHABETIC";
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
     key <AC01> { [ u,                       U,                       Home,                    Home,                    backslash,               NoSymbol,                mu,                      NoSymbol                 ] };
     key <AC02> { [ i,                       I,                       Left,                    Left,                    slash,                   Greek_iota,              integral,                NoSymbol                 ] };
     key <AC03> { [ a,                       A,                       Down,                    Down,                    braceleft,               Greek_alpha,             U2200,                   NoSymbol                 ] };
@@ -371,7 +371,7 @@ xkb_symbols "neo" {
 
     key <AC11> { [ y,                       Y,                       KP_Decimal,              NoSymbol,                at,                      Greek_upsilon,           nabla,                   NoSymbol                 ] };
 
-    // Bottom Row
+    // Bottom row
     // --------------------------------------------------------------
     key <AB01> { [ udiaeresis,              Udiaeresis,              Escape,                  Escape,                  numbersign,              NoSymbol,                U211C,                   NoSymbol                 ] };
     key <AB02> { [ odiaeresis,              Odiaeresis,              Tab,                     Tab,                     dollar,                  U03F5,                   U2111,                   NoSymbol                 ] };
@@ -384,7 +384,7 @@ xkb_symbols "neo" {
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
     key <AB08> { [ comma,                   endash,                  KP_2,                    NoSymbol,                quotedbl,                Greek_rho,               U21D2,                   NoSymbol                 ] };
     key <AB09> { [ period,                  enfilledcircbullet,      KP_3,                    NoSymbol,                apostrophe,              U03D1,                   Greek_THETA,             NoSymbol                 ] };
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUATERALPHABETIC";
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
     key <AB10> { [ j,                       J,                       semicolon,               NoSymbol,                semicolon,               Greek_theta,             variation,               NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
 
@@ -399,26 +399,26 @@ xkb_symbols "neo" {
     // The former Numlock key:
     key <NMLK> { [ Tab,                     ISO_Left_Tab,            notequal,                NoSymbol,                equal,                   approxeq,                identical,               NoSymbol                 ] };
 
-    // Topmost Row
+    // Topmost row
     // --------------------------------------------------------------
     key <KPDV> { [ KP_Divide,               KP_Divide,               U2215,                   NoSymbol,                division,                U2300,                   U2223,                   NoSymbol                 ] };
     key <KPMU> { [ KP_Multiply,             KP_Multiply,             multiply,                NoSymbol,                U2219,                   U2299,                   U2297,                   NoSymbol                 ] };
     key <KPSU> { [ KP_Subtract,             KP_Subtract,             U2216,                   NoSymbol,                U2212,                   U2296,                   U2238,                   NoSymbol                 ] };
 
-    // Top Row
+    // Top row
     // --------------------------------------------------------------
     key  <KP7> { [ KP_7,                    U2714,                   KP_Home,                 KP_Home,                 U2195,                   U226A,                   upstile,                 NoSymbol                 ] };
     key  <KP8> { [ KP_8,                    U2718,                   KP_Up,                   KP_Up,                   uparrow,                 intersection,            U22C2,                   NoSymbol                 ] };
     key  <KP9> { [ KP_9,                    dagger,                  KP_Prior,                KP_Prior,                U20D7,                   U226B,                   U2309,                   NoSymbol                 ] };
     key <KPAD> { [ KP_Add,                  KP_Add,                  U2213,                   NoSymbol,                plusminus,               U2295,                   U2214,                   NoSymbol                 ] };
  
-    // Middle Row
+    // Middle row
     // --------------------------------------------------------------
     key  <KP4> { [ KP_4,                    club,                    KP_Left,                 KP_Left,                 leftarrow,               includedin,              U2286,                   NoSymbol                 ] };
     key  <KP5> { [ KP_5,                    EuroSign,                KP_Begin,                KP_Begin,                brokenbar,               U22B6,                   U22B7,                   NoSymbol                 ] };
     key  <KP6> { [ KP_6,                    U2023,                   KP_Right,                KP_Right,                rightarrow,              includes,                U2287,                   NoSymbol                 ] };
 
-    // Bottom Row
+    // Bottom row
     // --------------------------------------------------------------
     key  <KP1> { [ KP_1,                    diamond,                 KP_End,                  KP_End,                  U2194,                   lessthanequal,           downstile,               NoSymbol                 ] };
     key  <KP2> { [ KP_2,                    heart,                   KP_Down,                 KP_Down,                 downarrow,               union,                   U22C3,                   NoSymbol                 ] };
@@ -426,7 +426,7 @@ xkb_symbols "neo" {
     key <KPEN> { [ KP_Enter,                KP_Enter,                KP_Enter,                KP_Enter,                KP_Enter,                KP_Enter,                KP_Enter,                NoSymbol                 ] };
     key <KPEQ> { [ KP_Equal,                NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol,                NoSymbol                 ] };
 
-    // Bottommost Row
+    // Bottommost row
     // --------------------------------------------------------------
     key  <KP0> { [ KP_0,                    U2423,                   KP_Insert,               KP_Insert,               percent,                 U2030,                   U25A1,                   NoSymbol                 ] };
     key <KPDL> { [ KP_Separator,            KP_Decimal,              KP_Delete,               KP_Delete,               period,                  apostrophe,              quotedbl,                NoSymbol                 ] };
