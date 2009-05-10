@@ -87,7 +87,7 @@ partial default xkb_types "default" {
         level_name[Level8] = "Neo Level6 Shift";
     };
 
-    type "EIGHT_LEVEL_NEO_LOCKS_QUATERALPHABETIC" {
+    type "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC" {
         // 'NumLock' is used for the (Neo-)Mod4-Lock.
         modifiers = Shift + Lock + LevelThree + NumLock + LevelFive;
 
