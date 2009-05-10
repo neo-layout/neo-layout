@@ -216,6 +216,7 @@ xkb_symbols "sundeadkeys" {
 // inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
 //
 // Authors: 
+//      Stephan Hilb <stephan at ehilb dot de>
 //      <lucky at zankt dot net>
 //      Benjamin Kellermann <Benjamin dot Kellermann at gmx dot Germany>
 //      Erik Streb <mail at erikstreb dot de>
@@ -223,7 +224,7 @@ xkb_symbols "sundeadkeys" {
 //
 //      http://www.neo-layout.org
 //
-// $Revision: 1803 $, $Date: 2009-04-21 23:49:27 +0200 (Di, 21. Apr 2009) $
+// $Revision$, $Date$
 
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo" {
