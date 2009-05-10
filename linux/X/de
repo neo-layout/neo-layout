@@ -236,7 +236,7 @@ xkb_symbols "neo" {
     // Ebene 1: normal
     // Ebene 2: Shift
     // Ebene 3: Mod3
-    // Ebene 4: Mod4 (for marking something use Shift+Mod4)
+    // Ebene 4: Mod4 (for marking something use Shift + Mod4)
     // Ebene 5: Shift + Mod3
     // Ebene 6: Mod3 + Mod4
     // Compose (not a level): Mod3 + Tab
