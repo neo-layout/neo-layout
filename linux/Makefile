@@ -1,4 +1,5 @@
-FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap xmodmap/neo_de_alternative.xmodmap xmodmap/neo_de.xmodmap.referenz
+FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap \
+xmodmap/neo_de_alternative.xmodmap xmodmap/neo_de.xmodmap.referenz xkb
 
 all:${FILES}
 
@@ -30,6 +31,12 @@ xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
 
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
+
+xkb:X/de X/level5
+	cd X; \
+	tar -cz --transform='s,^de$$,xkb/symbols/de,' \
+	--transform='s,^level5$$,xkb/types/level5,' \
+	-f xkb.tgz de level5;
 
 clean: 
 	rm -f ${FILES}
