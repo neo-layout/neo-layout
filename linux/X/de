@@ -267,8 +267,9 @@ xkb_symbols "neo" {
     // Neo-Mod3
     // --------------------------------------------------------------
     key.type[Group1] = "ONE_LEVEL";
-    key <CAPS> { [ ISO_Level3_Shift              ] };
-    key <BKSL> { [ ISO_Level3_Shift              ] };
+    key <CAPS> { [ ISO_Level3_Shift ] };
+    key <BKSL> { [ ISO_Level3_Shift ] };
+    modifier_map Mod5 { ISO_Level3_Shift };
 
 
     // Neo-Mod4
@@ -285,8 +286,17 @@ xkb_symbols "neo" {
         symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
         actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
     };
-    modifier_map Mod2 { <LSGT> };
-    modifier_map Mod3 { <RALT> };
+    modifier_map Mod2 { <LSGT>, <RALT> };
+
+    // Mapping virtual modifier 'LevelFive' to real modifier 'Mod3':
+    key <LVL3> {
+        type[Group1] = "ONE_LEVEL",
+    	vmods[Group1] = LevelFive,
+        symbols[Group1] = [ NoSymbol ],
+        actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+    };
+    modifier_map Mod3 { <LVL3> };
+
 
     // Legend
     // ===============
