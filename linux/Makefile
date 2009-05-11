@@ -1,5 +1,5 @@
 FILES=bin/installiere_neo/installiere_neo xmodmap/neo_de_x-prog.xmodmap \
-xmodmap/neo_de_alternative.xmodmap xmodmap/neo_de.xmodmap.referenz xkb
+xmodmap/neo_de_alternative.xmodmap xmodmap/neo_de.xmodmap.referenz X/xkb.tgz
 
 all:${FILES}
 
@@ -8,35 +8,35 @@ bin/installiere_neo/installiere_neo: xmodmap/neo_de.xmodmap xmodmap/neo_de_alter
 	chmod a+x $@
 
 xmodmap/neo_de_x-prog.xmodmap:xmodmap/neo_de.xmodmap
-	sed -e 's/\x09Up/\x9KP_Up/g'\
-      -e 's/BackSpace/NoSymbol/g'\
-      -e 's/\x09Delete/\x09KP_Delete/g'\
-      -e 's/\x09Insert/\x09KP_Insert/g'\
-      -e 's/\x09Home/\x09KP_Home/g'\
-      -e 's/\x09Left/\x09KP_Left/g'\
-      -e 's/\x09Down/\x09KP_Down/g'\
-      -e 's/\x09Right/\x09KP_Right/g'\
-      -e 's/\x09End/\x09KP_End/g'\
-      -e 's/\x09Next/\x09KP_Next/g'\
-      -e 's/\x09KP_Add/\x09plus/g'\
-      -e 's/\x09KP_Substract/\x09minus/g'\
-      -e 's/\x09Return/\x09KP_Enter/g' $< > $@
+	sed -e 's/\x09Up/\x9KP_Up/g' \
+	-e 's/BackSpace/NoSymbol/g' \
+	-e 's/\x09Delete/\x09KP_Delete/g' \
+	-e 's/\x09Insert/\x09KP_Insert/g' \
+	-e 's/\x09Home/\x09KP_Home/g' \
+	-e 's/\x09Left/\x09KP_Left/g' \
+	-e 's/\x09Down/\x09KP_Down/g' \
+	-e 's/\x09Right/\x09KP_Right/g' \
+	-e 's/\x09End/\x09KP_End/g' \
+	-e 's/\x09Next/\x09KP_Next/g' \
+	-e 's/\x09KP_Add/\x09plus/g' \
+	-e 's/\x09KP_Substract/\x09minus/g' \
+	-e 's/\x09Return/\x09KP_Enter/g' $< > $@
 
 
 xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
-	 sed -e s/U202F/NoSymbol/g\
-      -e s/dead_stroke/NoSymbol/g\
-      -e s/dead_doublegrave/U02F5/g\
-      -e s/dead_dasia/U1FFE/g $< > $@
+	sed -e 's/U202F/NoSymbol/g' \
+	-e 's/dead_stroke/NoSymbol/g' \
+	-e 's/dead_doublegrave/U02F5/g' \
+	-e 's/dead_dasia/U1FFE/g' $< > $@
 
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
 
-xkb:X/de X/level5
+X/xkb.tgz:X/de X/level5
 	cd X; \
 	tar -cz --transform='s,^de$$,xkb/symbols/de,' \
 	--transform='s,^level5$$,xkb/types/level5,' \
-	-f xkb.tgz de level5;
+	-f xkb.tgz de level5
 
 clean: 
 	rm -f ${FILES}
