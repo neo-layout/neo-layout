@@ -41,6 +41,10 @@ SetScrollLockState Off
 KeyboardLED(2,"off") ; deaktivieren, falls sie doch brennt
 
 EnvGet, WindowsEnvAppDataFolder, APPDATA
+if (WindowsEnvAppDataFolder == "") {
+  EnvGet, WindowsEnvAppDataFolder, USERPROFILE
+  WindowsEnvAppDataFolder .= "\Anwendungsdaten"
+}
 ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
 FileCreateDir, %ApplicationFolder%
 ini = %ApplicationFolder%\NEO2.ini
