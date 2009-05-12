@@ -31,20 +31,7 @@ togglesuspend:
 return
 
 about:
-  msgbox, 64, %name%  Ergonomische Tastaturbelegung, 
-  (
-  %name% 
-  `nDas Neo-Layout ersetzt das übliche deutsche 
-  Tastaturlayout mit der Alternative Neo, 
-  beschrieben auf http://neo-layout.org/. 
-  `nDazu sind keine Administratorrechte nötig. 
-  `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
-  `nDies geschieht transparent für den Anwender, 
-  es muss nichts installiert werden. 
-  `nDie Zeichenübersetzung kann leicht über das Icon im 
-  Systemtray deaktiviert werden.  `n
-  )
+  TrayAbout()
 return
 
 neo:
@@ -94,6 +81,24 @@ Traytogglesuspend() {
     SetNumLockState, %SavedNumLockState%
     suspend, on  ; Schaltet Suspend ein -> QWERTZ
   }
+}
+
+TrayAbout() {
+  global
+  msgbox, 64, %name%  Ergonomische Tastaturbelegung, 
+  (
+  %name% 
+  `nDas Neo-Layout ersetzt das übliche deutsche 
+  Tastaturlayout mit der Alternative Neo, 
+  beschrieben auf http://neo-layout.org/. 
+  `nDazu sind keine Administratorrechte nötig. 
+  `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
+  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
+  `nDies geschieht transparent für den Anwender, 
+  es muss nichts installiert werden. 
+  `nDie Zeichenübersetzung kann leicht über das Icon im 
+  Systemtray deaktiviert werden.  `n
+  )
 }
 
 TrayAktivieren()
