@@ -1,4 +1,4 @@
-; äüö
+﻿; äüö
 
 thekeys() {
 ;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
@@ -552,6 +552,10 @@ Layout00000807() {
   UNSHU00007B := 1 ; {
   UNSHU00007D := 1 ; }
   UNSHU00005C := 1 ; \
+}
+
+Layout00010407() {
+  Layout00000407()
 }
 
 ActivateLayOut(layout) {
