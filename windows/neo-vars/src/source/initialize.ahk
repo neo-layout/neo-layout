@@ -34,7 +34,7 @@ disable=Deaktiviere %name%
 #LTrim ; Quelltext kann eingerückt werden
 
 SetCapsLockState Off
-Gosub, SaveNumLockState
+SaveNumLockState()
 SetNumLockState Off
 OnExit, exitprogram
 SetScrollLockState Off
@@ -92,6 +92,14 @@ IsMod4LPressed := 0
 IsMod4Pressed := 0
 IsMod4Locked := 0
 EbeneAktualisieren := "NEOEbeneAktualisieren"
+
+SaveNumLockState() {
+  global
+  if GetKeyState("NumLock","T")
+    SavedNumLockState = On
+  else
+    SavedNumLockState = Off
+}
 
 %EbeneAktualisieren%()
 

@@ -6,7 +6,8 @@
 
 +pause::
 Suspend, Permit
-  goto togglesuspend
+  Traytogglesuspend()
+return
 
 ;;;;;; DOWN EVENTS
 
