@@ -338,6 +338,7 @@
 <Multi_key> <femalesymbol> <malesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <malesymbol> <femalesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
+<Multi_key> <Multi_key>                    : "♫"   U266B # BEAMED EIGHTH NOTE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U25A1> <U2718>                : "☒"   U2612 # BALLOT BOX WITH X
