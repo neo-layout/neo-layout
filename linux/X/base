@@ -856,6 +856,7 @@
   *			misc:typo 	= +typo(base):4
 
 ! option	=	symbols
+  shift:both_capslock	=	+shift(both_capslock)
   grp:shift_toggle	=	+group(shifts_toggle)
   altwin:menu		=	+altwin(menu)
   altwin:meta_alt	=	+altwin(meta_alt)
