@@ -32,11 +32,13 @@ xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
 
-X/xkb.tgz:X/de X/level5
+X/xkb.tgz:X/de X/level5 X/base X/shift
 	cd X; \
 	tar -cz --transform='s,^de$$,xkb/symbols/de,' \
 	--transform='s,^level5$$,xkb/types/level5,' \
-	-f xkb.tgz de level5
+	--transform='s,^base$$,xkb/rules/base,' \
+	--transform='s,^shift$$,xkb/symbols/shift,' \
+	-f xkb.tgz de level5 base shift
 
 clean: 
 	rm -f ${FILES}
