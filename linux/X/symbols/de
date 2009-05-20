@@ -253,14 +253,6 @@ xkb_symbols "neo_base" {
     // Neo:        Ebene1                   Ebene2                   Ebene3                   Ebene5                   Ebene4                   ???                      Ebene6                   ???                      
     // Keys (Neo): None                     Shift                    Mod3                     Mod3 + Shift             Mod4                     Mod4 + Shift             Mod3 + Mod4              Mod3 + Mod4 + Shift      
 
-    key <LVL3> {
-        type[Group1] = "ONE_LEVEL",
-    	vmods[Group1] = LevelFive,
-        symbols[Group1] = [ NoSymbol ],
-        actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-    };
-    modifier_map Mod3 { <LVL3> };
-
 
     // Alphanumeric-keys
     // ===============
