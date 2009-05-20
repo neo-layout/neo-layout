@@ -34,7 +34,7 @@ xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 
 X/xkb.tgz:X/de X/level5 X/base X/shift
 	cd X; \
-	chmod u=rw,g=r,o=r de level5 base shift # um Probleme mit Rechten zu umgehen, die zu Ticket #141 führen
+	chmod u=rw,g=r,o=r de level5 base shift; \
 	tar -cz --transform='s,^de$$,xkb/symbols/de,' \
 	--transform='s,^level5$$,xkb/types/level5,' \
 	--transform='s,^base$$,xkb/rules/base,' \
