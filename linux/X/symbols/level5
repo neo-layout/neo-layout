@@ -19,12 +19,17 @@ xkb_symbols "rctrl_switch" {
 
 // The following modifier keys are used to switch to the third shift and to set a
 // corresponding lock, implemented as NumLock.  They do not use *Level5* keysyms,
-// as some applications get confused by it.  The modifiers are to be used in
-// pairs of a 'left' and a 'right' one.
+// as some applications get confused by it.
 
-// Left modifier
 partial modifier_keys
 xkb_symbols "lsgt_switch_numlock" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <LSGT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -33,9 +38,16 @@ xkb_symbols "lsgt_switch_numlock" {
   };
   modifier_map Mod2 { <LSGT> };
 };
-// Left modifier
+
 partial modifier_keys
 xkb_symbols "lwin_switch_numlock" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <LWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -45,9 +57,15 @@ xkb_symbols "lwin_switch_numlock" {
   modifier_map Mod2 { <LWIN> };
 };
 
-// Right modifier
 partial modifier_keys
 xkb_symbols "ralt_switch_numlock" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <RALT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -56,9 +74,16 @@ xkb_symbols "ralt_switch_numlock" {
   };
   modifier_map Mod2 { <RALT> };
 };
-// Right modifier
+
 partial modifier_keys
 xkb_symbols "rwin_switch_numlock" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <RWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -68,9 +93,15 @@ xkb_symbols "rwin_switch_numlock" {
   modifier_map Mod2 { <RWIN> };
 };
 
-// Left modifier
 partial modifier_keys
 xkb_symbols "lsgt_switch_numlock_cancel" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <LSGT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
@@ -79,9 +110,16 @@ xkb_symbols "lsgt_switch_numlock_cancel" {
   };
   modifier_map Mod2 { <LSGT> };
 };
-// Left modifier
+
 partial modifier_keys
 xkb_symbols "lwin_switch_numlock_cancel" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <LWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
@@ -91,9 +129,15 @@ xkb_symbols "lwin_switch_numlock_cancel" {
   modifier_map Mod2 { <LWIN> };
 };
 
-// Right modifier
 partial modifier_keys
 xkb_symbols "ralt_switch_numlock_cancel" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <RALT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
@@ -102,9 +146,16 @@ xkb_symbols "ralt_switch_numlock_cancel" {
   };
   modifier_map Mod2 { <RALT> };
 };
-// Right modifier
+
 partial modifier_keys
 xkb_symbols "rwin_switch_numlock_cancel" {
+  key <LVL3> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = LevelFive,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
+   };
+  modifier_map Mod3 { <LVL3> };
   key <RWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
