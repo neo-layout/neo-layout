@@ -1,0 +1,115 @@
+// $XKeyboardConfig$
+
+// these variants assign various XKB keycodes to ISO_Level5_Shift so that
+// the third shift level can be reached
+//
+// $XFree86: xc/programs/xkbcomp/symbols/level3,v 1.7 2003/09/08 14:25:32 eich Exp $
+//
+
+// using the level(switch) map, the right Control key temporarily
+// chooses the fifth shift level (until it is released).
+partial modifier_keys
+xkb_symbols "rctrl_switch" {
+  key <RCTL> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+  modifier_map Mod3   { ISO_Level5_Shift };
+};
+
+// The following modifier keys are used to switch to the third shift and to set a
+// corresponding lock, implemented as NumLock.  They do not use *Level5* keysyms,
+// as some applications get confused by it.  The modifiers are to be used in
+// pairs of a 'left' and a 'right' one.
+
+// Left modifier
+partial modifier_keys
+xkb_symbols "lsgt_switch_numlock" {
+  key <LSGT> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <LSGT> };
+};
+// Left modifier
+partial modifier_keys
+xkb_symbols "lwin_switch_numlock" {
+  key <LWIN> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <LWIN> };
+};
+
+// Right modifier
+partial modifier_keys
+xkb_symbols "ralt_switch_numlock" {
+  key <RALT> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <RALT> };
+};
+// Right modifier
+partial modifier_keys
+xkb_symbols "rwin_switch_numlock" {
+  key <RWIN> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <RWIN> };
+};
+
+// Left modifier
+partial modifier_keys
+xkb_symbols "lsgt_switch_numlock_cancel" {
+  key <LSGT> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <LSGT> };
+};
+// Left modifier
+partial modifier_keys
+xkb_symbols "lwin_switch_numlock_cancel" {
+  key <LWIN> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <LWIN> };
+};
+
+// Right modifier
+partial modifier_keys
+xkb_symbols "ralt_switch_numlock_cancel" {
+  key <RALT> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <RALT> };
+};
+// Right modifier
+partial modifier_keys
+xkb_symbols "rwin_switch_numlock_cancel" {
+  key <RWIN> {
+    vmods= NumLock,
+    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
+    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+  };
+  modifier_map Mod2 { <RWIN> };
+};
