@@ -36,7 +36,7 @@ SetWorkingDir, %A_ScriptDir%
 #include    source\tools.ahk
 
 ; individuelle Einstellungen
-#include *i %A_AppData%\NEO2\custom.ahk
+#include *i %A_AppData%\Neo2\custom.ahk
 
 #include    source\tray.ahk
 #include    source\keyhooks.ahk

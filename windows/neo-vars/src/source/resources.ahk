@@ -1,5 +1,5 @@
 EnvGet, WindowsEnvTempFolder, TEMP
-ResourceFolder = %WindowsEnvTempFolder%\NEO2
+ResourceFolder = %WindowsEnvTempFolder%\Neo2
 FileCreateDir, %ResourceFolder%
 
 if (FileExist("ResourceFolder")<>false) {
