@@ -35,9 +35,6 @@ http://dejavu.sourceforge.net/
 • Feststellen der Ebene 4:                             (Mod4+Mod4) oder (Umschalt+Mod3+Tab)
   Zum Lösen der Feststellung nochmals gleiche Kombination
 
-  HINWEIS: Unter Linux ist es momentan noch nicht möglich die Feststellung
-  zu lösen, indem man beide Mods drückt. Man muss dort nur einen drücken!
-
 === Tastaturmaussteuerung ===
 Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
 Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
@@ -83,7 +80,7 @@ T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
         5 … Toter Spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 …
 
-T3 („Tote Taste 3“: Taste rechts neben dem scharfen S (ß))
+T3 („Tote Taste 3“: Taste rechts neben dem scharfen s (ß))
 ┌─────┐ 1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
 │¸ ˝ ˙│ 2 … Tote Cedille (sieht aus wie U+00B8 CEDILLA)
 │´ / ᾿│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
@@ -156,7 +153,7 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 === Ebene 4 ===
 Auf Ebene 4 der Haupttastatur werden für folgende Zeichen die jeweilige KP_-Variante benutzt, um die
-Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gewährleisten:
+Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten:
  • die Ziffern 0-9
  • die Opertionszeichen +-*/
  • statt Return wird KP_Enter verwendet
@@ -166,12 +163,12 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benuttz, na
  • der Punkt (nicht KP_Decimal, da dies kein weiter Funktionalität bietet, jedoch Probleme (z.B. bei
    OpenOffice) bereitet)
  • die Navigationselemente (die KP_-Vatianten bereiten in einigen Programmen Probleme; andererseits
-   sind die KP_-Varianten in anderen, insbesonder älten, Programmen wie xterm xedit, … erforderlich)
+   sind die KP_-Varianten in anderen, insbesonder älten, Programmen wie xterm, xedit, … erforderlich)
 
 Auf dem Ziffernblock (Keypad) sollte für alle Elemente nach Möglichkeit die KP_‐Variante verwendet
 werden!
 
-Für die Ziffern auf der ersten Ebene wird nicht die KP_-Variante verwendet.
+Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante verwendet.
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
@@ -270,7 +267,7 @@ Für die Ziffern auf der ersten Ebene wird nicht die KP_-Variante verwendet.
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 == Ziffernblock ==
-Um die Vielseitigkeit und Funktionsfähigkeit der NEO‐Tastatur zu gewährleisten,
+Um die Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten,
 sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwendet werden!
 
 === Legende – Ziffernblock ===
@@ -368,7 +365,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 === Vierte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
 │ ≠ │ ⁄ │ × │ ∖ │
-├───┼───┼───┼───┤ frc means fraction slash ⁄
+├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
 │KP←│Beg│KP→│ ∓ │ Beg invokes click of the keyboard mouse
