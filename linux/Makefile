@@ -36,7 +36,7 @@ X/xkb.tgz:X/rules/* X/symbols/* X/types/*
 	cd X; \
 	chmod u=rw,g=r,o=r rules/* symbols/* types/*; \
 	tar -cz --transform='s,^,xkb/,' \
-	-f xkb.tgz rules symbols types
+	-f xkb.tgz rules/base symbols/{de,level3,level5,shift} types/level5
 
 clean: 
 	rm -f ${FILES}
