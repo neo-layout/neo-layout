@@ -106,14 +106,14 @@ partial default xkb_types "default" {
         map[Lock+NumLock+LevelFive+LevelThree]       = Level3;
         map[Lock+NumLock+LevelFive+LevelThree+Shift] = Level4;
 
-        level_name[Level1] = "Neo Level1";
-        level_name[Level2] = "Neo Level2";
-        level_name[Level3] = "Neo Level3";
-        level_name[Level4] = "Neo Level5";
-        level_name[Level5] = "Neo Level4";
-        level_name[Level6] = "Neo Level4 Shift";
-        level_name[Level7] = "Neo Level6";
-        level_name[Level8] = "Neo Level6 Shift";
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Alt Base";
+        level_name[Level4] = "Shift Alt";
+        level_name[Level5] = "X";
+        level_name[Level6] = "X Shift";
+        level_name[Level7] = "X Alt Base";
+        level_name[Level8] = "X Shift Alt";
     };
 
     type "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC" {
@@ -164,14 +164,14 @@ partial default xkb_types "default" {
         map[Lock+NumLock+LevelFive+LevelThree]       = Level3;
         map[Lock+NumLock+LevelFive+LevelThree+Shift] = Level4;
 
-        level_name[Level1] = "Neo Level1";
-        level_name[Level2] = "Neo Level2";
-        level_name[Level3] = "Neo Level3";
-        level_name[Level4] = "Neo Level5";
-        level_name[Level5] = "Neo Level4";
-        level_name[Level6] = "Neo Level4 Shift";
-        level_name[Level7] = "Neo Level6";
-        level_name[Level8] = "Neo Level6 Shift";
+        level_name[Level1] = "Base";
+        level_name[Level2] = "Shift";
+        level_name[Level3] = "Alt Base";
+        level_name[Level4] = "Shift Alt";
+        level_name[Level5] = "X";
+        level_name[Level6] = "X Shift";
+        level_name[Level7] = "X Alt Base";
+        level_name[Level8] = "X Shift Alt";
     };
 
     type "EIGHT_LEVEL_SEMIALPHABETIC" {

@@ -23,13 +23,13 @@ xkb_symbols "rctrl_switch" {
 
 partial modifier_keys
 xkb_symbols "lsgt_switch_numlock" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <LSGT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -41,13 +41,13 @@ xkb_symbols "lsgt_switch_numlock" {
 
 partial modifier_keys
 xkb_symbols "lwin_switch_numlock" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <LWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -59,13 +59,13 @@ xkb_symbols "lwin_switch_numlock" {
 
 partial modifier_keys
 xkb_symbols "ralt_switch_numlock" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <RALT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -77,13 +77,13 @@ xkb_symbols "ralt_switch_numlock" {
 
 partial modifier_keys
 xkb_symbols "rwin_switch_numlock" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <RWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL",
@@ -95,13 +95,13 @@ xkb_symbols "rwin_switch_numlock" {
 
 partial modifier_keys
 xkb_symbols "lsgt_switch_numlock_cancel" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <LSGT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
@@ -113,13 +113,13 @@ xkb_symbols "lsgt_switch_numlock_cancel" {
 
 partial modifier_keys
 xkb_symbols "lwin_switch_numlock_cancel" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <LWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
@@ -131,13 +131,13 @@ xkb_symbols "lwin_switch_numlock_cancel" {
 
 partial modifier_keys
 xkb_symbols "ralt_switch_numlock_cancel" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <RALT> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
@@ -149,13 +149,13 @@ xkb_symbols "ralt_switch_numlock_cancel" {
 
 partial modifier_keys
 xkb_symbols "rwin_switch_numlock_cancel" {
-  key <LVL3> {
+  key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
     symbols[Group1] = [ NoSymbol ],
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
-  modifier_map Mod3 { <LVL3> };
+  modifier_map Mod3 { <MDSW> };
   key <RWIN> {
     vmods= NumLock,
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
