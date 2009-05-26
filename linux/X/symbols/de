@@ -227,7 +227,13 @@ xkb_symbols "sundeadkeys" {
 // $Revision$, $Date$
 
 partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "neo_base" {
+xkb_symbols "neo" {
+
+    include "shift(both_capslock)"
+    include "level3(caps_switch)"
+    include "level3(bksl_switch)"
+    include "level5(lsgt_switch_numlock)"
+    include "level5(ralt_switch_numlock)"
 
     name[Group1]= "Germany - Neo 2";
 
@@ -262,7 +268,7 @@ xkb_symbols "neo_base" {
     // --------------------------------------------------------------
     key  <TAB> { 
         symbols[Group1]= [ Tab,             ISO_Left_Tab,            Multi_key,               Num_Lock,                NoSymbol,                NoSymbol,                NoSymbol,                Num_Lock                 ],
-        actions[Group1]= [ NoActions(),     NoActions(),             NoActions(),             LockMods(modifiers=NumLock), NoActions(),         NoActions(),             NoActions(),             LockMods(modifiers=NumLock) ]
+        actions[Group1]= [ NoAction(),      NoAction(),              NoAction(),              LockMods(modifiers=NumLock), NoAction(),          NoAction(),              NoAction(),              LockMods(modifiers=NumLock) ]
     };
     modifier_map Mod2 { <TAB> };
 
