@@ -32,11 +32,11 @@ xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
 
-X/xkb.tgz:X/rules/* X/symbols/* X/types/*
+X/xkb.tgz:X/compat/* X/rules/* X/symbols/* X/types/*
 	cd X; \
-	chmod u=rw,g=r,o=r rules/* symbols/* types/*; \
+	chmod u=rw,g=r,o=r compat/* rules/* symbols/* types/*; \
 	tar -cz --transform='s,^,xkb/,' \
-	-f xkb.tgz rules/base rules/base.xml rules/evdev rules/evdev.xml symbols/de symbols/level3 symbols/level5 symbols/shift types/level5
+	-f xkb.tgz compat/neo_mods rules/base rules/base.xml rules/evdev rules/evdev.xml symbols/de symbols/level3 symbols/level5 symbols/shift types/level5
 
 clean: 
 	rm -f ${FILES}
