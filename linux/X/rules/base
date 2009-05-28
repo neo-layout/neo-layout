@@ -22,7 +22,7 @@
 ! $msmodels = microsoft microsoft7000 microsoftpro microsoftprousb microsoftprose
 
 // PC geometries - they have special geometry but symbols are mostly pc105
-! $pcgeometries = abnt2 latitude jp106 kr106
+! $pcgeometries = latitude
 
 // Layouts that provide further specializations for the OLPC
 ! $olpclayouts = af am ara br ca es et it kh kz in mn np ru th tr us 
@@ -85,7 +85,6 @@
               gb gr \
               hu \
               ie ir is it \
-              kg \
               latam \
               lk lt \
               mn mt \
@@ -100,6 +99,9 @@
 
 ! $evdevkbds = ibm_spacesaver
 
+! $thinkpads = thinkpad thinkpad60 thinkpadz60
+
+
 ! $dvoraklayouts = br ca de ee es fr gb no pl se us
 
 ! model		=	keycodes
@@ -109,8 +111,6 @@
   sun5		=	sun(type5_euro)
   sun6		=	sun(type6_usb)
   pc98		=	xfree98(pc98)
-  abnt2		=	xfree86(abnt2)
-  jp106		=	xfree86(jp106)
   evdev		=	evdev
   olpc		=	evdev
   macintosh_hhk	=	macintosh(hhk)
@@ -139,6 +139,7 @@
  $msmodels	=	microsoft(natural)
   dell101	=	dell(dell101)
   dellm65	=	dell(dellm65)
+  latitude	=	dell(latitude)
   flexpro	=	keytronic(FlexPro)
   hp6000	=	hp(omnibook)
   omnikey101	=	northgate(omnikey101)
@@ -292,10 +293,10 @@
   amiga		$nonlatin		=	xfree68_vndr/amiga(usa1)+%l%(v):2
   amiga		*			=	xfree68_vndr/amiga(usa1)+%l%(v)
   classmate	us			=	pc+%l(classmate)
-  sun4		$nonlatin		=	latin+sun_vndr/us(sun4)+%l%(v):2
-  sun4		*			=	latin+sun_vndr/us(sun4)+%l%(v)
-  sun5		$nonlatin		=	latin+sun_vndr/us(sun5)+%l%(v):2
-  sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
+  sun4		$nonlatin		=	latin+sun_vndr/us(type4)+%l%(v):2
+  sun4		*			=	latin+sun_vndr/us(type4)+%l%(v)
+  sun5		$nonlatin		=	latin+sun_vndr/us(type5)+%l%(v):2
+  sun5		*			=	latin+sun_vndr/us(type5)+%l%(v)
   sun6		us			=	sun_vndr/us(type6)
   sun6		en_US			=	sun_vndr/us(type6)+iso9995-3(basic)
   sun6		*			=	sun_vndr/us(type6)+%l%(v)
@@ -309,21 +310,38 @@
  $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l%(v)
   olpc		$olpclayouts		=	olpc+%l%(m)
   olpc		*			=	olpc+%l%(v)
-  thinkpad   	br			=	pc+br(thinkpad)
+ $thinkpads   	br			=	pc+br(thinkpad)
   *	   	$nonlatin		=	pc+us+%l%(v):2
   *		*			=	pc+%l%(v)
 
 ! model		layout[1]			=	symbols
   *		ar			=	pc+ara%(v[1])
+  *		ben			=	pc+in(ben)
   *		bs			=	pc+ba%(v[1])
   *		cs			=	pc+rs%(v[1])
+  *		cz_qwerty			=	pc+cz(qwerty)
+  *		dev			=	pc+in(deva)
+  *		dvorak			=	pc+us(dvorak)
   *		dzdwi			=	pc+bt%(v[1])
   *		el			=	pc+gr%(v[1])
   *		en_US			=	pc+latin%(v[1])
+  *		guj			=	pc+in(guj)
+  *		gur			=	pc+in(guru)
+  *		iu			=	pc+ca(ike)
   *		lo			=	pc+la%(v[1])
+  *		kan			=	pc+in(kan)
   *		mi			=	pc+mao%(v[1])
+  *		ml			=	pc+in(mal)
+  *		ogham			=	pc+ie(ogam)
+  *		ori			=	pc+ie(ori)
+  *		sapmi			=	pc+no(smi)
   *		sr			=	pc+srp%(v[1])
+  *		syr			=	pc+sy(syc)
+  *		tel			=	pc+in(tel)
+  *		tml			=	pc+in(tam)
   *		yu			=	pc+srp%(v[1])
+  *		fr-latin9			=	pc+fr(latin9)
+  *		us_intl			=	pc+us(alt-intl)
   *		ben(basic)			=	pc+in(ben)
   *		ben(probhat)			=	pc+in(ben_probhat)
   *		dev(basic)			=	pc+in(deva)
@@ -381,7 +399,7 @@
   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
  $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l[1]%(v[1])
-  thinkpad	br			=	pc+%l[1](thinkpad)
+ $thinkpads	br			=	pc+%l[1](thinkpad)
   *		*			=	pc+%l[1]%(v[1])
 
 ! model		layout[1]	variant[1]	=	symbols
@@ -437,15 +455,32 @@
 
 ! layout[2]	=	symbols
   ar		=	+ara%(v[2]):2
+  ben		=	+in(ben):2
   bs		=	+ba%(v[2]):2
   cs		=	+rs%(v[2]):2
+  cz_qwerty		=	+cz(qwerty):2
+  dev		=	+in(deva):2
+  dvorak		=	+us(dvorak):2
   dzdwi		=	+bt%(v[2]):2
   el		=	+gr%(v[2]):2
   en_US		=	+latin%(v[2]):2
+  guj		=	+in(guj):2
+  gur		=	+in(guru):2
+  iu		=	+ca(ike):2
   lo		=	+la%(v[2]):2
+  kan		=	+in(kan):2
   mi		=	+mao%(v[2]):2
+  ml		=	+in(mal):2
+  ogham		=	+ie(ogam):2
+  ori		=	+ie(ori):2
+  sapmi		=	+no(smi):2
   sr		=	+srp%(v[2]):2
+  syr		=	+sy(syc):2
+  tel		=	+in(tel):2
+  tml		=	+in(tam):2
   yu		=	+srp%(v[2]):2
+  fr-latin9		=	+fr(latin9):2
+  us_intl		=	+us(alt-intl):2
   ben(basic)	=	+in(ben):2
   ben(probhat)	=	+in(ben_probhat):2
   dev(basic)	=	+in(deva):2
@@ -499,15 +534,32 @@
 
 ! layout[3]	=	symbols
   ar		=	+ara%(v[3]):3
+  ben		=	+in(ben):3
   bs		=	+ba%(v[3]):3
   cs		=	+rs%(v[3]):3
+  cz_qwerty		=	+cz(qwerty):3
+  dev		=	+in(deva):3
+  dvorak		=	+us(dvorak):3
   dzdwi		=	+bt%(v[3]):3
   el		=	+gr%(v[3]):3
   en_US		=	+latin%(v[3]):3
+  guj		=	+in(guj):3
+  gur		=	+in(guru):3
+  iu		=	+ca(ike):3
   lo		=	+la%(v[3]):3
+  kan		=	+in(kan):3
   mi		=	+mao%(v[3]):3
+  ml		=	+in(mal):3
+  ogham		=	+ie(ogam):3
+  ori		=	+ie(ori):3
+  sapmi		=	+no(smi):3
   sr		=	+srp%(v[3]):3
+  syr		=	+sy(syc):3
+  tel		=	+in(tel):3
+  tml		=	+in(tam):3
   yu		=	+srp%(v[3]):3
+  fr-latin9		=	+fr(latin9):3
+  us_intl		=	+us(alt-intl):3
   ben(basic)	=	+in(ben):3
   ben(probhat)	=	+in(ben_probhat):3
   dev(basic)	=	+in(deva):3
@@ -561,15 +613,32 @@
 
 ! layout[4]	=	symbols
   ar		=	+ara%(v[4]):4
+  ben		=	+in(ben):4
   bs		=	+ba%(v[4]):4
   cs		=	+rs%(v[4]):4
+  cz_qwerty		=	+cz(qwerty):4
+  dev		=	+in(deva):4
+  dvorak		=	+us(dvorak):4
   dzdwi		=	+bt%(v[4]):4
   el		=	+gr%(v[4]):4
   en_US		=	+latin%(v[4]):4
+  guj		=	+in(guj):4
+  gur		=	+in(guru):4
+  iu		=	+ca(ike):4
   lo		=	+la%(v[4]):4
+  kan		=	+in(kan):4
   mi		=	+mao%(v[4]):4
+  ml		=	+in(mal):4
+  ogham		=	+ie(ogam):4
+  ori		=	+ie(ori):4
+  sapmi		=	+no(smi):4
   sr		=	+srp%(v[4]):4
+  syr		=	+sy(syc):4
+  tel		=	+in(tel):4
+  tml		=	+in(tam):4
   yu		=	+srp%(v[4]):4
+  fr-latin9		=	+fr(latin9):4
+  us_intl		=	+us(alt-intl):4
   ben(basic)	=	+in(ben):4
   ben(probhat)	=	+in(ben_probhat):4
   dev(basic)	=	+in(deva):4
@@ -788,11 +857,13 @@
   btc6301urf    =       +inet(media_nav_acpi_common)
   dellsk8125    =       +inet(dell)
   dellsk8135    =       +inet(dell)
+  cherrybunlim  =       +inet(nav_common)
   dexxa         =       +inet(media_nav_common)
   dtk2000       =       +inet(media_nav_acpi_common)
   fscaa1667g    =       +inet(media_nav_common)
   geniuskb19e   =       +inet(media_nav_acpi_common)
   geniuscomfy   =       +inet(media_nav_acpi_common)
+  geniuskkb2050hs =     +inet(dellusbmm)
   hpnx9020      =       +inet(hpi6)
   latitude      =       +inet(media_common)
   logicd        =       +inet(logitech_base)
@@ -817,10 +888,23 @@
   targa_v811    =       +inet(media_nav_acpi_common)
   thinkpad      =       +inet(media_nav_common)
   thinkpadz60   =       +inet(thinkpad60)
+  trust_slimline =      +inet(media_nav_acpi_common)
   vsonku306     =       +inet(microsoftprooem)
   $inetkbds     =       +inet(%m)
   $maclaptop    =       +inet(apple)+level3(enter_switch)
   $macs	        =       +inet(apple)
+
+// Neo special modifier-keys
+! layout	variant		=	compat
+  de		neo			=	+neo_mods
+! layout[1]	variant[1]	=	compat
+  de		neo			=	+neo_mods
+! layout[2]	variant[2]	=	compat
+  de		neo			=	+neo_mods:2
+! layout[3]	variant[3]	=	compat
+  de		neo			=	+neo_mods:3
+! layout[4]	variant[4]	=	compat
+  de		neo			=	+neo_mods:4
 
 ! model		layout		=	compat
   pc98		nec_vndr/jp	=	pc98(basic)
@@ -863,7 +947,6 @@
   altwin:ctrl_alt_win	=	+altwin(ctrl_alt_win)
   altwin:meta_win	=	+altwin(meta_win)
   altwin:left_meta_win	=	+altwin(left_meta_win)
-  altwin:super_win	=	+altwin(super_win)
   altwin:hyper_win	=	+altwin(hyper_win)
   altwin:alt_super_win	=	+altwin(alt_super_win)
   altwin:swap_lalt_lwin	=	+altwin(swap_lalt_lwin)
@@ -896,6 +979,7 @@
   grp:lctrl_toggle	=	+group(lctrl_toggle)
   grp:rctrl_toggle	=	+group(rctrl_toggle)
   grp:lalt_toggle	=	+group(lalt_toggle)
+  grp:sclk_toggle	=	+group(sclk_toggle)
   lv3:switch		=	+level3(switch)
   lv3:ralt_switch	=	+level3(ralt_switch)
   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
@@ -906,6 +990,7 @@
   lv3:win_switch	=	+level3(win_switch)
   lv3:lwin_switch	=	+level3(lwin_switch)
   lv3:rwin_switch	=	+level3(rwin_switch)
+  lv3:enter_switch	=	+level3(enter_switch)
   caps:capslock		=	+capslock(capslock)
   caps:shiftlock	=	+capslock(shiftlock)
   caps:swapescape	=	+capslock(swapescape)
@@ -956,7 +1041,7 @@
   shift:breaks_caps     =	+shift(breaks_caps)
   esperanto:qwerty      =	+epo(qwerty)
   esperanto:dvorak      =	+epo(dvorak)
-  terminate:ctrl_alt_bksp =	+srvr_ctrl(terminate_ctrl_alt_bksp)
+  terminate:ctrl_alt_bksp =	+terminate(ctrl_alt_bksp)
   shift:both_capslock                =       +shift(both_capslock)
   shift:lshift_both_capslock         =       +shift(lshift_both_capslock)
   shift:rshift_both_capslock         =       +shift(rshift_both_capslock)
@@ -980,6 +1065,7 @@
   lv5:ralt_switch_numlock_cancel     =       +level5(ralt_switch_numlock_cancel)
   lv5:lwin_switch_numlock_cancel     =       +level5(lwin_switch_numlock_cancel)
   lv5:rwin_switch_numlock_cancel     =       +level5(rwin_switch_numlock_cancel)
+
 
 
 ! option	=	compat

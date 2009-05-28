@@ -60,11 +60,6 @@ partial default xkb_types "default" {
         // 'NumLock' is used for the (Neo-)Mod4-Lock.
         modifiers = Shift + Lock + LevelThree + NumLock + LevelFive;
 
-        preserve[LevelFive+Shift] = Shift;
-        preserve[NumLock+Shift] = Shift;
-        preserve[Lock+LevelFive+Shift] = Shift;
-        preserve[Lock+NumLock+Shift] = Shift;
-
         map[None]                                    = Level1;
         map[Shift]                                   = Level2;
         map[LevelThree]                              = Level3;
@@ -106,6 +101,11 @@ partial default xkb_types "default" {
         map[Lock+NumLock+LevelFive+LevelThree]       = Level3;
         map[Lock+NumLock+LevelFive+LevelThree+Shift] = Level4;
 
+        preserve[LevelFive+Shift] = Shift;
+        preserve[NumLock+Shift] = Shift;
+        preserve[Lock+LevelFive+Shift] = Shift;
+        preserve[Lock+NumLock+Shift] = Shift;
+
         level_name[Level1] = "Base";
         level_name[Level2] = "Shift";
         level_name[Level3] = "Alt Base";
@@ -119,9 +119,6 @@ partial default xkb_types "default" {
     type "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC" {
         // 'NumLock' is used for the (Neo-)Mod4-Lock.
         modifiers = Shift + Lock + LevelThree + NumLock + LevelFive;
-
-        preserve[LevelFive+Shift] = Shift;
-        preserve[NumLock+Shift] = Shift;
     
         map[None]                                    = Level1;
         map[Shift]                                   = Level2;
@@ -163,6 +160,9 @@ partial default xkb_types "default" {
         map[Lock+NumLock+LevelFive+Shift]            = Level1;
         map[Lock+NumLock+LevelFive+LevelThree]       = Level3;
         map[Lock+NumLock+LevelFive+LevelThree+Shift] = Level4;
+
+        preserve[LevelFive+Shift] = Shift;
+        preserve[NumLock+Shift] = Shift;
 
         level_name[Level1] = "Base";
         level_name[Level2] = "Shift";

@@ -22,7 +22,7 @@ xkb_symbols "rctrl_switch" {
 // as some applications get confused by it.
 
 partial modifier_keys
-xkb_symbols "lsgt_switch_numlock" {
+xkb_symbols "neomod_map" {
   key <MDSW> {
     type[Group1] = "ONE_LEVEL",
    	vmods[Group1] = LevelFive,
@@ -30,137 +30,99 @@ xkb_symbols "lsgt_switch_numlock" {
     actions[Group1] = [ SetMods(modifiers=LevelFive) ]
    };
   modifier_map Mod3 { <MDSW> };
+  key <HYPR> {
+    type[Group1] = "ONE_LEVEL",
+   	vmods[Group1] = NumLock,
+    symbols[Group1] = [ NoSymbol ],
+    actions[Group1] = [ SetMods(modifiers=NumLock) ]
+   };
+  modifier_map Mod2 { <HYPR> };
+};
+
+partial modifier_keys
+xkb_symbols "lsgt_switch_numlock" {
+
+  include "level5(neomod_map)"
+
   key <LSGT> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <LSGT> };
 };
 
 partial modifier_keys
 xkb_symbols "lwin_switch_numlock" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <LWIN> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <LWIN> };
 };
 
 partial modifier_keys
 xkb_symbols "ralt_switch_numlock" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <RALT> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <RALT> };
 };
 
 partial modifier_keys
 xkb_symbols "rwin_switch_numlock" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <RWIN> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <RWIN> };
 };
 
 partial modifier_keys
 xkb_symbols "lsgt_switch_numlock_cancel" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <LSGT> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <LSGT> };
 };
 
 partial modifier_keys
 xkb_symbols "lwin_switch_numlock_cancel" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <LWIN> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <LWIN> };
 };
 
 partial modifier_keys
 xkb_symbols "ralt_switch_numlock_cancel" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <RALT> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <RALT> };
 };
 
 partial modifier_keys
 xkb_symbols "rwin_switch_numlock_cancel" {
-  key <MDSW> {
-    type[Group1] = "ONE_LEVEL",
-   	vmods[Group1] = LevelFive,
-    symbols[Group1] = [ NoSymbol ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive) ]
-   };
-  modifier_map Mod3 { <MDSW> };
+
+  include "level5(neomod_map)"
+
   key <RWIN> {
-    vmods= NumLock,
-    key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
-    symbols[Group1] = [ Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock, Num_Lock ],
-    actions[Group1] = [ SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), SetMods(modifiers=LevelFive), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock), LockMods(modifiers=NumLock) ]
+    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
-  modifier_map Mod2 { <RWIN> };
 };

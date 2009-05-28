@@ -62,7 +62,7 @@ xkb_symbols "nodeadkeys" {
     name[Group1]="Germany - Eliminate dead keys";
 
     key <TLDE>	{ [asciicircum,    degree,      notsign,      notsign ]	};
-    key <AE12>	{ [apostrophe,      grave,      cedilla,      cedilla ]	};
+    key <AE12>	{ [     acute,      grave,      cedilla,      cedilla ]	};
     key <AD11>	{ [udiaeresis, Udiaeresis,    diaeresis,    diaeresis ]	};
     key <AD12>	{ [      plus,   asterisk,   asciitilde,       macron ]	};
     key <AC10>	{ [odiaeresis, Odiaeresis,  doubleacute,  doubleacute ]	};
@@ -211,6 +211,7 @@ xkb_symbols "sundeadkeys" {
     name[Group1]="Germany - Sun dead keys";
 };
 
+
 // German NEO-Layout Version 2
 // adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
 // inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
@@ -227,13 +228,7 @@ xkb_symbols "sundeadkeys" {
 // $Revision$, $Date$
 
 partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "neo" {
-
-    include "shift(both_capslock)"
-    include "level3(caps_switch)"
-    include "level3(bksl_switch)"
-    include "level5(lsgt_switch_numlock)"
-    include "level5(ralt_switch_numlock)"
+xkb_symbols "neo_base" {
 
     name[Group1]= "Germany - Neo 2";
 
@@ -248,7 +243,7 @@ xkb_symbols "neo" {
     // Compose (not a level): Mod3 + Tab
     // Feststelltaste (Capslock): Shift + Shift
     // Mod4-Lock: Mod4 + Mod4
-    //
+    // Mod4-Lock: Shift + Mod3 + Tab
 
     // Legend
     // ===============
@@ -266,11 +261,8 @@ xkb_symbols "neo" {
 
     // Tab as Multi_key (Compose)
     // --------------------------------------------------------------
-    key  <TAB> { 
-        symbols[Group1]= [ Tab,             ISO_Left_Tab,            Multi_key,               Num_Lock,                NoSymbol,                NoSymbol,                NoSymbol,                Num_Lock                 ],
-        actions[Group1]= [ NoAction(),      NoAction(),              NoAction(),              LockMods(modifiers=NumLock), NoAction(),          NoAction(),              NoAction(),              LockMods(modifiers=NumLock) ]
-    };
-    modifier_map Mod2 { <TAB> };
+    key  <TAB> { [ Tab,                     ISO_Left_Tab,            Multi_key,               ISO_Level5_Lock,         NoSymbol,                NoSymbol,                NoSymbol,                ISO_Level5_Lock          ] };
+
 
     // Number row
     // --------------------------------------------------------------
@@ -387,6 +379,18 @@ xkb_symbols "neo" {
     // --------------------------------------------------------------
     key  <KP0> { [ KP_0,                    U2423,                   percent,                 U2030,                   KP_Insert,               KP_Insert,               U25A1,                   NoSymbol                 ] };
     key <KPDL> { [ KP_Separator,            KP_Decimal,              period,                  apostrophe,              KP_Delete,               KP_Delete,               quotedbl,                NoSymbol                 ] };
+};
+
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "neo" {
+
+    include "de(neo_base)"
+
+    include "shift(both_capslock)"
+    include "level3(caps_switch)"
+    include "level3(bksl_switch)"
+    include "level5(lsgt_switch_numlock)"
+    include "level5(ralt_switch_numlock)"
 };
 
 // Copied from macintosh_vndr/de

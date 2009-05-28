@@ -88,13 +88,6 @@
     </model>
     <model>
       <configItem>
-        <name>jp106</name>
-        <description>Japanese 106-key</description>
-        <vendor>Generic</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
         <name>pc98</name>
         <description>PC-98xx Series</description>
         <vendor>Generic</vendor>
@@ -119,13 +112,6 @@
         <name>a4_rfkb23</name>
         <description>A4Tech Wireless Desktop RFKB-23</description>
         <vendor>A4Tech</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>abnt2</name>
-        <description>Brazilian ABNT2</description>
-        <vendor>Generic</vendor>
       </configItem>
     </model>
     <model>
@@ -256,6 +242,13 @@
       <configItem>
         <name>cherrycmexpert</name>
         <description>Cherry CyMotion Expert</description>
+        <vendor>Cherry</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>cherrybunlim</name>
+        <description>Cherry B.UNLIMITED</description>
         <vendor>Cherry</vendor>
       </configItem>
     </model>
@@ -444,6 +437,13 @@
       <configItem>
         <name>geniuskb19e</name>
         <description>Genius KB-19e NB</description>
+        <vendor>Genius</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>geniuskkb2050hs</name>
+        <description>Genius KKB-2050HS</description>
         <vendor>Genius</vendor>
       </configItem>
     </model>
@@ -667,7 +667,7 @@
     <model>
       <configItem>
         <name>logicdpa2</name>
-        <description>Logitech Cordless Desktop Pro (alternate option2)</description>
+        <description>Logitech Cordless Desktop Pro (alternate option 2)</description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
@@ -974,6 +974,13 @@
     </model>
     <model>
       <configItem>
+        <name>trust_slimline</name>
+        <description>Trust Slimline</description>
+	<vendor>Trust</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>yahoo</name>
         <description>Yahoo! Internet Keyboard</description>
 	<vendor>Yahoo!</vendor>
@@ -1068,13 +1075,6 @@
         <name>emachines</name>
         <description>Laptop/notebook eMachines m68xx</description>
 	<vendor>eMachines</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-	<name>kr106</name>
-	<description>Korean 106-key</description>
-	<vendor>Generic</vendor>
       </configItem>
     </model>
     <model>
@@ -2350,6 +2350,13 @@
         </variant>
         <variant>
           <configItem>
+            <name>oci</name>
+            <description>Occitan</description>
+            <languageList><iso639Id>oci</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>geo</name>
             <description>Georgian AZERTY Tskapo</description>
             <languageList><iso639Id>geo</iso639Id></languageList>
@@ -2822,7 +2829,7 @@
     <layout>
       <configItem>
         <name>kg</name>
-        <shortDescription>Kir</shortDescription>
+        <shortDescription>Kgz</shortDescription>
         <description>Kyrgyzstan</description>
         <languageList><iso639Id>kir</iso639Id></languageList>
       </configItem>
@@ -2966,6 +2973,12 @@
           <configItem>
             <name>lekpa</name>
             <description>LEKPa</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>balticplus</name>
+            <description>Baltic+</description>
           </configItem>
         </variant>
       </variantList>
@@ -3177,7 +3190,7 @@
         <variant>
           <configItem>
             <name>dvorak_altquotes</name>
-            <description>Dvorak, Polish quotes on key "1/!"</description>
+            <description>Dvorak, Polish quotes on key 1</description>
           </configItem>
         </variant>
         <variant>
@@ -3333,6 +3346,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>phonetic_winkeys</name>
+            <description>Phonetic Winkeys</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>typewriter</name>
             <description>Typewriter</description>
           </configItem>
@@ -3404,6 +3423,12 @@
             <name>xal</name>
             <description>Kalmyk</description>
             <languageList><iso639Id>xal</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dos</name>
+            <description>DOS</description>
           </configItem>
         </variant>
       </variantList>
@@ -3885,8 +3910,8 @@
         </variant>
         <variant>
           <configItem>
-            <name>unicode</name>
-            <description>Unicode</description>
+            <name>legacy</name>
+            <description>Legacy</description>
           </configItem>
         </variant>
         <variant>
@@ -3940,6 +3965,12 @@
         <languageList><iso639Id>eng</iso639Id></languageList>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>extd</name>
+            <description>Extended - Winkeys</description>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>intl</name>
@@ -4195,7 +4226,16 @@
     </layout>
     <layout>
       <configItem>
-        <name>braille</name>
+        <name>sn</name>
+        <shortDescription>Sen</shortDescription>
+        <description>Senegal</description>
+        <languageList><iso639Id>wol</iso639Id></languageList>
+      </configItem>
+      <variantList/>
+    </layout>
+    <layout>
+      <configItem>
+        <name>brai</name>
         <shortDescription>Brl</shortDescription>
         <description>Braille</description>
       </configItem>
@@ -4210,6 +4250,22 @@
           <configItem>
             <name>right_hand</name>
             <description>Right hand</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
+        <name>tm</name>
+        <shortDescription>Tkm</shortDescription>
+        <description>Turkmenistan</description>
+        <languageList><iso639Id>tuk</iso639Id></languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>alt</name>
+            <description>Alt-Q</description>
           </configItem>
         </variant>
       </variantList>
@@ -4472,7 +4528,7 @@
       <option>
         <configItem>
           <name>lv3:enter_switch</name>
-          <description>Press Enter key on keypad to choose 3rd level.</description>
+          <description>Enter on keypad</description>
         </configItem>
       </option>
       <option>
@@ -4771,12 +4827,6 @@
         <configItem>
           <name>altwin:left_meta_win</name>
           <description>Meta is mapped to Left Win</description>
-        </configItem>
-      </option>
-      <option>
-        <configItem>
-          <name>altwin:super_win</name>
-          <description>Super is mapped to Win keys</description>
         </configItem>
       </option>
       <option>
@@ -5106,6 +5156,18 @@
           <name>esperanto:dvorak</name>
           <description>To the corresponding key in a Dvorak keyboard.</description>
        </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="true">
+      <configItem>
+        <name>terminate</name>
+        <description>Key sequence to kill the X server</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>terminate:ctrl_alt_bksp</name>
+          <description>Control + Alt + Backspace</description>
+        </configItem>
       </option>
     </group>
   </optionList>
