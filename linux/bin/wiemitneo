@@ -8,7 +8,7 @@
 #      Pascal Hauck <pascal dot hauck at web dot de>
 # 
 # Kontakt zu den Entwicklern der NEO-Tastatur:
-#      <mailinglist at neo-layout dot org>
+#      <diskussion at neo-layout dot org>
 
 COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
 REFERENZ=$HOME/neo/neo20.txt
