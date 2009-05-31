@@ -1,0 +1,141 @@
+#!/usr/bin/env ruby
+
+begin
+	require 'gtk2'
+rescue LoadError
+	$stderr << "########################################################\n"
+	$stderr << "# In order to run this programm you need ruby-gnome2!  #\n"
+	$stderr << "########################################################\n"
+	raise
+end
+
+require 'yaml'
+require 'pp'
+require 'optparse'
+require 'ostruct'
+require 'gconf2'
+
+TRAYCOMMANDVERSION = [0,1]
+
+Gtk.init
+$options = OpenStruct.new
+	
+optpars = OptionParser.new { |opts|
+	
+	opts.banner = "Usage: #{File.basename($0)} [options]"
+	
+	opts.separator "Options:"
+	
+	opts.on("--configfile=file", "Path to the configfile.") {|string|
+		$options.configfile = string
+	}	
+
+	opts.on_tail("--version", "Show version and exit") {
+		puts "traycommand #{TRAYCOMMANDVERSION.join('.')}"
+		puts "written by Benjamin Kellermann <Benjamin.Kellermann@gmx.de>"
+		exit
+	}
+}
+
+begin
+	optpars.parse!
+rescue => e
+	puts e
+	puts optpars
+	exit
+end
+
+############################################################################
+# init the things from the configfile
+############################################################################
+unless File.exist?($options.configfile) and $config = YAML::load_file($options.configfile)
+	$config = []
+	2.times{ 
+		$config << {"command"  => "/path/to/command.sh",
+								"icon"     => "/path/to/icon.{png|ico|jpg|...}",
+								"menutext" => "Some Useful text"}
+	}
+	File.open($options.configfile, 'w') do |out|
+		out << $config.to_yaml
+	end
+	puts "Created configfile template, exiting now"
+	exit
+end
+
+############################################################################
+# init the tray and GTK stuff
+############################################################################
+currentconfig = 0
+$sicon = Gtk::StatusIcon.new
+$sicon.pixbuf = Gdk::Pixbuf.new(File.expand_path($config[currentconfig]["icon"]))
+
+# Add a menu
+menu = Gtk::Menu.new
+
+$config.each_with_index{|citem,i|
+	item = Gtk::MenuItem.new(citem["menutext"])
+	item.signal_connect("activate"){
+		`#{citem["command"]}`
+		$sicon.pixbuf = Gdk::Pixbuf.new(File.expand_path(citem["icon"]))
+		currentconfig = i
+	}
+	menu.append(item.show)
+}
+$sicon.signal_connect("activate"){
+	nextconf = (currentconfig+1) % $config.size
+	`#{$config[nextconf]["command"]}`
+	$sicon.pixbuf = Gdk::Pixbuf.new(File.expand_path($config[nextconf]["icon"]))
+	currentconfig = nextconf
+}
+
+
+
+
+############################################################################
+# set the about dialog
+############################################################################
+aboutitem = Gtk::ImageMenuItem.new(Gtk::Stock::ABOUT)
+aboutitem.signal_connect("activate") {
+			Gtk::AboutDialog.set_email_hook {|about, link|
+		`xdg-open mailto:#{link}`
+	}
+	Gtk::AboutDialog.set_url_hook {|about, link|
+		`xdg-open #{link}`
+	}
+
+	a = Gtk::AboutDialog.new
+	a.authors   = ["Benjamin Kellermann <Benjamin.Kellermann@gmx.de>"]
+	a.comments  = "This is an applet to execute commands fastly."
+	a.copyright = "Copyright (C) 2009 Benjamin Kellermann"
+	a.license   = "This program is licenced under CC-by-sa"
+	a.logo_icon_name = "gtk-about"
+	a.name      = "keyspeedapplet"
+	a.version   = TRAYCOMMANDVERSION.join(".")
+	a.website   = "http://www.eigenheimstrasse.de/~ben/traycommand/"
+	a.website_label = "Download Website"
+	a.signal_connect('response') { a.destroy }
+	a.show
+}
+menu.append(aboutitem.show)
+
+# add an exit button
+quit = Gtk::ImageMenuItem.new(Gtk::Stock::QUIT)
+quit.signal_connect("activate") { Gtk.main_quit }
+menu.append(Gtk::SeparatorMenuItem.new.show)
+menu.append(quit.show)
+
+$sicon.signal_connect('popup-menu') do |w,e,time|
+	menu.popup(nil, nil, e, time) 
+end
+
+pid = fork {
+	Signal.trap("USR1") {
+		$sicon.activate
+	}
+	Gtk.main
+}
+File.open("/tmp/traycommand-#{$options.configfile}.pid","w"){|f|
+	f << pid
+}
+
+Process.waitpid(pid)

@@ -1,0 +1,7 @@
+--- 
+- command: "~/bin/asdf; xmodmap ~/thinkpad.xmodmap"
+  icon: "~/neo/windows/neo-vars/src/neo_enabled.ico"
+  menutext: "Neo"
+- command: "~/bin/uiae; xmodmap ~/thinkpad.xmodmap"
+  icon: "~/neo/windows/neo-vars/src/neo_disabled.ico"
+  menutext: "qwertz"
