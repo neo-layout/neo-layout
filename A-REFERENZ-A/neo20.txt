@@ -280,7 +280,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ┌───────┐ 1 … ASCII-Schrägstrich
 │ / ⁄ ∣ │ 2 … ASCII-Schrägstrich
 │ / ÷ ⌀ │ 3 … Geteiltzeichen (U+00F7 DIVISION SIGN)
-└───────┘ 4 … Geteiltstrich (U+2215 DIVISION SLASH)
+└───────┘ 4 … schräger Bruchstrich (U+2044 FRACTION SLASH)
           5 … Durchmesser (U+2300 DIAMETER SIGN)
           6 … ist ein Teiler von (U+2223 DIVIDES)
 
