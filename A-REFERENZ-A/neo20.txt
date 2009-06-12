@@ -320,7 +320,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 │1  ↔  ≤│2  ↓  ∪│3  ⇌  ≥│       │
 ├───────┴───────┼───────┤       │
 │  ␣   Ins   □  │. Del ″│       │
-│  0    %    ‱  │,     ′│ Enter │
+│  0    %    ‰  │,     ′│ Enter │
 └───────────────┴───────┴───────┘
 
 === Erste Ebene – Miniatur ===
@@ -385,7 +385,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ├───┼───┼───┼───┤
 │ ≤ │ ∪ │ ≥ │   │
 ├───┴───┼───┤   │
-│ ‱     │ ′ │Ent│
+│ ‰     │ ′ │Ent│
 └───────┴───┴───┘
 
 === Sechste Ebene – Miniatur ===
