@@ -440,8 +440,8 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ⊗ … Tensorprodukt ; Vektor in die Ebene zeigend (U2297)
 ∞ … unendlich (U221E)
 ∋ … enthält das Element (U220B)
-ª … weiblicher Ordinalindikator (2ª) (00AA)
-º … männlicher Ordinalindikator (1º) (00BA)
+ª … weiblicher Ordinalindikator (2ª) (U00AA)
+º … männlicher Ordinalindikator (1º) (U00BA)
 
 == Hinweise zu Doppelbelegungen in Unicode ==
 Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.
@@ -454,7 +454,8 @@ deutliche machen zu können. Zur Platzersparnis haben wir stets eines (das einfa
 und allgemeinste) Zeichen aufgenommen:
 • Ω (U03A9) ; Einheit des Widerstandes Ohm (U2126)
 • Σ (U03A3) ; Summenzeichen (U2211)
-• Δ (U0394) ; Laplaceoperator (2206) ; Dreieck, symmetrische Differenz (25B3)
+• Δ (U0394) ; Laplaceoperator (U2206) ; Dreieck, symmetrische Differenz (U25B3)
 • ∇ (U2207) ; Dreieck (U25BD)
 • Π (U03A0) ; Produktzeichen ∏ (U220F)
 • µ (U03BC) ; SI-Vorsilbe micro (U00B5)
+• ‰ (U2030) ; Permyriad-Zeichen (U2031)
