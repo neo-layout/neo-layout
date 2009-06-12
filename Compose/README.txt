@@ -1,22 +1,12 @@
-= Über diese Datei =
-Diese Datei behandelt vor allen Dingen die korrekte Installation der 
-Compose-Dateien. Für den Gebrauch von Compose siehe hingegen 
-https://wiki.neo-layout.org/wiki/Compose
+= Informationen über Compose =
+Für die Installation und den Gebrauch der Compose-Funktion siehe
+https://wiki.neo-layout.org/wiki/Tote%20Tasten%20und%20Compose
 
-== Ergänzungen der Compose-Datei unter Linux/BSD ==
-Die Datei Compose.neo enthält Ergänzungen von Tastenkombinationen für die Compose-Taste bzw. tote Tasten für Linux.
 
-Die Kombinationen der gängigien Compose verändert NEO im Sinne erhaltender Kompatibilität nicht!
+===================================================================================
+= Die folgenden Informationen sollten Stück-für-Stück ins Wiki übertragen werden! =
+===================================================================================
 
-=== Bereits vorhandene Tastenkombinationen (unter Linux) ===
-Diese sind in der Datei en_US.UTF-8 gesammelt und hier im SVN für die 
-Windows-Nutzer lokal gespiegelt.
-
-Im Internet gibt es die stets aktuellste Originaldatei unter
-  http://cvsweb.xfree86.org/cvsweb/xc/nls/Compose/en_US.UTF-8?rev=HEAD&content-type=text/vnd.viewcvs-markup
-
-Unter Linux ist die zu ergänzende Datei auch direkt verfügbar unter
-  /usr/share/X11/locale/en_US.UTF-8/Compose
 
 === Installation/Anleitung zur Benutzung ===
 
