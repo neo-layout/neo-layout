@@ -41,4 +41,7 @@ X/xkb.tgz:X/compat/* X/rules/* X/symbols/* X/types/*
 clean: 
 	rm -f ${FILES}
 
+install:X/xkb.tgz
+	tar -xzf X/xkb.tgz -C /usr/share/X11/
+
 .PHONY: clean
