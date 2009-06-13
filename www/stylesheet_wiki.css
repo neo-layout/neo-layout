@@ -22,6 +22,7 @@ tt { white-space: pre }
 @media screen {
  a.ext-link:before {content: "\2197\A0";}
  a[href*="neo-layout.org"]:before { content: "";}
+ a[href^="http://www.google."]:before { content: "\2197\A0";}
  a.ext-link .icon {
   background: none;
   padding-left:0;
