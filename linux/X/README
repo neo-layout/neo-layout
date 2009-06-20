@@ -15,25 +15,15 @@ aktuellen Stand gebracht wird. Insbesondere von den Entwicklern.
     description«.
     ——————————————————————————————————————————————————————————————————————
 
-== Anleitung für Anwender ohne Root-Zugang ==
-    ______________________________________________________________________
-    Achtung, diese Methode funktioniert nur, wenn man schon ein System mit
-    NEO 1.0 hat. Das haben die meisten ab Anfang 2007. Sonst muss man die
-    xmodmap-Variante benutzen.
-    ——————————————————————————————————————————————————————————————————————
-Wenn man keine root-Rechte hat, gibt man folgenden Befehl ein:
-    setxkbmap de neo -print | xkbcomp - -I$PWD $DISPLAY
-Dies nur, wenn man gerade im Ordner mit der Datei „de“ ist.
-Ansonsten muss man $PWD durch das Verzeichnis mit der „de“-Datei ersetzen. 
+== Installation durch Ersetzen der Systemdateien (Root-Rechte erforderlich) ==
 
-== Anleitung für Anwender mit Root-Zugang ==
-Wenn man für den benutzten Rechner Root-Rechte bekommen kann, muss die Datei
-„de“ unter Linux nach
-    /usr/share/X11/xkb/symbols
-kopiert werden. Achtung dort befindet sich meist schon eine Datei mit gleichem
-Namen! Entweder vorher ein Backup machen oder man benennt diese Datei anders.
-Dann muss man allerdings auch die nachfolgenden Befehle anpassen (den Namen,
-den man statt „de“ gewählt hat).
+Der Vorteil dieser Methode ist die gute Systemintegration. Nach der Installation
+kann das Neo-Layout und seine Modifier-Optionen auch in GUI-Tools, wie sie es in
+Gnome und KDE gibt, ausgewählt und verwendet werden.
+
+Dazu wird der gesamte Inhalt dieses Verzeichnisses nach /usr/share/X11/xkb/
+kopiert.
+Eine Sicherheitskopie der alten Dateien ist empfehlenswert!
 
 === Aktivieren ===
 Zum Aktivieren nur
@@ -44,31 +34,28 @@ eintippen.
 Zurück zu qwertz geht es mit:
     setxkbmap de
 
-== Tipps ==
+=== uiae/asdf-Umschalten ===
 Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein, 
 kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
-zwischen qwertz und NEO wechseln. 
+zwischen qwertz und NEO wechseln.
 
-=== Ohne Root-Zugang ===
-    alias asdf='setxkbmap de neo -print | xkbcomp - -I$NEO_PWD $DISPLAY'
+    alias asdf='setxkbmap de neo'
     alias uiae='setxkbmap de'
-wobei $NEO_PWD durch das Verzeichnis mit der „de“-Datei ersetzt werden muss.
 
-=== Mit Root-Zugang ===
+=== Neo für alle Benutzer – Umschalten mit Rollen ===
+
 Trägt man folgende Zeilen in seine xorg.conf (nur mit root-Zugang möglich) ein,
 kann man anschließend mittels drücken der Rollen-Taste zwischen qwertz und
 NEO wechseln. Die Rollen-LED zeigt den aktuellen Status an.
+
 	Option "XkbLayout"  "de,de"
 	Option "XkbVariant" "neo,nodeadkeys"
 	Option "XkbOptions" "grp:sclk_toggle,grp_led:scroll"
 
-Alternativ auch hier in die ~/.bashrc, ~/.zshrc oder vergleichbares:
-    alias asdf='setxkbmap de neo'
-    alias uiae='setxkbmap de'
-
 Seit X.org 7.3 wird die Tastatur von HAL verwaltet. um gleiche Einstellungen
 vorzunehmen erstellt man in /etc/hal/fdi/policy eine Datei namens 
 10-x11-input.fdi mit folgendem Inhalt:
+
   <match key="info.capabilities" contains="input.keys">
   	<merge key="input.x11_driver" type="string">evdev</merge>
   	<merge key="input.x11_options.XkbModel" type="string">evdev</merge>
@@ -78,26 +65,39 @@ vorzunehmen erstellt man in /etc/hal/fdi/policy eine Datei namens
   </match>
 
 
-== Ab Version 1827 ==
-Diese neue Version zielt darauf ab, die Referenz in Sachen Lock-Verhalten noch
-besser umzusetzen und in der neuen xkeyboard-config aufgenommen zu werden.
-Der einzige Nachteil ist der, dass zum Testen zwei Dateien verändert werden
-müssen.
+== Installation ohne Ersetzen der Systemdateien ==
 
-Sicherheitskopien falls benötigt vorher anfertigen.
-Die Datei „de-test“ zu „de“ umbenennen und nach „/usr/share/X11/xkb/symbols“
-kopieren.
-Außerdem die Datei „level5-test“ zu „level5“ umbenennen und nach
-„/usr/share/X11/xkb/types“ kopieren.
+Hierzu werden keinerlei Root-Rechte benötigt. Allerdings ist hierdurch keine
+gute Systemintegration gewährleistet.
+Die folgenden Befehle sollten im diesem Verzeichnis ausgeführt werden.
 
-Das Aktivieren funktioniert wie gehabt:
-    setxkbmap de neo
+=== Aktivieren ===
+Folgender Befehl aktiviert Neo: 
+    setxkbmap -I./ de neo -print | xkbcomp - -I./ $DISPLAY
+
+Die ausgegebenen Warnings, sowie zwei Errors können im Normalfall ignoriert
+werden.
+
+=== Deaktivieren ===
+Zurück zu qwertz geht es mit:
+    setxkbmap de
+
+=== uiae/asdf-Umschalten ===
+Trägt man folgende Zeilen in die ~/.bashrc, ~/.zshrc oder vergleichbares ein, 
+kann man anschließend mittels abrollen der linken Hand auf der Grundreihe 
+zwischen qwertz und NEO wechseln.
+
+    alias asdf='setxkbmap -I$NEO_PWD de neo -print | xkbcomp - -I$NEO_PWD $DISPLAY'
+    alias uiae='setxkbmap de'
+
+wobei $NEO_PWD durch dieses Verzeichnis ersetzt werden muss.
+
 
 
 == FAQ ==
 Bei Problemen erst mal in die FAQ schauen, das meiste ist bekannt.
 
 == Quelle == 
-Diese Datei patcht die Aktuellste Version von freedesktop.org
-Abrufbar im Orginal unter:
-http://cgit.freedesktop.org/xkeyboard-config/plain/symbols/de
+Die Dateien in diesem Ordner basieren auf den Orginaldateien aus xkeyboard-config:
+
+http://cgit.freedesktop.org/xkeyboard-config/
