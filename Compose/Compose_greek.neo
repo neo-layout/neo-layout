@@ -2,6 +2,40 @@
 
 # additional Definitions by Neo keyboard layout - greek letters
 
+# capital greek letters
+<Multi_key> <G> <A>                      : "Α"   U0391 # GREEK CAPITAL LETTER ALPHA
+<Multi_key> <g> <A>                      : "Α"   U0391 # GREEK CAPITAL LETTER ALPHA
+<Multi_key> <G> <B>                      : "Β"   U0392 # GREEK CAPITAL LETTER BETA
+<Multi_key> <g> <B>                      : "Β"   U0392 # GREEK CAPITAL LETTER BETA
+<Multi_key> <G> <E>                      : "Ε"   U0395 # GREEK CAPITAL LETTER EPSILON
+<Multi_key> <g> <E>                      : "Ε"   U0395 # GREEK CAPITAL LETTER EPSILON
+<Multi_key> <G> <Z>                      : "Ζ"   U0396 # GREEK CAPITAL LETTER ZETA
+<Multi_key> <g> <Z>                      : "Ζ"   U0396 # GREEK CAPITAL LETTER ZETA
+<Multi_key> <G> <H>                      : "Η"   U0397 # GREEK CAPITAL LETTER ETA
+<Multi_key> <g> <H>                      : "Η"   U0397 # GREEK CAPITAL LETTER ETA
+<Multi_key> <G> <Adiaeresis>             : "Η"   U0397 # GREEK CAPITAL LETTER ETA
+<Multi_key> <g> <Adiaeresis>             : "Η"   U0397 # GREEK CAPITAL LETTER ETA
+<Multi_key> <G> <I>                      : "Ι"   U0399 # GREEK CAPITAL LETTER IOTA
+<Multi_key> <g> <I>                      : "Ι"   U0399 # GREEK CAPITAL LETTER IOTA
+<Multi_key> <G> <K>                      : "Κ"   U039A # GREEK CAPITAL LETTER KAPPA
+<Multi_key> <g> <K>                      : "Κ"   U039A # GREEK CAPITAL LETTER KAPPA
+<Multi_key> <G> <M>                      : "Μ"   U039C # GREEK CAPITAL LETTER MU
+<Multi_key> <g> <M>                      : "Μ"   U039C # GREEK CAPITAL LETTER MU
+<Multi_key> <G> <N>                      : "Ν"   U039D # GREEK CAPITAL LETTER NU
+<Multi_key> <g> <N>                      : "Ν"   U039D # GREEK CAPITAL LETTER NU
+<Multi_key> <G> <O>                      : "Ο"   U039F # GREEK CAPITAL LETTER OMICRON
+<Multi_key> <g> <O>                      : "Ο"   U039F # GREEK CAPITAL LETTER OMICRON
+<Multi_key> <G> <P>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <g> <P>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <G> <R>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <g> <R>                      : "Ρ"   U03A1 # GREEK CAPITAL LETTER RHO
+<Multi_key> <G> <T>                      : "Τ"   U03A4 # GREEK CAPITAL LETTER TAU
+<Multi_key> <g> <T>                      : "Τ"   U03A4 # GREEK CAPITAL LETTER TAU
+<Multi_key> <G> <Y>                      : "Υ"   U03A5 # GREEK CAPITAL LETTER UPSILON
+<Multi_key> <g> <Y>                      : "Υ"   U03A5 # GREEK CAPITAL LETTER UPSILON
+<Multi_key> <G> <X>                      : "Χ"   U03A7 # GREEK CAPITAL LETTER CHI
+<Multi_key> <g> <X>                      : "Χ"   U03A7 # GREEK CAPITAL LETTER CHI
+
 # greek letters with diacritical marks
 <U1FBF> <Greek_alpha>                               : "ἀ"   U1F00 # GREEK SMALL LETTER ALPHA WITH PSILI
 <U1FFE> <Greek_alpha>                               : "ἁ"   U1F01 # GREEK SMALL LETTER ALPHA WITH DASIA
