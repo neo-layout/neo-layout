@@ -18,6 +18,7 @@
 <U1FBF> <nobreakspace>                     : "᾿"   U1FBF # GREEK PSILI
 <U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
 <U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+<U21BB> <nobreakspace>                     : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 
 # combining characters
 <Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
@@ -45,7 +46,7 @@
 <dead_doubleacute> <space>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
 <U1FBF> <space>                            : "᾿"   U1FBF # GREEK PSILI
 <U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
-
+<U21BB> <space>                            : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 
 # letters
 # latin letters with ogonek (simplifying the keyboard ogonek and cedilla are on the same place)
@@ -194,7 +195,9 @@
 <Multi_key> <KP_1> <questiondown> <exclamdown>   : "⸘"   U2E18 # INVERTED INTERROBANG
 <Multi_key> <KP_1> <exclamdown> <questiondown>   : "⸘"   U2E18 # INVERTED INTERROBANG
 <Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
-<Multi_key> <colon> <colon>                      : "‥"   U2025 # TWO DOT LEADER
+<U21BB> <colon>                                  : "‥"   U2025 # TWO DOT LEADER
+<U21BB> <ellipsis>                               : "⋱"   U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+<U21BB> <U22EE>                                  : "⋰"   U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
 <Multi_key> <ellipsis> <ellipsis>                : "[…]"
 
@@ -339,14 +342,17 @@
 <Multi_key> <malesymbol> <femalesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
 <Multi_key> <Multi_key>                    : "♫"   U266B # BEAMED EIGHTH NOTE
+<Multi_key> <bracketleft> <bracketright>   : "□"   U25A1 # WHITE SQUARE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U25A1> <U2718>                : "☒"   U2612 # BALLOT BOX WITH X
 <Multi_key> <U2718> <U25A1>                : "☒"   U2612 # BALLOT BOX WITH X
+<U21BB> <bracketright>                     : "␣"   U2423 # OPEN BOX
 <Multi_key> <U2423> <U2423>                : "⍽"   U237D # SHOULDERED OPEN BOX
 <Multi_key> <p> <f>                        : "₰"   U20B0 # GERMAN PENNY SIGN
 <Multi_key> <p> <o> <i>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
 <Multi_key> <o> <p> <t>                    : "⌥"   U2325 # OPTION KEY
+<U21BB> <U21CC>                            : "⇋"   U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
 
 
 # box drawings

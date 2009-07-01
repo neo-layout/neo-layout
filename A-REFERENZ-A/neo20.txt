@@ -57,6 +57,7 @@ Bedienung dort weniger komfortabel.
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
 ↶    … undo-Funktion
+↻    … Drehen-Funktion, dreht das folgende Zeichen
 
 === Akzenttasten ===
 Zu den Akzenten siehe auch
@@ -74,7 +75,7 @@ T1 („Tote Taste 1“: Taste links neben der 1)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
 ┌─────┐ 1 … Toter Gravis (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
-│   ̏  │ 2 …
+│↻  ̏  │ 2 … Totes Drehen (sieht aus wie U+21BB CLOCKWISE OPEN CIRCLE ARROW)
 │` ¨ ῾│ 3 … Totes Trema (sieht aus wie U+00A8 DIAERESIS)
 └─────┘ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
         5 … Toter Spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
@@ -128,21 +129,21 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┌─────┐
 │» ⇞ ⊥│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
-│4 › ℓ│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
+│4 › ♀│ 3 … › öffnendes einfaches Guillemet (U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK)
 └─────┘
 
 ┌─────┐
 │« · ∡│ 2 … « schließendes doppeltes Guillemet (U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK)
-│5 ‹ †│ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
+│5 ‹ ♂│ 3 … ‹ schließendes einfaches Guillemet (U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK)
 └─────┘
 
 ┌─────┐
-│„   ∄│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
+│„   ∞│ 2 … „ öffnendes Gänsefüßchen (U+201E DOUBLE LOW-9 QUOTATION MARK)
 │8 ‚ ⟨│ 3 … ‚ öffnendes halbes Anführungszeichen (U+201A SINGLE LOW-9 QUOTATION MARK)
 └─────┘
 
 ┌─────┐
-│“ / ∦│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
+│“ / ∝│ 2 … “ schließendes Gänsefüßchen, englisch öffnendes (U+201C LEFT DOUBLE QUOTATION MARK)
 │9 ‘ ⟩│ 3 … ‘ schließ. halb. Anführz., engl. öffn. halb. Anführz. (U+2018 LEFT SINGLE QUOTATION MARK)
 └─────┘
 
@@ -155,15 +156,15 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 Auf Ebene 4 der Haupttastatur werden für folgende Zeichen die jeweilige KP_-Variante benutzt, um die
 Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten:
  • die Ziffern 0-9
- • die Opertionszeichen +-*/
+ • die Operationszeichen +-*/
  • statt Return wird KP_Enter verwendet
  • für das Komma wird KP_Separator benutzt
 
-Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benuttz, namentlich:
- • der Punkt (nicht KP_Decimal, da dies kein weiter Funktionalität bietet, jedoch Probleme (z.B. bei
+Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, namentlich:
+ • der Punkt (nicht KP_Decimal, da dies keine weitere Funktionalität bietet, jedoch Probleme (z.B. bei
    OpenOffice) bereitet)
  • die Navigationselemente (die KP_-Vatianten bereiten in einigen Programmen Probleme; andererseits
-   sind die KP_-Varianten in anderen, insbesonder älten, Programmen wie xterm, xedit, … erforderlich)
+   sind die KP_-Varianten in anderen, insbesondere älteren, Programmen wie xterm, xedit, … erforderlich)
 
 Auf dem Ziffernblock (Keypad) sollte für alle Elemente nach Möglichkeit die KP_‐Variante verwendet
 werden!
@@ -172,7 +173,7 @@ Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante ve
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„   ∞│“ / ∝│” * ∅│— - ╌│  ̏   │Backspace│
+│˜ ˇ ¯│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„   ∞│“ / ∝│” * ∅│— - ╌│↻ ̏   │Backspace│
 │ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ♀│5 ‹ ♂│6 ¢ ⚥│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│-   ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │ Tab⇤   │X ⋮ Ξ│V ⌫ √│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ ×│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ − ∘│¸ ˝ ˙│      │
@@ -203,7 +204,7 @@ Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante ve
 
 === Zweite Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˜ │°│§│ℓ│»│«│$│€│„│“│”│—│ │ Back │
+│ ˜ │°│§│ℓ│»│«│$│€│„│“│”│—│↻│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¸│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -403,7 +404,6 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 
 == Zeichenerläuterungen ==
 Ξ … Xi, griechischer Majuskel (U039E)
-≙ … entspricht (U2259)
 Λ … Lambda, griechischer Majuskel (U039B)
 ℂ … Menge der komplexen Zahlen (U2102)
 Ω … Omega, griechischer Majuskel (U03A9)
@@ -413,7 +413,6 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 Φ … Phi, griechischer Majuskel (U03A6)
 ℚ … Menge der rationalen Zahlen (U211A)
 ∘ … Verknüpfungsoperator (U2218)
-∮ … Integral über eine geschlossene Kurve (U222E)
 ∫ … Integral (U222B)
 ∀ … Allquantor ; für alle (U2200)
 ∃ … Existenzquantor ; es gibt (U2203)
@@ -425,8 +424,6 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 Δ … Delta, griechischer Majuskel (U0394)
 ∇ … Nablaoperator (Gradient, Divergenz, Rotation) (U2207)
 ∝ … proportional zu (U221D)
-ℑ … Imaginärteil einer komplexen Zahl (U2111)
-ℜ … Realteil einer komplexen Zahl (U211C)
 ℵ … Kardinalzahlen, Aleph-Symbol (U2135)
 Π … Pi, griechischer Majuskel (U03A0)
 ℤ … Menge der ganzen Zahlen (U2124)

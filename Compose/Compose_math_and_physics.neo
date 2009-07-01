@@ -76,17 +76,19 @@
 <Multi_key> <KP_Add> <KP_Subtract>         : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <KP_Subtract> <KP_Add>         : "∓"   U2213 # MINUS-OR-PLUS SIGN
 <Multi_key> <minus> <plus>                 : "∓"   U2213 # MINUS-OR-PLUS SIGN
+<U21BB> <plusminus>                        : "∓"   U2213 # MINUS-OR-PLUS SIGN
+<U21BB> <U2213>                            : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <s> <u> <m>                    : "∑"   U2211 # N-ARY SUMMATION
 <Multi_key> <i> <n> <r>                    : "∫"   U222B # INTEGRAL
 <Multi_key> <p> <r> <o> <d>                : "∏"   U220F # N-ARY PRODUCT
-<Multi_key> <bar> <underscore> <bar>       : "∐"   U2210 # N-ARY COPRODUCT
-<Multi_key> <bar> <underbar> <bar>         : "∐"   U2210 # N-ARY COPRODUCT
+<U21BB> <Greek_PI>                         : "∐"   U2210 # N-ARY COPRODUCT
 <Multi_key> <p> <r> <o> <p>                : "∝"   U221D # PROPORTIONAL TO
 <Multi_key> <a> <x>                        : "∝"   U221D # PROPORTIONAL TO
 <Multi_key> <R> <e>                        : "ℜ"   U211C # BLACK-LETTER CAPITAL R
 <Multi_key> <r> <e>                        : "ℜ"   U211C # BLACK-LETTER CAPITAL R
 <Multi_key> <I> <m>                        : "ℑ"   U2111 # BLACK-LETTER CAPITAL I
 <Multi_key> <i> <m>                        : "ℑ"   U2111 # BLACK-LETTER CAPITAL I
+<U21BB> <elementof>                        : "∋"   U220B # CONTAINS AS MEMBER
 <Multi_key> <elementof> <elementof>        : "∋"   U220B # CONTAINS AS MEMBER
 <Multi_key> <h> <a>                        : "ℵ"   U2135 # ALEF SYMBOL
 <Multi_key> <h> <b>                        : "ℶ"   U2136 # BET SYMBOL
@@ -103,6 +105,10 @@
 <Multi_key> <U2297> <U2297>                : "⨂"   U2A02 # N-ARY CIRCLED TIMES OPERATOR
 <dead_macron> <includedin>                 : "⊆"   U2286 # SUBSET OF OR EQUAL TO
 <dead_macron> <includes>                   : "⊇"   U2287 # SUPERSET OF OR EQUAL TO
+<U21BB> <includedin>                       : "⊃"   includes # SUPERSET OF
+<U21BB> <includes>                         : "⊂"   includedin # SUBSET OF
+<U21BB> <U2286>                            : "⊇"   U2287 # SUPERSET OF OR EQUAL TO
+<U21BB> <U2287>                            : "⊆"   U2286 # SUBSET OF OR EQUAL TO
 <Multi_key> <less> <bar>                   : "⊲"   U22B2 # NORMAL SUBGROUP OF
 <Multi_key> <bar> <less>                   : "⊲"   U22B2 # NORMAL SUBGROUP OF
 <Multi_key> <bar> <greater>                : "⊳"   U22B3 # CONTAINS AS NORMAL SUBGROUP
@@ -118,6 +124,7 @@
 <Multi_key> <bar> <equal>                  : "⊨"   U22A8 # TRUE
 <Multi_key> <bar> <KP_Equal>               : "⊨"   U22A8 # TRUE
 <Multi_key> <downtack> <downtack>          : "⊤"   U22A4 # DOWN TACK
+<U21BB> <U22A5>                            : "⊤"   U22A4 # DOWN TACK
 <Multi_key> <o> <plus>                     : "⊕"   U2295 # CIRCLED PLUS
 <Multi_key> <o> <KP_Add>                   : "⊕"   U2295 # CIRCLED PLUS
 <Multi_key> <o> <minus>                    : "⊖"   U2296 # CIRCLED MINUS
@@ -131,8 +138,10 @@
 <Multi_key> <o> <asterisk>                 : "⊛"   U229B # CIRCLED ASTERISK OPERATOR
 <Multi_key> <o> <equal>                    : "⊜"   U229C # CIRCLED EQUALS
 <Multi_key> <o> <KP_Equal>                 : "⊜"   U229C # CIRCLED EQUALS
-<Multi_key> <asterisk> <asterisk>          : "∗" U2217 # ASTERISK OPERATOR
-<Multi_key> <KP_Multiply> <KP_Multiply>    : "∗" U2217 # ASTERISK OPERATOR
+<Multi_key> <asterisk> <asterisk>          : "∗"   U2217 # ASTERISK OPERATOR
+<Multi_key> <KP_Multiply> <KP_Multiply>    : "∗"   U2217 # ASTERISK OPERATOR
+<U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
+<U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
@@ -219,6 +228,10 @@
 <Multi_key> <downarrow> <downarrow>        : "⇊"   U21CA # DOWNWARDS PAIRED ARROWS
 <Multi_key> <downarrow> <uparrow>          : "⇵"   U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 <Multi_key> <w> <i> <d>                    : "↯"   U21AF # DOWNWARDS ZIGZAG ARROW
+<U21BB> <U2192>                            : "←"   U2190 # LEFTWARDS ARROW
+<U21BB> <U2190>                            : "→"   U2192 # RIGHTWARDS ARROW
+<U21BB> <21A6>                             : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
+<U21BB> <ifonlyif>                         : "⇕"   U21D5 # UP DOWN DOUBLE ARROW
 
 # superscripts and subscripts
 <dead_circumflex> <minus>                  : "⁻"   U207B # SUPERSCRIPT MINUS
