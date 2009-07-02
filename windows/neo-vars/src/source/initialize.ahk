@@ -35,7 +35,7 @@ disable=Deaktiviere %name%
 
 SetCapsLockState Off
 SaveNumLockState()
-SetNumLockState Off
+SetNumLockState On
 OnExit, exitprogram
 SetScrollLockState Off
 KeyboardLED(2,"off") ; deaktivieren, falls sie doch brennt

@@ -200,6 +200,17 @@ SendBlindShiftFixed(char, theseq) {
         send % "{blind}{RShift Up}" . theseq . "{RShift Down}"
       else
         send % "{blind}" . theseq
+  else if (DOSH%char%)
+    if (IsShiftLPressed)
+      if (IsShiftRPressed)
+        send % "{blind}" . theseq
+      else
+        send % "{blind}{RShift Down}" . theseq . "{RShift Up}"
+    else
+      if (IsShiftRPressed)
+        send % "{blind}{Shift Down}" . theseq . "{Shift Up}"
+      else
+        send % "{blind}{Shift Down}" . theseq . "{Shift Up}"
   else
     send % "{blind}" . theseq
 }
