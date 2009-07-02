@@ -295,7 +295,7 @@
 <Multi_key> <asciicircum> <Greek_delta>    : "ᵟ"   U1D5F # MODIFIER LETTER SMALL DELTA
 <Multi_key> <asciicircum> <Greek_epsilon>  : "ᵋ"   U1D4B # MODIFIER LETTER SMALL OPEN E
 <Multi_key> <asciicircum> <Greek_phi>      : "ᵠ"   U1D60 # MODIFIER LETTER SMALL GREEK PHI
-<Multi_key> <asciicircum> <U03D5>          : "ᵠ"   U1DB2 # MODIFIER LETTER SMALL PHI
+<Multi_key> <asciicircum> <U03D5>          : "ᶲ"   U1DB2 # MODIFIER LETTER SMALL PHI
 <Multi_key> <asciicircum> <Greek_chi>      : "ᵡ"   U1D61 # MODIFIER LETTER SMALL CHI
 <Multi_key> <asciicircum> <Greek_theta>    : "ᶿ"   U1DBF # MODIFIER LETTER SMALL THETA
 <Multi_key> <asciicircum> <Greek_upsilon>  : "ᶷ"   U1DB7 # MODIFIER LETTER SMALL UPSILON
