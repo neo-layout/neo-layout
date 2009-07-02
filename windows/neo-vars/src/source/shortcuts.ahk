@@ -95,6 +95,30 @@ CSS__NHom := "NumpadHome"
 CSS__NEnd := "NumpadEnd"
 CSS__NClr := "NumpadClear"
 
+; Numpad Navigation + Shift
+CSS_SNDel := "NumpadDel"
+CSS_SNIns := "NumpadIns"
+CSS_SN_Up := "NumpadUp"
+CSS_SN_Dn := "NumpadDown"
+CSS_SN_Ri := "NumpadRight"
+CSS_SN_Le := "NumpadLeft"
+CSS_SNPUp := "NumpadPgUp"
+CSS_SNPDn := "NumpadPgDn"
+CSS_SNHom := "NumpadHome"
+CSS_SNEnd := "NumpadEnd"
+CSS_SNClr := "NumpadClear"
+DOSHS_SNDel := 1
+DOSHS_SNIns := 1
+DOSHS_SN_Up := 1
+DOSHS_SN_Dn := 1
+DOSHS_SN_Ri := 1
+DOSHS_SN_Le := 1
+DOSHS_SNPUp := 1
+DOSHS_SNPDn := 1
+DOSHS_SNHom := 1
+DOSHS_SNEnd := 1
+DOSHS_SNClr := 1
+
 CSS__L_M2 := "LShift"
 CSS__R_M2 := "RShift"
 

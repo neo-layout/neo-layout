@@ -60,20 +60,49 @@ ED("VK6ASC037",0,"S__NMul","S__NMul","U0022C5","U0000D7","U002299","U002297") ; 
 ED("VK6DSC04A",0,"S__NSub","S__NSub","U002212","U002216","U002296","U002238") ; NumpadSub
 ED("VK6BSC04E",0,"S__NAdd","S__NAdd","U0000B1","U002213","U002295","U002214") ; NumpadAdd
 
-EDN("VK67SC047","VK24SC047",0,"S__N__7","U002714","U002195","S__NHom","U00226A","U002308") ; Numpad7, NumpadHome
-EDN("VK68SC048","VK26SC048",0,"S__N__8","U002718","U002191","S__N_Up","U002229","U0022C2") ; Numpad8, NumpadUp
-EDN("VK69SC049","VK21SC049",0,"S__N__9","U002020","U0020D7","S__NPUp","U00226B","U002309") ; Numpad9, NumpadPgUp
+;EDN("VK67SC047","VK24SC047",0,"S__N__7","U002714","U002195","S__NHom","U00226A","U002308") ; Numpad7, NumpadHome
+ED("VK67SC047",0,"S__N__7",""       ,"U002195","S__NHom",""       ,"U002308") ; Numpad7
+ED("VK24SC047",0,"U002714",""       ,"U00226A","S_SNHom",""       ,""       ) ; NumpadHome == Numpad7 + Shift
 
-EDN("VK64SC04B","VK25SC04B",0,"S__N__4","U002663","U002190","S__N_Le","U002282","U002286") ; Numpad4, NumpadLeft
-EDN("VK65SC04C","VK0CSC04C",0,"S__N__5","U0020AC","U0000A6","S__NClr","U0022B6","U0022B7") ; Numpad5, NumpadClear
-EDN("VK66SC04D","VK27SC04D",0,"S__N__6","U002023","U002192","S__N_Ri","U002283","U002287") ; Numpad6, NumpadRight
+;EDN("VK68SC048","VK26SC048",0,"S__N__8","U002718","U002191","S__N_Up","U002229","U0022C2") ; Numpad8, NumpadUp
+ED("VK68SC048",0,"S__N__8",""       ,"U002191","S__N_Up",""       ,"U0022C2") ; Numpad8
+ED("VK26SC048",0,"U002718",""       ,"U002229","S_SN_Up",""       ,""       ) ; NumpadUp == Numpad8 + Shift
 
-EDN("VK61SC04F","VK23SC04F",0,"S__N__1","U002666","U002194","S__NEnd","U002264","U00230A") ; Numpad1, NumpadEnd
-EDN("VK62SC050","VK28SC050",0,"S__N__2","U002665","U002193","S__N_Dn","U00222A","U0022C3") ; Numpad2, NumpadDown
-EDN("VK63SC051","VK22SC051",0,"S__N__3","U002660","U0021CC","S__NPDn","U002265","U00230B") ; Numpad3, NumpadPgDn
+;EDN("VK69SC049","VK21SC049",0,"S__N__9","U002020","U0020D7","S__NPUp","U00226B","U002309") ; Numpad9, NumpadPgUp
+ED("VK69SC049",0,"S__N__9",""       ,"U0020D7","S__NPUp",""       ,"U002309") ; Numpad9
+ED("VK21SC049",0,"U002020",""       ,"U00226B","S_SNPUp",""       ,""       ) ; NumpadPgUp == Numpad9 + Shift
 
-EDN("VK60SC052","VK2DSC052",0,"S__N__0","U002423","U000025","S__NIns","U002030","U0025A1") ; Numpad0, NumpadIns
-EDN("VK6ESC053","VK2ESC053",0,"S__NDot","U00002E","U00002C","S__NDel","U002032","U002033") ; NumpadDot, NumpadDel
+;EDN("VK64SC04B","VK25SC04B",0,"S__N__4","U002663","U002190","S__N_Le","U002282","U002286") ; Numpad4, NumpadLeft
+ED("VK64SC04B",0,"S__N__4",""       ,"U002190","S__N_Le",""       ,"U002286") ; Numpad4
+ED("VK25SC04B",0,"U002663",""       ,"U002282","S_SN_Le",""       ,""       ) ; NumpadLeft == Numpad4 + Shift
+
+;EDN("VK65SC04C","VK0CSC04C",0,"S__N__5","U0020AC","U0000A6","S__NClr","U0022B6","U0022B7") ; Numpad5, NumpadClear
+ED("VK65SC04C",0,"S__N__5",""       ,"U0000A6","S__NClr",""       ,"U0022B7") ; Numpad5
+ED("VK0CSC04C",0,"U0020AC",""       ,"U0022B6","S_SNClr",""       ,""       ) ; NumpadClear == Numpad5 + Shift
+
+;EDN("VK66SC04D","VK27SC04D",0,"S__N__6","U002023","U002192","S__N_Ri","U002283","U002287") ; Numpad6, NumpadRight
+ED("VK66SC04D",0,"S__N__6",""       ,"U002192","S__N_Ri",""       ,"U002287") ; Numpad6
+ED("VK27SC04D",0,"U002023",""       ,"U002283","S_SN_Ri",""       ,""       ) ; NumpadRight == Numpad6 + Shift
+
+;EDN("VK61SC04F","VK23SC04F",0,"S__N__1","U002666","U002194","S__NEnd","U002264","U00230A") ; Numpad1, NumpadEnd
+ED("VK61SC04F",0,"S__N__1",""       ,"U002194","S__NEnd",""       ,"U00230A") ; Numpad1
+ED("VK23SC04F",0,"U002666",""       ,"U002264","S_SNEnd",""       ,""       ) ; NumpadEnd == Numpad1 + Shift
+
+;EDN("VK62SC050","VK28SC050",0,"S__N__2","U002665","U002193","S__N_Dn","U00222A","U0022C3") ; Numpad2, NumpadDown
+ED("VK62SC050",0,"S__N__2",""       ,"U002193","S__N_Dn",""       ,"U0022C3") ; Numpad2
+ED("VK28SC050",0,"U002665",""       ,"U00222A","S_SN_Dn",""       ,""       ) ; NumpadDown == Numpad2 + Shift
+
+;EDN("VK63SC051","VK22SC051",0,"S__N__3","U002660","U0021CC","S__NPDn","U002265","U00230B") ; Numpad3, NumpadPgDn
+ED("VK63SC051",0,"S__N__3",""       ,"U0021CC","S__NPDn",""       ,"U00230B") ; Numpad3
+ED("VK22SC051",0,"U002660",""       ,"U002265","S_SNPDn",""       ,""       ) ; NumpadPgDn == Numpad3 + Shift
+
+; EDN("VK60SC052","VK2DSC052",0,"S__N__0","U002423","U000025","S__NIns","U002030","U0025A1") ; Numpad0, NumpadIns
+ED("VK60SC052",0,"S__N__0",""       ,"U000025","S__NIns",""       ,"U0025A1") ; Numpad0
+ED("VK2DSC052",0,"U002423",""       ,"U002030","S_SNIns",""       ,""       ) ; NumpadIns == Numpad0 + Shift
+
+; EDN("VK6ESC053","VK2ESC053",0,"S__NDot","U00002E","U00002C","S__NDel","U002032","U002033") ; NumpadDot, NumpadDel
+ED("VK6ESC053",0,"S__NDot",""       ,"U00002C","S__NDel",""       ,"U002033") ; NumpadDot
+ED("VK2ESC053",0,"U00002E",""       ,"U002032","S_SNDel",""       ,""       ) ; NumpadDel == NumpadDot + Shift
 
 ; other keys
 ED("space",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
