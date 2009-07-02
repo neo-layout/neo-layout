@@ -14,7 +14,7 @@
    height="459.57001"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.46+devel, revision 20105"
+   inkscape:version="0.46"
    sodipodi:docname="tastatur_neo_alle_Ebenen.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline"
@@ -85,7 +85,7 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:window-height="539"
+     inkscape:window-height="693"
      inkscape:window-width="1381"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
@@ -96,12 +96,12 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.58408208"
-     inkscape:cx="1010.6989"
-     inkscape:cy="264.02677"
+     inkscape:zoom="0.61694879"
+     inkscape:cx="1044.6572"
+     inkscape:cy="229.78501"
      inkscape:window-x="35"
      inkscape:window-y="139"
-     inkscape:current-layer="layer12"
+     inkscape:current-layer="layer6"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -10610,7 +10610,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Ebene 1"
-     style="display:none"
+     style="display:inline"
      transform="translate(-3.4008115,-283.39115)">
     <text
        x="159.61749"
@@ -13097,6 +13097,17 @@
        id="text5000"
        xml:space="preserve"
        sodipodi:linespacing="125%">$</text>
+    <text
+       x="1136.2767"
+       y="341.25769"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       id="text4964"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4968"
+         x="1136.2767"
+         y="341.25769">↻</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -14230,18 +14241,7 @@
          sodipodi:role="line"
          id="tspan16848"
          x="33.863846"
-         y="402.70468">⇤</tspan></text>
-    <text
-       x="35.181229"
-       y="429.37534"
-       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
-       id="text16850"
-       xml:space="preserve"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan16852"
-         x="35.181229"
-         y="429.37534">⇥</tspan></text>
+         y="402.70468" /></text>
     <text
        sodipodi:linespacing="125%"
        xml:space="preserve"
@@ -14739,6 +14739,18 @@
          y="701.84467"
          id="tspan7791-5-5"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">,</tspan></text>
+    <text
+       x="46.962807"
+       y="424.20551"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       id="text4996"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4998"
+         x="46.962807"
+         y="424.20551"
+         style="font-size:40px">♫</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -15168,13 +15180,6 @@
          id="tspan29750"
          style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine">¡</tspan></text>
     <text
-       x="1180.0001"
-       y="421.65906"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
-       id="text29752"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">/</text>
-    <text
        xml:space="preserve"
        style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        x="1300.095"
@@ -15222,13 +15227,13 @@
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:DejaVu Sans"
        x="1168.8899"
-       y="419.59619"
+       y="423.59619"
        id="text26889"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan26891"
          x="1168.8899"
-         y="419.59619">◌</tspan></text>
+         y="423.59619">◌</tspan></text>
     <text
        x="34.181038"
        y="510.07019"
@@ -15540,6 +15545,39 @@
          id="tspan4650"
          x="505.80029"
          y="333.25531">‧</tspan></text>
+    <text
+       x="1083.3257"
+       y="420.52908"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       id="text4973"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         x="1083.3257"
+         y="420.52908"
+         id="tspan4975"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine">−</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
+       x="1140.4729"
+       y="325.0762"
+       id="text4986"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4988"
+         x="1140.4729"
+         y="325.0762">  ̏</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
+       x="1170.1542"
+       y="421.52112"
+       id="text4991"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4994"
+         x="1170.1542"
+         y="421.52112">  ̋</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -17028,20 +17066,20 @@
          x="1169.8953"
          y="424.50537">◌</tspan></text>
     <path
-       d="m 185.3784,558.85606 c 0,0 10.897,4.40466 13.3575,7.45404 2.4606,3.04936 3.1637,70.13505 1.7576,75.21738 -1.4061,5.08222 -6.3272,8.13158 -6.3272,8.13158 l -73.4664,-0.67765 c 0,0 -8.0849,-0.33878 -8.0849,-5.08222 0,-4.74343 -2.2945,-73.09982 0.5177,-75.13265 2.8121,-2.03295 16.7065,-9.91048 16.7065,-9.91048 l 55.5392,0 0,0 0,0 0,0 z"
+       d="M 185.3784,558.85606 C 185.3784,558.85606 196.2754,563.26072 198.7359,566.3101 C 201.1965,569.35946 201.8996,636.44515 200.4935,641.52748 C 199.0874,646.6097 194.1663,649.65906 194.1663,649.65906 L 120.6999,648.98141 C 120.6999,648.98141 112.615,648.64263 112.615,643.89919 C 112.615,639.15576 110.3205,570.79937 113.1327,568.76654 C 115.9448,566.73359 129.8392,558.85606 129.8392,558.85606 L 185.3784,558.85606 L 185.3784,558.85606 L 185.3784,558.85606 L 185.3784,558.85606 L 185.3784,558.85606 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43945" />
     <path
-       d="m 1135.6729,649.74839 c 0,0 11.4218,5.44637 12.5048,9.71283 1.3852,5.45714 2.4952,83.37268 2.4952,73.83588 0,0 -5,7.0283 -5,7.0283 l -115,0.22599 c 0,0 -6.2785,-2.80853 -6.2785,-7.32596 0,-4.51743 -1.7506,-69.61688 0.3949,-71.55288 2.1456,-1.93609 15.8836,-11.92416 15.8836,-11.92416 l 95,0 0,0 0,0 z"
+       d="M 1135.6729,649.74839 C 1135.6729,649.74839 1147.0947,655.19476 1148.1777,659.46122 C 1149.5629,664.91836 1150.6729,742.8339 1150.6729,733.2971 C 1150.6729,733.2971 1145.6729,740.3254 1145.6729,740.3254 L 1030.6729,740.55139 C 1030.6729,740.55139 1024.3944,737.74286 1024.3944,733.22543 C 1024.3944,728.708 1022.6438,663.60855 1024.7893,661.67255 C 1026.9349,659.73646 1040.6729,649.74839 1040.6729,649.74839 L 1135.6729,649.74839 L 1135.6729,649.74839 L 1135.6729,649.74839 L 1135.6729,649.74839 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43947"
        sodipodi:nodetypes="cssccsscc" />
     <path
-       d="m 1244.5037,466.57036 c 0,0 10.897,4.40466 13.3575,7.45404 2.4606,3.04936 3.1637,70.13506 1.7576,75.21738 -1.4061,5.08221 -6.3272,8.13158 -6.3272,8.13158 l -73.4664,-0.67765 c 0,0 -8.0849,-0.33877 -8.0849,-5.08221 0,-4.74344 -2.2945,-73.09982 0.5177,-75.13266 2.8121,-2.03296 16.7065,-9.91048 16.7065,-9.91048 l 55.5392,0 0,0 0,0 0,0 z"
+       d="M 1244.5037,466.57036 C 1244.5037,466.57036 1255.4007,470.97502 1257.8612,474.0244 C 1260.3218,477.07376 1261.0249,544.15946 1259.6188,549.24178 C 1258.2127,554.32399 1253.2916,557.37336 1253.2916,557.37336 L 1179.8252,556.69571 C 1179.8252,556.69571 1171.7403,556.35694 1171.7403,551.6135 C 1171.7403,546.87006 1169.4458,478.51368 1172.258,476.48084 C 1175.0701,474.44788 1188.9645,466.57036 1188.9645,466.57036 L 1244.5037,466.57036 L 1244.5037,466.57036 L 1244.5037,466.57036 L 1244.5037,466.57036 L 1244.5037,466.57036 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43949" />
     <path
-       d="m 148.01276,467.85906 c 0,0 10.74557,6.01509 9.16356,9.55789 -2.49147,5.57947 4.58177,66.90527 0,76.46316 -2.27378,4.74324 -4.58178,4.77895 -4.58178,4.77895 l -138.772246,-5e-5 c 0,0 -7.6103333,-0.34131 -7.6103333,-5.12026 0,-4.77894 -2.1597584,-73.64697 0.4873179,-75.69504 2.6470763,-2.04816 15.7258524,-9.98465 15.7258524,-9.98465 l 125.587629,0 0,0 0,0 z"
+       d="M 148.01276,467.85906 C 148.01276,467.85906 158.75833,473.87415 157.17632,477.41695 C 154.68485,482.99642 161.75809,544.32222 157.17632,553.88011 C 154.90254,558.62335 152.59454,558.65906 152.59454,558.65906 L 13.822294,558.65901 C 13.822294,558.65901 6.2119607,558.3177 6.2119607,553.53875 C 6.2119607,548.75981 4.0522023,479.89178 6.6992786,477.84371 C 9.3463549,475.79555 22.425131,467.85906 22.425131,467.85906 L 148.01276,467.85906 L 148.01276,467.85906 L 148.01276,467.85906 L 148.01276,467.85906 z"
        style="opacity:0.8;fill:#808080;fill-opacity:0.49385753;fill-rule:evenodd;stroke:none;display:inline"
        id="path43951"
        sodipodi:nodetypes="cssccsscc" />
@@ -17245,7 +17283,7 @@
          y="521.88849">⊂</tspan></text>
     <path
        style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
-       d="m 794.72792,694.38892 2.40749,0 0,-4.92188 4.03321,0 0,1.66016 -2.39258,0 0,4.92188 -5.68874,0 0,-4.92188 -2.40235,0 0,-1.66016 4.04297,0 0,4.92188"
+       d="M 794.72792,694.38892 L 797.13541,694.38892 L 797.13541,689.46704 L 801.16862,689.46704 L 801.16862,691.1272 L 798.77604,691.1272 L 798.77604,696.04908 L 793.0873,696.04908 L 793.0873,691.1272 L 790.68495,691.1272 L 790.68495,689.46704 L 794.72792,689.46704 L 794.72792,694.38892"
        id="text7097"
        sodipodi:nodetypes="ccccccccccccc" />
     <text
@@ -17261,11 +17299,11 @@
        transform="matrix(0.5610993,0,0,0.5610993,324.19182,246.06861)">
       <path
          id="path7132"
-         d="m 841.12132,751.75138 c -4.7693,0 -8.62497,4.11672 -8.625,9.21875 0,1.3354 0.2417,2.60332 0.71875,3.75 l 15.8125,0 c 0.47705,-1.14668 0.75001,-2.4146 0.75,-3.75 0,-5.10205 -3.88695,-9.21877 -8.65625,-9.21875 z"
-         style="fill:none;stroke:#000000;stroke-width:2.51361012;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0.52015748" />
+         d="M 841.12132,751.75138 C 836.35202,751.75138 832.49635,755.8681 832.49632,760.97013 C 832.49632,762.30553 832.73802,763.57345 833.21507,764.72013 L 849.02757,764.72013 C 849.50462,763.57345 849.77758,762.30553 849.77757,760.97013 C 849.77757,755.86808 845.89062,751.75136 841.12132,751.75138 z"
+         style="fill:none;stroke:#000000;stroke-width:2.51361012;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0.52015748;stroke-opacity:1" />
       <path
          id="path7134"
-         d="m 832.65257,761.72013 c -2.28153,0 -4.12499,1.39405 -4.125,3.15625 l 0,15.28125 c 0,1.76223 1.84348,3.18751 4.125,3.1875 l 16.75,0 c 2.28153,0 4.12499,-1.42527 4.125,-3.1875 l 0,-15.28125 c 0,-1.76223 -1.84348,-3.15623 -4.125,-3.15625 l -16.75,0 z m 8.46875,5.65625 c 1.83008,2e-5 3.3125,1.48242 3.3125,3.3125 0,0.9861 -0.44097,1.86128 -1.125,2.46875 l 1.71875,6.5 -7.6875,0 1.71875,-6.40625 c -0.75192,-0.60795 -1.25,-1.52097 -1.25,-2.5625 0,-1.83006 1.48242,-3.3125 3.3125,-3.3125 z"
+         d="M 832.65257,761.72013 C 830.37104,761.72013 828.52758,763.11418 828.52757,764.87638 L 828.52757,780.15763 C 828.52757,781.91986 830.37105,783.34514 832.65257,783.34513 L 849.40257,783.34513 C 851.6841,783.34513 853.52756,781.91986 853.52757,780.15763 L 853.52757,764.87638 C 853.52757,763.11415 851.68409,761.72015 849.40257,761.72013 L 832.65257,761.72013 z M 841.12132,767.37638 C 842.9514,767.3764 844.43382,768.8588 844.43382,770.68888 C 844.43382,771.67498 843.99285,772.55016 843.30882,773.15763 L 845.02757,779.65763 L 837.34007,779.65763 L 839.05882,773.25138 C 838.3069,772.64343 837.80882,771.73041 837.80882,770.68888 C 837.80882,768.85882 839.29124,767.37638 841.12132,767.37638 z"
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
   </g>
