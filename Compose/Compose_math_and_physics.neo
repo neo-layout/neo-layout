@@ -142,6 +142,7 @@
 <Multi_key> <KP_Multiply> <KP_Multiply>    : "∗"   U2217 # ASTERISK OPERATOR
 <U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
 <U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
+<U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
@@ -287,6 +288,7 @@
 <Multi_key> <asciicircum> <R>              :"ᴿ"   U1D3F # MODIFIER LETTER CAPITAL R
 <Multi_key> <asciicircum> <T>              :"ᵀ"   U1D40 # MODIFIER LETTER CAPITAL T
 <Multi_key> <asciicircum> <U>              :"ᵁ"   U1D41 # MODIFIER LETTER CAPITAL U
+<Multi_key> <asciicircum> <V>              :"ⱽ"   U2C7D # MODIFIER LETTER CAPITAL V
 <Multi_key> <asciicircum> <W>              :"ᵂ"   U1D42 # MODIFIER LETTER CAPITAL W
 
 <Multi_key> <asciicircum> <Greek_alpha>    : "ᵅ"   U1D45 # MODIFIER LETTER SMALL ALPHA
@@ -306,6 +308,8 @@
 <Multi_key> <underbar> <e>                 : "ₑ"   U2091 # LATIN SUBSCRIPT SMALL LETTER E
 <Multi_key> <underscore> <i>               : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I
 <Multi_key> <underbar> <i>                 : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I
+<Multi_key> <underscore> <j>               : "ⱼ"   U2C7C # LATIN SUBSCRIPT SMALL LETTER J
+<Multi_key> <underbar> <j>                 : "ⱼ"   U2C7C # LATIN SUBSCRIPT SMALL LETTER J
 <Multi_key> <underscore> <o>               : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O
 <Multi_key> <underbar> <o>                 : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O
 <Multi_key> <underscore> <r>               : "ᵣ"   U1D63 # LATIN SUBSCRIPT SMALL LETTER R
@@ -435,6 +439,20 @@
 <Multi_key> <braceleft> <braceleft>       : "⦃"   U2983 # LEFT WHITE CURLY BRACKET
 <Multi_key> <bar> <braceright>            : "⦄"   U2984 # RIGHT WHITE CURLY BRACKET
 <Multi_key> <braceright> <braceright>     : "⦄"   U2984 # RIGHT WHITE CURLY BRACKET
+
+# Mathematical Boxes (like arrays, etc.)
+<Multi_key> <x> <parenleft> <2>           : "⎛⎞\n⎝⎠"
+<Multi_key> <x> <parenleft> <3>           : "⎛⎞\n⎜⎟\n⎝⎠"
+<Multi_key> <x> <parenleft> <4>           : "⎛⎞\n⎜⎟\n⎜⎟\n⎝⎠"
+<Multi_key> <x> <parenleft> <5>           : "⎛⎞\n⎜⎟\n⎜⎟\n⎜⎟\n⎝⎠"
+<Multi_key> <x> <bracketleft> <2>         : "⎡⎤\n⎣⎦"
+<Multi_key> <x> <bracketleft> <3>         : "⎡⎤\n⎢⎥\n⎣⎦"
+<Multi_key> <x> <bracketleft> <4>         : "⎡⎤\n⎢⎥\n⎢⎥\n⎣⎦"
+<Multi_key> <x> <bracketleft> <5>         : "⎡⎤\n⎢⎥\n⎢⎥\n⎢⎥\n⎣⎦"
+<Multi_key> <x> <braceleft> <2>           : "⎧⎫\n⎩⎭"
+<Multi_key> <x> <braceleft> <3>           : "⎧⎫\n⎨⎬\n⎩⎭"
+<Multi_key> <x> <braceleft> <4>           : "⎧⎫\n⎨⎬\n⎪⎪\n⎩⎭"
+<Multi_key> <x> <braceleft> <5>           : "⎧⎫\n⎪⎪\n⎨⎬\n⎪⎪\n⎩⎭"
 
 # physical symbols
 # physical constants
