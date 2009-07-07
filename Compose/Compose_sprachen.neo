@@ -7,7 +7,6 @@
 <Multi_key> <B> <B>                               : "ʙ" U0299 # LATIN LETTER SMALL CAPITAL B
 <Multi_key> <G> <G>                               : "ɢ" U0262 # LATIN LETTER SMALL CAPITAL G
 <Multi_key> <H> <H>                               : "ʜ" U029C # LATIN LETTER SMALL CAPITAL H
-# Neo-Definition ♫II auflösen
 <Multi_key> <I> <I>                               : "ɪ" U026A # LATIN LETTER SMALL CAPITAL I
 <Multi_key> <L> <L>                               : "ʟ" U029F # LATIN LETTER SMALL CAPITAL L
 <Multi_key> <N> <N>                               : "ɴ" U0274 # LATIN LETTER SMALL CAPITAL N
@@ -23,6 +22,7 @@
 <Multi_key> <Greek_phi> <Greek_phi>               : "ɸ" U0278 # LATIN SMALL LETTER PHI
 <Multi_key> <Greek_PHI> <Greek_PHI>               : "ɸ" U0278 # LATIN SMALL LETTER PHI
 <Multi_key> <U03D5> <U03D5>                       : "ɸ" U0278 # LATIN SMALL LETTER PHI
+<Multi_key> <Greek_upsilon> <Greek_upsilon>       : "ʊ" U028A # LATIN SMALL LETTER UPSILON
 <Multi_key> <3> <3>                               : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <Multi_key> <KP_3> <KP_3>                         : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
 <Multi_key> <g> <g>                               : "ɡ" U0261 # LATIN SMALL LETTER SCRIPT G
@@ -35,12 +35,11 @@
 <U21BB> <m>                                       : "ɯ" U026F # LATIN SMALL LETTER TURNED M
 <U21BB> <y>                                       : "ʎ" U028E # LATIN SMALL LETTER TURNED Y
 <U21BB> <Greek_lambda>                            : "ʎ" U028E # LATIN SMALL LETTER TURNED Y
-<Multi_key> <Greek_upsilon> <Greek_upsilon>       : "ʊ" U028A # LATIN SMALL LETTER UPSILON
 <U21BB> <r>                                       : "ɹ" U0279 # LATIN SMALL LETTER TURNED R
 <U21BB> <w>                                       : "ʍ" U028D # LATIN SMALL LETTER TURNED W
 <U21BB> <R>                                       : "ʁ" U0281 # LATIN LETTER SMALL CAPITAL INVERTED R
 #<U21BB> <parenright>                              : "‿" U203F # UNDERTIE
-#<U21BB> <parenleft>                               : "͡" U
+#<U21BB> <parenleft>                               : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 <U21BB> <Greek_tau>                               : "ɾ" U027E # LATIN SMALL LETTER R WITH FISHHOOK
 <Multi_key> <r> <underscore>                      : "ɾ" U027E # LATIN SMALL LETTER R WITH FISHHOOK
 <Multi_key> <r> <underbar>                        : "ɾ" U027E # LATIN SMALL LETTER R WITH FISHHOOK
@@ -75,7 +74,7 @@
 <dead_tilde> <l>                                  : "ɫ" U026B # LATIN SMALL LETTER L WITH MIDDLE TILDE
 <dead_stroke> <J>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
 <dead_stroke> <j>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
-#<U02DE> <J>                                       : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
+#<U02DE> <dead_stroke> <J>                         : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 <Multi_key> <j> <f>                               : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 <dead_stroke> <u>                                 : "ʉ" U0289 # LATIN SMALL LETTER U BAR
 <Multi_key> <slash> <u>                           : "ʉ" U0289 # LATIN SMALL LETTER U BAR
@@ -103,10 +102,9 @@
 <Multi_key> <j> <n>                               : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
 # überschreibt ㎗
 <Multi_key> <d> <l>                               : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
-#<Multi_key> <parenleft> <h> <j>                   : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
+<Multi_key> <U02DE> <h> <j>                       : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
 <U21BB> <Multi_key> <h> <n>                       : "ɰ" U0270 # LATIN SMALL LETTER TURNED M WITH LONG LEG
 
-# Hier ist mir nichts besseres eingefallen, das als IPA-? ♫i? zu erklären
 <Multi_key> <i> <question>                        : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
 <dead_stroke> <Multi_key> <i> <question>          : "ʡ" U02A1 # LATIN LETTER GLOTTAL STOP WITH STROKE
 <U21BB> <Multi_key> <i> <question>                : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
@@ -135,14 +133,13 @@
 <dead_circumflex> <Multi_key> <bar> <asciicircum> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
 <dead_circumflex> <Multi_key> <v> <bar>           : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
 <dead_circumflex> <U21BB> <L>                     : "̚" U031A # COMBINING LEFT ANGLE ABOVE
+<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 
 <Multi_key> <equal> <bar> <equal>                 : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
 <Multi_key> <KP_Equal> <bar> <KP_Equal>           : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
-# IPA-Zeichen, die ähnlich wie andere Zeichen aussehen, zu tippen mit i für IPA
 <Multi_key> <i> <bar> <space>                     : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
 <Multi_key> <i> <bar> <bar>                       : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
 <Multi_key> <i> <exclam>                          : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
-<Multi_key> <i> <rightsinglequotemark>            : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 
 # Diakritika – erstmal zum Testen:
 <U21BB> <degree>                                  : "̥" U0325 # COMBINING RING BELOW
@@ -154,7 +151,7 @@
 <U21BB> <asciitilde>                              : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key> <underscore> <asciitilde>             : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key> <underbar> <asciitilde>               : "̰" U0330 # COMBINING TILDE BELOW
-#<Multi_key> <underscore> <breve>                  : "̯" U 
+#<Multi_key> <underscore> <breve>                  : "̯" U032F # COMBINING INVERTED BREVE BELOW
 
 <Multi_key> <underscore> <bracketleft> <bracketright> : "̻" U033B # COMBINING SQUARE BELOW
 <Multi_key> <underbar> <bracketleft> <bracketright>   : "̻" U033B # COMBINING SQUARE BELOW
@@ -302,6 +299,7 @@
 <Multi_key> <Z> <Z>                               : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
 <U21BB> <Multi_key> <Z> <Z>                       : "Ƹ" U01B8 # LATIN CAPITAL LETTER EZH REVERSED
 <U21BB> <Multi_key> <Z> <Z>                       : "ƹ" U01B9 # LATIN SMALL LETTER EZH REVERSED
+<Multi_key> <j> <N>                               : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
 
 # Gedreht
 <U21BB> <Greek_OMEGA>                             : "Ʊ" U01B1 LATIN CAPITAL LETTER UPSILON

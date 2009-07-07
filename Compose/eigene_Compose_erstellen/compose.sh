@@ -4,7 +4,7 @@ pfad=..
 g=1									# mit graphischer Menüauswahl (g=1 mit GUI, g=0 ohne GUI )
 
 # Anzahl der Compose-Module
-anzahl=5
+anzahl=6
 
 m[2]=mathephysik							# Modul
 b[2]="mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)"		# Beschreibung
@@ -16,15 +16,20 @@ b[3]="griechische Buchstaben (A ἀ)"
 d[3]=Compose_greek.neo
 a[3]=off
 
-m[4]=roemisch
-b[4]="römische Zahlen >12 (große Datei!) (1868→ⅿⅾⅽⅽⅽⅼⅹⅴⅰⅰⅰ)"
-d[4]=Compose_many_roman_numericals.neo
+m[4]=sprachen
+b[4]="Lautschrift und weitere Sprachen ([neːo] Ɱ ʃ ɐ)"
+d[4]=Compose_sprachen.neo
 a[4]=off
 
-m[5]=klingonisch
-b[5]="klingonische Zahlen (große Datei!) (1984→wa'SaD Hutvatlh chorghmaH loS)"
-d[5]=Compose_many_klingon_numericals.neo
+m[5]=roemisch
+b[5]="römische Zahlen >12 (große Datei!) (1868→ⅿⅾⅽⅽⅽⅼⅹⅴⅰⅰⅰ)"
+d[5]=Compose_many_roman_numericals.neo
 a[5]=off
+
+m[6]=klingonisch
+b[6]="klingonische Zahlen (große Datei!) (1984→wa'SaD Hutvatlh chorghmaH loS)"
+d[6]=Compose_many_klingon_numericals.neo
+a[6]=off
 
 
 m[0]=standard

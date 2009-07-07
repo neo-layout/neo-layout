@@ -349,7 +349,7 @@
 <Multi_key> <s> <c> <o>                    : "ℴ"   U2134 # SCRIPT SMALL O
 
 # double-struck letters
-<Multi_key> <bar> <A>                     : "�"   U1D538 # MATHEMATICAL DOUBLE-STRUCK CAPITAL A
+<Multi_key> <bar> <A>                     : "𝔸"   U1D538 # MATHEMATICAL DOUBLE-STRUCK CAPITAL A
 <Multi_key> <bar> <B>                     : "𝔹"   U1D539 # MATHEMATICAL DOUBLE-STRUCK CAPITAL B
 <Multi_key> <bar> <C>                     : "ℂ"   U02102 # DOUBLE-STRUCK CAPITAL C
 <Multi_key> <bar> <D>                     : "𝔻"   U1D53B # MATHEMATICAL DOUBLE-STRUCK CAPITAL D
@@ -361,7 +361,7 @@
 <Multi_key> <bar> <J>                     : "𝕁"   U1D541 # MATHEMATICAL DOUBLE-STRUCK CAPITAL J
 <Multi_key> <bar> <K>                     : "𝕂"   U1D542 # MATHEMATICAL DOUBLE-STRUCK CAPITAL K
 <Multi_key> <bar> <L>                     : "𝕃"   U1D543 # MATHEMATICAL DOUBLE-STRUCK CAPITAL L
-<Multi_key> <bar> <M>                     : "�"   U1D544 # MATHEMATICAL DOUBLE-STRUCK CAPITAL M
+<Multi_key> <bar> <M>                     : "𝕄"   U1D544 # MATHEMATICAL DOUBLE-STRUCK CAPITAL M
 <Multi_key> <bar> <N>                     : "ℕ"   U02115 # DOUBLE-STRUCK CAPITAL N
 <Multi_key> <bar> <O>                     : "𝕆"   U1D546 # MATHEMATICAL DOUBLE-STRUCK CAPITAL O
 <Multi_key> <bar> <P>                     : "ℙ"   U02119 # DOUBLE-STRUCK CAPITAL P
@@ -369,46 +369,46 @@
 <Multi_key> <bar> <R>                     : "ℝ"   U0211D # DOUBLE-STRUCK CAPITAL R
 <Multi_key> <bar> <S>                     : "𝕊"   U1D54A # MATHEMATICAL DOUBLE-STRUCK CAPITAL S
 <Multi_key> <bar> <T>                     : "𝕋"   U1D54B # MATHEMATICAL DOUBLE-STRUCK CAPITAL T
-<Multi_key> <bar> <U>                     : "�"   U1D54C # MATHEMATICAL DOUBLE-STRUCK CAPITAL U
-<Multi_key> <bar> <V>                     : "�"   U1D54D # MATHEMATICAL DOUBLE-STRUCK CAPITAL V
-<Multi_key> <bar> <W>                     : "�"   U1D54E # MATHEMATICAL DOUBLE-STRUCK CAPITAL W
-<Multi_key> <bar> <X>                     : "�"   U1D54F # MATHEMATICAL DOUBLE-STRUCK CAPITAL X
+<Multi_key> <bar> <U>                     : "𝕌"   U1D54C # MATHEMATICAL DOUBLE-STRUCK CAPITAL U
+<Multi_key> <bar> <V>                     : "𝕍"   U1D54D # MATHEMATICAL DOUBLE-STRUCK CAPITAL V
+<Multi_key> <bar> <W>                     : "𝕎"   U1D54E # MATHEMATICAL DOUBLE-STRUCK CAPITAL W
+<Multi_key> <bar> <X>                     : "𝕏"   U1D54F # MATHEMATICAL DOUBLE-STRUCK CAPITAL X
 <Multi_key> <bar> <Y>                     : "𝕐"   U1D550 # MATHEMATICAL DOUBLE-STRUCK CAPITAL Y
 <Multi_key> <bar> <Z>                     : "ℤ"   U02124 # DOUBLE-STRUCK CAPITAL Z
-<Multi_key> <bar> <a>                     : "�"   U1D552 # MATHEMATICAL DOUBLE-STRUCK SMALL A
+<Multi_key> <bar> <a>                     : "𝕒"   U1D552 # MATHEMATICAL DOUBLE-STRUCK SMALL A
 <Multi_key> <bar> <b>                     : "𝕓"   U1D553 # MATHEMATICAL DOUBLE-STRUCK SMALL B
 <Multi_key> <bar> <c>                     : "𝕔"   U1D554 # MATHEMATICAL DOUBLE-STRUCK SMALL C
-<Multi_key> <bar> <d>                     : "�"   U1D555 # MATHEMATICAL DOUBLE-STRUCK SMALL D
-<Multi_key> <bar> <e>                     : "�"   U1D556 # MATHEMATICAL DOUBLE-STRUCK SMALL E
+<Multi_key> <bar> <d>                     : "𝕕"   U1D555 # MATHEMATICAL DOUBLE-STRUCK SMALL D
+<Multi_key> <bar> <e>                     : "𝕖"   U1D556 # MATHEMATICAL DOUBLE-STRUCK SMALL E
 <Multi_key> <bar> <f>                     : "𝕗"   U1D557 # MATHEMATICAL DOUBLE-STRUCK SMALL F
 <Multi_key> <bar> <g>                     : "𝕘"   U1D558 # MATHEMATICAL DOUBLE-STRUCK SMALL G
-<Multi_key> <bar> <h>                     : "�"   U1D559 # MATHEMATICAL DOUBLE-STRUCK SMALL H
+<Multi_key> <bar> <h>                     : "𝕙"   U1D559 # MATHEMATICAL DOUBLE-STRUCK SMALL H
 <Multi_key> <bar> <i>                     : "𝕚"   U1D55A # MATHEMATICAL DOUBLE-STRUCK SMALL I
-<Multi_key> <bar> <j>                     : "�"   U1D55B # MATHEMATICAL DOUBLE-STRUCK SMALL J
+<Multi_key> <bar> <j>                     : "𝕛"   U1D55B # MATHEMATICAL DOUBLE-STRUCK SMALL J
 <Multi_key> <bar> <k>                     : "𝕜"   U1D55C # MATHEMATICAL DOUBLE-STRUCK SMALL K
-<Multi_key> <bar> <l>                     : "�"   U1D55D # MATHEMATICAL DOUBLE-STRUCK SMALL L
-<Multi_key> <bar> <m>                     : "�"   U1D55E # MATHEMATICAL DOUBLE-STRUCK SMALL M
-<Multi_key> <bar> <n>                     : "�"   U1D55F # MATHEMATICAL DOUBLE-STRUCK SMALL N
+<Multi_key> <bar> <l>                     : "𝕝"   U1D55D # MATHEMATICAL DOUBLE-STRUCK SMALL L
+<Multi_key> <bar> <m>                     : "𝕞"   U1D55E # MATHEMATICAL DOUBLE-STRUCK SMALL M
+<Multi_key> <bar> <n>                     : "𝕟"   U1D55F # MATHEMATICAL DOUBLE-STRUCK SMALL N
 <Multi_key> <bar> <o>                     : "𝕠"   U1D560 # MATHEMATICAL DOUBLE-STRUCK SMALL O
 <Multi_key> <bar> <p>                     : "𝕡"   U1D561 # MATHEMATICAL DOUBLE-STRUCK SMALL P
-<Multi_key> <bar> <q>                     : "�"   U1D562 # MATHEMATICAL DOUBLE-STRUCK SMALL Q
+<Multi_key> <bar> <q>                     : "𝕢"   U1D562 # MATHEMATICAL DOUBLE-STRUCK SMALL Q
 <Multi_key> <bar> <r>                     : "𝕣"   U1D563 # MATHEMATICAL DOUBLE-STRUCK SMALL R
 <Multi_key> <bar> <s>                     : "𝕤"   U1D564 # MATHEMATICAL DOUBLE-STRUCK SMALL S
 <Multi_key> <bar> <t>                     : "𝕥"   U1D565 # MATHEMATICAL DOUBLE-STRUCK SMALL T
-<Multi_key> <bar> <u>                     : "�"   U1D566 # MATHEMATICAL DOUBLE-STRUCK SMALL U
+<Multi_key> <bar> <u>                     : "𝕦"   U1D566 # MATHEMATICAL DOUBLE-STRUCK SMALL U
 <Multi_key> <bar> <v>                     : "𝕧"   U1D567 # MATHEMATICAL DOUBLE-STRUCK SMALL V
-<Multi_key> <bar> <w>                     : "�"   U1D568 # MATHEMATICAL DOUBLE-STRUCK SMALL W
-<Multi_key> <bar> <x>                     : "�"   U1D569 # MATHEMATICAL DOUBLE-STRUCK SMALL X
+<Multi_key> <bar> <w>                     : "𝕨"   U1D568 # MATHEMATICAL DOUBLE-STRUCK SMALL W
+<Multi_key> <bar> <x>                     : "𝕩"   U1D569 # MATHEMATICAL DOUBLE-STRUCK SMALL X
 <Multi_key> <bar> <y>                     : "𝕪"   U1D56A # MATHEMATICAL DOUBLE-STRUCK SMALL Y
 <Multi_key> <bar> <z>                     : "𝕫"   U1D56B # MATHEMATICAL DOUBLE-STRUCK SMALL Z
-<Multi_key> <bar> <0>                     : "�"   U1D7D8 # MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
-<Multi_key> <bar> <KP_0>                  : "�"   U1D7D8 # MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
-<Multi_key> <bar> <1>                     : "�"   U1D7D9 # MATHEMATICAL DOUBLE-STRUCK DIGIT ONE
-<Multi_key> <bar> <KP_1>                  : "�"   U1D7D9 # MATHEMATICAL DOUBLE-STRUCK DIGIT ONE
+<Multi_key> <bar> <0>                     : "𝟘"   U1D7D8 # MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
+<Multi_key> <bar> <KP_0>                  : "𝟘"   U1D7D8 # MATHEMATICAL DOUBLE-STRUCK DIGIT ZERO
+<Multi_key> <bar> <1>                     : "𝟙"   U1D7D9 # MATHEMATICAL DOUBLE-STRUCK DIGIT ONE
+<Multi_key> <bar> <KP_1>                  : "𝟙"   U1D7D9 # MATHEMATICAL DOUBLE-STRUCK DIGIT ONE
 <Multi_key> <bar> <2>                     : "𝟚"   U1D7DA # MATHEMATICAL DOUBLE-STRUCK DIGIT TWO
 <Multi_key> <bar> <KP_2>                  : "𝟚"   U1D7DA # MATHEMATICAL DOUBLE-STRUCK DIGIT TWO
-<Multi_key> <bar> <3>                     : "�"   U1D7DB # MATHEMATICAL DOUBLE-STRUCK DIGIT THREE
-<Multi_key> <bar> <KP_3>                  : "�"   U1D7DB # MATHEMATICAL DOUBLE-STRUCK DIGIT THREE
+<Multi_key> <bar> <3>                     : "𝟛"   U1D7DB # MATHEMATICAL DOUBLE-STRUCK DIGIT THREE
+<Multi_key> <bar> <KP_3>                  : "𝟛"   U1D7DB # MATHEMATICAL DOUBLE-STRUCK DIGIT THREE
 <Multi_key> <bar> <4>                     : "𝟜"   U1D7DC # MATHEMATICAL DOUBLE-STRUCK DIGIT FOUR
 <Multi_key> <bar> <KP_4>                  : "𝟜"   U1D7DC # MATHEMATICAL DOUBLE-STRUCK DIGIT FOUR
 <Multi_key> <bar> <5>                     : "𝟝"   U1D7DD # MATHEMATICAL DOUBLE-STRUCK DIGIT FIVE
@@ -419,8 +419,8 @@
 <Multi_key> <bar> <KP_7>                  : "𝟟"   U1D7DF # MATHEMATICAL DOUBLE-STRUCK DIGIT SEVEN
 <Multi_key> <bar> <8>                     : "𝟠"   U1D7E0 # MATHEMATICAL DOUBLE-STRUCK DIGIT EIGHT
 <Multi_key> <bar> <KP_8>                  : "𝟠"   U1D7E0 # MATHEMATICAL DOUBLE-STRUCK DIGIT EIGHT
-<Multi_key> <bar> <9>                     : "�"   U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
-<Multi_key> <bar> <KP_9>                  : "�"   U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
+<Multi_key> <bar> <9>                     : "𝟡"   U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
+<Multi_key> <bar> <KP_9>                  : "𝟡"   U1D7E1 # MATHEMATICAL DOUBLE-STRUCK DIGIT NINE
 <Multi_key> <bar> <Greek_gamma>           : "ℽ"   U0213D # DOUBLE-STRUCK SMALL GAMMA
 <Multi_key> <bar> <Greek_GAMMA>           : "ℾ"   U0213E # DOUBLE-STRUCK CAPITAL GAMMA
 <Multi_key> <bar> <Greek_pi>              : "ℼ"   U0213C # DOUBLE-STRUCK SMALL PI
@@ -473,6 +473,15 @@
 <Multi_key> <w> <apostrophe>              : "′"   U2032 # PRIME
 <Multi_key> <w> <quotedbl>                : "″"   U2033 # DOUBLE PRIME
 <Multi_key> <w> <3>                       : "‴"   U2034 # TRIPLE PRIME
+<Multi_key> <w> <KP_3>                    : "‴"   U2034 # TRIPLE PRIME
+<Multi_key> <w> <4>                       : "⁗"   U2057 # QUADRUPLE PRIME
+<Multi_key> <w> <KP_4>                    : "⁗"   U2057 # QUADRUPLE PRIME
+<U21BB> <U2032>                           : "‵"   U2035 # REVERSED PRIME
+<U21BB> <Multi_key> <w> <apostrophe>      : "‵"   U2035 # REVERSED PRIME
+<U21BB> <U2033>                           : "‶"   U2036 # REVERSED DOUBLE PRIME
+<U21BB> <Multi_key> <w> <quotedbl>        : "‶"   U2036 # REVERSED DOUBLE PRIME
+<U21BB> <Multi_key> <w> <3>               : "‷"   U2037 # REVERSED TRIPLE PRIME
+<U21BB> <Multi_key> <w> <KP_3>            : "‷"   U2037 # REVERSED TRIPLE PRIME
 <Multi_key> <Greek_mu> <l>                : "㎕"   U3395 # SQUARE MU L
 <Multi_key> <Greek_mu> <U2113>            : "㎕"   U3395 # SQUARE MU L
 <Multi_key> <m> <l>                       : "㎖"   U3396 # SQUARE ML
