@@ -33,10 +33,10 @@ enable=Aktiviere %name%
 disable=Deaktiviere %name%
 #LTrim ; Quelltext kann eingerÃ¼ckt werden
 
-SetCapsLockState Off
-SetScrollLockState Off
-NEONumLockLEDState := "Off"
-SetNEONumLockState()
+NEONumLockLEDState    := "Off"
+NEOCapsLockLEDState   := "Off"
+NEOScrollLockLEDState := "Off"
+SetNEOLockStates()
 OnExit, exitprogram
 
 EnvGet, WindowsEnvAppDataFolder, APPDATA
@@ -92,31 +92,30 @@ IsMod4Pressed := 0
 IsMod4Locked := 0
 EbeneAktualisieren := "NEOEbeneAktualisieren"
 
-SaveNumLockState() {
+SetNEOLockStates() {
   global
-  if GetKeyState("NumLock","T")
-    SavedNumLockState:="On"
-  else
-    SavedNumLockState:="Off"
+  SavedNumLockState := GetKeyState("NumLock","T")
+  SavedScrollLockState := GetKeyState("ScrollLock","T")
+  SavedCapsLockState := GetKeyState("CapsLock","T")
+  SwitchIs0 := "Off"
+  SwitchIs1 := "On"
+  SavedNumLockState := SwitchIs%SavedNumLockState%
+  SavedScrollLockState := SwitchIs%SavedScrollLockState%
+  SavedCapsLockState := SwitchIs%SavedCapsLockState%
+  SetNumLockState, On
+  SetScrollLockState, Off
+  SetCapsLockState, Off
+  Sleep,1
+  UpdateNEOLEDS()
 }
 
-SetNEONumLockState() {
+SetOldLockStates() {
   global
-  SaveNumLockState()
-  if (SavedNumLockState == "Off") {
-    SetNumLockState, On
-    Sleep, 1           ; damit sich das Aktivieren von NumLock nicht mit dem Deaktivieren der LED prügeln muss
-  }
-  KeyboardLED(2,NEONumLockLEDState) ; NumLock-LED richtig stellen
-}
-
-SetOldNumLockState() {
-  global
-  if (SavedNumLockState == "Off") {
-    SetNumLockState, Off   ; deaktiviert auch die eventuell eingeschaltete NumLockLED
-    Sleep, 1
-  } else if (NEONumLockLEDState == "Off")
-    KeyboardLED(2,"on")
+  UpdateOldLEDS()
+  Sleep,1
+  SetNumLockState,% SavedNumLockState
+  SetScrollLockState,% SavedScrollLockState
+  SetCapsLockState,% SavedCapsLockState
 }
 
 %EbeneAktualisieren%()

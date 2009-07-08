@@ -59,7 +59,7 @@ hide:
 return
 
 exitprogram:
-  SetOldNumLockState()
+  SetOldLockStates()
   exitapp
 return
 
@@ -71,13 +71,13 @@ Traytogglesuspend() {
     menu, tray, rename, %enable%, %disable%
     menu, tray, tip, %name%
     menu, tray, icon, %ResourceFolder%\neo_enabled.ico,,1
-    SetNEONumLockState()
+    SetNEOLockStates()
     suspend, off ; Schaltet Suspend aus -> NEO
   } else {
     menu, tray, rename, %disable%, %enable%
     menu, tray, tip, %name% : Deaktiviert
     menu, tray, icon, %ResourceFolder%\neo_disabled.ico,,1
-    SetOldNumLockState()
+    SetOldLockStates()
     suspend, on  ; Schaltet Suspend ein -> QWERTZ
   }
 }

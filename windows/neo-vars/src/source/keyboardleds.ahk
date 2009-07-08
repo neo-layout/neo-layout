@@ -1,3 +1,20 @@
+UpdateOldLEDS() {
+  global
+  SwitchIsOn := 1
+  SwitchIsOff := 0
+  Num := SwitchIs%SavedScrollLockState% + 2*SwitchIs%SavedNumLockState% + 4*SwitchIs%SavedCapsLockState%
+  KeyboardLED(Num,"switch")
+}
+
+UpdateNEOLEDS() {
+  global
+  SwitchIsOn := 1
+  SwitchIsOff := 0
+  Num := SwitchIs%NEOScrollLockLEDState% + 2*SwitchIs%NEONumLockLEDState% + 4*SwitchIs%NEOCapsLockLEDState%
+  KeyboardLED(Num,"switch")
+}
+
+
 ;ScrollLock=1, NumLock=2, CapsLock=4, bzw. eine beliebige Summe dieser Werte
 KeyboardLED(LEDvalue, Cmd){ ; LEDvalue: ScrollLock=1, NumLock=2, CapsLock=4 ; Cmd = on/off/switch
   Static h_device
