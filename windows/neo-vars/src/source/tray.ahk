@@ -72,7 +72,7 @@ Traytogglesuspend() {
     menu, tray, tip, %name%
     menu, tray, icon, %ResourceFolder%\neo_enabled.ico,,1
     SaveNumLockState()
-    SetNumLockState Off
+    SetNumLockState On
     suspend, off ; Schaltet Suspend aus -> NEO
   } else {
     menu, tray, rename, %disable%, %enable%
