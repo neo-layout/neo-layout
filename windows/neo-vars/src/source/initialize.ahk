@@ -35,6 +35,7 @@ disable=Deaktiviere %name%
 
 SetCapsLockState Off
 SetScrollLockState Off
+NEONumLockLEDState := "Off"
 SetNEONumLockState()
 OnExit, exitprogram
 
@@ -106,15 +107,16 @@ SetNEONumLockState() {
     SetNumLockState, On
     Sleep, 1           ; damit sich das Aktivieren von NumLock nicht mit dem Deaktivieren der LED prügeln muss
   }
-  KeyboardLED(2,"off") ; deaktivieren, falls sie doch brennt
+  KeyboardLED(2,NEONumLockLEDState) ; NumLock-LED richtig stellen
 }
 
 SetOldNumLockState() {
   global
-  if (SavedNumLockState == "On")
+  if (SavedNumLockState == "Off") {
+    SetNumLockState, Off   ; deaktiviert auch die eventuell eingeschaltete NumLockLED
+    Sleep, 1
+  } else if (NEONumLockLEDState == "Off")
     KeyboardLED(2,"on")
-  else
-    SetNumLockState, Off
 }
 
 %EbeneAktualisieren%()
