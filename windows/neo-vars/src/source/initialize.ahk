@@ -34,11 +34,9 @@ disable=Deaktiviere %name%
 #LTrim ; Quelltext kann eingerÃ¼ckt werden
 
 SetCapsLockState Off
-SaveNumLockState()
-SetNumLockState On
-OnExit, exitprogram
 SetScrollLockState Off
-KeyboardLED(2,"off") ; deaktivieren, falls sie doch brennt
+SetNEONumLockState()
+OnExit, exitprogram
 
 EnvGet, WindowsEnvAppDataFolder, APPDATA
 if (WindowsEnvAppDataFolder == "") {
@@ -96,9 +94,27 @@ EbeneAktualisieren := "NEOEbeneAktualisieren"
 SaveNumLockState() {
   global
   if GetKeyState("NumLock","T")
-    SavedNumLockState = On
+    SavedNumLockState:="On"
   else
-    SavedNumLockState = Off
+    SavedNumLockState:="Off"
+}
+
+SetNEONumLockState() {
+  global
+  SaveNumLockState()
+  if (SavedNumLockState == "Off") {
+    SetNumLockState, On
+    Sleep, 1           ; damit sich das Aktivieren von NumLock nicht mit dem Deaktivieren der LED prügeln muss
+  }
+  KeyboardLED(2,"off") ; deaktivieren, falls sie doch brennt
+}
+
+SetOldNumLockState() {
+  global
+  if (SavedNumLockState == "On")
+    KeyboardLED(2,"on")
+  else
+    SetNumLockState, Off
 }
 
 %EbeneAktualisieren%()
