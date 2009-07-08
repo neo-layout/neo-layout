@@ -24,8 +24,8 @@ CharProc__LnS1() {
   ; Lange-s-Tastatur aktivieren
   ED("VKBASC01A",1,"U000073","U001E9E","U0000DF",""       ,"U0003C2","U002218") ; ß
   ED("VK48SC023",1,"U00017F","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
-  KeyboardLED(2,"on")
   NEONumLockLEDState := "On"
+  UpdateNEOLEDS()
 }
 
 CharProc__LnS0() {
@@ -33,8 +33,8 @@ CharProc__LnS0() {
   ; Lange-s-Tastatur deaktivieren
   ED("VKBASC01A",1,"U0000DF","U001E9E","U00017F",""       ,"U0003C2","U002218") ; ß
   ED("VK48SC023",1,"U000073","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
-  KeyboardLED(2,"off")
   NEONumLockLEDState := "Off"
+  UpdateNEOLEDS()
   if (zeigeModusBox)
     TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F11 drücken.,10,1
 }

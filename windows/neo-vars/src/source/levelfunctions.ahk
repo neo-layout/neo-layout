@@ -68,12 +68,14 @@ ToggleMod2Lock() {
   if (isMod2Locked)
   {
     isMod2Locked := 0
-    KeyboardLED(4,"off")
+    NEOCapsLockLEDState := "Off"
+    UpdateNEOLEDS()
   }
   else
   {
     isMod2Locked := 1
-    KeyBoardLED(4,"on")
+    NEOCapsLockLEDState := "On"
+    UpdateNEOLEDS()
   }
 }
 
@@ -82,14 +84,18 @@ ToggleMod4Lock() {
   global
   if (IsMod4Locked) {
     IsMod4Locked := 0
-    if (UseMod4Light)
-      KeyboardLED(1,"off")
+    if (UseMod4Light) {
+      NEOScrollLockLEDState := "Off"
+      UpdateNEOLEDS()
+    }
     if (zeigeLockBox)
       TrayTip,Mod4-Feststellung,Die Feststellung wurde aufgehoben.,3,1
   } else {
     IsMod4Locked := 1
-    if (UseMod4Light)
-      KeyboardLED(1,"on")
+    if (UseMod4Light) {
+      NEOScrollLockLEDState := "On"
+      UpdateNEOLEDS()
+    }
     if (zeigeLockBox)
       TrayTip,Mod4-Feststellung,Um Mod4 wieder zu lösen`, drücke beide Mod4-Tasten gleichzeitig!,3,1
   }
