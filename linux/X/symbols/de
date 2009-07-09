@@ -281,7 +281,7 @@ xkb_symbols "neo_base" {
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             NoSymbol,                emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             NoSymbol,                hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          dead_dasia,              dead_doublegrave,        NoSymbol,                U02DE,                NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          dead_dasia,              dead_doublegrave,        NoSymbol,                U02DE,                   NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
@@ -360,7 +360,7 @@ xkb_symbols "neo_base" {
     key  <KP8> { [ KP_8,                    U2718,                   uparrow,                 intersection,            KP_Up,                   KP_Up,                   U22C2,                   NoSymbol                 ] };
     key  <KP9> { [ KP_9,                    dagger,                  U20D7,                   U226B,                   KP_Prior,                KP_Prior,                U2309,                   NoSymbol                 ] };
     key <KPAD> { [ KP_Add,                  KP_Add,                  plusminus,               U2295,                   U2213,                   NoSymbol,                U2214,                   NoSymbol                 ] };
- 
+
     // Middle row
     // --------------------------------------------------------------
     key  <KP4> { [ KP_4,                    club,                    leftarrow,               includedin,              KP_Left,                 KP_Left,                 U2286,                   NoSymbol                 ] };
@@ -378,7 +378,7 @@ xkb_symbols "neo_base" {
     // Bottommost row
     // --------------------------------------------------------------
     key  <KP0> { [ KP_0,                    U2423,                   percent,                 U2030,                   KP_Insert,               KP_Insert,               U25A1,                   NoSymbol                 ] };
-    key <KPDL> { [ KP_Separator,            KP_Decimal,              period,                  apostrophe,              KP_Delete,               KP_Delete,               quotedbl,                NoSymbol                 ] };
+    key <KPDL> { [ KP_Separator,            KP_Decimal,              period,                  minutes,                 KP_Delete,               KP_Delete,               seconds,                 NoSymbol                 ] };
 };
 
 partial alphanumeric_keys modifier_keys keypad_keys
