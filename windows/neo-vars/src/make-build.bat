@@ -41,14 +41,14 @@ del "%outdir%\neo20-r*.exe" 2> nul
 set fnahk=%srcdir%\neo20-all.ahk
 
 if exist "%customahk%" (
-  ren "%customahk%" "%customahkbuild%"
+  move "%customahk%" "%customahkbuild%"
 )
 
 echo Compiling the new Driver using Autohotkey
 "%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
 
 if exist "%customahkbuild%" (
-  ren "%customahkbuild%" "%customahk%"
+  move "%customahkbuild%" "%customahk%"
 )
 
 echo Driver Update complete! You can now close this log-window.
