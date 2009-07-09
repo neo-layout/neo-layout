@@ -222,6 +222,7 @@ CharProc(name) {
 CharProc__Rlod() {
   global
   ; Neustart des AHK-Skripts
+  SetOldLockStates()
   reload
 }
 
