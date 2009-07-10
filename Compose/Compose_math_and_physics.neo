@@ -79,7 +79,7 @@
 <U21BB> <plusminus>                        : "∓"   U2213 # MINUS-OR-PLUS SIGN
 <U21BB> <U2213>                            : "±"   plusminus # PLUS-MINUS SIGN
 <Multi_key> <s> <u> <m>                    : "∑"   U2211 # N-ARY SUMMATION
-<Multi_key> <i> <n> <r>                    : "∫"   U222B # INTEGRAL
+<Multi_key> <i> <n> <t>                    : "∫"   U222B # INTEGRAL
 <Multi_key> <p> <r> <o> <d>                : "∏"   U220F # N-ARY PRODUCT
 <U21BB> <Greek_PI>                         : "∐"   U2210 # N-ARY COPRODUCT
 <Multi_key> <p> <r> <o> <p>                : "∝"   U221D # PROPORTIONAL TO
