@@ -136,8 +136,8 @@
 <Multi_key> <underbar> <asciitilde>               : "̰" U0330 # COMBINING TILDE BELOW
 #<Multi_key> <underscore> <breve>                  : "̯" U032F # COMBINING INVERTED BREVE BELOW
 
-<Multi_key> <underscore> <bracketleft> <bracketright> : "̻" U033B # COMBINING SQUARE BELOW
-<Multi_key> <underbar> <bracketleft> <bracketright>   : "̻" U033B # COMBINING SQUARE BELOW
+#<Multi_key> <underscore> <bracketleft> <bracketright> : "̻" U033B # COMBINING SQUARE BELOW
+#<Multi_key> <underbar> <bracketleft> <bracketright>   : "̻" U033B # COMBINING SQUARE BELOW
 <Multi_key> <underscore> <U21BB> <bracketright>   : "̺" U033A # COMBINING INVERTED BRIDGE BELOW
 <Multi_key> <underbar> <U21BB> <bracketright>     : "̺" U033A # COMBINING INVERTED BRIDGE BELOW
 <Multi_key> <underscore> <U21BB> <bracketleft>    : "̪" U032A # COMBINING BRIDGE BELOW
