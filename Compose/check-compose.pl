@@ -1,6 +1,8 @@
 #!/usr/bin/perl -w
 
-# Dieses Skript prüft übergebene Compose-Dateien auf Präfix-Eigenschaft
+# Dieses Skript prüft übergebene Compose-Dateien auf 
+# Präfix-Eigenschaft und auf Code-Dopplungen
+#
 # Beispiel-Aufruf:
 #
 # ./check-compose.pl *.neo
@@ -29,7 +31,17 @@ EOF
 	}
     }
 
+    if ($code{"@codes"}) {
+	    print <<EOF;
+
+* @codes Sequenz mehrfach verwendet
+ $line
+ $code{"@codes"}
+EOF
+    }
+
     $code{"@codes"} = $line;
+
     if ($prefix{"@codes"}) {
 	    print <<EOF;
 
