@@ -1,24 +1,53 @@
-Compose_neo_math.neo: Compose.neo Compose_math_and_physics.neo
-	cat $? > $@
-	echo >> $@
-	echo "# End of Definitions by Neo keyboard layout" >> $@
 
-Compose_neo_greek.neo: Compose.neo Compose_greek.neo
-	cat $? > $@
-	echo >> $@
-	echo "# End of Definitions by Neo keyboard layout" >> $@
+SRC = ./src
 
-Compose_neo_math_sprachen.neo: Compose.neo Compose_math_and_physics.neo Compose_greek.neo Compose_sprachen.neo
-	cat $? > $@
-	echo >> $@
-	echo "# End of Definitions by Neo keyboard layout" >> $@
+DEFAULTS = \
+	base \
+	base_math \
+	base_greek \
+	base_math_greek_lang \
+	base_greek_lang \
+	base_roman
 
-Compose_neo_sprachen.neo: Compose.neo Compose_greek.neo Compose_sprachen.neo
-	cat $? > $@
-	echo >> $@
-	echo "# End of Definitions by Neo keyboard layout" >> $@
+MODULES = $(notdir $(basename $(wildcard $(SRC)/*.module)))
 
-Compose_neo_rom.neo: Compose.neo Compose_many_roman_numericals.neo
-	cat $? > $@
-	echo >> $@
-	echo "# End of Definitions by Neo keyboard layout" >> $@
+CHECKCOMPOSE = ./check-compose.pl
+
+help : 
+	@echo Available modules: $(MODULES).
+	@echo Type \`make XCompose_mod1_mod2_mod3\' to create 
+	@echo "   " compose file from modules \`mod1\', \`mod2\', and \`mod3\'.
+	@echo Type \`make all\' to create default file set.
+	@echo Type \`make clean\' to cleanup directory.
+
+all : $(addprefix XCompose_, $(DEFAULTS))
+
+XCompose%: FORCE
+	@echo Creating file $@
+	@echo -e "#\n# Automatically generated file.  Do not edit.\n#" >$@ ;\
+	for i in \
+	`echo $@ | sed -e 's/XCompose//;s/_/ /g'`;\
+	do \
+	   export fn=$(SRC)/$$i.module;\
+	   if [ -e $$fn ]; then \
+	      echo -e "\n#\n# begin include module $$i\n#\n" >>$@ ;\
+	      cat $$fn >>$@ ;\
+	      echo -e "\n#\n# end include module $$i\n#\n" >>$@ ;\
+	   else \
+	      echo "*** Warning: file $$fn not found";\
+	   fi \
+	done
+
+check :
+	@for i in XCompose*; do \
+	   $(CHECKCOMPOSE) -q $$i || (\
+	   echo Problem in file $$i. ;\
+	   echo Run \`$(CHECKCOMPOSE) $$i\' for more details. ); done
+
+clean :
+	-rm -f XCompose_*
+
+
+
+.PHONY : clean help check
+FORCE : ;

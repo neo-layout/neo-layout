@@ -8,6 +8,10 @@
 # ./check-compose.pl *.neo
 
 use strict;
+use Getopt::Std;
+our ($opt_q);
+
+getopts('q'); # almost quiet operation
 
 my %prefix;
 my %code;
@@ -22,6 +26,7 @@ while (my $line = <>) {
 	$prefix{"@codes[0..$i]"} = $line;
 
 	if ($code{"@codes[0..$i]"}) {
+	    if ($opt_q) { exit 1; }
 	    print <<EOF;
 
 * @codes[0..$i] Präfix bereits terminal verwendet
@@ -32,7 +37,8 @@ EOF
     }
 
     if ($code{"@codes"}) {
-	    print <<EOF;
+	if ($opt_q) { exit 1; }
+	print <<EOF;
 
 * @codes Sequenz mehrfach verwendet
  $line
@@ -43,7 +49,8 @@ EOF
     $code{"@codes"} = $line;
 
     if ($prefix{"@codes"}) {
-	    print <<EOF;
+	if ($opt_q) { exit 1; }
+	print <<EOF;
 
 * @codes Sequenz bereits als Präfix verwendet
  $line
@@ -51,3 +58,4 @@ EOF
 EOF
     } 
 }
+
