@@ -25,15 +25,17 @@ all : $(addprefix XCompose_, $(DEFAULTS))
 
 XCompose%: FORCE
 	@echo Creating file $@
-	@echo -e "#\n# Automatically generated file.  Do not edit.\n#" >$@ ;\
+	@echo "#" >$@ ;\
+	@echo "# Automatically generated file.  Do not edit." >$@ ;\
+	@echo "#" >$@ ;\
 	for i in \
 	`echo $@ | sed -e 's/XCompose//;s/_/ /g'`;\
 	do \
 	   export fn=$(SRC)/$$i.module;\
 	   if [ -e $$fn ]; then \
-	      echo -e "\n#\n# begin include module $$i\n#\n" >>$@ ;\
+	      echo "# begin include module $$i" >>$@ ;\
 	      cat $$fn >>$@ ;\
-	      echo -e "\n#\n# end include module $$i\n#\n" >>$@ ;\
+	      echo "# end include module $$i" >>$@ ;\
 	   else \
 	      echo "*** Warning: file $$fn not found";\
 	   fi \
