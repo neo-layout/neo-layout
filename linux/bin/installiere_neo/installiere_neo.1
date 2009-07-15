@@ -167,19 +167,19 @@ install_options()
 	chmod u+x $inst_dir/beschreibe
 
 	echo "Ergänze die Compose-Erweiterung von Neo…"
-	create neo_compose $inst_dir/Compose.neo
+	create neo_compose $inst_dir/XCompose
 	if [ -f $HOME/.XCompose ]
 	then
 		echo -e "Die Datei ${red}$HOME/.XCompose${normal} gibt es bereits – soll die bestehende Datei überschrieben werden? \c"; read -p "[J,N] " -e overwrite
 		if [ "$overwrite" = "J" ]		# overwrite?
 		then
 			echo "Datei $HOME/.XCompose wird überschrieben!"
-			cat /usr/share/X11/locale/en_US.UTF-8/Compose $inst_dir/Compose.neo > $HOME/.XCompose
+			cat /usr/share/X11/locale/en_US.UTF-8/Compose $inst_dir/XCompose > $HOME/.XCompose
 		else
 			echo -e "Datei ${red}$HOME/.XCompose${normal} bleibt erhalten, jedoch kann die Compos-Erweiterung von Neo nicht genutzt werden."
 		fi
 	else
-		cat /usr/share/X11/locale/en_US.UTF-8/Compose $inst_dir/Compose.neo > $HOME/.XCompose
+		cat /usr/share/X11/locale/en_US.UTF-8/Compose $inst_dir/XCompose > $HOME/.XCompose
 	fi
 
 	create neorc $HOME/.neorc
@@ -217,7 +217,7 @@ deinstall()
 	rmfromprofile
 	remove $HOME/.neorc
 	remove $inst_dir/starte_neo
-	remove $inst_dir/Compose.neo
+	remove $inst_dir/XCompose
 	remove $inst_dir/neo20.txt
 	remove $inst_dir/beschreibe
 	remove $inst_dir/wiemitneo

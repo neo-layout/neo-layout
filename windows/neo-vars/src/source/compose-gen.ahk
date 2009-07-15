@@ -1916,9 +1916,9 @@ LoadCurrentCompose() {
   return
 
   ConvertCompose:
-    ComposePath := "..\..\..\Compose"
+    ComposePath := "..\..\..\Compose\src"
     LoadCurrentComposeFile(ComposePath . "\en_US.UTF-8")
-    LoadCurrentComposeFile(ComposePath . "\Compose.neo")
+    LoadCurrentComposeFile(ComposePath . "\base.module")
     TrayTip,Compose-Konvertierung,Konvertierung abgeschlossen!,10,1
   return
 }
