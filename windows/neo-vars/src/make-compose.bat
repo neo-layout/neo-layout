@@ -30,8 +30,9 @@ if errorlevel 1 (
 
 echo Deleting old Compose sequences
 del "%Ssrcdir%\Compose.generated.ahk" "%Ssrcdir%\Compose-tainted.generated.ahk" 2> nul
+
 echo Compiling Compose sequences
-"%AutoHotkey%" "%Ssrcdir%\makecompose.ahk" "%CompRevision%" "%fncomp%" "%svnversiondir2%\en_US.UTF-8" "%svnversiondir2%\Compose.neo" "%svnversiondir2%\Compose_greek.neo" "%svnversiondir2%\Compose_math_and_physics.neo"
+"%AutoHotkey%" "%Ssrcdir%\makecompose.ahk" "%CompRevision%" "%fncomp%" "%svnversiondir2%\src\en_US.UTF-8" "%svnversiondir2%\src\base.module" "%svnversiondir2%\src\greek.module" "%svnversiondir2%\src\math.module" "%svnversiondir2%\src\lang.module"
 
 echo Compose Update complete! You can now close this log-window.
 pause
