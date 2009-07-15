@@ -48,7 +48,7 @@ fuege_ein neo_neo ../neo
 fuege_ein neo_num ../num
 fuege_ein neo_wiemitneo ../wiemitneo
 fuege_ein neo_beschreibe ../beschreibe
-fuege_ein neo_compose ../../../Compose/Compose.neo
+fuege_ein neo_compose ../../../Compose/XCompose
 fuege_ein neorc ../../etc/neo.conf
 
 cat installiere_neo.2
