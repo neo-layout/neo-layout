@@ -9,7 +9,8 @@ DEFAULTS = \
 	base_greek_lang \
 	base_roman
 
-MODULES = $(notdir $(basename $(wildcard $(SRC)/*.module)))
+MODULES_SRC = $(wildcard $(SRC)/*.module))
+MODULES = $(notdir $(basename $(MODULES_SRC)))
 
 CHECKCOMPOSE = ./check-compose.pl
 
@@ -37,6 +38,9 @@ XCompose%: FORCE
 	      echo "*** Warning: file $$fn not found";\
 	   fi \
 	done
+
+XCompose : XCompose_base
+	cp $< $@
 
 check :
 	@for i in XCompose*; do \
