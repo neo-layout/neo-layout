@@ -19,6 +19,7 @@ help :
 	@echo "   " compose file from modules \`mod1\', \`mod2\', and \`mod3\'.
 	@echo Type \`make all\' to create default file set.
 	@echo Type \`make clean\' to cleanup directory.
+	@echo Copy the file XCompose_mod1_mod2_mod3 to \~/.XCompose afterwards.
 
 all : $(addprefix XCompose_, $(DEFAULTS))
 
