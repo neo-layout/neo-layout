@@ -1,4 +1,3 @@
-
 SRC = ./src
 
 DEFAULTS = \
@@ -9,7 +8,7 @@ DEFAULTS = \
 	base_greek_lang \
 	base_roman
 
-MODULES_SRC = $(wildcard $(SRC)/*.module))
+MODULES_SRC = $(wildcard $(SRC)/*.module)
 MODULES = $(notdir $(basename $(MODULES_SRC)))
 
 CHECKCOMPOSE = ./check-compose.pl
@@ -23,15 +22,15 @@ help :
 
 all : $(addprefix XCompose_, $(DEFAULTS))
 
-XCompose%: FORCE
+XCompose%: $(MODULES_SRC) 
 	@echo Creating file $@
-	@echo "#" >$@ ;\
-	@echo "# Automatically generated file.  Do not edit." >$@ ;\
-	@echo "#" >$@ ;\
+	echo "#" >$@ 
+	echo "# Automatically generated file.  Do not edit." >>$@ 
+	echo "#" >>$@ 
 	for i in \
 	`echo $@ | sed -e 's/XCompose//;s/_/ /g'`;\
 	do \
-	   export fn=$(SRC)/$$i.module;\
+	   fn=$(SRC)/$$i.module;\
 	   if [ -e $$fn ]; then \
 	      echo "# begin include module $$i" >>$@ ;\
 	      cat $$fn >>$@ ;\
@@ -52,8 +51,9 @@ check :
 
 clean :
 	-rm -f XCompose_*
+	-rm -f XCompose
 
 
 
 .PHONY : clean help check
-FORCE : ;
+
