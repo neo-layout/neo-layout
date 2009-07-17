@@ -28,6 +28,7 @@ xmodmap/neo_de_x-prog.xmodmap:xmodmap/neo_de.xmodmap
 
 xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
 	sed -e 's/U202F/NoSymbol/g' \
+	-e 's/keycode\ 108/keysym\ KP_Enter/g' \
 	-e 's/dead_stroke/NoSymbol/g' \
 	-e 's/dead_doublegrave/U02F5/g' \
 	-e 's/dead_dasia/U1FFE/g' $< > $@
