@@ -1,60 +1,101 @@
+#
+# Neo/Compose/Makefile
+# Autor: hcw@gmx.de
+
+# Ort der Modul-Dateien 
+#
 SRC = ./src
+MODULES_FILES = $(wildcard $(SRC)/*.module)
+MODULES = $(notdir $(basename $(MODULES_FILES)))
 
-DEFAULTS = \
-	base \
-	base_math \
-	base_greek \
-	base_math_greek_lang \
-	base_greek_lang \
-	base_roman
+# Liste von Demofiles, werden bei 'make all' erzeugt.
+# Im Grunde ist dies seit 'make config' überflüssig.
+#
+DEMOFILES = \
+	XCompose_base \
+	XCompose_base_math \
+	XCompose_base_math_greek_lang \
+	XCompose_base_greek_lang \
+	XCompose_base_roman
 
-MODULES_SRC = $(wildcard $(SRC)/*.module)
-MODULES = $(notdir $(basename $(MODULES_SRC)))
-
+# Hilfsprogramme
+#
 CHECKCOMPOSE = ./check-compose.pl
+CONFIGURE = /bin/bash ./configure.sh
 
-help : 
-	@echo Available modules: $(MODULES).
-	@echo Type \`make XCompose_mod1_mod2_mod3\' to create 
-	@echo "   " compose file from modules \`mod1\', \`mod2\', and \`mod3\'.
-	@echo Type \`make all\' to create default file set.
-	@echo Type \`make clean\' to cleanup directory.
-	@echo Copy the file XCompose_mod1_mod2_mod3 to \~/.XCompose afterwards.
+# Nutzerkonfiguration für Zusammenstellung der Datei XCompose.
+# Datei .config wird von 'make config' interaktiv geschrieben.
+# Defaultwert, falls .config noch nicht existiert.
+#
+-include ./.config
+USER_XCOMPOSE ?= XCompose_base_math
 
-all : $(addprefix XCompose_, $(DEFAULTS))
+#
+# 'make' bzw. 'make all' erzeugt die Datei XCompose ohne Installation
+#
 
-XCompose%: $(MODULES_SRC) 
-	@echo Creating file $@
-	echo "#" >$@ 
-	echo "# Automatically generated file.  Do not edit." >>$@ 
-	echo "#" >>$@ 
-	for i in \
-	`echo $@ | sed -e 's/XCompose//;s/_/ /g'`;\
+all : XCompose $(DEMOFILES)
+
+#
+# 'make config' führt interaktive Abfrage der Konfiguration durch 
+# und legt Ergebnis in .config ab
+#
+
+config :
+	$(CONFIGURE) $(MODULES)
+
+#
+# 'make XCompose_foo_bar_baz' erzeugt Datei aus Modulen foo bar baz
+#
+
+XCompose_% : $(MODULES_FILES) 
+	@echo "Erzeuge $@."
+	@echo "#" >$@ 
+	@echo "# Automatically generated file $@.  Do not edit." >>$@ 
+	@echo "#" >>$@ 
+	@for i in \
+	`echo $@ | sed -e 's/XCompose//;s/_/ /g'` ;\
 	do \
-	   fn=$(SRC)/$$i.module;\
+	   fn=$(SRC)/$$i.module ;\
 	   if [ -e $$fn ]; then \
 	      echo "# begin include module $$i" >>$@ ;\
 	      cat $$fn >>$@ ;\
 	      echo "# end include module $$i" >>$@ ;\
 	   else \
-	      echo "*** Warning: file $$fn not found";\
+	      echo "*** Warnung: Datei $$fn kann nicht eingebunden werden" ;\
 	   fi \
 	done
 
-XCompose : XCompose_base
+XCompose : $(USER_XCOMPOSE) $(wildcard .config)
 	cp $< $@
 
-check :
-	@for i in XCompose*; do \
+#
+# Installiere ins Homeverzeichnis
+#
+
+install : XCompose
+	cp XCompose $${HOME}/.XCompose
+
+#
+# Test der XCompose-Dateien auf Korrektheit
+#
+
+check : 
+	@for i in $(wildcard XCompose*) ; do \
 	   $(CHECKCOMPOSE) -q $$i || (\
-	   echo Problem in file $$i. ;\
-	   echo Run \`$(CHECKCOMPOSE) $$i\' for more details. ); done
+	   echo Problem in Datei $$i. ;\
+	   echo Mehr Informationen mit \`$(CHECKCOMPOSE) $$i\'. ); done
+
+#
+# weitere Standard-Targets
+#
 
 clean :
 	-rm -f XCompose_*
 	-rm -f XCompose
 
+distclean : clean
+	-rm -f .config
 
-
-.PHONY : clean help check
+.PHONY : all config check clean distclean install 
 
