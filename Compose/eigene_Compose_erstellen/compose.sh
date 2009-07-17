@@ -87,7 +87,12 @@ done
 
 if [ $g = 1 ]
 then
-	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]} ${m[5]} "${b[5]}" ${a[5]} ${m[6]} "${b[6]}" ${a[6]}`
+	if [ $KDE_FULL_SESSION = true ]
+	then
+		menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]} ${m[5]} "${b[5]}" ${a[5]} ${m[6]} "${b[6]}" ${a[6]}`
+	else
+		menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --hide-column=1 --text " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten.\n Für Für mehrere Module STRG bzw. CTRL gedrückt halten. " ${m[2]} "${b[2]}" ${m[3]} "${b[3]}" ${m[4]} "${b[4]}" ${m[5]} "${b[5]}" ${m[6]} "${b[6]}"`
+	fi
 	auswahl=$auswahl\ $menu
 fi
 
