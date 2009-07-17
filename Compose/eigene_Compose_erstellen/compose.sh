@@ -38,7 +38,7 @@ auswahl=${m[0]}
 
 m[1]=optional
 d[1]=optional.module
-auswahl=${m[0]}\ ${m[1]}						# Bei Verwendung einer eigenen (optionalen) Compose das Kommentarzeichen (#) entfernen
+#auswahl=${m[0]}\ ${m[1]}						# Bei Verwendung einer eigenen (optionalen) Compose das Kommentarzeichen (#) entfernen
 
 
 while [ ! "$module" ]
