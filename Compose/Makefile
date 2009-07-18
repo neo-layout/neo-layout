@@ -74,7 +74,7 @@ XCompose : $(USER_XCOMPOSE) $(wildcard .config)
 #
 
 install : XCompose
-	cp XCompose $${HOME}/.XCompose
+	cat $(SRC)/en_US.UTF-8 XCompose > $${HOME}/.XCompose
 
 #
 # Test der XCompose-Dateien auf Korrektheit
