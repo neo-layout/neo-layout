@@ -1,42 +1,40 @@
 #!/bin/sh
 
+SRC=./src								# Source directory
+
 # Anzahl der Compose-Module
 anzahl=6
 
-m[2]=math								# Modul
-b[2]="mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)"		# Beschreibung
-d[2]=math.module							# Datei
-a[2]=off								# Standard-Auswahl
+m[2]=math								# name of modul
+b[2]="mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)"		# description of module
+a[2]=off								# default value for this module
 
 m[3]=greek
 b[3]="griechische Buchstaben (A ἀ)"
-d[3]=greek.module
 a[3]=off
 
 m[4]=lang
 b[4]="Lautschrift und weitere Sprachen ([neːo] Ɱ ʃ ɐ)"
-d[4]=lang.module
 a[4]=off
 
 m[5]=roman
 b[5]="römische Zahlen >12 (große Datei!) (1868→ⅿⅾⅽⅽⅽⅼⅹⅴⅰⅰⅰ)"
-d[5]=roman.module
 a[5]=off
 
 m[6]=klingon
 b[6]="klingonische Zahlen (große Datei!) (1984→wa'SaD Hutvatlh chorghmaH loS)"
-d[6]=klingon.module
 a[6]=off
 
 
 m[0]=base
-d[0]=base.module
 auswahl=XCompose_${m[0]}
 
-m[1]=optional
-d[1]=optional.module
-#auswahl=${m[0]}\ ${m[1]}						# Bei Verwendung einer eigenen (optionalen) Compose das Kommentarzeichen (#) entfernen
-
+if [ -f $SRC/optional.module ]
+then
+	m[1]=optional
+	b[1]=eigene Compose-Datei					# for zenity written with a no‑break space
+	a[1]=on
+fi
 
 while [ ! "$module" ]
 do
@@ -58,15 +56,15 @@ done
 
 if [ $KDE_FULL_SESSION = true ]
 then
-	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]} ${m[5]} "${b[5]}" ${a[5]} ${m[6]} "${b[6]}" ${a[6]}`
+	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]} ${m[5]} "${b[5]}" ${a[5]} ${m[6]} "${b[6]}" ${a[6]} ${m[1]} "${b[1]}" ${a[1]}`
 else
-	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --hide-column=1 --separator=_ --text " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten.\n Für Für mehrere Module STRG bzw. CTRL gedrückt halten. " ${m[2]} "${b[2]}" ${m[3]} "${b[3]}" ${m[4]} "${b[4]}" ${m[5]} "${b[5]}" ${m[6]} "${b[6]}"`
+	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --hide-column=1 --separator=_ --text " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten.\n Für Für mehrere Module STRG bzw. CTRL gedrückt halten. " ${m[2]} "${b[2]}" ${m[3]} "${b[3]}" ${m[4]} "${b[4]}" ${m[5]} "${b[5]}" ${m[6]} "${b[6]}" ${m[1]} ${b[1]}`
 fi
 menu=$(echo $menu | sed -e 's/\"//g' | sed -e 's/\ /_/g')
 
 if [ $menu ]
 then
-	make $auswahl\_$menu
+	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config
 	make install
 	make clean
 fi
