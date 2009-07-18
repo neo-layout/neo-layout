@@ -1,5 +1,5 @@
 
-# Erweiterung zur Standard-Compose und zur Neo-Compose-Erweiterung zur Verwendung in Lyx
+# Erweiterung zur Standard-Compose und zur Neo-Compose-Erweiterung zur Verwendung in LyX
 #
 # Autor: Pascal Hauck <neo at pascalhauck dot de>
 #
@@ -13,7 +13,7 @@
 #   3) diese Datei
 #
 # Schritt 2:
-#  lyx starten
+#  LyX starten
 #  Einige Sekunden warten…
 # 
 # Schritt 3:
@@ -23,12 +23,13 @@
 #
 #
 # Man beachte:
-#  Alle Programme, die nach der Zusammenstellung der Neo-lyx-Compose gestartet werden,
+#  Alle Programme, die nach der Zusammenstellung der Neo-LyX-Compose gestartet werden,
 #  nutzen diese auch. Das heißt, dass z.B. das Zeichen ›…‹ durch ›\\ldots ‹ ersetzt wird.
-#  Da dies nicht gewünscht ist, sollte nach dem Starten von lyx erst nann weitere Programme
+#  Da dies nicht gewünscht ist, sollte nach dem Starten von LyX erst nann weitere Programme
 #  gestartet werden, wenn die bisherige Compose-Datei wieder hergestellt ist und einige
 #  Sekunden Zeit vergangen ist.
 
+#configinfo Datei zur direkten Eingabe von Zeichen in LyX
 
 <U22C5>                        : "\\cdot "
 <multiply>                     : "\\times "
@@ -103,7 +104,8 @@
 <Greek_sigma>                  : "\\sigma "
 <Greek_tau>                    : "\\tau "
 <Greek_upsilon>                : "\\upsilon "
-<Greek_phi>                    : "\\phi "
+<Greek_phi>                    : "\\varphi "
+<U03D5>                        : "\\phi "
 <Greek_chi>                    : "\\chi "
 <Greek_psi>                    : "\\psi "
 <Greek_omega>                  : "\\omega "
