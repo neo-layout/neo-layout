@@ -13,7 +13,11 @@ src/*.module
 
 Makefile
   Erstellt aus den Modulen eine oder mehrere lauffähige
-  XCompose-Dateien.  Details mit `make help'
+  XCompose-Dateien.
+
+compose_gui.sh
+  Graphisches Frontend (je nach System kdialog oder zenity) für
+  `make config && make install`
 
 XCompose* 
   Lauffähige Compose-Datei (werden mittels Makefile erzeugt).  Sie ist
