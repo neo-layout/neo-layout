@@ -1,40 +1,48 @@
 #!/bin/sh
 
+# This file is part of the german Neo keyboard layout
+#
+# GUI to combine several Compose modules written by Neo keyboard layout
+# This file has been originally written by Pascal Hauck (neo@pascalhauck.de)
+
+
 SRC=./src								# Source directory
-
-# Anzahl der Compose-Module
-anzahl=6
-
-m[2]=math								# name of modul
-b[2]="mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)"		# description of module
-a[2]=off								# default value for this module
-
-m[3]=greek
-b[3]="griechische Buchstaben (A ἀ)"
-a[3]=off
-
-m[4]=lang
-b[4]="Lautschrift und weitere Sprachen ([neːo] Ɱ ʃ ɐ)"
-a[4]=off
-
-m[5]=roman
-b[5]="römische Zahlen >12 (große Datei!) (1868→ⅿⅾⅽⅽⅽⅼⅹⅴⅰⅰⅰ)"
-a[5]=off
-
-m[6]=klingon
-b[6]="klingonische Zahlen (große Datei!) (1984→wa'SaD Hutvatlh chorghmaH loS)"
-a[6]=off
+CONFFILE=.config
+typeset -i anzahl
 
 
-m[0]=base
-auswahl=XCompose_${m[0]}
+auswahl=XCompose_base
 
-if [ -f $SRC/optional.module ]
-then
-	m[1]=optional
-	b[1]=eigene Compose-Datei					# for zenity written with a no‑break space
-	a[1]=on
-fi
+for i in src/*.module
+do
+	name=$(basename $i .module)					# name of modul
+	if [ ! "$name" = "base" ]
+	then
+		anzahl=anzahl+1
+		m[$anzahl]=$name
+		b[$anzahl]=$(sed -n "
+/^#configinfo[ \t]*/{
+    s///
+    s/^\(.\{10\}\) */\1/
+    p;q
+}
+
+\${
+    s/.*/ohne Beschreibung/
+    s/^\(.\{10\}\) */\1/
+    p
+}" $SRC/$name.module)							# description of module
+		if grep -q $name $CONFFILE
+		then
+			a[$anzahl]=on					# default value for this module
+		else
+			a[$anzahl]=off
+		fi
+	fi
+	klist=$klist\ ${m[$anzahl]}\ ${b[$anzahl]}\ ${a[$anzahl]}
+	glist=$glist\ ${m[$anzahl]}\ ${b[$anzahl]}
+done
+
 
 while [ ! "$module" ]
 do
@@ -43,10 +51,10 @@ do
       module=ausgewählt
       ;;
   *)
-      echo Aufruf: compose.sh [-g] [COMPOSEMODULE]
+      echo Aufruf: compose.sh
       echo Mit »compose.sh« können die Compose-Module von Neo zusammengesetzt werden.
       echo Folgende Module sind verfügbar:
-      for i in $(seq 2 $anzahl)
+      for i in $(seq 1 $anzahl)
       do
        echo -e "  ${m[$i]}\t\t${b[$i]}"
       done
@@ -54,11 +62,12 @@ do
  esac
 done
 
+
 if [ $KDE_FULL_SESSION = true ]
 then
-	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " ${m[2]} "${b[2]}" ${a[2]} ${m[3]} "${b[3]}" ${a[3]} ${m[4]} "${b[4]}" ${a[4]} ${m[5]} "${b[5]}" ${a[5]} ${m[6]} "${b[6]}" ${a[6]} ${m[1]} "${b[1]}" ${a[1]}`
+	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " $klist`
 else
-	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --hide-column=1 --separator=_ --text " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten.\n Für Für mehrere Module STRG bzw. CTRL gedrückt halten. " ${m[2]} "${b[2]}" ${m[3]} "${b[3]}" ${m[4]} "${b[4]}" ${m[5]} "${b[5]}" ${m[6]} "${b[6]}" ${m[1]} ${b[1]}`
+	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --hide-column=1 --separator=_ --text " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten.\n Für Für mehrere Module STRG bzw. CTRL gedrückt halten. " $glist`
 fi
 menu=$(echo $menu | sed -e 's/\"//g' | sed -e 's/\ /_/g')
 
