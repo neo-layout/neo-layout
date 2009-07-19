@@ -13,10 +13,7 @@ CONFFILE=.config
 MODPATH=./src
 MODSUFFIX=.module
 
-if [ ! -e $CONFFILE ] ; then
-    # leere Konfiguration erzeugen
-    echo "USER_XCOMPOSE = base " > $CONFFILE
-fi
+[ -e $CONFFILE ] || { echo $CONFFILE fehlt; exit 1; }
 
 #
 # verfügbare Module auslesen und Kurzbeschreibung anzeigen

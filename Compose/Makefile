@@ -5,18 +5,19 @@
 # Ort der Modul-Dateien 
 #
 SRC = ./src
-MODULES_FILES = $(wildcard $(SRC)/*.module)
+PSEUDO_MODULES_FILES = $(SRC)/enUS.module
+MODULES_FILES = $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module)
 MODULES = $(notdir $(basename $(MODULES_FILES)))
 
 # Liste von Demofiles, werden bei 'make all' erzeugt.
 # Im Grunde ist dies seit 'make config' überflüssig.
 #
 DEMOFILES = \
-	XCompose_base \
-	XCompose_base_math \
-	XCompose_base_math_greek_lang \
-	XCompose_base_greek_lang \
-	XCompose_base_roman
+	XCompose_enUS_base \
+	XCompose_enUS_base_math \
+	XCompose_enUS_base_math_greek_lang \
+	XCompose_enUS_base_greek_lang \
+	XCompose_enUS_base_roman
 
 # Hilfsprogramme
 #
@@ -28,7 +29,7 @@ CONFIGURE = /bin/bash ./configure.sh
 # Defaultwert, falls .config noch nicht existiert.
 #
 -include ./.config
-USER_XCOMPOSE ?= XCompose_base_math
+USER_XCOMPOSE ?= XCompose_enUS_base_math
 
 #
 # 'make' bzw. 'make all' erzeugt die Datei XCompose ohne Installation
@@ -39,9 +40,11 @@ all : XCompose $(DEMOFILES)
 #
 # 'make config' führt interaktive Abfrage der Konfiguration durch 
 # und legt Ergebnis in .config ab
-#
 
-config :
+
+config : $(PSEUDO_MODULES_FILES)
+	@if [ ! -f .config ] ; then \
+	   echo "USER_XCOMPOSE = $(USER_XCOMPOSE)" > .config ; fi
 	$(CONFIGURE) $(MODULES)
 
 #
@@ -70,11 +73,27 @@ XCompose : $(USER_XCOMPOSE) $(wildcard .config)
 	cp $< $@
 
 #
+# Regeln für Pseudo-Module
+#
+# Im Grunde braucht src/en_US.UTF-8 gar nicht in der Neo-Distribution
+# enthalten zu sein; man könnte stattdessen auch an dieser Stelle
+# die Abhängigkeit
+#    $(SRC)/enUS.module : /usr/share/X11/locale/en_US.UTF-8/Compose
+# setzen.
+#
+$(SRC)/enUS.module : $(SRC)/en_US.UTF-8
+	@ ( \
+	   echo "# File $@, wird aus $< durch Kopieren erzeugt." ;\
+	   echo "#configinfo en_US.UTF-8, Standard unabhängig von Neo" ;\
+	   cat $< \
+	) > $@
+
+#
 # Installiere ins Homeverzeichnis
 #
 
 install : XCompose
-	cat $(SRC)/en_US.UTF-8 XCompose > $${HOME}/.XCompose
+	cp XCompose $${HOME}/.XCompose
 
 #
 # Test der XCompose-Dateien auf Korrektheit
@@ -96,6 +115,7 @@ clean :
 
 distclean : clean
 	-rm -f .config
+	-rm -f $(SRC)/enUS.module
 
 .PHONY : all config check clean distclean install 
 
