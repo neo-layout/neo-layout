@@ -11,6 +11,20 @@ CONFFILE=.config
 typeset -i anzahl
 
 
+if [ $KDE_FULL_SESSION = true ]
+then
+	CHECKLIST() {
+		kdialog --title Compose-Module --checklist "$1<br>$2<br><br>$3" $5
+	}
+	MSGBOX="kdialog --title Compose-Module --msgbox "
+else
+	CHECKLIST() {
+		zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "$1\n$2\n\n$3\n$4" $6
+	}
+	MSGBOX="zenity --title Compose-Module --width=480 --height=250 --info --text "
+fi
+
+
 auswahl=XCompose_base
 
 for i in src/*.module
@@ -62,26 +76,10 @@ do
  esac
 done
 
-text1="Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt,"
-text2="wodurch Zeichen wie ∮ έ ʒ ermöglicht werden."
-text3="Wählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten."
-text4="Für mehrere Module STRG bzw. CTRL gedrückt halten."
-if [ $KDE_FULL_SESSION = true ]
-then
-	menu=`kdialog --title Compose-Module --checklist "$text1<br>$text2<br><br>$text3" $klist`
-else
-	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "$text\n$text2\n\n$text3\n$test4" $glist`
-fi
-menu=$(echo $menu | sed -e 's/\"//g' | sed -e 's/\ /_/g')
+menu=`CHECKLIST "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt," "wodurch Zeichen wie ∮ έ ʒ ermöglicht werden." "Wählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten." "Für mehrere Module STRG bzw. CTRL gedrückt halten." "$klist" "$glist" | sed -e 's/\"//g' | sed -e 's/\ /_/g'`
 
 if [ $menu ]
 then
 	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
-	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config && make install && make clean && 
-	$(if [ $KDE_FULL_SESSION = true ]
-	then
-		kdialog --title Compose-Module --msgbox "$fertig"
-	else
-		zenity --title Compose-Module --width=480 --height=250 --info --text "$fertig"
-	fi)
+	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config && make install && make clean && $MSGBOX "$fertig"
 fi
