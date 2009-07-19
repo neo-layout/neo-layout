@@ -62,18 +62,26 @@ do
  esac
 done
 
-
+text1="Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt,"
+text2="wodurch Zeichen wie ∮ έ ʒ ermöglicht werden."
+text3="Wählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten."
+text4="Für mehrere Module STRG bzw. CTRL gedrückt halten."
 if [ $KDE_FULL_SESSION = true ]
 then
-	menu=`kdialog --title Compose-Module --checklist " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten. " $klist`
+	menu=`kdialog --title Compose-Module --checklist "$text1<br>$text2<br><br>$text3" $klist`
 else
-	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --hide-column=1 --separator=_ --text " Wählen Sie die optionalen Compose-Module von Neo aus, die Sie verwenden möchten.\n Für Für mehrere Module STRG bzw. CTRL gedrückt halten. " $glist`
+	menu=`zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "$text\n$text2\n\n$text3\n$test4" $glist`
 fi
 menu=$(echo $menu | sed -e 's/\"//g' | sed -e 's/\ /_/g')
 
 if [ $menu ]
 then
-	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config
-	make install
-	make clean
+	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
+	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config && make install && make clean && 
+	$(if [ $KDE_FULL_SESSIO = true ]
+	then
+		kdialog --title Compose-Module --msgbox "$fertig"
+	else
+		zenity --title Compose-Module --width=480 --height=250 --info --text "$fertig"
+	fi)
 fi
