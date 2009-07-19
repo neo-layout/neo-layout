@@ -78,7 +78,7 @@ if [ $menu ]
 then
 	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
 	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config && make install && make clean && 
-	$(if [ $KDE_FULL_SESSIO = true ]
+	$(if [ $KDE_FULL_SESSION = true ]
 	then
 		kdialog --title Compose-Module --msgbox "$fertig"
 	else
