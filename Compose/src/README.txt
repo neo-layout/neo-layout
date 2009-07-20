@@ -8,4 +8,5 @@
   möglich.
 
 en_US.UTF-8
-  wird von AHK compose-gen benötigt.
+  wird von AHK compose-gen benötigt. Enthält Cokos, die unter Linux
+  bereits vorliegen (sollten).
