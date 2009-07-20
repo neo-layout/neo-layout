@@ -6,7 +6,7 @@
 #
 SRC = ./src
 PSEUDO_MODULES_FILES = $(SRC)/enUS.module
-MODULES_FILES = $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module)
+MODULES_FILES = $(sort $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module))
 MODULES = $(notdir $(basename $(MODULES_FILES)))
 
 # Liste von Demofiles, werden bei 'make all' erzeugt.
