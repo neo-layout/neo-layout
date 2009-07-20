@@ -11,8 +11,7 @@ PNGFILES=$(addsuffix .png,$(basename ${SVGFILES}))
 
 default: pdf png 
 pdf: ${PDFFILES}
-png: ${PNGFILES} ebenen www
-ebenen: ${EBENENPNG}
+png: ${PNGFILES} ${EBENENPNG} www
 www: $(addsuffix .png,$(basename $(shell find ../www -name "*.svg")))
 
 clean: cleanpng cleanpdf
@@ -46,7 +45,7 @@ tastatur3d/ziffernfeld/%.png: tastatur3d/%.svg
 	mogrify -depth 8 $@
 	optipng $@
 
-tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/%.svg tastatur3d/hauptfeld/%.png tastatur3d/ziffernfeld/%.png
+tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/hauptfeld/%.png tastatur3d/ziffernfeld/%.png
 	mkdir -p tastatur3d/haupt_ziffern_feld
 	convert -splice 20x0 -background transparent -colors 256 -type Palette +dither -alpha off -alpha on tastatur3d/ziffernfeld/$*.png /tmp/$*_tmp.png
 	convert +append tastatur3d/hauptfeld/$*.png /tmp/$*_tmp.png $@
