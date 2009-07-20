@@ -11,26 +11,42 @@ CONFFILE=.config
 typeset -i anzahl
 
 
-if [ $KDE_FULL_SESSION = true ]
+if [ "X:$KDE_FULL_SESSION" = "X:true" ]
 then
 	CHECKLIST() {
 		kdialog --title Compose-Module --checklist "$1<br>$2<br><br>$3" $5
 	}
-	MSGBOX="kdialog --title Compose-Module --msgbox "
+	MSGBOX() {
+		kdialog --title Compose-Module --msgbox "$1"
+	}
+	YESNO() {
+		kdialog --title Compose-Module --yesno "$1"
+	}
 else
 	CHECKLIST() {
-		zenity --title Compose-Module --width=480 --height=250 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "$1\n$2\n\n$3\n$4" $6
+		zenity --title Compose-Module --width=610 --height=320 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "$1\n$2\n\n$3\n$4" $6
 	}
-	MSGBOX="zenity --title Compose-Module --width=480 --height=250 --info --text "
+	MSGBOX() {
+		zenity --title Compose-Module --info --text "$1"
+	}
+	YESNO() {
+		zenity --title Compose-Module --question --text "$1"
+	}
 fi
 
 
-auswahl=XCompose_base
+if [ -f $HOME/.XCompose ]
+then
+	YESNO "Es gibt bereits eine Compose-Datei (z.B. durch eine ältere Neo-Installation).\nSollten Sie eigene Definitionen in der Datei ~/.XCompose vorgenommen haben, dann brechen Sie jetzt ab und schreiben Ihre eigenen Definitionen in eine Datei (z.B. user.module) im Ordner src.\n\nAnderenfalls können Sie das Skript bedenkenlos fortsetzen.\nWollen Sie fortfahren?" || exit
+fi
+
+
+auswahl=XCompose_enUS_base
 
 for i in src/*.module
 do
 	name=$(basename $i .module)					# name of modul
-	if [ ! "$name" = "base" ]
+	if [ ! "$name" = "base" -a ! "$name" = "enUS" ]
 	then
 		anzahl=anzahl+1
 		m[$anzahl]=$name
@@ -46,7 +62,7 @@ do
     s/^\(.\{10\}\) */\1/
     p
 }" $SRC/$name.module)							# description of module
-		if grep -q $name $CONFFILE
+		if  grep -qs $name $CONFFILE
 		then
 			a[$anzahl]=on					# default value for this module
 		else
@@ -81,5 +97,5 @@ menu=`CHECKLIST "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose
 if [ $menu ]
 then
 	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
-	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config && make install && make clean && $MSGBOX "$fertig"
+	echo "USER_XCOMPOSE = XCompose_$auswahl_$menu" > .config && make install && make clean && MSGBOX "$fertig"
 fi
