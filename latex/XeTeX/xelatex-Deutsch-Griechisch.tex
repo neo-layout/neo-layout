@@ -1,0 +1,66 @@
+﻿%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%% Die Datei ist also UTF-8-kodiert, und mit "xelatex geek.tex" zu kompilieren
+
+%% Koma-Script
+\documentclass[fontsize=10pt]{scrartcl} % oder scrbook?
+
+%% XeTeX
+\usepackage{xltxtra}
+
+% Grundschrift
+\setmainfont{Gentium}
+
+%% Sprachen
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new, latesthyphen=true]{german}
+\setotherlanguage[variant=ancient]{greek}
+
+% Schrift für Griechisch
+\newfontfamily\greekfont[ExternalLocation]{SBL_grk.ttf}
+
+% Links erzeugen
+\usepackage{hyperref}
+
+
+\begin{document}
+
+
+\title{Deutsch/Griechische Texte in \XeTeX}
+\author{\textsc{Xena} von Amphipolis}
+\date{Stand: \today\ (oder auch \textgreek{\today})}
+\maketitle
+
+\tableofcontents
+
+\section{Einleitung}
+Die griechischen Zeichen lassen sich mit \XeTeX\ so erzeugen: \textgreek{ἡ Ἑλληνικὴ γλῶσσα} sowie \textgreek{ὦ, ᾖς, ᾖ, ὦμεν, ἦτε, ὦσι(ν)} und \textgreek{α ἁᾳ βγδεζη ϑ θι ϰ κλμνξοπ ϱ ρσςτυφ ϕ χψω ΓΔΘΛΞΠΣΦΨΩ} …
+
+Auch die \emph{Gentium}\footnote{\url{http://www.sil.org/~gaultney/Gentium/}} bringt einige griechische Glyphen wie α, δ oder Ψ mit, aber wohl nicht ganz so viele wie die \emph{SBL Greek}\footnote{\url{http://www.sbl-site.org/educational/BiblicalFonts_SBLGreek.aspx}}. Und es ist sowieso schöner, für eine fremde Sprache konsequent eine fremde Schrift zu nutzen.
+
+Graf Zahl zählt jetzt auch auf griechisch: \textgreek{1863=\greeknumeral{1863}} Neolinge, \textgreek{1864=\greeknumeral{1864}} Neolinge, … und um auch einmal einen längeren Textausſchnitt aus Homers Ilias zu zitieren:
+
+\newcommand{\ilias}{μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην, ἣ μυρί' Ἀχαιοῖς ἄλγε'
+ἔθηκε, πολλὰς δ' ἰφθίμους ψυχὰς Ἄϊδι προί̈αψεν ἡρώων, αὐτοὺς δὲ ἑλώρια
+τεῦχε κύνεσσιν οἰωνοῖσί τε πᾶσι, Διὸς δ' ἐτελείετο βουλή, ἐξ οὗ δὴ τὰ
+πρῶτα διαστήτην ἐρίσαντε Ἀτρεί̈δης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.}
+
+\begin{quote}
+\begin{greek}
+\ilias
+\end{greek}
+\end{quote}
+
+Und was wäre dieses Dokument, ohne auch noch etwas mit \emph{fontspec} herumzuspielen:
+\begin{quote}
+\begin{greek}
+\addfontfeatures{Variant=4}
+\ilias
+\end{greek}
+\end{quote}
+
+\section{\texorpdfstring{\textgreek{ἀληθινόν} im Text und im Inhaltsverzeichnis}{Umschrift für den PDF-Link}}
+¡Bei mir kompiliert’s ohne Fehler!
+
+
+\end{document}
