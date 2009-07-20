@@ -13,7 +13,7 @@ CONFFILE=.config
 MODPATH=./src
 MODSUFFIX=.module
 
-[ -e $CONFFILE ] || { echo $CONFFILE fehlt; exit 1; }
+[ -w $CONFFILE ] || { echo "$CONFFILE fehlt. Nutze 'make config'."; exit 1; }
 
 #
 # verfügbare Module auslesen und Kurzbeschreibung anzeigen
@@ -23,20 +23,26 @@ selprompt=
 PS3="Gewählte Module sind mit '+' gekennzeichnet.
 Auswahl (angegebene Ziffer oder 0 für Ende) > "
 
+echo
 echo Verfügbare Module für XCompose:
 for i in ${MODULES}; do
     sed -n "
 /^#configinfo[ \t]*/{
     s//$i          /
-    s/^\(.\{10\}\) */\1/
-    p;q
+    b print
 }
 
 \${
     s/.*/$i          - ohne Beschreibung/
-    s/^\(.\{10\}\) */\1/
-    p
-}" ${MODPATH}/${i}${MODSUFFIX}
+    b print
+}
+
+b
+
+: print
+s/^\(.\{10\}\) *\(.\{1,69\}\).*/\1\2/  # 80-Zeichen-Terminal-Grenze
+p
+q" ${MODPATH}/${i}${MODSUFFIX}
 
     if grep -q $i $CONFFILE; then
 	selprompt="${selprompt} ${i}+ ";
@@ -85,6 +91,7 @@ echo Gewählte Module:
 cat $CONFFILE
 
 grep -q base $CONFFILE || echo "*** Warnung: Modul 'base' wurde nicht gewählt."
+grep -q enUS $CONFFILE || echo "*** Warnung: Modul 'enUS' wurde nicht gewählt."
 
 echo
 echo "Weiter mit 'make' bzw. 'make install'"
