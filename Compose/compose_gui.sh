@@ -97,5 +97,5 @@ menu=`CHECKLIST "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose
 if [ $menu ]
 then
 	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
-	echo "USER_XCOMPOSE = ${auswahl}_${menu}" > .config && make install && make clean && MSGBOX "$fertig"
+	echo "USER_XCOMPOSE = ${auswahl}_${menu}" > .config && make install && MSGBOX "$fertig"
 fi
