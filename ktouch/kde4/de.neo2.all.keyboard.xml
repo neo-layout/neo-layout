@@ -1,9 +1,9 @@
 <KTouchKeyboard>
  <Title>Neo 2.0</Title>
  <Comment>Neo 2.0 Ebenen 1-4
-11.04.2009</Comment>
+21.07.2009</Comment>
  <FontSuggestions>Sans Serif,9,-1,5,50,0,0,0,0,0</FontSuggestions>
- <Language>de</Language>
+ <Language>de (German)</Language>
  <Keys>
   <Key Width="80" X="-920" Y="200" Height="80" Type="FINGER" >
    <Char Unicode="85" Position="TopLeft" >U</Char>
@@ -144,7 +144,8 @@
    <Char Unicode="45" Position="BottomLeft" >-</Char>
   </Key>
   <Key Width="80" X="100" Y="0" Height="80" FingerKeyIndex="7" Type="NORMAL" >
-   <Char Unicode="32" Position="TopRight" > </Char>
+   <Char Unicode="8635" Position="TopLeft" >↻</Char>
+   <Char Unicode="783" Position="TopRight" >̏ </Char>
    <Char Unicode="96" Position="BottomLeft" >`</Char>
    <Char Unicode="168" Position="BottomRight" >¨</Char>
   </Key>
@@ -303,7 +304,7 @@
   <Key Width="110" X="150" KeyText="Menu" Y="400" Height="80" Type="OTHER" />
  </Keys>
  <Connections>
-  <KeyConnector KeyUnicode="8" TargetKeyIndex="18" />
+  <KeyConnector KeyUnicode="8" TargetKeyIndex="33" ModifierIndex="11" />
   <KeyConnector KeyUnicode="13" TargetKeyIndex="9" />
   <KeyConnector KeyUnicode="32" TargetKeyIndex="15" />
   <KeyConnector KeyUnicode="33" TargetKeyIndex="48" ModifierIndex="17" />
