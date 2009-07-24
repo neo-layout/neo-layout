@@ -14,13 +14,16 @@ MODULES_FILES = $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module)
 # XCompose eingefügt.  Alle nicht erwähnten Module kommen in
 # alphabetischer Reihenfolge in die Mitte.
 #
-MODULE_ORDER_HEAD = head-example enUS base
-MODULE_ORDER_TAIL = user tail-example
+MODULE_ORDER_HEAD = pre1 pre2 pre3 pre4 enUS base
+MODULE_ORDER_TAIL = user post1 post2 post3 post4
 
 M := $(sort $(notdir $(basename $(MODULES_FILES))))
 MODULES := $(foreach i, $(MODULE_ORDER_HEAD), $(findstring $(i),$(M)))
 MODULES += $(filter-out $(MODULE_ORDER_HEAD) $(MODULE_ORDER_TAIL), $(M))
 MODULES += $(foreach i, $(MODULE_ORDER_TAIL), $(findstring $(i),$(M)))
+
+$(if $(findstring _,$(M)), \
+  $(error Unterstrich in Dateinamen $(SRC)/*.module nicht erlaubt))
 
 # Liste von Demofiles, werden bei 'make all' erzeugt.
 # Im Grunde ist dies seit 'make config' überflüssig.
