@@ -6,8 +6,21 @@
 #
 SRC = ./src
 PSEUDO_MODULES_FILES = $(SRC)/enUS.module
-MODULES_FILES = $(sort $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module))
-MODULES = $(notdir $(basename $(MODULES_FILES)))
+MODULES_FILES = $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module)
+
+# Gewünschte Build-Reihenfolge der Module.  Die in den Listen
+# genannten Dateien werden (falls Module dieses Namens existieren) in
+# der vorgegebenen Reihenfolge zwingend am Anfang oder am Ende von
+# XCompose eingefügt.  Alle nicht erwähnten Module kommen in
+# alphabetischer Reihenfolge in die Mitte.
+#
+MODULE_ORDER_HEAD = head-example enUS base
+MODULE_ORDER_TAIL = user tail-example
+
+M := $(sort $(notdir $(basename $(MODULES_FILES))))
+MODULES := $(foreach i, $(MODULE_ORDER_HEAD), $(findstring $(i),$(M)))
+MODULES += $(filter-out $(MODULE_ORDER_HEAD) $(MODULE_ORDER_TAIL), $(M))
+MODULES += $(foreach i, $(MODULE_ORDER_TAIL), $(findstring $(i),$(M)))
 
 # Liste von Demofiles, werden bei 'make all' erzeugt.
 # Im Grunde ist dies seit 'make config' überflüssig.
@@ -40,7 +53,6 @@ all : XCompose $(DEMOFILES)
 #
 # 'make config' führt interaktive Abfrage der Konfiguration durch 
 # und legt Ergebnis in .config ab
-
 
 config : $(PSEUDO_MODULES_FILES)
 	@if [ ! -f .config ] ; then \
