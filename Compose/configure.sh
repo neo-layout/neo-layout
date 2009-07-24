@@ -28,21 +28,22 @@ echo Verfügbare Module für XCompose:
 for i in ${MODULES}; do
     sed -n "
 /^#configinfo[ \t]*/{
-    s//$i          /
+    s///
     b print
 }
 
-\${
-    s/.*/$i          - ohne Beschreibung/
-    b print
-}
+\$! b
 
-b
-
+s/.*/(ohne Beschreibung)/
 : print
-s/^\(.\{10\}\) *\(.\{1,69\}\).*/\1\2/  # 80-Zeichen-Terminal-Grenze
+
+x
+s/^/$i          /
+G
+s/^\(.\{9\}\).*\n\(.\{1,69\}\).*/\1 \2/  # 80-Zeichen-Terminal-Grenze
 p
-q" ${MODPATH}/${i}${MODSUFFIX}
+q
+" ${MODPATH}/${i}${MODSUFFIX}
 
     if grep -q $i $CONFFILE; then
 	selprompt="${selprompt} ${i}+ ";
