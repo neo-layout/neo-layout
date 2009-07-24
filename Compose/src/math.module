@@ -168,6 +168,9 @@
 <Multi_key> <slash> <bar>                                   : "∤"   U2224 # DOES NOT DIVIDE
 <dead_stroke> <bar>                                         : "∤"   U2224 # DOES NOT DIVIDE
 <Multi_key> <bar> <dead_stroke> <dead_stroke>               : "∤"   U2224 # DOES NOT DIVIDE
+<Multi_key> <slash> <U2223>                                 : "∤"   U2224 # DOES NOT DIVIDE
+<dead_stroke> <U2223>                                       : "∤"   U2224 # DOES NOT DIVIDE
+<Multi_key> <U2223> <dead_stroke> <dead_stroke>             : "∤"   U2224 # DOES NOT DIVIDE
 <Multi_key> <slash> <U2225>                                 : "∦"   U2226 # NOT PARALLEL TO
 <dead_stroke> <U2225>                                       : "∦"   U2226 # NOT PARALLEL TO
 <Multi_key> <U2225> <dead_stroke> <dead_stroke>             : "∦"   U2226 # NOT PARALLEL TO
