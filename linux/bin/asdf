@@ -40,6 +40,8 @@ die2() {
 
 numlock_manually() {
 	$ECHO_e "${orange}Fehler beim setzen des Status von NumLock.${normal}" >&2
+	$ECHO_e "${orange}Sehr wahrscheinlich ist das Programm ›numlockx‹ nicht installiert.${normal}" >&2
+	$ECHO_e "${orange}Installieren Sie es, um diese Meldung zukünftig zu vermeiden.${normal}" >&2
 	$ECHO_e "Bitte jetzt ${orange}NumLock${normal} von Hand auf ${orange}$1${normal} schalten und ${orange}Enter${normal} drücken um fortzufahren…" >&2
 	read enter
 }
