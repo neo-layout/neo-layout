@@ -144,6 +144,7 @@
 <U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
 <U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
 <U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
+<Multi_key> <d> <a> <g>                    : "†"   U2020 # DAGGER
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
