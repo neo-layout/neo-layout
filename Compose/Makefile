@@ -41,7 +41,7 @@ CONFIGURE = /bin/bash ./configure.sh
 # Datei .config wird von 'make config' interaktiv geschrieben.
 # Defaultwert, falls .config noch nicht existiert.
 #
--include ./.config
+-include $(wildcard .config)
 USER_XCOMPOSE ?= XCompose_enUS_base_math
 
 #
@@ -54,10 +54,12 @@ all : XCompose $(DEMOFILES)
 # 'make config' führt interaktive Abfrage der Konfiguration durch 
 # und legt Ergebnis in .config ab
 
-config : $(PSEUDO_MODULES_FILES)
-	@if [ ! -f .config ] ; then \
-	   echo "USER_XCOMPOSE = $(USER_XCOMPOSE)" > .config ; fi
-	$(CONFIGURE) $(MODULES)
+.config :
+	@echo Kein .config gefunden.  Beginne mit Default.
+	@echo "USER_XCOMPOSE = $(USER_XCOMPOSE)" > .config
+
+config : $(PSEUDO_MODULES_FILES) .config
+	@$(CONFIGURE) $(MODULES)
 
 #
 # 'make XCompose_foo_bar_baz' erzeugt Datei aus Modulen foo bar baz
