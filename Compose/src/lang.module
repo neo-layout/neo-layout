@@ -38,27 +38,27 @@
 <Multi_key> <t> <l>                               : "ʈ" U0288 # LATIN SMALL LETTER T WITH RETROFLEX HOOK
 
 # IPA hook letters
-<U02DE> <b>                                       : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
-<U02DE> <d>                                       : "ɗ" U0257 # LATIN SMALL LETTER D WITH HOOK
-<U02DE> <g>                                       : "ɠ" U0260 # LATIN SMALL LETTER G WITH HOOK
-<U02DE> <Multi_key> <G> <G>                       : "ʛ" U029B # LATIN LETTER SMALL CAPITAL G WITH HOOK
-<U02DE> <h>                                       : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
-<U02DE> <j>                                       : "ʝ" U029D # LATIN SMALL LETTER J WITH CROSSED-TAIL
-<U02DE> <l>                                       : "ɬ" U026C # LATIN SMALL LETTER L WITH BELT
-<U02DE> <r>                                       : "ɽ" U027D # LATIN SMALL LETTER R WITH TAIL
-<U02DE> <m>                                       : "ɱ" U0271 # LATIN SMALL LETTER M WITH HOOK
-<U02DE> <s>                                       : "ʂ" U0282 # LATIN SMALL LETTER S WITH HOOK
-<U02DE> <v>                                       : "ⱱ" U2C71 # LATIN SMALL LETTER V WITH RIGHT HOOK
+<dead_hook> <b>                                   : "ɓ" U0253 # LATIN SMALL LETTER B WITH HOOK
+<dead_hook> <d>                                   : "ɗ" U0257 # LATIN SMALL LETTER D WITH HOOK
+<dead_hook> <g>                                   : "ɠ" U0260 # LATIN SMALL LETTER G WITH HOOK
+<dead_hook> <Multi_key> <G> <G>                   : "ʛ" U029B # LATIN LETTER SMALL CAPITAL G WITH HOOK
+<dead_hook> <h>                                   : "ɦ" U0266 # LATIN SMALL LETTER H WITH HOOK
+<dead_hook> <j>                                   : "ʝ" U029D # LATIN SMALL LETTER J WITH CROSSED-TAIL
+<dead_hook> <l>                                   : "ɬ" U026C # LATIN SMALL LETTER L WITH BELT
+<dead_hook> <r>                                   : "ɽ" U027D # LATIN SMALL LETTER R WITH TAIL
+<dead_hook> <m>                                   : "ɱ" U0271 # LATIN SMALL LETTER M WITH HOOK
+<dead_hook> <s>                                   : "ʂ" U0282 # LATIN SMALL LETTER S WITH HOOK
+<dead_hook> <v>                                   : "ⱱ" U2C71 # LATIN SMALL LETTER V WITH RIGHT HOOK
 <Multi_key> <Greek_gamma> <Greek_gamma>           : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<U02DE> <x>                                       : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
-<U02DE> <z>                                       : "ʐ" U0290 # LATIN SMALL LETTER Z WITH RETROFLEX HOOK
-<U02DE> <Multi_key> <e> <e>                       : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
-<U02DE> <3>                                       : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
+<dead_hook> <x>                                   : "ɣ" U0263 # LATIN SMALL LETTER GAMMA
+<dead_hook> <z>                                   : "ʐ" U0290 # LATIN SMALL LETTER Z WITH RETROFLEX HOOK
+<dead_hook> <Multi_key> <e> <e>                   : "ɚ" U025A # LATIN SMALL LETTER SCHWA WITH HOOK
+<dead_hook> <3>                                   : "ɝ" U025D # LATIN SMALL LETTER REVERSED OPEN E WITH HOOK
 
 <dead_tilde> <l>                                  : "ɫ" U026B # LATIN SMALL LETTER L WITH MIDDLE TILDE
 <dead_stroke> <J>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
 <dead_stroke> <j>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
-#<U02DE> <dead_stroke> <J>                         : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
+#<dead_hook> <dead_stroke> <J>                    : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 <Multi_key> <j> <f>                               : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 <dead_stroke> <u>                                 : "ʉ" U0289 # LATIN SMALL LETTER U BAR
 <Multi_key> <slash> <u>                           : "ʉ" U0289 # LATIN SMALL LETTER U BAR
@@ -82,11 +82,11 @@
 <Multi_key> <x> <underscore>                      : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 <Multi_key> <x> <underbar>                        : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 
-<U02DE> <U21BB> <r>                               : "ɻ" U027B # LATIN SMALL LETTER TURNED R WITH HOOK
+<dead_hook> <U21BB> <r>                           : "ɻ" U027B # LATIN SMALL LETTER TURNED R WITH HOOK
 <Multi_key> <j> <n>                               : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
 # überschreibt ㎗
 <Multi_key> <d> <l>                               : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
-<Multi_key> <U02DE> <h> <j>                       : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
+<Multi_key> <dead_hook> <h> <j>                   : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
 <U21BB> <Multi_key> <h> <n>                       : "ɰ" U0270 # LATIN SMALL LETTER TURNED M WITH LONG LEG
 
 <Multi_key> <i> <question>                        : "ʔ" U0294 # LATIN LETTER GLOTTAL STOP
@@ -145,10 +145,10 @@
 <Multi_key> <underbar> <U21BB> <bracketleft>      : "̪" U032A # COMBINING BRIDGE BELOW
 
 # Hochgestellt:
-<dead_circumflex> <U02DE> <m>                     : "ᶬ" U1DAC # MODIFIER LETTER SMALL M WITH HOOK
+<dead_circumflex> <dead_hook> <m>                 : "ᶬ" U1DAC # MODIFIER LETTER SMALL M WITH HOOK
 <dead_circumflex> <Multi_key> <n> <l>             : "ᶯ" U1DAF # MODIFIER LETTER SMALL N WITH RETROFLEX HOOK
 <dead_circumflex> <Multi_key> <j> <n>             : "ᶮ" U1DAE # MODIFIER LETTER SMALL N WITH LEFT HOOK
-<dead_circumflex> <U02DE> <n>                     : "ᵑ" U1D51 # MODIFIER LETTER SMALL ENG
+<dead_circumflex> <dead_hook> <n>                 : "ᵑ" U1D51 # MODIFIER LETTER SMALL ENG
 <dead_circumflex> <Multi_key> <n> <g>             : "ᵑ" U1D51 # MODIFIER LETTER SMALL ENG
 <dead_circumflex> <Multi_key> <N> <N>             : "ᶰ" U1DB0 # MODIFIER LETTER SMALL CAPITAL N
 <dead_circumflex> <dead_stroke> <j>               : "ᶡ" U1DA1 # MODIFIER LETTER SMALL DOTLESS J WITH STROKE
@@ -159,16 +159,16 @@
 <dead_circumflex> <Multi_key> <d> <h>             : "ᶞ" U1D9E # MODIFIER LETTER SMALL ETH
 <dead_circumflex> <Multi_key> <s> <h>             : "ᶴ" U1DB4 # MODIFIER LETTER SMALL ESH
 <dead_circumflex> <Multi_key> <z> <z>             : "ᶾ" U1DBE # MODIFIER LETTER SMALL EZH
-<dead_circumflex> <U02DE> <s>                     : "ᶳ" U1DB3 # MODIFIER LETTER SMALL S WITH HOOK
-<dead_circumflex> <U02DE> <z>                     : "ᶼ" U1DBC # MODIFIER LETTER SMALL Z WITH RETROFLEX HOOK
-<dead_circumflex> <U02DE> <j>                     : "ᶨ" U1DA8 # MODIFIER LETTER SMALL J WITH CROSSED-TAIL
-<dead_circumflex> <U02DE> <x>                     : "ˠ" U02E0 # MODIFIER LETTER SMALL GAMMA
+<dead_circumflex> <dead_hook> <s>                 : "ᶳ" U1DB3 # MODIFIER LETTER SMALL S WITH HOOK
+<dead_circumflex> <dead_hook> <z>                 : "ᶼ" U1DBC # MODIFIER LETTER SMALL Z WITH RETROFLEX HOOK
+<dead_circumflex> <dead_hook> <j>                 : "ᶨ" U1DA8 # MODIFIER LETTER SMALL J WITH CROSSED-TAIL
+<dead_circumflex> <dead_hook> <x>                 : "ˠ" U02E0 # MODIFIER LETTER SMALL GAMMA
 <dead_circumflex> <U21BB> <R>                     : "ʶ" U02B6 # MODIFIER LETTER SMALL CAPITAL INVERTED R
 <dead_circumflex> <U21BB> <question>              : "ˁ" U02C1 # MODIFIER LETTER REVERSED GLOTTAL STOP
-<dead_circumflex> <U02DE> <h>                     : "ʱ" U02B1 # MODIFIER LETTER SMALL H WITH HOOK
+<dead_circumflex> <dead_hook> <h>                 : "ʱ" U02B1 # MODIFIER LETTER SMALL H WITH HOOK
 <dead_circumflex> <Multi_key> <v> <parenright>    : "ᶹ" U1DB9 # MODIFIER LETTER SMALL V WITH HOOK
 <dead_circumflex> <U21BB> <r>                     : "ʴ" U02B4 # MODIFIER LETTER SMALL TURNED R
-<dead_circumflex> <U02DE> <U21BB> <r>             : "ʵ" U02B5 # MODIFIER LETTER SMALL TURNED R WITH HOOK
+<dead_circumflex> <dead_hook> <U21BB> <r>         : "ʵ" U02B5 # MODIFIER LETTER SMALL TURNED R WITH HOOK
 <dead_circumflex> <U21BB> <Multi_key> <h> <n>     : "ᶭ" U1DAD # MODIFIER LETTER SMALL TURNED M WITH LONG LEG
 <dead_circumflex> <Multi_key> <l> <l>             : "ᶩ" U1DA9 # MODIFIER LETTER SMALL L WITH RETROFLEX HOOK
 <dead_circumflex> <Multi_key> <L> <L>             : "ᶫ" U1DAB # MODIFIER LETTER SMALL CAPITAL L
@@ -220,57 +220,57 @@
 <dead_circumflex> <dead_abovedot> <e>             : "ệ" U1EC7 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex> <dead_abovedot> <O>             : "Ộ" U1ED8 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND DOT BELOW
 <dead_circumflex> <dead_abovedot> <o>             : "ộ" U1ED9 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND DOT BELOW
-<U02DE> <O>                                       : "Ơ" U01A0 # LATIN CAPITAL LETTER O WITH HORN
-<U02DE> <o>                                       : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
-<dead_acute> <U02DE> <O>                          : "Ớ" U1EDA # LATIN CAPITAL LETTER O WITH HORN AND ACUTE
-<dead_acute> <U02DE> <o>                          : "ớ" U1EDB # LATIN SMALL LETTER O WITH HORN AND ACUTE
-<dead_grave> <U02DE> <O>                          : "Ờ" U1EDC # LATIN CAPITAL LETTER O WITH HORN AND GRAVE
-<dead_grave> <U02DE> <o>                          : "ờ" U1EDD # LATIN SMALL LETTER O WITH HORN AND GRAVE
-<U1FBF> <U02DE> <O>                               : "Ở" U1EDE # LATIN CAPITAL LETTER O WITH HORN AND HOOK ABOVE
-<U1FBF> <U02DE> <o>                               : "ở" U1EDF # LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE
-<dead_tilde> <U02DE> <O>                          : "Ỡ" U1EE0 # LATIN CAPITAL LETTER O WITH HORN AND TILDE
-<dead_tilde> <U02DE> <o>                          : "ỡ" U1EE1 # LATIN SMALL LETTER O WITH HORN AND TILDE
-<dead_abovedot> <U02DE> <O>                       : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
-<dead_abovedot> <U02DE> <o>                       : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
-<U02DE> <U>                                       : "Ư" U01AF # LATIN CAPITAL LETTER U WITH HORN
-<U02DE> <u>                                       : "ư" U01B0 # LATIN SMALL LETTER U WITH HORN
-<dead_acute> <U02DE> <U>                          : "Ứ" U1EE8 # LATIN CAPITAL LETTER U WITH HORN AND ACUTE
-<dead_acute> <U02DE> <u>                          : "ứ" U1EE9 # LATIN SMALL LETTER U WITH HORN AND ACUTE
-<dead_grave> <U02DE> <U>                          : "Ừ" U1EEA # LATIN CAPITAL LETTER U WITH HORN AND GRAVE
-<dead_grave> <U02DE> <u>                          : "ừ" U1EEB # LATIN SMALL LETTER U WITH HORN AND GRAVE
-<U1FBF> <U02DE> <U>                               : "Ử" U1EEC # LATIN CAPITAL LETTER U WITH HORN AND HOOK ABOVE
-<U1FBF> <U02DE> <u>                               : "ử" U1EED # LATIN SMALL LETTER U WITH HORN AND HOOK ABOVE
-<dead_tilde> <U02DE> <U>                          : "Ữ" U1EEE # LATIN CAPITAL LETTER U WITH HORN AND TILDE
-<dead_tilde> <U02DE> <u>                          : "ữ" U1EEF # LATIN SMALL LETTER U WITH HORN AND TILDE
-<dead_abovedot> <U02DE> <U>                       : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
-<dead_abovedot> <U02DE> <u>                       : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
+<dead_hook> <O>                                   : "Ơ" U01A0 # LATIN CAPITAL LETTER O WITH HORN
+<dead_hook> <o>                                   : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
+<dead_acute> <dead_hook> <O>                      : "Ớ" U1EDA # LATIN CAPITAL LETTER O WITH HORN AND ACUTE
+<dead_acute> <dead_hook> <o>                      : "ớ" U1EDB # LATIN SMALL LETTER O WITH HORN AND ACUTE
+<dead_grave> <dead_hook> <O>                      : "Ờ" U1EDC # LATIN CAPITAL LETTER O WITH HORN AND GRAVE
+<dead_grave> <dead_hook> <o>                      : "ờ" U1EDD # LATIN SMALL LETTER O WITH HORN AND GRAVE
+<U1FBF> <dead_hook> <O>                           : "Ở" U1EDE # LATIN CAPITAL LETTER O WITH HORN AND HOOK ABOVE
+<U1FBF> <dead_hook> <o>                           : "ở" U1EDF # LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE
+<dead_tilde> <dead_hook> <O>                      : "Ỡ" U1EE0 # LATIN CAPITAL LETTER O WITH HORN AND TILDE
+<dead_tilde> <dead_hook> <o>                      : "ỡ" U1EE1 # LATIN SMALL LETTER O WITH HORN AND TILDE
+<dead_abovedot> <dead_hook> <O>                   : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
+<dead_abovedot> <dead_hook> <o>                   : "ợ" U1EE3 # LATIN SMALL LETTER O WITH HORN AND DOT BELOW
+<dead_hook> <U>                                   : "Ư" U01AF # LATIN CAPITAL LETTER U WITH HORN
+<dead_hook> <u>                                   : "ư" U01B0 # LATIN SMALL LETTER U WITH HORN
+<dead_acute> <dead_hook> <U>                      : "Ứ" U1EE8 # LATIN CAPITAL LETTER U WITH HORN AND ACUTE
+<dead_acute> <dead_hook> <u>                      : "ứ" U1EE9 # LATIN SMALL LETTER U WITH HORN AND ACUTE
+<dead_grave> <dead_hook> <U>                      : "Ừ" U1EEA # LATIN CAPITAL LETTER U WITH HORN AND GRAVE
+<dead_grave> <dead_hook> <u>                      : "ừ" U1EEB # LATIN SMALL LETTER U WITH HORN AND GRAVE
+<U1FBF> <dead_hook> <U>                           : "Ử" U1EEC # LATIN CAPITAL LETTER U WITH HORN AND HOOK ABOVE
+<U1FBF> <dead_hook> <u>                           : "ử" U1EED # LATIN SMALL LETTER U WITH HORN AND HOOK ABOVE
+<dead_tilde> <dead_hook> <U>                      : "Ữ" U1EEE # LATIN CAPITAL LETTER U WITH HORN AND TILDE
+<dead_tilde> <dead_hook> <u>                      : "ữ" U1EEF # LATIN SMALL LETTER U WITH HORN AND TILDE
+<dead_abovedot> <dead_hook> <U>                   : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
+<dead_abovedot> <dead_hook> <u>                   : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 
 # Afrikanisch
 # other hook letters
-<U02DE> <B>                                       : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
-<U02DE> <C>                                       : "Ƈ" U0187 # LATIN CAPITAL LETTER C WITH HOOK
-<U02DE> <c>                                       : "ƈ" U0188 # LATIN SMALL LETTER C WITH HOOK
-<U02DE> <D>                                       : "Ɗ" U018A # LATIN CAPITAL LETTER D WITH HOOK
-<U02DE> <F>                                       : "Ƒ" U0191 # LATIN CAPITAL LETTER F WITH HOOK
-<U02DE> <f>                                       : "ƒ" U0192 # LATIN SMALL LETTER F WITH HOOK
-<U02DE> <G>                                       : "Ɠ" U0193 # LATIN CAPITAL LETTER G WITH HOOK
-<U02DE> <I>                                       : "Ɩ" U0196 # LATIN CAPITAL LETTER IOTA
-<U02DE> <i>                                       : "ɩ" U0269 # LATIN SMALL LETTER IOTA
-<U02DE> <K>                                       : "Ƙ" U0198 # LATIN CAPITAL LETTER K WITH HOOK
-<U02DE> <k>                                       : "ƙ" U0199 # LATIN SMALL LETTER K WITH HOOK
-<U02DE> <M>                                       : "Ɱ" U2C6E # LATIN CAPITAL LETTER M WITH HOOK
-<U02DE> <N>                                       : "Ŋ" U014A # LATIN CAPITAL LETTER ENG
-<U02DE> <n>                                       : "ŋ" U014B # LATIN SMALL LETTER ENG
-<U02DE> <P>                                       : "Ƥ" U01A4 # LATIN CAPITAL LETTER P WITH HOOK
-<U02DE> <p>                                       : "ƥ" U01A5 # LATIN SMALL LETTER P WITH HOOK
-<U02DE> <R>                                       : "Ɽ" U2C64 # LATIN CAPITAL LETTER R WITH TAIL
-<U02DE> <T>                                       : "Ƭ" U01AC # LATIN CAPITAL LETTER T WITH HOOK
-<U02DE> <t>                                       : "ƭ" U01AD # LATIN SMALL LETTER T WITH HOOK
-<U02DE> <W>                                       : "Ⱳ" U2C72 # LATIN CAPITAL LETTER W WITH HOOK
-<U02DE> <w>                                       : "ⱳ" U2C73 # LATIN SMALL LETTER W WITH HOOK
-<U02DE> <X>                                       : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
-<U02DE> <Y>                                       : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
-<U02DE> <y>                                       : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
+<dead_hook> <B>                                   : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
+<dead_hook> <C>                                   : "Ƈ" U0187 # LATIN CAPITAL LETTER C WITH HOOK
+<dead_hook> <c>                                   : "ƈ" U0188 # LATIN SMALL LETTER C WITH HOOK
+<dead_hook> <D>                                   : "Ɗ" U018A # LATIN CAPITAL LETTER D WITH HOOK
+<dead_hook> <F>                                   : "Ƒ" U0191 # LATIN CAPITAL LETTER F WITH HOOK
+<dead_hook> <f>                                   : "ƒ" U0192 # LATIN SMALL LETTER F WITH HOOK
+<dead_hook> <G>                                   : "Ɠ" U0193 # LATIN CAPITAL LETTER G WITH HOOK
+<dead_hook> <I>                                   : "Ɩ" U0196 # LATIN CAPITAL LETTER IOTA
+<dead_hook> <i>                                   : "ɩ" U0269 # LATIN SMALL LETTER IOTA
+<dead_hook> <K>                                   : "Ƙ" U0198 # LATIN CAPITAL LETTER K WITH HOOK
+<dead_hook> <k>                                   : "ƙ" U0199 # LATIN SMALL LETTER K WITH HOOK
+<dead_hook> <M>                                   : "Ɱ" U2C6E # LATIN CAPITAL LETTER M WITH HOOK
+<dead_hook> <N>                                   : "Ŋ" U014A # LATIN CAPITAL LETTER ENG
+<dead_hook> <n>                                   : "ŋ" U014B # LATIN SMALL LETTER ENG
+<dead_hook> <P>                                   : "Ƥ" U01A4 # LATIN CAPITAL LETTER P WITH HOOK
+<dead_hook> <p>                                   : "ƥ" U01A5 # LATIN SMALL LETTER P WITH HOOK
+<dead_hook> <R>                                   : "Ɽ" U2C64 # LATIN CAPITAL LETTER R WITH TAIL
+<dead_hook> <T>                                   : "Ƭ" U01AC # LATIN CAPITAL LETTER T WITH HOOK
+<dead_hook> <t>                                   : "ƭ" U01AD # LATIN SMALL LETTER T WITH HOOK
+<dead_hook> <W>                                   : "Ⱳ" U2C72 # LATIN CAPITAL LETTER W WITH HOOK
+<dead_hook> <w>                                   : "ⱳ" U2C73 # LATIN SMALL LETTER W WITH HOOK
+<dead_hook> <X>                                   : "Ɣ" U0194 # LATIN CAPITAL LETTER GAMMA
+<dead_hook> <Y>                                   : "Ƴ" U01B3 # LATIN CAPITAL LETTER Y WITH HOOK
+<dead_hook> <y>                                   : "ƴ" U01B4 # LATIN SMALL LETTER Y WITH HOOK
 
 <Multi_key> <D> <l>                               : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
 <Multi_key> <S> <H>                               : "Ʃ" U01A9 # LATIN CAPITAL LETTER ESH
