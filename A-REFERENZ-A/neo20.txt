@@ -119,7 +119,7 @@ Taste rechts neben der 0
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 Außerdem gibt es noch
- • den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzugt wird
+ • den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzeugt wird
  • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf dem Keypad
  • den (deutschen) Gedankenstrich (U+2013 EN DASH) über Shift + Komma
  • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) über Mod3 + t
