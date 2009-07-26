@@ -1,5 +1,5 @@
-=== NEO in der Textkonsole (ohne X) ===
-Die Datei neo.map enthält eine keymap, um die NEO-Tastaturbelegung auch ohne X
+=== Neo in der Textkonsole (ohne X) ===
+Die Datei neo.map enthält eine keymap, um die Neo-Tastaturbelegung auch ohne X
 auf der Konsole benutzten zu können.
 
 Dazu wird die keymap (nur als root möglich!!) mit »loadkeys PFAD/neo.map«
@@ -11,7 +11,7 @@ Der einfachste Weg ist jedoch die Verwendung des Skriptes ›asdf‹ (siehe Ordn
 
 
 === Technische Hinweise ===
-Soll NEO systemweit auf der Textkonsole zur Verfügung stehen, muss in der
+Soll Neo systemweit auf der Textkonsole zur Verfügung stehen, muss in der
 Datei ›/etc/sysconfig/keyboard‹ die Zeile (oder eine ähnlich klingende):
   --------------------------
   KEYTABLE="de-latin1-nodeadkeys.map.gz"
@@ -29,13 +29,13 @@ defkeymap.map laut manpage unter /usr/share/keymaps oder
 /usr/src/linux/drivers/char, bei mir aber unter /etc liegt.
 
 Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status
-von »Num_Lock« (den es unter NEO nicht mehr gibt). Um Num_Lock dennoch
+von »Num_Lock« (den es unter Neo nicht mehr gibt). Um Num_Lock dennoch
 nachträglich einschalten zu können, muss die Menü-Taste (in der untersten Reihe)
 betätigt werden.
 
 Diese Keymap ist für ein MS Natural Keyboard Elite erstellt worden. Sollten
 andere Tastaturen andere keycodes verwenden (z.B. Laptoptastaturen), sollte dies
-auf der Mailingliste der NEO-Tastaturbelegung gemeldet werden.
+auf der Mailingliste der Neo-Tastaturbelegung gemeldet werden.
 
 
 Ergänzung: die keymaps liegen in folgenden Verzeichnissen:
@@ -57,5 +57,5 @@ Was (noch) nicht geht:
 • Bisher funktioniert keiner der Modifier_Lock.
 • Die große Menge an Compose-Kombinationen, die unter X möglich sind, werden
   längst nicht alle unterstützt.
-• Auch die Compose-Erweiterungen von NEO sind noch nicht verfügbar.
+• Auch die Compose-Erweiterungen von Neo sind noch nicht verfügbar.
 
