@@ -20,7 +20,7 @@
 <U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
 <U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <nobreakspace>                     : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
-<dead_hook> <nobreakspace>                 : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
+<U02DE> <nobreakspace>                     : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 
 # combining characters
 <Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
@@ -42,6 +42,7 @@
 <Multi_key> <U1FFE> <U1FFE>                : "҅"   U0485 # COMBINING CYRILLIC DASIA PNEUMATA
 <Multi_key> <U1FBF> <U1FBF>                : "҆"   U0486 # COMBINING CYRILLIC PSILI PNEUMATA
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
+<U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 
 # in standard Compose missing dead keys with spaces
 <dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
@@ -49,7 +50,7 @@
 <U1FBF> <space>                            : "᾿"   U1FBF # GREEK PSILI
 <U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
 <U21BB> <space>                            : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
-<dead_hook> <space>                        : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
+<U02DE> <space>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 
 # letters
 # latin letters with ogonek (simplifying the keyboard ogonek and cedilla are on the same place)
@@ -96,7 +97,7 @@
 <dead_stroke> <D>                        : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
 <dead_stroke> <l>                        : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
 <dead_stroke> <L>                        : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
-<dead_stroke> <o>                        : "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
+<dead_stroke> <o>                        : "ø"   oslash  # LATIN SMALL LETTER O WITH STROKE
 <dead_stroke> <O>                        : "Ø"   Ooblique # LATIN CAPITAL LETTER O WITH STROKE
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
