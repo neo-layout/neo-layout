@@ -36,6 +36,8 @@
 <Multi_key> <g> <Y>                      : "Υ"   U03A5 # GREEK CAPITAL LETTER UPSILON
 <Multi_key> <G> <X>                      : "Χ"   U03A7 # GREEK CAPITAL LETTER CHI
 <Multi_key> <g> <X>                      : "Χ"   U03A7 # GREEK CAPITAL LETTER CHI
+<U02DE> <Multi_key> <G> <Y>              : "ϒ"   U03D2 # GREEK UPSILON WITH HOOK SYMBOL
+<U02DE> <Multi_key> <g> <Y>              : "ϒ"   U03A5 # GREEK UPSILON WITH HOOK SYMBOL
 
 # greek letters with diacritical marks
 <U1FBF> <Greek_alpha>                               : "ἀ"   U1F00 # GREEK SMALL LETTER ALPHA WITH PSILI
@@ -770,6 +772,8 @@
 <dead_grave> <Multi_key> <G> <Y>                                   : "Ὺ"   U1FEA # GREEK CAPITAL LETTER UPSILON WITH VARIA
 <dead_acute> <Multi_key> <g> <Y>                                   : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA
 <dead_acute> <Multi_key> <G> <Y>                                   : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA
+<dead_acute> <U02DE> <Multi_key> <g> <Y>                           : "ϓ"   U03D3 # GREEK UPSILON WITH ACUTE AND HOOK SYMBOL
+<dead_acute> <U02DE> <Multi_key> <G> <Y>                           : "ϓ"   U03D3 # GREEK UPSILON WITH ACUTE AND HOOK SYMBOL
 <U1FFE> <Multi_key> <g> <Greek_RHO>                                : "Ῥ"   U1FEC # GREEK CAPITAL LETTER RHO WITH DASIA
 <U1FFE> <Multi_key> <G> <Greek_RHO>                                : "Ῥ"   U1FEC # GREEK CAPITAL LETTER RHO WITH DASIA
 <dead_grave> <Multi_key> <g> <O>                                   : "Ὸ"   U1FF8 # GREEK CAPITAL LETTER OMICRON WITH VARIA
@@ -783,6 +787,8 @@
 <dead_diaeresis> <Multi_key> <G> <I>                               : "Ϊ"   U03AA # GREEK CAPITAL LETTER IOTA WITH DIALYTIKA
 <dead_diaeresis> <Multi_key> <g> <Y>                               : "Ϋ"   U03AB # GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA
 <dead_diaeresis> <Multi_key> <G> <Y>                               : "Ϋ"   U03AB # GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA
+<dead_diaeresis> <U02DE> <Multi_key> <g> <Y>                       : "ϔ"   U03D4 # GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
+<dead_diaeresis> <U02DE> <Multi_key> <G> <Y>                       : "ϔ"   U03D4 # GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
 
 # greek letters with tonos instead of oxia (if wanted)
 # <dead_acute> <Greek_alpha>                                         : "ά"   U03AC # GREEK SMALL LETTER ALPHA WITH TONOS
@@ -807,5 +813,13 @@
 # <dead_acute> <Multi_key> <g> <Y>                                   : "Ύ"   U038E # GREEK CAPITAL LETTER UPSILON WITH TONOS
 # <dead_acute> <Multi_key> <G> <Y>                                   : "Ύ"   U038E # GREEK CAPITAL LETTER UPSILON WITH TONOS
 # <dead_acute> <Greek_OMEGA>                                         : "Ώ"   U038F # GREEK CAPITAL LETTER OMEGA WITH TONOS
+
+# additional greek symbols
+# Greek ampersand symbols
+<U02DE> <U03F0>                                                      : "ϗ"   U03D7 # GREEK KAI SYMBOL
+<U02DE> <Multi_key> <g> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
+<U02DE> <Multi_key> <G> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
+
+
 
 # End of additional Definitions (greek letters) by Neo keyboard layout

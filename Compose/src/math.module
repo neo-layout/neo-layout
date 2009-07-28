@@ -238,6 +238,10 @@
 <U21BB> <U2190>                            : "→"   U2192 # RIGHTWARDS ARROW
 <U21BB> <21A6>                             : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
 <U21BB> <ifonlyif>                         : "⇕"   U21D5 # UP DOWN DOUBLE ARROW
+<U02DE> <U2192>                            : "↪"   U21AA # RIGHTWARDS ARROW WITH HOOK
+<U02DE> <U2190>                            : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<U02DE> <U21BB> <U2192>                    : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<U21BB> <U02DE> <U2192>                    : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
 
 # superscripts and subscripts
 <dead_circumflex> <minus>                  : "⁻"   U207B # SUPERSCRIPT MINUS
