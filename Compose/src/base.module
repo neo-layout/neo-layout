@@ -43,8 +43,7 @@
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 <Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
-<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
-
+<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPH
 
 # in standard Compose missing dead keys with spaces
 <dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
@@ -118,7 +117,7 @@
 <Multi_key> <slash> <A>                  : "Ⱥ"   U023A # LATIN CAPITAL LETTER A WITH STROKE
 <Multi_key> <KP_Divide> <A>              : "Ⱥ"   U023A # LATIN CAPITAL LETTER A WITH STROKE
 <Multi_key> <slash> <C>                  : "Ȼ"   U023B # LATIN CAPITAL LETTER C WITH STROKE
-<Multi_key> <KP_Divide> <A>              : "Ⱥ"   U023A # LATIN CAPITAL LETTER A WITH STROKE
+<Multi_key> <KP_Divide> <C>              : "Ȼ"   U023B # LATIN CAPITAL LETTER C WITH STROKE
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
 <Multi_key> <slash> <u>                  : "ʉ"   U0289 # LATIN SMALL LETTER U BAR
@@ -283,6 +282,7 @@
 <Multi_key> <l> <period>                 : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
 <dead_abovedot> <L>                      : "Ŀ"   U013F # LATIN CAPITAL LETTER L WITH MIDDLE DOT
 <dead_abovedot> <l>                      : "ŀ"   U0140 # LATIN SMALL LETTER L WITH MIDDLE DOT
+<dead_tilde> <L>                         : "Ɫ"   U2C62 # LATIN CAPITAL LETTER L WITH MIDDLE TILDE
 <dead_tilde> <l>                         : "ɫ"   U026B # LATIN SMALL LETTER L WITH MIDDLE TILDE
 <dead_breve> <H>                         : "Ḫ"   U1E2A # LATIN CAPITAL LETTER H WITH BREVE BELOW
 <dead_breve> <h>                         : "ḫ"   U1E2B # LATIN SMALL LETTER H WITH BREVE BELOW
@@ -363,8 +363,8 @@
 <U21BB> <ellipsis>                               : "⋱"   U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <U21BB> <U22EE>                                  : "⋰"   U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
+<Multi_key> <7> <7>                              : "⁊"   U204A # TIRONIAN SIGN ET
 <Multi_key> <ellipsis> <ellipsis>                : "[…]"
-
 
 # roman numerals
 <Multi_key> <R> <1> <space>              : "Ⅰ"   U2160 # ROMAN NUMERAL ONE
@@ -468,7 +468,6 @@
 <Multi_key> <KP_1> <KP_2>                  : "½"   U00BD # VULGAR FRACTION ONE HALF
 <Multi_key> <KP_3> <KP_4>                  : "¾"   U00BE # VULGAR FRACTION THREE QUARTERS
 
-
 # other symbols
 <Multi_key> <colon> <parenright>           : "☺"   U263A # WHITE SMILING FACE
 <Multi_key> <colon> <parenleft>            : "☹"   U2639 # WHITE FROWNING FACE
@@ -478,8 +477,18 @@
 <Multi_key> <malesymbol> <malesymbol>      : "⚣"   U26A3 # DOUBLED MALE SIGN
 <Multi_key> <femalesymbol> <malesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
 <Multi_key> <malesymbol> <femalesymbol>    : "⚤"   U26A4 # INTERLOCKED FEMALE AND MALE SIGN
+<dead_stroke> <malesymbol>                 : "⚦"   U26A6 # MALE WITH STROKE SIGN
+<dead_stroke> <U26A5>                      : "⚧"   U26A7 # MALE WITH STROKE AND MALE AND FEMALE SIGN
+<dead_breve> <femalesymbol>                : "☿"   U263F # MERCURY
+<U21BB> <femalesymbol>                     : "♁"   U2641 # EARTH
 <Multi_key> <Tab>                          : "♫"   U266B # BEAMED EIGHTH NOTE
 <Multi_key> <Multi_key>                    : "♫"   U266B # BEAMED EIGHTH NOTE
+<U02DE> <slash>                            : "✔"   U2714 # HEAVY CHECK MARK
+<U02DE> <KP_Divide>                        : "✔"   U2714 # HEAVY CHECK MARK
+<U02DE> <backslash>                        : "✔"   U2714 # HEAVY CHECK MARK
+<dead_stroke> <slash>                      : "✘"   U2718 # HEAVY BALLOT X
+<dead_stroke> <KP_Divide>                  : "✘"   U2718 # HEAVY BALLOT X
+<dead_stroke> <backslash>                  : "✘"   U2718 # HEAVY BALLOT X
 <Multi_key> <bracketleft> <bracketright>   : "□"   U25A1 # WHITE SQUARE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
@@ -491,7 +500,6 @@
 <Multi_key> <p> <o> <i>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
 <Multi_key> <o> <p> <t>                    : "⌥"   U2325 # OPTION KEY
 <U21BB> <U21CC>                            : "⇋"   U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
-
 
 # box drawings
 <Multi_key> <x> <1> <1>      : "┌──────────┐\n│          │\n└──────────┘\n"
