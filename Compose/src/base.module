@@ -43,7 +43,7 @@
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 <Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
-<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPH
+<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 
 # in standard Compose missing dead keys with spaces
 <dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
@@ -305,28 +305,6 @@
 <Multi_key> <F> <l>                      : "ﬄ"   UFB04 # LATIN SMALL LIGATURE FFL
 <Multi_key> <U017F> <t>                  : "ﬅ"   UFB05 # LATIN SMALL LIGATURE LONG S T
 <Multi_key> <s> <t>                      : "ﬆ"   UFB06 # LATIN SMALL LIGATURE ST
-<Multi_key> <f> <b>                      : ""   UE030 # LATIN SMALL LIGATURE FB
-<Multi_key> <F> <b>                      : ""   UE031 # LATIN SMALL LIGATURE FFB
-<Multi_key> <F> <h>                      : ""   UE032 # LATIN SMALL LIGATURE FFH
-<Multi_key> <F> <j>                      : ""   UE033 # LATIN SMALL LIGATURE FFJ
-<Multi_key> <F> <k>                      : ""   UE034 # LATIN SMALL LIGATURE FFK
-<Multi_key> <F> <t>                      : ""   UE035 # LATIN SMALL LIGATURE FFT
-<Multi_key> <f> <h>                      : ""   UE036 # LATIN SMALL LIGATURE FH
-<Multi_key> <f> <j>                      : ""   UE037 # LATIN SMALL LIGATURE FJ
-<Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
-<Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
-<Multi_key> <l> <c> <k>                  : ""   UE03A # LATIN SMALL LIGATURE CK
-<Multi_key> <l> <c> <h>                  : ""   UE03B # LATIN SMALL LIGATURE CH
-<Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
-<Multi_key> <l> <c> <t>                  : ""   UE03D # LATIN SMALL LIGATURE CT
-<Multi_key> <U017F> <i>                  : ""   UE03E # LATIN SMALL LIGATURE LONG S I
-<Multi_key> <U017F> <U017F>              : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
-<Multi_key> <U017F> <l>                  : ""   UE043 # LATIN SMALL LIGATURE LONG S L
-<Multi_key> <S> <i>                      : ""   UE044 # LATIN SMALL LIGATURE LONG S LONG S I
-<Multi_key> <U017F> <s>                  : ""   UE045 # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
-<Multi_key> <t> <z>                      : ""   UE04A # LATIN SMALL LIGATURE TZ (ALSO: UE04F)
-<Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
-<Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
 <Multi_key> <I> <J>                      : "Ĳ"   U0132 # LATIN CAPITAL LIGATURE IJ
 <Multi_key> <i> <j>                      : "ĳ"   U0133 # LATIN SMALL LIGATURE IJ
 <Multi_key> <D> <Z>                      : "Ǆ"   U01C4 # LATIN CAPITAL LETTER DZ WITH CARON
