@@ -184,7 +184,6 @@
 <dead_acute> <Multi_key> <a> <e>         : "ǽ"   U01FD # LATIN SMALL LETTER AE WITH ACUTE
 <Multi_key> <z> <h>                      : "ʒ"   U0292 # LATIN SMALL LETTER EZH
 <Multi_key> <z> <z>                      : "ʒ"   U0292 # LATIN SMALL LETTER EZH
-<Multi_key> <s> <h>                      : "ʃ"   U0283 # LATIN SMALL LETTER ESH
 
 # ligatures
 <Multi_key> <f> <f>                      : "ﬀ"   UFB00 # LATIN SMALL LIGATURE FF

@@ -44,8 +44,6 @@
 <Multi_key> <o> <KP_3> <integral>          : "∰"   U2230 # VOLUME U222E
 <Multi_key> <jot> <3> <integral>           : "∰"   U2230 # VOLUME U222E
 <Multi_key> <jot> <KP_3> <integral>        : "∰"   U2230 # VOLUME U222E
-<Multi_key> <l> <n>                        : "㏑"   U33D1 # SQUARE LN
-<Multi_key> <l> <o> <g>                    : "㏒"   U33D2 # SQUARE LOG
 <Multi_key> <asciicircum> <bracketleft>    : "⌈"   U2308 # LEFT CEILING
 <Multi_key> <underscore> <bracketleft>     : "⌊"   U230A # LEFT FLOOR
 <Multi_key> <asciicircum> <bracketright>   : "⌉"   U2309 # RIGHT CEILING

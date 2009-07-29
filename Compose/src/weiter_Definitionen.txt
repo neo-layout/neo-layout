@@ -28,7 +28,9 @@
 <Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
 
 
-# physical square units
+# physical square units and log
+<Multi_key> <l> <n>                       : "㏑"   U33D1 # SQUARE LN
+<Multi_key> <l> <o> <g>                   : "㏒"   U33D2 # SQUARE LOG
 <Multi_key> <Greek_mu> <l>                : "㎕"   U3395 # SQUARE MU L
 <Multi_key> <Greek_mu> <U2113>            : "㎕"   U3395 # SQUARE MU L
 <Multi_key> <m> <l>                       : "㎖"   U3396 # SQUARE ML
