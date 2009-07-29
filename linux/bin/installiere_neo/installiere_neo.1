@@ -58,6 +58,7 @@ green="\033[32m"
 # remove the entry in $HOME/.profile
 rmfromprofile()
 {
+	touch /$HOME/.profile
 	grep -v "\# Neo Tastaturbelegung" $HOME/.profile > $HOME/profile.neo.tmp
 	rm /$HOME/.profile
 	mv $HOME/profile.neo.tmp $HOME/.profile
