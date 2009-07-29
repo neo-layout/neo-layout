@@ -32,7 +32,7 @@ echo Deleting old Compose sequences
 del "%Ssrcdir%\Compose.generated.ahk" "%Ssrcdir%\Compose-tainted.generated.ahk" 2> nul
 
 echo Compiling Compose sequences
-"%AutoHotkey%" "%Ssrcdir%\makecompose.ahk" "%CompRevision%" "%fncomp%" "%svnversiondir2%\src\en_US.UTF-8" "%svnversiondir2%\src\base.module" "%svnversiondir2%\src\ligatures.module" "%svnversiondir2%\src\greek.module" "%svnversiondir2%\src\math.module" "%svnversiondir2%\src\lang.module"
+"%AutoHotkey%" "%Ssrcdir%\makecompose.ahk" "%CompRevision%" "%fncomp%" "%svnversiondir2%\src\en_US.UTF-8" "%svnversiondir2%\src\base.module" "%svnversiondir2%\src\greek.module" "%svnversiondir2%\src\math.module" "%svnversiondir2%\src\lang.module" "%svnversiondir2%\src\weiter_Definitionen.txt"
 
 echo Compose Update complete! You can now close this log-window.
 pause
