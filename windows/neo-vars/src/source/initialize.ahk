@@ -63,7 +63,7 @@ if (inputlocalealias<>"")
 if (inputlocale<>"00000407" and inputlocale<>"00000807" and inputlocale<>"00010407") {
   suspend   
   regread,inputlocale,HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%,Layout Text
-  msgbox, 48, Warnung!,
+  msgbox, 52, Warnung!,
     (
     Nicht kompatibles Tastaturlayout:   
     `t%inputlocale%   
@@ -74,8 +74,12 @@ if (inputlocale<>"00000407" and inputlocale<>"00000807" and inputlocale<>"000104
     `t-> Regions- und Sprachoptionen   
     `t-> Sprachen 
     `t-> Details...   `n
+    Trotzdem fortfahren?`n
     )
-  exitapp
+  ifmsgbox, No
+    exitapp
+  ifmsgbox, Yes
+    suspend
 }
 
 wasNonShiftKeyPressed := 0
