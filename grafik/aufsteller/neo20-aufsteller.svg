@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
+   xmlns:ns="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:cc="http://web.resource.org/cc/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,9 +13,9 @@
    height="744.09003"
    id="svg2559"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.45.1"
    version="1.0"
-   sodipodi:docbase="/home/wicking/programmieren/Projekt/NEO/svn-neo/svn/grafik/aufsteller-svg"
+   sodipodi:docbase="/home/pascal/neo/svn-Arbeitsverzeichnis/neo/grafik/aufsteller"
    sodipodi:docname="neo20-aufsteller.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -56,8 +57,8 @@
      inkscape:object-paths="false"
      inkscape:guide-bbox="true"
      inkscape:grid-bbox="false"
-     inkscape:window-width="1918"
-     inkscape:window-height="1011"
+     inkscape:window-width="1680"
+     inkscape:window-height="971"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:object-bbox="false"
@@ -78,18 +79,18 @@
   <metadata
      id="metadata2565">
     <rdf:RDF>
-      <cc:Work
+      <ns:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <cc:license
+        <ns:license
            rdf:resource="http://creativecommons.org/licenses/by/2.5/" />
         <dc:title>NEO-Tastatur-Layout Version 2.0 als Aufsteller</dc:title>
         <dc:creator>
-          <cc:Agent>
+          <ns:Agent>
             <dc:title>Erik Streb del Toro</dc:title>
-          </cc:Agent>
+          </ns:Agent>
         </dc:creator>
         <dc:source>https://neo.eigenheimstrasse.de/svn/grafik/svg/neo20_Farbe_Ebene_1_bis_4.svg</dc:source>
         <dc:language>Deutsch</dc:language>
@@ -112,29 +113,35 @@
         <dc:relation>https://neo.eigenheimstrasse.de/svn/A-REFERENZ-A/neo20.txt</dc:relation>
         <dc:identifier>https://neo.eigenheimstrasse.de/svn/grafik/aufsteller-svg/neo20-aufsteller.svg</dc:identifier>
         <dc:publisher>
-          <cc:Agent>
+          <ns:Agent>
             <dc:title>NEO-Layout-Team</dc:title>
-          </cc:Agent>
+          </ns:Agent>
         </dc:publisher>
         <dc:contributor>
-          <cc:Agent>
+          <ns:Agent>
             <dc:title>stark erweitert von Philipp H. Poll</dc:title>
-          </cc:Agent>
+          </ns:Agent>
         </dc:contributor>
-      </cc:Work>
-      <cc:License
+      </ns:Work>
+      <ns:License
          rdf:about="http://creativecommons.org/licenses/by/2.5/">
-        <cc:permits
+        <ns:permits
            rdf:resource="http://web.resource.org/cc/Reproduction" />
-        <cc:permits
+        <ns:permits
            rdf:resource="http://web.resource.org/cc/Distribution" />
-        <cc:requires
+        <ns:requires
            rdf:resource="http://web.resource.org/cc/Notice" />
-        <cc:requires
+        <ns:requires
            rdf:resource="http://web.resource.org/cc/Attribution" />
-        <cc:permits
+        <ns:permits
            rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
-      </cc:License>
+      </ns:License>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
@@ -5015,7 +5022,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8840"
-         x="897.12115"
+         x="897.12116"
          y="429.55637"
          style="font-size:29.52701378px">/</tspan></text>
     <text
@@ -5147,7 +5154,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan9236"
-         x="897.41833"
+         x="897.41834"
          y="606.13214"
          style="font-size:29.52701378px">2</tspan></text>
     <text
@@ -7730,7 +7737,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan16264"
-         x="52.343822"
+         x="52.343823"
          y="441.1355"
          style="fill:#e31515;font-family:Linux Libertine">¯</tspan></text>
     <rect
@@ -9100,7 +9107,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4009"
-         x="461.52209"
+         x="461.5221"
          y="620.2746"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">⇔</tspan></text>
     <text
@@ -9495,7 +9502,7 @@
          style="font-size:17.16624832px;fill:#ffffff;font-family:Linux Libertine">-</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O"
        x="633.125"
        y="412.77753"
        id="text3986"
