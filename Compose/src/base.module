@@ -8,7 +8,7 @@
 <dead_acute> <nobreakspace>                : "´"   U00B4 # ACUTE ACCENT
 <dead_grave> <nobreakspace>                : "`"   U0060 # GRAVE ACCENT
 <dead_cedilla> <nobreakspace>              : "¸"   U00B8 # CEDILLA
-<dead_ogonek> <nobreakspace>               : "˛"   U02DB # OGONEK
+<U21BB> <dead_cedilla> <nobreakspace>      : "˛"   U02DB # OGONEK
 <dead_abovedot> <nobreakspace>             : "˙"   U02D9 # DOT ABOVE
 <dead_abovering> <nobreakspace>            : "˚"   U02DA # RING ABOVE
 <dead_tilde> <nobreakspace>                : "˜"   U02DC # SMALL TILDE
@@ -27,10 +27,11 @@
 <dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT
 <dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON
 <dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE
+<U21BB> <dead_breve> <dead_breve>          : "̑"   U0311 # COMBINING INVERTED BREVE
 <dead_acute> <dead_acute>                  : "́"   U0301 # COMBINING ACUTE ACCENT
 <dead_grave> <dead_grave>                  : "̀"   U0300 # COMBINING GRAVE ACCENT
 <dead_cedilla> <dead_cedilla>              : "̧"   U0327 # COMBINING CEDILLA
-<dead_ogonek> <dead_ogonek>                : "̨"   U0328 # COMBINING OGONEK
+<U21BB> <dead_cedilla> <dead_cedilla>      : "̨"   U0328 # COMBINING OGONEK
 <dead_abovedot> <dead_abovedot>            : "̇"   U0307 # COMBINING DOT ABOVE
 <dead_abovering> <dead_abovering>          : "̊"   U030A # COMBINING RING ABOVE
 <dead_tilde> <dead_tilde>                  : "̃"   U0303 # COMBINING TILDE
@@ -71,6 +72,8 @@
 <dead_macron> <dead_cedilla> <o>             : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
 <Multi_key> <macron> <dead_cedilla> <o>      : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
 <Multi_key> <underscore> <dead_cedilla> <o>  : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
+<U21BB> <dead_cedilla> <E>                   : "Ȩ"   U0228 # LATIN CAPITAL LETTER E WITH CEDILLA
+<U21BB> <dead_cedilla> <e>                   : "ȩ"   U0229 # LATIN SMALL LETTER E WITH CEDILLA
 
 # latin letters with line below (simplifying the keyboard line below and macron are on the same place)
 <dead_macron> <B>                            : "Ḇ"   U1E06 # LATIN CAPITAL LETTER B WITH LINE BELOW
@@ -92,40 +95,18 @@
 <dead_macron> <h>                            : "ẖ"   U1E96 # LATIN SMALL LETTER H WITH LINE BELOW
 
 # letters with stroke
-<dead_stroke> <A>                        : "Ⱥ"   U023A # LATIN CAPITAL LETTER A WITH STROKE
-<dead_stroke> <B>                        : "Ƀ"   U0243 # LATIN CAPITAL LETTER B WITH STROKE
-<dead_stroke> <C>                        : "Ȼ"   U023B # LATIN CAPITAL LETTER C WITH STROKE
-<dead_stroke> <h>                        : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
-<dead_stroke> <H>                        : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
-<dead_stroke> <d>                        : "đ"   dstroke # LATIN SMALL LETTER D WITH STROKE
 <dead_stroke> <D>                        : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
-<dead_stroke> <l>                        : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
-<dead_stroke> <L>                        : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
-<dead_stroke> <o>                        : "ø"   oslash  # LATIN SMALL LETTER O WITH STROKE
-<dead_stroke> <O>                        : "Ø"   Ooblique # LATIN CAPITAL LETTER O WITH STROKE
-<dead_acute> <dead_stroke> <o>           : "ǿ"   U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
-<dead_acute> <dead_stroke> <O>           : "Ǿ"   U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
-<dead_stroke> <R>                        : "Ɍ"   U024C # LATIN CAPITAL LETTER R WITH STROKE
-<dead_stroke> <r>                        : "ɍ"   U024D # LATIN SMALL LETTER R WITH STROKE
-<dead_stroke> <u>                        : "ʉ"   U0289 # LATIN SMALL LETTER U BAR
-<dead_stroke> <U>                        : "Ʉ"   U0244 # LATIN CAPITAL LETTER U BAR
-<dead_stroke> <Y>                        : "Ɏ"   U024E # LATIN CAPITAL LETTER Y WITH STROKE
-<dead_stroke> <y>                        : "ɏ"   U024F # LATIN SMALL LETTER Y WITH STROKE
-<dead_stroke> <Greek_lambda>             : "ƛ"   U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-<Multi_key> <slash> <T>                  : "Ⱦ"   U023E # LATIN CAPITAL LETTER T WITH DIAGONAL STROKE
-<Multi_key> <KP_Divide> <T>              : "Ⱦ"   U023E # LATIN CAPITAL LETTER T WITH DIAGONAL STROKE
-<Multi_key> <slash> <A>                  : "Ⱥ"   U023A # LATIN CAPITAL LETTER A WITH STROKE
-<Multi_key> <KP_Divide> <A>              : "Ⱥ"   U023A # LATIN CAPITAL LETTER A WITH STROKE
-<Multi_key> <slash> <C>                  : "Ȼ"   U023B # LATIN CAPITAL LETTER C WITH STROKE
-<Multi_key> <KP_Divide> <C>              : "Ȼ"   U023B # LATIN CAPITAL LETTER C WITH STROKE
+<dead_stroke> <d>                        : "đ"   dstroke # LATIN SMALL LETTER D WITH STROKE
+<dead_stroke> <H>                        : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
+<dead_stroke> <h>                        : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
-<Multi_key> <slash> <u>                  : "ʉ"   U0289 # LATIN SMALL LETTER U BAR
-<Multi_key> <KP_Divide> <u>              : "ʉ"   U0289 # LATIN SMALL LETTER U BAR
-<Multi_key> <minus> <u>                  : "ʉ"   U0289 # LATIN SMALL LETTER U BAR
-<Multi_key> <slash> <U>                  : "Ʉ"   U0244 # LATIN CAPITAL LETTER U BAR
-<Multi_key> <KP_Divide> <U>              : "Ʉ"   U0244 # LATIN CAPITAL LETTER U BAR
-<Multi_key> <minus> <U>                  : "Ʉ"   U0244 # LATIN CAPITAL LETTER U BAR
+<dead_stroke> <L>                        : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
+<dead_stroke> <l>                        : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
+<dead_stroke> <O>                        : "Ø"   Ooblique # LATIN CAPITAL LETTER O WITH STROKE
+<dead_stroke> <o>                        : "ø"   oslash  # LATIN SMALL LETTER O WITH STROKE
+<dead_acute> <dead_stroke> <O>           : "Ǿ"   U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
+<dead_acute> <dead_stroke> <o>           : "ǿ"   U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
 
 # if you want to have ð and Ð with dead stroke instead of đ and Đ you should uncomment the next two lines
 # <dead_stroke> <d>                      : "ð"   U00F0 # LATIN SMALL LETTER ETH
@@ -195,9 +176,12 @@
 <Multi_key> <s> <t>                      : "ﬆ"   UFB06 # LATIN SMALL LIGATURE ST
 <Multi_key> <I> <J>                      : "Ĳ"   U0132 # LATIN CAPITAL LIGATURE IJ
 <Multi_key> <i> <j>                      : "ĳ"   U0133 # LATIN SMALL LIGATURE IJ
-<Multi_key> <D> <Z>                      : "Ǆ"   U01C4 # LATIN CAPITAL LETTER DZ WITH CARON
-<Multi_key> <D> <z>                      : "ǅ"   U01C5 # LATIN CAPITAL LETTER D WITH SMALL LETTER Z WITH CARON
-<Multi_key> <d> <z>                      : "ǆ"   U01C6 # LATIN SMALL LETTER DZ WITH CARON
+<Multi_key> <D> <Z>                      : "Ǳ"   U01F1 # LATIN CAPITAL LETTER DZ
+<Multi_key> <D> <z>                      : "ǲ"   U01F2 # LATIN CAPITAL LETTER D WITH SMALL LETTER Z
+<Multi_key> <d> <z>                      : "ǳ"   U01F3 # LATIN SMALL LETTER DZ
+<dead_caron> <Multi_key> <D> <Z>         : "Ǆ"   U01C4 # LATIN CAPITAL LETTER DZ WITH CARON
+<dead_caron> <Multi_key> <D> <z>         : "ǅ"   U01C5 # LATIN CAPITAL LETTER D WITH SMALL LETTER Z WITH CARON
+<dead_caron> <Multi_key> <d> <z>         : "ǆ"   U01C6 # LATIN SMALL LETTER DZ WITH CARON
 <Multi_key> <L> <J>                      : "Ǉ"   U01C7 # LATIN CAPITAL LETTER LJ
 <Multi_key> <L> <j>                      : "ǈ"   U01C8 # LATIN CAPITAL LETTER L WITH SMALL LETTER J
 <Multi_key> <l> <j>                      : "ǉ"   U01C9 # LATIN SMALL LETTER LJ
@@ -228,6 +212,7 @@
 <U21BB> <colon>                                  : "‥"   U2025 # TWO DOT LEADER
 <U21BB> <ellipsis>                               : "⋱"   U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <U21BB> <U22EE>                                  : "⋰"   U22F0 # UP RIGHT DIAGONAL ELLIPSIS
+<dead_circumflex> <ellipsis>                     : "⋯"   U22EF # MIDLINE HORIZONTAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
 <Multi_key> <7> <7>                              : "⁊"   U204A # TIRONIAN SIGN ET
 <Multi_key> <ellipsis> <ellipsis>                : "[…]"
