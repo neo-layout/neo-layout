@@ -80,6 +80,69 @@
 <Multi_key> <U02DE> <h> <j>                       : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
 <Multi_key> <U02DE> <h> <g>                       : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
 
+# additional stroke letters (only ʉ, ɵ, ɟ and ʄ are IPA) 
+<dead_stroke> <A>                                 : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
+<Multi_key> <slash> <A>                           : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
+<Multi_key> <KP_Divide> <A>                       : "Ⱥ" U023A # LATIN CAPITAL LETTER A WITH STROKE
+<dead_stroke> <a>                                 : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
+<Multi_key> <slash> <a>                           : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
+<Multi_key> <KP_Divide> <a>                       : "ⱥ" U2C65 # LATIN SMALL LETTER A WITH STROKE
+<dead_stroke> <B>                                 : "Ƀ" U0243 # LATIN CAPITAL LETTER B WITH STROKE
+<dead_stroke> <C>                                 : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
+<Multi_key> <slash> <C>                           : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
+<Multi_key> <KP_Divide> <C>                       : "Ȼ" U023B # LATIN CAPITAL LETTER C WITH STROKE
+<dead_stroke> <c>                                 : "ȼ" U023C # LATIN SMALL LETTER C WITH STROKE
+<Multi_key> <slash> <c>                           : "ȼ" U023C # LATIN SMALL LETTER C WITH STROKE
+<Multi_key> <KP_Divide> <c>                       : "ȼ" U023C # LATIN SMALL LETTER C WITH STROKE
+<dead_stroke> <E>                                 : "Ɇ" U0246 # LATIN CAPITAL LETTER E WITH STROKE
+<Multi_key> <slash> <E>                           : "Ɇ" U0246 # LATIN CAPITAL LETTER E WITH STROKE
+<Multi_key> <KP_Divide> <E>                       : "Ɇ" U0246 # LATIN CAPITAL LETTER E WITH STROKE
+<dead_stroke> <e>                                 : "ɇ" U0247 # LATIN SMALL LETTER E WITH STROKE
+<Multi_key> <slash> <e>                           : "ɇ" U0247 # LATIN SMALL LETTER E WITH STROKE
+<Multi_key> <KP_Divide> <e>                       : "ɇ" U0247 # LATIN SMALL LETTER E WITH STROKE
+<dead_stroke> <I>                                 : "Ɨ" U0197 # LATIN CAPITAL LETTER I WITH STROKE
+<dead_stroke> <Multi_key> <I> <I>                 : "ᵻ" U1D7B # LATIN SMALL CAPITAL LETTER I WITH STROKE
+<Multi_key> <minus> <J>                           : "Ɉ" U0248 # LATIN CAPITAL LETTER J WITH STROKE
+<Multi_key> <minus> <j>                           : "ɉ" U0249 # LATIN SMALL LETTER J WITH STROKE
+<dead_stroke> <J>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
+<dead_stroke> <j>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
+<dead_stroke> <dead_abovedot> <j>                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
+<U02DE> <dead_stroke> <J>                         : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
+<Multi_key> <j> <f>                               : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
+# Collides with standard compose £ and ₤ 
+#<Multi_key> <minus> <L>                           : "Ƚ" U023D # LATIN CAPITAL LETTER L WITH BAR
+#<Multi_key> <minus> <l>                           : "ƚ" U019A # LATIN SMALL LETTER L WITH BAR
+#<Multi_key> <equals> <L>                          : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
+#<Multi_key> <equals> <l>                          : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
+#<dead_stroke> <sterling>                          : "₤" U20A4 # LIRA SIGN
+<Multi_key> <minus> <o>                           : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
+<Multi_key> <minus> <O>                           : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
+<dead_stroke> <P>                                 : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
+<dead_stroke> <p>                                 : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
+<dead_stroke> <R>                                 : "Ɍ" U024C # LATIN CAPITAL LETTER R WITH STROKE
+<dead_stroke> <r>                                 : "ɍ" U024D # LATIN SMALL LETTER R WITH STROKE
+<dead_stroke> <U017F>                             : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
+<Multi_key> <slash> <T>                           : "Ⱦ" U023E # LATIN CAPITAL LETTER T WITH DIAGONAL STROKE
+<Multi_key> <KP_Divide> <T>                       : "Ⱦ" U023E # LATIN CAPITAL LETTER T WITH DIAGONAL STROKE
+<Multi_key> <slash> <t>                           : "ⱦ" U2C66 # LATIN SMALL LETTER T WITH DIAGONAL STROKE
+<Multi_key> <KP_Divide> <t>                       : "ⱦ" U2C66 # LATIN SMALL LETTER T WITH DIAGONAL STROKE
+<dead_stroke> <u>                                 : "ʉ" U0289 # LATIN SMALL LETTER U BAR
+<Multi_key> <slash> <u>                           : "ʉ" U0289 # LATIN SMALL LETTER U BAR
+<Multi_key> <KP_Divide> <u>                       : "ʉ" U0289 # LATIN SMALL LETTER U BAR
+<Multi_key> <minus> <u>                           : "ʉ" U0289 # LATIN SMALL LETTER U BAR
+<dead_stroke> <U>                                 : "Ʉ" U0244 # LATIN CAPITAL LETTER U BAR
+<Multi_key> <slash> <U>                           : "Ʉ" U0244 # LATIN CAPITAL LETTER U BAR
+<Multi_key> <KP_Divide> <U>                       : "Ʉ" U0244 # LATIN CAPITAL LETTER U BAR
+<Multi_key> <minus> <U>                           : "Ʉ" U0244 # LATIN CAPITAL LETTER U BAR
+<dead_stroke> <Y>                                 : "Ɏ" U024E # LATIN CAPITAL LETTER Y WITH STROKE
+<dead_stroke> <y>                                 : "ɏ" U024F # LATIN SMALL LETTER Y WITH STROKE
+<dead_stroke> <Greek_lambda>                      : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
+# It is undecided whether they should be included
+#<dead_stroke> <2>                                 : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+#<dead_stroke> <Greek_iota>                        : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
+#<dead_stroke> <Greek_upsilon>                     : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
+#<dead_stroke> <Multi_key> <U> <U>                 : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
+
 # IPA, african and other languages
 <Multi_key> <l> <z>                               : "ɮ" U026E # LATIN SMALL LETTER LEZH
 <Multi_key> <Z> <H>                               : "Ʒ" U01B7 # LATIN CAPITAL LETTER EZH
@@ -117,7 +180,7 @@
 # letters with curl (IPA)
 <dead_abovering> <c>                              : "ɕ" U0255 # LATIN SMALL LETTER C WITH CURL
 <dead_abovering> <z>                              : "ʑ" U0291 # LATIN SMALL LETTER Z WITH CURL
-# nonstandard sinologist symbols:
+# non-IPA sinologist
 <dead_abovering> <d>                              : "ȡ" U0221 # LATIN SMALL LETTER D WITH CURL
 <dead_abovering> <l>                              : "ȴ" U0234 # LATIN SMALL LETTER L WITH CURL
 <dead_abovering> <n>                              : "ȵ" U0235 # LATIN SMALL LETTER N WITH CURL
@@ -129,19 +192,11 @@
 <U21BB> <Multi_key> <i> <question>                : "ʕ" U0295 # LATIN LETTER PHARYNGEAL VOICED FRICATIVE
 <dead_stroke> <U21BB> <question>                  : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
 <dead_stroke> <U21BB> <Multi_key> <i> <question>  : "ʢ" U02A2 # LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE
-
 <Multi_key> <g> <g>                               : "ɡ" U0261 # LATIN SMALL LETTER SCRIPT G
 <U21BB> <Greek_tau>                               : "ɾ" U027E # LATIN SMALL LETTER R WITH FISHHOOK
 <Multi_key> <r> <underscore>                      : "ɾ" U027E # LATIN SMALL LETTER R WITH FISHHOOK
 <Multi_key> <r> <underbar>                        : "ɾ" U027E # LATIN SMALL LETTER R WITH FISHHOOK
 <Multi_key> <r> <r>                               : "ɼ" U027C # LATIN SMALL LETTER R WITH LONG LEG
-
-<dead_stroke> <J>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
-<dead_stroke> <j>                                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
-#<U02DE> <dead_stroke> <J>                         : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
-<Multi_key> <j> <f>                               : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
-<Multi_key> <minus> <o>                           : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
-
 <Multi_key> <parenleft> <3> <space>               : "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E
 <Multi_key> <parenleft> <KP_3> <space>            : "ɞ" U025E # LATIN SMALL LETTER CLOSED REVERSED OPEN E
 <Multi_key> <x> <underscore>                      : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
@@ -167,33 +222,31 @@
 <Multi_key> <underscore> <apostrophe>             : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <Multi_key> <underbar> <apostrophe>               : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <U21BB> <Multi_key> <apostrophe> <apostrophe>     : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-
 #<U21BB> <parenright>                              : "‿" U203F # UNDERTIE
 <U21BB> <parenleft>                               : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 
+# tone letters
 <Multi_key> <t> <5>                               : "˥" U02E5 # MODIFIER LETTER EXTRA-HIGH TONE BAR
 <Multi_key> <t> <4>                               : "˦" U02E6 # MODIFIER LETTER HIGH TONE BAR
 <Multi_key> <t> <3>                               : "˧" U02E7 # MODIFIER LETTER MID TONE BAR
 <Multi_key> <t> <2>                               : "˨" U02E8 # MODIFIER LETTER LOW TONE BAR
 <Multi_key> <t> <1>                               : "˩" U02E9 # MODIFIER LETTER EXTRA-LOW TONE BAR
-
 # Standard Mandarin tones
 #<Multi_key> <m> <1>                               : "˥˥"
 #<Multi_key> <m> <2>                               : "˧˥"
 #<Multi_key> <m> <3>                               : "˨˩˦"
 #<Multi_key> <m> <4>                               : "˥˩"
-
 <dead_circumflex> <Multi_key> <bar> <asciicircum> : "ꜛ" UA71B # MODIFIER LETTER RAISED UP ARROW
 <dead_circumflex> <Multi_key> <v> <bar>           : "ꜜ" UA71C # MODIFIER LETTER RAISED DOWN ARROW
-<dead_circumflex> <U21BB> <L>                     : "̚" U031A # COMBINING LEFT ANGLE ABOVE
 
 # diakritics – work in progress
+<dead_circumflex> <U21BB> <L>                     : "̚" U031A # COMBINING LEFT ANGLE ABOVE
 <U21BB> <degree>                                  : "̥" U0325 # COMBINING RING BELOW
 <Multi_key> <underscore> <degree>                 : "̥" U0325 # COMBINING RING BELOW
 <Multi_key> <underbar> <degree>                   : "̥" U0325 # COMBINING RING BELOW
 <U21BB> <quotedbl>                                : "̤" U0324 # COMBINING DIAERESIS BELOW
-<Multi_key> <underscore> <quotedbl>               : "̤" U0324 # COMBINING DIAERESIS BELOW
-<Multi_key> <underbar> <quotedbl>                 : "̤" U0324 # COMBINING DIAERESIS BELOW
+#<Multi_key> <underscore> <quotedbl>               : "̤" U0324 # COMBINING DIAERESIS BELOW
+#<Multi_key> <underbar> <quotedbl>                 : "̤" U0324 # COMBINING DIAERESIS BELOW
 <U21BB> <asciitilde>                              : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key> <underscore> <asciitilde>             : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key> <underbar> <asciitilde>               : "̰" U0330 # COMBINING TILDE BELOW
@@ -252,6 +305,9 @@
 <dead_circumflex> <U21BB> <a>                     : "ᵄ" U1D44 # MODIFIER LETTER SMALL TURNED A
 <dead_circumflex> <Greek_alpha>                   : "ᵅ" U1D45 # MODIFIER LETTER SMALL ALPHA
 <dead_circumflex> <U21BB> <Greek_alpha>           : "ᶛ" U1D9B # MODIFIER LETTER SMALL TURNED ALPHA
+# non-IPA:
+<dead_circumflex> <dead_stroke> <I>               : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
+<dead_circumflex> <dead_stroke> <Multi_key> <I> <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 
 # Vietnamese language
 <U1FBF> <A>                                       : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
@@ -328,5 +384,17 @@
 <Multi_key> <a> <KP_7>                            : "٧"   U0667 # ARABIC-INDIC DIGIT SEVEN
 <Multi_key> <a> <KP_8>                            : "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
 <Multi_key> <a> <KP_9>                            : "٩"   U0669 # ARABIC-INDIC DIGIT NINE
+
+# Medieval section
+# will be included here with Ꝥꝥ, 
+<Multi_key> <H> <v>                               : "Ƕ" U01F6 # LATIN CAPITAL LETTER HWAIR
+<Multi_key> <h> <v>                               : "ƕ" U0195 # LATIN SMALL LETTER HV
+#<Multi_key> <Y> <R>                               : "Ʀ" U01A6 # LATIN LETTER YR
+#<Multi_key> <W> <y>                               : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
+#<Multi_key> <w> <y>                               : "ƿ" U01BF # LATIN LETTER WYNN
+#<Multi_key> <Y> <G>                               : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
+#<Multi_key> <y> <g>                               : "ȝ" U021D # LATIN SMALL LETTER YOGH
+#<Multi_key> <O> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
+#<Multi_key> <o> <u>                               : "ȣ"	 U0223 # LATIN SMALL LETTER OU
 
 # End of additional Definitions (languages) by Neo keyboard layout
