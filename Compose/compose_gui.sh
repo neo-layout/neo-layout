@@ -24,7 +24,7 @@ then
 	YESNO() {
 		kdialog --title Compose-Module --yesno "$1"
 	}
-else
+elif [ -n "`which zenity 2>/dev/null`" ]; then
 	ADD_TO_LIST() {
 		list=("${list[@]}" "$1" "$2")
 	}
@@ -37,11 +37,28 @@ else
 	YESNO() {
 		zenity --title Compose-Module --question --text "$1"
 	}
+elif [ -n "`which dialog 2>/dev/null`" ]; then
+	ADD_TO_LIST() {
+		list=("${list[@]}" "$1" "$2" "$3")
+	}
+	CHECKLIST() {
+		dialog --title Compose-Module --checklist "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt, wodurch Zeichen wie ≙ έ ʒ ermöglicht werden.\nWählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten." 20 70 10 "${list[@]}" 3>&1 1>&2 2>&3 3>&-
+	}
+	MSGBOX() {
+		dialog --title Compose-Module --msgbox "$1" 8 60
+	}
+	YESNO() {
+		dialog --title Compose-Module --yesno "$1" 14 70
+	}
+else
+	echo "Es wurde weder kdialog noch zenity noch dialog gefunden."
+	echo "Dieses Programm kann darum nicht benutzt werden. Verwenden Sie stattdessen ›make config‹."
+	exit 1
+
 fi
 
 
-while [ ! "$nohelp" ]
-do
+while [ ! "$nohelp" ]; do
  case ${1-" "} in
   " ")
 	nohelp=ok
@@ -50,11 +67,9 @@ do
 	echo Aufruf: compose.sh
 	echo Mit »compose.sh« können die Compose-Module von Neo zusammengesetzt werden.
 	echo Folgende Module sind verfügbar:
-	for j in `ls $SRC/*.module`
-	do
+	for j in `ls $SRC/*.module`; do
 		i=$(basename $j .module)
-		if [ ! "$i" = "base" ] && [ ! "$i" = "enUS" ]
-		then
+		if [ ! "$i" = "base" ] && [ ! "$i" = "enUS" ]; then
 			sed -n "
 /^#configinfo[ \t]*/{
     s///
@@ -83,11 +98,9 @@ done
 
 auswahl=XCompose_enUS_base
 
-for i in src/*.module
-do
+for i in src/*.module; do
 	name=$(basename $i .module)					# name of modul
-	if [ ! "$name" = "base" -a ! "$name" = "enUS" ]
-	then
+	if [ ! "$name" = "base" -a ! "$name" = "enUS" ]; then
 		description=$(sed -n "
 /^#configinfo[ \t]*/{
     s///
@@ -101,8 +114,7 @@ s/.*/(ohne Beschreibung)/
 p
 q
 " $SRC/$name.module)							# description of module
-		if  grep -qs $name $CONFFILE
-		then
+		if  grep -qs $name $CONFFILE; then
 			default=on					# default value for this module
 		else
 			default=off
@@ -115,15 +127,13 @@ done
 
 
 
-if [ -f $HOME/.XCompose ]
-then
+if [ -f $HOME/.XCompose ]; then
 	YESNO "Es gibt bereits eine Compose-Datei (z.B. durch eine ältere Neo-Installation).\nSollten Sie eigene Definitionen in der Datei ~/.XCompose vorgenommen haben, dann brechen Sie jetzt ab und schreiben Ihre eigenen Definitionen in eine Datei (z.B. user.module) im Ordner src.\n\nAnderenfalls können Sie das Skript bedenkenlos fortsetzen.\nWollen Sie fortfahren?" || exit
 fi
 
 menu=`CHECKLIST | sed -e 's/\"//g' | sed -e 's/\ /_/g'`
 
-if [ $menu ]
-then
+if [ $menu ]; then
 	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
 	echo "USER_XCOMPOSE = ${auswahl}_${menu}" > .config && make install && MSGBOX "$fertig"
 fi
