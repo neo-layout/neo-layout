@@ -24,7 +24,7 @@ then
 	YESNO() {
 		kdialog --title Compose-Module --yesno "$1"
 	}
-elif [ -n "`which zenity 2>/dev/null`" ]; then
+elif [ -n "`which zenity 2>/dev/null`" ] && [ ${DISPLAY} ]; then
 	ADD_TO_LIST() {
 		list=("${list[@]}" "$1" "$2")
 	}
