@@ -103,6 +103,8 @@
 <Multi_key> <U2295> <U2295>                : "⨁"   U2A01 # N-ARY CIRCLED PLUS OPERATOR
 <Multi_key> <U2297> <U2297>                : "⨂"   U2A02 # N-ARY CIRCLED TIMES OPERATOR
 <dead_macron> <includedin>                 : "⊆"   U2286 # SUBSET OF OR EQUAL TO
+<Multi_key> <includein> <equal>            : "⊆"   U2286 # SUBSET OF OR EQUAL TO
+<Multi_key> <equal> <includein>            : "⊆"   U2286 # SUBSET OF OR EQUAL TO
 <dead_macron> <includes>                   : "⊇"   U2287 # SUPERSET OF OR EQUAL TO
 <U21BB> <includedin>                       : "⊃"   includes # SUPERSET OF
 <U21BB> <includes>                         : "⊂"   includedin # SUBSET OF
