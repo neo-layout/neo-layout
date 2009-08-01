@@ -461,6 +461,11 @@
 <Multi_key> <x> <braceleft> <4>           : "⎧⎫\n⎨⎬\n⎪⎪\n⎩⎭"
 <Multi_key> <x> <braceleft> <5>           : "⎧⎫\n⎪⎪\n⎨⎬\n⎪⎪\n⎩⎭"
 
+# dots for vectors and matrices
+<Multi_key> <ellipsis> <bar>              : "⋮" U22EE # VERTICAL ELLIPSIS
+<Multi_key> <ellipsis> <slash>            : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
+<Multi_key> <ellipsis> <backslash>        : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
+
 # physical symbols
 # physical constants
 <Multi_key> <p> <h> <space>               : "ℎ"   U210E # PLANCK CONSTANT
