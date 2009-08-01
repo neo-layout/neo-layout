@@ -50,9 +50,12 @@ do
 	echo Aufruf: compose.sh
 	echo Mit »compose.sh« können die Compose-Module von Neo zusammengesetzt werden.
 	echo Folgende Module sind verfügbar:
-	for j in `ls $SRC/*.module`; do
-	i=$(basename $j .module)
-	sed -n "
+	for j in `ls $SRC/*.module`
+	do
+		i=$(basename $j .module)
+		if [ ! "$i" = "base" ] && [ ! "$i" = "enUS" ]
+		then
+			sed -n "
 /^#configinfo[ \t]*/{
     s///
     b print
@@ -70,6 +73,7 @@ s/^\(.\{9\}\).*\n\(.\{1,69\}\).*/\1 \2/  # 80-Zeichen-Terminal-Grenze
 p
 q
 " ${SRC}/${i}.module
+		fi
 	done
 	exit;;
  esac
