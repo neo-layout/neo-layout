@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
+   xmlns:ns="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:cc="http://web.resource.org/cc/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -12,13 +13,14 @@
    height="332"
    id="svg2559"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.45.1"
    version="1.0"
    sodipodi:docname="neo-druckvorlage.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/home/philipp/NEO-Belegung/neo20-Tastatur-20vbh.png"
    inkscape:export-xdpi="200.06024"
-   inkscape:export-ydpi="200.06024">
+   inkscape:export-ydpi="200.06024"
+   sodipodi:docbase="/home/pascal/neo/svn-Arbeitsverzeichnis/neo/grafik/druckvorlage">
   <defs
      id="defs2561">
     <inkscape:perspective
@@ -36,9 +38,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1593089"
-     inkscape:cx="476.52404"
-     inkscape:cy="177.12859"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="265.32042"
+     inkscape:cy="196.87214"
      inkscape:current-layer="layer2"
      id="namedview2563"
      width="935px"
@@ -58,8 +60,8 @@
      inkscape:object-paths="false"
      inkscape:guide-bbox="true"
      inkscape:grid-bbox="false"
-     inkscape:window-width="1918"
-     inkscape:window-height="1011"
+     inkscape:window-width="1680"
+     inkscape:window-height="971"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:object-bbox="true"
@@ -86,18 +88,18 @@
   <metadata
      id="metadata2565">
     <rdf:RDF>
-      <cc:Work
+      <ns:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <cc:license
+        <ns:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
         <dc:title>NEO-Tastatur-Layout Version 2.0 als Druckvorlage</dc:title>
         <dc:creator>
-          <cc:Agent>
+          <ns:Agent>
             <dc:title>Philipp H. Poll (siehe http://linuxlibertine.sourceforge.net/)</dc:title>
-          </cc:Agent>
+          </ns:Agent>
         </dc:creator>
         <dc:source>https://neo.eigenheimstrasse.de/svn/grafik/svg/neo20_Farbe_Ebene_1_bis_4.svg</dc:source>
         <dc:language>Deutsch</dc:language>
@@ -120,31 +122,37 @@
         <dc:relation>https://neo.eigenheimstrasse.de/svn/A-REFERENZ-A/neo20.txt</dc:relation>
         <dc:identifier>https://neo.eigenheimstrasse.de/svn/grafik/druckvorlage-svg/neo-druckvorlage.svg</dc:identifier>
         <dc:contributor>
-          <cc:Agent>
+          <ns:Agent>
             <dc:title>Erik Streb del Toro, Philipp H. Poll, NEO-Layout-Team (www.neo-layout.org)</dc:title>
-          </cc:Agent>
+          </ns:Agent>
         </dc:contributor>
         <dc:publisher>
-          <cc:Agent>
+          <ns:Agent>
             <dc:title>www.neo-layout.org</dc:title>
-          </cc:Agent>
+          </ns:Agent>
         </dc:publisher>
-      </cc:Work>
-      <cc:License
+      </ns:Work>
+      <ns:License
          rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
-        <cc:permits
+        <ns:permits
            rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
+        <ns:permits
            rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:requires
+        <ns:requires
            rdf:resource="http://creativecommons.org/ns#Notice" />
-        <cc:requires
+        <ns:requires
            rdf:resource="http://creativecommons.org/ns#Attribution" />
-        <cc:permits
+        <ns:permits
            rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-        <cc:requires
+        <ns:requires
            rdf:resource="http://creativecommons.org/ns#ShareAlike" />
-      </cc:License>
+      </ns:License>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
@@ -1108,7 +1116,7 @@
          y="654.70758">Alt</tspan><tspan
          sodipodi:role="line"
          x="341.90701"
-         y="665.29089"
+         y="665.29088"
          id="tspan2277">Option</tspan></text>
     <text
        xml:space="preserve"
@@ -1123,7 +1131,7 @@
          y="707.13599">Alt</tspan><tspan
          sodipodi:role="line"
          x="860.39349"
-         y="717.7193"
+         y="717.71929"
          id="tspan2283">Option</tspan></text>
     <text
        xml:space="preserve"
@@ -2290,18 +2298,6 @@
          x="397.22311"
          y="445.371"
          style="font-size:29.21955299px">3</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
-       x="382.75885"
-       y="654.50317"
-       id="text6606"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan6608"
-         x="382.75885"
-         y="654.50317"
-         style="fill:#ffffff;font-family:Linux Libertine">ℓ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -3484,7 +3480,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan6287"
-         x="784.99146"
+         x="784.99145"
          y="498.62204"
          style="font-size:29.21955299px">ß</tspan></text>
     <text
@@ -4445,7 +4441,7 @@
          style="font-weight:normal;fill:#3879dc;fill-opacity:1;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine">⟨</tspan><tspan
          sodipodi:role="line"
          x="640.23633"
-         y="448.29883"
+         y="448.29884"
          style="font-weight:normal;fill:#3879dc;fill-opacity:1;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
          id="tspan3962" /></text>
     <text
@@ -4624,7 +4620,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4013"
-         x="682.87354"
+         x="682.87353"
          y="624.77625"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">⇒</tspan></text>
     <text
@@ -5897,7 +5893,9 @@
        id="text8656"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan3860">⇟</tspan></text>
+         id="tspan3860"
+         x="1078.0648"
+         y="622.45337">⇟</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffee00;fill-opacity:1;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
@@ -6050,7 +6048,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan7590"
-         x="753.59637"
+         x="753.59638"
          y="651.26239"
          style="font-size:9.82734966px;fill:#3879dc;fill-opacity:1;font-family:DejaVu Sans Condensed">   Leerzeichen ⍽</tspan></text>
     <g
@@ -6416,6 +6414,42 @@
          id="tspan3858"
          x="1138.2755"
          y="593.8902">Enter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="385.59106"
+       y="428.94968"
+       id="text3635"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3637"
+         x="385.59106"
+         y="428.94968"
+         style="fill:#ffffff;font-family:Linux Libertine">ℓ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="339.62915"
+       y="428.94968"
+       id="text3639"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3641"
+         x="339.62915"
+         y="428.94968"
+         style="fill:#ffffff;font-family:Linux Libertine">§</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       x="294.02075"
+       y="428.94968"
+       id="text3643"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3645"
+         x="294.02075"
+         y="428.94968"
+         style="fill:#ffffff;font-family:Linux Libertine">°</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6564,7 +6598,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan11993"
-         x="88.693214"
+         x="88.693215"
          y="69.15773"
          style="fill:#ffffff;font-family:Linux Libertine">X</tspan></text>
     <text
@@ -6917,7 +6951,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4662"
-         x="771.7326"
+         x="771.73261"
          y="510.8165"
          style="fill:#ffee00;font-family:Linux Libertine">ə</tspan></text>
     <text
