@@ -17,13 +17,13 @@ orange="\033[33m"
 green="\033[32m"
 
 
-if [ "X:$KDE_FULL_SESSION" = "X:true" ]
-then
+if [ "X:$KDE_FULL_SESSION" = "X:true" ]; then
+	NL="<br>"
 	ADD_TO_LIST() {
 		list=("${list[@]}" "$1" "$2" "$3")
 	}
 	CHECKLIST() {
-		kdialog --title Compose-Module --checklist "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt,<br>wodurch Zeichen wie ≙ έ ʒ ermöglicht werden.<br>Wählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten." "${list[@]}"
+		kdialog --title Compose-Module --checklist "$1" "${list[@]}"
 	}
 	MSGBOX() {
 		kdialog --title Compose-Module --msgbox "$1"
@@ -32,11 +32,12 @@ then
 		kdialog --title Compose-Module --yesno "$1"
 	}
 elif [ -n "`which zenity 2>/dev/null`" ] && [ ${DISPLAY} ]; then
+	NL="\n"
 	ADD_TO_LIST() {
 		list=("${list[@]}" "$1" "$2")
 	}
 	CHECKLIST() {
-		zenity --title Compose-Module --width=610 --height=320 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt,\nwodurch Zeichen wie ≙ έ ʒ ermöglicht werden.\nWählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten.\nFür mehrere Module STRG bzw. CTRL gedrückt halten." "${list[@]}"
+		zenity --title Compose-Module --width=610 --height=320 --list --multiple --column Modulname  --column Modulebeschreibung --separator=_ --text "$1${NL}$2" "${list[@]}"
 	}
 	MSGBOX() {
 		zenity --title Compose-Module --info --text "$1"
@@ -45,17 +46,21 @@ elif [ -n "`which zenity 2>/dev/null`" ] && [ ${DISPLAY} ]; then
 		zenity --title Compose-Module --question --text "$1"
 	}
 elif [ -n "`which dialog 2>/dev/null`" ]; then
+	NL="\n"
 	ADD_TO_LIST() {
 		list=("${list[@]}" "$1" "$2" "$3")
 	}
 	CHECKLIST() {
-		dialog --title Compose-Module --checklist "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt, wodurch Zeichen wie ≙ έ ʒ ermöglicht werden.\nWählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten." 20 70 10 "${list[@]}" 3>&1 1>&2 2>&3 3>&-
+		dialog --title Compose-Module --checklist "$1" 20 70 10 "${list[@]}" 3>&1 1>&2 2>&3 3>&- || exit 1
+		clear
 	}
 	MSGBOX() {
 		dialog --title Compose-Module --msgbox "$1" 8 60
+		clear
 	}
 	YESNO() {
-		dialog --title Compose-Module --yesno "$1" 14 70
+		dialog --title Compose-Module --yesno "$1" 0 0 || exit 1
+		clear
 	}
 else
 	echo -e ${red} "Es wurde weder kdialog noch zenity noch dialog gefunden." ${normal}
@@ -136,10 +141,10 @@ done
 
 
 if [ -f $HOME/.XCompose ]; then
-	YESNO "Es gibt bereits eine Compose-Datei (z.B. durch eine ältere Neo-Installation).\nSollten Sie eigene Definitionen in der Datei ~/.XCompose vorgenommen haben, dann brechen Sie jetzt ab und schreiben Ihre eigenen Definitionen in eine Datei (z.B. user.module) im Ordner src.\n\nAnderenfalls können Sie das Skript bedenkenlos fortsetzen.\nWollen Sie fortfahren?" || exit
+	YESNO "Es gibt bereits eine Compose-Datei (z.B. durch eine ältere Neo-Installation).\nSollten Sie eigene Definitionen in der Datei ~/.XCompose vorgenommen haben, dann brechen Sie jetzt ab und schreiben Ihre eigenen Definitionen in eine Datei (z.B. user.module) im Ordner src.\n\nAnderenfalls können Sie das Skript bedenkenlos fortsetzen.\nWollen Sie fortfahren?" || exit 1
 fi
 
-menu=`CHECKLIST | sed -e 's/\"//g' | sed -e 's/\ /_/g'`
+menu=`CHECKLIST "Die Neo-Tastaturbelegung hat etliche Erweiterungen für Compose (Mod3+Tab) erstellt,${NL}wodurch Zeichen wie ≙ έ ʒ ermöglicht werden.${NL}Wählen Sie die Compose-Module von Neo aus, die Sie verwenden möchten." "Für mehrere Module STRG bzw. CTRL gedrückt halten." | sed -e 's/\"//g' | sed -e 's/\ /_/g'`
 
 if [ $menu ]; then
 	fertig="Die neue Compose-Datei wurde erfolgreich erstellt.\nSie wird für alle neu gestarteten Programme sowie nach dem nächsten Login wirksam."
