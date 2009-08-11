@@ -310,8 +310,8 @@ keycode 89 =  KP_3		U2660		U21CC	      greaterthanequal	U230B		NoSymbol	KP_Next	
 
 keycode 90 = KP_0		U2423		percent		U2030		U25A1		NoSymbol	KP_Insert	KP_Insert
 !				␣ space sign	%		‰ per mille	□ white square					
-keycode 91 = KP_Separator	period		NoSymbol	minutes		seconds		NoSymbol	KP_Delete	KP_Delete
-!		,		.				′ min,feets	″ sec,inches					
+keycode 91 = KP_Separator	period		comma		minutes		seconds		NoSymbol	KP_Delete	KP_Delete
+!		,		.		,		′ min,feets	″ sec,inches					
 
 
 
