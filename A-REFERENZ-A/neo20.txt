@@ -39,10 +39,22 @@ http://dejavu.sourceforge.net/
 Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
 Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
 die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
-Am besten geeignet ist dazu die Ebene 4 des Keypads (z.B. mit Mod4_Lock). Verzichtet man auf
-Markierungen ist auch Ebene 1 des Keypads geeignet.
-Des Weiteren kann man die Zahlen auf Ebene 4 des Haupttastaturfelds benutzen, jedoch ist die
-Bedienung dort weniger komfortabel.
+Die Bedienung kann wahlweise über die Ebene 1 des Keypads oder die rechte Hälfte der Ebene 4
+(z.B. mit Mod4_Lock) erfolgen.
+
+Funktionweise der Tastaturmaussteuerung:
+ • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. 7: links-oben)
+ • 5 entspricht einem (einfachen) Klick
+ • + entspricht einem Doppelklick
+ • 0 entspricht einem gehaltenen Klick (z.B. für drag’n’drop oder Markierungen)
+ • Komma oder Punkt (auf dem Keypad also die Taste neben der 0) lösen diesen
+   gehaltenen Klick (z.B. für drag’n’drop; für das Ende einer Markierung 5 benutzen!)
+Welche Taste geklickt wird, muss zuvor bestimmt werden:
+ • / kündigt einen Linksklick an (Standard)
+ • * kündigt einen Mittelklick an
+ • - kündigt einen Rechtsklick an
+
+Die Tastaturmaussteuerung funktioniert ausschließlich mit den KP_-Varianten!
 
 === Symbole ===
 ⇞⇟   … Bild auf/Bild ab
