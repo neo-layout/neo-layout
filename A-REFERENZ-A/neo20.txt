@@ -157,7 +157,7 @@ Auf Ebene 4 der Haupttastatur werden für folgende Zeichen die jeweilige KP_-Var
 Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten:
  • die Ziffern 0-9
  • die Operationszeichen +-*/
- • statt Return wird KP_Enter verwendet
+ • für die Return-Taste wird KP_Enter verwendet
  • für das Komma wird KP_Separator benutzt
 
 Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, namentlich:
@@ -165,9 +165,11 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
    OpenOffice) bereitet)
  • die Navigationselemente (die KP_-Vatianten bereiten in einigen Programmen Probleme; andererseits
    sind die KP_-Varianten in anderen, insbesondere älteren, Programmen wie xterm, xedit, … erforderlich)
+ • für das zusätzliche Return auf p(4) wird Return – und nicht KP_Enter – verwendet
 
 Auf dem Ziffernblock (Keypad) sollte für alle Elemente nach Möglichkeit die KP_‐Variante verwendet
-werden!
+werden, die auch bei QWERTZ verwendet werden! Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht
+benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbringen.
 
 Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante verwendet.
 
