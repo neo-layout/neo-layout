@@ -283,8 +283,8 @@ keycode 86 =  KP_Add		KP_Add		plusminus	U2295		U2214		NoSymbol	U2213		NoSymbol
 
 keycode 83 =  KP_4		club		leftarrow	includedin	U2286		NoSymbol	KP_Left		KP_Left
 !				♣		←		⊂		⊆						
-keycode 84 =  KP_5		EuroSign	brokenbar	U22B6 		U22B7		NoSymbol	KP_Begin	KP_Begin
-!				€		¦		⊶ original of	⊷ image of					
+keycode 84 =  KP_5		EuroSign	colon		U22B6 		U22B7		NoSymbol	KP_Begin	KP_Begin
+!				€		:		⊶ original of	⊷ image of					
 keycode 85 =  KP_6		U2023		rightarrow	includes	U2287		NoSymbol	KP_Right	KP_Right
 !				‣		→		⊃		⊇						
 
