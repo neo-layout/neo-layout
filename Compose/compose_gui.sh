@@ -3,11 +3,11 @@
 # This file is part of the german Neo keyboard layout
 #
 # GUI to combine several Compose modules written by Neo keyboard layout
-# This file has been originally written by Pascal Hauck (neo@pascalhauck.de)
+# This file has been originally written by Pascal Hauck <neo at pascalhauck dot de>
 
 
 SRC=./src								# Source directory
-CONFFILE=.config
+CONFFILE=.config							# config file for selected modules
 
 
 # colours in the Bash
@@ -17,9 +17,10 @@ orange="\033[33m"
 green="\033[32m"
 
 
+# different subroutines for kdialog, zenity and dialog
 if [ "X:$KDE_FULL_SESSION" = "X:true" ]; then
-	NL="<br>"
-	ADD_TO_LIST() {
+	NL="<br>"							# new line (can be different in kdialog and zenity)
+	ADD_TO_LIST() {							# make list of modules, descriptions and default values (not for zenity)
 		list=("${list[@]}" "$1" "$2" "$3")
 	}
 	CHECKLIST() {
@@ -62,7 +63,7 @@ elif [ -n "`which dialog 2>/dev/null`" ]; then
 		dialog --title Compose-Module --yesno "$1" 0 0 || exit 1
 		clear
 	}
-else
+else									# none of them (kdialog, zenity, dialog) exists → tell user to use make config && make install
 	echo -e ${red} "Es wurde weder kdialog noch zenity noch dialog gefunden." ${normal}
 	echo -e ${red} "Die graphische Konfiguration kann nicht verwendet werden." ${normal}
 	echo -e ${red} "Bitte benutzen Sie stattdessen ›make config && make install‹." ${normal}
@@ -71,7 +72,7 @@ else
 fi
 
 
-while [ ! "$nohelp" ]; do
+while [ ! "$nohelp" ]; do						# options for »compose_gui.sh« (at the moment just --help)
  case ${1-" "} in
   " ")
 	nohelp=ok
@@ -80,7 +81,7 @@ while [ ! "$nohelp" ]; do
 	echo Aufruf: compose.sh
 	echo Mit »compose.sh« können die Compose-Module von Neo zusammengesetzt werden.
 	echo Folgende Module sind verfügbar:
-	for j in `ls $SRC/*.module`; do
+	for j in `ls $SRC/*.module`; do					# show all available Compose modules and descriptions
 		i=$(basename $j .module)
 		if [ ! "$i" = "base" ] && [ ! "$i" = "enUS" ]; then
 			sed -n "
@@ -109,11 +110,11 @@ done
 
 
 
-auswahl=XCompose_enUS_base
+auswahl=XCompose_enUS_base						# enUS and base cannot be deselected
 
 for i in src/*.module; do
-	name=$(basename $i .module)					# name of modul
-	if [ ! "$name" = "base" -a ! "$name" = "enUS" ]; then
+	name=$(basename $i .module)					# get name of modul
+	if [ ! "$name" = "base" -a ! "$name" = "enUS" ]; then		# enUS and base annot be deselected
 		description=$(sed -n "
 /^#configinfo[ \t]*/{
     s///
@@ -126,9 +127,9 @@ s/.*/(ohne Beschreibung)/
 : print
 p
 q
-" $SRC/$name.module)							# description of module
+" $SRC/$name.module)							# get description of module
 		if  grep -qs $name $CONFFILE; then
-			default=on					# default value for this module
+			default=on					# get default value for this module
 		else
 			default=off
 		fi
@@ -140,7 +141,7 @@ done
 
 
 
-if [ -f $HOME/.XCompose ]; then
+if [ -f $HOME/.XCompose ]; then						# warn if ~/.XCompose already exists
 	YESNO "Es gibt bereits eine Compose-Datei (z.B. durch eine ältere Neo-Installation).\nSollten Sie eigene Definitionen in der Datei ~/.XCompose vorgenommen haben, dann brechen Sie jetzt ab und schreiben Ihre eigenen Definitionen in eine Datei (z.B. user.module) im Ordner src.\n\nAnderenfalls können Sie das Skript bedenkenlos fortsetzen.\nWollen Sie fortfahren?" || exit 1
 fi
 
