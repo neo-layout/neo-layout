@@ -10,6 +10,13 @@ SRC=./src								# Source directory
 CONFFILE=.config
 
 
+# colours in the Bash
+normal="\033[0m"
+red="\033[31m"
+orange="\033[33m"
+green="\033[32m"
+
+
 if [ "X:$KDE_FULL_SESSION" = "X:true" ]
 then
 	ADD_TO_LIST() {
@@ -51,8 +58,9 @@ elif [ -n "`which dialog 2>/dev/null`" ]; then
 		dialog --title Compose-Module --yesno "$1" 14 70
 	}
 else
-	echo "Es wurde weder kdialog noch zenity noch dialog gefunden."
-	echo "Dieses Programm kann darum nicht benutzt werden. Verwenden Sie stattdessen ›make config‹."
+	echo -e ${red} "Es wurde weder kdialog noch zenity noch dialog gefunden." ${normal}
+	echo -e ${red} "Die graphische Konfiguration kann nicht verwendet werden." ${normal}
+	echo -e ${red} "Bitte benutzen Sie stattdessen ›make config && make install‹." ${normal}
 	exit 1
 
 fi
