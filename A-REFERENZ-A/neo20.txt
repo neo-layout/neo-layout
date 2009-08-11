@@ -152,6 +152,10 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │0 ’ ₀│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 └─────┘
 
+=== Ziffern ===
+Für die Ziffern auf dem Keypad und diese auf Ebene 4 wird die KP_-Variante verwendet.
+Für die Ziffern auf der ersten Ebene der Haupttastatur wird nicht die KP_-Variante verwendet.
+
 === Ebene 4 ===
 Auf Ebene 4 der Haupttastatur werden für folgende Zeichen die jeweilige KP_-Variante benutzt, um die
 Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten:
@@ -167,11 +171,6 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
    sind die KP_-Varianten in anderen, insbesondere älteren, Programmen wie xterm, xedit, … erforderlich)
  • für das zusätzliche Return auf p(4) wird Return – und nicht KP_Enter – verwendet
 
-Auf dem Ziffernblock (Keypad) sollte für alle Elemente nach Möglichkeit die KP_‐Variante verwendet
-werden, die auch bei QWERTZ verwendet werden! Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht
-benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbringen.
-
-Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante verwendet.
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
@@ -271,7 +270,9 @@ Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante ve
 
 == Ziffernblock ==
 Um die Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten,
-sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwendet werden!
+sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwendet werden, sofern diese
+auch under QWERTZ zum Einsatz kommen! Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht
+benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbringen.
 
 === Legende – Ziffernblock ===
 ┌───────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
@@ -308,6 +309,14 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
           5 … (U+2295 CIRCLED PLUS)
           6 … (U+2214 DOT PLUS)
 
+┌───────┐ 1 … KP_Separator (ergibt ein Komma)
+│. Del ″│ 2 … Punkt (explizit)
+│,  ,  ′│ 3 … Komma (explizit)
+└───────┘ 4 … Delete
+          5 … Minutenzeichen (U+2032 PRIME)
+          6 … Sekundenzeichen (U+2033 DOUBLE PRIME)
+
+
 === Alle Ebenen – Ziffernblock ===
 ┌───────┬───────┬───────┬───────┐
 │ ⇤ ≠ ≡ │ / ⁄ ∣ │ * × ⊗ │ - ∖ ∸ │
@@ -323,7 +332,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 │1  ↔  ≤│2  ↓  ∪│3  ⇌  ≥│       │
 ├───────┴───────┼───────┤       │
 │  ␣   Ins   □  │. Del ″│       │
-│  0    %    ‰  │,     ′│ Enter │
+│  0    %    ‰  │,  ,  ′│ Enter │
 └───────────────┴───────┴───────┘
 
 === Erste Ebene – Miniatur ===
@@ -362,7 +371,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ├───┼───┼───┼───┤
 │ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
-│ %     │   │Ent│
+│ %     │ , │Ent│
 └───────┴───┴───┘
 
 === Vierte Ebene – Miniatur ===
