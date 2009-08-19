@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="53.149605"
+   height="53.149605"
+   id="svg32601"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="neo-favicon.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs32603">
+    <linearGradient
+       id="linearGradient32593">
+      <stop
+         id="stop32595"
+         offset="0"
+         style="stop-color:#a14a4a;stop-opacity:1;" />
+      <stop
+         id="stop32597"
+         offset="1"
+         style="stop-color:#ebd4d4;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient32593"
+       id="linearGradient32599"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.0076331,0,0,3.0092732,-30.826029,-589.36074)"
+       x1="177.86992"
+       y1="358.754"
+       x2="170.11589"
+       y2="320.92755" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective32609" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8576814"
+     inkscape:cx="-40.015407"
+     inkscape:cy="21.56264"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="mm"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="-5"
+     inkscape:window-y="-3" />
+  <metadata
+     id="metadata32606">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Martin Engel</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-545.56694,-452.23049)">
+    <path
+       style="fill:url(#linearGradient32599);fill-opacity:1;stroke:none;stroke-width:1.3102541;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 545.56694,452.23049 L 545.56694,468.8958 C 546.65709,468.49584 547.83394,468.27163 549.12378,468.25928 C 552.57098,468.25937 555.7983,469.68426 557.74107,472.02054 C 559.02073,473.55949 560.05647,475.32565 560.4304,477.45992 C 560.80424,479.59428 560.9448,481.84929 561.24008,483.94087 C 561.35464,484.75284 561.52092,485.51584 561.70275,486.2555 C 562.17172,487.6376 562.67144,488.39811 563.20639,489.09091 C 564.37745,490.60755 567.19323,492.93255 572.48877,492.56285 C 572.46312,492.63377 575.79019,492.31634 576.36366,492.30246 L 580.12288,494.29882 C 578.43142,494.98228 578.05798,495.20916 576.47932,495.54293 C 574.91676,495.89253 573.40527,496.06363 571.93935,496.06372 C 567.73494,496.06372 563.17422,494.60819 560.80628,492.12886 C 556.58401,487.45322 557.66176,479.66612 556.09275,476.36047 C 554.97688,474.00946 552.58365,472.24501 549.96233,472.10734 C 548.05104,472.00705 546.75406,472.39497 545.56694,473.17786 L 545.56694,505.38009 L 598.71655,505.38009 L 598.71655,495.36934 C 597.64353,495.78472 596.38731,496.00586 594.69707,496.00586 C 594.32987,496.12085 592.39944,496.06313 591.83428,495.91906 C 591.82748,495.91739 591.81221,495.92083 591.80537,495.91906 C 588.56047,495.5752 586.7878,493.96565 584.54718,491.7238 C 581.23019,488.405 579.85605,478.65033 576.13232,473.78545 C 574.97246,472.43454 573.29156,471.76015 571.10075,471.76015 C 568.95826,471.76015 567.1943,472.44472 565.80893,473.84331 L 562.0208,471.84695 C 564.3404,469.3041 567.43706,468.02791 571.30317,468.02781 C 574.75042,468.028 577.44746,469.16629 579.42886,471.47082 C 584.39312,477.75383 583.9599,491.52461 593.97414,492.27352 C 595.94566,492.27352 597.5218,491.68775 598.71655,490.56649 L 598.71655,474.01691 C 597.44306,472.46741 595.42531,471.67336 593.10664,471.67335 C 590.67194,471.67335 589.21757,472.70405 587.87264,473.90118 C 586.60896,473.24234 585.14382,472.34173 584.11343,471.78908 C 586.25247,469.38918 589.05462,467.96996 593.10664,467.96995 C 595.36018,467.96995 597.16701,468.35936 598.71655,469.09833 L 598.71655,452.23049 L 545.56694,452.23049 z M 563.58232,480.23747 L 574.80214,480.23747 L 577.636,481.9445 L 575.49614,483.68047 L 564.30524,483.68047 C 563.59566,482.53371 563.69062,481.38433 563.58232,480.23747 z"
+       id="path31810" />
+  </g>
+</svg>
