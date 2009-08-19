@@ -42,7 +42,7 @@ die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
 Die Bedienung kann wahlweise über die Ebene 1 des Keypads oder die rechte Hälfte der Ebene 4
 (z.B. mit Mod4_Lock) erfolgen.
 
-Funktionweise der Tastaturmaussteuerung:
+Information zur Tastaturmaussteuerung:
  • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. 7: links-oben)
  • 5 entspricht einem (einfachen) Klick
  • + entspricht einem Doppelklick
@@ -54,7 +54,10 @@ Welche Taste geklickt wird, muss zuvor bestimmt werden:
  • * kündigt einen Mittelklick an
  • - kündigt einen Rechtsklick an
 
-Die Tastaturmaussteuerung funktioniert ausschließlich mit den KP_-Varianten!
+Die Tastaturmaussteuerung funktioniert unter allen Betriebssystemen (Linux, Windows, …) und allen
+Tastaturbelegungen (Neo, QWERTZ, QWERTY, …) identisch.
+Bei der Entwicklung der Belegung ist darauf zu achten, dass die KP_-Varianten (also z.B. wie bei QWERTZ)
+verwendet werden, da andererseits die Tastaturmaussteuerung nicht funktioniert.
 
 === Symbole ===
 ⇞⇟   … Bild auf/Bild ab
