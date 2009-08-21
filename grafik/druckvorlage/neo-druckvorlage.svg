@@ -39,7 +39,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="265.32042"
+     inkscape:cx="998.2214"
      inkscape:cy="196.87214"
      inkscape:current-layer="layer2"
      id="namedview2563"
@@ -177,8 +177,7 @@
      id="layer15"
      inkscape:label="Neue Tasten"
      style="display:inline"
-     transform="translate(-223.45089,-412.4453)"
-     sodipodi:insensitive="true">
+     transform="translate(-223.45089,-412.4453)">
     <rect
        style="opacity:1;fill:#76ccb4;fill-opacity:1;fill-rule:nonzero;stroke:#bcd35f;stroke-width:0.81398118;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0.52015748;stroke-opacity:1;display:inline"
        id="rect15020"
@@ -550,7 +549,7 @@
        ry="6.0647316" />
     <path
        style="fill:#d9de43;fill-opacity:1;fill-rule:nonzero;stroke:#bcd35f;stroke-width:0.81428313;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0.52015748;stroke-opacity:1;display:inline"
-       d="M 877.10693,467.64688 C 873.6579,467.64688 870.894,470.35824 870.894,473.7181 L 870.894,506.55468 C 870.894,509.91454 873.65783,512.6259 877.10693,512.6259 L 884.31211,512.6259 C 887.80332,512.6259 888.49342,515.64765 888.49342,518.55539 L 888.49342,570.40582 C 888.49342,573.76567 891.28091,576.47706 894.73001,576.47704 L 938.05515,576.47704 C 941.50402,576.47704 944.26785,573.76568 944.26792,570.40582 L 944.24426,473.7181 C 944.24426,470.35825 941.45677,467.64688 938.0079,467.64688 L 877.10693,467.64688 z"
+       d="M 877.10693,467.64688 C 873.6579,467.64688 870.894,470.35824 870.894,473.7181 L 870.894,506.55468 C 870.894,509.91454 873.65783,512.6259 877.10693,512.6259 L 884.31211,512.6259 C 887.80332,512.6259 888.49342,515.64765 888.49342,518.55539 L 888.49342,570.40582 C 888.49342,573.76567 891.28091,576.47706 894.73001,576.47704 L 938.05515,576.47704 C 941.50402,576.47704 944.26785,573.76568 944.26792,570.40582 L 944.24426,473.7181 C 944.24426,470.35825 941.45677,467.64688 938.0079,467.64688 L 877.10693,467.64688 z "
        id="path15132"
        sodipodi:nodetypes="ccccccccccccc" />
     <rect
@@ -5494,7 +5493,7 @@
          id="tspan8544">→</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:0.48749846;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:0.48749846;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline;font-family:Linux Biolinum O"
        x="1055.5054"
        y="565.58075"
        id="text8546"
@@ -5503,7 +5502,7 @@
          id="tspan8548"
          x="1055.5054"
          y="565.58075"
-         style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:0.48749846;stroke-miterlimit:4;stroke-dasharray:none;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O">∞</tspan></text>
+         style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:0.48749846;stroke-miterlimit:4;stroke-dasharray:none;font-family:Linux Biolinum O">⊶</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O"
@@ -5631,7 +5630,7 @@
          y="567.9859">⊆</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
        x="1053.4668"
        y="535.99115"
        id="text4100"
@@ -5639,10 +5638,10 @@
          sodipodi:role="line"
          id="tspan4144"
          x="1053.4668"
-         y="535.99115">⊶</tspan></text>
+         y="535.99115">⊷</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
        x="1045.4238"
        y="565.32214"
        id="text4104"
@@ -5650,7 +5649,7 @@
          sodipodi:role="line"
          id="tspan4146"
          x="1045.4238"
-         y="565.32214">⊷</tspan></text>
+         y="565.32214">:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:AdineKirnberg-Script;-inkscape-font-specification:AdineKirnberg-Script"
