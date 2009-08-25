@@ -39,10 +39,22 @@ http://dejavu.sourceforge.net/
 Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
 Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
 die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
-Am besten geeignet ist dazu die Ebene 4 des Keypads (z.B. mit Mod4_Lock). Verzichtet man auf
-Markierungen ist auch Ebene 1 des Keypads geeignet.
-Des Weiteren kann man die Zahlen auf Ebene 4 des Haupttastaturfelds benutzen, jedoch ist die
-Bedienung dort weniger komfortabel.
+Die Bedienung kann wahlweise über die Ebene 1 des Keypads oder die rechte Hälfte der Ebene 4
+(z.B. mit Mod4_Lock) erfolgen.
+
+Funktionweise der Tastaturmaussteuerung:
+ • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. 7: links-oben)
+ • 5 entspricht einem (einfachen) Klick
+ • + entspricht einem Doppelklick
+ • 0 entspricht einem gehaltenen Klick (z.B. für drag’n’drop oder Markierungen)
+ • Komma oder Punkt (auf dem Keypad also die Taste neben der 0) lösen diesen
+   gehaltenen Klick (z.B. für drag’n’drop; für das Ende einer Markierung 5 benutzen!)
+Welche Taste geklickt wird, muss zuvor bestimmt werden:
+ • / kündigt einen Linksklick an (Standard)
+ • * kündigt einen Mittelklick an
+ • - kündigt einen Rechtsklick an
+
+Die Tastaturmaussteuerung funktioniert ausschließlich mit den KP_-Varianten!
 
 === Symbole ===
 ⇞⇟   … Bild auf/Bild ab
@@ -67,27 +79,27 @@ Zu den Akzenten siehe auch
 
 T1 („Tote Taste 1“: Taste links neben der 1)
 ┌─────┐ 1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
-│˜ ¯ ˘│ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
+│˜ ˇ ˘│ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
 │ˆ ˚ ˞│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
-└─────┘ 4 … Toter Makron (sieht aus wie U+00AF MACRON)
+└─────┘ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
         5 … Toter Haken (sieht aus wie U+02DE MODIFIER LETTER RHOTIC HOOK)
         6 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
 ┌─────┐ 1 … Toter Gravis (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
-│¨ ˇ .│ 2 … Totes Trema (sieht aus wie U+00A8 DIAERESIS)
+│¨ ˙ .│ 2 … Totes Trema (sieht aus wie U+00A8 DIAERESIS)
 │` ↻ ῾│ 3 … Totes Drehen (sieht aus wie U+21BB CLOCKWISE OPEN CIRCLE ARROW)
-└─────┘ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
+└─────┘ 4 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
         5 … Toter Spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
         6 … Toter Punkt darunter (sieht aus wie U+002E FULL STOP)
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen s (ß))
 ┌─────┐ 1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
-│¸ ˝ ˙│ 2 … Tote Cedille (sieht aus wie U+00B8 CEDILLA)
+│¸ ˝ ¯│ 2 … Tote Cedille (sieht aus wie U+00B8 CEDILLA)
 │´ / ᾿│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
 └─────┘ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
         5 … Toter Spiritus lenis (sieht aus wie U+1FBF GREEK PSILI), Haken (viet.: dấu hỏi) für lateinische Vokale
-        6 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
+        6 … Toter Makron (sieht aus wie U+00AF MACRON)
 
 ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
 gleich erscheinen, sondern nur in Kombination mit einem weiteren Buchstaben) werden
@@ -152,12 +164,16 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 │0 ’ ₀│ 3 … ’ Apostroph, engl. schließendes halbes Anführungsz. (U+2019 RIGHT SINGLE QUOTATION MARK)
 └─────┘
 
+=== Ziffern ===
+Für die Ziffern auf dem Keypad und diese auf Ebene 4 wird die KP_-Variante verwendet.
+Für die Ziffern auf der ersten Ebene der Haupttastatur wird nicht die KP_-Variante verwendet.
+
 === Ebene 4 ===
 Auf Ebene 4 der Haupttastatur werden für folgende Zeichen die jeweilige KP_-Variante benutzt, um die
 Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten:
  • die Ziffern 0-9
  • die Operationszeichen +-*/
- • statt Return wird KP_Enter verwendet
+ • für die Return-Taste wird KP_Enter verwendet
  • für das Komma wird KP_Separator benutzt
 
 Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, namentlich:
@@ -165,18 +181,15 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
    OpenOffice) bereitet)
  • die Navigationselemente (die KP_-Vatianten bereiten in einigen Programmen Probleme; andererseits
    sind die KP_-Varianten in anderen, insbesondere älteren, Programmen wie xterm, xedit, … erforderlich)
+ • für das zusätzliche Return auf p(4) wird Return – und nicht KP_Enter – verwendet
 
-Auf dem Ziffernblock (Keypad) sollte für alle Elemente nach Möglichkeit die KP_‐Variante verwendet
-werden!
-
-Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante verwendet.
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ¯ ˘│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„   ∞│“ / ∝│” * ∅│— - ╌│¨ ˇ .│Backspace│
+│˜ ˇ ˘│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„   ∞│“ / ∝│” * ∅│— - ╌│¨ ˙ .│Backspace│
 │ˆ ˚ ˞│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ♀│5 ‹ ♂│6 ¢ ⚥│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│-   ‑│` ↻ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab⇤   │X ⋮ Ξ│V ⌫ √│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ ×│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ − ∘│¸ ˝ ˙│      │
+│ Tab⇤   │X ⋮ Ξ│V ⌫ √│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ ×│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ − ∘│¸ ˝ ¯│      │
 │ Tab⇥ ♫ │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! ϰ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Return│
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │   Mod   │U ⇱ ⊂│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│ Mod │  ↲  │
@@ -230,7 +243,7 @@ Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante ve
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ¯ │ª│º│№│⇞│·│£│¤│ │/│*│-│ˇ│ Back │
+│ ˇ │ª│º│№│⇞│·│£│¤│ │/│*│-│˙│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │    │⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│−│˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -258,7 +271,7 @@ Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante ve
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
 │ ˘ │¬│∨│∧│⊥│∡│∥│→│∞│∝│∅│╌│.│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │Ξ│√│Λ│ℂ│Ω│×│Ψ│Γ│Φ│ℚ│∘│˙│ Ret │
+│    │Ξ│√│Λ│ℂ│Ω│×│Ψ│Γ│Φ│ℚ│∘│¯│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⊂│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -269,7 +282,9 @@ Für die Ziffern auf der ersten Ebene (Hauptfeld) wird nicht die KP_-Variante ve
 
 == Ziffernblock ==
 Um die Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten,
-sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwendet werden!
+sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwendet werden, sofern diese
+auch under QWERTZ zum Einsatz kommen! Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht
+benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbringen.
 
 === Legende – Ziffernblock ===
 ┌───────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
@@ -306,6 +321,14 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
           5 … (U+2295 CIRCLED PLUS)
           6 … (U+2214 DOT PLUS)
 
+┌───────┐ 1 … KP_Separator (ergibt ein Komma)
+│. Del ″│ 2 … Punkt (explizit)
+│,  ,  ′│ 3 … Komma (explizit)
+└───────┘ 4 … Delete
+          5 … Minutenzeichen (U+2032 PRIME)
+          6 … Sekundenzeichen (U+2033 DOUBLE PRIME)
+
+
 === Alle Ebenen – Ziffernblock ===
 ┌───────┬───────┬───────┬───────┐
 │ ⇤ ≠ ≡ │ / ⁄ ∣ │ * × ⊗ │ - ∖ ∸ │
@@ -321,7 +344,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 │1  ↔  ≤│2  ↓  ∪│3  ⇌  ≥│       │
 ├───────┴───────┼───────┤       │
 │  ␣   Ins   □  │. Del ″│       │
-│  0    %    ‰  │,     ′│ Enter │
+│  0    %    ‰  │,  ,  ′│ Enter │
 └───────────────┴───────┴───────┘
 
 === Erste Ebene – Miniatur ===
@@ -360,7 +383,7 @@ sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwe
 ├───┼───┼───┼───┤
 │ ↔ │ ↓ │ ⇌ │   │
 ├───┴───┼───┤   │
-│ %     │,/.│Ent│
+│ %     │ , │Ent│
 └───────┴───┴───┘
 
 === Vierte Ebene – Miniatur ===
