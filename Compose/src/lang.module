@@ -385,9 +385,6 @@
 <Multi_key> <a> <KP_8>                            : "٨"   U0668 # ARABIC-INDIC DIGIT EIGHT
 <Multi_key> <a> <KP_9>                            : "٩"   U0669 # ARABIC-INDIC DIGIT NINE
 
-#arabic letters
-<Multi_key> <h> <period>                          : "ḥ"   U1E25 # LATIN SMALL LETTER H WITH DOT BELOW
-
 # Medieval section
 # will be included here with Ꝥꝥ, 
 <Multi_key> <H> <v>                               : "Ƕ" U01F6 # LATIN CAPITAL LETTER HWAIR
