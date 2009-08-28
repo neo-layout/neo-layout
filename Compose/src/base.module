@@ -21,6 +21,7 @@
 <U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <nobreakspace>                     : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 <U02DE> <nobreakspace>                     : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
+<dead_belowdot> <nobreakspace>             : "."   U002E # FULL STOP
 
 # combining characters
 <Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
@@ -43,6 +44,7 @@
 <U1FBF> <U1FBF>                            : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
+<dead_belowdot> <dead_belowdot>            : "̣"   U0323 # COMBINING DOT BELOW
 <Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
 <Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 
@@ -53,6 +55,7 @@
 <U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
 <U21BB> <space>                            : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 <U02DE> <space>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
+<dead_belowdot> <space>                    : "."   U002E # FULL STOP
 
 # letters
 # latin letters with ogonek (simplifying the keyboard ogonek and cedilla are on the same place)
