@@ -120,12 +120,12 @@ keycode 36 = Return		Return		Return		Return		KP_Enter	KP_Enter	Return		Return
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 49 = dead_circumflex	dead_tilde	dead_abovering	U02DE		dead_macron Pointer_EnableKeys	dead_breve	NoSymbol
-! called T1	ˆ		˜		˚		˞		¯	   (keypad-mouse mode)	˘
-keycode 21 = dead_grave		dead_diaeresis	U21BB		U1FFE		dead_caron	NoSymbol	dead_belowdot	NoSymbol
-! called T2	`		¨		↻		῾ dasia (asper)	ˇ				.
-keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	     dead_doubleacute	NoSymbol	dead_abovedot	NoSymbol
-! called T3	´		¸		/		᾿ psili (lenis)	˝				˙
+keycode 49 = dead_circumflex	dead_tilde	dead_abovering	U02DE		dead_caron  Pointer_EnableKeys	dead_breve	NoSymbol
+! called T1	ˆ		˜		˚		˞		ˇ	   (keypad-mouse mode)	˘
+keycode 21 = dead_grave		dead_diaeresis	U21BB		U1FFE		dead_abovedot	NoSymbol	dead_belowdot	NoSymbol
+! called T2	`		¨		↻		῾ dasia (asper)	˙				.
+keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	      dead_doubleacute	NoSymbol	dead_macron	NoSymbol
+! called T3	´		¸		/		᾿ psili (lenis)	˝				¯
 
 
 
