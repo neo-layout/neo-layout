@@ -19,6 +19,7 @@
 <U1FBF> <nobreakspace>                     : "᾿"   U1FBF # GREEK PSILI
 <U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
 <U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
+<U21BB> <dead_doubleacute> <nobreakspace>  : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <nobreakspace>                     : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 <U02DE> <nobreakspace>                     : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 <dead_belowdot> <nobreakspace>             : "."   U002E # FULL STOP
@@ -43,6 +44,7 @@
 <U1FFE> <U1FFE>                            : "̓"   U0313 # COMBINING COMMA ABOVE
 <U1FBF> <U1FBF>                            : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
+<U21BB> <dead_doubleacute> <dead_doubleacute>  : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 <dead_belowdot> <dead_belowdot>            : "̣"   U0323 # COMBINING DOT BELOW
 <Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
@@ -55,6 +57,7 @@
 <U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
 <U21BB> <space>                            : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 <U02DE> <space>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
+<U21BB> <dead_cedilla> <space>             : "˛"   U02DB # OGONEK
 <dead_belowdot> <space>                    : "."   U002E # FULL STOP
 
 # letters
@@ -70,11 +73,7 @@
 <dead_cedilla> <O>                           : "Ǫ"   U01EA # LATIN CAPITAL LETTER O WITH OGONEK
 <dead_cedilla> <o>                           : "ǫ"   U01EB # LATIN SMALL LETTER O WITH OGONEK
 <dead_macron> <dead_cedilla> <O>             : "Ǭ"   U01EC # LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
-<Multi_key> <macron> <dead_cedilla> <O>      : "Ǭ"   U01EC # LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
-<Multi_key> <underscore> <dead_cedilla> <O>  : "Ǭ"   U01EC # LATIN CAPITAL LETTER O WITH OGONEK AND MACRON
 <dead_macron> <dead_cedilla> <o>             : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
-<Multi_key> <macron> <dead_cedilla> <o>      : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
-<Multi_key> <underscore> <dead_cedilla> <o>  : "ǭ"   U01ED # LATIN SMALL LETTER O WITH OGONEK AND MACRON
 <U21BB> <dead_cedilla> <E>                   : "Ȩ"   U0228 # LATIN CAPITAL LETTER E WITH CEDILLA
 <U21BB> <dead_cedilla> <e>                   : "ȩ"   U0229 # LATIN SMALL LETTER E WITH CEDILLA
 
@@ -128,6 +127,19 @@
 <U02F5> <r>                              : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
 <U02F5> <U>                              : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
 <U02F5> <u>                              : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
+# double grave as turned double acute
+#<U21BB> <dead_doubleacute> <A>           : "Ȁ"   U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <a>           : "ȁ"   U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <E>           : "Ȅ"   U0204 # LATIN CAPITAL LETTER E WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <e>           : "ȅ"   U0205 # LATIN SMALL LETTER E WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <I>           : "Ȉ"   U0208 # LATIN CAPITAL LETTER I WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <i>           : "ȉ"   U0209 # LATIN SMALL LETTER I WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <O>           : "Ȍ"   U020C # LATIN CAPITAL LETTER O WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <o>           : "ȍ"   U020D # LATIN SMALL LETTER O WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <R>           : "Ȑ"   U0210 # LATIN CAPITAL LETTER R WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <r>           : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <U>           : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
+#<U21BB> <dead_doubleacute> <u>           : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 
 # letters with comma below
 <Multi_key> <S> <comma>                  : "Ș"   U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
@@ -213,9 +225,8 @@
 <Multi_key> <KP_1> <exclamdown> <questiondown>   : "⸘"   U2E18 # INVERTED INTERROBANG
 <Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
 <U21BB> <colon>                                  : "‥"   U2025 # TWO DOT LEADER
-<U21BB> <ellipsis>                               : "⋱"   U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
-<U21BB> <U22EE>                                  : "⋰"   U22F0 # UP RIGHT DIAGONAL ELLIPSIS
-<dead_circumflex> <ellipsis>                     : "⋯"   U22EF # MIDLINE HORIZONTAL ELLIPSIS
+<U21BB> <ellipsis>                               : "⋮"   U22EE # VERTICAL ELLIPSIS
+<Multi_key> <ellipsis> <bar>                     : "⋮"   U22EE # VERTICAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
 <Multi_key> <7> <7>                              : "⁊"   U204A # TIRONIAN SIGN ET
 <Multi_key> <ellipsis> <ellipsis>                : "[…]"
