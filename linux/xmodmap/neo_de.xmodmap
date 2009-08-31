@@ -149,7 +149,7 @@ keycode 15 = 	6		dollar		cent		U26A5		sterling	NoSymbol	U2225		NoSymbol
 
 keycode 16 = 	7		EuroSign	yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
 !				€		¥		κ		¤				→
-keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	NoSymbol	NoSymbol	infinity	NoSymbol
+keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	Tab		ISO_Left_Tab	infinity	NoSymbol
 !				„		‚		⟨ (bra)						∞
 keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	variation	NoSymbol
 !				“		‘		⟩ (ket)		/		/		∝ proportional to
@@ -253,8 +253,8 @@ keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	U21A6		NoSymbol
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene6		Ebene7		Ebene4		Ebene4+Sh
 
-keycode 77  = Tab		ISO_Left_Tab	equal		approxeq	identical	NoSymbol	notequal	NoSymbol
-!						=		≈ almost equal	≡ identical to			≠		
+keycode 77  = Tab		ISO_Left_Tab	equal		approxeq	identical	NoSymbol	notequal	Pointer_EnableKeys
+!						=		≈ almost equal	≡ identical to			≠		(keypad-mouse mode)
 keysym KP_Divide = KP_Divide	KP_Divide	division	U2300		U2223		NoSymbol	U2044		NoSymbol
 !		/		/		÷		⌀ diameter	∣ divides			(for ⁶⁄₅₉)	
 keycode 63  = KP_Multiply	KP_Multiply	U22C5		U2299		U2297		NoSymbol	multiply	NoSymbol
