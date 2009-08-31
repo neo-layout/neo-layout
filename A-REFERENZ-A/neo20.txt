@@ -60,6 +60,8 @@ Bei der Entwicklung der Belegung ist darauf zu achten, dass die KP_-Varianten (a
 verwendet werden, da andererseits die Tastaturmaussteuerung nicht funktioniert.
 
 === Symbole ===
+⇥    … Tab
+⇤    … Left_Tab (spring z.B. ein Eingebefeld zurück)
 ⇞⇟   … Bild auf/Bild ab
 ⇱⇲   … Pos1/Ende
 ⌫ ⌦  … Backspace/Entf
@@ -72,7 +74,9 @@ verwendet werden, da andererseits die Tastaturmaussteuerung nicht funktioniert.
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
 ↶    … undo-Funktion
+↷    … redo-Funktion
 ↻    … Drehen-Funktion, dreht das folgende Zeichen
+⍓    … (de)aktiviert die Maussteuerung über die Tastatur
 
 === Akzenttasten ===
 Zu den Akzenten siehe auch
@@ -189,7 +193,7 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„   ∞│“ / ∝│” * ∅│— - ╌│↻ ̏  ˞│Backspace│
+│˜ ˇ ¯│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„ ⇥ ∞│“ / ∝│” * ∅│— - ╌│↻ ̏  ˞│Backspace│
 │ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ♀│5 ‹ ♂│6 ¢ ⚥│7 ¥ κ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│-   ‑│` ¨ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
 │ Tab⇤   │X ⋮ Ξ│V ⌫ √│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ ×│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ − ∘│¸ ˝ ˙│      │
@@ -246,7 +250,7 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │ª│º│№│⇞│·│£│¤│ │/│*│-│̏ │ Back │
+│ ˇ │ª│º│№│⇞│·│£│¤│⇥│/│*│-│̏ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │    │⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│−│˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -281,6 +285,19 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 │Ums│M4│∪│∩│ℵ│Π│ℤ│⇐│⇔│⇒│Θ│↦│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│  schmal ¦ │M4│Fe│Me│Str│
+└───┴──┴──┴───────────┴──┴──┴──┴───┘
+
+=== Pseudo‑Ebene – Miniatur ===
+┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
+│ ⍓ │ │ │ │⇞│ │ │ │⇤│/│*│-│̏ │ Back │
+├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
+│    │ │⌫│⇡│⌦│⎀│ │7│8│9│+│ │ │ Ret │
+├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
+│ M3  │⇱│⇠│⇣│⇢│⇲│ │4│5│6│,│.│M3│   │
+├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
+│Ums│4L│⌧│⇤│⇟│↲│↷│ │1│2│3│ │ Umsch │
+├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
+│Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 == Ziffernblock ==
@@ -426,6 +443,19 @@ benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbring
 │ ⌊ │ ∪ │ ⌋ │   │
 ├───┴───┼───┤   │
 │ □     │ ″ │Ent│
+└───────┴───┴───┘
+
+=== Pseudo‑Ebene – Miniatur ===
+┌───┬───┬───┬───┐
+│ ⍓ │   │   │   │
+├───┼───┼───┼───┤
+│Hom│KP↑│PgU│   │
+├───┼───┼───┤   │
+│KP←│Beg│KP→│   │ Beg invokes click of the keyboard mouse
+├───┼───┼───┼───┤
+│End│KP↓│PgD│   │
+├───┴───┼───┤   │
+│  Ins  │Del│Ent│
 └───────┴───┴───┘
 
 == Zeichenerläuterungen ==
