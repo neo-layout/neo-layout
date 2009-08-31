@@ -28,10 +28,14 @@
 <dead_abovering> <integral>                : "∮"   U222E # CONTOUR INTEGRAL
 <Multi_key> <o> <integral>                 : "∮"   U222E # CONTOUR INTEGRAL
 <Multi_key> <jot> <integral>               : "∮"   U222E # CONTOUR INTEGRAL
+<dead_abovering> <2> <integral>            : "∯"   U222F # SURFACE INTEGRAL
+<dead_abovering> <KP_2> <integral>         : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <o> <2> <integral>             : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <o> <KP_2> <integral>          : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <jot> <2> <integral>           : "∯"   U222F # SURFACE INTEGRAL
 <Multi_key> <jot> <KP_2> <integral>        : "∯"   U222F # SURFACE INTEGRAL
+<dead_abovering> <3> <integral>            : "∰"   U2230 # VOLUME U222E
+<dead_abovering> <KP_3> <integral>         : "∰"   U2230 # VOLUME U222E
 <Multi_key> <o> <3> <integral>             : "∰"   U2230 # VOLUME U222E
 <Multi_key> <o> <KP_3> <integral>          : "∰"   U2230 # VOLUME U222E
 <Multi_key> <jot> <3> <integral>           : "∰"   U2230 # VOLUME U222E
@@ -52,6 +56,7 @@
 <Multi_key> <equal> <equal>                : "≡"   U2261 # IDENTICAL TO
 <Multi_key> <colon> <equal>                : "≔"   U2254 # COLON EQUALS
 <Multi_key> <equal> <colon>                : "≕"   U2255 # EQUALS COLON
+<Multi_key> <KP_Equal> <colon>             : "≕"   U2255 # EQUALS COLON
 <Multi_key> <greater> <equal>              : "≥"   U2265 # GREATER-THAN OR EQUAL TO
 <Multi_key> <equal> <greater>              : "≥"   U2265 # GREATER-THAN OR EQUAL TO
 <Multi_key> <less> <equal>                 : "≤"   U2264 # LESS-THAN OR EQUAL TO
@@ -267,7 +272,9 @@
 <dead_circumflex> <KP_Subtract>            : "⁻"   U207B # SUPERSCRIPT MINUS
 <Multi_key> <asciicircum> <KP_Subtract>    : "⁻"   U207B # SUPERSCRIPT MINUS
 <Multi_key> <underscore> <minus>           : "₋"   U208B # SUBSCRIPT MINUS
+<Multi_key> <underbar> <minus>             : "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <underscore> <KP_Subtract>     : "₋"   U208B # SUBSCRIPT MINUS
+<Multi_key> <underbar> <KP_Subtract>       : "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <asciicircum> <equal>          : "⁼"   U207C # SUPERSCRIPT EQUALS SIGN
 
 <Multi_key> <asciicircum> <a>              :"ᵃ"   U1D43 # MODIFIER LETTER SMALL A
@@ -328,20 +335,34 @@
 <Multi_key> <asciicircum> <Greek_upsilon>  : "ᶷ"   U1DB7 # MODIFIER LETTER SMALL UPSILON
 
 <Multi_key> <underscore> <a>               : "ₐ"   U2090 # LATIN SUBSCRIPT SMALL LETTER A
+<Multi_key> <underbar> <a>                 : "ₐ"   U2090 # LATIN SUBSCRIPT SMALL LETTER A
 <Multi_key> <underscore> <e>               : "ₑ"   U2091 # LATIN SUBSCRIPT SMALL LETTER E
+<Multi_key> <underbar> <e>                 : "ₑ"   U2091 # LATIN SUBSCRIPT SMALL LETTER E
 <Multi_key> <underscore> <i>               : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I
+<Multi_key> <underbar> <i>                 : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I
 <Multi_key> <underscore> <j>               : "ⱼ"   U2C7C # LATIN SUBSCRIPT SMALL LETTER J
+<Multi_key> <underbar> <j>                 : "ⱼ"   U2C7C # LATIN SUBSCRIPT SMALL LETTER J
 <Multi_key> <underscore> <o>               : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O
+<Multi_key> <underbar> <o>                 : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O
 <Multi_key> <underscore> <r>               : "ᵣ"   U1D63 # LATIN SUBSCRIPT SMALL LETTER R
+<Multi_key> <underbar> <r>                 : "ᵣ"   U1D63 # LATIN SUBSCRIPT SMALL LETTER R
 <Multi_key> <underscore> <u>               : "ᵤ"   U1D64 # LATIN SUBSCRIPT SMALL LETTER U
+<Multi_key> <underbar> <u>                 : "ᵤ"   U1D64 # LATIN SUBSCRIPT SMALL LETTER U
 <Multi_key> <underscore> <v>               : "ᵥ"   U1D65 # LATIN SUBSCRIPT SMALL LETTER V
+<Multi_key> <underbar> <v>                 : "ᵥ"   U1D65 # LATIN SUBSCRIPT SMALL LETTER V
 <Multi_key> <underscore> <x>               : "ₓ"   U2093 # LATIN SUBSCRIPT SMALL LETTER X
+<Multi_key> <underbar> <x>                 : "ₓ"   U2093 # LATIN SUBSCRIPT SMALL LETTER X
 
 <Multi_key> <underscore> <Greek_beta>      : "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
+<Multi_key> <underbar> <Greek_beta>        : "ᵦ"   U1D66 # GREEK SUBSCRIPT SMALL LETTER BETA
 <Multi_key> <underscore> <Greek_gamma>     : "ᵧ"   U1D67 # GREEK SUBSCRIPT SMALL LETTER GAMMA
+<Multi_key> <underbar> <Greek_gamma>       : "ᵧ"   U1D67 # GREEK SUBSCRIPT SMALL LETTER GAMMA
 <Multi_key> <underscore> <Greek_rho>       : "ᵨ"   U1D68 # GREEK SUBSCRIPT SMALL LETTER RHO
+<Multi_key> <underbar> <Greek_rho>         : "ᵨ"   U1D68 # GREEK SUBSCRIPT SMALL LETTER RHO
 <Multi_key> <underscore> <Greek_phi>       : "ᵩ"   U1D69 # GREEK SUBSCRIPT SMALL LETTER PHI
+<Multi_key> <underbar> <Greek_phi>         : "ᵩ"   U1D69 # GREEK SUBSCRIPT SMALL LETTER PHI
 <Multi_key> <underscore> <Greek_chi>       : "ᵪ"   U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
+<Multi_key> <underbar> <Greek_chi>         : "ᵪ"   U1D6A # GREEK SUBSCRIPT SMALL LETTER CHI
 
 # script letters
 <Multi_key> <s> <c> <g>                    : "ℊ"   U210A # SCRIPT SMALL G
