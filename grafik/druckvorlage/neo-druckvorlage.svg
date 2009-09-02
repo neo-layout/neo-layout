@@ -20,7 +20,7 @@
    inkscape:export-filename="/home/philipp/NEO-Belegung/neo20-Tastatur-20vbh.png"
    inkscape:export-xdpi="200.06024"
    inkscape:export-ydpi="200.06024"
-   sodipodi:docbase="/usr/home/wirth/tmp/neo/grafik/druckvorlage">
+   sodipodi:docbase="/home/pascal/neo/svn-Arbeitsverzeichnis/neo/grafik/druckvorlage">
   <defs
      id="defs2561">
     <inkscape:perspective
@@ -61,9 +61,9 @@
      inkscape:guide-bbox="true"
      inkscape:grid-bbox="false"
      inkscape:window-width="1592"
-     inkscape:window-height="971"
+     inkscape:window-height="962"
      inkscape:window-x="0"
-     inkscape:window-y="196"
+     inkscape:window-y="0"
      inkscape:object-bbox="true"
      showguides="true"
      inkscape:snap-bbox="false"
@@ -3265,7 +3265,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4786"
-         x="409.62588"
+         x="409.62589"
          y="623.77985">∩</tspan></text>
     <text
        xml:space="preserve"
@@ -4399,7 +4399,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8272"
-         x="750.83697"
+         x="750.83698"
          y="481.5249"
          style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">φ</tspan></text>
     <text
@@ -4619,7 +4619,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4013"
-         x="682.87354"
+         x="682.87353"
          y="624.77625"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">⇒</tspan></text>
     <text
@@ -4631,7 +4631,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4017"
-         x="727.23261"
+         x="727.2326"
          y="625.80151"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">Θ</tspan></text>
     <text
@@ -5356,7 +5356,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8500"
-         x="993.40241"
+         x="993.4024"
          y="497.13058"
          style="font-size:29.52701378px">7</tspan></text>
     <text
@@ -6419,6 +6419,45 @@
          id="tspan25943"
          x="892.20154"
          y="502.45441">Enter</tspan></text>
+    <g
+       style="opacity:1;display:inline"
+       id="g3622"
+       transform="matrix(1.0736877,0,0,1.0736877,134.36006,29.300982)">
+      <g
+         transform="matrix(0.3152314,0,0,0.3152314,428.61734,368.43164)"
+         id="g3624"
+         style="opacity:1;fill:#ffff00;stroke:#ffff00;display:inline">
+        <path
+           id="path3626"
+           d="M 82.50003,75 L 54.020182,75"
+           style="fill:#ffff00;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffff00;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           id="path3628"
+           d="M 60,82.5 L 60,67.5 L 45,75 L 60,82.5 z "
+           style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:#ffff00;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffff00;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 45,67.5 C 45,82.5 45,82.5 45,82.5"
+           id="path3630" />
+      </g>
+      <g
+         transform="matrix(-0.3152314,0,0,0.3152314,468.38077,372.86022)"
+         id="g3632"
+         style="opacity:1;fill:#ffff00;stroke:#ffff00;display:inline">
+        <path
+           id="path3634"
+           d="M 82.50003,75 L 54.020182,75"
+           style="fill:#ffff00;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffff00;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           id="path3636"
+           d="M 60,82.5 L 60,67.5 L 45,75 L 60,82.5 z "
+           style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           style="fill:#ffff00;fill-opacity:0.75;fill-rule:evenodd;stroke:#ffff00;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 45,67.5 C 45,82.5 45,82.5 45,82.5"
+           id="path3638" />
+      </g>
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6567,7 +6606,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan11993"
-         x="88.693214"
+         x="88.693215"
          y="69.15773"
          style="fill:#ffffff;font-family:Linux Libertine">X</tspan></text>
     <text
@@ -6920,7 +6959,7 @@
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4662"
-         x="771.7326"
+         x="771.73261"
          y="510.8165"
          style="fill:#ffee00;font-family:Linux Libertine">ə</tspan></text>
     <text
