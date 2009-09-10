@@ -1,0 +1,47 @@
+#configinfo Schnellschreiben mit Kürzeln
+
+
+# Ziel dieser Compose-Datei ist, häufige Wörter nur durch Kürzel einzugeben und dadurch
+# das Schreibtempo deutlich zu steigern. Grundlage ist die Wortliste der Uni Leizpig.
+# Siehe: http://wortschatz.uni-leipzig.de/Papers/top100de.txt
+
+# Alle Kürzel werden mit ♫ eingeleitet und mit space abgeschlossen.
+
+<Multi_key> <r> <space>                             : "der "
+<Multi_key> <e> <space>                             : "die "
+<Multi_key> <u> <space>                             : "und "
+<Multi_key> <n> <space>                             : "den "
+<Multi_key> <v> <space>                             : "von "
+<Multi_key> <s> <space>                             : "das "
+<Multi_key> <m> <space>                             : "mit "
+<Multi_key> <c> <space>                             : "sich "
+<Multi_key> <f> <space>                             : "auf "
+<Multi_key> <ü> <space>                             : "für "
+<Multi_key> <i> <space>                             : "ist "
+<Multi_key> <n> <space>                             : "nicht "
+<Multi_key> <1> <space>                             : "ein "
+<Multi_key> <E> <space>                             : "Die "
+<Multi_key> <1> <e> <space>                         : "eine "
+<Multi_key> <l> <space>                             : "als "
+<Multi_key> <a> <space>                             : "auch "
+<Multi_key> <w> <n> <space>                         : "werden "
+<Multi_key> <h> <space>                             : "hat "
+<Multi_key> <ssharp> <space>                        : "dass "
+<Multi_key> <w> <space>                             : "wird "
+<Multi_key> <b> <space>                             : "bei "
+<Multi_key> <1> <r> <space>                         : "einer "
+<Multi_key> <R> <space>                             : "Der "
+<Multi_key> <d> <space>                             : "sind "
+<Multi_key> <1> <m> <space>                         : "einem "
+<Multi_key> <1> <n> <space>                         : "einen "
+<Multi_key> <S> <space>                             : "Das "
+<Multi_key> <z> <space>                             : "zum
+<Multi_key> <h> <n> <space>                         : "haben "
+<Multi_key> <o> <space>                             : "oder "
+<Multi_key> <h> <t> <space>                         : "hatte "
+<Multi_key> <k> <space>                             : "kann "
+<Multi_key> <o> <space>                             : "gegen "
+<Multi_key> <k> <n> <space>                         : "können "
+<Multi_key> <J> <space>                             : "Jahr "
+<Multi_key> <j> <space>                             : "jetzt "
+<Multi_key> <p> <space>                             : "später "
