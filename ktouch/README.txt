@@ -16,9 +16,10 @@ KTouch über das Menü
 ausgewählt werden.
 
 === Dateien – welche für was? ===
-de.neo2.keyboard      – zeigt die Belegung der 1. Ebene an
-de.neo2.mod3.keyboard – zeigt die Belegung der 3. Ebene an
-de.neo2.mod4.keyboard – zeigt die Belegung der 4. Ebene an
-german.neo.ktouch.xml – Trainingslektion speziell für NEO (verbesserungswürdig)
-neo2-test.ktouch.xml  – Test-Trainingslektion um alle NEO-Zeichen zu testen
+de.neo2.keyboard            – zeigt die Belegung der 1. Ebene an
+de.neo2.mod3.keyboard       – zeigt die Belegung der 3. Ebene an
+de.neo2.mod4.keyboard       – zeigt die Belegung der 4. Ebene an
+german.neo.ktouch.xml       – Trainingslektion speziell für NEO
+german.neo.ktouch-Hanno.xml – Alte Trainingslektionen von Hanno
+neo2-test.ktouch.xml        – Test-Trainingslektion um alle NEO-Zeichen zu testen
 
