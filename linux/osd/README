@@ -1,0 +1,118 @@
+************************************************************************
+*                                                                      *
+*   OSD Neo2                      Copyright (c) 2009 Martin Zuther     *
+*                                                                      *
+*   On screen display for learning the keyboard layout Neo2            *
+*                                                                      *
+*   This program comes with ABSOLUTELY NO WARRANTY.  This is free      *
+*   software, and you are welcome to redistribute it under certain     *
+*   conditions.  Please read the file "LICENSE" for details.           *
+*                                                                      *
+************************************************************************
+
+
+                              Einführung
+                              ==========
+
+Das Programm "OSD Neo2" für Linux zeigt die Zeichen der gerade
+verwendeten Ebene des Neo2-Tastaturlayouts auf dem Bildschirm an.
+
+
+                            Abhängigkeiten
+                            ==============
+
+Die folgenden Programme und Bibliotheken werden für "OSD Neo2"
+benötigt (frühere oder spätere Versionen können allerdings genauso gut
+funktionieren):
+
+* Python 2.6
+  Debian-Paket: python2.6
+  Homepage: http://www.python.org/
+
+* PyGTK 2.14
+  Debian-Paket: python-gtk2
+  Homepage: http://www.pygtk.org/
+
+Die meisten Linux-Benutzer von Ubuntu können vermutlich gleich
+loslegen, ohne etwas installieren zu müssen.
+
+
+                             Installation
+                             ============
+
+Eigentlich muss nach der Installation der Abhängigkeiten (s. oben) nur
+der Inhalt des Archivs "OSDneo2_x.xx.tar.gz" in ein Verzeichnis
+entpackt werden, dann kann es losgehen: einfach die Konsole öffnen, in
+das Verzeichnis des Programms wechseln und ./OSDneo2.py eingeben
+(diese Datei muss natürlich ausführbar sein).
+
+
+                                Update
+                                ======
+
+Soll das Programm im gleichen Ordner wie vorher installiert werden,
+sollte dessen Inhalt vorher gelöscht werden.  Die Einstellungen des
+Programms werden im Homeverzeichnis jedes Benutzers gespeichert (siehe
+nächster Abschnitt) und bleiben daher erhalten.
+
+
+                             Einstellungen
+                             =============
+
+Die Einstellungen von "OSD Neo2" werden in der Datei "~/.OSDneo2"
+gespeichert.  Um die Einstellungen zu ändern, muss "OSD Neo2" zuerst
+beendet werden, danach kann die Datei ".OSDneo2" mit einem Texteditor
+bearbeitet werden.  Wenn alles schief geht, kann die Datei ".OSDneo2"
+einfach gelöscht werden, sie wird dann beim nächsten Start von "OSD
+Neo2" neu angelegt.
+
+* display_main_keyboard:
+
+  Legt fest, ob das Hauptfeld der Tastatur angezeigt werden soll
+  ("True") oder nicht ("False").
+
+* display_numeric_keyboard:
+
+  Legt fest, ob das Ziffernfeld der Tastatur angezeigt werden soll
+  ("True") oder nicht ("False").
+
+* magnification_in_percent:
+
+  Hier kann man angeben, wie die geladenen Tastatur-Bilder vergrößert
+  oder verkleinert werden sollen (Angabe in Prozent).  "Einfache"
+  Brüche wie 50% (1/2), 75% (3/4) oder 200% (2/1) sehen im Normalfall
+  besser aus als 82.5% (33/40).
+
+* polling_in_milliseconds:
+
+  Gibt das Zeitintervall an, mit dem die Tastatur eingelesen wird
+  (Angabe in Millisekunden).  Höhere Werte benötigen weniger
+  CPU-Zyklen und sind vor allem für ältere Rechner geeignet -- dafür
+  dauert es länger, bis das Programm auf gedrückte Tasten reagiert.
+  Umgekehrt wird der Rechner bei niedrigeren Werten stärker
+  beansprucht und das Programm reagiert schneller auf gedrückte
+  Tasten.  Vermutlich muss diese Einstellung nicht geändert werden.
+
+* selected_keyboard_driver:
+
+  Gibt an, welcher Neo2-Tastaturtreiber verwendet wird.  Gültige
+  Einstellungen sind "xkbdmap" (Voreinstellung) und "xmodmap".
+
+* window_position_x / window_position_y:
+
+  Die Bildschirm-Position von "OSD Neo2" wird beim Beenden hier
+  gespeichert.  Vermutlich muss diese Einstellung nur geändert werden,
+  wenn das Programm aus Versehen "vom Bildschirm geschoben" wurde.  In
+  diesem Fall können beide Werte einfach auf "0" gesetzt werden.
+
+
+                               Kontakt
+                               =======
+
+Ich höre gerne von Anwendern meiner Programme.  Wenn Du also Zeit und
+Lust hast, schreib mir eine Email (die Adresse gibt's unter
+http://www.mzuther.de/), gerne auch mit Vorschlägen, Verbesserungen
+oder Bugfixes!
+
+Und jetzt -- vielen Dank für die Verwendung freier Software.  Ich
+hoffe, sie gefällt Dir...!

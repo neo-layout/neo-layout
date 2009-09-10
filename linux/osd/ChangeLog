@@ -1,0 +1,51 @@
+2009-09-07  Martin Zuther  <code@mzuther.de>
+
+	* Version 0.12
+
+	* osd_neo2.py: renamed to "OSDneo2.py"
+
+	* settings.py: renamed to "Settings.py"
+
+	* settings.py: settings now stored in "~/.OSDneo2"
+
+2009-09-05  Martin Zuther  <code@mzuther.de>
+
+	* osd_neo2.py (OSDneo2): added new INI file option
+	'selected_keyboard_driver' and corresponding matrices for
+	switching between the two Neo2 keyboard drivers ("xkbdmap" and
+	"xmodmap")
+
+2009-09-04  Martin Zuther  <code@mzuther.de>
+
+	* osd_neo2.py (OSDneo2): layer switching is now controlled via
+	  matrices
+
+	* caught exceptions for files that cannot be accessed or are missing
+
+2009-09-01  Martin Zuther  <code@mzuther.de>
+
+	* osd_neo2.py (OSDneo2): changed X11 keyboard defines to official
+	  Neo2 values
+
+	* SimpleXkbWrapper.py (SimpleXkbWrapper.__init__): changed
+	  "c_bool" return value of function "XkbGetState" to
+	  "c_int" (compatibility to Python v2.5)
+
+2009-08-31  Martin Zuther  <code@mzuther.de>
+
+	* version: 0.11
+
+	* removed start scripts and "evdev" library
+
+	* SimpleXkbWrapper.py (SimpleXkbWrapper): new class that uses X
+	  Keyboard Extension v1.0 to poll keyboard modifier states
+
+2009-08-28  Martin Zuther  <code@mzuther.de>
+
+	* removed support for Win32 (there are better alternatives)
+
+2009-08-27  Martin Zuther  <code@mzuther.de>
+
+	* version: 0.10
+
+	* first public release
