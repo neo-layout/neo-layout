@@ -1,6 +1,6 @@
 <KTouchLecture>
  <Title>Deutsch (Neo-Tastaturlayout) 2009</Title>
- <Comment>Überarbeitet 2009 von Carsten MISCHKE <Carsten,Mischke@gmail.com> inspireirt durch die Vorlage von Hanno Behrens
+ <Comment>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com&gt; inspireirt durch die Vorlage von Hanno Behrens
 Homepage: http://neo-layout.org
 </Comment>
  <FontSuggestions>Sans Serif</FontSuggestions>
@@ -558,11 +558,11 @@ Homepage: http://neo-layout.org
    <Line>nenne. nenne, nenne. nenne, ihren. ihren, ihren. ihren, gerne. gerne, gerne. gerne,</Line>
    <Line>seine. seine, seine. seine, leine. leine, leine. leine, keine. keine, keine. keine,</Line>
    <Line>zaubern. zaubern. zebra. zebra. zauberstab. zauberstab. zeilenumbruch. zeilenumbruch.</Line>
-   <Line>badezimmer. badezimmer.  beelzebub. beelzebub. benzinpumpe. benzinpumpe. besitzen. besitzen.</Line>
+   <Line>badezimmer. badezimmer . beelzebub. beelzebub. benzinpumpe. benzinpumpe. besitzen. besitzen.</Line>
    <Line>zeitbombe. zeitbombe. zeitungsschreiber. zeitungsschreiber. zerbrechlich. zerbrechlich. bestellzettel. bestellzettel.</Line>
    <Line>bezahlen. bezahlen. bulldozer. bulldozer. bezirk. bezirk. zierband. zierband. zimtbaum. zimtbaum. zwiebel. zwiebel.</Line>
-   <Line>zollbeamter. zollbeamter.  bezeugen. bezeugen. brustwarze. brustwarze. bronzezeit. bronzezeit. bezweifeln. bezweifeln.</Line>
-   <Line>zusammenbringen. zusammenbringen. zubinden. zubinden.  zusammenprallen. zusammenprallen. zwieback. zwieback.</Line>
+   <Line>zollbeamter. zollbeamter . bezeugen. bezeugen. brustwarze. brustwarze. bronzezeit. bronzezeit. bezweifeln. bezweifeln.</Line>
+   <Line>zusammenbringen. zusammenbringen. zubinden. zubinden . zusammenprallen. zusammenprallen. zwieback. zwieback.</Line>
   </Level>
   <Level>
    <NewCharacters>Sicherheitstest</NewCharacters>
@@ -676,7 +676,7 @@ Homepage: http://neo-layout.org
    <NewCharacters>Kurze Trainingssätze</NewCharacters>
    <Line>Hinter dem Haus steht ein Baum. Der Baum ist alt. Der Berg ist hoch. Bald gehe ich zum Sport. Dann spiele ich Basketball.</Line>
    <Line>Meine Mutter backt Kuchen. Den Kuchen essen wir mit Kirschen und Schlagsahne. Susanne isst keinen Kuchen. Sie will nicht dick werden.</Line>
-   <Line>Georg hatte gestern Geburtstag. Sein Geschenk war ein besuch im Tierpark. Die Schlangen haben wir nicht gesehen.</Line>
+   <Line>Georg hatte gestern Geburtstag. Sein Geschenk war ein Besuch im Tierpark. Die Schlangen haben wir nicht gesehen.</Line>
    <Line>Bananen sind gelb. Kirschen sind rot. Birnen sind gelb oder rot. Marmelade aus Kirschen ist rot. Kiwis haben Haare. Deshalb iss sie ohne Schale.</Line>
    <Line>Martin nimmt die Dose mit dem Geld. Hans lernt eisern Mathematik. Hanno arbeitet schon den ganzen Tag. Das Buch ist gut.</Line>
    <Line>Helene kommt bald nach Hause. Die anderen warten schon am Tisch. Hunger und Durst haben alle. Darum bestellten sie Nudeln mit Sauce.</Line>
@@ -734,10 +734,10 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <NewCharacters>Kurze Trainingssätze</NewCharacters>
-   <Line>Der Urlaub war super. Wir waren mit den Zelt unterwegs. Der Zeltplatz war bei einer Insel. Den Namen der Insel weiss ich nicht mehr.</Line>
+   <Line>Der Urlaub war super. Wir waren mit den Zelt unterwegs. Der Zeltplatz war bei einer Insel. Den Namen der Insel weiß ich nicht mehr.</Line>
    <Line>Mein Kumpel dachte der Untergang der Sonne im Meer ist im Osten. Er ist so ein Idiot. Die Sonne geht im Westen unter.</Line>
    <Line>Willi wollte am Wettbewerb teilnehmen. Er trainierte eisern. Allerdings wurden seine Problemzonen nicht weniger. Er nahm nicht ab.</Line>
-   <Line>Arno arbeitet bei uns. Arno ist eigentlich Elektriker. Er hilft bei der Installation von Programmen. Arno kann auch Computer zusammen bauen.</Line>
+   <Line>Arno arbeitet bei uns. Arno ist eigentlich Elektriker. Er hilft bei der Installation von Programmen. Arno kann auch Computer zusammenbauen.</Line>
    <Line>Inge kann gut rennen. Alle sagten ihr das. Lars wollte mit ihr rennen. Inge war aber zu schnell. Lars ist nun deprimiert.</Line>
    <Line>Endlich wollt ihr uns besuchen. Ihr konntet heute aber nicht kommen. Weil wir heute mit den Kindern zum Abenteuerspielplatz gehen.</Line>
    <Line>Ein guter Rat ist teuer. Probleme erledigen wir prombt. Wunder gehen nicht so schnell. Alle schlauen Weisheiten haben Witz.</Line>
@@ -749,7 +749,7 @@ Homepage: http://neo-layout.org
    <NewCharacters>Unser Sicherheitstest</NewCharacters>
    <Line>Weile Eile Eule Aula Lieder Glieder Regen Degen Schritt Glitter Dritter Celle Kelle Elle Cent Karter Charta Krater Chlor Ohr Chor</Line>
    <Line>Haar Heer Herr Hagel Nagel Wand Hand Hund Grund Hundert Ast Hast Rast Gast Eis Reis Greis Gleis See Tee Schnee Sorge</Line>
-   <Line>Sonne Wonne Tonne Soldat Diktat Spinat Pirat Spagat  Saat Tat Staat Rat Storch Strolch Stroh Metamorphose Dose Hose Rose</Line>
+   <Line>Sonne Wonne Tonne Soldat Diktat Spinat Pirat Spaga t Saat Tat Staat Rat Storch Strolch Stroh Metamorphose Dose Hose Rose</Line>
    <Line>Karikatur Natur Kathedrale Zentrale Kleiderhaken Kniekehle Seele Makrele Koch Kunst Wache Sache Wagen Hektik Trinkgeld</Line>
    <Line>Warnstreik Keks Gewalt Gestalt Wunsch Punsch Kiste Piste Gockel Sockel Krokodil Nil Kontakt Akt Kiwi HiWi Wolke Molke</Line>
    <Line>Spreu Heu Praktikum Produkt Baum Raum Saum Traum Maske Massaker Picknick Kritik Mikroskop Mittelwert Schwert</Line>
@@ -823,11 +823,11 @@ Homepage: http://neo-layout.org
    <Line>ala aäa ivi iöi ala aäa ivi iöi ala aäa ivi iöi lal äaä viv öiö ala äaä ivi öiö aäe iöu aäe iöu eäa uöi eäa uöi eäa uöi</Line>
    <Line>öffentlich öfter böse löten krönen wölben können gedöst aufgelöst aufmöbeln stöhnen befördern zuhört röter flöten ungestört köstlich</Line>
    <Line>wäre sähe läge wäre sähe hätten kämen lägen wären nähme während lässig mächtig allmählich gäben fälschen spät erzählen</Line>
-   <Line>wölben störte gröle  böig töten dösen möchte blöde öde krönen höhnen völlig vögeln öffne ölig spröde möglich stören bewölkt höhnen</Line>
+   <Line>wölben störte gröl e böig töten dösen möchte blöde öde krönen höhnen völlig vögeln öffne ölig spröde möglich stören bewölkt höhnen</Line>
    <Line>ändern gänzlich fänden spärlich älter ständig städtisch nämlich häusliche erhältliche nächtlich sächliche tägliche hinlängliche</Line>
    <Line>Wölfe Böcke Böe Götzen Knödel Einöde Röcke Köcher Höhe Wörter Löwe Rohöl Köter Öde Dörfer Bögen Röhren Römer Stör Öfnung</Line>
    <Line>Nähe März Wände Ämter Kälte Ärzte Bäume Päckchen Räume Wärme Plätzen Käufer Häuser Dämon Getränk Läufer</Line>
-   <Line>Pöbel  Anhöhe Ölbild Likör Löcher Rapsöl Malmö Köder Knöpfe Blöcke Tenöre Öffner Ölzeug Wanusslöl Löffel Kröte Höhle</Line>
+   <Line>Pöbe l Anhöhe Ölbild Likör Löcher Rapsöl Malmö Köder Knöpfe Blöcke Tenöre Öffner Ölzeug Wanusslöl Löffel Kröte Höhle</Line>
    <Line>Mängel Gebäck Gepäck Hände Blätter Erkältung Pläne Geräusch Universität Verdächtiger Europäer Ärztin Märchen</Line>
    <Line>Tölpel Körbe Körner Chöre König Göre Gönner Köder Lötzinn Löhne Mönche Köln Ökologie Gehör Möbel Behörde Körper</Line>
   </Level>
@@ -849,7 +849,7 @@ Homepage: http://neo-layout.org
    <Line>im März kämen die Männer der Behörde, die Mängel der Ölheizung finden, fiese Dämonen beschwören.</Line>
    <Line>bei Erkältung täglich ein paar Löffel Hustensaft trinken, hätten Wörter weniger Vokale wär die Betonung fast unmöglich.</Line>
    <Line>Ausländer möchten viele Vokablen lernen um völlig fehlerfrei zu reder, Gönner gäben mehr Geld.</Line>
-   <Line>Tenöre stören nicht wenn Chöre singen, Ökologie ist die Wissenschaft der Umwelt, lässig Körbe flechten</Line>
+   <Line>Tenöre stören nicht wenn Chöre singen, Ökologie ist die Wissenschaft der Umwelt, lässig Körbe flechten.</Line>
   </Level>
   <Level>
    <NewCharacters>Sicherheitstest für ä und ö</NewCharacters>
@@ -908,7 +908,7 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <NewCharacters>Wir wiederholen</NewCharacters>
-   <Line>uquivialaece djdtftrgrnhn uquivialaece djdtftrgrnhn uquivia</Line>
+   <Line>uxuivialaece djdtftrgrnhn uxuivialaece djdtftrgrnhn uquivia</Line>
    <Line>epeaäanmnr,r epeaäanmnr,r epeaäanmnr,r epeaäanmnr,r epeaäan</Line>
    <Line>beim fast gibt drei kaum alte geht neue seit viel soll etwa</Line>
    <Line>Gast Geld Gott Glas Graf Gang Gold Grab Gram Golf Glut Gabe</Line>
@@ -932,8 +932,8 @@ Homepage: http://neo-layout.org
    <NewCharacters>Wir üben y und ß</NewCharacters>
    <Line>analysieren, bayerisch, symbolisch, zylindrisch, zyklisch, happy, typisch, systematisch, rhytmisch, sympatisch,</Line>
    <Line>saß, fließen, ließen, gießen, außen, außer, draußen, äußerte, weiß, groß, bloß, genießen, reißen, heißen, verließ,</Line>
-   <Line>Typhus. Psyche. Hockey. Zypern. Typ. Analyse. Zylinder. Bayern. Hygiene.  Dynamo. Symbol. Cowboy. Boykott. Rhythmus. Paraguay. Sympathie.</Line>
-   <Line>Blöße . Gießen. Grieß. Grüße. Gruß. Maße. Maß. Schöße. Schoß. Schloß. Straße. Muße.  Stoß. Spaß. Steiß. Strauß. Ruß. Yeti. Yokohama. Yuccapalme.</Line>
+   <Line>Typhus. Psyche. Hockey. Zypern. Typ. Analyse. Zylinder. Bayern. Hygiene . Dynamo. Symbol. Cowboy. Boykott. Rhythmus. Paraguay. Sympathie.</Line>
+   <Line>Blöße . Gießen. Grieß. Grüße. Gruß. Maße. Maß. Schöße. Schoß. Schloß. Straße. Muße . Stoß. Spaß. Steiß. Strauß. Ruß. Yeti. Yokohama. Yuccapalme.</Line>
    <Line>Physik. System. Baby. Embryo. Layout. Bypass. Party. Maya. Cowboy. City. Jury. Whiskey. Bayreuth. Speyer. Sylt. Yoga. Zyklus. Yin und Yang. Yard.</Line>
    <Line>bayerischer Typ, Syrien analysieren, symbolische Analyse, zylindrischer Zylinder, bloß Bayern, äußere Hygiene,</Line>
    <Line>süße Physik, weißes System, großer Dynamo, grüßendes Symbol, symbolischer Gruß,</Line>
@@ -1028,7 +1028,7 @@ Homepage: http://neo-layout.org
    <Line>Die Bücher und Texte von Karl Marx würden nebeneinander gelegt mehrere Quadratmeter Fußboden bedecken.</Line>
   </Level>
   <Level>
-   <NewCharacters>English test - 1000 frequently used words</NewCharacters>
+   <NewCharacters>English test—1000 frequently used words</NewCharacters>
    <Line>sister gun total company oxygen similar deal radio plural death determine various score evening is not then</Line>
    <Line>action agreed forward nor capital opposite stretched rope factories wrong experience cotton settled chart rose apple</Line>
    <Line>yellow prepared allow details pretty fear entire southern solution workers corn truck fresh Washington substances</Line>
@@ -1075,7 +1075,7 @@ Homepage: http://neo-layout.org
    <Line>wear child else party bad desert plains seeds save increase gas suppose experiment history England woman</Line>
    <Line>engine cost burning coast alone maybe design bank Germany drawing business joined period east separate foot wire</Line>
    <Line>pay break law choose single uncle ears clean touch hunting grass visit information flow you are bit</Line>
-   <Line>express lady grew whose mouth students skin received yard human valley garden equal art cents  please</Line>
+   <Line>express lady grew whose mouth students skin received yard human valley garden equal art cents please</Line>
    <Line>guess thick major supply silent blood observe corner trade lie tube electric rather spot necessary</Line>
    <Line>insects compare bell weight crops crowd fun meat tone poem loud lifted hit enjoy consider process</Line>
    <Line>sand elements suggested army doctor indicate thin hat provide except position property thus expect entered</Line>
@@ -1087,16 +1087,16 @@ Homepage: http://neo-layout.org
    <Line>sun become covered seen question top fast cold fish ship several cried area across hold plan</Line>
    <Line>mark today himself notice dog during toward south horse short five sing birds better step war</Line>
    <Line>problem best morning ground complete however passed fall room low vowel king knew hours true town</Line>
-   <Line>since black hundred I will ever products against unit piece happened pattern figure told whole numeral certain</Line>
+   <Line>since black hundred will ever products against unit piece happened pattern figure told whole numeral certain</Line>
    <Line>usually measure table field did not remember north travel friends early slowly wood easy waves money fire</Line>
   </Level>
   <Level>
-   <NewCharacters>Deutsche Wörter - 1000 häufigst benutzte Wörter</NewCharacters>
+   <NewCharacters>Deutsche Wörter – 1000 häufigst benutzte Wörter</NewCharacters>
    <Line>der die und in den von zu das mit sich des auf für ist im dem nicht ein eine als auch es an werden</Line>
-   <Line>aus er hat daß sie nach wird bei einer um am sind noch wie einem über einen so zum war haben nur oder</Line>
+   <Line>aus er hat dass sie nach wird bei einer um am sind noch wie einem über einen so zum war haben nur oder</Line>
    <Line>aber vor zur bis mehr durch man sein wurde sei in Prozent hatte kann gegen vom können schon wenn habe</Line>
    <Line>seine Euro ihre dann unter wir soll ich eines es Jahr zwei Jahren diese wieder keine Uhr seiner worden</Line>
-   <Line>und will zwischen immer Millionen ein was sagte er gibt alle diesem seit muß wurden beim doch jetzt</Line>
+   <Line>und will zwischen immer Millionen ein was sagte er gibt alle diesem seit muss wurden beim doch jetzt</Line>
    <Line>waren drei Jahre mit neue neuen damit bereits da auch ihr seinen müssen ab ihrer nach ohne sondern</Line>
    <Line>selbst ersten nun etwa bei heute ihren weil ihm seien Menschen Deutschland anderen werde ich sagt wir</Line>
    <Line>eine rund für aber ihn Ende jedoch Zeit sollen ins wenn so seinem uns Stadt geht doch sehr hier ganz</Line>
@@ -1106,14 +1106,14 @@ Homepage: http://neo-layout.org
    <Line>diese großen dazu von Mann da sollte würde also bisher Leben Milliarden Welt Regierung konnte ihrem</Line>
    <Line>Frauen während Land zehn würden stehen ja USA heißt dies zurück Kinder dessen ihnen deren sogar Frage</Line>
    <Line>gewesen erste gab liegt gar davon gestern geben Teil Polizei dass hätte eigenen kaum sieht große denn</Line>
-   <Line>weitere was sehen macht Angaben weniger gerade läßt Geld München deutsche allen darauf wohl später</Line>
+   <Line>weitere was sehen macht Angaben weniger gerade lässt Geld München deutsche allen darauf wohl später</Line>
    <Line>könne deshalb aller kam Arbeit mich gegenüber nächsten bleibt wenig lange gemacht wer dies Fall mir</Line>
    <Line>gehen Berliner mal Weg wollte sechs keinen Woche dagegen alten möglich gilt erklärte müsse dabei</Line>
    <Line>könnten Geschichte zusammen finden Tag Art erhalten man Dollar Wochen jeder nie bleiben besonders</Line>
    <Line>Deutschen den zu zunächst derzeit allein deutlich Entwicklung weiß einige sollten Präsident geworden</Line>
    <Line>statt Bonn Platz inzwischen nur Freitag um pro seines damit Montag Europa schließlich Sonntag einfach</Line>
    <Line>gehört eher oft Zahl neben hält weit Partei meisten Thema zeigt Politik aus zweiten Januar insgesamt</Line>
-   <Line>je mußte Anfang hinter ebenfalls ging Mitarbeiter darüber vielen Ziel darf Seite fest hin erklärt</Line>
+   <Line>je musste Anfang hinter ebenfalls ging Mitarbeiter darüber vielen Ziel darf Seite fest hin erklärt</Line>
    <Line>Namen Haus an Frankfurt Gesellschaft Mittwoch damals Dienstag Hilfe Mai Markt seit Tage Donnerstag</Line>
    <Line>halten gleich nehmen solche Entscheidung besser alte Leute Ergebnis Samstag sagen System März tun</Line>
    <Line>Monaten kleinen lang nicht knapp bringen wissen Kosten Erfolg bekannt findet daran künftig acht schnell</Line>
@@ -1125,7 +1125,7 @@ Homepage: http://neo-layout.org
    <Line>trotz wirklich Lage Länder leicht gekommen Spiel laut November kurz politische führt innerhalb unsere</Line>
    <Line>meint immer wieder Form anders ihres völlig beispielsweise gute bislang August Hand jede GmbH Film Minuten</Line>
    <Line>erreicht beide Musik Kritik Mitte Verfügung Buch dürfen unter jeweils einigen zum Umsatz spielen Daten welche</Line>
-   <Line>müßten hieß paar nachdem Kunst gebracht Problem noch jeden Sprecher recht erneut längst europäischen sein Eltern</Line>
+   <Line>müssten hieß paar nachdem Kunst gebracht Problem noch jeden Sprecher recht erneut längst europäischen sein Eltern</Line>
    <Line>Beginn besteht mindestens machte jetzt bietet außerdem Bürger Trainer bald Deutsche schon Fragen klar durch</Line>
    <Line>gehören dort erstmals Februar zeigen Titel Stück größten setzt Wert Staat möchte daher wolle Bundesregierung</Line>
    <Line>lediglich Nacht Krieg Opfer Tod nimmt Firma zuletzt Werk hohen leben unter anderem dieser Kirche weiterhin</Line>
@@ -1135,7 +1135,7 @@ Homepage: http://neo-layout.org
    <Line>hoch beginnt Wort obwohl Kopf spielt Interesse Westen verloren Preis erst jedem erreichen setzen spricht früher</Line>
    <Line>teilte Landes zudem einzelnen bereit Blick Druck Bayern Kilometer gemeinsam Bedeutung Chance Politiker</Line>
    <Line>dazu besten Ansicht endlich Stelle direkt beim Bevölkerung viele solchen alle solle jungen Einsatz</Line>
-   <Line>richtig größte sofort neuer ehemaligen unserer dürfte schaffen Augen Rußland Internet allerdings Raum</Line>
+   <Line>richtig größte sofort neuer ehemaligen unserer dürfte schaffen Augen Russland Internet allerdings Raum</Line>
    <Line>Mannschaft neun kamen Ausstellung Zeiten einzige meine nun Verfahren Angebot Richtung Projekt niemand</Line>
    <Line>Kampf weder tatsächlich Personen heute geführt Gespräch Kreis Hamburger Schule guten Hauptstadt</Line>
    <Line>durchaus Zusammenarbeit darin Amt Schritt meist groß zufolge Sprache Region Punkte Vergleich genommen</Line>
@@ -1144,7 +1144,7 @@ Homepage: http://neo-layout.org
    <Line>Chef frei dennoch hohe Firmen Koalition Mädchen zur entwickelt fand Diskussion bringt deshalb Hause Gefahr per</Line>
    <Line>zugleich früheren dadurch ganzen abend erzählt Streit Vergangenheit Parteien Verhandlungen jedenfalls gesehen</Line>
    <Line>französischen Trotz darunter Spieler forderte Meinung wenigen Publikum sowohl meinte mag Auto Lösung Boden</Line>
-   <Line>hinaus war verletzt weltweit Sohn bevor mußten keiner Produktion Ort braucht Zusammenhang Kind Verein sprechen</Line>
+   <Line>hinaus war verletzt weltweit Sohn bevor mussten keiner Produktion Ort braucht Zusammenhang Kind Verein sprechen</Line>
    <Line>gleichzeitig London sogenannten Richter geplant Italien Mittel her freilich Mensch großer wenige öffentlichen</Line>
    <Line>dritten nahm Bundesrepublik Arbeitsplätze bedeutet Feld Bank oben Aktien Präsident gesetzt Ausland</Line>
    <Line>Ministerpräsident Vertreter jedes ziehen Parlament berichtete dieses China aufgrund Stellen warum</Line>
@@ -1160,8 +1160,8 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <NewCharacters>Die Ziffern</NewCharacters>
-   <Line>Die gewohnten Tasten über den Buchstabenfeld sind auch unter Neo Tastaturlayout die Ziffern.</Line>
-   <Line>111 Kleiner Finger 111 u1 x1 u1 ü1 u1  x1x x1x 111</Line>
+   <Line>Die gewohnten Tasten über dem Buchstabenfeld sind auch unter dem Tastaturlayout Neo die Ziffern.</Line>
+   <Line>111 Kleiner Finger 111 u1 x1 u1 ü1 u 1 x1x x1x 111</Line>
    <Line>222 Kleiner Finger 222 u2 x2 u2 ü2 u2 x2x x2x 222</Line>
    <Line>333 Ringfinger 333 i3 v3 i3 ö3 i3 v3v v3v 333</Line>
    <Line>444 Mittelfinger 444 a4 l4 a4 ä4 a4 l4l l4l 444</Line>
@@ -1172,7 +1172,7 @@ Homepage: http://neo-layout.org
    <Line>999 Mittelfinger 999 r9 g9 r9 ,9 r9 g9g g9g 999</Line>
    <Line>000 Ringfinger 000 t0 f0 t0 .0 t0 f0f f0f 000</Line>
    <Line>--- Kleiner Finger --- d- q- d- j- d- q-q q-q ---</Line>
-   <Line>Mit der Hochstelltaste ändert sch bereits die gewohnte Belegung. Probiere es aus.</Line>
+   <Line>Mit der Hochstelltaste ändert sich bereits die gewohnte Belegung. Probiere es aus.</Line>
    <Line>1° 2§ 3ℓ 4» 5« 6$ 7€ 8„ 9“ 0” -— nocheinmal 1° 2§ 3ℓ 4» 5« 6$ 7€ 8„ 9“ 0” -—</Line>
    <Line>Die Ziffern könner auch mittels der M4-Taste dargestellt werden, die Taste links vom ü drücken und die gewünschte andere Taste</Line>
    <Line>m m1m 111 1m1 111 m m1m 111 1m1 111</Line>
@@ -1189,7 +1189,7 @@ Homepage: http://neo-layout.org
   <Level>
    <NewCharacters>Die Sonderzeichen</NewCharacters>
    <Line>Mittels der M3-Taste, die über der Hochstelltaste, können verschiedene Sonderzeichen erzeugt werden.</Line>
-   <Line>k ! k!k !!! k ! k!k !!! h < h<h <<< h < h<h <<<</Line>
+   <Line>k ! k!k !!! k ! k!k !!! h &lt; h&lt;h &lt;&lt;&lt; h &lt; h&lt;h &lt;&lt;&lt;</Line>
    <Line>g > g>g >>> g > g>g >>> f = f=f === f = f=f ===</Line>
    <Line>q & &q& &&& q & &q& &&& s ? s?s ??? s ? s?s ???</Line>
    <Line>n ( n(n ((( n ( n(n ((( r ) r)r ))) r ) r)r )))</Line>
@@ -1243,7 +1243,7 @@ Homepage: http://neo-layout.org
    <Line>DPA Deutsche Presseagentur</Line>
    <Line>DPD Deutscher Paketdienst</Line>
    <Line>DRK Deutsches Rotes Kreuz</Line>
-   <Line>DVD  Digitale Video Disc</Line>
+   <Line>DV D Digitale Video Disc</Line>
    <Line>EDV Elektronische Datenverarbeitung</Line>
    <Line>EKG Elektrokardiogramm</Line>
    <Line>EKZ Einkaufszentrum</Line>
@@ -1267,7 +1267,7 @@ Homepage: http://neo-layout.org
    <Line>PLZ Postleitzahl</Line>
    <Line>PVC Polyvinyl-Chlorid (Kunststoff)</Line>
    <Line>RAF Rote Armee Fraktion (linksradikale deutsche Terrorvereinigung aus den70ern)</Line>
-   <Line>SOS Morsenotruf ... --- ... (Eselsbrücke: "Save Our Souls")</Line>
+   <Line>SOS Morsenotruf ... --- ... (Eselsbrücke: „Save Our Souls“)</Line>
    <Line>THW Technisches Hilfswerk</Line>
    <Line>TNT Trinitrotoluol (Sprengstoff)</Line>
    <Line>TÜV Technischer Überwachungsverein</Line>
@@ -1280,12 +1280,13 @@ Homepage: http://neo-layout.org
    <NewCharacters>Glückwunsch</NewCharacters>
    <Line>Herzlichen Glückwunsch zum Erlernen des Neo-Tastaturlayouts. Ich hoffe, die Lektionen haben trotz der Mühe ein wenig</Line>
    <Line>Spaß gemacht. Natürlich muss jetzt noch viel geübt werden. Die bisher erlernten Schriftzeichen müssen gefestigt werden,</Line>
-   <Line>dazu folgen noch ein paar Testtexte. Außerdem können sie in anderen Lektionen die Fließtext-Übungen mit KTouch machen.</Line>
+   <Line>dazu folgen noch ein paar Testtexte. Außerdem können Sie in anderen Lektionen die Fließtext-Übungen mit KTouch machen.</Line>
    <Line>So können Sie immer kontrollieren, wie schnell Ihr Schreiben geworden ist.</Line>
-   <Line>Wie Sie schon bemerkt haben, bezitzt das Neo-Layout eine große Anzahl von Sonderzeichen, die Sie mit Hilfe</Line>
+   <Line>Wie Sie schon bemerkt haben, besitzt das Neo-Layout eine große Anzahl von Sonderzeichen, die Sie mit Hilfe</Line>
    <Line>der Alt-Gr-Taste, auch zusammen mit der Hochstelltaste erreichen können.</Line>
    <Line>Des weiteren finden Sie auf der Akzenttaste und der Tilde-Taste sogenannte Dead-keys, die vor eine Taste gedrückt,</Line>
-   <Line>diese modifizieren. Außerdem gibt es für jede Taste eine Alternativ-Belegung, mit griechischen Zeichen oder anderen häufig gebräuchlichen. Den Umgang mit den Sonderzeichen übt man auch besser außerhalb dieses Programmes. Üben Sie damit!</Line>
+   <Line>diese modifizieren. Außerdem gibt es für jede Taste eine Alternativ-Belegung, mit griechischen Zeichen oder anderen häufig gebräuchlichen.</Line>
+   <Line>Den Umgang mit den Sonderzeichen übt man auch besser außerhalb dieses Programmes. Üben Sie damit!</Line>
    <Line>Spielen Sie damit ein wenig. Werden Sie schneller als je zuvor. Viel Spaß!</Line>
   </Level>
   <Level>
@@ -1293,7 +1294,7 @@ Homepage: http://neo-layout.org
    <Line>Esperanto ist sowohl die einfachste als auch die ausdrucksstärkste Sprache der Welt, die Basis einer blühenden internationalen Kultur. Esperanto-Sprecher gibt es in jedem Land der Erde, von Frankreich bis Japan, von Island bis Chile, und alle benutzen die Sprache Esperanto um ihre Gedanken, Literatur und Musik miteinander zu teilen und auszutauschen.</Line>
    <Line>Doktoro Esperanto (Esperanto „Hoffender“) war das Pseudonym, unter dem Dr. Ludwik Lejzer Zamenhof (im Deutschen manchmal: Ludwig Lazarus Samenhof) 1887 die Grundlagen der Sprache veröffentlichte. Seine Absicht war es, eine leicht erlernbare, neutrale Sprache für die internationale Verständigung zu entwickeln, die jedoch andere Sprachen nicht ersetzen sollte. Auf Initiative Zamenhofs entstand eine internationale Sprachgemeinschaft, die das Esperanto seither für viele Zwecke anwendet, vor allem für Reisen, Brieffreundschaften, internationale Treffen und kulturellen Austausch (Literatur, Musik u. a.). Bald fand diese Sprache auch Verwendung in Radiosendungen, im Amateurfunk, im mündlichen und fernmündlichen Verkehr, in Telegrammen, Zeitungen und Zeitschriften und später im Internet.</Line>
    <Line>Esperanto wird sowohl in Israel als auch im Iran gesprochen, in Russland und China als auch in den USA. Erleben Sie afrikanische Gesänge, brasilianischen Tanz, koreanische Kampfkunst, deutsches Bier und nepalesische Küche, möglicherweise alles während des gleichen Treffens. Erleben Sie die Leichtigkeit der Kommunikation über Sprachgrenzen hinweg, wie Sie sie noch nie bisher gefühlt haben. Tauchen Sie ein, nehmen Sie teil am Austausch der Kulturen. Die Vielfalt der Welt liegt vor Ihnen.</Line>
-   <Line>Denken Sie nicht mehr an Ihr Schulenglisch oder Schulfranzösisch - schon allein das Wort "Schulenglisch" impliziert das Ergebnis: dass die allermeisten Menschen nach 3 Jahren noch nichts in der Bäckerei bestellen können und sich selbst nach 9 Jahren noch nicht frei in der Fremdsprache ausdrücken. Stattdessen lernen Sie 1 Jahr lang Esperanto und Sie werden bereits viel mehr ausdrücken können (und in mehr Ländern).</Line>
+   <Line>Denken Sie nicht mehr an Ihr Schulenglisch oder Schulfranzösisch - schon allein das Wort „Schulenglisch“ impliziert das Ergebnis: dass die allermeisten Menschen nach 3 Jahren noch nichts in der Bäckerei bestellen können und sich selbst nach 9 Jahren noch nicht frei in der Fremdsprache ausdrücken. Stattdessen lernen Sie 1 Jahr lang Esperanto und Sie werden bereits viel mehr ausdrücken können (und in mehr Ländern).</Line>
    <Line>Esperanto wurde mit Absicht so geplant, dass man es so einfach wie möglich lernen kann, so dass alle Menschen in allen Ländern, selbst ohne Talent für Sprachen, ungezwungen und gemütlich miteinander reden können, ohne Unbeholfenheit, genau wie in der Muttersprache. Wenn Sie es schwierig finden, unregelmäßige Verben oder das Geschlecht von Substantiven zu behalten, ist Esperanto etwas für Sie, denn Esperanto hat solche unnötigen Ärgernisse abgeschafft. Aber es hat auch das Vokabeln-Lernen sehr vereinfacht, indem Sie viel mehr mit weniger Wörtern ausdrücken können. Wenn Sie 500 Wörter Esperanto lernen, ist es das Äquivalent von einem Englisch- oder Französisch-Wortschatz von mindestens 3000 Wörtern.</Line>
   </Level>
   <Level>
@@ -1343,14 +1344,14 @@ Homepage: http://neo-layout.org
   <Level>
    <NewCharacters>Testtext „Yoga“</NewCharacters>
    <Line>Yoga ist eine indische philosophische Lehre, die eine Reihe geistiger und körperlicher Übungen wie Yama, Niyama, … Kriyas, Meditation und/oder Askese umfasst. Der Begriff Yoga kann sowohl als „Vereinigung“ oder „Integration“ als auch im Sinne von „Anschirren“ und „Anspannen“ des Körpers an die Seele zur Sammlung und Konzentration verstanden werden. Welcher Weg zur Verwirklichung dieser Ziele einzuschlagen ist, darin unterscheiden sich die verschiedenen Richtungen erheblich voneinander. Wurzeln: Da Yoga ursprünglich aus Indien stammt, liegen die Wurzeln der Yoga-Philosophie im Hinduismus und Teilen des Buddhismus. Das Individuum wird hier als ein Reisender im Wagen des materiellen Körpers gesehen. Der Wagen ist der Körper, der Kutscher der Verstand, die fünf Pferde die fünf Sinnesorgane, der Fahrgast die Seele, und das Geschirr heißt im Indischen „Yoga“.</Line>
-   <Line>Darüber hinaus enthält die Bhagavad-Gita direkte Anweisungen für den Yogi. So heißt es im 5. Kapitel: in Vers 27: „Sich lösend von der Außenwelt, starr auf die Nasenwurzel ('Nasikagra') schauend – Den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich, die durch der Nase Innres gehen“. (Anmerkung: „Nasikagra“ verwechseln einige Übersetzer mit „Nasenspitze“ – die meisten Yogis schielen aber nicht etwa, sondern blicken als Konzentrationsübung auf die Nasenwurzel zwischen den Augenbrauen, angeblich einen wichtigen Nerventreffpunkt). Vers 28 wendet sich den spirituellen Zielen zu: „Zügelnd die Sinne, Herz und Geist, ganz der Erlösung zugewandt – Befreit von Wünschen, Furcht und Zorn, so ist für immer er erlöst.“ Im 6. Kapitel geht es um Versenkung (Dhyana) und die richtige Lebensweise: In Vers 10 heißt es: yogi yunjita satatam atmanam rahasi sthitah – ekaki yatachittama nirashir aparigraha. „Der Yogi soll beständig sich mühen in der Einsamkeit – Allein, bezähmend Sinn und Selbst, nichts hoffend, ohne Besitz“.</Line>
+   <Line>Darüber hinaus enthält die Bhagavad-Gita direkte Anweisungen für den Yogi. So heißt es im 5. Kapitel, Vers 27: „Sich lösend von der Außenwelt, starr auf die Nasenwurzel ('Nasikagra') schauend – Den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich, die durch der Nase Innres gehen“. (Anmerkung: „Nasikagra“ verwechseln einige Übersetzer mit „Nasenspitze“ – die meisten Yogis schielen aber nicht etwa, sondern blicken als Konzentrationsübung auf die Nasenwurzel zwischen den Augenbrauen, angeblich einen wichtigen Nerventreffpunkt). Vers 28 wendet sich den spirituellen Zielen zu: „Zügelnd die Sinne, Herz und Geist, ganz der Erlösung zugewandt – Befreit von Wünschen, Furcht und Zorn, so ist für immer er erlöst.“ Im 6. Kapitel geht es um Versenkung (Dhyana) und die richtige Lebensweise: In Vers 10 heißt es: yogi yunjita satatam atmanam rahasi sthitah – ekaki yatachittama nirashir aparigraha. „Der Yogi soll beständig sich mühen in der Einsamkeit – Allein, bezähmend Sinn und Selbst, nichts hoffend, ohne Besitz“.</Line>
    <Line>Grundsätzlich hat Yoga nachweislich einige positiv bewertete Effekte sowohl auf die physische als auch auf die psychische Gesundheit. Yoga kann unter Umständen zu einer Linderung bei verschiedensten Krankheitsbildern führen, etwa bei Durchblutungsstörungen, Schlafstörungen, nervösen Beschwerden (Angst und Depression), chronischen Kopfschmerzen oder Rückenschmerzen. Der Nutzen von Yoga bei Krankheit oder zur Erhaltung der Gesundheit wird unterschiedlich bewertet. In Deutschland können Kosten für Yogakurse von den Krankenkassen vor allem im Rahmen des Präventionsprinzips der Vermeidung spezifischer Risiken und stressabhängiger Krankheiten erstattet werden. Yoga hat auf viele Menschen eine beruhigende, ausgleichende Wirkung und kann somit den Folgeerscheinungen von Stress entgegenwirken.</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Psyche“</NewCharacters>
-   <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das "Gesamtsystem" aller jener (Lebens)"Regungen", das "der Volksmund" seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt. Damit ist zuerst die Gesamtheit solcher "Lebensäußerungen" oder Eigenreaktionen gemeint, die zuerst oder überhaupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind und damit nur aus der subjektiven oder heute sog. "Ersten Person-Perspektive" beobachtet und beschrieben werden können: das erlebende Wahrnehmen, das vorstellende Erinnern vorgängiger Erfahrungen, das Träumen, spontane oder willkürliche Ausdenken oder Phantasieren möglicher oder andersartiger Erfahrungen aller nur denkbaren Art bis hin zum vielfältigen emotionalen Reagieren darauf (und gegebenenfalls damit in Zusammenhang stehendem gewohnheitsmäßigen, also gelernten Verhalten und absichtlichen oder bewussten und eventuell sogar geplanten bis strategischen Handeln).</Line>
-   <Line>Traditionell wird außerdem "dem Psychischen" der "physische" Leib oder "somatische" Körper gegenüber gestellt. Als "psychosomatisch" werden dann solche "leib-seelischen" Vorgänge bezeichnet, bei denen die bewussten und unbewussten psychischen Aktivitäten mit solchen Vorgänge im Menschen in Zusammenhang stehen, die nur physiologisch, biochemisch oder anderweitig festgestellt und beobachtet werden können. In erster Linie handelt es sich dabei um Veränderungen von vegetativ gesteuerten und hormonell vermittelten Vitalfunktionen wie Muskeltonus, Atmung, Herzschlag, Blutdruck oder Verdauung einschließlich evtl. dadurch bedingter krankhafter Auswirkungen wie etwa chronischer oder sogar schmerzhafter Verspannung, um nur ein Beispiel davon anzuführen.</Line>
-   <Line>Aufgrund dieser besonderen Fähigkeit sind ältere Kinder und vor allem erwachsene Menschen zu jener Art von bewusstem, insbesondere absichtlichen Denken und Planen fähig, das bei Tieren bislang nicht beobachtet werden konnte. Menschen werden deswegen für ihre Taten verantwortlich gemacht, nicht dagegen Tiere und Kleinkinder vor Entwicklung ausreichender Erinnerungsfähigkeit und Beherrschung eines gezielten und kontrollierten, insbesondere regelgeleiteten und allein "in der Vorstellung" oder "im Geiste" stattfindenden Kombinierens von Vorstellungselementen jeder Art ("Denken").</Line>
+   <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das „Gesamtsystem“ aller jener (Lebens)„Regungen“, das „der Volksmund“ seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt. Damit ist zuerst die Gesamtheit solcher „Lebensäußerungen“ oder Eigenreaktionen gemeint, die zuerst oder überhaupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind und damit nur aus der subjektiven oder heute sog. „Ersten-Person-Perspektive“ beobachtet und beschrieben werden können: das erlebende Wahrnehmen, das vorstellende Erinnern vorgängiger Erfahrungen, das Träumen, spontane oder willkürliche Ausdenken oder Phantasieren möglicher oder andersartiger Erfahrungen aller nur denkbaren Art bis hin zum vielfältigen emotionalen Reagieren darauf (und gegebenenfalls damit in Zusammenhang stehendem gewohnheitsmäßigen, also gelernten Verhalten und absichtlichen oder bewussten und eventuell sogar geplanten bis strategischen Handeln).</Line>
+   <Line>Traditionell wird außerdem „dem Psychischen“ der „physische“ Leib oder „somatische“ Körper gegenüber gestellt. Als „psychosomatisch“ werden dann solche „leib-seelischen“ Vorgänge bezeichnet, bei denen die bewussten und unbewussten psychischen Aktivitäten mit solchen Vorgänge im Menschen in Zusammenhang stehen, die nur physiologisch, biochemisch oder anderweitig festgestellt und beobachtet werden können. In erster Linie handelt es sich dabei um Veränderungen von vegetativ gesteuerten und hormonell vermittelten Vitalfunktionen wie Muskeltonus, Atmung, Herzschlag, Blutdruck oder Verdauung einschließlich evtl. dadurch bedingter krankhafter Auswirkungen wie etwa chronischer oder sogar schmerzhafter Verspannung, um nur ein Beispiel davon anzuführen.</Line>
+   <Line>Aufgrund dieser besonderen Fähigkeit sind ältere Kinder und vor allem erwachsene Menschen zu jener Art von bewusstem, insbesondere absichtlichen Denken und Planen fähig, das bei Tieren bislang nicht beobachtet werden konnte. Menschen werden deswegen für ihre Taten verantwortlich gemacht, nicht dagegen Tiere und Kleinkinder vor Entwicklung ausreichender Erinnerungsfähigkeit und Beherrschung eines gezielten und kontrollierten, insbesondere regelgeleiteten und allein „in der Vorstellung“ oder „im Geiste“ stattfindenden Kombinierens von Vorstellungselementen jeder Art („Denken“).</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Linux und Freie Software“</NewCharacters>
@@ -1408,7 +1409,7 @@ Homepage: http://neo-layout.org
    <Line>rmdir Löscht ein Verzeichnis mit dessen Inhalt.</Line>
    <Line>su Wechselt den aktuellen Benutzer.</Line>
    <Line>sudo Wird dieses Kommando vor ein anderes geschrieben (mit Leerzeichen) so wird es mit root-Rechten (Administrator) ausgeführt.</Line>
-   <Line>top Zeigt eine Liste der laufenden Prozesse geordnet nach CPU-Leistung (ende mit der Taste "Q").</Line>
+   <Line>top Zeigt eine Liste der laufenden Prozesse geordnet nach CPU-Leistung (ende mit der Taste „Q“).</Line>
   </Level>
   <Level>
    <NewCharacters>Shell-Übung</NewCharacters>
@@ -1420,7 +1421,7 @@ Homepage: http://neo-layout.org
    <Line>cd - Wechselt in das vorherige Verzeichnis. cd -</Line>
    <Line>cp [Datei][Verz] Kopiert Datei in Verzeichnis. cp 123.txt /tmp</Line>
    <Line>mv Verschiebt eine Datei. mv 123.txt /tmp</Line>
-   <Line>mv [Datei1][Datei2]" benennt Datei [DATEI1] in [DATEI2] um. mv 123.txt 456.txt</Line>
+   <Line>mv [Datei1] [Datei2] benennt Datei [DATEI1] in [DATEI2] um. mv 123.txt 456.txt</Line>
    <Line>rm Löscht eine Datei. rm /tmp/123.txt ; rm /tmp/*</Line>
    <Line>rm -rf alles unterhalb des Verzeichnis löschen. rm -rf /tmp/</Line>
    <Line>mkdir Erzeugt ein Verzeichnis. mkdir /home/test</Line>
