@@ -1191,7 +1191,7 @@ Homepage: http://neo-layout.org
    <Line>Mittels der M3-Taste, die über der Hochstelltaste, können verschiedene Sonderzeichen erzeugt werden.</Line>
    <Line>k ! k!k !!! k ! k!k !!! h &lt; h&lt;h &lt;&lt;&lt; h &lt; h&lt;h &lt;&lt;&lt;</Line>
    <Line>g > g>g >>> g > g>g >>> f = f=f === f = f=f ===</Line>
-   <Line>q & &q& &&& q & &q& &&& s ? s?s ??? s ? s?s ???</Line>
+   <Line>q &amp; &amp;q&amp; &amp;&amp;&amp; q &amp; &amp;q&amp; &amp;&amp;&amp; s ? s?s ??? s ? s?s ???</Line>
    <Line>n ( n(n ((( n ( n(n ((( r ) r)r ))) r ) r)r )))</Line>
    <Line>t - t-t --- t - t-t --- d : d:d ::: d : d:d :::</Line>
    <Line>y @ y@y @@@ y @ y@y @@@ b + +b+ +++ b + +b+ +++</Line>
@@ -1214,7 +1214,7 @@ Homepage: http://neo-layout.org
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
    <Line>name@email.de, jemand@web.de, einer@gmx.de, irgedwer@gmail.com,</Line>
-   <Line>Max & Sohn, C&A, H&M, GmbH & Co</Line>
+   <Line>Max &amp; Sohn, C&amp;A, H&amp;M, GmbH &amp; Co</Line>
    <Line>Joachim (Vater), Klara (Mutter), Tobias (Sohn), Steffanie (Tochter), Walter (Opa), Heidi (Oma).</Line>
   </Level>
   <Level>
@@ -1223,7 +1223,7 @@ Homepage: http://neo-layout.org
    <Line>Beispiele: ARD, GmbH, KPMG, StGB, StVO, UdSSR, UNHCR</Line>
    <Line>Maßeinheiten werden als Wort gesprochen, aber dennoch ohne Punkt abgekürzt. Beispiel: 10 m (gesprochen „10 Meter“)</Line>
    <Line>Abkürzungen, die nicht abgekürzt ausgesprochen werden, werden grundsätzlich mit Punkten abgekürzt. Wenn die Abkürzung mehrteilig ist, stehen Leerzeichen zwischen den Bestandteilen. Beispiele: Dr., z. B., d. h., i. d. R., ges. gesch.</Line>
-   <Line>Eine Ausnahme stellt das verbreitete „usw.“ dar, das sich anstelle des eigentlich korrekten „u. s. w.“ als Abkürzung für „und so weiter“ durchgesetzt hat, ebenso wie die lateinische Variante „etc.“ bzw. „&c.“ für „et cetera“.</Line>
+   <Line>Eine Ausnahme stellt das verbreitete „usw.“ dar, das sich anstelle des eigentlich korrekten „u. s. w.“ als Abkürzung für „und so weiter“ durchgesetzt hat, ebenso wie die lateinische Variante „etc.“ bzw. „&amp;c.“ für „et cetera“.</Line>
    <Line>Weitere Ausnahmen bilden „svw.“ für „so viel wie“.</Line>
    <Line>Die Abkürzungsweise mit Punkten, aber ohne Leerzeichen, ist seit Langem veraltet. Einige Beispiele:</Line>
    <Line>ABS Anti-Blockier-System (Sicherheitssystem für Bremsen)</Line>
@@ -1273,7 +1273,7 @@ Homepage: http://neo-layout.org
    <Line>TÜV Technischer Überwachungsverein</Line>
    <Line>UKW Ultrakurzwelle</Line>
    <Line>UPS United Parcel Service (Paketdienst)</Line>
-   <Line>USW Und so weiter...</Line>
+   <Line>USW Und so weiter …</Line>
    <Line>WWW World Wide Web</Line>
   </Level>
   <Level>
@@ -1300,7 +1300,7 @@ Homepage: http://neo-layout.org
   <Level>
    <NewCharacters>Testtext „Der kleine Prinz“</NewCharacters>
    <Line>Der kleine Prinz ist eine vom Autor illustrierte Erzählung von Antoine de Saint-Exupery. Sie ist das bekannteste Werk des französischen Autors und erschien zuerst 1943 in New York, wo Saint-Exupery sich im Exil aufhielt. Das Werk ist ein modernes Märchen, das sowohl Kinder als auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer für Freundschaft und Menschlichkeit dar, enthält jedoch auch politische Anspielungen. Der orientalische Astronom, dessen Entdeckung erst dann ernst genommen wird, als er sie in einem westlichen Anzug vorträgt, kann als Hinweis auf die Reformen in der Türkei durch Atatürk verstanden werden.</Line>
-   <Line>Die Erstausgabe des Kleinen Prinzen wurde am 6. April 1943 vom Verlag Reynal & Hitchcock in New York veröffentlicht. Das Buch erschien zeitgleich im französischen Original („Le petit prince“) und in einer englischen Übersetzung („The little prince“) von Katherine Woods. Von der Erstauflage wurden auch limitierte und signierte Ausgaben in englisch (525 Exemplare) und französisch (260 Exemplare) verkauft. 1950 erschien die erste deutsche Übersetzung von Grete und Josef Leitgeb beim Arche Verlag in Zürich. Bis heute wurde das Werk weltweit in über 180 Sprach- und Dialektvarianten übersetzt.</Line>
+   <Line>Die Erstausgabe des Kleinen Prinzen wurde am 6. April 1943 vom Verlag Reynal &amp; Hitchcock in New York veröffentlicht. Das Buch erschien zeitgleich im französischen Original („Le petit prince“) und in einer englischen Übersetzung („The little prince“) von Katherine Woods. Von der Erstauflage wurden auch limitierte und signierte Ausgaben in englisch (525 Exemplare) und französisch (260 Exemplare) verkauft. 1950 erschien die erste deutsche Übersetzung von Grete und Josef Leitgeb beim Arche Verlag in Zürich. Bis heute wurde das Werk weltweit in über 180 Sprach- und Dialektvarianten übersetzt.</Line>
    <Line>Der Erzähler berichtet zunächst, wie er als sechsjähriges Kind seine erste Zeichnung vollendet hatte. Wenn er sie den „großen Leuten“ mit der Frage zeigte, ob sie ihnen nicht Angst mache, hätten sie geantwortet: „Warum sollen wir vor einem Hut Angst haben?“ Die Zeichnung sollte jedoch eine Riesenschlange darstellen, die einen Elefanten verdaut. Zufällig begegnet der Erzähler, nachdem er mit seinem Flugzeug in der Sahara notgelandet ist, dem kleinen Prinzen, der ihn bittet: „Zeichne mir ein Schaf …“ Da der Prinz aber mit allen Zeichnungen, die der Flieger anfertigt, unzufrieden ist, zeichnet jener eine Kiste und erklärt: „Das Schaf, das du willst, steckt da drin.“ Der Prinz hat im übrigen keine Mühe, eine Zeichnung mit dem Elefanten und der Riesenschlange als solche zu erkennen. Tag für Tag erzählt nun der kleine Prinz dem Erzähler seine Geschichte. Er stammt nicht von der Erde, sondern von einem kleinen Asteroiden, „kaum größer als ein Haus“. Einmal war auf dem Planeten des kleinen Prinzen eine Blume gewachsen, hatte ihre Knospe entwickelt, ordnete ihre Blütenblätter und enthüllte sich gerade zur Stunde des Sonnenaufgangs. Der kleine Prinz unterhielt sich mit ihr, doch quälte sie ihn bald mit ihrer Eitelkeit. „Man darf den Blumen nicht zuhören, man muss sie anschauen und einatmen.“ Schließlich verließ der Prinz seinen Planeten. Auf der Suche nach Freunden besucht er weitere Asteroiden in der Region. Und so kommt der kleine Prinz auf den siebten Planeten, die Erde.</Line>
   </Level>
   <Level>
@@ -1455,7 +1455,7 @@ Homepage: http://neo-layout.org
    <Line>$ vi ginfo</Line>
    <Line>#</Line>
    <Line>#</Line>
-   <Line># Script to print user information who currently login , current date & time</Line>
+   <Line># Script to print user information who currently login , current date &amp; time</Line>
    <Line>#</Line>
    <Line>clear</Line>
    <Line>echo "Hello $USER"</Line>
