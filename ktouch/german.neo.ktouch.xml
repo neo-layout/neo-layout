@@ -1,6 +1,6 @@
 <KTouchLecture>
  <Title>Deutsch (Neo-Tastaturlayout) 2009</Title>
- <Comment>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com&gt; inspireirt durch die Vorlage von Hanno Behrens
+ <Comment>Überarbeitet 2009 von Carsten MISCHKE &lt;Carsten,Mischke@gmail.com> inspireirt durch die Vorlage von Hanno Behrens
 Homepage: http://neo-layout.org
 </Comment>
  <FontSuggestions>Sans Serif</FontSuggestions>
@@ -623,8 +623,10 @@ Homepage: http://neo-layout.org
    <Line>moskwa mundharmonika musikgruppe muskatnuss muskel muttersprachler protokoll pumpen,</Line>
    <Line>katze zarte prinz zarin zeigen zieren kratzte biete halbe leben bitte lieber blauer gelber selber.</Line>
    <Line>zahnpasta zaumzeug zeitpunkt zeitmessung zementieren zentimeter zeppelin zermahlen,</Line>
-   <Line>zeremonienmeister zerschmettern zimmermann zirkel zwinkern zwischenmahlzeit zopf badminton bambus balkon bankdirektor benehmen. basilikum baumwolle bestimmen beispielsweise beweisen bewohnbar zaubern zebra zauberstab zeilenumbruch badezimmer beelzebub,</Line>
-   <Line>benzinpumpe besitzen zeitbombe zeitungsschreiber zerbrechlich bestellzettel bezahlen bulldozer bezirk zierband zimtbaum zollbeamter. zwiebel bezeugen brustwarze bronzezeit bezweifeln zusammenbringen zubinden zusammenprallen zwieback,</Line>
+   <Line>zeremonienmeister zerschmettern zimmermann zirkel zwinkern zwischenmahlzeit zopf badminton bambus balkon bankdirektor benehmen.</Line>
+   <Line>basilikum baumwolle bestimmen beispielsweise beweisen bewohnbar zaubern zebra zauberstab zeilenumbruch badezimmer beelzebub,</Line>
+   <Line>benzinpumpe besitzen zeitbombe zeitungsschreiber zerbrechlich bestellzettel bezahlen bulldozer bezirk zierband zimtbaum zollbeamter.</Line>
+   <Line>zwiebel bezeugen brustwarze bronzezeit bezweifeln zusammenbringen zubinden zusammenprallen zwieback,</Line>
   </Level>
   <Level>
    <NewCharacters>Linker Umschalter</NewCharacters>
@@ -1222,13 +1224,15 @@ Homepage: http://neo-layout.org
    <Line>Wird eine Abkürzung abgekürzt ausgesprochen, so wird sie grundsätzlich ohne Punkt und stets ohne Leerzeichen geschrieben.</Line>
    <Line>Beispiele: ARD, GmbH, KPMG, StGB, StVO, UdSSR, UNHCR</Line>
    <Line>Maßeinheiten werden als Wort gesprochen, aber dennoch ohne Punkt abgekürzt. Beispiel: 10 m (gesprochen „10 Meter“)</Line>
-   <Line>Abkürzungen, die nicht abgekürzt ausgesprochen werden, werden grundsätzlich mit Punkten abgekürzt. Wenn die Abkürzung mehrteilig ist, stehen Leerzeichen zwischen den Bestandteilen. Beispiele: Dr., z. B., d. h., i. d. R., ges. gesch.</Line>
-   <Line>Eine Ausnahme stellt das verbreitete „usw.“ dar, das sich anstelle des eigentlich korrekten „u. s. w.“ als Abkürzung für „und so weiter“ durchgesetzt hat, ebenso wie die lateinische Variante „etc.“ bzw. „&amp;c.“ für „et cetera“.</Line>
+   <Line>Abkürzungen, die nicht abgekürzt ausgesprochen werden, werden grundsätzlich mit Punkten abgekürzt.</Line>
+   <Line>Wenn die Abkürzung mehrteilig ist, stehen Leerzeichen zwischen den Bestandteilen. Beispiele: Dr., z. B., d. h., i. d. R., ges. gesch.</Line>
+   <Line>Eine Ausnahme stellt das verbreitete „usw.“ dar, das sich anstelle des eigentlich korrekten „u. s. w.“ als Abkürzung für „und so weiter“ durchgesetzt hat,</Line>
+   <Line>ebenso wie die lateinische Variante „etc.“ bzw. „&amp;c.“ für „et cetera“.</Line>
    <Line>Weitere Ausnahmen bilden „svw.“ für „so viel wie“.</Line>
    <Line>Die Abkürzungsweise mit Punkten, aber ohne Leerzeichen, ist seit Langem veraltet. Einige Beispiele:</Line>
    <Line>ABS Anti-Blockier-System (Sicherheitssystem für Bremsen)</Line>
    <Line>ADAC Allgemeiner Deutscher Automobil Club</Line>
-   <Line>AEG Aus Erfahrung gut - Allgemeine Elektrizitäts-Gesellschaft (Haushaltsgerätefirma)</Line>
+   <Line>AEG Aus Erfahrung gut – Allgemeine Elektrizitäts-Gesellschaft (Haushaltsgerätefirma)</Line>
    <Line>AKW Atomkraftwerk</Line>
    <Line>BKA Bundeskriminalamt</Line>
    <Line>BMW Bayerische Motorenwerke</Line>
@@ -1278,30 +1282,59 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <NewCharacters>Glückwunsch</NewCharacters>
-   <Line>Herzlichen Glückwunsch zum Erlernen des Neo-Tastaturlayouts. Ich hoffe, die Lektionen haben trotz der Mühe ein wenig</Line>
-   <Line>Spaß gemacht. Natürlich muss jetzt noch viel geübt werden. Die bisher erlernten Schriftzeichen müssen gefestigt werden,</Line>
+   <Line>Herzlichen Glückwunsch zum Erlernen des Neo-Tastaturlayouts. Ich hoffe, die Lektionen haben trotz der Mühe ein wenig Spaß gemacht.</Line>
+   <Line>Natürlich muss jetzt noch viel geübt werden. Die bisher erlernten Schriftzeichen müssen gefestigt werden,</Line>
    <Line>dazu folgen noch ein paar Testtexte. Außerdem können Sie in anderen Lektionen die Fließtext-Übungen mit KTouch machen.</Line>
    <Line>So können Sie immer kontrollieren, wie schnell Ihr Schreiben geworden ist.</Line>
-   <Line>Wie Sie schon bemerkt haben, besitzt das Neo-Layout eine große Anzahl von Sonderzeichen, die Sie mit Hilfe</Line>
-   <Line>der Alt-Gr-Taste, auch zusammen mit der Hochstelltaste erreichen können.</Line>
-   <Line>Des weiteren finden Sie auf der Akzenttaste und der Tilde-Taste sogenannte Dead-keys, die vor eine Taste gedrückt,</Line>
-   <Line>diese modifizieren. Außerdem gibt es für jede Taste eine Alternativ-Belegung, mit griechischen Zeichen oder anderen häufig gebräuchlichen.</Line>
+   <Line>Wie Sie schon bemerkt haben, besitzt Neo eine große Anzahl von Sonderzeichen, die Sie mit Hilfe der M4-Taste, auch zusammen mit der Hochstelltaste erreichen können.</Line>
+   <Line>Des Weiteren finden Sie auf der Akzent-, der Zirkumflex- und der Tilde-Taste sogenannte tote Tasten, die, vor einer Taste gedrückt, diese modifizieren.</Line>
+   <Line>Außerdem gibt es für jede Taste eine Alternativ-Belegung, mit griechischen Zeichen oder anderen häufig gebräuchlichen.</Line>
    <Line>Den Umgang mit den Sonderzeichen übt man auch besser außerhalb dieses Programmes. Üben Sie damit!</Line>
    <Line>Spielen Sie damit ein wenig. Werden Sie schneller als je zuvor. Viel Spaß!</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Esperanto“</NewCharacters>
-   <Line>Esperanto ist sowohl die einfachste als auch die ausdrucksstärkste Sprache der Welt, die Basis einer blühenden internationalen Kultur. Esperanto-Sprecher gibt es in jedem Land der Erde, von Frankreich bis Japan, von Island bis Chile, und alle benutzen die Sprache Esperanto um ihre Gedanken, Literatur und Musik miteinander zu teilen und auszutauschen.</Line>
-   <Line>Doktoro Esperanto (Esperanto „Hoffender“) war das Pseudonym, unter dem Dr. Ludwik Lejzer Zamenhof (im Deutschen manchmal: Ludwig Lazarus Samenhof) 1887 die Grundlagen der Sprache veröffentlichte. Seine Absicht war es, eine leicht erlernbare, neutrale Sprache für die internationale Verständigung zu entwickeln, die jedoch andere Sprachen nicht ersetzen sollte. Auf Initiative Zamenhofs entstand eine internationale Sprachgemeinschaft, die das Esperanto seither für viele Zwecke anwendet, vor allem für Reisen, Brieffreundschaften, internationale Treffen und kulturellen Austausch (Literatur, Musik u. a.). Bald fand diese Sprache auch Verwendung in Radiosendungen, im Amateurfunk, im mündlichen und fernmündlichen Verkehr, in Telegrammen, Zeitungen und Zeitschriften und später im Internet.</Line>
-   <Line>Esperanto wird sowohl in Israel als auch im Iran gesprochen, in Russland und China als auch in den USA. Erleben Sie afrikanische Gesänge, brasilianischen Tanz, koreanische Kampfkunst, deutsches Bier und nepalesische Küche, möglicherweise alles während des gleichen Treffens. Erleben Sie die Leichtigkeit der Kommunikation über Sprachgrenzen hinweg, wie Sie sie noch nie bisher gefühlt haben. Tauchen Sie ein, nehmen Sie teil am Austausch der Kulturen. Die Vielfalt der Welt liegt vor Ihnen.</Line>
-   <Line>Denken Sie nicht mehr an Ihr Schulenglisch oder Schulfranzösisch - schon allein das Wort „Schulenglisch“ impliziert das Ergebnis: dass die allermeisten Menschen nach 3 Jahren noch nichts in der Bäckerei bestellen können und sich selbst nach 9 Jahren noch nicht frei in der Fremdsprache ausdrücken. Stattdessen lernen Sie 1 Jahr lang Esperanto und Sie werden bereits viel mehr ausdrücken können (und in mehr Ländern).</Line>
-   <Line>Esperanto wurde mit Absicht so geplant, dass man es so einfach wie möglich lernen kann, so dass alle Menschen in allen Ländern, selbst ohne Talent für Sprachen, ungezwungen und gemütlich miteinander reden können, ohne Unbeholfenheit, genau wie in der Muttersprache. Wenn Sie es schwierig finden, unregelmäßige Verben oder das Geschlecht von Substantiven zu behalten, ist Esperanto etwas für Sie, denn Esperanto hat solche unnötigen Ärgernisse abgeschafft. Aber es hat auch das Vokabeln-Lernen sehr vereinfacht, indem Sie viel mehr mit weniger Wörtern ausdrücken können. Wenn Sie 500 Wörter Esperanto lernen, ist es das Äquivalent von einem Englisch- oder Französisch-Wortschatz von mindestens 3000 Wörtern.</Line>
+   <Line>Esperanto ist sowohl die einfachste als auch die ausdrucksstärkste Sprache der Welt, die Basis einer blühenden internationalen Kultur.</Line>
+   <Line>Esperanto-Sprecher gibt es in jedem Land der Erde, von Frankreich bis Japan, von Island bis Chile,</Line>
+   <Line>und alle benutzen die Sprache Esperanto um ihre Gedanken, Literatur und Musik miteinander zu teilen und auszutauschen.</Line>
+   <Line>Doktoro Esperanto (Esperanto „Hoffender“) war das Pseudonym, unter dem Dr. Ludwik Lejzer Zamenhof (im Deutschen manchmal: Ludwig Lazarus Samenhof) 1887 die Grundlagen der Sprache veröffentlichte.</Line>
+   <Line>Seine Absicht war es, eine leicht erlernbare, neutrale Sprache für die internationale Verständigung zu entwickeln, die jedoch andere Sprachen nicht ersetzen sollte.</Line>
+   <Line>Auf Initiative Zamenhofs entstand eine internationale Sprachgemeinschaft, die das Esperanto seither für viele Zwecke anwendet,</Line>
+   <Line>vor allem für Reisen, Brieffreundschaften, internationale Treffen und kulturellen Austausch (Literatur, Musik u. a.).</Line>
+   <Line>Bald fand diese Sprache auch Verwendung in Radiosendungen, im Amateurfunk, im mündlichen und fernmündlichen Verkehr, in Telegrammen, Zeitungen und Zeitschriften und später im Internet.</Line>
+   <Line>Esperanto wird sowohl in Israel als auch im Iran gesprochen, in Russland und China als auch in den USA.</Line>
+   <Line>Erleben Sie afrikanische Gesänge, brasilianischen Tanz, koreanische Kampfkunst, deutsches Bier und nepalesische Küche, möglicherweise alles während des gleichen Treffens. </Line>
+   <Line>Erleben Sie die Leichtigkeit der Kommunikation über Sprachgrenzen hinweg, wie Sie sie noch nie bisher gefühlt haben.</Line>
+   <Line>Tauchen Sie ein, nehmen Sie teil am Austausch der Kulturen. Die Vielfalt der Welt liegt vor Ihnen.</Line>
+   <Line>Denken Sie nicht mehr an Ihr Schulenglisch oder Schulfranzösisch – schon allein das Wort „Schulenglisch“ impliziert das Ergebnis:</Line>
+   <Line>Dass die allermeisten Menschen nach 3 Jahren noch nichts in der Bäckerei bestellen können und sich selbst nach 9 Jahren noch nicht frei in der Fremdsprache ausdrücken.</Line>
+   <Line>Stattdessen lernen Sie 1 Jahr lang Esperanto und Sie werden bereits viel mehr ausdrücken können (und in mehr Ländern).</Line>
+   <Line>Esperanto wurde mit Absicht so geplant, dass man es so einfach wie möglich lernen kann, so dass alle Menschen in allen Ländern, selbst ohne Talent für Sprachen,</Line>
+   <Line>ungezwungen und gemütlich miteinander reden können, ohne Unbeholfenheit, genau wie in der Muttersprache.</Line>
+   <Line>Wenn Sie es schwierig finden, unregelmäßige Verben oder das Geschlecht von Substantiven zu behalten, ist Esperanto etwas für Sie, denn Esperanto hat solche unnötigen Ärgernisse abgeschafft.</Line>
+   <Line>Aber es hat auch das Vokabeln-Lernen sehr vereinfacht, indem Sie viel mehr mit weniger Wörtern ausdrücken können.</Line>
+   <Line>Wenn Sie 500 Wörter Esperanto lernen, ist es das Äquivalent von einem Englisch- oder Französisch-Wortschatz von mindestens 3000 Wörtern.</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Der kleine Prinz“</NewCharacters>
-   <Line>Der kleine Prinz ist eine vom Autor illustrierte Erzählung von Antoine de Saint-Exupery. Sie ist das bekannteste Werk des französischen Autors und erschien zuerst 1943 in New York, wo Saint-Exupery sich im Exil aufhielt. Das Werk ist ein modernes Märchen, das sowohl Kinder als auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer für Freundschaft und Menschlichkeit dar, enthält jedoch auch politische Anspielungen. Der orientalische Astronom, dessen Entdeckung erst dann ernst genommen wird, als er sie in einem westlichen Anzug vorträgt, kann als Hinweis auf die Reformen in der Türkei durch Atatürk verstanden werden.</Line>
-   <Line>Die Erstausgabe des Kleinen Prinzen wurde am 6. April 1943 vom Verlag Reynal &amp; Hitchcock in New York veröffentlicht. Das Buch erschien zeitgleich im französischen Original („Le petit prince“) und in einer englischen Übersetzung („The little prince“) von Katherine Woods. Von der Erstauflage wurden auch limitierte und signierte Ausgaben in englisch (525 Exemplare) und französisch (260 Exemplare) verkauft. 1950 erschien die erste deutsche Übersetzung von Grete und Josef Leitgeb beim Arche Verlag in Zürich. Bis heute wurde das Werk weltweit in über 180 Sprach- und Dialektvarianten übersetzt.</Line>
-   <Line>Der Erzähler berichtet zunächst, wie er als sechsjähriges Kind seine erste Zeichnung vollendet hatte. Wenn er sie den „großen Leuten“ mit der Frage zeigte, ob sie ihnen nicht Angst mache, hätten sie geantwortet: „Warum sollen wir vor einem Hut Angst haben?“ Die Zeichnung sollte jedoch eine Riesenschlange darstellen, die einen Elefanten verdaut. Zufällig begegnet der Erzähler, nachdem er mit seinem Flugzeug in der Sahara notgelandet ist, dem kleinen Prinzen, der ihn bittet: „Zeichne mir ein Schaf …“ Da der Prinz aber mit allen Zeichnungen, die der Flieger anfertigt, unzufrieden ist, zeichnet jener eine Kiste und erklärt: „Das Schaf, das du willst, steckt da drin.“ Der Prinz hat im übrigen keine Mühe, eine Zeichnung mit dem Elefanten und der Riesenschlange als solche zu erkennen. Tag für Tag erzählt nun der kleine Prinz dem Erzähler seine Geschichte. Er stammt nicht von der Erde, sondern von einem kleinen Asteroiden, „kaum größer als ein Haus“. Einmal war auf dem Planeten des kleinen Prinzen eine Blume gewachsen, hatte ihre Knospe entwickelt, ordnete ihre Blütenblätter und enthüllte sich gerade zur Stunde des Sonnenaufgangs. Der kleine Prinz unterhielt sich mit ihr, doch quälte sie ihn bald mit ihrer Eitelkeit. „Man darf den Blumen nicht zuhören, man muss sie anschauen und einatmen.“ Schließlich verließ der Prinz seinen Planeten. Auf der Suche nach Freunden besucht er weitere Asteroiden in der Region. Und so kommt der kleine Prinz auf den siebten Planeten, die Erde.</Line>
+   <Line>Der kleine Prinz ist eine vom Autor illustrierte Erzählung von Antoine de Saint-Exupery.</Line>
+   <Line>Sie ist das bekannteste Werk des französischen Autors und erschien zuerst 1943 in New York, wo Saint-Exupery sich im Exil aufhielt.</Line>
+   <Line>Das Werk ist ein modernes Märchen, das sowohl Kinder als auch Erwachsene anspricht. Es stellt einerseits ein Plädoyer für Freundschaft und Menschlichkeit dar, enthält jedoch auch politische Anspielungen.</Line>
+   <Line>Der orientalische Astronom, dessen Entdeckung erst dann ernst genommen wird, als er sie in einem westlichen Anzug vorträgt, kann als Hinweis auf die Reformen in der Türkei durch Atatürk verstanden werden.</Line>
+   <Line>Die Erstausgabe des Kleinen Prinzen wurde am 6. April 1943 vom Verlag Reynal &amp; Hitchcock in New York veröffentlicht.</Line>
+   <Line>Das Buch erschien zeitgleich im französischen Original („Le petit prince“) und in einer englischen Übersetzung („The little prince“) von Katherine Woods.</Line>
+   <Line>Von der Erstauflage wurden auch limitierte und signierte Ausgaben in englisch (525 Exemplare) und französisch (260 Exemplare) verkauft.</Line>
+   <Line>1950 erschien die erste deutsche Übersetzung von Grete und Josef Leitgeb beim Arche Verlag in Zürich. Bis heute wurde das Werk weltweit in über 180 Sprach- und Dialektvarianten übersetzt.</Line>
+   <Line>Der Erzähler berichtet zunächst, wie er als sechsjähriges Kind seine erste Zeichnung vollendet hatte.</Line>
+   <Line>Wenn er sie den „großen Leuten“ mit der Frage zeigte, ob sie ihnen nicht Angst mache, hätten sie geantwortet: „Warum sollen wir vor einem Hut Angst haben?“</Line>
+   <Line>Die Zeichnung sollte jedoch eine Riesenschlange darstellen, die einen Elefanten verdaut.</Line>
+   <Line>Zufällig begegnet der Erzähler, nachdem er mit seinem Flugzeug in der Sahara notgelandet ist, dem kleinen Prinzen, der ihn bittet: „Zeichne mir ein Schaf …“</Line>
+   <Line>Da der Prinz aber mit allen Zeichnungen, die der Flieger anfertigt, unzufrieden ist, zeichnet jener eine Kiste und erklärt: „Das Schaf, das du willst, steckt da drin.“</Line>
+   <Line>Der Prinz hat im Übrigen keine Mühe, eine Zeichnung mit dem Elefanten und der Riesenschlange als solche zu erkennen. Tag für Tag erzählt nun der kleine Prinz dem Erzähler seine Geschichte.</Line>
+   <Line>Er stammt nicht von der Erde, sondern von einem kleinen Asteroiden, „kaum größer als ein Haus“.</Line>
+   <Line>Einmal war auf dem Planeten des kleinen Prinzen eine Blume gewachsen, hatte ihre Knospe entwickelt, ordnete ihre Blütenblätter und enthüllte sich gerade zur Stunde des Sonnenaufgangs.</Line>
+   <Line>Der kleine Prinz unterhielt sich mit ihr, doch quälte sie ihn bald mit ihrer Eitelkeit. „Man darf den Blumen nicht zuhören, man muss sie anschauen und einatmen.“</Line>
+   <Line>Schließlich verließ der Prinz seinen Planeten. Auf der Suche nach Freunden besucht er weitere Asteroiden in der Region. Und so kommt der kleine Prinz auf den siebten Planeten, die Erde.</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Sprichwörter“</NewCharacters>
@@ -1343,47 +1376,111 @@ Homepage: http://neo-layout.org
   </Level>
   <Level>
    <NewCharacters>Testtext „Yoga“</NewCharacters>
-   <Line>Yoga ist eine indische philosophische Lehre, die eine Reihe geistiger und körperlicher Übungen wie Yama, Niyama, … Kriyas, Meditation und/oder Askese umfasst. Der Begriff Yoga kann sowohl als „Vereinigung“ oder „Integration“ als auch im Sinne von „Anschirren“ und „Anspannen“ des Körpers an die Seele zur Sammlung und Konzentration verstanden werden. Welcher Weg zur Verwirklichung dieser Ziele einzuschlagen ist, darin unterscheiden sich die verschiedenen Richtungen erheblich voneinander. Wurzeln: Da Yoga ursprünglich aus Indien stammt, liegen die Wurzeln der Yoga-Philosophie im Hinduismus und Teilen des Buddhismus. Das Individuum wird hier als ein Reisender im Wagen des materiellen Körpers gesehen. Der Wagen ist der Körper, der Kutscher der Verstand, die fünf Pferde die fünf Sinnesorgane, der Fahrgast die Seele, und das Geschirr heißt im Indischen „Yoga“.</Line>
-   <Line>Darüber hinaus enthält die Bhagavad-Gita direkte Anweisungen für den Yogi. So heißt es im 5. Kapitel, Vers 27: „Sich lösend von der Außenwelt, starr auf die Nasenwurzel ('Nasikagra') schauend – Den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich, die durch der Nase Innres gehen“. (Anmerkung: „Nasikagra“ verwechseln einige Übersetzer mit „Nasenspitze“ – die meisten Yogis schielen aber nicht etwa, sondern blicken als Konzentrationsübung auf die Nasenwurzel zwischen den Augenbrauen, angeblich einen wichtigen Nerventreffpunkt). Vers 28 wendet sich den spirituellen Zielen zu: „Zügelnd die Sinne, Herz und Geist, ganz der Erlösung zugewandt – Befreit von Wünschen, Furcht und Zorn, so ist für immer er erlöst.“ Im 6. Kapitel geht es um Versenkung (Dhyana) und die richtige Lebensweise: In Vers 10 heißt es: yogi yunjita satatam atmanam rahasi sthitah – ekaki yatachittama nirashir aparigraha. „Der Yogi soll beständig sich mühen in der Einsamkeit – Allein, bezähmend Sinn und Selbst, nichts hoffend, ohne Besitz“.</Line>
-   <Line>Grundsätzlich hat Yoga nachweislich einige positiv bewertete Effekte sowohl auf die physische als auch auf die psychische Gesundheit. Yoga kann unter Umständen zu einer Linderung bei verschiedensten Krankheitsbildern führen, etwa bei Durchblutungsstörungen, Schlafstörungen, nervösen Beschwerden (Angst und Depression), chronischen Kopfschmerzen oder Rückenschmerzen. Der Nutzen von Yoga bei Krankheit oder zur Erhaltung der Gesundheit wird unterschiedlich bewertet. In Deutschland können Kosten für Yogakurse von den Krankenkassen vor allem im Rahmen des Präventionsprinzips der Vermeidung spezifischer Risiken und stressabhängiger Krankheiten erstattet werden. Yoga hat auf viele Menschen eine beruhigende, ausgleichende Wirkung und kann somit den Folgeerscheinungen von Stress entgegenwirken.</Line>
+   <Line>Yoga ist eine indische philosophische Lehre, die eine Reihe geistiger und körperlicher Übungen wie Yama, Niyama, Kriyas, Meditation und/oder Askese umfasst.</Line>
+   <Line>Der Begriff Yoga kann sowohl als „Vereinigung“ oder „Integration“ als auch im Sinne von „Anschirren“ und „Anspannen“ des Körpers an die Seele zur Sammlung und Konzentration verstanden werden.</Line>
+   <Line>Welcher Weg zur Verwirklichung dieser Ziele einzuschlagen ist, darin unterscheiden sich die verschiedenen Richtungen erheblich voneinander.</Line>
+   <Line>Wurzeln: Da Yoga ursprünglich aus Indien stammt, liegen die Wurzeln der Yoga-Philosophie im Hinduismus und Teilen des Buddhismus.</Line>
+   <Line>Das Individuum wird hier als ein Reisender im Wagen des materiellen Körpers gesehen.</Line>
+   <Line>Der Wagen ist der Körper, der Kutscher der Verstand, die fünf Pferde die fünf Sinnesorgane, der Fahrgast die Seele, und das Geschirr heißt im Indischen „Yoga“.</Line>
+   <Line>Darüber hinaus enthält die Bhagavad-Gita direkte Anweisungen für den Yogi.</Line>
+   <Line>So heißt es im 5. Kapitel, Vers 27: „Sich lösend von der Außenwelt, starr auf die Nasenwurzel ('Nasikagra') schauend – den Hauch und Aushauch (Ein-/Ausatmung) regelnd gleich, die durch der Nase Innres gehen“.</Line>
+   <Line>(Anmerkung: „Nasikagra“ verwechseln einige Übersetzer mit „Nasenspitze“ – die meisten Yogis schielen aber nicht etwa,</Line>
+   <Line>sondern blicken als Konzentrationsübung auf die Nasenwurzel zwischen den Augenbrauen, angeblich einen wichtigen Nerventreffpunkt).</Line>
+   <Line>Vers 28 wendet sich den spirituellen Zielen zu: „Zügelnd die Sinne, Herz und Geist, ganz der Erlösung zugewandt – Befreit von Wünschen, Furcht und Zorn, so ist für immer er erlöst.“</Line>
+   <Line>Im 6. Kapitel geht es um Versenkung (Dhyana) und die richtige Lebensweise. In Vers 10 heißt es: „yogi yunjita satatam atmanam rahasi sthitah – ekaki yatachittama nirashir aparigraha.“</Line>
+   <Line>‚Der Yogi soll beständig sich mühen in der Einsamkeit – allein, bezähmend Sinn und Selbst, nichts hoffend, ohne Besitz.‘</Line>
+   <Line>Grundsätzlich hat Yoga nachweislich einige positiv bewertete Effekte sowohl auf die physische als auch auf die psychische Gesundheit.</Line>
+   <Line>Yoga kann unter Umständen zu einer Linderung bei verschiedensten Krankheitsbildern führen,</Line>
+   <Line>etwa bei Durchblutungsstörungen, Schlafstörungen, nervösen Beschwerden (Angst und Depression), chronischen Kopfschmerzen oder Rückenschmerzen.</Line>
+   <Line>Der Nutzen von Yoga bei Krankheit oder zur Erhaltung der Gesundheit wird unterschiedlich bewertet.</Line>
+   <Line>In Deutschland können Kosten für Yogakurse von den Krankenkassen vor allem im Rahmen des Präventionsprinzips der Vermeidung spezifischer Risiken und stressabhängiger Krankheiten erstattet werden.</Line>
+   <Line>Yoga hat auf viele Menschen eine beruhigende, ausgleichende Wirkung und kann somit den Folgeerscheinungen von Stress entgegenwirken.</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Psyche“</NewCharacters>
-   <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das „Gesamtsystem“ aller jener (Lebens)„Regungen“, das „der Volksmund“ seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt. Damit ist zuerst die Gesamtheit solcher „Lebensäußerungen“ oder Eigenreaktionen gemeint, die zuerst oder überhaupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind und damit nur aus der subjektiven oder heute sog. „Ersten-Person-Perspektive“ beobachtet und beschrieben werden können: das erlebende Wahrnehmen, das vorstellende Erinnern vorgängiger Erfahrungen, das Träumen, spontane oder willkürliche Ausdenken oder Phantasieren möglicher oder andersartiger Erfahrungen aller nur denkbaren Art bis hin zum vielfältigen emotionalen Reagieren darauf (und gegebenenfalls damit in Zusammenhang stehendem gewohnheitsmäßigen, also gelernten Verhalten und absichtlichen oder bewussten und eventuell sogar geplanten bis strategischen Handeln).</Line>
-   <Line>Traditionell wird außerdem „dem Psychischen“ der „physische“ Leib oder „somatische“ Körper gegenüber gestellt. Als „psychosomatisch“ werden dann solche „leib-seelischen“ Vorgänge bezeichnet, bei denen die bewussten und unbewussten psychischen Aktivitäten mit solchen Vorgänge im Menschen in Zusammenhang stehen, die nur physiologisch, biochemisch oder anderweitig festgestellt und beobachtet werden können. In erster Linie handelt es sich dabei um Veränderungen von vegetativ gesteuerten und hormonell vermittelten Vitalfunktionen wie Muskeltonus, Atmung, Herzschlag, Blutdruck oder Verdauung einschließlich evtl. dadurch bedingter krankhafter Auswirkungen wie etwa chronischer oder sogar schmerzhafter Verspannung, um nur ein Beispiel davon anzuführen.</Line>
-   <Line>Aufgrund dieser besonderen Fähigkeit sind ältere Kinder und vor allem erwachsene Menschen zu jener Art von bewusstem, insbesondere absichtlichen Denken und Planen fähig, das bei Tieren bislang nicht beobachtet werden konnte. Menschen werden deswegen für ihre Taten verantwortlich gemacht, nicht dagegen Tiere und Kleinkinder vor Entwicklung ausreichender Erinnerungsfähigkeit und Beherrschung eines gezielten und kontrollierten, insbesondere regelgeleiteten und allein „in der Vorstellung“ oder „im Geiste“ stattfindenden Kombinierens von Vorstellungselementen jeder Art („Denken“).</Line>
+   <Line>Das heute sachlich vorherrschende Verständnis von Psyche bezieht sich auf das „Gesamtsystem“ aller jener (Lebens)„Regungen“,</Line>
+   <Line>das „der Volksmund“ seit langem als Innenleben oder auch Seelenleben bezeichnet und dabei wie die wissenschaftliche Psychologie in Denken und Gefühlsleben unterteilt.</Line>
+   <Line>Damit ist zuerst die Gesamtheit solcher „Lebensäußerungen“ oder Eigenreaktionen gemeint,</Line>
+   <Line>die zuerst oder überhaupt nur der Selbst- oder Eigenwahrnehmung zugänglich sind und damit nur aus der subjektiven oder heute sog. „Ersten-Person-Perspektive“ beobachtet und beschrieben werden können:</Line>
+   <Line>Das erlebende Wahrnehmen, das vorstellende Erinnern vorgängiger Erfahrungen, das Träumen,</Line>
+   <Line>spontane oder willkürliche Ausdenken oder Phantasieren möglicher oder andersartiger Erfahrungen aller nur denkbaren Art bis hin zum vielfältigen emotionalen Reagieren darauf</Line>
+   <Line>(und gegebenenfalls damit in Zusammenhang stehendem gewohnheitsmäßigen, also gelernten Verhalten und absichtlichen oder bewussten und eventuell sogar geplanten bis strategischen Handeln).</Line>
+   <Line>Traditionell wird außerdem „dem Psychischen“ der „physische“ Leib oder „somatische“ Körper gegenüber gestellt.</Line>
+   <Line>Als „psychosomatisch“ werden dann solche „leib-seelischen“ Vorgänge bezeichnet, bei denen die bewussten und unbewussten psychischen Aktivitäten mit solchen Vorgänge im Menschen in Zusammenhang stehen,</Line>
+   <Line>die nur physiologisch, biochemisch oder anderweitig festgestellt und beobachtet werden können.</Line>
+   <Line>In erster Linie handelt es sich dabei um Veränderungen von vegetativ gesteuerten und hormonell vermittelten Vitalfunktionen wie Muskeltonus, Atmung, Herzschlag, Blutdruck oder Verdauung,</Line>
+   <Line>einschließlich evtl. dadurch bedingter krankhafter Auswirkungen wie etwa chronischer oder sogar schmerzhafter Verspannung, um nur ein Beispiel davon anzuführen.</Line>
+   <Line>Aufgrund dieser besonderen Fähigkeit sind ältere Kinder und vor allem erwachsene Menschen zu jener Art von bewusstem, insbesondere absichtlichen Denken und Planen fähig,</Line>
+   <Line>das bei Tieren bislang nicht beobachtet werden konnte.</Line>
+   <Line>Menschen werden deswegen für ihre Taten verantwortlich gemacht, nicht dagegen Tiere und Kleinkinder vor Entwicklung ausreichender Erinnerungsfähigkeit und Beherrschung eines gezielten und kontrollierten,</Line>
+   <Line>insbesondere regelgeleiteten und allein „in der Vorstellung“ oder „im Geiste“ stattfindenden Kombinierens von Vorstellungselementen jeder Art („Denken“).</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Linux und Freie Software“</NewCharacters>
-   <Line>Als Linux oder GNU/Linux werden in der Regel freie, portable, Unix-ähnliche Mehrbenutzer-Betriebssysteme bezeichnet, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren. Die weite, auch kommerzielle Verbreitung ermöglichte ab 1992 die Lizenzierung des Linux-Kernels unter der GPL.</Line>
-   <Line>Das modular aufgebaute Betriebssystem wird von Softwareentwicklern auf der ganzen Welt weiterentwickelt, die an den verschiedenen Projekten mitarbeiten. Es sind sowohl Unternehmen als auch Non-Profit-Organisationen und Einzelpersonen beteiligt, die dies als Hobby betreiben. Im praktischen Einsatz werden meist sogenannte Linux-Distributionen genutzt, in denen verschiedene Software zu einem fertigen Paket zusammengestellt ist. Jede Distribution enthält somit Linux beziehungsweise den Linux-Kernel. Es gibt eine Vielzahl von Linux-Distributionen, aber für die aktuellen Kernel 2.2.x, 2.4.x und 2.6.x jeweils nur eine stabile, eine aktiv gepflegte und eine weiter entwickelte Version – nebenbei wird der (stabile) 2.6.29er-Zweig noch gepflegt und es werden Patches für vorhergehende Versionen bereitgestellt. Allerdings passen viele Distributoren und versierte Benutzer den Betriebssystemkern mehr oder weniger für ihre Zwecke an.</Line>
-   <Line>Die Einsatzbereiche von Linux sind vielfältig und umfassen unter anderem die Nutzung auf Desktop-Rechnern, Servern, Mobiltelefonen, Routern, Multimedia-Endgeräten und Supercomputern. Dabei variiert die Verbreitung von Linux in den einzelnen Bereichen drastisch. So ist Linux im Server-Markt eine feste Größe, während es auf dem Desktop bisher nur eine geringe Rolle spielt. Ebenfalls spielt die wirtschaftliche und geographische Lage einer Region eine wichtige Rolle. So planen vorrangig südamerikanische Schwellenländer den verstärkten Einsatz von Linux.</Line>
-   <Line>Freie Software (engl.: free software) ist Software, die für jeden Zweck genutzt, studiert, bearbeitet und in ursprünglicher oder veränderter Form weiterverbreitet werden darf. Das schließt auch die kommerzielle Nutzung ein. Software, die auf Grundlage dieser Software entsteht, muss normalerweise ebenfalls Freie Software sein (Prinzip des Copyleft bzw. share alike).</Line>
+   <Line>Als Linux oder GNU/Linux werden in der Regel freie, portable, Unix-ähnliche Mehrbenutzer-Betriebssysteme bezeichnet, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren.</Line>
+   <Line>Die weite, auch kommerzielle Verbreitung ermöglichte ab 1992 die Lizenzierung des Linux-Kernels unter der GPL.</Line>
+   <Line>Das modular aufgebaute Betriebssystem wird von Softwareentwicklern auf der ganzen Welt weiterentwickelt, die an den verschiedenen Projekten mitarbeiten.</Line>
+   <Line>Es sind sowohl Unternehmen als auch Non-Profit-Organisationen und Einzelpersonen beteiligt, die dies als Hobby betreiben.</Line>
+   <Line>Im praktischen Einsatz werden meist sogenannte Linux-Distributionen genutzt, in denen verschiedene Software zu einem fertigen Paket zusammengestellt ist.</Line>
+   <Line>Jede Distribution enthält somit Linux beziehungsweise den Linux-Kernel.</Line>
+   <Line>Es gibt eine Vielzahl von Linux-Distributionen, aber für die aktuellen Kernel 2.2.x, 2.4.x und 2.6.x jeweils nur eine stabile, eine aktiv gepflegte und eine weiter entwickelte Version –</Line>
+   <Line>nebenbei wird der (stabile) 2.6.29er-Zweig noch gepflegt und es werden Patches für vorhergehende Versionen bereitgestellt.</Line>
+   <Line>Allerdings passen viele Distributoren und versierte Benutzer den Betriebssystemkern mehr oder weniger für ihre Zwecke an.</Line>
+   <Line>Die Einsatzbereiche von Linux sind vielfältig und umfassen unter anderem die Nutzung auf Desktop-Rechnern, Servern, Mobiltelefonen, Routern, Multimedia-Endgeräten und Supercomputern.</Line>
+   <Line>Dabei variiert die Verbreitung von Linux in den einzelnen Bereichen drastisch. So ist Linux im Server-Markt eine feste Größe, während es auf dem Desktop bisher nur eine geringe Rolle spielt.</Line>
+   <Line>Ebenfalls spielt die wirtschaftliche und geographische Lage einer Region eine wichtige Rolle. So planen vorrangig südamerikanische Schwellenländer den verstärkten Einsatz von Linux.</Line>
+   <Line>Freie Software (engl.: free software) ist Software, die für jeden Zweck genutzt, studiert, bearbeitet und in ursprünglicher oder veränderter Form weiterverbreitet werden darf.</Line>
+   <Line>Das schließt auch die kommerzielle Nutzung ein. Software, die auf Grundlage dieser Software entsteht, muss normalerweise ebenfalls Freie Software sein (Prinzip des Copyleft bzw. share alike).</Line>
    <Line>Freier Software steht die proprietäre oder „unfreie“ Software gegenüber, die diese Freiheiten nicht oder nicht in vollem Umfang bietet. Diese Unterscheidung wurde von der Free Software Foundation (FSF) geprägt.</Line>
    <Line>Die Free Software Foundation (FSF) definiert Software als frei, wenn ihre Lizenz folgende Freiheiten einräumt:</Line>
    <Line>Freiheit 0: Das Programm zu jedem Zweck auszuführen.</Line>
    <Line>Freiheit 1: Das Programm zu studieren und zu verändern.</Line>
    <Line>Freiheit 2: Das Programm zu verbreiten.</Line>
    <Line>Freiheit 3: Das Programm zu verbessern und zu verbreiten, um damit einen Nutzen für die Gemeinschaft zu erzeugen.</Line>
-   <Line>Für die Freiheiten (1) und (3) ist der Zugang zum Quelltext Voraussetzung, sonst wird das Verändern eines Programms schwierig bis unmöglich. Sind eine oder mehrere dieser Bedingungen nicht erfüllt, wird die Software als proprietär oder „unfrei“ bezeichnet.</Line>
+   <Line>Für die Freiheiten (1) und (3) ist der Zugang zum Quelltext Voraussetzung, sonst wird das Verändern eines Programms schwierig bis unmöglich.</Line>
+   <Line>Sind eine oder mehrere dieser Bedingungen nicht erfüllt, wird die Software als proprietär oder „unfrei“ bezeichnet.</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Alkohol“</NewCharacters>
    <Line>Ethanol ist eine farblose, leicht entzündliche Flüssigkeit mit brennendem Geschmack sowie charakteristischem, würzigem Geruch.</Line>
    <Line>Umgangssprachlich wird es als Alkohol bezeichnet. Ältere Nomenklaturen verwendeten die Bezeichnungen Äthanol, Äthylalkohol oder Ethylalkohol.</Line>
-   <Line>Es gibt noch ältere Bezeichnungen wie Weingeist und Spiritus (lateinisch „Geist“). In der Chemie wird Ethanol oft mit EtOH abgekürzt und in der Alltagsmedizin mündlich mit C2 bezeichnet (als Verkürzung der Summenformel C2H6O). Bekannt ist Ethanol vor allem als Trinkalkohol, der als Anteil in Genussmittel (z. B. Wein, Bier, Likör) klassifiziert wird. Er ist allerdings zugleich ein Rauschmittel, sein Konsum ist in den meisten Staaten erlaubt.</Line>
+   <Line>Es gibt noch ältere Bezeichnungen wie Weingeist und Spiritus (lateinisch „Geist“).</Line>
+   <Line>In der Chemie wird Ethanol oft mit EtOH abgekürzt und in der Alltagsmedizin mündlich mit C2 bezeichnet (als Verkürzung der Summenformel [₆=Composetaste+_+6] C₂H₆O).</Line>
+   <Line>Bekannt ist Ethanol vor allem als Trinkalkohol, der als Anteil in Genussmittel (z. B. Wein, Bier, Likör) klassifiziert wird.</Line>
+   <Line>Er ist allerdings zugleich ein Rauschmittel, sein Konsum ist in den meisten Staaten erlaubt.</Line>
    <Line>Das Führen von Fahrrädern, Kraftfahrzeugen, Schiffen und Flugzeugen unter Alkoholeinfluss ist jedoch meist unter Strafe gestellt.</Line>
-   <Line>Die Hauptverwendungen von Ethanol betreffen neben der Genuss- und Lebensmittelindustrie vor allem in den letzten Jahren die Nutzung als Biokraftstoff in Form von Bioethanol. Außerdem handelt es sich um ein organisches Lösungsmittel sowie eine Grundchemikalie der Industrie. Für den Menschen ist Ethanol giftig. Die Aufnahme führt - ab etwa 0,5–1 Promille Alkoholkonzentration im Blut - zu typischen akuten Trunkenheitssymptomen wie Schwindel, Übelkeit, Orientierungsstörung, Redseligkeit und gesteigerter Aggressivität. Die Letale Dosis (LD) liegt etwa bei 3,0 bis 4,0 Promille für ungeübte Trinker. Es wurden jedoch schon Werte über 7 Promille gemessen. Die LD50 beträgt für die Ratte 7.060 mg/kg bei oraler Applikation. Bei einer akuten Ethanolvergiftung kann der noch im Magen befindliche Alkohol durch Herbeiführen von Erbrechen oder durch Auspumpen des Mageninhalts teilweise entfernt werden.</Line>
-   <Line>Bei regelmäßiger Einnahme, die zu einer Abhängigkeit (Alkoholkrankheit) führen kann, werden alle Zellen des Körpers geschädigt. Insbesondere leiden das Nervensystem und Gehirn sowie die Leber. Der Vitamin B1-Stoffwechsel wird durch langanhaltenden Alkoholkonsum geschädigt, diese Schädigung kann eine Polyneuritis auslösen. Epilepsie, Psychosen, soziale Vereinsamung und der verfrühte Tod können die Folge sein. Die Wernicke-Enzephalopathie findet sich bei etwa 15 % der verstorbenen Alkoholiker, und bildet zusammen mit dem Korsakow-Syndrom das Wernicke-Korsakow-Syndrom. Bekannt ist auch die Schädigung des Zentralnervensystems beim Delirium tremens. Diese Nervenerscheinung tritt beim Alkoholentzug des Körpers auf.</Line>
-   <Line>In Deutschland sterben über 73.000 Menschen jährlich vorzeitig aufgrund ihres Alkoholmissbrauchs.</Line>
+   <Line>Die Hauptverwendungen von Ethanol betreffen neben der Genuss- und Lebensmittelindustrie vor allem in den letzten Jahren die Nutzung als Biokraftstoff in Form von Bioethanol.</Line>
+   <Line>Außerdem handelt es sich um ein organisches Lösungsmittel sowie eine Grundchemikalie der Industrie. Für den Menschen ist Ethanol giftig.</Line>
+   <Line>Die Aufnahme führt – ab etwa 0,5–1 Promille Alkoholkonzentration im Blut – zu typischen akuten Trunkenheitssymptomen wie Schwindel, Übelkeit, Orientierungsstörung, Redseligkeit und gesteigerter Aggressivität.</Line>
+   <Line>Die Letale Dosis (LD) liegt etwa bei 3,0 bis 4,0 Promille für ungeübte Trinker. Es wurden jedoch schon Werte über 7 Promille gemessen. Die LD50 beträgt für die Ratte 7.060 mg/kg bei oraler Applikation.</Line>
+   <Line>Bei einer akuten Ethanolvergiftung kann der noch im Magen befindliche Alkohol durch Herbeiführen von Erbrechen oder durch Auspumpen des Mageninhalts teilweise entfernt werden.</Line>
+   <Line>Bei regelmäßiger Einnahme, die zu einer Abhängigkeit (Alkoholkrankheit) führen kann, werden alle Zellen des Körpers geschädigt. Insbesondere leiden das Nervensystem und Gehirn sowie die Leber.</Line>
+   <Line>Der Vitamin-B1-Stoffwechsel wird durch langanhaltenden Alkoholkonsum geschädigt, diese Schädigung kann eine Polyneuritis auslösen.</Line>
+   <Line>Epilepsie, Psychosen, soziale Vereinsamung und der verfrühte Tod können die Folge sein.</Line>
+   <Line>Die Wernicke-Enzephalopathie findet sich bei etwa 15 % der verstorbenen Alkoholiker, und bildet zusammen mit dem Korsakow-Syndrom das Wernicke-Korsakow-Syndrom.</Line>
+   <Line>Bekannt ist auch die Schädigung des Zentralnervensystems beim Delirium tremens. Diese Nervenerscheinung tritt beim Alkoholentzug des Körpers auf.</Line>
+   <Line>In Deutschland sterben über 73000 Menschen jährlich vorzeitig aufgrund ihres Alkoholmissbrauchs.</Line>
   </Level>
   <Level>
    <NewCharacters>Testtext „Säuren“</NewCharacters>
-   <Line>Wohl die älteste bekannte Säure (lat. acidum) ist Essig (lat. acetum), eine etwa fünfprozentige wässrige Lösung der Verbindung Essigsäure. Säuren waren etwas Essigartiges (oxos od. acidus). In der Alchemie galt Säure als ein Urstoff. Die sauren Eigenschaften basierten auf einer einzigen Ursäure, die in verschiedenen Substanzen zur Wirkung kam. Säuren lassen Kalk bzw. Carbonate aufschäumen, haben eine ätzende Wirkung und einen sauren Geschmack. Bis Ende des 13. Jh. waren wohl neben Essig und anderen Pflanzensäften keine Säuren bekannt. Erweiterte Kenntnisse bezüglich Säuren wurden dem im 8. Jh. lebenden Geber zugeschrieben, sie basieren jedoch auf Schriften der deutlich jüngeren, sogenannten Pseudo-Geber. Es entwickelten sich Kenntnisse über verschiedene anorganische Säuren, die alle den Varietäten des Elements Wasser zugeschrieben wurden. Ab dem 18. Jh. wurden sie als Mineralsäuren bezeichnet.</Line>
-   <Line>Eine Herstellung von Salpetersäure (HNO3) wurde von den Pseudo-Geber vermutlich nach dem 13. Jh. als „auflösendes Wasser“ (aqua dissolutiva) oder „starkes Wasser“ (aqua fortis) beschrieben. Dabei wurde Kupfervitriol mit Salpeter und Alaun auf Rotglut erhitzt. Es entweichen nitrose Gase, die mit Wasser Salpetersäure bilden. Man nannte diese Säure auch Scheidewasser, da sie Silber in einer chemischen Reaktion löst, aber Gold nicht. J. R. Glauber beschrieb 1648 die Herstellung der konzentrierten (rauchenden) Salpetersäure (spiritus acidus nitri) durch Umsetzung mit Schwefelsäure.</Line>
-   <Line>Königswasser, aus heutiger Sicht eine Mischung aus Salpeter- und Salzsäure, dürfte ähnlich früh bekannt gewesen sein, da es sich relativ einfach durch Umsetzung von Salpetersäure mit dem bekannten Salmiak gewinnen lässt. Königswasser war die Königin aller Säuren, der nicht einmal Gold, der König der Metalle, widerstehen konnte.</Line>
-   <Line>Schweflige Säure (H2SO3) ist sicher lange bekannt, da sie durch Verbrennung von elementarem Schwefel zu erhalten ist. Sicherlich war bei vielen Prozessen auch Schwefelsäure (mit) dabei. Genauere Prozesse zur Darstellung von Schwefelsäure (H2SO4) wurden aber erst 1597 von A. Libavius genauer beschrieben: a) Glühen von Eisen- oder Kupfersulfat, dem sogenannten Eisen- bzw. Kupfervitriol – siehe hierzu auch Vitriolverfahren – zum Oleum vitrioli (rauchender Schwefelsäure) und b) Verbrennung von Schwefel und anschließende Oxidation, die zu verdünnten Lösungen (Oleum sulphuris) führten. Eine technische Umsetzung gelang im 19. Jh. mit dem Bleikammerverfahren.</Line>
-   <Line>Salzsäure (HCl) als eigenständige Verbindung wurde erst Ende des 16. Jh. bekannt. Durch Glühen einer Mischung Kochsalz und Ton beschrieb A. Libavius eine Synthese. B. Valentinus beschrieb die Umsetzung von Vitriol und Kochsalz zu aqua caustica, dem ätzenden Wasser. Intensive Untersuchungen durch J. R. Glauber im 17. Jh. führten zum Glaubers Salzgeist (Spiritus salis Glauberianus) der sehr konzentrierten, sogenannten rauchenden Salzsäure bzw. dem Gas Wasserstoffchlorid.</Line>
+   <Line>Wohl die älteste bekannte Säure (lat. acidum) ist Essig (lat. acetum), eine etwa fünfprozentige wässrige Lösung der Verbindung Essigsäure. Säuren waren etwas Essigartiges (oxos od. acidus).</Line>
+   <Line>In der Alchemie galt Säure als ein Urstoff. Die sauren Eigenschaften basierten auf einer einzigen Ursäure, die in verschiedenen Substanzen zur Wirkung kam.</Line>
+   <Line>Säuren lassen Kalk bzw. Carbonate aufschäumen, haben eine ätzende Wirkung und einen sauren Geschmack. Bis Ende des 13. Jh. waren wohl neben Essig und anderen Pflanzensäften keine Säuren bekannt.</Line>
+   <Line>Erweiterte Kenntnisse bezüglich Säuren wurden dem im 8. Jh. lebenden Geber zugeschrieben, sie basieren jedoch auf Schriften der deutlich jüngeren, sogenannten Pseudo-Geber.</Line>
+   <Line>Es entwickelten sich Kenntnisse über verschiedene anorganische Säuren, die alle den Varietäten des Elements Wasser zugeschrieben wurden. Ab dem 18. Jh. wurden sie als Mineralsäuren bezeichnet.</Line>
+   <Line>Eine Herstellung von Salpetersäure (HNO₃) wurde von den Pseudo-Geber vermutlich nach dem 13. Jh. als „auflösendes Wasser“ (aqua dissolutiva) oder „starkes Wasser“ (aqua fortis) beschrieben.</Line>
+   <Line>Dabei wurde Kupfervitriol mit Salpeter und Alaun auf Rotglut erhitzt. Es entweichen nitrose Gase, die mit Wasser Salpetersäure bilden.</Line>
+   <Line>Man nannte diese Säure auch Scheidewasser, da sie Silber in einer chemischen Reaktion löst, aber Gold nicht.</Line>
+   <Line>J. R. Glauber beschrieb 1648 die Herstellung der konzentrierten (rauchenden) Salpetersäure (spiritus acidus nitri) durch Umsetzung mit Schwefelsäure.</Line>
+   <Line>Königswasser, aus heutiger Sicht eine Mischung aus Salpeter- und Salzsäure, dürfte ähnlich früh bekannt gewesen sein,</Line>
+   <Line>da es sich relativ einfach durch Umsetzung von Salpetersäure mit dem bekannten Salmiak gewinnen lässt. Königswasser war die Königin aller Säuren, der nicht einmal Gold, der König der Metalle, widerstehen konnte.</Line>
+   <Line>Schweflige Säure (H₂SO₃) ist sicher lange bekannt, da sie durch Verbrennung von elementarem Schwefel zu erhalten ist. Sicherlich war bei vielen Prozessen auch Schwefelsäure (mit) dabei.</Line>
+   <Line>Genauere Prozesse zur Darstellung von Schwefelsäure (H₂SO₄) wurden aber erst 1597 von A. Libavius genauer beschrieben:</Line>
+   <Line>a) Glühen von Eisen- oder Kupfersulfat, dem sogenannten Eisen- bzw. Kupfervitriol – siehe hierzu auch Vitriolverfahren – zum Oleum vitrioli (rauchender Schwefelsäure) und </Line>
+   <Line>b) Verbrennung von Schwefel und anschließende Oxidation, die zu verdünnten Lösungen (Oleum sulphuris) führten. Eine technische Umsetzung gelang im 19. Jh. mit dem Bleikammerverfahren.</Line>
+   <Line>Salzsäure (HCl) als eigenständige Verbindung wurde erst Ende des 16. Jh. bekannt.</Line>
+   <Line>Durch Glühen einer Mischung Kochsalz und Ton beschrieb A. Libavius eine Synthese. B. Valentinus beschrieb die Umsetzung von Vitriol und Kochsalz zu aqua caustica, dem ätzenden Wasser.</Line>
+   <Line>Intensive Untersuchungen durch J. R. Glauber im 17. Jh. führten zum Glaubers Salzgeist (Spiritus salis Glauberianus), der sehr konzentrierten, sogenannten rauchenden Salzsäure bzw. dem Gas Wasserstoffchlorid.</Line>
   </Level>
   <Level>
    <NewCharacters>Shell-Einleitung</NewCharacters>
