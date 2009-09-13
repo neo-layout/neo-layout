@@ -211,13 +211,30 @@ EDS(scpos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
   ED(vksc%scpos%,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a,e8a)
 }
 
-ED1(pos,e1) {
- ED(pos,0,e1,e1,e1,e1,e1,e1)
+ED1(pos,e1a) {
+ ED(pos,0,e1a,e1a,e1a,e1a,e1a,e1a)
 }
 
-ED1S(scpos,e1) {
- EDS(scpos,0,e1,e1,e1,e1,e1,e1)
+ED1S(scpos,e1a) {
+ EDS(scpos,0,e1a,e1a,e1a,e1a,e1a,e1a)
 }
+
+ED12(scpos,caps,e1a,e2a) {
+  global
+  pos := vksc%scpos%
+  e1  := EncodeUniComposeA(e1a)
+  e2  := EncodeUniComposeA(e2a)
+  if (caps == 0) {
+    NOC%pos% := 1
+    UNSH%e1% := 0
+  } else {
+    NOC%pos% := 0
+    UNSH%e1% := 1 ; unshift wenn caps lock + Shift?
+  }
+  SetKeyPos("CP1" . pos, e1)
+  SetKeyPos("CP2" . pos, e2)
+}
+
 
 Comp := ""
 
