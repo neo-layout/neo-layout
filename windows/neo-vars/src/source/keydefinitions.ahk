@@ -1,108 +1,108 @@
-﻿; äüö
+; -*- encoding:utf-8 -*-
 
 thekeys() {
 ;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
 ; Reihe 1
 EDS("029",0,"T__cflx","T__tlde","T__obrg","T__cron","T__brve","T__mcrn") ; circumflex
-EDS("002",0,"U000031","U0000B0","U0000B9","U0000AA","U002081","U0000AC") ; 1
-EDS("003",0,"U000032","U0000A7","U0000B2","U0000BA","U002082","U002228") ; 2
-EDS("004",0,"U000033","U002113","U0000B3","U002116","U002083","U002227") ; 3
-EDS("005",0,"U000034","U0000BB","U00203A","S__PgUp","U002640","U0022A5") ; 4
-EDS("006",0,"U000035","U0000AB","U002039","U0000B7","U002642","U002221") ; 5
-EDS("007",0,"U000036","U000024","U0000A2","U0000A3","U0026A5","U002225") ; 6
-EDS("008",0,"U000037","U0020AC","U0000A5","U0000A4","U0003BA","U002192") ; 7
-EDS("009",0,"U000038","U00201E","U00201A",""       ,"U0027E8","U00221E") ; 8
-EDS("00A",0,"U000039","U00201C","U002018","S__NDiv","U0027E9","U00221D") ; 9
-EDS("00B",0,"U000030","U00201D","U002019","S__NMul","U002080","U002205") ; 0
-EDS("00C",0,"U00002D","U002014",""       ,"S__NSub","U002011","U0000AD") ; -
-EDS("00D",0,"T__grav","T__turn","T__drss","T__dgrv","U001FFE","T__hook") ; grave
+EDS("002",0,"1","°","¹","ª"      ,"₁","¬") ; 1
+EDS("003",0,"2","§","²","º"      ,"₂","∨") ; 2
+EDS("004",0,"3","ℓ","³","№"      ,"₃","∧") ; 3
+EDS("005",0,"4","»","›","S__PgUp","♀","⊥") ; 4
+EDS("006",0,"5","«","‹","·"      ,"♂","∡") ; 5
+EDS("007",0,"6","$","¢","£"      ,"⚥","∥") ; 6
+EDS("008",0,"7","€","¥","¤"      ,"κ","→") ; 7
+EDS("009",0,"8","„","‚",""       ,"⟨","∞") ; 8
+EDS("00A",0,"9","“","‘","S__NDiv","⟩","∝") ; 9
+EDS("00B",0,"0","”","’","S__NMul","₀","∅") ; 0
+EDS("00C",0,"-","—","" ,"S__NSub","‑","­") ; -
+EDS("00D",0,"T__grav","T__turn","T__drss","T__dgrv","˘","T__hook") ; grave
 ; Reihe 2
-EDS("010",1,"U000078","U000058","U002026","U0022EE","U0003BE","U00039E") ; x
-EDS("011",1,"U000076","U000056","U00005F","U000008",""       ,"U00221A") ; v
-EDS("012",1,"U00006C","U00004C","U00005B","S____Up","U0003BB","U00039B") ; l
-EDS("013",1,"U000063","U000043","U00005D","S___Del","U0003C7","U002102") ; c
-EDS("014",1,"U000077","U000057","U00005E","S___Ins","U0003C9","U0003A9") ; w
-EDS("015",1,"U00006B","U00004B","U000021","U0000A1","U0003F0","U0000D7") ; k
-EDS("016",1,"U000068","U000048","U00003C","S__N__7","U0003C8","U0003A8") ; h
-EDS("017",1,"U000067","U000047","U00003E","S__N__8","U0003B3","U000393") ; g
-EDS("018",1,"U000066","U000046","U00003D","S__N__9","U0003C6","U0003A6") ; f
-EDS("019",1,"U000071","U000051","U000026","S__NAdd","U0003D5","U00211A") ; q
-EDS("01A",1,"U0000DF","U001E9E","U00017F",""       ,"U0003C2","U002218") ; ß
-EDS("01B",0,"T__acut","T__cedi","T__strk","T__dbac","U001FBF","T__abdt") ; acute
+EDS("010",1,"x","X","…","⋮"       ,"ξ","Ξ") ; x
+EDS("011",1,"v","V","_","U000008","" ,"√") ; v
+EDS("012",1,"l","L","[","S____Up","λ","Λ") ; l
+EDS("013",1,"c","C","]","S___Del","χ","ℂ") ; c
+EDS("014",1,"w","W","^","S___Ins","ω","Ω") ; w
+EDS("015",1,"k","K","!","¡"      ,"ϰ","×") ; k
+EDS("016",1,"h","H","<","S__N__7","ψ","Ψ") ; h
+EDS("017",1,"g","G",">","S__N__8","γ","Γ") ; g
+EDS("018",1,"f","F","=","S__N__9","φ","Φ") ; f
+EDS("019",1,"q","Q","&","S__NAdd","ϕ","ℚ") ; q
+EDS("01A",1,"ß","ẞ","ſ",""       ,"ς","∘") ; ß
+EDS("01B",0,"T__acut","T__cedi","T__strk","T__dbac","᾿","T__abdt") ; acute
 ; Reihe 3
-EDS("01E",1,"U000075","U000055","U00005C","S__Home",""       ,"U002282") ; u
-EDS("01F",1,"U000069","U000049","U00002F","S__Left","U0003B9","U00222B") ; i
-EDS("020",1,"U000061","U000041","U00007B","S__Down","U0003B1","U002200") ; a
-EDS("021",1,"U000065","U000045","U00007D","S__Rght","U0003B5","U002203") ; e
-EDS("022",1,"U00006F","U00004F","U00002A","S___End","U0003BF","U002208") ; o
-EDS("023",1,"U000073","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
-EDS("024",1,"U00006E","U00004E","U000028","S__N__4","U0003BD","U002115") ; n
-EDS("025",1,"U000072","U000052","U000029","S__N__5","U0003F1","U00211D") ; r
-EDS("026",1,"U000074","U000054","U00002D","S__N__6","U0003C4","U002202") ; t
-EDS("027",1,"U000064","U000044","U00003A","S__NDot","U0003B4","U000394") ; d
-EDS("028",1,"U000079","U000059","U000040","U00002E","U0003C5","U002207") ; y
+EDS("01E",1,"u","U","\","S__Home","" ,"⊂") ; u
+EDS("01F",1,"i","I","/","S__Left","ι","∫") ; i
+EDS("020",1,"a","A","{","S__Down","α","∀") ; a
+EDS("021",1,"e","E","}","S__Rght","ε","∃") ; e
+EDS("022",1,"o","O","*","S___End","ο","∈") ; o
+EDS("023",1,"s","S","?","¿"      ,"σ","Σ") ; s
+EDS("024",1,"n","N","(","S__N__4","ν","ℕ") ; n
+EDS("025",1,"r","R",")","S__N__5","ϱ","ℝ") ; r
+EDS("026",1,"t","T","-","S__N__6","τ","∂") ; t
+EDS("027",1,"d","D",":","S__NDot","δ","Δ") ; d
+EDS("028",1,"y","Y","@","."      ,"υ","∇") ; y
 ; Reihe 4
-EDS("02C",1,"U0000FC","U0000DC","U000023","U00001B",""       ,"U00222A") ; ü
-EDS("02D",1,"U0000F6","U0000D6","U000024","U000009","U0003F5","U002229") ; ö
-EDS("02E",1,"U0000E4","U0000C4","U00007C","S__PgDn","U0003B7","U002135") ; ä
-EDS("02F",1,"U000070","U000050","U00007E","U00000D","U0003C0","U0003A0") ; p
-EDS("030",1,"U00007A","U00005A","U000060",""       ,"U0003B6","U002124") ; z
-EDS("031",1,"U000062","U000042","U00002B","U00003A","U0003B2","U0021D0") ; b
-EDS("032",1,"U00006D","U00004D","U000025","S__N__1","U0003BC","U0021D4") ; m
-EDS("033",0,"U00002C","U002013","U000022","S__N__2","U0003C1","U0021D2") ; ,
-EDS("034",0,"U00002E","U002022","U000027","S__N__3","U0003D1","U000398") ; .
-EDS("035",1,"U00006A","U00004A","U00003B","U00003B","U0003B8","U0021A6") ; j
+EDS("02C",1,"ü","Ü","#","U00001B","" ,"∪") ; ü
+EDS("02D",1,"ö","Ö","$","U000009","ϵ","∩") ; ö
+EDS("02E",1,"ä","Ä","|","S__PgDn","η","ℵ") ; ä
+EDS("02F",1,"p","P","~","U00000D","π","Π") ; p
+EDS("030",1,"z","Z","``",""      ,"ζ","ℤ") ; z
+EDS("031",1,"b","B","+",":"      ,"β","⇐") ; b
+EDS("032",1,"m","M","%","S__N__1","μ","⇔") ; m
+EDS("033",0,",","–","""","S__N__2","ρ","⇒") ; ,
+EDS("034",0,".","•","'","S__N__3","ϑ","Θ") ; .
+EDS("035",1,"j","J",";",";"      ,"θ","↦") ; j
 
 ; Numpad
-ED("VK90SC145",0,"U000009","U000009","U00003D","U002260","U002248","U002261") ; NumLock
-ED("VK6FSC135",0,"S__NDiv","S__NDiv","U0000F7","U002300","U002223","U002044") ; NumpadDiv
-ED("VK6ASC037",0,"S__NMul","S__NMul","U0022C5","U0000D7","U002299","U002297") ; NumpadMult
-ED("VK6DSC04A",0,"S__NSub","S__NSub","U002212","U002216","U002296","U002238") ; NumpadSub
-ED("VK6BSC04E",0,"S__NAdd","S__NAdd","U0000B1","U002213","U002295","U002214") ; NumpadAdd
+ED("VK90SC145",0,"U000009","U000009","=","≠","≈","≡") ; NumLock
+ED("VK6FSC135",0,"S__NDiv","S__NDiv","÷","⌀","∣","⁄") ; NumpadDiv
+ED("VK6ASC037",0,"S__NMul","S__NMul","⋅","×","⊙","⊗") ; NumpadMult
+ED("VK6DSC04A",0,"S__NSub","S__NSub","−","∖","⊖","∸") ; NumpadSub
+ED("VK6BSC04E",0,"S__NAdd","S__NAdd","±","∓","⊕","∔") ; NumpadAdd
 
 ;EDN("VK67SC047","VK24SC047",0,"S__N__7","U002714","U002195","S__NHom","U00226A","U002308") ; Numpad7, NumpadHome
-ED("VK67SC047",0,"S__N__7",""       ,"U002195","S__NHom",""       ,"U002308") ; Numpad7
-ED("VK24SC047",0,"U002714",""       ,"U00226A","S_SNHom",""       ,""       ) ; NumpadHome == Numpad7 + Shift
+ED("VK67SC047",0,"S__N__7",""       ,"↕","S__NHom",""       ,"⌈") ; Numpad7
+ED("VK24SC047",0,"✔"      ,""       ,"≪","S_SNHom",""       ,"" ) ; NumpadHome == Numpad7 + Shift
 
 ;EDN("VK68SC048","VK26SC048",0,"S__N__8","U002718","U002191","S__N_Up","U002229","U0022C2") ; Numpad8, NumpadUp
-ED("VK68SC048",0,"S__N__8",""       ,"U002191","S__N_Up",""       ,"U0022C2") ; Numpad8
-ED("VK26SC048",0,"U002718",""       ,"U002229","S_SN_Up",""       ,""       ) ; NumpadUp == Numpad8 + Shift
+ED("VK68SC048",0,"S__N__8",""       ,"↑","S__N_Up",""       ,"⋂") ; Numpad8
+ED("VK26SC048",0,"✘"      ,""       ,"∩","S_SN_Up",""       ,"" ) ; NumpadUp == Numpad8 + Shift
 
 ;EDN("VK69SC049","VK21SC049",0,"S__N__9","U002020","U0020D7","S__NPUp","U00226B","U002309") ; Numpad9, NumpadPgUp
-ED("VK69SC049",0,"S__N__9",""       ,"U0020D7","S__NPUp",""       ,"U002309") ; Numpad9
-ED("VK21SC049",0,"U002020",""       ,"U00226B","S_SNPUp",""       ,""       ) ; NumpadPgUp == Numpad9 + Shift
+ED("VK69SC049",0,"S__N__9",""       ,"⃗","S__NPUp",""       ,"⌉") ; Numpad9
+ED("VK21SC049",0,"†"      ,""       ,"≫","S_SNPUp",""       ,"" ) ; NumpadPgUp == Numpad9 + Shift
 
 ;EDN("VK64SC04B","VK25SC04B",0,"S__N__4","U002663","U002190","S__N_Le","U002282","U002286") ; Numpad4, NumpadLeft
-ED("VK64SC04B",0,"S__N__4",""       ,"U002190","S__N_Le",""       ,"U002286") ; Numpad4
-ED("VK25SC04B",0,"U002663",""       ,"U002282","S_SN_Le",""       ,""       ) ; NumpadLeft == Numpad4 + Shift
+ED("VK64SC04B",0,"S__N__4",""       ,"←","S__N_Le",""       ,"⊆") ; Numpad4
+ED("VK25SC04B",0,"♣"      ,""       ,"⊂","S_SN_Le",""       ,"" ) ; NumpadLeft == Numpad4 + Shift
 
 ;EDN("VK65SC04C","VK0CSC04C",0,"S__N__5","U0020AC","U0000A6","S__NClr","U0022B6","U0022B7") ; Numpad5, NumpadClear
-ED("VK65SC04C",0,"S__N__5",""       ,"U0000A6","S__NClr",""       ,"U0022B7") ; Numpad5
-ED("VK0CSC04C",0,"U0020AC",""       ,"U0022B6","S_SNClr",""       ,""       ) ; NumpadClear == Numpad5 + Shift
+ED("VK65SC04C",0,"S__N__5",""       ,"¦","S__NClr",""       ,"⊷") ; Numpad5
+ED("VK0CSC04C",0,"€"      ,""       ,"⊶","S_SNClr",""       ,"" ) ; NumpadClear == Numpad5 + Shift
 
 ;EDN("VK66SC04D","VK27SC04D",0,"S__N__6","U002023","U002192","S__N_Ri","U002283","U002287") ; Numpad6, NumpadRight
-ED("VK66SC04D",0,"S__N__6",""       ,"U002192","S__N_Ri",""       ,"U002287") ; Numpad6
-ED("VK27SC04D",0,"U002023",""       ,"U002283","S_SN_Ri",""       ,""       ) ; NumpadRight == Numpad6 + Shift
+ED("VK66SC04D",0,"S__N__6",""       ,"→","S__N_Ri",""       ,"⊇") ; Numpad6
+ED("VK27SC04D",0,"‣"      ,""       ,"⊃","S_SN_Ri",""       ,"" ) ; NumpadRight == Numpad6 + Shift
 
 ;EDN("VK61SC04F","VK23SC04F",0,"S__N__1","U002666","U002194","S__NEnd","U002264","U00230A") ; Numpad1, NumpadEnd
-ED("VK61SC04F",0,"S__N__1",""       ,"U002194","S__NEnd",""       ,"U00230A") ; Numpad1
-ED("VK23SC04F",0,"U002666",""       ,"U002264","S_SNEnd",""       ,""       ) ; NumpadEnd == Numpad1 + Shift
+ED("VK61SC04F",0,"S__N__1",""       ,"↔","S__NEnd",""       ,"⌊") ; Numpad1
+ED("VK23SC04F",0,"♦"      ,""       ,"≤","S_SNEnd",""       ,"" ) ; NumpadEnd == Numpad1 + Shift
 
 ;EDN("VK62SC050","VK28SC050",0,"S__N__2","U002665","U002193","S__N_Dn","U00222A","U0022C3") ; Numpad2, NumpadDown
-ED("VK62SC050",0,"S__N__2",""       ,"U002193","S__N_Dn",""       ,"U0022C3") ; Numpad2
-ED("VK28SC050",0,"U002665",""       ,"U00222A","S_SN_Dn",""       ,""       ) ; NumpadDown == Numpad2 + Shift
+ED("VK62SC050",0,"S__N__2",""       ,"↓","S__N_Dn",""       ,"⋃") ; Numpad2
+ED("VK28SC050",0,"♥"      ,""       ,"∪","S_SN_Dn",""       ,"" ) ; NumpadDown == Numpad2 + Shift
 
 ;EDN("VK63SC051","VK22SC051",0,"S__N__3","U002660","U0021CC","S__NPDn","U002265","U00230B") ; Numpad3, NumpadPgDn
-ED("VK63SC051",0,"S__N__3",""       ,"U0021CC","S__NPDn",""       ,"U00230B") ; Numpad3
-ED("VK22SC051",0,"U002660",""       ,"U002265","S_SNPDn",""       ,""       ) ; NumpadPgDn == Numpad3 + Shift
+ED("VK63SC051",0,"S__N__3",""       ,"⇌","S__NPDn",""       ,"⌋") ; Numpad3
+ED("VK22SC051",0,"♠"      ,""       ,"≥","S_SNPDn",""       ,"" ) ; NumpadPgDn == Numpad3 + Shift
 
 ; EDN("VK60SC052","VK2DSC052",0,"S__N__0","U002423","U000025","S__NIns","U002030","U0025A1") ; Numpad0, NumpadIns
-ED("VK60SC052",0,"S__N__0",""       ,"U000025","S__NIns",""       ,"U0025A1") ; Numpad0
-ED("VK2DSC052",0,"U002423",""       ,"U002030","S_SNIns",""       ,""       ) ; NumpadIns == Numpad0 + Shift
+ED("VK60SC052",0,"S__N__0",""       ,"%","S__NIns",""       ,"□") ; Numpad0
+ED("VK2DSC052",0,"␣"      ,""       ,"‰","S_SNIns",""       ,"" ) ; NumpadIns == Numpad0 + Shift
 
 ; EDN("VK6ESC053","VK2ESC053",0,"S__NDot","U00002E","U00002C","S__NDel","U002032","U002033") ; NumpadDot, NumpadDel
-ED("VK6ESC053",0,"S__NDot",""       ,"U00002C","S__NDel",""       ,"U002033") ; NumpadDot
-ED("VK2ESC053",0,"U00002E",""       ,"U002032","S_SNDel",""       ,""       ) ; NumpadDel == NumpadDot + Shift
+ED("VK6ESC053",0,"S__NDot",""       ,",","S__NDel",""       ,"″") ; NumpadDot
+ED("VK2ESC053",0,"."      ,""       ,"′","S_SNDel",""       ,"" ) ; NumpadDel == NumpadDot + Shift
 
 ; other keys
 ED("space",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
@@ -154,7 +154,7 @@ SetKeyPos(pos,char) {
   %pos% := char
 }
 
-ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
+EDR(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   global
   if (caps == 0)
     NOC%pos% := 1
@@ -172,14 +172,43 @@ ED(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   SetKeyPos("CP8" . pos,e8)
 }
 
-EDN(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
-  ED(pos1,caps,e1,e2,e3,e4,e5,e6)
-  ED(pos2,caps,e1,e2,e3,e4,e5,e6)
+ED(pos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
+  global
+  e1  := EncodeUniComposeA(e1a)
+  e2  := EncodeUniComposeA(e2a)
+  e3  := EncodeUniComposeA(e3a)
+  e4  := EncodeUniComposeA(e4a)
+  e5  := EncodeUniComposeA(e5a)
+  e6  := EncodeUniComposeA(e6a)
+  e7  := EncodeUniComposeA(e7a)
+  e8  := EncodeUniComposeA(e8a)
+  EDR(pos,caps,e1,e2,e3,e4,e5,e6,e7,e8)
 }
 
-EDS(scpos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
+EncodeUniComposeA(ea) {
+  if (StrLen(ea) == 7)
+    return ea
+  return EncodeUniCompose(ea)
+}
+
+EDNR(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
+  EDR(pos1,caps,e1,e2,e3,e4,e5,e6)
+  EDR(pos2,caps,e1,e2,e3,e4,e5,e6)
+}
+
+EDN(pos1,pos2,caps,e1a,e2a,e3a,e4a,e5a,e6a) {
+  ED(pos1,caps,e1a,e2a,e3a,e4a,e5a,e6a)
+  ED(pos2,caps,e1a,e2a,e3a,e4a,e5a,e6a)
+}
+
+EDSR(scpos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   global
-  ED(vksc%scpos%,caps,e1,e2,e3,e4,e5,e6,e7,e8)
+  EDR(vksc%scpos%,caps,e1,e2,e3,e4,e5,e6,e7,e8)
+}
+
+EDS(scpos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
+  global
+  ED(vksc%scpos%,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a,e8a)
 }
 
 ED1(pos,e1) {
