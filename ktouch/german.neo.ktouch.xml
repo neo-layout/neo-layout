@@ -1215,7 +1215,7 @@ Homepage: http://neo-layout.org
    <Line>Wo wohnen Sie? Gehst du in die Mensa? Du kommst heute? Universität oder Fachhochschule?</Line>
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
    <Line>Wer? Der! Was? Das! Wann? Dann! Wohin? Dahin! Warum? Darum! Wo? Da!</Line>
-   <Line>name@email.de, jemand@web.de, einer@gmx.de, irgedwer@gmail.com,</Line>
+   <Line>name@email.de, jemand@web.de, einer@gmx.de, irgendwer@gmail.com,</Line>
    <Line>Max &amp; Sohn, C&amp;A, H&amp;M, GmbH &amp; Co</Line>
    <Line>Joachim (Vater), Klara (Mutter), Tobias (Sohn), Steffanie (Tochter), Walter (Opa), Heidi (Oma).</Line>
   </Level>
@@ -1341,8 +1341,8 @@ Homepage: http://neo-layout.org
    <Line>Abends wird der Faule fleißig. An jedem Gerücht ist ein kleines bisschen Wahrheit. Andere Länder, andere Sitten.</Line>
    <Line>Andere Mütter haben auch schöne Töchter Angriff ist die beste Verteidigung. Alte Liebe rostet nicht.</Line>
    <Line>Berg und Tal kommen nicht zusammen, aber Menschen. Besser ein Ende mit Schrecken, als eine Schrecken ohne Ende.</Line>
-   <Line>Besser spät als nie. Bellende Hunde beißen nicht. Bier auf Wein, lass das sein. Wein auf Bier, das rat ich Dir.</Line>
-   <Line>Das Herz ist auf dem rechten Fleck. Den letzten beissen die Hunde. Der Krug geht so lange zum Brunnen, bis er bricht.</Line>
+   <Line>Besser spät als nie. Bellende Hunde beißen nicht. Bier auf Wein, lass das sein. Wein auf Bier, das rat ich dir.</Line>
+   <Line>Das Herz ist auf dem rechten Fleck. Den letzten beißen die Hunde. Der Krug geht so lange zum Brunnen, bis er bricht.</Line>
    <Line>Der Apfel fällt nicht weit vom Stamm. Der dümmste Bauer hat die dicksten Kartoffeln. Der Mensch lebt nicht vom Brot allein.</Line>
    <Line>Eigener Herd ist Goldes wert. Eine Hand wäscht die andere. Eine Schwalbe macht noch keinen Sommer.</Line>
    <Line>Eine Krähe hackt der anderen kein Auge aus. Einem geschenkten Gaul sieht man nicht ins Maul.</Line>
@@ -1355,7 +1355,7 @@ Homepage: http://neo-layout.org
    <Line>Keine Antwort ist auch eine Antwort. Keine Kette ist stärker als ihr schwächstes Glied. Klappe zu, Affe tot.</Line>
    <Line>Kinder und Narren sagen die Wahrheit. Kleider machen Leute. Kleine Geschenke, erhalten die Freundschaft.</Line>
    <Line>Lachen ist gesund. Lachen ist die beste Medizin. Lange Rede, kurzer Sinn. Langes Fädchen, faules Mädchen.</Line>
-   <Line>Langsam, aber sicher. Lass laufen, was du nicht halten kannst. Leben und leben lassen￼￼￼￼,. Lehrjahre sind keine Herrenjahre.</Line>
+   <Line>Langsam, aber sicher. Lass laufen, was du nicht halten kannst. Leben und leben lassen. Lehrjahre sind keine Herrenjahre.</Line>
    <Line>Man muss die Feste feiern, wie sie fallen. Man soll den Teufel nicht an die Wand malen. Man soll den Tag nicht vor dem Abend loben.</Line>
    <Line>Man wird alt wie eine Kuh, und lernt immer noch dazu. Morgen, morgen nur nicht heute, sagen alle faulen Leute.</Line>
    <Line>Nach dem Essen sollst du stehen. oder tausend Schritte gehen. Nachts sind alle Katzen grau. Neue Besen kehren gut.</Line>
@@ -1552,7 +1552,7 @@ Homepage: http://neo-layout.org
    <Line>$ vi ginfo</Line>
    <Line>#</Line>
    <Line>#</Line>
-   <Line># Script to print user information who currently login , current date &amp; time</Line>
+   <Line># Script to print user information who currently login, current date &amp; time</Line>
    <Line>#</Line>
    <Line>clear</Line>
    <Line>echo "Hello $USER"</Line>
