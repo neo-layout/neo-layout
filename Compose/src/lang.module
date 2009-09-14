@@ -111,13 +111,11 @@
 <dead_stroke> <dead_abovedot> <j>                 : "ɟ" U025F # LATIN SMALL LETTER DOTLESS J WITH STROKE
 <U02DE> <dead_stroke> <J>                         : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
 <Multi_key> <j> <f>                               : "ʄ" U0284 # LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK
-# Collides with standard compose £ and ₤ 
-#<Multi_key> <minus> <L>                           : "Ƚ" U023D # LATIN CAPITAL LETTER L WITH BAR
-#<Multi_key> <minus> <l>                           : "ƚ" U019A # LATIN SMALL LETTER L WITH BAR
-#<Multi_key> <equals> <L>                          : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
-#<Multi_key> <equals> <l>                          : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
-#<dead_stroke> <sterling>                          : "₤" U20A4 # LIRA SIGN
-<Multi_key> <minus> <sterling>                    : "₤" U20A4 # LIRA SIGN
+# Collides with standard compose £ and ₤:
+<Multi_key> <minus> <L>                           : "Ƚ" U023D # LATIN CAPITAL LETTER L WITH BAR
+<Multi_key> <minus> <l>                           : "ƚ" U019A # LATIN SMALL LETTER L WITH BAR
+<Multi_key> <equals> <L>                          : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
+<Multi_key> <equals> <l>                          : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
 <Multi_key> <minus> <o>                           : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
 <Multi_key> <minus> <O>                           : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
 <dead_stroke> <P>                                 : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
