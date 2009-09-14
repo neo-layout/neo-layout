@@ -127,19 +127,19 @@
 <U02F5> <r>                              : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
 <U02F5> <U>                              : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
 <U02F5> <u>                              : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
-# double grave as turned double acute
-#<U21BB> <dead_doubleacute> <A>           : "Ȁ"   U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <a>           : "ȁ"   U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <E>           : "Ȅ"   U0204 # LATIN CAPITAL LETTER E WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <e>           : "ȅ"   U0205 # LATIN SMALL LETTER E WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <I>           : "Ȉ"   U0208 # LATIN CAPITAL LETTER I WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <i>           : "ȉ"   U0209 # LATIN SMALL LETTER I WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <O>           : "Ȍ"   U020C # LATIN CAPITAL LETTER O WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <o>           : "ȍ"   U020D # LATIN SMALL LETTER O WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <R>           : "Ȑ"   U0210 # LATIN CAPITAL LETTER R WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <r>           : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <U>           : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
-#<U21BB> <dead_doubleacute> <u>           : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
+# double grave as turned double acute (will replace double grave)
+<U21BB> <dead_doubleacute> <A>           : "Ȁ"   U0200 # LATIN CAPITAL LETTER A WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <a>           : "ȁ"   U0201 # LATIN SMALL LETTER A WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <E>           : "Ȅ"   U0204 # LATIN CAPITAL LETTER E WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <e>           : "ȅ"   U0205 # LATIN SMALL LETTER E WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <I>           : "Ȉ"   U0208 # LATIN CAPITAL LETTER I WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <i>           : "ȉ"   U0209 # LATIN SMALL LETTER I WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <O>           : "Ȍ"   U020C # LATIN CAPITAL LETTER O WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <o>           : "ȍ"   U020D # LATIN SMALL LETTER O WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <R>           : "Ȑ"   U0210 # LATIN CAPITAL LETTER R WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <r>           : "ȑ"   U0211 # LATIN SMALL LETTER R WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <U>           : "Ȕ"   U0214 # LATIN CAPITAL LETTER U WITH DOUBLE GRAVE
+<U21BB> <dead_doubleacute> <u>           : "ȕ"   U0215 # LATIN SMALL LETTER U WITH DOUBLE GRAVE
 
 # letters with comma below
 <Multi_key> <S> <comma>                  : "Ș"   U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW
@@ -354,6 +354,7 @@
 <dead_stroke> <slash>                      : "✘"   U2718 # HEAVY BALLOT X
 <dead_stroke> <KP_Divide>                  : "✘"   U2718 # HEAVY BALLOT X
 <dead_stroke> <backslash>                  : "✘"   U2718 # HEAVY BALLOT X
+<Multi_key> <less> <3>                     : "♥"   U2665 # BLACK HEART SUIT
 <Multi_key> <bracketleft> <bracketright>   : "□"   U25A1 # WHITE SQUARE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
