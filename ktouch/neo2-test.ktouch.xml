@@ -1,56 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <KTouchLecture>
- <Title>NEO2-Test</Title>
+ <Title>Neo-2-Test</Title>
  <Comment>Created 2007 by Erik Streb</Comment>
  <FontSuggestions>Monospace</FontSuggestions>
  <Levels>
   <Level>
    <LevelComment>Anfänger können ohne Modifikatoren tippen</LevelComment>
    <NewCharacters>Ebene 1</NewCharacters>
-   <Line>^1234567890-'</Line>
-   <Line>xvlcwkhgfqß~</Line>
+   <Line>1234567890-</Line>
+   <Line>xvlcwkhgfqß</Line>
    <Line>uiaeosnrtdy</Line>
    <Line>üöäpzbm,.j</Line>
   </Level>
   <Level>
-   <LevelComment>nun muss man Umschalt drücken</LevelComment>
+   <LevelComment>Nun muss man Umschalt drücken</LevelComment>
    <NewCharacters>Ebene 2</NewCharacters>
-   <Line>ˇ°№§»«€$„“”–`</Line>
-   <Line>XVLCWKHGFQẞ¯</Line>
+   <Line>°§ℓ»«$€„“”—</Line>
+   <Line>XVLCWKHGFQẞ</Line>
    <Line>UIAEOSNRTDY</Line>
-   <Line>ÜÖÄPZBM⋮…J</Line>
+   <Line>ÜÖÄPZBM–•J</Line>
   </Level>
   <Level>
-   <LevelComment>diese Zeichen sind auf der 3. Ebene mit Mod3 bzw. M3 erreichbar</LevelComment>
+   <LevelComment>Diese Zeichen sind auf der 3. Ebene mit Mod3 bzw. M3 erreichbar</LevelComment>
    <NewCharacters>Ebene 3</NewCharacters>
-   <Line>˘¹²³›‹¢¥‚‘’—¸</Line>
-   <Line>_[]^!&lt;>=&amp;ſ&quot;</Line>
+   <Line>¹²³›‹¢¥‚‘’</Line>
+   <Line>…_[]^!&lt;>=&amp;ſ</Line>
    <Line>\/{}*?()-:@</Line>
    <Line>#$|~`+%&quot;';</Line>
   </Level>
   <Level>
-   <LevelComment>mittels Mod4 erreicht man diese Zeichen</LevelComment>
+   <LevelComment>Mittels Mod4 erreicht man diese Zeichen</LevelComment>
    <NewCharacters>Ebene 4</NewCharacters>
-   <Line>•‣/*-˙</Line>
-   <Line>¡789+</Line>
-   <Line>¿456,</Line>
-   <Line>123.</Line>
+   <Line>ªº№·£¤/*-</Line>
+   <Line>⋮¡789+−</Line>
+   <Line>¿456,.</Line>
+   <Line>:123;</Line>
    <Line>0</Line>
   </Level>
   <Level>
-   <LevelComment>diese Zeichen sind mit Mod3+Umschalt erreichbar</LevelComment>
+   <LevelComment>Diese Zeichen sind mit Mod3 + Umschalt erreichbar</LevelComment>
    <NewCharacters>Ebene 5</NewCharacters>
-   <Line>♀⚥♂ℓ†ϰ˛</Line>
-   <Line>ξvλχωκψγφɸς˝</Line>
-   <Line>uιαεοσνρτδυ</Line>
-   <Line>ηπζβμϱθϑ</Line>
+   <Line>₁₂₃♀♂⚥κ⟨⟩₀‑</Line>
+   <Line>ξλχωϰψγφϕς</Line>
+   <Line>ιαεοσνϱτδυ</Line>
+   <Line>ϵηπζβμρϑθ</Line>
   </Level>
   <Level>
-   <LevelComment>Mod3+Mod4 ergibt diese Zeichen</LevelComment>
+   <LevelComment>Mod3 + Mod4 ergibt diese Zeichen</LevelComment>
    <NewCharacters>Ebene 6</NewCharacters>
-   <Line>¬∨∧∡∥∉∄∦∅­°</Line>
-   <Line>Ξ≙ΛℂΩ√ΨΓΦ∘ℚ</Line>
-   <Line>∮∫∀∃∈Σℕℝ∂Δ∇</Line>
-   <Line>∝ℑℜΠℤ⇒⇔⇐Θ≡</Line>
+   <Line>¬∨∧⊥∡∥→∞∝∅</Line>
+   <Line>Ξ√ΛℂΩ×ΨΓΦℚ∘</Line>
+   <Line>⊂∫∀∃∈Σℕℝ∂Δ∇</Line>
+   <Line>∪∩ℵΠℤ⇐⇔⇒Θ↦</Line>
   </Level>
   <Level>
    <NewCharacters>Großbuchstaben</NewCharacters>
