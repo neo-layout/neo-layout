@@ -212,7 +212,7 @@ xkb_symbols "sundeadkeys" {
 };
 
 
-// German NEO-Layout Version 2
+// German Neo-Layout Version 2
 // adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
 // inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
 //
@@ -281,7 +281,7 @@ xkb_symbols "neo_base" {
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          dead_dasia,              dead_doublegrave,        NoSymbol,                U02DE,                   NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          U1FFE,                   dead_doublegrave,        NoSymbol,                U02DE,                   NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
@@ -301,7 +301,7 @@ xkb_symbols "neo_base" {
     key <AD11> { [ ssharp,                  U1E9E,                   U017F,                   Greek_finalsmallsigma,   U2212,                   NoSymbol,                jot,                     NoSymbol                 ] };
 
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AD12> { [ dead_acute,              dead_cedilla,            dead_stroke,             dead_psili,              dead_doubleacute,        NoSymbol,                dead_abovedot,           NoSymbol                 ] };
+    key <AD12> { [ dead_acute,              dead_cedilla,            dead_stroke,             U1FBF,                   dead_doubleacute,        NoSymbol,                dead_abovedot,           NoSymbol                 ] };
 
     // Middle row
     // --------------------------------------------------------------
