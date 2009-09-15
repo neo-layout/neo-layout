@@ -316,9 +316,9 @@ xkb_symbols "neo_base" {
     key <AC07> { [ n,                       N,                       parenleft,               Greek_nu,                KP_4,                    KP_4,                    U2115,                   NoSymbol                 ] };
     key <AC08> { [ r,                       R,                       parenright,              U03F1,                   KP_5,                    KP_5,                    U211D,                   NoSymbol                 ] };
     key <AC09> { [ t,                       T,                       minus,                   Greek_tau,               KP_6,                    KP_6,                    partialderivative,       NoSymbol                 ] };
-    key <AC10> { [ d,                       D,                       colon,                   Greek_delta,             KP_Separator,            NoSymbol,                Greek_DELTA,             NoSymbol                 ] };
+    key <AC10> { [ d,                       D,                       colon,                   Greek_delta,             KP_Separator,            comma,                   Greek_DELTA,             NoSymbol                 ] };
 
-    key <AC11> { [ y,                       Y,                       at,                      Greek_upsilon,           period,                  NoSymbol,                nabla,                   NoSymbol                 ] };
+    key <AC11> { [ y,                       Y,                       at,                      Greek_upsilon,           period,                  KP_Decimal,              nabla,                   NoSymbol                 ] };
 
     // Bottom row
     // --------------------------------------------------------------
