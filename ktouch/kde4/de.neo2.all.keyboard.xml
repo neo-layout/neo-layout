@@ -123,6 +123,7 @@
   </Key>
   <Key Width="80" X="-300" Y="0" Height="80" FingerKeyIndex="4" Type="NORMAL" >
    <Char Unicode="8222" Position="TopLeft" >„</Char>
+   <Char Unicode="8677" Position="TopRight" >⇥</Char>
    <Char Unicode="56" Position="BottomLeft" >8</Char>
    <Char Unicode="8218" Position="BottomRight" >‚</Char>
   </Key>
