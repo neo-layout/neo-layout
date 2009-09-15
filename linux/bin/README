@@ -1,6 +1,6 @@
 == installiere_neo ==
-Das Skript ›installiere_neo‹ erlaubt eine einfache und saubere Installation von NEO
-für einen Benutzer (keine root-Rechte erforderlich)
+Das Skript ›installiere_neo‹ erlaubt eine einfache und saubere Installation von Neo
+für einen Benutzer (keine root-Rechte erforderlich).
 
 
 == Skriptordner in .profile eintragen ==
@@ -10,7 +10,7 @@ Dazu sollte in der Datei ›.profile‹, die beim Login gelesen wird, folgende Z
 # NEO:
 PATH=$PATH:$(Pfad zu den Skripten)	# für NEO-Skripte wie ›asdf‹ und ›uiae‹
 export PATH				# für NEO-Skripte wie ›asdf‹ und ›uiae‹
-# asdf					# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es NEO
+# asdf					# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es Neo
 -------------------------------
 
 Man beachte, dass die Skripte ausführbar sein müssen (chmod u+x ›Datei‹)
