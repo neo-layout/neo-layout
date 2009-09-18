@@ -1,6 +1,5 @@
 #configinfo mathematische und physikalische Zeichen (≥ ∉ ℏ ℃)
 
-
 # additional Definitions by Neo keyboard layout - mathematical symbols
 
 # mathematical functions and operators
@@ -157,6 +156,9 @@
 <Multi_key> <o> <KP_Equal>                 : "⊜"   U229C # CIRCLED EQUALS
 <Multi_key> <asterisk> <asterisk>          : "∗"   U2217 # ASTERISK OPERATOR
 <Multi_key> <KP_Multiply> <KP_Multiply>    : "∗"   U2217 # ASTERISK OPERATOR
+<Multi_key> <bar> <multiply> <bar>         : "⋈"   U22C8 # BOWTIE
+<Multi_key> <bar> <multiply>               : "⋉"   U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key> <multiply> <bar>               : "⋊"   U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
 <U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
 <U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
@@ -229,42 +231,101 @@
 <dead_stroke> <Multi_key> <KP_Equal> <bar> <greater>        : "⋭"   U22ED # DOES NOT CONTAIN AS NORMAL SUBGROUP OR EQUAL
 
 # Vector
-<dead_circumflex> <rightarrow>             : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<dead_circumflex> <greater>                : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<Multi_key> <asciicircum> <greater>        : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<Multi_key> <asciicircum> <rightarrow>     : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-#<dead_circumflex> <leftarrow>              : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-
+<dead_circumflex> <rightarrow>                 : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
+<dead_circumflex> <greater>                    : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
+<Multi_key> <asciicircum> <greater>            : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
+<Multi_key> <asciicircum> <rightarrow>         : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
+<U21BB> <U20D7>                                : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+<dead_circumflex> <leftarrow>                  : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+<dead_circumflex> <U21BB> <rightarrow>         : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+<dead_circumflex> <less>                       : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+<Multi_key> <asciicircum> <less>               : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+<Multi_key> <asciicircum> <leftarrow>          : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+<Multi_key> <asciicircum> <U21BB> <rightarrow> : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
+⃗
 # arrows
-<Multi_key> <less> <minus>                 : "←"   U2190 # LEFTWARDS ARROW
-<Multi_key> <bar> <asciicircum>            : "↑"   U2191 # UPWARDS ARROW
-<Multi_key> <minus> <greater>              : "→"   U2192 # RIGHTWARDS ARROW
-<Multi_key> <v> <bar>                      : "↓"   U2193 # DOWNWARDS ARROW
-<Multi_key> <backslash> <asciicircum>      : "↖"   U2196 # NORTH WEST ARROW
-<Multi_key> <slash> <asciicircum>          : "↗"   U2197 # NORTH EAST ARROW
-<Multi_key> <backslash> <v>                : "↘"   U2198 # SOUTH EAST ARROW
-<Multi_key> <slash> <v>                    : "↙"   U2199 # SOUTH WEST ARROW
-<Multi_key> <leftarrow> <bar>              : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
-<Multi_key> <uparrow> <bar>                : "↥"   U21A5 # UPWARDS ARROW FROM BAR
-<Multi_key> <bar> <rightarrow>             : "↦"   U21A6 # RIGHTWARDS ARROW FROM BAR
-<Multi_key> <downarrow> <bar>              : "↧"   U21A7 # DOWNWARDS ARROW FROM BAR
-<Multi_key> <rightarrow> <leftarrow>       : "⇄"   U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
-<Multi_key> <uparrow> <downarrow>          : "⇅"   U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
-<Multi_key> <leftarrow> <rightarrow>       : "⇆"   U21C6 # LEFTWARDS ARROW OVER RIGHTWARDS ARROW
-<Multi_key> <leftarrow> <leftarrow>        : "⇇"   U21C7 # LEFTWARDS PAIRED ARROWS
-<Multi_key> <uparrow> <uparrow>            : "⇈"   U21C8 # UPWARDS PAIRED ARROWS
-<Multi_key> <rightarrow> <rightarrow>      : "⇉"   U21C9 # RIGHTWARDS PAIRED ARROWS
-<Multi_key> <downarrow> <downarrow>        : "⇊"   U21CA # DOWNWARDS PAIRED ARROWS
-<Multi_key> <downarrow> <uparrow>          : "⇵"   U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
-<Multi_key> <w> <i> <d>                    : "↯"   U21AF # DOWNWARDS ZIGZAG ARROW
-<U21BB> <U2192>                            : "←"   U2190 # LEFTWARDS ARROW
-<U21BB> <U2190>                            : "→"   U2192 # RIGHTWARDS ARROW
-<U21BB> <21A6>                             : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
-<U21BB> <ifonlyif>                         : "⇕"   U21D5 # UP DOWN DOUBLE ARROW
-<U02DE> <U2192>                            : "↪"   U21AA # RIGHTWARDS ARROW WITH HOOK
-<U02DE> <U2190>                            : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
-<U02DE> <U21BB> <U2192>                    : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
-<U21BB> <U02DE> <U2192>                    : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<Multi_key> <less> <minus>                     : "←"   U2190 # LEFTWARDS ARROW
+<Multi_key> <bar> <asciicircum>                : "↑"   U2191 # UPWARDS ARROW
+<Multi_key> <minus> <greater>                  : "→"   U2192 # RIGHTWARDS ARROW
+<Multi_key> <v> <bar>                          : "↓"   U2193 # DOWNWARDS ARROW
+<Multi_key> <less> <rightarrow>                : "↔"   U2194 # LEFT RIGHT ARROW
+<Multi_key> <leftarrow> <greater>              : "↔"   U2194 # LEFT RIGHT ARROW
+<Multi_key> <v> <uparrow>                      : "↕"   U2195 # UP DOWN ARROW
+<Multi_key> <downarrow> <asciicircum>          : "↕"   U2195 # UP DOWN ARROW
+<Multi_key> <asciicircum> <bar> <v>            : "↕"   U2195 # UP DOWN ARROW
+<Multi_key> <backslash> <asciicircum>          : "↖"   U2196 # NORTH WEST ARROW
+<Multi_key> <slash> <asciicircum>              : "↗"   U2197 # NORTH EAST ARROW
+<Multi_key> <backslash> <v>                    : "↘"   U2198 # SOUTH EAST ARROW
+<Multi_key> <slash> <v>                        : "↙"   U2199 # SOUTH WEST ARROW
+<Multi_key> <asciicircum> <backslash> <v>      : "⤡"   U2921 # NORTH WEST AND SOUTH EAST ARROW
+<Multi_key> <v> <slash> <asciicircum>          : "⤢"   U2922 # NORTH EAST AND SOUTH WEST ARROW
+<Multi_key> <leftarrow> <bar>                  : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
+<Multi_key> <uparrow> <bar>                    : "↥"   U21A5 # UPWARDS ARROW FROM BAR
+<Multi_key> <bar> <rightarrow>                 : "↦"   U21A6 # RIGHTWARDS ARROW FROM BAR
+<Multi_key> <downarrow> <bar>                  : "↧"   U21A7 # DOWNWARDS ARROW FROM BAR
+<Multi_key> <rightarrow> <bar>                 : "⇥"   U21E5 # RIGHTWARDS ARROW TO BAR
+<Multi_key> <bar> <leftarrow>                  : "⇤"   U21E4 # LEFTWARDS ARROW TO BAR
+<Multi_key> <bar> <U21BB> <rightarrow>         : "⇤"   U21E4 # LEFTWARDS ARROW TO BAR
+<Multi_key> <U2195> <bar>                      : "↨"   U21A8 # UP DOWN ARROW WITH BASE
+<Multi_key> <rightarrow> <leftarrow>           : "⇄"   U21C4 # RIGHTWARDS ARROW OVER LEFTWARDS ARROW
+<Multi_key> <uparrow> <downarrow>              : "⇅"   U21C5 # UPWARDS ARROW LEFTWARDS OF DOWNWARDS ARROW
+<Multi_key> <leftarrow> <rightarrow>           : "⇆"   U21C6 # LEFTWARDS ARROW OVER RIGHTWARDS ARROW
+<Multi_key> <leftarrow> <leftarrow>            : "⇇"   U21C7 # LEFTWARDS PAIRED ARROWS
+<Multi_key> <uparrow> <uparrow>                : "⇈"   U21C8 # UPWARDS PAIRED ARROWS
+<Multi_key> <rightarrow> <rightarrow>          : "⇉"   U21C9 # RIGHTWARDS PAIRED ARROWS
+<Multi_key> <downarrow> <downarrow>            : "⇊"   U21CA # DOWNWARDS PAIRED ARROWS
+<Multi_key> <downarrow> <uparrow>              : "⇵"   U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
+<Multi_key> <w> <i> <d>                        : "↯"   U21AF # DOWNWARDS ZIGZAG ARROW
+<Multi_key> <z> <rightarrow>                   : "↯"   U21AF # DOWNWARDS ZIGZAG ARROW
+<U21BB> <rightarrow>                           : "←"   U2190 # LEFTWARDS ARROW
+<U21BB> <U21A6>                                : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
+<U21BB> <ifonlyif>                             : "⇕"   U21D5 # UP DOWN DOUBLE ARROW
+<Multi_key> <bar> <uparrow>                    : "⇑"   U21D1 # UPWARDS DOUBLE ARROW
+<Multi_key> <bar> <downarrow>                  : "⇓"   U21D3 # DOWNWARDS DOUBLE ARROW
+<Multi_key> <bar> <backslash> <asciicircum>    : "⇖"   U21D6 # NORTH WEST DOUBLE ARROW
+<Multi_key> <bar> <slash> <asciicircum>        : "⇗"   U21D7 # NORTH EAST DOUBLE ARROW
+<Multi_key> <bar> <backslash> <v>              : "⇘"   U21D8 # SOUTH EAST DOUBLE ARROW
+<Multi_key> <bar> <slash> <v>                  : "⇙"   U21D9 # SOUTH WEST DOUBLE ARROW
+<Multi_key> <bar> <U21D2>                      : "⤇"   U2907 # RIGHTWARDS DOUBLE ARROW FROM BAR
+<Multi_key> <U21D0> <bar>                      : "⤆"   U2906 # LEFTWARDS DOUBLE ARROW FROM BAR
+<U02DE> <rightarrow>                           : "↪"   U21AA # RIGHTWARDS ARROW WITH HOOK
+<U02DE> <Multi_key> <minus> <greater>          : "↪"   U21AA # RIGHTWARDS ARROW WITH HOOK
+<U02DE> <leftarrow>                            : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<U02DE> <Multi_key> <less> <minus>             : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<U02DE> <U21BB> <rightarrow>                   : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<U21BB> <U02DE> <rightarrow>                   : "↩"   U21A9 # LEFTWARDS ARROW WITH HOOK
+<U02DE> <Multi_key> <backslash> <asciicircum>  : "⤣"   U2923 # NORTH WEST ARROW WITH HOOK
+<U02DE> <Multi_key> <slash> <asciicircum>      : "⤤"   U2924 # NORTH EAST ARROW WITH HOOK
+<U02DE> <Multi_key> <backslash> <v>            : "⤥"   U2925 # SOUTH EAST ARROW WITH HOOK
+<U02DE> <Multi_key> <slash> <v>                : "⤦"   U2926 # SOUTH WEST ARROW WITH HOOK
+<Multi_key> <ellipsis> <uparrow>               : "⇡"   U21E1 # UPWARDS DASHED ARROW
+<Multi_key> <ellipsis> <bar> <asciicircum>     : "⇡"   U21E1 # UPWARDS DASHED ARROW
+<Multi_key> <ellipsis> <downarrow>             : "⇣"   U21E3 # DOWNWARDS DASHED ARROW
+<Multi_key> <ellipsis> <v> <bar>               : "⇣"   U21E3 # DOWNWARDS DASHED ARROW
+<Multi_key> <ellipsis> <rightarrow>            : "⇢"   U21E2 # RIGHTWARDS DASHED ARROW
+<Multi_key> <ellipsis> <minus> <greater>       : "⇢"   U21E2 # RIGHTWARDS DASHED ARROW
+<Multi_key> <ellipsis> <leftarrow>             : "⇠"   U21E0 # LEFTWARDS DASHED ARROW
+<Multi_key> <ellipsis> <less> <minus>          : "⇠"   U21E0 # LEFTWARDS DASHED ARROW
+<Multi_key> <ellipsis> <U21BB> <rightarrow>    : "⇠"   U21E0 # LEFTWARDS DASHED ARROW
+<Multi_key> <minus> <rightarrow>               : "⟶"   U27F6 # LONG RIGHTWARDS ARROW
+<Multi_key> <leftarrow> <minus>                : "⟵"   U27F5 # LONG LEFTWARDS ARROW
+<Multi_key> <U21BB> <rightarrow> <minus>       : "⟵"   U27F5 # LONG LEFTWARDS ARROW
+<Multi_key> <equal> <U21D2>                    : "⟹"   U27F9 # LONG RIGHTWARDS DOUBLE ARROW
+<Multi_key> <U21D0> <equal>                    : "⟸"   U27F8 # LONG LEFTWARDS DOUBLE ARROW
+<Multi_key> <U21D0> <U21D2>                    : "⟺"   U27FA # LONG LEFT RIGHT DOUBLE ARROW
+<Multi_key> <equal> <uparrow>                  : "⇞"   U21DE # UPWARDS ARROW WITH DOUBLE STROKE
+<Multi_key> <equal> <downarrow>                : "⇟"   U21DF # DOWNWARDS ARROW WITH DOUBLE STROKE
+<Multi_key> <guillemotleft> <minus>            : "↞"   U219E # LEFTWARDS TWO HEADED ARROW
+<Multi_key> <guillemotleft> <bar>              : "↟"   U219F # UPWARDS TWO HEADED ARROW
+<Multi_key> <minus> <guillemotright>           : "↠"   U21A0 # RIGHTWARDS TWO HEADED ARROW
+<Multi_key> <bar> <guillemotright>             : "↡"   U21A1 # DOWNWARDS TWO HEADED ARROW
+<Multi_key> <greater> <rightarrow>             : "↣"   U21A3 # RIGHTWARDS ARROW WITH TAIL
+<Multi_key> <leftarrow> <less>                 : "↢"   U21A2 # LEFTWARDS ARROW WITH TAIL
+<Multi_key> <U21BB> <rightarrow> <less>        : "↢"   U21A2 # LEFTWARDS ARROW WITH TAIL
+<Multi_key> <minus> <less>                     : "⤙"   U2919 # LEFTWARDS ARROW-TAIL
+<Multi_key> <greater> <minus>                  : "⤚"   U291A # RIGHTWARDS ARROW-TAIL
+<Multi_key> <minus> <guillemotleft>            : "⤛"   U291B # LEFTWARDS DOUBLE ARROW-TAIL
+<Multi_key> <guillemotright> <minus>           : "⤜"   U291C # RIGHTWARDS DOUBLE ARROW-TAIL
 
 # superscripts and subscripts
 <dead_circumflex> <minus>                  : "⁻"   U207B # SUPERSCRIPT MINUS

@@ -416,7 +416,5 @@
 <Multi_key> <Y> <G>                               : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
 <Multi_key> <Y> <g>                               : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
 <Multi_key> <y> <g>                               : "ȝ" U021D # LATIN SMALL LETTER YOGH
-#<Multi_key> <Y> <R>                               : "Ʀ" U01A6 # LATIN LETTER YR
-#<Multi_key> <Y> <r>                               : "Ʀ" U01A6 # LATIN LETTER YR
 
 # End of additional Definitions (languages) by Neo keyboard layout
