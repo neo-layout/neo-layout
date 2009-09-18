@@ -67,19 +67,19 @@ Medium vorhanden ist.  Die Bedienung kann wahlweise über die Ebene 1 des
 Keypads oder die rechte Hälfte der Ebene 4 erfolgen.
 
 Information zur Tastaturmaussteuerung:
- • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. KP-7:
+ • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. KP_7:
    links-oben)
- • KP-5 entspricht einem (einfachen) Klick
- • KP-+ entspricht einem Doppelklick
- • KP-0 entspricht einem gehaltenen Klick (z.B. für drag’n’drop oder
+ • KP_5 entspricht einem (einfachen) Klick
+ • KP_+ entspricht einem Doppelklick
+ • KP_0 entspricht einem gehaltenen Klick (z.B. für drag’n’drop oder
    Markierungen)
- • KP-, oder KP-. lösen diesen gehaltenen Klick (z.B. für drag’n’drop; für das
-   Ende einer Markierung 5 benutzen!)
+ • KP_, oder KP_. lösen diesen gehaltenen Klick (z.B. für drag’n’drop; für das
+   Ende einer Markierung KP_5 benutzen!)
 
 Welche Taste geklickt wird, muss zuvor bestimmt werden:
- • KP-/ kündigt einen Linksklick an (Standard)
- • KP-* kündigt einen Mittelklick an
- • KP-- kündigt einen Rechtsklick an
+ • KP_/ kündigt einen Linksklick an (Standard)
+ • KP_* kündigt einen Mittelklick an
+ • KP_- kündigt einen Rechtsklick an
 
 Die Tastaturmaussteuerung funktioniert unter allen Betriebssystemen (Linux,
 Windows, …) und allen Tastaturbelegungen (Neo, QWERTZ, QWERTY, …) identisch.
@@ -224,7 +224,7 @@ der PC-105-Tastatur allein mit dem Hauptfeld der Tastatur.
 │    3    │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ϱ│t - τ│d : δ│y @ υ│  3  │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
 │CapsLk│ Lock│Ü ⌧ ∪│Ö ⇞ ∩│Ä ↲ ℵ│P ⇟ Π│Z ⇥ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 Θ│J ; ↦│   CapsLock   │
-│Umsch │Mod4 │ü #  │ö $ ϵ│ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Umschalt   │
+│Shift │Mod4 │ü #  │ö $ ϵ│ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ρ│. ' ϑ│j ; θ│   Shift      │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │      │ Alt  │Leerzeichen␣      0         schmal ¦  │ Lock │      │ Menü │ Strg │
 │      │      │      │Leerzeichen␣ Leerzeichen␣ geschützt ⍽ │Mod4  │      │      │      │
@@ -238,7 +238,7 @@ der PC-105-Tastatur allein mit dem Hauptfeld der Tastatur.
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │u│i│a│e│o│s│n│r│t│d│y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│M4│ü│ö│ä│p│z│b│m│,│.│j│ Umsch │
+│Shi│M4│ü│ö│ä│p│z│b│m│,│.│j│ Shift │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -264,7 +264,7 @@ der PC-105-Tastatur allein mit dem Hauptfeld der Tastatur.
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │\│/│{│}│*│?│(│)│-│:│@│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│M4│#│$│|│~│`│+│%│"│'│;│ Umsch │
+│Shi│M4│#│$│|│~│`│+│%│"│'│;│ Shift │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│Leerzeichen│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -277,7 +277,7 @@ der PC-105-Tastatur allein mit dem Hauptfeld der Tastatur.
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│4L│⌧│⇞│↲│⇟│⇥│:│1│2│3│;│ Umsch │
+│Shi│4L│⌧│⇞│↲│⇟│⇥│:│1│2│3│;│ Shift │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -290,7 +290,7 @@ der PC-105-Tastatur allein mit dem Hauptfeld der Tastatur.
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │ │ι│α│ε│ο│σ│ν│ϱ│τ│δ│υ│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│M4│ │ϵ│η│π│ζ│β│μ│ρ│ϑ│θ│ Umsch │
+│Shi│M4│ │ϵ│η│π│ζ│β│μ│ρ│ϑ│θ│ Shift │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│geschützt ⍽│M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
@@ -303,7 +303,7 @@ der PC-105-Tastatur allein mit dem Hauptfeld der Tastatur.
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⊂│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│M4│∪│∩│ℵ│Π│ℤ│⇐│⇔│⇒│Θ│↦│ Umsch │
+│Shi│M4│∪│∩│ℵ│Π│ℤ│⇐│⇔│⇒│Θ│↦│ Shift │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│  schmal ¦ │M4│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
