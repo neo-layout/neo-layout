@@ -157,13 +157,16 @@
 <Multi_key> <asterisk> <asterisk>          : "∗"   U2217 # ASTERISK OPERATOR
 <Multi_key> <KP_Multiply> <KP_Multiply>    : "∗"   U2217 # ASTERISK OPERATOR
 <Multi_key> <bar> <multiply> <bar>         : "⋈"   U22C8 # BOWTIE
-<Multi_key> <bar> <multiply>               : "⋉"   U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key> <bar> <multiply> <space>       : "⋉"   U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
 <Multi_key> <multiply> <bar>               : "⋊"   U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
 <U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
 <U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
 <U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
 <Multi_key> <d> <a> <g>                    : "†"   U2020 # DAGGER
 <Multi_key> <minus> <colon>                : "∹"   U2239 # EXCESS
+# overwrites »« combinations
+<Multi_key> <greater> <greater>            : "≫"  U226B # MUCH GREATER-THAN
+<Multi_key> <less> <less>                  : "≪"  U226A # MUCH LESS-THAN
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
@@ -250,8 +253,6 @@
 <Multi_key> <v> <bar>                          : "↓"   U2193 # DOWNWARDS ARROW
 <Multi_key> <less> <rightarrow>                : "↔"   U2194 # LEFT RIGHT ARROW
 <Multi_key> <leftarrow> <greater>              : "↔"   U2194 # LEFT RIGHT ARROW
-<Multi_key> <v> <uparrow>                      : "↕"   U2195 # UP DOWN ARROW
-<Multi_key> <downarrow> <asciicircum>          : "↕"   U2195 # UP DOWN ARROW
 <Multi_key> <asciicircum> <bar> <v>            : "↕"   U2195 # UP DOWN ARROW
 <Multi_key> <backslash> <asciicircum>          : "↖"   U2196 # NORTH WEST ARROW
 <Multi_key> <slash> <asciicircum>              : "↗"   U2197 # NORTH EAST ARROW
