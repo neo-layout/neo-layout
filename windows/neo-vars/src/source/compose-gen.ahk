@@ -1791,6 +1791,8 @@ EncodeUniCompose(str) {
 SetFormat, Integer, hex
   result := ""
   loop {
+    if (str == "")
+      break
     char := asc(SubStr(str,1,1))
     str  := SubStr(str,2)
     if (char < 0x80)
@@ -1828,8 +1830,6 @@ SetFormat, Integer, hex
          result .= "U" . SubStr("000000" . SubStr((((char & 0x07) << 18) + ((char2 & 0x3F) << 12) + ((char3 & 0x3F) << 6) + (char4 & 0x3F)),3),-5)
        }
     }
-    if (str == "")
-      break
   }
 SetFormat, Integer, d
   StringUpper,result,result
