@@ -442,74 +442,230 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 // Schema:
 //    Deadtrans( Name oder Unicode der normalen Taste,    Name oder Unicode der toten Taste,    Name oder Unicode der zu bildenden Taste,    0x0000 für  sichtbar, 0x0001 für tot)
 //    0, 0    terminiert komplette Liste
+//    
+//    Bei Doppelbelegungen wird erster Treffer genommen
+//    
 
 //Deadkeys
-// T1: Taste links neben der 1
-// Zirkumflex, Tilde, Ring Above, Caron, Brevis, Macron
-	DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000), //Zirkumflex
-	DEADTRANS( L'^'   , L'^'   , 0x0302 , 0x0000), //2x für Combining
-	DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),
-	DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
-	DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
-	DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
-	DEADTRANS( L'5'   , L'^'   , 0x2075 , 0x0000),
-	DEADTRANS( L'6'   , L'^'   , 0x2076 , 0x0000),
-	DEADTRANS( L'7'   , L'^'   , 0x2077 , 0x0000),
-	DEADTRANS( L'8'   , L'^'   , 0x2078 , 0x0000),
-	DEADTRANS( L'9'   , L'^'   , 0x2079 , 0x0000),
-	DEADTRANS( L'0'   , L'^'   , 0x2070 , 0x0000),
-	DEADTRANS( L'+'   , L'^'   , 0x207a , 0x0000),
-	DEADTRANS( L'-'   , L'^'   , 0x207b , 0x0000),
-	DEADTRANS( L'='   , L'^'   , 0x207c , 0x0000),
-	DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
-	DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
-	DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
-	DEADTRANS( L'A'   , L'^'   , 0x00c2 , 0x0000),
-	DEADTRANS( L'a'   , L'^'   , 0x00e2 , 0x0000),
-	DEADTRANS( L'C'   , L'^'   , 0x0108 , 0x0000),
-	DEADTRANS( L'c'   , L'^'   , 0x0109 , 0x0000),
-	DEADTRANS( L'E'   , L'^'   , 0x00ca , 0x0000),
-	DEADTRANS( L'e'   , L'^'   , 0x00ea , 0x0000),
-	DEADTRANS( L'G'   , L'^'   , 0x011c , 0x0000),
-	DEADTRANS( L'g'   , L'^'   , 0x011d , 0x0000),
-	DEADTRANS( L'H'   , L'^'   , 0x0124 , 0x0000),
-	DEADTRANS( L'h'   , L'^'   , 0x0125 , 0x0000),
-	DEADTRANS( L'I'   , L'^'   , 0x00ce , 0x0000),
-	DEADTRANS( L'i'   , L'^'   , 0x00ee , 0x0000),
-	DEADTRANS( L'J'   , L'^'   , 0x0134 , 0x0000),
-	DEADTRANS( L'j'   , L'^'   , 0x0135 , 0x0000),
-	DEADTRANS( L'O'   , L'^'   , 0x00d4 , 0x0000),
-	DEADTRANS( L'o'   , L'^'   , 0x00f4 , 0x0000),
-	DEADTRANS( L'S'   , L'^'   , 0x015c , 0x0000),
-	DEADTRANS( L's'   , L'^'   , 0x015d , 0x0000),
-	DEADTRANS( L'U'   , L'^'   , 0x00db , 0x0000),
-	DEADTRANS( L'u'   , L'^'   , 0x00fb , 0x0000),
-	DEADTRANS( L'W'   , L'^'   , 0x0174 , 0x0000),
-	DEADTRANS( L'w'   , L'^'   , 0x0175 , 0x0000),
-	DEADTRANS( L'Y'   , L'^'   , 0x0176 , 0x0000),
-	DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
-	DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
-	DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
+// Nachfolgend Tafeln für die diakritschen Zeichen (alphabetisch)
+// Kombinationen nur für „Latin Letters“, der rest ist im Deuschen selten und lässt sich über das Combiningszeichen (nachgestellt) bilden
+// Mehrfachfunktionen siehe: http://wiki.neo-layout.org/wiki/Diakritika#DoppelfunktionToterTasten
+//
+// zu xx% fertig:
+// Akut – fertig
+// Brevis – fertig
+// Gravis – fertig
+// Makron – ferig
+// Tilde – fertig
+// 
+//
+//
+//
+//
+//
+//
+//
+// Zirkumflex + Superskript – fertig
 
-	DEADTRANS( L' '   , L'~'   , L'~'   , 0x0000), //Tilde
-	DEADTRANS( L'~'   , L'~'   , 0x0303 , 0x0000), //2x für Combining
-	DEADTRANS( L'A'   , L'~'   , 0x00c3 , 0x0000),
-	DEADTRANS( L'N'   , L'~'   , 0x00d1 , 0x0000),
-	DEADTRANS( L'O'   , L'~'   , 0x00d5 , 0x0000),
-	DEADTRANS( L'a'   , L'~'   , 0x00e3 , 0x0000),
-	DEADTRANS( L'n'   , L'~'   , 0x00f1 , 0x0000),
-	DEADTRANS( L'o'   , L'~'   , 0x00f5 , 0x0000),
-	DEADTRANS( L'I'   , L'~'   , 0x0128 , 0x0000),
-	DEADTRANS( L'i'   , L'~'   , 0x0129 , 0x0000),
-	DEADTRANS( L'U'   , L'~'   , 0x0168 , 0x0000),
-	DEADTRANS( L'u'   , L'~'   , 0x0169 , 0x0000),
-	DEADTRANS( L'V'   , L'~'   , 0x1e7c , 0x0000),
-	DEADTRANS( L'v'   , L'~'   , 0x1e7d , 0x0000),
-	DEADTRANS( L'E'   , L'~'   , 0x1ebc , 0x0000),
-	DEADTRANS( L'e'   , L'~'   , 0x1ebd , 0x0000),
-	DEADTRANS( L'Y'   , L'~'   , 0x1ef8 , 0x0000),
-	DEADTRANS( L'y'   , L'~'   , 0x1ef9 , 0x0000),
+// Akut (fertig)
+DEADTRANS( L' '   , 0x00B4 , 0x00B4 , 0x0000),	//Akut
+DEADTRANS( 0x00B4 , 0x00B4 , 0x0301 , 0x0000),	//2x für Combining
+DEADTRANS( L'A'   , 0x00B4 , 0x00c1 , 0x0000),
+DEADTRANS( L'a'   , 0x00B4 , 0x00e1 , 0x0000),
+DEADTRANS( L'C'   , 0x00B4 , 0x0106 , 0x0000),
+DEADTRANS( L'c'   , 0x00B4 , 0x0106 , 0x0000),
+DEADTRANS( L'E'   , 0x00B4 , 0x00c9 , 0x0000),
+DEADTRANS( L'e'   , 0x00B4 , 0x00e9 , 0x0000),
+DEADTRANS( L'G'   , 0x00B4 , 0x01f4 , 0x0000),
+DEADTRANS( L'g'   , 0x00B4 , 0x01f5 , 0x0000),
+DEADTRANS( L'I'   , 0x00B4 , 0x00cd , 0x0000),
+DEADTRANS( L'i'   , 0x00B4 , 0x00ed , 0x0000),
+DEADTRANS( L'K'   , 0x00B4 , 0x1e30 , 0x0000),
+DEADTRANS( L'k'   , 0x00B4 , 0x1e31 , 0x0000),
+DEADTRANS( L'L'   , 0x00B4 , 0x0139 , 0x0000),
+DEADTRANS( L'l'   , 0x00B4 , 0x013a , 0x0000),
+DEADTRANS( L'M'   , 0x00B4 , 0x1e3e , 0x0000),
+DEADTRANS( L'm'   , 0x00B4 , 0x1e3f , 0x0000),
+DEADTRANS( L'N'   , 0x00B4 , 0x0143 , 0x0000),
+DEADTRANS( L'n'   , 0x00B4 , 0x0144 , 0x0000),
+DEADTRANS( L'O'   , 0x00B4 , 0x00d3 , 0x0000),
+DEADTRANS( L'o'   , 0x00B4 , 0x00f3 , 0x0000),
+DEADTRANS( L'P'   , 0x00B4 , 0x1e54 , 0x0000),
+DEADTRANS( L'p'   , 0x00B4 , 0x1e55 , 0x0000),
+DEADTRANS( L'R'   , 0x00B4 , 0x0154 , 0x0000),
+DEADTRANS( L'r'   , 0x00B4 , 0x0155 , 0x0000),
+DEADTRANS( L'S'   , 0x00B4 , 0x015a , 0x0000),
+DEADTRANS( L's'   , 0x00B4 , 0x015b , 0x0000),
+DEADTRANS( L'U'   , 0x00B4 , 0x00da , 0x0000),
+DEADTRANS( L'u'   , 0x00B4 , 0x00fa , 0x0000),
+DEADTRANS( L'W'   , 0x00B4 , 0x1e82 , 0x0000),
+DEADTRANS( L'w'   , 0x00B4 , 0x1e83 , 0x0000),
+DEADTRANS( L'Y'   , 0x00B4 , 0x00dd , 0x0000),
+DEADTRANS( L'y'   , 0x00B4 , 0x00fd , 0x0000),
+DEADTRANS( L'Z'   , 0x00B4 , 0x0179 , 0x0000),
+DEADTRANS( L'z'   , 0x00B4 , 0x017a , 0x0000),
+DEADTRANS( 0x00dc , 0x00B4 , 0x01d7 , 0x0000),	//Ü
+DEADTRANS( 0x00fc , 0x00B4 , 0x01d8 , 0x0000),	//ü
+DEADTRANS( 0x00c6 , 0x00B4 , 0x01fc , 0x0000),	//Æ
+DEADTRANS( 0x00e6 , 0x00B4 , 0x01fd , 0x0000),	//æ
 
+
+// Brevis (fertig)
+	DEADTRANS( L' '   , 0x02D8 , 0x02D8 , 0x0000),	//Brevis
+	DEADTRANS( 0x02D8 , 0x02D8 , 0x0306 , 0x0000),	//2x für Combining
+	DEADTRANS( L'A'   , 0x02D8 , 0x0102 , 0x0000),
+	DEADTRANS( L'a'   , 0x02D8 , 0x0103 , 0x0000),
+	DEADTRANS( L'E'   , 0x02D8 , 0x0114 , 0x0000),
+	DEADTRANS( L'e'   , 0x02D8 , 0x0115 , 0x0000),
+	DEADTRANS( L'G'   , 0x02D8 , 0x011e , 0x0000),
+	DEADTRANS( L'g'   , 0x02D8 , 0x011f , 0x0000),
+	DEADTRANS( L'I'   , 0x02D8 , 0x012c , 0x0000),
+	DEADTRANS( L'i'   , 0x02D8 , 0x012d , 0x0000),
+	DEADTRANS( L'O'   , 0x02D8 , 0x014e , 0x0000),
+	DEADTRANS( L'o'   , 0x02D8 , 0x014f , 0x0000),
+	DEADTRANS( L'U'   , 0x02D8 , 0x016c , 0x0000),
+	DEADTRANS( L'u'   , 0x02D8 , 0x016d , 0x0000),
+	DEADTRANS( L'H'   , 0x02D8 , 0x1e2a , 0x0000),
+	DEADTRANS( L'h'   , 0x02D8 , 0x1e2b , 0x0000),
+
+
+// Gravis (fertig)
+DEADTRANS( L' '   , 0x0060 , 0x0060 , 0x0000),	//Gravis
+DEADTRANS( 0x0060 , 0x0060 , 0x0300 , 0x0000),	//2x für Combining
+DEADTRANS( L'a'   , 0x0060 , 0x00e0 , 0x0000),			
+DEADTRANS( L'A'   , 0x0060 , 0x00c0 , 0x0000),			
+DEADTRANS( L'E'   , 0x0060 , 0x00c8 , 0x0000),			
+DEADTRANS( L'e'   , 0x0060 , 0x00e8 , 0x0000),			
+DEADTRANS( L'I'   , 0x0060 , 0x00cc , 0x0000),			
+DEADTRANS( L'i'   , 0x0060 , 0x00ec , 0x0000),			
+DEADTRANS( L'N'   , 0x0060 , 0x01f8 , 0x0000),			
+DEADTRANS( L'n'   , 0x0060 , 0x01f9 , 0x0000),			
+DEADTRANS( L'O'   , 0x0060 , 0x00d2 , 0x0000),			
+DEADTRANS( L'o'   , 0x0060 , 0x00f2 , 0x0000),			
+DEADTRANS( L'U'   , 0x0060 , 0x00d9 , 0x0000),			
+DEADTRANS( L'u'   , 0x0060 , 0x00f9 , 0x0000),			
+DEADTRANS( L'W'   , 0x0060 , 0x1e80 , 0x0000),			
+DEADTRANS( L'w'   , 0x0060 , 0x1e81 , 0x0000),			
+DEADTRANS( L'Y'   , 0x0060 , 0x1ef2 , 0x0000),			
+DEADTRANS( L'y'   , 0x0060 , 0x1ef3 , 0x0000),			
+DEADTRANS( 0x00dc , 0x0060 , 0x01db , 0x0000),	//Ü
+DEADTRANS( 0x00fc , 0x0060 , 0x01dc , 0x0000),	//ü
+
+
+// Makron (fertig)
+DEADTRANS( L' '   , 0x00AF , 0x00AF , 0x0000),	//Makron
+DEADTRANS( 0x00AF , 0x00AF , 0x0304 , 0x0000),	//2x für Combining
+DEADTRANS( L'A'   , 0x00AF , 0x0100 , 0x0000),
+DEADTRANS( L'a'   , 0x00AF , 0x0101 , 0x0000),
+DEADTRANS( L'E'   , 0x00AF , 0x0112 , 0x0000),
+DEADTRANS( L'e'   , 0x00AF , 0x0113 , 0x0000),
+DEADTRANS( L'I'   , 0x00AF , 0x012a , 0x0000),
+DEADTRANS( L'i'   , 0x00AF , 0x012b , 0x0000),
+DEADTRANS( L'O'   , 0x00AF , 0x014c , 0x0000),
+DEADTRANS( L'o'   , 0x00AF , 0x014d , 0x0000),
+DEADTRANS( L'U'   , 0x00AF , 0x016a , 0x0000),
+DEADTRANS( L'u'   , 0x00AF , 0x016b , 0x0000),
+DEADTRANS( L'Y'   , 0x00AF , 0x0232 , 0x0000),
+DEADTRANS( L'y'   , 0x00AF , 0x0233 , 0x0000),
+DEADTRANS( L'G'   , 0x00AF , 0x1e20 , 0x0000),
+DEADTRANS( L'g'   , 0x00AF , 0x1e21 , 0x0000),
+DEADTRANS( 0x00dc , 0x00AF , 0x01d5 , 0x0000),	//Ü
+DEADTRANS( 0x00fc , 0x00AF , 0x01d6 , 0x0000),	//ü
+DEADTRANS( 0x00d6 , 0x00AF , 0x022a , 0x0000),	//Ö
+DEADTRANS( 0x00f6 , 0x00AF , 0x022b , 0x0000),	//ö
+DEADTRANS( L'b'   , 0x00AF , 0x1e07 , 0x0000),  // ab hier Makron darunter
+DEADTRANS( L'B'   , 0x00AF , 0x1e06 , 0x0000),
+DEADTRANS( L'd'   , 0x00AF , 0x1e0f , 0x0000),
+DEADTRANS( L'D'   , 0x00AF , 0x1e0e , 0x0000),
+DEADTRANS( L'k'   , 0x00AF , 0x1e35 , 0x0000),
+DEADTRANS( L'K'   , 0x00AF , 0x1e34 , 0x0000),
+DEADTRANS( L'l'   , 0x00AF , 0x1e3b , 0x0000),
+DEADTRANS( L'L'   , 0x00AF , 0x1e3a , 0x0000),
+DEADTRANS( L'n'   , 0x00AF , 0x1e49 , 0x0000),
+DEADTRANS( L'N'   , 0x00AF , 0x1e48 , 0x0000),
+DEADTRANS( L'r'   , 0x00AF , 0x1e5f , 0x0000),
+DEADTRANS( L'R'   , 0x00AF , 0x1e5e , 0x0000),
+DEADTRANS( L't'   , 0x00AF , 0x1e6f , 0x0000),
+DEADTRANS( L'T'   , 0x00AF , 0x1e6e , 0x0000),
+DEADTRANS( L'z'   , 0x00AF , 0x1e95 , 0x0000),
+DEADTRANS( L'Z'   , 0x00AF , 0x1e94 , 0x0000),
+DEADTRANS( L'h'   , 0x00AF , 0x1e96 , 0x0000),
+
+
+// Tilde (fertig)
+DEADTRANS( L' '   , L'~'   , L'~'   , 0x0000), //Tilde
+DEADTRANS( L'~'   , L'~'   , 0x0303 , 0x0000), //2x für Combining
+DEADTRANS( L'A'   , L'~'   , 0x00c3 , 0x0000),
+DEADTRANS( L'a'   , L'~'   , 0x00e3 , 0x0000),
+DEADTRANS( L'E'   , L'~'   , 0x1ebc , 0x0000),
+DEADTRANS( L'e'   , L'~'   , 0x1ebd , 0x0000),
+DEADTRANS( L'I'   , L'~'   , 0x0128 , 0x0000),
+DEADTRANS( L'i'   , L'~'   , 0x0129 , 0x0000),
+DEADTRANS( L'N'   , L'~'   , 0x00d1 , 0x0000),
+DEADTRANS( L'n'   , L'~'   , 0x00f1 , 0x0000),
+DEADTRANS( L'O'   , L'~'   , 0x00d5 , 0x0000),
+DEADTRANS( L'o'   , L'~'   , 0x00f5 , 0x0000),
+DEADTRANS( L'U'   , L'~'   , 0x0168 , 0x0000),
+DEADTRANS( L'u'   , L'~'   , 0x0169 , 0x0000),
+DEADTRANS( L'V'   , L'~'   , 0x1e7c , 0x0000),
+DEADTRANS( L'v'   , L'~'   , 0x1e7d , 0x0000),
+DEADTRANS( L'Y'   , L'~'   , 0x1ef8 , 0x0000),
+DEADTRANS( L'y'   , L'~'   , 0x1ef9 , 0x0000),
+
+
+// Zirkumflex und Superscript (fertig)
+DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000), //Zirkumflex
+DEADTRANS( L'^'   , L'^'   , 0x0302 , 0x0000), //2x für Combining
+DEADTRANS( L'A'   , L'^'   , 0x00c2 , 0x0000),
+DEADTRANS( L'a'   , L'^'   , 0x00e2 , 0x0000),
+DEADTRANS( L'C'   , L'^'   , 0x0108 , 0x0000),
+DEADTRANS( L'c'   , L'^'   , 0x0109 , 0x0000),
+DEADTRANS( L'E'   , L'^'   , 0x00ca , 0x0000),
+DEADTRANS( L'e'   , L'^'   , 0x00ea , 0x0000),
+DEADTRANS( L'G'   , L'^'   , 0x011c , 0x0000),
+DEADTRANS( L'g'   , L'^'   , 0x011d , 0x0000),
+DEADTRANS( L'H'   , L'^'   , 0x0124 , 0x0000),
+DEADTRANS( L'h'   , L'^'   , 0x0125 , 0x0000),
+DEADTRANS( L'I'   , L'^'   , 0x00ce , 0x0000),
+DEADTRANS( L'i'   , L'^'   , 0x00ee , 0x0000),
+DEADTRANS( L'J'   , L'^'   , 0x0134 , 0x0000),
+DEADTRANS( L'j'   , L'^'   , 0x0135 , 0x0000),
+DEADTRANS( L'O'   , L'^'   , 0x00d4 , 0x0000),
+DEADTRANS( L'o'   , L'^'   , 0x00f4 , 0x0000),
+DEADTRANS( L'S'   , L'^'   , 0x015c , 0x0000),
+DEADTRANS( L's'   , L'^'   , 0x015d , 0x0000),
+DEADTRANS( L'U'   , L'^'   , 0x00db , 0x0000),
+DEADTRANS( L'u'   , L'^'   , 0x00fb , 0x0000),
+DEADTRANS( L'W'   , L'^'   , 0x0174 , 0x0000),
+DEADTRANS( L'w'   , L'^'   , 0x0175 , 0x0000),
+DEADTRANS( L'Y'   , L'^'   , 0x0176 , 0x0000),
+DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
+DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
+DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
+DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),	//ab hier hochgestelltes
+DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
+DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
+DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
+DEADTRANS( L'5'   , L'^'   , 0x2075 , 0x0000),
+DEADTRANS( L'6'   , L'^'   , 0x2076 , 0x0000),
+DEADTRANS( L'7'   , L'^'   , 0x2077 , 0x0000),
+DEADTRANS( L'8'   , L'^'   , 0x2078 , 0x0000),
+DEADTRANS( L'9'   , L'^'   , 0x2079 , 0x0000),
+DEADTRANS( L'0'   , L'^'   , 0x2070 , 0x0000),
+DEADTRANS( L'+'   , L'^'   , 0x207a , 0x0000),
+DEADTRANS( L'-'   , L'^'   , 0x207b , 0x0000),
+DEADTRANS( L'='   , L'^'   , 0x207c , 0x0000),
+DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
+DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
+DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
+
+
+
+
+
+                 
+//===================================================
+//===================================================
 	DEADTRANS( L' '   , 0x02DA , 0x02DA , 0x0000),	//Ring
 	DEADTRANS( 0x02DA , 0x02DA , 0x030A , 0x0000),	//2x für Combining
 	DEADTRANS( L'E'   , 0x02DA , 0x0116 , 0x0000),
@@ -589,64 +745,9 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 	DEADTRANS( 0x00fc , 0x02c7 , 0x01da , 0x0000),
 	DEADTRANS( 0x00dc , 0x02c7 , 0x01d9 , 0x0000),
 
-	DEADTRANS( L' '   , 0x02D8 , 0x02D8 , 0x0000),	//Brevis
-	DEADTRANS( 0x02D8 , 0x02D8 , 0x0306 , 0x0000),	//2x für Combining
-	DEADTRANS( L'A'   , 0x02D8 , 0x0102 , 0x0000),
-	DEADTRANS( L'a'   , 0x02D8 , 0x0103 , 0x0000),
-	DEADTRANS( L'E'   , 0x02D8 , 0x0114 , 0x0000),
-	DEADTRANS( L'e'   , 0x02D8 , 0x0115 , 0x0000),
-	DEADTRANS( L'G'   , 0x02D8 , 0x011e , 0x0000),
-	DEADTRANS( L'g'   , 0x02D8 , 0x011f , 0x0000),
-	DEADTRANS( L'I'   , 0x02D8 , 0x012c , 0x0000),
-	DEADTRANS( L'i'   , 0x02D8 , 0x012d , 0x0000),
-	DEADTRANS( L'O'   , 0x02D8 , 0x014e , 0x0000),
-	DEADTRANS( L'o'   , 0x02D8 , 0x014f , 0x0000),
-	DEADTRANS( L'U'   , 0x02D8 , 0x016c , 0x0000),
-	DEADTRANS( L'u'   , 0x02D8 , 0x016d , 0x0000),
 
-	DEADTRANS( L' '   , 0x00AF , 0x00AF , 0x0000),	//Makron
-	DEADTRANS( 0x00AF , 0x00AF , 0x0304 , 0x0000),	//2x für Combining
-	DEADTRANS( L'A'   , 0x00AF , 0x0100 , 0x0000),
-	DEADTRANS( L'a'   , 0x00AF , 0x0101 , 0x0000),
-	DEADTRANS( L'E'   , 0x00AF , 0x0112 , 0x0000),
-	DEADTRANS( L'e'   , 0x00AF , 0x0113 , 0x0000),
-	DEADTRANS( L'I'   , 0x00AF , 0x012a , 0x0000),
-	DEADTRANS( L'i'   , 0x00AF , 0x012b , 0x0000),
-	DEADTRANS( L'O'   , 0x00AF , 0x014c , 0x0000),
-	DEADTRANS( L'o'   , 0x00AF , 0x014d , 0x0000),
-	DEADTRANS( L'U'   , 0x00AF , 0x016a , 0x0000),
-	DEADTRANS( L'u'   , 0x00AF , 0x016b , 0x0000),
-	DEADTRANS( L'Y'   , 0x00AF , 0x0232 , 0x0000),
-	DEADTRANS( L'y'   , 0x00AF , 0x0233 , 0x0000),
-	DEADTRANS( L'G'   , 0x00AF , 0x1e20 , 0x0000),
-	DEADTRANS( L'g'   , 0x00AF , 0x1e21 , 0x0000),
-// Ende von T1 (links neben der 1)
 
-// T2: zwei rechts neben der 0
-// Gravis, , Trema, Doppelgravis, Spiritus asper, 
-	DEADTRANS( L' '   , 0x0060 , 0x0060 , 0x0000),	//Gravis
-	DEADTRANS( 0x0060 , 0x0060 , 0x0300 , 0x0000),	//2x für Combining
-	DEADTRANS( L'a'   , 0x0060 , 0x00e0 , 0x0000),
-	DEADTRANS( L'e'   , 0x0060 , 0x00e8 , 0x0000),
-	DEADTRANS( L'i'   , 0x0060 , 0x00ec , 0x0000),
-	DEADTRANS( L'o'   , 0x0060 , 0x00f2 , 0x0000),
-	DEADTRANS( L'u'   , 0x0060 , 0x00f9 , 0x0000),
-	DEADTRANS( L'A'   , 0x0060 , 0x00c0 , 0x0000),
-	DEADTRANS( L'E'   , 0x0060 , 0x00c8 , 0x0000),
-	DEADTRANS( L'I'   , 0x0060 , 0x00cc , 0x0000),
-	DEADTRANS( L'O'   , 0x0060 , 0x00d2 , 0x0000),
-	DEADTRANS( L'U'   , 0x0060 , 0x00d9 , 0x0000),
-	DEADTRANS( 0x00dc , 0x0060 , 0x01db , 0x0000),
-	DEADTRANS( 0x00fc , 0x0060 , 0x01dc , 0x0000),
-	DEADTRANS( L'N'   , 0x0060 , 0x01f8 , 0x0000),
-	DEADTRANS( L'n'   , 0x0060 , 0x01f9 , 0x0000),
-	DEADTRANS( L'W'   , 0x0060 , 0x1e80 , 0x0000),
-	DEADTRANS( L'w'   , 0x0060 , 0x1e81 , 0x0000),
-	DEADTRANS( L'Y'   , 0x0060 , 0x1ef2 , 0x0000),
-	DEADTRANS( L'y'   , 0x0060 , 0x1ef3 , 0x0000),
 
-//nicht belegt
-//2x für Combining
 
 	DEADTRANS( L' '   , 0x00A8 , 0x00A8 , 0x0000),	//Trema
 	DEADTRANS( 0x00A8 , 0x00A8 , 0x0308 , 0x0000),	//2x für Combining
@@ -710,44 +811,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 // T3: rechts nebem ›ß‹
 // Akut, Cedille, Quer-/Schrägstrich, Doppelakut, Spiritus lenis, Punkt darüber
-	DEADTRANS( L' '   , 0x00B4 , 0x00B4 , 0x0000),	//Akut
-	DEADTRANS( 0x00B4 , 0x00B4 , 0x0301 , 0x0000),	//2x für Combining
-	DEADTRANS( L'a'   , 0x00B4 , 0x00e1 , 0x0000),
-	DEADTRANS( L'e'   , 0x00B4 , 0x00e9 , 0x0000),
-	DEADTRANS( L'i'   , 0x00B4 , 0x00ed , 0x0000),
-	DEADTRANS( L'o'   , 0x00B4 , 0x00f3 , 0x0000),
-	DEADTRANS( L'u'   , 0x00B4 , 0x00fa , 0x0000),
-	DEADTRANS( L'y'   , 0x00B4 , 0x00fd , 0x0000),
-	DEADTRANS( L'A'   , 0x00B4 , 0x00c1 , 0x0000),
-	DEADTRANS( L'E'   , 0x00B4 , 0x00c9 , 0x0000),
-	DEADTRANS( L'I'   , 0x00B4 , 0x00cd , 0x0000),
-	DEADTRANS( L'O'   , 0x00B4 , 0x00d3 , 0x0000),
-	DEADTRANS( L'U'   , 0x00B4 , 0x00da , 0x0000),
-	DEADTRANS( L'Y'   , 0x00B4 , 0x00dd , 0x0000),
-	DEADTRANS( L'C'   , 0x00B4 , 0x0106 , 0x0000),
-	DEADTRANS( L'c'   , 0x00B4 , 0x0106 , 0x0000),
-	DEADTRANS( L'L'   , 0x00B4 , 0x0139 , 0x0000),
-	DEADTRANS( L'l'   , 0x00B4 , 0x013a , 0x0000),
-	DEADTRANS( L'N'   , 0x00B4 , 0x0143 , 0x0000),
-	DEADTRANS( L'n'   , 0x00B4 , 0x0144 , 0x0000),
-	DEADTRANS( L'R'   , 0x00B4 , 0x0154 , 0x0000),
-	DEADTRANS( L'r'   , 0x00B4 , 0x0155 , 0x0000),
-	DEADTRANS( L'S'   , 0x00B4 , 0x015a , 0x0000),
-	DEADTRANS( L's'   , 0x00B4 , 0x015b , 0x0000),
-	DEADTRANS( L'Z'   , 0x00B4 , 0x0179 , 0x0000),
-	DEADTRANS( L'z'   , 0x00B4 , 0x017a , 0x0000),
-	DEADTRANS( 0x00fc , 0x00B4 , 0x01d8 , 0x0000),
-	DEADTRANS( 0x00dc , 0x00B4 , 0x01d7 , 0x0000),
-	DEADTRANS( L'G'   , 0x00B4 , 0x01f4 , 0x0000),
-	DEADTRANS( L'g'   , 0x00B4 , 0x01f5 , 0x0000),
-	DEADTRANS( L'K'   , 0x00B4 , 0x1e30 , 0x0000),
-	DEADTRANS( L'k'   , 0x00B4 , 0x1e31 , 0x0000),
-	DEADTRANS( L'M'   , 0x00B4 , 0x1e3e , 0x0000),
-	DEADTRANS( L'm'   , 0x00B4 , 0x1e3f , 0x0000),
-	DEADTRANS( L'P'   , 0x00B4 , 0x1e54 , 0x0000),
-	DEADTRANS( L'p'   , 0x00B4 , 0x1e55 , 0x0000),
-	DEADTRANS( L'W'   , 0x00B4 , 0x1e82 , 0x0000),
-	DEADTRANS( L'w'   , 0x00B4 , 0x1e83 , 0x0000),
+
 
 	DEADTRANS( L' '   , 0x00b8 , 0x00b8 , 0x0000),	//Cedilla
 	DEADTRANS( 0x00b8 , 0x00b8 , 0x0327 , 0x0000),	 //2x für Combining
@@ -944,7 +1008,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 
 //Compose
-/*
+
 
 DEADTRANS(    0x0073    ,0x266B ,    0x0073    ,0x0001    ),
 DEADTRANS(    0x0046    ,0x266B ,    0x0046    ,0x0001    ),
@@ -2164,7 +2228,6 @@ DEADTRANS(    0x06C1    ,    0x0060    ,    0    ,0x0000    ),
 DEADTRANS(    0x06C1    ,    0x005E    ,    0    ,0x0000    ),
 DEADTRANS(    0x06C1    ,    0x0027    ,    0    ,0x0000    ),
 
-*/
 
 
 
