@@ -185,12 +185,6 @@ ED(pos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
   EDR(pos,caps,e1,e2,e3,e4,e5,e6,e7,e8)
 }
 
-EncodeUniComposeA(ea) {
-  if (StrLen(ea) == 7)
-    return ea
-  return EncodeUniCompose(ea)
-}
-
 EDNR(pos1,pos2,caps,e1,e2,e3,e4,e5,e6) {
   EDR(pos1,caps,e1,e2,e3,e4,e5,e6)
   EDR(pos2,caps,e1,e2,e3,e4,e5,e6)
