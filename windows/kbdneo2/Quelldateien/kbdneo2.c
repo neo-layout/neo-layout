@@ -227,30 +227,30 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 // Zeile 1
 {VK_OEM_1		,0					,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},	//Tote Taste 1
 {0xff			,0					,'^'		,'~'		,0x02da		,0x02c7		,0x02d8		,0x00af		}, 
-{'1'			,KANALOK			,'1'		,0x00b0		,0x00B9		,0x00ba		,0x2081		,0x00ac		},
+{'1'			,KANALOK			,'1'		,0x00b0		,0x00B9		,0x00aa		,0x2081		,0x00ac		},
 {'3'			,KANALOK			,'3'		,0x2113		,0x00b3		,0x2116		,0x2083		,0x2227		},
 {'4'			,KANALOK			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2640		,0x22a5		},	//WCH_NONE sollte »Bild auf« sein (AHK?)
 {'5'			,KANALOK			,'5'		,0x00ab		,0x2039		,0x00b7		,0x2642		,0x2221		},
-{'7'			,KANALOK			,'7'		,0x0024		,0x00a5		,0x00a4		,0x03ba		,0x2192		},
-{'8'			,KANALOK			,'8'		,0x201E		,0x201A		,WCH_NONE	,0x27E8		,0x221e		},
-{'9'			,KANALOK			,'9'		,0x201C		,0x2018		,'/'		,0x27E9		,0x220b		},
+{'7'			,KANALOK			,'7'		,0x20ac		,0x00a5		,0x00a4		,0x03ba		,0x2192		},
+{'8'			,KANALOK			,'8'		,0x201E		,0x201A		,WCH_NONE	,0x27E8		,0x221e		},	//Kana: '\t' vom AHK übernommen
+{'9'			,KANALOK			,'9'		,0x201C		,0x2018		,'/'		,0x27E9		,0x221d		},
 {'0'			,KANALOK			,'0'		,0x201D		,0x2019		,'*'		,0x2080		,0x2205		},
 {VK_OEM_MINUS	,KANALOK			,'-'		,0x2014		,WCH_NONE	,'-'		,0x2011		,0x00ad		},
 {VK_OEM_2		,0					,WCH_DEAD	,WCH_NONE	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_NONE	},	//Tote Taste 2
-{0xff			,0					,0x0060		,WCH_NONE	,0x00a8		,0x030f		,0x1ffe		,WCH_NONE	},
+{0xff			,0					,0x0060		,0x21bb		,0x00a8		,0x030f		,0x1ffe		,0x02de		},
 {VK_TAB			,0					,'\t'		,'\t'		,WCH_DEAD	,'\t'		,'\t'		,'\t'		},
 {0xff			,0					,WCH_NONE	,WCH_NONE	,0x266b		,WCH_NONE	,WCH_NONE	,WCH_NONE	},
 {'X'			,CAPLOK | KANALOK	,'x'		,'X'		,0x2026		,0x22ee		,0x03BE		,0x039E		},
-{'V'			,CAPLOK | KANALOK	,'v'		,'V'		,'_'		,WCH_NONE	,WCH_NONE	,0x2259		},	//Kana: '\b' vom AHK übernommen
+{'V'			,CAPLOK | KANALOK	,'v'		,'V'		,'_'		,WCH_NONE	,WCH_NONE	,0x221a		},	//Kana: '\b' vom AHK übernommen
 {'L'			,CAPLOK | KANALOK	,'l'		,'L'		,'['		,WCH_NONE	,0x03BB		,0x039b		},	//WCH_NONE sollte »Pfeil hoch« sein (AHK?)
 {'C'			,CAPLOK | KANALOK	,'c'		,'C'		,']'		,0x007f		,0x03C7		,0x2102		},	//0x007f sollte »Entfernen« sein (AHK?)
-{'W'			,CAPLOK | KANALOK	,'w'		,'W'		,0x005E		,WCH_NONE	,0x03c9		,0x222e		},	//WCH_NONE sollte »Einfügen« sein (AHK?)
-{'K'			,CAPLOK | KANALOK	,'k'		,'K'		,'!'		,0x00A1		,0x03f0		,0x221a		},
+{'W'			,CAPLOK | KANALOK	,'w'		,'W'		,0x005E		,WCH_NONE	,0x03c9		,0x03a9		},	//WCH_NONE sollte »Einfügen« sein (AHK?)
+{'K'			,CAPLOK | KANALOK	,'k'		,'K'		,'!'		,0x00A1		,0x03f0		,0x00d7		},
 {'H'			,CAPLOK | KANALOK	,'h'		,'H'		,'<'		,'7'		,0x03C8		,0x03A8		},
 {'G'			,CAPLOK | KANALOK	,'g'		,'G'		,'>'		,'8'		,0x03B3		,0x0393		},
 {'F'			,CAPLOK | KANALOK	,'f'		,'F'		,'='		,'9'		,0x03C6		,0x03A6		},
 {'Q'			,CAPLOK | KANALOK	,'q'		,'Q'		,'&'		,'+'		,0x03d5		,0x211a		},
-{'U'			,CAPLOK | KANALOK	,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x00b5		},	//WCH_NONE sollte »Pos 1« sein (AHK?)
+{'U'			,CAPLOK | KANALOK	,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x2282		},	//WCH_NONE sollte »Pos 1« sein (AHK?)
 {'I'			,CAPLOK | KANALOK	,'i'		,'I'		,'/'		,WCH_NONE	,0x03B9		,0x222b		},	//WCH_NONE sollte »Pfeil links« sein (AHK?)
 {'A'			,CAPLOK | KANALOK	,'a'		,'A'		,'{'		,WCH_NONE	,0x03B1		,0x2200		},	//WCH_NONE sollte »Pfeil runter« sein (AHK?)
 {'E'			,CAPLOK | KANALOK	,'e'		,'E'		,'}'		,WCH_NONE	,0x03B5		,0x2203		},	//WCH_NONE sollte »Pfeil rechts« sein (AHK?)
@@ -260,7 +260,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'R'			,CAPLOK | KANALOK	,'r'		,'R'		,')'		,'5'		,0x03f1		,0x211d		},
 {'T'			,CAPLOK | KANALOK	,'t'		,'T'		,'-'		,'6'		,0x03C4		,0x2202		},
 {'D'			,CAPLOK | KANALOK	,'d'		,'D'		,':'		,','		,0x03B4		,0x0394		},
-{VK_OEM_5		,CAPLOK | KANALOK	,0x00FC		,0x00DC		,'#'		,WCH_NONE	,WCH_NONE	,0x211c		},
+{VK_OEM_5		,CAPLOK | KANALOK	,0x00FC		,0x00DC		,'#'		,WCH_NONE	,WCH_NONE	,0x222a		},
+{VK_OEM_6		,CAPLOK | KANALOK	,0x00F6		,0x00D6		,'$'		,WCH_NONE	,0x03f5		,0x2229		},	//Kana: '\t' vom AHK übernommen
 {VK_OEM_7		,CAPLOK | KANALOK	,0x00E4		,0x00C4		,'|'		,WCH_NONE	,0x03B7		,0x2135		},	//WCH_NONE sollte »Bild runter« sein (AHK?)
 {'P'			,CAPLOK | KANALOK	,'p'		,'P'		,'~'		,WCH_NONE	,0x03C0		,0x03A0		},	//Kana: '\r' vom AHK übernommen		
 {'Z'			,CAPLOK | KANALOK	,'z'		,'Z'		,'`'		,WCH_NONE	,0x03B6		,0x2124		},
@@ -274,11 +275,10 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
 //				| CapsLock			|			| SHIFT		| NEU		| KANA		| NEU+Shift	| KANA+NEU	| Control	|
 //				|===================|===========|===========|===========|===========|===========|===========|===========|
-{VK_OEM_3		,CAPLOK | KANALOK	,0x00df		,0x1E9E	 ,0x017F		,WCH_NONE	,0x03C2		,0x2218		,0x2218		},
+{VK_OEM_3		,CAPLOK | KANALOK	,0x00df		,0x1E9E	 ,0x017F		,0x2052		,0x03C2		,0x2218		,0x2218		},
 {VK_OEM_4		,0					,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,0x001d		},	//Tote Taste 3
 {0xff			,0					,0x00b4		,0x00b8		,'-'		,0x02dd		,0x1fbf		,0x02d9		,WCH_NONE	},
 {'Y'			,CAPLOK | KANALOK	,'y'		,'Y'		,'@'		,'.'		,0x03C5		,0x2207		,0x001c		},
-{VK_OEM_6		,CAPLOK | KANALOK	,0x00F6		,0x00D6		,'$'		,WCH_NONE	,0x0020		,0x2111		,WCH_NONE	},	//Kana: '\t' vom AHK übernommen
 {VK_SPACE		,KANALOK			,' '		,' '		,' '		,'0'		,0x00a0		,0x202f		,' '		},
 {VK_BACK		,0					,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,0x007f		},
 {VK_ESCAPE		,0					,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		,0x001b		},
@@ -290,9 +290,9 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
 static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 //				| CapsLock			|			| SHIFT		| NEU		| KANA		| NEU+Shift	| KANA+NEU	| Control	| Control+Shift|
 //				|===================|===========|===========|===========|===========|===========|===========|===========|==============|
-{'2'			,KANALOK			,'2'		,0x00a7		,0x00b2		,0x00aa		,0x2082		,0x2228		,WCH_NONE	,0x0000		},
-{'6'			,KANALOK			,'6'		,0x20ac		,0x00A2		,0x00a3		,0x26a5		,0x2225		,WCH_NONE	,0x001e		},
-{'J'			,CAPLOK | KANALOK	,'j'		,'J'		,';'		,';'		,0x03b8		,0x221d		,WCH_NONE	,0x001f		},
+{'2'			,KANALOK			,'2'		,0x00a7		,0x00b2		,0x00ba		,0x2082		,0x2228		,WCH_NONE	,0x0000		},
+{'6'			,KANALOK			,'6'		,0x0024		,0x00A2		,0x00a3		,0x26a5		,0x2225		,WCH_NONE	,0x001e		},
+{'J'			,CAPLOK | KANALOK	,'j'		,'J'		,';'		,';'		,0x03b8		,0x21a6		,WCH_NONE	,0x001f		},
 {0				,0					,0			,0			,0			,0			,0			,0			,0			,0			}
 };
 

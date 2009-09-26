@@ -239,6 +239,11 @@ if (isMod4Active and !isMod3Pressed)
 Send {Blind}{TAB}
 return
 
+~*8::
+if (isMod4Active and !isMod3Pressed)
+Send {Blind}{TAB}
+return
+
 ~*ä::
 if (isMod4Active and !isMod3Pressed)
 Send {Blind}{PGDN}
