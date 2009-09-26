@@ -189,3 +189,5 @@ overflow:auto;
 }
 
 #content.ticket  { width: 100%; max-width:61em}
+
+table.code td {font-family: 'DejaVu Sans Mono',monospace;}
