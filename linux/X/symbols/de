@@ -281,7 +281,7 @@ xkb_symbols "neo_base" {
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          U1FFE,                   dead_doublegrave,        NoSymbol,                U02DE,                   NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          U1FFE,                   U02F5,                   NoSymbol,                U02DE,                   NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
