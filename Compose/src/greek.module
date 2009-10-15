@@ -820,6 +820,21 @@
 <U02DE> <Multi_key> <g> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 <U02DE> <Multi_key> <G> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 
+# ligatures and variants
+<Multi_key> <Greek_SIGMA> <Greek_tau>                                : "Ϛ"   U03DA # GREEK LETTER STIGMA
+<Multi_key> <Greek_sigma> <Greek_tau>                                : "ϛ"   U03DB # GREEK SMALL LETTER STIGMA
+<Multi_key> <Greek_beta> <Greek_beta>                                : "ϐ"   U03D0 # GREEK BETA SYMBOL
+<Multi_key> <Greek_omega> <Greek_pi>                                 : "ϖ"   U03D6 # GREEK PI SYMBOL
+<dead_stroke> <Greek_rho>                                            : "ϼ"   U03FC # GREEK RHO WITH STROKE SYMBOL
+<U21BB> <U03F5>                                                      : "϶"   U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 
+# very old greek, not supported at the moment
+# Ϟϟ Ϡϡ Ϻϻ (ͰͱͲͳͶͷ)
+<Multi_key> <g> <F>                                                  : "Ϝ"   U03DC # GREEK LETTER DIGAMMA
+<Multi_key> <G> <F>                                                  : "Ϝ"   U03DC # GREEK LETTER DIGAMMA
+<Multi_key> <g> <f>                                                  : "ϝ"   U03DD # GREEK SMALL LETTER DIGAMMA
+#<Multi_key> <g> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
+#<Multi_key> <G> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
+#<Multi_key> <g> <q>                                                  : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
 
 # End of additional Definitions (greek letters) by Neo keyboard layout

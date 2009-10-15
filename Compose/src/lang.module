@@ -373,14 +373,16 @@
 <Multi_key> <n> <bar>                             : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key> <N> <bar>                             : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
 <Multi_key> <g> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
+<Multi_key> <G> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <O> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <Greek_omicron> <Greek_upsilon>       : "ȣ" U0223 # LATIN SMALL LETTER OU
-#<Multi_key> <g> <u>                               : "ȣ" U0223 # LATIN SMALL LETTER OU
+<Multi_key> <g> <u>                               : "ȣ" U0223 # LATIN SMALL LETTER OU
 #<U21BB> <propto>                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
+#<Multi_key> <O> <o>                               : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
 
 # in need for better Cokos to generate these:
-#<Multi_key> <question> <asciicircum>              : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
-#<Multi_key> <question> <underscore>               : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
+#<Multi_key> <X> <question>                        : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
+#<Multi_key> <x> <question>                        : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
 # Ḙḙ Ṷṷ Ḛḛ Ḭḭ Ṵṵ Ṳṳ Ǝǝ
 
 # arabic numbers
