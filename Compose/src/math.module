@@ -44,7 +44,11 @@
 <Multi_key> <asciicircum> <bracketright>   : "⌉"   U2309 # RIGHT CEILING
 <Multi_key> <underscore> <bracketright>    : "⌋"   U230B # RIGHT FLOOR
 <Multi_key> <greater> <period>             : "∴"   U2234 # THEREFORE
+<Multi_key> <ellipsis> <logicaland>        : "∴"   U2234 # THEREFORE
 <Multi_key> <less> <period>                : "∵"   U2235 # BECAUSE
+<Multi_key> <ellipsis> <logicalor>         : "∵"   U2235 # BECAUSE
+<Multi_key> <2> <colon>                    : "∷"   U2237 # PROPORTION
+<Multi_key> <KP_2> <colon>                 : "∷"   U2237 # PROPORTION
 <Multi_key> <asciitilde> <equal>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
 <Multi_key> <equal> <asciitilde>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
 <dead_tilde> <equal>                       : "≅"   U2245 # APPROXIMATELY EQUAL TO
@@ -53,6 +57,8 @@
 <dead_macron> <asciitilde>                 : "≃"   U2243 # ASYMPTOTICALLY EQUAL TO
 <dead_tilde> <minus>                       : "≃"   U2243 # ASYMPTOTICALLY EQUAL TO
 <Multi_key> <equal> <equal>                : "≡"   U2261 # IDENTICAL TO
+<dead_abovedot> <identical>                : "⩧"   U2A67 # IDENTICAL WITH DOT ABOVE
+<dead_abovedot> <Multi_key> <equal> <equal>: "⩧"   U2A67 # IDENTICAL WITH DOT ABOVE
 <Multi_key> <colon> <equal>                : "≔"   U2254 # COLON EQUALS
 <Multi_key> <equal> <colon>                : "≕"   U2255 # EQUALS COLON
 <Multi_key> <KP_Equal> <colon>             : "≕"   U2255 # EQUALS COLON
@@ -93,6 +99,12 @@
 <Multi_key> <h> <d>                        : "ℸ"   U2138 # DALET SYMBOL
 <dead_abovedot> <logicaland>               : "⩑"   U2A51 # LOGICAL AND WITH DOT ABOVE
 <dead_abovedot> <logicalor>                : "⩒"   U2A52 # LOGICAL OR WITH DOT ABOVE
+<dead_macron> <logicaland>                 : "⊼"   U22BC # NAND
+<dead_macron> <logicalor>                  : "⊽"   U22BD # NOR
+<Multi_key> <logicalor> <underscore>       : "⊻"   U22BB # XOR
+<Multi_key> <logicalor> <underbar>         : "⊻"   U22BB # XOR
+<Multi_key> <logicaland> <underscore>      : "⩟"   U2A5F # LOGICAL AND WITH UNDERBAR
+<Multi_key> <logicaland> <underbar>        : "⩟"   U2A5F # LOGICAL AND WITH UNDERBAR
 <Multi_key> <logicalor> <logicalor>        : "⋁"   U22C1 # N-ARY LOGICAL OR
 <Multi_key> <logicaland> <logicaland>      : "⋀"   U22C0 # N-ARY LOGICAL AND
 <Multi_key> <union> <union>                : "⋃"   U22C3 # N-ARY UNION
@@ -112,7 +124,6 @@
 <U21BB> <U2287>                            : "⊆"   U2286 # SUBSET OF OR EQUAL TO
 <dead_abovedot> <U2286>                    : "⫃"   U2AC3 # SUBSET OF OR EQUAL TO WITH DOT ABOVE
 <dead_abovedot> <U2287>                    : "⫄"   U2AC4 # SUPERSET OF OR EQUAL TO WITH DOT ABOVE
-<dead_abovedot> <identical>                : "⩧"   U2A67 # IDENTICAL WITH DOT ABOVE
 <dead_abovedot> <asciitilde>               : "⩪"   U2A6A # TILDE OPERATOR WITH DOT ABOVE
 <dead_abovedot> <minus>                    : "∸"   U2238 # DOT MINUS
 <dead_circumflex> <approxeq>               : "⩯"   U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
@@ -164,9 +175,23 @@
 <U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
 <Multi_key> <d> <a> <g>                    : "†"   U2020 # DAGGER
 <Multi_key> <minus> <colon>                : "∹"   U2239 # EXCESS
+<Multi_key> <2> <greater>                  : "≫"  U226B # MUCH GREATER-THAN
+<Multi_key> <KP_2> <greater>               : "≫"  U226B # MUCH GREATER-THAN
+<Multi_key> <2> <less>                     : "≪"  U226A # MUCH LESS-THAN
+<Multi_key> <KP_2> <less>                  : "≪"  U226A # MUCH LESS-THAN
+<Multi_key> <3> <greater>                  : "⋙"  U22D9 # VERY MUCH GREATER-THAN
+<Multi_key> <KP_3> <greater>               : "⋙"  U22D9 # VERY MUCH GREATER-THAN
+<Multi_key> <3> <less>                     : "⋘"  U22D8 # VERY MUCH LESS-THAN
+<Multi_key> <KP_3> <less>                  : "⋘"  U22D8 # VERY MUCH LESS-THAN
 # overwrites »« combinations
 <Multi_key> <greater> <greater>            : "≫"  U226B # MUCH GREATER-THAN
 <Multi_key> <less> <less>                  : "≪"  U226A # MUCH LESS-THAN
+<Multi_key> <2> <equal>                    : "⩵"  U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key> <KP_2> <equal>                 : "⩵"  U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key> <3> <equal>                    : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
+<Multi_key> <KP_3> <equal>                 : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
+
+
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
@@ -248,6 +273,7 @@
 ⃗
 # arrows
 <Multi_key> <less> <minus>                     : "←"   U2190 # LEFTWARDS ARROW
+<U21BB> <rightarrow>                           : "←"   U2190 # LEFTWARDS ARROW
 <Multi_key> <bar> <asciicircum>                : "↑"   U2191 # UPWARDS ARROW
 <Multi_key> <minus> <greater>                  : "→"   U2192 # RIGHTWARDS ARROW
 <Multi_key> <v> <bar>                          : "↓"   U2193 # DOWNWARDS ARROW
@@ -261,6 +287,7 @@
 <Multi_key> <asciicircum> <backslash> <v>      : "⤡"   U2921 # NORTH WEST AND SOUTH EAST ARROW
 <Multi_key> <v> <slash> <asciicircum>          : "⤢"   U2922 # NORTH EAST AND SOUTH WEST ARROW
 <Multi_key> <leftarrow> <bar>                  : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
+<U21BB> <U21A6>                                : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
 <Multi_key> <uparrow> <bar>                    : "↥"   U21A5 # UPWARDS ARROW FROM BAR
 <Multi_key> <bar> <rightarrow>                 : "↦"   U21A6 # RIGHTWARDS ARROW FROM BAR
 <Multi_key> <downarrow> <bar>                  : "↧"   U21A7 # DOWNWARDS ARROW FROM BAR
@@ -278,8 +305,6 @@
 <Multi_key> <downarrow> <uparrow>              : "⇵"   U21F5 # DOWNWARDS ARROW LEFTWARDS OF UPWARDS ARROW
 <Multi_key> <w> <i> <d>                        : "↯"   U21AF # DOWNWARDS ZIGZAG ARROW
 <Multi_key> <z> <rightarrow>                   : "↯"   U21AF # DOWNWARDS ZIGZAG ARROW
-<U21BB> <rightarrow>                           : "←"   U2190 # LEFTWARDS ARROW
-<U21BB> <U21A6>                                : "↤"   U21A4 # LEFTWARDS ARROW FROM BAR
 <U21BB> <ifonlyif>                             : "⇕"   U21D5 # UP DOWN DOUBLE ARROW
 <Multi_key> <bar> <uparrow>                    : "⇑"   U21D1 # UPWARDS DOUBLE ARROW
 <Multi_key> <bar> <downarrow>                  : "⇓"   U21D3 # DOWNWARDS DOUBLE ARROW
@@ -316,17 +341,42 @@
 <Multi_key> <U21D0> <U21D2>                    : "⟺"   U27FA # LONG LEFT RIGHT DOUBLE ARROW
 <Multi_key> <equal> <uparrow>                  : "⇞"   U21DE # UPWARDS ARROW WITH DOUBLE STROKE
 <Multi_key> <equal> <downarrow>                : "⇟"   U21DF # DOWNWARDS ARROW WITH DOUBLE STROKE
+<dead_circumflex> <leftarrow>                  : "↞"   U219E # LEFTWARDS TWO HEADED ARROW
+<dead_circumflex> <U21BB> <rightarrow>         : "↞"   U219E # LEFTWARDS TWO HEADED ARROW
 <Multi_key> <guillemotleft> <minus>            : "↞"   U219E # LEFTWARDS TWO HEADED ARROW
+<dead_circumflex> <uparrow>                    : "↟"   U219F # UPWARDS TWO HEADED ARROW
 <Multi_key> <guillemotleft> <bar>              : "↟"   U219F # UPWARDS TWO HEADED ARROW
+<dead_circumflex> <rightarrow>                 : "↠"   U21A0 # RIGHTWARDS TWO HEADED ARROW
 <Multi_key> <minus> <guillemotright>           : "↠"   U21A0 # RIGHTWARDS TWO HEADED ARROW
+<dead_circumflex> <downarrow>                  : "↡"   U21A1 # DOWNWARDS TWO HEADED ARROW
 <Multi_key> <bar> <guillemotright>             : "↡"   U21A1 # DOWNWARDS TWO HEADED ARROW
 <Multi_key> <greater> <rightarrow>             : "↣"   U21A3 # RIGHTWARDS ARROW WITH TAIL
+<dead_caron> <rightarrow>                      : "↣"   U21A3 # RIGHTWARDS ARROW WITH TAIL
 <Multi_key> <leftarrow> <less>                 : "↢"   U21A2 # LEFTWARDS ARROW WITH TAIL
 <Multi_key> <U21BB> <rightarrow> <less>        : "↢"   U21A2 # LEFTWARDS ARROW WITH TAIL
+<dead_caron> <leftarrow>                       : "↢"   U21A2 # LEFTWARDS ARROW WITH TAIL
 <Multi_key> <minus> <less>                     : "⤙"   U2919 # LEFTWARDS ARROW-TAIL
 <Multi_key> <greater> <minus>                  : "⤚"   U291A # RIGHTWARDS ARROW-TAIL
 <Multi_key> <minus> <guillemotleft>            : "⤛"   U291B # LEFTWARDS DOUBLE ARROW-TAIL
 <Multi_key> <guillemotright> <minus>           : "⤜"   U291C # RIGHTWARDS DOUBLE ARROW-TAIL
+<dead_acute> <leftarrow>                       : "↼"   U21BC # LEFTWARDS HARPOON WITH BARB UPWARDS
+<dead_acute> <uparrow>                         : "↿"   U21BF # UPWARDS HARPOON WITH BARB LEFTWARDS
+<dead_acute> <rightarrow>                      : "⇁"   U21C1 # RIGHTWARDS HARPOON WITH BARB DOWNWARDS
+<dead_acute> <downarrow>                       : "⇂"   U21C2 # DOWNWARDS HARPOON WITH BARB RIGHTWARDS
+<dead_grave> <leftarrow>                       : "↽"   U21BD # LEFTWARDS HARPOON WITH BARB DOWNWARDS
+<dead_grave> <uparrow>                         : "↾"   U21BE # UPWARDS HARPOON WITH BARB RIGHTWARDS
+<dead_grave> <rightarrow>                      : "⇀"   U21C0 # RIGHTWARDS HARPOON WITH BARB UPWARDS
+<dead_grave> <downarrow>                       : "⇃"   U21C3 # DOWNWARDS HARPOON WITH BARB LEFTWARDS
+<dead_tilde> <leftarrow>                       : "↜"   U219C # LEFTWARDS WAVE ARROW
+<dead_tilde> <U21BB> <rightarrow>              : "↜"   U219C # LEFTWARDS WAVE ARROW
+<dead_tilde> <rightarrow>                      : "↝"   U219D # RIGHTWARDS WAVE ARROW
+<dead_tilde> <U2194>                           : "↭"   U21AD # LEFT RIGHT WAVE ARROW
+<dead_ring> <leftarrow>                        : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
+<dead_ring> <U21BB> <rightarrow>               : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
+<dead_ring> <rightarrow>                       : "↬"   U21AC # RIGHTWARDS ARROW WITH LOOP
+# possible additions:
+# ˙: ⇠⇡⇢⇣
+# ¯: ↤↥↦↧↨
 
 # superscripts and subscripts
 <dead_circumflex> <minus>                  : "⁻"   U207B # SUPERSCRIPT MINUS
