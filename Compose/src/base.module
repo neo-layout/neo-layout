@@ -26,6 +26,7 @@
 
 # combining characters
 <Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
+<Multi_key> <ellipsis> <o>                 : "◌"   U25CC # DOTTED CIRCLE
 <dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT
 <dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON
 <dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE

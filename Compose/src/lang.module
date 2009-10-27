@@ -244,15 +244,16 @@
 
 # diakritics – work in progress
 <dead_circumflex> <U21BB> <L>                     : "̚" U031A # COMBINING LEFT ANGLE ABOVE
-<U21BB> <degree>                                  : "̥" U0325 # COMBINING RING BELOW
-<Multi_key> <underscore> <degree>                 : "̥" U0325 # COMBINING RING BELOW
-<U21BB> <quotedbl>                                : "̤" U0324 # COMBINING DIAERESIS BELOW
-#<Multi_key> <underscore> <quotedbl>               : "̤" U0324 # COMBINING DIAERESIS BELOW
-<U21BB> <asciitilde>                              : "̰" U0330 # COMBINING TILDE BELOW
-<Multi_key> <underscore> <asciitilde>             : "̰" U0330 # COMBINING TILDE BELOW
-#<Multi_key> <underscore> <breve>                  : "̯" U032F # COMBINING INVERTED BREVE BELOW
+<U21BB> <dead_abovering> <dead_abovering>         : "̥" U0325 # COMBINING RING BELOW
+<Multi_key> <underscore> <dead_abovering>         : "̥" U0325 # COMBINING RING BELOW
+<U21BB> <dead_diaeresis> <dead_diaeresis>         : "̤" U0324 # COMBINING DIAERESIS BELOW
+<Multi_key> <underscore> <dead_diaeresis>         : "̤" U0324 # COMBINING DIAERESIS BELOW
+<U21BB> <dead_tilde> <dead_tilde>                 : "̰" U0330 # COMBINING TILDE BELOW
+<Multi_key> <underscore> <dead_tilde>             : "̰" U0330 # COMBINING TILDE BELOW
+<Multi_key> <underscore> <dead_breve>             : "̯" U032F # COMBINING INVERTED BREVE BELOW
+<Multi_key> <underscore> <dead_circumflex> <dead_circumflex> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
 
-#<Multi_key> <underscore> <bracketleft> <bracketright> : "̻" U033B # COMBINING SQUARE BELOW
+<Multi_key> <underscore> <U25A1>                  : "̻" U033B # COMBINING SQUARE BELOW
 <Multi_key> <underscore> <U21BB> <bracketright>   : "̺" U033A # COMBINING INVERTED BRIDGE BELOW
 <Multi_key> <underscore> <U21BB> <bracketleft>    : "̪" U032A # COMBINING BRIDGE BELOW
 
@@ -369,6 +370,30 @@
 <dead_belowdot> <U02DE> <U>                       : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW
 <dead_belowdot> <U02DE> <u>                       : "ự" U1EF1 # LATIN SMALL LETTER U WITH HORN AND DOT BELOW
 
+# diacritics below
+<Multi_key> <underscore> <dead_circumflex> <D>    : "Ḓ" U1E12 # LATIN CAPITAL LETTER D WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <d>    : "ḓ" U1E13 # LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <L>    : "Ḽ" U1E3C # LATIN CAPITAL LETTER L WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <l>    : "ḽ" U1E3D # LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <N>    : "Ṋ" U1E4A # LATIN CAPITAL LETTER N WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <n>    : "ṋ" U1E4B # LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <T>    : "Ṱ" U1E70 # LATIN CAPITAL LETTER T WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <t>    : "ṱ" U1E71 # LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <E>    : "Ḙ" U1E18 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <e>    : "ḙ" U1E19 # LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <U>    : "Ṷ" U1E76 # LATIN CAPITAL LETTER U WITH CIRCUMFLEX BELOW
+<Multi_key> <underscore> <dead_circumflex> <u>    : "ṷ" U1E77 # LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW
+<U21BB> <dead_abovering> <A>                      : "Ḁ" U1E00 # LATIN CAPITAL LETTER A WITH RING BELOW
+<U21BB> <dead_abovering> <a>                      : "ḁ" U1E01 # LATIN SMALL LETTER A WITH RING BELOW
+<U21BB> <dead_diaeresis> <U>                      : "Ṳ" U1E72 # LATIN CAPITAL LETTER U WITH DIAERESIS BELOW
+<U21BB> <dead_diaeresis> <u>                      : "ṳ" U1E73 # LATIN SMALL LETTER U WITH DIAERESIS BELOW
+<U21BB> <dead_tilde> <E>                          : "Ḛ" U1E1A # LATIN CAPITAL LETTER E WITH TILDE BELOW
+<U21BB> <dead_tilde> <e>                          : "ḛ" U1E1B # LATIN SMALL LETTER E WITH TILDE BELOW
+<U21BB> <dead_tilde> <I>                          : "Ḭ" U1E2C # LATIN CAPITAL LETTER I WITH TILDE BELOW
+<U21BB> <dead_tilde> <i>                          : "ḭ" U1E2D # LATIN SMALL LETTER I WITH TILDE BELOW
+<U21BB> <dead_tilde> <U>                          : "Ṵ" U1E74 # LATIN CAPITAL LETTER U WITH TILDE BELOW
+<U21BB> <dead_tilde> <u>                          : "ṵ" U1E75 # LATIN SMALL LETTER U WITH TILDE BELOW
+
 # other letters
 <Multi_key> <n> <bar>                             : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key> <N> <bar>                             : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
@@ -383,7 +408,7 @@
 # in need for better Cokos to generate these:
 #<Multi_key> <X> <question>                        : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
 #<Multi_key> <x> <question>                        : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
-# Ḙḙ Ṷṷ Ḛḛ Ḭḭ Ṵṵ Ṳṳ Ǝǝ
+# Ǝǝ
 
 # arabic numbers
 <Multi_key> <a> <0>                               : "٠"   U0660 # ARABIC-INDIC DIGIT ZERO
