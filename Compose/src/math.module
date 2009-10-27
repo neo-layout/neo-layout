@@ -191,6 +191,53 @@
 <Multi_key> <3> <equal>                    : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
 <Multi_key> <KP_3> <equal>                 : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
 
+# new ideas (to be discussed)
+<dead_belowdot> <logicaland>               : "⟑"  U27D1 # AND WITH DOT
+<dead_abovedot> <Greek_DELTA>              : "⧊"  U29CA # TRIANGLE WITH DOT ABOVE
+<Multi_key> <colon> <rightarrow>           : "⧴"  U29F4 # RULE-DELAYED
+<Multi_key> <minus> <integral>             : "⨍"  U2A0D # FINITE PART INTEGRAL
+<Multi_key> <equal> <integral>             : "⨎"  U2A0E # INTEGRAL WITH DOUBLE STROKE
+<Multi_key> <integral> <equal>             : "⨎"  U2A0E # INTEGRAL WITH DOUBLE STROKE
+<Multi_key> <multiply> <integral>          : "⨘"  U2A18 # INTEGRAL WITH TIMES SIGN
+<Multi_key> <integral> <multiply>          : "⨘"  U2A18 # INTEGRAL WITH TIMES SIGN
+<Multi_key> <intersection> <integral>      : "⨙"  U2A19 # INTEGRAL WITH INTERSECTION
+<Multi_key> <integral> <intersection>      : "⨙"  U2A19 # INTEGRAL WITH INTERSECTION
+<Multi_key> <union> <integral>             : "⨚"  U2A1A # INTEGRAL WITH UNION
+<Multi_key> <integral> <union>             : "⨚"  U2A1A # INTEGRAL WITH UNION
+<dead_macron> <integral>                   : "⨛"  U2A1B # INTEGRAL WITH OVERBAR
+<Multi_key> <underscore> <integral>        : "⨜"  U2A1C # INTEGRAL WITH UNDERBAR
+<Multi_key> <underbar> <integral>          : "⨜"  U2A1C # INTEGRAL WITH UNDERBAR
+<Multi_key> <slash> <integral>             : "⨏"  U2A0F # INTEGRAL AVERAGE WITH SLASH
+<dead_stroke> <integral>                   : "⨏"  U2A0F # INTEGRAL AVERAGE WITH SLASH
+<dead_abovedot> <multiply>                 : "⨰"  U2A30 # MULTIPLICATION SIGN WITH DOT ABOVE
+<Multi_key> <underscore> <multiply>        : "⨱"  U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
+<Multi_key> <underbar> <multiply>          : "⨱"  U2A31 # MULTIPLICATION SIGN WITH UNDERBAR
+<dead_macron> <union>                      : "⩂"  U2A42 # UNION WITH OVERBAR
+<dead_macron> <intersection>               : "⩃"  U2A43 # INTERSECTION WITH OVERBAR
+<dead_belowdot> <equal>                    : "⩦"  U2A66 # EQUALS SIGN WITH DOT BELOW
+<dead_macron> <emptyset>                   : "⦱"  U29B1 # EMPTY SET WITH OVERBAR
+<Multi_key> <o> <U22A5>                    : "⦹"  U29B9 # CIRCLED PERPENDICULAR
+<Multi_key> <o> <U2225>                    : "⦷"  U29B7 # CIRCLED PARALLEL
+<Multi_key> <o> <less>                     : "⧀"  U29C0 # CIRCLED LESS-THAN
+<Multi_key> <o> <greater>                  : "⧁"  U29C1 # CIRCLED GREATER-THAN
+<Multi_key> <less> <parenright>            : "⪦"  U2AA6 # LESS-THAN CLOSED BY CURVE
+<Multi_key> <parenleft> <greater>          : "⪧"  U2AA7 # GREATER-THAN CLOSED BY CURVE
+<U21BB> <numbersign>                       : "⨳"  U2A33 # SMASH PRODUCT
+#<Multi_key> <multiply> <multiply>         : "⨯"  U2A2F # VECTOR OR CROSS PRODUCT
+<Multi_key> <Greek_DELTA> <plus>           : "⨹"  U2A39 # PLUS SIGN IN TRIANGLE
+<Multi_key> <plus> <Greek_DELTA>           : "⨹"  U2A39 # PLUS SIGN IN TRIANGLE
+<Multi_key> <Greek_DELTA> <minus>          : "⨺"  U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key> <minus> <Greek_DELTA>          : "⨺"  U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key> <Greek_DELTA> <multiply>       : "⨻"  U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key> <multiply> <Greek_DELTA>       : "⨻"  U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key> <Greek_DELTA> <equal>          : "≜"  U225C # DELTA EQUAL TO
+<Multi_key> <equal> <Greek_DELTA>          : "≜"  U225C # DELTA EQUAL TO
+<Multi_key> <equal> <question>             : "≟"  U225F # QUESTIONED EQUAL TO
+<Multi_key> <question> <equal>             : "≟"  U225F # QUESTIONED EQUAL TO
+<Multi_key> <question> <less>              : "⩻"  U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
+<Multi_key> <less> <question>              : "⩻"  U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
+<Multi_key> <question> <greater>           : "⩼"  U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
+<Multi_key> <greater> <question>           : "⩼"  U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
 
 
 # mathematical negations
