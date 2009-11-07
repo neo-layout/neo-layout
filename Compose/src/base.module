@@ -356,6 +356,7 @@
 <dead_stroke> <KP_Divide>                  : "✘"   U2718 # HEAVY BALLOT X
 <dead_stroke> <backslash>                  : "✘"   U2718 # HEAVY BALLOT X
 <Multi_key> <less> <3>                     : "♥"   U2665 # BLACK HEART SUIT
+<Multi_key> <less> <KP_3>                  : "♥"   U2665 # BLACK HEART SUIT
 <Multi_key> <bracketleft> <bracketright>   : "□"   U25A1 # WHITE SQUARE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK

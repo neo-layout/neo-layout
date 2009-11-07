@@ -23,7 +23,9 @@
 <U21BB> <Multi_key> <Greek_alpha> <Greek_alpha>   : "ɒ" U0252 # LATIN SMALL LETTER TURNED ALPHA
 <U21BB> <Greek_OMEGA>                             : "Ʊ" U01B1 # LATIN CAPITAL LETTER UPSILON
 <U21BB> <Multi_key> <h> <n>                       : "ɰ" U0270 # LATIN SMALL LETTER TURNED M WITH LONG LEG
-#Ǝǝ ↻E?		Pan-nigerian (Ǝ ≠ ∃, ǝ ≠ ə) 018E LATIN CAPITAL LETTER REVERSED E
+# Pan-nigeran reversed e with ‚n‘ for ‚nigerian‘, to be discussed, but up to now no alternative has been found (Ǝ ≠ ∃, ǝ ≠ ə)
+<Multi_key> <N> <E>                               : "Ǝ" U018E # LATIN CAPITAL LETTER REVERSED E
+<Multi_key> <n> <e>                               : "ǝ" U01DD # LATIN SMALL LETTER TURNED E
 
 # letters with hook (most African and IPA usage)
 <U02DE> <B>                                       : "Ɓ" U0181 # LATIN CAPITAL LETTER B WITH HOOK
@@ -141,14 +143,14 @@
 <dead_stroke> <Greek_lambda>                      : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 <Multi_key> <slash> <Greek_lambda>                : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 <Multi_key> <KP_Divide> <Greek_lambda>            : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
-# It is undecided whether they should be included
-#<dead_stroke> <2>                                 : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
-#<Multi_key> <minus> <2>                           : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
-#<dead_stroke> <Greek_iota>                        : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
-#<Multi_key> <minus> <Greek_iota>                  : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
-#<dead_stroke> <Greek_upsilon>                     : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
-#<Multi_key> <minus> <Greek_upsilon>               : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
-#<dead_stroke> <Multi_key> <U> <U>                 : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
+# It is undecided whether they should be included:
+<dead_stroke> <2>                                 : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+<Multi_key> <minus> <2>                           : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+<dead_stroke> <Greek_iota>                        : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
+<Multi_key> <minus> <Greek_iota>                  : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
+<dead_stroke> <Greek_upsilon>                     : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
+<Multi_key> <minus> <Greek_upsilon>               : "ᵿ" U1D7F # LATIN SMALL LETTER UPSILON WITH STROKE
+<dead_stroke> <Multi_key> <U> <U>                 : "ᵾ" U1D7E # LATIN SMALL CAPITAL LETTER U WITH STROKE
 
 # IPA, african and other languages
 <Multi_key> <l> <z>                               : "ɮ" U026E # LATIN SMALL LETTER LEZH
@@ -208,8 +210,8 @@
 <Multi_key> <x> <underscore>                      : "ɤ" U0264 # LATIN SMALL LETTER RAMS HORN
 
 # IPA clicks
-<Multi_key> <equal> <bar> <equal>                 : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
-<Multi_key> <KP_Equal> <bar> <KP_Equal>           : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+<Multi_key> <equal> <bar>                         : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+<Multi_key> <KP_Equal> <bar>                      : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
 <Multi_key> <i> <bar> <space>                     : "ǀ" U01C0 # LATIN LETTER DENTAL CLICK
 <Multi_key> <i> <bar> <bar>                       : "ǁ" U01C1 # LATIN LETTER LATERAL CLICK
 <Multi_key> <i> <exclam>                          : "ǃ" U01C3 # LATIN LETTER RETROFLEX CLICK
@@ -318,11 +320,11 @@
 <dead_circumflex> <Multi_key> <minus> <I>         : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 <dead_circumflex> <dead_stroke> <Multi_key> <I> <I> : "ᶧ" U1DA7 # MODIFIER LETTER SMALL CAPITAL I WITH STROKE
 
-# non-IPA Sinologist letters
-#<U21BB> <Multi_key> <r> <underscore>              : "ɿ" U027F # LATIN SMALL LETTER REVERSED R WITH FISHHOOK
-#<U21BB> <Multi_key> <s> <h>                       : "ʅ" U0285 # LATIN SMALL LETTER SQUAT REVERSED ESH
-#<dead_hook> <U21BB> <h>                           : "ʮ" U02AE # LATIN SMALL LETTER TURNED H WITH FISHHOOK
-#<U1FFE> <dead_hook> <U21BB> <h>                   : "ʯ" U02AF # LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL
+# non-IPA Sinologist letters (to be included?)
+<U21BB> <Multi_key> <r> <underscore>              : "ɿ" U027F # LATIN SMALL LETTER REVERSED R WITH FISHHOOK
+<U21BB> <Multi_key> <s> <h>                       : "ʅ" U0285 # LATIN SMALL LETTER SQUAT REVERSED ESH
+<dead_hook> <U21BB> <h>                           : "ʮ" U02AE # LATIN SMALL LETTER TURNED H WITH FISHHOOK
+<U1FFE> <dead_hook> <U21BB> <h>                   : "ʯ" U02AF # LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL
 
 # Vietnamese language
 <U1FBF> <A>                                       : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
@@ -402,13 +404,11 @@
 <Multi_key> <O> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <Greek_omicron> <Greek_upsilon>       : "ȣ" U0223 # LATIN SMALL LETTER OU
 <Multi_key> <g> <u>                               : "ȣ" U0223 # LATIN SMALL LETTER OU
-#<U21BB> <propto>                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
-#<Multi_key> <O> <o>                               : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
-
-# in need for better Cokos to generate these:
-#<Multi_key> <X> <question>                        : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
-#<Multi_key> <x> <question>                        : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
-# Ǝǝ
+<U21BB> <propto>                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
+<Multi_key> <O> <o>                               : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
+# need for better Cokos to generate these (analog: ♫i? → ʔ):
+<Multi_key> <X> <question>                        : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP
+<Multi_key> <x> <question>                        : "ɂ" U0242 # LATIN SMALL LETTER GLOTTAL STOP
 
 # arabic numbers
 <Multi_key> <a> <0>                               : "٠"   U0660 # ARABIC-INDIC DIGIT ZERO
