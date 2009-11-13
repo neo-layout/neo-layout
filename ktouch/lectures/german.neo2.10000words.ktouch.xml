@@ -1,0 +1,2329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KTouchLecture>
+ <Title>Deutsch (Neo2 10.000 Wörter)</Title>
+ <Comment>Neo2 - Die 10.000 häufigsten Wörter
+Erstellt am 04.09.2009 von Adam Taras &lt;www.adam-taras.de/opensource&gt;</Comment>
+ <FontSuggestions>Monospace</FontSuggestions>
+ <Levels>
+  <Level>
+   <LevelComment>e und n</LevelComment>
+   <NewCharacters>en</NewCharacters>
+   <Line>e e e e e e eee eee eee e e e e e e eee eee eee e e e e e e e eee</Line>
+   <Line>n n n n n n nnn nnn nnn n n n n n n nnn nnn nnn n n n n n n n nnn</Line>
+   <Line>eee nnn eee nnn nnn eee nnn eee ene ene ene nen nen nen ene nenen</Line>
+  </Level>
+  <Level>
+   <LevelComment>starke Mittelfinger: ar</LevelComment>
+   <NewCharacters>ar</NewCharacters>
+   <Line>a a a a a a aaa aaa aaa a a a a a a aaa eee nnn aaa eee nnn aaaee</Line>
+   <Line>ana ana ana nan ana ana ana ana ana eae eae eae aae eea naa anaea</Line>
+   <Line>r r r r r r rrr rrr rrr r r r r r r rrr aaa eee nnn rrr aaa nrnrn</Line>
+   <Line>rar rar rar ara ara ara ara nrn nrn nrn ere ere ere rar ara nrnrn</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ar</NewCharacters>
+   <Line>an anna anne arena er erna nennen rennen</Line>
+  </Level>
+  <Level>
+   <LevelComment>bewegliche kleine Finger: ud</LevelComment>
+   <NewCharacters>ud</NewCharacters>
+   <Line>u u u u u u uuu uuu uuu u u u u u u uuu uuu uuu u u u u u u u uuu</Line>
+   <Line>uuu nnn rrr uuu eee uuu aaa uuu nnn rrr uuu eee uuu aaa uuu eueue</Line>
+   <Line>d d d d d d ddd ddd ddd d d d d d d ddd ddd ddd d d d d d d dddnn</Line>
+   <Line>ddd eee aaa ddd nnn rrr ddd eee ddd aaa ddd nnn ddd rrr ddd edend</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ud</NewCharacters>
+   <Line>andere anderen anderer andrea da dann daran dauer dauern</Line>
+   <Line>ddr den denen denn der deren derer dran du eduard ende enden erde eu</Line>
+   <Line>neu neue neuen neuer neun nun nur rad rand rande rede reden redner</Line>
+   <Line>ruanda rund runde runden und</Line>
+  </Level>
+  <Level>
+   <LevelComment>Ringfingertraining: it</LevelComment>
+   <NewCharacters>it</NewCharacters>
+   <Line>i i i i i i iii iii iii i i i i i i iii iii iii i i i i i i i iii</Line>
+   <Line>iii nnn iii rrr iii ddd iii nnn iii aaa iii eee iii aaa iii nnnii</Line>
+   <Line>t t t t t t ttt ttt ttt t t t t t t ttt ttt ttt t t t t t t t ttt</Line>
+   <Line>ttt eee ttt aaa ttt iii ttt uuu ttt nnn ttt rrr ttt ddd ttt eeett</Line>
+  </Level>
+  <Level>
+   <NewCharacters>it</NewCharacters>
+   <Line>aneinander antreten art arten attentat audi darin darunter datei dateien daten</Line>
+   <Line>dauert dauerte dein deine derart deuten deutet deutete diana die dienen</Line>
+   <Line>dient diente dienten dieter dir drei drin dritte dritten dritter ei eier ein</Line>
+   <Line>einander eine einen einer eintreten eintritt endet endete erinnern erinnert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>it</NewCharacters>
+   <Line>erinnerte ernannt erneuert erneut erneute erneuten ernte etat idee ideen</Line>
+   <Line>in indianer indien innen innere inneren innern intendant intendanten intern</Line>
+   <Line>interne internen internet iran irene nannte nannten natur nein nennt</Line>
+   <Line>nett nie nieder rainer rat raten ratten redet rein reine reinen reiter renate</Line>
+  </Level>
+  <Level>
+   <NewCharacters>it</NewCharacters>
+   <Line>rendite renditen rente renten rentner retten reuter rinder ritter rtr runter</Line>
+   <Line>tante tat taten tee terrain teuer teure teuren teurer tier tiere tieren trainer</Line>
+   <Line>trainieren trainiert trat traten trauen trauer traut trend trennen trennt</Line>
+   <Line>treten treu treue tritt tun turnier tut uni unten unter untereinander unteren ute</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wichtiger Konsonant: l</LevelComment>
+   <NewCharacters>l</NewCharacters>
+   <Line>uiae dtrn eaiu nrtd uiae dtrn eaiu nrtd uiae dtrn eaiu nrtd uiaed</Line>
+   <Line>ala ala ala aln alr alt ale ala dal dal dal ual ual ual dal dalai</Line>
+   <Line>ali ali ali dal dal dal ual ual lal lal lal lan lar lat lae laila</Line>
+   <Line>edel edel null null edel edel adel lade lade edel edel edel lauer</Line>
+   <Line>dal dal ual ual ali ali dal dal dal ual ali dal ual ali dal aulen</Line>
+   <Line>dal ali ali ual dal ual dal ual ual ali ulla ulla eile eile laden</Line>
+  </Level>
+  <Level>
+   <NewCharacters>l</NewCharacters>
+   <Line>adler ali all alle allee allein alleine allen aller allerlei alliierten alt</Line>
+   <Line>alte alten alter anteil anteile areal atelier atlanta daniel deal derlei detail</Line>
+   <Line>detaillierte drittel duell elend elite eltern erlitt erlitten erteilen erteilt</Line>
+   <Line>erteilte ideale inland intel irland italien italiener la laden laien land lande</Line>
+  </Level>
+  <Level>
+   <NewCharacters>l</NewCharacters>
+   <Line>landen landet landete landrat laune laut lauten lauter lautet lautete le leder</Line>
+   <Line>lee leer leere leeren leid leiden leider leidet leiten leiter leiterin leitet</Line>
+   <Line>leitete lernen lernt lernte leute leuten lied lieder linie linien lire litauen</Line>
+   <Line>liter literatur litt ltd lud niederlande niederlanden null real reale realen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>l</NewCharacters>
+   <Line>rtl tal talent talente teil teile teilen teilt teilte teilten tel titel titeln</Line>
+   <Line>tunnel urteil urteile</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wichtiger Konsonant: g</LevelComment>
+   <NewCharacters>g</NewCharacters>
+   <Line>rgr rgr rgr rge rga rga rgn rgt rgu rgi rga rge rgn rgt rgd rguen</Line>
+   <Line>alg alg alg gel gel gel alg alg gel alg tag tag tal tal tag tagen</Line>
+   <Line>egal egal alge alge egal egal alge alge lage lage glut glut glute</Line>
+   <Line>gle gle gle gli gli gli glu glu gle gle leg leg lag lag lug luger</Line>
+   <Line>lag lag gel gel lig lig gal gal leg leg gul gul lug lug gut guter</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>agenten agentur agieren algerien alleingang alltag angela angelegt</Line>
+   <Line>angelegten angeregt angetan angetreten anlage anlagen anlegen anleger anlegern</Line>
+   <Line>anliegen anregung anregungen antrag arg argentinien auge augen dag dagegen</Line>
+   <Line>delegierten derartige derartigen digitale digitalen ding dinge dingen dirigent</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>dringend dringt eg egal eigen eigene eigenen eigener eignet eindeutig</Line>
+   <Line>eindeutige eingang eingegangen eingeladen eingelegt eingeleitet eingetragen</Line>
+   <Line>eingetreten einig einige einigen einiger einigten einigung einladung eintrag</Line>
+   <Line>energie energien eng engagieren engagiert engagierte engagierten enge engel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>engen enger england entgegen entlang ereignete erinnerung erinnerungen</Line>
+   <Line>erledigen erledigt ernennung erneuerung erreger erregt ertrag ertragen galerie</Line>
+   <Line>galt galten gang gar garantie garantieren garantiert garten gattung geduld</Line>
+   <Line>geeignet geeignete geeigneten geeinigt gegangen gegen gegend gegeneinander</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>gegenteil gegner gegnern geladen gelandet gelang gelangen gelangt geld gelder</Line>
+   <Line>gelegen gelegene gelegenen gelegt geleitet gelernt gelernte gelingen gelingt</Line>
+   <Line>gelitten gelte gelten geltend geltende geltenden gelungen gen genannt genannte</Line>
+   <Line>genannten genau genaue genauen genauer gene general generell genug gerade</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>geraten gerd gerda geredet geregelt gerettet geriet gerieten gering geringe</Line>
+   <Line>geringen geringer geringere geringeren gern gerne gertrud getan geteilt</Line>
+   <Line>getragen getreide getrennt getreten gilt ging ginge gingen gitarre glatt gnade</Line>
+   <Line>grad graue grauen grund grunde grundlage grundlagen grundlegende gulden gut</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>gute guten guter ig illegal illegale illegalen inge ingenieur ingenieure ingrid</Line>
+   <Line>integrieren integriert irgend ladung lag lage lagen lager lagern landtag</Line>
+   <Line>landung lang lange langen langer league legen legende legt legte legten leitung</Line>
+   <Line>leitungen liege liegen liegende liegenden liegt liga nagel neigung neugier</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>neuregelung niedergang niederlage niederlagen niedrig niedrige niedrigen</Line>
+   <Line>niedriger niedrigere niedrigeren nigeria rang reagieren reagiert reagierte</Line>
+   <Line>reagierten regel regeln regelung regelungen regen regie regieren regierenden</Line>
+   <Line>regiert regierung regierungen regt rettung ring ringen tag tage tagen tagung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>g</NewCharacters>
+   <Line>teilung tiergarten tiger trage tragen training traurig trennung trug trugen</Line>
+   <Line>ungarn untergang untergrund unterlag unterlagen unterliegen unterliegt</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: c</LevelComment>
+   <NewCharacters>c</NewCharacters>
+   <Line>ece ece ece ecn ecr ect ecn ecr eca eci ecu eca eci ecu eca</Line>
+   <Line>eci ecn ecr ect ecd ecu eci eca ecn agc agc agc auc auc euc</Line>
+   <Line>agc auc auc auc agc agc cuc cuc auc agc auc agc cuc cuc agc</Line>
+   <Line>celle celle celle cent cent cent clan clan clan cut cut cut</Line>
+   <Line>cecilie cecilie cecilie cure cure cure curie curie cut cure</Line>
+  </Level>
+  <Level>
+   <NewCharacters>c</NewCharacters>
+   <Line>adac ca carl cd cdu center claudia etc inc</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: h</LevelComment>
+   <NewCharacters>h</NewCharacters>
+   <Line>nhn nhn nhn nhe nha nhi nhe nha nhd nht nhr nhe nha nhi nhd</Line>
+   <Line>nhn nht nht nhd nhn nhr nht nhd nhe nha nhi nhu nhn nhr nht</Line>
+   <Line>auch auch auch hauch hauch hauch rauch rauch rauch auch cha</Line>
+   <Line>che cha chi chu che cha chi chu rauh rauh rauh haut cha chu</Line>
+   <Line>hai hai hai hau hau hau heu heu heu hier hier hier hut haut</Line>
+   <Line>heute heute heute haut haut haut rah rah rauch rauche heute</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>aachen ach acht achten achtung ahnen ahnung angehen angeht angelegenheit</Line>
+   <Line>angelegenheiten angerichtet anhaltende anhaltenden anhand anleihen athen</Line>
+   <Line>athleten auch chance chancen chile china chirac dach dachte dadurch daher dahin</Line>
+   <Line>dahinter danach darlehen deutlich deutliche deutlichen deutlicher dh dich dicht</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>dichter dichtung dietrich drehen dreht drehte durch durchgang echt echte echten</Line>
+   <Line>echter edith eh ehe eher ehre ehren ehrlich eichel eigentlich eigentliche</Line>
+   <Line>eigentlichen eingehalten eingehen eingereicht eingerichtet einhaltung einheit</Line>
+   <Line>einheiten einheitliche einheitlichen einrichten einrichtung einrichtungen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>eintracht endlich entgehen enthalten enthaltenen erhalt erhalten erhaltung</Line>
+   <Line>erhielt erhielten erich erleichtern erleichtert erleichterung errechnet</Line>
+   <Line>erreichen erreicht erreichte erreichten errichten errichtet errichtung etliche</Line>
+   <Line>euch gedacht gedicht gedichte gedichten gedreht geehrt gehalt gehalten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>gehandelt gehe gehen gehirn geht gelegenheit gelegentlich gerechnet gerecht</Line>
+   <Line>gereicht gerhard gerhardt gericht gerichte gerichtet geruch gleich gleiche</Line>
+   <Line>gleichen gleicher gleicht griechen griechenland gutachten gutachter haag haar</Line>
+   <Line>haare haaren hahn halle hallen halt halte halten haltung hanau hanauer hand</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>handel handele handeln handelt handelte handle handlung handlungen hang harald</Line>
+   <Line>hart harte harten harter hat hatte hatten hauch haut heer heiligen heinrich</Line>
+   <Line>heiraten held helden helene helga hellen her heran herr herren herrn hertha</Line>
+   <Line>herunter heuer heute heutige heutigen hielt hielten hier hierarchie hierher</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>hildegard hill hin hindurch hinein hingegen hinreichend hinten hinter</Line>
+   <Line>hintereinander hintergrund hinterher hinterlegen hinterlegt hinunter hitler</Line>
+   <Line>hund hunde hundert hunderte hunger hut ich ihn ihnen ihr ihre ihren ihrer</Line>
+   <Line>inhalt inhalte inhaltlich lachen lacht landgericht lediglich lehnen lehnt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>lehnte lehnten lehre lehrer lehrerin lehrern lehrt leiche leichen leicht</Line>
+   <Line>leichte leichten leichter leuchtet licht nach nachgedacht nachhaltig nachricht</Line>
+   <Line>nachrichten nachrichtenagentur nacht nachteil nachteile nah nahe nahen nahrung</Line>
+   <Line>nicht rache rauch recherchen rechne rechnen rechner rechnet rechnung rechnungen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>recht rechte rechten rechtlich rechtliche rechtlichen regelrecht rehhagel reich</Line>
+   <Line>reiche reichen reichlich reicht reichte reichten reihe reihen reinhard rhein</Line>
+   <Line>richard richten richter richtet richtete richtig richtige richtigen richtlinien</Line>
+   <Line>richtung richtungen ruhe ruhen ruhig ruth tauchen taucht teheran teilchen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>h</NewCharacters>
+   <Line>thailand the theater treuhand uhr uhren ulrich ungeachtet unrecht unruhe</Line>
+   <Line>unruhen unterhalten unterhaltung unterricht unterrichtet</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wichtiger Vokal: o</LevelComment>
+   <NewCharacters>o</NewCharacters>
+   <Line>eoe eoe eoe eod eot eor eon eoe eou eoi eoa eoi eoa eoe eou</Line>
+   <Line>oeu oei oea oed oet oer oeu oei tuo tuo ouc ouc ouc tuo tuo</Line>
+   <Line>otto otto otto toto toto toto doch doch doch lohn lohn lohn</Line>
+   <Line>gong gong gong tore tore tore rico rico rico toll toll toll</Line>
+   <Line>ohio horn hugo lord cool ahoi lago dorn tone loch tour ohne</Line>
+   <Line>ohio horn hugo lord cool ahoi lago dorn tone loch tour ohne</Line>
+  </Level>
+  <Level>
+   <NewCharacters>o</NewCharacters>
+   <Line>angeordnet anordnung anton antonio aol arnold auto autor autoren autorin</Line>
+   <Line>charlotte chicago chor clinton co coach container delegation dennoch dialog do</Line>
+   <Line>doch dollar donau dort dorthin dortigen dotierten drogen drohe drohen drohende</Line>
+   <Line>drohenden droht drohte drohten drohung drohungen duo echo einordnung erholt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>o</NewCharacters>
+   <Line>erholung euro gedroht geholt generation generationen georg george goethe gold</Line>
+   <Line>goldene goldenen gott hannelore heroin hoch hohe hohen hoher holding holen</Line>
+   <Line>holger holland holt holte horn hotel ideologie ignoriert initiatoren</Line>
+   <Line>integration international internationale internationalen internationaler ioc</Line>
+  </Level>
+  <Level>
+   <NewCharacters>o</NewCharacters>
+   <Line>ironie loch lohn lohnarten lohnt london londoner lothar nation national</Line>
+   <Line>nationale nationalen nationaler nationen nato neuordnung noch nord norden</Line>
+   <Line>nordirland not note noten notiert notierte oder ohne ohnehin ohr ohren olg olga</Line>
+   <Line>on online orden ordentlich ordnen ordnung organe orientieren orientiert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>o</NewCharacters>
+   <Line>orientierte orientierten orientierung original ort orte orten otto radio region</Line>
+   <Line>regionale regionalen regionen religion rio roland rolle rollen rollt rot rote</Line>
+   <Line>roten roth route routine tatort technologie technologien tenor terror theo</Line>
+   <Line>theologie theorie theorien thron to tochter tod tode toll ton tonne tonnen tor</Line>
+  </Level>
+  <Level>
+   <NewCharacters>o</NewCharacters>
+   <Line>tore toren tot total totale tote toten tour tradition traditionell</Line>
+   <Line>traditionelle traditionellen traditionen trio udo union uno</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wichtiger Konsonant: s</LevelComment>
+   <NewCharacters>s</NewCharacters>
+   <Line>nsn nsn nsn nsu nsi nsa nse nsa nsd nst nsr nsd nst nsr nsd</Line>
+   <Line>snd snt snr snd snt snr snd snt snr snr snt snd snr snt snd</Line>
+   <Line>ast ast ast eis eis eis ast eis das das das aus aus aus das</Line>
+   <Line>das aus aus das aus sie sie sie uns uns uns sie sie uns uns</Line>
+   <Line>ist ist ist sind sind dies dies hast hast hast hast ins ins</Line>
+   <Line>seid seid seid sein sein sein seid seid sein sein seit seit</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>adresse adressen aids aires allerdings alles als also altes altstadt</Line>
+   <Line>andererseits anderes anders andreas angeles angesagt angeschlossen angesehen</Line>
+   <Line>angesichts angesiedelt angestellt angestellte angestellten angst anneliese ans</Line>
+   <Line>anschein anscheinend anschlag ansehen ansicht ansichten ansonsten anstalt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>anstalten anstatt anstehenden anstelle anstieg anstrengungen asiatischen asien</Line>
+   <Line>august aus auseinander ausgang ausgegangen ausgeglichen ausgehandelt ausgehen</Line>
+   <Line>ausgeht ausgelegt ausgerechnet ausgerichtet ausgeschieden ausgeschlossen</Line>
+   <Line>ausgestattet ausgestellt ausgetauscht ausgetragen ausgleich ausgleichen ausland</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>auslegung ausreichen ausreichend ausreichende ausrichtung aussage aussagen</Line>
+   <Line>ausscheiden ausschreitungen aussehen aussicht aussichten aussieht ausstattung</Line>
+   <Line>aussteller ausstellung ausstellungen ausstieg ausstrahlung austausch australien</Line>
+   <Line>australischen autors autos cducsu celsius chaos charles chinas chinesen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>chinesische chinesischen christa christel christen christian christiane</Line>
+   <Line>christina christine christliche christlichen clintons csu cursor daraus</Line>
+   <Line>dargestellt darstellen darsteller darstellt darstellung darstellungen das dasa</Line>
+   <Line>dasein dass des desaster design dessen desto details deutsch deutsche deutschen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>deutscher deutsches deutschland deutschlands diagnose dichters dienst dienstag</Line>
+   <Line>dienstags dienste dienstleistungen dies diese diesen dieser dieses donnerstag</Line>
+   <Line>donnerstags doris drastisch drastische drastischen dresden dresdner durchaus</Line>
+   <Line>durchs durchschnitt durchschnittlich durchschnittliche durchschnittlichen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>durchsucht eigenes eigens einerseits eines eingeschaltet eingeschlagen</Line>
+   <Line>eingeschlossen eingestellt einiges eins einschnitte einseitig einsicht einst</Line>
+   <Line>einsteigen einstellen einstellung einstellungen einstieg einstige einstigen eis</Line>
+   <Line>eisen energisch englisch englische englischen englischer entlassen entlassung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>entlassungen entlasten entlastet entlastung entscheiden entscheidend</Line>
+   <Line>entscheidende entscheidenden entscheidet entscheidung entscheidungen entschied</Line>
+   <Line>entschieden entschlossen entschuldigung entsorgung entstand entstanden</Line>
+   <Line>entstandene entstandenen entstehen entsteht entstehung erdgas ereignis</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>ereignisse ereignissen erlassen ernst erscheinen erscheint erscheinung erschien</Line>
+   <Line>erschienen erschienenen erschossen erst erstattet erstaunlich erstaunt erste</Line>
+   <Line>erstellen erstellt erstellung ersten erstens erster erstes es essen essener</Line>
+   <Line>esslingen esslinger ethnischen gas gast gegenseitig gegenstand gehts geiseln</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>geist geister geistig geistige geistigen gelassen gelassenheit geldes geleistet</Line>
+   <Line>gelesen genauso genossen gentechnisch georgios gerichts gerissen gesagt gesang</Line>
+   <Line>geschah geschehen gescheitert gescheiterten geschichte geschichten geschieht</Line>
+   <Line>geschlagen geschlecht geschlossen geschlossene geschlossenen geschossen gesehen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>gesichert gesicht gesichter gesorgt gestalt gestalten gestaltet gestaltung</Line>
+   <Line>gestand gestanden gestartet gestattet geste gesteht gesteigert gestellt gesten</Line>
+   <Line>gestern gesteuert gestiegen gestiegenen gestohlen gestrichen gestrigen</Line>
+   <Line>gestritten gesucht gesund gesunde gesunden gesundheit gesungen getestet gisela</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>glas goethes gottes gottesdienst gras griechische griechischen grundschule</Line>
+   <Line>gunst gus gutes hals handels hans hansestadt hast haus hause hauses haushalt</Line>
+   <Line>haushalte haushalten heraus hergestellt herrschen herrschenden herrscher</Line>
+   <Line>herrscht herrschte herstellen hersteller herstellung hessen hessische</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>hessischen hiesigen hinaus hindernis hindernisse hinsicht hinsichtlich</Line>
+   <Line>hinterlassen historisch historische historischen historischer hitlers</Line>
+   <Line>hochschule hochschulen hoechst hohes holocaust horst hose hosen hotels</Line>
+   <Line>hunderttausende hussein identisch ihrerseits ihres illusion illusionen ilse</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>indes indessen indische indischen indonesien industrie industrielle</Line>
+   <Line>industriellen ingolstadt innensenator innenstadt ins insassen insel inseln</Line>
+   <Line>installation installiert institut institute institution institutionen instituts</Line>
+   <Line>interessant interessante interesse interessen interessenten interessieren</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>interessiert interessierte interessierten internationales iranische iranischen</Line>
+   <Line>irischen is island isoliert israel israelis israelische israelischen israels</Line>
+   <Line>ist italienische italienischen italiens landes landesregierung landgerichts</Line>
+   <Line>landsleute las lasse lassen last lasten lehrstellen leise leisten leistet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>leistung leistungen lesen leser lesung liest liste listen literarische</Line>
+   <Line>literarischen logische los lust lustig nachts nase nationalisten neuerdings</Line>
+   <Line>neues neueste neuesten neuseeland nichts niedersachsen nordosten nordsee</Line>
+   <Line>orchester organisation organisationen organisatoren organisieren organisiert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>organisierte organisierten oslo ost ostdeutsche ostdeutschen ostdeutschland</Line>
+   <Line>osten ostern ostsee ots rasch rasche rasen rathaus raus realisieren realisiert</Line>
+   <Line>realisierung realistisch rechts regisseur regisseure registrieren registriert</Line>
+   <Line>reichstag reis reise reisen reisende reisenden reist reiste release renaissance</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>research resolution ressorts ressourcen rest restaurant restaurants reste</Line>
+   <Line>restlichen resultat riesige riesigen rosa rose ruhestand russen russische</Line>
+   <Line>russischen russischer russland rutschte sa saal saarland sache sachen sachlich</Line>
+   <Line>sachschaden sachsen sachsenanhalt sage sagen sagt sagte sagten sah sahen saison</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>san sand sang saniert sanierung sat satelliten satire satt sauer sauna schade</Line>
+   <Line>schaden schatten schau schauen schaut scheidung schein scheinen scheint</Line>
+   <Line>scheitern scheitert scheiterte schicht schichten schiedsrichter schien schiene</Line>
+   <Line>schienen schier schild schildert schilderung schilling schlacht schlag schlagen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>schlange schlecht schlechte schlechten schlechter schlechtes schlechthin</Line>
+   <Line>schlicht schlichten schloss schlossen schlug schlugen schluss schnee schneider</Line>
+   <Line>schnell schnelle schnellen schneller schnitt schnittstelle schon schottland</Line>
+   <Line>schritt schritte schritten schuhe schuld schulden schuldig schule schulen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>schulter schultern schuster sechs sechsten sed see seele seen segen sehe sehen</Line>
+   <Line>sehnsucht sehr sei seien sein seine seinen seiner seinerseits seines seit seite</Line>
+   <Line>seiten seitens seither selten seltenen seltener senat senator senats senden</Line>
+   <Line>sender senders sendung sendungen senioren sensation seoul serie sg shell sich</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>sicher sichere sicheren sicherer sichergestellt sicherheit sicherheitsrat</Line>
+   <Line>sicherlich sichern sicherstellen sichert sicherte sicherung sicht sichtlich sid</Line>
+   <Line>sie siedler siedlung siedlungen sieg siege siegen sieger siegte siehe sieht</Line>
+   <Line>signal signale signalisiert sind singen singt sinn sinne sir situation</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>situationen so sog sogar sogenannte sogenannten sogenannter sogleich sohn</Line>
+   <Line>sohnes solange solch solche solchen solcher solches soldat soldaten solide soll</Line>
+   <Line>solle sollen sollte sollten sonderlich sondern song songs sonne sonntag</Line>
+   <Line>sonntags sonst sonstige sonstigen sorge sorgen sorgt sorgte sorgten sound st</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>staat staaten staates staatlich staatliche staatlichen staatlicher</Line>
+   <Line>staatsregierung stadion stadt stadthalle stadtrat stadtteil stadtteilen stahl</Line>
+   <Line>stalin stand standard standards standen standort standorte standorten star</Line>
+   <Line>stars start starten startet startete stasi station stationen stationiert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>statistische statt stattdessen status stau stehe stehen stehende stehenden</Line>
+   <Line>steht steigen steigende steigenden steigender steigern steigert steigerte</Line>
+   <Line>steigerung steigt stein steine steinen stelle stellen stellt stellte stellten</Line>
+   <Line>stellung stern sterne sternen stetig stets steuer steuerliche steuerlichen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>steuern steuert steuerung stich stichtag stieg stiegen stil still stille</Line>
+   <Line>stillen stillstand stirn strahlt strahlung strand strategie strategien</Line>
+   <Line>strategische strategischen street streichen streichung streit streiten streng</Line>
+   <Line>strenge strengen strich student studenten studie studien studieren studierenden</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>studiert studierte studio stuhl stunde stunden stundenlang stuttgart</Line>
+   <Line>stuttgarter suche suchen sucht suchte suchten susanne tages tagesordnung tasche</Line>
+   <Line>taschen tatsache tatsachen tausend tausende tausenden technisch technische</Line>
+   <Line>technischen technischer teils tennis terroristen test testen tests theaters</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>theoretisch these thesen tisch todes touristen trends trost tschechen</Line>
+   <Line>tschechien tschechische tschechischen tschetschenien tschetschenischen udssr</Line>
+   <Line>ungarischen uns unschuld unser unsere unseren unserer unseres unsicher</Line>
+   <Line>unsicherheit unsinn unterdessen untersagt unterscheiden unterscheidet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>s</NewCharacters>
+   <Line>unterschied unterschiede unterschiedlich unterschiedliche unterschiedlichen</Line>
+   <Line>unterschiedlicher unterstellt unterstrich untersuchen untersucht untersuchten</Line>
+   <Line>untersuchung untersuchungen ursache ursachen ursula us usa usd usdollar</Line>
+   <Line>usregierung</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wichtiger Konsonant: w</LevelComment>
+   <NewCharacters>w</NewCharacters>
+   <Line>ece ewe ewe ewe ece ewe ece ewe ece ewe ewe ewe ece ewe ece</Line>
+   <Line>ewu ewi ewa ewu ewi ewa ewu ewi ewu ewi ewa ewu ewi ewa ewu</Line>
+   <Line>wed wet wer wen wed wet wer wen wed wet wer wen wed wet wer</Line>
+   <Line>wer wer wer was was was wer wer wer was was was wer wer wer</Line>
+   <Line>wie wie wie wut wut wut wie wie wie wut wut wut wie wie wie</Line>
+   <Line>wer was wie wut wut wie was wer wer was wie wut wut wie was</Line>
+   <Line>wache wache wache gewalt schwan gewalt schwan gewalt schwan</Line>
+   <Line>etwas etwas etwas wunsch darwin wunsch darwin wunsch darwin</Line>
+   <Line>sowie sowie sowie ingwer anwies ingwer anwies ingwer anwies</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>anderswo angewandt angewendet angewiesen antwort antworten antwortet antwortete</Line>
+   <Line>anwalt anweisung anweisungen anwender anwendung anwendungen anwesend</Line>
+   <Line>anwesenheit anwohner ausgeweitet ausgewertet ausgewiesen auswahl ausweg</Line>
+   <Line>ausweitung auswertung derweil deswegen durchweg dw eingeweiht einwanderer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>einwohner einwohnern entweder erschwert erwachsene erwachsenen erwarte erwarten</Line>
+   <Line>erwartenden erwartet erwartete erwarteten erwartung erwartungen erweisen</Line>
+   <Line>erweist erweitern erweitert erweiterte erweiterten erweiterung erwies erwiesen</Line>
+   <Line>erwin erwischt etwa etwas ewig ewige ewigen gegenwart gesundheitswesen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>gewachsen gewagt gewalt gewaltig gewaltige gewaltigen gewandt gewann gewannen</Line>
+   <Line>gewarnt gewartet gewechselt gewertet gewesen gewicht gewinn gewinne gewinnen</Line>
+   <Line>gewinner gewinnt gewisse gewissen gewisser gewohnt gewollt gewonnen geworden</Line>
+   <Line>gewordene gewordenen gleichgewicht gleichwohl hingewiesen hinweg hinweis</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>hinweise inwieweit irgendwann irgendwelche irgendwie irgendwo landesweit</Line>
+   <Line>landtagswahl landtagswahlen landwirte langeweile langweilig lastwagen leinwand</Line>
+   <Line>lsw ludwig nachgewiesen nachweis nachweisen nachwuchs neuwahlen new nirgendwo</Line>
+   <Line>nordwesten norwegen norwegischen notwendig notwendige notwendigen nrw</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>rechtsanwalt reichweite rwe schleswigholstein schrittweise schwach schwache</Line>
+   <Line>schwachen schweden schwedische schwedischen schweigen schwelle schwer schwere</Line>
+   <Line>schweren schwerer schwerin schwersten schwester schwestern schwierig schwierige</Line>
+   <Line>schwierigen schwieriger schwung show slowenien soweit sowie sowieso sowohl</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>staatsanwalt stellenwert stichwort taiwan teilweise torwart trendwende</Line>
+   <Line>unerwartet unterwegs unwahrscheinlich unweit usw uwe wachsen wachsende</Line>
+   <Line>wachsenden wagen wagner wagt wahl wahlen wahlgang wahlsieg wahnsinn wahr wahre</Line>
+   <Line>wahren wahrheit wahrlich wahrscheinlich waigel wald wall walter wand wandel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>wandern wandte wann war ware waren warnen warnt warnte warnung warnungen</Line>
+   <Line>warschau warten wartet wartete warteten was washington wasser wdr wechsel</Line>
+   <Line>wechseln wechselnden wechselt wechselte weder weg wege wegen weh wehr wehren</Line>
+   <Line>wehrt weichen weihnachten weil weile wein weise weisen weisheit weist weit</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>weitaus weite weiten weiter weitere weiteren weiterer weiteres weitergehen</Line>
+   <Line>weiterhin weitgehend weithin welch welche welchen welcher welches welle wellen</Line>
+   <Line>welt welten weltrangliste weltweit weltweite weltweiten wen wende wenden wendet</Line>
+   <Line>wenig wenige wenigen weniger wenigsten wenigstens wenn wenngleich wer werde</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>werden werdenden werder werner wert werte werten wertet wertete wesen</Line>
+   <Line>wesentlich wesentliche wesentlichen west westdeutsche westdeutschen</Line>
+   <Line>westdeutschland westen westens westlich westliche westlichen westlicher wetter</Line>
+   <Line>wichtig wichtige wichtigen wichtiger wichtiges wichtigste wichtigsten wider</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>widerstand wie wieder wiederherstellung wiederholen wiederholt wiederholte</Line>
+   <Line>wiederholten wiederholung wiederwahl wiegt wien wiener wies wiese wiesen wild</Line>
+   <Line>wilde wilden will wille willen willi wind windows winter wir wird wirt wisse</Line>
+   <Line>wissen witwe wo woche wochen wochenende wochenenden wodurch woher wohin wohl</Line>
+  </Level>
+  <Level>
+   <NewCharacters>w</NewCharacters>
+   <Line>wohlstand wohnen wohnt wohnung wohnungen wolle wollen wollte wollten wonach</Line>
+   <Line>worden world wort worte worten wortes wto wuchs wunden wunder wundern wundert</Line>
+   <Line>wunsch wurde wurden wut www</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wichtiger Konsonant: k</LevelComment>
+   <NewCharacters>k</NewCharacters>
+   <Line>nhn nkn nkn nkn nhn nkn nhn nkn nhn nkn nkn nkn nhn nkn nhn</Line>
+   <Line>nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd nkt nkr nkd nkt nkr</Line>
+   <Line>knd knt knr kne kna kni knu knd knt knr kne kna kni knu knd</Line>
+   <Line>ack ack ack kat kat kat ack kat ack kat ack kat ack kat ack</Line>
+   <Line>kork kork kork kork keile keile kork kork keile keile keile</Line>
+   <Line>kick kick kick kick keile keile kick kick keile keile keile</Line>
+   <Line>kelch kelch kelch kiste kiste kelch kelch kelch kiste kiste</Line>
+   <Line>erika erika erika denken denken erika denken denken denkend</Line>
+   <Line>danke danke danke gockel gockel danke gockel gockel dankend</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>akt akte akten akteure aktie aktien aktienkurse aktion aktionen aktuell</Line>
+   <Line>aktuelle aktuellen alkohol anerkannt anerkennung angeklagt angeklagte</Line>
+   <Line>angeklagten angelika ankara anklage antike antiken aok architekt architekten</Line>
+   <Line>architektur artikel atlantik attacken ausdruck auswirken auswirkungen charakter</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>dank decke decken deckung denke denken denkt dick dicke dicken diktator</Line>
+   <Line>diktatur direkt direkte direkten direktor dirk diskussion diskussionen</Line>
+   <Line>diskutieren diskutiert doktor dreck druck drucken drucker dunkel dunkelheit</Line>
+   <Line>dunkle dunklen ecke ecken eindruck einigkeit einklang elektrische elektrischen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>elektronik elektronische elektronischen elke enkel entdecken entdeckt entdeckte</Line>
+   <Line>entdeckten entdeckung entwickeln entwickelt entwickelte entwickelten</Line>
+   <Line>entwicklung entwicklungen erika erkannt erkannte erkennen erkennt erkenntnis</Line>
+   <Line>erkenntnisse erkenntnissen erkrankung erkrankungen erstreckt ethik gedanke</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>gedanken gedeckt gedruckt gekostet gentechnik gerechtigkeit geschenk geschenkt</Line>
+   <Line>geschickt geschwindigkeit gesenkt gesteckt gesunken handwerk handwerker heike</Line>
+   <Line>hektar helsinki henkel historiker hongkong indirekt insekten intellektuellen</Line>
+   <Line>irak irakische irakischen kader kairo kaiser kaiserslautern kalender</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>kalkulation kalt kalte kalten kanada kanadischen kanal kandidat kandidaten</Line>
+   <Line>kandidatur kandidieren kann kannst kannte kanther kardinal karin karl karlsruhe</Line>
+   <Line>karlsruher karriere karte karten kasse kassel kassen kassieren kassiert kasten</Line>
+   <Line>katalog kategorie kategorien katharina katholiken katholische katholischen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>kehren kehrt kehrte kein keine keinen keiner keinerlei keines keineswegs keller</Line>
+   <Line>kenia kenne kennen kennengelernt kenner kennt kenntnis kenntnisse kern</Line>
+   <Line>kernenergie kette kg kids kiel kieler kiew kilo kind kinder kindergarten</Line>
+   <Line>kindergeld kindern kindes kindheit king kinkel kino kinos kirch kirche kirchen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>kirchlichen kl klage klagen klagt klagte klang klar klare klaren klarer klares</Line>
+   <Line>klarheit klasse klassen klassiker klassische klassischen klaus kleider kleidung</Line>
+   <Line>klein kleine kleinen kleiner kleinere kleineren kleines kleinstadt kleinste</Line>
+   <Line>kleinsten kletterte klientel klingen klingt klinik kliniken klischees kloster</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>klug knie knochen knoten knowhow koalition koch kohl kohle kohls kokain kollege</Line>
+   <Line>kollegen kollegin konditionen konkret konkrete konkreten konkurrent</Line>
+   <Line>konkurrenten konkurs konnte konnten konrad konsens konsolidierung konstant</Line>
+   <Line>konstruktion kontakt kontakte konten kontinent kontinuierlich konto</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>kontrahenten kontrast kontrolle kontrollen kontrollieren kontrolliert</Line>
+   <Line>kontrollierten korea korrekt korrektur korrekturen korrigieren korrigiert</Line>
+   <Line>kosten kostenlos kostenlose kostenstelle kostet kostete krank kranke kranken</Line>
+   <Line>krankenhaus krankenkassen krankheit krankheiten kredit kredite kreis kreise</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>kreisen kreises kreistag krieg kriege kriegen krieges kriegsende kriegt krise</Line>
+   <Line>krisen kriterien kritik kritiker kritikern kritisch kritische kritischen</Line>
+   <Line>kritisieren kritisiert kritisierte kritisierten kroaten kroatien kroatische</Line>
+   <Line>kroatischen krone kronen kuchen kugel kulisse kultur kulturelle kulturellen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>kulturen kunde kunden kunst kunsthalle kunstwerk kunstwerke kurden kurdischen</Line>
+   <Line>kurs kurse kursen kurt kuwait landkreis lenken linke linken links lkw locken</Line>
+   <Line>locker lockt logik logistik lokal lokale lokalen nachdenken nachdruck networks</Line>
+   <Line>nikolaus nordkorea notwendigkeit onkel oskar radikal radikale radikalen raketen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>reaktion reaktionen redakteur redaktion regierungskoalition rekord rektor</Line>
+   <Line>risiken risiko rock rostock sank sanktionen schalke schicken schicksal schickt</Line>
+   <Line>schickte schock schrecken schwierigkeiten sekte sektor sekunde sekunden</Line>
+   <Line>selektion senken senkung sinken sinkt skandal slowakei stadtwerke stark starke</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>starken starker starkes statistik statistiken stecken steckt steckte stock</Line>
+   <Line>strecke strecken streik streiks strikt struktur strukturen taktik tankstelle</Line>
+   <Line>technik techniken techniker tokio transaktion transaktionen trick tricks</Line>
+   <Line>trinken trinkwasser trocken ukraine ulrike unklar wahrscheinlichkeit wecken</Line>
+  </Level>
+  <Level>
+   <NewCharacters>k</NewCharacters>
+   <Line>weiterentwicklung weltkrieg werk werke werken werkes werks werkstatt winkel</Line>
+   <Line>wirken wirklich wirkliche wirklichen wirklichkeit wirkt wirkte wirkten wirkung</Line>
+   <Line>wirkungen wolken</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: p</LevelComment>
+   <NewCharacters>p</NewCharacters>
+   <Line>ece epe epe epe epd ept epr epn epu epi epa epe epa epi epu</Line>
+   <Line>ped pet per pen peu pei pea peu ped pet per pen pee pea pei</Line>
+   <Line>span spar spin spuk spiel sporn spreu sport sprit spion pol</Line>
+   <Line>knappe spielt speist sprechen platt planen poliert spanisch</Line>
+   <Line>kuppe tippt saphir kopiert april chips pest pils plan raupe</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>alpen angesprochen anpassen anpassung anspruch ap appell appelliert appellierte</Line>
+   <Line>applaus apple april aspekt aspekte ausgangspunkt ausgesprochen cdupolitiker</Line>
+   <Line>christoph christopher corporation coup deutschsprachigen diepgen disposition</Line>
+   <Line>doppelt doppelte doppelten dpa ehepaar eigenkapital eingeplant eingespart</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>einsparen einsparungen einspruch endspiel entspannt entspannung entsprach</Line>
+   <Line>entspreche entsprechen entsprechend entsprechende entsprechenden entsprechender</Line>
+   <Line>entsprechendes entspricht epoche erspart etappe euphorie europa europas</Line>
+   <Line>europaweit gegenspieler geldpolitik geplant geplante geplanten gespannt gespart</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>gespeichert gesperrt gespielt gesprochen gestoppt greenpeace group gruppe</Line>
+   <Line>gruppen gruppierungen hauptrolle hauptsache hauptstadt http interpretation</Line>
+   <Line>interpretiert kapital kapitals kapitel kaputt katastrophe klappt knapp knappe</Line>
+   <Line>knappen knapper kneipe koalitionspartner kooperation kooperationen kopenhagen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>kopie kopieren kopiert korruption kripo krupp landeshauptstadt</Line>
+   <Line>legislaturperiode lippen lupe nationalpark nationalspieler opel oper operation</Line>
+   <Line>operationen operiert opposition option optionen osteuropa paar paare packen</Line>
+   <Line>paket pakistan palast palette panik papa papier papiere papst paradies</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>paragraph paragraphen parallel parat paris pariser park parkett parks parolen</Line>
+   <Line>partei parteien parteitag partie partner partnern passagen passagiere passanten</Line>
+   <Line>passen passende passieren passiert pathos patient patienten paul pauli pause pc</Line>
+   <Line>pds pech peinlich peking pence pension per peres periode person personal</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>personalkosten personen personenwagen peru peter petra phantasie phase phasen</Line>
+   <Line>philippinen philips philosoph philosophen philosophie photo photos pilot</Line>
+   <Line>piloten pistole pkk pkw plakat plakate plan planen planer planeten plant</Line>
+   <Line>planung planungen plastik platte platten pleite plus poesie polen polens</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>politik politiker politikern politisch politische politischen politischer</Line>
+   <Line>politisches polnische polnischen pop porsche portugal position positionen post</Line>
+   <Line>posten potential potentielle potentiellen prag prager praktisch praktische</Line>
+   <Line>praktischen preis preise preisen presse pressesprecher priester pro produkt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>produkte produkten produktion produktionen prognose prognosen propaganda prosa</Line>
+   <Line>protagonisten protest proteste protesten protestieren protestiert protestierten</Line>
+   <Line>protokoll ps punkt punkte punkten rechtsprechung regierungspartei</Line>
+   <Line>regierungssprecher reparatur repertoire report reporter reports respekt sap</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>scharping schauspiel schauspieler schauspielerin schwerpunkt schwerpunkte</Line>
+   <Line>singapur skepsis skeptisch skulpturen spalte spalten spaltung spanien spaniens</Line>
+   <Line>spanier spanische spanischen spannend spannung spannungen sparen sparkasse</Line>
+   <Line>sparkassen sparpaket spart sparte sparten spd spdpolitiker spektakel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>spekulation spekulationen spekuliert spenden sperre spiegel spiegelt spiel</Line>
+   <Line>spiele spielen spieler spielern spiels spielt spieltag spielte spielten sponsor</Line>
+   <Line>sponsoren spontan sport sporthalle sportler sportlich sportliche sportlichen</Line>
+   <Line>sports sprach sprache sprachen sprang spreche sprechen sprecher sprecherin</Line>
+  </Level>
+  <Level>
+   <NewCharacters>p</NewCharacters>
+   <Line>spree sprich spricht springen springer springt spruch sprung spur spuren</Line>
+   <Line>standpunkt stephan stolpe stoppen tagesspiegel telephon teppich therapie tips</Line>
+   <Line>transport transportieren transportiert transrapid treppe truppe truppen</Line>
+   <Line>ursprung utopie westeuropa widersprach widersprechen widerspricht widerspruch</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: m</LevelComment>
+   <NewCharacters>m</NewCharacters>
+   <Line>nhn nmn nmn nmn nmu nmi nma nme nmd nmt nmr nmn nmd nmt nmn</Line>
+   <Line>nmu nmi nma nme nmn nmr nmt nmd um um um um im im im im arm</Line>
+   <Line>kam kam kam dem dem dem kam dem mir mir mir mag mag mag mir</Line>
+   <Line>male male male mild milde milde am mehr mehr mehr arme arme</Line>
+   <Line>male mehr mild male mehrere milde malen mehrere milder mehr</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>adam akademie aktienmarkt alarm allem allemal allesamt allgemein allgemeine</Line>
+   <Line>allgemeinen alptraum am american amerika amerikaner amerikanern amerikanische</Line>
+   <Line>amerikanischen amerikanischer amerikas ampel amsterdam amt amtes amtierende</Line>
+   <Line>amtierenden amtliche amtlichen amtsantritt amtsgericht anderem angekommen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>angemeldet angemessen angemessene angenehm angenommen ankommt anmelden</Line>
+   <Line>anmeldung anmeldungen annahme annehmen antisemitismus argument argumentation</Line>
+   <Line>argumente argumentiert arm arme armee armen armut astronomen atem ausgemacht</Line>
+   <Line>ausgenommen auskommen ausmachen ausnahme ausnahmen automatisch automatische</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>autonomie champions charme chemie chemikalien chemiker chemische chemischen</Line>
+   <Line>christdemokraten com computer computern daheim daimler damalige damaligen</Line>
+   <Line>damals dame damen damit darmstadt darum datum dem dementiert demnach demokraten</Line>
+   <Line>demokratie demokratisch demokratische demokratischen demonstranten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>demonstration demonstrationen demonstrieren demonstriert demonstrierten denkmal</Line>
+   <Line>deutschem diesem diesmal dietmar dilemma dimension dimensionen dimitrios</Line>
+   <Line>diplomat diplomaten diplomatischen diskriminierung dm dmark dokument</Line>
+   <Line>dokumentation dokumente dokumentieren dokumentiert dom dominieren dominiert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>dortmund dortmunder drama dramatisch dramatische dramatischen dreimal dumm</Line>
+   <Line>durchmesser edmund ehemalige ehemaligen ehemaliger ehemals ehemann eigenem</Line>
+   <Line>eigentum einem eingenommen einheimischen einkommen einmal einmalig einmalige</Line>
+   <Line>einmaligen einnahme einnahmen einnehmen einsam einsamkeit einstimmig element</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>elemente elementen em emotionen engagement engagements enorm enorme enormen</Line>
+   <Line>entkommen entnehmen entnommen ermitteln ermittelt ermittler ermittlung</Line>
+   <Line>ermittlungen ermordet ermordung erstenmal erstmal erstmals eukommission</Line>
+   <Line>europameister geheimdienst geheimen geheimnis gekommen gemacht gemalt gemein</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>gemeinde gemeinden gemeinderat gemeinsam gemeinsame gemeinsamen gemeinsames</Line>
+   <Line>gemeint gemeldet gemerkt gemessen genehmigt genehmigung genommen geraumer</Line>
+   <Line>gesammelt gesamte gesamten geschmack gestimmt gewidmet gleichnamigen gleichsam</Line>
+   <Line>gramm gremien gremium gutem hammer harmonie hartmann hartmut heim heimat</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>heimatstadt heimische heimischen heimlich heimspiel helmut hemd hermann herum</Line>
+   <Line>himmel hinnehmen hohem humor ihm ihrem im image immer immerhin import impulse</Line>
+   <Line>indem inmitten innenminister innenministerium innenministeriums insgesamt</Line>
+   <Line>instrument instrumente irmgard irrtum islam islamische islamischen islamisten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>kam kamen kamera kameraden kameras kammer kampagne kapitalismus kaum keinem</Line>
+   <Line>kilogramm kilometer kilometern kirchengemeinde klima klinsmann km komisch</Line>
+   <Line>kommando komme kommen kommende kommenden kommentar kommentare kommentiert</Line>
+   <Line>kommentierte kommission kommt kommunale kommunalen kommunalwahl kommunalwahlen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>kommune kommunen kommunikation kommunismus kommunisten kommunistische</Line>
+   <Line>kommunistischen komplett komplette kompletten komponente komponenten komponist</Line>
+   <Line>komponisten komposition kompositionen konsortium konsum konsumenten kreml</Line>
+   <Line>kriterium kultusminister kultusministerium landratsamt landsmann langem langsam</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>langsamer lateinamerika lehmann maastricht mache machen macht machte machten</Line>
+   <Line>madrid mag magen magistrat mahnte mai mailand main makler mal male maler</Line>
+   <Line>malerei mama man management manager manch manche manchem manchen mancher</Line>
+   <Line>manches manchmal mandanten mandat mandate mangel mangelnde mangels mangelt mann</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>mannes mannesmann mannheim mannheimer mantel manuell margarete maria marianne</Line>
+   <Line>marie marine mario marion mark marke marken marketing markieren markiert markt</Line>
+   <Line>marktanteil marktanteile marktes markus marokko mars marsch martha martin</Line>
+   <Line>martina maschine maschinen maske massaker masse massen match material</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>materialien materials materie mathematik matthias mauer mauern maus medaille</Line>
+   <Line>media medien medikamente medikamenten medium meer mehmet mehr mehrere mehreren</Line>
+   <Line>mehrerer mehrheit mehrheiten mehrheitlich mehrmals mehrwertsteuer mein meine</Line>
+   <Line>meinem meinen meiner meines meint meinte meinten meinung meinungen meist meiste</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>meisten meistens meister melden meldet meldete meldeten meldung meldungen menge</Line>
+   <Line>mengen mensch menschen menschenrechte menschheit menschliche menschlichen</Line>
+   <Line>menschlicher menschlichkeit mercedes merkel merken merkmal merkmale merkt messe</Line>
+   <Line>messen messer messungen metall meter metern methode methoden metro metropole mi</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>miami mich michael michel miete mieten mieter milch milieu mill milliarde</Line>
+   <Line>milliarden millimeter million millionen minder minderheit minderheiten</Line>
+   <Line>mindestens minen minister ministerien ministerin ministerium ministeriums minus</Line>
+   <Line>minute minuten mio mir mischung misere mission mit miteinander mitgeteilt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>mitglied mitglieder mitgliedern mitgliedsstaaten mithalten mithin mitleid</Line>
+   <Line>mitmachen mittag mitte mitteilen mitteilt mitteilte mitteilung mittel</Line>
+   <Line>mittelalter mittelalterlichen mitteln mittelpunkt mittels mittelstand mitten</Line>
+   <Line>mitternacht mittlere mittleren mittlerweile mittwoch mitunter mo mochte mode</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>modell modelle moderator moderne modernen moderner modernisierung mohamed</Line>
+   <Line>moment momentan momente monat monate monaten monatlich monats mond monika</Line>
+   <Line>monitor montag montage montags moral moralisch moralische moralischen mord</Line>
+   <Line>morde mordes morgen morgens morgigen moskau moskauer moskaus moslems mostar</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>motor motoren motto mr mrd multimedia mund munition museen museum museums</Line>
+   <Line>musical musik musikalisch musikalische musikalischen musiker muslime muss</Line>
+   <Line>musste mussten muster mut mutter nachdem nachmittag nahm nahmen nahrungsmittel</Line>
+   <Line>name namen namens namentlich nationalismus nehme nehmen neuem niemals niemand</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>niemandem niemanden nimmt nochmal nochmals nominiert nordamerika normal normale</Line>
+   <Line>normalen normaler normalerweise normen nummer nummern nunmehr optimal optimale</Line>
+   <Line>optimismus optimistisch parameter parlament parlamentarier parlamentarische</Line>
+   <Line>parlamentarischen parlaments parlamentswahlen plutonium podium potsdam</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>potsdamer premier premiere premierminister pressemitteilung programm programme</Line>
+   <Line>programmen programms prominente prompt rahmen rassismus raum realismus regime</Line>
+   <Line>reichtum remsmurrkreis renommierten rentenmarkt rom roman romane romans</Line>
+   <Line>romantik ruhm saddam sammeln sammelt sammler sammlung samstag samstags samt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>schlimm schlimmer schlimmsten schmalen schmid schmidt schmitt schmuck</Line>
+   <Line>schumacher segment seinem seitdem seltsam semester seminar seminare siemens</Line>
+   <Line>simon smith somalia somit sommer sommerpause spektrum spielraum stadtparlament</Line>
+   <Line>stamm stammdaten stammen stammende stammt stellungnahme stimme stimmen stimmt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>stimmte stimmten stimmung stockholm strom studium sturm summe summen supermarkt</Line>
+   <Line>team teams teilgenommen teilnahme teilnehmen teilnehmer teilnehmern telecom</Line>
+   <Line>telekom telekommunikation tempel temperatur temperaturen tempo termin termine</Line>
+   <Line>territorium terrorismus thema themen thomas tourismus traum triumph turm ulm</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>ulmer um umgang umgehen umgehend umgekehrt umgerechnet umgewandelt umland</Line>
+   <Line>umliegenden ums umso umsonst umstand umstellung umstritten umstrittene</Line>
+   <Line>umstrittenen umstrukturierung umwandlung umwelt umweltminister</Line>
+   <Line>umweltministerium unheimlich unmut unserem unterm unternehmen unternehmens</Line>
+  </Level>
+  <Level>
+   <NewCharacters>m</NewCharacters>
+   <Line>unternehmer unternommen usamerikanischen wachstum wahrgenommen wahrnehmen</Line>
+   <Line>wahrnehmung warm warmen warum wehrmacht weimar weitem welchem weltmarkt</Line>
+   <Line>weltmeister wem widmen widmet wiederum wilhelm william williams willkommen</Line>
+   <Line>wirksam wm wohnraum womit</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: z</LevelComment>
+   <NewCharacters>z</NewCharacters>
+   <Line>epe eze eze eze ezd ezt ezr ezn epe eze eza ezi ezu ezi eza</Line>
+   <Line>zer zer zer zir zir zer zir zage zage zage zage ziehe ziehe</Line>
+   <Line>ziege ziege zage zage ziehe ziehe ziehe zerrt zerrte zerrte</Line>
+   <Line>zielet zielet sitzt sitzt sitzt ritzte ritzte letzte letzte</Line>
+   <Line>zunge zunge zunge schmerz schmerz schmerz zunge zunge zagte</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>achtzig achtziger akzente akzeptanz akzeptieren akzeptiert allianz allzu</Line>
+   <Line>amtszeit angesetzt angezeigt angrenzenden ansatz anzahl anzeichen anzeige</Line>
+   <Line>anzeigen anzug anzulegen anzunehmen anzusehen arzneimittel arzt augenzeugen</Line>
+   <Line>auschwitz auseinandersetzung auseinandersetzungen ausgesetzt ausgezahlt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>ausgezeichnet auszeichnung auszugleichen chemnitz customizing darzustellen dazu</Line>
+   <Line>dazwischen ddrzeiten derzeit derzeitige derzeitigen distanz disziplin</Line>
+   <Line>durchgesetzt durchsetzen durchsetzung durchzusetzen dutzend dutzende ehrgeiz</Line>
+   <Line>eingesetzt eingesetzten eingezogen einsatz einsetzen einwohnerzahl einzelhandel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>einzelheiten einzeln einzelne einzelnen einzelner einziehen einzig einzige</Line>
+   <Line>einzigen einziger einziges einzug einzurichten einzusetzen einzustellen</Line>
+   <Line>entsetzen entziehen entzogen ersatz ersetzen ersetzt erzeugen erzeugnisse</Line>
+   <Line>erzeugt erziehung erzielen erzielt erzielte erzielten erzwingen ganz ganze</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>ganzen ganzer ganzes gegensatz gegenzug gekennzeichnet genutzt geradezu gesetz</Line>
+   <Line>gesetze gesetzen gesetzes gesetzlich gesetzliche gesetzlichen gesetzt gezahlt</Line>
+   <Line>gezeichnet gezeigt gezielt gezielte gezogen gezwungen glanz gleichzeitig grenze</Line>
+   <Line>grenzen grundgesetz grundgesetzes grundsatz heinz herangezogen herz herzen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>herzlich herzog herzustellen heutzutage hierzu hierzulande hinzu hitze hochzeit</Line>
+   <Line>holz horizont indiz instanz inszeniert inszenierung intelligenz inzwischen</Line>
+   <Line>kanzler kanzleramt kanzlers karadzic kennzahlen kennzeichen kommerziellen</Line>
+   <Line>kompetenz kompetenzen kompliziert komplizierte komplizierten konkurrenz</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>konstanz konzentration konzentrieren konzentriert konzept konzepte konzeption</Line>
+   <Line>konzern konzerne konzerns konzernumsatz konzert konzerte konzipiert kreuz</Line>
+   <Line>kreuzung kriminalpolizei kurz kurze kurzem kurzen kurzer kurzerhand leipzig</Line>
+   <Line>leipziger letzte letzten letztendlich letzter letztes letztlich lizenz lutz</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>magazin mainz mainzer marktplatz mazedonien medizin mediziner medizinische</Line>
+   <Line>medizinischen mehrzahl mozart nachkriegszeit nachzudenken nahezu</Line>
+   <Line>nationalsozialismus nationalsozialisten naturschutz nazis netz netze netzwerk</Line>
+   <Line>neunziger nutzen nutzer nutzt nutzte nutzten nutzung osze panzer parkplatz</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>platz plaziert polizei polizeisprecher polizist polizisten praktiziert</Line>
+   <Line>prenzlauer prinz prinzen prinzessin prinzip prinzipiell prinzipien produzenten</Line>
+   <Line>produzieren produziert prognostiziert prophezeit prozent prozentpunkte prozesse</Line>
+   <Line>prozesses rechtzeitig reduzieren reduziert reduzierung reiz residenz resonanz</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>rezept rezession salz satz satzung schauplatz schlagzeilen schmerz schmerzen</Line>
+   <Line>schulz schutz schwarz schwarze schwarzen schwarzer schweiz schweizer sechzig</Line>
+   <Line>sechziger seinerzeit setze setzen setzt setzte setzten sitz sitze sitzen sitzt</Line>
+   <Line>sitzung sitzungen sondersitzung sozial sozialamt sozialdemokrat</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>sozialdemokraten sozialdemokratische sozialdemokratischen soziale sozialen</Line>
+   <Line>sozialer sozialismus sozialisten sozialistische sozialistischen sozialpolitik</Line>
+   <Line>sozialstaat sozusagen spezialisiert spezialisten speziell spezielle speziellen</Line>
+   <Line>spielzeit spitze spitzenreiter staatskanzlei steuerhinterziehung steuerzahler</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>stolz sturz stz sz szenario szene szenen tageszeitung tanz tanzen taz</Line>
+   <Line>teilzunehmen tendenz tendenzen toleranz transparenz trotz trotzdem umgesetzt</Line>
+   <Line>umsatz umsatzes umsetzen umsetzung umweltschutz umzug umzugehen umzusetzen</Line>
+   <Line>unterzeichnet unterzeichnung unzureichend werkzeug werkzeuge winzigen witz</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>wohnzimmer wozu wurzeln zahl zahlen zahlreiche zahlreichen zahlreicher zahlt</Line>
+   <Line>zahlte zahlung zahlungen zaire zehn zehntausende zehntel zehnten zeichen</Line>
+   <Line>zeichnen zeichnet zeichnete zeichnung zeichnungen zeige zeigen zeigt zeigte</Line>
+   <Line>zeigten zeile zeilen zeit zeitalter zeiten zeitgenossen zeitlich zeitplan</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>zeitpunkt zeitraum zeitung zeitungen zeitweise zelle zellen zelt zensur</Line>
+   <Line>zentimeter zentral zentrale zentralen zentren zentrum zeug zeuge zeugen zeugnis</Line>
+   <Line>ziehen zieht ziel ziele zielen zielgruppe zielt ziemlich zigarette zigaretten</Line>
+   <Line>zimmer zimmermann zimmern zinsen zirkus zitat zitiert zitierte zog zogen zone</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>zoo zorn zu zucker zudem zueinander zuerst zug zugang zuge zugelassen zugelegt</Line>
+   <Line>zugenommen zugeordnet zugesagt zugestimmt zugleich zugrunde zugunsten zugute</Line>
+   <Line>zukommen zulassen zulassung zulegen zuletzt zum zumal zumeist zumindest zunahme</Line>
+   <Line>zunehmen zunehmend zunehmende zunehmenden zunge zuordnen zuordnung zur zurecht</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>zusage zusagen zusammen zusammengeschlossen zusammengestellt zusammenhang</Line>
+   <Line>zusammensetzung zusatz zuschauer zuschauern zuschlag zustand zustande zustimmen</Line>
+   <Line>zustimmung zutage zuwachs zuwachsraten zuweilen zuwenig zwang zwanzig zwar</Line>
+   <Line>zweck zwecke zwei zweier zweimal zweite zweiten zweitens zweiter zweites</Line>
+  </Level>
+  <Level>
+   <NewCharacters>z</NewCharacters>
+   <Line>zwingen zwingend zwingt zwischen</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: b</LevelComment>
+   <NewCharacters>b</NewCharacters>
+   <Line>nmn nbn nbn nbn nbu nbi nba nbe nbd nbt nbr nbn nbd nbt nbr</Line>
+   <Line>bnb bei bei bei bau bau bau bei bei bau bau bei bau bei bau</Line>
+   <Line>aber aber aber bald bald bald bann bann bann blau blau blau</Line>
+   <Line>beide beide beide klebet klebet klebet beiden beiden klebet</Line>
+   <Line>bekam bekam bekam liebe lieber lieber dabei dabei bittet ab</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>ab abap abbau abbauen abbildung abbruch abend abends abenteuer aber abermals</Line>
+   <Line>abgabe abgaben abgang abgebaut abgeben abgebrochen abgegeben abgehalten</Line>
+   <Line>abgelegt abgelehnt abgenommen abgeordnete abgeordneten abgeordnetenhaus</Line>
+   <Line>abgeordneter abgerechnet abgerissen abgesagt abgeschlossen abgeschnitten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>abgeschoben abgesehen abgesetzt abgesichert abgestellt abgestimmt abgewickelt</Line>
+   <Line>abgewiesen abgezogen abitur abkommen ablehnen ablehnung abrechnung abs absage</Line>
+   <Line>absatz abschiebung abschied abschnitt abschreibungen absehbarer abseits</Line>
+   <Line>absicherung absicht absichten absolut absolute absoluten absprache abstand</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>abstieg abstimmen abstimmung absturz absurd abteilung abteilungen</Line>
+   <Line>abteilungsleiter abtreibung abwarten abwehr abweichungen abwesenheit abwicklung</Line>
+   <Line>abzubauen abzug abzugeben abzusehen abzuwarten airbus albaner albanien albert</Line>
+   <Line>albrecht album ambiente ambitionen anbau anbieten anbieter anbietern anbietet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>anbindung anblick anderthalb angabe angaben angeben angeblich angebliche</Line>
+   <Line>angeblichen angebot angebote angeboten angebotenen angebracht angegeben</Line>
+   <Line>angegebenen angehoben angestrebt angestrebte angestrebten anhebung anzubieten</Line>
+   <Line>araber arabische arabischen arbeit arbeite arbeiten arbeiter arbeitern arbeitet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>arbeitete arbeiteten arbeitgeber arbeitgebern arbeitnehmer arbeitnehmern</Line>
+   <Line>arbeitsamt arbeitsgruppe arbeitskreis arbeitslos arbeitslose arbeitslosen</Line>
+   <Line>arbeitslosigkeit arbeitsmarkt arbeitsplatz arbeitsschritt arbeitszeit</Line>
+   <Line>arbeitszeiten augenblick augsburg augsburger ausbau ausbauen ausbildung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>ausbruch ausgabe ausgaben ausgebaut ausgeben ausgebildet ausgebrochen</Line>
+   <Line>ausgegeben ausgeschrieben ausschreibung auszubauen autobahn autobahnen</Line>
+   <Line>automobilindustrie ba bach bad baden badenbaden bagdad bahn bahnen bakterien</Line>
+   <Line>bald balkan ball ballett band bande bands bank banken banker bar barbara</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>barcelona bargeld basel basiert basis basler bat bau bauarbeiten bauarbeiter</Line>
+   <Line>bauch bauen bauer bauern baum baumann baustelle baustellen baut baute bauten</Line>
+   <Line>bdi beabsichtigt beachten beachtet beachtung beamte beamten beamter beantragen</Line>
+   <Line>beantragt beantragte beantworten beantwortet bearbeiten bearbeitet bearbeitung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>beate bebauung bebauungsplan beck beckenbauer becker bedacht bedauert bedauerte</Line>
+   <Line>bedeckt bedenken bedeute bedeuten bedeutende bedeutenden bedeutendsten bedeutet</Line>
+   <Line>bedeutete bedeutung bedienen bedient bedingt bedingung bedingungen bedroht</Line>
+   <Line>bedrohte bedrohten bedrohung beeindruckt beenden beendet beendete beendigung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>begangen begann begannen begeben begegnen begegnet begegnung begegnungen</Line>
+   <Line>begeistert begeisterung beginn beginnen beginnenden beginnt begleiten begleiter</Line>
+   <Line>begleitet begleitung begonnen begraben begrenzen begrenzt begrenzte begrenzten</Line>
+   <Line>begrenzung behalten behandeln behandelt behandlung behaupten behauptet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>behauptete behauptung beherrschen beherrscht behindert behinderte behinderten</Line>
+   <Line>bei beibehalten beide beiden beider beides beigetragen beim bein beinahe beine</Line>
+   <Line>beinen beinhaltet beirat beiseite beispiel beispiele beispielsweise beitrag</Line>
+   <Line>beitragen beitritt bekam bekamen bekannt bekannte bekannten bekannter</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bekanntesten bekanntgabe bekanntgegeben bekanntlich bekennen bekennt bekenntnis</Line>
+   <Line>bekl beklagen beklagt beklagte bekomme bekommen bekommt belange belasten</Line>
+   <Line>belastet belastung belastungen belebung beleg belege belegen belegt belegte</Line>
+   <Line>belgien belgische belgischen belgrad belgrader beliebig beliebt beliebten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>belohnt belohnung bemerkbar bemerkenswert bemerkt bemerkte bemerkung</Line>
+   <Line>bemerkungen benachbarten benannt benutzen benutzer benutzt benzin beobachten</Line>
+   <Line>beobachter beobachtet beobachtung beobachtungen beraten berater beratung</Line>
+   <Line>beratungen beratungsstelle berechnet berechnung berechnungen berechtigt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>berechtigung bereich bereiche bereichen bereit bereiten bereitet bereitgestellt</Line>
+   <Line>bereits berg berge bergen berger bericht berichte berichten berichterstattung</Line>
+   <Line>berichtet berichtete berichteten berlin berliner berlins bernd bernhard</Line>
+   <Line>bertelsmann berti beruhigen beruhigt beruht besatzung bescheid bescheiden</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bescheidenen beschert beschlagnahmt beschleunigen beschleunigt beschlossen</Line>
+   <Line>beschlossene beschlossenen beschreiben beschreibt beschreibung beschrieb</Line>
+   <Line>beschrieben beschuldigt beschwerde beschwerden beschwert beseitigen beseitigt</Line>
+   <Line>beseitigung besetzen besetzt besetzte besetzten besetzung besichtigen besiegt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>besitz besitzen besitzer besitzt besondere besonderen besonderer besonderes</Line>
+   <Line>besonders besorgt besser bessere besseren besseres besserung bestand bestanden</Line>
+   <Line>bestandteil beste bestehe bestehen bestehende bestehenden besteht bestellen</Line>
+   <Line>bestellt bestellung bestellungen besten bestens bester besteuerung bestimmen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bestimmt bestimmte bestimmten bestimmter bestimmung bestimmungen bestreiten</Line>
+   <Line>bestreitet bestritt bestritten besuch besuchen besucher besuchern besucht</Line>
+   <Line>besuchte beteiligen beteiligt beteiligten beteiligung beteiligungen beteuert</Line>
+   <Line>beton betonen betont betonte betonten betracht betrachten betrachter betrachtet</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>betrachtung betrag betragen betreiben betreiber betreibt betreten betreuen</Line>
+   <Line>betreuer betreut betreuung betrieb betriebe betrieben betrieblichen</Line>
+   <Line>betriebsergebnis betriebsrat betrug bett betten beurteilen beurteilt</Line>
+   <Line>beurteilung beute bewag bewahren bewahrt bewegen bewegt bewegte bewegten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bewegung bewegungen beweis beweise beweisen beweist bewerben bewerber bewerbung</Line>
+   <Line>bewerten bewertet bewertung bewies bewiesen bewirken bewirkt bewohner bewohnern</Line>
+   <Line>bezahlen bezahlt bezahlung bezeichnen bezeichnet bezeichnete bezeichneten</Line>
+   <Line>bezeichnung beziehen bezieht beziehung beziehungen beziehungsweise bezirk</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bezirke bezirken bezog bezogen bezug bgb bgh bibel bibliothek bibliotheken bier</Line>
+   <Line>biete bieten bietet bilanz bild bilden bilder bildern bildet bildete bildeten</Line>
+   <Line>bildschirm bildung bill billig billige billigen billiger billionen bin binden</Line>
+   <Line>bindung binnen biographie birgit birgt bis bisher bisherige bisherigen bislang</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bist bisweilen bitte bitten bitter bittere bittet blair blatt blau blaue blauen</Line>
+   <Line>bleibe bleiben bleibt blick blicke blicken blickt blieb bliebe blieben blind</Line>
+   <Line>block blockade blockieren blockiert blues blumen blut blutigen bmw bnd bochum</Line>
+   <Line>boden bodensee boeing bogen bombe bomben bonn bonner boom boot bord boris</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>borussia bosnien bosnienherzegowina bosniens bosnische bosnischen boston bot</Line>
+   <Line>boten brach brachte brachten branche branchen brand brandenburg brandenburger</Line>
+   <Line>brasilianischen brasilien brauche brauchen braucht brauchte brauchten brauerei</Line>
+   <Line>braun braunschweig brd brechen brecht breit breite breiten breiter bremen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bremens bremer bremsen bricht brigitte brille bringe bringen bringt briten</Line>
+   <Line>britische britischen britischer bronze brot bruch bruder brunnen bruno brust</Line>
+   <Line>brutal bse buben buch buche buchen buches buchstaben buchung buchungen</Line>
+   <Line>buchungskreis budapest budget buenos bulgarien bund bundes bundesamt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bundesanstalt bundesbahn bundesbank bundesdeutschen bundesgebiet</Line>
+   <Line>bundesinnenminister bundeskanzler bundesland bundesliga bundesrat</Line>
+   <Line>bundesregierung bundesrepublik bundesstaat bundestag bundestages bundestagswahl</Line>
+   <Line>bundestrainer bundeswehr bundesweit bundesweiten bunt bunte bunten burg bus</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>bush business busse bzw club clubs comeback commerzbank dabei daimlerbenz</Line>
+   <Line>daneben dankbar dasselbe datenbank debatte debatten demselben denkbar denselben</Line>
+   <Line>derselben deshalb dezember dgb dieselbe dieselben drehbuch dreieinhalb dtb</Line>
+   <Line>dublin duisburg durchbruch eben ebene ebenen ebenso ebensowenig eberhard</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>einbeziehung einbezogen einblick einbrecher einbringen einbruch eineinhalb</Line>
+   <Line>eingabe eingebaut eingeben eingebracht eingebunden eingegeben einstiegsbild</Line>
+   <Line>eisenbahn elbe elisabeth ensemble erarbeiten erarbeitet erbe erben erbracht</Line>
+   <Line>erdbeben ergab ergaben ergeben ergebnis ergebnisse ergebnissen ergibt erheben</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>erheblich erhebliche erheblichen erheblicher erhebt erhebung erhob erhoben</Line>
+   <Line>erkennbar erlauben erlaubnis erlaubt erleben erlebnis erlebnisse erlebt erlebte</Line>
+   <Line>erobern erobert eroberung erprobt erreichbar erwarb erwerb erwerben erworben</Line>
+   <Line>etablieren etabliert etablierten ezb gab gaben gabriele gabs gastgeber</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>gearbeitet gebaut gebe geben gebeten gebiet gebiete gebieten gebildet gebilligt</Line>
+   <Line>geblieben geboren geborene geborgen gebot geboten gebracht gebrauch gebraucht</Line>
+   <Line>gebrochen gebucht gebunden geburt geburtstag gegeben geglaubt gehabt gelbe</Line>
+   <Line>gelben gelebt geliebte geliebten geschrieben gesetzgeber gestorben getrieben</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>gewebe gewerbe gibt gibts glaube glauben glaubt glaubte glaubten global globale</Line>
+   <Line>globalen globalisierung globus gmbh gorbatschow gorleben grab hab habe haben</Line>
+   <Line>halb halbe halben halbes halbinsel halbwegs halbzeit hamburg hamburger hamburgs</Line>
+   <Line>heben hebron hebt heidelberg heidelberger heilbronn herausgeber herausgegeben</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>herbert herbst hierbei hinblick hob homburg huber hubert hubschrauber ibm</Line>
+   <Line>immobilien ingeborg inhaber innerhalb insbesondere istanbul kabarett kabel</Line>
+   <Line>kabinett kabul klub klubs kolumbien kombination kombiniert krebs kreuzberg kuba</Line>
+   <Line>kubikmeter kundgebung labor landesbank lebe lebed leben lebende lebenden</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>lebendig lebens lebensmittel lebensmitteln lebt lebte lebten leib libanon</Line>
+   <Line>liberale liberalen liberalisierung libero liebe lieben lieber liebhaber</Line>
+   <Line>liebsten liebt lob lobt lobte ludwigsburg ludwigsburger magdeburg maschinenbau</Line>
+   <Line>mercedesbenz mitarbeit mitarbeiter mitarbeiterin mitarbeitern mitarbeiters</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>mitgebracht nachbar nachbarn nebel neben nebenan nebenbei nebeneinander</Line>
+   <Line>nebenwirkungen nebst neubau neubauten norbert notenbank ob oben obendrein</Line>
+   <Line>oberen oberhalb oberlandesgericht oberstaatsanwalt oberste obersten oberursel</Line>
+   <Line>obst obwohl oktober oldenburg ortsbeirat ostberlin ostberliner personalabbau</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>polizeiangaben polizeibeamte postbank probe proben problem problematik</Line>
+   <Line>problematisch probleme problemen problemlos problems publikum publikums rabin</Line>
+   <Line>rahmenbedingungen rebellen regensburg republik republikaner robert rubel sabine</Line>
+   <Line>salzburg sauber saudiarabien sbahn scheibe scheiben scheinbar schieben schiebt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>schreiben schreiber schreibt schreibtisch schrieb schubert schwaben schwebt</Line>
+   <Line>selben selber selbst selbstmord september serben serbien serbische serbischen</Line>
+   <Line>sichtbar sieben siebten siebzig siebziger silber slobodan sobald soeben</Line>
+   <Line>sonnabend srebrenica stabil stabile stabilen stabilisierung stadtgebiet starb</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>starben staub sterben stirbt stoiber strebt substanz substanzen tabelle</Line>
+   <Line>tabellen tagebuch treiben treibt trieb turbulenzen ubahn umbau umgebaut umgeben</Line>
+   <Line>umgebracht umgebung unbedingt unbekannt unbekannte unbekannten unglaublich</Line>
+   <Line>unmittelbar unmittelbaren unmittelbarer unterbringung unterbrochen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>untergebracht unterhalb unterschrieben urlaub urlauber wahlbeteiligung weber</Line>
+   <Line>weibliche weiblichen weiterbildung weitergegeben weltbank werben werbung</Line>
+   <Line>weshalb wettbewerb wettbewerber wettbewerbs wiesbaden wiesbadener wimbledon</Line>
+   <Line>wirbt wobei wohnungsbau wunderbar zagreb zb zentralbank zugegeben</Line>
+  </Level>
+  <Level>
+   <NewCharacters>b</NewCharacters>
+   <Line>zusammenarbeit zusammenarbeiten zusammenbruch zweieinhalb</Line>
+  </Level>
+  <Level>
+   <LevelComment>Erster Umlaut: ä</LevelComment>
+   <NewCharacters>ä</NewCharacters>
+   <Line>abhängig abhängigkeit aktionäre aktionären allmählich anhänger anhängern</Line>
+   <Line>annähernd annäherung anschläge anschlägen ansätze anträge anwälte</Line>
+   <Line>arbeitsplätze arbeitsplätzen atmosphäre ausgewählt ausgewählte</Line>
+   <Line>ausgewählten ausländer ausländern ausländische ausländischen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>ausländischer auswählen autorität beeinträchtigt behält beiträge</Line>
+   <Line>beiträgen berät beschränken beschränkt beschränkung beschädigt bestände</Line>
+   <Line>bestätigen bestätigt bestätigte bestätigten bestätigung beträchtlich</Line>
+   <Line>beträge beträgt bewährt bewährung bewältigen blätter blättern</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>buchstäblich bundesländer bundesländern bundespräsident bundespräsidenten</Line>
+   <Line>bände bäume bäumen darmstädter demnächst drängen drängt dänemark</Line>
+   <Line>dänische dänischen eigenständige eingeräumt eingeschränkt einschränkung</Line>
+   <Line>einschränkungen einschätzung einsätze einträge einwände engländer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>enthält entschädigung enttäuscht enttäuschung entwicklungsländer</Line>
+   <Line>entwicklungsländern ergänzen ergänzt ergänzte ergänzung erhält</Line>
+   <Line>erhältlich erklären erklärt erklärte erklärten erklärung erklärungen</Line>
+   <Line>erläutert erläuterte ernährung erträge erwähnt erzählen erzähler</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>erzählt erzählte erzählung erzählungen europäer europäische europäischen</Line>
+   <Line>europäischer gaststätte gebäude gebäuden gebäudes gedrängt gedächtnis</Line>
+   <Line>gegenstände gegenwärtig gegenwärtige gegenwärtigen gehälter geklärt</Line>
+   <Line>gelände gemälde generalsekretär geprägt geprägten gepäck gerät geräte</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>geräten geräumt geschätzt geschätzten gespräch gespräche gesprächen</Line>
+   <Line>gesprächspartner geständnis gestärkt getränke gewählt gewählte gewählten</Line>
+   <Line>gewähren gewährleisten gewährleistet gewährt gezählt geändert gläubiger</Line>
+   <Line>grundsätze grundsätzlich grundsätzliche gäbe gängigen gänzlich gärten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>gäste gästen hauptsächlich holländer humanitäre hält hände händen</Line>
+   <Line>händler händlern hängen hängt härte härter hätte hätten häuser</Line>
+   <Line>häusern identität intensität kanäle kapazität kapazitäten kapitän</Line>
+   <Line>kindergärten kläger klären klärung kontinuität krankenhäuser</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>krankenhäusern kriminalität kälte käme kämen käse legendären lächeln</Line>
+   <Line>lächelt lächerlich läden lädt lägen länder ländern ländlichen länge</Line>
+   <Line>länger längere längerem längeren längerer längst lärm lässt mailänder</Line>
+   <Line>matthäus militär militärisch militärische militärischen militärs</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>ministerpräsident ministerpräsidenten mittelständische mittelständischen</Line>
+   <Line>mobilität mächtig mächtige mächtigen mädchen mängel männer männern</Line>
+   <Line>männliche männlichen märchen märkte märkten märz nachträglich</Line>
+   <Line>niederländer niederländische niederländischen niedersächsische</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>niedersächsischen normalität nächste nächsten nächster nächstes nächte</Line>
+   <Line>nächtlichen nähe näher nähere nähert nämlich osteuropäischen</Line>
+   <Line>palästinenser palästinensern palästinensische palästinensischen parkplätze</Line>
+   <Line>phänomen plädiert plädierte pläne plänen plätze plätzen popularität</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>populär porträt priorität präsent präsentation präsentieren präsentiert</Line>
+   <Line>präsentierte präsentierten präsenz präsident präsidenten präsidentin</Line>
+   <Line>präsidium präzise pädagogen realität regierungspräsidium regulären</Line>
+   <Line>repräsentanten repräsentiert rumänien räder rät rätsel räuber räume</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>räumen räumt räumte schläge schlägt schwäche schwächen schwächer</Line>
+   <Line>schwärmt schäden schätzen schätzt schätzung schätzungen schätzungsweise</Line>
+   <Line>schäuble selbständig selbständigkeit solidarität spektakuläre</Line>
+   <Line>spektakulären spät späten später spätere späteren spätestens</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>staatsanwälte staatspräsident staatspräsidenten staatssekretär stabilität</Line>
+   <Line>städte städten städtische städtischen stämme ständig ständige ständigen</Line>
+   <Line>stärke stärken stärker stärkere stärkeren stärkste stärksten stärkung</Line>
+   <Line>sächsischen sämtliche sänger sängerin sätze sätzen tatsächlich</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>tatsächliche tatsächlichen träger trägt tränen träume träumen träumt</Line>
+   <Line>täglich tägliche täglichen tänzer täter tätern tätig tätigen tätigkeit</Line>
+   <Line>tätigkeiten umstände umständen umsätze unabhängig unabhängige</Line>
+   <Line>unabhängigen unabhängigkeit ungeklärt unlängst unterhält uspräsident</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>werkstätten wächst wählen wähler wählern wählt wählte während währung</Line>
+   <Line>währungen währungsunion wälder wände wänden wäre wären wärme</Line>
+   <Line>zugänglich zulässig zunächst zusammenhänge zustände zuständig zuständige</Line>
+   <Line>zuständigen zuständigkeit zusätze zusätzlich zusätzliche zusätzlichen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ä</NewCharacters>
+   <Line>zusätzlicher zählen zähler zählern zählt zählte zählten zähne ähnlich</Line>
+   <Line>ähnliche ähnlichen ähnlicher ähnliches älter ältere älteren älterer</Line>
+   <Line>älteste ältesten ämter ändern ändert änderte änderung änderungen</Line>
+   <Line>ängste ära ärger ärgert ärzte ärzten ästhetik</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neues Satzzeichen: ,</LevelComment>
+   <NewCharacters>,</NewCharacters>
+   <Line>nmn r,r r,r r,r r,u r,i r,a r,e r,d r,t r,n r,d r,t r,t r,n</Line>
+   <Line>da, da, da, na, na, na, da, da, na, na, da, da, na, na, da,</Line>
+   <Line>aber, aber, aber, neues, neues, dann, dann, dann, aber, da,</Line>
+   <Line>bilde, deine, dein, diesen, meine, meine, bis, ein, sein, bis,</Line>
+   <Line>bis, ein, sein, kein, dein, in, aus, ans, sein, bald, leer,</Line>
+   <Line>an, mir, sei, denn, mehr, hier, am, aus, bis, ein, sei, an,</Line>
+  </Level>
+  <Level>
+   <NewCharacters>,</NewCharacters>
+   <Line>sie sagen mir, sie sagen dir, sie sagen ihr, sie sagen mir,</Line>
+   <Line>sie holen es, geben sie es, legen sie es, dann sagst du an,</Line>
+   <Line>senden sie es, senden sie es ab, senden sie es nun bald ab,</Line>
+   <Line>sie stellen aus, sie stellen es aus, stelle es bald hierher</Line>
+   <Line>sie brachte mir, sie brachte es bald, sie brachte es zuerst</Line>
+   <Line>sie hat es bemerkt, sie hatte bemerkt, sie bemerkten alles,</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: v</LevelComment>
+   <NewCharacters>v</NewCharacters>
+   <Line>ece nhn ivi ivi ivi ivd ivt ivr</Line>
+   <Line>ece ala ivi ivi ivu iva ive ivi</Line>
+   <Line>ved vad vid vud ved vad vid vud</Line>
+   <Line>viel viele viele vier vier vier</Line>
+   <Line>vieles vieles vieler vieler ver</Line>
+   <Line>verh verk verl verz vers verdau</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>absolventen absolviert aggressiv aktiv aktive aktiven aktivieren aktiviert</Line>
+   <Line>aktivität aktivitäten alternative alternativen archiv archivierung attraktiv</Line>
+   <Line>attraktive attraktiver attraktivität avantgarde aviv beethoven bevor</Line>
+   <Line>bevorstehende bevorstehenden bevorzugt brav bremerhaven bundesverband</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>bundesverbandes bvg david davon davor devise diverse diversen dividende</Line>
+   <Line>eindrucksvoll einverstanden ev eva evangelische evangelischen eventuell</Line>
+   <Line>gouverneur handvoll hannover hauptversammlung hervor hervorragend hervorragende</Line>
+   <Line>hsv individuell individuelle individuellen initiative initiativen inklusive</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>innovation innovationen innovative intensiv intensive intensiver intervention</Line>
+   <Line>interview interviews investieren investiert investition investitionen investor</Line>
+   <Line>investoren iv ivan klavier konservative konservativen konvention kosovo</Line>
+   <Line>krankenversicherung kreativität kurve landesverband leverkusen liebevoll live</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>massiv massive massiven mecklenburgvorpommern menschenrechtsverletzungen</Line>
+   <Line>milosevic mitgliederversammlung motiv motivation motive motiven nahverkehr</Line>
+   <Line>negativ negative negativen nerven niveau novelle november oliver operative</Line>
+   <Line>operativen perspektive perspektiven positiv positive positiven positives privat</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>private privaten privater privatisierung produktivität provinz provinzen</Line>
+   <Line>provokation relativ relevanten renovierung rentenversicherung reserven</Line>
+   <Line>reserviert revision revolution rivalen rover selbstverständlich server service</Line>
+   <Line>services serviert sinnvoll sinnvolle souverän souveränität soviel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>sozialversicherung stadtverordnetenversammlung stadtverwaltung stellvertretende</Line>
+   <Line>stellvertretenden stellvertretender stellvertreter subventionen sv</Line>
+   <Line>titelverteidiger tv universität universitäten unverständlich unverändert</Line>
+   <Line>vage van variante varianten vater vaters vatikan vchr veba vehement venedig</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verabschieden verabschiedet verabschiedete verabschiedung verankert</Line>
+   <Line>veranschlagt veranstalten veranstalter veranstaltet veranstaltung</Line>
+   <Line>veranstaltungen verantworten verantwortlich verantwortlichen verantwortung</Line>
+   <Line>verarbeiten verarbeitet verarbeitung verband verbandes verbergen verbessern</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verbessert verbesserte verbesserten verbesserung verbesserungen verbieten</Line>
+   <Line>verbietet verbinden verbindet verbindung verbindungen verbirgt verbliebenen</Line>
+   <Line>verborgen verbot verboten verbotenen verbracht verbrachte verbrannt verbrauch</Line>
+   <Line>verbraucher verbraucht verbrechen verbreiten verbreitet verbreitete</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verbreiteten verbreitung verbringen verbuchen verbucht verbund verbunden</Line>
+   <Line>verbundene verbundenen verbände verbänden verdacht verdachts verdammt</Line>
+   <Line>verdanken verdankt verdienen verdienst verdienste verdient verdiente verdoppeln</Line>
+   <Line>verdoppelt verdrängt verein vereinbaren vereinbart vereinbarte vereinbarten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vereinbarung vereinbarungen vereine vereinen vereinigten vereinigung vereins</Line>
+   <Line>vereint vereinten vergabe vergangen vergangene vergangenen vergangener</Line>
+   <Line>vergangenheit vergeben vergebens vergeblich vergessen vergewaltigung vergleich</Line>
+   <Line>vergleichbar vergleichbaren vergleichen vergleichsweise verglichen verhalten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verhandeln verhandelt verhandlung verhandlungen verheiratet verhindern</Line>
+   <Line>verhindert verhält verhältnis verhältnisse verhältnissen verhängt verkehr</Line>
+   <Line>verkehrsminister verlag verlage verlagert verlagerung verlangen verlangt</Line>
+   <Line>verlangte verlangten verlassen verlautete verlegen verleger verlegt verlegung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verleihen verleiht verletzt verletzte verletzten verletzung verletzungen</Line>
+   <Line>verliebt verliehen verlieren verlierer verliert verlor verloren verlorenen</Line>
+   <Line>verlust verluste verlusten verlängern verlängert verlängerung vermag</Line>
+   <Line>vermarktung vermehrt vermeiden vermeintlich vermeintlichen vermieden vermieter</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vermitteln vermittelt vermittler vermittlung vermuten vermutet vermutlich</Line>
+   <Line>vermutung vernachlässigt vernehmen vernehmung vernichtet vernichtung</Line>
+   <Line>verordnung verrat verraten verringern verringert verringerung verrät versagen</Line>
+   <Line>versagt versammelt versammelten versammlung verschickt verschieben verschiebung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verschiedene verschiedenen verschiedener verschiedensten verschlechtert</Line>
+   <Line>verschoben verschont verschwand verschwinden verschwindet verschwunden versehen</Line>
+   <Line>versetzen versetzt versicherer versichern versichert versicherte versicherten</Line>
+   <Line>versicherung versicherungen version versionen versorgen versorgt versorgung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>versprach versprechen verspricht versprochen verspätung verstand verstanden</Line>
+   <Line>verstecken versteckt verstehe verstehen versteht verstorbenen verständigen</Line>
+   <Line>verständigt verständigung verständlich verständnis verstärken verstärkt</Line>
+   <Line>verstärkte verstärkten verstärkung versuch versuche versuchen versucht</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>versuchte versuchten versäumt vertagt verteidigen verteidiger verteidigt</Line>
+   <Line>verteidigte verteidigung verteidigungsminister verteidigungsministerium</Line>
+   <Line>verteilen verteilt verteilung vertrag vertrages vertrat vertrauen vertraut</Line>
+   <Line>vertreiben vertreibung vertreten vertreter vertretern vertretung vertrieb</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vertrieben vertritt verträge verunsichert verursachen verursacht verurteilt</Line>
+   <Line>verurteilte verurteilung verwalten verwaltet verwaltung verwaltungsgericht</Line>
+   <Line>verwandeln verwandelt verwandt verwandten verwehrt verweigern verweigert</Line>
+   <Line>verweisen verweist verwenden verwendet verwendeten verwendung verwertung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>verwickelt verwies verwiesen verwirklichen verwirklicht verwirklichung</Line>
+   <Line>verwirrung verwundert verzeichnen verzeichnet verzeichnete verzicht verzichten</Line>
+   <Line>verzichtet verzichtete verändern verändert veränderte veränderten</Line>
+   <Line>veränderung veränderungen verärgert veto vgl via viag video videos viel</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>viele vielen vieler vieles vielleicht vielmehr vielzahl vier viermal vierte</Line>
+   <Line>viertel vierten vierzehn vierzig vietnam viktor vilbel villa viren virtuelle</Line>
+   <Line>virtuellen virus visier vision visionen vizepräsident vogel vogts volk volker</Line>
+   <Line>volkes volksabstimmung volkshochschule volkspartei volkswagen voll volle vollem</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vollen voller vollkommen vollständig vollständige vollständigen vollzogen</Line>
+   <Line>volumen vom von voneinander vor vorab vorabend voran vorangegangenen voraus</Line>
+   <Line>vorausgesetzt voraussetzung voraussetzungen voraussichtlich vorbehalte</Line>
+   <Line>vorbehalten vorbei vorbereiten vorbereitet vorbereitung vorbereitungen vorbild</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vorbilder vordergrund vorerst vorgaben vorgang vorgehen vorgehensweise</Line>
+   <Line>vorgelegt vorgelegten vorgenommen vorgeschlagen vorgeschrieben vorgesehen</Line>
+   <Line>vorgesehene vorgesehenen vorgestellt vorgetragen vorgänge vorgängen</Line>
+   <Line>vorgänger vorhaben vorhanden vorhandene vorhandenen vorhang vorher vorigen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vorkommen vorlage vorlegen vorliebe vorliegen vorliegenden vorliegt vormittag</Line>
+   <Line>vorn vorne vornehmen vornehmlich vornherein vorrang vorrangig vorschlag</Line>
+   <Line>vorschläge vorschlägen vorsicht vorsichtig vorsieht vorsitz vorsitzende</Line>
+   <Line>vorsitzenden vorsitzender vorsorglich vorsprung vorstand vorstandsmitglied</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>vorstandssprecher vorstandsvorsitzende vorstandsvorsitzender vorstellbar</Line>
+   <Line>vorstellen vorstellung vorstellungen vortag vorteil vorteile vortrag vorträge</Line>
+   <Line>vorurteile vorweisen vorwiegend vorzeitig vorzubereiten vorzunehmen votum</Line>
+   <Line>vulkan vw vwd väter wertvolle wiedervereinigung wieviel wovon zivile zivilen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>v</NewCharacters>
+   <Line>zivilisation zivilisten zuversicht zuversichtlich zuviel zuvor</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe f</LevelComment>
+   <NewCharacters>f</NewCharacters>
+   <Line>nhn rgr tft tft tft tfu tfi tfa</Line>
+   <Line>nhn rgr tft tft tfd tfr tfn tft</Line>
+   <Line>fiel fiel lief, lief frei frei,</Line>
+   <Line>folgen, flogen, duftet, kaufst,</Line>
+   <Line>deftig, anrief, haufen, farben,</Line>
+   <Line>furios, impfen, frevle, stumpf,</Line>
+   <Line>oft folgt auf frohsinn flunkern</Line>
+   <Line>friere muffig greife laufen frei</Line>
+   <Line>pfeife impfen zapfte stopft fun</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>abfahrt abfall abfälle abgelaufenen abgeschafft ablauf abschaffung adolf</Line>
+   <Line>affäre afghanistan afp afrika afrikanischen afrikas aktiengesellschaft alfred</Line>
+   <Line>allenfalls anfang anfangen anfangs anforderungen anfrage anfragen angefangen</Line>
+   <Line>angefordert angegriffen angerufen angreifer angriff angriffe angriffen ankunft</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>anlauf anruf arafat arbeitsgemeinschaft arbeitskräfte atomwaffen auf</Line>
+   <Line>aufarbeitung aufbau aufbauen aufbringen aufbruch aufeinander aufenthalt</Line>
+   <Line>auffassung aufforderung aufgabe aufgaben aufgebaut aufgeben aufgebracht</Line>
+   <Line>aufgebrochen aufgefallen aufgefordert aufgegeben aufgehoben aufgeklärt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>aufgenommen aufgerufen aufgestellt aufgestockt aufgetaucht aufgeteilt</Line>
+   <Line>aufgetreten aufgewachsen aufgrund aufhalten aufhebung aufklärung aufkommen</Line>
+   <Line>auflage auflagen aufmerksam aufmerksamkeit aufnahme aufnahmen aufnehmen</Line>
+   <Line>aufrechterhalten aufregung aufruf aufrufen aufs aufschrift aufschwung aufsehen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>aufsicht aufsichtsrat aufstand aufsteiger aufstellen aufstellung aufstieg</Line>
+   <Line>auftakt auftauchen aufteilung auftrag auftraggeber auftragseingang auftreten</Line>
+   <Line>auftritt auftritte aufträge aufträgen aufwand aufweisen aufwendungen</Line>
+   <Line>aufzeichnungen aufzubauen aufzugeben aufzunehmen ausfall ausfallen ausflug</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>ausgefallen ausgeliefert auskunft auslieferung ausverkauft autofahrer bahnhof</Line>
+   <Line>basf bauwirtschaft beauftragt bedarf beeinflussen befand befanden befassen</Line>
+   <Line>befehl befinden befindet befindlichen befragt befragten befragung befreien</Line>
+   <Line>befreit befreiung befunden begreifen begriff begriffe begriffen beifall</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>beihilfe bekräftigt bekräftigte bekämpfen bekämpft bekämpfung belaufen</Line>
+   <Line>belegschaft beläuft bereitschaft beruf berufe berufen berufliche beruflichen</Line>
+   <Line>beruft berufung beschäftigen beschäftigt beschäftigte beschäftigten</Line>
+   <Line>beschäftigung bestenfalls bestraft betreffen betreffenden betrifft betroffen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>betroffene betroffenen bewaffneten beziffert bezifferte bezweifelt bielefeld</Line>
+   <Line>bischof botschaft botschaften botschafter brief briefe briefen</Line>
+   <Line>bundesanwaltschaft bundesfinanzminister bundesgerichtshof</Line>
+   <Line>bundesverfassungsgericht bundesverfassungsgerichts bundeswirtschaftsminister</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>caf� cdufraktion chef chefredakteur chefs darauf daraufhin darf dauerhaft</Line>
+   <Line>definieren definiert definierten definition defizit defizite detlef dfb</Line>
+   <Line>dialogfenster differenz differenzen dorf drauf durfte durften ebenfalls effekt</Line>
+   <Line>effekte effektiv effizienz ehefrau eigenschaft eigenschaften einfach einfache</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>einfachen einfacher einfallen einfluss eingestuft eingetroffen eingreifen</Line>
+   <Line>eingriff eingriffe einkauf einzelfall elf elfriede empfahl empfang empfangen</Line>
+   <Line>empfehlen empfehlung empfehlungen empfiehlt empfinden empfindet empfohlen</Line>
+   <Line>empfunden empfänger entfallen entfalten entfernen entfernt entfernten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>entfernung entfielen entfällt entwicklungshilfe entworfen entwurf erfahren</Line>
+   <Line>erfahrung erfahrungen erfassen erfassung erfinder erfindung erfolg erfolge</Line>
+   <Line>erfolgen erfolglos erfolgreich erfolgreiche erfolgreichen erfolgreicher</Line>
+   <Line>erfolgreichsten erfolgt erfolgte erforderlich erforderliche erforderlichen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>erfordert erforschung erfreulich erfreut erfuhr erfunden erfurt erfährt</Line>
+   <Line>ergreifen ergriffen erhoffen erhofft ermittlungsverfahren ernsthaft ernsthafte</Line>
+   <Line>erwirtschaftet erzbischof europameisterschaft fabrik fabriken fach</Line>
+   <Line>fachhochschule fachleute fachleuten fahne fahnen fahrbahn fahren fahrer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>fahrgäste fahrrad fahrt fahrten fahrzeug fahrzeuge fahrzeugen fakten faktor</Line>
+   <Line>faktoren fall falle fallen falls falsch falsche falschen familie familien fand</Line>
+   <Line>fanden fangen fans farbe farben faschismus fassade fassen fassung fast</Line>
+   <Line>faszination fasziniert faust favorit favoriten fazit fc fdp februar fehle</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>fehlen fehlende fehlenden fehler fehlern fehlt fehlte fehlten feier feiern</Line>
+   <Line>feiert feierte feierten fein feind feinde feine feinen feld felder feldern</Line>
+   <Line>fenster fenstern ferien fern ferne fernen ferner fernsehen fernsehens fernseher</Line>
+   <Line>fernsehsender ferrari fertig fertiggestellt fertigstellung fertigung fest feste</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>festen fester festgehalten festgelegt festgelegten festgenommen festgeschrieben</Line>
+   <Line>festgestellt festhalten festival festivals festlegen festlegung festnahme</Line>
+   <Line>feststellen feststellung festzulegen festzustellen feuer feuerwehr fiel fielen</Line>
+   <Line>figur figuren filiale filialen film filme filmemacher filmen films finale</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>finanzamt finanzen finanziell finanzielle finanziellen finanzieller finanzieren</Line>
+   <Line>finanziert finanzierung finanzminister finanzministerium finanzpolitik finde</Line>
+   <Line>finden findet fing finger finnland firma firmen fisch fische fischer fiskus fit</Line>
+   <Line>flagge flammen flasche flaschen flecken fleisch fliegen fliegt fliehen flog</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>florenz florida flucht flug fluggesellschaft fluggesellschaften flughafen</Line>
+   <Line>flughafens flughäfen flugzeug flugzeuge flut fläche flächen focus folge</Line>
+   <Line>folgen folgende folgenden folglich folgt folgte folgten folter fonds for ford</Line>
+   <Line>fordern fordert forderte forderten forderung forderungen form formal format</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>formel formen formular formulieren formuliert formulierte formulierung forscher</Line>
+   <Line>forschung fort fortan fortgeschrieben fortgesetzt fortschritt fortschritte</Line>
+   <Line>fortsetzen fortsetzung forum foto fotografen fotos fr frage fragen fraglich</Line>
+   <Line>fragt fragte fraktion fraktionen fraktionschef fraktionsvorsitzende franc</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>francisco frank franken frankfurt frankfurter frankfurtmain frankreich</Line>
+   <Line>frankreichs franz franzose franzosen frau frauen frei freiburg freiburger freie</Line>
+   <Line>freien freier freigabe freigegeben freigelassen freiheit freiheitsstrafe</Line>
+   <Line>freilassung freilich freispruch freistaat freitag freitags freiwillig</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>freiwillige freiwilligen freizeit fremd fremde fremden freude freuen freund</Line>
+   <Line>freunde freunden freundin freundlich freundliche freundlichen freundschaft</Line>
+   <Line>freut freute friedberg frieden friedens friedhof friedlich friedliche</Line>
+   <Line>friedlichen friedrich frisch frische frischen frist fritz froh front fronten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>frust fuchs fuhr fuhren fulda fund fundament fundamentalisten funk funktion</Line>
+   <Line>funktionen funktionieren funktioniert funktionsbaustein funktionäre furcht</Line>
+   <Line>fusion fähig fähigkeit fähigkeiten fährt fälle fällen fällig fällt</Line>
+   <Line>fängt gefahr gefahren gefallen gefangen gefangene gefangenen gefeiert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>gefertigt geflogen geflohen gefolgt gefordert geforderte geforderten gefragt</Line>
+   <Line>gefunden gefährden gefährdet gefährdung gefährlich gefährliche</Line>
+   <Line>gefährlichen gefährlicher gefällt gefängnis gegebenenfalls gegriffen</Line>
+   <Line>geholfen gekauft gekämpft gelaufen geldstrafe geliefert gemeinschaft genf</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>genfer gepflegt gerechtfertigt gerichtshof gerufen geschaffen geschafft</Line>
+   <Line>geschrumpft geschäft geschäfte geschäften geschäftsbereich geschäftsleute</Line>
+   <Line>geschäftsmann geschäftstätigkeit gesellschaft gesellschaften gesellschafter</Line>
+   <Line>gesellschaftliche gesellschaftlichen gesetzentwurf gesundheitsreform getroffen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>gewerkschaft gewerkschaften gewerkschafter geworfen ggf gift gipfel gleichfalls</Line>
+   <Line>golf graf grafik greifen greift griff griffen hafen hafenstadt haft haftbefehl</Line>
+   <Line>haftstrafe halbfinale half haufen hauptbahnhof heft heftig heftige heftigen</Line>
+   <Line>heftiger helfen helfer herausforderung herausforderungen herausgefunden</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>herkunft herrschaft hilfe hilfen hilflos hilfreich hilft hinauf hof hoffe</Line>
+   <Line>hoffen hoffentlich hoffmann hoffnung hoffnungen hofft häftlinge hälfte</Line>
+   <Line>häufig häufiger häufigsten identifizieren identifiziert inflation</Line>
+   <Line>inflationsrate infolge information informationen informieren informiert infos</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>infrastruktur insofern iwf kaffee kalifornien kampf kartoffeln kauf kaufen</Line>
+   <Line>kaufhaus kaufmann kaufpreis kauft kaufte keinesfalls koffer konferenz konflikt</Line>
+   <Line>konflikte konflikts konfrontation konfrontiert kopf kraft kräfte kräften</Line>
+   <Line>kräftig kräftige kräftigen kundschaft kunststoff kurzfristig kämpfe</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>kämpfen kämpfer kämpft kämpfte käufer lafontaine landschaft landschaften</Line>
+   <Line>landwirtschaft landwirtschaftlichen langfristig langfristige langfristigen lauf</Line>
+   <Line>laufbahn laufe laufen laufende laufenden laufzeit leidenschaft</Line>
+   <Line>leistungsfähigkeit lief liefen lieferanten liefern liefert lieferte lieferten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>lieferung lieferungen lohnfortzahlung luft lufthansa luftwaffe läuft mafia</Line>
+   <Line>manfred mannschaft mannschaften marktwirtschaft mehrfach meisterschaft</Line>
+   <Line>meisterschaften microsoft mitgliedschaft mittelfeld mittelfeldspieler</Line>
+   <Line>mittelfristig mustafa nachbarschaft nachfolge nachfolgenden nachfolger</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>nachfrage nationalmannschaft nordrheinwestfalen notfalls oberfläche of offen</Line>
+   <Line>offenbach offenbacher offenbar offenbart offene offenen offener offenheit</Line>
+   <Line>offenkundig offensichtlich offensive offiziell offizielle offiziellen offizier</Line>
+   <Line>offiziere oft oftmals opfer opfern parteichef partnerschaft perfekt performance</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>pfarrer pfennig pferd pferde pflanze pflanzen pflege pflegen pflegeversicherung</Line>
+   <Line>pflegt pflicht pflichten pfund plattform pressekonferenz prof professionelle</Line>
+   <Line>professionellen professor professoren profi profil profis profit profitieren</Line>
+   <Line>profitiert profitierten radfahrer ralf raumfahrt rechtfertigen referendum</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>referent reform reformen regierungschef regierungschefs reifen reihenfolge</Line>
+   <Line>rheinlandpfalz rief riefen rindfleisch rolf rudolf ruf rufen rufnummer ruft</Line>
+   <Line>rundfunk sanft sauerstoff schafe schaffen schafft schaffte schaffung scharf</Line>
+   <Line>scharfe scharfen schiff schiffe schimpft schlaf schlafen schrift schriften</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>schriftlich schriftsteller schuf schwangerschaft schäfer seehofer</Line>
+   <Line>sicherheitskräfte siegfried sindelfingen sofern sofort sofortige software</Line>
+   <Line>sorgfältig sozialhilfe spdchef spdfraktion spdfraktionschef sprengstoff</Line>
+   <Line>staatsanwaltschaft staatschef stattfinden stattfindet stattgefunden stefan</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>steffi steuerreform stiftung stoff stoffe strafe strafen strafkammer straftaten</Line>
+   <Line>streifen streitkräfte stufe stufen tarife tarifverhandlungen tarifvertrag</Line>
+   <Line>telefon telefonisch telefonnummer teufel tief tiefe tiefen tiefer</Line>
+   <Line>tochtergesellschaft todesstrafe traf trafen treff treffen treffer treffpunkt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>trifft ufer umfang umfangreiche umfangreichen umfassen umfassende umfassenden</Line>
+   <Line>umfasst umfeld umfrage umfragen umlaufrendite unfall unfälle ungefähr uniform</Line>
+   <Line>unterkunft unterschrift unterschriften untersuchungshaft unzufrieden verfahren</Line>
+   <Line>verfahrens verfall verfallen verfasser verfassung verfassungsgericht</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>verfassungsschutz verfehlt verfolgen verfolgt verfolgte verfolgung verhaftet</Line>
+   <Line>verhaftung verhelfen verkauf verkaufen verkauft verkaufte verkauften verkraften</Line>
+   <Line>verkäufer verlauf verlaufen verlief verläuft vernunft verpflichten</Line>
+   <Line>verpflichtet verpflichtung verpflichtungen verschaffen verschafft verschärft</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>verschärfung verzweifelt verzweiflung vfb vielfach vielfalt vielfältigen</Line>
+   <Line>viertelfinale volkswirtschaft vorfahren vorfall vorfeld vorgeworfen vorläufig</Line>
+   <Line>vorläufige vorläufigen vorschrift vorschriften vorstandschef vorwurf waffe</Line>
+   <Line>waffen waffenstillstand wahlkampf warf warfen wegfall weltmeisterschaft werfen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>wettbewerbsfähigkeit wettkampf wiederaufbau wiederaufnahme wilfried wirft</Line>
+   <Line>wirtschaft wirtschaftlich wirtschaftliche wirtschaftlichen wirtschaftlicher</Line>
+   <Line>wirtschaftsminister wirtschaftsministerium wirtschaftspolitik</Line>
+   <Line>wirtschaftswachstum wissenschaft wissenschaftler wissenschaftlern</Line>
+  </Level>
+  <Level>
+   <NewCharacters>f</NewCharacters>
+   <Line>wissenschaftlich wissenschaftliche wissenschaftlichen wissenschaftlicher wolf</Line>
+   <Line>wolfgang wolfsburg worauf zdf zeitschrift zeitschriften zufall zufolge</Line>
+   <Line>zufrieden zufällig zugriff zukunft zutiefst zwangsläufig zweifel zweifellos</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: ö</LevelComment>
+   <NewCharacters>ö</NewCharacters>
+   <Line>epe aäa iüi uöu uöu uöd uöt uör</Line>
+   <Line>epe aäa iüi uöu uöe uöa uöi uöu</Line>
+   <Line>vör vör öle öle öre öre öde öde</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>abgelöst ablösung angehören angehörige angehörigen angehört anhörung</Line>
+   <Line>aufgelöst aufhören auflösung ausgelöst auslösen auslöser befördert</Line>
+   <Line>behörde behörden benötigen benötigt benötigte benötigten bevölkerung</Line>
+   <Line>bewölkt bischöfe böblingen böden börse börsen börsengang börsianer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>böse bösen dörfer dörfern empört empörung erhöhen erhöht erhöhte</Line>
+   <Line>erhöhten erhöhung erlös erlöse ermöglichen ermöglicht erschöpft</Line>
+   <Line>eröffnen eröffnet eröffnete eröffnung erörtert französische</Line>
+   <Line>französischen französischer fröhlich föderation fördern fördert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>förderung gefördert gehör gehöre gehören gehörende gehörenden gehört</Line>
+   <Line>gehörte gehörten gelöscht gelöst gestört getötet gewöhnlich</Line>
+   <Line>gewöhnlichen gewöhnt geöffnet göppingen götter göttingen herkömmlichen</Line>
+   <Line>höchst höchste höchsten höchstens höchster höhe höhen höhepunkt höher</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>höhere höheren höherer hölle hören hörer hört hörte kapitalerhöhung</Line>
+   <Line>komödie köln kölner könig königin königreich königs könne können</Line>
+   <Line>könnte könnten köpfe köpfen körper körperlich körperliche körperlichen</Line>
+   <Line>körpers körperverletzung löcher löhne löschen lösen löst löste lösung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>lösungen löwen millionenhöhe möbel möchte möchten möge mögen möglich</Line>
+   <Line>mögliche möglichen möglicher möglicherweise möglichkeit möglichkeiten</Line>
+   <Line>möglichst möller mönchengladbach mörder nervös nördlich nördlichen</Line>
+   <Line>nötig nötige nötigen persönlich persönliche persönlichen persönlicher</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>persönlichkeit persönlichkeiten plötzlich religiöse religiösen römer</Line>
+   <Line>römische römischen schröder schröders schön schöne schönen schöner</Line>
+   <Line>schönes schönheit schönste schönsten stören stört störung störungen</Line>
+   <Line>söhne tragödie töchter tödlich tödlichen töne töpfer töten tötung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>ungewöhnlich ungewöhnliche ungewöhnlichen unmöglich unnötig verkörpert</Line>
+   <Line>vermögen versöhnung verzögert verzögerung veröffentlichen veröffentlicht</Line>
+   <Line>veröffentlichte veröffentlichten veröffentlichung vögel völker völlig</Line>
+   <Line>womöglich wöchentlich wörter wörtlich zeitgenössischen zerstören</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>zerstört zerstörte zerstörten zerstörung zugehörigen zuhörer zwölf</Line>
+   <Line>öffentlich öffentliche öffentlichen öffentlicher öffentlichkeit</Line>
+   <Line>öffentlichkeitsarbeit öffentlichrechtlichen öffnen öffnet öffnete öffnung</Line>
+   <Line>öffnungszeiten öfter ökologie ökologisch ökologische ökologischen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ö</NewCharacters>
+   <Line>ökonomie ökonomische ökonomischen öl örtliche örtlichen österreich</Line>
+   <Line>österreicher österreichische österreichischen österreichs östlich</Line>
+   <Line>östlichen ötv</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neues Satzzeichen: .</LevelComment>
+   <NewCharacters>.</NewCharacters>
+   <Line>mnm r,r t.t t.t t.u t.i t.a t.e t.d t.t t.n t.r t.d t.n t.r</Line>
+   <Line>t.n es. es. es. er. er. er. es. er. an. an. an. es. er. an.</Line>
+   <Line>eine. eine. eine. eines. eines. bald. bald. sitzt. bald. an</Line>
+   <Line>aber. aber. aber. holt. holt. dar. dar. dar. her. her. hin.</Line>
+   <Line>kaute. mir. mir. mir. dir. dir. melde. ihr. ihr. ihre. des.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Wir üben</LevelComment>
+   <NewCharacters>.</NewCharacters>
+   <Line>klage, klage. klage, klage. klage, klage. klage, klage. an.</Line>
+   <Line>neues, neues. altes, altes. neues, neues. altes, altes. in.</Line>
+   <Line>meine, meine. deine, deine. meine, meine. deine, deine. am.</Line>
+   <Line>bauen, bauen. nenne, nenne. bauen, bauen. nenne, nenne. im.</Line>
+   <Line>ihren, ihren. gerne, gerne. ihren, ihren. gerne, gerne. da.</Line>
+   <Line>seine, seine. keine, keine. seine, seine. keine, keine. um.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Sicherheitstest</LevelComment>
+   <NewCharacters>.</NewCharacters>
+   <Line>sie sahen es, sie konnten es, sie meinten es, dann sah sie.</Line>
+   <Line>sie legen aus, sie sagen aus, sie horchen mit, sie merkten.</Line>
+   <Line>sie dachte mit, sie horchte aus, sie nimmt mit, sie bindet.</Line>
+   <Line>alles sagen es, alle haben es, alles hegen es, alles sagen.</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: x</LevelComment>
+   <NewCharacters>x</NewCharacters>
+   <Line>nmn r,r t.t dxd dxd dxn dxr dxt</Line>
+   <Line>nmn r,r t.t dxd dxe dxa dxi dxu</Line>
+   <Line>uxd ixd axd exd oxd nxd rxr txd</Line>
+   <Line>fix fix fix fix lax lax lax lax</Line>
+   <Line>exakt exakt mixen mixen gemixte</Line>
+   <Line>boxte boxte extre extra taxiert</Line>
+  </Level>
+  <Level>
+   <NewCharacters>x</NewCharacters>
+   <Line>alexander axel dax dpaafx exakt exemplare exil existenz existieren existiert</Line>
+   <Line>expansion experiment experimente experte experten explosion export exporte</Line>
+   <Line>externe externen extra extrem extremen extremisten fax felix flexibel</Line>
+   <Line>flexibilität index kohlendioxid komplexen kontext luxemburg luxus marx max</Line>
+  </Level>
+  <Level>
+   <NewCharacters>x</NewCharacters>
+   <Line>maximal mexiko nix praxis rexrodt sex sexualität sexuelle sexuellen taxifahrer</Line>
+   <Line>texas text texte texten textilien</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: q</LevelComment>
+   <NewCharacters>q</NewCharacters>
+   <Line>ece ala ivi uqu uqu uqu uqd uqt</Line>
+   <Line>ece ala ivi uqu uqu uqe uqa uvi</Line>
+   <Line>qui quo qua que qui quo qua que</Line>
+   <Line>quer quer quoll quer quer quoll</Line>
+   <Line>quitt quitt quillt quitt quillt</Line>
+   <Line>bequem bequem, bequeme bequemer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>q</NewCharacters>
+   <Line>arbeitslosenquote bequem hauptquartier konsequent konsequenz konsequenzen</Line>
+   <Line>nasdaq qm quadratmeter quadratmetern qualifikation qualifiziert qualifizierte</Line>
+   <Line>qualität qualitäten quartal quartett quasi quelle quellen quer quote</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: ü</LevelComment>
+   <NewCharacters>ü</NewCharacters>
+   <Line>epe aäa iüi iüi iüi iüd iüt iür</Line>
+   <Line>epe aäa iüi iüi iüe iüa iüu iüi</Line>
+   <Line>für für für für für für für für</Line>
+   <Line>für dafür wofür für dafür wofür</Line>
+   <Line>übe über über über über überaus</Line>
+   <Line>darüber vorüber darüber darüber</Line>
+   <Line>würde würden würde würdet würde</Line>
+   <Line>müsse müssen müsse müssen müsse</Line>
+   <Line>dürfe dürft dürfen dürfe dürfte</Line>
+   <Line>zurück zurückging zurückstellen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>anführer angeführt angekündigt angekündigte angekündigten ankündigung</Line>
+   <Line>ansprüche aufführung aufführungen aufgeführt ausdrücklich ausführen</Line>
+   <Line>ausführlich ausführung ausführungen ausgeführt ausgerüstet ausgeübt</Line>
+   <Line>auskünfte ausrüstung ausüben badenwürttemberg badenwürttembergische</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>badenwürttembergischen bedürfnis bedürfnisse befürchten befürchtet</Line>
+   <Line>befürchtung befürchtungen befürworter befürwortet begnügen begründen</Line>
+   <Line>begründet begründete begründeten begründung bemühen bemüht bemühte</Line>
+   <Line>bemühungen berücksichtigen berücksichtigt berücksichtigung berühmt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>berühmte berühmten berührt beschlüsse bezüge bezüglich blüm blüten</Line>
+   <Line>broschüre brücke brücken brüder brüssel brüsseler bundesbürger bücher</Line>
+   <Line>büchern bühne bühnen bündnis bündnisgrünen bürger bürgerhaus</Line>
+   <Line>bürgerinitiative bürgerkrieg bürgerliche bürgerlichen bürgermeister</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>bürgermeisterin bürgermeisters bürgern bürgerschaft büro bürokratie</Line>
+   <Line>büros dafür darüber drüben drücken drückt drückte durchführen</Line>
+   <Line>durchführung durchgeführt durchzuführen dünn dürfe dürfen dürfte</Line>
+   <Line>dürften düsseldorf düsseldorfer eigentümer einflüsse einführen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>einführung einführungsleitfaden eingeführt einzuführen endgültig</Line>
+   <Line>endgültige endgültigen entführt entführung entwürfe erfüllen erfüllt</Line>
+   <Line>erfüllung erschüttert flüchtete flüchtlinge flüchtlingen flüge flügel</Line>
+   <Line>flüsse früchte früh frühe frühen früher frühere früheren früherer</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>frühestens frühling frühstück frühzeitig fügt fügte fühle fühlen</Line>
+   <Line>fühlt fühlte fühlten führe führen führende führenden führender führer</Line>
+   <Line>führerschein führt führte führten führung führungskräfte fülle füllen</Line>
+   <Line>füllt fünf fünfte fünftel fünften fünfzehn fünfzig fünfziger für</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>fürchten fürchtet fürs gebühr gebühren gebürtige gedrückt gefühl</Line>
+   <Line>gefühle gefühlen geführt geführte geführten gefüllt gegenüber gegründet</Line>
+   <Line>gegründete gegründeten gekündigt gekürzt gemüse genügen genügend genügt</Line>
+   <Line>geprüft geringfügig gerüchte gerückt geschäftsführer geschäftsführung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>geschützt gestürzt gestützt gewünscht gewünschte gewünschten gewürdigt</Line>
+   <Line>geübt glaubwürdigkeit glück glücklich grundstück grundstücke grün</Line>
+   <Line>gründe gründen gründer gründete gründlich gründung grüne grünen grünes</Line>
+   <Line>gültig gültige gültigen gültigkeit günstig günstige günstigen günstiger</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>günter günther güter haustür hierfür hintergründe hügel hürde hürden</Line>
+   <Line>hütte küche kühe kühl kümmern kümmert kündigen kündigt kündigte</Line>
+   <Line>kündigten kündigung künftig künftige künftigen künstler künstlerin</Line>
+   <Line>künstlerische künstlerischen künstlern künstlers künstlich künstliche</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>künstlichen kürze kürzen kürzer kürzlich kürzung kürzungen küste</Line>
+   <Line>lektüre lübeck lübecker lücke lücken lüge marktführer menü müde mühe</Line>
+   <Line>mühsam müll müller münchen münchener münchens münchner münster münzen</Line>
+   <Line>müsse müssen müssten mütter nachdrücklich natürlich natürliche</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>natürlichen nürnberg nürnberger nützlich nützt oberbürgermeister prüfen</Line>
+   <Line>prüft prüfung prüfungen pünktlich reisebüros rotgrün rotgrüne rotgrünen</Line>
+   <Line>rückblick rücken rückführung rückgabe rückgang rückgängig rückkehr</Line>
+   <Line>rückläufig rückschlag rücksicht rückstand rückt rückte rücktritt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>rückzug rühe rüttgers saarbrücken schlüssel schüler schülerinnen</Line>
+   <Line>schülern schüsse schützen schützt spürbar spüren spürt</Line>
+   <Line>staatsbürgerschaft stück stücke stücken stückliste stünde stünden</Line>
+   <Line>stürmer stürzen stürzt stürzte stützen stützt süd südafrika südafrikas</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>südamerika süddeutschen süden südkorea südlich südlichen südostasien</Line>
+   <Line>südosten südwesten tagsüber thüringen thüringer torhüter tribüne</Line>
+   <Line>tübingen tübinger tür türen türkei türken türkische türkischen</Line>
+   <Line>umweltschützer unglück unterdrückung unterstützen unterstützt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>unterstützte unterstützung unverzüglich uraufführung ursprünglich</Line>
+   <Line>ursprüngliche ursprünglichen verbündeten verfügbar verfügbaren verfügen</Line>
+   <Line>verfügt verfügte verfügung vergnügen verknüpft verknüpfung verkünden</Line>
+   <Line>verkündet verkündete verkürzt vernünftig vernünftige verrückt verübt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>vorgeführt vorwürfe vorwürfen vorzüge vorübergehend widersprüche wofür</Line>
+   <Line>wünsche wünschen wünscht würde würden würzburg wüste zukünftig</Line>
+   <Line>zukünftige zukünftigen zurück zurückgegangen zurückgehen zurückgekehrt</Line>
+   <Line>zurückgenommen zurückgetreten zurückgewiesen zurückgezogen zurückgreifen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>zurückhaltend zurückhaltung zurückkehren zurückliegenden zurückziehen</Line>
+   <Line>zurückzuführen zurückzukehren zuschüsse züge zügen zügig zürich üben</Line>
+   <Line>über überall überaus überblick überdies überdurchschnittlich überein</Line>
+   <Line>übereinstimmung überfall überfallen überflüssig überfordert übergabe</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>übergang übergeben überhaupt überholt überlassen überleben überlebenden</Line>
+   <Line>überlebt überlegen überlegt überlegungen übermittelt übernahm übernahme</Line>
+   <Line>übernehmen übernimmt übernommen überprüfen überprüft überprüfung</Line>
+   <Line>überraschend überraschende überraschenden überrascht überraschung</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>überraschungen übers überschreiten überschrift überschritten übersehen</Line>
+   <Line>übersetzt übersetzung übersicht überstanden überstunden übertragen</Line>
+   <Line>übertragung übertrieben übertroffen überwachen überwacht überwachung</Line>
+   <Line>überwiegend überwiesen überwinden überwindung überwunden überzeugen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ü</NewCharacters>
+   <Line>überzeugend überzeugt überzeugung überzogen üblich übliche üblichen</Line>
+   <Line>übrig übrigen übrigens übt übte übung</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: j</LevelComment>
+   <NewCharacters>j</NewCharacters>
+   <Line>nhn rgr tft djd dju djd dju dji</Line>
+   <Line>nhn rgr tft djd djd djn djr djt</Line>
+   <Line>jaule, jobben, jähem, jäten, ja</Line>
+   <Line>bejahen, jemand, judith, junges</Line>
+   <Line>jährt, jäten, jenem, jemals, je</Line>
+   <Line>jobben, jubeln, jährt, verjagt.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>j</NewCharacters>
+   <Line>anja derjenigen diejenigen diesjährigen frühjahr gesamtjahr geschäftsjahr</Line>
+   <Line>geschäftsjahres halbjahr ja jacques jagd jahr jahre jahrelang jahren jahres</Line>
+   <Line>jahresbeginn jahresende jahrestag jahresumsatz jahreswechsel jahreszeit</Line>
+   <Line>jahrgang jahrhundert jahrhunderte jahrhunderten jahrhunderts jahrhundertwende</Line>
+  </Level>
+  <Level>
+   <NewCharacters>j</NewCharacters>
+   <Line>jahrtausend jahrtausendwende jahrzehnt jahrzehnte jahrzehntelang jahrzehnten</Line>
+   <Line>jakob james jan januar japan japaner japanische japanischen japans jazz je jean</Line>
+   <Line>jeans jede jedem jeden jedenfalls jeder jedermann jederzeit jedes jedesmal</Line>
+   <Line>jedoch jegliche jeglicher jeher jelzin jelzins jemals jemand jemanden jena jene</Line>
+  </Level>
+  <Level>
+   <NewCharacters>j</NewCharacters>
+   <Line>jenem jenen jener jenes jens jenseits jerusalem jesus jetzige jetzigen jetzt</Line>
+   <Line>jeweilige jeweiligen jeweils joachim job jobs jochen johann johanna johannes</Line>
+   <Line>john johnson jordan jordanien joschka josef joseph journalist journalisten</Line>
+   <Line>jubel jubiläum jude juden jugend jugendarbeit jugendliche jugendlichen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>j</NewCharacters>
+   <Line>jugendlicher jugoslawien jugoslawischen juli julia jung junge jungen junger</Line>
+   <Line>jungs juni jurist juristen juristisch juristische juristischen just justiz</Line>
+   <Line>justizminister jutta jäger jährige jährlich jährliche jährlichen jörg</Line>
+   <Line>jüdische jüdischen jüdischer jünger jüngere jüngeren jüngst jüngste</Line>
+  </Level>
+  <Level>
+   <NewCharacters>j</NewCharacters>
+   <Line>jüngsten jüngster jürgen konjunktur langjährige langjährigen lebensjahr</Line>
+   <Line>major netanjahu objekt objekte objekten projekt projekte projekten projekts</Line>
+   <Line>sarajevo sarajewo sowjetische sowjetischen sowjetunion vorjahr vorjahres</Line>
+   <Line>vorjahreszeitraum westjordanland</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: ß</LevelComment>
+   <NewCharacters>ß</NewCharacters>
+   <Line>ewe dßd dßd dßd dßn dßr dßt dßd</Line>
+   <Line>ßdn ßdr ßdt ßdn ßdr ßdt ßdn ßdr</Line>
+   <Line>ußd ißd aßd eßd oßd ußd ißd aßd</Line>
+   <Line>saß fuß saß fuß saß fuß saß fuß</Line>
+   <Line>gruß fließen, ließen gießen saß</Line>
+   <Line>außen außer draußen äußerte ruß</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>abriß abschließen abschluß angepaßt anlaß anläßlich anschließen</Line>
+   <Line>anschließend anschließenden anschluß anstoß ausmaß ausschließen</Line>
+   <Line>ausschließlich ausschluß ausschuß auszuschließen außen außenminister</Line>
+   <Line>außenministerium außenpolitik außenseiter außer außerdem außerhalb</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>außerordentlich außerordentlichen beeinflußt befaßt begrüßen begrüßt</Line>
+   <Line>begrüßte besaß beschließen beschließt beschloß beschluß bewußt</Line>
+   <Line>bewußtsein bezirksausschuß bißchen bloß bloße bloßen bundesaußenminister</Line>
+   <Line>bundesstraße daß draußen dreißig einbußen einfluß einigermaßen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>einschließlich entschluß erdgeschoß erfaßt erschließen erschließung faßt</Line>
+   <Line>fließen fließt fluß friedensprozeß friedrichstraße fuß fußball</Line>
+   <Line>fußballer fußgänger füße füßen gefaßt gemäß genießen genießt genuß</Line>
+   <Line>gestoßen gewissermaßen gewiß gewißheit gewußt geäußert gießen</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>gleichermaßen groß großbritannien große großem großen großer großes</Line>
+   <Line>großhandel großmutter großstadt großstädten großteil großvater</Line>
+   <Line>großzügig größe größen größenordnung größer größere größeren</Line>
+   <Line>größerer größeres größte größten größtenteils größter hauptstraße</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>haß heiß heiße heißen heißt hieß jahresüberschuß kompromiß kongreß</Line>
+   <Line>landstraße ließ ließe ließen läßt maß maße maßgeblich maßnahme</Line>
+   <Line>maßnahmen maßstab maßstäbe mißbrauch mißbraucht mißtrauen mutmaßliche</Line>
+   <Line>mutmaßlichen muß mußte mußten müßte müßten paß paßt preußen prozeß</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>regelmäßig regelmäßige regelmäßigen reißen reißt riß rußland</Line>
+   <Line>rußlands saß saßen schießen schießt schließen schließlich schließt</Line>
+   <Line>schließung schloß schluß schoß schuß selbstbewußt selbstbewußtsein</Line>
+   <Line>sparmaßnahmen spaß stieß stießen stoßen strauß straßburg straße</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>straßen straßenbahn straßenverkehr streß stößt umfaßt ungewiß</Line>
+   <Line>untersuchungsausschuß veranlaßt verfaßt vergrößert verließ verließen</Line>
+   <Line>verläßt vermißt verpaßt verstoß verstoßen verstöße vorstoß weiß</Line>
+   <Line>weiße weißen weißer weißrußland wußte wußten zusammengefaßt</Line>
+  </Level>
+  <Level>
+   <NewCharacters>ß</NewCharacters>
+   <Line>zusammenschluß zuschuß zweitgrößte äußere äußeren äußern äußerst</Line>
+   <Line>äußert äußerte äußerten äußerung äußerungen überschuß</Line>
+  </Level>
+  <Level>
+   <LevelComment>Neuer Buchstabe: y</LevelComment>
+   <NewCharacters>y</NewCharacters>
+   <Line>eoe dyd dyd dyd dyn dyr dyt dyd</Line>
+   <Line>nd ny nd ny nd ny nd ny nd nynd</Line>
+   <Line>sys rhy zyl bay typ hyg sym phy</Line>
+   <Line>bayerisch, bayerisch, bayerisch</Line>
+   <Line>typisch typische am typischsten</Line>
+   <Line>sympathisch, am sympathischsten</Line>
+  </Level>
+  <Level>
+   <NewCharacters>y</NewCharacters>
+   <Line>analyse analysen analysieren analysiert analyst analysten asyl asylbewerber</Line>
+   <Line>baby bayer bayerische bayerischen bayern bayerns bayreuth boykott city company</Line>
+   <Line>dayton dynamik foyer grosny gymnasium handy harry henry hollywood infotyp jury</Line>
+   <Line>libyen lyrik malaysia meyer mythen mythos oberbayern olympia olympiasieger</Line>
+  </Level>
+  <Level>
+   <NewCharacters>y</NewCharacters>
+   <Line>olympiastadion olympischen party physik physiker plädoyer psychisch</Line>
+   <Line>psychologen psychologie psychologische rhythmus sapsystem sony story sydney</Line>
+   <Line>symbol symbole sympathie symptome syrien system systematisch systematische</Line>
+   <Line>systeme systemen systems thyssen tony tschernobyl typ typen typisch typische</Line>
+  </Level>
+  <Level>
+   <NewCharacters>y</NewCharacters>
+   <Line>typischen typs university yen york yorker zyklus ägypten ägyptischen</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>
