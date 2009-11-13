@@ -1,27 +1,9 @@
-== Kleine Anleitung ==
-Die neue, an Neo 2 angepasste Tastaturdefinitionsdatei de.neo2.keyboard für
-KTouch muss man nach der Installation von KTouch manuell installieren, da
-KTouch bisher nur die alte Neo-Belegung mitliefert.
-Die Datei muss in das Verzeichnis
-    ~/.kde/share/apps/ktouch # (wenn man keine Root-Rechte hat)
-oder
-    /opt/local/share/apps/ktouch
-oder
-    /usr/share/apps/ktouch
-oder
-    /opt/kde3/share/apps/ktouch/
-oder
-    /usr/lib/kde4/share/kde4/apps/ktouch
-oder äquivalentes (je nach Betriebssystem) kopiert werden und kann dann in
-KTouch über das Menü
-    Einstellungen --> Tastaturbelegungen
-ausgewählt werden.
+=== Verzeichnisstruktur ====
+./keyboards  - Tastaturdefinitionsdateien für KTouch
+./lectures   - Lektionen für KTouch
+./tools      - Werkzeuge zum erstellen von KTouch-Lektionen. Näheres in den entsprechenden README.txt Dateien
 
-=== Dateien – welche für was? ===
-de.neo2.keyboard            – zeigt die Belegung der 1. Ebene an
-de.neo2.mod3.keyboard       – zeigt die Belegung der 3. Ebene an
-de.neo2.mod4.keyboard       – zeigt die Belegung der 4. Ebene an
-german.neo.ktouch.xml       – Trainingslektion speziell für Neo
-german.neo.ktouch-Neo1.xml  – alte Trainingslektionen von Hanno
-neo2-test.ktouch.xml        – Test-Trainingslektion um alle Neo-Zeichen zu testen
-
+Eine genaue Beschreibung und Installationsanleitung zu den Lektionen und Tastaturdefinitionsdateien findet sich im Wiki:
+    http://wiki.neo-layout.org/wiki/KTouchFuerNeoEinrichten
+Eine allgemeine Einführung in KTouch steht unter:
+    http://wiki.neo-layout.org/wiki/Tipptrainer#KTouch
