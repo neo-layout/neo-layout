@@ -372,5 +372,7 @@
 <Multi_key> <p> <o> <i>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
 <Multi_key> <o> <p> <t>                    : "⌥"   U2325 # OPTION KEY
 <U21BB> <U21CC>                            : "⇋"   U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
+<Multi_key> <period> <slash> <period>      : "⁒"   U2052 # COMMERCIAL MINUS SIGN
+<Multi_key> <period> <KP_Divide> <period>  : "⁒"   U2052 # COMMERCIAL MINUS SIGN
 
 # End of standard Definitions by Neo keyboard layout
