@@ -44,9 +44,9 @@ if (WindowsEnvAppDataFolder == "") {
   EnvGet, WindowsEnvAppDataFolder, USERPROFILE
   WindowsEnvAppDataFolder .= "\Anwendungsdaten"
 }
-ApplicationFolder = %WindowsEnvAppDataFolder%\NEO2
+ApplicationFolder = %WindowsEnvAppDataFolder%\Neo2
 FileCreateDir, %ApplicationFolder%
-ini = %ApplicationFolder%\NEO2.ini
+ini = %ApplicationFolder%\Neo2.ini
 
 IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1
 IniRead,zeigeModusBox,%ini%,Global,zeigeModusBox,1
