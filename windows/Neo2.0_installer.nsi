@@ -29,7 +29,7 @@
 
 ;Name und Name der Datei
   Name "Neo 2.0 - Das ergonomische Tastaturlayout"
-  OutFile "Neo2.0_universal_installer.exe"
+  OutFile "Neo2.0_installer.exe"
 
 ;Standardordner (für AHK)
   InstallDir "$PROGRAMFILES\Neo2"
@@ -113,6 +113,9 @@ SectionIn  2
 	file kbdneo2\Treiber\32bit_Windows\kbdneo2.dll
   ${EndIf}
 
+;Keyboardlayout wird aktiviert
+  System::Call "user32::LoadKeyboardLayout (b0000407,KLF_ACTIVATE)"
+
 ;UnInstaller erstellen
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
@@ -150,6 +153,9 @@ SectionIn 1
 	${EnableX64FSRedirection}
 	file kbdneo2\Treiber\32bit_Windows\kbdneo2.dll
   ${EndIf}
+
+;Keyboardlayout wird aktiviert
+  System::Call "user32::LoadKeyboardLayout (b0000407,KLF_ACTIVATE)"
 
 ;UnInstaller erstellen
   WriteUninstaller "$INSTDIR\Uninstall.exe"
