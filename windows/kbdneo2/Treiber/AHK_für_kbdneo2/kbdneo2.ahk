@@ -234,12 +234,7 @@ if (isMod4Active and !isMod3Pressed)
 Send {esc}
 return
 
-~*ö::
-if (isMod4Active and !isMod3Pressed)
-Send {Blind}{TAB}
-return
-
-~*8::
+~*VKDD:: ;ist ö
 if (isMod4Active and !isMod3Pressed)
 Send {Blind}{TAB}
 return
