@@ -285,7 +285,7 @@
 <Multi_key> <r> <KP_1> <KP_1>            : "ⅺ"   U217A # SMALL ROMAN NUMERAL ELEVEN
 <Multi_key> <r> <KP_1> <KP_2>            : "ⅻ"   U217B # SMALL ROMAN NUMERAL TWELVE
 
-# ordinal numbers english and french
+# ordinal numbers in English and French
 <Multi_key> <1> <s> <t>                  : "1ˢᵗ"
 <Multi_key> <KP_1> <s> <t>               : "1ˢᵗ"
 <Multi_key> <2> <n> <d>                  : "2ⁿᵈ"
@@ -357,6 +357,7 @@
 <dead_stroke> <backslash>                  : "✘"   U2718 # HEAVY BALLOT X
 <Multi_key> <less> <3>                     : "♥"   U2665 # BLACK HEART SUIT
 <Multi_key> <less> <KP_3>                  : "♥"   U2665 # BLACK HEART SUIT
+<Multi_key> <C> <N> <D>                    : "☮"   U262E # PEACE SYMBOL
 <Multi_key> <bracketleft> <bracketright>   : "□"   U25A1 # WHITE SQUARE
 <Multi_key> <U25A1> <U2714>                : "☑"   U2611 # BALLOT BOX WITH CHECK
 <Multi_key> <U2714> <U25A1>                : "☑"   U2611 # BALLOT BOX WITH CHECK
@@ -371,6 +372,7 @@
 <Multi_key> <minus> <sterling>             : "₤"   U20A4 # LIRA SIGN
 <Multi_key> <p> <o> <i>                    : "⌘"   U2318 # PLACE OF INTEREST SIGN
 <Multi_key> <o> <p> <t>                    : "⌥"   U2325 # OPTION KEY
+<Multi_key> <d> <a> <g>                    : "†"   U2020 # DAGGER
 <U21BB> <U21CC>                            : "⇋"   U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
 <Multi_key> <period> <slash> <period>      : "⁒"   U2052 # COMMERCIAL MINUS SIGN
 <Multi_key> <period> <KP_Divide> <period>  : "⁒"   U2052 # COMMERCIAL MINUS SIGN
