@@ -397,6 +397,7 @@
 <U21BB> <dead_tilde> <u>                          : "ṵ" U1E75 # LATIN SMALL LETTER U WITH TILDE BELOW
 
 # other letters
+<Multi_key> <rightsinglequotemark> <n>            : "ŉ" U0149 # LATIN SMALL LETTER N PRECEDED BY APOSTROPHE
 <Multi_key> <n> <bar>                             : "ƞ" U019E # LATIN SMALL LETTER N WITH LONG RIGHT LEG
 <Multi_key> <N> <bar>                             : "Ƞ" U0220 # LATIN CAPITAL LETTER N WITH LONG RIGHT LEG
 <Multi_key> <g> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
@@ -443,5 +444,8 @@
 <Multi_key> <Y> <G>                               : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
 <Multi_key> <Y> <g>                               : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
 <Multi_key> <y> <g>                               : "ȝ" U021D # LATIN SMALL LETTER YOGH
+#<U21BB> <Greek_delta>                             : "ƍ" U018D # LATIN SMALL LETTER TURNED DELTA
+#<U21BB> <g>                                       : "ᵷ" U1D77 # LATIN SMALL LETTER TURNED G
+#<Multi_key> <y> <r>                               : "Ʀ" U01A6 # LATIN LETTER YR
 
 # End of additional Definitions (languages) by Neo keyboard layout

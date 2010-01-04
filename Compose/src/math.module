@@ -159,6 +159,26 @@
 <dead_abovering> <emptyset>                : "⦲"   U29B2 # EMPTY SET WITH SMALL CIRCLE ABOVE
 <U21BB> <emptyset>                         : "⦰"   U29B0 # REVERSED EMPTY SET
 <dead_macron> <emptyset>                   : "⦱"   U29B1 # EMPTY SET WITH OVERBAR
+
+<Multi_key> <asterisk> <asterisk>          : "∗"   U2217 # ASTERISK OPERATOR
+<Multi_key> <KP_Multiply> <KP_Multiply>    : "∗"   U2217 # ASTERISK OPERATOR
+<Multi_key> <2> <greater>                  : "≫"  U226B # MUCH GREATER-THAN
+<Multi_key> <KP_2> <greater>               : "≫"  U226B # MUCH GREATER-THAN
+<Multi_key> <2> <less>                     : "≪"  U226A # MUCH LESS-THAN
+<Multi_key> <KP_2> <less>                  : "≪"  U226A # MUCH LESS-THAN
+<Multi_key> <3> <greater>                  : "⋙"  U22D9 # VERY MUCH GREATER-THAN
+<Multi_key> <KP_3> <greater>               : "⋙"  U22D9 # VERY MUCH GREATER-THAN
+<Multi_key> <3> <less>                     : "⋘"  U22D8 # VERY MUCH LESS-THAN
+<Multi_key> <KP_3> <less>                  : "⋘"  U22D8 # VERY MUCH LESS-THAN
+# overwrites »« combinations
+<Multi_key> <greater> <greater>            : "≫"  U226B # MUCH GREATER-THAN
+<Multi_key> <less> <less>                  : "≪"  U226A # MUCH LESS-THAN
+<Multi_key> <2> <equal>                    : "⩵"  U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key> <KP_2> <equal>                 : "⩵"  U2A75 # TWO CONSECUTIVE EQUALS SIGNS
+<Multi_key> <3> <equal>                    : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
+<Multi_key> <KP_3> <equal>                 : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
+
+# enclosed symbols
 <Multi_key> <o> <plus>                     : "⊕"   U2295 # CIRCLED PLUS
 <Multi_key> <o> <KP_Add>                   : "⊕"   U2295 # CIRCLED PLUS
 <Multi_key> <o> <minus>                    : "⊖"   U2296 # CIRCLED MINUS
@@ -176,36 +196,15 @@
 <Multi_key> <o> <U2225>                    : "⦷"   U29B7 # CIRCLED PARALLEL
 <Multi_key> <o> <less>                     : "⧀"   U29C0 # CIRCLED LESS-THAN
 <Multi_key> <o> <greater>                  : "⧁"   U29C1 # CIRCLED GREATER-THAN
-<Multi_key> <asterisk> <asterisk>          : "∗"   U2217 # ASTERISK OPERATOR
-<Multi_key> <KP_Multiply> <KP_Multiply>    : "∗"   U2217 # ASTERISK OPERATOR
-<Multi_key> <bar> <multiply> <bar>         : "⋈"   U22C8 # BOWTIE
-<Multi_key> <bar> <multiply> <space>       : "⋉"   U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
-<Multi_key> <multiply> <bar>               : "⋊"   U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
-<U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
-<U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
-<U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
-<Multi_key> <d> <a> <g>                    : "†"   U2020 # DAGGER
-<Multi_key> <minus> <colon>                : "∹"   U2239 # EXCESS
-<Multi_key> <2> <greater>                  : "≫"  U226B # MUCH GREATER-THAN
-<Multi_key> <KP_2> <greater>               : "≫"  U226B # MUCH GREATER-THAN
-<Multi_key> <2> <less>                     : "≪"  U226A # MUCH LESS-THAN
-<Multi_key> <KP_2> <less>                  : "≪"  U226A # MUCH LESS-THAN
-<Multi_key> <3> <greater>                  : "⋙"  U22D9 # VERY MUCH GREATER-THAN
-<Multi_key> <KP_3> <greater>               : "⋙"  U22D9 # VERY MUCH GREATER-THAN
-<Multi_key> <3> <less>                     : "⋘"  U22D8 # VERY MUCH LESS-THAN
-<Multi_key> <KP_3> <less>                  : "⋘"  U22D8 # VERY MUCH LESS-THAN
-# overwrites »« combinations
-<Multi_key> <greater> <greater>            : "≫"  U226B # MUCH GREATER-THAN
-<Multi_key> <less> <less>                  : "≪"  U226A # MUCH LESS-THAN
-<Multi_key> <2> <equal>                    : "⩵"  U2A75 # TWO CONSECUTIVE EQUALS SIGNS
-<Multi_key> <KP_2> <equal>                 : "⩵"  U2A75 # TWO CONSECUTIVE EQUALS SIGNS
-<Multi_key> <3> <equal>                    : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
-<Multi_key> <KP_3> <equal>                 : "⩶"  U2A76 # THREE CONSECUTIVE EQUALS SIGNS
+<Multi_key> <Greek_DELTA> <plus>           : "⨹"   U2A39 # PLUS SIGN IN TRIANGLE
+<Multi_key> <plus> <Greek_DELTA>           : "⨹"   U2A39 # PLUS SIGN IN TRIANGLE
+<Multi_key> <Greek_DELTA> <minus>          : "⨺"   U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key> <minus> <Greek_DELTA>          : "⨺"   U2A3A # MINUS SIGN IN TRIANGLE
+<Multi_key> <Greek_DELTA> <multiply>       : "⨻"   U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key> <multiply> <Greek_DELTA>       : "⨻"   U2A3B # MULTIPLICATION SIGN IN TRIANGLE
 
 # new ideas (to be discussed)
 <dead_belowdot> <logicaland>               : "⟑"   U27D1 # AND WITH DOT
-<dead_abovedot> <Greek_DELTA>              : "⧊"   U29CA # TRIANGLE WITH DOT ABOVE
-<Multi_key> <colon> <rightarrow>           : "⧴"  U29F4 # RULE-DELAYED
 <Multi_key> <minus> <integral>             : "⨍"   U2A0D # FINITE PART INTEGRAL
 <Multi_key> <equal> <integral>             : "⨎"   U2A0E # INTEGRAL WITH DOUBLE STROKE
 <Multi_key> <integral> <equal>             : "⨎"   U2A0E # INTEGRAL WITH DOUBLE STROKE
@@ -226,18 +225,22 @@
 <dead_macron> <intersection>               : "⩃"   U2A43 # INTERSECTION WITH OVERBAR
 <Multi_key> <less> <parenright>            : "⪦"   U2AA6 # LESS-THAN CLOSED BY CURVE
 <Multi_key> <parenleft> <greater>          : "⪧"   U2AA7 # GREATER-THAN CLOSED BY CURVE
-<U21BB> <numbersign>                       : "⨳"   U2A33 # SMASH PRODUCT
-#<Multi_key> <multiply> <multiply>         : "⨯"   U2A2F # VECTOR OR CROSS PRODUCT
-<Multi_key> <Greek_DELTA> <plus>           : "⨹"   U2A39 # PLUS SIGN IN TRIANGLE
-<Multi_key> <plus> <Greek_DELTA>           : "⨹"   U2A39 # PLUS SIGN IN TRIANGLE
-<Multi_key> <Greek_DELTA> <minus>          : "⨺"   U2A3A # MINUS SIGN IN TRIANGLE
-<Multi_key> <minus> <Greek_DELTA>          : "⨺"   U2A3A # MINUS SIGN IN TRIANGLE
-<Multi_key> <Greek_DELTA> <multiply>       : "⨻"   U2A3B # MULTIPLICATION SIGN IN TRIANGLE
-<Multi_key> <multiply> <Greek_DELTA>       : "⨻"   U2A3B # MULTIPLICATION SIGN IN TRIANGLE
+<Multi_key> <multiply> <multiply>          : "⨯"   U2A2F # VECTOR OR CROSS PRODUCT
 <Multi_key> <question> <less>              : "⩻"   U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
 <Multi_key> <less> <question>              : "⩻"   U2A7B # LESS-THAN WITH QUESTION MARK ABOVE
 <Multi_key> <question> <greater>           : "⩼"   U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
 <Multi_key> <greater> <question>           : "⩼"   U2A7C # GREATER-THAN WITH QUESTION MARK ABOVE
+
+# misc. symbols
+<Multi_key> <bar> <multiply> <bar>         : "⋈"   U22C8 # BOWTIE
+<Multi_key> <bar> <multiply> <space>       : "⋉"   U22C9 # LEFT NORMAL FACTOR SEMIDIRECT PRODUCT
+<Multi_key> <multiply> <bar>               : "⋊"   U22CA # RIGHT NORMAL FACTOR SEMIDIRECT PRODUCT
+<U21BB> <asciitilde>                       : "≀"   U2240 # WREATH PRODUCT
+<U21BB> <U2221>                            : "∢"   U2222 # SPHERICAL ANGLE
+<U21BB> <ampersand>                        : "⅋"   U214B # TURNED AMPERSAND
+<Multi_key> <minus> <colon>                : "∹"   U2239 # EXCESS
+<U21BB> <numbersign>                       : "⨳"   U2A33 # SMASH PRODUCT
+<dead_abovedot> <Greek_DELTA>              : "⧊"   U29CA # TRIANGLE WITH DOT ABOVE
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
@@ -306,19 +309,6 @@
 <dead_stroke> <Multi_key> <bar> <minus>                     : "⊬"   U22AC # DOES NOT PROVE
 <dead_stroke> <Multi_key> <bar> <equal>                     : "⊭"   U22AD # NOT TRUE
 <dead_stroke> <Multi_key> <bar> <KP_Equal>                  : "⊭"   U22AD # NOT TRUE
-
-# Vector
-<dead_circumflex> <rightarrow>                 : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<dead_circumflex> <greater>                    : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<Multi_key> <asciicircum> <greater>            : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<Multi_key> <asciicircum> <rightarrow>         : "⃗"   U20D7 # COMBINING RIGHT ARROW ABOVE
-<U21BB> <U20D7>                                : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-<dead_circumflex> <leftarrow>                  : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-<dead_circumflex> <U21BB> <rightarrow>         : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-<dead_circumflex> <less>                       : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-<Multi_key> <asciicircum> <less>               : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-<Multi_key> <asciicircum> <leftarrow>          : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
-<Multi_key> <asciicircum> <U21BB> <rightarrow> : "⃖"   U20D6 # COMBINING LEFT ARROW ABOVE
 ⃗
 # arrows
 <Multi_key> <less> <minus>                     : "←"   U2190 # LEFTWARDS ARROW
@@ -423,6 +413,18 @@
 <dead_ring> <leftarrow>                        : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
 <dead_ring> <U21BB> <rightarrow>               : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
 <dead_ring> <rightarrow>                       : "↬"   U21AC # RIGHTWARDS ARROW WITH LOOP
+<Multi_key> <colon> <rightarrow>               : "⧴"  U29F4 # RULE-DELAYED
+<dead_circumflex> <rightarrow>                 : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
+<dead_circumflex> <greater>                    : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
+<Multi_key> <asciicircum> <greater>            : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
+<Multi_key> <asciicircum> <rightarrow>         : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
+<U21BB> <U20D7>                                : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
+<dead_circumflex> <leftarrow>                  : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
+<dead_circumflex> <U21BB> <rightarrow>         : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
+<dead_circumflex> <less>                       : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
+<Multi_key> <asciicircum> <less>               : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
+<Multi_key> <asciicircum> <leftarrow>          : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
+<Multi_key> <asciicircum> <U21BB> <rightarrow> : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
 # possible additions:
 # ˙: ⇠⇡⇢⇣
 # ¯: ↤↥↦↧↨
@@ -438,51 +440,51 @@
 <Multi_key> <underbar> <KP_Subtract>       : "₋"   U208B # SUBSCRIPT MINUS
 <Multi_key> <asciicircum> <equal>          : "⁼"   U207C # SUPERSCRIPT EQUALS SIGN
 
-<Multi_key> <asciicircum> <a>              :"ᵃ"   U1D43 # MODIFIER LETTER SMALL A
-<Multi_key> <asciicircum> <b>              :"ᵇ"   U1D47 # MODIFIER LETTER SMALL B
-<Multi_key> <asciicircum> <c>              :"ᶜ"   U1D9C # MODIFIER LETTER SMALL C
-<Multi_key> <asciicircum> <d>              :"ᵈ"   U1D48 # MODIFIER LETTER SMALL D
-<Multi_key> <asciicircum> <e>              :"ᵉ"   U1D49 # MODIFIER LETTER SMALL E
-<Multi_key> <asciicircum> <f>              :"ᶠ"   U1DA0 # MODIFIER LETTER SMALL F
-<Multi_key> <asciicircum> <g>              :"ᵍ"   U1D4D # MODIFIER LETTER SMALL G
-<Multi_key> <asciicircum> <h>              :"ʰ"   U02B0 # MODIFIER LETTER SMALL H
-<Multi_key> <asciicircum> <i>              :"ⁱ"    U2071 # SUPERSCRIPT LATIN SMALL LETTER I
-<Multi_key> <asciicircum> <j>              :"ʲ"   U02B2 # MODIFIER LETTER SMALL J
-<Multi_key> <asciicircum> <k>              :"ᵏ"   U1D4F # MODIFIER LETTER SMALL K
-<Multi_key> <asciicircum> <l>              :"ˡ"   U02E1 # MODIFIER LETTER SMALL L
-<Multi_key> <asciicircum> <m>              :"ᵐ"   U1D50 # MODIFIER LETTER SMALL M
-<Multi_key> <asciicircum> <n>              :"ⁿ"   U207F # SUPERSCRIPT LATIN SMALL LETTER N
-<Multi_key> <asciicircum> <o>              :"ᵒ"   U1D52 # MODIFIER LETTER SMALL O
-<Multi_key> <asciicircum> <p>              :"ᵖ"   U1D56 # MODIFIER LETTER SMALL P
-<Multi_key> <asciicircum> <r>              :"ʳ"   U02B3 # MODIFIER LETTER SMALL R
-<Multi_key> <asciicircum> <s>              :"ˢ"   U02E2 # MODIFIER LETTER SMALL S
-<Multi_key> <asciicircum> <t>              :"ᵗ"   U1D57 # MODIFIER LETTER SMALL T
-<Multi_key> <asciicircum> <u>              :"ᵘ"   U1D58 # MODIFIER LETTER SMALL U
-<Multi_key> <asciicircum> <v>              :"ᵛ"   U1D5B # MODIFIER LETTER SMALL V
-<Multi_key> <asciicircum> <w>              :"ʷ"   U02B7 # MODIFIER LETTER SMALL W
-<Multi_key> <asciicircum> <x>              :"ˣ"   U02E3 # MODIFIER LETTER SMALL X
-<Multi_key> <asciicircum> <y>              :"ʸ"   U02B8 # MODIFIER LETTER SMALL Y
-<Multi_key> <asciicircum> <z>              :"ᶻ"   U1DBB # MODIFIER LETTER SMALL Z
+<Multi_key> <asciicircum> <a>              : "ᵃ"   U1D43 # MODIFIER LETTER SMALL A
+<Multi_key> <asciicircum> <b>              : "ᵇ"   U1D47 # MODIFIER LETTER SMALL B
+<Multi_key> <asciicircum> <c>              : "ᶜ"   U1D9C # MODIFIER LETTER SMALL C
+<Multi_key> <asciicircum> <d>              : "ᵈ"   U1D48 # MODIFIER LETTER SMALL D
+<Multi_key> <asciicircum> <e>              : "ᵉ"   U1D49 # MODIFIER LETTER SMALL E
+<Multi_key> <asciicircum> <f>              : "ᶠ"   U1DA0 # MODIFIER LETTER SMALL F
+<Multi_key> <asciicircum> <g>              : "ᵍ"   U1D4D # MODIFIER LETTER SMALL G
+<Multi_key> <asciicircum> <h>              : "ʰ"   U02B0 # MODIFIER LETTER SMALL H
+<Multi_key> <asciicircum> <i>              : "ⁱ"   U2071 # SUPERSCRIPT LATIN SMALL LETTER I
+<Multi_key> <asciicircum> <j>              : "ʲ"   U02B2 # MODIFIER LETTER SMALL J
+<Multi_key> <asciicircum> <k>              : "ᵏ"   U1D4F # MODIFIER LETTER SMALL K
+<Multi_key> <asciicircum> <l>              : "ˡ"   U02E1 # MODIFIER LETTER SMALL L
+<Multi_key> <asciicircum> <m>              : "ᵐ"   U1D50 # MODIFIER LETTER SMALL M
+<Multi_key> <asciicircum> <n>              : "ⁿ"   U207F # SUPERSCRIPT LATIN SMALL LETTER N
+<Multi_key> <asciicircum> <o>              : "ᵒ"   U1D52 # MODIFIER LETTER SMALL O
+<Multi_key> <asciicircum> <p>              : "ᵖ"   U1D56 # MODIFIER LETTER SMALL P
+<Multi_key> <asciicircum> <r>              : "ʳ"   U02B3 # MODIFIER LETTER SMALL R
+<Multi_key> <asciicircum> <s>              : "ˢ"   U02E2 # MODIFIER LETTER SMALL S
+<Multi_key> <asciicircum> <t>              : "ᵗ"   U1D57 # MODIFIER LETTER SMALL T
+<Multi_key> <asciicircum> <u>              : "ᵘ"   U1D58 # MODIFIER LETTER SMALL U
+<Multi_key> <asciicircum> <v>              : "ᵛ"   U1D5B # MODIFIER LETTER SMALL V
+<Multi_key> <asciicircum> <w>              : "ʷ"   U02B7 # MODIFIER LETTER SMALL W
+<Multi_key> <asciicircum> <x>              : "ˣ"   U02E3 # MODIFIER LETTER SMALL X
+<Multi_key> <asciicircum> <y>              : "ʸ"   U02B8 # MODIFIER LETTER SMALL Y
+<Multi_key> <asciicircum> <z>              : "ᶻ"   U1DBB # MODIFIER LETTER SMALL Z
 
-<Multi_key> <asciicircum> <A>              :"ᴬ"   U1D2C # MODIFIER LETTER CAPITAL A
-<Multi_key> <asciicircum> <B>              :"ᴮ"   U1D2E # MODIFIER LETTER CAPITAL B
-<Multi_key> <asciicircum> <D>              :"ᴰ"   U1D30 # MODIFIER LETTER CAPITAL D
-<Multi_key> <asciicircum> <E>              :"ᴱ"   U1D31 # MODIFIER LETTER CAPITAL E
-<Multi_key> <asciicircum> <G>              :"ᴳ"   U1D33 # MODIFIER LETTER CAPITAL G
-<Multi_key> <asciicircum> <H>              :"ᴴ"   U1D34 # MODIFIER LETTER CAPITAL H
-<Multi_key> <asciicircum> <I>              :"ᴵ"   U1D35 # MODIFIER LETTER CAPITAL I
-<Multi_key> <asciicircum> <J>              :"ᴶ"   U1D36 # MODIFIER LETTER CAPITAL J
-<Multi_key> <asciicircum> <K>              :"ᴷ"   U1D37 # MODIFIER LETTER CAPITAL K
-<Multi_key> <asciicircum> <L>              :"ᴸ"   U1D38 # MODIFIER LETTER CAPITAL L
-<Multi_key> <asciicircum> <M>              :"ᴹ"   U1D39 # MODIFIER LETTER CAPITAL M
-<Multi_key> <asciicircum> <N>              :"ᴺ"   U1D3A # MODIFIER LETTER CAPITAL N
-<Multi_key> <asciicircum> <O>              :"ᴼ"   U1D3C # MODIFIER LETTER CAPITAL O
-<Multi_key> <asciicircum> <P>              :"ᴾ"   U1D3E # MODIFIER LETTER CAPITAL P
-<Multi_key> <asciicircum> <R>              :"ᴿ"   U1D3F # MODIFIER LETTER CAPITAL R
-<Multi_key> <asciicircum> <T>              :"ᵀ"   U1D40 # MODIFIER LETTER CAPITAL T
-<Multi_key> <asciicircum> <U>              :"ᵁ"   U1D41 # MODIFIER LETTER CAPITAL U
-<Multi_key> <asciicircum> <V>              :"ⱽ"   U2C7D # MODIFIER LETTER CAPITAL V
-<Multi_key> <asciicircum> <W>              :"ᵂ"   U1D42 # MODIFIER LETTER CAPITAL W
+<Multi_key> <asciicircum> <A>              : "ᴬ"   U1D2C # MODIFIER LETTER CAPITAL A
+<Multi_key> <asciicircum> <B>              : "ᴮ"   U1D2E # MODIFIER LETTER CAPITAL B
+<Multi_key> <asciicircum> <D>              : "ᴰ"   U1D30 # MODIFIER LETTER CAPITAL D
+<Multi_key> <asciicircum> <E>              : "ᴱ"   U1D31 # MODIFIER LETTER CAPITAL E
+<Multi_key> <asciicircum> <G>              : "ᴳ"   U1D33 # MODIFIER LETTER CAPITAL G
+<Multi_key> <asciicircum> <H>              : "ᴴ"   U1D34 # MODIFIER LETTER CAPITAL H
+<Multi_key> <asciicircum> <I>              : "ᴵ"   U1D35 # MODIFIER LETTER CAPITAL I
+<Multi_key> <asciicircum> <J>              : "ᴶ"   U1D36 # MODIFIER LETTER CAPITAL J
+<Multi_key> <asciicircum> <K>              : "ᴷ"   U1D37 # MODIFIER LETTER CAPITAL K
+<Multi_key> <asciicircum> <L>              : "ᴸ"   U1D38 # MODIFIER LETTER CAPITAL L
+<Multi_key> <asciicircum> <M>              : "ᴹ"   U1D39 # MODIFIER LETTER CAPITAL M
+<Multi_key> <asciicircum> <N>              : "ᴺ"   U1D3A # MODIFIER LETTER CAPITAL N
+<Multi_key> <asciicircum> <O>              : "ᴼ"   U1D3C # MODIFIER LETTER CAPITAL O
+<Multi_key> <asciicircum> <P>              : "ᴾ"   U1D3E # MODIFIER LETTER CAPITAL P
+<Multi_key> <asciicircum> <R>              : "ᴿ"   U1D3F # MODIFIER LETTER CAPITAL R
+<Multi_key> <asciicircum> <T>              : "ᵀ"   U1D40 # MODIFIER LETTER CAPITAL T
+<Multi_key> <asciicircum> <U>              : "ᵁ"   U1D41 # MODIFIER LETTER CAPITAL U
+<Multi_key> <asciicircum> <V>              : "ⱽ"   U2C7D # MODIFIER LETTER CAPITAL V
+<Multi_key> <asciicircum> <W>              : "ᵂ"   U1D42 # MODIFIER LETTER CAPITAL W
 
 <Multi_key> <asciicircum> <Greek_alpha>    : "ᵅ"   U1D45 # MODIFIER LETTER SMALL ALPHA
 <Multi_key> <asciicircum> <Greek_beta>     : "ᵝ"   U1D5D # MODIFIER LETTER SMALL BETA
@@ -533,6 +535,7 @@
 <Multi_key> <s> <c> <l>                    : "ℓ"   U2113 # SCRIPT SMALL L
 <Multi_key> <e> <l> <l>                    : "ℓ"   U2113 # SCRIPT SMALL L
 <Multi_key> <s> <c> <P>                    : "℘"   U2118 # SCRIPT CAPITAL P
+<Multi_key> <w> <p>                        : "℘"   U2118 # SCRIPT CAPITAL P
 <Multi_key> <s> <c> <R>                    : "ℛ"   U211B # SCRIPT CAPITAL R
 <Multi_key> <s> <c> <B>                    : "ℬ"   U212C # SCRIPT CAPITAL B
 <Multi_key> <s> <c> <e>                    : "ℯ"   U212F # SCRIPT SMALL E
