@@ -151,7 +151,7 @@
 <Multi_key> <minus> <bar>                  : "⊣"   U22A3 # LEFT TACK
 <Multi_key> <bar> <equal>                  : "⊨"   U22A8 # TRUE
 <Multi_key> <bar> <KP_Equal>               : "⊨"   U22A8 # TRUE
-<Multi_key> <downtack> <downtack>          : "⊤"   U22A4 # DOWN TACK
+<Multi_key> <U22A5> <U22A5>                : "⊤"   U22A4 # DOWN TACK
 <U21BB> <U22A5>                            : "⊤"   U22A4 # DOWN TACK
 <Multi_key> <slash> <0>                    : "∅"   U2205 # EMPTY SET
 <dead_stroke> <0>                          : "∅"   U2205 # EMPTY SET
