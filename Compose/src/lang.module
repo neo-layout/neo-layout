@@ -228,7 +228,7 @@
 <Multi_key> <apostrophe> <apostrophe>             : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key> <underscore> <apostrophe>             : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <U21BB> <Multi_key> <apostrophe> <apostrophe>     : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-#<U21BB> <parenright>                              : "‿" U203F # UNDERTIE
+<U21BB> <parenright>                              : "‿" U203F # UNDERTIE
 <U21BB> <parenleft>                               : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 
 # tone letters (t) and Standard Mandarin tones
@@ -246,6 +246,8 @@
 
 # diakritics – work in progress
 <dead_circumflex> <U21BB> <L>                     : "̚" U031A # COMBINING LEFT ANGLE ABOVE
+<dead_circumflex> <multiply>                      : "̽" U033D # COMBINING X ABOVE
+<Multi_key> <asciicircum> <multiply>              : "̽" U033D # COMBINING X ABOVE
 <U21BB> <dead_abovering> <dead_abovering>         : "̥" U0325 # COMBINING RING BELOW
 <Multi_key> <underscore> <dead_abovering>         : "̥" U0325 # COMBINING RING BELOW
 <U21BB> <dead_diaeresis> <dead_diaeresis>         : "̤" U0324 # COMBINING DIAERESIS BELOW
@@ -254,10 +256,21 @@
 <Multi_key> <underscore> <dead_tilde>             : "̰" U0330 # COMBINING TILDE BELOW
 <Multi_key> <underscore> <dead_breve>             : "̯" U032F # COMBINING INVERTED BREVE BELOW
 <Multi_key> <underscore> <dead_circumflex> <dead_circumflex> : "̭" U032D # COMBINING CIRCUMFLEX ACCENT BELOW
-
+<Multi_key> <underscore> <dead_caron>             : "̬" U032C # COMBINING CARON BELOW
+<Multi_key> <underscore> <m>                      : "̼" U033C # COMBINING SEAGULL BELOW
+<Multi_key> <i> <plus>                            : "̟" U031F # COMBINING PLUS SIGN BELOW
+<Multi_key> <i> <minus>                           : "̠" U0320 # COMBINING MINUS SIGN BELOW
+<Multi_key> <underscore> <bar>                    : "̩" U0329 # COMBINING VERTICAL LINE BELOW
+<Multi_key> <underscore> <dead_macron>            : "̱" U0331 # COMBINING MACRON BELOW
+<Multi_key> <underscore> <U22A5>                  : "̝" U031D # COMBINING UP TACK BELOW
+<Multi_key> <underscore> <U21BB> <U22A5>          : "̞" U031E # COMBINING DOWN TACK BELOW
+<Multi_key> <underscore> <c>                      : "̜" U031C # COMBINING LEFT HALF RING BELOW
+<Multi_key> <underscore> <U21BB> <c>              : "̹" U0339 # COMBINING RIGHT HALF RING BELOW
 <Multi_key> <underscore> <U25A1>                  : "̻" U033B # COMBINING SQUARE BELOW
 <Multi_key> <underscore> <U21BB> <bracketright>   : "̺" U033A # COMBINING INVERTED BRIDGE BELOW
 <Multi_key> <underscore> <U21BB> <bracketleft>    : "̪" U032A # COMBINING BRIDGE BELOW
+# Missing: U+0319 COMBINING RIGHT TACK BELOW, U+0318 COMBINING LEFT TACK BELOW, U+0334 COMBINING TILDE OVERLAY, 
+# U+0351 COMBINING LEFT HALF RING ABOVE, U+0357 COMBINING RIGHT HALF RING ABOVE, U+0346 COMBINING BRIDGE ABOVE
 
 # tone accents:
 <Multi_key> <dead_macron> <dead_acute>            : "᷄" U1DC4 # COMBINING MACRON-ACUTE
