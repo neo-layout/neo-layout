@@ -817,6 +817,7 @@
 # additional greek symbols
 # Greek ampersand symbols
 <U02DE> <U03F0>                                                      : "ϗ"   U03D7 # GREEK KAI SYMBOL
+<U02DE> <Greek_kappa>                                                : "ϗ"   U03D7 # GREEK KAI SYMBOL
 <U02DE> <Multi_key> <g> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 <U02DE> <Multi_key> <G> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 
@@ -825,8 +826,9 @@
 <Multi_key> <Greek_sigma> <Greek_tau>                                : "ϛ"   U03DB # GREEK SMALL LETTER STIGMA
 <Multi_key> <Greek_beta> <Greek_beta>                                : "ϐ"   U03D0 # GREEK BETA SYMBOL
 <Multi_key> <Greek_omega> <Greek_pi>                                 : "ϖ"   U03D6 # GREEK PI SYMBOL
+<Multi_key> <Greek_pi> <Greek_omega>                                 : "ϖ"   U03D6 # GREEK PI SYMBOL
 <dead_stroke> <Greek_rho>                                            : "ϼ"   U03FC # GREEK RHO WITH STROKE SYMBOL
-<U21BB> <U03F5>                                                      : "϶"   U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
+#<U21BB> <U03F5>                                                      : "϶"   U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 
 # very old greek, not supported at the moment
 # Ϟϟ Ϡϡ Ϻϻ (ͰͱͲͳͶͷ)
