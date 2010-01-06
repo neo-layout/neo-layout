@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KTouchLecture>
+ <Title>Deutsch (Neo2 Tastaturbelegung)</Title>
+ <Comment>Test für Diakritika in EU-Amtsprachen, vgl. http://europa.eu/abc/european_countries/languages/danish/index_de.htm</Comment>
+ <FontSuggestions>Sans Serif</FontSuggestions>
+ <Levels>
+  <Level>
+   <NewCharacters>Deutsch: äüöß</NewCharacters>
+   <Line>Die Europäer: in Vielfalt vereint</Line>
+   <Line>Die Europäische Union (EU) ist ein Zusammenschluss demokratischer europäischer Länder, die sich der Wahrung des Friedens</Line>
+   <Line>und dem Streben nach Wohlstand verschrieben haben. Sie versteht sich nicht als ein neuer Staat, der an die Stelle bestehender Staaten tritt.</Line>
+   <Line>Allerdings ist die Europäische Union auch mehr als alle sonstigen internationalen Organisationen.</Line>
+   <Line>Die EU ist im Wortsinne einzigartig. Die Mitgliedstaaten der EU haben gemeinsame Organe eingerichtet.</Line>
+   <Line>Teile ihrer einzelstaatlichen Souveränität haben sie diesen Organen übertragen, damit in bestimmten Angelegenheiten</Line>
+   <Line>von gemeinsamem Interesse auf europäischer Ebene demokratische Entscheidungen getroffen werden können.</Line>
+  </Level> 
+  <Level>
+   <NewCharacters>Dänisch: æøå</NewCharacters>
+   <Line>Mangfoldighed og samarbejde</Line>
+   <Line>Den Europæiske Union (EU) er en familie af demokratiske lande i Europa, som har forpligtet sig til at arbejde sammen for fred og fremskridt. </Line>
+   <Line>Det er ikke en stat, som skal afløse de bestående stater, men noget andet og mere end andre internationale organisationer.</Line>
+   <Line>EU er en unik organisation. Medlemsstaterne har oprettet fælles institutioner, som de har overgivet en del af deres suverænitet,</Line>
+   <Line>så der kan træffes demokratiske beslutninger på europæisk plan inden for bestemte områder af fælles interesse.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Estnisch: õäöü (šž)</NewCharacters>
+   <Line>Mitmekesisuses ühinenud eurooplased</Line>
+   <Line>Euroopa Liit (EL) on demokraatlike Euroopa riikide pere, kes on otsustanud töötada koos rahu ja õitsengu saavutamiseks. See ei ole riik, mille eesmärgiks on asendada olemasolevaid riike, vaid sarnaneb pigem rahvusvahelistele organisatsioonidele. EL on tegelikult ainulaadne. Selle liikmesriigid on loonud ühised institutsioonid, millele nad delegeerivad osa oma suveräänsusest, nii et otsused teatud ühise huvi valdkondades tehakse demokraatlikult Euroopa tasandil. </Line>
+  </Level>
+  <Level>
+   <NewCharacters>Finnisch: äö (åšž)</NewCharacters>
+   <Line>Eurooppalaiset yhdessä mutta yksilöinä</Line>
+   <Line>Euroopan unioni (EU) koostuu demokraattisista valtioista, jotka ovat sitoutuneet työskentelemään yhdessä rauhan ja hyvinvoinnin saavuttamiseksi. Se ei ole valtio, jonka olisi tarkoitus korvata nykyiset valtiot, mutta se on kuitenkin enemmän kuin kansainvälinen järjestö. Itse asiassa EU on ainutlaatuinen organisaatio. Sen jäsenvaltiot ovat perustaneet yhteisiä toimielimiä, joille ne ovat siirtäneet tiettyjä toimivaltuuksia, jotta Euroopan kannalta merkittävistä asioista olisi mahdollista tehdä demokraattisia päätöksiä Euroopan tasolla.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Französisch: …</NewCharacters>
+   <Line>Des Européens unis dans la diversité</Line>
+   <Line>L’Union européenne (UE) est une famille de pays démocratiques européens décidés à œuvrer ensemble à la paix et à la prospérité. Il ne s’agit pas d’un État destiné à se substituer aux États existants, mais l’Union européenne va plus loin que toute autre organisation internationale. En fait, c’est une organisation unique en son genre. Les États qui la composent ont mis en place des institutions communes auxquelles ils délèguent une partie de leur souveraineté, afin que les décisions sur des questions spécifiques d’intérêt commun puissent se prendre démocratiquement au niveau européen.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Italienisch: àèìòùé</NewCharacters>
+   <Line>Gli europei: uniti nella diversità</Line>
+   <Line>L’Unione europea (UE) è una famiglia di paesi europei democratici che si sono impegnati a lavorare insieme per la pace e la prosperità. Non è uno Stato che si propone di sostituire gli Stati esistenti, ma è qualcosa di più rispetto alle altre organizzazioni internazionali. L’UE è infatti qualcosa di unico. I suoi Stati membri hanno creato una serie di istituzioni comuni a cui delegano una parte della loro sovranità in modo che le decisioni su questioni specifiche di interesse comune possano essere prese democraticamente a livello europeo.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Irisch: áéíóú</NewCharacters>
+   <Line>Eorpaigh aontaithe san éagsúlacht</Line>
+   <Line>Cuimsíonn an tAontas Eorpach (AE) grúpa de thíortha Eorpacha daonlathacha atá ag obair as lámha a chéile i dtreo na síochána agus an rathúnais. Ní Stát é a bheartaítear a chur in ionad na stát atá ann faoi láthair ach tá níos mó i gceist leis ná díreach eagraíocht idirnáisiúnta eile. Go deimhin níl a mhacasamhail le fáil. Tá comhinstitiúidí curtha ar bun ag a chuid Ballstát a ndéanann siad cuid dá gceannasacht a tharmligean chucu. Sa chaoi sin is féidir cinntí maidir le hábhair shonracha a bhfuil comhleas acu iontu a dhéanamh go daonlathach ag leibhéal Eorpach.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Lettisch: čģķļņšžāēīū</NewCharacters>
+   <Line>Eiropieši vienoti savā daudzveidībā</Line>
+   <Line>Eiropas Savienība (ES) ir demokrātisku Eiropas valstu apvienība, kuras ietvaros valstis apņēmušās kopīgi strādāt miera un labklājības sasniegšanai. Tā nav viena valsts, kas aizstāj esošās valstis. Tomēr tā ir kas vairāk nekā jebkura cita starptautiska organizācija. Patiesībā ES ir unikāla – tās dalībvalstis ir izveidojušas kopējas institūcijas, kurām deleģē daļu savas suverenitātes, tā, lai jautājumus par lietām, kas skar kopējas intereses, varētu demokrātiski izlemt Eiropas līmenī.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Litauisch: ąčęėįšųūž</NewCharacters>
+   <Line>Susivieniję ir įvairovę išlaikantys europiečiai</Line>
+   <Line>Europos Sąjunga (ES) yra demokratinių Europos valstybių šeima, pasiryžusi taikos ir gerovės labui veikti išvien. Ji nėra nauja valstybė, pakeisianti esamas valstybes. ES daug kuo skiriasi ir nuo kitų tarptautinių organizacijų. Iš tikrųjų ji yra unikali organizacija. Jos valstybės narės yra įsteigusios bendras institucijas, kurioms perduoda dalį savo suvereniteto, kad tam tikri visoms rūpimi klausimai būtų demokratiškai sprendžiami Europos lygmeniu.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Maltesisch: ċġħż</NewCharacters>
+   <Line>L-Ewropej magħquda fid-diversità</Line>
+   <Line>L-Unjoni Ewropea (UE) tirrappreżenta familja ta' pajjiżi demokratiċi Ewropej b'impenn li jaħdmu flimkien għall-paċ u l-ġid. L-Unjoni mhijiex Stat maħsub biex jieħu post l-istati eżistenti, iżda fl-istess waqt l-UE titqies aktar minn kull organizzazzjoni internazzjonali oħra. L-UE hi entità unika.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Niederländisch</NewCharacters>
+   <Line>De Europeanen: eenheid in verscheidenheid</Line>
+   <Line>De Europese Unie (EU) is een familie van democratische Europese landen die gezamenlijk aan vrede en welvaart willen werken. De Europese Unie is geen nieuwe staat die in de plaats komt van de bestaande staten, maar verschilt wel van alle andere internationale organisaties. Meer nog, de Europese Unie is uniek. De lidstaten van de EU hebben gemeenschappelijke instellingen opgericht waaraan zij een deel van hun soevereiniteit overdragen, zodat er op Europees niveau democratische beslissingen over specifieke vraagstukken van gemeenschappelijk belang kunnen worden genomen.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Polnisch: ąćęłńóśźż</NewCharacters>
+   <Line>Europejczycy zjednoczeni w swojej różnorodności</Line>
+   <Line>Unia Europejska (UE) to rodzina demokratycznych państw europejskich, których celem jest wspólna praca na rzecz pokoju i dobrobytu. Nie jest państwem powstałym w miejsce istniejących krajów, jest jednocześnie czymś więcej niż inne organizacje międzynarodowe. Jest to organizacja jedyna w swoim rodzaju. Państwa Członkowskie przekazują stworzonym przez siebie wspólnym instytucjom część swoich kompetencji, tak aby decyzje w określonych sprawach będących przedmiotem wspólnego zainteresowania mogły być podejmowane w sposób demokratyczny na poziomie europejskim.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Portugiesisch: áâãàçéêíóôõúü</NewCharacters>
+   <Line>Os europeus unidos na diversidade</Line>
+   <Line>A União Europeia (UE) é uma família de países democráticos europeus, com um projecto comum de paz e prosperidade. Não se trata de um Estado que pretende substituir Estados existentes, mas vai além de qualquer outra organização internacional. A UE é, neste aspecto, única. Os Estados Membros criaram instituições comuns a que delegam parte da sua soberania por forma a que as decisões sobre questões específicas de interesse comum possam ser tomadas democraticamente a nível europeu.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Rumänisch: ăâîșț</NewCharacters>
+   <Line>Europenii uniţi în diversitate</Line>
+   <Line>Uniunea Europeană (UE) este o familie de ţări democratice europene, care s-au angajat să lucreze împreună pentru pace şi prosperitate. UE nu este un stat menit să înlocuiască statele existente, ci este mai mult decât orice altă organizaţie internaţională. De fapt, Uniunea Europeană este unică. Statele sale membre au creat instituţii comune, cărora le deleagă o parte din suveranitatea lor, astfel încât deciziile privind puncte specifice de interes comun să poată fi luate în mod democratic la nivel european.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Schwedisch: åäö</NewCharacters>
+   <Line>Förening i mångfald</Line>
+   <Line>Europeiska unionen (EU) är en familj av demokratiska europeiska länder som gått samman för att verka för fred och välstånd. EU är inte en stat som skall ersätta befintliga stater, men den är något annat än andra internationella organisationer. EU är helt enkelt en unik organisation. Medlemsstaterna har upprättat gemensamma institutioner till vilka de har delegerat delar av sin suveränitet, så att demokratiska beslut om vissa frågor av gemensamt intresse kan fattas på europeisk nivå.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Slowakisch: áäčďéíľĺňóôŕšťúýž</NewCharacters>
+   <Line>Európania zjednotení v rôznorodosti</Line>
+   <Line>Európska únia (EÚ) je spoločenstvom demokratických európskych štátov, ktoré sa zaviazali spolupracovať na dosiahnutí mieru a prosperity. Nepredstavuje štát, ktorý by mal nahradiť jestvujúce štáty, ale je čímsi viac ako ktorákoľvek iná medzinárodná organizácia. EÚ je v podstate jedinečná. Členské štáty vytvorili spoločné inštitúcie, na ktoré delegovali časť svojej suverenity, aby sa rozhodnutia o jednotlivých záležitostiach spoločného záujmu prijímali demokraticky na európskej úrovni.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Slowenisch: čšž</NewCharacters>
+   <Line>Evropejci, združeni v raznolikosti</Line>
+   <Line>Evropska unija (EU) je družina demokratičnih evropskih držav, ki si skupaj prizadevajo za mir in blaginjo. EU ni država, ki bi nadomestila obstoječe države, temveč je več kot katera koli mednarodna organizacija. EU je v resnici edinstvena. Njene države članice so ustanovile skupne institucije, na katere so prenesle del svoje suverenosti, tako da na evropski ravni lahko demokratično sprejemajo odločitve o vprašanjih skupnega interesa.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Spanisch: áéíóúñü, ¿¡</NewCharacters>
+   <Line>Europeos unidos en la Diversidad</Line>
+   <Line>La Unión europea (UE) es una familia de países europeos democráticos, que se han comprometido a trabajar juntos en aras de la paz y la prosperidad. No se trata de un Estado destinado a sustituir a los actuales Estados, pero es más que cualquier otra organización internacional. En realidad, la UE es única. Sus Estados miembros han creado instituciones comunes en las que delegan parte de su soberanía, con el fin de que se puedan tomar democráticamente decisiones sobre asuntos específicos de interés común, a escala europea.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Tschechisch: áčďéěíňóřšťúůýž</NewCharacters>
+   <Line>Evropané sjednocení v různorodosti</Line>
+   <Line>Evropská unie (EU) je rodina demokratických evropských států, které se zavázaly spolupracovat v zájmu zachování míru a prosperity. Není to stát, jehož cílem by bylo nahradit státy současné, ale je více než jakákoli jiná mezinárodní organizace. EU je ve skutečnosti jedinečná. Její členské státy vytvořily společné instituce, na něž delegují část své suverenity tak, aby rozhodnutí o konkrétních otázkách společného zájmu bylo možné přijímat demokraticky na evropské úrovni.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Ungarisch: áéíóúöüőű</NewCharacters>
+   <Line>Sokszínűségben egyesült Európa</Line>
+   <Line>Az Európai Unió (EU) olyan demokratikus európai országok családja, amelyek a békéért és a fejlődésért dolgoznak együtt. Nem egy állam, amely a létező államok helyébe lép; az EU több, mint bármely más nemzetközi szervezet. Egyedülálló, mert tagállamai közös intézményeket állítottak fel, melyekben egyesítik szuverenitásuk egy részét, hogy a közös érdeket képviselő döntések demokratikusan, európai szinten jöhessenek létre.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Griechisch: …</NewCharacters>
+   <Line>Οι Ευρωπαίοι ενωμένοι μέσα από τη διαφορετικότητα</Line>
+   <Line>Η Ευρωπαϊκή Ένωση (ΕΕ) είναι μια οικογένεια ευρωπαϊκών δημοκρατικών χωρών, οι οποίες έχουν δεσμευτεί να συνεργάζονται για την ειρήνη και την ευημερία. Η Ευρωπαϊκή Ένωση δεν είναι ένα κράτος που επιδιώκει να αντικαταστήσει τα υπάρχοντα κράτη και είναι μεγαλύτερη από κάθε άλλο διεθνή οργανισμό. Η ΕΕ είναι όντως μοναδική. Τα κράτη μέλη της έχουν θεσπίσει κοινά θεσμικά όργανα στα οποία εκχωρούν ορισμένες εξουσίες τους, έτσι ώστε να είναι δυνατόν να λαμβάνονται δημοκρατικές αποφάσεις σε ευρωπαϊκό επίπεδο για συγκεκριμένα θέματα κοινού ενδιαφέροντος.</Line>
+  </Level>
+  <Level>
+   <NewCharacters>Bulgarisch: абвгдежзийклмнопрстуфхцчшщъьюя</NewCharacters>
+   <Line>Европейци, единни в многообразието</Line>
+   <Line>Европейският съюз е семейство от демократични европейски страни, решени да работят заедно за мир и благоденствие. Той не е държава, която трябва да замести съществуващите държави, но не е и поредната международна организация. Всъщност Европейският съюз е уникален. Неговите държави-членки са учредили общи институции, на които са отстъпили част от суверенитета си, така че решенията по специфични въпроси от общ интерес да могат да се вземат по демократичен начин на европейско равнище.</Line>
+  </Level>
+ </Levels>
+</KTouchLecture>
