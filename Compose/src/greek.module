@@ -787,8 +787,9 @@
 <dead_diaeresis> <Multi_key> <G> <I>                               : "Ϊ"   U03AA # GREEK CAPITAL LETTER IOTA WITH DIALYTIKA
 <dead_diaeresis> <Multi_key> <g> <Y>                               : "Ϋ"   U03AB # GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA
 <dead_diaeresis> <Multi_key> <G> <Y>                               : "Ϋ"   U03AB # GREEK CAPITAL LETTER UPSILON WITH DIALYTIKA
-<dead_diaeresis> <U02DE> <Multi_key> <g> <Y>                       : "ϔ"   U03D4 # GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
-<dead_diaeresis> <U02DE> <Multi_key> <G> <Y>                       : "ϔ"   U03D4 # GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
+# usage discouraged:
+#<dead_diaeresis> <U02DE> <Multi_key> <g> <Y>                       : "ϔ"   U03D4 # GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
+#<dead_diaeresis> <U02DE> <Multi_key> <G> <Y>                       : "ϔ"   U03D4 # GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
 
 # greek letters with tonos instead of oxia (if wanted)
 # <dead_acute> <Greek_alpha>                                         : "ά"   U03AC # GREEK SMALL LETTER ALPHA WITH TONOS
@@ -816,8 +817,9 @@
 
 # additional greek symbols
 # Greek ampersand symbols
-<U02DE> <U03F0>                                                      : "ϗ"   U03D7 # GREEK KAI SYMBOL
 <U02DE> <Greek_kappa>                                                : "ϗ"   U03D7 # GREEK KAI SYMBOL
+<U02DE> <U03F0>                                                      : "ϗ"   U03D7 # GREEK KAI SYMBOL
+<U02DE> <Greek_KAPPA>                                                : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 <U02DE> <Multi_key> <g> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 <U02DE> <Multi_key> <G> <K>                                          : "Ϗ"   U03CF # GREEK CAPITAL KAI SYMBOL
 
@@ -830,13 +832,13 @@
 <dead_stroke> <Greek_rho>                                            : "ϼ"   U03FC # GREEK RHO WITH STROKE SYMBOL
 #<U21BB> <U03F5>                                                      : "϶"   U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 
-# very old greek, not supported at the moment
-# Ϟϟ Ϡϡ Ϻϻ (ͰͱͲͳͶͷ)
+# archaic greek, not supported at the moment
+# Ϟϟ Ϡϡ (ϺϻͰͱͲͳͶͷ)
 <Multi_key> <g> <F>                                                  : "Ϝ"   U03DC # GREEK LETTER DIGAMMA
 <Multi_key> <G> <F>                                                  : "Ϝ"   U03DC # GREEK LETTER DIGAMMA
 <Multi_key> <g> <f>                                                  : "ϝ"   U03DD # GREEK SMALL LETTER DIGAMMA
-#<Multi_key> <g> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
-#<Multi_key> <G> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
-#<Multi_key> <g> <q>                                                  : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
+<Multi_key> <g> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
+<Multi_key> <G> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
+<Multi_key> <g> <q>                                                  : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
 
 # End of additional Definitions (greek letters) by Neo keyboard layout
