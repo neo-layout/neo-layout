@@ -228,7 +228,7 @@ xkb_symbols "sundeadkeys" {
 // $Revision$, $Date$
 
 partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "neo_base" {
+xkb_symbols "neo_kyrillisch" {
 
     name[Group1]= "Germany - Neo 2";
 
