@@ -39,14 +39,9 @@ NEOScrollLockLEDState := "Off"
 SetNEOLockStates()
 OnExit, exitprogram
 
-EnvGet, WindowsEnvAppDataFolder, APPDATA
-if (WindowsEnvAppDataFolder == "") {
-  EnvGet, WindowsEnvAppDataFolder, USERPROFILE
-  WindowsEnvAppDataFolder .= "\Anwendungsdaten"
-}
-ApplicationFolder = %WindowsEnvAppDataFolder%\Neo2
+ApplicationFolder := A_AppData . "\Neo2"
 FileCreateDir, %ApplicationFolder%
-ini = %ApplicationFolder%\Neo2.ini
+ini := ApplicationFolder . "\Neo2.ini"
 
 IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1
 IniRead,zeigeModusBox,%ini%,Global,zeigeModusBox,1
