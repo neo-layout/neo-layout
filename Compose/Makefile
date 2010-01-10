@@ -33,7 +33,8 @@ DEMOFILES = \
 	XCompose_enUS_base_math \
 	XCompose_enUS_base_math_greek_lang \
 	XCompose_enUS_base_greek_lang \
-	XCompose_enUS_base_roman
+	XCompose_enUS_base_roman \
+	XCompose_enUS_base_math_greek_lang_cyrillic 
 
 # Hilfsprogramme
 #

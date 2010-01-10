@@ -73,11 +73,14 @@
 <Multi_key> <n> <l>                               : "ɳ" U0273 # LATIN SMALL LETTER N WITH RETROFLEX HOOK
 <Multi_key> <l> <l>                               : "ɭ" U026D # LATIN SMALL LETTER L WITH RETROFLEX HOOK
 <Multi_key> <T> <l>                               : "Ʈ" U01AE # LATIN CAPITAL LETTER T WITH RETROFLEX HOOK
+<Multi_key> <T> <L>                               : "Ʈ" U01AE # LATIN CAPITAL LETTER T WITH RETROFLEX HOOK
 <Multi_key> <t> <l>                               : "ʈ" U0288 # LATIN SMALL LETTER T WITH RETROFLEX HOOK
 <U02DE> <U21BB> <r>                               : "ɻ" U027B # LATIN SMALL LETTER TURNED R WITH HOOK
 <Multi_key> <j> <N>                               : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
+<Multi_key> <J> <N>                               : "Ɲ" U019D # LATIN CAPITAL LETTER N WITH LEFT HOOK
 <Multi_key> <j> <n>                               : "ɲ" U0272 # LATIN SMALL LETTER N WITH LEFT HOOK
 <Multi_key> <D> <l>                               : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
+<Multi_key> <D> <L>                               : "Ɖ" U0189 # LATIN CAPITAL LETTER AFRICAN D
 <Multi_key> <d> <l>                               : "ɖ" U0256 # LATIN SMALL LETTER D WITH TAIL
 <Multi_key> <U02DE> <h> <j>                       : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
 <Multi_key> <U02DE> <h> <g>                       : "ɧ" U0267 # LATIN SMALL LETTER HENG WITH HOOK
@@ -180,7 +183,6 @@
 <Multi_key> <Greek_alpha> <Greek_alpha>           : "ɑ" U0251 # LATIN SMALL LETTER ALPHA
 <Multi_key> <Greek_epsilon> <Greek_epsilon>       : "ɛ" U025B # LATIN SMALL LETTER OPEN E
 <Multi_key> <Greek_phi> <Greek_phi>               : "ɸ" U0278 # LATIN SMALL LETTER PHI
-<Multi_key> <Greek_PHI> <Greek_PHI>               : "ɸ" U0278 # LATIN SMALL LETTER PHI
 <Multi_key> <U03D5> <U03D5>                       : "ɸ" U0278 # LATIN SMALL LETTER PHI
 <Multi_key> <Greek_upsilon> <Greek_upsilon>       : "ʊ" U028A # LATIN SMALL LETTER UPSILON
 <Multi_key> <3> <3>                               : "ɜ" U025C # LATIN SMALL LETTER REVERSED OPEN E
@@ -450,8 +452,10 @@
 # will be included here with Ꝥꝥ, 
 <dead_stroke> <U017F>                             : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
 <Multi_key> <slash> <U017F>                       : "ẜ" U1E9C # LATIN SMALL LETTER LONG S WITH DIAGONAL STROKE
+<Multi_key> <H> <V>                               : "Ƕ" U01F6 # LATIN CAPITAL LETTER HWAIR
 <Multi_key> <H> <v>                               : "Ƕ" U01F6 # LATIN CAPITAL LETTER HWAIR
 <Multi_key> <h> <v>                               : "ƕ" U0195 # LATIN SMALL LETTER HV
+<Multi_key> <W> <Y>                               : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
 <Multi_key> <W> <y>                               : "Ƿ" U01F7 # LATIN CAPITAL LETTER WYNN
 <Multi_key> <w> <y>                               : "ƿ" U01BF # LATIN LETTER WYNN
 <Multi_key> <Y> <G>                               : "Ȝ" U021C # LATIN CAPITAL LETTER YOGH
