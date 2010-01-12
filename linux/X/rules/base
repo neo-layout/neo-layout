@@ -24,6 +24,9 @@
 // PC geometries - they have special geometry but symbols are mostly pc105
 ! $pcgeometries = latitude
 
+// TypeMatrix geometries
+! $tmgeometries = tm2020 tm2030PS2 tm2030USB tm2030USB-102 tm2030USB-106
+
 // Layouts that provide further specializations for the OLPC
 ! $olpclayouts = af am ara br ca es et it kh kz in mn np ru th tr us 
 
@@ -46,6 +49,7 @@
               chicony chicony0108 chicony0420 chicony9885 \
               compalfl90 \
               compaqeak8 compaqik7 compaqik13 compaqik18 \
+              creativedw7000 \
               cymotionlinux \
               dell dellm65 inspiron dellusbmm \
               emachines ennyah_dkb1008 evdev \
@@ -101,7 +105,6 @@
 
 ! $thinkpads = thinkpad thinkpad60 thinkpadz60
 
-
 ! $dvoraklayouts = br ca de ee es fr gb no pl se us
 
 ! model		=	keycodes
@@ -110,6 +113,7 @@
   sun4		=	sun(type4_euro)
   sun5		=	sun(type5_euro)
   sun6		=	sun(type6_usb)
+  sun6euro	=	sun(type6tuv_usb)
   pc98		=	xfree98(pc98)
   evdev		=	evdev
   olpc		=	evdev
@@ -149,6 +153,7 @@
   thinkpad	=	thinkpad(intl)
   thinkpad60	=	thinkpad(60)
   thinkpadz60	=	thinkpad(60)
+ $tmgeometries	=	typematrix(%m)
   winbook	=	winbook(XP5)
   pc98		=	nec(pc98)
  $macbooks      =       macintosh(%m)
@@ -200,6 +205,7 @@
   *		syr		phonetic		=	pc+sy(syc_phonetic)
   *		tam		INSCRIPT		=	pc+in(tam)
   *		tam		UNI		=	pc+in(tam_unicode)
+  *		tam		NUMERAL-KEYBOARD		=	pc+in(tam_keyboard_with_numerals)
   *		tam		TAB		=	pc+in(tam_TAB)
   *		tam		TSCII		=	pc+in(tam_TSCII)
   *		tel		basic		=	pc+in(tel)
@@ -207,6 +213,10 @@
   *		yu		unicode		=	pc+srp(latinunicode)
   *		yu		yz		=	pc+srp(latinyz)
   *		yu		unicodeyz		=	pc+srp(latinunicodeyz)
+  *		rs		combiningkeys		=	pc+extras/rs(combiningkeys)
+  *		us		alt-intl-unicode		=	pc+extras/us(alt-intl-unicode)
+  *		us		crd		=	pc+extras/us(crd)
+  *		us		intl-unicode		=	pc+extras/us(intl-unicode)
   classmate	us		intl		=	pc+us(classmate-intl)
   classmate	us		alt-intl	=	pc+us(classmate-alt-intl)
   classmate	us		altgr-intl	=	pc+us(classmate-altgr-intl)
@@ -281,6 +291,7 @@
   *		syr(phonetic)			=	pc+sy(syc_phonetic)
   *		tam(INSCRIPT)			=	pc+in(tam)
   *		tam(UNI)			=	pc+in(tam_unicode)
+  *		tam(NUMERAL-KEYBOARD)			=	pc+in(tam_keyboard_with_numerals)
   *		tam(TAB)			=	pc+in(tam_TAB)
   *		tam(TSCII)			=	pc+in(tam_TSCII)
   *		tel(basic)			=	pc+in(tel)
@@ -288,6 +299,11 @@
   *		yu(unicode)			=	pc+srp(latinunicode)
   *		yu(yz)			=	pc+srp(latinyz)
   *		yu(unicodeyz)			=	pc+srp(latinunicodeyz)
+  *		apl			=	pc+extras/apl
+  *		rs(combiningkeys)			=	pc+extras/rs(combiningkeys)
+  *		us(alt-intl-unicode)			=	pc+extras/us(alt-intl-unicode)
+  *		us(crd)			=	pc+extras/us(crd)
+  *		us(intl-unicode)			=	pc+extras/us(intl-unicode)
   ataritt	$nonlatin		=	xfree68_vndr/ataritt(us)+%l%(v):2
   ataritt	*			=	xfree68_vndr/ataritt(us)+%l%(v)
   amiga		$nonlatin		=	xfree68_vndr/amiga(usa1)+%l%(v):2
@@ -300,6 +316,9 @@
   sun6		us			=	sun_vndr/us(type6)
   sun6		en_US			=	sun_vndr/us(type6)+iso9995-3(basic)
   sun6		*			=	sun_vndr/us(type6)+%l%(v)
+  sun6euro	us			=	sun_vndr/us(type6)
+  sun6euro	en_US			=	sun_vndr/us(type6)+iso9995-3(basic)
+  sun6euro	*			=	sun_vndr/us(type6)+%l%(v)
   pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)
   macintosh_old	us			=	macintosh_vndr/us(oldmac)
   macintosh_old	en_US			=	macintosh_vndr/us(oldmac)
@@ -384,6 +403,7 @@
   *		syr(phonetic)			=	pc+sy(syc_phonetic)
   *		tam(INSCRIPT)			=	pc+in(tam)
   *		tam(UNI)			=	pc+in(tam_unicode)
+  *		tam(NUMERAL-KEYBOARD)			=	pc+in(tam_keyboard_with_numerals)
   *		tam(TAB)			=	pc+in(tam_TAB)
   *		tam(TSCII)			=	pc+in(tam_TSCII)
   *		tel(basic)			=	pc+in(tel)
@@ -391,10 +411,15 @@
   *		yu(unicode)			=	pc+srp(latinunicode)
   *		yu(yz)			=	pc+srp(latinyz)
   *		yu(unicodeyz)			=	pc+srp(latinunicodeyz)
+  *		apl			=	pc+extras/apl%(v[1])
+  *		rs(combiningkeys)			=	pc+extras/rs(combiningkeys)
+  *		us(alt-intl-unicode)			=	pc+extras/us(alt-intl-unicode)
+  *		us(crd)			=	pc+extras/us(crd)
+  *		us(intl-unicode)			=	pc+extras/us(intl-unicode)
   ataritt	*			=	xfree68_vndr/ataritt(us)+%l[1]%(v[1])
   amiga		*			=	xfree68_vndr/amiga(usa1)+%l[1]%(v[1])
-  sun4		*			=	latin+sun_vndr/us(sun4)+%l[1]%(v[1])
-  sun5		*			=	latin+sun_vndr/us(sun5)+%l[1]%(v[1])
+  sun4		*			=	latin+sun_vndr/us(type4)+%l[1]%(v[1])
+  sun5		*			=	latin+sun_vndr/us(type5)+%l[1]%(v[1])
   macintosh_old	us			=	macintosh_vndr/us(oldmac)
   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
@@ -445,6 +470,7 @@
   *		syr		phonetic		=	pc+sy(syc_phonetic)
   *		tam		INSCRIPT		=	pc+in(tam)
   *		tam		UNI		=	pc+in(tam_unicode)
+  *		tam		NUMERAL-KEYBOARD		=	pc+in(tam_keyboard_with_numerals)
   *		tam		TAB		=	pc+in(tam_TAB)
   *		tam		TSCII		=	pc+in(tam_TSCII)
   *		tel		basic		=	pc+in(tel)
@@ -452,6 +478,10 @@
   *		yu		unicode		=	pc+srp(latinunicode)
   *		yu		yz		=	pc+srp(latinyz)
   *		yu		unicodeyz		=	pc+srp(latinunicodeyz)
+  *		rs		combiningkeys		=	pc+extras/rs(combiningkeys)
+  *		us		alt-intl-unicode		=	pc+extras/us(alt-intl-unicode)
+  *		us		crd		=	pc+extras/us(crd)
+  *		us		intl-unicode		=	pc+extras/us(intl-unicode)
 
 ! layout[2]	=	symbols
   ar		=	+ara%(v[2]):2
@@ -523,6 +553,7 @@
   syr(phonetic)	=	+sy(syc_phonetic):2
   tam(INSCRIPT)	=	+in(tam):2
   tam(UNI)	=	+in(tam_unicode):2
+  tam(NUMERAL-KEYBOARD)	=	+in(tam_keyboard_with_numerals):2
   tam(TAB)	=	+in(tam_TAB):2
   tam(TSCII)	=	+in(tam_TSCII):2
   tel(basic)	=	+in(tel):2
@@ -530,6 +561,11 @@
   yu(unicode)	=	+srp(latinunicode):2
   yu(yz)	=	+srp(latinyz):2
   yu(unicodeyz)	=	+srp(latinunicodeyz):2
+  apl		=	+extras/apl%(v[2]):2
+  rs(combiningkeys)	=	+extras/rs(combiningkeys):2
+  us(alt-intl-unicode)	=	+extras/us(alt-intl-unicode):2
+  us(crd)	=	+extras/us(crd):2
+  us(intl-unicode)	=	+extras/us(intl-unicode):2
   *		=	+%l[2]%(v[2]):2
 
 ! layout[3]	=	symbols
@@ -602,6 +638,7 @@
   syr(phonetic)	=	+sy(syc_phonetic):3
   tam(INSCRIPT)	=	+in(tam):3
   tam(UNI)	=	+in(tam_unicode):3
+  tam(NUMERAL-KEYBOARD)	=	+in(tam_keyboard_with_numerals):3
   tam(TAB)	=	+in(tam_TAB):3
   tam(TSCII)	=	+in(tam_TSCII):3
   tel(basic)	=	+in(tel):3
@@ -609,6 +646,11 @@
   yu(unicode)	=	+srp(latinunicode):3
   yu(yz)	=	+srp(latinyz):3
   yu(unicodeyz)	=	+srp(latinunicodeyz):3
+  apl		=	+extras/apl%(v[3]):3
+  rs(combiningkeys)	=	+extras/rs(combiningkeys):3
+  us(alt-intl-unicode)	=	+extras/us(alt-intl-unicode):3
+  us(crd)	=	+extras/us(crd):3
+  us(intl-unicode)	=	+extras/us(intl-unicode):3
   *		=	+%l[3]%(v[3]):3
 
 ! layout[4]	=	symbols
@@ -681,6 +723,7 @@
   syr(phonetic)	=	+sy(syc_phonetic):4
   tam(INSCRIPT)	=	+in(tam):4
   tam(UNI)	=	+in(tam_unicode):4
+  tam(NUMERAL-KEYBOARD)	=	+in(tam_keyboard_with_numerals):4
   tam(TAB)	=	+in(tam_TAB):4
   tam(TSCII)	=	+in(tam_TSCII):4
   tel(basic)	=	+in(tel):4
@@ -688,6 +731,11 @@
   yu(unicode)	=	+srp(latinunicode):4
   yu(yz)	=	+srp(latinyz):4
   yu(unicodeyz)	=	+srp(latinunicodeyz):4
+  apl		=	+extras/apl%(v[4]):4
+  rs(combiningkeys)	=	+extras/rs(combiningkeys):4
+  us(alt-intl-unicode)	=	+extras/us(alt-intl-unicode):4
+  us(crd)	=	+extras/us(crd):4
+  us(intl-unicode)	=	+extras/us(intl-unicode):4
   *		=	+%l[4]%(v[4]):4
 
 ! layout[2]	variant[2]	=	symbols
@@ -733,6 +781,7 @@
   syr		phonetic	=	+sy(syc_phonetic):2
   tam		INSCRIPT	=	+in(tam):2
   tam		UNI	=	+in(tam_unicode):2
+  tam		NUMERAL-KEYBOARD	=	+in(tam_keyboard_with_numerals):2
   tam		TAB	=	+in(tam_TAB):2
   tam		TSCII	=	+in(tam_TSCII):2
   tel		basic	=	+in(tel):2
@@ -740,6 +789,10 @@
   yu		unicode	=	+srp(latinunicode):2
   yu		yz	=	+srp(latinyz):2
   yu		unicodeyz	=	+srp(latinunicodeyz):2
+  rs		combiningkeys	=	+extras/rs(combiningkeys):2
+  us		alt-intl-unicode	=	+extras/us(alt-intl-unicode):2
+  us		crd	=	+extras/us(crd):2
+  us		intl-unicode	=	+extras/us(intl-unicode):2
 
 ! layout[3]	variant[3]	=	symbols
   ben		basic	=	+in(ben):3
@@ -784,6 +837,7 @@
   syr		phonetic	=	+sy(syc_phonetic):3
   tam		INSCRIPT	=	+in(tam):3
   tam		UNI	=	+in(tam_unicode):3
+  tam		NUMERAL-KEYBOARD	=	+in(tam_keyboard_with_numerals):3
   tam		TAB	=	+in(tam_TAB):3
   tam		TSCII	=	+in(tam_TSCII):3
   tel		basic	=	+in(tel):3
@@ -791,6 +845,10 @@
   yu		unicode	=	+srp(latinunicode):3
   yu		yz	=	+srp(latinyz):3
   yu		unicodeyz	=	+srp(latinunicodeyz):3
+  rs		combiningkeys	=	+extras/rs(combiningkeys):3
+  us		alt-intl-unicode	=	+extras/us(alt-intl-unicode):3
+  us		crd	=	+extras/us(crd):3
+  us		intl-unicode	=	+extras/us(intl-unicode):3
 
 ! layout[4]	variant[4]	=	symbols
   ben		basic	=	+in(ben):4
@@ -835,6 +893,7 @@
   syr		phonetic	=	+sy(syc_phonetic):4
   tam		INSCRIPT	=	+in(tam):4
   tam		UNI	=	+in(tam_unicode):4
+  tam		NUMERAL-KEYBOARD	=	+in(tam_keyboard_with_numerals):4
   tam		TAB	=	+in(tam_TAB):4
   tam		TSCII	=	+in(tam_TSCII):4
   tel		basic	=	+in(tel):4
@@ -842,6 +901,10 @@
   yu		unicode	=	+srp(latinunicode):4
   yu		yz	=	+srp(latinyz):4
   yu		unicodeyz	=	+srp(latinunicodeyz):4
+  rs		combiningkeys	=	+extras/rs(combiningkeys):4
+  us		alt-intl-unicode	=	+extras/us(alt-intl-unicode):4
+  us		crd	=	+extras/us(crd):4
+  us		intl-unicode	=	+extras/us(intl-unicode):4
 
 ! model		=	symbols
   a4techKB21    =       +inet(media_nav_common)
@@ -992,10 +1055,14 @@
   lv3:rwin_switch	=	+level3(rwin_switch)
   lv3:enter_switch	=	+level3(enter_switch)
   caps:capslock		=	+capslock(capslock)
+  caps:numlock		=	+capslock(numlock)
   caps:shiftlock	=	+capslock(shiftlock)
   caps:swapescape	=	+capslock(swapescape)
   caps:escape		=	+capslock(escape)
   caps:backspace	=	+capslock(backspace)
+  caps:super		=	+capslock(super)
+  caps:hyper		=	+capslock(hyper)
+  caps:none		=	+capslock(none)
   ctrl:nocaps		=	+ctrl(nocaps)
   ctrl:swapcaps		=	+ctrl(swapcaps)
   ctrl:ctrl_ac		=	+ctrl(ctrl_ac)
