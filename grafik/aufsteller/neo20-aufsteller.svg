@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -12,9 +13,8 @@
    height="744.09003"
    id="svg2559"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.47 r22583"
    version="1.0"
-   sodipodi:docbase="/home/wicking/programmieren/Projekt/NEO/svn-neo/svn/grafik/aufsteller-svg"
    sodipodi:docname="neo20-aufsteller.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
@@ -34,10 +34,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1402436"
-     inkscape:cx="290.26827"
-     inkscape:cy="642.25338"
-     inkscape:current-layer="layer8"
+     inkscape:zoom="1.756299"
+     inkscape:cx="410.86755"
+     inkscape:cy="196.11044"
+     inkscape:current-layer="layer12"
      id="namedview2563"
      width="29.699938cm"
      height="20.999875cm"
@@ -56,12 +56,13 @@
      inkscape:object-paths="false"
      inkscape:guide-bbox="true"
      inkscape:grid-bbox="false"
-     inkscape:window-width="1918"
-     inkscape:window-height="1011"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1440"
+     inkscape:window-height="843"
+     inkscape:window-x="-4"
+     inkscape:window-y="-3"
      inkscape:object-bbox="false"
-     showguides="true">
+     showguides="true"
+     inkscape:window-maximized="1">
     <inkscape:grid
        id="GridFromPre046Settings"
        type="xygrid"
@@ -188,24 +189,24 @@
          id="flowPara4056">== Mini-FAQ ==</flowPara><flowPara
          id="flowPara4058">F: Wo kann ich Fragen zu Neo stellen?</flowPara><flowPara
          id="flowPara4060">A: Es gibt eine Mailingliste. Auf dieser werden Fragen beantwortet und Neo weiter entwickelt. Im Webbrowser ist diese per http://wiki.neo-layout.org/wiki/Mailingliste erreichbar. Ansonsten erst mal die FAQ (häufigen Fragen) durchlesen.</flowPara><flowPara
-         id="flowPara4062"></flowPara><flowPara
+         id="flowPara4062" /><flowPara
          id="flowPara4064">F: Es gibt keine Feststell-/Caps-Lock-Taste. Kann ich nie mehr dauernd groß schreiben?</flowPara><flowPara
          id="flowPara4066">A: Die Dauergroßschreib-Funktionalität erhält man, indem man beide Umschalt-Tasten kurz gleichzeitig drückt. Zum temporären Ausschalten eine der beiden Umschalt-Tasten gedrückt halten und Buchstaben schreiben. Zum Ausschalten wieder beide Umschalttasten drücken.</flowPara><flowPara
-         id="flowPara4068"></flowPara><flowPara
+         id="flowPara4068" /><flowPara
          id="flowPara4070">F: Warum gibt es manche Tasten doppelt? Z. B. die Pfeiltasten, die Esc-Taste usw. Außerdem auch ~ und ^?</flowPara><flowPara
          id="flowPara4072">A: Diese sind dazu da, dass man seine Hände nicht vom normalen Eingabefeld der Tastatur nehmen muss. Man drückt einfach die Mod4-Taste und schon hat man die gesamte Tastatur (außer den Funktionstasten) per Zehnfingersystem erreichbar.</flowPara><flowPara
          id="flowPara4074">Da die Mod4-Taste nicht von Allen benutzt wird, sind diese Tasten auch auf ihrer alten Position verfügbar.</flowPara><flowPara
          id="flowPara4076">Die Tilde (~) und der Zirkumflex (^) sind als tote und untote Tasten vorhanden. Mit den toten kann man Buchstaben wie â, ô, û und ñ schreiben, indem man nacheinander die tote Taste und den Buchstaben drückt. Bei der untoten Taste erscheint das Zeichen direkt.</flowPara><flowPara
-         id="flowPara4078"></flowPara><flowPara
+         id="flowPara4078" /><flowPara
          id="flowPara4080">F: Wieso sind die Sonderzeichen – !&lt;&gt;=;?()-:+%&amp;&quot;'~$|#\/{}*@_[]^ – so angeordnet, wie sie angeordnet sind? Wie ist man darauf gekommen?</flowPara><flowPara
          id="flowPara4082">A: Die Sonderzeichen wurden für Neo Version 2 nach ähnlichen Kriterien zugeordnet, wie die Buchstaben schon für Neo Version 1. Also nicht nur nach Häufigkeit und guter Erreichbarkeit, sondern auch nach vorkommenden Bi- und Trigrammen. Das wären (unsortiert): ~/  :=  -&gt;  =&gt;  &lt;=  &gt;=  !=  :// /&gt;  &lt;/ &lt;!-- --&gt; &lt;?  ?&gt;  /*  */  /.  =&quot;  !&quot;  ?&quot; (&quot;  &quot;)  ('  ')  );  ,&quot;  &quot;,  &amp;&gt;  =`  }[  ]{  _{  ^{  ^2  ^3  :-) ;-) +=  *=  /= -=  #!/ $@  {$</flowPara><flowPara
          id="flowPara4084">Diese werden in den gängigen Programmier-, Skript- und Auszeichnungssprachen häufig verwendet. Leider ist es prinzipiell nicht möglich alle Zeichen für alle Bi- und Trigramme gut zu positionieren. Verbesserungsvorschläge sind jedoch willkommen. Außerdem kann sich jeder seine individuelle Neo-Version auch an die eigenen Bedürfnisse anpassen. Dazu einfach auf der Mailingliste fragen.</flowPara><flowPara
-         id="flowPara4086"></flowPara><flowPara
+         id="flowPara4086" /><flowPara
          id="flowPara4088">F: Wo ist der Apostroph, um z. B. Felix’ Katze zu schreiben?</flowPara><flowPara
          id="flowPara4090">A: Der echte Apostroph für Texte in deutscher und englischer Sprache befindet sich auf »Mod3« + »0«. Es ist das Zeichen ’.</flowPara><flowPara
          id="flowPara4092">Zur Verwendung des Apostrophs siehe den Wikipedia Artikel: http://de.wikipedia.org/wiki/Apostroph</flowPara><flowPara
          id="flowPara4094">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen. Dieses ist per »Mod3« + »,« (Komma) erreichbar.</flowPara><flowPara
-         id="flowPara4096"></flowPara></flowRoot>    <flowRoot
+         id="flowPara4096" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot2675"
        transform="matrix(-1,0,0,-1,554.17911,761.80927)"
@@ -224,13 +225,13 @@
          id="flowPara4106">  2. Öffnungszeiten: Mo–Fr 10–18 Uhr.</flowPara><flowPara
          id="flowPara4108">Der englische Gedankenstrich (auf »Umschalt« + »Taste-rechts-neben-der-Null«) kommt nur in englischen Texten vor und wird dort ohne umschließende Leerzeichen geschrieben.</flowPara><flowPara
          id="flowPara4110">Außerdem wird der erstgenannte Bindestrich auch als „Minus“ verwendet. Es gibt jedoch auch das richtige Minuszeichen, das genau so breit ist wie das Pluszeichen. Dieses befindet sich auf »Mod3« + »Ziffernblock-Minus«.</flowPara><flowPara
-         id="flowPara4112"></flowPara><flowPara
+         id="flowPara4112" /><flowPara
          id="flowPara4114">F: Welche sind die deutschen Gänsefüßchen? Wann welche Anführungszeichen?</flowPara><flowPara
          id="flowPara4116">A: Bei gedrückter »Umschalt-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Umschalt-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.</flowPara><flowPara
          id="flowPara4118">Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Umschalt-Taste« auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.</flowPara><flowPara
          id="flowPara4120">Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia: http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen</flowPara><flowPara
          id="flowPara4122">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen &quot; benutzen. Dieses ist per »Mod3« + ».« erreichbar.</flowPara><flowPara
-         id="flowPara4124"></flowPara></flowRoot>  </g>
+         id="flowPara4124" /></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer8"
@@ -4627,7 +4628,7 @@
        transform="matrix(0.8116542,0,0,0.8116542,143.5968,118.11305)">
       <path
          transform="matrix(1,0,0,1.0697674,0,-43.910723)"
-         d="M 493.64904,645.47919 A 3.6538272,3.6538272 0 1 1 486.34138,645.47919 A 3.6538272,3.6538272 0 1 1 493.64904,645.47919 z"
+         d="m 493.64904,645.47919 c 0,2.01795 -1.63588,3.65382 -3.65383,3.65382 -2.01795,0 -3.65383,-1.63587 -3.65383,-3.65382 0,-2.01796 1.63588,-3.65383 3.65383,-3.65383 2.01795,0 3.65383,1.63587 3.65383,3.65383 z"
          sodipodi:ry="3.6538272"
          sodipodi:rx="3.6538272"
          sodipodi:cy="645.47919"
@@ -4645,7 +4646,7 @@
          id="rect7602"
          style="opacity:1;fill:#3879dc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.70866144;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0.52015748;stroke-opacity:1" />
       <path
-         d="M 491.39726,650.70502 A 1.40205,1.40205 0 1 1 488.59316,650.70502 A 1.40205,1.40205 0 1 1 491.39726,650.70502 z"
+         d="m 491.39726,650.70502 c 0,0.77433 -0.62772,1.40205 -1.40205,1.40205 -0.77433,0 -1.40205,-0.62772 -1.40205,-1.40205 0,-0.77433 0.62772,-1.40205 1.40205,-1.40205 0.77433,0 1.40205,0.62772 1.40205,1.40205 z"
          sodipodi:ry="1.40205"
          sodipodi:rx="1.40205"
          sodipodi:cy="650.70502"
@@ -4714,7 +4715,7 @@
        transform="matrix(1.0736877,0,0,1.0736877,48.847958,392.63727)">
       <path
          transform="matrix(0.75595,0,0,0.8086907,88.64607,-269.66913)"
-         d="M 493.64904,645.47919 A 3.6538272,3.6538272 0 1 1 486.34138,645.47919 A 3.6538272,3.6538272 0 1 1 493.64904,645.47919 z"
+         d="m 493.64904,645.47919 c 0,2.01795 -1.63588,3.65382 -3.65383,3.65382 -2.01795,0 -3.65383,-1.63587 -3.65383,-3.65382 0,-2.01796 1.63588,-3.65383 3.65383,-3.65383 2.01795,0 3.65383,1.63587 3.65383,3.65383 z"
          sodipodi:ry="3.6538272"
          sodipodi:rx="3.6538272"
          sodipodi:cy="645.47919"
@@ -4734,7 +4735,7 @@
          transform="translate(-223.45089,-412.4453)" />
       <path
          transform="matrix(0.75595,0,0,0.75595,88.64607,-236.47482)"
-         d="M 491.39726,650.70502 A 1.40205,1.40205 0 1 1 488.59316,650.70502 A 1.40205,1.40205 0 1 1 491.39726,650.70502 z"
+         d="m 491.39726,650.70502 c 0,0.77433 -0.62772,1.40205 -1.40205,1.40205 -0.77433,0 -1.40205,-0.62772 -1.40205,-1.40205 0,-0.77433 0.62772,-1.40205 1.40205,-1.40205 0.77433,0 1.40205,0.62772 1.40205,1.40205 z"
          sodipodi:ry="1.40205"
          sodipodi:rx="1.40205"
          sodipodi:cy="650.70502"
@@ -6210,7 +6211,7 @@
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;font-family:Linux Libertine">¤</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Sans"
        x="414.82196"
        y="408.91434"
        id="text14677"
@@ -6219,7 +6220,7 @@
          id="tspan14679"
          x="414.82196"
          y="408.91434"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">κ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϰ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -6436,16 +6437,16 @@
          style="font-size:12.8842535px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;font-family:DejaVu Sans Condensed">⇡</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:8.58950233px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu Sans Condensed"
+       style="font-size:8.58950233px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans Condensed"
        x="269.04102"
-       y="496.87744"
+       y="498.01617"
        id="text5468"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan5470"
          x="269.04102"
-         y="496.87744"
-         style="font-size:7.5158143px;fill:#ffff00">Entf</tspan></text>
+         y="498.01617"
+         style="font-size:16.10499954px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffff00;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine">⌦</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu Sans Condensed"
@@ -7937,7 +7938,7 @@
          style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ν</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Sans"
        x="520.64178"
        y="590.07861"
        id="text7009"
@@ -7946,7 +7947,7 @@
          id="tspan7011"
          x="520.64178"
          y="590.07861"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ρ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϱ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -7985,7 +7986,7 @@
          style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">υ</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Symbol;-inkscape-font-specification:Symbol"
+       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:Symbol;-inkscape-font-specification:Symbol"
        x="388.68301"
        y="468.16913"
        id="text7041"
@@ -7993,7 +7994,7 @@
          sodipodi:role="line"
          id="tspan3980"
          x="388.68301"
-         y="468.16913">ϰ</tspan></text>
+         y="468.16913">κ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -8092,7 +8093,7 @@
          style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϑ</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Sans"
        x="535.46759"
        y="467.52109"
        id="text7077"
@@ -8101,7 +8102,7 @@
          id="tspan7079"
          x="535.46759"
          y="467.52109"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ɸ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">φ</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#3879dc;stroke-width:0.86278212;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:0.86278211, 1.72556421;stroke-dashoffset:0.86278211;stroke-opacity:1;display:inline"
        id="rect5884"
@@ -8126,7 +8127,7 @@
          style="font-weight:bold;fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ς</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Sans"
        x="582.69196"
        y="467.14236"
        id="text3351"
@@ -8135,14 +8136,14 @@
          id="tspan3353"
          x="582.69196"
          y="467.14236"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">φ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϕ</tspan></text>
     <g
        style="display:inline"
        id="g8802"
        transform="matrix(0.5750613,0,0,0.5750613,331.66019,30.398063)">
       <path
          transform="matrix(1,0,0,1.0697674,0,-43.910723)"
-         d="M 493.64904,645.47919 A 3.6538272,3.6538272 0 1 1 486.34138,645.47919 A 3.6538272,3.6538272 0 1 1 493.64904,645.47919 z"
+         d="m 493.64904,645.47919 c 0,2.01795 -1.63588,3.65382 -3.65383,3.65382 -2.01795,0 -3.65383,-1.63587 -3.65383,-3.65382 0,-2.01796 1.63588,-3.65383 3.65383,-3.65383 2.01795,0 3.65383,1.63587 3.65383,3.65383 z"
          sodipodi:ry="3.6538272"
          sodipodi:rx="3.6538272"
          sodipodi:cy="645.47919"
@@ -8160,7 +8161,7 @@
          id="rect8806"
          style="opacity:1;fill:#3879dc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.70866144;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0.52015748;stroke-opacity:1" />
       <path
-         d="M 491.39726,650.70502 A 1.40205,1.40205 0 1 1 488.59316,650.70502 A 1.40205,1.40205 0 1 1 491.39726,650.70502 z"
+         d="m 491.39726,650.70502 c 0,0.77433 -0.62772,1.40205 -1.40205,1.40205 -0.77433,0 -1.40205,-0.62772 -1.40205,-1.40205 0,-0.77433 0.62772,-1.40205 1.40205,-1.40205 0.77433,0 1.40205,0.62772 1.40205,1.40205 z"
          sodipodi:ry="1.40205"
          sodipodi:rx="1.40205"
          sodipodi:cy="650.70502"
@@ -8175,7 +8176,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Sans"
        x="499.04535"
        y="528.39227"
        id="text14651"
@@ -8184,7 +8185,7 @@
          id="tspan14653"
          x="499.04535"
          y="528.39227"
-         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ϱ</tspan></text>
+         style="fill:#3879dc;fill-opacity:1;font-family:Linux Libertine">ρ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
@@ -8385,74 +8386,74 @@
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">ℤ</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
        x="411.76666"
-       y="619.94086"
+       y="621.07965"
        id="text4003"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4005"
          x="411.76666"
-         y="619.94086"
+         y="621.07965"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">⇐</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
        x="461.52209"
-       y="620.2746"
+       y="621.41339"
        id="text4007"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4009"
          x="461.52209"
-         y="620.2746"
+         y="621.41339"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">⇔</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
        x="512.05664"
-       y="619.94086"
+       y="621.07965"
        id="text4011"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4013"
          x="512.05664"
-         y="619.94086"
+         y="621.07965"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">⇒</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
-       x="558.26666"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
+       x="614.06653"
        y="621.50354"
        id="text4015"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4017"
-         x="558.26666"
+         x="614.06653"
          y="621.50354"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">Θ</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
-       x="607.03735"
-       y="623.84753"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       x="561.63721"
+       y="621.84753"
        id="text4019"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan3970"
-         x="607.03735"
-         y="623.84753">↦</tspan></text>
+         x="561.63721"
+         y="621.84753">↦</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
        x="320.35065"
-       y="623.06622"
+       y="622.20502"
        id="text4023"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4025"
          x="320.35065"
-         y="623.06622"
+         y="622.20502"
          style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;font-family:Linux Libertine">Π</tspan></text>
     <text
        xml:space="preserve"
