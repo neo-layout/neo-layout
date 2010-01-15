@@ -142,8 +142,8 @@ keycode 14 = 	5		guillemotleft	U2039		malesymbol	periodcentered	NoSymbol	U2221		
 keycode 15 = 	6		dollar		cent		U26A5		sterling	NoSymbol	U2225		NoSymbol
 !				$		¢		⚥		£				∥ parallel
 
-keycode 16 = 	7		EuroSign	yen		Greek_kappa	currency	NoSymbol	rightarrow	NoSymbol
-!				€		¥		κ		¤				→
+keycode 16 = 	7		EuroSign	yen		U03F0		currency	NoSymbol	rightarrow	NoSymbol
+!				€		¥		ϰ Greek_kappa	¤				→
 keycode 17 = 	8   doublelowquotemark    singlelowquotemark  leftanglebracket	Tab		ISO_Left_Tab	infinity	NoSymbol
 !				„		‚		⟨ (bra)						∞
 keycode 18 = 	9   leftdoublequotemark   leftsinglequotemark rightanglebracket KP_Divide	KP_Divide	variation	NoSymbol
@@ -169,8 +169,8 @@ keycode 27 = 	c		C		bracketright	Greek_chi	Delete		Delete		U2102		NoSymbol
 keycode 28 = 	w		W		asciicircum	Greek_omega	Insert		Insert		Greek_OMEGA	Greek_OMEGA
 !						^		ω						Ω		Ω
 
-keycode 29 = 	k		K		exclam		U03F0		exclamdown	NoSymbol	multiply	NoSymbol
-!						!		ϰ Greek_kappa	¡				× times
+keycode 29 = 	k		K		exclam		Greek_kappa	exclamdown	NoSymbol	multiply	NoSymbol
+!						!		κ		¡				× times
 keycode 30 = 	h		H		less		Greek_psi	KP_7		KP_7		Greek_PSI	Greek_PSI
 !						<		η						Ψ		Ψ
 keycode 31 = 	g		G		greater		Greek_gamma	KP_8		KP_8		Greek_GAMMA	Greek_GAMMA
@@ -202,8 +202,8 @@ keycode 43 = 	s		S		question	Greek_sigma	questiondown	NoSymbol	Greek_SIGMA	Greek
 !						?		σ		¿				Σ		Σ
 keycode 44 = 	n		N		parenleft	Greek_nu	KP_4		KP_4		U2115		NoSymbol
 !						(		ν						ℕ natural
-keycode 45 = 	r		R		parenright	U03F1		KP_5		KP_5		U211D		NoSymbol
-!						)		ϱ Greek_rho					ℝ real
+keycode 45 = 	r		R		parenright	Greek_rho	KP_5		KP_5		U211D		NoSymbol
+!						)		ρ						ℝ real
 keycode 46 = 	t		T		minus		Greek_tau	KP_6		KP_6		partialderivative
 !						-		τ						∂
 keycode 47 = 	d		D		colon		Greek_delta	KP_Separator	comma		Greek_DELTA	Greek_DELTA
@@ -231,12 +231,12 @@ keycode 57 = 	b		B		plus		Greek_beta	colon		NoSymbol	U21D0		NoSymbol
 !						+		β		:				⇐
 keycode 58 = 	m		M		percent		Greek_mu	KP_1		KP_1		ifonlyif	NoSymbol
 !						%		μ						⇔
-keycode 59 = comma		endash		quotedbl	Greek_rho	KP_2		KP_2		U21D2		NoSymbol
-!		,		–		"		ρ						⇒ implies 
-keycode 60 = period	   enfilledcircbullet	apostrophe	U03D1		KP_3		KP_3		Greek_THETA	Greek_THETA
-!		.		•		'		ϑ Greek_theta					Θ
-keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	U21A6		NoSymbol
-!						;		θ		;				↦
+keycode 59 = comma		endash		quotedbl	U03F1		KP_2		KP_2		U21D2		NoSymbol
+!		,		–		"		ϱ Greek_rho					⇒ implies 
+keycode 60 = period	   enfilledcircbullet	apostrophe	U03D1		KP_3		KP_3		U21A6		NoSymbol
+!		.		•		'		ϑ Greek_theta					↦
+keycode 61 = 	j		J		semicolon	Greek_theta	semicolon	NoSymbol	Greek_THETA	Greek_THETA
+!						;		θ		;				Θ
 
 
 
