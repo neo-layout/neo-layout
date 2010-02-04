@@ -86,8 +86,8 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:window-height="693"
-     inkscape:window-width="1381"
+     inkscape:window-height="980"
+     inkscape:window-width="1680"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10.0"
@@ -97,17 +97,17 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="0.61694879"
-     inkscape:cx="1044.6572"
+     inkscape:zoom="0.76409426"
+     inkscape:cx="1044.9407"
      inkscape:cy="229.78501"
-     inkscape:window-x="35"
-     inkscape:window-y="139"
-     inkscape:current-layer="layer6"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:current-layer="layer11"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-global="false"
-     inkscape:window-maximized="0">
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid43901"
@@ -13353,11 +13353,11 @@
          x="1167.1957"
          y="135.48123">◌</tspan></text>
     <path
-       d="M 90.139357,275.17921 C 90.139357,275.17921 103.19247,279.58378 106.13985,282.63316 C 109.08734,285.68252 109.92951,352.7683 108.24529,357.85062 C 106.56093,362.93283 100.66607,365.98221 100.66607,365.98221 L 12.66292,365.30456 C 12.66292,365.30456 2.9782705,364.96578 2.9782705,360.22234 C 2.9782705,355.47889 0.2298355,287.12244 3.5984147,285.08959 C 6.9669935,283.05665 23.610599,275.17921 23.610599,275.17921 L 90.139357,275.17921 L 90.139357,275.17921 L 90.139357,275.17921 L 90.139357,275.17921 z"
+       d="m 90.139357,275.17921 c 0,0 13.053113,4.40457 16.000493,7.45395 2.94749,3.04936 3.78966,70.13514 2.10544,75.21746 -1.68436,5.08221 -7.57922,8.13159 -7.57922,8.13159 l -88.00315,-0.67765 c 0,0 -9.6846495,-0.33878 -9.6846495,-5.08222 0,-4.74345 -2.748435,-73.0999 0.6201442,-75.13275 3.3685788,-2.03294 20.0121843,-9.91038 20.0121843,-9.91038 l 66.528758,0 0,0 0,0 0,0 z"
        style="fill:#808080;fill-opacity:0.50196078;fill-rule:evenodd;stroke:none;display:inline"
        id="path43925-5" />
     <path
-       d="M 1340.9784,274.48125 C 1340.9784,274.48125 1353.793,280.96605 1356.5539,284.03781 C 1359.3148,287.10958 1356.5539,317.4858 1356.5539,360.49035 C 1356.5539,365.81183 1351.3621,365.26863 1351.3621,365.26863 L 1129.2466,365.26854 C 1129.2466,365.26854 1120.1749,364.92727 1120.1749,360.14899 C 1120.1749,355.37071 1117.6004,286.5122 1120.7557,284.46442 C 1123.9111,282.41654 1139.5014,274.48125 1139.5014,274.48125 L 1340.9784,274.48125 L 1340.9784,274.48125 L 1340.9784,274.48125 z"
+       d="m 1340.9784,274.48125 c 0,0 12.8146,6.4848 15.5755,9.55656 2.7609,3.07177 0,33.44799 0,76.45254 0,5.32148 -5.1918,4.77828 -5.1918,4.77828 l -222.1155,-9e-5 c 0,0 -9.0717,-0.34127 -9.0717,-5.11955 0,-4.77828 -2.5745,-73.63679 0.5808,-75.68457 3.1554,-2.04788 18.7457,-9.98317 18.7457,-9.98317 l 201.477,0 0,0 0,0 z"
        style="fill:#808080;fill-opacity:0.50196078;fill-rule:evenodd;stroke:none;display:inline"
        id="path43927-4"
        sodipodi:nodetypes="cssccsscc" />
@@ -15504,24 +15504,24 @@
        xml:space="preserve"
        sodipodi:linespacing="125%">⇞</text>
     <text
-       x="1800.63"
+       x="1937.4147"
        y="698.43811"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
        id="text29646-82"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="1800.63"
+         x="1937.4147"
          y="698.43811"
          id="tspan29648-8"
          style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:DejaVu Sans">⌦</tspan></text>
     <text
-       x="1944.0308"
+       x="1806.8754"
        y="701.65179"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans"
        id="text29582-9"
        xml:space="preserve"
        sodipodi:linespacing="125%"><tspan
-         x="1944.0308"
+         x="1806.8754"
          y="701.65179"
          id="tspan29584-0"
          style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine">⎀</tspan></text>
