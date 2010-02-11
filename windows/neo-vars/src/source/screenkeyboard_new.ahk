@@ -7,7 +7,7 @@ UnZipLocalFile := ApplicationFolder . "\unzip.exe"
 UnZipSourceLink := "http://stahlworks.com/dev/unzip.exe"
 
 UniFontVersion  := "2.30"
-UniFontFilename := "DejaVuSans.ttf"
+UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
 
 UniFontZipFilename   := "dejavu-fonts-ttf-" . UniFontVersion . ".zip"
