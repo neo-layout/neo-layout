@@ -28,6 +28,8 @@ NEOEbeneAktualisieren() {
     else
       BSTSwitch(EbeneNC)
   }
+  if (BSTNguiErstellt)
+    BSTNUpdate()
 }
 
 IsShiftActive() {

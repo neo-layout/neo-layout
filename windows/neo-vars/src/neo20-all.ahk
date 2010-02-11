@@ -28,6 +28,7 @@ SetWorkingDir, %A_ScriptDir%
 
 ; Die Bildschirmtastatur
 #include    source\screenkeyboard.ahk
+#include    source\screenkeyboard_new.ahk
 
 ; Mitgelieferte Belegungsvarianten
 #include    source\langstastatur.ahk

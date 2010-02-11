@@ -124,6 +124,8 @@ rerun:
     CharOutUp(PR%PhysKey%)
     PR%PhysKey% := ""
   }
+  if (BSTNguiErstellt)
+    BSTNUpdate()
 }
 
 CharStarUp(PhysKey) {
