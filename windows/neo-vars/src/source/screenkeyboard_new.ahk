@@ -76,6 +76,11 @@ GuiAddKeyS(sc,x,y) {
   GuiAddKey(vksc%sc%,x,y)
 }
 
+GuiAddKeySN(sc,x,y) {
+  global
+  GuiAddKey(vkscn1%sc%,x,y)
+}
+
 GuiAddKey(key,x,y) {
   global
   Gui, Add, Text, x%x% y%y% Center hwndGuiKey%key% BackgroundTrans, MM
@@ -150,6 +155,7 @@ BSTNToggle() {
     GuiAddKeyS("01B",476,48)
     GuiAddKey("enter",526,68)
 
+    GuiAddKeyS("03A",18,88)
     GuiAddKeyS("01E",75,88)
     GuiAddKeyS("01F",113,88)
     GuiAddKeyS("020",151,88)
@@ -161,7 +167,10 @@ BSTNToggle() {
     GuiAddKeyS("026",379,88)
     GuiAddKeyS("027",417,88)
     GuiAddKeyS("028",455,88)
+    GuiAddKeyS("02B",493,88)
 
+    GuiAddKeyS("02A",8,128)
+    GuiAddKeyS("056",50,128)
     GuiAddKeyS("02C",88,128)
     GuiAddKeyS("02D",126,128)
     GuiAddKeyS("02E",164,128)
@@ -172,8 +181,32 @@ BSTNToggle() {
     GuiAddKeyS("033",354,128)
     GuiAddKeyS("034",392,128)
     GuiAddKeyS("035",430,128)
+    GuiAddKeyS("136",498,128)
 
-    GuiAddKey("space",266,168)
+    GuiAddKey("space",264,168)
+    GuiAddKeyS("138",430,168)
+
+    GuiAddKeyS("145",582,9)
+    GuiAddKeyS("135",620,9)
+    GuiAddKeyS("037",658,9)
+    GuiAddKeyS("04A",696,9)
+
+    GuiAddKeySN("047",582,48)
+    GuiAddKeySN("048",620,48)
+    GuiAddKeySN("049",658,48)
+    GuiAddKeyS("04E",696,68)
+
+    GuiAddKeySN("04B",582,88)
+    GuiAddKeySN("04C",620,88)
+    GuiAddKeySN("04D",658,88)
+
+    GuiAddKeySN("04F",582,128)
+    GuiAddKeySN("050",620,128)
+    GuiAddKeySN("051",658,128)
+    GuiAddKey("numpadenter",696,148)
+
+    GuiAddKeySN("052",601,168)
+    GuiAddKeySN("053",658,168)
 
     Gui, +AlwaysOnTop +ToolWindow
     Gui, Show, y%yposition% w776 h200 NoActivate, NEO-Bildschirmtastatur (neu!)
