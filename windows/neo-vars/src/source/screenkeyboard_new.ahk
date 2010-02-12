@@ -68,6 +68,7 @@ BSTNUpdate() {
         DllCall("SendMessageW", "UInt",GuiKey%GuiPhysKey%, "UInt",WM_SETTEXT, "UInt",0, "Uint",&ptrU)
       }
     }
+    GuiControl,MoveDraw,Picture0
 }
 
 GuiAddKeyS(sc,x,y) {
@@ -77,7 +78,7 @@ GuiAddKeyS(sc,x,y) {
 
 GuiAddKey(key,x,y) {
   global
-  Gui, Add, Text, x%x% y%y% Center hwndGuiKey%key%, MM
+  Gui, Add, Text, x%x% y%y% Center hwndGuiKey%key% BackgroundTrans, MM
   GuiKeyList := GuiKeyList . key . ","
 }
 
@@ -119,60 +120,60 @@ BSTNToggle() {
     Gui, Add, Picture,AltSubmit x0   y0          vPicture0, % ResourceFolder . "\ebene0.png"
     Gui, Font, s12 bold, %UniFontName%
     GuiKeyList := ""
-    GuiAddKeyS("029",12,8)
-    GuiAddKeyS("002",52,8)
-    GuiAddKeyS("003",90,8)
-    GuiAddKeyS("004",128,8)
-    GuiAddKeyS("005",166,8)
-    GuiAddKeyS("006",204,8)
-    GuiAddKeyS("007",242,8)
-    GuiAddKeyS("008",280,8)
-    GuiAddKeyS("009",318,8)
-    GuiAddKeyS("00A",356,8)
-    GuiAddKeyS("00B",394,8)
-    GuiAddKeyS("00C",432,8)
-    GuiAddKeyS("00D",470,8)
-    GuiAddKey("backspace",508,8)
+    GuiAddKeyS("029",6,9)
+    GuiAddKeyS("002",44,9)
+    GuiAddKeyS("003",82,9)
+    GuiAddKeyS("004",120,9)
+    GuiAddKeyS("005",158,9)
+    GuiAddKeyS("006",196,9)
+    GuiAddKeyS("007",234,9)
+    GuiAddKeyS("008",272,9)
+    GuiAddKeyS("009",310,9)
+    GuiAddKeyS("00A",348,9)
+    GuiAddKeyS("00B",386,9)
+    GuiAddKeyS("00C",424,9)
+    GuiAddKeyS("00D",462,9)
+    GuiAddKey("backspace",510,9)
 
-    GuiAddKey("tab",26,48)
-    GuiAddKeyS("010",64,48)
-    GuiAddKeyS("011",102,48)
-    GuiAddKeyS("012",140,48)
-    GuiAddKeyS("013",178,48)
-    GuiAddKeyS("014",216,48)
-    GuiAddKeyS("015",254,48)
-    GuiAddKeyS("016",292,48)
-    GuiAddKeyS("017",330,48)
-    GuiAddKeyS("018",368,48)
-    GuiAddKeyS("019",406,48)
-    GuiAddKeyS("01A",444,48)
-    GuiAddKeyS("01B",484,48)
-    GuiAddKey("enter",532,48)
-    a
-    GuiAddKeyS("01E",82,88)
-    GuiAddKeyS("01F",120,88)
-    GuiAddKeyS("020",158,88)
-    GuiAddKeyS("021",196,88)
-    GuiAddKeyS("022",234,88)
-    GuiAddKeyS("023",272,88)
-    GuiAddKeyS("024",310,88)
-    GuiAddKeyS("025",348,88)
-    GuiAddKeyS("026",386,88)
-    GuiAddKeyS("027",424,88)
-    GuiAddKeyS("028",462,88)
+    GuiAddKey("tab",10,48)
+    GuiAddKeyS("010",58,48)
+    GuiAddKeyS("011",96,48)
+    GuiAddKeyS("012",134,48)
+    GuiAddKeyS("013",172,48)
+    GuiAddKeyS("014",210,48)
+    GuiAddKeyS("015",248,48)
+    GuiAddKeyS("016",286,48)
+    GuiAddKeyS("017",324,48)
+    GuiAddKeyS("018",362,48)
+    GuiAddKeyS("019",400,48)
+    GuiAddKeyS("01A",438,48)
+    GuiAddKeyS("01B",476,48)
+    GuiAddKey("enter",526,68)
 
-    GuiAddKeyS("02C",94,128)
-    GuiAddKeyS("02D",132,128)
-    GuiAddKeyS("02E",170,128)
-    GuiAddKeyS("02F",208,128)
-    GuiAddKeyS("030",246,128)
-    GuiAddKeyS("031",284,128)
-    GuiAddKeyS("032",322,128)
-    GuiAddKeyS("033",360,128)
-    GuiAddKeyS("034",398,128)
-    GuiAddKeyS("035",436,128)
+    GuiAddKeyS("01E",75,88)
+    GuiAddKeyS("01F",113,88)
+    GuiAddKeyS("020",151,88)
+    GuiAddKeyS("021",189,88)
+    GuiAddKeyS("022",227,88)
+    GuiAddKeyS("023",265,88)
+    GuiAddKeyS("024",303,88)
+    GuiAddKeyS("025",341,88)
+    GuiAddKeyS("026",379,88)
+    GuiAddKeyS("027",417,88)
+    GuiAddKeyS("028",455,88)
 
-    GuiAddKey("space",246,168)
+    GuiAddKeyS("02C",88,128)
+    GuiAddKeyS("02D",126,128)
+    GuiAddKeyS("02E",164,128)
+    GuiAddKeyS("02F",202,128)
+    GuiAddKeyS("030",240,128)
+    GuiAddKeyS("031",278,128)
+    GuiAddKeyS("032",316,128)
+    GuiAddKeyS("033",354,128)
+    GuiAddKeyS("034",392,128)
+    GuiAddKeyS("035",430,128)
+
+    GuiAddKey("space",266,168)
 
     Gui, +AlwaysOnTop +ToolWindow
     Gui, Show, y%yposition% w776 h200 NoActivate, NEO-Bildschirmtastatur (neu!)
