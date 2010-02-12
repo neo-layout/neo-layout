@@ -236,7 +236,26 @@ Comp := ""
 RSC(sc,vk) {
   global
   vksc%sc% := "VK" . vk . "SC" . sc
-  dnkey := "*" . vksc%sc%
+  RKEY(vksc%sc%)
+}
+
+RSCN(sc,vk1,vk2) {
+  RKEY("VK" . vk1 . "SC" . sc)
+  RKEY("VK" . vk2 . "SC" . sc)
+}
+
+RKEY(key) {
+  RKEYN("*" . key)
+}
+
+RKEYS(keys) {
+  loop,parse,keys,`,
+  {
+    RKEY(A_Loopfield)
+  }
+}
+
+RKEYN(dnkey) {
   upkey := dnkey . " up"
   Hotkey,% dnkey,allstarhook
   Hotkey,% upkey,allstarhook
@@ -295,6 +314,31 @@ Layout00000407() {
   RSC("033","BC")
   RSC("034","BE")
   RSC("035","BD")
+; Numpad
+  RSC("145","90") ; NumLock
+  RSC("135","6F") ; NumpadDiv
+  RSC("037","6A") ; NumpadMult
+  RSC("04A","6D") ; NumpadSub
+  RSC("04E","6B") ; NumpadAdd
+  RSCN("047","67","24") ; Numpad7/NumpadHome
+  RSCN("048","68","26") ; Numpad8/NumpadUp
+  RSCN("049","69","21") ; Numpad9/NumpadPgUp
+  RSCN("04B","64","25") ; Numpad4/NumpadLeft
+  RSCN("04C","65","0C") ; Numpad5/NumpadClear
+  RSCN("04D","66","27") ; Numpad6/NumpadRight
+  RSCN("04F","61","23") ; Numpad1/NumpadEnd
+  RSCN("050","62","28") ; Numpad2/NumpadDown
+  RSCN("051","63","22") ; Numpad3/NumpadPgDn
+  RSCN("052","60","2D") ; Numpad0/NumpadIns
+  RSCN("053","6E","2E") ; NumpadDot/NumpadDel
+; Diverses
+  RKEYS("F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12")
+  RKEYS("space,enter,backspace")
+  RKEYS("del,ins,home,end,pgup,pgdn,up,down,left,right")
+; Diverses ohne *
+  RKEYN("tab")
+  RKEYN("esc")
+  RKEYN("numpadenter")
 ; Modifier
   RSC("02A","A0") ; M2L
   RSC("136","A1") ; M2R
@@ -483,6 +527,31 @@ Layout00000807() {
   RSC("033","BC")
   RSC("034","BE")
   RSC("035","BD")
+; Numpad
+  RSC("145","90") ; NumLock
+  RSC("135","6F") ; NumpadDiv
+  RSC("037","6A") ; NumpadMult
+  RSC("04A","6D") ; NumpadSub
+  RSC("04E","6B") ; NumpadAdd
+  RSCN("047","67","24") ; Numpad7/NumpadHome
+  RSCN("048","68","26") ; Numpad8/NumpadUp
+  RSCN("049","69","21") ; Numpad9/NumpadPgUp
+  RSCN("04B","64","25") ; Numpad4/NumpadLeft
+  RSCN("04C","65","0C") ; Numpad5/NumpadClear
+  RSCN("04D","66","27") ; Numpad6/NumpadRight
+  RSCN("04F","61","23") ; Numpad1/NumpadEnd
+  RSCN("050","62","28") ; Numpad2/NumpadDown
+  RSCN("051","63","22") ; Numpad3/NumpadPgDn
+  RSCN("052","60","2D") ; Numpad0/NumpadIns
+  RSCN("053","6E","2E") ; NumpadDot/NumpadDel
+; Diverses
+  RKEYS("F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12")
+  RKEYS("space,enter,backspace")
+  RKEYS("del,ins,home,end,pgup,pgdn,up,down,left,right")
+; Diverses ohne *
+  RKEYN("tab")
+  RKEYN("esc")
+  RKEYN("numpadenter")
 ; Modifier
   RSC("02A","A0") ; M2L
   RSC("136","A1") ; M2R
