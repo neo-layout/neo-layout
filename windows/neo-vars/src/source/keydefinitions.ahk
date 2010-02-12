@@ -54,55 +54,23 @@ EDS("034",0,".","•","'","S__N__3","ϑ","Θ") ; .
 EDS("035",1,"j","J",";",";"      ,"θ","↦") ; j
 
 ; Numpad
-ED("VK90SC145",0,"U000009","U000009","=","≠","≈","≡") ; NumLock
-ED("VK6FSC135",0,"S__NDiv","S__NDiv","÷","⌀","∣","⁄") ; NumpadDiv
-ED("VK6ASC037",0,"S__NMul","S__NMul","⋅","×","⊙","⊗") ; NumpadMult
-ED("VK6DSC04A",0,"S__NSub","S__NSub","−","∖","⊖","∸") ; NumpadSub
-ED("VK6BSC04E",0,"S__NAdd","S__NAdd","±","∓","⊕","∔") ; NumpadAdd
+EDS("145",0,"U000009","U000009","=","≠","≈","≡") ; NumLock
+EDS("135",0,"S__NDiv","S__NDiv","÷","⌀","∣","⁄") ; NumpadDiv
+EDS("037",0,"S__NMul","S__NMul","⋅","×","⊙","⊗") ; NumpadMult
+EDS("04A",0,"S__NSub","S__NSub","−","∖","⊖","∸") ; NumpadSub
+EDS("04E",0,"S__NAdd","S__NAdd","±","∓","⊕","∔") ; NumpadAdd
 
-;EDN("VK67SC047","VK24SC047",0,"S__N__7","U002714","U002195","S__NHom","U00226A","U002308") ; Numpad7, NumpadHome
-ED("VK67SC047",0,"S__N__7",""       ,"↕","S__NHom",""       ,"⌈") ; Numpad7
-ED("VK24SC047",0,"✔"      ,""       ,"≪","S_SNHom",""       ,"" ) ; NumpadHome == Numpad7 + Shift
-
-;EDN("VK68SC048","VK26SC048",0,"S__N__8","U002718","U002191","S__N_Up","U002229","U0022C2") ; Numpad8, NumpadUp
-ED("VK68SC048",0,"S__N__8",""       ,"↑","S__N_Up",""       ,"⋂") ; Numpad8
-ED("VK26SC048",0,"✘"      ,""       ,"∩","S_SN_Up",""       ,"" ) ; NumpadUp == Numpad8 + Shift
-
-;EDN("VK69SC049","VK21SC049",0,"S__N__9","U002020","U0020D7","S__NPUp","U00226B","U002309") ; Numpad9, NumpadPgUp
-ED("VK69SC049",0,"S__N__9",""       ,"⃗","S__NPUp",""       ,"⌉") ; Numpad9
-ED("VK21SC049",0,"†"      ,""       ,"≫","S_SNPUp",""       ,"" ) ; NumpadPgUp == Numpad9 + Shift
-
-;EDN("VK64SC04B","VK25SC04B",0,"S__N__4","U002663","U002190","S__N_Le","U002282","U002286") ; Numpad4, NumpadLeft
-ED("VK64SC04B",0,"S__N__4",""       ,"←","S__N_Le",""       ,"⊆") ; Numpad4
-ED("VK25SC04B",0,"♣"      ,""       ,"⊂","S_SN_Le",""       ,"" ) ; NumpadLeft == Numpad4 + Shift
-
-;EDN("VK65SC04C","VK0CSC04C",0,"S__N__5","U0020AC","U0000A6","S__NClr","U0022B6","U0022B7") ; Numpad5, NumpadClear
-ED("VK65SC04C",0,"S__N__5",""       ,"¦","S__NClr",""       ,"⊷") ; Numpad5
-ED("VK0CSC04C",0,"€"      ,""       ,"⊶","S_SNClr",""       ,"" ) ; NumpadClear == Numpad5 + Shift
-
-;EDN("VK66SC04D","VK27SC04D",0,"S__N__6","U002023","U002192","S__N_Ri","U002283","U002287") ; Numpad6, NumpadRight
-ED("VK66SC04D",0,"S__N__6",""       ,"→","S__N_Ri",""       ,"⊇") ; Numpad6
-ED("VK27SC04D",0,"‣"      ,""       ,"⊃","S_SN_Ri",""       ,"" ) ; NumpadRight == Numpad6 + Shift
-
-;EDN("VK61SC04F","VK23SC04F",0,"S__N__1","U002666","U002194","S__NEnd","U002264","U00230A") ; Numpad1, NumpadEnd
-ED("VK61SC04F",0,"S__N__1",""       ,"↔","S__NEnd",""       ,"⌊") ; Numpad1
-ED("VK23SC04F",0,"♦"      ,""       ,"≤","S_SNEnd",""       ,"" ) ; NumpadEnd == Numpad1 + Shift
-
-;EDN("VK62SC050","VK28SC050",0,"S__N__2","U002665","U002193","S__N_Dn","U00222A","U0022C3") ; Numpad2, NumpadDown
-ED("VK62SC050",0,"S__N__2",""       ,"↓","S__N_Dn",""       ,"⋃") ; Numpad2
-ED("VK28SC050",0,"♥"      ,""       ,"∪","S_SN_Dn",""       ,"" ) ; NumpadDown == Numpad2 + Shift
-
-;EDN("VK63SC051","VK22SC051",0,"S__N__3","U002660","U0021CC","S__NPDn","U002265","U00230B") ; Numpad3, NumpadPgDn
-ED("VK63SC051",0,"S__N__3",""       ,"⇌","S__NPDn",""       ,"⌋") ; Numpad3
-ED("VK22SC051",0,"♠"      ,""       ,"≥","S_SNPDn",""       ,"" ) ; NumpadPgDn == Numpad3 + Shift
-
-; EDN("VK60SC052","VK2DSC052",0,"S__N__0","U002423","U000025","S__NIns","U002030","U0025A1") ; Numpad0, NumpadIns
-ED("VK60SC052",0,"S__N__0",""       ,"%","S__NIns",""       ,"□") ; Numpad0
-ED("VK2DSC052",0,"␣"      ,""       ,"‰","S_SNIns",""       ,"" ) ; NumpadIns == Numpad0 + Shift
-
-; EDN("VK6ESC053","VK2ESC053",0,"S__NDot","U00002E","U00002C","S__NDel","U002032","U002033") ; NumpadDot, NumpadDel
-ED("VK6ESC053",0,"S__NDot",""       ,",","S__NDel",""       ,"″") ; NumpadDot
-ED("VK2ESC053",0,"."      ,""       ,"′","S_SNDel",""       ,"" ) ; NumpadDel == NumpadDot + Shift
+EDNS("047",0,"S__N__7","✔","↕","S__NHom","S_SNHom","≪","⌈") ; Numpad7
+EDNS("048",0,"S__N__8","✘","↑","S__N_Up","S_SN_Up","∩","⋂") ; Numpad8
+EDNS("049",0,"S__N__9","†","⃗","S__NPUp","S_SNPUp","≫","⌉") ; Numpad9
+EDNS("04B",0,"S__N__4","♣","←","S__N_Le","S_SN_Le","⊂","⊆") ; Numpad4
+EDNS("04C",0,"S__N__5","€","¦","S__NClr","S_SNClr","⊶","⊷") ; Numpad5
+EDNS("04D",0,"S__N__6","‣","→","S__N_Ri","S_SN_Ri","⊃","⊇") ; Numpad6
+EDNS("04F",0,"S__N__1","♦","↔","S__NEnd","S_SNEnd","≤","⌊") ; Numpad1
+EDNS("050",0,"S__N__2","♥","↓","S__N_Dn","S_SN_Dn","∪","⋃") ; Numpad2
+EDNS("051",0,"S__N__3","♠","⇌","S__NPDn","S_SNPDn","≥","⌋") ; Numpad3
+EDNS("052",0,"S__N__0","␣","%","S__NIns","S_SNIns","‰","□") ; Numpad0
+EDNS("053",0,"S__NDot",".",",","S__NDel","S_SNDel","′","″") ; NumpadDot
 
 ; other keys
 ED("space",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
@@ -205,6 +173,12 @@ EDS(scpos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
   ED(vksc%scpos%,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a,e8a)
 }
 
+EDNS(scpos,caps,e1a,e2a,e3a,e4a1,e4a2,e5a,e6a,e7a="",e8a="") {
+  global
+  ED(vkscn1%scpos%,caps,e1a,e2a,e3a,e4a1,e5a,e6a)
+  ED(vkscn2%scpos%,caps,e2a,e1a,e5a,e4a2,"","")
+}
+
 ED1(pos,e1a) {
  ED(pos,0,e1a,e1a,e1a,e1a,e1a,e1a)
 }
@@ -240,8 +214,11 @@ RSC(sc,vk) {
 }
 
 RSCN(sc,vk1,vk2) {
-  RKEY("VK" . vk1 . "SC" . sc)
-  RKEY("VK" . vk2 . "SC" . sc)
+  global
+  vkscn1%sc% := "VK" . vk1 . "SC" . sc
+  vkscn2%sc% := "VK" . vk2 . "SC" . sc
+  RKEY(vkscn1%sc%)
+  RKEY(vkscn2%sc%)
 }
 
 RKEY(key) {
