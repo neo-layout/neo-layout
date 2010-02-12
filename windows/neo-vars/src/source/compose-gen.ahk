@@ -76,6 +76,8 @@ DefineXKBSyms() {
   DefineXKBSym("dead_diaeresis"    ,"T__drss")
   DefineXKBSym("dead_doubleacute"  ,"T__dbac")
   DefineXKBSym("dead_stroke"       ,"T__strk")
+  DefineXKBSym("U02DE"             ,"T__hook")
+  DefineXKBSym("U21BB"             ,"T__turn")
   DefineXKBSym("dead_iota"         ,"T__iota")    ; not assigned a dead key in NEO
   DefineXKBSym("dead_voiced_sound" ,"T__vsnd")    ; not assigned a dead key in NEO
   DefineXKBSym("dead_semivoiced_sound","T__ssnd") ; not assigned a dead key in NEO
@@ -1925,6 +1927,11 @@ LoadCurrentCompose() {
     ComposePath := "..\..\..\Compose\src"
     LoadCurrentComposeFile(ComposePath . "\en_US.UTF-8")
     LoadCurrentComposeFile(ComposePath . "\base.module")
+    LoadCurrentComposeFile(ComposePath . "\cyrillic.module")
+    LoadCurrentComposeFile(ComposePath . "\fast.module")
+    LoadCurrentComposeFile(ComposePath . "\greek.module")
+    LoadCurrentComposeFile(ComposePath . "\lang.module")
+    LoadCurrentComposeFile(ComposePath . "\math.module")
     TrayTip,Compose-Konvertierung,Konvertierung abgeschlossen!,10,1
   return
 }
