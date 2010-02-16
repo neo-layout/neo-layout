@@ -833,8 +833,7 @@
 <dead_stroke> <Greek_rho>                                            : "ϼ"   U03FC # GREEK RHO WITH STROKE SYMBOL
 <U21BB> <U03F5>                                                      : "϶"   U03F6 # GREEK REVERSED LUNATE EPSILON SYMBOL
 
-# archaic greek, not supported at the moment
-# Ϟϟ Ϡϡ (ϺϻͰͱ), Ϲϲ
+# archaic greek, not supported at the moment: Ϟϟ Ϡϡ Ϻϻ Ͱͱ
 <Multi_key> <g> <F>                                                  : "Ϝ"   U03DC # GREEK LETTER DIGAMMA
 <Multi_key> <G> <F>                                                  : "Ϝ"   U03DC # GREEK LETTER DIGAMMA
 <Multi_key> <g> <f>                                                  : "ϝ"   U03DD # GREEK SMALL LETTER DIGAMMA
@@ -842,24 +841,33 @@
 <Multi_key> <G> <Q>                                                  : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
 <Multi_key> <g> <q>                                                  : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
 <Multi_key> <g> <j>                                                  : "ϳ"   U03F3 # GREEK LETTER YOT
-#<Multi_key> <g> <C>                                                  : "Ϲ"   U03F9 # GREEK CAPITAL LUNATE SIGMA SYMBOL
-#<Multi_key> <G> <C>                                                  : "Ϲ"   U03F9 # GREEK CAPITAL LUNATE SIGMA SYMBOL
-#<Multi_key> <g> <c>                                                  : "ϲ"   U03F2 # GREEK LUNATE SIGMA SYMBOL
+<Multi_key> <g> <C>                                                  : "Ϲ"   U03F9 # GREEK CAPITAL LUNATE SIGMA SYMBOL
+<Multi_key> <G> <C>                                                  : "Ϲ"   U03F9 # GREEK CAPITAL LUNATE SIGMA SYMBOL
+<Multi_key> <g> <c>                                                  : "ϲ"   U03F2 # GREEK LUNATE SIGMA SYMBOL
 
-# not available as letters are not on keyboard, see neo_griechisch
-#<U21BB> <U03F2>                                                      : "ͻ"   U037B # GREEK SMALL REVERSED LUNATE SIGMA SYMBOL
-#<dead_abovedot> <U03F2>                                              : "ͼ"   U037C # GREEK SMALL DOTTED LUNATE SIGMA SYMBOL
-#<dead_abovedot> <U21BB> <U03F2>                                      : "ͽ"   U037D # GREEK SMALL REVERSED DOTTED LUNATE SIGMA SYMBOL
-#<U21BB> <U03F9>                                                      : "Ͻ"   U03FD # GREEK CAPITAL REVERSED LUNATE SIGMA SYMBOL
-#<dead_abovedot> <U03F9>                                              : "Ͼ"   U03FE # GREEK CAPITAL DOTTED LUNATE SIGMA SYMBOL
-#<dead_abovedot> <U21BB> <U03F9>                                      : "Ͽ"   U03FF # GREEK CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL
+# direct versions not available as letters are not on keyboard
+<U21BB> <U03F2>                                                      : "ͻ"   U037B # GREEK SMALL REVERSED LUNATE SIGMA SYMBOL
+<U21BB> <Multi_key> <g> <c>                                          : "ͻ"   U037B # GREEK SMALL REVERSED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U03F2>                                              : "ͼ"   U037C # GREEK SMALL DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <Multi_key> <g> <c>                                  : "ͼ"   U037C # GREEK SMALL DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U21BB> <U03F2>                                      : "ͽ"   U037D # GREEK SMALL REVERSED DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U21BB> <Multi_key> <g> <c>                          : "ͽ"   U037D # GREEK SMALL REVERSED DOTTED LUNATE SIGMA SYMBOL
+<U21BB> <U03F9>                                                      : "Ͻ"   U03FD # GREEK CAPITAL REVERSED LUNATE SIGMA SYMBOL
+<U21BB> <Multi_key> <g> <C>                                          : "Ͻ"   U03FD # GREEK CAPITAL REVERSED LUNATE SIGMA SYMBOL
+<U21BB> <Multi_key> <G> <C>                                          : "Ͻ"   U03FD # GREEK CAPITAL REVERSED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U03F9>                                              : "Ͼ"   U03FE # GREEK CAPITAL DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <Multi_key> <g> <C>                                  : "Ͼ"   U03FE # GREEK CAPITAL DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <Multi_key> <G> <C>                                  : "Ͼ"   U03FE # GREEK CAPITAL DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U21BB> <U03F9>                                      : "Ͽ"   U03FF # GREEK CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U21BB> <Multi_key> <g> <C>                          : "Ͽ"   U03FF # GREEK CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL
+<dead_abovedot> <U21BB> <Multi_key> <G> <C>                          : "Ͽ"   U03FF # GREEK CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL
 
-# older/alternative version by ♫··, to be discussed
-#<Multi_key> <U03DE> <U03DE>                                          : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
-#<Multi_key> <U03DF> <U03DF>                                          : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
-#<Multi_key> <U03DC> <U03DC>                                          : "Ͷ"   U0376 # GREEK CAPITAL LETTER PAMPHYLIAN DIGAMMA
-#<Multi_key> <U03DD> <U03DD>                                          : "ͷ"   U0377 # GREEK SMALL LETTER PAMPHYLIAN DIGAMMA
-#<Multi_key> <U03E0> <U03E0>                                          : "Ͳ"   U0372 # GREEK CAPITAL LETTER ARCHAIC SAMPI
-#<Multi_key> <U03E1> <U03E1>                                          : "ͳ"   U0373 # GREEK SMALL LETTER ARCHAIC SAMPI
+# older/alternative version by ♫··
+<Multi_key> <U03DE> <U03DE>                                          : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
+<Multi_key> <U03DF> <U03DF>                                          : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
+<Multi_key> <U03DC> <U03DC>                                          : "Ͷ"   U0376 # GREEK CAPITAL LETTER PAMPHYLIAN DIGAMMA
+<Multi_key> <U03DD> <U03DD>                                          : "ͷ"   U0377 # GREEK SMALL LETTER PAMPHYLIAN DIGAMMA
+<Multi_key> <U03E0> <U03E0>                                          : "Ͳ"   U0372 # GREEK CAPITAL LETTER ARCHAIC SAMPI
+<Multi_key> <U03E1> <U03E1>                                          : "ͳ"   U0373 # GREEK SMALL LETTER ARCHAIC SAMPI
 
 # End of additional Definitions (greek letters) by Neo keyboard layout
