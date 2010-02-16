@@ -418,6 +418,7 @@
 <Multi_key> <g> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <G> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <O> <U>                               : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
+<Multi_key> <Greek_OMICRON> <Greek_UPSILON>       : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <Greek_omicron> <Greek_upsilon>       : "ȣ" U0223 # LATIN SMALL LETTER OU
 <Multi_key> <g> <u>                               : "ȣ" U0223 # LATIN SMALL LETTER OU
 <U21BB> <propto>                                  : "ȣ" U0223 # LATIN SMALL LETTER OU

@@ -862,6 +862,9 @@
 <dead_abovedot> <U21BB> <Multi_key> <g> <C>                          : "Ͽ"   U03FF # GREEK CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL
 <dead_abovedot> <U21BB> <Multi_key> <G> <C>                          : "Ͽ"   U03FF # GREEK CAPITAL REVERSED DOTTED LUNATE SIGMA SYMBOL
 
+# numeral sign turn
+<U21BB> <U0374>                                                      : "͵"   U0375 # GREEK LOWER NUMERAL SIGN
+
 # older/alternative version by ♫··
 <Multi_key> <U03DE> <U03DE>                                          : "Ϙ"   U03D8 # GREEK LETTER ARCHAIC KOPPA
 <Multi_key> <U03DF> <U03DF>                                          : "ϙ"   U03D9 # GREEK SMALL LETTER ARCHAIC KOPPA
