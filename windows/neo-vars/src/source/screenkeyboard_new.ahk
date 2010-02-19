@@ -5,7 +5,7 @@ BSTNalwaysOnTop := 1
 
 CP3F2 := "P_BSTNt"
 
-UnZipLocalFile := ApplicationFolder . "\unzip.exe"
+UnZipLocalFile := ResourceFolder . "\unzip.exe"
 UnZipSourceLink := "http://stahlworks.com/dev/unzip.exe"
 
 UniFontVersion  := "2.30"
@@ -13,11 +13,12 @@ UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
 
 UniFontZipFilename   := "dejavu-fonts-ttf-" . UniFontVersion . ".zip"
-UniFontZipLocalFile  := ApplicationFolder . "\" . UniFontZipFilename
+UniFontZipLocalFile  := ResourceFolder . "\" . UniFontZipFilename
 
 UniFontZipSourceLink := "http://downloads.sourceforge.net/project/dejavu/dejavu/" . UniFontVersion . "/" . UniFontZipFilename
 
-UniFontLocalFile := ApplicationFolder . "/" . UniFontFilename
+UniFontLocalFilePath := ApplicationFolder
+UniFontLocalFile := UniFontLocalFilePath . "/" . UniFontFilename
 UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "/ttf/" . UniFontFilename
 
 BSTNUpdate() {
@@ -92,6 +93,7 @@ BSTNToggle() {
   if (BSTNguiErstellt) {
     BSTNguiErstellt := 0
     Gui, Destroy
+    DllCall( "GDI32.DLL\RemoveFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
   } else {
     if (FileExist(ResourceFolder)!="") {
       FileInstall,ebene0.png,%ResourceFolder%\ebene0.png,1
@@ -112,7 +114,7 @@ BSTNToggle() {
       }
 
       Progress,80,Entpacken des Archivs ...
-      RunWait,% """" . UnZipLocalFile . """ -j """ . UniFontZipLocalFile . """ """ . UniFontZipFontPath . """",%ApplicationFolder%,Hide
+      RunWait,% """" . UnZipLocalFile . """ -j """ . UniFontZipLocalFile . """ """ . UniFontZipFontPath . """",%UniFontLocalFilePath%,Hide
       Progress,OFF
     }
 
