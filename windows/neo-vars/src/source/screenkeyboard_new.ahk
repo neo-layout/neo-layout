@@ -41,7 +41,7 @@ BSTNUpdate() {
         } else if (CD%GuiComp% != "") {
           GuiComp := CD%GuiComp%
         } else if (CM%GuiComp% == 1) {
-          GuiComp := "U00002A"
+          GuiComp := "U00002AU00002A"
         } else if (Comp != "") {
           GuiComp := ""
         }
@@ -82,7 +82,9 @@ GuiAddKeySN(sc,x,y) {
 
 GuiAddKey(key,x,y) {
   global
-  Gui, Add, Text, x%x% y%y% Center hwndGuiKey%key% BackgroundTrans, MM
+  x:=x-4
+  y:=y-10
+  Gui, Add, Text, x%x% y%y% w38 h38 Center 0x200 hwndGuiKey%key% BackgroundTrans
   GuiKeyList := GuiKeyList . key . ","
 }
 
