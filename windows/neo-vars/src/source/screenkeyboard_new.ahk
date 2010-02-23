@@ -113,6 +113,9 @@ CharProc_BSTN0() {
 
 CharProc_BSTN1() {
   global
+  if (GuiCurrent!="")
+    %GuiCurrent%OnClose()
+
   if (FileExist(ResourceFolder)!="") {
     FileInstall,ebene0.png,%ResourceFolder%\ebene0.png,1
   }
