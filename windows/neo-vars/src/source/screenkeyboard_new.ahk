@@ -35,15 +35,23 @@ BSTNUpdate() {
           }
         } else
           GuiEb := EbeneC
-        GuiComp := Comp . CP%GuiEb%%GuiPhysKey%
-        if (GSYM%GuiComp% != "") {
-          GuiComp := GSYM%GuiComp%
-        } else if (CD%GuiComp% != "") {
-          GuiComp := CD%GuiComp%
-        } else if (CM%GuiComp% == 1) {
-          GuiComp := "U00002AU00002A"
-        } else if (Comp != "") {
-          GuiComp := ""
+	CurrentComp := Comp
+        GuiComp := ""
+rerun_bstnupdate:
+        GuiComp1 := CurrentComp . CP%GuiEb%%GuiPhysKey%
+        if (GSYM%GuiComp1% != "") {
+          GuiComp .= GSYM%GuiComp1%
+        } else if (CD%GuiComp1% != "") {
+          GuiComp .= CD%GuiComp1%
+        } else if (CM%GuiComp1% == 1) {
+          GuiComp .= "U00002AU00002A"
+        } else if (CF%CurrentComp% != "") {
+	  if (IM%GuiPhysKey% != 1)
+            GuiComp .= CF%CurrentComp%
+	  CurrentComp := ""
+          goto rerun_bstnupdate
+        } else if (CurrentComp = "") {
+          GuiComp .= GuiComp1
         }
 	GuiPos := 0
         loop {
@@ -73,6 +81,13 @@ BSTNUpdate() {
 GuiAddKeyS(sc,x,y) {
   global
   GuiAddKey(vksc%sc%,x,y)
+}
+
+GuiAddKeySM(sc,x,y) {
+  global
+  vksc := vksc%sc%
+  IM%vksc% := 1
+  GuiAddKey(vksc,x,y)
 }
 
 GuiAddKeySN(sc,x,y) {
@@ -178,7 +193,7 @@ CharProc_BSTN1() {
   GuiAddKeyS("01B",476,48)
   GuiAddKey("enter",526,68)
 
-  GuiAddKeyS("03A",18,88)
+  GuiAddKeySM("03A",18,88)
   GuiAddKeyS("01E",75,88)
   GuiAddKeyS("01F",113,88)
   GuiAddKeyS("020",151,88)
@@ -190,10 +205,10 @@ CharProc_BSTN1() {
   GuiAddKeyS("026",379,88)
   GuiAddKeyS("027",417,88)
   GuiAddKeyS("028",455,88)
-  GuiAddKeyS("02B",493,88)
+  GuiAddKeySM("02B",493,88)
 
-  GuiAddKeyS("02A",8,128)
-  GuiAddKeyS("056",50,128)
+  GuiAddKeySM("02A",8,128)
+  GuiAddKeySM("056",50,128)
   GuiAddKeyS("02C",88,128)
   GuiAddKeyS("02D",126,128)
   GuiAddKeyS("02E",164,128)
@@ -204,10 +219,10 @@ CharProc_BSTN1() {
   GuiAddKeyS("033",354,128)
   GuiAddKeyS("034",392,128)
   GuiAddKeyS("035",430,128)
-  GuiAddKeyS("136",498,128)
+  GuiAddKeySM("136",498,128)
 
   GuiAddKey("space",264,168)
-  GuiAddKeyS("138",430,168)
+  GuiAddKeySM("138",430,168)
 
   GuiAddKeyS("145",582,9)
   GuiAddKeyS("135",620,9)
