@@ -226,7 +226,7 @@ CharProc_BSTN1() {
   GuiAddKeySN("052",601,168)
   GuiAddKeySN("053",658,168)
   Gui, +AlwaysOnTop +ToolWindow
-  Gui, Show, y%yposition% w776 h200 NoActivate, NEO-Bildschirmtastatur (neu!)
+  Gui, Show, y%yposition% w729 h199 NoActivate, NEO-Bildschirmtastatur (neu!)
   BSTNUpdate()
   BSTNalwaysOnTop := 1
   GuiCurrent := "BSTN"
