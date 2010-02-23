@@ -48,6 +48,9 @@ BSTToggle() {
     GuiCurrent := ""
     Gui, Destroy
   } else {
+    if (GuiCurrent!="")
+      %GuiCurrent%OnClose()
+
     SysGet, WorkArea, MonitorWorkArea
     yPosition := WorkAreaBottom - 230
     Gui, Color, FFFFFF
