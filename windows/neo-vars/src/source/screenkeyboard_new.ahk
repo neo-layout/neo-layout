@@ -3,8 +3,6 @@
 BSTNguiErstellt := 0
 BSTNalwaysOnTop := 1
 
-CP3F2 := "P_BSTNt"
-
 UnZipLocalFile := ResourceFolder . "\unzip.exe"
 UnZipSourceLink := "http://stahlworks.com/dev/unzip.exe"
 
@@ -88,134 +86,150 @@ GuiAddKey(key,x,y) {
   GuiKeyList := GuiKeyList . key . ","
 }
 
-BSTNToggle() {
+CharProc_BSTNt() {
   global
-  if (BSTNguiErstellt) {
-    BSTNguiErstellt := 0
-    Gui, Destroy
-    DllCall( "GDI32.DLL\RemoveFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
-  } else {
-    if (FileExist(ResourceFolder)!="") {
-      FileInstall,ebene0.png,%ResourceFolder%\ebene0.png,1
-    }
+  ; Bildschirmtastatur togglen
+  useBSTN := !(useBSTN)
+  if (useBSTN)
+    CharProc_BSTN1()
+  else
+    CharProc_BSTN0()
+}
 
-    if (FileExist(UniFontLocalFile)=="") {
-      if (FileExist(UnZipLocalFile)=="") {
-        Progress,0,,Herunterladen des Entpack-Programms ...
-        UrlDownloadToFile,%UnZipSourceLink%,%UnZipLocalFile%
-        if (FileExist(UnZipLocalFile)=="") {
-          Msgbox,Konnte Unzip-Programm nicht finden und nicht installieren!
-        }
-      }
+BSTNOnClose() {
+  global
+  useBSTN := 0
+  CharProc_BSTN0()
+}
 
-      if (FileExist(UniFontZipLocalFile)=="") {
-        Progress,20,Herunterladen des Fonts ...
-        UrlDownloadToFile,%UniFontZipSourceLink%,%UniFontZipLocalFile%
-      }
+CharProc_BSTN0() {
+  global
+  GuiCurrent := ""
+  Gui, Destroy
+  DllCall( "GDI32.DLL\RemoveFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
+}
 
-      Progress,80,Entpacken des Archivs ...
-      RunWait,% """" . UnZipLocalFile . """ -j """ . UniFontZipLocalFile . """ """ . UniFontZipFontPath . """",%UniFontLocalFilePath%,Hide
-      Progress,OFF
-    }
-
-    DllCall( "GDI32.DLL\AddFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
-
-
-    SysGet, WorkArea, MonitorWorkArea
-    yPosition := WorkAreaBottom - 230
-    Gui, Color, FFFFFF
-    Gui, Add, Picture,AltSubmit x0   y0          vPicture0, % ResourceFolder . "\ebene0.png"
-    Gui, Font, s12 bold, %UniFontName%
-    GuiKeyList := ""
-    GuiAddKeyS("029",6,9)
-    GuiAddKeyS("002",44,9)
-    GuiAddKeyS("003",82,9)
-    GuiAddKeyS("004",120,9)
-    GuiAddKeyS("005",158,9)
-    GuiAddKeyS("006",196,9)
-    GuiAddKeyS("007",234,9)
-    GuiAddKeyS("008",272,9)
-    GuiAddKeyS("009",310,9)
-    GuiAddKeyS("00A",348,9)
-    GuiAddKeyS("00B",386,9)
-    GuiAddKeyS("00C",424,9)
-    GuiAddKeyS("00D",462,9)
-    GuiAddKey("backspace",510,9)
-
-    GuiAddKey("tab",10,48)
-    GuiAddKeyS("010",58,48)
-    GuiAddKeyS("011",96,48)
-    GuiAddKeyS("012",134,48)
-    GuiAddKeyS("013",172,48)
-    GuiAddKeyS("014",210,48)
-    GuiAddKeyS("015",248,48)
-    GuiAddKeyS("016",286,48)
-    GuiAddKeyS("017",324,48)
-    GuiAddKeyS("018",362,48)
-    GuiAddKeyS("019",400,48)
-    GuiAddKeyS("01A",438,48)
-    GuiAddKeyS("01B",476,48)
-    GuiAddKey("enter",526,68)
-
-    GuiAddKeyS("03A",18,88)
-    GuiAddKeyS("01E",75,88)
-    GuiAddKeyS("01F",113,88)
-    GuiAddKeyS("020",151,88)
-    GuiAddKeyS("021",189,88)
-    GuiAddKeyS("022",227,88)
-    GuiAddKeyS("023",265,88)
-    GuiAddKeyS("024",303,88)
-    GuiAddKeyS("025",341,88)
-    GuiAddKeyS("026",379,88)
-    GuiAddKeyS("027",417,88)
-    GuiAddKeyS("028",455,88)
-    GuiAddKeyS("02B",493,88)
-
-    GuiAddKeyS("02A",8,128)
-    GuiAddKeyS("056",50,128)
-    GuiAddKeyS("02C",88,128)
-    GuiAddKeyS("02D",126,128)
-    GuiAddKeyS("02E",164,128)
-    GuiAddKeyS("02F",202,128)
-    GuiAddKeyS("030",240,128)
-    GuiAddKeyS("031",278,128)
-    GuiAddKeyS("032",316,128)
-    GuiAddKeyS("033",354,128)
-    GuiAddKeyS("034",392,128)
-    GuiAddKeyS("035",430,128)
-    GuiAddKeyS("136",498,128)
-
-    GuiAddKey("space",264,168)
-    GuiAddKeyS("138",430,168)
-
-    GuiAddKeyS("145",582,9)
-    GuiAddKeyS("135",620,9)
-    GuiAddKeyS("037",658,9)
-    GuiAddKeyS("04A",696,9)
-
-    GuiAddKeySN("047",582,48)
-    GuiAddKeySN("048",620,48)
-    GuiAddKeySN("049",658,48)
-    GuiAddKeyS("04E",696,68)
-
-    GuiAddKeySN("04B",582,88)
-    GuiAddKeySN("04C",620,88)
-    GuiAddKeySN("04D",658,88)
-
-    GuiAddKeySN("04F",582,128)
-    GuiAddKeySN("050",620,128)
-    GuiAddKeySN("051",658,128)
-    GuiAddKey("numpadenter",696,148)
-
-    GuiAddKeySN("052",601,168)
-    GuiAddKeySN("053",658,168)
-
-    Gui, +AlwaysOnTop +ToolWindow
-    Gui, Show, y%yposition% w776 h200 NoActivate, NEO-Bildschirmtastatur (neu!)
-    BSTNguiErstellt := 1
-    BSTNUpdate()
-    BSTNalwaysOnTop := 1
+CharProc_BSTN1() {
+  global
+  if (FileExist(ResourceFolder)!="") {
+    FileInstall,ebene0.png,%ResourceFolder%\ebene0.png,1
   }
+
+  if (FileExist(UniFontLocalFile)=="") {
+    if (FileExist(UnZipLocalFile)=="") {
+      Progress,0,,Herunterladen des Entpack-Programms ...
+      UrlDownloadToFile,%UnZipSourceLink%,%UnZipLocalFile%
+      if (FileExist(UnZipLocalFile)=="") {
+        Msgbox,Konnte Unzip-Programm nicht finden und nicht installieren!
+      }
+    }
+
+    if (FileExist(UniFontZipLocalFile)=="") {
+      Progress,20,Herunterladen des Fonts ...
+      UrlDownloadToFile,%UniFontZipSourceLink%,%UniFontZipLocalFile%
+    }
+
+    Progress,80,Entpacken des Archivs ...
+    RunWait,% """" . UnZipLocalFile . """ -j """ . UniFontZipLocalFile . """ """ . UniFontZipFontPath . """",%UniFontLocalFilePath%,Hide
+    Progress,OFF
+  }
+
+  DllCall( "GDI32.DLL\AddFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
+
+
+  SysGet, WorkArea, MonitorWorkArea
+  yPosition := WorkAreaBottom - 230
+  Gui, Color, FFFFFF
+  Gui, Add, Picture,AltSubmit x0   y0          vPicture0, % ResourceFolder . "\ebene0.png"
+  Gui, Font, s12 bold, %UniFontName%
+  GuiKeyList := ""
+  GuiAddKeyS("029",6,9)
+  GuiAddKeyS("002",44,9)
+  GuiAddKeyS("003",82,9)
+  GuiAddKeyS("004",120,9)
+  GuiAddKeyS("005",158,9)
+  GuiAddKeyS("006",196,9)
+  GuiAddKeyS("007",234,9)
+  GuiAddKeyS("008",272,9)
+  GuiAddKeyS("009",310,9)
+  GuiAddKeyS("00A",348,9)
+  GuiAddKeyS("00B",386,9)
+  GuiAddKeyS("00C",424,9)
+  GuiAddKeyS("00D",462,9)
+  GuiAddKey("backspace",510,9)
+
+  GuiAddKey("tab",10,48)
+  GuiAddKeyS("010",58,48)
+  GuiAddKeyS("011",96,48)
+  GuiAddKeyS("012",134,48)
+  GuiAddKeyS("013",172,48)
+  GuiAddKeyS("014",210,48)
+  GuiAddKeyS("015",248,48)
+  GuiAddKeyS("016",286,48)
+  GuiAddKeyS("017",324,48)
+  GuiAddKeyS("018",362,48)
+  GuiAddKeyS("019",400,48)
+  GuiAddKeyS("01A",438,48)
+  GuiAddKeyS("01B",476,48)
+  GuiAddKey("enter",526,68)
+
+  GuiAddKeyS("03A",18,88)
+  GuiAddKeyS("01E",75,88)
+  GuiAddKeyS("01F",113,88)
+  GuiAddKeyS("020",151,88)
+  GuiAddKeyS("021",189,88)
+  GuiAddKeyS("022",227,88)
+  GuiAddKeyS("023",265,88)
+  GuiAddKeyS("024",303,88)
+  GuiAddKeyS("025",341,88)
+  GuiAddKeyS("026",379,88)
+  GuiAddKeyS("027",417,88)
+  GuiAddKeyS("028",455,88)
+  GuiAddKeyS("02B",493,88)
+
+  GuiAddKeyS("02A",8,128)
+  GuiAddKeyS("056",50,128)
+  GuiAddKeyS("02C",88,128)
+  GuiAddKeyS("02D",126,128)
+  GuiAddKeyS("02E",164,128)
+  GuiAddKeyS("02F",202,128)
+  GuiAddKeyS("030",240,128)
+  GuiAddKeyS("031",278,128)
+  GuiAddKeyS("032",316,128)
+  GuiAddKeyS("033",354,128)
+  GuiAddKeyS("034",392,128)
+  GuiAddKeyS("035",430,128)
+  GuiAddKeyS("136",498,128)
+
+  GuiAddKey("space",264,168)
+  GuiAddKeyS("138",430,168)
+
+  GuiAddKeyS("145",582,9)
+  GuiAddKeyS("135",620,9)
+  GuiAddKeyS("037",658,9)
+  GuiAddKeyS("04A",696,9)
+
+  GuiAddKeySN("047",582,48)
+  GuiAddKeySN("048",620,48)
+  GuiAddKeySN("049",658,48)
+  GuiAddKeyS("04E",696,68)
+
+  GuiAddKeySN("04B",582,88)
+  GuiAddKeySN("04C",620,88)
+  GuiAddKeySN("04D",658,88)
+
+  GuiAddKeySN("04F",582,128)
+  GuiAddKeySN("050",620,128)
+  GuiAddKeySN("051",658,128)
+  GuiAddKey("numpadenter",696,148)
+
+  GuiAddKeySN("052",601,168)
+  GuiAddKeySN("053",658,168)
+  Gui, +AlwaysOnTop +ToolWindow
+  Gui, Show, y%yposition% w776 h200 NoActivate, NEO-Bildschirmtastatur (neu!)
+  BSTNUpdate()
+  BSTNalwaysOnTop := 1
+  GuiCurrent := "BSTN"
 }
 
 BSTNToggleAlwaysOnTop() {
@@ -227,12 +241,6 @@ BSTNToggleAlwaysOnTop() {
     Gui, +AlwaysOnTop
     BSTNalwaysOnTop := 1
   }
-}
-
-CharProc_BSTNt() {
-  global
-  ; Bildschirmtastatur Ein/Aus
-  BSTNToggle()
 }
 
 CharProc_BSTNA() {
@@ -339,4 +347,15 @@ BSTNSymbols() {
   GUISYM("U00202F",">⍽<")
 }
 
-BSTNSymbols()
+BSTNRegister() {
+  global
+
+  CP3F2 := "P_BSTNt"
+  BSTNSymbols()
+
+  IniRead,useBSTN,%ini%,Global,useBSTN,0
+  if (useBSTN)
+    CharProc_BSTN1()
+}
+
+BSTNRegister()

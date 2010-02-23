@@ -28,7 +28,7 @@ NEOEbeneAktualisieren() {
     else
       BSTSwitch(EbeneNC)
   }
-  if (BSTNguiErstellt)
+  if (useBSTN)
     BSTNUpdate()
 }
 

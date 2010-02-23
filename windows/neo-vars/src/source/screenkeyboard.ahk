@@ -32,10 +32,20 @@ BSTSwitch(Eb) {
   }
 }
 
+BSTOnClose() {
+  global
+  if (BSTguiErstellt) {
+    BSTguiErstellt := 0
+    GuiCurrent := ""
+    Gui, Destroy
+  }
+}
+
 BSTToggle() {
   global
   if (BSTguiErstellt) {
     BSTguiErstellt := 0
+    GuiCurrent := ""
     Gui, Destroy
   } else {
     SysGet, WorkArea, MonitorWorkArea
@@ -55,6 +65,7 @@ BSTToggle() {
     BSTguiErstellt := 1
     BSTSwitch(EbeneNC)
     BSTalwaysOnTop := 1
+    GuiCurrent := "BST"
   }
 }
 
