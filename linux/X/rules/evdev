@@ -910,6 +910,17 @@
 ! layout[4]	variant[4]	=	compat
   de		neo			=	+neo_mods:4
 
+! layout    variant     =   geometry
+  de        neo         =   pc(pc105)
+! layout[1] variant[1]  =   geometry
+  de        neo         =   pc(pc105)
+! layout[2] variant[2]  =   geometry
+  de        neo         =   pc(pc105)
+! layout[3] variant[3]  =   geometry
+  de        neo         =   pc(pc105)
+! layout[4] variant[4]  =   geometry
+  de        neo         =   pc(pc105)
+
 ! model		layout		=	compat
   pc98		nec_vndr/jp	=	pc98(basic)
   *		jp		=	complete+japan
