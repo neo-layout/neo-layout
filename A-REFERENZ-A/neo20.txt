@@ -86,27 +86,27 @@ Zu den Akzenten siehe auch
 
 T1 („Tote Taste 1“: Taste links neben der 1)
 ┌─────┐ 1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
-│˜ ˇ ¯│ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
-│ˆ ˚ ˘│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
-└─────┘ 4 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
-        5 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
-        6 … Toter Makron (sieht aus wie U+00AF MACRON)
+│ˇ ˙ .│ 2 … Toter Caron/Hatschek (sieht aus wie U+02C7 CARON)
+│ˆ ↻ ˞│ 3 … Totes Drehen (sieht aus wie U+21BB CLOCKWISE OPEN CIRCLE ARROW)
+└─────┘ 4 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
+        5 … Toter Haken (sieht aus wie U+02DE MODIFIER LETTER RHOTIC HOOK)
+        6 … Toter Punkt darunter (sieht aus wie U+002E FULL STOP)
 
 T2 („Tote Taste 2“: zwei Tasten rechts neben der 0)
 ┌─────┐ 1 … Toter Gravis (sieht aus wie U+02CB MODIFIER LETTER GRAVE ACCENT)
-│↻  ̏ ˞│ 2 … Totes Drehen (sieht aus wie U+21BB CLOCKWISE OPEN CIRCLE ARROW)
-│` ¨ ῾│ 3 … Totes Trema (sieht aus wie U+00A8 DIAERESIS)
-└─────┘ 4 … Toter Doppelgravis (sieht aus wie U+030F COMBINING DOUBLE GRAVE ACCENT)
+│¸ ¨ ¯│ 2 … Tote Cedille (sieht aus wie U+00B8 CEDILLA)
+│` ˚ ῾│ 3 … Toter Ring (sieht aus wie U+02DA RING ABOVE)
+└─────┘ 4 … Totes Trema (sieht aus wie U+00A8 DIAERESIS)
         5 … Toter Spiritus asper (sieht aus wie U+1FFE GREEK DASIA)
-        6 … Toter Haken (sieht aus wie U+02DE MODIFIER LETTER RHOTIC HOOK)
+        6 … Toter Makron (sieht aus wie U+00AF MACRON)
 
 T3 („Tote Taste 3“: Taste rechts neben dem scharfen s (ß))
 ┌─────┐ 1 … Toter Akut (sieht aus wie U+02CA MODIFIER LETTER ACUTE ACCENT)
-│¸ ˝ ˙│ 2 … Tote Cedille (sieht aus wie U+00B8 CEDILLA)
+│˜ ˝ ˘│ 2 … Tote Tilde (sieht aus wie U+02DC SMALL TILDE)
 │´ / ᾿│ 3 … Toter Quer-/Schrägstrich (sieht aus wie U+02D7 MODIFIER LETTER MINUS SIGN oder wie U+002F SOLIDUS)
 └─────┘ 4 … Toter Doppelakut (sieht aus wie U+02DD DOUBLE ACUTE ACCENT)
         5 … Toter Spiritus lenis (sieht aus wie U+1FBF GREEK PSILI), Haken (viet.: dấu hỏi) für lateinische Vokale
-        6 … Toter Punkt darüber (sieht aus wie U+02D9 DOT ABOVE)
+        6 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
 
 ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
 gleich erscheinen, sondern nur in Kombination mit einem weiteren Buchstaben) werden
@@ -193,16 +193,16 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Alle Ebenen – Haupttastatur ===
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐
-│˜ ˇ ¯│° ª ¬│§ º ∨│ℓ № ∧│» ⇞ ⊥│« · ∡│$ £ ∥│€ ¤ →│„ ⇥ ∞│“ / ∝│” * ∅│— - ╌│↻ ̏  ˞│Backspace│
-│ˆ ˚ ˘│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ♀│5 ‹ ♂│6 ¢ ⚥│7 ¥ ϰ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│-   ‑│` ¨ ῾│    ⌫    │
+│ˇ ˙ .│° ª ¬│§ º ∨│ℓ № ∧│»   ⊥│« · ∡│$ £ ∥│€ ¤ →│„ ⇥ ∞│“ / ∝│” * ∅│— - ╌│¸ ¨ ¯│Backspace│
+│ˆ ↻ ˞│1 ¹ ₁│2 ² ₂│3 ³ ₃│4 › ♀│5 ‹ ♂│6 ¢ ⚥│7 ¥ ϰ│8 ‚ ⟨│9 ‘ ⟩│0 ’ ₀│-   ‑│` ˚ ῾│    ⌫    │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──────┤
-│ Tab⇤   │X ⋮ Ξ│V ⌫ √│L ⇡ Λ│C ⌦ ℂ│W ⎀ Ω│K ¡ ×│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ − ∘│¸ ˝ ˙│      │
+│ Tab⇤   │X ⇞ Ξ│V ⌫ √│L ⇡ Λ│C ⌦ ℂ│W ⇟ Ω│K ¡ ×│H 7 Ψ│G 8 Γ│F 9 Φ│Q + ℚ│ẞ − ∘│˜ ˝ ˘│      │
 │ Tab⇥ ♫ │x … ξ│v _  │l [ λ│c ] χ│w ^ ω│k ! κ│h < ψ│g > γ│f = φ│q & ϕ│ß ſ ς│´ / ᾿│Return│
 ├────────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┐     │
 │   Mod   │U ⇱ ⊂│I ⇠ ∫│A ⇣ ∀│E ⇢ ∃│O ⇲ ∈│S ¿ Σ│N 4 ℕ│R 5 ℝ│T 6 ∂│D , Δ│Y . ∇│ Mod │  ↲  │
 │    3    │u \  │i / ι│a { α│e } ε│o * ο│s ? σ│n ( ν│r ) ρ│t - τ│d : δ│y @ υ│  3  │     │
 ├──────┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴─────┴─────┤
-│CapsLk│ Lock│Ü ⌧ ∪│Ö ⇥ ∩│Ä ⇟ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 ↦│J ; Θ│   CapsLock   │
+│CapsLk│ Lock│Ü ⌧ ∪│Ö ⇥ ∩│Ä ⎀ ℵ│P ↲ Π│Z ↶ ℤ│B : ⇐│M 1 ⇔│– 2 ⇒│• 3 ↦│J ; Θ│   CapsLock   │
 │Umsch │Mod4 │ü #  │ö $ ϵ│ä | η│p ~ π│z ` ζ│b + β│m % μ│, " ϱ│. ' ϑ│j ; θ│   Umschalt   │
 ├──────┼─────┴┬────┴─┬───┴─────┴─────┴─────┴─────┴─────┴────┬┴─────┼─────┴┬──────┬──────┤
 │ Strg │      │ Alt  │Leerzeichen␣      0         schmal ¦  │ Lock │      │ Menü │ Strg │
@@ -224,9 +224,9 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Zweite Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˜ │°│§│ℓ│»│«│$│€│„│“│”│—│↻│ Back │
+│ ˇ │°│§│ℓ│»│«│$│€│„│“│”│—│¸│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│¸│ Ret │
+│Tab⇤│X│V│L│C│W│K│H│G│F│Q│ẞ│˜│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │U│I│A│E│O│S│N│R│T│D│Y│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -237,7 +237,7 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Dritte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˚ │¹│²│³│›│‹│¢│¥│‚│‘│’│ │¨│ Back │
+│ ↻ │¹│²│³│›│‹│¢│¥│‚│‘│’│ │˚│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │ ♫  │…│_│[│]│^│!│<│>│=│&│ſ│/│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -250,20 +250,20 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Vierte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˇ │ª│º│№│⇞│·│£│¤│⇥│/│*│-│̏ │ Back │
+│ ˙ │ª│º│№│ │·│£│¤│⇥│/│*│-│¨│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │⋮│⌫│⇡│⌦│⎀│¡│7│8│9│+│−│˝│ Ret │
+│    │⇞│⌫│⇡│⌦│⇟│¡│7│8│9│+│−│˝│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│¿│4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│4L│⌧│⇥│⇟│↲│↶│:│1│2│3│;│ Umsch │
+│Ums│4L│⌧│⇥│⎀│↲│↶│:│1│2│3│;│ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
 === Fünfte Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ˘ │₁│₂│₃│♀│♂│⚥│ϰ│⟨│⟩│₀│‑│῾│ Back │
+│ ˞ │₁│₂│₃│♀│♂│⚥│ϰ│⟨│⟩│₀│‑│῾│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
 │ 4Lk│ξ│ │λ│χ│ω│κ│ψ│γ│φ│ϕ│ς│᾿│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
@@ -276,9 +276,9 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Sechste Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ¯ │¬│∨│∧│⊥│∡│∥│→│∞│∝│∅│╌│˞│ Back │
+│ . │¬│∨│∧│⊥│∡│∥│→│∞│∝│∅│╌│¯│ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │Ξ│√│Λ│ℂ│Ω│×│Ψ│Γ│Φ│ℚ│∘│˙│ Ret │
+│    │Ξ│√│Λ│ℂ│Ω│×│Ψ│Γ│Φ│ℚ│∘│˘│ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⊂│∫│∀│∃│∈│Σ│ℕ│ℝ│∂│Δ│∇│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
@@ -289,13 +289,13 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 === Pseudo‑Ebene – Miniatur ===
 ┌───┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬──────┐
-│ ⍓ │ │ │ │⇞│ │ │ │⇤│/│*│-│̏ │ Back │
+│ ⍓ │ │ │ │ │ │ │ │⇤│/│*│-│ │ Back │
 ├───┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬─────┤
-│    │ │⌫│⇡│⌦│⎀│ │7│8│9│+│ │ │ Ret │
+│    │⇞│⌫│⇡│⌦│⇟│ │7│8│9│+│ │ │ Ret │
 ├────┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴─┐   │
 │ M3  │⇱│⇠│⇣│⇢│⇲│ │4│5│6│,│.│M3│   │
 ├───┬─┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴┬┴──┴───┤
-│Ums│4L│⌧│⇤│⇟│↲│↷│ │1│2│3│ │ Umsch │
+│Ums│4L│⌧│⇤│⎀│↲│↷│ │1│2│3│ │ Umsch │
 ├───┼──┼─┴┬┴─┴─┴─┴─┴─┴┬┴─┼─┴┬──┬───┤
 │Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
