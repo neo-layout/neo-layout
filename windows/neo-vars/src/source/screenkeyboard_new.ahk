@@ -46,7 +46,11 @@ rerun_bstnupdate:
         if (GSYM%GuiComp1% != "") {
           GuiComp .= GSYM%GuiComp1%
         } else if (CD%GuiComp1% != "") {
-          GuiComp .= CD%GuiComp1%
+	  GSym    := CD%GuiComp1%
+          if (GSYM%GSym% != "") 
+            GuiComp .= GSYM%Gsym%
+          else
+            GuiComp .= CD%GuiComp1%
         } else if (CM%GuiComp1% == 1) {
           GuiComp .= "U00002AU00002A"
         } else if (CF%CurrentComp% != "") {
