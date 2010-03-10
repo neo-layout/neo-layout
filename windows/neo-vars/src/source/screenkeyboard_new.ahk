@@ -279,23 +279,27 @@ BSTNSymbols() {
   global
   ; diverse Symbole für Spezialzeichen
   GUISYM("T__cflx","◌̂")
-  GUISYM("T__tlde","◌̃")
-  GUISYM("T__obrg","◌̊")
   GUISYM("T__cron","◌̌")
-  GUISYM("T__brve","◌̆")
-  GUISYM("T__mcrn","◌̄")
+  GUISYM("T__turn","↻")
+  GUISYM("T__abdt","◌̇")
+  GUISYM("T__hook","◌˞") ; not perfect
+  GUISYM("T__bldt",".") ; not perfect
 
   GUISYM("T__grav","◌̀")
-  GUISYM("T__turn","↻")
+  GUISYM("T__cedi","◌̧")
+  GUISYM("T__obrg","◌̊")
   GUISYM("T__drss","◌̈")
-  GUISYM("T__dgrv","◌")
-  GUISYM("T__hook","◌")
+  GUISYM("U001FFE","◌῾") ; not perfect
+  GUISYM("T__mcrn","◌̄")
 
   GUISYM("T__acut","◌́")
-  GUISYM("T__cedi","◌̧")
+  GUISYM("T__tlde","◌̃")
   GUISYM("T__strk","◌̷")
   GUISYM("T__dbac","◌̋")
-  GUISYM("T__abdt","◌̇")
+  GUISYM("U001FBF","◌᾿") ; not perfect
+  GUISYM("U0002D8","◌̆")
+
+
 
   GUISYM("S__Sh_L","⇧")
   GUISYM("S__Sh_R","⇧")
@@ -350,7 +354,7 @@ BSTNSymbols() {
   GUISYM("S_SNHom","↸")
   GUISYM("S_SNEnd","⇲")
 
-  GUISYM("U00001B","ESC")
+  GUISYM("U00001B","⌧")
   GUISYM("U000008","⌫")
   GUISYM("U000009","↹")
   GUISYM("U00000D","⏎")
