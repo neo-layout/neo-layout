@@ -61,8 +61,11 @@ CharProc___EH1() {
   TKEH_VKBDSC035 := "VK59SC02C" ; j -> ü
   ; Modify Space
   ED1("space","P__EHSd")
+  GUISYM("P__EHSd","EH")
   ED("EHSpace",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
-  TransformProc := "Einhand"
+
+  TransformProc     := "Einhand"
+  TransformBSTNProc := "Einhand"
 }
 
 CharProc___EH0() {
@@ -103,7 +106,10 @@ CharProc___EH0() {
   TKEH_VKBESC034 := "" ; .
   TKEH_VKBDSC035 := "" ; j
   ED("space",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
-  TransformProc := ""
+  GUISYM("P__EHSd","")
+
+  TransformProc     := ""
+  TransformBSTNProc := ""
 }
 
 CharProc__EHSd() {
@@ -111,6 +117,8 @@ CharProc__EHSd() {
   ; Space im Einhandmodus gedrückt
   EHSpacePressed := 1
   PRspace := "P__EHSu"
+  if (useBSTN)
+    BSTNUpdate()
 }
 
 CharProc__EHSu() {
@@ -122,6 +130,8 @@ CharProc__EHSu() {
   }
   EHKeyPressed := 0
   EHSpacePressed := 0
+  if (useBSTN)
+    BSTNUpdate()
 }
 
 CharProc__M2LT() {
@@ -135,6 +145,14 @@ TransformEinhand(PhysKey) {
   global
   if (EHSpacePressed and (TKEH_%PhysKey% != "")) {
     EHKeyPressed := 1
+    return TKEH_%PhysKey%
+  }
+  return PhysKey
+}
+
+TransformBSTNEinhand(PhysKey) {
+  global
+  if (EHSpacePressed and (TKEH_%PhysKey% != "")) {
     return TKEH_%PhysKey%
   }
   return PhysKey
