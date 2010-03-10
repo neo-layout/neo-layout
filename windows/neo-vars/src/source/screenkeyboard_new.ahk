@@ -35,10 +35,14 @@ BSTNUpdate() {
           }
         } else
           GuiEb := EbeneC
+        if (TransformBSTNProc != "")
+          GuiVirtKey := TransformBSTN%TransformBSTNProc%(GuiPhysKey)
+        else
+          GuiVirtKey := GuiPhysKey
 	CurrentComp := Comp
         GuiComp := ""
 rerun_bstnupdate:
-        GuiComp1 := CurrentComp . CP%GuiEb%%GuiPhysKey%
+        GuiComp1 := CurrentComp . CP%GuiEb%%GuiVirtKey%
         if (GSYM%GuiComp1% != "") {
           GuiComp .= GSYM%GuiComp1%
         } else if (CD%GuiComp1% != "") {
@@ -46,7 +50,7 @@ rerun_bstnupdate:
         } else if (CM%GuiComp1% == 1) {
           GuiComp .= "U00002AU00002A"
         } else if (CF%CurrentComp% != "") {
-	  if (IM%GuiPhysKey% != 1)
+	  if (IM%GuiVirtKey% != 1)
             GuiComp .= CF%CurrentComp%
 	  CurrentComp := ""
           goto rerun_bstnupdate
