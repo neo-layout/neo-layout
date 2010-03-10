@@ -1,16 +1,47 @@
 -------------------------------------------------------------------------------
-ACHTUNG:
-Damit alles ordentlich dargestellt wird, muss man für die Darstellung z. B. im
-Texteditor eine dicktengleiche Schrift einstellen!
+== ACHTUNG ==
+Damit diese Datei ordentlich dargestellt wird, ist im Browser oder Texteditor
 
-Im Browser (Firefox) muss man unter Ansicht, Zeichenkodierung auf Unicode
-(UTF-8) stellen.
+• eine dicktengleiche (fixed width, monospaced) Schrift zu wählen und
+• die Zeichenkodierung auf Unicode/UTF-8 zu setzen.
 
-Unter Windows ist in der Grundinstallation leider keine dicktengleiche Schrift
-installiert, die befriedigend viele Unicodezeichen beinhaltet.
-Abhilfe schafft z. B. DejaVu Sans Mono (ist z. B. bei OpenOffice dabei):
-http://dejavu.sourceforge.net/
+Empfohlen wird die Schrift DejaVu Sans Mono, http://dejavu.sourceforge.net/.
+Diese wird z.B. bei OpenOffice automatisch installiert.
 -------------------------------------------------------------------------------
+
+== Notation in dieser Referenz ==
+
+• Umschalttasten zur Anwahl der verschiedenen Tastaturebenen:
+  „Umschalt“ für die 2. Ebene (auch als „Shift“ bekannt),
+  „Mod3“ für die 3. Ebene,
+  „Mod4“ für die 4. Ebene.
+
+• Falls nötig, werden zur Unterscheidung der rechten und linken Umschalttasten
+  „R“ und „L“ angehängt, etwa „UmschL“ und „Mod3R“.
+
+• Griffkombinationen, bei denen eine oder mehrere Tasten zu drücken und zu
+  halten sind, bis die letzte Taste gedrückt wurde, werden durch das Zeichen
+  „+“ zwischen den Tasten kenntlich gemacht. Beispiel: „Mod3+Mod4+e“ steht für
+  die Anweisung „Mod3 drücken und festhalten, Mod4 drücken und festhalten, e
+  drücken, alle Tasten loslassen“ und ergibt „∃“.
+
+• Grifffolgen werden ohne Zeichen oder mit einem Leerzeichen hintereinander
+  geschrieben.  Beispiel: „Mod3+Tab a e“ steht für „Mod3 drücken und
+  festhalten, Tab drücken, alle Tasten loslassen, a drücken und loslassen, e
+  drücken und loslassen“ und ergibt „æ“.
+
+• Das Symbol „♫“, gesprochen „Compose“ steht für die Griffkombination
+  „Mod3+Tab“ und ermöglicht das Zusammensetzen von Zeichen. Beispiel:
+  „♫ a e“ bzw. kürzer notiert „♫ae“ ergibt „æ“ bzw. noch kürzer „♫ae=æ“.
+  
+• Tasten auf höheren Ebenen können auch durch die Angabe des Namens der Taste
+  gefolgt von der Ebenennummer in runden Klammern bezeichnet werden.  Beispiel:
+  „a(3)“ wird durch „Mod3+a“ eingegeben und ergibt „{“.  Diese Notation ist
+  insbesondere für Ebenen 5/6 sinnvoll, die keine exklusiven Umschalttasten
+  besitzen.
+
+• Tasten auf dem Keypad (abgesetzter Ziffernblock) werden durch vorangestelltes
+  „KP_“ gekennzeichnet. Beispiel: KP_5.
 
 == Haupttastatur ==
 === Legende – Haupttastatur ===
@@ -26,38 +57,37 @@ http://dejavu.sourceforge.net/
 • Ebene 5: Griechische Kleinbuchstaben                             (Mod3+Umschalt)
 • Ebene 6: math./physik. Zeichen und griech. Großbuchstaben        (Mod3+Mod4)
 
-• Compose: Zusammensetzen von Zeichen                  (Mod3+Tab)
-  Beispiel:
-  »Compose« »Compose loslassen« »o« »c« = ©
-  (Kurzschreibweise: ♫oc → ©)
-• Feststellen/Capslock: Dauergroßschreiben             (Umschalt+Umschalt)
-  Zum Lösen der Feststellung nochmals gleiche Kombination
-• Feststellen der Ebene 4:                             (Mod4+Mod4) oder (Umschalt+Mod3+Tab)
-  Zum Lösen der Feststellung nochmals gleiche Kombination
+=== Locks ==
+ • Capslock (auch Feststelltaste, Dauergroß): UmschaltL+UmschaltR
+   Hinweis: Capslock wirkt ausschließlich auf die Buchstaben und auf keine der
+   anderen Tasten (Ziffern, Komma, …)! Es handelt sich also wirklich um einen Caps-
+   und nicht um einen Umschalt-Lock.
+ • Feststellen der 4. Ebene: Mod4L+Mod4R oder Shift+Mod3+Tab
+Zum Lösen der Feststellung ist jeweils nochmals die gleiche Kombination einzugeben.
 
 === Tastaturmaussteuerung ===
-Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder aus.
-Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann sinnvoll sein, falls
-die Maus oder das Touchpad streikt oder keine solches Medium vorhanden ist.
-Die Bedienung kann wahlweise über die Ebene 1 des Keypads oder die rechte Hälfte der Ebene 4
-(z.B. mit Mod4_Lock) erfolgen.
+Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder
+aus. Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann
+sinnvoll sein, falls die Maus oder das Touchpad streikt oder keine solches
+Medium vorhanden ist. Die Bedienung kann wahlweise über die Ebene 1 des
+Keypads oder die rechte Hälfte der Ebene 4 erfolgen; dabei müssen vom Treiber jedoch
+stets die KP_-Varianten gesendet werden, da sonst die Tastaturmaussteuerung
+nicht funktioniert!
 
 Information zur Tastaturmaussteuerung:
- • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. 7: links-oben)
- • 5 entspricht einem (einfachen) Klick
- • + entspricht einem Doppelklick
- • 0 entspricht einem gehaltenen Klick (z.B. für drag’n’drop oder Markierungen)
- • Komma oder Punkt (auf dem Keypad also die Taste neben der 0) lösen diesen
-   gehaltenen Klick (z.B. für drag’n’drop; für das Ende einer Markierung 5 benutzen!)
+ • Die Ziffern ergeben eine Bewegung in die jeweilige Richtung (z.B. KP_7: links-oben)
+ • KP_5 entspricht einem (einfachen) Klick
+ • KP_+ entspricht einem Doppelklick
+ • KP_0 entspricht einem gehaltenen Klick (z.B. für drag’n’drop oder Markierungen)
+ • Komma oder Punkt (auf dem Keypad also die Taste neben der KP_0) lösen diesen
+   gehaltenen Klick (z.B. für drag’n’drop; für das Ende einer Markierung KP_5 benutzen!)
 Welche Taste geklickt wird, muss zuvor bestimmt werden:
- • / kündigt einen Linksklick an (Standard)
- • * kündigt einen Mittelklick an
- • - kündigt einen Rechtsklick an
+ • KP_/ kündigt einen Linksklick an (Standard)
+ • KP_* kündigt einen Mittelklick an
+ • KP_- kündigt einen Rechtsklick an
 
-Die Tastaturmaussteuerung funktioniert unter allen Betriebssystemen (Linux, Windows, …) und allen
-Tastaturbelegungen (Neo, QWERTZ, QWERTY, …) identisch.
-Bei der Entwicklung der Belegung ist darauf zu achten, dass die KP_-Varianten (also z.B. wie bei QWERTZ)
-verwendet werden, da andererseits die Tastaturmaussteuerung nicht funktioniert.
+Die Tastaturmaussteuerung funktioniert unter allen Betriebssystemen (Linux, Windows, …)
+und allen Tastaturbelegungen (Neo, QWERTZ, QWERTY, …) identisch.
 
 === Symbole ===
 ⇥    … Tab
@@ -68,12 +98,12 @@ verwendet werden, da andererseits die Tastaturmaussteuerung nicht funktioniert.
 ⌧    … Esc
 ⎀    … Einf
 ⇠⇡⇢⇣ … Links/Hoch/Rechts/Runter
-♫    … Steht als Symbol für die Kombotaste (Compose)
+♫    … Steht als Symbol für Compose („Kombotaste“)
 ╌    … Weicher Trennstrich (U+00AD SOFT HYPHEN)
 ␣    … Leerzeichen (SPACE)
 ⍽    … Geschütztes Leerzeichen (U+00A0 NO-BREAK SPACE)
 ¦    … Schmales, geschütztes Leerzeichen (U+202F NARROW NO-BREAK SPACE)
-↶    … undo-Funktion
+↶    … undo-Funktion (Rückgängig)
 ↷    … redo-Funktion
 ↻    … Drehen-Funktion, dreht das folgende Zeichen
 ⍓    … (de)aktiviert die Maussteuerung über die Tastatur
@@ -108,20 +138,18 @@ T3 („Tote Taste 3“: Taste rechts neben dem scharfen s (ß))
         5 … Toter Spiritus lenis (sieht aus wie U+1FBF GREEK PSILI), Haken (viet.: dấu hỏi) für lateinische Vokale
         6 … Toter Breve/Brevis (sieht aus wie U+02D8 BREVE)
 
-ACHTUNG: „Tote Tasten“ (Tasten zum Erzeugen toter Zeichen – also Zeichen die nicht
-gleich erscheinen, sondern nur in Kombination mit einem weiteren Buchstaben) werden
-folgendermaßen bedient (Beispiel):
- 1. Tote Tilde »~« eingeben.
- 2. Danach »n«.
- 3. Es erscheint das »ñ«.
+ACHTUNG: Tote Tasten erzeugen selbst keine Ausgabe, sondern sorgen für eine Änderung des
+nachfolgend eingegebenen Zeichens. Beispiele: „T3 e“ ergibt „é“, „T3(2) n“ ergibt „ñ“.
 
-TIPP: Mit der toten Tasten Zirkumflex (ˆ) kann man hochgestellte Ziffern erzeugen. Eigentlich werden hoch- und
-tiefgestellte Zeichen jedoch mit ♫^ (für hochgestellt, z.B. ⁻⁵ˣᵅ) und ♫_ (für tiefgestellt ₊₅ₓ) erzeugt.
+TIPP: Der Tote Zirkumflex gefolgt von einer Ziffer stellt diese hoch, Beispiel: „T1 2“ ergibt „²“.
+Andere Zeichen werden durch Composesequenzen hoch- oder tiefgestellt, Beispiele:
+„♫^x“ (genauer „Mod3+Tab Mod3+w x“) ergibt „ˣ“ und
+„♫_+“ (genauer „Mod3+Tab Mod3+v Mod3+b“) ergibt „₊“.
 
-Eine Darstellung eines toten Zeichens kann man wie folgt erreichen:
- 1. »totes Zeichen« eingeben
- 2. »Shift« + »Mod3« + »Leerzeichen«
-Hingegen erzeugt »totes Zeichen« mit anschließendem »Leerzeichen« die untote Variante.
+Eine Darstellung eines toten Zeichens (Diakritika) selbst wird erreicht, indem ihm das
+geschützte Leerzeichen (Shift+Mod3+Space) nachgestellt wird; ein folgendes normales
+Leerzeichen ergibt hingegen die untote Variante.
+Beispiele: „T1 Shift+Mod3+Space“ ergibt „ˆ“, aber „T1 Space“ ergibt „^“.
 
 === Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
@@ -138,10 +166,10 @@ Taste rechts neben der 0
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 Außerdem gibt es noch
- • den (echten) Hyphen (U+2010 HYPHEN), der über <dead_stroke> + <space> erzeugt wird
- • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf dem Keypad
- • den (deutschen) Gedankenstrich (U+2013 EN DASH) über Shift + Komma
- • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) über Mod3 + t
+ • den (echten) Hyphen (U+2010 HYPHEN) auf „Mod3+T3 Space“
+ • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf „KP_-“,
+ • den (deutschen) Gedankenstrich (U+2013 EN DASH) auf „Umschalt+Komma“
+ • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) auf „Mod3+t“.
 
 === Anführungszeichen ===
 Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
@@ -172,23 +200,24 @@ Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 └─────┘
 
 === Ziffern ===
-Für die Ziffern auf dem Keypad und diese auf Ebene 4 wird die KP_-Variante verwendet.
+Für die Ziffern auf dem Keypad und die auf Ebene 4 wird die KP_-Variante verwendet.
 Für die Ziffern auf der ersten Ebene der Haupttastatur wird nicht die KP_-Variante verwendet.
 
 === Ebene 4 ===
-Auf Ebene 4 der Haupttastatur werden für folgende Zeichen die jeweilige KP_-Variante benutzt, um die
-Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten:
- • die Ziffern 0-9
+Auf Ebene 4 der Haupttastatur wird für die folgenden Zeichen die jeweilige KP_-Variante zurückgeliefert:
+ • die Ziffern 0 bis 9
  • die Operationszeichen +-*/
- • für die Return-Taste wird KP_Enter verwendet
- • für das Komma wird KP_Separator benutzt
+ • das Komma auf d(4) liefert KP_Separator
 
-Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, namentlich:
- • der Punkt (nicht KP_Decimal, da dies keine weitere Funktionalität bietet, jedoch Probleme (z.B. bei
-   OpenOffice) bereitet)
- • die Navigationselemente (die KP_-Vatianten bereiten in einigen Programmen Probleme; andererseits
+Für andere Zeichen der Ebene 4 werden hingegen nicht die KP_-Variante benutzt, namentlich:
+ • der Punkt auf y(4) liefert . (und nicht KP_Decimal, da dies keine weitere Funktionalität bietet,
+   jedoch Probleme (z.B. bei OpenOffice) bereitet)
+ • alle Navigationselemente (die KP_-Vatianten bereiten in einigen Programmen Probleme; andererseits
    sind die KP_-Varianten in anderen, insbesondere älteren, Programmen wie xterm, xedit, … erforderlich)
- • für das zusätzliche Return auf p(4) wird Return – und nicht KP_Enter – verwendet
+ • für das zusätzliche Return auf p(4) wird Return – und nicht KP_Enter – verwendet.
+
+Ziel ist der Erhalt der vollen Funktionalität von Navigations- und Zahlenblock
+der Standardtastatur allein mit dem Hauptfeld der Tastatur.
 
 
 === Alle Ebenen – Haupttastatur ===
@@ -302,9 +331,12 @@ Für andere Zeichen der Ebene 4 wird hingegen nicht die KP_-Variante benutzt, na
 
 == Ziffernblock ==
 Um die Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten,
-sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante verwendet werden, sofern diese
-auch under QWERTZ zum Einsatz kommen! Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht
-benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbringen.
+sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante
+verwendet werden, sofern diese auch under QWERTZ zum Einsatz kommen.
+Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht benutzt, da sie in
+vielen Programmen nicht die erwartete Funktionalität erbringen.
+
+
 
 === Legende – Ziffernblock ===
 ┌───────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
@@ -496,14 +528,15 @@ benutzt, da sie in vielen Programmen nicht die erwartete Funktionalität erbring
 º … männlicher Ordinalindikator (1º) (U00BA)
 
 == Hinweise zu Doppelbelegungen in Unicode ==
-Griechische Minuskel und Majuskel besitzten in der Regel eine weitere Bedeutung, z.B.
+Griechische Minuskel und Majuskel besitzten in der Regel eine weitere
+Bedeutung, z.B.
 • Δ für Differenz oder Fehler
 • Θ für homöopathische Urtinktur
 • Γ für Gammafunktion
 
-Einige finden sich darum an mehreren Stellen im Unicode, um (eventuelle) Unterschiede
-deutliche machen zu können. Zur Platzersparnis haben wir stets eines (das einfachste
-und allgemeinste) Zeichen aufgenommen:
+Einige finden sich darum an mehreren Stellen im Unicode, um (eventuelle)
+Unterschiede deutliche machen zu können.  Zur Platzersparnis haben wir stets
+eines (das einfachste und allgemeinste) Zeichen aufgenommen:
 • Ω (U03A9) ; Einheit des Widerstandes Ohm (U2126)
 • Σ (U03A3) ; Summenzeichen (U2211)
 • Δ (U0394) ; Laplaceoperator (U2206) ; Dreieck, symmetrische Differenz (U25B3)
