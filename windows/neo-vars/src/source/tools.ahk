@@ -1,49 +1,54 @@
-; ���
+; -*- encoding: utf-8 -*-
 
-; R�mische Zahlen
+; Römische Zahlen
 CMS__Comp := 1
 CMS__CompU000072 := 1
 CMS__CompU000052 := 1
-CDS__CompU000072U000072 := "P_Rom1"
-CDS__CompU000072U000031 := "P_Rom1"
-CDS__CompU000052U000031 := "P_Rom1"
-CDS__CompU000072U000052 := "P_Rom2"
-CDS__CompU000072U000032 := "P_Rom2"
-CDS__CompU000052U000032 := "P_Rom2"
-CDS__CompU000052U000072 := "P_Rom3"
-CDS__CompU000072U000033 := "P_Rom3"
-CDS__CompU000052U000033 := "P_Rom3"
-CDS__CompU000052U000052 := "P_Rom4"
-CDS__CompU000072U000034 := "P_Rom4"
-CDS__CompU000052U000034 := "P_Rom4"
+CDS__CompU000072U00004F := "P__Rom1"
+;CDS__CompU000072U000031 := "P__Rom1"
+;CDS__CompU000052U000031 := "P__Rom1"
+CDS__CompU000052U00004F := "P__Rom2"
+;CDS__CompU000072U000032 := "P__Rom2"
+;CDS__CompU000052U000032 := "P__Rom2"
+CDS__CompU000072U00006F := "P__Rom3"
+;CDS__CompU000072U000033 := "P__Rom3"
+;CDS__CompU000052U000033 := "P__Rom3"
+CDS__CompU000052U00006F := "P__Rom4"
+;CDS__CompU000072U000034 := "P__Rom4"
+;CDS__CompU000052U000034 := "P__Rom4"
 
-CharProc_Rom1() {
+GUISYM("P__Rom1","ⅶ")
+GUISYM("P__Rom2","Ⅶ")
+GUISYM("P__Rom3","vii")
+GUISYM("P__Rom4","VII")
+
+CharProc__Rom1() {
   global
-  ; starte gro� geschriebene r�mische Zahlen, verwende U2160++
+  ; starte klein geschriebene römische Zahlen, verwende U2160++
   PressHookProc := "Roman"
   RomanMode := 1
   RomanSum := 0
 }
 
-CharProc_Rom2() {
+CharProc__Rom2() {
   global
-  ; starte klein geschriebene r�mische Zahlen, verwende U2160++
+  ; starte groß geschriebene römische Zahlen, verwende U2160++
   PressHookProc := "Roman"
   RomanMode := 2
   RomanSum := 0
 }
 
-CharProc_Rom3() {
+CharProc__Rom3() {
   global
-  ; starte gro� geschriebene r�mische Zahlen, verwende Buchstaben
+  ; starte klein geschriebene römische Zahlen, verwende Buchstaben
   PressHookProc := "Roman"
   RomanMode := 3
   RomanSum := 0
 }
 
-CharProc_Rom4() {
+CharProc__Rom4() {
   global
-  ; starte klein geschriebene r�mische Zahlen, verwende Buchstaben
+  ; starte groß geschriebene römische Zahlen, verwende Buchstaben
   PressHookProc := "Roman"
   RomanMode := 4
   RomanSum := 0
@@ -52,7 +57,7 @@ CharProc_Rom4() {
 GenRomanDigit(Pos, DigitIs, DigitTest, str0, str1, str2, str3, str4, str5) {
   res := ""
   if (DigitIs == DigitTest)
-    res := str%Pos%
+    res := EncodeUniComposeA(str%Pos%)
   return res
 }
 
@@ -88,15 +93,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U002170","U002179","U00217D","U00217F","U002182","U002188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U002170U002170","U002179U002179","U00217DU00217D","U00217FU00217F","U002182U002182","U002188U002188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U002170U002170U002170","U002179U002179U002179","U00217DU00217DU00217D","U00217FU00217FU00217F","U002182U002182U002182","U002188U002188U002188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U002170U002174","U002179U00217C","U00217DU00217E","U002180U002181","U002182U002187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U002174","U00217C","U00217E","U002181","U002187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U002174U002170","U00217CU002179","U00217EU00217D","U002181U002180","U002187U002182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U002174U002170U002170","U00217CU002179U002179","U00217EU00217DU00217D","U002181U002180U002180","U002187U002182U002182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U002174U002170U002170U002170","U00217CU002179U002179U002179","U00217EU00217DU00217DU00217D","U002181U002180U002180U002180","U002187U002182U002182U002182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U002178","U002179U00217D","U00217DU00217F","U002180U002182","U002182U002188","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"ⅰ","ⅹ","ⅽ","ⅿ","ↂ","ↈ") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"ⅰⅰ","ⅹⅹ","ⅽⅽ","ⅿⅿ","ↂↂ","ↈↈ") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"ⅰⅰⅰ","ⅹⅹⅹ","ⅽⅽⅽ","ⅿⅿⅿ","ↂↂↂ","ↈↈↈ") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"ⅰⅴ","ⅹⅼ","ⅽⅾ","ↀↁ","ↂↇ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"ⅴ","ⅼ","ⅾ","ↁ","ↇ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"ⅴⅰ","ⅼⅹ","ⅾⅽ","ↁↀ","ↇↂ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"ⅴⅰⅰ","ⅼⅹⅹ","ⅾⅽⅽ","ↁↀↀ","ↇↂↂ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"ⅴⅰⅰⅰ","ⅼⅹⅹⅹ","ⅾⅽⅽⅽ","ↁↀↀↀ","ↇↂↂↂ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"ⅰⅹ","ⅹⅽ","ⅽⅿ","ↀↂ","ↂↈ","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -105,15 +110,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U002160","U002169","U00216D","U00216F","U002182","U002188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U002160U002160","U002169U002169","U00216DU00216D","U00216FU00216F","U002182U002182","U002188U002188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U002160U002160U002160","U002169U002169U002169","U00216DU00216DU00216D","U00216FU00216FU00216F","U002182U002182U002182","U002188U002188U002188") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U002160U002164","U002169U00216C","U00216DU00216E","U002180U002181","U002182U002187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U002164","U00216C","U00216E","U002181","U002187","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U002164U002160","U00216CU002169","U00216EU00216D","U002181U002180","U002187U002182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U002164U002160U002160","U00216CU002169U002169","U00216EU00216DU00216D","U002181U002180U002180","U002187U002182U002182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U002164U002160U002160U002160","U00216CU002169U002169U002169","U00216EU00216DU00216DU00216D","U002181U002180U002180U002180","U002187U002182U002182U002182","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U002160U002169","U002169U00216D","U00216DU00216F","U002180U002182","U002182U002188","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"Ⅰ","Ⅹ","Ⅽ","Ⅿ","ↂ","ↈ") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"ⅠⅠ","ⅩⅩ","ⅭⅭ","ⅯⅯ","ↂↂ","ↈↈ") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"ⅠⅠⅠ","ⅩⅩⅩ","ⅭⅭⅭ","ⅯⅯⅯ","ↂↂↂ","ↈↈↈ") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"ⅠⅤ","ⅩⅬ","ⅭⅮ","Ⅿↁ","ↂↇU002182U002187","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"Ⅴ","Ⅼ","Ⅾ","ↁ","ↇ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"ⅤⅠ","ⅬⅩ","ⅮⅭ","ↁⅯ","ↇↂ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"ⅤⅠⅠ","ⅬⅩⅩ","ⅮⅭⅭ","ↁⅯⅯ","ↇↂↂ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"ⅤⅠⅠⅠ","ⅬⅩⅩⅩ","ⅮⅭⅭⅭ","ↁⅯⅯⅯ","ↇↂↂↂ","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"ⅠⅩ","ⅩⅭ","ⅭⅯ","Ⅿↂ","ↂↈ","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -122,15 +127,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U000069","U000078","U000063","U00006D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U000069U000069","U000078U000078","U000063U000063","U00006DU00006D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U000069U000069U000069","U000078U000078U000078","U000063U000063U000063","U00006DU00006DU00006D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U000069U000076","U000078U00006C","U000063U000064","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U000076","U00006C","U000064","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U000076U000069","U00006CU000078","U000064U000063","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U000076U000069U000069","U00006CU000078U000078","U000064U000063U000063","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U000076U000069U000069U000069","U00006CU000078U000078U000078","U000064U000063U000063U000063","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U000069U000078","U000078U000063","U000063U00006D","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"i"   ,"x"   ,"c"   ,"m"  ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"ii"  ,"xx"  ,"cc"  ,"mm" ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"iii" ,"xxx" ,"ccc" ,"mmm","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"iv"  ,"xl"  ,"cd"  ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"v"   ,"l"   ,"d"   ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"vi"  ,"lx"  ,"dc"  ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"vii" ,"lxx" ,"dcc" ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"viii","lxxx","dccc",""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"ix"  ,"xc"  ,"cm"  ,""   ,"","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -139,15 +144,15 @@ PressHookRoman(PhysKey, ActKey, Char) {
       loop {
         RomanDigit := mod(RomanSum,10)
         RomanSum := RomanSum//10
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"U000049","U000058","U000043","U00004D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"U000049U000049","U000058U000058","U000043U000043","U00004DU00004D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"U000049U000049U000049","U000058U000058U000058","U000043U000043U000043","U00004DU00004DU00004D","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"U000049U000056","U000058U00004C","U000043U000044","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"U000056","U00004C","U000044","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"U000056U000049","U00004CU000058","U000044U000043","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"U000056U000049U000049","U00004CU000058U000058","U000044U000043U000043","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"U000056U000049U000049U000049","U00004CU000058U000058U000058","U000044U000043U000043U000043","","","") . RomanStr
-        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"U000049U000058","U000058U000043","U000043U00004D","","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,1,"I"   ,"X"   ,"C"   ,"M"  ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,2,"II"  ,"XX"  ,"CC"  ,"MM" ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,3,"III" ,"XXX" ,"CCC" ,"MMM","","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,4,"IV"  ,"XL"  ,"CD"  ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,5,"V"   ,"L"   ,"D"   ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,6,"VI"  ,"LX"  ,"DC"  ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,7,"VII" ,"LXX" ,"DCC" ,""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,8,"VIII","LXXX","DCCC",""   ,"","") . RomanStr
+        RomanStr := GenRomanDigit(RomanPos,RomanDigit,9,"IX"  ,"XC"  ,"CM"  ,""   ,"","") . RomanStr
         if (RomanSum == 0)
           break
         RomanPos := RomanPos + 1
@@ -177,6 +182,7 @@ CDS__CompU000044U000064 := "P__DUni"
 CDS__CompU000044U000044 := "P__DUni"
 
 CP5VK41SC01E := "P___Uni"
+GUISYM("P___Uni","UU")
 
 CharProc___Uni() {
   global
@@ -228,7 +234,7 @@ PressHookUni(PhysKey, ActKey, Char) {
   else if ((Char == "U000046") or (Char == "U000066"))
     UniSum := UniSum . "F"
   else if ((Char == "U00000D") or (Char == "U000020")) {
-    UniSum := "U" . SubStr("000000" . UniSum, -5)
+    UniSum := "U" . SubStr("000000" . UniSum, -7)
     PP%PhysKey% := UniSum
     PR%PhysKey% := UniSum
     CharOutDown(UniSum)
@@ -594,7 +600,7 @@ SetFormat,Integer,d
     Gui,2:Font,,Dejavu Sans
     Gui,2:Add,Text,,% wmnk
   } else
-    Gui,2:Add,Text,,% "Als Tastendruck nicht verf�gbar"
+    Gui,2:Add,Text,,% "Als Tastendruck nicht verfuegbar"
 
   Gui,2:Add, Button, Default xp+100 yp+40, OK
   Gui,2:Show
