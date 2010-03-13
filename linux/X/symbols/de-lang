@@ -266,7 +266,7 @@ xkb_symbols "neo_base" {
 
     // Number row
     // --------------------------------------------------------------
-    key <TLDE> { [ dead_circumflex,         dead_tilde,              dead_abovering,          dead_breve,              dead_caron,              Pointer_EnableKeys,      dead_macron,             NoSymbol                 ] };
+    key <TLDE> { [ dead_circumflex,         dead_caron,              U21BB,                   U02DE,                   dead_abovedot,           Pointer_EnableKeys,      dead_belowdot,           NoSymbol                 ] };
 
     key <AE01> { [ 1,                       degree,                  onesuperior,             onesubscript,            ordfeminine,             NoSymbol,                notsign,                 NoSymbol                 ] };
     key <AE02> { [ 2,                       section,                 twosuperior,             twosubscript,            masculine,               NoSymbol,                logicalor,               NoSymbol                 ] };
@@ -275,24 +275,24 @@ xkb_symbols "neo_base" {
     key <AE05> { [ 5,                       guillemotleft,           U2039,                   malesymbol,              periodcentered,          NoSymbol,                U2221,                   NoSymbol                 ] };
     key <AE06> { [ 6,                       dollar,                  cent,                    U26A5,                   sterling,                NoSymbol,                U2225,                   NoSymbol                 ] };
 
-    key <AE07> { [ 7,                       EuroSign,                yen,                     Greek_kappa,             currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
+    key <AE07> { [ 7,                       EuroSign,                yen,                     U03F0,                   currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
     key <AE08> { [ 8,                       doublelowquotemark,      singlelowquotemark,      U27E8,                   Tab,                     ISO_Left_Tab,            U221E,                   NoSymbol                 ] };
     key <AE09> { [ 9,                       leftdoublequotemark,     leftsinglequotemark,     U27E9,                   KP_Divide,               KP_Divide,               variation,               NoSymbol                 ] };
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          U1FFE,                   U02F5,                   NoSymbol,                U02DE,                   NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              dead_cedilla,            dead_abovering,          U1FFE,                   dead_diaeresis,          NoSymbol,                dead_macron,             NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
-    key <AD01> { [ x,                       X,                       ellipsis,                Greek_xi,                U22EE,                   NoSymbol,                Greek_XI,                NoSymbol                 ] };
+    key <AD01> { [ x,                       X,                       ellipsis,                Greek_xi,                Prior,                   Prior,                   Greek_XI,                NoSymbol                 ] };
     key <AD02> { [ v,                       V,                       underscore,              NoSymbol,                BackSpace,               BackSpace,               radical,                 NoSymbol                 ] };
     key <AD03> { [ l,                       L,                       bracketleft,             Greek_lambda,            Up,                      Up,                      Greek_LAMBDA,            NoSymbol                 ] };
     key <AD04> { [ c,                       C,                       bracketright,            Greek_chi,               Delete,                  Delete,                  U2102,                   NoSymbol                 ] };
-    key <AD05> { [ w,                       W,                       asciicircum,             Greek_omega,             Insert,                  Insert,                  Greek_OMEGA,             NoSymbol                 ] };
+    key <AD05> { [ w,                       W,                       asciicircum,             Greek_omega,             Next,                    Next,                    Greek_OMEGA,             NoSymbol                 ] };
 
-    key <AD06> { [ k,                       K,                       exclam,                  U03F0,                   exclamdown,              NoSymbol,                multiply,                NoSymbol                 ] };
+    key <AD06> { [ k,                       K,                       exclam,                  Greek_kappa,             exclamdown,              NoSymbol,                multiply,                NoSymbol                 ] };
     key <AD07> { [ h,                       H,                       less,                    Greek_psi,               KP_7,                    KP_7,                    Greek_PSI,               NoSymbol                 ] };
     key <AD08> { [ g,                       G,                       greater,                 Greek_gamma,             KP_8,                    KP_8,                    Greek_GAMMA,             NoSymbol                 ] };
     key <AD09> { [ f,                       F,                       equal,                   Greek_phi,               KP_9,                    KP_9,                    Greek_PHI,               NoSymbol                 ] };
@@ -301,7 +301,7 @@ xkb_symbols "neo_base" {
     key <AD11> { [ ssharp,                  U1E9E,                   U017F,                   Greek_finalsmallsigma,   U2212,                   NoSymbol,                jot,                     NoSymbol                 ] };
 
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AD12> { [ dead_acute,              dead_cedilla,            dead_stroke,             U1FBF,                   dead_doubleacute,        NoSymbol,                dead_abovedot,           NoSymbol                 ] };
+    key <AD12> { [ dead_acute,              dead_tilde,              dead_stroke,             U1FBF,                  dead_doubleacute,        NoSymbol,                dead_breve,               NoSymbol                 ] };
 
     // Middle row
     // --------------------------------------------------------------
@@ -314,7 +314,7 @@ xkb_symbols "neo_base" {
 
     key <AC06> { [ s,                       S,                       question,                Greek_sigma,             questiondown,            NoSymbol,                Greek_SIGMA,             NoSymbol                 ] };
     key <AC07> { [ n,                       N,                       parenleft,               Greek_nu,                KP_4,                    KP_4,                    U2115,                   NoSymbol                 ] };
-    key <AC08> { [ r,                       R,                       parenright,              U03F1,                   KP_5,                    KP_5,                    U211D,                   NoSymbol                 ] };
+    key <AC08> { [ r,                       R,                       parenright,              Greek_rho,               KP_5,                    KP_5,                    U211D,                   NoSymbol                 ] };
     key <AC09> { [ t,                       T,                       minus,                   Greek_tau,               KP_6,                    KP_6,                    partialderivative,       NoSymbol                 ] };
     key <AC10> { [ d,                       D,                       colon,                   Greek_delta,             KP_Separator,            comma,                   Greek_DELTA,             NoSymbol                 ] };
 
@@ -324,17 +324,17 @@ xkb_symbols "neo_base" {
     // --------------------------------------------------------------
     key <AB01> { [ udiaeresis,              Udiaeresis,              numbersign,              NoSymbol,                Escape,                  Escape,                  union,                   NoSymbol                 ] };
     key <AB02> { [ odiaeresis,              Odiaeresis,              dollar,                  U03F5,                   Tab,                     Tab,                     intersection,            NoSymbol                 ] };
-    key <AB03> { [ adiaeresis,              Adiaeresis,              bar,                     Greek_eta,               Next,                    Next,                    U2135,                   NoSymbol                 ] };
+    key <AB03> { [ adiaeresis,              Adiaeresis,              bar,                     Greek_eta,               Insert,                  Insert,                  U2135,                   NoSymbol                 ] };
     key <AB04> { [ p,                       P,                       asciitilde,              Greek_pi,                Return,                  Return,                  Greek_PI,                NoSymbol                 ] };
     key <AB05> { [ z,                       Z,                       grave,                   Greek_zeta,              Undo,                    Undo,                    U2124,                   NoSymbol                 ] };
 
     key <AB06> { [ b,                       B,                       plus,                    Greek_beta,              colon,                   NoSymbol,                U21D0,                   NoSymbol                 ] };
     key <AB07> { [ m,                       M,                       percent,                 Greek_mu,                KP_1,                    KP_1,                    ifonlyif,                NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AB08> { [ comma,                   endash,                  quotedbl,                Greek_rho,               KP_2,                    KP_2,                    U21D2,                   NoSymbol                 ] };
-    key <AB09> { [ period,                  enfilledcircbullet,      apostrophe,              U03D1,                   KP_3,                    KP_3,                    Greek_THETA,             NoSymbol                 ] };
+    key <AB08> { [ comma,                   endash,                  quotedbl,                U03F1,                   KP_2,                    KP_2,                    U21D2,                   NoSymbol                 ] };
+    key <AB09> { [ period,                  enfilledcircbullet,      apostrophe,              U03D1,                   KP_3,                    KP_3,                    U21A6,             NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
-    key <AB10> { [ j,                       J,                       semicolon,               Greek_theta,             semicolon,               NoSymbol,                U21A6,                   NoSymbol                 ] };
+    key <AB10> { [ j,                       J,                       semicolon,               Greek_theta,             semicolon,               NoSymbol,                Greek_THETA,                   NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
 
     // Space key
@@ -543,7 +543,7 @@ xkb_symbols "neo_base_griechisch" {
 
     // Number row
     // --------------------------------------------------------------
-    key <TLDE> { [ dead_circumflex,         dead_tilde,              dead_abovering,          dead_breve,              dead_caron,              Pointer_EnableKeys,      dead_macron,             NoSymbol                 ] };
+    key <TLDE> { [ dead_circumflex,         dead_caron,              U21BB,                   U02DE,                   dead_abovedot,           Pointer_EnableKeys,      dead_belowdot,           NoSymbol                 ] };
 
     key <AE01> { [ 1,                       degree,                  onesuperior,             onesubscript,            ordfeminine,             NoSymbol,                notsign,                 NoSymbol                 ] };
     key <AE02> { [ 2,                       section,                 twosuperior,             twosubscript,            masculine,               NoSymbol,                logicalor,               NoSymbol                 ] };
@@ -558,16 +558,16 @@ xkb_symbols "neo_base_griechisch" {
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          U1FFE,                   U02F5,                   NoSymbol,                U02DE,                   NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              dead_cedilla,            dead_abovering,          U1FFE,                   dead_diaeresis,          NoSymbol,                dead_macron,             NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
-    key <AD01> { [ Greek_xi,                Greek_XI,                ellipsis,                Greek_xi,                U22EE,                   NoSymbol,                Greek_XI,                NoSymbol                 ] };
+    key <AD01> { [ Greek_xi,                Greek_XI,                ellipsis,                Greek_xi,                Prior,                   Prior,                   Greek_XI,                NoSymbol                 ] };
     key <AD02> { [ U03DD,                   U03DC,                   underscore,              NoSymbol,                BackSpace,               BackSpace,               radical,                 NoSymbol                 ] };
     key <AD03> { [ Greek_lambda,            Greek_LAMBDA,            bracketleft,             Greek_lambda,            Up,                      Up,                      Greek_LAMBDA,            NoSymbol                 ] };
     key <AD04> { [ Greek_chi,               Greek_CHI,               bracketright,            Greek_chi,               Delete,                  Delete,                  U2102,                   NoSymbol                 ] };
-    key <AD05> { [ Greek_omega,             Greek_OMEGA,             asciicircum,             Greek_omega,             Insert,                  Insert,                  Greek_OMEGA,             NoSymbol                 ] };
+    key <AD05> { [ Greek_omega,             Greek_OMEGA,             asciicircum,             Greek_omega,             Next,                    Next,                    Greek_OMEGA,             NoSymbol                 ] };
 
     key <AD06> { [ Greek_kappa,             Greek_KAPPA,             exclam,                  Greek_kappa,             exclamdown,              NoSymbol,                multiply,                NoSymbol                 ] };
     key <AD07> { [ Greek_psi,               Greek_PSI,               less,                    Greek_psi,               KP_7,                    KP_7,                    Greek_PSI,               NoSymbol                 ] };
@@ -578,7 +578,7 @@ xkb_symbols "neo_base_griechisch" {
     key <AD11> { [ Greek_finalsmallsigma,   NoSymbol,                U017F,                   Greek_finalsmallsigma,   U2212,                   NoSymbol,                jot,                     NoSymbol                 ] };
 
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AD12> { [ dead_acute,              dead_cedilla,            dead_stroke,             U1FBF,                   dead_doubleacute,        NoSymbol,                dead_abovedot,           NoSymbol                 ] };
+    key <AD12> { [ dead_acute,              dead_tilde,              dead_stroke,             U1FBF,                  dead_doubleacute,        NoSymbol,                dead_breve,               NoSymbol                 ] };
 
     // Middle row
     // --------------------------------------------------------------
@@ -601,7 +601,7 @@ xkb_symbols "neo_base_griechisch" {
     // --------------------------------------------------------------
     key <AB01> { [ U03E1,                   U03E0,                   numbersign,              NoSymbol,                Escape,                  Escape,                  union,                   NoSymbol                 ] };
     key <AB02> { [ U03DF,                   U03DE,                   dollar,                  U03F5,                   Tab,                     Tab,                     intersection,            NoSymbol                 ] };
-    key <AB03> { [ Greek_eta,               Greek_ETA,               bar,                     Greek_eta,               Next,                    Next,                    U2135,                   NoSymbol                 ] };
+    key <AB03> { [ Greek_eta,               Greek_ETA,               bar,                     Greek_eta,               Insert,                  Insert,                  U2135,                   NoSymbol                 ] };
     key <AB04> { [ Greek_pi,                Greek_PI,                asciitilde,              Greek_pi,                Return,                  Return,                  Greek_PI,                NoSymbol                 ] };
     key <AB05> { [ Greek_zeta,              Greek_ZETA,              grave,                   Greek_zeta,              Undo,                    Undo,                    U2124,                   NoSymbol                 ] };
 
@@ -697,7 +697,7 @@ xkb_symbols "neo_base_kyrillisch" {
 
     // Number row
     // --------------------------------------------------------------
-    key <TLDE> { [ dead_circumflex,         dead_tilde,              dead_abovering,          dead_breve,              dead_caron,              Pointer_EnableKeys,      dead_macron,             NoSymbol                 ] };
+    key <TLDE> { [ dead_circumflex,         dead_caron,              U21BB,                   U02DE,                   dead_abovedot,           Pointer_EnableKeys,      dead_belowdot,           NoSymbol                 ] };
 
     key <AE01> { [ 1,                       degree,                  onesuperior,             onesubscript,            ordfeminine,             NoSymbol,                notsign,                 NoSymbol                 ] };
     key <AE02> { [ 2,                       section,                 twosuperior,             twosubscript,            masculine,               NoSymbol,                logicalor,               NoSymbol                 ] };
@@ -706,24 +706,24 @@ xkb_symbols "neo_base_kyrillisch" {
     key <AE05> { [ 5,                       guillemotleft,           U2039,                   malesymbol,              periodcentered,          NoSymbol,                U2221,                   NoSymbol                 ] };
     key <AE06> { [ 6,                       dollar,                  cent,                    U26A5,                   sterling,                NoSymbol,                U2225,                   NoSymbol                 ] };
 
-    key <AE07> { [ 7,                       EuroSign,                yen,                     Greek_kappa,             currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
+    key <AE07> { [ 7,                       EuroSign,                yen,                     U03F0,                   currency,                NoSymbol,                rightarrow,              NoSymbol                 ] };
     key <AE08> { [ 8,                       doublelowquotemark,      singlelowquotemark,      U27E8,                   Tab,                     ISO_Left_Tab,            U221E,                   NoSymbol                 ] };
     key <AE09> { [ 9,                       leftdoublequotemark,     leftsinglequotemark,     U27E9,                   KP_Divide,               KP_Divide,               variation,               NoSymbol                 ] };
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              U21BB,                   dead_diaeresis,          dead_dasia,              dead_doublegrave,        NoSymbol,                U02DE,                   NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              dead_cedilla,            dead_abovering,          U1FFE,                   dead_diaeresis,          NoSymbol,                dead_macron,             NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
-    key <AD01> { [ Cyrillic_che,            Cyrillic_CHE,            ellipsis,                Greek_xi,                U22EE,                   NoSymbol,                Greek_XI,                NoSymbol                 ] };
+    key <AD01> { [ Cyrillic_che,            Cyrillic_CHE,            ellipsis,                Greek_xi,                Prior,                   Prior,                   Greek_XI,                NoSymbol                 ] };
     key <AD02> { [ Cyrillic_ve,             Cyrillic_VE,             underscore,              NoSymbol,                BackSpace,               BackSpace,               radical,                 NoSymbol                 ] };
     key <AD03> { [ Cyrillic_el,             Cyrillic_EL,             bracketleft,             Greek_lambda,            Up,                      Up,                      Greek_LAMBDA,            NoSymbol                 ] };
     key <AD04> { [ Cyrillic_tse,            Cyrillic_TSE,            bracketright,            Greek_chi,               Delete,                  Delete,                  U2102,                   NoSymbol                 ] };
-    key <AD05> { [ Cyrillic_sha,            Cyrillic_SHA,            asciicircum,             Greek_omega,             Insert,                  Insert,                  Greek_OMEGA,             NoSymbol                 ] };
+    key <AD05> { [ Cyrillic_sha,            Cyrillic_SHA,            asciicircum,             Greek_omega,             Next,                    Next,                    Greek_OMEGA,             NoSymbol                 ] };
 
-    key <AD06> { [ Cyrillic_ka,             Cyrillic_KA,             exclam,                  U03F0,                   exclamdown,              NoSymbol,                multiply,                NoSymbol                 ] };
+    key <AD06> { [ Cyrillic_ka,             Cyrillic_KA,             exclam,                  Greek_kappa,             exclamdown,              NoSymbol,                multiply,                NoSymbol                 ] };
     key <AD07> { [ Cyrillic_ha,             Cyrillic_HA,             less,                    Greek_psi,               KP_7,                    KP_7,                    Greek_PSI,               NoSymbol                 ] };
     key <AD08> { [ Cyrillic_ghe,            Cyrillic_GHE,            greater,                 Greek_gamma,             KP_8,                    KP_8,                    Greek_GAMMA,             NoSymbol                 ] };
     key <AD09> { [ Cyrillic_ef,             Cyrillic_EF,             equal,                   Greek_phi,               KP_9,                    KP_9,                    Greek_PHI,               NoSymbol                 ] };
@@ -732,7 +732,8 @@ xkb_symbols "neo_base_kyrillisch" {
     key <AD11> { [ Macedonia_dse,           Macedonia_DSE,           U017F,                   Greek_finalsmallsigma,   U2212,                   NoSymbol,                jot,                     NoSymbol                 ] };
 
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AD12> { [ dead_acute,              dead_cedilla,            dead_stroke,             dead_psili,              dead_doubleacute,        NoSymbol,                dead_abovedot,           NoSymbol                 ] };
+    key <AD12> { [ dead_acute,              dead_tilde,              dead_stroke,             U1FBF,                  dead_doubleacute,        NoSymbol,                dead_breve,               NoSymbol                 ] };
+
 
     // Middle row
     // --------------------------------------------------------------
@@ -745,7 +746,7 @@ xkb_symbols "neo_base_kyrillisch" {
 
     key <AC06> { [ Cyrillic_es,             Cyrillic_ES,             question,                Greek_sigma,             questiondown,            NoSymbol,                Greek_SIGMA,             NoSymbol                 ] };
     key <AC07> { [ Cyrillic_en,             Cyrillic_EN,             parenleft,               Greek_nu,                KP_4,                    KP_4,                    U2115,                   NoSymbol                 ] };
-    key <AC08> { [ Cyrillic_er,             Cyrillic_ER,             parenright,              U03F1,                   KP_5,                    KP_5,                    U211D,                   NoSymbol                 ] };
+    key <AC08> { [ Cyrillic_er,             Cyrillic_ER,             parenright,              Greek_rho,               KP_5,                    KP_5,                    U211D,                   NoSymbol                 ] };
     key <AC09> { [ Cyrillic_te,             Cyrillic_TE,             minus,                   Greek_tau,               KP_6,                    KP_6,                    partialderivative,       NoSymbol                 ] };
     key <AC10> { [ Cyrillic_de,             Cyrillic_DE,             colon,                   Greek_delta,             KP_Separator,            NoSymbol,                Greek_DELTA,             NoSymbol                 ] };
 
@@ -755,17 +756,17 @@ xkb_symbols "neo_base_kyrillisch" {
     // --------------------------------------------------------------
     key <AB01> { [ Serbian_tshe,            Serbian_TSHE,            numbersign,              NoSymbol,                Escape,                  Escape,                  union,                   NoSymbol                 ] };
     key <AB02> { [ Ukrainian_i,             Ukrainian_I,             dollar,                  U03F5,                   Tab,                     Tab,                     intersection,            NoSymbol                 ] };
-    key <AB03> { [ Cyrillic_e,              Cyrillic_E,              bar,                     Greek_eta,               Next,                    Next,                    U2135,                   NoSymbol                 ] };
+    key <AB03> { [ Cyrillic_e,              Cyrillic_E,              bar,                     Greek_eta,               Insert,                  Insert,                  U2135,                   NoSymbol                 ] };
     key <AB04> { [ Cyrillic_pe,             Cyrillic_PE,             asciitilde,              Greek_pi,                Return,                  Return,                  Greek_PI,                NoSymbol                 ] };
     key <AB05> { [ Cyrillic_ze,             Cyrillic_ZE,             grave,                   Greek_zeta,              Undo,                    Undo,                    U2124,                   NoSymbol                 ] };
 
     key <AB06> { [ Cyrillic_be,             Cyrillic_BE,             plus,                    Greek_beta,              colon,                   NoSymbol,                U21D0,                   NoSymbol                 ] };
     key <AB07> { [ Cyrillic_em,             Cyrillic_EM,             percent,                 Greek_mu,                KP_1,                    KP_1,                    ifonlyif,                NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AB08> { [ comma,                   endash,                  quotedbl,                Greek_rho,               KP_2,                    KP_2,                    U21D2,                   NoSymbol                 ] };
-    key <AB09> { [ period,                  enfilledcircbullet,      apostrophe,              U03D1,                   KP_3,                    KP_3,                    Greek_THETA,             NoSymbol                 ] };
+    key <AB08> { [ comma,                   endash,                  quotedbl,                U03F1,                   KP_2,                    KP_2,                    U21D2,                   NoSymbol                 ] };
+    key <AB09> { [ period,                  enfilledcircbullet,      apostrophe,              U03D1,                   KP_3,                    KP_3,                    U21A6,             NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS_QUARTERALPHABETIC";
-    key <AB10> { [ Cyrillic_je,             Cyrillic_JE,             semicolon,               Greek_theta,             semicolon,               NoSymbol,                U21A6,                   NoSymbol                 ] };
+    key <AB10> { [ Cyrillic_je,             Cyrillic_JE,             semicolon,               Greek_theta,             semicolon,               NoSymbol,                Greek_THETA,                   NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
 
     // Space key
