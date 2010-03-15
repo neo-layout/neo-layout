@@ -226,7 +226,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 //				|===================|===========|===========|===========|===========|===========|===========|
 // Zeile 1
 {VK_OEM_1		,0					,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},	//Tote Taste 1
-{0xff			,0					,'^'		,'~'		,0x02da		,0x02c7		,0x02d8		,0x00af		}, 
+{0xff			,0					,'^'		,0x02c7		,0x21bb		,0x02d9		,0x02de		,'.'		}, 
 {'1'			,KANALOK			,'1'		,0x00b0		,0x00B9		,0x00aa		,0x2081		,0x00ac		},
 {'3'			,KANALOK			,'3'		,0x2113		,0x00b3		,0x2116		,0x2083		,0x2227		},
 {'4'			,KANALOK			,'4'		,0x00bb		,0x203A		,WCH_NONE	,0x2640		,0x22a5		},	//WCH_NONE sollte »Bild auf« sein (AHK?)
@@ -236,8 +236,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'9'			,KANALOK			,'9'		,0x201C		,0x2018		,'/'		,0x27E9		,0x221d		},
 {'0'			,KANALOK			,'0'		,0x201D		,0x2019		,'*'		,0x2080		,0x2205		},
 {VK_OEM_MINUS	,KANALOK			,'-'		,0x2014		,WCH_NONE	,'-'		,0x2011		,0x00ad		},
-{VK_OEM_2		,0					,WCH_DEAD	,WCH_NONE	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_NONE	},	//Tote Taste 2
-{0xff			,0					,0x0060		,0x21bb		,0x00a8		,0x030f		,0x1ffe		,0x02de		},
+{VK_OEM_2		,0					,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	},	//Tote Taste 2
+{0xff			,0					,0x0060		,0x00b8		,0x02da		,0x00a8		,0x02bd		,0x00af		},
 {VK_TAB			,0					,'\t'		,'\t'		,WCH_DEAD	,'\t'		,'\t'		,'\t'		},
 {0xff			,0					,WCH_NONE	,WCH_NONE	,0x266b		,WCH_NONE	,WCH_NONE	,WCH_NONE	},
 {'X'			,CAPLOK | KANALOK	,'x'		,'X'		,0x2026		,0x22ee		,0x03BE		,0x039E		},
@@ -277,7 +277,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
 //				|===================|===========|===========|===========|===========|===========|===========|===========|
 {VK_OEM_3		,CAPLOK | KANALOK	,0x00df		,0x1E9E	 ,0x017F		,0x2052		,0x03C2		,0x2218		,0x2218		},
 {VK_OEM_4		,0					,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,0x001d		},	//Tote Taste 3
-{0xff			,0					,0x00b4		,0x00b8		,'-'		,0x02dd		,0x1fbf		,0x02d9		,WCH_NONE	},
+{0xff			,0					,0x00b4		,'~'		,'/'		,0x02dd		,0x1fbf		,0x02d8		,WCH_NONE	},
 {'Y'			,CAPLOK | KANALOK	,'y'		,'Y'		,'@'		,'.'		,0x03C5		,0x2207		,0x001c		},
 {VK_SPACE		,KANALOK			,' '		,' '		,' '		,'0'		,0x00a0		,0x202f		,' '		},
 {VK_BACK		,0					,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,'\b'		,0x007f		},
@@ -465,7 +465,52 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 //
 //
 //
-// Zirkumflex + Superskript – fertig
+// Zirkumflex und Superscript (fertig)
+DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000), //Zirkumflex
+DEADTRANS( L'^'   , L'^'   , 0x0302 , 0x0000), //2x für Combining
+DEADTRANS( L'A'   , L'^'   , 0x00c2 , 0x0000),
+DEADTRANS( L'a'   , L'^'   , 0x00e2 , 0x0000),
+DEADTRANS( L'C'   , L'^'   , 0x0108 , 0x0000),
+DEADTRANS( L'c'   , L'^'   , 0x0109 , 0x0000),
+DEADTRANS( L'E'   , L'^'   , 0x00ca , 0x0000),
+DEADTRANS( L'e'   , L'^'   , 0x00ea , 0x0000),
+DEADTRANS( L'G'   , L'^'   , 0x011c , 0x0000),
+DEADTRANS( L'g'   , L'^'   , 0x011d , 0x0000),
+DEADTRANS( L'H'   , L'^'   , 0x0124 , 0x0000),
+DEADTRANS( L'h'   , L'^'   , 0x0125 , 0x0000),
+DEADTRANS( L'I'   , L'^'   , 0x00ce , 0x0000),
+DEADTRANS( L'i'   , L'^'   , 0x00ee , 0x0000),
+DEADTRANS( L'J'   , L'^'   , 0x0134 , 0x0000),
+DEADTRANS( L'j'   , L'^'   , 0x0135 , 0x0000),
+DEADTRANS( L'O'   , L'^'   , 0x00d4 , 0x0000),
+DEADTRANS( L'o'   , L'^'   , 0x00f4 , 0x0000),
+DEADTRANS( L'S'   , L'^'   , 0x015c , 0x0000),
+DEADTRANS( L's'   , L'^'   , 0x015d , 0x0000),
+DEADTRANS( L'U'   , L'^'   , 0x00db , 0x0000),
+DEADTRANS( L'u'   , L'^'   , 0x00fb , 0x0000),
+DEADTRANS( L'W'   , L'^'   , 0x0174 , 0x0000),
+DEADTRANS( L'w'   , L'^'   , 0x0175 , 0x0000),
+DEADTRANS( L'Y'   , L'^'   , 0x0176 , 0x0000),
+DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
+DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
+DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
+DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),	//ab hier hochgestelltes
+DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
+DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
+DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
+DEADTRANS( L'5'   , L'^'   , 0x2075 , 0x0000),
+DEADTRANS( L'6'   , L'^'   , 0x2076 , 0x0000),
+DEADTRANS( L'7'   , L'^'   , 0x2077 , 0x0000),
+DEADTRANS( L'8'   , L'^'   , 0x2078 , 0x0000),
+DEADTRANS( L'9'   , L'^'   , 0x2079 , 0x0000),
+DEADTRANS( L'0'   , L'^'   , 0x2070 , 0x0000),
+DEADTRANS( L'+'   , L'^'   , 0x207a , 0x0000),
+DEADTRANS( L'-'   , L'^'   , 0x207b , 0x0000),
+DEADTRANS( L'='   , L'^'   , 0x207c , 0x0000),
+DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
+DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
+DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
+
 
 // Akut (fertig)
 DEADTRANS( L' '   , 0x00B4 , 0x00B4 , 0x0000),	//Akut
@@ -613,51 +658,6 @@ DEADTRANS( L'Y'   , L'~'   , 0x1ef8 , 0x0000),
 DEADTRANS( L'y'   , L'~'   , 0x1ef9 , 0x0000),
 
 
-// Zirkumflex und Superscript (fertig)
-DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000), //Zirkumflex
-DEADTRANS( L'^'   , L'^'   , 0x0302 , 0x0000), //2x für Combining
-DEADTRANS( L'A'   , L'^'   , 0x00c2 , 0x0000),
-DEADTRANS( L'a'   , L'^'   , 0x00e2 , 0x0000),
-DEADTRANS( L'C'   , L'^'   , 0x0108 , 0x0000),
-DEADTRANS( L'c'   , L'^'   , 0x0109 , 0x0000),
-DEADTRANS( L'E'   , L'^'   , 0x00ca , 0x0000),
-DEADTRANS( L'e'   , L'^'   , 0x00ea , 0x0000),
-DEADTRANS( L'G'   , L'^'   , 0x011c , 0x0000),
-DEADTRANS( L'g'   , L'^'   , 0x011d , 0x0000),
-DEADTRANS( L'H'   , L'^'   , 0x0124 , 0x0000),
-DEADTRANS( L'h'   , L'^'   , 0x0125 , 0x0000),
-DEADTRANS( L'I'   , L'^'   , 0x00ce , 0x0000),
-DEADTRANS( L'i'   , L'^'   , 0x00ee , 0x0000),
-DEADTRANS( L'J'   , L'^'   , 0x0134 , 0x0000),
-DEADTRANS( L'j'   , L'^'   , 0x0135 , 0x0000),
-DEADTRANS( L'O'   , L'^'   , 0x00d4 , 0x0000),
-DEADTRANS( L'o'   , L'^'   , 0x00f4 , 0x0000),
-DEADTRANS( L'S'   , L'^'   , 0x015c , 0x0000),
-DEADTRANS( L's'   , L'^'   , 0x015d , 0x0000),
-DEADTRANS( L'U'   , L'^'   , 0x00db , 0x0000),
-DEADTRANS( L'u'   , L'^'   , 0x00fb , 0x0000),
-DEADTRANS( L'W'   , L'^'   , 0x0174 , 0x0000),
-DEADTRANS( L'w'   , L'^'   , 0x0175 , 0x0000),
-DEADTRANS( L'Y'   , L'^'   , 0x0176 , 0x0000),
-DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
-DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
-DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
-DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),	//ab hier hochgestelltes
-DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
-DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
-DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
-DEADTRANS( L'5'   , L'^'   , 0x2075 , 0x0000),
-DEADTRANS( L'6'   , L'^'   , 0x2076 , 0x0000),
-DEADTRANS( L'7'   , L'^'   , 0x2077 , 0x0000),
-DEADTRANS( L'8'   , L'^'   , 0x2078 , 0x0000),
-DEADTRANS( L'9'   , L'^'   , 0x2079 , 0x0000),
-DEADTRANS( L'0'   , L'^'   , 0x2070 , 0x0000),
-DEADTRANS( L'+'   , L'^'   , 0x207a , 0x0000),
-DEADTRANS( L'-'   , L'^'   , 0x207b , 0x0000),
-DEADTRANS( L'='   , L'^'   , 0x207c , 0x0000),
-DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
-DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
-DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
 
 
 
