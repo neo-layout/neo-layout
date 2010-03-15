@@ -179,7 +179,7 @@ doMod4() {
 }
 
 ; *** Funktionstasten ***
-~*4::
+~*x::
 if (isMod4Active and !isMod3Pressed)
 Send {Blind}{PGUP}
 return
@@ -201,7 +201,7 @@ return
 
 ~*w::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{INS}
+Send {Blind}{PGDN}
 return
 
 ~*u::
@@ -234,14 +234,14 @@ if (isMod4Active and !isMod3Pressed)
 Send {esc}
 return
 
-~*VKDD:: ;ist ö
+~*VKDD:: ;ist ö, mit ö jedoch merkwürdige Fehler
 if (isMod4Active and !isMod3Pressed)
 Send {Blind}{TAB}
 return
 
 ~*ä::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{PGDN}
+Send {Blind}{INS}
 return
 
 ~*p::
@@ -249,6 +249,10 @@ if (isMod4Active and !isMod3Pressed)
 Send {ENTER}
 return
 
+~*z::
+if (isMod4Active and !isMod3Pressed)
+Send ^z
+return
 
 ;*****************
 ; Menüfunktionen *
