@@ -467,7 +467,7 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 //
 // =========================================================================
 // TASTE 1: ZIRKUMFLEX, HATSCHEK, DREHEN, PUNKT DRÜBER, HAKEN, PUNKT DRUNTER
-// Zirkumflex und Superscript (alles wie en_US.UTF-8)
+// Zirkumflex und Superscript (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , L'^'   , L'^'   , 0x0000), //Zirkumflex
 DEADTRANS( L'^'   , L'^'   , 0x0302 , 0x0000), //2x für Combining
 DEADTRANS( L'A'   , L'^'   , 0x00c2 , 0x0000),
@@ -496,7 +496,13 @@ DEADTRANS( L'Y'   , L'^'   , 0x0176 , 0x0000),
 DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
 DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
 DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
-DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),	//ab hier hochgestelltes
+DEADTRANS( L'?'   , L'^'   , 0x02c0 , 0x0000),  // ab hier lang.module 
+DEADTRANS( 0x00d7 , L'^'   , 0x02c0 , 0x0000),
+DEADTRANS( 0x03b1 , L'^'   , 0x1d45 , 0x0000),   //Greek_alpha  
+DEADTRANS( 0x03b5 , L'^'   , 0x1d4b , 0x0000),   //Greek_epsilon
+DEADTRANS( 0x03c5 , L'^'   , 0x1db7 , 0x0000),   //Greek_upsilon
+DEADTRANS( 0x03d5 , L'^'   , 0x1db2 , 0x0000),   // Ende lang.module
+DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),  //ab hier hochgestelltes
 DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
 DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
 DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
@@ -513,7 +519,7 @@ DEADTRANS( L'('   , L'^'   , 0x207d , 0x0000),
 DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
 DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
 
-//Caron (alles wie en_US.UTF-8)
+//Caron (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x02c7 , 0x02c7 , 0x0000),	//Caron 
 DEADTRANS( 0x02c7 , 0x02c7 , 0x030C , 0x0000),	//2x für Combining
 DEADTRANS( L'A'   , 0x02c7 , 0x01CD , 0x0000),
@@ -566,11 +572,9 @@ DEADTRANS( L'-'   , 0x02c7 , 0x208b , 0x0000),
 DEADTRANS( L'='   , 0x02c7 , 0x208c , 0x0000),
 DEADTRANS( L'('   , 0x02c7 , 0x208d , 0x0000),
 DEADTRANS( L')'   , 0x02c7 , 0x208e , 0x0000),
-//DEADTRANS( L'a'   , 0x02c7 , 0x2090 , 0x0000),
-//DEADTRANS( L'e'   , 0x02c7 , 0x2091 , 0x0000),
 DEADTRANS( L'x'   , 0x02c7 , 0x2093 , 0x0000), // Ende tiefgestellt
 
-//Drehen (NICHT fertig)
+//Drehen (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x21bb , 0x21bb , 0x0000), //Drehen-Symbol
 DEADTRANS( L'3'   , 0x21bb , 0x0190 , 0x0000), //ab hier lang.module
 DEADTRANS( L'a'   , 0x21bb , 0x0250 , 0x0000),
@@ -593,9 +597,10 @@ DEADTRANS( 0x03a9 , 0x21bb , 0x01b1 , 0x0000),
 DEADTRANS( 0x03c4 , 0x21bb , 0x027e , 0x0000),
 DEADTRANS( 0x03b4 , 0x21bb , 0x018d , 0x0000),
 DEADTRANS( L')'   , 0x21bb , 0x203f , 0x0000),
-DEADTRANS( L'('   , 0x21bb , 0x0361 , 0x0000), //Ende lang.module
+DEADTRANS( L'('   , 0x21bb , 0x0361 , 0x0000),
+DEADTRANS( 0x221d , 0x21bb , 0x0223 , 0x0000), //Ende lang.module
 
-//Punkt Drüber & Mittenpunkt  (alles wie en_US.UTF-8)
+//Punkt Drüber & Mittenpunkt  (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x02d9 , 0x02d9 , 0x0000),	//Punkt Drüber
 DEADTRANS( 0x02d9 , 0x02d9 , 0x0307 , 0x0000),	//2x für Combining 
 DEADTRANS( L'L'   , 0x02d9 , 0x013F , 0x0000),  //Mittenpunkt
@@ -643,7 +648,7 @@ DEADTRANS( L'Z'   , 0x02d9 , 0x017b , 0x0000),
 DEADTRANS( L'z'   , 0x02d9 , 0x017c , 0x0000),
 DEADTRANS( L'0'   , 0x02d9 , 0x0298 , 0x0000), //lang.module
 
-//Rhotic hook (NICHT fertig)
+//Rhotic hook (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x02de , 0x02de , 0x0000), // Rhotic Hook
 DEADTRANS( L'B'   , 0x02de , 0x0181 , 0x0000), // ab hier lang.module
 DEADTRANS( L'b'   , 0x02de , 0x0253 , 0x0000),
@@ -687,7 +692,7 @@ DEADTRANS( L'y'   , 0x02de , 0x01b4 , 0x0000),
 DEADTRANS( L'z'   , 0x02de , 0x0290 , 0x0000),
 DEADTRANS( L'3'   , 0x02de , 0x025d , 0x0000), // bis hier lang.module
 
-//Punkt Darunter (alles wie en_US.UTF-8)
+//Punkt Darunter (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , L'.' , L'.'     , 0x0000),	//Puntk darunter
 DEADTRANS( L'.'   , L'.' , 0x0323   , 0x0000),	//2x für Combining
 DEADTRANS( L'A'   , L'.' , 0x1ea0   , 0x0000),
@@ -732,7 +737,7 @@ DEADTRANS( L'z'   , L'.' , 0x1e93   , 0x0000),
 // =====================================================================
 // =====================================================================
 // TASTE 2: GRAVIS, CEDILLE, RING, TREMA, OGONEK, MAKRON
-// Gravis (alles wie en_US.UTF-8)
+// Gravis (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x0060 , 0x0060 , 0x0000),	//Gravis
 DEADTRANS( 0x0060 , 0x0060 , 0x0300 , 0x0000),	//2x für Combining
 DEADTRANS( L'a'   , 0x0060 , 0x00e0 , 0x0000),			
@@ -768,7 +773,7 @@ DEADTRANS( 0x03bf , 0x0060 , 0x1F78 , 0x0000),
 DEADTRANS( 0x03a5 , 0x0060 , 0x1FEA , 0x0000),
 DEADTRANS( 0x03c5 , 0x0060 , 0x1F7A , 0x0000),
  
-//Cedille (alles wie en_US.UTF-8)
+//Cedille (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x00b8 , 0x00b8 , 0x0000),	//Cedille
 DEADTRANS( 0x00b8 , 0x00b8 , 0x0327 , 0x0000),	 //2x für Combining
 DEADTRANS( L'C'   , 0x00b8 , 0x00c7 , 0x0000),
@@ -802,7 +807,7 @@ DEADTRANS( L'o'   , 0x00b8 , 0x01eb , 0x0000),
 DEADTRANS( L'U'   , 0x00b8 , 0x0172 , 0x0000),
 DEADTRANS( L'u'   , 0x00b8 , 0x0173 , 0x0000),
 
-//Ring (alles wie en_US.UTF-8)
+//Ring (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x02DA , 0x02DA , 0x0000),	//Ring
 DEADTRANS( 0x02DA , 0x02DA , 0x030A , 0x0000),	//2x für Combining
 DEADTRANS( L'A'   , 0x02DA , 0x00c5 , 0x0000),
@@ -819,7 +824,7 @@ DEADTRANS( L'n'   , 0x02DA , 0x0235 , 0x0000),
 DEADTRANS( L't'   , 0x02DA , 0x0236 , 0x0000),
 DEADTRANS( L'z'   , 0x02DA , 0x0291 , 0x0000),
 
-//Trema (alles wie en_US.UTF-8)
+//Trema (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x00A8 , 0x00A8 , 0x0000),	//Trema
 DEADTRANS( 0x00A8 , 0x00A8 , 0x0308 , 0x0000),	//2x für Combining
 DEADTRANS( 0x00b4 , 0x00A8 , 0x0344 , 0x0001),  //Trema und Akut: COMBINING GREEK DIALYTIKA TONOS
@@ -847,7 +852,7 @@ DEADTRANS( 0x03b9 , 0x00A8 , 0x03ca , 0x0000),
 DEADTRANS( 0x03a5 , 0x00A8 , 0x03ab , 0x0000),
 DEADTRANS( 0x03c5 , 0x00A8 , 0x03cb , 0x0000),
 
-//Spiritus asper (alles wie en_US.UTF-8)
+//Spiritus asper (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x1ffe , 0x1ffe , 0x0000),	//Spiritus asper
 DEADTRANS( 0x1ffe , 0x1ffe , 0x0314 , 0x0000),	//2x für Combining
 DEADTRANS( 0x03b1 , 0x1ffe , 0x1f01 , 0x0000),//Greek_alpha  
@@ -867,7 +872,7 @@ DEADTRANS( 0x03a1 , 0x1ffe , 0x1fec , 0x0000),//Greek_RHO
 DEADTRANS( 0x03c5 , 0x1ffe , 0x1f51 , 0x0000),//Greek_upsilon
 DEADTRANS( 0x03a5 , 0x1ffe , 0x1f59 , 0x0000),//Greek_UPSILON
 
-// Makron (alles wie en_US.UTF-8)
+// Makron (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x00AF , 0x00AF , 0x0000),	//Makron
 DEADTRANS( 0x00AF , 0x00AF , 0x0304 , 0x0000),	//2x für Combining
 DEADTRANS( L'A'   , 0x00AF , 0x0100 , 0x0000),
@@ -914,7 +919,7 @@ DEADTRANS( L'R'   , 0x00AF , 0x1e5e , 0x0000),
 DEADTRANS( L't'   , 0x00AF , 0x1e6f , 0x0000),
 DEADTRANS( L'T'   , 0x00AF , 0x1e6e , 0x0000),
 DEADTRANS( L'z'   , 0x00AF , 0x1e95 , 0x0000),
-DEADTRANS( L'Z'   , 0x00AF , 0x1e94 , 0x0000),
+DEADTRANS( L'Z'   , 0x00AF , 0x1e94 , 0x0000), // Ende Makron darunter
 DEADTRANS( L'1'   , 0x00af , 0x2081 , 0x0000), // tiefgestellt
 DEADTRANS( L'2'   , 0x00af , 0x2082 , 0x0000),
 DEADTRANS( L'3'   , 0x00af , 0x2083 , 0x0000),
@@ -930,14 +935,12 @@ DEADTRANS( L'-'   , 0x00af , 0x208b , 0x0000),
 DEADTRANS( L'='   , 0x00af , 0x208c , 0x0000),
 DEADTRANS( L'('   , 0x00af , 0x208d , 0x0000),
 DEADTRANS( L')'   , 0x00af , 0x208e , 0x0000),
-//DEADTRANS( L'a'   , 0x00af , 0x2090 , 0x0000),
-//DEADTRANS( L'e'   , 0x00af , 0x2091 , 0x0000),
 DEADTRANS( L'x'   , 0x00af , 0x2093 , 0x0000), // Ende tiefgestellt
 // ENDE TASTE 2
 // =====================================================================
 // =====================================================================
 // TASTE 3: AKUT, TILDE, QUERSTRICH, DOPPELAKUT, OGONEK, BREVE
-// Akut (alles wie en_US.UTF-8)
+// Akut (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x00B4 , 0x00B4 , 0x0000),	//Akut
 DEADTRANS( 0x00B4 , 0x00B4 , 0x0301 , 0x0000),	//2x für Combining
 DEADTRANS( 0x00a8 , 0x00b4 , 0x0344 , 0x0001),  //Trema und Akut: COMBINING GREEK DIALYTIKA TONOS
@@ -994,7 +997,7 @@ DEADTRANS( 0x03bf , 0x00B4 , 0x03cc , 0x0000),
 DEADTRANS( 0x03c5 , 0x00B4 , 0x03cd , 0x0000),	
 DEADTRANS( 0x03c9 , 0x00B4 , 0x03ce , 0x0000),	
 
-// Tilde  (alles wie en_US.UTF-8)
+// Tilde  (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , L'~'   , L'~'   , 0x0000), //Tilde
 DEADTRANS( L'~'   , L'~'   , 0x0303 , 0x0000), //2x für Combining
 DEADTRANS( L'A'   , L'~'   , 0x00c3 , 0x0000),
@@ -1019,7 +1022,7 @@ DEADTRANS( 0x03b9 , L'~'   , 0x1FD6 , 0x0000),
 DEADTRANS( 0x03c9 , L'~'   , 0x1FF6 , 0x0000),	
 DEADTRANS( 0x03c5 , L'~'   , 0x1FE6 , 0x0000),	
 
-//Quer-/Schrägstrich
+//Quer-/Schrägstrich (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , L'-'   , 0x2011 , 0x0000),	//Quer-/Schrägstrich; mit Space wird echter Hyphen erzeugt
 DEADTRANS( L'-'   , L'-'   , 0x0335 , 0x0000),	//2x für Combining (Combining Short Stroke)
 DEADTRANS( L'A'   , L'-'   , 0x023A , 0x0000),  //lang.module
@@ -1040,13 +1043,17 @@ DEADTRANS( L'u'   , L'-'   , 0x0289 , 0x0000),
 DEADTRANS( L'U'   , L'-'   , 0x0244 , 0x0000),
 DEADTRANS( L'Y'   , L'-'   , 0x024E , 0x0000),
 DEADTRANS( L'y'   , L'-'   , 0x024F , 0x0000),
+DEADTRANS( 0x03b9 , L'-'   , 0x1d7c , 0x0000),  //Greek_iota   
+DEADTRANS( 0x03bb , L'-'   , 0x019b , 0x0000),  //Greek_lambda
+DEADTRANS( 0x03c5 , L'-'   , 0x1d7f , 0x0000),  //Greek_upsilon
+DEADTRANS( 0x017f , L'-'   , 0x1e9c , 0x0000),  //lang-s
 DEADTRANS( L'2'   , L'-'   , 0x01bb , 0x0000),  //Ende lang.module
 DEADTRANS( L'O'   , L'-'   , 0x00d8 , 0x0000),	//Schrägstrich
 DEADTRANS( L'o'   , L'-'   , 0x00f8 , 0x0000),
 DEADTRANS( L'L'   , L'-'   , 0x0141 , 0x0000),
 DEADTRANS( L'l'   , L'-'   , 0x0142 , 0x0000),
 
-//Doppelakut
+//Doppelakut (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x02DD , 0x02DD , 0x0000),	//Doppelakut
 DEADTRANS( 0x02DD , 0x02DD , 0x030B , 0x0000),	//2x für Combining
 DEADTRANS( L'O'   , 0x02DD , 0x0150 , 0x0000),
@@ -1054,7 +1061,7 @@ DEADTRANS( L'o'   , 0x02DD , 0x0151 , 0x0000),
 DEADTRANS( L'U'   , 0x02DD , 0x0170 , 0x0000),
 DEADTRANS( L'u'   , 0x02DD , 0x0171 , 0x0000),
 
-//Spiritus Lenis (alles wie en_US.UTF-8)
+//Spiritus Lenis (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),  //Spiritus Lenis
 DEADTRANS( 0x1fbf , 0x1fbf , 0x0313 , 0x0000),
 DEADTRANS( 0x03b1 , 0x1fbf , 0x1F00 , 0x0000),//Greek_alpha  
@@ -1071,12 +1078,20 @@ DEADTRANS( 0x03bf , 0x1fbf , 0x1F40 , 0x0000),//Greek_omicron
 DEADTRANS( 0x039f , 0x1fbf , 0x1F48 , 0x0000),//Greek_OMICRON
 DEADTRANS( 0x03c1 , 0x1fbf , 0x1FE4 , 0x0000),//Greek_rho    
 DEADTRANS( 0x03c5 , 0x1fbf , 0x1F50 , 0x0000),//Greek_upsilon
+DEADTRANS( L'A'   , 0x1fbf , 0x1EA2 , 0x0000),  //lang.module
+DEADTRANS( L'a'   , 0x1fbf , 0x1EA3 , 0x0000),
+DEADTRANS( L'E'   , 0x1fbf , 0x1EBA , 0x0000),
+DEADTRANS( L'e'   , 0x1fbf , 0x1EBB , 0x0000),
+DEADTRANS( L'I'   , 0x1fbf , 0x1EC8 , 0x0000),
+DEADTRANS( L'i'   , 0x1fbf , 0x1EC9 , 0x0000),
+DEADTRANS( L'O'   , 0x1fbf , 0x1ECE , 0x0000),
+DEADTRANS( L'o'   , 0x1fbf , 0x1ECF , 0x0000),
+DEADTRANS( L'U'   , 0x1fbf , 0x1EE6 , 0x0000),
+DEADTRANS( L'u'   , 0x1fbf , 0x1EE7 , 0x0000),
+DEADTRANS( L'Y'   , 0x1fbf , 0x1EF6 , 0x0000),
+DEADTRANS( L'y'   , 0x1fbf , 0x1EF7 , 0x0000),
 
-
-
-
-
-// Breve (fertig)
+// Breve (ferfig für en_US.UTF-8 und lang.module)
 DEADTRANS( L' '   , 0x02D8 , 0x02D8 , 0x0000),	//Breve
 DEADTRANS( 0x02D8 , 0x02D8 , 0x0306 , 0x0000),	//2x für Combining
 DEADTRANS( L'A'   , 0x02D8 , 0x0102 , 0x0000),
@@ -1091,8 +1106,17 @@ DEADTRANS( L'O'   , 0x02D8 , 0x014e , 0x0000),
 DEADTRANS( L'o'   , 0x02D8 , 0x014f , 0x0000),
 DEADTRANS( L'U'   , 0x02D8 , 0x016c , 0x0000),
 DEADTRANS( L'u'   , 0x02D8 , 0x016d , 0x0000),
+DEADTRANS( 0x03b1 , 0x02D8 , 0x1FB0 , 0x0000),//Greek_alpha  
+DEADTRANS( 0x0391 , 0x02D8 , 0x1FB8 , 0x0000),//Greek_ALPHA  
+DEADTRANS( 0x03b9 , 0x02D8 , 0x1FD0 , 0x0000),//Greek_iota   
+DEADTRANS( 0x0399 , 0x02D8 , 0x1FD8 , 0x0000),//Greek_IOTA   
+DEADTRANS( 0x03c5 , 0x02D8 , 0x1FE0 , 0x0000),//Greek_upsilon
+DEADTRANS( 0x03a5 , 0x02D8 , 0x1FE8 , 0x0000),//Greek_UPSILON
 DEADTRANS( L'H'   , 0x02D8 , 0x1e2a , 0x0000), //Breve darunter
 DEADTRANS( L'h'   , 0x02D8 , 0x1e2b , 0x0000), //Breve darunter
+
+
+
 
 
 	DEADTRANS( L' '   , 0x030f , 0x02F5 , 0x0000),	//Doppelgravis
