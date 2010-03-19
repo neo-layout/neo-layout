@@ -994,7 +994,7 @@ DEADTRANS( 0x03bf , 0x00B4 , 0x03cc , 0x0000),
 DEADTRANS( 0x03c5 , 0x00B4 , 0x03cd , 0x0000),	
 DEADTRANS( 0x03c9 , 0x00B4 , 0x03ce , 0x0000),	
 
-// Tilde
+// Tilde  (alles wie en_US.UTF-8)
 DEADTRANS( L' '   , L'~'   , L'~'   , 0x0000), //Tilde
 DEADTRANS( L'~'   , L'~'   , 0x0303 , 0x0000), //2x für Combining
 DEADTRANS( L'A'   , L'~'   , 0x00c3 , 0x0000),
@@ -1019,10 +1019,10 @@ DEADTRANS( 0x03b9 , L'~'   , 0x1FD6 , 0x0000),
 DEADTRANS( 0x03c9 , L'~'   , 0x1FF6 , 0x0000),	
 DEADTRANS( 0x03c5 , L'~'   , 0x1FE6 , 0x0000),	
 
-//Quer-/Schrägstrich; mit Space wird echter Hyphen erzeugt
+//Quer-/Schrägstrich
 DEADTRANS( L' '   , L'-'   , 0x2011 , 0x0000),	//Quer-/Schrägstrich; mit Space wird echter Hyphen erzeugt
 DEADTRANS( L'-'   , L'-'   , 0x0335 , 0x0000),	//2x für Combining (Combining Short Stroke)
-DEADTRANS( L'A'   , L'-'   , 0x023A , 0x0000),
+DEADTRANS( L'A'   , L'-'   , 0x023A , 0x0000),  //lang.module
 DEADTRANS( L'a'   , L'-'   , 0x2C65 , 0x0000),
 DEADTRANS( L'B'   , L'-'   , 0x0243 , 0x0000),
 DEADTRANS( L'C'   , L'-'   , 0x023B , 0x0000),
@@ -1040,7 +1040,7 @@ DEADTRANS( L'u'   , L'-'   , 0x0289 , 0x0000),
 DEADTRANS( L'U'   , L'-'   , 0x0244 , 0x0000),
 DEADTRANS( L'Y'   , L'-'   , 0x024E , 0x0000),
 DEADTRANS( L'y'   , L'-'   , 0x024F , 0x0000),
-DEADTRANS( L'2'   , L'-'   , 0x01bb , 0x0000),
+DEADTRANS( L'2'   , L'-'   , 0x01bb , 0x0000),  //Ende lang.module
 DEADTRANS( L'O'   , L'-'   , 0x00d8 , 0x0000),	//Schrägstrich
 DEADTRANS( L'o'   , L'-'   , 0x00f8 , 0x0000),
 DEADTRANS( L'L'   , L'-'   , 0x0141 , 0x0000),
@@ -1054,23 +1054,23 @@ DEADTRANS( L'o'   , 0x02DD , 0x0151 , 0x0000),
 DEADTRANS( L'U'   , 0x02DD , 0x0170 , 0x0000),
 DEADTRANS( L'u'   , 0x02DD , 0x0171 , 0x0000),
 
+//Spiritus Lenis (alles wie en_US.UTF-8)
 DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),  //Spiritus Lenis
 DEADTRANS( 0x1fbf , 0x1fbf , 0x0313 , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-DEADTRANS( L' '   , 0x1fbf , 0x1fbf , 0x0000),
-
-
+DEADTRANS( 0x03b1 , 0x1fbf , 0x1F00 , 0x0000),//Greek_alpha  
+DEADTRANS( 0x0391 , 0x1fbf , 0x1F08 , 0x0000),//Greek_ALPHA  
+DEADTRANS( 0x03b5 , 0x1fbf , 0x1F10 , 0x0000),//Greek_epsilon
+DEADTRANS( 0x0395 , 0x1fbf , 0x1F18 , 0x0000),//Greek_EPSILON
+DEADTRANS( 0x03b7 , 0x1fbf , 0x1F20 , 0x0000),//Greek_eta    
+DEADTRANS( 0x0397 , 0x1fbf , 0x1F28 , 0x0000),//Greek_ETA    
+DEADTRANS( 0x03b9 , 0x1fbf , 0x1F30 , 0x0000),//Greek_iota   
+DEADTRANS( 0x0399 , 0x1fbf , 0x1F38 , 0x0000),//Greek_IOTA   
+DEADTRANS( 0x03c9 , 0x1fbf , 0x1F60 , 0x0000),//Greek_omega  
+DEADTRANS( 0x03a9 , 0x1fbf , 0x1F68 , 0x0000),//Greek_OMEGA  
+DEADTRANS( 0x03bf , 0x1fbf , 0x1F40 , 0x0000),//Greek_omicron
+DEADTRANS( 0x039f , 0x1fbf , 0x1F48 , 0x0000),//Greek_OMICRON
+DEADTRANS( 0x03c1 , 0x1fbf , 0x1FE4 , 0x0000),//Greek_rho    
+DEADTRANS( 0x03c5 , 0x1fbf , 0x1F50 , 0x0000),//Greek_upsilon
 
 
 
