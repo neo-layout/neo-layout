@@ -115,12 +115,12 @@ keycode 36 = Return		Return		Return		Return		KP_Enter	KP_Enter	Return		Return
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 49 = dead_circumflex	dead_tilde	dead_abovering	U02DE		dead_caron  Pointer_EnableKeys	dead_breve	NoSymbol
-! called T1	ˆ		˜		˚		˞		ˇ	   (keypad-mouse mode)	˘
-keycode 21 = dead_grave		dead_diaeresis	U21BB		U1FFE		dead_abovedot	NoSymbol	dead_belowdot	NoSymbol
-! called T2	`		¨		↻		῾ dasia (asper)	˙				.
-keycode 35 = dead_acute		dead_cedilla	dead_stroke	U1FBF	      dead_doubleacute	NoSymbol	dead_macron	NoSymbol
-! called T3	´		¸		/		᾿ psili (lenis)	˝				¯
+keycode 49 = dead_circumflex	dead_caron	U21BB		U02DE		dead_abovedot Pointer_EnableKeys dead_belowdot	NoSymbol
+! called T1	ˆ		ˇ		↻		˞		˙	     (keypad-mouse mode) .		
+keycode 21 = dead_grave		dead_cedilla	dead_abovering	U1FFE		dead_diaeresis	NoSymbol	dead_macron	NoSymbol
+! called T2	`		¸		˚		῾ dasia (asper)	¨				¯		
+keycode 35 = dead_acute		dead_tilde	dead_stroke	U1FBF	      dead_doubleacute	NoSymbol	dead_breve	NoSymbol
+! called T3	´		˜		/		᾿ psili (lenis)	˝				˘		
 
 
 
@@ -135,7 +135,7 @@ keycode 11 = 	2		section		twosuperior	twosubscript	masculine	NoSymbol	logicalor	
 !				§		²	  	₂		º				∨
 keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logicaland	NoSymbol
 !				ℓ liter		³	  	₃		№				∧
-keycode 13 = 	4		guillemotright	U203A		femalesymbol	Prior		Prior		downtack	NoSymbol
+keycode 13 = 	4		guillemotright	U203A		femalesymbol	NoSymbol	NoSymbol	downtack	NoSymbol
 !				»		›		♀						⊥ perpendicular
 keycode 14 = 	5		guillemotleft	U2039		malesymbol	periodcentered	NoSymbol	U2221		NoSymbol
 !				«		‹		♂		·				∡ angle sign
@@ -158,15 +158,15 @@ keycode 20 = minus		emdash		NoSymbol	U2011		KP_Subtract	KP_Subtract	hyphen		NoSy
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !            Ebene1		Ebene2		Ebene3		Ebene5		Ebene4		Ebene4+Sh	Ebene6		Ebene7
 
-keycode 24 = 	x		X		ellipsis	Greek_xi	U22EE		NoSymbol	Greek_XI	Greek_XI
-!						…		ξ		⋮				Ξ		Ξ
+keycode 24 = 	x		X		ellipsis	Greek_xi	Prior		Prior		Greek_XI	Greek_XI
+!						…		ξ						Ξ		Ξ
 keycode 25 = 	v		V		underscore	NoSymbol	BackSpace	BackSpace	radical		NoSymbol
 !						_								√	
 keycode 26 = 	l		L		bracketleft	Greek_lambda	Up		Up		Greek_LAMBDA	Greek_LAMBDA
 !						[		λ						Λ		Λ
 keycode 27 = 	c		C		bracketright	Greek_chi	Delete		Delete		U2102		NoSymbol
 !						]		χ						ℂ komplex
-keycode 28 = 	w		W		asciicircum	Greek_omega	Insert		Insert		Greek_OMEGA	Greek_OMEGA
+keycode 28 = 	w		W		asciicircum	Greek_omega	Next		Next		Greek_OMEGA	Greek_OMEGA
 !						^		ω						Ω		Ω
 
 keycode 29 = 	k		K		exclam		Greek_kappa	exclamdown	NoSymbol	multiply	NoSymbol
@@ -220,7 +220,7 @@ keycode 52 = udiaeresis		Udiaeresis	numbersign	NoSymbol	Escape		Escape		union		N
 !		ü		Ü		#								∪
 keycode 53 = odiaeresis		Odiaeresis	dollar		U03F5		Tab		ISO_Left_Tab	intersection	NoSymbol
 !		ö		Ö		$		ϵ						∩
-keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Next		Next		U2135		NoSymbol
+keycode 54 = adiaeresis		Adiaeresis	bar		Greek_eta	Insert		Insert		U2135		NoSymbol
 !		ä		Ä		|		η						ℵ
 keycode 55 = 	p		P		asciitilde	Greek_pi	Return		Return		Greek_PI	Greek_PI
 !						~		π						Π		Π
