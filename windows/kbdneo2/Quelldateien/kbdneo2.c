@@ -450,20 +450,9 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 
 //Deadkeys
 // Nachfolgend Tafeln für die diakritschen Zeichen
-// Kombinationen nur für „Latin Letters“, der rest ist im Deuschen selten und lässt sich über das Combiningzeichen (nachgestellt) bilden
+// Kombinationen mit einem Diakritika und Compose mit 2 Zeichen. Der Rest ist im Deuschen selten 
+// und lässt sich über das Combiningzeichen (nachgestellt) bilden
 // Mehrfachfunktionen siehe: http://wiki.neo-layout.org/wiki/Diakritika#DoppelfunktionToterTasten
-//
-// zu xx% fertig:
-// Akut – fertig
-// Brevis – fertig
-// Gravis – fertig
-// Makron – ferig
-// Tilde – fertig
-// 
-//
-//
-//
-//
 //
 // =========================================================================
 // TASTE 1: ZIRKUMFLEX, HATSCHEK, DREHEN, PUNKT DRÜBER, HAKEN, PUNKT DRUNTER
@@ -1114,110 +1103,40 @@ DEADTRANS( 0x03c5 , 0x02D8 , 0x1FE0 , 0x0000),//Greek_upsilon
 DEADTRANS( 0x03a5 , 0x02D8 , 0x1FE8 , 0x0000),//Greek_UPSILON
 DEADTRANS( L'H'   , 0x02D8 , 0x1e2a , 0x0000), //Breve darunter
 DEADTRANS( L'h'   , 0x02D8 , 0x1e2b , 0x0000), //Breve darunter
-
-
-
-
-
-	DEADTRANS( L' '   , 0x030f , 0x02F5 , 0x0000),	//Doppelgravis
-	DEADTRANS( 0x030f , 0x030f , 0x030f , 0x0000),	//2x für Combining
-	DEADTRANS( L'A'   , 0x030f , 0x0200 , 0x0000),
-	DEADTRANS( L'E'   , 0x030f , 0x0204 , 0x0000),
-	DEADTRANS( L'I'   , 0x030f , 0x0208 , 0x0000),
-	DEADTRANS( L'O'   , 0x030f , 0x020c , 0x0000),
-	DEADTRANS( L'R'   , 0x030f , 0x0210 , 0x0000),
-	DEADTRANS( L'U'   , 0x030f , 0x0214 , 0x0000),
-	DEADTRANS( L'a'   , 0x030f , 0x0201 , 0x0000),
-	DEADTRANS( L'e'   , 0x030f , 0x0205 , 0x0000),
-	DEADTRANS( L'i'   , 0x030f , 0x0209 , 0x0000),
-	DEADTRANS( L'o'   , 0x030f , 0x020d , 0x0000),
-	DEADTRANS( L'r'   , 0x030f , 0x0211 , 0x0000),
-	DEADTRANS( L'u'   , 0x030f , 0x0215 , 0x0000),
-//nicht belegt
-//2x für Combining
-// Ende von T2
-// T3: rechts nebem ›ß‹
-// Akut, Cedille, Quer-/Schrägstrich, Doppelakut, Spiritus lenis, Punkt darüber
-	DEADTRANS( L' '   , 0x02DD , 0x02DD , 0x0000),	//Doppelakut
-	DEADTRANS( 0x02DD , 0x02DD , 0x030B , 0x0000),	//2x für Combining
-	DEADTRANS( L'O'   , 0x02DD , 0x0150 , 0x0000),
-	DEADTRANS( L'o'   , 0x02DD , 0x0151 , 0x0000),
-	DEADTRANS( L'U'   , 0x02DD , 0x0170 , 0x0000),
-	DEADTRANS( L'u'   , 0x02DD , 0x0171 , 0x0000),
-
-
-
-
-
-
-	
-	
-	
-
-    
-
-    
-
-
-                      
-
-
-        
-
-
-
-    // Ende der Taste zwei rechts neben der 0
-    // Anfang der Taste rechts neben dem »ß«
-
-
-    
-
-
-
-DEADTRANS( L' '   , 0x02DD , 0x02DD , 0x0000), //Doppel Akut
-DEADTRANS( 0x02DD , 0x02DD , 0x030B , 0x0000), //2x für Combining
-DEADTRANS( L'O'   , 0x02DD , 0x0150 , 0x0000),
-DEADTRANS( L'o'   , 0x02DD , 0x0151 , 0x0000),
-DEADTRANS( L'U'   , 0x02DD , 0x0170 , 0x0000),
-DEADTRANS( L'u'   , 0x02DD , 0x0171 , 0x0000),
-DEADTRANS( L' '   , 0x02DD , 0x02DD , 0x0000),
-
-DEADTRANS( L' '   , ','    , ','    , 0x0000), //Komma Below
-DEADTRANS( L','   , ','    , ','    , 0x0000),     //2x für Combining
-DEADTRANS( L'S'   , ','    , 0x0218 , 0x0000),
-DEADTRANS( L's'   , ','    , 0x0219 , 0x0000),
-DEADTRANS( L'T'   , ','    , 0x021a , 0x0000),
-DEADTRANS( L't'   , ','    , 0x021b , 0x0000),
-DEADTRANS( L' '   , ','    , 0x0326 , 0x0000),
-// Ende der Tasten rechts neben dem »ß«
-
-
+// ENDE TASTE 3
+// =====================================================================
+// =====================================================================
+//Kombinierte Diakritika, die es im Unicode gibt
 //Trema und Akut: COMBINING GREEK DIALYTIKA TONOS
-//DEADTRANS( L' '   , 0x0344 , 0x0344 , 0x0000),
+DEADTRANS( L' '   , 0x0344 , 0x0344 , 0x0000),
+DEADTRANS( 0x03c5 , 0x0344 , 0x03b0 , 0x0000),
+DEADTRANS( 0x03b9 , 0x0344 , 0x0390 , 0x0000),
+// =====================================================================
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Der Vollständigkeit halber:
+// Doppelgravis
+DEADTRANS( L' '   , 0x030f , 0x02F5 , 0x0000),	//Doppelgravis
+DEADTRANS( 0x030f , 0x030f , 0x030f , 0x0000),	//2x für Combining
+DEADTRANS( L'A'   , 0x030f , 0x0200 , 0x0000),
+DEADTRANS( L'E'   , 0x030f , 0x0204 , 0x0000),
+DEADTRANS( L'I'   , 0x030f , 0x0208 , 0x0000),
+DEADTRANS( L'O'   , 0x030f , 0x020c , 0x0000),
+DEADTRANS( L'R'   , 0x030f , 0x0210 , 0x0000),
+DEADTRANS( L'U'   , 0x030f , 0x0214 , 0x0000),
+DEADTRANS( L'a'   , 0x030f , 0x0201 , 0x0000),
+DEADTRANS( L'e'   , 0x030f , 0x0205 , 0x0000),
+DEADTRANS( L'i'   , 0x030f , 0x0209 , 0x0000),
+DEADTRANS( L'o'   , 0x030f , 0x020d , 0x0000),
+DEADTRANS( L'r'   , 0x030f , 0x0211 , 0x0000),
+DEADTRANS( L'u'   , 0x030f , 0x0215 , 0x0000),
+//nicht belegt
+// =====================================================================
+// =====================================================================
 //Compose
-
 //Compose-Taste
 DEADTRANS(	L' ',	0x266B	,	0x266b	,	0x0001),
 DEADTRANS(	0x266b	,	0x266B	,	0x266b	,	0x0000),
-
 //Vorabdefinitionen
 DEADTRANS(	0x006F	,	0x266B	,	0x006F	,	0x0001),
 DEADTRANS(	0x0032	,	0x266B	,	0x0032	,	0x0001),
