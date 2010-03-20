@@ -1,18 +1,28 @@
 #include <windows.h>
+#define VER_USE_OTHER_MAJOR_MINOR_VER
+#define VER_PRODUCTMAJORVERSION    2
+#define VER_PRODUCTMINORVERSION    2002
+
 #include <ntverp.h>
 
 
-#define VER_PRODUCTBUILD            /* NT */   7600
-#define VER_PRODUCTBUILD_QFE        16385
+//#define VER_PRODUCTBUILD            1234
+//#define VER_PRODUCTBUILD_QFE        16385
 
-#define VER_COMPANYNAME_STR         "Windows (R) Win 7 DDK provider"
-#define VER_PRODUCTNAME_STR         "Windows (R) Win 7 DDK driver"
-#define VER_LEGALTRADEMARKS_STR     \
-"Windows (R) is a registered trademark of Microsoft Corporation."
+//#define VER_COMPANYNAME_STR         " "
+//#define VER_PRODUCTNAME_STR         "Neo 2 Tastaturtreiber"
+#define VER_LEGALCOPYRIGHT_STR      "wiki.neo-layout.org/wiki/Lizenzfragen"
+//VER_LEGALCOPYRIGHT_STR
+//#define VER_LEGALTRADEMARKS_STR     \
+"wiki.neo-layout.org/wiki/Lizenzfragen"
+
+//#define VER_FILEVERSION          5678
+//#define VER_FILEVERSION_STR       " "
+
 
 #define VER_FILETYPE              VFT_DLL
 #define VER_FILESUBTYPE           VFT2_DRV_KEYBOARD
-#define VER_FILEDESCRIPTION_STR   "Deutsch (NEO 2.0 ergonomisch) Tastaturlayout"
+#define VER_FILEDESCRIPTION_STR   "Deutsch (Neo 2.0 ergonomisch) Tastaturlayout"
 #define VER_INTERNALNAME_STR      "kbdneo2"
 #define VER_ORIGINALFILENAME_STR  "kbdneo2.dll"
 

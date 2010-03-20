@@ -1,9 +1,6 @@
 /***************************************************************************\
 * Module Name: KBDNEO2.C
-*
-* keyboard layout for German NEO 2.0
-*
-* History:
+* Deutsches ergonomische Layout Neo 2.0
 \***************************************************************************/
 
 #include <windows.h>
