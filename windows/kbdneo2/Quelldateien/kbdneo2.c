@@ -1,7 +1,7 @@
-/***************************************************************************\
+/* **************************************************************************\
 * Module Name: KBDNEO2.C
 * Deutsches ergonomische Layout Neo 2.0
-\***************************************************************************/
+\************************************************************************** */
 
 #include <windows.h>
 #include "kbd.h"
@@ -15,9 +15,10 @@
 #define ALLOC_SECTION_LDATA
 #endif
 
-/***************************************************************************\
-* ausVK[] - Virtual Scan Code to Virtual Key conversion table for German
-\***************************************************************************/
+
+/* **************************************************************************\
+* ausVK[] - Virtual Scan Code to Virtual Key
+\************************************************************************** */
 
 static ALLOC_SECTION_LDATA USHORT ausVK[] = {
     T00, T01, T02, T03, T04, T05, T06, T07,
@@ -28,9 +29,9 @@ static ALLOC_SECTION_LDATA USHORT ausVK[] = {
     T28, T29, T2A, T2B, T2C, T2D, T2E, T2F,
     T30, T31, T32, T33, T34, T35,
 
-    /*
-     * Right-hand Shift key must have KBDEXT bit set.
-     */
+
+// Rechtes Shift muss KBDEXT bit haben
+
     T36 | KBDEXT,
 
     T37 | KBDMULTIVK,               // numpad_* + Shift/Alt -> SnapShot
@@ -38,21 +39,23 @@ static ALLOC_SECTION_LDATA USHORT ausVK[] = {
     T38, T39, T3A, T3B, T3C, T3D, T3E,
     T3F, T40, T41, T42, T43, T44,
 
-    /*
-     * NumLock Key:
-     *     KBDEXT     - VK_NUMLOCK is an Extended key
-     *     KBDMULTIVK - VK_NUMLOCK or VK_PAUSE (without or with CTRL)
-     */
-    T45 | KBDEXT | KBDMULTIVK,
+	
+    /* NumLock Key:
+     *     KBDEXT     - VK_NUMLOCK ist Extended key
+     *     KBDMULTIVK - VK_NUMLOCK oder VK_PAUSE (mit oder ohne STRG) */
+
+	 T45 | KBDEXT | KBDMULTIVK,
 
     T46 | KBDMULTIVK,
 
+	
     /*
      * Number Pad keys:
      *     KBDNUMPAD  - digits 0-9 and decimal point.
      *     KBDSPECIAL - require special processing by Windows
      */
-    T47 | KBDNUMPAD | KBDSPECIAL,   // Numpad 7 (Home)
+    
+	T47 | KBDNUMPAD | KBDSPECIAL,   // Numpad 7 (Home)
     T48 | KBDNUMPAD | KBDSPECIAL,   // Numpad 8 (Up),
     T49 | KBDNUMPAD | KBDSPECIAL,   // Numpad 9 (PgUp),
     T4A,
@@ -74,6 +77,7 @@ static ALLOC_SECTION_LDATA USHORT ausVK[] = {
     T7C, T7D, T7E
 
 };
+
 
 static ALLOC_SECTION_LDATA VSC_VK aE0VscToVk[] = {
         { 0x10, X10 | KBDEXT              },  // Speedracer: Previous Track
@@ -117,17 +121,21 @@ static ALLOC_SECTION_LDATA VSC_VK aE0VscToVk[] = {
         { 0,      0                       }
 };
 
+
 static ALLOC_SECTION_LDATA VSC_VK aE1VscToVk[] = {
         { 0x1D, Y1D                       },  // Pause
         { 0   ,   0                       }
 };
 
-/***************************************************************************\
+
+/* **************************************************************************\
 * aVkToBits[]  - map Virtual Keys to Modifier Bits
 *
-* See kbd.h for a full description.
-\***************************************************************************/
+* Siehe kbd.h für mehr Infos
+\************************************************************************** */
+
 // Es wird nicht zwischen linken und/oder rechtem Modifier unterschieden
+
 static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { VK_SHIFT		,	KBDSHIFT	},
     { VK_CONTROL	,	KBDCTRL		},    
@@ -137,12 +145,12 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
     { 0				,	0			}
 };
 
-/***************************************************************************\
+
+/* **************************************************************************\
 * aModification[]  - map character modifier bits to modification number
 *
-* See kbd.h for a full description.
-*
-\***************************************************************************/
+* Siehe kbd.h für mehr Infos
+\************************************************************************** */
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 	&aVkToBits[0],
@@ -187,35 +195,21 @@ static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 	}
 };
 
-/***************************************************************************\
+
+/* **************************************************************************\
+* Spezielle Werte für den VK (Spalte 1)
+*     0xff          - Tote Zeichen für obige Zeile
+*     0             - Beendet die gesamte Liste
 *
-* aVkToWch2[]  - Virtual Key to WCHAR translation for 2 shift states
-* aVkToWch3[]  - Virtual Key to WCHAR translation for 3 shift states
-* aVkToWch4[]  - Virtual Key to WCHAR translation for 4 shift states
-* aVkToWch5[]  - Virtual Key to WCHAR translation for 5 shift states
-* aVkToWch6[]  - Virtual Key to WCHAR translation for 6 shift states
-* aVkToWch7[]  - Virtual Key to WCHAR translation for 7 shift states
-* aVkToWch8[]  - Virtual Key to WCHAR translation for 8 shift states
-* aVkToWch9[]  - Virtual Key to WCHAR translation for 9 shift states
+* Spezielle Werte für Attributes (Spalte 2)
+*     CAPLOK    - CAPS-LOCK wirkt auf diese Taste wie SHIFT
+*     KANALOK   - Mod4-LOCK wirkt auf diese Taste wie Mod4
 *
-* Table attributes: Unordered Scan, null-terminated
-*
-* Search this table for an entry with a matching Virtual Key to find the
-* corresponding unshifted and shifted WCHAR characters.
-*
-* Special values for VirtualKey (column 1)
-*     0xff          - dead chars for the previous entry
-*     0             - terminate the list
-*
-* Special values for Attributes (column 2)
-*     CAPLOK bit    - CAPS-LOCK affect this key like SHIFT
-*
-* Special values for wch[*] (column 3 & 4)
-*     WCH_NONE      - No character
-*     WCH_DEAD      - Dead Key (diaresis) or invalid (US keyboard has none)
-*     WCH_LGTR      - Ligature (generates multiple characters)
-*
-\***************************************************************************/
+* Spezielle Werte für wch[*]
+*     WCH_NONE      - Keine Belegung
+*     WCH_DEAD      - Totes Zeichen
+*     WCH_LGTR      - Ligatur
+\************************************************************************** */
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 // Reihenfolge der Ebene wie oben ( ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {    &aVkToBits[0],)… festgelegt
@@ -293,13 +287,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 {0				,0					,0			,0			,0			,0			,0			,0			,0			,0			}
 };
 
-// Put this last so that VkKeyScan interprets number characters
-// as coming from the main section of the kbd  before considering
-// the numpad.
-
+// Numpad-Belegung muss zum Schluss kommen
 // Entgegen der neo20.txt vorgesehene Belegung 1,2,3,4,5,6 ist hier 1,4,3,2 umgesetzt:
-
-
 static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
 //				| CapsLock	|			| SHIFT		| KANA		| NEU		|
 //				|===========|===========|===========|===========|===========|
@@ -321,6 +310,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
 {0				,0			,0			,0			,0			,0			}
 };
 
+
 // Hier müssen die verwendeten WChar_Tables vorkommen; Numpad MUSS letzte Zeile sein.
 static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
     {  (PVK_TO_WCHARS1)aVkToWch6, 6, sizeof(aVkToWch6[0]) },
@@ -330,14 +320,15 @@ static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
     {                       NULL, 0, 0                    },
 };
 
-/***************************************************************************\
+
+/* **************************************************************************\
 * aKeyNames[], aKeyNamesExt[]  - Virtual Scancode to Key Name tables
 *
 * Table attributes: Ordered Scan (by scancode), null-terminated
 *
-* Only the names of Extended, NumPad, Dead and Non-Printable keys are here.
-* (Keys producing printable characters are named by that character)
-\***************************************************************************/
+* Nur für Tasten, die keine Zeichen erzeugen, Tasten die Zeichen erzeugen
+* werden danach benannt
+\************************************************************************** */
 
 static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNames[] = {
     0x01,    L"ESC",
@@ -383,6 +374,7 @@ static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNames[] = {
     0   ,    NULL
 };
 
+
 static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNamesExt[] = {
     0x1c,    L"EINGABE (ZEHNERTASTATUR)",
     0x1d,    L"STRG-RECHTS",
@@ -409,6 +401,7 @@ static ALLOC_SECTION_LDATA VSC_LPWSTR aKeyNamesExt[] = {
     0   ,    NULL
 };
 
+
 static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
 //Tottaste 1 (links neben 1)
 	L"^"         L"ZIRKUMFLEX",
@@ -425,17 +418,17 @@ static ALLOC_SECTION_LDATA DEADKEY_LPWSTR aKeyNamesDead[] = {
     L"\x00A8"    L"TREMA",
     L"\x1ffe"    L"SPIRITUS_ASPER",
     L"\x00AF"    L"MAKRON",
-	
+
 //Tottaste 3 (rechts neben „ß“)
     L"\x00B4"    L"AKUT",
     L"\x007E"    L"TILDE",
     L"\x002D"    L"QUERSTRICH",
     L"\x02DD"    L"DOPPEL_AKUT", 
     L"\x1fbf"    L"SPIRITUS_LENIS",
-    L"\x02D8"    L"BREVE",	
-   
+    L"\x02D8"    L"BREVE",	   
     NULL
 };
+
 
 static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 // Schema:
@@ -443,8 +436,8 @@ static ALLOC_SECTION_LDATA DEADKEY aDeadKey[] = {
 //    0, 0    terminiert komplette Liste
 //    
 //    Bei Doppelbelegungen wird erster Treffer genommen
-//    
-
+//
+//
 //Deadkeys
 // Nachfolgend Tafeln für die diakritschen Zeichen
 // Kombinationen mit einem Diakritika und Compose mit 2 Zeichen. Der Rest ist im Deuschen selten 
@@ -482,13 +475,13 @@ DEADTRANS( L'Y'   , L'^'   , 0x0176 , 0x0000),
 DEADTRANS( L'y'   , L'^'   , 0x0177 , 0x0000),
 DEADTRANS( L'Z'   , L'^'   , 0x1e90 , 0x0000),
 DEADTRANS( L'z'   , L'^'   , 0x1e91 , 0x0000),
-DEADTRANS( L'?'   , L'^'   , 0x02c0 , 0x0000),  // ab hier lang.module 
+DEADTRANS( L'?'   , L'^'   , 0x02c0 , 0x0000), // ab hier lang.module 
 DEADTRANS( 0x00d7 , L'^'   , 0x02c0 , 0x0000),
-DEADTRANS( 0x03b1 , L'^'   , 0x1d45 , 0x0000),   //Greek_alpha  
-DEADTRANS( 0x03b5 , L'^'   , 0x1d4b , 0x0000),   //Greek_epsilon
-DEADTRANS( 0x03c5 , L'^'   , 0x1db7 , 0x0000),   //Greek_upsilon
-DEADTRANS( 0x03d5 , L'^'   , 0x1db2 , 0x0000),   // Ende lang.module
-DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000),  //ab hier hochgestelltes
+DEADTRANS( 0x03b1 , L'^'   , 0x1d45 , 0x0000), //Greek_alpha  
+DEADTRANS( 0x03b5 , L'^'   , 0x1d4b , 0x0000), //Greek_epsilon
+DEADTRANS( 0x03c5 , L'^'   , 0x1db7 , 0x0000), //Greek_upsilon
+DEADTRANS( 0x03d5 , L'^'   , 0x1db2 , 0x0000), // Ende lang.module
+DEADTRANS( L'1'   , L'^'   , 0x00b9 , 0x0000), //ab hier hochgestelltes
 DEADTRANS( L'2'   , L'^'   , 0x00b2 , 0x0000),
 DEADTRANS( L'3'   , L'^'   , 0x00b3 , 0x0000),
 DEADTRANS( L'4'   , L'^'   , 0x2074 , 0x0000),
@@ -506,8 +499,8 @@ DEADTRANS( L')'   , L'^'   , 0x207e , 0x0000),
 DEADTRANS( L'n'   , L'^'   , 0x207f , 0x0000),
 
 //Caron (ferfig für en_US.UTF-8 und lang.module)
-DEADTRANS( L' '   , 0x02c7 , 0x02c7 , 0x0000),	//Caron 
-DEADTRANS( 0x02c7 , 0x02c7 , 0x030C , 0x0000),	//2x für Combining
+DEADTRANS( L' '   , 0x02c7 , 0x02c7 , 0x0000), //Caron 
+DEADTRANS( 0x02c7 , 0x02c7 , 0x030C , 0x0000), //2x für Combining
 DEADTRANS( L'A'   , 0x02c7 , 0x01CD , 0x0000),
 DEADTRANS( L'a'   , 0x02c7 , 0x01CE , 0x0000),
 DEADTRANS( L'C'   , 0x02c7 , 0x010c , 0x0000),
@@ -587,11 +580,11 @@ DEADTRANS( L'('   , 0x21bb , 0x0361 , 0x0000),
 DEADTRANS( 0x221d , 0x21bb , 0x0223 , 0x0000), //Ende lang.module
 
 //Punkt Drüber & Mittenpunkt  (ferfig für en_US.UTF-8 und lang.module)
-DEADTRANS( L' '   , 0x02d9 , 0x02d9 , 0x0000),	//Punkt Drüber
-DEADTRANS( 0x02d9 , 0x02d9 , 0x0307 , 0x0000),	//2x für Combining 
-DEADTRANS( L'L'   , 0x02d9 , 0x013F , 0x0000),  //Mittenpunkt
-DEADTRANS( L'l'   , 0x02d9 , 0x0140 , 0x0000),  //Mittenpunkt
-DEADTRANS( 0x017f , 0x02d9 , 0x1E9B , 0x0000),  // Lang-s mit Punkt drüber
+DEADTRANS( L' '   , 0x02d9 , 0x02d9 , 0x0000), //Punkt Drüber
+DEADTRANS( 0x02d9 , 0x02d9 , 0x0307 , 0x0000), //2x für Combining 
+DEADTRANS( L'L'   , 0x02d9 , 0x013F , 0x0000), //Mittenpunkt
+DEADTRANS( L'l'   , 0x02d9 , 0x0140 , 0x0000), //Mittenpunkt
+DEADTRANS( 0x017f , 0x02d9 , 0x1E9B , 0x0000), // Lang-s mit Punkt drüber
 DEADTRANS( L'A'   , 0x02d9 , 0x0226 , 0x0000),
 DEADTRANS( L'a'   , 0x02d9 , 0x0227 , 0x0000),
 DEADTRANS( L'B'   , 0x02d9 , 0x1e02 , 0x0000),
@@ -679,8 +672,8 @@ DEADTRANS( L'z'   , 0x02de , 0x0290 , 0x0000),
 DEADTRANS( L'3'   , 0x02de , 0x025d , 0x0000), // bis hier lang.module
 
 //Punkt Darunter (ferfig für en_US.UTF-8 und lang.module)
-DEADTRANS( L' '   , L'.' , L'.'     , 0x0000),	//Puntk darunter
-DEADTRANS( L'.'   , L'.' , 0x0323   , 0x0000),	//2x für Combining
+DEADTRANS( L' '   , L'.' , L'.'     , 0x0000), //Punkt darunter
+DEADTRANS( L'.'   , L'.' , 0x0323   , 0x0000), //2x für Combining
 DEADTRANS( L'A'   , L'.' , 0x1ea0   , 0x0000),
 DEADTRANS( L'a'   , L'.' , 0x1ea1   , 0x0000),
 DEADTRANS( L'B'   , L'.' , 0x1e04   , 0x0000),
@@ -3429,63 +3422,53 @@ DEADTRANS(	0x0338	,	0x22B3	,	0x22EB	,	0x0000),
 DEADTRANS(	0x0338	,	0x22B4	,	0x22EC	,	0x0000),
 DEADTRANS(	0x0338	,	0x22B5	,	0x22ED	,	0x0000),
 DEADTRANS(	0x0338	,	0x2ADD	,	0x2ADC	,	0x0000),
-
-
-
-
-
-
-
-
-
     0, 0
 };
 
 
 static ALLOC_SECTION_LDATA KBDTABLES KbdTables = {
-/*
-* Modifier keys
-*/
+// Modifier keys
+
     &CharModifiers,
 
-/*
-* Characters tables
-*/
+	
+// Characters tables
+
     aVkToWcharTable,
 
-/*
-* Diacritics
-*/
+	
+// Diakritika vorhanden
+
     aDeadKey,
 
-/*
-* Names of Keys
-*/
+	
+// Namen der Keys
+
     aKeyNames,
     aKeyNamesExt,
     aKeyNamesDead,
 
-/*
-* Scan codes to Virtual Keys
-*/
+	
+// Scancodes zu Virtual Keys
+
     ausVK,
     sizeof(ausVK) / sizeof(ausVK[0]),
     aE0VscToVk,
     aE1VscToVk,
 
-/*
-* Locale-specific special processing
-* KLLF_ALTGR damit AltGr = Strg+Alt 
-*/
+	
+// KLLF_ALTGR damit AltGr = Strg+Alt 
+
     MAKELONG(KLLF_ALTGR, KBD_VERSION),
 
-/*
-* Ligatures
-*/
+	
+// keine Ligaturen
+
     0,
     0,
     NULL
 };
+
 
 PKBDTABLES KbdLayerDescriptor(VOID)
 {
