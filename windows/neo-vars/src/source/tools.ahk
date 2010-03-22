@@ -183,6 +183,7 @@ CDS__CompU000044U000044 := "P__DUni"
 
 CP5VK41SC01E := "P___Uni"
 GUISYM("P___Uni","UU")
+GUISYM("P__DUni","DD")
 
 CharProc___Uni() {
   global
@@ -310,6 +311,7 @@ SetFormat, Integer, hex
 
 CDS__CompU000075U000063 := "P__Cal1"
 CDS__CompU000055U000043 := "P__Cal2"
+
 
 CharProc__Cal1() {
   global
