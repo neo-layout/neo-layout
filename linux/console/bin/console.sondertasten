@@ -1,10 +1,5 @@
 ! neo.map - german NEO keyboard layout
-! 2008 Pascal Hauck, <pascal.hauck@web.de>
-!
-! Diese Datei ist experimentell!
-! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
-! anders verhalten als erwartet, sollte dies auf der Mailingliste
-! der NEO-Tastaturbelegung gemeldet werden.
+! 2010 Pascal Hauck, <neo@pascalhauck.de>
 !
 ! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap
 ! erzeugt.
