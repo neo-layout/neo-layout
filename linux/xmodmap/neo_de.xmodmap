@@ -135,7 +135,7 @@ keycode 11 = 	2		section		twosuperior	twosubscript	masculine	NoSymbol	logicalor	
 !				§		²	  	₂		º				∨
 keycode 12 = 	3		U2113		threesuperior	threesubscript	numerosign	NoSymbol	logicaland	NoSymbol
 !				ℓ liter		³	  	₃		№				∧
-keycode 13 = 	4		guillemotright	U203A		femalesymbol	NoSymbol	NoSymbol	downtack	NoSymbol
+keycode 13 = 	4		guillemotright	U203A		femalesymbol	NoSymbol	NoSymbol	U22A5		NoSymbol
 !				»		›		♀						⊥ perpendicular
 keycode 14 = 	5		guillemotleft	U2039		malesymbol	periodcentered	NoSymbol	U2221		NoSymbol
 !				«		‹		♂		·				∡ angle sign
