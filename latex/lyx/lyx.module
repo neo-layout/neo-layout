@@ -170,3 +170,5 @@
 <Multi_key> <r> <m>                                           : "\\mathrm "
 <emptyset>                                                    : "\\empty "
 <dead_circumflex> <dagger>                                    : "^\\dagger "
+<logicalor>                                                   : "\\vee "
+<logicaland>                                                  : "\\wedge "
