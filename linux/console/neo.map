@@ -1,10 +1,5 @@
 ! neo.map - german NEO keyboard layout
-! 2008 Pascal Hauck, <pascal.hauck@web.de>
-!
-! Diese Datei ist experimentell!
-! Sollten Fehler auftreten oder sich verschiedene Linux-Distributionen
-! anders verhalten als erwartet, sollte dies auf der Mailingliste
-! der NEO-Tastaturbelegung gemeldet werden.
+! 2010 Pascal Hauck, <neo@pascalhauck.de>
 !
 ! Diese Keymap wird über einige Skripte automatisch aus der neo_de.xmodmap
 ! erzeugt.
@@ -172,14 +167,14 @@ alt_is_meta
    altgr   shiftl  keycode  57 = U+202F                
 
 ! ----dead keys-------------------------------------------------------------
-                   keycode  41 = dead_circumflex       dead_tilde            U+030a                dead_breve            
-           shiftl  keycode  41 = dead_caron            
-   altgr   shiftl  keycode  41 = U+0304                
-                   keycode  13 = dead_grave            VoidSymbol            dead_diaeresis        U+1FFE                
-           shiftl  keycode  13 = U+02F5                
-                   keycode  27 = dead_acute            dead_cedilla          VoidSymbol            U+1FBF                
+                   keycode  41 = dead_circumflex       dead_caron            U+21BB                U+02DE                
+           shiftl  keycode  41 = U+0307                
+                   keycode  13 = dead_grave            dead_cedilla          U+030a                U+1FFE                
+           shiftl  keycode  13 = dead_diaeresis        
+   altgr   shiftl  keycode  13 = U+0304                
+                   keycode  27 = dead_acute            dead_tilde            VoidSymbol            U+1FBF                
            shiftl  keycode  27 = dead_doubleacute      
-   altgr   shiftl  keycode  27 = U+0307                
+   altgr   shiftl  keycode  27 = dead_breve            
 
 ! --------------------------------------------------------------------------
 ! Row 1 (number row)
@@ -194,23 +189,23 @@ alt_is_meta
            shiftl  keycode   4 = U+2116                
    altgr   shiftl  keycode   4 = U+2227                
                    keycode   5 = four                  guillemotright        U+203A                U+2640                
-           shiftl  keycode   5 = Prior                 
-   shift   shiftl  keycode   5 = Prior                 
    altgr   shiftl  keycode   5 = U+22a4                
                    keycode   6 = five                  guillemotleft         U+2039                U+2642                
            shiftl  keycode   6 = periodcentered        
    altgr   shiftl  keycode   6 = U+2221                
-                   keycode   7 = six                   U+20ac                cent                  U+26A5                
+                   keycode   7 = six                   dollar                cent                  U+26A5                
            shiftl  keycode   7 = sterling              
    altgr   shiftl  keycode   7 = U+2225                
-                   keycode   8 = seven                 dollar                yen                   U+03ba                
+                   keycode   8 = seven                 U+20ac                yen                   U+03F0                
            shiftl  keycode   8 = currency              
    altgr   shiftl  keycode   8 = U+2192                
                    keycode   9 = eight                 U+201e                U+201a                U+2329                
+           shiftl  keycode   9 = Tab                   
    altgr   shiftl  keycode   9 = U+221e                
                    keycode  10 = nine                  U+201c                U+2018                U+232a                
            shiftl  keycode  10 = KP_Divide             
    shift   shiftl  keycode  10 = KP_Divide             
+   altgr   shiftl  keycode  10 = U+221d                
                    keycode  11 = zero                  U+201d                U+2019                VoidSymbol            
            shiftl  keycode  11 = KP_Multiply           
    shift   shiftl  keycode  11 = KP_Multiply           
@@ -225,13 +220,14 @@ alt_is_meta
                    keycode  16 = x                     
            altgr   keycode  16 = U+2026                
    shift   altgr   keycode  16 = U+03be                
-           shiftl  keycode  16 = U+22EE                
+           shiftl  keycode  16 = Prior                 
+   shift   shiftl  keycode  16 = Prior                 
    altgr   shiftl  keycode  16 = U+039e                
                    keycode  17 = v                     
            altgr   keycode  17 = underscore            
            shiftl  keycode  17 = BackSpace             
    shift   shiftl  keycode  17 = BackSpace             
-   altgr   shiftl  keycode  17 = U+222E                
+   altgr   shiftl  keycode  17 = U+221a                
                    keycode  18 = l                     
            altgr   keycode  18 = bracketleft           
    shift   altgr   keycode  18 = U+03bb                
@@ -247,14 +243,14 @@ alt_is_meta
                    keycode  20 = w                     
            altgr   keycode  20 = asciicircum           
    shift   altgr   keycode  20 = U+03c9                
-           shiftl  keycode  20 = Insert                
-   shift   shiftl  keycode  20 = Insert                
+           shiftl  keycode  20 = Next                  
+   shift   shiftl  keycode  20 = Next                  
    altgr   shiftl  keycode  20 = U+03a9                
                    keycode  21 = k                     
            altgr   keycode  21 = exclam                
-   shift   altgr   keycode  21 = U+03F0                
+   shift   altgr   keycode  21 = U+03ba                
            shiftl  keycode  21 = exclamdown            
-   altgr   shiftl  keycode  21 = U+221a                
+   altgr   shiftl  keycode  21 = multiply              
                    keycode  22 = h                     
            altgr   keycode  22 = less                  
    shift   altgr   keycode  22 = U+03c8                
@@ -280,6 +276,7 @@ alt_is_meta
    shift   shiftl  keycode  25 = KP_Add                
    altgr   shiftl  keycode  25 = U+211A                
                    keycode  26 = ssharp                U+1E9E                U+017F                U+03c2                
+           shiftl  keycode  26 = U+2212                
    altgr   shiftl  keycode  26 = U+2218                
 
 ! --------------------------------------------------------------------------
@@ -289,7 +286,7 @@ alt_is_meta
            altgr   keycode  30 = backslash             
            shiftl  keycode  30 = Home                  
    shift   shiftl  keycode  30 = Home                  
-   altgr   shiftl  keycode  30 = U+00B5                
+   altgr   shiftl  keycode  30 = U+2282                
                    keycode  31 = i                     
            altgr   keycode  31 = slash                 
    shift   altgr   keycode  31 = U+03b9                
@@ -326,7 +323,7 @@ alt_is_meta
    altgr   shiftl  keycode  36 = U+2115                
                    keycode  37 = r                     
            altgr   keycode  37 = parenright            
-   shift   altgr   keycode  37 = U+03F1                
+   shift   altgr   keycode  37 = U+03c1                
            shiftl  keycode  37 = KP_5                  
    shift   shiftl  keycode  37 = KP_5                  
    altgr   shiftl  keycode  37 = U+211D                
@@ -340,11 +337,13 @@ alt_is_meta
            altgr   keycode  39 = colon                 
    shift   altgr   keycode  39 = U+03b4                
            shiftl  keycode  39 = U+002c                
+   shift   shiftl  keycode  39 = comma                 
    altgr   shiftl  keycode  39 = U+0394                
                    keycode  40 = y                     
            altgr   keycode  40 = at                    
    shift   altgr   keycode  40 = U+03c5                
-           shiftl  keycode  40 = U+002e                
+           shiftl  keycode  40 = period                
+   shift   shiftl  keycode  40 = U+002e                
    altgr   shiftl  keycode  40 = U+2207                
 
 ! --------------------------------------------------------------------------
@@ -353,13 +352,13 @@ alt_is_meta
                    keycode  44 = udiaeresis            Udiaeresis            numbersign            VoidSymbol            
            shiftl  keycode  44 = Escape                
    shift   shiftl  keycode  44 = Escape                
-   altgr   shiftl  keycode  44 = U+211C                
+   altgr   shiftl  keycode  44 = U+222a                
                    keycode  45 = odiaeresis            Odiaeresis            dollar                U+03F5                
            shiftl  keycode  45 = Tab                   
-   altgr   shiftl  keycode  45 = U+2111                
+   altgr   shiftl  keycode  45 = U+2229                
                    keycode  46 = adiaeresis            Adiaeresis            bar                   U+03b7                
-           shiftl  keycode  46 = Next                  
-   shift   shiftl  keycode  46 = Next                  
+           shiftl  keycode  46 = Insert                
+   shift   shiftl  keycode  46 = Insert                
    altgr   shiftl  keycode  46 = U+2135                
                    keycode  47 = p                     
            altgr   keycode  47 = asciitilde            
@@ -382,19 +381,19 @@ alt_is_meta
            shiftl  keycode  50 = KP_1                  
    shift   shiftl  keycode  50 = KP_1                  
    altgr   shiftl  keycode  50 = U+21d4                
-                   keycode  51 = comma                 U+2013                quotedbl              U+03c1                
+                   keycode  51 = comma                 U+2013                quotedbl              U+03F1                
            shiftl  keycode  51 = KP_2                  
    shift   shiftl  keycode  51 = KP_2                  
    altgr   shiftl  keycode  51 = U+21D2                
                    keycode  52 = period                U+2022                apostrophe            U+03D1                
            shiftl  keycode  52 = KP_3                  
    shift   shiftl  keycode  52 = KP_3                  
-   altgr   shiftl  keycode  52 = U+0398                
+   altgr   shiftl  keycode  52 = U+21A6                
                    keycode  53 = j                     
            altgr   keycode  53 = semicolon             
    shift   altgr   keycode  53 = U+03b8                
            shiftl  keycode  53 = semicolon             
-   altgr   shiftl  keycode  53 = U+221d                
+   altgr   shiftl  keycode  53 = U+0398                
 
 ! --------------------------------------------------------------------------
 ! Keypad Row 1 (uppest row)
@@ -430,7 +429,7 @@ alt_is_meta
 ! --------------------------------------------------------------------------
                    keycode  75 = KP_4                  U+2663                U+2190                U+2282                
    altgr   shiftl  keycode  75 = U+2286                
-                   keycode  76 = KP_5                  U+20ac                brokenbar             U+22B6                
+                   keycode  76 = KP_5                  U+20ac                colon                 U+22B6                
    altgr   shiftl  keycode  76 = U+22B7                
                    keycode  77 = KP_6                  U+2023                U+2192                U+2283                
    altgr   shiftl  keycode  77 = U+2287                
@@ -448,11 +447,9 @@ alt_is_meta
 ! --------------------------------------------------------------------------
 ! Keypad Row 5 (lowest row)
 ! --------------------------------------------------------------------------
-                   keycode  82 = comma                 period                U+002c                U+2032                
-           shiftl  keycode  82 = Remove                
-   shift   shiftl  keycode  82 = Remove                
-   altgr   shiftl  keycode  82 = U+2033                
-                   keycode  83 = comma                 period                U+002c                U+2032                
+                   keycode  82 = KP_0                  U+2423                percent               U+2030                
+   altgr   shiftl  keycode  82 = U+25A1                
+                   keycode  83 = U+002c                period                comma                 U+2032                
            shiftl  keycode  83 = Remove                
    shift   shiftl  keycode  83 = Remove                
    altgr   shiftl  keycode  83 = U+2033                
