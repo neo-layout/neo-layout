@@ -339,37 +339,37 @@
 <U21BB> <Multi_key> <r> <underscore>              : "ɿ" U027F # LATIN SMALL LETTER REVERSED R WITH FISHHOOK
 <U21BB> <Multi_key> <s> <h>                       : "ʅ" U0285 # LATIN SMALL LETTER SQUAT REVERSED ESH
 <dead_hook> <U21BB> <h>                           : "ʮ" U02AE # LATIN SMALL LETTER TURNED H WITH FISHHOOK
-<U1FFE> <dead_hook> <U21BB> <h>                   : "ʯ" U02AF # LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL
+<dead_dasia> <dead_hook> <U21BB> <h>              : "ʯ" U02AF # LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL
 
 # Vietnamese language
-<U1FBF> <A>                                       : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
-<U1FBF> <a>                                       : "ả" U1EA3 # LATIN SMALL LETTER A WITH HOOK ABOVE
-<U1FBF> <E>                                       : "Ẻ" U1EBA # LATIN CAPITAL LETTER E WITH HOOK ABOVE
-<U1FBF> <e>                                       : "ẻ" U1EBB # LATIN SMALL LETTER E WITH HOOK ABOVE
-<U1FBF> <I>                                       : "Ỉ" U1EC8 # LATIN CAPITAL LETTER I WITH HOOK ABOVE
-<U1FBF> <i>                                       : "ỉ" U1EC9 # LATIN SMALL LETTER I WITH HOOK ABOVE
-<U1FBF> <O>                                       : "Ỏ" U1ECE # LATIN CAPITAL LETTER O WITH HOOK ABOVE
-<U1FBF> <o>                                       : "ỏ" U1ECF # LATIN SMALL LETTER O WITH HOOK ABOVE
-<U1FBF> <U>                                       : "Ủ" U1EE6 # LATIN CAPITAL LETTER U WITH HOOK ABOVE
-<U1FBF> <u>                                       : "ủ" U1EE7 # LATIN SMALL LETTER U WITH HOOK ABOVE
-<U1FBF> <Y>                                       : "Ỷ" U1EF6 # LATIN CAPITAL LETTER Y WITH HOOK ABOVE
-<U1FBF> <y>                                       : "ỷ" U1EF7 # LATIN SMALL LETTER Y WITH HOOK ABOVE
-<U1FBF> <dead_breve> <A>                          : "Ẳ" U1EB2 # LATIN CAPITAL LETTER A WITH BREVE AND HOOK ABOVE
-<U1FBF> <dead_breve> <a>                          : "ẳ" U1EB3 # LATIN SMALL LETTER A WITH BREVE AND HOOK ABOVE
-<U1FBF> <dead_circumflex> <A>                     : "Ẩ" U1EA8 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE
-<U1FBF> <dead_circumflex> <a>                     : "ẩ" U1EA9 # LATIN SMALL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE
-<U1FBF> <dead_circumflex> <E>                     : "Ể" U1EC2 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE
-<U1FBF> <dead_circumflex> <e>                     : "ể" U1EC3 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE
-<U1FBF> <dead_circumflex> <O>                     : "Ổ" U1ED4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE
-<U1FBF> <dead_circumflex> <o>                     : "ổ" U1ED5 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE
+<dead_psili> <A>                                  : "Ả" U1EA2 # LATIN CAPITAL LETTER A WITH HOOK ABOVE
+<dead_psili> <a>                                  : "ả" U1EA3 # LATIN SMALL LETTER A WITH HOOK ABOVE
+<dead_psili> <E>                                  : "Ẻ" U1EBA # LATIN CAPITAL LETTER E WITH HOOK ABOVE
+<dead_psili> <e>                                  : "ẻ" U1EBB # LATIN SMALL LETTER E WITH HOOK ABOVE
+<dead_psili> <I>                                  : "Ỉ" U1EC8 # LATIN CAPITAL LETTER I WITH HOOK ABOVE
+<dead_psili> <i>                                  : "ỉ" U1EC9 # LATIN SMALL LETTER I WITH HOOK ABOVE
+<dead_psili> <O>                                  : "Ỏ" U1ECE # LATIN CAPITAL LETTER O WITH HOOK ABOVE
+<dead_psili> <o>                                  : "ỏ" U1ECF # LATIN SMALL LETTER O WITH HOOK ABOVE
+<dead_psili> <U>                                  : "Ủ" U1EE6 # LATIN CAPITAL LETTER U WITH HOOK ABOVE
+<dead_psili> <u>                                  : "ủ" U1EE7 # LATIN SMALL LETTER U WITH HOOK ABOVE
+<dead_psili> <Y>                                  : "Ỷ" U1EF6 # LATIN CAPITAL LETTER Y WITH HOOK ABOVE
+<dead_psili> <y>                                  : "ỷ" U1EF7 # LATIN SMALL LETTER Y WITH HOOK ABOVE
+<dead_psili> <dead_breve> <A>                     : "Ẳ" U1EB2 # LATIN CAPITAL LETTER A WITH BREVE AND HOOK ABOVE
+<dead_psili> <dead_breve> <a>                     : "ẳ" U1EB3 # LATIN SMALL LETTER A WITH BREVE AND HOOK ABOVE
+<dead_psili> <dead_circumflex> <A>                : "Ẩ" U1EA8 # LATIN CAPITAL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE
+<dead_psili> <dead_circumflex> <a>                : "ẩ" U1EA9 # LATIN SMALL LETTER A WITH CIRCUMFLEX AND HOOK ABOVE
+<dead_psili> <dead_circumflex> <E>                : "Ể" U1EC2 # LATIN CAPITAL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE
+<dead_psili> <dead_circumflex> <e>                : "ể" U1EC3 # LATIN SMALL LETTER E WITH CIRCUMFLEX AND HOOK ABOVE
+<dead_psili> <dead_circumflex> <O>                : "Ổ" U1ED4 # LATIN CAPITAL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE
+<dead_psili> <dead_circumflex> <o>                : "ổ" U1ED5 # LATIN SMALL LETTER O WITH CIRCUMFLEX AND HOOK ABOVE
 <U02DE> <O>                                       : "Ơ" U01A0 # LATIN CAPITAL LETTER O WITH HORN
 <U02DE> <o>                                       : "ơ" U01A1 # LATIN SMALL LETTER O WITH HORN
 <dead_acute> <U02DE> <O>                          : "Ớ" U1EDA # LATIN CAPITAL LETTER O WITH HORN AND ACUTE
 <dead_acute> <U02DE> <o>                          : "ớ" U1EDB # LATIN SMALL LETTER O WITH HORN AND ACUTE
 <dead_grave> <U02DE> <O>                          : "Ờ" U1EDC # LATIN CAPITAL LETTER O WITH HORN AND GRAVE
 <dead_grave> <U02DE> <o>                          : "ờ" U1EDD # LATIN SMALL LETTER O WITH HORN AND GRAVE
-<U1FBF> <U02DE> <O>                               : "Ở" U1EDE # LATIN CAPITAL LETTER O WITH HORN AND HOOK ABOVE
-<U1FBF> <U02DE> <o>                               : "ở" U1EDF # LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE
+<dead_psili> <U02DE> <O>                          : "Ở" U1EDE # LATIN CAPITAL LETTER O WITH HORN AND HOOK ABOVE
+<dead_psili> <U02DE> <o>                          : "ở" U1EDF # LATIN SMALL LETTER O WITH HORN AND HOOK ABOVE
 <dead_tilde> <U02DE> <O>                          : "Ỡ" U1EE0 # LATIN CAPITAL LETTER O WITH HORN AND TILDE
 <dead_tilde> <U02DE> <o>                          : "ỡ" U1EE1 # LATIN SMALL LETTER O WITH HORN AND TILDE
 <dead_belowdot> <U02DE> <O>                       : "Ợ" U1EE2 # LATIN CAPITAL LETTER O WITH HORN AND DOT BELOW
@@ -380,8 +380,8 @@
 <dead_acute> <U02DE> <u>                          : "ứ" U1EE9 # LATIN SMALL LETTER U WITH HORN AND ACUTE
 <dead_grave> <U02DE> <U>                          : "Ừ" U1EEA # LATIN CAPITAL LETTER U WITH HORN AND GRAVE
 <dead_grave> <U02DE> <u>                          : "ừ" U1EEB # LATIN SMALL LETTER U WITH HORN AND GRAVE
-<U1FBF> <U02DE> <U>                               : "Ử" U1EEC # LATIN CAPITAL LETTER U WITH HORN AND HOOK ABOVE
-<U1FBF> <U02DE> <u>                               : "ử" U1EED # LATIN SMALL LETTER U WITH HORN AND HOOK ABOVE
+<dead_psili> <U02DE> <U>                          : "Ử" U1EEC # LATIN CAPITAL LETTER U WITH HORN AND HOOK ABOVE
+<dead_psili> <U02DE> <u>                          : "ử" U1EED # LATIN SMALL LETTER U WITH HORN AND HOOK ABOVE
 <dead_tilde> <U02DE> <U>                          : "Ữ" U1EEE # LATIN CAPITAL LETTER U WITH HORN AND TILDE
 <dead_tilde> <U02DE> <u>                          : "ữ" U1EEF # LATIN SMALL LETTER U WITH HORN AND TILDE
 <dead_belowdot> <U02DE> <U>                       : "Ự" U1EF0 # LATIN CAPITAL LETTER U WITH HORN AND DOT BELOW

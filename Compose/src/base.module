@@ -16,8 +16,8 @@
 <dead_diaeresis> <nobreakspace>            : "¨"   U00A8 # DIAERESIS
 <dead_stroke> <nobreakspace>               : "/"   U002F # SOLIDUS
 <dead_doubleacute> <nobreakspace>          : "˝"   U02DD # DOUBLE ACUTE ACCENT
-<U1FBF> <nobreakspace>                     : "᾿"   U1FBF # GREEK PSILI
-<U1FFE> <nobreakspace>                     : "῾"   U1FFE # GREEK DASIA
+<dead_psili> <nobreakspace>                : "᾿"   U1FBF # GREEK PSILI
+<dead_dasia> <nobreakspace>                : "῾"   U1FFE # GREEK DASIA
 <U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <dead_doubleacute> <nobreakspace>  : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <nobreakspace>                     : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
@@ -42,8 +42,8 @@
 <dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS
 <dead_stroke> <dead_stroke>                : "̷"   U0338 # COMBINING SHORT SOLIDUS OVERLAY
 <dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT
-<U1FFE> <U1FFE>                            : "̓"   U0313 # COMBINING COMMA ABOVE
-<U1FBF> <U1FBF>                            : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
+<dead_dasia> <dead_dasia>                  : "̓"   U0313 # COMBINING COMMA ABOVE
+<dead_psili> <dead_psili>                  : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U21BB> <dead_doubleacute> <dead_doubleacute>  : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
@@ -54,8 +54,8 @@
 # in standard Compose missing dead keys with spaces
 <dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
 <dead_doubleacute> <space>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
-<U1FBF> <space>                            : "᾿"   U1FBF # GREEK PSILI
-<U1FFE> <space>                            : "῾"   U1FFE # GREEK DASIA
+<dead_psili> <space>                       : "᾿"   U1FBF # GREEK PSILI
+<dead_dasia> <space>                       : "῾"   U1FFE # GREEK DASIA
 <U21BB> <space>                            : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 <U02DE> <space>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
 <U21BB> <dead_cedilla> <space>             : "˛"   U02DB # OGONEK
