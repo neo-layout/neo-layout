@@ -297,14 +297,14 @@ BSTNSymbols() {
   GUISYM("T__cedi","◌̧")
   GUISYM("T__obrg","◌̊")
   GUISYM("T__drss","◌̈")
-  GUISYM("U001FFE","◌῾") ; not perfect
+  GUISYM("T_dasia","◌῾") ; not perfect
   GUISYM("T__mcrn","◌̄")
 
   GUISYM("T__acut","◌́")
   GUISYM("T__tlde","◌̃")
   GUISYM("T__strk","◌̷")
   GUISYM("T__dbac","◌̋")
-  GUISYM("U001FBF","◌᾿") ; not perfect
+  GUISYM("T_psili","◌᾿") ; not perfect
   GUISYM("U0002D8","◌̆")
 
 
