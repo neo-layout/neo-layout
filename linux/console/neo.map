@@ -169,10 +169,10 @@ alt_is_meta
 ! ----dead keys-------------------------------------------------------------
                    keycode  41 = dead_circumflex       dead_caron            U+21BB                U+02DE                
            shiftl  keycode  41 = U+0307                
-                   keycode  13 = dead_grave            dead_cedilla          U+030a                U+1FFE                
+                   keycode  13 = dead_grave            dead_cedilla          U+030a                VoidSymbol            
            shiftl  keycode  13 = dead_diaeresis        
    altgr   shiftl  keycode  13 = U+0304                
-                   keycode  27 = dead_acute            dead_tilde            VoidSymbol            U+1FBF                
+                   keycode  27 = dead_acute            dead_tilde            VoidSymbol            VoidSymbol            
            shiftl  keycode  27 = dead_doubleacute      
    altgr   shiftl  keycode  27 = dead_breve            
 
@@ -189,7 +189,7 @@ alt_is_meta
            shiftl  keycode   4 = U+2116                
    altgr   shiftl  keycode   4 = U+2227                
                    keycode   5 = four                  guillemotright        U+203A                U+2640                
-   altgr   shiftl  keycode   5 = U+22a4                
+   altgr   shiftl  keycode   5 = U+22A5                
                    keycode   6 = five                  guillemotleft         U+2039                U+2642                
            shiftl  keycode   6 = periodcentered        
    altgr   shiftl  keycode   6 = U+2221                
