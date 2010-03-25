@@ -80,6 +80,8 @@ DefineXKBSyms() {
   DefineXKBSym("dead_stroke"       ,"T__strk")
   DefineXKBSym("U02DE"             ,"T__hook")
   DefineXKBSym("U21BB"             ,"T__turn")
+  DefineXKBSym("dead_dasia"        ,"T_dasia")
+  DefineXKBSym("dead_psili"        ,"T_psili")
   DefineXKBSym("dead_iota"         ,"T__iota")    ; not assigned a dead key in NEO
   DefineXKBSym("dead_voiced_sound" ,"T__vsnd")    ; not assigned a dead key in NEO
   DefineXKBSym("dead_semivoiced_sound","T__ssnd") ; not assigned a dead key in NEO
