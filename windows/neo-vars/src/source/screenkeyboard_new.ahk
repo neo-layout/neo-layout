@@ -46,9 +46,9 @@ rerun_bstnupdate:
         if (GSYM%GuiComp1% != "") {
           GuiComp .= GSYM%GuiComp1%
         } else if (CD%GuiComp1% != "") {
-	  GSym    := CD%GuiComp1%
-          if (GSYM%GSym% != "") 
-            GuiComp .= GSYM%Gsym%
+	  G_Sym    := CD%GuiComp1%
+          if (GSYM%G_Sym% != "") 
+            GuiComp .= GSYM%G_sym%
           else
             GuiComp .= CD%GuiComp1%
         } else if (CM%GuiComp1% == 1) {
@@ -58,7 +58,7 @@ rerun_bstnupdate:
             GuiComp .= CF%CurrentComp%
 	  CurrentComp := ""
           goto rerun_bstnupdate
-        } else if (CurrentComp = "") {
+        } else if (CurrentComp == "") {
           GuiComp .= GuiComp1
         }
 	GuiPos := 0
