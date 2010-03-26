@@ -281,7 +281,7 @@ xkb_symbols "neo_base" {
     key <AE10> { [ 0,                       rightdoublequotemark,    rightsinglequotemark,    zerosubscript,           KP_Multiply,             KP_Multiply,             emptyset,                NoSymbol                 ] };
 
     key <AE11> { [ minus,                   emdash,                  NoSymbol,                U2011,                   KP_Subtract,             KP_Subtract,             hyphen,                  NoSymbol                 ] };
-    key <AE12> { [ dead_grave,              dead_cedilla,            dead_abovering,          U1FFE,                   dead_diaeresis,          NoSymbol,                dead_macron,             NoSymbol                 ] };
+    key <AE12> { [ dead_grave,              dead_cedilla,            dead_abovering,          dead_dasia,              dead_diaeresis,          NoSymbol,                dead_macron,             NoSymbol                 ] };
 
     // Top row
     // --------------------------------------------------------------
@@ -301,7 +301,7 @@ xkb_symbols "neo_base" {
     key <AD11> { [ ssharp,                  U1E9E,                   U017F,                   Greek_finalsmallsigma,   U2212,                   NoSymbol,                jot,                     NoSymbol                 ] };
 
     key.type[Group1] = "EIGHT_LEVEL_NEO_LOCKS";
-    key <AD12> { [ dead_acute,              dead_tilde,              dead_stroke,             U1FBF,                  dead_doubleacute,        NoSymbol,                dead_breve,               NoSymbol                 ] };
+    key <AD12> { [ dead_acute,              dead_tilde,              dead_stroke,             dead_psili,              dead_doubleacute,        NoSymbol,                dead_breve,              NoSymbol                 ] };
 
     // Middle row
     // --------------------------------------------------------------
