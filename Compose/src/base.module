@@ -376,5 +376,6 @@
 <U21BB> <U21CC>                            : "⇋"   U21CB # LEFTWARDS HARPOON OVER RIGHTWARDS HARPOON
 <Multi_key> <period> <slash> <period>      : "⁒"   U2052 # COMMERCIAL MINUS SIGN
 <Multi_key> <period> <KP_Divide> <period>  : "⁒"   U2052 # COMMERCIAL MINUS SIGN
+<Multi_key> <enfilledcircbullet> <enfilledcircbullet> : "‣" U2023 # TRIANGULAR BULLET
 
 # End of standard Definitions by Neo keyboard layout
