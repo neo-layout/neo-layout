@@ -147,7 +147,7 @@
 <Multi_key> <slash> <Greek_lambda>                : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 <Multi_key> <KP_Divide> <Greek_lambda>            : "ƛ" U019B # LATIN SMALL LETTER LAMBDA WITH STROKE
 # It is undecided whether they should be included:
-<dead_stroke> <2>                                 : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
+#<dead_stroke> <2>                                 : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <Multi_key> <minus> <2>                           : "ƻ" U01BB # LATIN LETTER TWO WITH STROKE
 <dead_stroke> <Greek_iota>                        : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
 <Multi_key> <minus> <Greek_iota>                  : "ᵼ" U1D7C # LATIN SMALL LETTER IOTA WITH STROKE
