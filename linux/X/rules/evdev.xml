@@ -554,6 +554,13 @@
     </model>
     <model>
       <configItem>
+        <name>hpmini110</name>
+        <description>Hewlett-Packard Mini 110 Notebook</description>
+        <vendor>Hewlett-Packard</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>rapidaccess</name>
         <description>IBM Rapid Access</description>
         <vendor>IBM</vendor>
@@ -570,13 +577,6 @@
       <configItem>
         <name>thinkpad</name>
         <description>IBM ThinkPad 560Z/600/600E/A22E</description>
-        <vendor>IBM</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>thinkpadintl</name>
-        <description>IBM ThinkPad 560Z/600/600E/A22E, Intl</description>
         <vendor>IBM</vendor>
       </configItem>
     </model>
@@ -981,6 +981,41 @@
     </model>
     <model>
       <configItem>
+        <name>tm2020</name>
+        <description>TypeMatrix EZ-Reach 2020</description>
+        <vendor>TypeMatrix</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>tm2030PS2</name>
+        <description>TypeMatrix EZ-Reach 2030 PS2</description>
+        <vendor>TypeMatrix</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>tm2030USB</name>
+        <description>TypeMatrix EZ-Reach 2030 USB</description>
+        <vendor>TypeMatrix</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>tm2030USB-102</name>
+        <description>TypeMatrix EZ-Reach 2030 USB (102/105:EU mode)</description>
+        <vendor>TypeMatrix</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>tm2030USB-106</name>
+        <description>TypeMatrix EZ-Reach 2030 USB (106:JP mode)</description>
+        <vendor>TypeMatrix</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>yahoo</name>
         <description>Yahoo! Internet Keyboard</description>
 	<vendor>Yahoo!</vendor>
@@ -1060,6 +1095,27 @@
       <configItem>
         <name>apple_laptop</name>
         <description>Apple Laptop</description>
+	<vendor>Apple</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>applealu_ansi</name>
+        <description>Apple Aluminium Keyboard (ANSI)</description>
+	<vendor>Apple</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>applealu_iso</name>
+        <description>Apple Aluminium Keyboard (ISO)</description>
+	<vendor>Apple</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>applealu_jis</name>
+        <description>Apple Aluminium Keyboard (JIS)</description>
 	<vendor>Apple</vendor>
       </configItem>
     </model>
@@ -1154,6 +1210,13 @@
         <vendor>Compal Electronics Inc.</vendor>
       </configItem>
     </model>
+    <model>
+      <configItem>
+        <name>creativedw7000</name>
+        <description>Creative Desktop Wireless 7000</description>
+        <vendor>Creative</vendor>
+      </configItem>
+    </model>
   </modelList>
   <layoutList>
     <layout>
@@ -1186,7 +1249,7 @@
         <variant>
           <configItem>
             <name>alt-intl</name>
-            <description>Alternative international (former us_intl)</description>
+            <description>Alternative international</description>
           </configItem>
         </variant>
 	<variant>
@@ -1204,7 +1267,13 @@
         <variant>
           <configItem>
             <name>dvorak-intl</name>
-            <description>Dvorak international</description>
+            <description>Dvorak international (with dead keys)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak-alt-intl</name>
+            <description>Dvorak alternative international (no dead keys)</description>
           </configItem>
         </variant>
         <variant>
@@ -1235,6 +1304,7 @@
           <configItem>
             <name>rus</name>
             <description>Russian phonetic</description>
+            <languageList><iso639Id>rus</iso639Id></languageList>
           </configItem>
         </variant>
         <variant>
@@ -1256,6 +1326,14 @@
           <configItem>
             <name>olpc2</name>
             <description>Group toggle on multiply/divide key</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>srp</name>
+            <description>Serbian</description>
+            <languageList><iso639Id>eng</iso639Id>
+                          <iso639Id>srp</iso639Id> </languageList>
           </configItem>
         </variant>
       </variantList>
@@ -1455,8 +1533,8 @@
       <variantList>
         <variant>
           <configItem>
-            <name>winkeys</name>
-            <description>Winkeys</description>
+            <name>legacy</name>
+            <description>Legacy</description>
           </configItem>
         </variant>
         <variant>
@@ -1523,7 +1601,7 @@
     <layout>
       <configItem>
         <name>bd</name>
-        <shortDescription>Ban</shortDescription>
+        <shortDescription>Bgd</shortDescription>
         <description>Bangladesh</description>
         <languageList><iso639Id>ben</iso639Id></languageList>
       </configItem>
@@ -1610,6 +1688,13 @@
           <configItem>
             <name>tam_unicode</name>
             <description>Tamil Unicode</description>
+            <languageList><iso639Id>tam</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tam_keyboard_with_numerals</name>
+            <description>Tamil Keyboard with Numerals</description>
             <languageList><iso639Id>tam</iso639Id></languageList>
           </configItem>
         </variant>
@@ -1764,7 +1849,7 @@
         <variant>
           <configItem>
             <name>phonetic</name>
-            <description>Traditional Phonetic</description>
+            <description>Traditional phonetic</description>
           </configItem>
         </variant>
       </variantList>
@@ -1772,7 +1857,7 @@
         <variant>
           <configItem>
             <name>bas_phonetic</name>
-            <description>Standard Phonetic</description>
+            <description>New phonetic</description>
           </configItem>
         </variant>
       </variantList>
@@ -1913,7 +1998,7 @@
     <layout>
       <configItem>
         <name>cd</name>
-        <shortDescription>DRC</shortDescription>
+        <shortDescription>COD</shortDescription>
         <description>Congo, Democratic Republic of the</description>
         <languageList><iso639Id>fra</iso639Id></languageList>
       </configItem>
@@ -1922,7 +2007,7 @@
     <layout>
       <configItem>
         <name>cn</name>
-        <shortDescription>China</shortDescription>
+        <shortDescription>Chn</shortDescription>
         <description>China</description>
         <languageList><iso639Id>chi</iso639Id></languageList>
       </configItem>
@@ -2009,12 +2094,18 @@
 	    <description>UCW layout (accented letters only)</description>
 	 </configItem>
 	</variant>
+	<variant>
+	  <configItem>
+	    <name>dvorak-ucw</name>
+	    <description>US Dvorak with CZ UCW support</description>
+	 </configItem>
+	</variant>
       </variantList>
     </layout>
     <layout>
       <configItem>
         <name>dk</name>
-        <shortDescription>Dan</shortDescription>
+        <shortDescription>Dnk</shortDescription>
         <description>Denmark</description>
         <languageList><iso639Id>dan</iso639Id></languageList>
       </configItem>
@@ -2076,7 +2167,7 @@
     <layout>
       <configItem>
         <name>bt</name>
-        <shortDescription>Bhu</shortDescription>
+        <shortDescription>Btn</shortDescription>
         <description>Bhutan</description>
         <languageList><iso639Id>dzo</iso639Id></languageList>
       </configItem>
@@ -2119,20 +2210,8 @@
       <variantList>
         <variant>
           <configItem>
-            <name>pro</name>
-            <description>Pro</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>keypad</name>
-            <description>Keypad</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>pro_keypad</name>
-            <description>Pro Keypad</description>
+            <name>pes_keypad</name>
+            <description>Persian, with Persian Keypad</description>
           </configItem>
         </variant>
         <variant>
@@ -2207,7 +2286,7 @@
     <layout>
       <configItem>
         <name>fo</name>
-        <shortDescription>Fao</shortDescription>
+        <shortDescription>Fro</shortDescription>
         <description>Faroe Islands</description>
         <languageList><iso639Id>fao</iso639Id></languageList>
       </configItem>
@@ -2418,7 +2497,7 @@
     <layout>
       <configItem>
         <name>gn</name>
-        <shortDescription>Gui</shortDescription>
+        <shortDescription>Gin</shortDescription>
         <description>Guinea</description>
         <languageList><iso639Id>fra</iso639Id></languageList>
       </configItem>
@@ -2553,7 +2632,7 @@
     <layout>
       <configItem>
         <name>gr</name>
-        <shortDescription>Gre</shortDescription>
+        <shortDescription>Grc</shortDescription>
         <description>Greece</description>
         <languageList><iso639Id>gre</iso639Id></languageList>
       </configItem>
@@ -2797,6 +2876,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>us</name>
+            <description>US keyboard with Italian letters</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>geo</name>
             <description>Georgian</description>
             <languageList><iso639Id>geo</iso639Id></languageList>
@@ -2824,6 +2909,12 @@
             <description>OADG 109A</description>
           </configItem>
 	</variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <description>Macintosh</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2853,9 +2944,9 @@
     </layout>
     <layout>
       <configItem>
-	<name>kz</name>
-	<shortDescription>Kaz</shortDescription>
-	<description>Kazakhstan</description>
+        <name>kz</name>
+        <shortDescription>Kaz</shortDescription>
+        <description>Kazakhstan</description>
         <languageList><iso639Id>kaz</iso639Id></languageList>
       </configItem>
       <variantList>
@@ -2975,18 +3066,12 @@
             <description>LEKPa</description>
           </configItem>
         </variant>
-        <variant>
-          <configItem>
-            <name>balticplus</name>
-            <description>Baltic+</description>
-          </configItem>
-        </variant>
       </variantList>
     </layout>
     <layout>
       <configItem>
         <name>lv</name>
-        <shortDescription>Lav</shortDescription>
+        <shortDescription>Lva</shortDescription>
         <description>Latvia</description>
         <languageList><iso639Id>lav</iso639Id></languageList>
       </configItem>
@@ -3207,6 +3292,12 @@
             <languageList><iso639Id>rus</iso639Id></languageList>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>dvp</name>
+            <description>Programmer Dvorak</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3364,6 +3455,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>typewriter-legacy</name>
+            <description>Typewriter, legacy</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>tt</name>
             <description>Tatar</description>
             <languageList><iso639Id>tat</iso639Id></languageList>
@@ -3429,6 +3526,21 @@
           <configItem>
             <name>dos</name>
             <description>DOS</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>srp</name>
+            <description>Serbian</description>
+            <languageList><iso639Id>rus</iso639Id>
+                          <iso639Id>srp</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>bak</name>
+            <description>Bashkirian</description>
+            <languageList><iso639Id>bak</iso639Id></languageList>
           </configItem>
         </variant>
       </variantList>
@@ -3655,6 +3767,12 @@
       <variantList>
         <variant>
           <configItem>
+            <name>legacy</name>
+            <description>Legacy</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>de_nodeadkeys</name>
             <description>German, eliminate dead keys</description>
           </configItem>
@@ -3763,7 +3881,7 @@
     <layout>
       <configItem>
         <name>lk</name>
-        <shortDescription>SrL</shortDescription>
+        <shortDescription>Lka</shortDescription>
         <description>Sri Lanka</description>
         <languageList><iso639Id>sin</iso639Id></languageList>
       </configItem>
@@ -4146,7 +4264,7 @@
     <layout>
       <configItem>
         <name>mv</name>
-        <shortDescription>Mal</shortDescription>
+        <shortDescription>Mdv</shortDescription>
         <description>Maldives</description>
         <languageList><iso639Id>div</iso639Id></languageList>
       </configItem>
@@ -4155,7 +4273,7 @@
     <layout>
        <configItem>
         <name>za</name>
-        <shortDescription>Zar</shortDescription>
+        <shortDescription>Zaf</shortDescription>
         <description>South Africa</description>
         <languageList><iso639Id>eng</iso639Id></languageList>
       </configItem>
@@ -4179,7 +4297,7 @@
     <layout>
       <configItem>
         <name>np</name>
-        <shortDescription>Nep</shortDescription>
+        <shortDescription>Npl</shortDescription>
 	<description>Nepal</description>
         <languageList><iso639Id>nep</iso639Id></languageList>
       </configItem>
@@ -4187,7 +4305,7 @@
     <layout>
       <configItem>
         <name>ng</name>
-        <shortDescription>Nig</shortDescription>
+        <shortDescription>Nga</shortDescription>
 	<description>Nigeria</description>
         <languageList><iso639Id>eng</iso639Id></languageList>
       </configItem>
@@ -4266,6 +4384,34 @@
           <configItem>
             <name>alt</name>
             <description>Alt-Q</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
+        <name>ml</name>
+        <shortDescription>Mli</shortDescription>
+        <description>Mali</description>
+        <languageList><iso639Id>bam</iso639Id></languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>fr-oss</name>
+            <description>Français (France Alternative)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>us-mac</name>
+            <description>English (USA Macintosh)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>us-intl</name>
+            <description>English (USA International)</description>
           </configItem>
         </variant>
       </variantList>
@@ -4358,6 +4504,12 @@
       </option>
       <option>
         <configItem>
+          <name>grp:lctrl_rctrl_switch</name>
+          <description>Left Ctrl (to first layout), Right Ctrl (to last layout)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>grp:alt_caps_toggle</name>
           <description>Alt+CapsLock</description>
         </configItem>
@@ -4392,6 +4544,12 @@
           <description>Left Ctrl+Left Shift</description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>grp:rctrl_rshift_toggle</name>
+          <description>Right Ctrl+Right Shift</description>
+        </configItem>
+      </option>      
       <option>
         <configItem>
           <name>grp:ctrl_alt_toggle</name>
@@ -4455,7 +4613,7 @@
       <option>
         <configItem>
           <name>grp:sclk_toggle</name>
-          <description>Scroll Lock</description>
+          <description>ScrollLock</description>
         </configItem>
       </option>
     </group>
@@ -4764,6 +4922,12 @@
       </option>
       <option>
         <configItem>
+          <name>caps:numlock</name>
+          <description>Make CapsLock an additional NumLock</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>caps:swapescape</name>
           <description>Swap ESC and CapsLock</description>
         </configItem>
@@ -4782,8 +4946,26 @@
       </option>
       <option>
         <configItem>
+          <name>caps:super</name>
+          <description>Make CapsLock an additional Super</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>caps:hyper</name>
+          <description>Make CapsLock an additional Hyper</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>caps:shiftlock</name>
           <description>CapsLock toggles Shift so all keys are affected</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>caps:none</name>
+          <description>CapsLock is disabled</description>
         </configItem>
       </option>
     </group>
@@ -4880,6 +5062,12 @@
       </option>
       <option>
         <configItem>
+          <name>compose:lctrl</name>
+          <description>Left Ctrl</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>compose:rctrl</name>
           <description>Right Ctrl</description>
         </configItem>
@@ -4887,13 +5075,31 @@
       <option>
         <configItem>
           <name>compose:caps</name>
-          <description>Caps Lock</description>
+          <description>CapsLock</description>
         </configItem>
       </option>
       <option>
         <configItem>
           <name>compose:102</name>
           <description>Less-than/Greater-than</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>compose:paus</name>
+          <description>Pause</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>compose:prsc</name>
+          <description>PrtSc</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>compose:sclk</name>
+          <description>ScrollLock</description>
         </configItem>
       </option>
     </group>
@@ -4923,13 +5129,19 @@
       <option>
         <configItem>
           <name>numpad:shift3</name>
-          <description>Shift does not cancel NumLock, chooses 3d level instead</description>
+          <description>Shift does not cancel NumLock, chooses 3rd level instead</description>
         </configItem>
       </option>
       <option>
         <configItem>
           <name>srvrkeys:none</name>
           <description>Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>apple:alupckeys</name>
+          <description>Apple Aluminium Keyboard: emulate PC keys (Print, Scroll_Lock, Pause, NumLock)</description>
         </configItem>
       </option>
       <option>
@@ -5119,6 +5331,54 @@
         <configItem>
           <name>nbsp:level4nl</name>
           <description>Non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2</name>
+          <description>Zero-width non-joiner character at second level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2zwj3</name>
+          <description>Zero-width non-joiner character at second level, zero-width joiner character at third level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2zwj3nb4</name>
+          <description>Zero-width non-joiner character at second level, zero-width joiner character at third level, non-breakable space character at fourth level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2nb3</name>
+          <description>Zero-width non-joiner character at second level, non-breakable space character at third level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2nb3s</name>
+          <description>Zero-width non-joiner character at second level, non-breakable space character at third level, nothing at fourth level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2nb3zwj4</name>
+          <description>Zero-width non-joiner character at second level, non-breakable space character at third level, zero-width joiner at fourth level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj2nb3nnb4</name>
+          <description>Zero-width non-joiner character at second level, non-breakable space character at third level, thin non-breakable space at fourth level</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:zwnj3zwj4</name>
+          <description>Zero-width non-joiner character at third level, zero-width joiner at fourth level</description>
         </configItem>
       </option>
     </group>
