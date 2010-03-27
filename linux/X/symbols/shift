@@ -40,7 +40,7 @@ xkb_symbols "both_capslock" {
   include "shift(rshift_both_capslock)"
 };
 
-// When pressed alone, release Lock, whan pressed with another Shift key, set Lock.
+// Release Lock when pressed alone and set Lock when pressed with another Shift key.
 partial modifier_keys
 xkb_symbols "lshift_both_capslock_cancel" {
   key <LFSH> {
@@ -48,7 +48,7 @@ xkb_symbols "lshift_both_capslock_cancel" {
     symbols[Group1] = [ Shift_L,                       Caps_Lock                ]
   };
 };
-// When pressed alone, release Lock, whan pressed with another Shift key, set Lock.
+// Release Lock when pressed alone and set Lock when pressed with another Shift key.
 partial modifier_keys
 xkb_symbols "rshift_both_capslock_cancel" {
   key <RTSH> {
