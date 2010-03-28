@@ -64,8 +64,8 @@ CharProc___EH1() {
   GUISYM("P__EHSd","EH")
   ED("EHSpace",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
 
-  TransformProc     := "Einhand"
-  TransformBSTNProc := "Einhand"
+  TransformProc    := "Einhand"
+  TransformBSTProc := "Einhand"
 }
 
 CharProc___EH0() {
@@ -108,17 +108,18 @@ CharProc___EH0() {
   ED("space",0,"U000020","U000020","U000020","S__N__0","U0000A0","U00202F")
   GUISYM("P__EHSd","")
 
-  TransformProc     := ""
-  TransformBSTNProc := ""
+  TransformProc    := ""
+  TransformBSTProc := ""
 }
 
 CharProc__EHSd() {
   global
   ; Space im Einhandmodus gedrückt
-  EHSpacePressed := 1
   PRspace := "P__EHSu"
-  if (useBSTN)
-    BSTNUpdate()
+  if (!EHSpacePressed) {
+    EHSpacePressed := 1
+    Check_BSTUpdate(1)
+  }
 }
 
 CharProc__EHSu() {
@@ -130,8 +131,7 @@ CharProc__EHSu() {
   }
   EHKeyPressed := 0
   EHSpacePressed := 0
-  if (useBSTN)
-    BSTNUpdate()
+  Check_BSTUpdate(1)
 }
 
 CharProc__M2LT() {
@@ -150,7 +150,7 @@ TransformEinhand(PhysKey) {
   return PhysKey
 }
 
-TransformBSTNEinhand(PhysKey) {
+TransformBSTEinhand(PhysKey) {
   global
   if (EHSpacePressed and (TKEH_%PhysKey% != "")) {
     return TKEH_%PhysKey%

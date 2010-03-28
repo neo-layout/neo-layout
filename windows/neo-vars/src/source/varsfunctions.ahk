@@ -124,8 +124,7 @@ rerun:
     CharOutUp(PR%PhysKey%)
     PR%PhysKey% := ""
   }
-  if (useBSTN)
-    BSTNUpdate()
+  Check_BSTUpdate()
 }
 
 CharStarUp(PhysKey) {
