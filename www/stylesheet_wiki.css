@@ -185,7 +185,7 @@ overflow:auto;
   font-size:1em;
   background-color:White;
   color:Black;
-  text-align:left;
+  text-align:justify;
 }
 
 #content.ticket  { width: 100%; max-width:61em}
