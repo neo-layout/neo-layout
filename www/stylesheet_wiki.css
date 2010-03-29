@@ -188,6 +188,8 @@ overflow:auto;
   text-align:justify;
 }
 
+#content img {margin:1em}  /*hält Text von Bildern im Contentbereich fern */
+
 #content.ticket  { width: 100%; max-width:61em}
 
 table.code td {font-family: 'DejaVu Sans Mono',monospace;}
