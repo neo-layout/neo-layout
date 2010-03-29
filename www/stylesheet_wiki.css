@@ -7,10 +7,10 @@ body {
  line-height:1.35em;
 }
 
-h1 { font-size: 2.2em; line-height: 0.9em;}
-h2 { font-size: 1.6em; margin-top: 0,9em; }
-h3 { font-size: 1.2em }
-h4 { font-size: 1em }
+h1 { font-size: 2.2em; line-height: 0.9em; text-align:justify}
+h2 { font-size: 1.6em; margin-top: 0,9em; text-align:justify}
+h3 { font-size: 1.2em; text-align:justify}
+h4 { font-size: 1em; text-align:justify}
 
 tt { white-space: pre }
 
