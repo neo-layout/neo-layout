@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+		Neo – Ergonomisches Tastaturlayout
+    </title>
+	<link rel="search" href="http://wiki.neo-layout.org/search" />
+	<link rel="start" href="http://neo-layout.org" />
+	<link rel="stylesheet" href="http://wiki.neo-layout.org/chrome/common/css/trac.css" type="text/css" />
+	<link rel="stylesheet" href="http://wiki.neo-layout.org/chrome/common/css/wiki.css" type="text/css" />
+	<link rel="stylesheet" href="http://neo-layout.org/stylesheet_wiki.css" type="text/css" />
+	<link rel="shortcut icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" />
+	<link type="application/opensearchdescription+xml" rel="search" href="http://wiki.neo-layout.org/search/opensearch" title="Search Neo-Layout" />
+	<script type="text/javascript" src="http://wiki.neo-layout.org/chrome/common/js/jquery.js"></script>
+	<script type="text/javascript" src="http://wiki.neo-layout.org/chrome/common/js/trac.js"></script>
+	<script type="text/javascript" src="http://wiki.neo-layout.org/chrome/common/js/search.js"></script>
+	<!--[if lt IE 7]>
+	<script type="text/javascript" src="http://wiki.neo-layout.org/chrome/common/js/ie_pre7_hacks.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$("#content").find("h1,h2,h3,h4,h5,h6").addAnchor("Link to this section");
+		});
+	</script>
+
+	<style type="text/css">
+		<!--
+/* Interaktive Tastaturebenen */
+		.aktiveEbene { border-color:#56b; color:#23b; }
+		.Ebene_button {
+		  border:1px solid black;
+		  padding:0.25em 1em;
+		  position:absolute;
+		  cursor:pointer;
+		  z-index:2;
+		}
+		
+		.Ebenen_box { position: relative;}
+		.Ebene_bild { padding-top:2em; }
+		.Ebene_wrapper { position:absolute; top:0px; background-color: white; }
+		.Ebene_wrapper > .Ebene_bild { display:none; }
+		.Ebene_wrapper:hover > .Ebene_bild { display:block; }
+		.Ebene_wrapper:hover > .Ebene_button,.Ebene1_wrapper:hover > .Ebene_button { 
+		  background-color:Highlight;
+		}
+		
+		#content img.ebenen {margin:1em 0 0 0} /*kein Standard-Margin für die Bilder*/
+		-->
+	</style>
+
+</head>
+<body>
+	<div id="siteheader">&nbsp;</div>
+	<div id="banner">
+		<div id="header">
+			<a id="logo" href="http://neo-layout.org/"><img src="http://neo-layout.org/neo_kopf_trac_522x50.png" alt="Neo Tastaturlayout" height="50" width="522" /></a>
+		</div>
+
+<!-- Quicklinks -->
+<!--Werden per post-commit hook immer aktuell gehalten!-->
+		<a href="neo_de.xmodmap">
+			<img src="http://neo-layout.org/tastentierchen_pingu.png" title="quickdownload:Neo_Linux" alt="quickdownload:Neo_Linux" />
+		</a>
+		<a href="http://wiki.neo-layout.org/browser/windows/neo-vars/out/neo20.exe?format=raw">
+			<img src="http://neo-layout.org/tastentierchen_fenster.png" title="quickdownload:Neo_Windows" alt="quickdownload:Neo_Windows" />
+		</a>
+		<a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">
+			<img src="http://neo-layout.org/tastentierchen_apfel.png" title="quickdownload:Neo_OS-X" alt="quickdownload:Neo_OS-X" />
+		</a>
+<!-- /Quicklinks -->
+    </div>
+	<div id="content" class="wiki">
+		<div class="wikipage searchable">
+			<p></p>
+			<div class="wiki-toc">
+				<h4>Wiki</h4>
+				<ol>
+					<li><a href="http://wiki.neo-layout.org/wiki">Wiki-Hauptseite</a></li>
+				</ol>
+				<h4>Dokumentation und Hilfe</h4>
+				<ol>
+					<li><a href="http://wiki.neo-layout.org/wiki/Benutzerhandbuch">Handbuch</a></li>
+					<li><a href="http://wiki.neo-layout.org/wiki/Mailingliste">Mailingliste</a></li>
+					<li><a href="http://neo-layout.org/chat">Neo-Chat</a></li>
+				</ol>
+				<h4>Installation</h4>
+				<ol>
+					<li><a href="http://neo-layout.org/windows">Windows</a></li>
+					<li><a href="http://neo-layout.org/linux">Linux</a></li>
+					<li><a href="http://neo-layout.org/mac">Mac&nbsp;OS&nbsp;X</a></li>
+					<li><a href="http://neo-layout.org/bsd">FreeBSD</a></li>
+					<li><a href="http://neo-layout.org/portabel">… für unterwegs</a></li>
+					<li><a href="http://neo-layout.org/installation">Weitere Systeme</a></li>
+				</ol>
+				<h4>Grafiken</h4>
+				<ol>
+					<li><a href="grafik/aufsteller/neo20-aufsteller.pdf">Aufsteller zum Lernen</a></li>
+					<li><a href="grafik/druckvorlage/neo-druckvorlage.pdf">Druckvorlage</a></li>
+					<li><a href="http://wiki.neo-layout.org/wiki/Grafiken">Noch viel mehr</a></li>
+				</ol>
+				<h4>Sonstiges</h4>
+				<ol>
+					<li><a href="http://wiki.neo-layout.org/wiki/Verweise%20auf%20andere%20Projekte">Links</a></li>
+					<li><a href="http://wiki.neo-layout.org/wiki/Presseberichte">Presseberichte</a></li>
+				</ol>
+			</div>
+			<p>&nbsp;</p>
+			<h1>Neo – Ergonomisches Tastaturlayout</h1>
+			<p>
+				Neo ist ein neue Tastaturbelegung, die extra für die deutsche Sprache optimiert ist: 
+			</p>
+			<ul>
+				<li>Optimierungen bezüglich deutscher Zweier- und Dreier-Zeichenfolgen (Ebene 1 und 2)</li>
+				<li>Programmiertasten sind gut erreichbar (Ebene 3)</li>
+				<li>Neue Zeichen, wie „ , ” , « , » , ∫ , √ , α , β , … sind direkt einzugeben (alle Ebenen)</li>
+				<li>Navigation mittels Steuerkreuz ←↑→↓ direkt auf der Haupttastatur (Ebene 4)</li>
+			</ul>
+			<a href="http://wiki.neo-layout.org/wiki/Einführungskapitel" id="Hauptfeldlink_rechtsunten">Warum Neo besser ist als Qwertz …</a>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>       
+			<h2> Die Neo-Tastaturbelegung zum Ausprobieren</h2>
+			<div class="Ebenen_box">
+				<div class="Ebene1_wrapper">
+					<div class="Ebene_button" style="left:0em">Ebene&nbsp;1</div>
+					<div class="Ebene_bild">
+						<img class="ebenen" src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene1.png" alt="Tastenbelegung Ebene 1" />
+					</div>
+				</div>
+				<div class="Ebene_wrapper">
+					<div class="Ebene_button" style="left:6.5em;">Ebene&nbsp;2</div>
+					<div class="Ebene_bild">
+						<img class="ebenen" src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene2.png" alt="Tastenbelegung Ebene 2" />
+					</div>
+				</div>
+				<div class="Ebene_wrapper">
+					<div class="Ebene_button" style="left:13em;">Ebene&nbsp;3</div>
+					<div class="Ebene_bild">
+						<img class="ebenen" src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene3.png" alt="Tastenbelegung Ebene 3" />
+					</div>
+				</div>
+				<div class="Ebene_wrapper">
+					<div class="Ebene_button" style="left:19.5em">Ebene&nbsp;4</div>
+					<div class="Ebene_bild">
+						<img class="ebenen" src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene4.png" alt="Tastenbelegung Ebene 4" />
+					</div>
+				</div>
+				<div class="Ebene_wrapper">
+					<div class="Ebene_button" style="left:26em;">Ebene&nbsp;5</div>
+					<div class="Ebene_bild">
+						<img class="ebenen" src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene5.png" alt="Tastenbelegung Ebene 5" />
+					</div>
+				</div>
+				<div class="Ebene_wrapper">
+					<div class="Ebene_button" style="left:32.5em;">Ebene&nbsp;6</div>
+					<div class="Ebene_bild">
+						<img class="ebenen" src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene6.png" alt="Tastenbelegung Ebene 6" />
+					</div>
+				</div>
+			</div>
+			<p>
+				Zum Ausdrucken und Lernen der Neo-Tastaturbelegung gibt es den <a href="grafik/aufsteller/neo20-aufsteller.pdf">Aufsteller</a> und die irgendwann auch käuflich zu beziehende <a href="grafik/druckvorlage/neo-druckvorlage.pdf">Druckvorlage</a>
+			</p>
+			<p>&nbsp;</p> 
+			<h2>Kurzinformation für Interessierte</h2>
+			<p> 
+				Um an Neo zu ge&shy;langen, wird auf die <a href="http://wiki.neo-layout.org/wiki/Neo%20einrichten">Installationsanleitungen</a> oder für Profis auf das SVN-Reposi&shy;tory: <b>svn co https://svn.neo-layout.org neo</b> verwiesen. Hier sind die direk&shy;ten Links zu den Neo-Treibern für die ver&shy;brei&shy;testen Be&shy;triebs&shy;sys&shy;teme (in jedem Ordner be&shy;findet sich eine Datei README.txt mit weiter&shy;gehen&shy;den In&shy;forma&shy;tionen):
+			</p>
+			<ul>
+				<li>Windows: <a href="http://wiki.neo-layout.org/browser/windows/">http://wiki.neo-layout.org/browser/windows/</a></li>
+				<li>Linux: <a href="http://wiki.neo-layout.org/browser/linux/">http://wiki.neo-layout.org/browser/linux/</a></li>
+				<li>Mac&nbsp;OS&nbsp;X: <a href="http://wiki.neo-layout.org/browser/mac_osx/">http://wiki.neo-layout.org/browser/mac_osx/</a></li>
+			</ul>
+			<p>
+				Die <b>aktu&shy;elle Be&shy;legung</b> findet sich in der Datei <a href="http://wiki.neo-layout.org/browser/A-REFERENZ-A/neo20.txt">http://wiki.neo-layout.org/browser/A-REFERENZ-A/neo20.txt</a>
+			</p>
+			<p>
+				Eine <b>Refe&shy;renz zum Aus&shy;drucken</b> und Auf&shy;stellen findet sich unter <a href="grafik/aufsteller/neo20-aufsteller.pdf">http://neo-layout.org/grafik/aufsteller/neo20-aufsteller.pdf</a>. Weiter gibt es im svn-Repo&shy;sitory Tastatur&shy;aufkleber&shy;generatoren.
+			</p>
+			<p>
+				Auf jeden Fall wird em&shy;pfoh&shy;len, folgende <b>Schrift&shy;arten zu in&shy;stallieren</b>, damit alle mit Neo schreib&shy;baren Zeichen dar&shy;gestellt werden können:
+			</p>
+			<ul>
+				<li><a href="http://dejavu.sourceforge.net/wiki/index.php/Download">Deja-Vu</a></li>
+				<li><a href="http://sourceforge.net/project/showfiles.php?group_id=89513">Libertine</a></li>
+			</ul>
+			<p>
+				<b>Neo ist auf den »normalen Ebenen«</b> – will heißen: nor&shy;male Buch&shy;staben und Klam&shy;mern, etc. – <b>voll&shy;ständig be&shy;nutzbar</b>. Da die Be&shy;triebs&shy;sys&shy;teme oder Pro&shy;gramme bei weiteren Ebenen ger&shy;ne noch rum&shy;zicken, ist der Trei&shy;ber auf den anderen Ebenen noch nicht ganz fertig. Bei den Grund&shy;ebenen sol&shy;lte sich bei der Be&shy;legung nichts mehr ändern. Fehler sind hier zu finden:
+			</p>
+			<ul>
+				<li><a href="http://wiki.neo-layout.org/report/1">aktuelle Fehler (Active Tickets)</a></li>
+				<li><a href="http://wiki.neo-layout.org/newticket">neuen Fehler melden (New Ticket)</a></li>
+			</ul>
+			<h2>Kontakt</h2>
+			<p>
+				Kontakt zu den Neo-Ent&shy;wicklern kann man über die Mailing&shy;liste <b><a href="mailto:diskussion@neo-layout.org?subject=Sinnvoller Betreff!&cc=Hier.bitte.Ihre.Adresse.eingeben@Ihr-Provider.invalid&body=Hallo!%0A%0D%0A%0D%E2%80%A2 Ich bin bereits Neo-Nutzer (oder: Ich bin noch kein Neo-Nutzer).%0A%0D%E2%80%A2 Ich benutze Linux%2FWindows%2FMac%0A%0D%E2%80%A2 Ich benutze den Treiber: (Xmodmap, Xkbmap, AHK, kbdneo2, %E2%80%A6)%0A%0D%E2%80%A2 [Bitte denke daran, Deine richtige Adresse bei CC: einzutragen!]%0A%0D%E2%80%A2 Mein eigentliches Problem ist%E2%80%A6%0A%0D%0A%0DDanke schonmal vorab%2C%0D%0AMax Musterschreiber%0A%0D%0A%0DPS: Bitte lasst mich in der Antwort als CC: stehen, weil ich diese Liste%0A%0Dsonst nicht mitlese.">diskussion@neo-layout.org</a></b> bzw. über den IRC-Kanal <b>#neo</b> bei <b>freenode.net</b> bekommen. Ver&shy;besserungs&shy;vorschläge sind im&shy;mer will&shy;kom&shy;men! Da wir sehr viele Ab&shy;hängig&shy;keiten haben, kann es aber sein, dass sie nicht un&shy;bedingt ein&shy;ge&shy;pflegt werden.
+			</p>
+			<p>Danke fürs Interesse!</p>
+			<p>Euer Neo-Team</p>
+		</div>
+	</div>
+    <div id="footer">
+		<hr />
+    </div>
+    <div id="sitefooter">
+    </div>
+</body>
+</html>
