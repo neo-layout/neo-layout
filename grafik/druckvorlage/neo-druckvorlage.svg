@@ -43,6 +43,20 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5604"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5633"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      inkscape:document-units="mm"
@@ -51,9 +65,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.9486631"
-     inkscape:cx="467.5"
-     inkscape:cy="166"
+     inkscape:zoom="2.8275878"
+     inkscape:cx="841.27064"
+     inkscape:cy="194.72568"
      inkscape:current-layer="layer2"
      id="namedview2563"
      width="935px"
@@ -73,9 +87,9 @@
      inkscape:object-paths="false"
      inkscape:guide-bbox="true"
      inkscape:grid-bbox="false"
-     inkscape:window-width="1918"
+     inkscape:window-width="958"
      inkscape:window-height="1027"
-     inkscape:window-x="0"
+     inkscape:window-x="960"
      inkscape:window-y="0"
      inkscape:object-bbox="true"
      showguides="true"
@@ -5004,15 +5018,15 @@
          y="426.74854">≈</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
-       x="992.51532"
-       y="454.52411"
+       style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="993.01544"
+       y="455.89893"
        id="text4012"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4016"
-         x="992.51532"
-         y="454.52411">≡</tspan></text>
+         x="993.01544"
+         y="455.89893">≡</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -5075,14 +5089,14 @@
          style="font-size:29.52701378px">+</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu Sans Condensed"
-       x="1077.6016"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans Condensed"
+       x="1078.3088"
        y="482.46948"
        id="text8434"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8436"
-         x="1077.6016"
+         x="1078.3088"
          y="482.46948"
          style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:DejaVu Sans Condensed">†</tspan></text>
     <text
@@ -5217,15 +5231,15 @@
          style="font-size:17.16624832px;fill:#ffffff;font-family:Linux Libertine">*</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu LGC Sans"
-       x="1125.7126"
-       y="426.42999"
+       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu LGC Sans"
+       x="1127.7126"
+       y="428.42999"
        id="text3981"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan3983"
-         x="1125.7126"
-         y="426.42999"
+         x="1127.7126"
+         y="428.42999"
          style="font-size:17.16624832px;fill:#ffffff;font-family:Linux Libertine">-</tspan></text>
     <text
        xml:space="preserve"
@@ -5262,26 +5276,26 @@
          y="427.86398">⊙</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
        x="1090.579"
-       y="454.23938"
+       y="454.94669"
        id="text4038"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4042"
          x="1090.579"
-         y="454.23938">⊗</tspan></text>
+         y="454.94669">⊗</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
-       x="1148.8221"
-       y="426.91736"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine Bold"
+       x="1149.8832"
+       y="426.56369"
        id="text3997"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan4002"
-         x="1148.8221"
-         y="426.91736">∸</tspan></text>
+         id="tspan5623"
+         x="1149.8832"
+         y="426.56369">⊖</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffee00;fill-opacity:1;display:inline;font-family:AdineKirnberg-Script"
@@ -5340,15 +5354,15 @@
          y="507.03635">∔</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
-       x="993.4024"
-       y="497.13058"
+       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
+       x="993.75604"
+       y="496.77692"
        id="text8498"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8500"
-         x="993.4024"
-         y="497.13058"
+         x="993.75604"
+         y="496.77692"
          style="font-size:29.52701378px">7</tspan></text>
     <text
        xml:space="preserve"
@@ -5376,27 +5390,27 @@
          style="font-size:29.52701378px">5</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
-       x="1090.068"
-       y="557.81445"
+       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
+       x="1089.7144"
+       y="556.04614"
        id="text8510"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8512"
-         x="1090.068"
-         y="557.81445"
+         x="1089.7144"
+         y="556.04614"
          style="font-size:29.52701378px">6</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu Sans Condensed"
-       x="982.26385"
-       y="481.47311"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans Condensed"
+       x="983.67847"
+       y="482.53409"
        id="text8514"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8516"
-         x="982.26385"
-         y="481.47311"
+         x="983.67847"
+         y="482.53409"
          style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:DejaVu Sans Condensed">✔</tspan></text>
     <text
        xml:space="preserve"
@@ -5424,15 +5438,15 @@
          style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:DejaVu Sans Condensed">♣</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:DejaVu Sans Condensed"
-       x="1079.775"
-       y="542.0968"
+       style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans Condensed"
+       x="1079.4214"
+       y="540.32849"
        id="text8526"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8528"
-         x="1079.775"
-         y="542.0968"
+         x="1079.4214"
+         y="540.32849"
          style="font-size:17.85639381px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;font-family:DejaVu Sans Condensed">‣</tspan></text>
     <text
        xml:space="preserve"
@@ -5484,16 +5498,13 @@
          id="tspan8544">→</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#856d12;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr;text-anchor:middle;fill:#856d12;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
        x="1054.8423"
        y="565.58075"
        id="text8546"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan8548"
-         x="1054.8423"
-         y="565.58075"
-         style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#856d12;fill-opacity:1;stroke:none;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine">⊶</tspan></text>
+         id="tspan5652">:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#856d12;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Biolinum O"
@@ -5621,37 +5632,35 @@
          y="567.9859">⊆</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
        x="1055.1545"
        y="535.93085"
        id="text4100"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan4144"
-         x="1055.1545"
-         y="535.93085">⊷</tspan></text>
+         id="tspan5658">⊶</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
-       x="1045.4238"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine"
+       x="1047.4238"
        y="565.32214"
        id="text4104"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan4146"
-         x="1045.4238"
-         y="565.32214">:</tspan></text>
+         id="tspan5656"
+         x="1047.4238"
+         y="565.32214">⊷</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#3879dc;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:AdineKirnberg-Script"
-       x="1102.1001"
-       y="537.00562"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:AdineKirnberg-Script"
+       x="1101.0391"
+       y="537.35925"
        id="text4108"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4148"
-         x="1102.1001"
-         y="537.00562">⊃</tspan></text>
+         x="1101.0391"
+         y="537.35925">⊃</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#e31515;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
@@ -5665,15 +5674,15 @@
          y="567.97662">⊇</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;font-family:Linux Libertine"
+       style="font-size:18.04428673px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
        x="992.57751"
-       y="556.56769"
+       y="555.50671"
        id="text8588"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan8590"
          x="992.57751"
-         y="556.56769"
+         y="555.50671"
          style="font-size:29.52701378px">4</tspan></text>
     <text
        xml:space="preserve"
@@ -6478,6 +6487,28 @@
          id="tspan4343"
          x="774.92212"
          y="511.28448">−</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="1138.0137"
+       y="456.43747"
+       id="text4038-2"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan5621"
+         x="1138.0137"
+         y="456.43747">∸</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#856d12;fill-opacity:1;stroke:none;display:inline;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O"
+       x="1101.4619"
+       y="674.599"
+       id="text8642-4"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan5650"
+         x="1101.4619"
+         y="674.599">,</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
