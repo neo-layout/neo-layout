@@ -5,6 +5,7 @@ body {
  text-align: center;
  font: normal 10pt 'Segoe UI','Bitstream Vera Sans',verdana,helvetica,arial,sans-serif;
  line-height:1.35em;
+ min-width:522px; /*Breite vom Logo*/
 }
 
 h1 { font-size: 2.2em; line-height: 0.9em; text-align:left}
@@ -190,7 +191,8 @@ overflow:auto;
   background-color:White;
   color:Black;
   text-align:justify;
-}
+  min-width:522; /*breite vom Logo*/
+  }
 
 #content img {margin:1em}  /*hält Text von Bildern im Contentbereich fern */
 
