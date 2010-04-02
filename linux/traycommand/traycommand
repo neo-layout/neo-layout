@@ -9,11 +9,19 @@ rescue LoadError
 	raise
 end
 
+begin
+	require 'gconf2'
+rescue LoadError
+	$stderr << "########################################################\n"
+	$stderr << "# In order to run this programm you need ruby-gconf2!  #\n"
+	$stderr << "########################################################\n"
+	raise
+end
+
 require 'yaml'
 require 'pp'
 require 'optparse'
 require 'ostruct'
-require 'gconf2'
 
 TRAYCOMMANDVERSION = [0,1]
 
@@ -39,6 +47,7 @@ optpars = OptionParser.new { |opts|
 
 begin
 	optpars.parse!
+	$options.configfile ||= "layoutswitch.yaml"
 rescue => e
 	puts e
 	puts optpars
