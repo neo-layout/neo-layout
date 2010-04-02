@@ -46,7 +46,9 @@
 		}
 		.ebenen {width:100%;max-width:595px}
 		
-		.quick {white-spaces:nowrap;}
+		.quick {display:inline-block;white-spaces:nowrap;}
+		.clear {clear:both;}
+		
 		#header img {margin-bottom:0.5em}
 		
 		#content img.ebenen {margin:1em 0 0 0} /*kein Standard-Margin für die Bilder*/
@@ -63,7 +65,7 @@
 
 <!-- Quicklinks -->
 <!--Werden per post-commit hook immer aktuell gehalten!-->
-		<span class="quick">
+		<div class="quick">
 			<a href="neo_de.xmodmap">
 				<img src="http://neo-layout.org/tastentierchen_pingu.png" title="quickdownload:Neo_Linux" alt="quickdownload:Neo_Linux" />
 			</a>
@@ -73,7 +75,7 @@
 			<a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">
 				<img src="http://neo-layout.org/tastentierchen_apfel.png" title="quickdownload:Neo_OS-X" alt="quickdownload:Neo_OS-X" />
 			</a>
-		</span>
+		</div>
 <!-- /Quicklinks -->
     </div>
 	<div id="content" class="wiki">
@@ -111,7 +113,6 @@
 					<li><a href="http://wiki.neo-layout.org/wiki/Presseberichte">Presseberichte</a></li>
 				</ol>
 			</div>
-			<p>&nbsp;</p>
 			<h1>Neo – Er&shy;go&shy;no&shy;misches Tas&shy;ta&shy;tur&shy;lay&shy;out</h1>
 			<p>
 				Neo ist ein neue Tas&shy;ta&shy;tur&shy;be&shy;legung, die extra für die deutsche Sprache optimiert ist: 
@@ -124,8 +125,7 @@
 			</ul>
 			<a href="http://wiki.neo-layout.org/wiki/Einführungskapitel" id="Hauptfeldlink_rechtsunten">Warum Neo besser ist als Qwertz …</a>
 			<p>&nbsp;</p>
-			<p>&nbsp;</p>       
-			<h2> Die Neo-Tastatur&shy;belegung zum Aus&shy;probieren</h2>
+			<h2 class="clear"> Die Neo-Tastatur&shy;belegung zum Aus&shy;probieren</h2>
 			<div class="Ebenen_box">
 				<div class="Ebene1_wrapper">
 					<div class="Ebene_button" style="left:0em">Ebene&nbsp;1</div>
