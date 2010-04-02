@@ -122,9 +122,9 @@ keycode 44 = Return		Return		Return		Return		KP_Enter	KP_Enter	Return		Return
 
 keycode 18 = dead_circumflex	dead_tilde	dead_abovering	dead_breve	dead_caron  Pointer_EnableKeys	dead_macron	NoSymbol
 ! called T1	ˆ		˜		˚		˘		ˇ	   (keypad-mouse mode)	¯
-keycode 32 = dead_grave		NoSymbol	dead_diaeresis	U1FFE		U02F5		NoSymbol	NoSymbol	NoSymbol
+keycode 32 = dead_grave		NoSymbol	dead_diaeresis	dead_dasia		U02F5		NoSymbol	NoSymbol	NoSymbol
 ! called T2	`				¨		῾ dasia (asper)	˵
-keycode 38 = dead_acute		dead_cedilla	dead_stroke	U1FBF	     dead_doubleacute	NoSymbol	dead_abovedot	NoSymbol
+keycode 38 = dead_acute		dead_cedilla	dead_stroke	dead_psili		dead_doubleacute	NoSymbol	dead_abovedot	NoSymbol
 ! called T3	´		¸		/		᾿ psili (lenis)	˝				˙
 
 
