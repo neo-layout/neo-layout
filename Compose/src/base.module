@@ -251,6 +251,7 @@
 <Multi_key> <ellipsis> <bar>                     : "⋮"   U22EE # VERTICAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
 <Multi_key> <7> <7>                              : "⁊"   U204A # TIRONIAN SIGN ET
+<Multi_key> <KP_7> <KP_7>                        : "⁊"   U204A # TIRONIAN SIGN ET
 <Multi_key> <ellipsis> <ellipsis>                : "[…]"
 
 # roman numerals
