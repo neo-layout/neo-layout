@@ -6,20 +6,27 @@ HAUPTZIFFERN=$(foreach file, ${EBENEN}, tastatur3d/haupt_ziffern_feld/${file})
 EBENENPDF=$(addsuffix .pdf,$(basename ${EBENENSVG}))
 EBENENPNG=$(addsuffix .png,$(basename ${EBENENSVG} ${HAUPT} ${ZIFFERN} ${HAUPTZIFFERN}))
 
-SVGFILES=$(filter-out ./tastatur3d/tastatur_neo_%.svg, $(shell find -name "*.svg")) 
+SVGFILES=$(filter-out ./tastatur3d/tastatur_neo_%.svg, $(shell find -name "*.svg")) ref2svg/ref2svg.svg
 PDFFILES=$(filter-out ./promotion-material/Flyer-fs/neo_logo.pdf, $(addsuffix .pdf,$(basename ${SVGFILES})))
 PNGFILES=$(addsuffix .png,$(basename ${SVGFILES})) 
 
-default: pdf png 
-pdf: ${PDFFILES} ${EBENENPDF}
-png: ${PNGFILES} ${EBENENPNG} www
+default: svg pdf png
+ref2svg/ref2svg.svg: ref2svg/ref2svg.pl ../A-REFERENZ-A/neo20.txt
+	cd ref2svg/; \
+	./ref2svg.pl > ref2svg.svg
+svg: ref2svg/ref2svg.svg
+pdf: ${PDFFILES} ${EBENENPDF} svg
+png: ${PNGFILES} ${EBENENPNG} www svg
 www: $(addsuffix .png,$(basename $(shell find ../www -name "*.svg")))
 
-clean: cleanpng cleanpdf
+clean: cleansvg cleanpng cleanpdf
 
 cleanebenen:
 	rm -f ${EBENENSVG} ${EBENENPNG} ${EBENENPDF}
 	$(foreach dir, hauptfeld ziffernfeld haupt_ziffern_feld, if [ -d tastatur3d/${dir} ];then rmdir tastatur3d/${dir}; fi;)
+
+cleansvg:
+	rm -f ref2svg/ref2svg.svg
 
 cleanpng: cleanebenen
 	rm -f ${PNGFILES}
@@ -70,4 +77,9 @@ tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/hauptfeld/%.png tastatur3d/ziffe
 	mogrify -depth 8 $@
 	optipng $@
 
-.PHONY: default clean pdf cleanpdf png cleanpng ebenen cleanebenen
+
+.PHONY: default clean \
+	pdf cleanpdf \
+	png cleanpng \
+	ebenen cleanebenen \
+	svg cleansvg
