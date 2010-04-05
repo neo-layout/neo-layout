@@ -128,6 +128,7 @@ sub start_svg {
 		'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd');
 
 	$writer->startTag('svg', height => $height, width => $width,
+		'xmlns' => 'http://www.w3.org/2000/svg',
 		'xmlns:xlink' => 'http://www.w3.org/1999/xlink');
 }
 sub end_svg {
@@ -142,7 +143,7 @@ sub create_defs {
 		# style information
 		$writer->dataElement('style', '
 			text.common {
-				font-family:Linux Biolinum;
+				font-family:Linux Biolinum O, Linux Biolinum;
 				font-style:normal;
 				font-variant:normal;
 				font-stretch:normal;
