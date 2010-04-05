@@ -7,7 +7,7 @@ EBENENPDF=$(addsuffix .pdf,$(basename ${EBENENSVG}))
 EBENENPNG=$(addsuffix .png,$(basename ${EBENENSVG} ${HAUPT} ${ZIFFERN} ${HAUPTZIFFERN}))
 
 SVGFILES=$(filter-out ./tastatur3d/tastatur_neo_%.svg, $(shell find -name "*.svg")) 
-PDFFILES=$(addsuffix .pdf,$(basename ${SVGFILES}))
+PDFFILES=$(filter-out ./promotion-material/Flyer-fs/neo_logo.pdf, $(addsuffix .pdf,$(basename ${SVGFILES})))
 PNGFILES=$(addsuffix .png,$(basename ${SVGFILES})) 
 
 default: pdf png 
