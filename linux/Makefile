@@ -31,7 +31,8 @@ xmodmap/neo_de_alternative.xmodmap:xmodmap/neo_de.xmodmap
 	-e 's/keycode\ 108/keysym\ KP_Enter/g' \
 	-e 's/dead_stroke/NoSymbol/g' \
 	-e 's/dead_doublegrave/U02F5/g' \
-	-e 's/dead_dasia/U1FFE/g' $< > $@
+	-e 's/\x09dead_psili/\x09dead_abovecomma/g' \
+	-e 's/\x09dead_dasia/\x09dead_abovereversedcomma/g' $< > $@
 
 xmodmap/neo_de.xmodmap.referenz:xmodmap/neo_de.xmodmap
 	cd xmodmap; ./erzeuge_neo_de_referenz > neo_de.xmodmap.referenz
