@@ -26,6 +26,7 @@ NEO_XMODMAP=${NEO_XMODMAP:-$HOME/neo/neo_de.xmodmap}
 NEO_XMODMAP_XPROG=${NEO_XMODMAP_XPROG:-$HOME/neo/neo_de_x-prog.xmodmap}
 NEO_XMODMAP_ALTERNATIVE=${NEO_XMODMAP_ALTERNATIVE:-$HOME/neo/neo_de_alternative.xmodmap}
 NEO_CONSOLE_KEYMAP=${NEO_CONSOLE_KEYMAP:-$HOME/neo/neo.map}
+KEYSYMDEF=${KEYSYMDEF:-/usr/include/X11/keysymdef.h}
 
 die() {
 	$ECHO_e "${red}$@${normal}" >&2
@@ -159,6 +160,10 @@ else
 			set_xkbmap "${NEO_XKBMAP}" "${NEO_XKBVARIANT}"
 			;;
 		xmodmap)
+			if [ `grep -c 'dead_dasia' ${KEYSYMDEF}` -eq 0 ]; then
+				$ECHO_e "${red}Das System scheint älter zu sein, weiche auf neo_de_alternative aus.${normal}"
+				NEO_XMODMAP=${NEO_XMODMAP_ALTERNATIVE}
+			fi
 			[ $quiet ] || echo "Das Laden der Xmodmap kann einige Sekunden dauern…"
 			set_xmodmap "${NEO_XMODMAP}"
 			;;
