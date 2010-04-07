@@ -1,0 +1,32 @@
+== Bugreports an Gnome/GTK senden == 
+Siehe Mail von Benjamin Kellermann vom 19.07.2007 09:20.
+
+24) ‣ Liste der toten Tasten erweitern, so dass alle Möglichkeiten drin stehen.
+      Denn auf viele Zeichen kommt man gar nicht, wenn man es nicht schon weiß
+      (beispielsweise ^2 = ²).
+      Die Liste vielleicht aufteilen in mathematische Operatoren, Buchstaben,
+      sonstige Zeichen.
+    ‣ Tabelle aller Zeichen (besonders wichtig sind die akzentuierten
+      Buchstaben!), ungefähr so:
+
+Griechische Zeichen
+-----------+----------------
+ ⋮                  |   ⋮
+δ          |   Mod3+Shift+D
+ ⋮                  |   ⋮
+
+MatNat-Zeichen
+-----------+----------------
+∫          |   Mod3+Mod4+I
+⋮                   |      ⋮
+
+Lateinische Buchstaben mit Akzenten
+-----------+----------------
+ë          | totes Mod3+Taste_rechts_neben_ß und dann e
+⋮                   |   ⋮
+
+42) Anleitung schreiben
+    Eine kurze und außerdem ausführliche Anleitung für die Zeichen und
+    deren Benutzung schreiben.
+    Die Kurzeinführung sollte solche Zeichen mitabdecken:
+ ( ) \ / ! ? ; : _ - @ ¢ = + und % und Gedankenstrich/Bisstrich 
