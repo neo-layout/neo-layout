@@ -156,15 +156,9 @@
 
 \DeclareUnicodeCharacter{2207}{\ensuremath{\nabla}}
 
-% FIXME: geht nicht, wo liegt der Fehler??
-% Wenn man mit Neo in Kile unter
-% Linux den Doppelpfeil nach rechts
-% eingibt, dann erscheint das
-% Unicode-Zeichen Ux22a2 (warum?)
-\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}} 
-% FIXME: Workaround, damit vorige Zeile trotzdem geht
-\DeclareUnicodeCharacter{22A2}{\ensuremath{\Rightarrow}} 
 
+\DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}} 
+%! \DeclareUnicodeCharacter{22A2}{\ensuremath{\Rightarrow}} % Workarround für ältere Versionen von Kile
 \DeclareUnicodeCharacter{21D0}{\ensuremath{\Leftarrow}}
 \DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
 \DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
@@ -240,6 +234,7 @@
 \DeclareUnicodeCharacter{2227}{\ensuremath{\wedge}}
 \DeclareUnicodeCharacter{226A}{\ensuremath{\ll}}
 \DeclareUnicodeCharacter{226B}{\ensuremath{\gg}}
+\DeclareUnicodeCharacter{2205}{\ensuremath{\emptyset}}
 %    \end{macrocode}
 
 % \DescribeMacro{\nfrac}
@@ -303,7 +298,7 @@
 \DeclareUnicodeCharacter{2255}{=:}
 
 % Hoch- und Tiefgestellte Ziffern und Zeichen
-\DeclareUnicodeCharacter{2070}{^0}}
+\DeclareUnicodeCharacter{2070}{\ensuremath{^0}}
 \DeclareUnicodeCharacter{00B9}{\ensuremath{^1}}
 \DeclareUnicodeCharacter{00B2}{\ensuremath{^2}}
 \DeclareUnicodeCharacter{00B3}{\ensuremath{^3}}
