@@ -64,6 +64,7 @@
 %
 %
 % \changes{v0.1}{2007/08/14}{Initial version}
+% \changes{v0.1b}{2010/04/09}{Small corrections suggested by Frank Stähr.}
 %
 % \GetFileInfo{uniinput.dtx}
 %
@@ -164,6 +165,7 @@
 % FIXME: Workaround, damit vorige Zeile trotzdem geht
 \DeclareUnicodeCharacter{22A2}{\ensuremath{\Rightarrow}} 
 
+\DeclareUnicodeCharacter{21D0}{\ensuremath{\Leftarrow}}
 \DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
 \DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
 
@@ -171,7 +173,7 @@
 % Also so: WURZEL{7+2}
 % Achtung: darf nur im Mathemodus verwendet werden!
 % FIXME: diesen Hinweis eben noch in die PDF-Doku eintragen?
-\DeclareUnicodeCharacter{221A}{\sqrt} 
+\DeclareUnicodeCharacter{221A}{\ensuremath{\sqrt}} 
 \DeclareUnicodeCharacter{221B}{\ensuremath{\sqrt[3]}}
 \DeclareUnicodeCharacter{221C}{\ensuremath{\sqrt[4]}}
 
@@ -194,7 +196,7 @@
 %\DeclareUnicodeCharacter{00A3}{\pounds} % geht sowieso schon
 %\DeclareUnicodeCharacter{00A5}{\textyen} % geht sowieso schon
 
-%\DeclareUnicodeCharacter{2026}{\dots} % geht sowieso schon
+\DeclareUnicodeCharacter{2026}{\ifmmode\ldots\else\textellipsis\fi} % nutze den jeweils passenden Befehl
 %\DeclareUnicodeCharacter{00A1}{\textexclamdown} % geht sowieso schon
 %\DeclareUnicodeCharacter{00BF}{\textquestiondown} % geht sowieso schon
 %\DeclareUnicodeCharacter{00A9}{\copyright} % geht sowieso schon
@@ -296,38 +298,41 @@
 \DeclareUnicodeCharacter{2A00}{\ensuremath{\bigodot}}
 \DeclareUnicodeCharacter{2A01}{\ensuremath{\bigoplus}}
 \DeclareUnicodeCharacter{2A02}{\ensuremath{\bigotimes}}
-\DeclareUnicodeCharacter{2261}{\equiv}
+\DeclareUnicodeCharacter{2261}{\ensuremath{\equiv}}
 \DeclareUnicodeCharacter{2254}{:=}
 \DeclareUnicodeCharacter{2255}{=:}
 
 % Hoch- und Tiefgestellte Ziffern und Zeichen
-\DeclareUnicodeCharacter{2070}{^0}
-\DeclareUnicodeCharacter{2074}{^4}
-\DeclareUnicodeCharacter{2075}{^5}
-\DeclareUnicodeCharacter{2076}{^6}
-\DeclareUnicodeCharacter{2077}{^7}
-\DeclareUnicodeCharacter{2078}{^8}
-\DeclareUnicodeCharacter{2079}{^9}
-\DeclareUnicodeCharacter{207A}{^+}
-\DeclareUnicodeCharacter{207B}{^-}
-\DeclareUnicodeCharacter{207C}{^=}
-\DeclareUnicodeCharacter{207D}{^(}
-\DeclareUnicodeCharacter{207E}{^)}
-\DeclareUnicodeCharacter{2080}{_0}
-\DeclareUnicodeCharacter{2081}{_1}
-\DeclareUnicodeCharacter{2082}{_2}
-\DeclareUnicodeCharacter{2083}{_3}
-\DeclareUnicodeCharacter{2084}{_4}
-\DeclareUnicodeCharacter{2085}{_5}
-\DeclareUnicodeCharacter{2086}{_6}
-\DeclareUnicodeCharacter{2087}{_7}
-\DeclareUnicodeCharacter{2088}{_8}
-\DeclareUnicodeCharacter{2089}{_9}
-\DeclareUnicodeCharacter{208A}{_+}
-\DeclareUnicodeCharacter{208B}{_-}
-\DeclareUnicodeCharacter{208C}{_=}
-\DeclareUnicodeCharacter{208D}{_(}
-\DeclareUnicodeCharacter{208E}{_)}
+\DeclareUnicodeCharacter{2070}{^0}}
+\DeclareUnicodeCharacter{00B9}{\ensuremath{^1}}
+\DeclareUnicodeCharacter{00B2}{\ensuremath{^2}}
+\DeclareUnicodeCharacter{00B3}{\ensuremath{^3}}
+\DeclareUnicodeCharacter{2074}{\ensuremath{^4}}
+\DeclareUnicodeCharacter{2075}{\ensuremath{^5}}
+\DeclareUnicodeCharacter{2076}{\ensuremath{^6}}
+\DeclareUnicodeCharacter{2077}{\ensuremath{^7}}
+\DeclareUnicodeCharacter{2078}{\ensuremath{^8}}
+\DeclareUnicodeCharacter{2079}{\ensuremath{^9}}
+\DeclareUnicodeCharacter{207A}{\ensuremath{^+}}
+\DeclareUnicodeCharacter{207B}{\ensuremath{^-}}
+\DeclareUnicodeCharacter{207C}{\ensuremath{^=}}
+\DeclareUnicodeCharacter{207D}{\ensuremath{^(}}
+\DeclareUnicodeCharacter{207E}{\ensuremath{^)}}
+\DeclareUnicodeCharacter{2080}{\ensuremath{_0}}
+\DeclareUnicodeCharacter{2081}{\ensuremath{_1}}
+\DeclareUnicodeCharacter{2082}{\ensuremath{_2}}
+\DeclareUnicodeCharacter{2083}{\ensuremath{_3}}
+\DeclareUnicodeCharacter{2084}{\ensuremath{_4}}
+\DeclareUnicodeCharacter{2085}{\ensuremath{_5}}
+\DeclareUnicodeCharacter{2086}{\ensuremath{_6}}
+\DeclareUnicodeCharacter{2087}{\ensuremath{_7}}
+\DeclareUnicodeCharacter{2088}{\ensuremath{_8}}
+\DeclareUnicodeCharacter{2089}{\ensuremath{_9}}
+\DeclareUnicodeCharacter{208A}{\ensuremath{_+}}
+\DeclareUnicodeCharacter{208B}{\ensuremath{_-}}
+\DeclareUnicodeCharacter{208C}{\ensuremath{_=}}
+\DeclareUnicodeCharacter{208D}{\ensuremath{_(}}
+\DeclareUnicodeCharacter{208E}{\ensuremath{_)}}
 
 % Double-Struck letters
 \DeclareUnicodeCharacter{1D538}{\ensuremath{\mathbb{A}}}
