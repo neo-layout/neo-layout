@@ -176,7 +176,7 @@ p         {  /* text-indent:1em;
 #linkbutton a:focus   {  color:#223; text-decoration:underline; }
 #linkbutton a:active  {  color:#8b2121; text-decoration:none;  }
 #linkbutton a:hover   {  color:#020; text-decoration:none;
-			 background-color:Highlight;          
+			 background-color:Highlight;
 		      }
 
 #Gesamtzentrierung { 
@@ -206,7 +206,7 @@ p         {  /* text-indent:1em;
 
 .Ebene_wrapper > .Ebene_bild { display:none; }
 .Ebene_wrapper:hover > .Ebene_bild { display:block; }
-.Ebene_wrapper:hover > .Ebene_button,.Ebene1_wrapper:hover > .Ebene_button { 
-	background-color:Highlight; 
+.Ebene_wrapper:hover > .Ebene_button,.Ebene1_wrapper:hover > .Ebene_button {
+	background-color:Highlight;
 }
 
