@@ -329,14 +329,13 @@ der Standardtastatur allein mit dem Hauptfeld der Tastatur.
 │Str│Fe│Al│     0     │4L│Fe│Me│Str│
 └───┴──┴──┴───────────┴──┴──┴──┴───┘
 
+
 == Ziffernblock ==
 Um die Vielseitigkeit und Funktionsfähigkeit der Neo‐Tastatur zu gewährleisten,
 sollten für alle Elemente auf dem Keypad wenn möglich die KP_‐Variante
 verwendet werden, sofern diese auch under QWERTZ zum Einsatz kommen.
 Zusätzliche KP_-Keysyms wie KP_Tab werden jedoch nicht benutzt, da sie in
 vielen Programmen nicht die erwartete Funktionalität erbringen.
-
-
 
 === Legende – Ziffernblock ===
 ┌───────┐ 1 … 1. Ebene (kein Mod)     │ 4 … 4. Ebene (Mod4)
@@ -422,7 +421,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │ ♦ │ ♥ │ ♠ │   │
 ├───┴───┼───┤   │
-│ ␣     │ . │Ent│ ␣ is a charakter, not space!
+│ ␣     │ . │Ent│ ␣ is a character, not space!
 └───────┴───┴───┘
 
 === Dritte Ebene – Miniatur ===
@@ -477,7 +476,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 │ □     │ ″ │Ent│
 └───────┴───┴───┘
 
-=== Pseudo‑Ebene – Miniatur ===
+=== Pseudo-Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
 │ ⍓ │   │   │   │
 ├───┼───┼───┼───┤
