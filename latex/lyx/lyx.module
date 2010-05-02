@@ -131,6 +131,7 @@
 <Multi_key> <includein> <equal>                               : "\\subseteq "
 <Multi_key> <equal> <includein>                               : "\\subseteq "
 <dead_macron> <includes>                                      : "\\subseteq "
+<asciitilde>                                                  : "\\sim "
 
 
 # Zahlen und Mengen
