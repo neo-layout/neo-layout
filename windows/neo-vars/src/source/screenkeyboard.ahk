@@ -307,7 +307,7 @@ BSTSymbols() {
 
   GUISYM("T__grav","◌̀")
   GUISYM("T__cedi","◌̧")
-  GUISYM("T__obrg","◌̊")
+  GUISYM("T__abrg","◌̊")
   GUISYM("T__drss","◌̈")
   GUISYM("T_dasia","◌῾") ; not perfect
   GUISYM("T__mcrn","◌̄")
@@ -317,7 +317,7 @@ BSTSymbols() {
   GUISYM("T__strk","◌̷")
   GUISYM("T__dbac","◌̋")
   GUISYM("T_psili","◌᾿") ; not perfect
-  GUISYM("U0002D8","◌̆")
+  GUISYM("T__brve","◌̆")
 
 
 
