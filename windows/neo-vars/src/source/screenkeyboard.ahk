@@ -1,6 +1,5 @@
 ; -*- encoding:utf-8 -*-
 
-BSTguiErstellt := 0
 BSTalwaysOnTop := 1
 
 UnZipLocalFile := ResourceFolder . "\unzip.exe"
@@ -287,7 +286,7 @@ BSTToggleAlwaysOnTop() {
 CharProc__BSTA() {
   global
   ; Bildschirmtastatur AlwaysOnTop
-  if (BSTguiErstellt)
+  if (useBST)
     BSTToggleAlwaysOnTop()
 }
 
@@ -396,6 +395,7 @@ BSTRegister() {
   global
 
   CP3F1 := "P__BSTt"
+  CP3F2 := "P__BSTA"
   BSTSymbols()
 
   IniRead,useBST,%ini%,Global,useBST,0
