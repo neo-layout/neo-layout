@@ -20,14 +20,6 @@ NEOEbeneAktualisieren() {
   Ebene7  := SubStr("00000000010100000101000000000000",ModPos,1)
   Ebene8  := SubStr("00000000000001010000000000000101",ModPos,1)
 
-  if (BSTOguiErstellt) {
-    if (striktesMod2Lock)
-      BSTOSwitch(EbeneC)
-    else if (EbeneNC != EbeneC)
-      BSTOSwitch(EbeneNC . "C")
-    else
-      BSTOSwitch(EbeneNC)
-  }
   Check_BSTUpdate()
 }
 
