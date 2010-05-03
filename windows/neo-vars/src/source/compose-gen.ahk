@@ -66,7 +66,7 @@ DefineXKBSyms() {
   DefineXKBSym("dead_cedilla"      ,"T__cedi")
   DefineXKBSym("dead_abovedot"     ,"T__abdt")
   DefineXKBSym("dead_ogonek"       ,"T__ogon")
-  DefineXKBSym("dead_abovering"    ,"T__obrg")
+  DefineXKBSym("dead_abovering"    ,"T__abrg")
   DefineXKBSym("dead_circumflex"   ,"T__cflx")
   DefineXKBSym("dead_caron"        ,"T__cron")
   DefineXKBSym("dead_breve"        ,"T__brve")
