@@ -33,6 +33,7 @@ SetWorkingDir, %A_ScriptDir%
 #include    source\langstastatur.ahk
 #include    source\einhandneo.ahk
 #include    source\lernmodus.ahk
+#include    source\nordtast.ahk
 #include    source\tools.ahk
 
 ; individuelle Einstellungen
