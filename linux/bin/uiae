@@ -58,7 +58,7 @@ cat <<HELP
 Aufruf: $0 [-q] [Standard-X-Variante]
 Aktiviert die Standard-Tastaturbelegung.
 
-  NEO-X-Variante:
+  Neo-X-Variante:
   xkmbap	in den meisten Fällen richtig (Standardeinstellung)
   xmodmap	nur sinnvoll, wenn eine eigene Xmodmap als Standardbelegung verwendet wird
 
@@ -135,7 +135,7 @@ else
 			fi
 			;;
 		*)
-			die "${orange}${STD_X_VARIANTE}${red} ist eine unbekannte X-Variante der NEO-Belegung."
+			die "${orange}${STD_X_VARIANTE}${red} ist eine unbekannte X-Variante der Neo-Belegung."
 			;;
 	esac
 
@@ -149,5 +149,5 @@ fi
 if [ ! "$quiet" ]; then
 	echo
 	echo "Die Tastaturbelegung wurde auf die Standardbelegung geändert."
-	$ECHO_e "Durch ${green}asdf${normal} kehrt man wieder zur NEO-Belegung zurück."
+	$ECHO_e "Durch ${green}asdf${normal} kehrt man wieder zur Neo-Belegung zurück."
 fi
