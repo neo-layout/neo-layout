@@ -268,7 +268,7 @@
          id="flowPara4088">F: Wo ist der Apostroph, um z. B. Felix’ Katze zu schreiben?</flowPara><flowPara
          id="flowPara4090">A: Der echte Apostroph für Texte in deutscher und englischer Sprache befindet sich auf »Mod3« + »0«. Es ist das Zeichen ’.</flowPara><flowPara
          id="flowPara4092">Zur Verwendung des Apostrophs siehe den Wikipedia Artikel: http://de.wikipedia.org/wiki/Apostroph</flowPara><flowPara
-         id="flowPara4094">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen. Dieses ist per »Mod3« + »,« (Komma) erreichbar.</flowPara><flowPara
+         id="flowPara4094">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen ' benutzen. Dieses ist per »Mod3« + ».« erreichbar.</flowPara><flowPara
          id="flowPara4096" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot2675"
@@ -293,7 +293,7 @@
          id="flowPara4116">A: Bei gedrückter »Umschalt-Taste« sind auf den Tasten »8« und »9« die Gänsefüßchen für deutsche Texte erreichbar. Es sind die Zeichen „ und “. Außerdem werden häufig die spitzen Doppelklammern (Guillemets) als Anführungszeichen in deutschen Texten (vor allem Büchern) verwendet. Diese sind per »Umschalt-Taste« + »4« und »5« zu erreichen. Es sind die Zeichen » und «.</flowPara><flowPara
          id="flowPara4118">Die im Englischen verwendeten Gänsefüßchen sind bei gedrückter »Umschalt-Taste« auf den Tasten »9« und »0«. Es sind die Zeichen “ und ”.</flowPara><flowPara
          id="flowPara4120">Für die Anführungszeichen anderer Sprachen siehe den Artikel auf Wikipedia: http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen</flowPara><flowPara
-         id="flowPara4122">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen &quot; benutzen. Dieses ist per »Mod3« + ».« erreichbar.</flowPara><flowPara
+         id="flowPara4122">Hinweis: Beim Programmieren muss man immer das Ersatzzeichen &quot; benutzen. Dieses ist per »Mod3« + »,« (Komma) erreichbar.</flowPara><flowPara
          id="flowPara4124" /></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
