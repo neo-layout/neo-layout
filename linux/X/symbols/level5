@@ -21,7 +21,11 @@ xkb_symbols "rctrl_switch" {
 // corresponding lock, implemented as NumLock.
 
 partial modifier_keys
-xkb_symbols "neomod_map" {
+xkb_symbols "lock" {
+  // This adds the definitions needed to create a level5-lock behaviour, using
+  // the real modifier NumLock as a lock indicator.
+  // See also: types/level5 : EIGHT_LEVEL_LEVEL_FIVE_LOCK
+  // See also: compat/level5(level5_lock)
   key.type[Group1] = "ONE_LEVEL";
 
   replace key <MDSW> {
@@ -40,9 +44,9 @@ xkb_symbols "neomod_map" {
 };
 
 partial modifier_keys
-xkb_symbols "lsgt_switch_numlock" {
+xkb_symbols "lsgt_switch_lock" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <LSGT> {
     type[Group1] = "EIGHT_LEVEL",
@@ -51,9 +55,9 @@ xkb_symbols "lsgt_switch_numlock" {
 };
 
 partial modifier_keys
-xkb_symbols "lwin_switch_numlock" {
+xkb_symbols "lwin_switch_lock" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <LWIN> {
     type[Group1] = "EIGHT_LEVEL",
@@ -62,9 +66,9 @@ xkb_symbols "lwin_switch_numlock" {
 };
 
 partial modifier_keys
-xkb_symbols "ralt_switch_numlock" {
+xkb_symbols "ralt_switch_lock" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <RALT> {
     type[Group1] = "EIGHT_LEVEL",
@@ -73,9 +77,9 @@ xkb_symbols "ralt_switch_numlock" {
 };
 
 partial modifier_keys
-xkb_symbols "rwin_switch_numlock" {
+xkb_symbols "rwin_switch_lock" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <RWIN> {
     type[Group1] = "EIGHT_LEVEL",
@@ -84,45 +88,45 @@ xkb_symbols "rwin_switch_numlock" {
 };
 
 partial modifier_keys
-xkb_symbols "lsgt_switch_numlock_cancel" {
+xkb_symbols "lsgt_switch_lock_cancel" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <LSGT> {
-    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
     symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
 };
 
 partial modifier_keys
-xkb_symbols "lwin_switch_numlock_cancel" {
+xkb_symbols "lwin_switch_lock_cancel" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <LWIN> {
-    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
     symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
 };
 
 partial modifier_keys
-xkb_symbols "ralt_switch_numlock_cancel" {
+xkb_symbols "ralt_switch_lock_cancel" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <RALT> {
-    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
     symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
 };
 
 partial modifier_keys
-xkb_symbols "rwin_switch_numlock_cancel" {
+xkb_symbols "rwin_switch_lock_cancel" {
 
-  include "level5(neomod_map)"
+  include "level5(lock)"
 
   key <RWIN> {
-    type[Group1] = "EIGHT_LEVEL_NEO_LOCKS",
+    type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK",
     symbols[Group1] = [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
 };
