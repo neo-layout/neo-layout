@@ -116,7 +116,7 @@ xkb_symbols "lwin_switch" {
   key <LWIN> {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
-  };
+    };
   modifier_map Mod5   { ISO_Level3_Shift };
 };
 
@@ -129,7 +129,7 @@ xkb_symbols "rwin_switch" {
   key <RWIN> {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
-  };
+    };
   modifier_map Mod5   { ISO_Level3_Shift };
 };
 
@@ -141,7 +141,7 @@ xkb_symbols "enter_switch" {
   key <KPEN> {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
-  };
+    };
   modifier_map Mod5   { ISO_Level3_Shift };
 };
 

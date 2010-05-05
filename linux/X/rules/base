@@ -126,9 +126,6 @@
   sun6		=	sun(type6_usb)
   sun6euro	=	sun(type6tuv_usb)
   pc98		=	xfree98(pc98)
-  evdev		=	evdev
- $nokiamodels	=	evdev
-  olpc		=	evdev
  $applealu	=	macintosh(alukbd)
   macintosh_hhk	=	macintosh(hhk)
   macintosh_old	=	macintosh(old)
@@ -953,7 +950,6 @@
   a4_rfkb23     =       +inet(media_nav_acpi_common)
   asus_laptop   =       +inet(media_common)
   acer_tm_800   =       +inet(acer_laptop)
-  acpi          =       +inet(acpi_common)
   benqx730      =       +inet(benqx)
   benqx800      =       +inet(benqx)
   btc5126t      =       +inet(nav_acpi_common)
@@ -1000,32 +996,21 @@
   $maclaptop    =       +inet(apple)+level3(enter_switch)
   $applealu     =       +inet(apple)
   $macs	        =       +inet(apple)
-  
-  
-// Neo special modifier-keys
-! layout	variant		=	compat
-  de		neo			=	+neo_mods
-! layout[1]	variant[1]	=	compat
-  de		neo			=	+neo_mods
-! layout[2]	variant[2]	=	compat
-  de		neo			=	+neo_mods:2
-! layout[3]	variant[3]	=	compat
-  de		neo			=	+neo_mods:3
-! layout[4]	variant[4]	=	compat
-  de		neo			=	+neo_mods:4
 
-! layout    variant     =   geometry
-  de        neo         =   pc(pc105)
-! layout[1] variant[1]  =   geometry
-  de        neo         =   pc(pc105)
-! layout[2] variant[2]  =   geometry
-  de        neo         =   pc(pc105)
-! layout[3] variant[3]  =   geometry
-  de        neo         =   pc(pc105)
-! layout[4] variant[4]  =   geometry
-  de        neo         =   pc(pc105)
-  
-  
+! layout	variant		=	compat
+  de		neo			=	+caps(caps_lock)+misc(assign_shift_left_action)+level5(level5_lock)
+
+! layout[1]	variant[1]	=	compat
+  de		neo			=	+caps(caps_lock)+misc(assign_shift_left_action)+level5(level5_lock)
+
+! layout[2]	variant[2]	=	compat
+  de		neo			=	+caps(caps_lock):2+misc(assign_shift_left_action):2+level5(level5_lock):2
+
+! layout[3]	variant[3]	=	compat
+  de		neo			=	+caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
+
+! layout[4]	variant[4]	=	compat
+  de		neo			=	+caps(caps_lock):4+misc(assign_shift_left_action):4+level5(level5_lock):4
 
 ! model		layout		=	compat
   pc98		nec_vndr/jp	=	pc98(basic)
@@ -1191,14 +1176,14 @@
   lv3:caps_switch_latch              =       +level3(caps_switch_latch)
   lv3:bksl_switch_latch              =       +level3(bksl_switch_latch)
   lv3:lsgt_switch_latch              =       +level3(lsgt_switch_latch)
-  lv5:lsgt_switch_numlock            =       +level5(lsgt_switch_numlock)
-  lv5:ralt_switch_numlock            =       +level5(ralt_switch_numlock)
-  lv5:lwin_switch_numlock            =       +level5(lwin_switch_numlock)
-  lv5:rwin_switch_numlock            =       +level5(rwin_switch_numlock)
-  lv5:lsgt_switch_numlock_cancel     =       +level5(lsgt_switch_numlock_cancel)
-  lv5:ralt_switch_numlock_cancel     =       +level5(ralt_switch_numlock_cancel)
-  lv5:lwin_switch_numlock_cancel     =       +level5(lwin_switch_numlock_cancel)
-  lv5:rwin_switch_numlock_cancel     =       +level5(rwin_switch_numlock_cancel)
+  lv5:lsgt_switch_lock            =       +level5(lsgt_switch_lock)
+  lv5:ralt_switch_lock            =       +level5(ralt_switch_lock)
+  lv5:lwin_switch_lock            =       +level5(lwin_switch_lock)
+  lv5:rwin_switch_lock            =       +level5(rwin_switch_lock)
+  lv5:lsgt_switch_lock_cancel     =       +level5(lsgt_switch_lock_cancel)
+  lv5:ralt_switch_lock_cancel     =       +level5(ralt_switch_lock_cancel)
+  lv5:lwin_switch_lock_cancel     =       +level5(lwin_switch_lock_cancel)
+  lv5:rwin_switch_lock_cancel     =       +level5(rwin_switch_lock_cancel)
 
 
 
