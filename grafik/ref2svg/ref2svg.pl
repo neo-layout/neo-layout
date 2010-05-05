@@ -14,7 +14,6 @@ sub create_defs;
 sub create_key;
 sub parse_ref;
 sub in2px;
-sub css_builder;
 sub create_keys;
 sub round;
 
@@ -89,7 +88,6 @@ sub parse_ref {
 sub create_keys {
 	my @letters = @_;
 
-	#for (0..$#{$letters[0]}) { # letters
 	for (0..$#{$letters[0]}) { # letters
 		create_key
 			$letters[0][$_],
@@ -106,16 +104,6 @@ sub create_keys {
 			$letters[9][$_],
 			$letters[10][$_];
 	}
-}
-
-sub css_builder {
-	my %props = @_;
-	my $css = '';
-
-	foreach (keys %props) {
-		$css .= "$_:${props{$_}};";
-	}
-	return $css;
 }
 
 sub in2px {
@@ -164,28 +152,39 @@ sub create_defs {
 			text.outline {
 				stroke:#111111;
 				stroke-linejoin:round;
+			}
+			rect#boundary {
+				fill:none;
+				stroke:#eeeeee;
+				stroke-width:'.in2px(0.005).';
+			}
+			rect#border {
+				fill:#333333;
+				stroke:#eeeeee;
+				stroke-width:'.in2px(0.025).';
+			}
+			text.level1 {
+			}
+			text.level2 {
+			}
+			text.level3 {
+				fill:#99dd66;
+			}
+			text.level4 {
+				fill:#6699dd;
+				font-size:13px;
 			}', type => 'text/css');
 
 		# boundary of keys
 		$writer->emptyTag('rect',
 			id => 'boundary',
 			width => $keywidth, height => $keyheight,
-			rx => 5,
-			style => css_builder(
-				fill => 'none',
-				stroke => '#eeeeee',
-				'stroke-width' => in2px(0.005)
-			));
+			rx => 5);
 		# border for keys, actual key stickers
 		$writer->emptyTag('rect',
 			id => 'border',
 			width => $labelwidth, height => $labelheight,
-			rx => 10,
-			style => css_builder(
-				fill => '#333333',
-				stroke => '#eeeeee',
-				'stroke-width' => in2px(0.025)
-			));
+			rx => 10);
 
 	$writer->endTag('defs');
 } 
@@ -220,23 +219,20 @@ sub create_key {
 			for(' outline', '') {
 				$writer->dataElement('text', $keys[1],
 					transform => 'translate(15,41)',
-					class => "common main$_")
+					class => "level1 common main$_")
 				       	# do not show e1, if it's the same letter as e2
 					# only use for latin letters
 					unless(#$keys[1] =~ /[a-züöäß]/ &&
 						$keys[1] =~ /\Q$keys[2]/i);
 				$writer->dataElement('text', $keys[2]||'',
 					transform => 'translate(15,19)',
-					class => "common main$_");
+					class => "level2 common main$_");
 				$writer->dataElement('text', $keys[3]||'',
 					transform => 'translate(32,18)',
-					class => "common special$_",
-					style => css_builder(fill => '#99dd66'));
+					class => "level3 common special$_");
 				$writer->dataElement('text', $keys[4]||'',
 					transform => 'translate(32,42)',
-					class => "common special$_",
-					style => css_builder(fill => '#6699dd',
-						'font-size' => '13px'));
+					class => "level4 common special$_");
 				       	# do not show e4 on keypad
 					#unless($row > 4 && $keys[0] =~ /\d/i);
 			}
