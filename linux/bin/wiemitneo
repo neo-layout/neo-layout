@@ -1,13 +1,13 @@
 #!/bin/bash
 # 
-# Dieses Skript unterstützt die Benutzung der NEO-Tastatur
+# Dieses Skript unterstützt die Benutzung der Neo-Tastatur
 # Als Argument kann ein einzelnes Zeichen oder eine Beschreibung eines 
 # Zeichens übergeben werden
 #
 # Dieses Skript stammt von:
 #      Pascal Hauck <pascal dot hauck at web dot de>
 # 
-# Kontakt zu den Entwicklern der NEO-Tastatur:
+# Kontakt zu den Entwicklern der Neo-Tastatur:
 #      <diskussion at neo-layout dot org>
 
 COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
@@ -42,7 +42,7 @@ schau_auf_tastatur () {
 		if [ $anzahl -ge 1 ]
 		then
 #		$zeichen gibt es direkt auf der Tastatur bei Ebene $e auf der Taste $ursprung
-		[ $j -le 2 ] && echo • $zeichen gibt es  direkt auf der NEO-Tastatur: && j=3
+		[ $j -le 2 ] && echo • $zeichen gibt es  direkt auf der Neo-Tastatur: && j=3
 
 			for i in $(seq 1 $anzahl)			# eventuell mehrfach auf der Tastatur vorhanden
 			do
@@ -106,7 +106,7 @@ schau_auf_tastatur () {
 
 		else
 # 		$zeichen gibt es nicht direkt auf der Haupttastatur
-			[ $j -eq 2 ] && echo • $zeichen gibt es nicht direkt auf der NEO-Tastatur && j=3
+			[ $j -eq 2 ] && echo • $zeichen gibt es nicht direkt auf der Neo-Tastatur && j=3
 		fi
 	done
 }

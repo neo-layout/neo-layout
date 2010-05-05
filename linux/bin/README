@@ -7,18 +7,18 @@ für einen Benutzer (keine root-Rechte erforderlich).
 Der Ordner mit diesen Skripten sollte in der Variable $PATH eingetregen sein, um von überall verfügbar zu sein
 Dazu sollte in der Datei ›.profile‹, die beim Login gelesen wird, folgende Zeilen eingetragen sein:
 -------------------------------
-# NEO:
-PATH=$PATH:$(Pfad zu den Skripten)	# für NEO-Skripte wie ›asdf‹ und ›uiae‹
-export PATH				# für NEO-Skripte wie ›asdf‹ und ›uiae‹
-# asdf					# mit einem # am Zeilenanfang bleibt QWERTZ das Standardlayout, sonst ist es Neo
+# Neo:
+PATH=$PATH:$(Pfad zu den Skripten)	# für Neo-Skripte wie ›asdf‹ und ›uiae‹
+export PATH				# für Neo-Skripte wie ›asdf‹ und ›uiae‹
+# asdf					# mit einem # am Zeilenanfang bleibt Qwertz das Standardlayout, sonst ist es Neo
 -------------------------------
 
 Man beachte, dass die Skripte ausführbar sein müssen (chmod u+x ›Datei‹)
 
 
 == uiae, asdf ==
-asdf (linke Hand auf der Grundreihe abrollen) schaltet von QWERTZ zu Neo um.
-uiae ( “      “   “   “       “        “    )    “      “  Neo zu QWERTZ um.
+asdf (linke Hand auf der Grundreihe abrollen) schaltet von Qwertz zu Neo um.
+uiae ( “      “   “   “       “        “    )    “      “  Neo zu Qwertz um.
 
 Verwendung:
 asdf [Variante]
@@ -56,10 +56,10 @@ usw.
 
 
 == wiemitneo ==
-Gibt an, ob und wie ein Zeichen mit NEO ermöglicht werden kann.
+Gibt an, ob und wie ein Zeichen mit Neo ermöglicht werden kann.
 Beispiel:  »wiemitneo @«
 -------------------------------
-• @ gibt es direkt auf der NEO-Tastatur:
+• @ gibt es direkt auf der Neo-Tastatur:
 @ erreicht man mit Mod3+y
 
 • @ ist über Compose folgendermaßen darstellbar:
