@@ -41,7 +41,7 @@ X/xkb.tgz:X/compat/* X/rules/* X/symbols/* X/types/*
 	cd X; \
 	chmod u=rw,g=r,o=r compat/* rules/* symbols/* types/*; \
 	tar -cz --transform='s,^,xkb/,' \
-	-f xkb.tgz compat/neo_mods rules/base rules/base.xml rules/evdev rules/evdev.xml symbols/de symbols/level3 symbols/level5 symbols/shift types/level5
+	-f xkb.tgz compat/caps compat/level5 compat/misc rules/base rules/base.xml rules/evdev rules/evdev.xml symbols/de symbols/level3 symbols/level5 symbols/shift types/level5
 
 clean: 
 	rm -f ${FILES}
