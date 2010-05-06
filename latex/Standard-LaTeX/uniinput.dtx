@@ -105,6 +105,7 @@
 \RequirePackage{marvosym}
 \RequirePackage{amsmath}
 
+% Griechische Buchstaben:
 \DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
 \DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
 \DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
@@ -114,10 +115,8 @@
 \DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
 \DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
 \DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
-% mü, wird in Neo nicht verwendet
-\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}} 
-% micro
-\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}} 
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}} %! mü, wird in Neo nicht verwendet
+\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}} %! micro
 \DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
 \DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
 \DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
@@ -149,19 +148,29 @@
 \DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
 \DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
 
-%geschuetztes Leerzeichen (nobreak space)
+% Leerzeichen:
+% geschuetztes Leerzeichen (nobreak space)
 \DeclareUnicodeCharacter{00A0}{~} 
-%schmales Leerzeichen (narrow nobreak space)
+% schmales Leerzeichen (narrow nobreak space)
 \DeclareUnicodeCharacter{202F}{\,} 
 
+% Sonstiges:
 \DeclareUnicodeCharacter{2207}{\ensuremath{\nabla}}
 
-
+% Pfeile:
 \DeclareUnicodeCharacter{21D2}{\ensuremath{\Rightarrow}} 
 %! \DeclareUnicodeCharacter{22A2}{\ensuremath{\Rightarrow}} % Workarround für ältere Versionen von Kile
 \DeclareUnicodeCharacter{21D0}{\ensuremath{\Leftarrow}}
 \DeclareUnicodeCharacter{21D4}{\ensuremath{\Leftrightarrow}}
 \DeclareUnicodeCharacter{2202}{\ensuremath{\partial}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{2190}{\ensuremath{\gets}}
+\DeclareUnicodeCharacter{21A6}{\ensuremath{\mapsto}}
+
+% Klammern:
+\DeclareUnicodeCharacter{230A}{\ensuremath{\lfloor}}
+\DeclareUnicodeCharacter{230B}{\ensuremath{\rfloor}}
+
 
 % man muss noch Klammern und Argument der Wurzel setzen, wenn man das hier verwendet: 
 % Also so: WURZEL{7+2}
@@ -222,6 +231,9 @@
 \DeclareUnicodeCharacter{2287}{\ensuremath{\supseteq}}
 \DeclareUnicodeCharacter{2229}{\ensuremath{\cap}}
 \DeclareUnicodeCharacter{222A}{\ensuremath{\cup}}
+
+% Negierte Zeichen (es gibt davon noch sehr viel mehr):
+\DeclareUnicodeCharacter{2288}{\ensuremath{\nsubseteq}} %! ist nur per Compose zu erreichen
 
 % ist sonst als \textdagger definiert
 \DeclareUnicodeCharacter{2020}{\ensuremath{\dagger}} 
@@ -298,10 +310,11 @@
 \DeclareUnicodeCharacter{2255}{=:}
 
 % Hoch- und Tiefgestellte Ziffern und Zeichen
+
 \DeclareUnicodeCharacter{2070}{\ensuremath{^0}}
-\DeclareUnicodeCharacter{00B9}{\ensuremath{^1}}
-\DeclareUnicodeCharacter{00B2}{\ensuremath{^2}}
-\DeclareUnicodeCharacter{00B3}{\ensuremath{^3}}
+\DeclareUnicodeCharacter{00B9}{\ifmmode^1\else\textonesuperior\fi}
+\DeclareUnicodeCharacter{00B2}{\ifmmode^2\else\texttwosuperior\fi}
+\DeclareUnicodeCharacter{00B3}{\ifmmode^3\else\textthreesuperior\fi}
 \DeclareUnicodeCharacter{2074}{\ensuremath{^4}}
 \DeclareUnicodeCharacter{2075}{\ensuremath{^5}}
 \DeclareUnicodeCharacter{2076}{\ensuremath{^6}}
