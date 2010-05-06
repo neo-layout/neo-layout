@@ -1,4 +1,5 @@
-Diese Dateien basieren auf der von der Uni Leipzig erstellten Liste der 10000
+== häufigste*.txt ==
+Die Dateien basieren auf der von der Uni Leipzig erstellten Liste der 10000
 häufigsten Wörter (bzw. Wortformen) der deutschen Sprache¹.
 Groß- und Kleinschreibung sowie Sonderzeichen (Bindestriche, Leerzeichen,
 Apostrophe, Buchstaben mit Akzenten, Zahlen, …) wurden ignoriert.
