@@ -1,3 +1,13 @@
+% ToDo:
+% • die beiden Spalten, über die sich der Absatz „Wie Neo funktioniert“ erstreckt, zu einer Spalten verbinden
+% • in letztgenanntem Absatz noch etwas mehr schreiben
+% • die Schwarz-Weiß-Version ist noch verbesserungswürdig, insbesondere das kleine Tastaturbild auf der Titelseite ist noch in Farbe (habe spontan keinen guten Ersatz gefunden)
+% • Bildunterschriften für die Bilder (Farbe/SW), mit der gesagt wird, wo welche Ebene ist bzw. welche Farbe sie hat
+% • Zitat von Donald Norman besser formatieren (Name in Kapitälchen usw.) oder komplett durch anderes ersetzen
+% • Seitennummer („1“) von der ersten Seite entfernen
+% • um „Raute“ und „A“ noch ein Kästchen, damit es wie eine Taste aussieht
+% • Was genau hatte der Befehl \hksqrt ursrünglich für einen Sinn?
+
 \iffalse 
 \svnInfo $Date: $
 \svnInfo $Revision: $
@@ -12,7 +22,7 @@
 \documentclass[%
   a4paper
   ,ngerman
-  ,notumble
+  ,notumble,12pt,
 ]{leaflet}
 
 \usepackage[T1]{fontenc}
@@ -23,6 +33,8 @@ adieresis={ä},
 germandbls={ß},
 Euro={€},
 }
+
+\newcommand{\ifcolor}{\iftrue} % hier stattdessen \iffalse setzen, wenn man ein Schwarz-Weiß-Bild haben möchte (falls kein Farbdrucker verfügbar) – es wird entsprechend ein anderes Bild gewählt
 
 \usepackage{fixltx2e}
 \usepackage{babel}
@@ -67,9 +79,6 @@ Euro={€},
 \author{Ergonomisches Tastaturlayout}
 \date{\includegraphics[height=3ex]{neo_logo}}
 
-\usepackage{blindtext}
-
-
 
 
 
@@ -79,7 +88,7 @@ Euro={€},
 \begin{itemize}%{compactitem}
 \item ein Layout für Programmierer, Vielschreiber und Tippneulinge
 \item ein Blick über den Tellerrand
-\item eine Tastatur optimiert auf die die deutsche Sprache
+\item eine Tastatur optimiert auf die deutsche Sprache
 \end{itemize}%{compactitem}
 
 \vfill
@@ -92,60 +101,72 @@ Euro={€},
 \emph{In dubio pro Neo}.
 \end{center}
 \newpage
+\section{Wie Neo funktioniert}
+Um die umfangreichen Funktionalitäten bieten zu können, benötigt Neo zusätzliche \enquote{Ebenen}. Qwert verwendet fast nur zwei, die erste für die Klein- und die Shift"=Ebene für die Großbuchstaben. Dazu kommt noch AltGr für @, \textbackslash, \euro\ usw.
+
+Neo erweitert diese Idee und bietet gleich sechs Ebenen. Die dafür nötigen Modifier (\enquote{Umschalttasten}) sind mit den kleinen Fingern gut erreichbar.
+
+Wer will, braucht auch nur die ersten drei Ebenen zu nutzen und wird allein davon schon angenehm überrascht sein. Für \LaTeX\ etwa kann man nun den viel zu oft benötigten Backslash bequem per Qwertz"=Raute~+ Qwertz"=A erreichen. Und wer meint, dass das US"=Layout dies genauso gut
+schafft, hat wohl noch nie deutsche Umlaute getippt ;-)
+\vfill
+\hspace*{-2.5ex}
+\ifcolor
+\includegraphics*[trim=0 47 0 0, width=3.41\linewidth]{neo-druckvorlage.pdf} % /grafik/druckvorlage/neo-druckvorlage.svg
+\else
+\includegraphics*[trim=0 58 0 0, width=3.45\linewidth]{neo_Alle_Ebenen.pdf} % /grafik/tastatur2d/neo_Alle_Ebenen.svg
+\fi
+\newpage
+Die vierte Ebene ersetzt euch alles jenseits des Tastaturhauptfeldes, wie etwa den Zahlenblock, den z.\,B. Notebooks nicht haben. Und last but not least: Die griechischen Kleinbuchstaben und mathematischen Zeichen der 5.\,bzw.\ 6.\,Ebene, für deren Aktivierung Ihr zwei Modifier gleichzeitig drücken müsst, sind ein ungemein wertvolles Feature für die, die es nutzen.
+\newpage
+\section{Was nun zu tun ist}
+Installationsanleitungen für alle gängigen Plattformen, Hilfestellungen und FAQ findet Ihr auf der Neo-Seite und vor allem im hauseigenen Wiki: \url{wiki.neo-layout.org}
+
+Dort gibt es auch Verweise zu anderen alternativen Layouts, wie etwa das schon seit 1932 bestehende Dvorak oder das erst 2005 entwickelte RISTOME. 
+
+Wenn du willst, beschäftige dich damit und triff deine Entscheidung. Sollte sie pro Neo sein, empfehlen wir, dies auch konsequent durchzuziehen. Im Wiki findest du zahlreiche Erfahrungsberichte und weitere Tipps.
+
+Aber Vorsicht: Wer einmal Neo benutzt, wird nie wieder etwas anderes wollen.
+
+\emph{Der technische Fortschritt hat bereits gesiegt. Schließt du dich ihm heute an – oder erst, wenn schon alle anderen mitmachen?}
+
+\newpage
 \section{Das Problem}
 
-Die meisten von Euch benutzen eine sogenannte QWERTZ"=Tastatur (nach den ersten Buchstaben der oberen Reihe links) und sind der Meinung, diese Tastatur wäre gut so und hätte sich irgendwie nach ergonomischen Gesichtspunkten entwickelt. Falsch.
+Die meisten von euch benutzen eine sogenannte QWERTZ"=Tastatur (nach den ersten Buchstaben der oberen Reihe links) und sind der Meinung, diese Tastatur wäre gut so und hätte sich irgendwie nach ergonomischen Gesichtspunkten entwickelt. Falsch.
 
-Das QWERT-Tastaturlayout wurde 1870 von Christopher Sholes konstruiert, um ein Verhaken der Typenhebel auf mechanischen, frühen Schreibmaschinen zu vermeiden und die Tippgeschwindigkeit zu hemmen. Schon Sholes selbst wusste, dass diese Anordnung auf modernen Tastaturen kontraproduktiv ist.
+Das Qwert-Tastaturlayout wurde 1868 von Christopher Sholes konstruiert, um ein Verhaken der Typenhebel auf mechanischen, frühen Schreibmaschinen zu vermeiden und die Tippgeschwindigkeit zu hemmen. Schon Sholes selbst wusste, dass diese Anordnung auf modernen Tastaturen kontraproduktiv ist.
 
-QWERTZ ist ein Relikt der Steinzeit. Während die Computerwelt rasant voranschreitet und die Menschen von Softwareergonomie reden, beharren sie weiterhin auf einen 140"=jährigen Fehler -- und das auch noch bei der wichtigsten Mensch"=Maschine"=Schnittstelle. Eigentlich sollte es doch indiskutabel sein, diesen Missstand zu beseitigen, egal wie lange es \enquote{funktioniert} hat.
+Qwertz ist ein Relikt der Steinzeit. Während die Computerwelt rasant voranschreitet und die Menschen von Softwareergonomie reden, beharren sie weiterhin auf einem 140"=jährigen Fehler – und das auch noch bei der wichtigsten Mensch"=Maschine"=Schnittstelle. Eigentlich sollte es doch indiskutabel sein, diesen Missstand zu beseitigen, egal wie lange es \enquote{funktioniert} hat.
 
+\begin{quotation}
+„Wir haben riesige Anstrengungen in das Design all dessen gesteckt, was man auf dem Bildschirm sieht. Aber die Tastatur scheint direkt von Gott zu kommen, und zwar von einem bösen Gott.“\\
+\indent{– Donald Norman, Usability-Spezialist}
+\end{quotation}
+
+\newpage
 \section{Die Lösung}
-Neo ordnet die Buchstaben der Tastatur neu, die wichtigsten liegen auf der Grundreihe. Etwa die Vokale \texttt{uiae} auf der linken, die
-häufigsten deutschen Konsonanten \texttt{nrtd} auf der rechten Hand.
+Neo ordnet die Buchstaben der Tastatur neu, die wichtigsten liegen auf der Grundreihe. Etwa die Vokale \texttt{uiaeo} auf der linken, die
+häufigsten deutschen Konsonanten \texttt{snrtd} auf der rechten Hand.
 
 Dabei könnt Ihr eure alte Tastatur behalten, geändert wird lediglich das Layout, also die Software. Der Aufwand des Umlernens des Layouts auf Neo hält sich dabei in Grenzen. Es kostet nur Überwindung.
+
+\ \newline
 
 \subsection{Vorteile von Neo}
 \begin{compactitem}
 \item schnellere Tippgeschwindigkeit durch bessere Position der häufigen Buchstaben
-\item keine Überlastung der linken Hand wie bei QWERTZ
+\item keine Überlastung der linken Hand wie bei Qwertz
 \item Programmier- und Sonderzeichen wie \texttt{/ \textbackslash\ [ ] \$ >~=} sind gut erreichbar
-\item neue Zeichen wie \texttt{„ “ » « ?‘ \cent\ $\varsigma$ \female}
-\dots\ können direkt eingegeben werden
-\item genauso mathematische Zeichen wie $\Delta\,\partial\,\int\,\hksqrt{}\,\upalpha\,\upbeta$ -- auch in \LaTeX!
+\item neue Zeichen wie „ “ » « ?‘ \cent\ $\clubsuit$ \female\ \textellipsis\ können direkt eingegeben werden
+\item genauso mathematische Zeichen wie $\Delta\,\partial\,\int\,\surd\,\upalpha\,\upbeta$ -- auch in \LaTeX! % warum hier statt \surd urspruenglich der Befehl \hksqrt{}?
 \item Ziffernblock, Steuerkreuz $\leftarrow\,\uparrow\,\rightarrow\,\downarrow$
 und Befehlsfeld auch auf der Haupttastatur
 \end{compactitem}
 
-\section{Wie Neo funktioniert}
-Um die umfangreichen Funktionalitäten bieten zu können, benötigt Neo zusätzliche \enquote{Ebenen}. QWERTZ verwendet fast nur zwei, die erste für die Klein- und die Shift"=Ebene für die Großbuchstaben. Dazu kommt noch AltGr für @, \textbackslash\ und \euro.
+\begin{figure*}[b]
+\begin{center}
+\url{www.neo-layout.org}
+\end{center}
+\end{figure*}
 
-Neo erweitert diese Idee und bietet gleich sechs Ebenen. Die dafür nötigen Modifier (\enquote{Umschalttasten}) sind mit den kleinen Fingern gut erreichbar.
-
-Wer will, braucht auch nur die ersten drei Ebenen zu nutzen und wird allein davon schon angenehm überrascht sein. Für \LaTeX\ etwa kann man nun den viel zu oft benötigten Backslash bequem per QWERTZ"=Raute~+ QWERTZ-A erreichen. Und wer meint, dass das US"=Layout dies genauso gut
-schafft, hat wohl noch nie deutsche Umlaute getippt ;-)
-
-Die vierte Ebene ersetzt euch alles jenseits des Tastaturhauptfeldes, wie etwa den Zahlenblock, den z.\,B. Notebooks nicht haben. Und last but not least: Die griechischen Kleinbuchstaben und mathematischen Zeichen der 5.\,bzw.\ 6.\,Ebene, für deren Aktivierung Ihr zwei Modifier gleichzeitig drücken müsst, sind ein ungemein wertvolles Feature für die, die es nutzen.
-
-\vfill
-
-\hspace*{2ex}
-\includegraphics*[width=2.1\linewidth]{neo-druckvorlage}
-
-\section{Was nun zu tun ist}
-Installationsanleitungen für alle gängigen Plattformen, Hilfestellungen und FAQ findet Ihr auf der Neo-Seite und vor allem im hauseigenen Wiki: \url{wiki.neo-layout.org} 
-
-Dort gibt es auch Verweise zu anderen alternativen Layouts, wie etwa das schon seit 1932 bestehende Dvorak oder das erst 2005 entwickelte RISTOME. 
-
-Wenn Du willst, beschäftige Dich damit und triff Deine Entscheidung. Sollte sie pro Neo sein, empfehlen wir, dies auch konsequent durchzuziehen. Im Wiki findest Du zahlreiche Erfahrungsberichte und weitere Tipps.
-
-Aber Vorsicht: Wer einmal Neo benutzt, wird nie wieder etwas anderes wollen.
-
-\vspace{12.5em}
-\emph{Der technische Fortschritt hat bereits gesiegt. Schließt Du Dich ihm heute an – oder erst, wenn schon alle anderen mitmachen?}
-
-\newpage
-
-\blindtext[6]
 \end{document}
