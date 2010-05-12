@@ -1,6 +1,6 @@
 !! ~/.xmodmap
 !! 
-!! German NEO-Layout
+!! German Neo-Layout
 !! adopted 2004 by Hanno Behrens <Hanno.Behrens@gmx.de>
 !! inspired by Dvorak/de-ergo  http://www.goebel-consult.de/de-ergo/
 !! Authors: 
@@ -323,6 +323,6 @@ add Mod5 = ISO_Level3_Shift
 !     Mod3+Mod4 (in dieser Reihenfolge!) erreicht werden kann.
 !
 ! 2.) Die KP_-Einträge ermöglichen die Steuerung des Mauscursors mit der Tastatur.
-!     Hierzu wird mittels Mod4+ß dieser Betriebsmodus ein- und später wieder ausgeschaltet.
+!     Hierzu wird mittels Shift+Mod4+T1 dieser Betriebsmodus ein- und später wieder ausgeschaltet.
 !     Die Steuerung des Cursors kann über den Ziffernblock (Ebene 4, eventuell mit
 !     eingerastetem Mod4) erfolgen.
