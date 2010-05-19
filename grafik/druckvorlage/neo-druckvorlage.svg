@@ -72,9 +72,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6508623"
-     inkscape:cx="336.25786"
-     inkscape:cy="266.97882"
+     inkscape:zoom="1.2588235"
+     inkscape:cx="467.5"
+     inkscape:cy="166"
      inkscape:current-layer="layer2"
      id="namedview2563"
      width="935px"
@@ -1149,7 +1149,7 @@
          y="659.78296">Strg</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
        x="341.90701"
        y="654.70758"
        id="text2273"
@@ -1250,14 +1250,14 @@
     <text
        xml:space="preserve"
        style="font-size:10.58303356px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
-       x="623.85785"
+       x="606.57977"
        y="664.6579"
        id="text13436"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         x="623.85785"
+         x="606.57977"
          y="664.6579"
-         id="tspan13438">Leerzeichen ␣</tspan></text>
+         id="tspan13438">Leerzeichen ␣</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16.63089943px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
@@ -2798,7 +2798,7 @@
          style="font-size:12.8842535px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;font-family:Linux Libertine">⇡</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
        x="457.43182"
        y="508.24374"
        id="text7920"
@@ -2807,7 +2807,7 @@
          id="tspan7922"
          x="457.43182"
          y="508.24374"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">Entf</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Entf</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16.10531616px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine Bold"
@@ -3145,7 +3145,7 @@
          style="font-size:12.8842535px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine Bold">⇟</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
        x="353.09561"
        y="621.18335"
        id="text7994"
@@ -3154,7 +3154,7 @@
          id="tspan7996"
          x="353.09561"
          y="621.18335"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">Esc</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Esc</tspan></text>
     <g
        style="display:inline"
        id="g7998"
@@ -5552,7 +5552,7 @@
          style="font-size:12.88399982px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine Bold">⇠</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
        x="1032.6487"
        y="565.14276"
        id="text8561"
@@ -5561,7 +5561,7 @@
          id="tspan8563"
          x="1032.6487"
          y="565.14276"
-         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">Beg</tspan></text>
+         style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Beg</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:12.88399982px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;display:inline;font-family:Linux Libertine;-inkscape-font-specification:Linux Libertine Bold"
@@ -5908,7 +5908,7 @@
          y="674.02277">⎀</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffee00;fill-opacity:1;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
        x="1079.7994"
        y="674.8678"
        id="text8663"
@@ -6040,23 +6040,23 @@
          y="479.45651">∩</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
-       x="754.70953"
+       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       x="756.09973"
        y="650.75635"
        id="text7588"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan7590"
-         x="754.70953"
+         x="756.09973"
          y="650.75635"
-         style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">Leerzeichen ⍽</tspan></text>
+         style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#3879dc;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Leerzeichen ⍽</tspan></text>
     <g
        style="display:inline"
        id="g13426"
-       transform="matrix(0.75595,0,0,0.75595,340.6552,154.95779)">
+       transform="matrix(0.75595,0,0,0.75595,338.27203,154.95779)">
       <path
          transform="matrix(1,0,0,1.0697674,0,-43.910723)"
-         d="m 493.64904,645.47919 a 3.6538272,3.6538272 0 1 1 -7.30766,0 3.6538272,3.6538272 0 1 1 7.30766,0 z"
+         d="m 493.64904,645.47919 c 0,2.01795 -1.63588,3.65382 -3.65383,3.65382 -2.01795,0 -3.65383,-1.63587 -3.65383,-3.65382 0,-2.01796 1.63588,-3.65383 3.65383,-3.65383 2.01795,0 3.65383,1.63587 3.65383,3.65383 z"
          sodipodi:ry="3.6538272"
          sodipodi:rx="3.6538272"
          sodipodi:cy="645.47919"
@@ -6074,7 +6074,7 @@
          id="rect7602"
          style="fill:#3879dc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <path
-         d="m 491.39726,650.70502 a 1.40205,1.40205 0 1 1 -2.8041,0 1.40205,1.40205 0 1 1 2.8041,0 z"
+         d="m 491.39726,650.70502 c 0,0.77433 -0.62772,1.40205 -1.40205,1.40205 -0.77433,0 -1.40205,-0.62772 -1.40205,-1.40205 0,-0.77433 0.62772,-1.40205 1.40205,-1.40205 0.77433,0 1.40205,0.62772 1.40205,1.40205 z"
          sodipodi:ry="1.40205"
          sodipodi:rx="1.40205"
          sodipodi:cy="650.70502"
@@ -6089,28 +6089,28 @@
     </g>
     <path
        style="font-size:12px;font-style:normal;font-weight:normal;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:Linux Libertine"
-       d="m 787.30036,671.71511 1.63128,0 0,-2.17801 2.41992,0 0,0.9961 -1.43554,0 0,2.178 -3.60003,0 0,-2.178 -1.44141,0 0,-0.9961 2.42578,0 0,2.17801"
+       d="m 790.67653,671.71511 1.63128,0 0,-2.17801 2.41992,0 0,0.9961 -1.43554,0 0,2.178 -3.60003,0 0,-2.178 -1.44141,0 0,-0.9961 2.42578,0 0,2.17801"
        id="text6657"
        sodipodi:nodetypes="ccccccccccccc" />
     <text
        xml:space="preserve"
-       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
-       x="748.94263"
+       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       x="750.33282"
        y="670.6311"
        id="text13133"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan13135"
-         x="748.94263"
+         x="750.33282"
          y="670.6311"
-         style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">Leerzeichen</tspan></text>
+         style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Leerzeichen</tspan></text>
     <g
        style="display:inline"
        id="g6651"
-       transform="translate(252.0091,411.25461)">
+       transform="translate(249.62593,411.25461)">
       <path
          transform="matrix(0.75595,0,0,0.8086907,88.64607,-269.66913)"
-         d="m 493.64904,645.47919 a 3.6538272,3.6538272 0 1 1 -7.30766,0 3.6538272,3.6538272 0 1 1 7.30766,0 z"
+         d="m 493.64904,645.47919 c 0,2.01795 -1.63588,3.65382 -3.65383,3.65382 -2.01795,0 -3.65383,-1.63587 -3.65383,-3.65382 0,-2.01796 1.63588,-3.65383 3.65383,-3.65383 2.01795,0 3.65383,1.63587 3.65383,3.65383 z"
          sodipodi:ry="3.6538272"
          sodipodi:rx="3.6538272"
          sodipodi:cy="645.47919"
@@ -6130,7 +6130,7 @@
          transform="translate(-223.45089,-412.4453)" />
       <path
          transform="matrix(0.75595,0,0,0.75595,88.64607,-236.47482)"
-         d="m 491.39726,650.70502 a 1.40205,1.40205 0 1 1 -2.8041,0 1.40205,1.40205 0 1 1 2.8041,0 z"
+         d="m 491.39726,650.70502 c 0,0.77433 -0.62772,1.40205 -1.40205,1.40205 -0.77433,0 -1.40205,-0.62772 -1.40205,-1.40205 0,-0.77433 0.62772,-1.40205 1.40205,-1.40205 0.77433,0 1.40205,0.62772 1.40205,1.40205 z"
          sodipodi:ry="1.40205"
          sodipodi:rx="1.40205"
          sodipodi:cy="650.70502"
@@ -6221,7 +6221,7 @@
        transform="matrix(0.5750613,0,0,0.5750613,495.99973,50.353656)">
       <path
          transform="matrix(1,0,0,1.0697674,0,-43.910723)"
-         d="m 493.64904,645.47919 a 3.6538272,3.6538272 0 1 1 -7.30766,0 3.6538272,3.6538272 0 1 1 7.30766,0 z"
+         d="m 493.64904,645.47919 c 0,2.01795 -1.63588,3.65382 -3.65383,3.65382 -2.01795,0 -3.65383,-1.63587 -3.65383,-3.65382 0,-2.01796 1.63588,-3.65383 3.65383,-3.65383 2.01795,0 3.65383,1.63587 3.65383,3.65383 z"
          sodipodi:ry="3.6538272"
          sodipodi:rx="3.6538272"
          sodipodi:cy="645.47919"
@@ -6239,7 +6239,7 @@
          id="rect8278"
          style="fill:#3879dc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <path
-         d="m 491.39726,650.70502 a 1.40205,1.40205 0 1 1 -2.8041,0 1.40205,1.40205 0 1 1 2.8041,0 z"
+         d="m 491.39726,650.70502 c 0,0.77433 -0.62772,1.40205 -1.40205,1.40205 -0.77433,0 -1.40205,-0.62772 -1.40205,-1.40205 0,-0.77433 0.62772,-1.40205 1.40205,-1.40205 0.77433,0 1.40205,0.62772 1.40205,1.40205 z"
          sodipodi:ry="1.40205"
          sodipodi:rx="1.40205"
          sodipodi:cy="650.70502"
@@ -6420,7 +6420,7 @@
        id="text25939"
        y="502.45441"
        x="892.20154"
-       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
+       style="font-size:7.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan25943"
@@ -6522,16 +6522,16 @@
          y="674.599">,</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed"
-       x="690.26196"
+       style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;stroke:none;display:inline;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       x="685.69427"
        y="670.6311"
        id="text13133-3"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan13135-8"
-         x="690.26196"
+         x="685.69427"
          y="670.6311"
-         style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-condensed;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold Semi-Condensed">schm.</tspan></text>
+         style="font-size:10.58300018px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#e31515;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">schm.</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
