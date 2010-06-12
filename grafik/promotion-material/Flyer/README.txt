@@ -3,7 +3,7 @@ Dieser Flyer ist im A4-Format, damit ihn jeder ohne Probleme ausdrucken und kopi
 
 == Kompilieren ==
 Eine installierte LaTeX-Distribution vorausgesetzt, kann mit
-      pdflatex Flyer.tex
+      make
 eine pdf-Datei erzeugt werden.
 
 == Geschichte ==
