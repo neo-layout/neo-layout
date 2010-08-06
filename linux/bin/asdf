@@ -160,7 +160,9 @@ else
 			set_xkbmap "${NEO_XKBMAP}" "${NEO_XKBVARIANT}"
 			;;
 		xmodmap)
-			if [ ! -f ${KEYSYMDEF} ] || [ `grep -c 'dead_dasia' ${KEYSYMDEF}` -eq 0 ]; then
+                        if [ ! true ]; then
+# hier wurde früher überprüft, ob die keysymdef.h vorhanden und aktuell ist. Diese Datei ist jedoch in aktuellen Standardinstallationen nicht mehr vorhanden.
+# ehemals: if [ ! -f ${KEYSYMDEF} ] || [ `grep -c 'dead_dasia' ${KEYSYMDEF}` -eq 0 ]; then
 				$ECHO_e "${red}Das System scheint älter zu sein, weiche auf neo_de_alternative aus.${normal}"
 				NEO_XMODMAP=${NEO_XMODMAP_ALTERNATIVE}
 			fi
