@@ -309,7 +309,7 @@ keycode 91 = KP_Separator	period		comma		minutes		seconds		NoSymbol	KP_Delete	KP
 !		,		.		,		′ min,feets	″ sec,inches					
 
 
-add Mod3 = ISO_Group_Shift
+add Mod3 = ISO_First_Group
 add Mod5 = ISO_Level3_Shift
 
 
