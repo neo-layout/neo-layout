@@ -25,12 +25,6 @@ div.Hauptfeld {
   color:Black;
 }
 
-#Hauptfeldlink_rechtsunten {
-  position:relative; top:.8em; left:.5em;
-  text-align:right;
-  margin-bottom:0em;
-}
-
 #Bildcontainer_links {
   width:10em;
   border-width:thin;
