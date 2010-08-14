@@ -24,52 +24,6 @@ div.Hauptfeld {
   margin-bottom:0em;
 }
 
-#Navigationsleiste {
-  background-color:#F8F8FA;
-  color:WindowText;
-  position:relative; 
-  width:11em; 
-  float:left;
-  text-align:center; 
-  margin:2em;
-  margin-left:0em;
-  margin-top:2em;
-  border-width:thin;  
-  border-style:solid;  
-  border-color:green; 
-  border-top-width:0px;
-
-}
-
-div.Navigationsthema {
-  border-bottom-width:1px;
-  border-bottom-style:solid;
-  border-color:black;
-  border-top-width:1px;
-  border-top-style:solid;
-  border-color:black;
-  text-align:center;
-  font-weight:bold;
-  background-color:#FAFBF8;
-  color:InfoText;
-  padding-top:.2em;
-  padding-bottom:.2em;
-}
-
-div.Navigationsunterpunkte {
-  padding-top:.5em;
-  padding-bottom:.75em;
-}
-
-a.Navigationseintrag {
-  display:block;
-  text-align:left;
-  padding-left:1em;
-  padding-right:1em;
-  padding-top:.25em;
-  padding-bottom:.25em;
-}
-
 #Bildcontainer_links {
   width:10em;
   border-width:thin;
@@ -210,3 +164,40 @@ p         {  /* text-indent:1em;
 	background-color:Highlight;
 }
 
+ul#menu, ul#menu ul {
+	list-style:none;
+	padding-left:0;
+	margin-left:0;
+}
+#menu {
+	position:relative;
+	float:left;
+	width:11em;
+
+	border:1px solid black;
+	color:WindowText;
+	background-color:#ccf;
+	font-family:Linux Biolinum O, Linux Biolinum, sans;
+	font-weight:bold;
+
+	margin:2em 1em;
+}
+
+/* section containers */
+#menu li { color:InfoText; }
+/* section list (items) */
+#menu li ul { font-weight:normal; }
+/* use css2 in browsers that support it */
+#menu > li, #menu li ul { margin-top:1ex; }
+#menu > li { padding-left:1em; }
+#menu > li ul { margin-left:-1em; }
+
+/* section list links */
+#menu li ul li a {
+	display:block;
+	padding:.4em 1em;
+
+	background-color:#f8f8fa;
+	font-weight:normal;
+}
+#menu li ul li a:hover { background-color:Highlight; }
