@@ -42,16 +42,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.6482626"
-     inkscape:cx="264.1243"
-     inkscape:cy="-40.858639"
+     inkscape:cx="265.3377"
+     inkscape:cy="-41.737566"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1388"
-     inkscape:window-height="994"
+     inkscape:window-width="1400"
+     inkscape:window-height="1002"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata44673">
     <rdf:RDF>
@@ -83,7 +83,7 @@
          id="tspan2816"
          x="77.682159"
          y="543.9361"
-         style="font-size:40.70521927px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O Bold">ergonomisch optimiert</tspan></text>
+         style="font-size:36;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O Bold">ergonomisch optimiert</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Linux Biolinum O;-inkscape-font-specification:Linux Biolinum O"
@@ -92,6 +92,6 @@
        id="text2818"
        transform="translate(-46.55321,504.50721)"><tspan
          sodipodi:role="line"
-         id="tspan2820"></tspan></text>
+         id="tspan2820" /></text>
   </g>
 </svg>
