@@ -1,3 +1,10 @@
+body {
+	font-family:Linux Libertine O, Linux Libertine, serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:Linux Biolinum O, Linux Biolinum, sans;
+}
+
 div.Hauptfeld {
   border-width:thin;
   border-color:#444;
