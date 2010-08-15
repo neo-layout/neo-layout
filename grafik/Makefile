@@ -42,15 +42,11 @@ tastatur3d/tastatur_neo_Ebene%.svg: tastatur3d/tastatur_neo_alle_Ebenen.svg
 tastatur3d/hauptfeld/%.png: tastatur3d/%.svg
 	mkdir -p  tastatur3d/hauptfeld
 	inkscape --without-gui --export-id="Haupttastaturfeld" --export-png=$@ -h200 tastatur3d/$*.svg
-	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
-	mogrify -depth 8 $@
 	optipng $@
 
 tastatur3d/ziffernfeld/%.png: tastatur3d/%.svg
 	mkdir -p tastatur3d/ziffernfeld
 	inkscape --without-gui --export-id="Ziffernblock" --export-png=$@ -h200 tastatur3d/$*.svg
-	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
-	mogrify -depth 8 $@
 	optipng $@
 
 tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/hauptfeld/%.png tastatur3d/ziffernfeld/%.png
@@ -58,8 +54,6 @@ tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/hauptfeld/%.png tastatur3d/ziffe
 	convert -splice 20x0 -background transparent -colors 256 -type Palette +dither -alpha off -alpha on tastatur3d/ziffernfeld/$*.png /tmp/$*_tmp.png
 	convert +append tastatur3d/hauptfeld/$*.png /tmp/$*_tmp.png $@
 	rm /tmp/$*_tmp.png
-	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
-	mogrify -depth 8 $@
 	optipng $@
 
 %.pdf: %.svg
@@ -67,14 +61,10 @@ tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/hauptfeld/%.png tastatur3d/ziffe
 
 ../www/%.png: ../www/%.svg
 	inkscape --without-gui --export-png=$@ $<
-	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
-	mogrify -depth 8 $@
 	optipng $@
 
 %.png: %.svg
 	inkscape --without-gui --export-png=$@ -w1000 $<
-	mogrify -colors 256 -type Palette +dither -alpha off -alpha on $@
-	mogrify -depth 8 $@
 	optipng $@
 
 
