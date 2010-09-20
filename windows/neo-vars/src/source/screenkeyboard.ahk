@@ -80,7 +80,13 @@ rerun_bstnupdate:
 	  if (SubStr(GuiComp,1,1)=="U") {
             Charcode := "0x" . Substr(GuiComp,2,6)
 	      if (charCode < 0x10000) {
-	        NumPut(CharCode, ptrU, GuiPos, "UShort")
+	        if (charCode == 0x26) {
+		  ; double any Ampersand (&) to avoid being replaced with
+		  ; underscore (Windows Shortcut Key terminology)
+		  NumPut(CharCode, ptrU, GuiPos, "UShort")
+		  GuiPos := GuiPos + 2
+		}
+		NumPut(CharCode, ptrU, GuiPos, "UShort")
               } else {
                 ; surrogates
                 NumPut(0xD800|((charCode-0x10000)/1024) , ptrU, GuiPos, "UShort")
