@@ -5,7 +5,7 @@
    ========
    On screen display for learning the keyboard layout Neo2
 
-   Copyright (c) 2009 Martin Zuther (http://www.mzuther.de/)
+   Copyright (c) 2009-2010 Martin Zuther (http://www.mzuther.de/)
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -139,13 +139,18 @@ class SimpleXkbWrapper:
 
 
     def __init__(self):
-        # dynamically link to "X Keyboard Extension" library
-        library_xf86misc = ctypes.CDLL(ctypes.util.find_library('Xxf86misc'))
+        # dynamically link to "X Keyboard Extension" library while at
+        # the same time checking which library to use
+        xkbd_library_location = ctypes.util.find_library('Xxf86misc')
+        if not xkbd_library_location:
+            xkbd_library_location = ctypes.util.find_library('X11')
+
+        xkbd_library = ctypes.CDLL(xkbd_library_location)
 
         # print debugging information if requested
         if self.DEBUG_XKB:
             print
-            print '  %s' % library_xf86misc
+            print '  %s' % xkbd_library
 
 
 
@@ -181,7 +186,7 @@ class SimpleXkbWrapper:
 
         # set-up function (low-level)
         self.__XkbOpenDisplay__ = prototype_xkbopendisplay( \
-            ('XkbOpenDisplay', library_xf86misc), \
+            ('XkbOpenDisplay', xkbd_library), \
                 paramflags_xkbopendisplay \
                 )
 
@@ -253,7 +258,7 @@ class SimpleXkbWrapper:
 
         # set-up function (low-level)
         self.__XkbGetState__ = prototype_xkbgetstate( \
-            ('XkbGetState', library_xf86misc), \
+            ('XkbGetState', xkbd_library), \
                 paramflags_xkbgetstate \
                 )
 

@@ -1,3 +1,11 @@
+2010-10-15  Martin Zuther  <code@mzuther.de>
+
+	* Version 0.13
+
+	* SimpleXkbWrapper.py: the "X Keyboard Extension" functions have
+	been moved from "libXxf86misc" to "libX11", so the code now checks
+	which library to link to
+
 2009-09-07  Martin Zuther  <code@mzuther.de>
 
 	* Version 0.12

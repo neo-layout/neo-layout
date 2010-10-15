@@ -4,7 +4,7 @@
    ========
    On screen display for learning the keyboard layout Neo2
 
-   Copyright (c) 2009 Martin Zuther (http://www.mzuther.de/)
+   Copyright (c) 2009-2010 Martin Zuther (http://www.mzuther.de/)
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -59,8 +59,8 @@ class Settings:
         # common application copyrights and information (only set here, private)
         self.__application__ = 'OSD Neo2'
         self.__cmd_line__ = 'OSDneo2'
-        self.__version__ = '0.12'
-        self.__years__ = '2009'
+        self.__version__ = '0.13'
+        self.__years__ = '2009-2010'
         self.__authors__ = 'Martin Zuther'
         self.__license_short__ = 'GPL version 3 (or later)'
         self.__license_long__ = """This program is free software: you can redistribute it and/or modify
