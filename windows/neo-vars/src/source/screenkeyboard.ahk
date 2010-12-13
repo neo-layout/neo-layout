@@ -125,7 +125,9 @@ GuiAddKey(key,x,y) {
   global
   x:=x-4
   y:=y-10
-  Gui, Add, Text, x%x% y%y% w38 h38 Center 0x200 hwndGuiKey%key% BackgroundTrans
+  GuiPosx%key% := x
+  GuiPosy%key% := y
+  Gui, Add, Text, x%x% y%y% w38 h38 Center 0x200 vGuiKey%key% hwndGuiKey%key% BackgroundTrans
   GuiKeyList := GuiKeyList . key . ","
 }
 
@@ -143,6 +145,20 @@ BSTOnClose() {
   global
   useBST := 0
   CharProc__BST0()
+}
+
+BSTOnSize() {
+  global
+  Gui, Show, % "y" . yposition . " w" . A_GuiWidth . " h" . A_GuiWidth*199/729 . " NoActivate", Neo-Bildschirmtastatur
+  GuiControl,,Picture0, % "*w" . A_GuiWidth . " *h-1 " . ResourceFolder . "\ebene0.png"
+  Gui, Font, % "s" . A_GuiWidth*12/729 . " bold", % UniFontName
+  loop,parse,GuiKeyList,`,
+  {
+    GuiPhysKey := A_LoopField
+    GuiControl,Font,GuiKey%GuiPhysKey%
+    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . GuiPosx%GuiPhysKey%*A_GuiWidth/729 . " y" . GuiPosy%GuiPhysKey%*A_GuiWidth/729 . " w" . 38*A_GuiWidth/729 . " h" . 38*A_GuiWidth/729
+  }
+  GuiControl,MoveDraw,Picture0
 }
 
 CharProc__BST0() {
@@ -186,7 +202,7 @@ CharProc__BST1() {
   SysGet, WorkArea, MonitorWorkArea
   yPosition := WorkAreaBottom - 230
   Gui, Color, FFFFFF
-  Gui, Add, Picture,AltSubmit x0   y0          vPicture0, % ResourceFolder . "\ebene0.png"
+  Gui, Add, Picture,AltSubmit x0   y0  vPicture0, % ResourceFolder . "\ebene0.png"
   Gui, Font, s12 bold, %UniFontName%
   GuiKeyList := ""
   GuiAddKeyS("029",6,9)
@@ -271,7 +287,7 @@ CharProc__BST1() {
 
   GuiAddKeySN("052",601,168)
   GuiAddKeySN("053",658,168)
-  Gui, +AlwaysOnTop +ToolWindow
+  Gui, +AlwaysOnTop +ToolWindow +Resize -MaximizeBox
   Gui, Show, y%yposition% w729 h199 NoActivate, Neo-Bildschirmtastatur
   BSTUpdate()
   BSTalwaysOnTop := 1
