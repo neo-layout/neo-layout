@@ -22,3 +22,8 @@ GuiClose:
   else
     Gui, Destroy
 return
+
+GuiSize:
+  if (GuiCurrent!="")
+    %GuiCurrent%OnSize()
+return
