@@ -150,7 +150,6 @@ BSTOnClose() {
 BSTOnSize() {
   global
   Gui, Show, % "y" . yposition . " w" . A_GuiWidth . " h" . A_GuiWidth*199/729 . " NoActivate", Neo-Bildschirmtastatur
-  GuiControl,,Picture0, % "*w" . A_GuiWidth . " *h-1 " . ResourceFolder . "\ebene0.png"
   Gui, Font, % "s" . A_GuiWidth*12/729 . " bold", % UniFontName
   loop,parse,GuiKeyList,`,
   {
@@ -158,7 +157,7 @@ BSTOnSize() {
     GuiControl,Font,GuiKey%GuiPhysKey%
     GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . GuiPosx%GuiPhysKey%*A_GuiWidth/729 . " y" . GuiPosy%GuiPhysKey%*A_GuiWidth/729 . " w" . 38*A_GuiWidth/729 . " h" . 38*A_GuiWidth/729
   }
-  GuiControl,MoveDraw,Picture0
+  GuiControl,,Picture0, % "*w" . A_GuiWidth . " *h-1 " . ResourceFolder . "\ebene0.png"
 }
 
 CharProc__BST0() {
