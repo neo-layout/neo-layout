@@ -1,7 +1,7 @@
-;*********************
+ï»¿;*********************
 ; Anfangsbedingungen *
 ;*********************
-name=Neo 2.0 (Erweiterung für nativen Treiber)
+name=Neo 2.0 (Erweiterung fÃ¼r nativen Treiber)
 enable=Aktiviere %name%
 disable=Deaktiviere %name%
 #usehook on
@@ -15,12 +15,12 @@ if (FileExist("neo_enabled.ico")&&FileExist("neo_disabled.ico"))
 
   
 ;*************************
-; Menü des Systray-Icons *
+; MenÃ¼ des Systray-Icons *
 ;*************************
 if (iconBenutzen)
   menu,tray,icon,neo_enabled.ico,,1
 menu,tray,nostandard
-menu,tray,add,AHK öffnen,open
+menu,tray,add,AHK Ã¶ffnen,open
   menu,helpmenu,add,Info,about
   menu,helpmenu,add
   menu,helpmenu,add,http://autohotkey.com/,autohotkey
@@ -58,7 +58,7 @@ isMod4Active := 0
 ;***********************
 ; Fehlende Funktionen  *
 ;***********************
-; *** benötigte Modifier werden gehookt ***
+; *** benÃ¶tigte Modifier werden gehookt ***
 ~*SC136::
   if (isShiftLPressed and !isShiftRPressed)
   ToggleMod2Lock()
@@ -229,17 +229,17 @@ if (isMod4Active and !isMod3Pressed)
 Send {Blind}{END}
 return
 
-~*ü::
+~*Ã¼::
 if (isMod4Active and !isMod3Pressed)
 Send {esc}
 return
 
-~*VKDD:: ;ist ö, mit ö jedoch merkwürdige Fehler
+~*Ã¶:: 
 if (isMod4Active and !isMod3Pressed)
 Send {Blind}{TAB}
 return
 
-~*ä::
+~*Ã¤::
 if (isMod4Active and !isMod3Pressed)
 Send {Blind}{INS}
 return
@@ -255,7 +255,7 @@ Send ^z
 return
 
 ;*****************
-; Menüfunktionen *
+; MenÃ¼funktionen *
 ;*****************
 togglesuspend:
   if A_IsSuspended {
@@ -273,11 +273,11 @@ togglesuspend:
   } return
 
 about:
-  msgbox, 64, NEO 2.0 – Ergonomische Tastaturbelegung, 
+  msgbox, 64, NEO 2.0 â€“ Ergonomische Tastaturbelegung, 
   (
   %name% 
   `nDas Neo-Layout ist ein alternatives deutsches Tastaturlayout
-  Näheres finden Sie unter http://neo-layout.org/. 
+  NÃ¤heres finden Sie unter http://neo-layout.org/. 
   `nDieses Skript erweitert den nativen Tastaturtreiber um 
   einige fehlende Funktionen.
   )

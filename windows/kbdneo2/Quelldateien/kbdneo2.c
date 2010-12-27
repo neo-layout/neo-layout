@@ -231,7 +231,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {0xff			,0					,0x0060		,0x00b8		,0x02da		,0x00a8		,0x1FFE		,0x00af		},
 {VK_TAB			,0					,'\t'		,'\t'		,WCH_DEAD	,'\t'		,'\t'		,'\t'		},
 {0xff			,0					,WCH_NONE	,WCH_NONE	,0x266b		,WCH_NONE	,WCH_NONE	,WCH_NONE	},
-{'X'			,CAPLOK | KANALOK	,'x'		,'X'		,0x2026		,0x22ee		,WCH_NONE	,0x039E		},  //WCH_NONE sollte »Seite hoch« sein (AHK?)
+{'X'			,CAPLOK | KANALOK	,'x'		,'X'		,0x2026		,WCH_NONE	,0x03be		,0x039E		},  //WCH_NONE sollte »Seite hoch« sein (AHK?)
 {'V'			,CAPLOK | KANALOK	,'v'		,'V'		,'_'		,WCH_NONE	,WCH_NONE	,0x221a		},	//Kana: '\b' vom AHK übernommen
 {'L'			,CAPLOK | KANALOK	,'l'		,'L'		,'['		,WCH_NONE	,0x03BB		,0x039b		},	//WCH_NONE sollte »Pfeil hoch« sein (AHK?)
 {'C'			,CAPLOK | KANALOK	,'c'		,'C'		,']'		,WCH_NONE	,0x03C7		,0x2102		},	//WCH_NONE sollte »Entfernen« sein (AHK?)
@@ -288,25 +288,25 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 };
 
 // Numpad-Belegung muss zum Schluss kommen
-// Entgegen der neo20.txt vorgesehene Belegung 1,2,3,4,5,6 ist hier 1,4,3,2 umgesetzt:
+// Entgegen der neo20.txt vorgesehene Belegung 1,2,3,4,5,6 ist hier 1,4,3,2 umgesetzt, Num ist nicht belegt:
 static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
 //				| CapsLock	|			| SHIFT		| KANA		| NEU		|
 //				|===========|===========|===========|===========|===========|
-{VK_ADD			,0			,'+'		,'+'		,0x00b1		,0x2213		},
-{VK_DIVIDE		,0			,'/'		,'/'		,0x00f7		,0x2215		},
-{VK_MULTIPLY	,0			,'*'		,'*'		,0x00d7		,0x2219		},
-{VK_SUBTRACT	,0			,'-'		,'-'		,0x2052		,WCH_NONE	},
-{VK_DECIMAL		,0			,','		,','		,'.'		,','		},
-{VK_NUMPAD0		,0			,'0'		,'0'		,0x0025		,0x2030		},
-{VK_NUMPAD1		,0			,'1'		,'1'		,0x2194		,0x2264		},
-{VK_NUMPAD2		,0			,'2'		,'2'		,0x2193		,0x222a		},
-{VK_NUMPAD3		,0			,'3'		,'3'		,0x21cc		,0x2265		},
-{VK_NUMPAD4		,0			,'4'		,'4'		,0x2190		,0x2282		},
-{VK_NUMPAD5		,0			,'5'		,'5'		,0x221e		,0x220B		},
-{VK_NUMPAD6		,0			,'6'		,'6'		,0x2192		,0x2283		},
-{VK_NUMPAD7		,0			,'7'		,'7'		,0x2195		,0x226a		},
-{VK_NUMPAD8		,0			,'8'		,'8'		,0x2191		,0x2229		},
-{VK_NUMPAD9		,0			,'9'		,'9'		,0x2297		,0x226b		},
+{VK_ADD			,0			,'+'		,0x2213		,0x00b1		,'+'		},
+{VK_DIVIDE		,0			,'/'		,0x2044		,0x00f7		,'/'		},
+{VK_MULTIPLY	,0			,'*'		,0x00d7		,0x22C5		,'*'		},
+{VK_SUBTRACT	,0			,'-'		,0x2216		,0x2212		,'-'		},
+{VK_DECIMAL		,0			,','		,','		,','		,'.'		},
+{VK_NUMPAD0		,0			,'0'		,'0'		,0x0025		,0x2423		},
+{VK_NUMPAD1		,0			,'1'		,'1'		,0x2194		,0x2666		},
+{VK_NUMPAD2		,0			,'2'		,'2'		,0x2193		,0x2665		},
+{VK_NUMPAD3		,0			,'3'		,'3'		,0x21cc		,0x2060		},
+{VK_NUMPAD4		,0			,'4'		,'4'		,0x2190		,0x2663		},
+{VK_NUMPAD5		,0			,'5'		,'5'		,':'		,0x20ac		},
+{VK_NUMPAD6		,0			,'6'		,'6'		,0x2192		,0x2023		},
+{VK_NUMPAD7		,0			,'7'		,'7'		,0x2195		,0x2714		},
+{VK_NUMPAD8		,0			,'8'		,'8'		,0x2191		,0x2718		},
+{VK_NUMPAD9		,0			,'9'		,'9'		,0x2297		,0x2020		},
 {0				,0			,0			,0			,0			,0			}
 };
 
