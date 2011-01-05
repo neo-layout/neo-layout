@@ -241,7 +241,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'G'			,CAPLOK | KANALOK	,'g'		,'G'		,'>'		,'8'		,0x03B3		,0x0393		},
 {'F'			,CAPLOK | KANALOK	,'f'		,'F'		,'='		,'9'		,0x03C6		,0x03A6		},
 {'Q'			,CAPLOK | KANALOK	,'q'		,'Q'		,'&'		,'+'		,0x03d5		,0x211a		},
-{'U'			,CAPLOK | KANALOK	,'u'		,'U'		,'\\'		,WCH_NONE	,WCH_NONE	,0x2282		},	//WCH_NONE sollte »Pos 1« sein (AHK?)
+{'U'			,CAPLOK | KANALOK	,'u'		,'U'		,0x005c		,WCH_NONE	,WCH_NONE	,0x2282		},	//WCH_NONE sollte »Pos 1« sein (AHK?)
 {'I'			,CAPLOK | KANALOK	,'i'		,'I'		,'/'		,WCH_NONE	,0x03B9		,0x222b		},	//WCH_NONE sollte »Pfeil links« sein (AHK?)
 {'A'			,CAPLOK | KANALOK	,'a'		,'A'		,'{'		,WCH_NONE	,0x03B1		,0x2200		},	//WCH_NONE sollte »Pfeil runter« sein (AHK?)
 {'E'			,CAPLOK | KANALOK	,'e'		,'E'		,'}'		,WCH_NONE	,0x03B5		,0x2203		},	//WCH_NONE sollte »Pfeil rechts« sein (AHK?)
@@ -258,8 +258,8 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'Z'			,CAPLOK | KANALOK	,'z'		,'Z'		,'`'		,WCH_NONE	,0x03B6		,0x2124		},  //WCH_NONE sollte »Undo« sein (AHK?)
 {'B'			,CAPLOK | KANALOK	,'b'		,'B'		,'+'		,':'		,0x03B2		,0x21d0		},
 {'M'			,CAPLOK | KANALOK	,'m'		,'M'		,'%'		,'1'		,0x00b5		,0x21d4		},
-{VK_OEM_COMMA	,KANALOK			,','		,0x2013		,'\"'		,'2'		,0x03f1		,0x21d2		},
-{VK_OEM_PERIOD	,KANALOK			,'.'		,0x2022		,'\''		,'3'		,0x03d1		,0x21a6		},
+{VK_OEM_COMMA	,KANALOK			,','		,0x2013		,0x0022		,'2'		,0x03f1		,0x21d2		},
+{VK_OEM_PERIOD	,KANALOK			,'.'		,0x2022		,0x0027		,'3'		,0x03d1		,0x21a6		},
 {0				,0					,0			,0			,0			,0			,0			,0			}
 };
 
