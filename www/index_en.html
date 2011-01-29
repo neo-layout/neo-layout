@@ -43,12 +43,12 @@
 <ul id="menu">
 	<li>Navigate
 	<ul>
-		<li><a href="http://wiki.neo-layout.org/wiki">Wiki (german)</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Download">Download (german)</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Benutzerhandbuch">Manual (german)</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Neo%20einrichten">Installation (german)</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Verweise%20auf%20andere%20Projekte">Similar Projects (Links)</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Presseberichte">Press Releases (german)</a></li>
+		<li><a href="http://wiki.neo-layout.org/wiki" style="text-decoration: line-through;">Wiki (german)</a></li>
+		<li><a href="http://wiki.neo-layout.org/wiki/Download" style="text-decoration: line-through;">Download (german)</a></li>
+		<li><a href="http://wiki.neo-layout.org/wiki/Benutzerhandbuch" style="text-decoration: line-through;">Manual (german)</a></li>
+		<li><a href="http://wiki.neo-layout.org/wiki/Neo%20einrichten" style="text-decoration: line-through;">Installation (german)</a></li>
+		<li><a href="http://wiki.neo-layout.org/wiki/Verweise%20auf%20andere%20Projekte" style="text-decoration: line-through;">Similar Projects (german)</a></li>
+		<li><a href="http://wiki.neo-layout.org/wiki/Presseberichte" style="text-decoration: line-through;">Press Releases (german)</a></li>
 	</ul>
 	</li>
 
@@ -70,7 +70,7 @@
 	<ul>
 		<li>Optimizations regarding <a href="http://en.wikipedia.org/wiki/Letter_frequency">Letter Frequency</a> as well as <a href="http://en.wikipedia.org/wiki/N-gram">Bi– and Trigrams</a> given by the German Language (on Layer 1 and 2)</li>
 		<li>Directly underneath your finger tips lie frequently used chars for Programming Languages (on Layer 3)</li>
-                <li>Navigating Keys also lie directly under your finger tips! ←↑→↓ (on Layer 4)</li>
+                <li>Navigation Keys also lie directly under your finger tips! ←↑→↓ (on Layer 4)</li>
 		<li>New chars can be entered, like: „ , ” , « , » , ∫ , √ , α , β , … (and massively more)</li>
 	</ul>
 
@@ -116,36 +116,52 @@
 	<p>Learn Neo by viewing a printable <a href="grafik/aufsteller/neo20-aufsteller.pdf">Display showing the complete layout</a></p>
 </div>
 
-<div class="Hauptfeld">
-	<h1>English Translations here!</h1>
+<div class="Hauptfeld" id="translations_en">
+	<h1>English translations available:</h1>
+	<ul>
+		<li><a href="#installation_en">Installation</a></li>
+		<li><a href="#overview_en">Overview of every single layer</a></li>
+		<li><a href="#troubleshoot_en">Troubleshooting, Tips&amp;Tricks, Known Issues</a></li>
+		<li><a href="#contact_en">Neo Chat, Mailing list</a></li>
+	</ul>
+</div>
+
+<div class="Hauptfeld" id="installation_en">
+	<h1>Installation</h1>
 	<p>Due to its rich layers, programs can behave strange (on upper layers). We know, that they are just overwhelmed ;)</p>
-	<h2>Installation</h2>
 	<p>ABSOLUTELY NO WARRANTIES FOR ANYTHING!<br>USE AT YOUR OWN RISK!</p>
-	<h4>Windows</h4>
-	<p>You'd also want to have a font like <a href="http://dejavu.sourceforge.net/wiki/index.php/Download">Deja Vu</a> or <a href="http://sourceforge.net/project/showfiles.php?group_id=89513">Libertine</a> to see all the fancy Neo–typeable chars!</p>
+	<h2>Windows</h2>
+	<p>
+	You'd also want to have a font like <a href="http://dejavu.sourceforge.net/wiki/index.php/Download">Deja Vu</a> or <a href="http://sourceforge.net/project/showfiles.php?group_id=89513">Libertine</a> to see all the fancy Neo–typeable chars!
+	</p>
 	<ul>
 		<li><em>Try–out and Non–Administrators</em>: Just run <a href="http://neo-layout.org/neo20.exe">neo20.exe</a>. To deactivate and switch back: Double-click on the Neo–Trayicon, or use [Shift]+[Pause]! (Peek at Neo: [CapsLock]+[F1])</li>
 		<li><em>Administrator Priviledges</em>: After System backup, look at <a href="http://neo-layout.org/kbdneo32.zip">kbdneo32.zip</a> for a 32–, or at <a href="http://neo-layout.org/kbdneo64.zip">kbdneo64.zip</a> for a 64–Bit Windows: Run reg_backup.bat (and get your registry keys for deinstalling Neo!), copy kbdneo2.dll to C:\Windows\system32\ per Windows Explorer(!), run kbdneo2_install.reg. Now there's Neo under the Control panel's keyboard configuration task as a variant after selecting German as keyboard language. For using cursors etc. you will also have to run <a href="http://neo-layout.org/kbdneo_ahk.exe">kbdneo_ahk.exe</a>. To deactivate and switch back: Use the keyboard layout icon, or press [Ctrl]+[Shift]. Deinstallation: Either only choose your old layout, or purge Neo away: After deselecting Neo as keyboard layout, run kbdneo2_uninstall.reg, and run the registry keys got at installation by reg_backup.bat</li>
 	</ul>
-	<h4>Linux</h4>
-	<p>Please choose:</p>
-	<ul>
+	<h2>Linux</h2>
+	<p>
+	Please choose:</p>
+	<ul style="clear:both;">
 		<li><em>Actual Distributions</em>: [Keyboard Configuration]: Language: [germany], Variant: [neo]</li>
 		<li>$<em>xmodmap</em> <a href="http://neo-layout.org/neo_de.xmodmap">neo_de.xmodmap</a></li>
 		<li><em>xkbmap</em> (root privileges needed): To be written …<br>
 		
 		</li>
 	</ul>
-	<h4>Mac OS–X</h4>
-	<p>(Layers 4 and 6 are not accessible right now :|)Get <a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">neo.keylayout</a> (if necessary, rename it to this name!) and <a href="http://wiki.neo-layout.org/browser/mac_osx/neo.icns?format=raw">neo.icns</a>, move both in your directory at ~/Library/Keyboard Layouts, log out and in again, now you can select Neo at the normal Keyboard configuration panel as layout. Mod3 is at ⌥.</p>
-	<h4>FreeBSD, OpenBSD, NetBSD</h4>
+	<h2>Mac OS–X</h2>
+	<p>
+	(Layers 4 and 6 are not accessible right now :|)Get <a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">neo.keylayout</a> (if necessary, rename it to this name!) and <a href="http://wiki.neo-layout.org/browser/mac_osx/neo.icns?format=raw">neo.icns</a>, move both in your directory at ~/Library/Keyboard Layouts, log out and in again, now you can select Neo at the normal Keyboard configuration panel as layout. Mod3 is at ⌥.</p>
+	<h2>FreeBSD, OpenBSD, NetBSD</h2>
 	<p>To be written …</p>
-	<h4>Solaris</h4>
+	<h2>Solaris</h2>
 	<p>To be written …</p>
-	<h4>C64</h4>
+	<h2>C64</h2>
 	<p>To be written …</p>
 
-	<h2>Overviewing the complete Layers</h2>
+</div>
+
+<div class="Hauptfeld" id="overview_en">
+	<h1>Overview of every single Layer</h1>
 	<p>Click to zoom in!</p>
 	<p>Layer 1:<br><a href="http://www.neo-layout.org/grafik/tastatur3d/tastatur_neo_Ebene1.png"><img src="http://www.neo-layout.org/grafik/tastatur3d/tastatur_neo_Ebene1.png" width=100%></a></p>
 	<p>Layer 2:<br><a href="http://www.neo-layout.org/grafik/tastatur3d/tastatur_neo_Ebene2.png"><img src="http://www.neo-layout.org/grafik/tastatur3d/tastatur_neo_Ebene2.png" width=100%></a></p>
@@ -157,7 +173,27 @@
 
 </div>
 
+
+<div class="Hauptfeld" id="troubleshoot_en">
+	<h1>Troubleshooting, Tips&amp;Tricks, Known Issues</h1>
+	<p>To be written …</p>
 </div>
 
+<div class="Hauptfeld" id="contact_en">
+	<h1>Neo Chat, Mailing list</h1>
+	<h2>Chat (IRC)</h2>
+	<p>Feel free to ask questions here, there should be someone around who understands you (maybe there's nobody because of the different time zones). To enter our chat, just click here:<p>
+	<p><a href="http://webchat.freenode.net?channels=neo">Launch Neo-Chat</a></p>
+	<p>It's the IRC #<em>neo</em> channel at <em>freenode.net</em>.</p>
+	<h2>Mailing list</h2>
+	<p>[most posts in german!] Our mailing list address is as mentioned next:</p>
+	<p><a class="mail-link" href="mailto:diskussion@neo-layout.org?subject=Your Question in short words&amp;cc=Insert.YOUR.Email.address.here@Your-Provider.invalid&amp;body=Hi there!%0A%0D%0A%0D%E2%80%A2 I'm already using Neo (or: I'm not using Neo).%0A%0D%E2%80%A2 My OS is Linux%2FWindows%2FMac%0A%0D%E2%80%A2 I am using the following driver: (Xmodmap, Xkbmap, AHK, kbdneo2, %E2%80%A6)%0A%0D%E2%80%A2 [Please insert your email address as CC:!]%0A%0D%E2%80%A2 I have the following issues%E2%80%A6%0A%0D%0A%0DThank you all for your answers%2C%0D%0A[My Name here]%0A%0D%0A%0DPS: Please keep my email address in the CC: field, because I don' read the %0D%0Amailing list. Please also use the »Reply all« button!">diskussion@neo-layout.org</a></p>
+	<p>It can be viewed by a web browser via this link: <a href="http://lists.neo-layout.org/pipermail/diskussion/">Browse Mailing List Archive</a>.<br>
+	   Therefore, you can also use <a href="http://news.gmane.org/gmane.comp.hardware.keyboards.layout.neo">Gmane: Read Mailing list</a>. <br>
+	   Other information available at <a  href="http://dir.gmane.org/gmane.comp.hardware.keyboards.layout.neo">Gmane: Overview of Mailing list<a>.</p>
+</div>
+
+
+</div>
 </body>
 </html>
