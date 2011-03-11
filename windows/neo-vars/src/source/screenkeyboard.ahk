@@ -5,7 +5,7 @@ BSTalwaysOnTop := 1
 UnZipLocalFile := ResourceFolder . "\unzip.exe"
 UnZipSourceLink := "http://stahlworks.com/dev/unzip.exe"
 
-UniFontVersion  := "2.30"
+UniFontVersion  := "2.33"
 UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
 
