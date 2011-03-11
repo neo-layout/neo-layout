@@ -20,12 +20,26 @@ UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "/ttf/" . UniFontFi
 
 Check_BSTUpdate(DoBSTUpdate = 0) {
   global
+  if (useDBST) {
+    if (!useBST and (Comp != "")) {
+      useBST := 1
+      BSTLastComp := ""
+      CharProc__BST1()
+    }
+  }
   if (useBST 
       and (DoBSTUpdate
            or (Comp != BSTLastComp)
            or (EbeneC != BSTLastEbeneC)
            or (EbeneNC != BSTLastEbeneNC)))
     BSTUpdate()
+  if (useDBST) {
+    if (useBST and (Comp == "")) {
+      useBST := 0
+      BSTLastComp := ""
+      CharProc__BST0()
+    }
+  }
 }
 
 BSTUpdate() {
@@ -139,6 +153,18 @@ CharProc__BSTt() {
     CharProc__BST1()
   else
     CharProc__BST0()
+}
+
+CharProc_DBSTt() {
+  global
+  useDBST := !(useDBST)
+  if (useDBST) {
+    if (zeigeModusBox)
+      TrayTip,Dynamische Bildschirmtastatur,Die dynamische Bildschirmtastatur wurde aktiviert. Zum Deaktivieren`, Mod3+F3 druecken.,10,1
+  } else {
+    if (zeigeModusBox)
+      TrayTip,Dynamische Bildschirmtastatur,Die dynamische Bildschirmtastatur wurde deaktiviert.,10,1
+  }
 }
 
 BSTOnClose() {
@@ -307,7 +333,7 @@ BSTToggleAlwaysOnTop() {
 CharProc__BSTA() {
   global
   ; Bildschirmtastatur AlwaysOnTop
-  if (useBST)
+  if (useBST or useDBST)
     BSTToggleAlwaysOnTop()
 }
 
@@ -417,11 +443,14 @@ BSTRegister() {
 
   CP3F1 := "P__BSTt"
   CP3F2 := "P__BSTA"
+  CP3F3 := "P_DBSTt"
   BSTSymbols()
 
   IniRead,useBST,%ini%,Global,useBST,0
   if (useBST)
     CharProc__BST1()
+
+  IniRead,useDBST,%ini%,Global,useDBST,0
 }
 
 BSTRegister()
