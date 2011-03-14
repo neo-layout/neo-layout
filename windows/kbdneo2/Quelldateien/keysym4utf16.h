@@ -3,9 +3,64 @@
 * Deutsches ergonomische Layout Neo 2.0
 \****************************************************************************/
 
-// 
+// Neo-spezifische Keysyms
+// C ist case sensitiv
 
-#define Multi_key							0x266B
+#define Multi_key						0x266B
+#define totdreh							0x21bb
+#define rhotichook						0x02de
+#define litersign						0x2113
+#define guillemotright2					0x203A
+#define guillemotleft2					0x2039
+#define measuredangle					0x2221
+#define scriptkappa						0x03F0
+#define nobreakhyphen					0x2011
+#define ringabove						0x02da
+#define greek_dasia						0x1FFE
+#define doublestruck_c					0x2102
+#define scriptphi						0x03D5
+#define doublestruck_q					0x211a
+#define forall							0x2200
+#define thereexists						0x2203
+#define doublestruck_n					0x2115
+#define doublestruck_r					0x211D
+#define straightepsilon					0x03F5
+#define alefsymbol						0x2135
+#define doublestruck_z					0x2124
+#define doublearrowleft					0x21d0
+#define scriptrho						0x03f1
+#define scripttheta						0x03d1
+#define arrowfrombarright				0x21A6
+#define Ssharp							0x1E9E
+#define slong							0x017F
+#define minussign						0x2212
+#define escape							0x001b
+#define infoseparator1					0x001f
+#define infoseparator2					0x001e
+#define infoseparator3					0x001d
+#define infoseparator4					0x001c
+#define greek_psili						0x1fbf
+#define nnobreakspace					0x202f
+#define endoftext						0x0003
+#define maleandfemalesign				0x26a5
+#define parallelto						0x2225
+#define minusorplus						0x2213
+#define fractionslash					0x2044
+#define dotoperator						0x22C5
+#define setminus						0x2216
+#define leftrightarrow					0x2194
+#define rightoverleftharpoon			0x21cc
+#define wordjoiner						0x2060
+#define triangularbullets				0x2023
+#define updownarrow						0x2195
+#define heavycheckmark					0x2714
+#define heavyballotx					0x2718
+#define circledtimes					0x2297
+#define delete							0x007F
+
+
+//#define newline						'\n'
+//#define carriagereturn				'\r'
 
 
 // Aus http://cgit.freedesktop.org/xorg/proto/xproto/plain/keysymdef.h

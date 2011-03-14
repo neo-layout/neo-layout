@@ -3,5 +3,5 @@
 * Änderungen an der KBD.H für das deutsches ergonomische Layout Neo 2.0
 \****************************************************************************/
 
-#undef DEADTRANS(ch, accent, comp, flags)
+#undef DEADTRANS
 #define DEADTRANS(accent, ch, comp, flags) { MAKELONG(ch, accent), comp, flags}

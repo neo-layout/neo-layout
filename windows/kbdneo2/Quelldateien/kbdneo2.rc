@@ -8,7 +8,7 @@
 #include <ntverp.h>
 
 #undef VER_PRODUCTBUILD
-#define VER_PRODUCTBUILD            2291
+#define VER_PRODUCTBUILD            2369
 
 #undef VER_PRODUCTBUILD_QFE
 #define VER_PRODUCTBUILD_QFE        0
