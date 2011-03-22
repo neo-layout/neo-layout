@@ -5,7 +5,7 @@ all: $(BUILD_FILES)
 
 kbdneo%.zip: $(COMMON_FILES) %bit_Windows/kbdneo2.dll
 	mkdir -p kbdneo$*
-	cp $(COMMON_FILES) $*bit_Windows/kbdneo2.dll kbdneo$*
+	cp -r $(COMMON_FILES) $*bit_Windows/* kbdneo$*
 	cd kbdneo$*; zip -r kbdneo$* *
 	mv kbdneo$*/kbdneo$*.zip .
 
