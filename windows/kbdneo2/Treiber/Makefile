@@ -4,7 +4,7 @@ BUILD_FILES=kbdneo32.zip kbdneo64.zip AHK_für_kbdneo2/kbdneo_ahk.exe
 all: $(BUILD_FILES)
 
 kbdneo64.zip: $(COMMON_FILES) 64bit_Windows/System32/kbdneo2.dll 64bit_Windows/SysWOW64/kbdneo2.dll
-	mkdir -p kbdneo32
+	mkdir -p kbdneo64
 	cp -r $(COMMON_FILES) 64bit_Windows/System32/kbdneo2.dll 64bit_Windows/SysWOW64/kbdneo2.dll kbdneo64
 	cd kbdneo64; zip -r kbdneo64 *
 	mv kbdneo64/kbdneo64.zip .
