@@ -5,9 +5,11 @@
       <name>German Neo Mod 4</name>
       <appendix>Mod 4 Modifiers</appendix>
       <appendix>Navigationsblock</appendix>
-      <appendix>// Separately activate: For German > NEO Keyboard Layout Fixes</appendix>
-      <appendix>// and: Simultaneous Key Presses [Shift_L+Shift_R] to Capslock</appendix>
-      <appendix>// and: Option_R to Command_R</appendix>
+      <appendix>Num Block</appendix>
+      <appendix>// Ausserdem sollten die folgenden Funktionen unten aktiviert werden:</appendix>
+      <appendix>// For German > NEO Keyboard Layout Fixes</appendix>
+      <appendix>// Simultaneous Key Presses [Shift_L+Shift_R] to Capslock</appendix>
+      <appendix>// Option_R to Command_R</appendix>
       <identifier>private.german_neo_mod_4</identifier>
 
       <!-- Mod 4 Modifiers -->
@@ -18,8 +20,8 @@
       <autogen>--KeyToKey-- KeyCode::D, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_DOWN</autogen>
       <autogen>--KeyToKey-- KeyCode::F, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_RIGHT</autogen>
       <autogen>--KeyToKey-- KeyCode::E, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_UP</autogen>
-      <autogen>--KeyToKey-- KeyCode::A, VK_CONTROL|VK_OPTION, KeyCode::HOME</autogen>
-      <autogen>--KeyToKey-- KeyCode::G, VK_CONTROL|VK_OPTION, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::A, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+      <autogen>--KeyToKey-- KeyCode::G, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
       <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL|VK_OPTION, KeyCode::DELETE</autogen>
       <autogen>--KeyToKey-- KeyCode::R, VK_CONTROL|VK_OPTION, KeyCode::FORWARD_DELETE</autogen>
       <autogen>--KeyToKey-- KeyCode::Z, VK_CONTROL|VK_OPTION, KeyCode::ESCAPE</autogen>
@@ -29,6 +31,26 @@
       <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL|VK_OPTION, KeyCode::PC_INSERT</autogen>
       <autogen>--KeyToKey-- KeyCode::V, VK_CONTROL|VK_OPTION, KeyCode::RETURN</autogen>
       <autogen>--KeyToKey-- KeyCode::B, VK_CONTROL|VK_OPTION, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
+      <!-- Num Block -->
+      <autogen>--KeyToKey-- KeyCode::SPACE, VK_CONTROL|VK_OPTION, KeyCode::KEY_0</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, VK_CONTROL|VK_OPTION, KeyCode::KEY_1</autogen>
+      <autogen>--KeyToKey-- KeyCode::COMMA, VK_CONTROL|VK_OPTION, KeyCode::KEY_2</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, VK_CONTROL|VK_OPTION, KeyCode::KEY_3</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, VK_CONTROL|VK_OPTION, KeyCode::KEY_4</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, VK_CONTROL|VK_OPTION, KeyCode::KEY_5</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, VK_CONTROL|VK_OPTION, KeyCode::KEY_6</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, VK_CONTROL|VK_OPTION, KeyCode::KEY_7</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, VK_CONTROL|VK_OPTION, KeyCode::KEY_8</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, VK_CONTROL|VK_OPTION, KeyCode::KEY_9</autogen>
+      <autogen>--KeyToKey-- KeyCode::SLASH, VK_CONTROL|VK_OPTION, KeyCode::SLASH, ModifierFlag::OPTION_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_CONTROL|VK_OPTION, KeyCode::COMMA</autogen>
+      <autogen>--KeyToKey-- KeyCode::P, VK_CONTROL|VK_OPTION, KeyCode::N, ModifierFlag:: OPTION_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_CONTROL|VK_OPTION, KeyCode::MINUS</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, VK_CONTROL|VK_OPTION, KeyCode::DOT</autogen>
+      <autogen>--KeyToKey-- KeyCode::N, VK_CONTROL|VK_OPTION, KeyCode::SEMICOLON, ModifierFlag::OPTION_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_9, VK_CONTROL|VK_OPTION, KeyCode::S, ModifierFlag::OPTION_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_0, VK_CONTROL|VK_OPTION, KeyCode::G, ModifierFlag::OPTION_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::MINUS, VK_CONTROL|VK_OPTION, KeyCode::MINUS</autogen>
     </item>
 
   </list>
