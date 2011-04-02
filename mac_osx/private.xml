@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<root>
+  <list>
+    <item>
+      <name>German Neo Mod 4</name>
+      <appendix>Mod 4 Modifiers</appendix>
+      <appendix>Navigationsblock</appendix>
+      <appendix>// Separately activate: For German > NEO Keyboard Layout Fixes</appendix>
+      <appendix>// and: Simultaneous Key Presses [Shift_L+Shift_R] to Capslock</appendix>
+      <appendix>// and: Option_R to Command_R</appendix>
+      <identifier>private.german_neo_mod_4</identifier>
+
+      <!-- Mod 4 Modifiers -->
+      <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::CONTROL_L, ModifierFlag::OPTION_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::GERMAN_LESS_THAN, KeyCode::CONTROL_L, ModifierFlag::OPTION_L</autogen>
+      <!-- Navigationsblock -->
+      <autogen>--KeyToKey-- KeyCode::S, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>--KeyToKey-- KeyCode::D, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::F, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>--KeyToKey-- KeyCode::E, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::A, VK_CONTROL|VK_OPTION, KeyCode::HOME</autogen>
+      <autogen>--KeyToKey-- KeyCode::G, VK_CONTROL|VK_OPTION, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL|VK_OPTION, KeyCode::DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::R, VK_CONTROL|VK_OPTION, KeyCode::FORWARD_DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::Z, VK_CONTROL|VK_OPTION, KeyCode::ESCAPE</autogen>
+      <autogen>--KeyToKey-- KeyCode::X, VK_CONTROL|VK_OPTION, KeyCode::TAB</autogen>
+      <autogen>--KeyToKey-- KeyCode::T, VK_CONTROL|VK_OPTION, KeyCode::PAGEDOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::Q, VK_CONTROL|VK_OPTION, KeyCode::PAGEUP</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL|VK_OPTION, KeyCode::PC_INSERT</autogen>
+      <autogen>--KeyToKey-- KeyCode::V, VK_CONTROL|VK_OPTION, KeyCode::RETURN</autogen>
+      <autogen>--KeyToKey-- KeyCode::B, VK_CONTROL|VK_OPTION, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
+    </item>
+
+  </list>
+</root>
