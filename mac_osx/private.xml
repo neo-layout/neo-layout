@@ -1,56 +1,185 @@
 <?xml version="1.0"?>
 <root>
   <list>
-    <item>
-      <name>German Neo Mod 4</name>
-      <appendix>Mod 4 Modifiers</appendix>
-      <appendix>Navigationsblock</appendix>
-      <appendix>Num Block</appendix>
-      <appendix>// Ausserdem sollten die folgenden Funktionen unten aktiviert werden:</appendix>
-      <appendix>// For German > NEO Keyboard Layout Fixes</appendix>
-      <appendix>// Simultaneous Key Presses [Shift_L+Shift_R] to Capslock</appendix>
-      <appendix>// Option_R to Command_R</appendix>
-      <identifier>private.german_neo_mod_4</identifier>
 
-      <!-- Mod 4 Modifiers -->
-      <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::CONTROL_L, ModifierFlag::OPTION_R</autogen>
-      <autogen>--KeyToKey-- KeyCode::GERMAN_LESS_THAN, KeyCode::CONTROL_L, ModifierFlag::OPTION_L</autogen>
-      <!-- Navigationsblock -->
-      <autogen>--KeyToKey-- KeyCode::S, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_LEFT</autogen>
-      <autogen>--KeyToKey-- KeyCode::D, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_DOWN</autogen>
-      <autogen>--KeyToKey-- KeyCode::F, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_RIGHT</autogen>
-      <autogen>--KeyToKey-- KeyCode::E, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_UP</autogen>
-      <autogen>--KeyToKey-- KeyCode::A, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
-      <autogen>--KeyToKey-- KeyCode::G, VK_CONTROL|VK_OPTION, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
-      <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL|VK_OPTION, KeyCode::DELETE</autogen>
-      <autogen>--KeyToKey-- KeyCode::R, VK_CONTROL|VK_OPTION, KeyCode::FORWARD_DELETE</autogen>
-      <autogen>--KeyToKey-- KeyCode::Z, VK_CONTROL|VK_OPTION, KeyCode::ESCAPE</autogen>
-      <autogen>--KeyToKey-- KeyCode::X, VK_CONTROL|VK_OPTION, KeyCode::TAB</autogen>
-      <autogen>--KeyToKey-- KeyCode::T, VK_CONTROL|VK_OPTION, KeyCode::PAGEDOWN</autogen>
-      <autogen>--KeyToKey-- KeyCode::Q, VK_CONTROL|VK_OPTION, KeyCode::PAGEUP</autogen>
-      <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL|VK_OPTION, KeyCode::PC_INSERT</autogen>
-      <autogen>--KeyToKey-- KeyCode::V, VK_CONTROL|VK_OPTION, KeyCode::RETURN</autogen>
-      <autogen>--KeyToKey-- KeyCode::B, VK_CONTROL|VK_OPTION, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
-      <!-- Num Block -->
-      <autogen>--KeyToKey-- KeyCode::SPACE, VK_CONTROL|VK_OPTION, KeyCode::KEY_0</autogen>
-      <autogen>--KeyToKey-- KeyCode::M, VK_CONTROL|VK_OPTION, KeyCode::KEY_1</autogen>
-      <autogen>--KeyToKey-- KeyCode::COMMA, VK_CONTROL|VK_OPTION, KeyCode::KEY_2</autogen>
-      <autogen>--KeyToKey-- KeyCode::DOT, VK_CONTROL|VK_OPTION, KeyCode::KEY_3</autogen>
-      <autogen>--KeyToKey-- KeyCode::J, VK_CONTROL|VK_OPTION, KeyCode::KEY_4</autogen>
-      <autogen>--KeyToKey-- KeyCode::K, VK_CONTROL|VK_OPTION, KeyCode::KEY_5</autogen>
-      <autogen>--KeyToKey-- KeyCode::L, VK_CONTROL|VK_OPTION, KeyCode::KEY_6</autogen>
-      <autogen>--KeyToKey-- KeyCode::U, VK_CONTROL|VK_OPTION, KeyCode::KEY_7</autogen>
-      <autogen>--KeyToKey-- KeyCode::I, VK_CONTROL|VK_OPTION, KeyCode::KEY_8</autogen>
-      <autogen>--KeyToKey-- KeyCode::O, VK_CONTROL|VK_OPTION, KeyCode::KEY_9</autogen>
-      <autogen>--KeyToKey-- KeyCode::SLASH, VK_CONTROL|VK_OPTION, KeyCode::SLASH, ModifierFlag::OPTION_R</autogen>
-      <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_CONTROL|VK_OPTION, KeyCode::COMMA</autogen>
-      <autogen>--KeyToKey-- KeyCode::P, VK_CONTROL|VK_OPTION, KeyCode::N, ModifierFlag:: OPTION_R</autogen>
-      <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_CONTROL|VK_OPTION, KeyCode::MINUS</autogen>
-      <autogen>--KeyToKey-- KeyCode::QUOTE, VK_CONTROL|VK_OPTION, KeyCode::DOT</autogen>
-      <autogen>--KeyToKey-- KeyCode::N, VK_CONTROL|VK_OPTION, KeyCode::SEMICOLON, ModifierFlag::OPTION_R</autogen>
-      <autogen>--KeyToKey-- KeyCode::KEY_9, VK_CONTROL|VK_OPTION, KeyCode::S, ModifierFlag::OPTION_R</autogen>
-      <autogen>--KeyToKey-- KeyCode::KEY_0, VK_CONTROL|VK_OPTION, KeyCode::G, ModifierFlag::OPTION_R</autogen>
-      <autogen>--KeyToKey-- KeyCode::MINUS, VK_CONTROL|VK_OPTION, KeyCode::MINUS</autogen>
+    <item>
+      <name>Neo 2</name>
+      <appendix>Umsetzung der 4. und 6. Ebene. Um problembehaftete Kombinationen mit Control zu vermeiden,</appendix>
+      <appendix>werden Teile von Ebene 4 und 6 per Tottaste umgesetzt.</appendix>
+      <appendix>Ebene 6 ist jetzt über Mod3+Mod4 erreichbar.</appendix>
+      <appendix></appendix>
+      <appendix>Zusätzlich sollten folgende Funktionen unten akiviert werden.</appendix>
+      <appendix> • For German > NEO Keyboard Layout Fixes</appendix>
+      <appendix> • Change Option_R Key > Option_R to Command_R</appendix>
+      <appendix>Außerdem sollte Capslock zu Option umbelegt werden.</appendix>
+    </item>
+
+    <item>
+      <name>German Neo 2. Enthält:</name>
+      <appendix>• Mod4 und Mod4-Lock (durch Mod4_L+Mod4_R)</appendix>
+      <appendix>• Navigations- und Ziffernblock</appendix>
+      <appendix>• Umsetzung Ebene 4 und 6 per Tottaste</appendix>
+      <identifier>private.german_neo_mod4</identifier>
+
+      <!-- Mod 4 Modifiers and Mod 4 Locks -->
+      <autogen>--KeyOverlaidModifier-- KeyCode::COMMAND_R, ModifierFlag::EXTRA1, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::VK_LOCK_EXTRA1</autogen>
+      <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_EXTRA1</autogen>
+      <block>
+        <modifier_not>ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R</modifier_not>
+        <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, ModifierFlag::EXTRA1, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::VK_LOCK_EXTRA1</autogen>
+        <autogen>--KeyToKey-- KeyCode::GERMAN_LESS_THAN, KeyCode::VK_MODIFIER_EXTRA1</autogen>
+      </block>
+
+      <block>
+        <modifier_not>ModifierFlag::OPTION_L, ModifierFlag::OPTION_R</modifier_not>
+
+        <!-- Navigationsblock -->
+        <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT</autogen>
+        <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP</autogen>
+        <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::EXTRA1, KeyCode::DELETE</autogen>
+        <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::EXTRA1, KeyCode::FORWARD_DELETE</autogen>
+        <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::EXTRA1, KeyCode::ESCAPE</autogen>
+        <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::EXTRA1, KeyCode::TAB</autogen>
+        <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::EXTRA1, KeyCode::PAGEDOWN</autogen>
+        <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::EXTRA1, KeyCode::PAGEUP</autogen>
+        <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::EXTRA1, KeyCode::PC_INSERT</autogen>
+        <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::EXTRA1, KeyCode::RETURN</autogen>
+        <autogen>--KeyToKey-- KeyCode::B, ModifierFlag::EXTRA1, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
+
+        <!-- Num Block -->
+        <block>
+          <modifier_not>ModifierFlag::SHIFT_L, ModifierFlag::SHIFT_R</modifier_not>
+
+        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::EXTRA1, KeyCode::KEY_0</autogen>
+        <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::EXTRA1, KeyCode::KEY_1</autogen>
+        <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::EXTRA1, KeyCode::KEY_2</autogen>
+        <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::EXTRA1, KeyCode::KEY_3</autogen>
+        <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::EXTRA1, KeyCode::KEY_4</autogen>
+        <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::EXTRA1, KeyCode::KEY_5</autogen>
+        <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::EXTRA1, KeyCode::KEY_6</autogen>
+        <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::EXTRA1, KeyCode::KEY_7</autogen>
+        <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::EXTRA1, KeyCode::KEY_8</autogen>
+        <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::EXTRA1, KeyCode::KEY_9</autogen>
+        <autogen>--KeyToKey-- KeyCode::SLASH, ModifierFlag::EXTRA1, KeyCode::SLASH, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::EXTRA1, KeyCode::COMMA</autogen>
+        <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::EXTRA1, KeyCode::N, ModifierFlag:: OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA1, KeyCode::MINUS</autogen>
+        <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::EXTRA1, KeyCode::DOT</autogen>
+        <autogen>--KeyToKey-- KeyCode::N, ModifierFlag::EXTRA1, KeyCode::SEMICOLON, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_9, ModifierFlag::EXTRA1, KeyCode::S, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_0, ModifierFlag::EXTRA1, KeyCode::G, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::MINUS, ModifierFlag::EXTRA1, KeyCode::MINUS</autogen>
+        </block>
+        <block>
+        <!-- Pseudoebene -->
+        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_0</autogen>
+        <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_1</autogen>
+        <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_2</autogen>
+        <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_3</autogen>
+        <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_4</autogen>
+        <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_5</autogen>
+        <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_6</autogen>
+        <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_7</autogen>
+        <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_8</autogen>
+        <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::KEY_9</autogen>
+        <autogen>--KeyToKey-- KeyCode::SLASH, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::SLASH, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::COMMA</autogen>
+        <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::N, ModifierFlag:: OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::MINUS</autogen>
+        <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::DOT</autogen>
+        <autogen>--KeyToKey-- KeyCode::N, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::SEMICOLON, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_9, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::S, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_0, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::G, ModifierFlag::OPTION_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::MINUS, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::MINUS</autogen>
+        </block>
+      </block>
+
+      <!-- Umsetzung Ebene 4 und 6 per Tottaste -->
+
+      <!-- Ebene 4 -->
+      <block>
+        <modifier_not>ModifierFlag::OPTION_L, ModifierFlag::OPTION_R</modifier_not>
+
+        <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::H, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::Y, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::Y, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_1, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_1, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_2, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_2, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_3, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_3, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_5, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_5, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_6, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_6, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_7, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_7, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_8, ModifierFlag::EXTRA1|ModifierFlag::NONE, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_8, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_8, ModifierFlag::EXTRA1|VK_SHIFT, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_9, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::GERMAN_CIRCUMFLEX, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::GERMAN_CIRCUMFLEX, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::EQUAL, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::EQUAL, ModifierFlag::SHIFT_R</autogen>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_R</autogen>
+      </block>
+
+      <!-- Ebene 6 -->
+     <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::Q, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::W, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::E, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::R, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::T, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::Y, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::Y, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::U, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::I, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::O, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::P, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::A, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::S, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::D, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::F, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::G, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::H, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::J, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::K, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::L, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::SEMICOLON, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::QUOTE, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::X, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::C, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::V, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::B, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::B, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::N, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::N, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::M, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::COMMA, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::DOT, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::SLASH, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::SLASH, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_1, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_1, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_2, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_2, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_3, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_3, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_4, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_4, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_5, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_5, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_6, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_6, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_7, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_7, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_8, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_8, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_9, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_9, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::KEY_0, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::KEY_0, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::EQUAL, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::EQUAL, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::MINUS, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::MINUS, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::SPACE, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::GERMAN_CIRCUMFLEX, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::GERMAN_CIRCUMFLEX, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+      <autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
+    </item>
+
+    <item>
+      <name>Behalte Command_L + > als Tastenkombination zum Wechsel zwischen Programmfenstern</name>
+      <identifier>private.german_neo_keep_cmdl_germanlessthan</identifier>
+      <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, ModifierFlag::COMMAND_L, KeyCode::COMMAND_L, KeyCode::U, ModifierFlag::OPTION_R|ModifierFlag::COMMAND_L</autogen>
+    </item>
+
+    <item>
+      <name>Shift_L+Shift_R zu Capslock</name>
+      <identifier>private.german_neo_bothshift_to_capslock</identifier>
+      <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_R, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
+      <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_L, KeyCode::SHIFT_R, KeyCode::CAPSLOCK</autogen>
     </item>
 
   </list>

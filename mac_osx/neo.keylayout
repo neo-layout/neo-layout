@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 2.1.4 on 2011-03-02 at 01:45 (GMT+01:00)-->
-<keyboard group="0" id="5591" name="Deutsch (Neo 2)" maxout="2">
+<!--Last edited by Ukelele version 2.1.5 on 2011-04-02 at 13:11 (GMT+02:00)-->
+<keyboard group="0" id="14242" name="Deutsch (Neo 2)" maxout="2">
     <layouts>
         <layout first="0" last="0" modifiers="30" mapSet="138"/>
     </layouts>
@@ -28,10 +28,10 @@
             <modifier keys="anyShift? caps? anyOption? command anyControl?"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="7">
-            <modifier keys="anyShift? caps? anyControl"/>
+            <modifier keys="caps? anyOption? anyControl"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="8">
-            <modifier keys="anyShift? caps? anyOption anyControl"/>
+            <modifier keys="anyShift caps? anyOption? anyControl"/>
         </keyMapSelect>
     </modifierMap>
     <keyMapSet id="138">
@@ -78,7 +78,7 @@
             <key code="39" action="92"/>
             <key code="40" action="111"/>
             <key code="41" action="101"/>
-            <key code="42" action="6"/>
+            <key code="42" output=""/>
             <key code="43" action="100"/>
             <key code="44" action="106"/>
             <key code="45" action="98"/>
@@ -197,7 +197,7 @@
             <key code="47" action="132"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="73"/>
-            <key code="50" output="&#x001B;"/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -262,6 +262,7 @@
             <key code="16" action="37"/>
             <key code="17" output="W"/>
             <key code="18" output="!"/>
+            <key code="19" output="&#x0022;"/>
             <key code="20" output="§"/>
             <key code="21" output="$"/>
             <key code="22" output="&#x0026;"/>
@@ -292,10 +293,10 @@
             <key code="47" output=":"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="73"/>
-            <key code="50" output="&#x001B;"/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
-            <key code="53" output="&#x003E;"/>
+            <key code="53" output="&#x001B;"/>
             <key code="54" output="&#x0000;"/>
             <key code="55" output="&#x0000;"/>
             <key code="56" output="&#x0000;"/>
@@ -399,8 +400,8 @@
             <key code="46" output="%"/>
             <key code="47" output="&#x0027;"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
-            <key code="50" output="&#x001B;"/>
+            <key code="49" output=" "/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -446,54 +447,56 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="4">
-            <key code="0" output=""/>
-            <key code="1" output="ι"/>
-            <key code="2" output="α"/>
-            <key code="3" output="ε"/>
-            <key code="4" output="σ"/>
-            <key code="5" output="ο"/>
+            <key code="0" action="action"/>
+            <key code="1" action="ι"/>
+            <key code="2" action="α"/>
+            <key code="3" action="ε"/>
+            <key code="4" action="σ"/>
+            <key code="5" action="ο"/>
+            <key code="6" action="Ebene 4 und 6"/>
             <key code="7" action="74"/>
-            <key code="8" output="η"/>
-            <key code="9" output="π"/>
+            <key code="8" action="η"/>
+            <key code="9" action="π"/>
             <key code="10" action="59"/>
-            <key code="11" output="ζ"/>
-            <key code="12" output="ξ"/>
-            <key code="14" output="λ"/>
-            <key code="15" output="χ"/>
-            <key code="16" output="ϰ"/>
-            <key code="17" output="ω"/>
-            <key code="18" output="₁"/>
-            <key code="19" output="₂"/>
-            <key code="20" output="₃"/>
-            <key code="21" output="♀"/>
-            <key code="22" output="⚥"/>
-            <key code="23" output="♂"/>
+            <key code="11" action="ζ"/>
+            <key code="12" action="ξ"/>
+            <key code="13" output="√"/>
+            <key code="14" action="λ"/>
+            <key code="15" action="χ"/>
+            <key code="16" action="κ"/>
+            <key code="17" action="ω"/>
+            <key code="18" action="₁"/>
+            <key code="19" action="₂"/>
+            <key code="20" action="₃"/>
+            <key code="21" action="♀"/>
+            <key code="22" action="⚥"/>
+            <key code="23" action="♂"/>
             <key code="24" action="3"/>
-            <key code="25" output="⟩"/>
-            <key code="26" output="κ"/>
+            <key code="25" action="⟩"/>
+            <key code="26" action="ϰ"/>
             <key code="27" action="71"/>
-            <key code="28" output="⟨"/>
-            <key code="29" output="₀"/>
-            <key code="30" output="᾿"/>
-            <key code="31" output="9"/>
-            <key code="32" output="7"/>
-            <key code="33" output="ς"/>
-            <key code="34" output="8"/>
-            <key code="35" output="ϕ"/>
+            <key code="28" action="⟨"/>
+            <key code="29" action="₀"/>
+            <key code="30" action="᾿"/>
+            <key code="31" action="φ"/>
+            <key code="32" action="ψ"/>
+            <key code="33" action="ς"/>
+            <key code="34" action="γ"/>
+            <key code="35" action="ϕ"/>
             <key code="36" output="&#x000D;"/>
-            <key code="37" output="6"/>
-            <key code="38" output="4"/>
-            <key code="39" output="υ"/>
-            <key code="40" output="5"/>
-            <key code="41" output="δ"/>
-            <key code="43" output="2"/>
-            <key code="44" output="θ"/>
-            <key code="45" output="β"/>
-            <key code="46" output="1"/>
-            <key code="47" output="3"/>
+            <key code="37" action="τ"/>
+            <key code="38" action="ν"/>
+            <key code="39" action="υ"/>
+            <key code="40" action="ρ"/>
+            <key code="41" action="δ"/>
+            <key code="43" action="ϱ"/>
+            <key code="44" action="θ"/>
+            <key code="45" action="β"/>
+            <key code="46" action="μ"/>
+            <key code="47" action="ϑ"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output="0"/>
-            <key code="50" output="&#x001B;"/>
+            <key code="49" action=" "/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -558,6 +561,7 @@
             <key code="16" output="Κ"/>
             <key code="17" output="Ω"/>
             <key code="18" output="¹"/>
+            <key code="19" output="²"/>
             <key code="20" output="³"/>
             <key code="21" output="¼"/>
             <key code="22" output="¾"/>
@@ -580,7 +584,7 @@
             <key code="39" output="¥"/>
             <key code="40" output="™"/>
             <key code="41" output="Ð"/>
-            <key code="42" output="`"/>
+            <key code="42" output=""/>
             <key code="43" output="¸"/>
             <key code="44" output="∞"/>
             <key code="45" output="Β"/>
@@ -588,10 +592,10 @@
             <key code="47" action="58"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="&#x001B;"/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
-            <key code="53" output="»"/>
+            <key code="53" output="&#x001B;"/>
             <key code="64" output="&#x0010;"/>
             <key code="66" output="&#x001D;"/>
             <key code="70" output="&#x001C;"/>
@@ -683,10 +687,10 @@
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="73"/>
-            <key code="50" output="&#x001B;"/>
+            <key code="50" output=""/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
-            <key code="53" output="`"/>
+            <key code="53" output="&#x001B;"/>
             <key code="64" output="&#x0010;"/>
             <key code="65" output="."/>
             <key code="66" output="&#x001D;"/>
@@ -745,62 +749,62 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="7">
-            <key code="0" output="⊂"/>
-            <key code="1" output="∫"/>
-            <key code="2" output="∀"/>
-            <key code="3" output="∃"/>
-            <key code="4" output="Σ"/>
-            <key code="5" output="∈"/>
-            <key code="6" output="∪"/>
-            <key code="7" output="∩"/>
-            <key code="8" output="ℵ"/>
-            <key code="9" output="ℵ"/>
-            <key code="10" output="¯"/>
-            <key code="11" output="ℤ"/>
-            <key code="12" output="Ξ"/>
-            <key code="13" output="√"/>
-            <key code="14" output="Λ"/>
-            <key code="15" output="ℂ"/>
-            <key code="16" output="×"/>
-            <key code="17" output="Ω"/>
-            <key code="18" output="¬"/>
-            <key code="19" output="∨"/>
-            <key code="20" output="∧"/>
-            <key code="21" output="⊥"/>
-            <key code="22" output="∥"/>
-            <key code="23" output="∡"/>
-            <key code="24" output="˞"/>
-            <key code="25" output="∝"/>
-            <key code="26" output="→"/>
-            <key code="27" output="╌"/>
-            <key code="28" output="∞"/>
-            <key code="29" output="∅"/>
-            <key code="30" output="˙"/>
-            <key code="31" output="Φ"/>
-            <key code="32" output="Ψ"/>
-            <key code="33" output="∘"/>
-            <key code="34" output="Γ"/>
-            <key code="35" output="ℚ"/>
+            <key code="0" output="&#x0001;"/>
+            <key code="1" output="&#x0013;"/>
+            <key code="2" output="&#x0004;"/>
+            <key code="3" output="&#x0006;"/>
+            <key code="4" output="&#x0008;"/>
+            <key code="5" output="&#x0007;"/>
+            <key code="6" output="&#x0019;"/>
+            <key code="7" output="&#x0018;"/>
+            <key code="8" output="&#x0003;"/>
+            <key code="9" output="&#x0016;"/>
+            <key code="10" output="&#x001E;"/>
+            <key code="11" output="&#x0002;"/>
+            <key code="12" output="&#x0011;"/>
+            <key code="13" output="&#x0017;"/>
+            <key code="14" output="&#x0005;"/>
+            <key code="15" output="&#x0012;"/>
+            <key code="16" output="&#x001A;"/>
+            <key code="17" output="&#x0014;"/>
+            <key code="18" output="1"/>
+            <key code="19" output="2"/>
+            <key code="20" output="3"/>
+            <key code="21" output="4"/>
+            <key code="22" output="6"/>
+            <key code="23" output="5"/>
+            <key code="24" output="´"/>
+            <key code="25" output="9"/>
+            <key code="26" output="7"/>
+            <key code="27" output="ß"/>
+            <key code="28" output="8"/>
+            <key code="29" output="0"/>
+            <key code="30" output="+"/>
+            <key code="31" output="&#x000F;"/>
+            <key code="32" output="&#x0015;"/>
+            <key code="33" output="&#x001D;"/>
+            <key code="34" output="&#x0009;"/>
+            <key code="35" output="&#x0010;"/>
             <key code="36" output="&#x000D;"/>
-            <key code="37" output="∂"/>
-            <key code="38" output="ℕ"/>
-            <key code="39" action="72"/>
-            <key code="40" output="ℝ"/>
-            <key code="41" output="Δ"/>
-            <key code="42" output="&#x001C;"/>
-            <key code="43" output="⇒"/>
-            <key code="44" output="↦"/>
-            <key code="45" output="⇐"/>
-            <key code="46" output="⇔"/>
-            <key code="47" output="Θ"/>
+            <key code="37" output="&#x000C;"/>
+            <key code="38" output="&#x000A;"/>
+            <key code="39" output="&#x001B;"/>
+            <key code="40" output="&#x000B;"/>
+            <key code="41" output="&#x001C;"/>
+            <key code="42" output="#"/>
+            <key code="43" output=","/>
+            <key code="44" output="-"/>
+            <key code="45" output="&#x000E;"/>
+            <key code="46" output="&#x000D;"/>
+            <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="73"/>
-            <key code="50" output="&#x001B;"/>
+            <key code="49" action="5"/>
+            <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
-            <key code="53" output="`"/>
+            <key code="53" output="&#x001B;"/>
             <key code="64" output="&#x0010;"/>
-            <key code="65" output="."/>
+            <key code="65" output=","/>
             <key code="66" output="&#x001D;"/>
             <key code="67" output="*"/>
             <key code="69" output="+"/>
@@ -830,9 +834,9 @@
             <key code="99" output="&#x0010;"/>
             <key code="100" output="&#x0010;"/>
             <key code="101" output="&#x0010;"/>
-            <key code="102" action="73"/>
+            <key code="102" output="&#x0010;"/>
             <key code="103" output="&#x0010;"/>
-            <key code="104" action="73"/>
+            <key code="104" output="&#x0010;"/>
             <key code="105" output="&#x0010;"/>
             <key code="106" output="&#x0010;"/>
             <key code="107" output="&#x0010;"/>
@@ -857,60 +861,102 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="8">
-            <key code="0" output=""/>
-            <key code="4" output="¿"/>
-            <key code="16" output="¡"/>
-            <key code="18" output="ª"/>
-            <key code="19" output="º"/>
-            <key code="20" output="№"/>
-            <key code="22" output="£"/>
-            <key code="23" output="·"/>
-            <key code="25" output="/"/>
-            <key code="26" output="¤"/>
-            <key code="27" output="-"/>
-            <key code="28" output="⇥"/>
-            <key code="29" output="*"/>
-            <key code="31" output="9"/>
-            <key code="32" output="7"/>
-            <key code="33" output="−"/>
-            <key code="34" output="8"/>
-            <key code="35" output="+"/>
+            <key code="0" output="&#x0001;"/>
+            <key code="1" output="&#x0013;"/>
+            <key code="2" output="&#x0004;"/>
+            <key code="3" output="&#x0006;"/>
+            <key code="4" output="&#x0008;"/>
+            <key code="5" output="&#x0007;"/>
+            <key code="6" output="&#x0019;"/>
+            <key code="7" output="&#x0018;"/>
+            <key code="8" output="&#x0003;"/>
+            <key code="9" output="&#x0016;"/>
+            <key code="10" output="°"/>
+            <key code="11" output="&#x0002;"/>
+            <key code="12" output="&#x0011;"/>
+            <key code="13" output="&#x0017;"/>
+            <key code="14" output="&#x0005;"/>
+            <key code="15" output="&#x0012;"/>
+            <key code="16" output="&#x001A;"/>
+            <key code="17" output="&#x0014;"/>
+            <key code="18" output="!"/>
+            <key code="19" output="&#x0022;"/>
+            <key code="20" output="§"/>
+            <key code="21" output="$"/>
+            <key code="22" output="&#x0026;"/>
+            <key code="23" output="%"/>
+            <key code="24" output="`"/>
+            <key code="25" output=")"/>
+            <key code="26" output="/"/>
+            <key code="27" output="?"/>
+            <key code="28" output="("/>
+            <key code="29" output="="/>
+            <key code="30" output="*"/>
+            <key code="31" output="&#x000F;"/>
+            <key code="32" output="&#x0015;"/>
+            <key code="33" output="&#x001D;"/>
+            <key code="34" output="&#x0009;"/>
+            <key code="35" output="&#x0010;"/>
             <key code="36" output="&#x000D;"/>
-            <key code="37" output="6"/>
-            <key code="38" output="4"/>
-            <key code="39" output="."/>
-            <key code="40" output="5"/>
-            <key code="41" output=","/>
-            <key code="43" output="2"/>
-            <key code="44" output=";"/>
-            <key code="45" output=":"/>
-            <key code="46" output="1"/>
-            <key code="47" output="3"/>
+            <key code="37" output="&#x000C;"/>
+            <key code="38" output="&#x000A;"/>
+            <key code="39" output="&#x001B;"/>
+            <key code="40" output="&#x000B;"/>
+            <key code="41" output="&#x001C;"/>
+            <key code="42" output="&#x001E;"/>
+            <key code="43" output=";"/>
+            <key code="44" output="&#x001F;"/>
+            <key code="45" output="&#x000E;"/>
+            <key code="46" output="&#x000D;"/>
+            <key code="47" output=":"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output="0"/>
+            <key code="49" action="5"/>
+            <key code="50" output="&#x003E;"/>
             <key code="51" output="&#x0008;"/>
+            <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
             <key code="64" output="&#x0010;"/>
-            <key code="66" output="&#x001D;"/>
-            <key code="70" output="&#x001C;"/>
+            <key code="65" output=","/>
+            <key code="66" output="*"/>
+            <key code="67" output="*"/>
+            <key code="69" output="+"/>
+            <key code="70" output="+"/>
             <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
+            <key code="72" output="="/>
+            <key code="75" output="/"/>
             <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
+            <key code="77" output="/"/>
+            <key code="78" output="-"/>
             <key code="79" output="&#x0010;"/>
             <key code="80" output="&#x0010;"/>
+            <key code="81" output="="/>
+            <key code="82" output="0"/>
+            <key code="83" output="1"/>
+            <key code="84" output="2"/>
+            <key code="85" output="3"/>
+            <key code="86" output="4"/>
+            <key code="87" output="5"/>
+            <key code="88" output="6"/>
+            <key code="89" output="7"/>
+            <key code="91" output="8"/>
+            <key code="92" output="9"/>
             <key code="96" output="&#x0010;"/>
             <key code="97" output="&#x0010;"/>
             <key code="98" output="&#x0010;"/>
             <key code="99" output="&#x0010;"/>
             <key code="100" output="&#x0010;"/>
             <key code="101" output="&#x0010;"/>
+            <key code="102" output="&#x0010;"/>
             <key code="103" output="&#x0010;"/>
+            <key code="104" output="&#x0010;"/>
             <key code="105" output="&#x0010;"/>
             <key code="106" output="&#x0010;"/>
             <key code="107" output="&#x0010;"/>
+            <key code="108" output="&#x0010;"/>
             <key code="109" output="&#x0010;"/>
+            <key code="110" output="&#x0010;"/>
             <key code="111" output="&#x0010;"/>
+            <key code="112" output="&#x0010;"/>
             <key code="113" output="&#x0010;"/>
             <key code="114" output="&#x0005;"/>
             <key code="115" output="&#x0001;"/>
@@ -929,853 +975,1186 @@
     </keyMapSet>
     <actions>
         <action id="0">
-            <when state="none" next="State 12"/>
-            <when state="State 8" next="State 16"/>
+            <when state="none" next="Ebene 1 T2 Gravis"/>
         </action>
         <action id="1">
-            <when state="none" next="State 16"/>
+            <when state="none" next="Ebene 3 T2 Ring"/>
         </action>
         <action id="2">
-            <when state="none" next="State 5"/>
+            <when state="none" next="Ebene 3 T3 Schrägstrich"/>
         </action>
         <action id="3">
-            <when state="none" next="State 17"/>
-        </action>
-        <action id="4">
-            <when state="none" next="State 8"/>
+            <when state="none" next="Ebene 5 T2 Spiritus asper"/>
+            <when state="Ebene 4 und 6" next="Ebene 6 T2 Macron"/>
         </action>
         <action id="5">
             <when state="none" output=""/>
-            <when state="State 8" next="State 11"/>
-        </action>
-        <action id="6">
-            <when state="none" next="State 8"/>
         </action>
         <action id="7">
-            <when state="none" output=""/>
-            <when state="State 8" output="῾"/>
+            <when state="none" next="Ebene 2 T2 Cedille"/>
+            <when state="Ebene 4 und 6" next="Ebene 4 T2 Trema Diaeresis"/>
         </action>
         <action id="8">
             <when state="none" output="$"/>
-            <when state="State 8" output="⚥"/>
+            <when state="Ebene 4 und 6" output="£"/>
         </action>
         <action id="9">
             <when state="none" output="Ä"/>
-            <when state="State 8" output="η"/>
+            <when state="Ebene 5 Spiritus lenis" output="Ἠ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ἡ"/>
         </action>
         <action id="10">
             <when state="none" output="Ü"/>
-            <when state="State 2" output="Ǚ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǚ"/>
         </action>
         <action id="11">
             <when state="none" output="ß"/>
-            <when state="State 8" output="ſ"/>
         </action>
         <action id="12">
             <when state="none" output="ä"/>
-            <when state="State 16" output="ä"/>
-            <when state="State 8" output="|"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ä"/>
+            <when state="Ebene 5 Spiritus lenis" output="ἠ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ἡ"/>
         </action>
         <action id="13">
             <when state="none" output="-"/>
-            <when state="State 8" output=""/>
         </action>
         <action id="14">
             <when state="none" output="0"/>
-            <when state="State 8" output="’"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁰"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₀"/>
         </action>
         <action id="15">
             <when state="none" output="1"/>
-            <when state="State 8" output="¹"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="¹"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₁"/>
         </action>
         <action id="16">
             <when state="none" output="2"/>
-            <when state="State 8" output="²"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="²"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₂"/>
         </action>
         <action id="17">
             <when state="none" output="3"/>
-            <when state="State 8" output="³"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="³"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₃"/>
         </action>
         <action id="18">
             <when state="none" output="4"/>
-            <when state="State 8" output="›"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁴"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₄"/>
         </action>
         <action id="19">
             <when state="none" output="5"/>
-            <when state="State 8" output="‹"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁵"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₅"/>
         </action>
         <action id="20">
             <when state="none" output="6"/>
-            <when state="State 8" output="¢"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁶"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₆"/>
         </action>
         <action id="21">
             <when state="none" output="7"/>
-            <when state="State 8" output="¥"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁷"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₇"/>
         </action>
         <action id="22">
             <when state="none" output="8"/>
-            <when state="State 8" output="‚"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁸"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₈"/>
         </action>
         <action id="23">
             <when state="none" output="9"/>
-            <when state="State 8" output="‘"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="⁹"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="₉"/>
         </action>
         <action id="24">
             <when state="none" output="B"/>
-            <when state="State 8" output="β"/>
+            <when state="Ebene 3 T1 Drehen" output="&#x10412;"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ḃ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɓ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ḅ"/>
+            <when state="Ebene 6 T2 Macron" output="Ḇ"/>
         </action>
         <action id="25">
             <when state="none" output="C"/>
-            <when state="State 10" output="Ĉ"/>
-            <when state="State 2" output="Č"/>
-            <when state="State 8" output="χ"/>
-            <when state="State 9" output="Ç"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ĉ"/>
+            <when state="Ebene 1 T3 Akut" output="Ć"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Č"/>
+            <when state="Ebene 2 T2 Cedille" output="Ç"/>
+            <when state="Ebene 3 T1 Drehen" output="Ↄ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ċ"/>
+            <when state="Ebene 5 T1 Haken" output="Ƈ"/>
         </action>
         <action id="26">
             <when state="none" output="C"/>
-            <when state="State 2" output="Č"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Č"/>
         </action>
         <action id="27">
             <when state="none" output="D"/>
-            <when state="State 2" output="Ď"/>
-            <when state="State 8" output="δ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ď"/>
+            <when state="Ebene 2 T2 Cedille" output="Ḑ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Đ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ḋ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɗ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ḍ"/>
+            <when state="Ebene 6 T2 Macron" output="Ḏ"/>
         </action>
         <action id="28">
             <when state="none" output="D"/>
-            <when state="State 2" output="Ď"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ď"/>
         </action>
         <action id="29">
             <when state="none" output="F"/>
-            <when state="State 8" output="9"/>
+            <when state="Ebene 3 T1 Drehen" output="Ⅎ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ḟ"/>
+            <when state="Ebene 5 T1 Haken" output="Ƒ"/>
         </action>
         <action id="30">
             <when state="none" output="G"/>
-            <when state="State 10" output="Ĝ"/>
-            <when state="State 2" output="Ǧ"/>
-            <when state="State 7" output="Ğ"/>
-            <when state="State 8" output="8"/>
-            <when state="State 9" output="Ģ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ĝ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǧ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ģ"/>
+            <when state="Ebene 3 T1 Drehen" output="⅁"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ǥ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ġ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɠ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ġ"/>
+            <when state="Ebene 6 T2 Macron" output="Ḡ"/>
+            <when state="Ebene 6 T3 Breve" output="Ğ"/>
         </action>
         <action id="31">
             <when state="none" output="G"/>
-            <when state="State 2" output="Ǧ"/>
-            <when state="State 7" output="Ğ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǧ"/>
+            <when state="Ebene 6 T3 Breve" output="Ğ"/>
         </action>
         <action id="32">
             <when state="none" output="H"/>
-            <when state="State 10" output="Ĥ"/>
-            <when state="State 16" output="Ḧ"/>
-            <when state="State 2" output="Ȟ"/>
-            <when state="State 7" output="Ḫ"/>
-            <when state="State 8" output="7"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ĥ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ȟ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ḩ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ħ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ḣ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ḧ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ḥ"/>
+            <when state="Ebene 6 T3 Breve" output="Ḫ"/>
         </action>
         <action id="33">
             <when state="none" output="H"/>
-            <when state="State 2" output="Ȟ"/>
-            <when state="State 7" output="Ḫ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ȟ"/>
+            <when state="Ebene 6 T3 Breve" output="Ḫ"/>
         </action>
         <action id="34">
             <when state="none" output="J"/>
-            <when state="State 10" output="Ĵ"/>
-            <when state="State 2" output="J̌"/>
-            <when state="State 8" output="θ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ĵ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="J̌"/>
+            <when state="Ebene 3 T1 Drehen" output="ſ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ɟ"/>
         </action>
         <action id="35">
             <when state="none" output="J"/>
-            <when state="State 2" output="J̌"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="J̌"/>
         </action>
         <action id="36">
             <when state="none" output="K"/>
-            <when state="State 2" output="Ǩ"/>
-            <when state="State 8" output="ϰ"/>
-            <when state="State 9" output="Ķ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǩ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ķ"/>
+            <when state="Ebene 4 und 6" output="¡"/>
+            <when state="Ebene 5 T1 Haken" output="Ƙ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ḳ"/>
+            <when state="Ebene 6 T2 Macron" output="Ḵ"/>
         </action>
         <action id="37">
             <when state="none" output="K"/>
-            <when state="State 2" output="Ǩ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǩ"/>
         </action>
         <action id="38">
             <when state="none" output="M"/>
-            <when state="State 8" output="1"/>
+            <when state="Ebene 3 T1 Drehen" output="W"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ṁ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɱ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ṃ"/>
         </action>
         <action id="39">
             <when state="none" output="P"/>
-            <when state="State 8" output="π"/>
+            <when state="Ebene 3 T1 Drehen" output="Ԁ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ṗ"/>
+            <when state="Ebene 5 T1 Haken" output="Ƥ"/>
         </action>
         <action id="40">
             <when state="none" output="Q"/>
-            <when state="State 8" output="ϕ"/>
         </action>
         <action id="41">
             <when state="none" output="R"/>
-            <when state="State 2" output="Ř"/>
-            <when state="State 8" output="5"/>
-            <when state="State 9" output="Ŗ"/>
+            <when state="Ebene 1 T3 Akut" output="Ŕ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ř"/>
+            <when state="Ebene 2 T2 Cedille" output="Ŗ"/>
+            <when state="Ebene 3 T1 Drehen" output="ᴚ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ṙ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɽ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ῥ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ṛ"/>
+            <when state="Ebene 6 T2 Macron" output="Ṟ"/>
         </action>
         <action id="42">
             <when state="none" output="R"/>
-            <when state="State 2" output="Ř"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ř"/>
         </action>
         <action id="43">
             <when state="none" output="S"/>
-            <when state="State 10" output="Ŝ"/>
-            <when state="State 2" output="Š"/>
-            <when state="State 8" output="σ"/>
-            <when state="State 9" output="Ş"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ŝ"/>
+            <when state="Ebene 1 T3 Akut" output="Ś"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Š"/>
+            <when state="Ebene 2 T2 Cedille" output="Ş"/>
+            <when state="Ebene 3 T1 Drehen" output="Ƨ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ṡ"/>
+            <when state="Ebene 4 und 6" output="¿"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ṣ"/>
         </action>
         <action id="44">
             <when state="none" output="S"/>
-            <when state="State 2" output="Š"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Š"/>
         </action>
         <action id="45">
             <when state="none" output="T"/>
-            <when state="State 2" output="Ť"/>
-            <when state="State 8" output="6"/>
-            <when state="State 9" output="Ţ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ť"/>
+            <when state="Ebene 2 T2 Cedille" output="Ţ"/>
+            <when state="Ebene 3 T1 Drehen" output="⊥"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ŧ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ṫ"/>
+            <when state="Ebene 5 T1 Haken" output="Ƭ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ṭ"/>
+            <when state="Ebene 6 T2 Macron" output="Ṯ"/>
         </action>
         <action id="46">
             <when state="none" output="T"/>
-            <when state="State 2" output="Ť"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ť"/>
         </action>
         <action id="47">
             <when state="none" output="V"/>
-            <when state="State 3" output="Ṽ"/>
+            <when state="Ebene 2 T3 Tilde" output="Ṽ"/>
+            <when state="Ebene 3 T1 Drehen" output="Ʌ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ṿ"/>
         </action>
         <action id="48">
             <when state="none" output="W"/>
-            <when state="State 10" output="Ŵ"/>
-            <when state="State 12" output="Ẁ"/>
-            <when state="State 16" output="Ẅ"/>
-            <when state="State 4" output="W̊"/>
-            <when state="State 8" output="ω"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ŵ"/>
+            <when state="Ebene 1 T2 Gravis" output="Ẁ"/>
+            <when state="Ebene 3 T1 Drehen" output="M"/>
+            <when state="Ebene 3 T2 Ring" output="W̊"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ẇ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ẅ"/>
+            <when state="Ebene 5 Spiritus lenis" output="Ὠ"/>
+            <when state="Ebene 5 T1 Haken" output="Ⱳ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ὡ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ẉ"/>
         </action>
         <action id="49">
             <when state="none" output="X"/>
-            <when state="State 16" output="Ẍ"/>
-            <when state="State 2" output="Ǯ"/>
-            <when state="State 8" output="ξ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǯ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ẋ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ẍ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɣ"/>
         </action>
         <action id="50">
             <when state="none" output="X"/>
-            <when state="State 2" output="Ǯ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǯ"/>
         </action>
         <action id="51">
-            <when state="none" next="State 3"/>
-            <when state="State 8" next="State 7"/>
-        </action>
-        <action id="52">
-            <when state="none" next="State 6"/>
-        </action>
-        <action id="53">
-            <when state="none" next="State 13"/>
+            <when state="none" next="Ebene 2 T1 Caron Hatschek"/>
+            <when state="Ebene 4 und 6" next="Ebene 4 T1 Punkt darüber"/>
         </action>
         <action id="54">
-            <when state="none" next="State 14"/>
-            <when state="State 8" next="State 5"/>
-        </action>
-        <action id="55">
-            <when state="none" next="State 10"/>
-            <when state="State 8" next="State 7"/>
+            <when state="none" next="Ebene 1 T3 Akut"/>
         </action>
         <action id="56">
-            <when state="none" next="State 1"/>
+            <when state="none" next="Ebene 5 Spiritus lenis"/>
         </action>
         <action id="57">
-            <when state="none" next="State 7"/>
+            <when state="none" next="Ebene 6 T3 Breve"/>
         </action>
         <action id="58">
-            <when state="none" next="State 15"/>
+            <when state="none" next="Ebene 4 T1 Punkt darüber"/>
         </action>
         <action id="59">
-            <when state="none" next="State 2"/>
+            <when state="none" next="Ebene 5 T1 Haken"/>
+            <when state="Ebene 4 und 6" next="Ebene 6 T1 Punkt darunter"/>
         </action>
         <action id="60">
-            <when state="none" next="State 9"/>
-            <when state="State 8" output="᾿"/>
+            <when state="none" next="Ebene 2 T3 Tilde"/>
+            <when state="Ebene 4 und 6" next="Ebene 4 T3 Doppelakut"/>
         </action>
         <action id="61">
             <when state="none" output="u"/>
-            <when state="State 1" output="á"/>
-            <when state="State 10" output="â"/>
-            <when state="State 12" output="à"/>
-            <when state="State 13" output="ã"/>
-            <when state="State 14" output="á"/>
-            <when state="State 15" output="ạ"/>
-            <when state="State 16" output="ä"/>
-            <when state="State 2" output="å"/>
-            <when state="State 3" output="ã"/>
-            <when state="State 4" output="å"/>
-            <when state="State 6" output="ä"/>
-            <when state="State 7" output="â"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="â"/>
+            <when state="Ebene 1 T2 Gravis" output="à"/>
+            <when state="Ebene 1 T3 Akut" output="á"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="å"/>
+            <when state="Ebene 2 T3 Tilde" output="ã"/>
+            <when state="Ebene 3 T2 Ring" output="å"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ạ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ä"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ä"/>
+            <when state="Ebene 5 Spiritus lenis" output="á"/>
+            <when state="Ebene 5 T1 Haken" output="ã"/>
+            <when state="Ebene 6 T3 Breve" output="â"/>
         </action>
         <action id="62">
             <when state="none" output="o"/>
-            <when state="State 1" output="ó"/>
-            <when state="State 10" output="ô"/>
-            <when state="State 12" output="ò"/>
-            <when state="State 13" output="õ"/>
-            <when state="State 14" output="ó"/>
-            <when state="State 15" output="ọ"/>
-            <when state="State 16" output="ö"/>
-            <when state="State 2" output="ǒ"/>
-            <when state="State 3" output="õ"/>
-            <when state="State 4" output="o̊"/>
-            <when state="State 6" output="ö"/>
-            <when state="State 7" output="ŏ"/>
-            <when state="State 8" output="*"/>
-        </action>
-        <action id="63">
-            <when state="none" output="u"/>
-            <when state="State 1" output="ú"/>
-            <when state="State 10" output="û"/>
-            <when state="State 12" output="ù"/>
-            <when state="State 14" output="ú"/>
-            <when state="State 16" output="ü"/>
-            <when state="State 2" output="ů"/>
-            <when state="State 3" output="ũ"/>
-            <when state="State 4" output="ů"/>
-            <when state="State 6" output="ü"/>
-            <when state="State 7" output="û"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ô"/>
+            <when state="Ebene 1 T2 Gravis" output="ò"/>
+            <when state="Ebene 1 T3 Akut" output="ó"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǒ"/>
+            <when state="Ebene 2 T2 Cedille" output="ǫ"/>
+            <when state="Ebene 2 T3 Tilde" output="õ"/>
+            <when state="Ebene 3 T2 Ring" output="o̊"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ø"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ȯ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ö"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ő"/>
+            <when state="Ebene 5 Spiritus lenis" output="ὀ"/>
+            <when state="Ebene 5 T1 Haken" output="ơ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ὁ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ọ"/>
+            <when state="Ebene 6 T2 Macron" output="ō"/>
+            <when state="Ebene 6 T3 Breve" output="ŏ"/>
         </action>
         <action id="64">
             <when state="none" output="A"/>
-            <when state="State 1" output="Á"/>
-            <when state="State 10" output="Â"/>
-            <when state="State 12" output="À"/>
-            <when state="State 13" output="Ã"/>
-            <when state="State 14" output="Á"/>
-            <when state="State 15" output="Ạ"/>
-            <when state="State 16" output="Ä"/>
-            <when state="State 2" output="Ǎ"/>
-            <when state="State 3" output="Ã"/>
-            <when state="State 4" output="Å"/>
-            <when state="State 6" output="Ä"/>
-            <when state="State 7" output="Ă"/>
-            <when state="State 8" output="α"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Â"/>
+            <when state="Ebene 1 T2 Gravis" output="À"/>
+            <when state="Ebene 1 T3 Akut" output="Á"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǎ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ą"/>
+            <when state="Ebene 2 T3 Tilde" output="Ã"/>
+            <when state="Ebene 3 T1 Drehen" output="∀"/>
+            <when state="Ebene 3 T2 Ring" output="Å"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ȧ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ä"/>
+            <when state="Ebene 5 Spiritus lenis" output="Ἀ"/>
+            <when state="Ebene 5 T1 Haken" output="Ả"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ἁ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ạ"/>
+            <when state="Ebene 6 T2 Macron" output="Ā"/>
+            <when state="Ebene 6 T3 Breve" output="Ă"/>
         </action>
         <action id="65">
             <when state="none" output="O"/>
-            <when state="State 1" output="Ó"/>
-            <when state="State 10" output="Ô"/>
-            <when state="State 12" output="Ò"/>
-            <when state="State 13" output="Õ"/>
-            <when state="State 14" output="Ó"/>
-            <when state="State 15" output="Ọ"/>
-            <when state="State 16" output="Ö"/>
-            <when state="State 2" output="Ǒ"/>
-            <when state="State 3" output="Õ"/>
-            <when state="State 4" output="O̊"/>
-            <when state="State 6" output="Ö"/>
-            <when state="State 7" output="Ŏ"/>
-            <when state="State 8" output="ο"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ô"/>
+            <when state="Ebene 1 T2 Gravis" output="Ò"/>
+            <when state="Ebene 1 T3 Akut" output="Ó"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǒ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ǫ"/>
+            <when state="Ebene 2 T3 Tilde" output="Õ"/>
+            <when state="Ebene 3 T2 Ring" output="O̊"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ø"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ȯ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ö"/>
+            <when state="Ebene 4 T3 Doppelakut" output="Ő"/>
+            <when state="Ebene 5 Spiritus lenis" output="Ὀ"/>
+            <when state="Ebene 5 T1 Haken" output="Ơ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ὁ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ọ"/>
+            <when state="Ebene 6 T2 Macron" output="Ō"/>
+            <when state="Ebene 6 T3 Breve" output="Ŏ"/>
         </action>
         <action id="66">
             <when state="none" output="U"/>
-            <when state="State 1" output="Ú"/>
-            <when state="State 10" output="Û"/>
-            <when state="State 12" output="Ù"/>
-            <when state="State 14" output="Ú"/>
-            <when state="State 16" output="Ü"/>
-            <when state="State 2" output="Ǔ"/>
-            <when state="State 3" output="Ũ"/>
-            <when state="State 4" output="Ů"/>
-            <when state="State 6" output="Ü"/>
-            <when state="State 7" output="Ŭ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Û"/>
+            <when state="Ebene 1 T2 Gravis" output="Ù"/>
+            <when state="Ebene 1 T3 Akut" output="Ú"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǔ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ų"/>
+            <when state="Ebene 2 T3 Tilde" output="Ũ"/>
+            <when state="Ebene 3 T1 Drehen" output="∩"/>
+            <when state="Ebene 3 T2 Ring" output="Ů"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ʉ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ü"/>
+            <when state="Ebene 4 T3 Doppelakut" output="Ű"/>
+            <when state="Ebene 5 T1 Haken" output="Ư"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ụ"/>
+            <when state="Ebene 6 T2 Macron" output="Ū"/>
+            <when state="Ebene 6 T3 Breve" output="Ŭ"/>
         </action>
         <action id="67">
             <when state="none" output="i"/>
-            <when state="State 1" output="í"/>
-            <when state="State 10" output="î"/>
-            <when state="State 12" output="ì"/>
-            <when state="State 14" output="í"/>
-            <when state="State 16" output="ï"/>
-            <when state="State 2" output="ǐ"/>
-            <when state="State 3" output="ĩ"/>
-            <when state="State 6" output="ï"/>
-            <when state="State 7" output="ĭ"/>
-            <when state="State 8" output="/"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="î"/>
+            <when state="Ebene 1 T2 Gravis" output="ì"/>
+            <when state="Ebene 1 T3 Akut" output="í"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǐ"/>
+            <when state="Ebene 2 T2 Cedille" output="į"/>
+            <when state="Ebene 2 T3 Tilde" output="ĩ"/>
+            <when state="Ebene 3 T1 Drehen" output="ı"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ɨ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ı"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ï"/>
+            <when state="Ebene 5 Spiritus lenis" output="ἰ"/>
+            <when state="Ebene 5 T1 Haken" output="ɩ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ἱ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ị"/>
+            <when state="Ebene 6 T2 Macron" output="ī"/>
+            <when state="Ebene 6 T3 Breve" output="ĭ"/>
         </action>
         <action id="68">
             <when state="none" output="I"/>
-            <when state="State 1" output="Í"/>
-            <when state="State 10" output="Î"/>
-            <when state="State 12" output="Ì"/>
-            <when state="State 14" output="Í"/>
-            <when state="State 15" output="İ"/>
-            <when state="State 16" output="Ï"/>
-            <when state="State 2" output="Ǐ"/>
-            <when state="State 3" output="Ĩ"/>
-            <when state="State 6" output="Ï"/>
-            <when state="State 7" output="Ĭ"/>
-            <when state="State 8" output="ι"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Î"/>
+            <when state="Ebene 1 T2 Gravis" output="Ì"/>
+            <when state="Ebene 1 T3 Akut" output="Í"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǐ"/>
+            <when state="Ebene 2 T2 Cedille" output="Į"/>
+            <when state="Ebene 2 T3 Tilde" output="Ĩ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ɨ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="İ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ï"/>
+            <when state="Ebene 5 Spiritus lenis" output="Ἰ"/>
+            <when state="Ebene 5 T1 Haken" output="Ɩ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ἱ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ị"/>
+            <when state="Ebene 6 T2 Macron" output="Ī"/>
+            <when state="Ebene 6 T3 Breve" output="Ĭ"/>
         </action>
         <action id="69">
             <when state="none" output="e"/>
-            <when state="State 1" output="é"/>
-            <when state="State 10" output="ê"/>
-            <when state="State 12" output="è"/>
-            <when state="State 14" output="é"/>
-            <when state="State 15" output="ė"/>
-            <when state="State 16" output="ë"/>
-            <when state="State 2" output="ě"/>
-            <when state="State 3" output="ẽ"/>
-            <when state="State 4" output="e̊"/>
-            <when state="State 6" output="ë"/>
-            <when state="State 7" output="ĕ"/>
-            <when state="State 8" output="}"/>
-            <when state="State 9" output="ȩ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ê"/>
+            <when state="Ebene 1 T2 Gravis" output="è"/>
+            <when state="Ebene 1 T3 Akut" output="é"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ě"/>
+            <when state="Ebene 2 T2 Cedille" output="ȩ"/>
+            <when state="Ebene 2 T3 Tilde" output="ẽ"/>
+            <when state="Ebene 3 T1 Drehen" output="ǝ"/>
+            <when state="Ebene 3 T2 Ring" output="e̊"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ė"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ë"/>
+            <when state="Ebene 4 T3 Doppelakut" output="e̋"/>
+            <when state="Ebene 5 Spiritus lenis" output="ἐ"/>
+            <when state="Ebene 5 T1 Haken" output="ẻ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ἑ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ẹ"/>
+            <when state="Ebene 6 T2 Macron" output="ē"/>
+            <when state="Ebene 6 T3 Breve" output="ĕ"/>
         </action>
         <action id="70">
             <when state="none" output="E"/>
-            <when state="State 1" output="É"/>
-            <when state="State 10" output="Ê"/>
-            <when state="State 12" output="È"/>
-            <when state="State 14" output="É"/>
-            <when state="State 15" output="Ė"/>
-            <when state="State 16" output="Ë"/>
-            <when state="State 2" output="Ě"/>
-            <when state="State 3" output="Ẽ"/>
-            <when state="State 4" output="E̊"/>
-            <when state="State 6" output="Ë"/>
-            <when state="State 7" output="Ĕ"/>
-            <when state="State 8" output="ε"/>
-            <when state="State 9" output="Ȩ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ê"/>
+            <when state="Ebene 1 T2 Gravis" output="È"/>
+            <when state="Ebene 1 T3 Akut" output="É"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ě"/>
+            <when state="Ebene 2 T2 Cedille" output="Ȩ"/>
+            <when state="Ebene 2 T3 Tilde" output="Ẽ"/>
+            <when state="Ebene 3 T1 Drehen" output="Ǝ"/>
+            <when state="Ebene 3 T2 Ring" output="E̊"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ė"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ë"/>
+            <when state="Ebene 5 Spiritus lenis" output="Ἐ"/>
+            <when state="Ebene 5 T1 Haken" output="Ẻ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ἑ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ẹ"/>
+            <when state="Ebene 6 T2 Macron" output="Ē"/>
+            <when state="Ebene 6 T3 Breve" output="Ĕ"/>
         </action>
         <action id="71">
             <when state="none" output="‑"/>
-            <when state="State 6" output="„"/>
+            <when state="Ebene 4 und 6" output="­"/>
         </action>
         <action id="72">
-            <when state="none" output="∇"/>
-            <when state="State 15" output="…"/>
-            <when state="State 6" output="‚"/>
+            <when state="none" output=""/>
         </action>
         <action id="73">
             <when state="none" output=" "/>
-            <when state="State 1" output="´"/>
-            <when state="State 10" output="^"/>
-            <when state="State 13" output="~"/>
-            <when state="State 14" output="´"/>
-            <when state="State 15" output="·"/>
-            <when state="State 17" output="῾"/>
-            <when state="State 2" output="ˇ"/>
-            <when state="State 3" output="~"/>
-            <when state="State 4" output="˚"/>
-            <when state="State 5" output="̷̷"/>
-            <when state="State 6" output="&#x0022;"/>
-            <when state="State 7" output="˘"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="^"/>
+            <when state="Ebene 1 T2 Gravis" output="`"/>
+            <when state="Ebene 1 T3 Akut" output="´"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ˇ"/>
+            <when state="Ebene 2 T2 Cedille" output="¸"/>
+            <when state="Ebene 2 T3 Tilde" output="~"/>
+            <when state="Ebene 3 T2 Ring" output="˚"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="̷̷"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="·"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="¨"/>
+            <when state="Ebene 4 T3 Doppelakut" output="˶"/>
+            <when state="Ebene 5 Spiritus lenis" output="᾿"/>
+            <when state="Ebene 5 T1 Haken" output="˞"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="῾"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="."/>
+            <when state="Ebene 6 T2 Macron" output="¯"/>
+            <when state="Ebene 6 T3 Breve" output="˘"/>
         </action>
         <action id="74">
             <when state="none" output="ϵ"/>
-            <when state="State 13" output="~"/>
+            <when state="Ebene 4 und 6" output="∩"/>
         </action>
         <action id="75">
             <when state="none" output="n"/>
-            <when state="State 12" output="ǹ"/>
-            <when state="State 13" output="ñ"/>
-            <when state="State 14" output="ń"/>
-            <when state="State 2" output="ň"/>
-            <when state="State 3" output="ñ"/>
-            <when state="State 8" output="("/>
-            <when state="State 9" output="ņ"/>
+            <when state="Ebene 1 T2 Gravis" output="ǹ"/>
+            <when state="Ebene 1 T3 Akut" output="ń"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ň"/>
+            <when state="Ebene 2 T2 Cedille" output="ņ"/>
+            <when state="Ebene 2 T3 Tilde" output="ñ"/>
+            <when state="Ebene 3 T1 Drehen" output="u"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ṅ"/>
+            <when state="Ebene 5 T1 Haken" output="ŋ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ṇ"/>
+            <when state="Ebene 6 T2 Macron" output="ṉ"/>
         </action>
         <action id="76">
             <when state="none" output="N"/>
-            <when state="State 12" output="Ǹ"/>
-            <when state="State 13" output="Ñ"/>
-            <when state="State 2" output="Ň"/>
-            <when state="State 3" output="Ñ"/>
-            <when state="State 8" output="4"/>
-            <when state="State 9" output="Ņ"/>
-        </action>
-        <action id="77">
-            <when state="none" output="y"/>
-            <when state="State 1" output="ý"/>
-            <when state="State 10" output="ŷ"/>
-            <when state="State 12" output="ỳ"/>
-            <when state="State 14" output="ý"/>
-            <when state="State 16" output="ÿ"/>
-            <when state="State 4" output="ẙ"/>
+            <when state="Ebene 1 T2 Gravis" output="Ǹ"/>
+            <when state="Ebene 1 T3 Akut" output="Ń"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ň"/>
+            <when state="Ebene 2 T2 Cedille" output="Ņ"/>
+            <when state="Ebene 2 T3 Tilde" output="Ñ"/>
+            <when state="Ebene 3 T1 Drehen" output="ᴎ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ṅ"/>
+            <when state="Ebene 5 T1 Haken" output="Ŋ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ṇ"/>
+            <when state="Ebene 6 T2 Macron" output="Ṉ"/>
         </action>
         <action id="78">
             <when state="none" output="Y"/>
-            <when state="State 1" output="Ý"/>
-            <when state="State 10" output="Ŷ"/>
-            <when state="State 12" output="Ỳ"/>
-            <when state="State 14" output="Ý"/>
-            <when state="State 16" output="Ÿ"/>
-            <when state="State 4" output="Y̊"/>
-            <when state="State 8" output="υ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="Ŷ"/>
+            <when state="Ebene 1 T2 Gravis" output="Ỳ"/>
+            <when state="Ebene 1 T3 Akut" output="Ý"/>
+            <when state="Ebene 3 T1 Drehen" output="⅄"/>
+            <when state="Ebene 3 T2 Ring" output="Y̊"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ẏ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="Ÿ"/>
+            <when state="Ebene 4 T3 Doppelakut" output="Ӳ"/>
+            <when state="Ebene 5 T1 Haken" output="Ƴ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="Ὑ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ỵ"/>
+            <when state="Ebene 6 T2 Macron" output="Ȳ"/>
         </action>
         <action id="79">
             <when state="none" output="L"/>
-            <when state="State 15" output="Ŀ"/>
-            <when state="State 2" output="Ľ"/>
-            <when state="State 8" output="λ"/>
-            <when state="State 9" output="Ļ"/>
+            <when state="Ebene 1 T3 Akut" output="Ĺ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ľ"/>
+            <when state="Ebene 2 T2 Cedille" output="Ļ"/>
+            <when state="Ebene 3 T1 Drehen" output="⅂"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ł"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ŀ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ḷ"/>
+            <when state="Ebene 6 T2 Macron" output="Ḻ"/>
         </action>
         <action id="80">
             <when state="none" output="l"/>
-            <when state="State 14" output="ĺ"/>
-            <when state="State 15" output="ŀ"/>
-            <when state="State 2" output="ľ"/>
-            <when state="State 8" output="["/>
-            <when state="State 9" output="ļ"/>
+            <when state="Ebene 1 T3 Akut" output="ĺ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ľ"/>
+            <when state="Ebene 2 T2 Cedille" output="ļ"/>
+            <when state="Ebene 3 T1 Drehen" output="l"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ł"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ŀ"/>
+            <when state="Ebene 5 T1 Haken" output="ɬ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ḷ"/>
+            <when state="Ebene 6 T2 Macron" output="ḻ"/>
         </action>
         <action id="81">
             <when state="none" output="Z"/>
-            <when state="State 15" output="Ż"/>
-            <when state="State 2" output="Ž"/>
-            <when state="State 8" output="ζ"/>
+            <when state="Ebene 1 T3 Akut" output="Ź"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ž"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="Ƶ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="Ż"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="Ẓ"/>
+            <when state="Ebene 6 T2 Macron" output="Ẕ"/>
         </action>
         <action id="82">
             <when state="none" output="z"/>
-            <when state="State 15" output="ż"/>
-            <when state="State 2" output="ž"/>
-            <when state="State 8" output="`"/>
+            <when state="Ebene 1 T3 Akut" output="ź"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ž"/>
+            <when state="Ebene 3 T2 Ring" output="ʑ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ƶ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ż"/>
+            <when state="Ebene 5 T1 Haken" output="ʐ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ẓ"/>
+            <when state="Ebene 6 T2 Macron" output="ẕ"/>
         </action>
         <action id="83">
             <when state="none" output="u"/>
-            <when state="State 1" output="ú"/>
-            <when state="State 10" output="û"/>
-            <when state="State 12" output="ù"/>
-            <when state="State 14" output="ú"/>
-            <when state="State 16" output="ü"/>
-            <when state="State 2" output="ǔ"/>
-            <when state="State 3" output="ũ"/>
-            <when state="State 4" output="ů"/>
-            <when state="State 6" output="ü"/>
-            <when state="State 7" output="ŭ"/>
-            <when state="State 8" output="\"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="û"/>
+            <when state="Ebene 1 T2 Gravis" output="ù"/>
+            <when state="Ebene 1 T3 Akut" output="ú"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǔ"/>
+            <when state="Ebene 2 T2 Cedille" output="ų"/>
+            <when state="Ebene 2 T3 Tilde" output="ũ"/>
+            <when state="Ebene 3 T1 Drehen" output="n"/>
+            <when state="Ebene 3 T2 Ring" output="ů"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ʉ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ü"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ű"/>
+            <when state="Ebene 5 Spiritus lenis" output="ὐ"/>
+            <when state="Ebene 5 T1 Haken" output="ư"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ụ"/>
+            <when state="Ebene 6 T2 Macron" output="ū"/>
+            <when state="Ebene 6 T3 Breve" output="ŭ"/>
         </action>
         <action id="84">
             <when state="none" output="h"/>
-            <when state="State 1" output="ú"/>
-            <when state="State 10" output="û"/>
-            <when state="State 12" output="ù"/>
-            <when state="State 14" output="ú"/>
-            <when state="State 16" output="ü"/>
-            <when state="State 2" output="ů"/>
-            <when state="State 3" output="ũ"/>
-            <when state="State 4" output="ů"/>
-            <when state="State 6" output="ü"/>
-            <when state="State 7" output="û"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="û"/>
+            <when state="Ebene 1 T2 Gravis" output="ù"/>
+            <when state="Ebene 1 T3 Akut" output="ú"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ů"/>
+            <when state="Ebene 2 T3 Tilde" output="ũ"/>
+            <when state="Ebene 3 T2 Ring" output="ů"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ü"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ü"/>
+            <when state="Ebene 5 Spiritus lenis" output="ú"/>
+            <when state="Ebene 6 T3 Breve" output="û"/>
         </action>
         <action id="85">
             <when state="none" output="a"/>
-            <when state="State 1" output="á"/>
-            <when state="State 10" output="â"/>
-            <when state="State 12" output="à"/>
-            <when state="State 13" output="ã"/>
-            <when state="State 14" output="á"/>
-            <when state="State 15" output="ạ"/>
-            <when state="State 16" output="ä"/>
-            <when state="State 2" output="ǎ"/>
-            <when state="State 3" output="ã"/>
-            <when state="State 4" output="å"/>
-            <when state="State 6" output="ä"/>
-            <when state="State 7" output="ă"/>
-            <when state="State 8" output="{"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="â"/>
+            <when state="Ebene 1 T2 Gravis" output="à"/>
+            <when state="Ebene 1 T3 Akut" output="á"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǎ"/>
+            <when state="Ebene 2 T2 Cedille" output="ą"/>
+            <when state="Ebene 2 T3 Tilde" output="ã"/>
+            <when state="Ebene 3 T1 Drehen" output="ɐ"/>
+            <when state="Ebene 3 T2 Ring" output="å"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ȧ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ä"/>
+            <when state="Ebene 5 Spiritus lenis" output="ἀ"/>
+            <when state="Ebene 5 T1 Haken" output="ả"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ἁ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ạ"/>
+            <when state="Ebene 6 T2 Macron" output="ā"/>
+            <when state="Ebene 6 T3 Breve" output="ă"/>
         </action>
         <action id="86">
             <when state="none" output="l"/>
-            <when state="State 1" output="é"/>
-            <when state="State 10" output="ê"/>
-            <when state="State 12" output="è"/>
-            <when state="State 14" output="é"/>
-            <when state="State 15" output="ė"/>
-            <when state="State 16" output="ë"/>
-            <when state="State 3" output="ẽ"/>
-            <when state="State 6" output="ë"/>
-            <when state="State 7" output="ê"/>
-            <when state="State 9" output="ȩ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ê"/>
+            <when state="Ebene 1 T2 Gravis" output="è"/>
+            <when state="Ebene 1 T3 Akut" output="é"/>
+            <when state="Ebene 2 T2 Cedille" output="ȩ"/>
+            <when state="Ebene 2 T3 Tilde" output="ẽ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ė"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ë"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ë"/>
+            <when state="Ebene 5 Spiritus lenis" output="é"/>
+            <when state="Ebene 6 T3 Breve" output="ê"/>
         </action>
         <action id="87">
             <when state="none" output="k"/>
-            <when state="State 1" output="ý"/>
-            <when state="State 10" output="ŷ"/>
-            <when state="State 12" output="ỳ"/>
-            <when state="State 14" output="ý"/>
-            <when state="State 16" output="ÿ"/>
-            <when state="State 4" output="ẙ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ŷ"/>
+            <when state="Ebene 1 T2 Gravis" output="ỳ"/>
+            <when state="Ebene 1 T3 Akut" output="ý"/>
+            <when state="Ebene 3 T2 Ring" output="ẙ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ÿ"/>
+            <when state="Ebene 5 Spiritus lenis" output="ý"/>
         </action>
         <action id="88">
             <when state="none" output="b"/>
-            <when state="State 12" output="ǹ"/>
-            <when state="State 13" output="ñ"/>
-            <when state="State 14" output="ń"/>
-            <when state="State 3" output="ñ"/>
-            <when state="State 9" output="ņ"/>
+            <when state="Ebene 1 T2 Gravis" output="ǹ"/>
+            <when state="Ebene 1 T3 Akut" output="ń"/>
+            <when state="Ebene 2 T2 Cedille" output="ņ"/>
+            <when state="Ebene 2 T3 Tilde" output="ñ"/>
+            <when state="Ebene 5 T1 Haken" output="ñ"/>
         </action>
         <action id="89">
             <when state="none" output="g"/>
-            <when state="State 1" output="í"/>
-            <when state="State 10" output="î"/>
-            <when state="State 12" output="ì"/>
-            <when state="State 14" output="í"/>
-            <when state="State 16" output="ï"/>
-            <when state="State 3" output="ĩ"/>
-            <when state="State 6" output="ï"/>
-            <when state="State 7" output="î"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="î"/>
+            <when state="Ebene 1 T2 Gravis" output="ì"/>
+            <when state="Ebene 1 T3 Akut" output="í"/>
+            <when state="Ebene 2 T3 Tilde" output="ĩ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ï"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ï"/>
+            <when state="Ebene 5 Spiritus lenis" output="í"/>
+            <when state="Ebene 6 T3 Breve" output="î"/>
         </action>
         <action id="90">
             <when state="none" output="f"/>
-            <when state="State 1" output="ó"/>
-            <when state="State 10" output="ô"/>
-            <when state="State 12" output="ò"/>
-            <when state="State 13" output="õ"/>
-            <when state="State 14" output="ó"/>
-            <when state="State 15" output="ọ"/>
-            <when state="State 16" output="ö"/>
-            <when state="State 3" output="õ"/>
-            <when state="State 6" output="ö"/>
-            <when state="State 7" output="ô"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ô"/>
+            <when state="Ebene 1 T2 Gravis" output="ò"/>
+            <when state="Ebene 1 T3 Akut" output="ó"/>
+            <when state="Ebene 2 T3 Tilde" output="õ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ọ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ö"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ö"/>
+            <when state="Ebene 5 Spiritus lenis" output="ó"/>
+            <when state="Ebene 5 T1 Haken" output="õ"/>
+            <when state="Ebene 6 T3 Breve" output="ô"/>
         </action>
         <action id="91">
             <when state="none" output="t"/>
-            <when state="State 14" output="ĺ"/>
-            <when state="State 15" output="ŀ"/>
-            <when state="State 9" output="ļ"/>
+            <when state="Ebene 1 T3 Akut" output="ĺ"/>
+            <when state="Ebene 2 T2 Cedille" output="ļ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ŀ"/>
         </action>
         <action id="92">
             <when state="none" output="y"/>
-            <when state="State 1" output="ý"/>
-            <when state="State 10" output="ŷ"/>
-            <when state="State 12" output="ỳ"/>
-            <when state="State 14" output="ý"/>
-            <when state="State 16" output="ÿ"/>
-            <when state="State 4" output="ẙ"/>
-            <when state="State 8" output="@"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ŷ"/>
+            <when state="Ebene 1 T2 Gravis" output="ỳ"/>
+            <when state="Ebene 1 T3 Akut" output="ý"/>
+            <when state="Ebene 3 T1 Drehen" output="ʎ"/>
+            <when state="Ebene 3 T2 Ring" output="ẙ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ẏ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ÿ"/>
+            <when state="Ebene 4 T3 Doppelakut" output="ӳ"/>
+            <when state="Ebene 5 Spiritus lenis" output="ὐ"/>
+            <when state="Ebene 5 T1 Haken" output="ƴ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ὑ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ỵ"/>
+            <when state="Ebene 6 T2 Macron" output="ȳ"/>
         </action>
         <action id="93">
             <when state="none" output="ü"/>
-            <when state="State 15" output="ż"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ż"/>
         </action>
         <action id="94">
             <when state="none" output="y"/>
-            <when state="State 15" output="…"/>
-            <when state="State 6" output="‚"/>
-        </action>
-        <action id="95">
-            <when state="none" output=""/>
-            <when state="State 15" output="…"/>
-            <when state="State 6" output="‚"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="…"/>
+            <when state="Ebene 4 T3 Doppelakut" output="‚"/>
         </action>
         <action id="96">
             <when state="none" output="$"/>
-            <when state="State 15" output="…"/>
-            <when state="State 6" output="‚"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="…"/>
+            <when state="Ebene 4 T3 Doppelakut" output="‚"/>
         </action>
         <action id="97">
-            <when state="none" next="State 10"/>
-            <when state="State 8" next="State 4"/>
+            <when state="none" next="Ebene 1 T1 Zirkumflex"/>
         </action>
         <action id="98">
             <when state="none" output="b"/>
-            <when state="State 8" output="+"/>
+            <when state="Ebene 3 T1 Drehen" output="q"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ƀ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ḃ"/>
+            <when state="Ebene 5 T1 Haken" output="ɓ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ḅ"/>
+            <when state="Ebene 6 T2 Macron" output="ḇ"/>
         </action>
         <action id="99">
             <when state="none" output="c"/>
-            <when state="State 10" output="ĉ"/>
-            <when state="State 14" output="ć"/>
-            <when state="State 2" output="č"/>
-            <when state="State 8" output="]"/>
-            <when state="State 9" output="ç"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ĉ"/>
+            <when state="Ebene 1 T3 Akut" output="ć"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="č"/>
+            <when state="Ebene 2 T2 Cedille" output="ç"/>
+            <when state="Ebene 3 T1 Drehen" output="ɔ"/>
+            <when state="Ebene 3 T2 Ring" output="ɕ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ċ"/>
+            <when state="Ebene 5 T1 Haken" output="ƈ"/>
         </action>
         <action id="100">
             <when state="none" output=","/>
-            <when state="State 8" output="&#x0022;"/>
+            <when state="Ebene 3 T1 Drehen" output="&#x0027;"/>
         </action>
         <action id="101">
             <when state="none" output="d"/>
-            <when state="State 2" output="ď"/>
-            <when state="State 8" output=":"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ď"/>
+            <when state="Ebene 2 T2 Cedille" output="ḑ"/>
+            <when state="Ebene 3 T1 Drehen" output="p"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="đ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ḋ"/>
+            <when state="Ebene 5 T1 Haken" output="ɗ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ḍ"/>
+            <when state="Ebene 6 T2 Macron" output="ḏ"/>
         </action>
         <action id="102">
             <when state="none" output="."/>
-            <when state="State 8" output="&#x0027;"/>
+            <when state="Ebene 3 T1 Drehen" output="˙"/>
         </action>
         <action id="103">
             <when state="none" output="f"/>
-            <when state="State 8" output="="/>
+            <when state="Ebene 3 T1 Drehen" output="ɟ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ḟ"/>
+            <when state="Ebene 5 T1 Haken" output="ƒ"/>
         </action>
         <action id="104">
             <when state="none" output="g"/>
-            <when state="State 10" output="ĝ"/>
-            <when state="State 14" output="ǵ"/>
-            <when state="State 2" output="ǧ"/>
-            <when state="State 7" output="ğ"/>
-            <when state="State 8" output="&#x003E;"/>
-            <when state="State 9" output="ģ"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ĝ"/>
+            <when state="Ebene 1 T3 Akut" output="ǵ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǧ"/>
+            <when state="Ebene 2 T2 Cedille" output="ģ"/>
+            <when state="Ebene 3 T1 Drehen" output="ɓ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ǥ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ġ"/>
+            <when state="Ebene 5 T1 Haken" output="ɠ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ġ"/>
+            <when state="Ebene 6 T2 Macron" output="ḡ"/>
+            <when state="Ebene 6 T3 Breve" output="ğ"/>
         </action>
         <action id="105">
             <when state="none" output="h"/>
-            <when state="State 10" output="ĥ"/>
-            <when state="State 16" output="ḧ"/>
-            <when state="State 2" output="ȟ"/>
-            <when state="State 7" output="ḫ"/>
-            <when state="State 8" output="&#x003C;"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ĥ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ȟ"/>
+            <when state="Ebene 2 T2 Cedille" output="ḩ"/>
+            <when state="Ebene 3 T1 Drehen" output="ɥ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ħ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ḣ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ḧ"/>
+            <when state="Ebene 5 T1 Haken" output="ɦ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ḥ"/>
+            <when state="Ebene 6 T2 Macron" output="ẖ"/>
+            <when state="Ebene 6 T3 Breve" output="ḫ"/>
         </action>
         <action id="106">
             <when state="none" output="j"/>
-            <when state="State 10" output="ĵ"/>
-            <when state="State 2" output="ǰ"/>
-            <when state="State 8" output=";"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ĵ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǰ"/>
+            <when state="Ebene 3 T1 Drehen" output="ɾ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ɟ"/>
+            <when state="Ebene 5 T1 Haken" output="ʝ"/>
         </action>
         <action id="107">
             <when state="none" output="k"/>
-            <when state="State 2" output="ǩ"/>
-            <when state="State 8" output="!"/>
-            <when state="State 9" output="ķ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǩ"/>
+            <when state="Ebene 2 T2 Cedille" output="ķ"/>
+            <when state="Ebene 3 T1 Drehen" output="ʞ"/>
+            <when state="Ebene 5 T1 Haken" output="ƙ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ḳ"/>
+            <when state="Ebene 6 T2 Macron" output="ḵ"/>
         </action>
         <action id="108">
             <when state="none" output="m"/>
-            <when state="State 8" output="%"/>
+            <when state="Ebene 3 T1 Drehen" output="ɯ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ṁ"/>
+            <when state="Ebene 5 T1 Haken" output="ɱ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ṃ"/>
         </action>
         <action id="109">
             <when state="none" output="p"/>
-            <when state="State 8" output="~"/>
+            <when state="Ebene 3 T1 Drehen" output="d"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ṗ"/>
+            <when state="Ebene 5 T1 Haken" output="ƥ"/>
         </action>
         <action id="110">
             <when state="none" output="q"/>
-            <when state="State 8" output="&#x0026;"/>
+            <when state="Ebene 3 T1 Drehen" output="b"/>
         </action>
         <action id="111">
             <when state="none" output="r"/>
-            <when state="State 14" output="ŕ"/>
-            <when state="State 2" output="ř"/>
-            <when state="State 8" output=")"/>
-            <when state="State 9" output="ŗ"/>
+            <when state="Ebene 1 T3 Akut" output="ŕ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ř"/>
+            <when state="Ebene 2 T2 Cedille" output="ŗ"/>
+            <when state="Ebene 3 T1 Drehen" output="ɹ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ṙ"/>
+            <when state="Ebene 5 T1 Haken" output="ɽ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ῥ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ṛ"/>
+            <when state="Ebene 6 T2 Macron" output="ṟ"/>
         </action>
         <action id="112">
             <when state="none" output="s"/>
-            <when state="State 10" output="ŝ"/>
-            <when state="State 14" output="ś"/>
-            <when state="State 2" output="š"/>
-            <when state="State 8" output="?"/>
-            <when state="State 9" output="ş"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ŝ"/>
+            <when state="Ebene 1 T3 Akut" output="ś"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="š"/>
+            <when state="Ebene 2 T2 Cedille" output="ş"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ṡ"/>
+            <when state="Ebene 5 T1 Haken" output="ʂ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ṣ"/>
         </action>
         <action id="113">
             <when state="none" output="t"/>
-            <when state="State 16" output="ẗ"/>
-            <when state="State 2" output="ť"/>
-            <when state="State 8" output="-"/>
-            <when state="State 9" output="ţ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ť"/>
+            <when state="Ebene 2 T2 Cedille" output="ţ"/>
+            <when state="Ebene 3 T1 Drehen" output="ʇ"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="ŧ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ṫ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ẗ"/>
+            <when state="Ebene 5 T1 Haken" output="ƭ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ṭ"/>
+            <when state="Ebene 6 T2 Macron" output="ṯ"/>
         </action>
         <action id="114">
             <when state="none" output="v"/>
-            <when state="State 3" output="ṽ"/>
-            <when state="State 8" output="_"/>
+            <when state="Ebene 2 T3 Tilde" output="ṽ"/>
+            <when state="Ebene 3 T1 Drehen" output="ʌ"/>
+            <when state="Ebene 5 T1 Haken" output="ⱱ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ṿ"/>
         </action>
         <action id="115">
             <when state="none" output="w"/>
-            <when state="State 10" output="ŵ"/>
-            <when state="State 12" output="ẁ"/>
-            <when state="State 14" output="ẃ"/>
-            <when state="State 16" output="ẅ"/>
-            <when state="State 4" output="ẘ"/>
-            <when state="State 8" output="^"/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ŵ"/>
+            <when state="Ebene 1 T2 Gravis" output="ẁ"/>
+            <when state="Ebene 1 T3 Akut" output="ẃ"/>
+            <when state="Ebene 3 T1 Drehen" output="ʍ"/>
+            <when state="Ebene 3 T2 Ring" output="ẘ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ẇ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ẅ"/>
+            <when state="Ebene 5 Spiritus lenis" output="ὠ"/>
+            <when state="Ebene 5 T1 Haken" output="ⱳ"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="ὡ"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="ẉ"/>
         </action>
         <action id="116">
             <when state="none" output="x"/>
-            <when state="State 14" output="ź"/>
-            <when state="State 16" output="ẍ"/>
-            <when state="State 2" output="ǯ"/>
-            <when state="State 8" output="…"/>
+            <when state="Ebene 1 T3 Akut" output="ź"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǯ"/>
+            <when state="Ebene 4 T1 Punkt darüber" output="ẋ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ẍ"/>
+            <when state="Ebene 5 T1 Haken" output="ɣ"/>
         </action>
         <action id="117">
             <when state="none" output="§"/>
-            <when state="State 8" output="₂"/>
+            <when state="Ebene 4 und 6" output="º"/>
         </action>
         <action id="118">
             <when state="none" output="«"/>
-            <when state="State 8" output="♂"/>
+            <when state="Ebene 4 und 6" output="·"/>
         </action>
         <action id="119">
             <when state="none" output="°"/>
-            <when state="State 8" output="₁"/>
+            <when state="Ebene 4 und 6" output="ª"/>
         </action>
         <action id="120">
             <when state="none" output="»"/>
-            <when state="State 8" output="♀"/>
         </action>
         <action id="121">
             <when state="none" output="Ö"/>
-            <when state="State 8" output="ϵ"/>
         </action>
         <action id="122">
             <when state="none" output="Ü"/>
-            <when state="State 2" output="Ǚ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="Ǚ"/>
+            <when state="Ebene 6 T2 Macron" output="Ǖ"/>
         </action>
         <action id="123">
             <when state="none" output="ö"/>
-            <when state="State 16" output="ö"/>
-            <when state="State 8" output="$"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ö"/>
         </action>
         <action id="124">
             <when state="none" output="ü"/>
-            <when state="State 14" output="ǘ"/>
-            <when state="State 16" output="ü"/>
-            <when state="State 2" output="ǚ"/>
-            <when state="State 8" output="#"/>
+            <when state="Ebene 1 T3 Akut" output="ǘ"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ǚ"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="ü"/>
+            <when state="Ebene 6 T2 Macron" output="ǖ"/>
         </action>
         <action id="125">
-            <when state="none" next="State 4"/>
+            <when state="none" next="Ebene 3 T1 Drehen"/>
         </action>
         <action id="126">
             <when state="none" output="ẞ"/>
-            <when state="State 8" output="ς"/>
         </action>
         <action id="127">
             <when state="none" output="–"/>
-            <when state="State 8" output="2"/>
         </action>
         <action id="128">
             <when state="none" output="—"/>
-            <when state="State 8" output="‑"/>
         </action>
         <action id="129">
             <when state="none" output="“"/>
-            <when state="State 8" output="⟩"/>
+            <when state="Ebene 4 und 6" output="⇤"/>
         </action>
         <action id="130">
             <when state="none" output="”"/>
-            <when state="State 8" output="₀"/>
         </action>
         <action id="131">
             <when state="none" output="„"/>
-            <when state="State 8" output="⟨"/>
+            <when state="Ebene 4 und 6" output="⇥"/>
         </action>
         <action id="132">
             <when state="none" output="•"/>
-            <when state="State 8" output="3"/>
         </action>
         <action id="133">
             <when state="none" output="€"/>
-            <when state="State 8" output="κ"/>
+            <when state="Ebene 4 und 6" output="¤"/>
         </action>
         <action id="134">
             <when state="none" output="ℓ"/>
-            <when state="State 8" output="₃"/>
+            <when state="Ebene 4 und 6" output="№"/>
+        </action>
+        <action id="Ebene 4 und 6">
+            <when state="none" next="Ebene 4 und 6"/>
+            <when state="Ebene 4 und 6" output="∪"/>
+        </action>
+        <action id="action">
+            <when state="none" output=""/>
+            <when state="Ebene 4 und 6" output="⊂"/>
+        </action>
+        <action id=" ">
+            <when state="none" output=" "/>
+            <when state="Ebene 1 T1 Zirkumflex" output="ˆ"/>
+            <when state="Ebene 1 T2 Gravis" output="`"/>
+            <when state="Ebene 1 T3 Akut" output="´"/>
+            <when state="Ebene 2 T1 Caron Hatschek" output="ˇ"/>
+            <when state="Ebene 2 T2 Cedille" output="¸"/>
+            <when state="Ebene 2 T3 Tilde" output="˜"/>
+            <when state="Ebene 3 T1 Drehen" output="↻"/>
+            <when state="Ebene 3 T2 Ring" output="˚"/>
+            <when state="Ebene 3 T3 Schrägstrich" output="/"/>
+            <when state="Ebene 4 T2 Trema Diaeresis" output="¨"/>
+            <when state="Ebene 4 T3 Doppelakut" output="˝"/>
+            <when state="Ebene 4 und 6" output=" "/>
+            <when state="Ebene 5 Spiritus lenis" output="᾿"/>
+            <when state="Ebene 5 T1 Haken" output=" ̉"/>
+            <when state="Ebene 5 T2 Spiritus asper" output="῾"/>
+            <when state="Ebene 6 T1 Punkt darunter" output="."/>
+            <when state="Ebene 6 T2 Macron" output="¯"/>
+            <when state="Ebene 6 T3 Breve" output="˘"/>
+        </action>
+        <action id="α">
+            <when state="none" output="α"/>
+            <when state="Ebene 4 und 6" output="∀"/>
+        </action>
+        <action id="β">
+            <when state="none" output="β"/>
+            <when state="Ebene 4 und 6" output="⇐"/>
+        </action>
+        <action id="γ">
+            <when state="none" output="γ"/>
+            <when state="Ebene 4 und 6" output="Γ"/>
+        </action>
+        <action id="δ">
+            <when state="none" output="δ"/>
+            <when state="Ebene 4 und 6" output="Δ"/>
+        </action>
+        <action id="ε">
+            <when state="none" output="ε"/>
+            <when state="Ebene 4 und 6" output="∃"/>
+        </action>
+        <action id="ζ">
+            <when state="none" output="ζ"/>
+            <when state="Ebene 4 und 6" output="ℤ"/>
+        </action>
+        <action id="η">
+            <when state="none" output="η"/>
+            <when state="Ebene 4 und 6" output="ℵ"/>
+        </action>
+        <action id="θ">
+            <when state="none" output="θ"/>
+            <when state="Ebene 4 und 6" output="Θ"/>
+        </action>
+        <action id="ι">
+            <when state="none" output="ι"/>
+            <when state="Ebene 4 und 6" output="∫"/>
+        </action>
+        <action id="κ">
+            <when state="none" output="κ"/>
+            <when state="Ebene 4 und 6" output="×"/>
+        </action>
+        <action id="λ">
+            <when state="none" output="λ"/>
+            <when state="Ebene 4 und 6" output="Λ"/>
+        </action>
+        <action id="μ">
+            <when state="none" output="μ"/>
+            <when state="Ebene 4 und 6" output="⇔"/>
+        </action>
+        <action id="ν">
+            <when state="none" output="ν"/>
+            <when state="Ebene 4 und 6" output="ℕ"/>
+        </action>
+        <action id="ξ">
+            <when state="none" output="ξ"/>
+            <when state="Ebene 4 und 6" output="Ξ"/>
+        </action>
+        <action id="ο">
+            <when state="none" output="ο"/>
+            <when state="Ebene 4 und 6" output="∈"/>
+        </action>
+        <action id="π">
+            <when state="none" output="π"/>
+            <when state="Ebene 4 und 6" output="Π"/>
+        </action>
+        <action id="ρ">
+            <when state="none" output="ρ"/>
+            <when state="Ebene 4 und 6" output="ℝ"/>
+        </action>
+        <action id="ς">
+            <when state="none" output="ς"/>
+            <when state="Ebene 4 und 6" output="∘"/>
+        </action>
+        <action id="σ">
+            <when state="none" output="σ"/>
+            <when state="Ebene 4 und 6" output="Σ"/>
+        </action>
+        <action id="τ">
+            <when state="none" output="τ"/>
+            <when state="Ebene 4 und 6" output="∂"/>
+        </action>
+        <action id="υ">
+            <when state="none" output="υ"/>
+            <when state="Ebene 4 und 6" output="∇"/>
+        </action>
+        <action id="φ">
+            <when state="none" output="φ"/>
+            <when state="Ebene 4 und 6" output="Φ"/>
+        </action>
+        <action id="χ">
+            <when state="none" output="χ"/>
+            <when state="Ebene 4 und 6" output="ℂ"/>
+        </action>
+        <action id="ψ">
+            <when state="none" output="ψ"/>
+            <when state="Ebene 4 und 6" output="Ψ"/>
+        </action>
+        <action id="ω">
+            <when state="none" output="ω"/>
+            <when state="Ebene 4 und 6" output="Ω"/>
+        </action>
+        <action id="ϑ">
+            <when state="none" output="ϑ"/>
+            <when state="Ebene 4 und 6" output="↦"/>
+        </action>
+        <action id="ϕ">
+            <when state="none" output="ϕ"/>
+            <when state="Ebene 4 und 6" output="ℚ"/>
+        </action>
+        <action id="ϰ">
+            <when state="none" output="ϰ"/>
+            <when state="Ebene 4 und 6" output="→"/>
+        </action>
+        <action id="ϱ">
+            <when state="none" output="ϱ"/>
+            <when state="Ebene 4 und 6" output="⇒"/>
+        </action>
+        <action id="᾿">
+            <when state="none" next="Ebene 5 Spiritus lenis"/>
+            <when state="Ebene 4 und 6" next="Ebene 6 T3 Breve"/>
+        </action>
+        <action id="₀">
+            <when state="none" output="₀"/>
+            <when state="Ebene 4 und 6" output="∅"/>
+        </action>
+        <action id="₁">
+            <when state="none" output="₁"/>
+            <when state="Ebene 4 und 6" output="¬"/>
+        </action>
+        <action id="₂">
+            <when state="none" output="₂"/>
+            <when state="Ebene 4 und 6" output="∨"/>
+        </action>
+        <action id="₃">
+            <when state="none" output="₃"/>
+            <when state="Ebene 4 und 6" output="∧"/>
+        </action>
+        <action id="♀">
+            <when state="none" output="♀"/>
+            <when state="Ebene 4 und 6" output="⊥"/>
+        </action>
+        <action id="♂">
+            <when state="none" output="♂"/>
+            <when state="Ebene 4 und 6" output="∡"/>
+        </action>
+        <action id="⚥">
+            <when state="none" output="⚥"/>
+            <when state="Ebene 4 und 6" output="∥"/>
+        </action>
+        <action id="⟨">
+            <when state="none" output="⟨"/>
+            <when state="Ebene 4 und 6" output="∞"/>
+        </action>
+        <action id="⟩">
+            <when state="none" output="⟩"/>
+            <when state="Ebene 4 und 6" output="∝"/>
         </action>
     </actions>
     <terminators>
-        <when state="State 1" output="´"/>
-        <when state="State 10" output="^"/>
-        <when state="State 11" output=""/>
-        <when state="State 12" output="`"/>
-        <when state="State 13" output="~"/>
-        <when state="State 14" output="´"/>
-        <when state="State 15" output="·"/>
-        <when state="State 16" output="¨"/>
-        <when state="State 17" output="῾"/>
-        <when state="State 2" output="ˇ"/>
-        <when state="State 3" output="˜"/>
-        <when state="State 4" output="˚"/>
-        <when state="State 5" output="/"/>
-        <when state="State 6" output="&#x0022;"/>
-        <when state="State 7" output="˘"/>
-        <when state="State 8" output=""/>
-        <when state="State 9" output="¸"/>
+        <when state="Ebene 1 T1 Zirkumflex" output="^"/>
+        <when state="Ebene 1 T2 Gravis" output="`"/>
+        <when state="Ebene 1 T3 Akut" output="´"/>
+        <when state="Ebene 2 T1 Caron Hatschek" output="ˇ"/>
+        <when state="Ebene 2 T2 Cedille" output="¸"/>
+        <when state="Ebene 2 T3 Tilde" output="˜"/>
+        <when state="Ebene 3 T1 Drehen" output=""/>
+        <when state="Ebene 3 T2 Ring" output="˚"/>
+        <when state="Ebene 3 T3 Schrägstrich" output="/"/>
+        <when state="Ebene 4 T1 Punkt darüber" output="·"/>
+        <when state="Ebene 4 T2 Trema Diaeresis" output="¨"/>
+        <when state="Ebene 4 T3 Doppelakut" output="˝"/>
+        <when state="Ebene 4 und 6" output=""/>
+        <when state="Ebene 5 Spiritus lenis" output="᾿"/>
+        <when state="Ebene 5 T1 Haken" output="˞"/>
+        <when state="Ebene 5 T2 Spiritus asper" output="῾"/>
+        <when state="Ebene 6 T1 Punkt darunter" output="."/>
+        <when state="Ebene 6 T2 Macron" output="¯"/>
+        <when state="Ebene 6 T3 Breve" output="˘"/>
     </terminators>
 </keyboard>
