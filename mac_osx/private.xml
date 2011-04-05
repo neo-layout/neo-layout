@@ -172,7 +172,7 @@
     <item>
       <name>Behalte Command_L + > als Tastenkombination zum Wechsel zwischen Programmfenstern</name>
       <identifier>private.german_neo_keep_cmdl_germanlessthan</identifier>
-      <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, ModifierFlag::COMMAND_L, KeyCode::COMMAND_L, KeyCode::U, ModifierFlag::OPTION_R|ModifierFlag::COMMAND_L</autogen>
+      <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, ModifierFlag::COMMAND_L, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::U, ModifierFlag::OPTION_R|ModifierFlag::COMMAND_L</autogen>
     </item>
 
     <item>
