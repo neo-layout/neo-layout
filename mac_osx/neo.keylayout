@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 2.1.5 on 2011-04-02 at 13:11 (GMT+02:00)-->
+<!--Last edited by Ukelele version 2.1.5 on 2011-04-05 at 15:42 (GMT+02:00)-->
 <keyboard group="0" id="14242" name="Deutsch (Neo 2)" maxout="2">
     <layouts>
         <layout first="0" last="0" modifiers="30" mapSet="138"/>
@@ -687,7 +687,7 @@
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="73"/>
-            <key code="50" output=""/>
+            <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>

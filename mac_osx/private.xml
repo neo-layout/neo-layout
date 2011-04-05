@@ -24,11 +24,14 @@
       <!-- Mod 4 Modifiers and Mod 4 Locks -->
       <autogen>--KeyOverlaidModifier-- KeyCode::COMMAND_R, ModifierFlag::EXTRA1, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::VK_LOCK_EXTRA1</autogen>
       <autogen>--KeyToKey-- KeyCode::COMMAND_R, KeyCode::VK_MODIFIER_EXTRA1</autogen>
+
       <block>
         <modifier_not>ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R</modifier_not>
         <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, ModifierFlag::EXTRA1, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::VK_LOCK_EXTRA1</autogen>
         <autogen>--KeyToKey-- KeyCode::GERMAN_LESS_THAN, KeyCode::VK_MODIFIER_EXTRA1</autogen>
       </block>
+
+      <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, VK_COMMAND, KeyCode::VK_MODIFIER_EXTRA1, ModifierFlag::COMMAND_R, KeyCode::GERMAN_LESS_THAN, ModifierFlag::COMMAND_L</autogen>
 
       <block>
         <modifier_not>ModifierFlag::OPTION_L, ModifierFlag::OPTION_R</modifier_not>
@@ -167,12 +170,6 @@
       <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::SPACE, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
       <autogen>--KeyToKey-- KeyCode::GERMAN_CIRCUMFLEX, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::GERMAN_CIRCUMFLEX, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
       <autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT, ModifierFlag::EXTRA1|VK_OPTION, KeyCode::Z, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_R|ModifierFlag::SHIFT_R</autogen>
-    </item>
-
-    <item>
-      <name>Behalte Command_L + > als Tastenkombination zum Wechsel zwischen Programmfenstern</name>
-      <identifier>private.german_neo_keep_cmdl_germanlessthan</identifier>
-      <autogen>--KeyOverlaidModifier-- KeyCode::GERMAN_LESS_THAN, ModifierFlag::COMMAND_L, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::U, ModifierFlag::OPTION_R|ModifierFlag::COMMAND_L</autogen>
     </item>
 
     <item>
