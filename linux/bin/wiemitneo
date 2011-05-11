@@ -9,8 +9,20 @@
 # Kontakt zu den Entwicklern der Neo-Tastatur:
 #      <diskussion at neo-layout dot org>
 
-COMPOSE=$HOME/.XCompose
-REFERENZ=$HOME/neo/neo20.txt
+
+# Benutze die beutzerspezifische Compose-Datei (wenn vorhanden); ansonsten die des Systems
+if [ -f $HOME/.XCompose ]; then
+	COMPOSE=$HOME/.XCompose
+else
+	COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose
+fi
+
+# Benutze die von installiere_neo installierte Referenz-Datei (wenn vorhanden); ansonsten die aus dem SVN
+if [ -f $HOME/neo/neo20.txt ]; then
+	REFERENZ=$HOME/neo/neo20.txt
+else
+	REFERENZ=../../A-REFERENZ-A/neo20.txt
+fi
 
 VON[1]=7; BIS[1]=82; RAND[1]="┌─────┬──";   ORT[1]=""			# HAUPTTASTATUR=1
 VON[2]=1; BIS[2]=33; RAND[2]="┌───────┬──"; ORT[2]="auf dem Keypad"	# KEYPAD=2
