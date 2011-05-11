@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # 
 # Dieses Skript unterstützt die Benutzung der Neo-Tastatur
 # Als Argument kann ein einzelnes Zeichen oder eine Beschreibung eines Zeichens übergeben werden
