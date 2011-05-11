@@ -11,3 +11,5 @@ Offene Punkte:
 • eventuell sollte eine Beschreibung (CUBE ROOT, FOURTH ROOT) ergänzt werden
 • neben Compose sollte auch sollte auch die keysymdef.h abgefragt werden, so dass ›wiemitneo integral‹ neben ∬, ∭, ⨌, ∯ auch ∫ anbietet
 • Standard-Compose und ~/.XCompose durchsuchen
+• wiemitneo ≠ führt verursacht einen cut-Fehler, siehe http://wiki.neo-layout.org/ticket/84
+
