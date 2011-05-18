@@ -35,7 +35,7 @@
 ;Name und Name der Datei
 
 	!define /date ZEIT "%y%m%d.%H"
-	Name "Neo2.0 - Das ergonomische Tastaturlayout"
+	Name "Neo 2.0 - Das ergonomische Tastaturlayout"
 	OutFile "Neo2.0_setup.exe"
 
 ;Standardordner (für AHK)
@@ -68,7 +68,7 @@
 	!define MUI_WELCOMEPAGE_TITLE_3LINES ;3 Zeilen für den Titel
 	!insertmacro MUI_PAGE_WELCOME
 	
-	!insertmacro MUI_PAGE_LICENSE "lizenz.txt"
+	;!insertmacro MUI_PAGE_LICENSE "lizenz.txt"
 	
 	!define MUI_PAGE_CUSTOMFUNCTION_PRE preComp
 	!define MUI_PAGE_CUSTOMFUNCTION_LEAVE leaveComp
@@ -120,8 +120,16 @@
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Name" "German (Germany)"
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1100"
 			SetRegView 32
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Text" "Deutsch (Neo 2.0 ergonomisch)"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout File" "kbdneo2.dll"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Id" "00c0"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1000"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Name" "German (Germany)"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1100"
 			${DisableX64FSRedirection}
-			file kbdneo2\Treiber\64bit_Windows\kbdneo2.dll
+			file kbdneo2\Treiber\64bit_Windows\System32\kbdneo2.dll
+			${EnableX64FSRedirection}
+			file kbdneo2\Treiber\64bit_Windows\SysWOW64\kbdneo2.dll
 	    ${Else}
 			SetRegView 32 
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Text" "Deutsch (Neo 2.0 ergonomisch)"
@@ -134,7 +142,7 @@
 			file kbdneo2\Treiber\32bit_Windows\kbdneo2.dll
 		${EndIf}
 		
-		!insertmacro UAC_AsUser_Call Function makeKBDactive ${UAC_SYNCREGISTERS}
+		;!insertmacro UAC_AsUser_Call Function makeKBDactive ${UAC_SYNCREGISTERS}
 		
 	SectionEnd
 
@@ -151,7 +159,7 @@
 		
 		SetOutPath "$SYSDIR"
 		${If} ${RunningX64}
-		SetRegView 64
+			SetRegView 64
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Text" "Deutsch (Neo 2.0 ergonomisch)"
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout File" "kbdneo2.dll"
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Id" "00c0"
@@ -159,8 +167,16 @@
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Name" "German (Germany)"
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1100"
 			SetRegView 32
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Text" "Deutsch (Neo 2.0 ergonomisch)"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout File" "kbdneo2.dll"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Id" "00c0"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1000"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Name" "German (Germany)"
+			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1100"
 			${DisableX64FSRedirection}
-			file kbdneo2\Treiber\64bit_Windows\kbdneo2.dll
+			file kbdneo2\Treiber\64bit_Windows\System32\kbdneo2.dll
+			${EnableX64FSRedirection}
+			file kbdneo2\Treiber\64bit_Windows\SysWOW64\kbdneo2.dll
 		${Else}
 			SetRegView 32 
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Layout Text" "Deutsch (Neo 2.0 ergonomisch)"
@@ -171,9 +187,10 @@
 			WriteRegStr HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Keyboard Layouts\b0000407" "Custom Language Display Name" "@%SystemRoot%\system32\kbdneo2.dll,-1100"
 			${EnableX64FSRedirection}
 			file kbdneo2\Treiber\32bit_Windows\kbdneo2.dll
+
 		${EndIf}
 		
-		; !insertmacro UAC_AsUser_Call Function makeKBDactive ${UAC_SYNCREGISTERS}
+		;!insertmacro UAC_AsUser_Call Function makeKBDactive ${UAC_SYNCREGISTERS}
 		
 	SectionEnd
 
@@ -241,11 +258,11 @@
 		pop $R0
 		strCmp $R0 "Admin" +5 ;falls Admin hüpf 5 Commandozeilen weiter
 		;wenn kein Admin wird das hier angezeigt:
-		messageBox MB_OK  "Wir sind kein Admin, sondern ›$R0‹"
+		messageBox MB_OK  "›$R0‹, Optionen mit Admin-Rechten werden deaktiviert."
 			SectionSetFlags ${installiereKbdneoPlusAHK} ${SF_RO} ;Installationsarten mit Adminrechten werden gesperrt
 			SectionSetFlags ${installiereKbdneoOhneAHK} ${SF_RO} ;Installationsarten mit Adminrechten werden gesperrt
 			return
-		messageBox MB_OK "Wir sind Admin"
+		;messageBox MB_OK "Wir sind Admin"
 	FunctionEnd
 
 
@@ -273,9 +290,9 @@
 	
 	
 ;Layout beim User Aktivieren (hoffentlich ;)
-	Function makeKBDactive
-		System::Call "user32::LoadKeyboardLayout(t "b0000407",${KLF_ACTIVATE})"
-	FunctionEnd
+;	Function makeKBDactive
+;		System::Call "user32::LoadKeyboardLayout(t "b0000407",${KLF_ACTIVATE})"
+;	FunctionEnd
 
 
 ;Datei beim User schreiben, obwohl als Admin eingeloggt
