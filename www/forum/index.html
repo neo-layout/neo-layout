@@ -16,17 +16,31 @@
 
 html {height:100%;margin:0;padding:0;} 
 body {height:100%;margin:0;padding:0;}
-#forum {display:none;border:none; outline:1px solid grey; padding:0;margin:0.5% 0.5% 0 0.5%;}
+#forum {border:none; outline:1px solid grey; padding:0;margin:0.5% 0.5% 0 0.5%;}
 iframe {margin:0;padding:0;border:none;}
 </style>
 <script type="text/javascript">
-        window.onload=setTimeout(doWhatIWant, 10000);
+		var lookAlive = 0
+		window.onload=setTimeout(setMeUp, 250);
+
+		function setMeUp(){
+			document.getElementById('forum').setAttribute('onload', 'iframeLoaded()');
+			document.getElementById('forum').setAttribute('src','http://gmane.org/language.php?set_language=ger&from=');
+		}
+		function iframeLoaded(){
+			if (lookAlive == 0)
+				document.getElementById('forum').setAttribute('src','http://blog.gmane.org/gmane.comp.hardware.keyboards.layout.neo/?set_lines=100000');
+			else if (lookAlive == 1)
+				document.getElementById('forum').setAttribute('src','http://blog.gmane.org/gmane.comp.hardware.keyboards.layout.neo?set_blog_all=no');
+			else if (lookAlive == 2)
+				doWhatIWant();
+			lookAlive++;
+		}
 		function doWhatIWant(){
-		if (document.styleSheets[0].cssRules)
-		document.styleSheets[0].insertRule('.settings{display:none;}',0);
-		else if (document.styleSheets[0].rules)
-		document.styleSheets[0].addRule('.settings','display:none');
-		document.getElementById('forum').style.display="block";
+			if (document.styleSheets[0].cssRules)
+				document.styleSheets[0].insertRule('.settings{display:none;}',0);
+			else if (document.styleSheets[0].rules)
+				document.styleSheets[0].addRule('.settings','display:none');
 		document.getElementById('forum').setAttribute('src','http://blog.gmane.org/gmane.comp.hardware.keyboards.layout.neo/?set_user_css=http%3A%2F%2Fneo-layout.org%2Fforum%2Fgmane.css&do_set_user_css=t');
 		document.getElementById('forum').setAttribute('width','99%');
 		document.getElementById('forum').setAttribute('height','98%');
