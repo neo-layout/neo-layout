@@ -1,0 +1,460 @@
+	body {
+		margin:0px 0px 0px 0px;
+		background:#FFF;		
+		}
+	A 			{ color: #003366; font-weight:bold; text-decoration: none; text-transform:downcase;}
+	A:link		{ color: #003366; font-weight:bold; text-decoration: none; text-transform:downcase; }
+	A:visited	{ color: #003366; font-weight:bold; text-decoration: none; text-transform:downcase; }
+	A:active	{ color: #FFF;  }
+	A:hover		{ color: #003366;  }
+
+	h1, h2, h3 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+#banner {
+ font-family:palatino,  georgia, verdana, arial, sans-serif;
+ background: #dceeee;
+ background-image:  url(http://gmane.org/img/gmane-50.png);
+ background-repeat: no-repeat;
+ background-position: 98% 50%;
+ color:#FFF;
+ font-size:large;
+ font-weight:bold;       
+ padding:15px;
+ padding-bottom: 20px;
+}
+
+	#banner a,
+        #banner a:link,
+        #banner a:visited,
+        #banner a:active,
+        #banner a:hover {
+		font-family: palatino,  georgia, verdana, arial, sans-serif;
+		font-size: xx-large;
+		color: #FFF;
+		text-decoration: none;
+		}
+
+h1.name {
+  height: 50px;
+  width: 100%;
+  background-repeat: no-repeat;
+
+}
+
+.description {
+  font-family:palatino,  georgia, times new roman, serif;
+  font-size:normal;
+  font-weight:bold;
+  color:#000;
+  text-transform:none;    
+  margin-top:8px;
+}
+				
+	#container {
+		background:#FFF;
+		border:1px solid #FFF;		
+		}
+
+	.blog {
+  		padding:15px;
+		background:#FFF; 
+		}
+
+	.blogbody {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#222;
+		font-size:11pt;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:150%;
+  		text-align:justify;
+  		margin: 20px 0px 20px 50px;
+	}
+
+	.blogbody a,
+	.blogbody a:link,
+	.blogbody a:visited,
+	.blogbody a:active {
+	    color:#003366;
+	    font-size:9pt;
+		font-weight: bold;
+		text-decoration: none;			
+
+/*		text-decoration: underline; */
+	}
+
+    .blogbody a:hover   {
+        color:#003366;
+    }
+
+    .blogbody p
+    {
+        margin-top:10px;
+        margin-left:30px;
+    }
+    
+    .extended
+    {
+    		font-family: sans-serif;
+        text-align:right;
+        margin-bottom:0px;
+    }
+    
+    	.extended a,
+	.extended a:link,
+	.extended a:visited,
+	.extended a:active,
+	.extended a:hover {
+	    color:#003366;
+	    font-size:small;
+		font-weight: bold;
+		text-decoration: none;			
+
+/*		text-decoration: underline; */
+	}
+
+	.title	{
+		font-family: palatino, georgia, times new roman, serif;
+		font-size: 13pt;
+		color: #003366;
+		/*text-transform:uppercase;  /* No me gusta */
+		margin-bottom:20px;
+		}			
+
+	h2.title	{
+		font-family: palatino, georgia, times new roman, serif;
+		font-size: large;
+		color: #003366;
+		/*text-transform:uppercase;  /* No me gusta */
+		margin-bottom:20px;
+		}			
+
+	#menu {
+  		margin-bottom:15px;
+		background:#FFF;
+		text-align:center;
+		}		
+
+	.date	{ 
+		font-family:palatino, georgia, times new roman, serif; 
+		color: #003366; 
+		border-bottom:1px solid #003366;
+		margin-bottom:15px;
+		font-weight:bold;
+		}			
+		
+	.posted	{ 
+		font-family:verdana, arial, sans-serif; 
+		font-size: 9pt; 
+		color: #003366; 
+		text-align: right;
+/*		margin-top:25px; */
+		margin-bottom:10px;
+		border-bottom:0px solid #003366;    
+		}
+		
+		
+	.calendar {
+		font-family:verdana, arial, sans-serif;
+		color:#00000;
+		font-size:9pt;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;
+		}
+
+	
+	.calendarhead {	
+		font-family:palatino, georgia, times new roman, serif;
+		color:#003366;
+		font-size:small;
+		font-weight:normal;
+  		padding:2px;
+		letter-spacing: .3em;
+  		background:#FFF;
+  		text-transform:uppercase;
+		text-align:center;
+		border-bottom: 1px solid #003366;			
+		}	
+	
+	.side {
+		font-family:verdana, arial, sans-serif;
+		color:#333;
+		font-size:9pt;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+  		padding:2px;				
+		}	
+		
+    .side a {
+        font-weight:normal;
+    }
+	.sidetitle {
+		font-family:palatino, georgia, times new roman, serif;
+		color:#003366;
+		font-size:small;
+		font-weight:normal;
+  		padding:2px;
+  		margin-top:30px;
+		letter-spacing: .3em;
+  		background:#FFF; 
+  		text-transform:uppercase;
+		border-bottom: 1px solid #003366;			  		
+		}		
+	
+	.sidetitle_b {
+		font-family: sans-serif;
+		color:#003366;
+		font-size:9pt;
+		font-weight:bold;
+  		padding:2px;
+  		margin-top:30px;
+		letter-spacing: .3em;
+  		background:#FFF;
+ 		}		
+	
+	.syndicate {
+		font-family:verdana, arial, sans-serif;
+		font-size:x9pt;		
+  		line-height:140%;
+  		padding:2px;
+  		margin-top:15px;
+  		background:#FFF;  		
+ 		}	
+		
+	.powered {
+		font-family:palatino, georgia, times new roman, serif;
+		color:#666;
+		font-size:9pt;		
+		line-height:140%;
+		text-transform:uppercase; 
+		padding:2px;
+		margin-top:50px;
+		letter-spacing: .2em;					
+  		background:#FFF;		
+		}	
+		
+	
+	.comments-body {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;
+  		margin-left:50px;		
+ 		border-bottom:1px dotted #003366; 					
+		}		
+
+
+	.comments-post {
+		font-family:verdana, arial, sans-serif;
+		color:#003366;
+		font-size:9pt;
+		font-weight:normal;
+  		background:#FFF;
+  		text-align:right;		
+		}	
+			
+	
+	.trackback-url {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding:5px;		
+ 		border:1px dotted #999; 					
+		}
+
+
+	.trackback-body {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#666;
+		font-size:small;
+		font-weight:normal;
+  		background:#FFF;
+  		line-height:140%;
+ 		padding-bottom:10px;
+  		padding-top:10px;		
+ 		border-bottom:1px dotted #999; 					
+		}		
+
+	.trackback-post {
+		font-family:verdana, arial, sans-serif;
+		color:#666;
+		font-size:9pt;
+		font-weight:normal;
+  		background:#FFF;
+/*  		text-align:right;		*/
+		}	
+
+		
+	.comments-head	{ 
+		font-family:palatino, georgia, verdana, arial, sans-serif; 
+		font-size:small; 
+		color: #003366; 
+		border-bottom:1px solid #003366;
+		margin-top:20px;
+		font-weight:bold;
+  		background:#FFF;		
+		}		
+
+	#banner-commentspop {
+		font-family:palatino, georgia, verdana, arial, sans-serif;
+		color:#FFF;
+		font-size:large;
+		font-weight:bold;
+		border-left:1px solid #FFF;	
+		border-right:1px solid #FFF;  		
+		border-top:1px solid #FFF;
+		border-bottom: 4px solid #990099;
+		  		
+  		background:#003366;
+  		padding-left:15px;
+  		padding-right:15px;
+  		padding-top:5px;
+  		padding-bottom:5px;  
+* 		}
+
+div.face {
+   float: left;
+   margin-left: -55px;
+}
+div.posting div.posting {
+ margin-left: 1cm;
+}
+div.options { visibility:collapse;
+ /*  text-align: right;
+   display: inline;
+   float: right;
+   position: relative;
+   bottom: 0px;
+   color: #003366; */
+}
+
+#topcontent {
+ position: absolute;
+ margin-right: 0px;
+ margin-left: 0px;
+ margin-bottom: 0px;
+ border: 0px solid #000;
+ width: 100%;
+ height: 100%;
+}
+
+#sidebox { 
+ padding: 15px; 
+ border: 0px solid red;
+# width: 200px;
+ background: white;
+ margin-right: 75%;
+}
+
+#content {
+ float: right;
+ border: 0px solid #000;
+ padding: 0px;
+ width: 73%;
+ background: white;
+}
+
+div.bottombox {
+background: #dceeee;
+ color: #FFF;
+ height: 51px;
+ font-size: large;
+ font-weight: bold; 
+ padding: 15px;
+ background-image:  url(http://gmane.org/img/gmane-50-green.png);
+ background-repeat: no-repeat;
+ background-position: 50% 50%;
+ border: 0px solid blue;
+ text-align: center;
+ font-family:palatino,  georgia, times new roman, serif;
+ color:#FFFF33;
+}
+p.bottomtext {
+ margin-top: 15px;
+}
+div.bottombox a {
+ color:#FFFF33;
+ font-weight: bold; 
+ text-decoration: none; 
+}
+table.months td {
+ padding: 0px;
+ white-space: nowrap;
+ width: 160px;
+}
+table.months th {
+ font-weight: normal; 
+ padding: 0px;
+ padding-right: 3px;
+ width: 40px;
+ white-space: nowrap;
+ vertical-align: top;
+}
+table.months {
+ border-spacing: 0px;
+ border-collapse: collapse;
+ border: 0;  
+ padding: 0px;
+ cell-spacing: 0px;
+}
+table.months div.cont {
+ width: 40px;
+ position: relative;
+}
+table.months div.bot {
+ position: absolute;
+ right: 0px;
+ top: 0px;
+ background-color: #00aa00;
+ z-index: 1;
+}
+table.months div.top {
+ position: absolute;
+ right: 0px;
+ z-index: 2;
+}
+
+h1.name {
+  background-image:  url(http://neo-layout.org/neo_kopf_trac_522x50.png) !important;
+}
+div.blog .posted form a {font-size:12pt;}
+div.blog > .entry pre {display:none}
+div.blog > .entry .blogbody {
+ margin-left:0;
+ border-bottom: 1px solid #003366;
+}
+div.blog > .entry .date {display:none}
+div.blog > .entry .face {display:none}
+div.blog > .entry .posted{color: #fff; text-align:left; }
+div.blog > .entry .posted form a{color: #003366; }
+div.blog > .entry .posted form a[href^="http://permalink.gmane.org"] {display:none}
+div.blog > .entry .posted form a[href^="http://post.gmane.org"] {display:none}
+div.blog > .entry .posted form a[href^="http://comments.gmane.org"]:before {content:"Thread öffnen ("}
+div.blog > .entry .posted form a[href^="http://comments.gmane.org"]:after {content:")"}
+
+
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div   + div  + div + div + div {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div   + div  + div + div {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div   + div  + div {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div   + div {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div a {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div {font-size:5pt;color:#fff}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div a[href^="http://post.gmane"] {padding:10px;color:red; border:2px solid red; display:block;font-size:14pt;line-height:18pt}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div a[href^="http://post.gmane"]:after {content:" (neuen Thread starten)"}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div br {display:none}
+#sidebox .sidetitle:first-child + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  + div  {display:none}
