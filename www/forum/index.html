@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Forum – Neo-Layout
+    </title>
+        <link rel="search" href="/search" />
+        <link rel="help" href="/wiki/TracGuide" />
+        <link rel="alternate" href="/wiki/Mailingliste?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="/wiki" />
+        <link rel="shortcut icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="http://neo-layout.org/favicon.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="/search/opensearch" title="Search Neo-Layout" />
+
+<style type="text/css" media="screen">
+
+html {height:100%;margin:0;padding:0;} 
+body {height:100%;margin:0;padding:0;}
+#forum {display:none;border:none; outline:1px solid grey; padding:0;margin:0.5% 0.5% 0 0.5%;}
+iframe {margin:0;padding:0;border:none;}
+</style>
+<script type="text/javascript">
+        window.onload=setTimeout(doWhatIWant, 10000);
+		function doWhatIWant(){
+		if (document.styleSheets[0].cssRules)
+		document.styleSheets[0].insertRule('.settings{display:none;}',0);
+		else if (document.styleSheets[0].rules)
+		document.styleSheets[0].addRule('.settings','display:none');
+		document.getElementById('forum').style.display="block";
+		document.getElementById('forum').setAttribute('src','http://blog.gmane.org/gmane.comp.hardware.keyboards.layout.neo/?set_user_css=http%3A%2F%2Fneo-layout.org%2Fgmane.css&do_set_user_css=t');
+		document.getElementById('forum').setAttribute('width','99%');
+		document.getElementById('forum').setAttribute('height','98%');
+		}
+</script>
+	</head>
+  <body><div class="settings">Einstellungen werden vorgenommen, bitte warten …<br /><br />Javascript und Cookies von gmane.org müssen zugelassen werden.</div>
+  <iframe class="settings" width="1" height="1" src="http://gmane.org/language.php?set_language=ger&from="></iframe>
+  <iframe class="settings" width="1" height="1" src="http://blog.gmane.org/gmane.comp.hardware.keyboards.layout.neo/?set_lines=100000"></iframe>
+  <iframe class="settings" width="1" height="1" src="http://blog.gmane.org/gmane.comp.hardware.keyboards.layout.neo?set_blog_all=no"></iframe>
+  <iframe id="forum" width="1" height="1" src="about:blank"></iframe>
+
+</body>
+</html>
