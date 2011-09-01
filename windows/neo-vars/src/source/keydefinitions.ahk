@@ -64,7 +64,7 @@ EDNS("047",0,"S__N__7","✔","↕","S__NHom","S_SNHom","≪","⌈") ; Numpad7
 EDNS("048",0,"S__N__8","✘","↑","S__N_Up","S_SN_Up","∩","⋂") ; Numpad8
 EDNS("049",0,"S__N__9","†","⃗","S__NPUp","S_SNPUp","≫","⌉") ; Numpad9
 EDNS("04B",0,"S__N__4","♣","←","S__N_Le","S_SN_Le","⊂","⊆") ; Numpad4
-EDNS("04C",0,"S__N__5","€","¦","S__NClr","S_SNClr","⊶","⊷") ; Numpad5
+EDNS("04C",0,"S__N__5","€",":","S__NClr","S_SNClr","⊶","⊷") ; Numpad5
 EDNS("04D",0,"S__N__6","‣","→","S__N_Ri","S_SN_Ri","⊃","⊇") ; Numpad6
 EDNS("04F",0,"S__N__1","♦","↔","S__NEnd","S_SNEnd","≤","⌊") ; Numpad1
 EDNS("050",0,"S__N__2","♥","↓","S__N_Dn","S_SN_Dn","∪","⋃") ; Numpad2
