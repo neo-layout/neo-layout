@@ -2,8 +2,10 @@
 
 BSTalwaysOnTop := 1
 
+UnZipSFXSourceLink := "ftp://ftp.info-zip.org/pub/infozip/win32/unz600xn.exe"
+UnZipSFXLocalFile  := ResourceFolder . "\unzipsfx.exe"
+
 UnZipLocalFile := ResourceFolder . "\unzip.exe"
-UnZipSourceLink := "http://stahlworks.com/dev/unzip.exe"
 
 UniFontVersion  := "2.33"
 UniFontFilename := "DejaVuSans-Bold.ttf"
@@ -204,19 +206,22 @@ CharProc__BST1() {
 
   if (FileExist(UniFontLocalFile)=="") {
     if (FileExist(UnZipLocalFile)=="") {
-      Progress,0,,Herunterladen des Entpack-Programms ...
-      UrlDownloadToFile,%UnZipSourceLink%,%UnZipLocalFile%
-      if (FileExist(UnZipLocalFile)=="") {
+      Progress,0,Herunterladen des gepackten Entpack-Programms ...
+      UrlDownloadToFile,%UnZipSFXSourceLink%,%UnZipSFXLocalFile%
+      if (FileExist(UnZipSFXLocalFile)=="") {
         Msgbox,Konnte Unzip-Programm nicht finden und nicht installieren!
+      } else {
+        Progress,25,Entpacken des Entpack-Programms ...
+        RunWait,% """" . UnZipSFXLocalFile . """ -d """ . ResourceFolder . """ unzip.exe",,Hide
       }
     }
 
     if (FileExist(UniFontZipLocalFile)=="") {
-      Progress,20,Herunterladen des Fonts ...
+      Progress,50,Herunterladen des Fonts ...
       UrlDownloadToFile,%UniFontZipSourceLink%,%UniFontZipLocalFile%
     }
 
-    Progress,80,Entpacken des Archivs ...
+    Progress,75,Entpacken des Archivs ...
     RunWait,% """" . UnZipLocalFile . """ -j """ . UniFontZipLocalFile . """ """ . UniFontZipFontPath . """",%UniFontLocalFilePath%,Hide
     Progress,OFF
   }
