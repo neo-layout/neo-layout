@@ -203,6 +203,25 @@ ED12(scpos,caps,e1a,e2a) {
   SetKeyPos("CP2" . pos, e2)
 }
 
+ED1256(scpos,caps,e1a,e2a,e5a,e6a) {
+  global
+  pos := vksc%scpos%
+  e1  := EncodeUniComposeA(e1a)
+  e2  := EncodeUniComposeA(e2a)
+  e5  := EncodeUniComposeA(e5a)
+  e6  := EncodeUniComposeA(e6a)
+  if (caps == 0) {
+    NOC%pos% := 1
+    UNSH%e1% := 0
+  } else {
+    NOC%pos% := 0
+    UNSH%e1% := 1 ; unshift wenn caps lock + Shift?
+  }
+  SetKeyPos("CP1" . pos, e1)
+  SetKeyPos("CP2" . pos, e2)
+  SetKeyPos("CP5" . pos, e5)
+  SetKeyPos("CP6" . pos, e6)
+}
 
 Comp := ""
 
