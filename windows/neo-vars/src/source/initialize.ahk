@@ -36,7 +36,6 @@ disable=Deaktiviere %name%
 NEONumLockLEDState    := "Off"
 NEOCapsLockLEDState   := "Off"
 NEOScrollLockLEDState := "Off"
-SetNEOLockStates()
 OnExit, exitprogram
 
 ApplicationFolder := A_AppData . "\Neo2"
@@ -48,6 +47,9 @@ IniRead,zeigeModusBox,%ini%,Global,zeigeModusBox,1
 IniRead,UseMod4Light,%ini%,Global,UseMod4Light,1
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
+IniRead,NumLockOff,%ini%,Global,NumLockOff,0
+
+SetNEOLockStates()
 
 regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1
 regread,inputlocalealias,HKEY_CURRENT_USER,Keyboard Layout\Substitutes,%inputlocale%
@@ -101,7 +103,10 @@ SetNEOLockStates() {
   SavedNumLockState := SwitchIs%SavedNumLockState%
   SavedScrollLockState := SwitchIs%SavedScrollLockState%
   SavedCapsLockState := SwitchIs%SavedCapsLockState%
-  SetNumLockState, On
+  if (NumLockOff == 1)
+    SetNumLockState, Off
+  else
+    SetNumLockState, On
   SetScrollLockState, Off
   SetCapsLockState, Off
   Sleep,1
