@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 SetWorkingDir, %A_ScriptDir%
 #include %A_ScriptDir%\
 
@@ -13,11 +15,11 @@ SetWorkingDir, %A_ScriptDir%
 ; Hier liegt die Tastaturbelegung
 #include    source\keydefinitions.ahk
 
-; Shortcuts, um die Zeichen wieder sauber zur Applikation bringen zu können
+; Shortcuts, um die Zeichen wieder sauber zur Applikation bringen zu kÃ¶nnen
 #include    source\performance.ahk
 #include    source\shortcuts.ahk
 
-; Good-old AHK-Skripts, enthalten die ersten Key-Hooks für Mod-Tasten
+; Good-old AHK-Skripts, enthalten die ersten Key-Hooks fÃ¼r Mod-Tasten
 ; Achtung: Hinter dem ersten Keyboard-Hook werden keine globalen Variablen
 ; mehr gesetzt!
 #include    source\initialize.ahk

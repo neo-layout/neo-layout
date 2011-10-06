@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 if (A_IsCompiled) {
 ; Revisionsinformation bereits verfügbar
 } else {
@@ -66,7 +68,7 @@ if (inputlocale<>"00000407" and inputlocale<>"00000807" and inputlocale<>"000104
     `t%inputlocale%   
     `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
     sein, damit %name% wie erwartet funktioniert.   
-    `n�ndern Sie die Tastatureinstellung unter 
+    `nÄndern Sie die Tastatureinstellung unter 
     `tSystemsteuerung   
     `t-> Regions- und Sprachoptionen   
     `t-> Sprachen 

@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 #NoEnv
 
 AllStar(This_HotKey) {
@@ -47,9 +49,9 @@ rerun:
   if (PP%PhysKey% != "")
     CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
   else
-    CompNew := Comp . char           ; H�ngen wir mal das neue Zeichen zum Compositum an
+    CompNew := Comp . char           ; Hï¿½ngen wir mal das neue Zeichen zum Compositum an
 
-  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gel�scht
+  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gelï¿½scht
     tosend := CD%CompNew%
     PP%PhysKey% := CompNew
     Comp := ""
@@ -59,7 +61,7 @@ rerun:
     Comp := CompNew
   } else if (CF%Comp% != "") {
     tosend := CF%Comp%
-    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufr�umen
+    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufrï¿½umen
       CharOutUp(PR%PhysKey%)
       PR%PhysKey% := ""
     }
@@ -90,7 +92,7 @@ rerun:
 
 
   if (strlen(tosend) > 7) {          ; Ausgabe mehrerer Zeichen
-    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufr�umen
+    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufrï¿½umen
       CharOutUp(PR%PhysKey%)
       PR%PhysKey% := ""
     }

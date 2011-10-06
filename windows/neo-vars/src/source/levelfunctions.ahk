@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 NEOEbeneAktualisieren() {
   global
   Ebene7 := 0
@@ -15,8 +17,8 @@ NEOEbeneAktualisieren() {
   ; isMod2Locked     00110011001100110011001100110011
   ; isShiftPressed   01010101010101010101010101010101
 
-  EbeneNC := SubStr("12123535444466664444353512126666",ModPos,1) ; Für normale Tasten (reagieren nicht auf CapsLock)
-  EbeneC  := SubStr("12213535444466664444353512216666",ModPos,1) ; Für Buchstaben     (reagieren       auf CapsLock)
+  EbeneNC := SubStr("12123535444466664444353512126666",ModPos,1) ; FÃ¼r normale Tasten (reagieren nicht auf CapsLock)
+  EbeneC  := SubStr("12213535444466664444353512216666",ModPos,1) ; FÃ¼r Buchstaben     (reagieren       auf CapsLock)
   Ebene7  := SubStr("00000000010100000101000000000000",ModPos,1)
   Ebene8  := SubStr("00000000000001010000000000000101",ModPos,1)
 
@@ -90,7 +92,7 @@ ToggleMod4Lock() {
       UpdateNEOLEDS()
     }
     if (zeigeLockBox)
-      TrayTip,Mod4-Feststellung,Um Mod4 wieder zu lösen`, drücke beide Mod4-Tasten gleichzeitig!,3,1
+      TrayTip,Mod4-Feststellung,Um Mod4 wieder zu lÃ¶sen`, drÃ¼cke beide Mod4-Tasten gleichzeitig!,3,1
   }
 }
 

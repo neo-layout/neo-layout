@@ -1,4 +1,6 @@
-; die Nachfolgenden sind nützlich um sich die Qwertz-Tasten abzugewöhnen, da alle auf der 4. Ebene vorhanden.
+; -*- encoding: utf-8 -*-
+
+; die Nachfolgenden sind nÃ¼tzlich um sich die Qwertz-Tasten abzugewÃ¶hnen, da alle auf der 4. Ebene vorhanden.
 lernModus_std_Return := 0
 lernModus_std_Backspace := 0
 lernModus_std_PgUp := 0
@@ -28,7 +30,7 @@ CharProc___LMt() {
   if (lernModus) {
     CharProc___LM1()
     if (zeigeModusBox)
-      TrayTip,NEO-Lernmodus,NEO-Lernmodus wurde aktiviert. Zum Deaktivieren`, Mod3+F9 drücken.,10,1
+      TrayTip,NEO-Lernmodus,NEO-Lernmodus wurde aktiviert. Zum Deaktivieren`, Mod3+F9 drÃ¼cken.,10,1
   } else {
     CharProc___LM0()
     if (zeigeModusBox)

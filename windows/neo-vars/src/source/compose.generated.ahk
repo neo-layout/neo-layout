@@ -1,4 +1,6 @@
-CompRevision := "2231"
+; -*- encoding: utf-8 -*-
+
+CompRevision := "2354"
 
 LoadDefaultCompose() {
   global

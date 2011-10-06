@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 #MaxThreadsPerHotKey 1
 Thread,Interrupt,-1,-1
 

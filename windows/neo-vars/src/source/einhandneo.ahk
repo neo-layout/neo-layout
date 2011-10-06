@@ -1,4 +1,4 @@
-; öäü
+; -*- encoding: utf-8 -*-
 
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 If (einHandNeo)
@@ -14,7 +14,7 @@ CharProc___EHt() {
   if (einHandNeo) {
     CharProc___EH1()
     if (zeigeModusBox)
-      TrayTip,NEO-Einhandmodus,Der NEO-Einhand-Modus wurde aktiviert. Zum Deaktivieren Mod3+F10 drücken.,10,1
+      TrayTip,NEO-Einhandmodus,Der NEO-Einhand-Modus wurde aktiviert. Zum Deaktivieren Mod3+F10 drÃ¼cken.,10,1
   } else {
     CharProc___EH0()
     if (zeigeModusBox)
@@ -37,7 +37,7 @@ CharProc___EH1() {
   TKEH_VK38SC009 := "VK35SC006" ; 8 -> 5
   TKEH_VK39SC00A := "VK34SC005" ; 9 -> 4
   TKEH_VK30SC00B := "VK33SC004" ; 0 -> 3
-  TKEH_VKDBSC00C := "VK32SC003" ; ß -> 2
+  TKEH_VKDBSC00C := "VK32SC003" ; ÃŸ -> 2
   TKEH_VKDDSC00D := "VK31SC002" ; tot2 -> 1
   ; Reihe 2
   TKEH_VK5ASC015 := "VK54SC014" ; k -> w
@@ -45,7 +45,7 @@ CharProc___EH1() {
   TKEH_VK49SC017 := "VK45SC012" ; g -> l
   TKEH_VK4FSC018 := "VK57SC011" ; f -> v
   TKEH_VK50SC019 := "VK51SC010" ; q -> x
-  TKEH_VKBASC01A := "tab"       ; ß -> tab
+  TKEH_VKBASC01A := "tab"       ; ÃŸ -> tab
   TKEH_VKBBSC01B := "VKDCSC029" ; tot3 -> tot1
   ; Reihe 3
   TKEH_VK48SC023 := "VK47SC022" ; s -> o
@@ -56,9 +56,9 @@ CharProc___EH1() {
   ; Reihe 4
   TKEH_VK4ESC031 := "VK42SC030" ; b -> z
   TKEH_VK4DSC032 := "VK56SC02F" ; m -> p
-  TKEH_VKBCSC033 := "VK43SC02E" ; , -> ä
-  TKEH_VKBESC034 := "VK58SC02D" ; . -> ö
-  TKEH_VKBDSC035 := "VK59SC02C" ; j -> ü
+  TKEH_VKBCSC033 := "VK43SC02E" ; , -> Ã¤
+  TKEH_VKBESC034 := "VK58SC02D" ; . -> Ã¶
+  TKEH_VKBDSC035 := "VK59SC02C" ; j -> Ã¼
   ; Modify Space
   ED1("space","P__EHSd")
   GUISYM("P__EHSd","EH")
@@ -83,7 +83,7 @@ CharProc___EH0() {
   TKEH_VK38SC009 := "" ; 8
   TKEH_VK39SC00A := "" ; 9
   TKEH_VK30SC00B := "" ; 0
-  TKEH_VKDBSC00C := "" ; ß
+  TKEH_VKDBSC00C := "" ; ÃŸ
   TKEH_VKDDSC00D := "" ; tot2
   ; Reihe 2
   TKEH_VK5ASC015 := "" ; k
@@ -91,7 +91,7 @@ CharProc___EH0() {
   TKEH_VK49SC017 := "" ; g
   TKEH_VK4FSC018 := "" ; f
   TKEH_VK50SC019 := "" ; q
-  TKEH_VKBASC01A := "" ; ß
+  TKEH_VKBASC01A := "" ; ÃŸ
   TKEH_VKBBSC01B := "" ; tot3
   ; Reihe 3
   TKEH_VK48SC023 := "" ; s
@@ -114,7 +114,7 @@ CharProc___EH0() {
 
 CharProc__EHSd() {
   global
-  ; Space im Einhandmodus gedrückt
+  ; Space im Einhandmodus gedrÃ¼ckt
   PRspace := "P__EHSu"
   if (!EHSpacePressed) {
     EHSpacePressed := 1

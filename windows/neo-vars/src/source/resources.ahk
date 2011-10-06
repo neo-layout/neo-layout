@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 EnvGet, WindowsEnvTempFolder, TEMP
 ResourceFolder = %WindowsEnvTempFolder%\Neo2
 FileCreateDir, %ResourceFolder%

@@ -1,6 +1,4 @@
 ; -*- encoding:utf-8 -*-
-; AHK versteht zwar kein utf-8, aber so lässt sich’s doch leichter eingeben.
-
 
 DefineXKBSym(name,val) {
   global
@@ -1980,7 +1978,7 @@ CompRevision = %1%
 OutputFile = %2%
 
 FileDelete,%OutputFile%
-FileAppend,CompRevision := "%CompRevision%"`r`n`r`nLoadDefaultCompose() {`r`n  global`r`n`r`n, %OutputFile%    ; }
+FileAppend,`; -*- encoding: utf-8 -*-`r`n`r`nCompRevision := "%CompRevision%"`r`n`r`nLoadDefaultCompose() {`r`n  global`r`n`r`n, %OutputFile%    ; }
 
 loop %Numpars% {
   if (A_Index < 3)

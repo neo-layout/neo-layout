@@ -1,15 +1,17 @@
+; -*- encoding: utf-8 -*-
+
 /* SHORTCUTS
-   Da in diesem AHK-Skript sämtliche Tastendrücke zur weiteren Verarbeitung
-   in Unicode- und Spezialzeichen umgewandelt werden, müssen sie für eine
-   effiziente Tasten-Ausgabe, wo möglich, zurück gewandelt werden. Dazu
+   Da in diesem AHK-Skript sÃ¤mtliche TastendrÃ¼cke zur weiteren Verarbeitung
+   in Unicode- und Spezialzeichen umgewandelt werden, mÃ¼ssen sie fÃ¼r eine
+   effiziente Tasten-Ausgabe, wo mÃ¶glich, zurÃ¼ck gewandelt werden. Dazu
    dienen Shortcuts: Soll beispielsweise das Unicode-Zeichen U0061 (kleines
    a) ausgegeben werden, muss dieses durch "send {a}" ersetzt werden. Die
-   dafür notwendigen Rückwandlungskonstanten werden hier, teilweise
+   dafÃ¼r notwendigen RÃ¼ckwandlungskonstanten werden hier, teilweise
    automatisiert, definiert und im entsprechenden Unterprogramm zur Anwendung
    gebracht.
 */
 
-; ###### Shortcuts für alle ASCII-Zeichen (0x21 bis 0x7E)
+; ###### Shortcuts fÃ¼r alle ASCII-Zeichen (0x21 bis 0x7E)
 SetFormat, integer, hex
 char := 0x21
 loop {
@@ -29,9 +31,9 @@ CSU00001B := "esc"
 CSU000020 := "space"
 
 /**** die folgenden Shortcuts ersetzen die automatische Wahl entsprechender
- **** down- und up-Sendezeichen, da die Zeichenerzeugung entweder aufwändiger
+ **** down- und up-Sendezeichen, da die Zeichenerzeugung entweder aufwÃ¤ndiger
  **** ist (wie bei den diversen toten Zeichen) oder schlicht mit AHK nicht
- **** geht (wie das Key-Repeat der schließenden Klammer).
+ **** geht (wie das Key-Repeat der schlieÃŸenden Klammer).
 */
 DNCSU00007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
 ; CSU00007D := ""
@@ -123,7 +125,7 @@ CSS__L_M2 := "LShift"
 CSS__R_M2 := "RShift"
 
 /*
-  Jetzt noch ein paar Verschönerungsabkürzungen
+  Jetzt noch ein paar VerschÃ¶nerungsabkÃ¼rzungen
 */
 CBS____M2 := "Shift+"
 CBS____M3 := "Mod3+"
@@ -137,7 +139,7 @@ CBS__Comp := "Compose"
 CBT__Acut := "Akut"
 CBT__grav := "Gravis"
 CBT__cedi := "Cedille"
-CBT__abdt := "Punkt darüber"
+CBT__abdt := "Punkt darÃ¼ber"
 CBT__ogon := "Ogonek"
 CBT__cflx := "Zircumflex"
 CBT__cron := "Hatschek"
@@ -147,9 +149,9 @@ CBT__tlde := "Tilde"
 CBT__mcrn := "Makron"
 CBT__drss := "Trema"
 CBT__dbac := "Doppelakut"
-CBT__strk := "Schrägstrich"
+CBT__strk := "SchrÃ¤gstrich"
 
 CBU00005E := "^"
 CBU000060 := "``"
-CBU0000B4 := "´"
+CBU0000B4 := "Â´"
 CBCP1VK90SC145 := "Ntab"

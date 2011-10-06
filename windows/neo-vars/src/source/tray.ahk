@@ -1,8 +1,10 @@
+; -*- encoding: utf-8 -*-
+
 TrayAktivieren() {
   global
   menu,tray,icon,%ResourceFolder%\neo_enabled.ico,,1
   menu,tray,nostandard
-  menu,tray,add,Öffnen,open
+  menu,tray,add,Ã–ffnen,open
     menu,helpmenu,add,About,about
     menu,helpmenu,add,Autohotkey-Hilfe,help
     menu,helpmenu,add
@@ -92,15 +94,15 @@ TrayAbout() {
   msgbox, 64, %name%  Ergonomische Tastaturbelegung, 
   (
   %name% 
-  `nDas Neo-Layout ersetzt das übliche deutsche 
+  `nDas Neo-Layout ersetzt das Ã¼bliche deutsche 
   Tastaturlayout mit der Alternative Neo, 
   beschrieben auf http://neo-layout.org/. 
-  `nDazu sind keine Administratorrechte nötig. 
+  `nDazu sind keine Administratorrechte nÃ¶tig. 
   `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
-  `nDies geschieht transparent für den Anwender, 
+  abgefangen und statt dessen eine Ãœbersetzung weitergeschickt. 
+  `nDies geschieht transparent fÃ¼r den Anwender, 
   es muss nichts installiert werden. 
-  `nDie Zeichenübersetzung kann leicht über das Icon im 
+  `nDie ZeichenÃ¼bersetzung kann leicht Ã¼ber das Icon im 
   Systemtray deaktiviert werden.  `n
   )
 }
