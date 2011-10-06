@@ -1,3 +1,5 @@
+; -*- encoding: utf-8 -*-
+
 UpdateOldLEDS() {
   global
   SwitchIsOn := 1

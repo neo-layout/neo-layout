@@ -23,10 +23,14 @@ UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "/ttf/" . UniFontFi
 Check_BSTUpdate(DoBSTUpdate = 0) {
   global
   if (useDBST) {
-    if (!useBST and (Comp != "")) {
+    if (!useBST and ((Comp != "") or (EbeneC == 5) or (EbeneC == 6))) {
       useBST := 1
       BSTLastComp := ""
       CharProc__BST1()
+    } else if (useBST and ((Comp == "") and (EbeneC != 5) and (EbeneC != 6))) {
+      useBST := 0
+      BSTLastComp := ""
+      CharProc__BST0()
     }
   }
   if (useBST 
@@ -35,13 +39,6 @@ Check_BSTUpdate(DoBSTUpdate = 0) {
            or (EbeneC != BSTLastEbeneC)
            or (EbeneNC != BSTLastEbeneNC)))
     BSTUpdate()
-  if (useDBST) {
-    if (useBST and (Comp == "")) {
-      useBST := 0
-      BSTLastComp := ""
-      CharProc__BST0()
-    }
-  }
 }
 
 BSTUpdate() {
@@ -162,7 +159,7 @@ CharProc_DBSTt() {
   useDBST := !(useDBST)
   if (useDBST) {
     if (zeigeModusBox)
-      TrayTip,Dynamische Bildschirmtastatur,Die dynamische Bildschirmtastatur wurde aktiviert. Zum Deaktivieren`, Mod3+F3 druecken.,10,1
+      TrayTip,Dynamische Bildschirmtastatur,Die dynamische Bildschirmtastatur wurde aktiviert. Zum Deaktivieren`, Mod3+F3 drücken.,10,1
   } else {
     if (zeigeModusBox)
       TrayTip,Dynamische Bildschirmtastatur,Die dynamische Bildschirmtastatur wurde deaktiviert.,10,1
@@ -177,13 +174,13 @@ BSTOnClose() {
 
 BSTOnSize() {
   global
-  Gui, Show, % "y" . yposition . " w" . A_GuiWidth . " h" . A_GuiWidth*199/729 . " NoActivate", Neo-Bildschirmtastatur
-  Gui, Font, % "s" . A_GuiWidth*12/729 . " bold", % UniFontName
+  Gui, Show, % "Y" . yposition . " W" . A_GuiWidth . " H" . Round(A_GuiWidth*199/729,0) . " NoActivate", Neo-Bildschirmtastatur
+  Gui, Font, % "s" . Round(A_GuiWidth*12/729,0) . " bold", % UniFontName
   loop,parse,GuiKeyList,`,
   {
     GuiPhysKey := A_LoopField
     GuiControl,Font,GuiKey%GuiPhysKey%
-    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . GuiPosx%GuiPhysKey%*A_GuiWidth/729 . " y" . GuiPosy%GuiPhysKey%*A_GuiWidth/729 . " w" . 38*A_GuiWidth/729 . " h" . 38*A_GuiWidth/729
+    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . Round(GuiPosx%GuiPhysKey%*A_GuiWidth/729,0) . " y" . Round(GuiPosy%GuiPhysKey%*A_GuiWidth/729,0) . " w" . Round(38*A_GuiWidth/729,0) . " h" . Round(38*A_GuiWidth/729,0)
   }
   GuiControl,,Picture0, % "*w" . A_GuiWidth . " *h-1 " . ResourceFolder . "\ebene0.png"
 }

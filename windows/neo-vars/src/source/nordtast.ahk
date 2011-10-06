@@ -10,17 +10,17 @@ CharProcNordTt() {
     isNordTast := 1
     CharProcNordT1()
     if (zeigeModusBox)
-      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante NT wurde aktiviert. Zum Umschalten`, Mod3+F12 druecken.,10,1
+      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante NT wurde aktiviert. Zum Umschalten`, Mod3+F12 drücken.,10,1
   } else if (isNordTast == 1) {
     isNordTast := 2
     CharProcNordT2()
     if (zeigeModusBox)
-      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante AdNW wurde aktiviert. Zum Umschalten`, Mod3+F12 druecken.,10,1
+      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante AdNW wurde aktiviert. Zum Umschalten`, Mod3+F12 drücken.,10,1
   } else if (isNordTast == 2) {
     isNordTast := 3
     CharProcNordT3()
     if (zeigeModusBox)
-      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante DIEgO wurde aktiviert. Zum Umschalten`, Mod3+F12 druecken.,10,1
+      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante DIEgO wurde aktiviert. Zum Umschalten`, Mod3+F12 drücken.,10,1
   } else {
     isNordTast := 0
     CharProcNordT0()

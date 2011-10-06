@@ -1,7 +1,9 @@
-; Wir müssen F24 nicht hooken, aber bei einem Restart hat AHK den Bug,
-; dass manchmal der erste Hook ausgeführt wird, als wäre diese Taste
-; gedrückt worden. Da F24 auf den wenigsten Tastaturen vorkommt und daher für
-; NEO uninteressant ist, kehren wir einfach wieder zurück.
+; -*- encoding: utf-8 -*-
+
+; Wir mÃ¼ssen F24 nicht hooken, aber bei einem Restart hat AHK den Bug,
+; dass manchmal der erste Hook ausgefÃ¼hrt wird, als wÃ¤re diese Taste
+; gedrÃ¼ckt worden. Da F24 auf den wenigsten Tastaturen vorkommt und daher fÃ¼r
+; NEO uninteressant ist, kehren wir einfach wieder zurÃ¼ck.
 ~F24::return
 
 +pause::

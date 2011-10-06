@@ -1799,7 +1799,17 @@ SetFormat, Integer, hex
       break
     char := asc(SubStr(str,1,1))
     str  := SubStr(str,2)
-    if (char < 0x80)
+    if (A_IsUnicode) {
+      if ((char < 0xDC00) or (char >= 0xE000))
+        result .= "U" . SubStr("000000" . Substr(char, 3), -5)
+      else {
+        ; unwrap surrogates
+        char2 := asc(Substr(str,1,1))
+        str   := SubStr(str,2)
+        result .= "U" . SubStr("000000" . SubStr(((char & 0x3FF) << 12) + (char2 & 0x3FF), 3), -5)
+      }
+    }
+    else if (char < 0x80)
       result .= "U" . SubStr("000000" . SubStr(char,3),-5)
     else if (char < 0xC0) {
       ; error
