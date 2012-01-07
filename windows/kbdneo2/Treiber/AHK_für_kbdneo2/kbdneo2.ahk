@@ -1,4 +1,4 @@
-﻿;*********************
+;*********************
 ; Anfangsbedingungen *
 ;*********************
 name=Neo 2.0 (Erweiterung für nativen Treiber)
