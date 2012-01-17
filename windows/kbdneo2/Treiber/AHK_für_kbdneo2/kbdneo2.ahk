@@ -13,7 +13,7 @@ if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&F
 if (FileExist("neo_enabled.ico")&&FileExist("neo_disabled.ico"))
   iconBenutzen=1
 
-  
+
 ;*************************
 ; Menü des Systray-Icons *
 ;*************************
@@ -458,3 +458,4 @@ ToggleAlwaysOnTop:
     alwaysOnTop = 1
   }
 Return
+
