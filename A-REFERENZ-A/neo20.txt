@@ -353,7 +353,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 
 ┌───────┐ 1 … ASCII-Malzeichen
 │ * × ⊗ │ 2 … ASCII-Malzeichen
-│ * ⋅ ⊙ │ 3 … Malpunkt (U+2219 BULLET OPERATOR)
+│ * ⋅ ⊙ │ 3 … Malpunkt (U+22C5 DOT OPERATOR)
 └───────┘ 4 … Malkreuz (U+00D7 MULTIPLICATION SIGN)
           5 … (U+2299 CIRCLED DOT OPERATOR)
           6 … (U+2297 CIRCLED TIMES)
