@@ -1,15 +1,11 @@
-
 // based on a keyboard map from an 'xkb/symbols/de' file
-//
-// $XKeyboardConfig$
-// $XFree86: xc/programs/xkbcomp/symbols/de,v 1.6 2003/09/08 13:12:51 pascal Exp $
 
 default
 xkb_symbols "basic" {
 
     include "latin(type4)"
 
-    name[Group1]="Germany";
+    name[Group1]="German";
 
     key <AE02>	{ [         2,   quotedbl,  twosuperior,    oneeighth ]	};
     key <AE03>	{ [         3,    section, threesuperior,    sterling ]	};
@@ -59,7 +55,7 @@ xkb_symbols "nodeadkeys" {
     // modify the basic German layout to not have any dead keys
 
     include "de(basic)"
-    name[Group1]="Germany - Eliminate dead keys";
+    name[Group1]="German (eliminate dead keys)";
 
     key <TLDE>	{ [asciicircum,    degree,      notsign,      notsign ]	};
     key <AE12>	{ [     acute,      grave,      cedilla,      cedilla ]	};
@@ -68,7 +64,6 @@ xkb_symbols "nodeadkeys" {
     key <AC10>	{ [odiaeresis, Odiaeresis,  doubleacute,  doubleacute ]	};
     key <AC11>	{ [adiaeresis, Adiaeresis,  asciicircum,  asciicircum ]	};
     key <BKSL>	{ [numbersign, apostrophe,        grave,        grave ]	};
-    key <AB10>	{ [     minus, underscore, dead_belowdot,    abovedot ]	};
 };
 
 partial alphanumeric_keys
@@ -78,7 +73,7 @@ xkb_symbols "deadgraveacute" {
     // in many programming languages)
 
     include "de(basic)"
-    name[Group1]="Germany - Dead grave acute";
+    name[Group1]="German (dead grave acute)";
 
     key <TLDE>	{ [asciicircum,    degree,      notsign,      notsign ]	};
     key <AD12>	{ [      plus,   asterisk,   asciitilde,  dead_macron ]	};
@@ -93,7 +88,7 @@ xkb_symbols "deadacute" {
 
     include "de(deadgraveacute)"
 
-    name[Group1]="Germany - Dead acute";
+    name[Group1]="German (dead acute)";
 
     key <AE12>	{ [dead_acute,      grave, dead_cedilla,  dead_ogonek ]	};
     key <BKSL>	{ [numbersign, apostrophe,   dead_grave,   dead_grave ]	};
@@ -109,7 +104,7 @@ xkb_symbols "ro" {
 
     include "de(basic)"
 
-    name[Group1]="Germany - Romanian keyboard with German letters";
+    name[Group1]="Romanian (Germany)";
 
     key <AD05> { [         t,    T,           tcedilla,     Tcedilla    ] };
     key <AD08> { [         i,    I,        icircumflex,  Icircumflex    ] };
@@ -124,7 +119,7 @@ xkb_symbols "ro_nodeadkeys" {
     // Read the comment for de_ro !
 
     include "de(nodeadkeys)"
-    name[Group1]="Germany - Romanian keyboard with German letters, eliminate dead keys";
+    name[Group1]="Romanian (Germany, eliminate dead keys)";
 
     key <AD05> { [         t,    T,           tcedilla,     Tcedilla    ] };
     key <AD08> { [         i,    I,        icircumflex,  Icircumflex    ] };
@@ -142,7 +137,7 @@ partial alphanumeric_keys
 xkb_symbols "dvorak" {
     include "us(dvorak)"
 
-    name[Group1]="Germany - Dvorak";
+    name[Group1]="German (Dvorak)";
 
     key <TLDE> { [ asciicircum, degree ] };
 
@@ -208,7 +203,7 @@ xkb_symbols "sundeadkeys" {
 
     include "de(Sundeadkeys)"
 
-    name[Group1]="Germany - Sun dead keys";
+    name[Group1]="German (Sun dead keys)";
 };
 
 
@@ -229,8 +224,6 @@ xkb_symbols "sundeadkeys" {
 
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo_base" {
-
-    name[Group1]= "Germany - Neo 2";
 
     // Levels in Neo jargon
     // --------------------------------------------------------------
@@ -386,6 +379,8 @@ xkb_symbols "neo" {
 
     include "de(neo_base)"
 
+    name[Group1]= "German (Neo 2)";
+
     include "shift(both_capslock)"
     include "level3(caps_switch)"
     include "level3(bksl_switch)"
@@ -400,7 +395,7 @@ partial alphanumeric_keys
 xkb_symbols "mac" {
 
     include "de"
-    name[Group1]= "Germany - Macintosh";
+    name[Group1]= "German (Macintosh)";
 
     // Alphanumeric section
     key <AE01>	{ [         1,     exclam,   exclamdown,           at ]	};
@@ -428,7 +423,7 @@ partial alphanumeric_keys
 xkb_symbols "mac_nodeadkeys" {
     // modify the standard German mac layout to not have any dead keys
     include "de(mac)"
-    name[Group1]= "Germany - Macintosh, eliminate dead keys";
+    name[Group1]= "German (Macintosh, eliminate dead keys)";
     key <AE04>	{ [         4,     dollar,   onequarter,     currency ]	};
 
     key <TLDE>	{ [ asciicircum,    degree,     notsign       ]	};
@@ -444,7 +439,7 @@ xkb_symbols "mac_nodeadkeys" {
 partial alphanumeric_keys
 xkb_symbols "dsb"
 {
-	name[Group1] = "Germany - Lower Sorbian";
+	name[Group1] = "Lower Sorbian";
 	include "latin(basic)"
 	include "level3(ralt_switch)"
 	include "kpdl(comma)"
@@ -467,7 +462,7 @@ xkb_symbols "dsb"
 partial alphanumeric_keys
 xkb_symbols "dsb_qwertz"
 {
-	name[Group1] = "Germany - Lower Sorbian (qwertz)";
+	name[Group1] = "Lower Sorbian (qwertz)";
 	include "latin(basic)"
 	include "level3(ralt_switch)"
 	include "kpdl(comma)"
@@ -489,17 +484,144 @@ xkb_symbols "dsb_qwertz"
 	key <AD09> { [              o,              O,         oacute,         Oacute ] };
 };
 
-partial alphanumeric_keys 
-xkb_symbols "qwerty" {
- 
-    // This layout should work exactly as a de with the exception 
-    // of 'Z' and 'Y' keys, which are in the qwerty style (ie. swapped).
-    // 2008 by Matej Košík <kosik@fiit.stuba.sk>
-    
+// layout for Russian letters on an german keyboard
+// based on US-RU layout by Ivan Popov <pin@konvalo.org> 2005-07-17
+// adopted for german layout by Alexey Fisher <bug-track@fisher-privat.net> 2010-08-19
+
+partial alphanumeric_keys
+xkb_symbols "ru" {
+
     include "de(basic)"
+ 
+    name[Group1]= "Russian (Germany, phonetic)";
 
-    name[Group1] = "Germany - qwerty";
+key.type[group1]="FOUR_LEVEL_ALPHABETIC";
 
-    key <AB01>	{ [         z,          Z,     leftarrow,         yen ]	};
-    key <AD06>	{ [         y,          Y, guillemotleft,        less ]	};
+    key <LatA> { [        Cyrillic_a,        Cyrillic_A ] };
+    key <LatB> { [       Cyrillic_be,       Cyrillic_BE ] };
+    key <LatW> { [       Cyrillic_ve,       Cyrillic_VE ] };
+    key <LatG> { [      Cyrillic_ghe,      Cyrillic_GHE ] };
+    key <LatD> { [       Cyrillic_de,       Cyrillic_DE ] };
+    key <LatE> { [       Cyrillic_ie,       Cyrillic_IE ] };
+    key <TLDE> { [       Cyrillic_io,       Cyrillic_IO, asciitilde ] };
+    key <LatX> { [      Cyrillic_zhe,      Cyrillic_ZHE ] };
+    key <LatZ> { [       Cyrillic_ze,       Cyrillic_ZE ] };
+    key <LatI> { [        Cyrillic_i,        Cyrillic_I ] };
+    key <LatJ> { [   Cyrillic_shorti,   Cyrillic_SHORTI ] };
+    key <LatK> { [       Cyrillic_ka,       Cyrillic_KA ] };
+    key <LatL> { [       Cyrillic_el,       Cyrillic_EL ] };
+    key <LatM> { [       Cyrillic_em,       Cyrillic_EM ] };
+    key <LatN> { [       Cyrillic_en,       Cyrillic_EN ] };
+    key <LatO> { [        Cyrillic_o,        Cyrillic_O ] };
+    key <LatP> { [       Cyrillic_pe,       Cyrillic_PE ] };
+    key <LatR> { [       Cyrillic_er,       Cyrillic_ER ] };
+    key <LatS> { [       Cyrillic_es,       Cyrillic_ES ] };
+    key <LatT> { [       Cyrillic_te,       Cyrillic_TE ] };
+    key <LatU> { [        Cyrillic_u,        Cyrillic_U ] };
+    key <LatF> { [       Cyrillic_ef,       Cyrillic_EF ] };
+    key <LatH> { [       Cyrillic_ha,       Cyrillic_HA ] };
+    key <LatC> { [      Cyrillic_tse,      Cyrillic_TSE ] };
+    key <AC10> { [      Cyrillic_che,      Cyrillic_CHE ] };
+    key <AD11> { [      Cyrillic_sha,      Cyrillic_SHA ] };
+    key <AD12> { [    Cyrillic_shcha,    Cyrillic_SHCHA, plus, asterisk ] };
+    key <AE12> { [ Cyrillic_hardsign, Cyrillic_HARDSIGN ] };
+    key <LatY> { [     Cyrillic_yeru,     Cyrillic_YERU ] };
+    key <LatV> { [ Cyrillic_softsign, Cyrillic_SOFTSIGN ] };
+    key <AC11> { [        Cyrillic_e,        Cyrillic_E ] };
+    key <BKSL> { [       Cyrillic_yu,       Cyrillic_YU, numbersign, apostrophe ] };
+    key <LatQ> { [       Cyrillic_ya,       Cyrillic_YA ] };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "htcdream" {
+        include "inet(htcdream)"
+
+        name[Group1]= "German";
+
+        //second row
+        key <AD01> { [ q, Q, Tab, Tab ] };
+        key <AD02> { [ w, W, grave, grave ] };
+        key <AD03> { [ e, E, EuroSign, EuroSign ] };
+        key <AD04> { [ r, R, underscore, underscore ] };
+        key <AD05> { [ t, T, sterling, sterling] };
+        key <AD06> { [ z, Z, division, division ] };
+        key <AD07> { [ u, U, udiaeresis, udiaeresis ] };
+        key <AD08> { [ i, I, minus, minus ] };
+        key <AD09> { [ o, O, odiaeresis, odiaeresis ] };
+        key <AD10> { [ p, P, equal, equal ] };
+
+        //third row
+        key <AC01> { [ a, A, adiaeresis, adiaeresis ] };
+        key <AC02> { [ s, S, ssharp, ssharp] };
+        key <AC03> { [ d ,D, backslash, backslash ] };
+        key <AC04> { [ f, F, braceleft, braceleft ] };
+        key <AC05> { [ g, G, braceright, braceright ] };
+        key <AC06> { [ h, H, multiply, multiply ] };
+        key <AC07> { [ j, J, colon, colon ] };
+        key <AC08> { [ k, K, plus, plus ] };
+        key <AC09> { [ l, L, apostrophe, apostrophe ] };
+
+        //forth row
+        key <AB01> { [ y, Y, bar, bar ] };
+        key <AB02> { [ x, X, bracketleft, bracketleft ] };
+        key <AB03> { [ c, C, bracketright, bracketright ] };
+        key <AB04> { [ v, V, less, less ] };
+        key <AB05> { [ b, B, greater, greater ] };
+        key <AB06> { [ n, N, semicolon, semicolon ] };
+        key <AB07> { [ m, M, quotedbl, quotedbl ] };
+        key <AB08> { [ comma, comma, question, question ] };
+
+        //fifth row
+        key <FK15> { [ at, at, asciitilde, asciitilde ] };
+
+        include "level3(alt_switch)"
+};
+
+// EXTRAS:
+
+partial alphanumeric_keys
+xkb_symbols "us" {
+    include "us"
+
+    name[Group1]="German (US keyboard with German letters)";
+
+    key <AC01> { [           a,          A, adiaeresis, Adiaeresis ] };
+    key <AC02> { [           s,          S,     ssharp,     ssharp ] };
+    key <AC10> { [   semicolon,      colon, odiaeresis, Odiaeresis ] };
+    key <AC11> { [  apostrophe,   quotedbl, adiaeresis, Adiaeresis ] };
+    key <AD03> { [           e,          E,   EuroSign,   EuroSign ] };
+    key <AD07> { [           u,          U, udiaeresis, Udiaeresis ] };
+    key <AD09> { [           o,          O, odiaeresis, Odiaeresis ] };
+    key <AD11> { [ bracketleft,  braceleft, udiaeresis, Udiaeresis ] };
+    key <AE03> { [           3, numbersign,    section,    section ] };
+    key <AE11> { [       minus, underscore,     ssharp,   question ] };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "hu" {
+
+    // modify the basic German layout to not have any dead keys and add Hungarian letters
+
+    include "de(basic)"
+    name[Group1]="German (with Hungarian letters and no dead keys)";
+
+    key <AB01> { [         y,          Y, guillemotleft,        less ] };
+    key <AC10> { [odiaeresis, Odiaeresis,        eacute,      Eacute ] };
+    key <AC11> { [adiaeresis, Adiaeresis,        aacute,       Aacute] };
+    key <AD03> { [         e,          E,      EuroSign,    EuroSign ] };
+    key <AD06> { [         z,          Z,     leftarrow,         yen ] };
+    key <AD07> { [         u,          U,        uacute,      Uacute ] };
+    key <AD08> { [         i,          I,        iacute,      Iacute ] };
+    key <AD09> { [         o,          O,  odoubleacute,Odoubleacute ] };
+    key <AD11> { [udiaeresis, Udiaeresis,  udoubleacute,Udoubleacute ] };
+    key <AD12> { [      plus,   asterisk,    asciitilde,      macron ] };
+    key <AE12> { [     acute,      grave,        oacute,      Oacute ] };
+    key <BKSL> { [numbersign, apostrophe,         grave,       grave ] };
+    key <TLDE> { [asciicircum,    degree,       notsign,     notsign ] };
+    
+    
 };

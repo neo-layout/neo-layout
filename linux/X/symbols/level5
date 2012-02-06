@@ -1,9 +1,5 @@
-// $XKeyboardConfig$
-
 // these variants assign various XKB keycodes to ISO_Level5_Shift so that
 // the third shift level can be reached
-//
-// $XFree86: xc/programs/xkbcomp/symbols/level3,v 1.7 2003/09/08 14:25:32 eich Exp $
 //
 
 // using the level(switch) map, the right Control key temporarily
@@ -16,6 +12,25 @@ xkb_symbols "rctrl_switch" {
     };
   modifier_map Mod3   { ISO_Level5_Shift };
 };
+
+partial modifier_keys
+xkb_symbols "lsgt_switch" {
+  key <LSGT> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+  modifier_map Mod3   { ISO_Level5_Shift };
+};
+
+partial modifier_keys
+xkb_symbols "ralt_switch" {
+  key <RALT> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+  modifier_map Mod3   { ISO_Level5_Shift };
+};
+
 
 // The following modifier keys are used to switch to the third shift and to set a
 // corresponding lock, implemented as NumLock.
