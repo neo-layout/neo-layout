@@ -202,6 +202,9 @@ CharProc__BST1() {
   }
 
   if (FileExist(UniFontLocalFile)=="") {
+    Msgbox, 4, NeoVars-Bildschirmtastatur, Wollen Sie die für die Bildschirmtastatur notwendigen Dateien herunterladen?
+    ifMsgBox, No
+      Return
     if (FileExist(UnZipLocalFile)=="") {
       Progress,0,Herunterladen des gepackten Entpack-Programms ...
       UrlDownloadToFile,%UnZipSFXSourceLink%,%UnZipSFXLocalFile%
