@@ -1,11 +1,13 @@
 @echo off
 
-echo Setting local path variables
+echo Setting default local path variables
 :: TortoiseSVN and its clever tool SubWCRev
 set Tsvnpath=C:\Programme\TortoiseSVN\bin
-set SubWCRev=%Tsvnpath%\SubWCRev.exe
-
 set  ahkpath=C:\Programme\AutoHotkey
+
+if exist _local_paths.bat call _local_paths.bat
+
+set SubWCRev=%Tsvnpath%\SubWCRev.exe
 set  Ahk2Exe=%ahkpath%\Compiler\Ahk2Exe.exe
 
 REM The path to the authohotkey directory in the local svn copy, MUST be "."
