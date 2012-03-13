@@ -7,7 +7,15 @@ disable=Deaktiviere %name%
 #usehook on
 #LTrim
 
-; *** Benutze Bilder wennsie im aktuellen Verzeichnis vorhanden sind ***
+; *** Benutze Bilder, wenn sie im aktuellen Verzeichnis vorhanden sind ***
+FileInstall,neo_enabled.ico,neo_enabled.ico,1
+FileInstall,neo_disabled.ico,neo_disabled.ico,1
+FileInstall,ebene1.png,ebene1.png,1
+FileInstall,ebene2.png,ebene2.png,1
+FileInstall,ebene3.png,ebene3.png,1
+FileInstall,ebene4.png,ebene4.png,1
+FileInstall,ebene5.png,ebene5.png,1
+FileInstall,ebene6.png,ebene6.png,1
 if (FileExist("ebene1.png")&&FileExist("ebene2.png")&&FileExist("ebene3.png")&&FileExist("ebene4.png")&&FileExist("ebene5.png")&&FileExist("ebene6.png"))
   zeigeBildschirmTastatur = 1
 if (FileExist("neo_enabled.ico")&&FileExist("neo_disabled.ico"))
@@ -179,79 +187,109 @@ doMod4() {
 }
 
 ; *** Funktionstasten ***
-~*x::
+*x::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{PGUP}
+	Send {Blind}{PGUP}
+else
+	Send {Blind}x
 return
 
-~*v::
+*v::
 if (isMod4Active and !isMod3Pressed) 
-Send {Blind}{BACKSPACE}
+	Send {Blind}{BACKSPACE}
+else
+	Send {Blind}v
 return
  
-~*l::
+*l::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{UP}
+	Send {Blind}{UP}
+else
+	Send {Blind}l
 return
 
-~*c::
+*c::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{DEL}
+	Send {Blind}{DEL}
+else
+	Send {Blind}c
 return
 
-~*w::
+*w::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{PGDN}
+	Send {Blind}{PGDN}
+else
+	Send {Blind}w
 return
 
-~*u::
+*u::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{HOME}
+	Send {Blind}{HOME}
+else
+	Send {Blind}u
 return
 
-~*i::
+*i::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{LEFT}
+	Send {Blind}{LEFT}
+else
+	Send {Blind}i
 return
 
-~*a::
+*a::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{DOWN}
+	Send {Blind}{DOWN}
+else
+	Send {Blind}a
 return
 
-~*e::
+*e::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{RIGHT}
+	Send {Blind}{RIGHT}
+else
+	Send {Blind}e
 return
 
-~*o::
+*o::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{END}
+	Send {Blind}{END}
+else
+	Send {Blind}o
 return
 
-~*ü::
+*ü::
 if (isMod4Active and !isMod3Pressed)
-Send {esc}
+	Send {esc}
+else
+	Send {Blind}ü
 return
 
-~*ö:: 
+*ö:: 
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{TAB}
+	Send {Blind}{TAB}
+else
+	Send {Blind}ö
 return
 
-~*ä::
+*ä::
 if (isMod4Active and !isMod3Pressed)
-Send {Blind}{INS}
+	Send {Blind}{INS}
+else
+	Send {Blind}ä
 return
 
-~*p::
+*p::
 if (isMod4Active and !isMod3Pressed)
-Send {ENTER}
+	Send {ENTER}
+else
+	Send {Blind}p
 return
 
-~*z::
+*z::
 if (isMod4Active and !isMod3Pressed)
-Send ^z
+	Send ^z
+else
+	Send {Blind}z
 return
 
 ;*****************
