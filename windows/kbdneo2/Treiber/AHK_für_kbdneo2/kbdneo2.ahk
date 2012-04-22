@@ -37,8 +37,9 @@ menu,tray,add,Hilfe,:helpmenu
 menu,tray,add
 menu,tray,add,%disable%,togglesuspend
 menu,tray,add
-menu,tray,add,Skript Bearbeiten,edit
-menu,tray,add,Neu Laden,reload
+menu,tray,add,Skript bearbeiten,edit
+menu,tray,add,Skript neu laden,reload
+menu,tray,add,Bildschirmtastatur umschalten,Show
 menu,tray,add
 menu,tray,add,Nicht im Systray anzeigen,hide
 menu,tray,add,%name% beenden,exitprogram
@@ -72,11 +73,13 @@ isMod4Active := 0
   ToggleMod2Lock()
   isShiftRPressed := 1
   isShiftPressed := 1
+  goto modeToggled
 return
 
 ~*SC136 up::
   isShiftRPressed := 0
   isShiftPressed := isShiftLPressed
+  goto modeToggled
 return
 
 ~*SC02A::
@@ -84,31 +87,37 @@ return
   ToggleMod2Lock()
   isShiftLPressed := 1
   isShiftPressed := 1
+  goto modeToggled
 return
 
 ~*SC02A up::
   isShiftLPressed := 0
   isShiftPressed := isShiftRPressed
+  goto modeToggled
 return
 
 ~*SC02B::
   isMod3RPressed := 1
   isMod3Pressed := 1
+  goto modeToggled
 return
 
 ~*SC02B up::
   isMod3RPressed := 0
   isMod3Pressed := isMod3LPressed
+  goto modeToggled
 return
 
 ~*SC03A::
   isMod3LPressed := 1
   isMod3Pressed := 1
+  goto modeToggled
 return
 
 ~*SC03A up::
   isMod3LPressed := 0
   isMod3Pressed := isMod3RPressed
+  goto modeToggled
 return
 
 ~*SC138::
@@ -117,12 +126,14 @@ return
   isMod4RPressed := 1
   isMod4Pressed := 1
   doMod4()
+  goto modeToggled
 return
 
 ~*SC138 up::
   isMod4RPressed := 0
   isMod4Pressed := isMod4LPressed
   doMod4()
+  goto modeToggled
 return
 
 ~*SC056::
@@ -131,12 +142,14 @@ return
   isMod4LPressed := 1
   isMod4Pressed := 1
   doMod4()
+  goto modeToggled
 return
 	
 ~*SC056 up::
   isMod4LPressed := 0
   isMod4Pressed := isMod4RPressed
   doMod4()
+  goto modeToggled
 return
 
 ; *** Welcher Modifier ist aktiv und CapsLock und Mod4Lock ***
@@ -355,6 +368,48 @@ return
 ;*********************
 guiErstellt = 0
 alwaysOnTop = 1
+showingShift = 0
+showShiftTimer = 0
+
+showShift:
+showingShift = 1
+showShiftTimer = 0
+goto modeToggled
+return
+
+;SetTimer, modeToggled, 1000
+modeToggled:
+  if (isShiftPressed && !showingShift && !showShiftTimer){
+    SetTimer, showShift, -500
+    showShiftTimer = 1
+  } else if (!isShiftPressed){
+    SetTimer, showShift, Off
+    showShiftTimer = 0
+    showingShift = 0
+  }
+  
+  ;SplashTextOn, 150, 20, Button from WinLIRC, Mode Toggled
+  ;SetTimer, SplashOff, 1000  ; This allows more signals to be processed while displaying the window.
+  if (guiErstellt) {
+    if ((isMod3Pressed) && (isMod4Pressed || isMod4Locked)) {
+      goto Switch6
+    } else if ((isMod3Pressed) && (isShiftPressed || isMod2Locked)) {
+      goto Switch5
+    } else if (isMod4Active) {
+      goto Switch4
+    } else if (isMod3Pressed) {
+      goto Switch3
+    } else if (showingShift || isMod2Locked) {
+      goto Switch2
+    } else {
+      goto Switch1
+    }
+  }
+return
+
+SplashOff:
+  SplashTextOff
+return
 
 *F1::
   if (isMod4Pressed&&zeigeBildschirmTastatur)
@@ -436,9 +491,9 @@ Return
 
 Switch:
   if guiErstellt {
-    if (Image = tImage)
-       goto Close
-    else {
+    if (Image = tImage) {
+      ;goto Close
+    } else {
       Image := tImage
       SetTimer, Refresh
     }
@@ -457,23 +512,27 @@ Show:
     }     
     yPosition := A_ScreenHeight -270
     Gui,Color,FFFFFF
-    Gui,Add,Button,xm+5 gSwitch1,F1
-    Gui,Add,Button,xm+5 gSwitch2,F2
-    Gui,Add,Button,xm+5 gSwitch3,F3
-    Gui,Add,Button,xm+5 gSwitch4,F4
-    Gui,Add,Button,xm+5 gSwitch5,F5
-    Gui,Add,Button,xm+5 gSwitch6,F6
-    Gui,Add,Button,xm+5 gShow,F7
-    Gui,Add,Text,x+5,An /
-    Gui,Add,Text,y+3,Aus
-    Gui,Add,Button,x+10 y+-30 gShow,F8
-    Gui,Add,Text,x+5,OnTop
-    Gui,Add,Picture,AltSubmit ys w729 h199 vPicture,%Image%
+    Gui,Add,Picture,  AltSubmit BackgroundTrans xm ym vPicture,%Image% ;
     Gui,+AlwaysOnTop
-    Gui,Show,y%yposition% Autosize
+    Gui +LastFound
+    WinSet, TransColor, FFFFFF
+    Gui -Caption +ToolWindow 
+    Gui,Show,NA y%yposition% Autosize
+    OnMessage(0x201, "WM_LBUTTONDOWN")
+    OnMessage(0x203, "WM_LBUTTONDBLCLK")
     guiErstellt = 1
   } 
 Return
+
+WM_LBUTTONDOWN()
+{
+   PostMessage, 0xA1, 2
+}
+
+WM_LBUTTONDBLCLK()
+{
+   SetTimer, Close, -1
+}
 
 Close:
   guiErstellt = 0
