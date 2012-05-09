@@ -37,8 +37,6 @@
 <Greek_THETA>                                                 : "\\Theta "
 <Greek_LAMBDA>                                                : "\\Lambda "
 <Greek_XI>                                                    : "\\Xi "
-<Greek_PI>                                                    : "\\Pi "
-<Greek_SIGMA>                                                 : "\\Sigma "
 <Greek_PHI>                                                   : "\\Phi "
 <Greek_CHI>                                                   : "\\Chi "
 <Greek_PSI>                                                   : "\\Psi "
@@ -91,6 +89,7 @@
 <threesuperior>                                               : "^3 "
 
 # Operationen
+<U2219>                                                       : "\\cdot "
 <U22C5>                                                       : "\\cdot "
 <periodcentered>                                              : "\\cdot "
 <multiply>                                                    : "\\times "
@@ -108,6 +107,7 @@
 <U2300>                                                       : "\\oslash "
 <U2216>                                                       : "\\setminus "
 
+
 # Pfeile, Gleichheitszeichen und ähnliches
 <U21D2>                                                       : "\\Rightarrow "
 <ifonlyif>                                                    : "\\Leftrightarrow "
@@ -116,6 +116,7 @@
 <leftarrow>                                                   : "\\leftarrow "
 <approxeq>                                                    : "\\approx "
 <rightarrow>                                                  : "\\to "
+<Multi_key> <bar> <rightarrow>                                : "\\mapsto "
 <notequal>                                                    : "\\neq "
 <identical>                                                   : "\\equiv "
 <includedin>                                                  : "\\subset "
@@ -128,11 +129,13 @@
 <Multi_key> <equal> <grater>                                  : "\\geq "
 <Multi_key> <lower> <equal>                                   : "\\leq "
 <Multi_key> <equal> <lower>                                   : "\\leq "
-<Multi_key> <includein> <equal>                               : "\\subseteq "
-<Multi_key> <equal> <includein>                               : "\\subseteq "
+<Multi_key> <includedin> <equal>                              : "\\subseteq "
+<Multi_key> <equal> <includedin>                              : "\\subseteq "
 <dead_macron> <includes>                                      : "\\subseteq "
+<U2286>                                                       : "\\subseteq "
 <asciitilde>                                                  : "\\sim "
-
+<Greek_PI>                                                    : "\\prod "
+<Greek_SIGMA>                                                 : "\\sum "
 
 # Zahlen und Mengen
 <Multi_key> <elementof> <R>                                   : "\\in \\mathbb R "
@@ -145,7 +148,8 @@
 <U211A>                                                       : "\\mathbb Q "
 <U2115>                                                       : "\\mathbb N "
 <U2102>                                                       : "\\mathbb C "
-<infinity>                                                    : "\\infty "
+<U221E>                                                       : "\\infty "
+
 
 # weitere Zeichen
 <Multi_key> <l> <i> <m>                                       : "\\lim _"
@@ -169,7 +173,7 @@
 <Multi_key> <U2203> <dead_stroke> <dead_stroke>               : "\\nexists "
 <Multi_key> <Greek_SIGMA> <Greek_SIGMA>                       : "\\sum "
 <Multi_key> <r> <m>                                           : "\\mathrm "
-<emptyset>                                                    : "\\empty "
+<emptyset>                                                    : "\\emptyset "
 <dead_circumflex> <dagger>                                    : "^\\dagger "
 <logicalor>                                                   : "\\vee "
 <logicaland>                                                  : "\\wedge "
