@@ -185,10 +185,25 @@ CharProcNordT0() {
   ED1256("035",1,"j","J","θ","Θ")
 }
 
+CharProcNordTs() {
+  global
+
+  if (isNordTast == 0)
+    IniDelete,%ini%,Global,isNordTast
+  else
+    IniWrite,%isNordTast%,%ini%,Global,isNordTast
+
+  if ErrorLevel
+    TrayTip,NordTast-Belegungsvariante,Beim Speichern der Variante ist ein Fehler aufgetreten.,10,1    
+  else if (zeigeModusBox)
+    TrayTip,NordTast-Belegungsvariante,Variante gespeichert.,10,1    
+}
+
 ActivateNordTast() {
   global
 
   CP3F12  := "PNordTt"                   ; M3+F12: Aktiviere/Deaktiviere NordTast
+  CP4F12  := "PNordTs"                   ; M4+F12: Speichere NordTast
 
   IniRead,isNordTast,%ini%,Global,isNordTast,0
   if (isNordTast == 1)
