@@ -1,0 +1,4 @@
+#ifndef _KeyBuddy2_icpp_init_stub
+#define _KeyBuddy2_icpp_init_stub
+#include "CtrlLib/init"
+#endif
