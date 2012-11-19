@@ -1,0 +1,153 @@
+﻿<html>
+ <head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>KeyBuddy2 - Dokumentation</title>
+ </head>
+ <body>
+ <font face="arial">
+  <h1>KeyBuddy2 - Dokumentation</h1>
+von Mirko Kunze mirko.kunze(&#97;)web.de<br><br>
+KeyBuddy2 ist ein Programm zur Umsetzung des neo-Layouts. Außerdem bietet es die Möglichkeit, kyrillische Zeichen einzugeben und Hotstrings zu definieren, wobei während des Tippens Zeichenketten ersetzt oder Programme gestartet werden können. KeyBuddy2 ist Freeware und kostet lediglich einen würdigenden Gedanken an den Autor.
+  <h2>KeyBuddy2 benutzen</h2>
+Einfach KeyBuddy2.exe ausführen. Im selben Ordner müssen folgende Dateien liegen: hotstrings.txt, keynames.txt, mousemap.txt, neomap.txt, rumap.txt, sendmap.txt, symbolmap.txt, uppercase.txt<br>
+Eine Tastatur öffnet sich, die Anzeigt, was passiert, wenn man eine Taste drückt. Im Groben verhält sich die Tastatur wie hier <a href="http://www.neo-layout.org/">www.neo-layout.org</a> beschrieben. Es gibt jedoch folgende Erweiterungen:
+  <ul>
+   <li>Da man manchmal Shift und die Pfeiltasten benutzen möchte, wird im normalen neo-Layout kein Unterschied zwischen der 4. Ebene und Shift + 4. Ebene (Pseudo-Ebene) gemacht. Die rechte Hand hat in dieser Pseudo-Ebene jedoch keine Aufgabe, deswegen sind hier alle Umschalter über die rechte Hand in der Pseudo-Ebene zu erreichen.
+   <li>Man hat die Wahl, ob die Buchstaben wie im neo-Layout umsortiert sein sollen oder nicht. Die weiteren Ebenen sind auch im qwertz-Layout verfügbar. Umschalter ist standardmäßig Mod4+Shift+N (für <b>n</b>eo).</li>
+   <li>Man kann auf kyrillische Buchstaben umschalten, standardmäßig Mod4+Shift+K (für <b>k</b>yrillisch).</li>
+   <li>Das Programm lässt sich deaktivieren über Mod4+Shift+L (für <b>L</b>ayers). Der Mechanismus für die Tastaturüberwachung ist jedoch weiterhin aktiv und wartet auf erneute Eingabe dieser Tastenkombination zum reaktivieren.
+   <li>Über Mod4+Shift+Ö (für <b>ö</b>ffnen) lässt sich die Tastatur anzeigen und verstecken (geht auch durch Linksklicks auf das Tray-Icon).</li>
+   <li>Mit Mod4+Shift+M (für <b>M</b>aus) kann man die Maussteuerung aktivieren und deaktivieren.</li>
+   <li>Komplett schließen lässt sich das Programm entweder via Mod4+Shift+Z (für <b>z</b>u) oder über Rechtsklick auf das Tray-Icon -> Exit.</li>
+   <li>Zusätzlich lassen sich Hotstrings definieren. Das Programm zeichnet die Eingabe des Nutzers permanent auf. Sobald eine vorher definierte Zeichenkette eingegeben wurde, wird sie ersetzt oder ein Programm wird ausgeführt.</li>
+   <li>Damit alle Symbole auf den Tasten dargestellt werden können, wird empfohlen, die hässliche aber vollständige Schriftart Unifont als ttf herunterzuladen (<a href="http://unifoundry.com/unifont.html">http://unifoundry.com/unifont.html</a>) und zu installieren.</li>
+  </ul>
+Folgende Aspekte von neo wurden nicht umgesetzt:
+  <ul>
+   <li>Das Numpad (Ich habe keins an meinem Laptop und die Hände gehören sowieso auf die Hauptebene!)</li>
+   <li>Die Compose-Taste fügt nur eine Note in den Text ein. Benötigt man Compose-itionen, kann man mit Hotstrings und diesem Notensymbol arbeiten.</li>
+   <li>Dead-keys fügen ebenfalls sofort ihre entsprechenden Symbole in den Text und sind damit nicht dead. Auch hier lässt sich mit Hotstrings das gewünschte Verhalten implementieren.</li>
+   <li>Außerdem wird keinerlei Syntaxcheck beim Laden der Textdateien durchgeführt. Diese müssen also korrekt sein, sonst passiert sonstwas.</li>
+  </ul>
+ <h2>KeyBuddy2 konfigurieren</h2>
+ Über die diversen Textdateien bietet KeyBuddy2 viele Konfigurationsmöglichkeiten. Zu ihrer bearbeitung empfiehlt sich <a href="http://notepad-plus-plus.org/">Notepad++</a> mit <a href="http://unifoundry.com/unifont.html">unifont</a> als Schriftart, sowie ein <a href="http://mh-nexus.de/de/hxd/">Hex-Editor</a>. Alle Textdateien müssen mit einem Zeilenumbruch enden.
+ <h3>Hotstrings</h3>
+In hotstrings.txt werden die Hotstrings definiert, die KeyBuddy2 erkennen soll. Diese Datei muss im Format UCS-2 Little Endian vorliegen (In Notepad++ unter Kodierung einstellbar). Die Datei muss mit einem Zeilenumbruch enden.<br>
+Ein Hotstring lässt sich wie folgt definieren:
+<pre>h="hs" s="Hotstring"</pre>
+Sobald man nun hs eingibt, wird zweimal die Löschtaste und anschließend das wort "Hotstring" gesendet. Die verschiedenen Hotstrings müssen durch Zeilenumbrüche getrennt sein. Statt des Sendens einer Zeichenkette kann auch ein beliebiges Programm gestartet werden. Beispiel:
+<pre>h="calc" l="calc.exe"</pre>
+Tippt man calc, wird es wieder gelöscht und der Taschenrechner gestartet. Der Arbeitsordner des Programms und weitere Kommandozeilenparameter lassen sich wie folgt definieren:
+<pre>h="wineula" l="c:/windows/system32|notepad.exe|eula.txt"</pre>
+Es lassen sich auch Filter definieren:
+<pre>t="Notepad++"</pre>
+Der Hotstring feuert nur, wenn im Titel des Fensters, das den Fokus hat, die Zeichenkette "Notepad++" zu finden ist.
+<pre>c="Scintilla"</pre>
+Dieser Hotstring feuert nur, wenn die Klasse des Objekts, das den Fokus hat, den Namen "Scintilla" trägt.<br>
+Die Reihenfolge, in der die Parameter eines Hotstrings aufgelistet werden, ist beliebig. Hauptsache ist, dass sie durch ein Leerzeichen getrennt sind und in der gleichen Zeile stehen. Zeilenumbrüche innerhalb der Anführungszeichen sind erlaubt und werden als zur Zeichenkette gehörend interpretiert. Das Maskierungszeichen ist \. Das bedeutet, dass Anführungszeichen innerhalb einer Zeichenkette durch \" und Backslashes selbst durch \\ realisiert werden können. Spezielle Tastendrücke, die sich nicht durch Unicode darstellen lassen, sowie Tastenkombinationen, können wie im nächsten Kapitel dargestellt codiert werden.
+ <h3>neo-Remapping</h3>
+Die Datei neomap.txt (ANSI) dient dazu, den <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd375731%28v=vs.85%29.aspx">Virtual-Key Code</a> der gedrückten Taste auf den der entsprechenden neo-Taste zu ändern. Der Key-Code der gedrückten Taste entspricht hierbei der Zeilennummer (beginnend bei 1) und der ANSI-Code des Zeichens in einer Zeile entspricht dem neo-Key-Code. In Zeile 68 sollte also ein A stehen, da die reale D-Taste (vk=68) der neo-A-Taste (vk=65) entspricht. Leere Zeilen bedeuten, dass hier kein Mapping stattfinden soll.<br>
+Folgende Tasten lassen sich umdefinieren: A..Z, 0..9, Punkt, Komma, Bindestrich, Zirkumflex (^), Akut (´), Plus, Tab und die Leertaste.
+  <h3>Allgemeines Layout</h3>
+Das allgemeine Layout lässt sich in sendmap.txt (UCS-2 Little Endian) editieren. Die Zeilennummer eines Zeichens beschreibt den neo-Key-Code der Taste, die für dieses Zeichen gedrückt werden soll. Die Spalte eines Zeichens in seiner Zeile beschreibt die Ebene, die aktiv sein muss, damit das Zeichen gesendet wird. Pro Zeile müssen also sieben Zeichen definiert sein, Spalte sieben ist für die Pseudo-Ebene.<br>
+In der Basic Multilingual Plane des Unicode (U+0000 bis U+FFFF) gibt es die so genannte Private Use Area (U+E000 bis U+F8FF), die für selbstdefinierte Zeichen nutzbar ist. In KeyBuddy2 wird sie dazu verwendet, spezielle Tastenkombinationen zu senden. Normalerweise nutzt KeyBuddy2 die <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms646310%28v=vs.85%29.aspx">SendInput</a>-Funktion der Windows API mit dem Flag KEYEVENTF_UNICODE, um Unicode-Zeichen an Programme zu senden. Damit lassen sich jedoch nicht alle Tasten simulieren (Cursor-Tasten, F1 bis F12, ...). Liegt das erste Byte eines zu sendenden Zeichens zwischen 0xE0 und 0xF7, wird kein Unicode-Zeichen gesendet, sondern ein Tastendruck simuliert (ebenfalls über SendInput). Hierbei beschreibt das zweite Byte den <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd375731%28v=vs.85%29.aspx">Virtual-Key Code</a> der zu simulierenden Taste. Das erste Byte erlaubt noch weitere Konfigurationsmöglichkeiten, die in der folgenden Tabelle dargestellt werden.<br><br>
+<table border cellpadding=2>
+<tr><th>Unicode</th><th>Shift</th><th>Strg</th><th>Alt</th><th>runter</th><th>hoch</th><th>echte Taste wird runtergedrückt</th><th>echte Taste wird losgelassen</th></tr>
+<tr><td>U+E0xx</td><td> </td><td> </td><td> </td><td>X</td><td> </td><td>xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E1xx</td><td>X</td><td> </td><td> </td><td>X</td><td> </td><td>Shift&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E2xx</td><td> </td><td>X</td><td> </td><td>X</td><td> </td><td>Strg&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E3xx</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td><td>Strg&downarrow; Shift&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E4xx</td><td> </td><td> </td><td>X</td><td>X</td><td> </td><td>Alt&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E5xx</td><td>X</td><td> </td><td>X</td><td>X</td><td> </td><td>Shift&downarrow; Alt&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E6xx</td><td> </td><td>X</td><td>X</td><td>X</td><td> </td><td>Strg&downarrow; Alt&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E7xx</td><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>Strg&downarrow; Shift&downarrow; Alt&downarrow; xx&downarrow;</td><td> </td></tr>
+<tr><td>U+E8xx</td><td> </td><td> </td><td> </td><td> </td><td>X</td><td>xx&uparrow;</td><td> </td></tr>
+<tr><td>U+E9xx</td><td>X</td><td> </td><td> </td><td> </td><td>X</td><td>xx&uparrow; Shift&uparrow; </td><td> </td></tr>
+<tr><td>U+EAxx</td><td> </td><td>X</td><td> </td><td> </td><td>X</td><td>xx&uparrow; Strg&uparrow; </td><td> </td></tr>
+<tr><td>U+EBxx</td><td>X</td><td>X</td><td> </td><td> </td><td>X</td><td>xx&uparrow; Strg&uparrow; Shift&uparrow; </td><td> </td></tr>
+<tr><td>U+ECxx</td><td> </td><td> </td><td>X</td><td> </td><td>X</td><td>xx&uparrow; Alt&uparrow; </td><td> </td></tr>
+<tr><td>U+EDxx</td><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td>xx&uparrow; Shift&uparrow; Alt&uparrow; </td><td> </td></tr>
+<tr><td>U+EExx</td><td> </td><td>X</td><td>X</td><td> </td><td>X</td><td>xx&uparrow; Strg&uparrow; Alt&uparrow;</td><td> </td></tr>
+<tr><td>U+EFxx</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td>xx&uparrow; Strg&uparrow; Shift&uparrow; Alt&uparrow;</td><td> </td></tr>
+<tr><td>U+F0xx</td><td> </td><td> </td><td> </td><td>X</td><td>X</td><td>xx&downarrow;</td><td>xx&uparrow;</td></tr>
+<tr><td>U+F1xx</td><td>X</td><td> </td><td> </td><td>X</td><td>X</td><td>Shift&downarrow; xx&downarrow;</td><td>xx&uparrow; Shift&uparrow; </td></tr>
+<tr><td>U+F2xx</td><td> </td><td>X</td><td> </td><td>X</td><td>X</td><td>Strg&downarrow; xx&downarrow;</td><td>xx&uparrow; Strg&uparrow; </td></tr>
+<tr><td>U+F3xx</td><td>X</td><td>X</td><td> </td><td>X</td><td>X</td><td>Strg&downarrow; Shift&downarrow; xx&downarrow;</td><td>xx&uparrow; Strg&uparrow; Shift&uparrow; </td></tr>
+<tr><td>U+F4xx</td><td> </td><td> </td><td>X</td><td>X</td><td>X</td><td>Alt&downarrow; xx&downarrow;</td><td>xx&uparrow; Alt&uparrow;</td></tr>
+<tr><td>U+F5xx</td><td>X</td><td> </td><td>X</td><td>X</td><td>X</td><td>Shift&downarrow; Alt&downarrow; xx&downarrow;</td><td>xx&uparrow; Shift&uparrow; Alt&uparrow;</td></tr>
+<tr><td>U+F6xx</td><td> </td><td>X</td><td>X</td><td>X</td><td>X</td><td>Strg&downarrow; Alt&downarrow; xx&downarrow;</td><td>xx&uparrow; Strg&uparrow; Alt&uparrow;</td></tr>
+<tr><td>U+F7xx</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>Strg&downarrow; Shift&downarrow; Alt&downarrow; xx&downarrow;</td><td>xx&uparrow; Strg&uparrow; Shift&uparrow; Alt&uparrow;</td></tr>
+</table><br>
+
+Über U+F8xx lassen sich die Tasten mit Umschaltern belegen:<br><br>
+U+F800 = KeyBuddy2 schließen<br>
+U+F801 = KeyBuddy2 aktivieren/deaktivieren<br>
+U+F802 = neo-Layout/qwertz-Layout<br>
+U+F803 = Kyrillisch an/aus<br>
+U+F804 = Capslock an/aus (geht auch über LShift+RShift)<br>
+U+F805 = Ebene 4 lock/unlock (geht auch über &lt;+AltGr)<br>
+U+F806 = Maussteuerung an/aus<br>
+U+F807 = GUI öffnen/schließen (geht auch über Linksklick auf Tray-Icon)<br>
+<br>
+Die Datei symbolmap.txt ist genauso aufgebaut wie sendmap.txt, allerdings enthält sie nicht die Zeichen, die gesendet werden sollen sondern was auf der Tastatur in der GUI abgebildet wird.<br><br>
+Das Editieren dieser Spezialkombinationen dürfte sich in einem Texteditor als schwierig erweisen, weswegen ein Hex-Editor empfohlen wird. Hierbei muss beachtet werden, dass U+ABCD im Little-Endian-Format als CDAB erscheint.
+
+  <h3>Kyrillisches Layout</h3>
+Das Layout für kyrillische Buchstaben ist in rumap.txt (UCS-2 Little Endian) definiert. Hierbei wird der Unicode des sonst zu sendenden Zeichens (wieder definiert durch Zeilennummer, muss zwischen 1 und 255 liegen) auf ein kyrillisches Symbol abgebildet. Es lässt sich (genau) ein Dead-Key (standardmäßig J) definieren. In seiner Zeile muss ein Kreuz (Unicode 0x2020) stehen. Definiert man in einer Zeile zwei kyrillische Symbole, lässt sich das zweite via Dead-Key erreichen.
+
+<h3>Maussteuerung</h3>
+Die Maussteuerung ist in der Datei mousemap.txt (ANSI) definierbar. Hierbei werden die Virtual-Key Codes (nicht neo-Key-Codes!) für Mausaktionen in folgender Reihenfolge aufgelistet:<br>
+<br>
+Nach links bewegen<br>
+Nach oben bewegen<br>
+Nach rechts bewegen<br>
+Nach unten bewegen<br>
+Linksklick<br>
+Rechtsklick<br>
+Mittelklick<br>
+Scrollrad hoch<br>
+Scrollrad runter<br>
+<h3>Restliche Textdateien</h3>
+Die Datei keynames.txt enthält die Namen der Tasten bei deaktiviertem Remapping, uppercase.txt enthält das Mapping von Kleinbuchstaben-Unicode auf Großbuchstaben-Unicode, was bei Capslock benutzt wird.
+<h2>Der Quellcode</h2>
+KeyBuddy2 wurde mit <a href="http://www.ultimatepp.org/">Ultimate++</a> Version 4193 geschrieben und mit <a href="http://www.mingw.org/">MinGW</a> (finde keine Versionsnummer) kompiliert.
+<h3>Main Class</h3>
+Die Programmklasse heißt KeyBuddy2 und findet sich in KeyBuddy2.h bzw. main.cpp. Beim Starten des Programms wird ihr Konstruktor aufgerufen, beim Beenden ihr Destruktor.
+<h3>ProcessKbdEvent</h3>
+Dies ist die Kernfunktion des Programms, sie findet sich in main.cpp. Sie wird aufgerufen, sobald ein (echtes oder simuliertes) Tastaturereignis (Runterdrücken oder Loslassen einer Taste, wobei eine reale, gehaltene Taste ständig "Runterdrücken"-Signale sendet) passiert. Wenn sie true zurückliefert, wird das Ereignis weitergeleitet, bei false wird es blockiert. Folgendes tut sie:
+<ul>
+<li>Falls das Ereignis nicht simuliert war, wird der Zustand der Taste (oben oder unten) in dem Array keyPressed gespeichert. Dieses Array ist programmweit die Referenz über den Tastaturzustand.</li>
+<li>Ist das dwExtraInfo-Flag des Ereignisses auf HOTSTRING gesetzt, handelt es sich um einen simulierten Tastendruck, der durch die Ausführung eines Hotstrings gesendet wird. In diesem Falle gibt es keine weitere Verarbeitung und die Funktion liefert true zurück.</li>
+<li>Handelt es sich bei dem Ereignis um eine Navigationstaste oder ähnliches (z.B. Cursor), wird der Hotstring-Buffer geleert. Dadurch wird verhindert, dass wenn man an einer Stelle eines Dokumentes schreibt, dann woanders hinspringt und dort weiterschreibt, zufällig ein Hotstring aus der Kombination beider Tippereien ausgelöst wird.</li>
+<li>Falls die Löschtaste gedrückt oder simuliert wurde, wird auch das letzte Zeichen des Hotstring-Buffers gelöscht.</li>
+<li>Falls das Ereignis simuliert ist, findet ab hier keine weitere Verarbeitung statt und die Funktion liefert true zurück.</li>
+<li>Wenn KeyBuddy2 deaktiviert ist, wird getestet, ob der aktuelle Tastendruck das Programm wieder aktivieren würde (er also U+F801 senden will). Falls ja, wird das Programm wieder aktiviert. Die Funktion liefert false.</li>
+<li>Wenn die Maussteuerung aktiv ist und ihr Deaktivierungs-Tastendruck registriert wird, wird sie deaktiviert. Die Funktion liefert false.</li>
+<li>Falls man sich zur Zeit in keiner neo-Ebene befindet (weil LStrg, LAlt oder LWin o.ä. gedrückt ist, oder weil KeyBuddy2 inaktiv ist), gibt es keine weitere Verarbeitung und die Funktion liefert true.</li>
+<li>Falls LShift und RShift gedrückt sind, wird Capslock aktiviert oder deaktiviert.</li>
+<li>Falls &lt; und AltGr gedrückt sind, wird die 4. Ebene fixiert oder gelöst.</li>
+<li>Falls eine der Tasten A..Z, 0..9, Punkt, Komma, Bindestrich, Zirkumflex (^), Akut (´), Plus, Tab oder Leertaste gedrückt oder losgelassen wurde, passiert folgendes:</li>
+<ul>
+<li>Ist die Maussteuerung aktiv, wird das Ereignis an sie gesendet und die ProcessKbdEvent liefert false.</li>
+<li>Die aktuelle neo-Ebene wird bestimmt.</li>
+<li>Für Ebenen 3, 4 und 7 wird grundsätzlich Remapping von Virtual-Key Code auf neo-Key Code durchgeführt. In Ebenen 1, 2 und 5 nur falls das neo-Layout aktiviert ist.</li>
+<li>Anhand der Key Codes und der Ebene wird das zu sendende Symbol aus der Sendmap geladen (ein zweidimensionales Array namens map, bei Programmstart aus sendmap.txt geladen)</li>
+<li>Falls Kyrillisch eingeschaltet ist, werden lateinische Zeichen in entsprechende kyrillische umgewandelt (wobei der kyrillische Dead-Key berücksichtigt wird). Diese Projektion wird mit dem Array namens rumap durchgeführt.</li>
+<li>Falls Capslock aktiv ist, werden Kleinbuchstaben in Großbuchstaben gewandelt.</li>
+<li>Nun wird die Funktion SendUNIKey aufgerufen, welche sich um das zu sendende Zeichen kümmert.</li>
+<li>Das Zeichen wird außerdem dem Hotstring-Buffer angehängt und es wird geprüft, ob eine Hotstring-Ersetzung stattfindet. Darum kümmert sich die Funktion checkHotStrings.</li>
+<li>ProcessKbdEvent liefert false.</li>
+</ul>
+<li>Falls &lt; oder &#35; gedrückt wurden, werden sie blockiert.</li>
+<li>Sonst liefert die Funktion true.</li>
+</ul>
+Zwischendrin wird noch unter diversen Umständen die GUI neu gezeichnet.
+<h3>SendUNIKey</h3>
+Im Falle des Sendens eines Unicode-Zeichens wird SendInput mit dwFlags=KEYEVENTF_UNICODE aufgerufen. Im Falle einer speziellen Tastenkombination (U+E000 .. U+F8FF) wird zunächst ermittelt, ob Strg, Shift oder Alt mitgesendet werden sollen. Anschließend wird der aktuelle Tastaturzustand über GetKeyboardState ausgelesen und in keyboardStateBuffer zwischengespeichert. Danach werden virtuell alle Tasten losgelassen. Die Tastenkombination wird mit SendInput gesendet und die Tastatur wird wieder in ihren ursprünglichen Zustand versetzt.
+<h3>Der Rest</h3>
+Alle weiteren Funktionen sind hoffentlich ausreichend im Quelltext dokumentiert.
+<h2>Viel Spaß!</h2>
+Mirko Kunze
+ </font>
+ </body>
+</html>

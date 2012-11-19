@@ -1,0 +1,29 @@
+uses
+	CtrlLib;
+
+file
+	hookfuncs.cpp,
+	hookfuncs.h,
+	logger.cpp,
+	logger.h,
+	keyButton.h,
+	KeyBuddy2.h,
+	kb2images.iml,
+	hotstrings.h,
+	hotstrings.cpp,
+	icon.ico,
+	icon.rc,
+	includes.h,
+	info.txt,
+	keydefines.inc,
+	keybuttons.inc,
+	mousecontrol.cpp,
+	mousedefines.inc,
+	mousecontrol.h,
+	main.cpp,
+	KeyBuddy2_debug.lay,
+	KeyBuddy2.lay;
+
+mainconfig
+	"" = "GUI";
+
