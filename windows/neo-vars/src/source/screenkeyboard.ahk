@@ -2,11 +2,6 @@
 
 BSTalwaysOnTop := 1
 
-UnZipSFXSourceLink := "ftp://ftp.info-zip.org/pub/infozip/win32/unz600xn.exe"
-UnZipSFXLocalFile  := ResourceFolder . "\unzipsfx.exe"
-
-UnZipLocalFile := ResourceFolder . "\unzip.exe"
-
 UniFontVersion  := "2.33"
 UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
@@ -17,8 +12,8 @@ UniFontZipLocalFile  := ResourceFolder . "\" . UniFontZipFilename
 UniFontZipSourceLink := "http://downloads.sourceforge.net/project/dejavu/dejavu/" . UniFontVersion . "/" . UniFontZipFilename
 
 UniFontLocalFilePath := ApplicationFolder
-UniFontLocalFile := UniFontLocalFilePath . "/" . UniFontFilename
-UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "/ttf/" . UniFontFilename
+UniFontLocalFile := UniFontLocalFilePath . "\" . UniFontFilename
+UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "\ttf\" . UniFontFilename
 
 Check_BSTUpdate(DoBSTUpdate = 0) {
   global
@@ -192,6 +187,11 @@ CharProc__BST0() {
   DllCall( "GDI32.DLL\RemoveFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
 }
 
+Copy_Async(sourcefile, destpath)
+{
+    ComObjCreate("Shell.Application").Namespace(destpath).CopyHere(sourcefile,4|16)
+}
+
 CharProc__BST1() {
   global
   if (GuiCurrent!="")
@@ -205,24 +205,45 @@ CharProc__BST1() {
     Msgbox, 4, NeoVars-Bildschirmtastatur, Wollen Sie die für die Bildschirmtastatur notwendigen Dateien herunterladen?
     ifMsgBox, No
       Return
-    if (FileExist(UnZipLocalFile)=="") {
-      Progress,0,Herunterladen des gepackten Entpack-Programms ...
-      UrlDownloadToFile,%UnZipSFXSourceLink%,%UnZipSFXLocalFile%
-      if (FileExist(UnZipSFXLocalFile)=="") {
-        Msgbox,Konnte Unzip-Programm nicht finden und nicht installieren!
-      } else {
-        Progress,25,Entpacken des Entpack-Programms ...
-        RunWait,% """" . UnZipSFXLocalFile . """ -d """ . ResourceFolder . """ unzip.exe",,Hide
-      }
-    }
 
+    Progress,0,Herunterladen der gepackten Font-Datei ...
     if (FileExist(UniFontZipLocalFile)=="") {
-      Progress,50,Herunterladen des Fonts ...
       UrlDownloadToFile,%UniFontZipSourceLink%,%UniFontZipLocalFile%
     }
 
-    Progress,75,Entpacken des Archivs ...
-    RunWait,% """" . UnZipLocalFile . """ -j """ . UniFontZipLocalFile . """ """ . UniFontZipFontPath . """",%UniFontLocalFilePath%,Hide
+    if (FileExist(UniFontZipLocalFile)=="") {
+      Progress,100,Fehler. Konnte gepackte Font-Datei nicht herunterladen.
+      return
+    }
+
+    Progress,50,Entpacken des Archivs ...
+    Copy_Async(UniFontZipLocalFile . "\" . UniFontZipFontPath, UniFontLocalFilePath)
+    i := 0
+    loop {
+      Progress,% 50+i,Entpacken des Archivs ...
+      sleep 200
+      if (FileExist(UniFontLocalFile)!="") {
+        Progress,75,Fertig
+        break
+      }
+      i := i+1
+      if (i > 20) {
+        Progress,100,Fehler
+        sleep 500
+        break
+      }
+    }
+    ; 4 Sekunden sollten reichen. Wenn nicht, Abbruch.
+    if (FileExist(UniFontLocalFile)=="") {
+      Progress,OFF
+      MsgBox,Font-Datei %UniFontLocalFile% existiert nicht. Abbruch.
+      return
+    }
+    Progress,90,Entferne Archiv-Datei ...
+    FileDelete,%UniFontZipLocalFile%
+    Sleep,200
+    Progress,100,Fertig!
+    Sleep,2000
     Progress,OFF
   }
 
