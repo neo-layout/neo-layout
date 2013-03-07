@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 IniRead,LangSTastatur,%ini%,Global,LangSTastatur,0
 If (LangSTastatur)

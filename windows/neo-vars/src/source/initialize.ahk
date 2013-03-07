@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 if (A_IsCompiled) {
 ; Revisionsinformation bereits verfügbar

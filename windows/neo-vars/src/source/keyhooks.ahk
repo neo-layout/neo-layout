@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 ; Wir müssen F24 nicht hooken, aber bei einem Restart hat AHK den Bug,
 ; dass manchmal der erste Hook ausgeführt wird, als wäre diese Taste
