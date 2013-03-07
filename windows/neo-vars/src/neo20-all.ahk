@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 SetWorkingDir, %A_ScriptDir%
 #include %A_ScriptDir%\
