@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 /* SHORTCUTS
    Da in diesem AHK-Skript sämtliche Tastendrücke zur weiteren Verarbeitung

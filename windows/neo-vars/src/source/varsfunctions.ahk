@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 #NoEnv
 
@@ -49,9 +49,9 @@ rerun:
   if (PP%PhysKey% != "")
     CompNew := PP%PhysKey%           ; Von Tastaturwiederholung
   else
-    CompNew := Comp . char           ; Hï¿½ngen wir mal das neue Zeichen zum Compositum an
+    CompNew := Comp . char           ; Hängen wir mal das neue Zeichen zum Compositum an
 
-  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gelï¿½scht
+  if (CD%CompNew% != "") {           ; Compose hat getroffen: wird geschickt, Compose gelöscht
     tosend := CD%CompNew%
     PP%PhysKey% := CompNew
     Comp := ""
@@ -61,7 +61,7 @@ rerun:
     Comp := CompNew
   } else if (CF%Comp% != "") {
     tosend := CF%Comp%
-    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufrï¿½umen
+    if (PR%PhysKey% != "") {         ; Eventuell vergessenen Key-Release aufräumen
       CharOutUp(PR%PhysKey%)
       PR%PhysKey% := ""
     }

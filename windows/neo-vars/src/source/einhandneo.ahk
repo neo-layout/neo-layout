@@ -1,4 +1,4 @@
-; -*- encoding: utf-8 -*-
+﻿; -*- encoding: utf-8 -*-
 
 IniRead,einHandNeo,%ini%,Global,einHandNeo,0
 If (einHandNeo)

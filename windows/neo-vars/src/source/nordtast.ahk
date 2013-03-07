@@ -1,4 +1,4 @@
-; -*- encoding:utf-8 -*-
+﻿; -*- encoding:utf-8 -*-
 ; NordTast. Belegung von Ulf Bro, http://www.nordtast.org/
 ; Aus der Neo-Welt (AdNW) von Andreas Wettstein, http://wettstae.home.solnet.ch/
 ; (c) 2010 Matthias Wächter

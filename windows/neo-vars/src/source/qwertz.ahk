@@ -1,4 +1,4 @@
-; -*- encoding:utf-8 -*-
+﻿; -*- encoding:utf-8 -*-
 ; QWERTZ
 ; (c) 2011 Matthias Wächter
 

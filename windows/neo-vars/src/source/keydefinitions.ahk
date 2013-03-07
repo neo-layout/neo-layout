@@ -1,4 +1,4 @@
-; -*- encoding:utf-8 -*-
+﻿; -*- encoding:utf-8 -*-
 
 thekeys() {
 ;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
