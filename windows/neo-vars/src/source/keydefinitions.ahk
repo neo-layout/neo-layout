@@ -1,6 +1,8 @@
 ﻿; -*- encoding:utf-8 -*-
 
 thekeys() {
+global
+layoutstring:=""
 ;   KeyCode       Ebene1  Ebene2  Ebene3  Ebene4  Ebene5  Ebene6  Ebene7* Ebene8*
 ; Reihe 1
 EDS("029",0,"T__cflx","T__cron","T__turn","T__abdt","T__hook","T__bldt") ; circumflex
@@ -14,45 +16,45 @@ EDS("008",0,"7","€","¥","¤"      ,"ϰ","→") ; 7
 EDS("009",0,"8","„","‚",""       ,"⟨","∞") ; 8
 EDS("00A",0,"9","“","‘","S__NDiv","⟩","∝") ; 9
 EDS("00B",0,"0","”","’","S__NMul","₀","∅") ; 0
-EDS("00C",0,"-","—","" ,"S__NSub","‑","­") ; -
+EDSK("00C",0,"-","—","" ,"S__NSub","‑","­") ; -
 EDS("00D",0,"T__grav","T__cedi","T__abrg","T__drss","T_dasia","T__mcrn") ; grave
 ; Reihe 2
-EDS("010",1,"x","X","…","S__PgUp","ξ","Ξ") ; x
-EDS("011",1,"v","V","_","U000008","" ,"√") ; v
-EDS("012",1,"l","L","[","S____Up","λ","Λ") ; l
-EDS("013",1,"c","C","]","S___Del","χ","ℂ") ; c
-EDS("014",1,"w","W","^","S__PgDn","ω","Ω") ; w
-EDS("015",1,"k","K","!","¡"      ,"κ","×") ; k
-EDS("016",1,"h","H","<","S__N__7","ψ","Ψ") ; h
-EDS("017",1,"g","G",">","S__N__8","γ","Γ") ; g
-EDS("018",1,"f","F","=","S__N__9","φ","Φ") ; f
-EDS("019",1,"q","Q","&","S__NAdd","ϕ","ℚ") ; q
-EDS("01A",1,"ß","ẞ","ſ","−"      ,"ς","∘") ; ß
+EDSK("010",1,"x","X","…","S__PgUp","ξ","Ξ") ; x
+EDSK("011",1,"v","V","_","U000008","" ,"√") ; v
+EDSK("012",1,"l","L","[","S____Up","λ","Λ") ; l
+EDSK("013",1,"c","C","]","S___Del","χ","ℂ") ; c
+EDSK("014",1,"w","W","^","S__PgDn","ω","Ω") ; w
+EDSK("015",1,"k","K","!","¡"      ,"κ","×") ; k
+EDSK("016",1,"h","H","<","S__N__7","ψ","Ψ") ; h
+EDSK("017",1,"g","G",">","S__N__8","γ","Γ") ; g
+EDSK("018",1,"f","F","=","S__N__9","φ","Φ") ; f
+EDSK("019",1,"q","Q","&","S__NAdd","ϕ","ℚ") ; q
+EDSK("01A",1,"ß","ẞ","ſ","−"      ,"ς","∘") ; ß
 EDS("01B",0,"T__acut","T__tlde","T__strk","T__dbac","T_psili","T__brve") ; acute
 ; Reihe 3
-EDS("01E",1,"u","U","\","S__Home","" ,"⊂") ; u
-EDS("01F",1,"i","I","/","S__Left","ι","∫") ; i
-EDS("020",1,"a","A","{","S__Down","α","∀") ; a
-EDS("021",1,"e","E","}","S__Rght","ε","∃") ; e
-EDS("022",1,"o","O","*","S___End","ο","∈") ; o
-EDS("023",1,"s","S","?","¿"      ,"σ","Σ") ; s
-EDS("024",1,"n","N","(","S__N__4","ν","ℕ") ; n
-EDS("025",1,"r","R",")","S__N__5","ρ","ℝ") ; r
-EDS("026",1,"t","T","-","S__N__6","τ","∂") ; t
-EDS("027",1,"d","D",":","S__NDot","δ","Δ") ; d
-EDS("028",1,"y","Y","@","."      ,"υ","∇") ; y
+EDSK("01E",1,"u","U","\","S__Home","" ,"⊂") ; u
+EDSK("01F",1,"i","I","/","S__Left","ι","∫") ; i
+EDSK("020",1,"a","A","{","S__Down","α","∀") ; a
+EDSK("021",1,"e","E","}","S__Rght","ε","∃") ; e
+EDSK("022",1,"o","O","*","S___End","ο","∈") ; o
+EDSK("023",1,"s","S","?","¿"      ,"σ","Σ") ; s
+EDSK("024",1,"n","N","(","S__N__4","ν","ℕ") ; n
+EDSK("025",1,"r","R",")","S__N__5","ρ","ℝ") ; r
+EDSK("026",1,"t","T","-","S__N__6","τ","∂") ; t
+EDSK("027",1,"d","D",":","S__NDot","δ","Δ") ; d
+EDSK("028",1,"y","Y","@","."      ,"υ","∇") ; y
 ; Reihe 4
-EDS("02C",1,"ü","Ü","#","U00001B","" ,"∪") ; ü
-EDS("02D",1,"ö","Ö","$","U000009","ϵ","∩") ; ö
-EDS("02E",1,"ä","Ä","|","S___Ins","η","ℵ") ; ä
-EDS("02F",1,"p","P","~","U00000D","π","Π") ; p
-EDS("030",1,"z","Z","``",""      ,"ζ","ℤ") ; z
-EDS("031",1,"b","B","+",":"      ,"β","⇐") ; b
-EDS("032",1,"m","M","%","S__N__1","μ","⇔") ; m
-EDS("033",0,",","–","""","S__N__2","ϱ","⇒") ; ,
-EDS("034",0,".","•","'","S__N__3","ϑ","↦") ; .
-EDS("035",1,"j","J",";",";"      ,"θ","Θ") ; j
-
+EDSK("02C",1,"ü","Ü","#","U00001B","" ,"∪") ; ü
+EDSK("02D",1,"ö","Ö","$","U000009","ϵ","∩") ; ö
+EDSK("02E",1,"ä","Ä","|","S___Ins","η","ℵ") ; ä
+EDSK("02F",1,"p","P","~","U00000D","π","Π") ; p
+EDSK("030",1,"z","Z","``",""      ,"ζ","ℤ") ; z
+EDSK("031",1,"b","B","+",":"      ,"β","⇐") ; b
+EDSK("032",1,"m","M","%","S__N__1","μ","⇔") ; m
+EDSK("033",0,",","–","""","S__N__2","ϱ","⇒") ; ,
+EDSK("034",0,".","•","'","S__N__3","ϑ","↦") ; .
+EDSK("035",1,"j","J",";",";"      ,"θ","Θ") ; j
+neo20layoutstring := layoutstring
 ; Numpad
 EDS("145",0,"U000009","U000009","=","≠","≈","≡") ; NumLock
 EDS("135",0,"S__NDiv","S__NDiv","÷","⌀","∣","⁄") ; NumpadDiv
@@ -171,6 +173,41 @@ EDSR(scpos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
 EDS(scpos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
   global
   ED(vksc%scpos%,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a,e8a)
+}
+
+EDSK(scpos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a="",e8a="") {
+  global
+  EDS(scpos,caps,e1a,e2a,e3a,e4a,e5a,e6a,e7a,e8a)
+  layoutstringpos := strlen(layoutstring) + 1
+  layoutstring .= e1a
+  e1 := EncodeUniComposeA(e1a)
+  LOSP%layoutstringpos%:=scpos
+  LOSE2%e1% := e2a
+  LOSE5%e1% := e5a
+  LOSE6%e1% := e6a
+  LOSEC%e1% := caps
+}
+
+Change1256Layout(newlayoutstring) {
+  global
+  if (strlen(newlayoutstring) != 33) {
+    MsgBox,Falscher Layoutstring, zu wenige Zeichen!
+    return
+  }
+  layoutstring := ""
+  layoutstringpos := 1
+  while (layoutstringpos <= 33) {
+    e1a := substr(newlayoutstring,layoutstringpos,1)
+    e1  := EncodeUniComposeA(e1a)
+    ED1256(LOSP%layoutstringpos%, LOSEC%e1%, e1a, LOSE2%e1%, LOSE5%e1%, LOSE6%e1%)
+    layoutstring .= e1a
+    layoutstringpos := layoutstringpos + 1
+  }
+}
+
+Change1256LayoutNeo20() {
+  global
+  Change1256Layout(neo20layoutstring)
 }
 
 EDNS(scpos,caps,e1a,e2a,e3a,e4a1,e4a2,e5a,e6a,e7a="",e8a="") {
