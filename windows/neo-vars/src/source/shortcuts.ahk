@@ -1,4 +1,4 @@
-﻿; -*- encoding: utf-8 -*-
+; -*- encoding: utf-8 -*-
 
 /* SHORTCUTS
    Da in diesem AHK-Skript sämtliche Tastendrücke zur weiteren Verarbeitung
@@ -17,9 +17,9 @@ char := 0x21
 loop {
   s1 := SubStr(char,3)
   CSU0000%s1% := chr(char)
-  char += 1
   if (char = 0x7E)
     break
+  char += 1
 }
 SetFormat, integer, d
 
@@ -31,13 +31,9 @@ CSU00001B := "esc"
 CSU000020 := "space"
 
 /**** die folgenden Shortcuts ersetzen die automatische Wahl entsprechender
- **** down- und up-Sendezeichen, da die Zeichenerzeugung entweder aufwändiger
- **** ist (wie bei den diversen toten Zeichen) oder schlicht mit AHK nicht
- **** geht (wie das Key-Repeat der schließenden Klammer).
+ **** down- und up-Sendezeichen, da die Zeichenerzeugung aufwändiger
+ **** ist, wie bei den diversen toten Zeichen.
 */
-DNCSU00007D := "{}}"                 ; "{} down}" geht nicht, warum auch immer
-; CSU00007D := ""
-
 
 CSS__Sh_L := "LShift"
 CSS__Sh_R := "RShift"
