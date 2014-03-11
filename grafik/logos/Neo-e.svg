@@ -1,27 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 12.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
-	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
-]>
-<svg  version="1.1" id="Layer_1" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="42.671875" height="47.1733398"
-	 viewBox="0 0 42.671875 47.1733398" overflow="visible" enable-background="new 0 0 42.671875 47.1733398" xml:space="preserve">
-<font horiz-adv-x="1000">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   width="42.671875"
+   height="47.1733398"
+   viewBox="0 0 42.671875 47.1733398"
+   overflow="visible"
+   enable-background="new 0 0 42.671875 47.1733398"
+   xml:space="preserve"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="Neo-e.svg"><metadata
+   id="metadata33"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs31" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="640"
+   inkscape:window-height="480"
+   id="namedview29"
+   showgrid="false"
+   inkscape:zoom="5.0028258"
+   inkscape:cx="21.335938"
+   inkscape:cy="23.58667"
+   inkscape:window-x="0"
+   inkscape:window-y="24"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<font
+   horiz-adv-x="1000"
+   id="font3">
 <!-- Converted by Andrey V. Panov from TeX fonts -->
 <!-- Copyright: Copyright 2008 Adobe System Incorporated. All rights reserved. -->
-<font-face font-family="CMUBright-SemiBold" units-per-em="1000" underline-position="-100" underline-thickness="50"/>
-<missing-glyph horiz-adv-x="760" d="M10,10l740,0l0,755l-740,0M70,112l0,551l276,-275M105,70l275,276l275,-276M105,705l550,0l-275,-276M414,388l276,275l0,-551z"/>
-<glyph unicode="e" horiz-adv-x="471" d="M29,239C29,111 124,-8 267,-8C335,-8 390,14 435,43l-7,81C406,108 350,67 267,67C182,67 119,145 119,240l0,10l322,0C441,445 327,485 251,485C122,485 29,368 29,239M131,309C152,373 202,409 250,409C272,409 335,404 359,309z"/>
-<glyph unicode="o" horiz-adv-x="525" d="M29,235C29,91 141,-8 262,-8C395,-8 495,104 495,234C495,374 389,484 262,484C120,484 29,358 29,235M125,245C125,385 203,409 262,409C333,409 398,373 399,251l0,-5C399,151 370,70 262,70C224,70 187,83 162,112C129,149 125,204 125,245z"/>
+<font-face
+   font-family="CMUBright-SemiBold"
+   units-per-em="1000"
+   underline-position="-100"
+   underline-thickness="50"
+   id="font-face5" />
+<missing-glyph
+   horiz-adv-x="760"
+   d="M10,10l740,0l0,755l-740,0M70,112l0,551l276,-275M105,70l275,276l275,-276M105,705l550,0l-275,-276M414,388l276,275l0,-551z"
+   id="missing-glyph7" />
+<glyph
+   unicode="e"
+   horiz-adv-x="471"
+   d="M29,239C29,111 124,-8 267,-8C335,-8 390,14 435,43l-7,81C406,108 350,67 267,67C182,67 119,145 119,240l0,10l322,0C441,445 327,485 251,485C122,485 29,368 29,239M131,309C152,373 202,409 250,409C272,409 335,404 359,309z"
+   id="glyph9" />
+<glyph
+   unicode="o"
+   horiz-adv-x="525"
+   d="M29,235C29,91 141,-8 262,-8C395,-8 495,104 495,234C495,374 389,484 262,484C120,484 29,358 29,235M125,245C125,385 203,409 262,409C333,409 398,373 399,251l0,-5C399,151 370,70 262,70C224,70 187,83 162,112C129,149 125,204 125,245z"
+   id="glyph11" />
 </font>
 
-	<font horiz-adv-x="1000">
+	<font
+   horiz-adv-x="1000"
+   id="font13">
 <!-- Converted by Andrey V. Panov from TeX fonts -->
 <!-- Copyright: Copyright 2008 Adobe System Incorporated. All rights reserved. -->
-<font-face font-family="CMUBright-SemiBoldOblique" units-per-em="1000" underline-position="-100" underline-thickness="50"/>
-<missing-glyph horiz-adv-x="760" d="M10,10l740,0l0,755l-740,0M70,112l0,551l276,-275M105,70l275,276l275,-276M105,705l550,0l-275,-276M414,388l276,275l0,-551z"/>
-<glyph unicode="N" horiz-adv-x="708" d="M83,0l94,0l127,600l174,-600l146,0l148,695l-94,0l0,-1l-127,-600l-174,601l-146,0l-1,-1z"/>
+<font-face
+   font-family="CMUBright-SemiBoldOblique"
+   units-per-em="1000"
+   underline-position="-100"
+   underline-thickness="50"
+   id="font-face15" />
+<missing-glyph
+   horiz-adv-x="760"
+   d="M10,10l740,0l0,755l-740,0M70,112l0,551l276,-275M105,70l275,276l275,-276M105,705l550,0l-275,-276M414,388l276,275l0,-551z"
+   id="missing-glyph17" />
+<glyph
+   unicode="N"
+   horiz-adv-x="708"
+   d="M83,0l94,0l127,600l174,-600l146,0l148,695l-94,0l0,-1l-127,-600l-174,601l-146,0l-1,-1z"
+   id="glyph19" />
 </font>
 
-	<text transform="matrix(1 0 0 1 0 30.7299805)"><tspan x="0" y="0" font-family="'CMUBright-SemiBoldOblique'" font-size="28">N</tspan><tspan x="19.8237305" y="6" font-family="'CMUBright-SemiBold'" font-size="28" letter-spacing="-4">e</tspan><tspan x="28.8115234" y="-7" font-family="'CMUBright-SemiBold'" font-size="28" letter-spacing="-4">o</tspan></text>
+	<text
+   transform="matrix(1 0 0 1 0 30.7299805)"
+   id="text21"><tspan
+     x="0"
+     y="0"
+     font-family="'CMUBright-SemiBoldOblique'"
+     font-size="28"
+     id="tspan23">N</tspan><tspan
+     x="19.8237305"
+     y="6"
+     font-family="'CMUBright-SemiBold'"
+     font-size="28"
+     letter-spacing="-4"
+     id="tspan25">e</tspan><tspan
+     x="28.8115234"
+     y="-7"
+     font-family="'CMUBright-SemiBold'"
+     font-size="28"
+     letter-spacing="-4"
+     id="tspan27">o</tspan></text>
+
 </svg>
