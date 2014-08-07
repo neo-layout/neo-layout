@@ -1,4 +1,4 @@
-﻿; -*- encoding: utf-8 -*-
+; -*- encoding: utf-8 -*-
 
 #NoEnv
 
@@ -367,9 +367,6 @@ SendUnicodeChar(charCode){
   {
     StringLower,charCode,charCode
     send % "^+u" . SubStr(charCode,3) . " "
-  } else IfWinActive,ahk_class Emacs
-  {
-    send % "^x8{Enter}" . SubStr(charCode,3) . "{Enter}"
   } else {
     static ki := "#"
     if (ki =="#") {
@@ -400,9 +397,6 @@ SendUnicodeCharDown(charCode){
   {
     StringLower,charCode,charCode
     send % "^+u" . SubStr(charCode,3) . " "
-  } else IfWinActive,ahk_class Emacs
-  {
-    send % "^x8{Enter}" . SubStr(charCode,3) . "{Enter}"
   } else {
     static ki := "#"
     if (ki =="#") {
@@ -425,9 +419,6 @@ SendUnicodeCharDown(charCode){
 
 SendUnicodeCharUp(charCode){
   IfWinActive,ahk_class gdkWindowToplevel
-  {
-    ; nothing
-  } else IfWinActive,ahk_class Emacs
   {
     ; nothing
   } else {
