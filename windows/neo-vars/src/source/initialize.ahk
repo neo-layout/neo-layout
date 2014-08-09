@@ -134,3 +134,14 @@ if (dynamischesCompose)
   LoadCurrentCompose()
 else
   LoadDefaultCompose()
+
+; generischer Layoutwechsel
+CustomLayoutChange() {
+  global
+  IniRead,customLayout,%ini%,Global,customLayout,%A_Space%
+  if (customLayout != "")
+    Change1256Layout(customLayout)
+}
+
+CustomLayoutChange()
+
