@@ -2,8 +2,8 @@
 
 echo Setting default local path variables
 :: TortoiseSVN and its clever tool SubWCRev
-set Tsvnpath=C:\Programme\TortoiseSVN\bin
-set  ahkpath=C:\Programme\AutoHotkey
+set Tsvnpath=C:\Program Files\TortoiseSVN\bin
+set  ahkpath=C:\Program Files (x86)\AutoHotkey
 
 if exist _local_paths.bat call _local_paths.bat
 
