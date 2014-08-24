@@ -506,7 +506,7 @@ CDS__CompU000075U000077 := "P___WMN"
 
 CharProc___WMN() {
   global
-  ok := DllCall("OpenClipboard")
+  ok := DllCall("User32.dll\OpenClipboard", "Ptr", 0)
   if (!ok) {
     TrayTip,Wie mit NEO,Fehler in OpenClipboard,10,1
     return
