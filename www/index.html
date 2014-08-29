@@ -1,132 +1,172 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
- "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	
+<!DOCTYPE html>
+<html lang="de">
 <head>
 	<title>Neo – Ergonomisches Tastaturlayout</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="shortcut icon" href="./favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
-	<!--[if lte IE 7]>
-		<link rel="stylesheet" type="text/css" href="stylesheet_ie7.css">
-	<![endif]-->
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+	<style>
+		body { background-color:#dceeee; }
+
+		.page-header a img {
+			border:0;
+		}
+		nav .list-group-item .glyphicon {
+			padding-right:1ex;
+		}
+
+		/* Interaktive Tastaturebenen */
+
+		.Ebene_button {
+			border:1px solid black;
+			padding:0.25em 1em;
+			position:absolute;
+			cursor:pointer;
+			z-index:2;
+		}
+
+		.Ebenen_box { position: relative; margin-bottom:1ex; }
+
+		.Ebene_bild { padding-top:2.5em; }
+
+		.Ebene_wrapper { position:absolute; top:0px; background-color: white; }
+
+		.Ebene_wrapper > .Ebene_bild { display:none; }
+		.Ebene_wrapper:hover > .Ebene_bild { display:block; }
+
+		.Ebene_wrapper:hover > .Ebene_button,
+		.Ebene1_wrapper:hover > .Ebene_button {
+			background-color:Highlight;
+		}
+	</style>
 </head>
 
-<!-- Für Mittenpositionierung: padding: 0; margin: 0; text-align: center; ind bodystyle /-->
-<body style="background-color:#dceeee; padding: 0em; margin: 0em; text-align: center; ">
+<body>
+<div class="container">
+	<div class="page-header">
+		<h1 class="clearfix">
+			<span class="visible-xs">Neo</span>
+			<img src="./neo_kopf_trac_522x50.png" alt="Neo – Ergonomisches Tastaturlayout" class="hidden-xs" />
 
+			<span class="visible-sm-block"></span>
 
-<div id="Gesamtzentrierung"> 
-
-<div style="position:relative; top:2.25em; left:3.25em; width:54em; height:70px; overflow:hidden; "> 
-	<!-- Logo -->
-	<img src="./neo_kopf_trac_522x50.png" alt="Neo – Ergonomisches Tastaturlayout" />
-
-	<!-- Quicklinks -->
-
-	<!--Werden per post-commit hook immer aktuell gehalten!-->
-	<a href="neo_de.xmodmap">
-		<img src="./tastentierchen_pingu.png" title="quickdownload:Neo_Linux" alt="quickdownload:Neo_Linux" style="border-width: 0px;" />
-	</a>
-
-	<a href="http://wiki.neo-layout.org/browser/windows/neo-vars/out/neo20.exe?format=raw">
-		<img src="./tastentierchen_fenster.png" title="quickdownload:Neo_Windows" alt="quickdownload:Neo_Windows" style="border-width: 0px;" />
-	</a>
-
-	<a href="http://wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">
-		<img src="./tastentierchen_apfel.png" title="quickdownload:Neo_OS-X" alt="quickdownload:Neo_OS-X" style="border-width: 0px;" />
-	</a>
-
-	<!-- /Quicklinks -->
-</div> 
-
-<ul id="menu">
-	<li>Navigation
-	<ul>
-		<li><a href="http://wiki.neo-layout.org/wiki">Wiki</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Download">Download</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Benutzerhandbuch">Handbuch</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Neo%20einrichten">Installation</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Verweise%20auf%20andere%20Projekte">ähnliche Projekte</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Presseberichte">Presse</a></li>
-	</ul>
-	</li>
-
-	<li> Kontakt
-	<ul>
-		<li><a href="http://webchat.freenode.net?channels=neo">Neo-Chat</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Mailingliste">Mailingliste</a></li>
-		<li><a href="http://neo-layout.org/forum">Forum</a></li>
-		<li><a href="http://wiki.neo-layout.org/newticket">Fehler melden</a></li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Impressum">Impressum</a></li>
-	</ul>
-	</li>
-</ul>
-
-<div class="Hauptfeld">
-
-	<h1>Neo – ein ergonomisches Tastaturlayout</h1>
-
-	<p>
-		Neo eine Tastaturbelegung, die für die deutsche Sprache optimiert ist.
-		Wichtige Kriterien sind:
-	</p>
-
-	<ul>
-		<li>Optimierungen bezüglich deutscher <a href="http://de.wikipedia.org/wiki/Buchstabenhäufigkeit">Buchstabenhäufigkeiten</a> sowie <a href="http://de.wikipedia.org/wiki/N-Gramm">Bi- und Trigrammen</a> (Ebene 1 und 2)</li>
-		<li>Programmiertasten sind gut erreichbar (Ebene 3)</li>
-		<li>Neue Zeichen, wie „ , “ , « , » , ∫ , √ , α , β , … sind direkt einzugeben (alle Ebenen)</li>
-		<li>Navigation mittels Steuerkreuz ←↑↓→ direkt auf der Haupttastatur (Ebene 4)</li>
-		<li><a href="http://wiki.neo-layout.org/wiki/Einführungskapitel">weiterlesen …</a></li>
-	</ul>
-
-</div>
-
-
-<div class="Hauptfeld">
-<h1>Die Ebenen von Neo</h1>
-	<div class="Ebenen_box">
-		<div class="Ebene1_wrapper">
-			<div class="Ebene_button" style="left:0em">Ebene&nbsp;1</div>
-			<div class="Ebene_bild">
-				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene1.png" alt="Tastenbelegung Ebene 1" />
-			</div>
-		</div>
-		<div class="Ebene_wrapper">
-			<div class="Ebene_button" style="left:6.5em;">Ebene&nbsp;2</div>
-			<div class="Ebene_bild">
-				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene2.png" alt="Tastenbelegung Ebene 2" />
-			</div>
-		</div>
-		<div class="Ebene_wrapper">
-			<div class="Ebene_button" style="left:13em;">Ebene&nbsp;3</div>
-			<div class="Ebene_bild">
-				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene3.png" alt="Tastenbelegung Ebene 3" />
-			</div>
-		</div>
-		<div class="Ebene_wrapper">
-			<div class="Ebene_button" style="left:19.5em">Ebene&nbsp;4</div>
-			<div class="Ebene_bild">
-				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene4.png" alt="Tastenbelegung Ebene 4" />
-			</div>
-		</div>
-		<div class="Ebene_wrapper">
-			<div class="Ebene_button" style="left:26em;">Ebene&nbsp;5</div>
-			<div class="Ebene_bild">
-				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene5.png" alt="Tastenbelegung Ebene 5" />
-			</div>
-		</div>
-		<div class="Ebene_wrapper">
-			<div class="Ebene_button" style="left:32.5em;">Ebene&nbsp;6</div>
-			<div class="Ebene_bild">
-				<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene6.png" alt="Tastenbelegung Ebene 6" />
-			</div>
-		</div>
+			<span class="pull-right">
+				<a href="neo_de.xmodmap">
+					<img src="./tastentierchen_pingu.png" title="quickdownload:Neo_Linux" alt="quickdownload:Neo_Linux" />
+				</a>
+				<a href="//wiki.neo-layout.org/browser/windows/neo-vars/out/neo20.exe?format=raw">
+					<img src="./tastentierchen_fenster.png" title="quickdownload:Neo_Windows" alt="quickdownload:Neo_Windows" />
+				</a>
+				<a href="//wiki.neo-layout.org/browser/mac_osx/neo.keylayout?format=raw">
+					<img src="./tastentierchen_apfel.png" title="quickdownload:Neo_OS-X" alt="quickdownload:Neo_OS-X" />
+				</a>
+			</span>
+		</h1>
 	</div>
-	Zum Ausdrucken und Lernen der Neo-Tastaturbelegung gibt es <a href="http://wiki.neo-layout.org/wiki/Grafiken">verschiedene Grafiken</a>.
-</div>
 
-</div>
+	<div class="row clearfix">
+		<div class="col-md-9 col-md-push-3">
+			<section class="jumbotron well">
+				<h1>Neo</h1>
+				<p>Neo eine ergonomische Tastaturbelegung, die für die deutsche Sprache optimiert ist.</p>
 
+				<p class="text-right"><a class="btn btn-primary btn-lg" href="//wiki.neo-layout.org/wiki/Einführungskapitel">Mehr erfahren <small class="glyphicon glyphicon-chevron-right"></small></a></p>
+			</section>
+
+			<section class="well">
+				<h4>Wichtige Kriterien von Neo</h4>
+				<ul>
+					<li>Optimierungen bezüglich deutscher <a href="http://de.wikipedia.org/wiki/Buchstabenhäufigkeit">Buchstabenhäufigkeiten</a> sowie <a href="http://de.wikipedia.org/wiki/N-Gramm">Bi- und Trigrammen</a> (Ebene 1 und 2)</li>
+					<li>Programmiertasten sind gut erreichbar (Ebene 3)</li>
+					<li>Neue Zeichen, wie „ , “ , « , » , ∫ , √ , α , β , … sind direkt einzugeben (alle Ebenen)</li>
+					<li>Navigation mittels Steuerkreuz ←↑↓→ direkt auf der Haupttastatur (Ebene 4)</li>
+					<li><a href="//wiki.neo-layout.org/wiki/Einführungskapitel">weiterlesen …</a></li>
+				</ul>
+			</section>
+
+			<section class="well">
+				<h4>Die 6 Ebenen von Neo</h4>
+				<div class="Ebenen_box img-responsive">
+					<div class="Ebene1_wrapper">
+						<div class="Ebene_button" style="left:0em">Ebene&nbsp;1</div>
+						<div class="Ebene_bild">
+							<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene1.png" alt="Tastenbelegung Ebene 1" class="img-responsive" />
+						</div>
+					</div>
+					<div class="Ebene_wrapper">
+						<div class="Ebene_button" style="left:6.5em;">Ebene&nbsp;2</div>
+						<div class="Ebene_bild">
+							<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene2.png" alt="Tastenbelegung Ebene 2" class="img-responsive" />
+						</div>
+					</div>
+					<div class="Ebene_wrapper">
+						<div class="Ebene_button" style="left:13em;">Ebene&nbsp;3</div>
+						<div class="Ebene_bild">
+							<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene3.png" alt="Tastenbelegung Ebene 3" class="img-responsive" />
+						</div>
+					</div>
+					<div class="Ebene_wrapper">
+						<div class="Ebene_button" style="left:19.5em">Ebene&nbsp;4</div>
+						<div class="Ebene_bild">
+							<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene4.png" alt="Tastenbelegung Ebene 4" class="img-responsive" />
+						</div>
+					</div>
+					<div class="Ebene_wrapper">
+						<div class="Ebene_button" style="left:26em;">Ebene&nbsp;5</div>
+						<div class="Ebene_bild">
+							<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene5.png" alt="Tastenbelegung Ebene 5" class="img-responsive" />
+						</div>
+					</div>
+					<div class="Ebene_wrapper">
+						<div class="Ebene_button" style="left:32.5em;">Ebene&nbsp;6</div>
+						<div class="Ebene_bild">
+							<img src="./grafik/tastatur3d/hauptfeld/tastatur_neo_Ebene6.png" alt="Tastenbelegung Ebene 6" class="img-responsive" />
+						</div>
+					</div>
+				</div>
+
+				<p>Zum Ausdrucken und Lernen der Neo-Tastaturbelegung gibt es <a href="//wiki.neo-layout.org/wiki/Grafiken">verschiedene Grafiken</a>.</p>
+			</section>
+		</div>
+
+		<nav class="col-md-3 col-md-pull-9">
+			<section>
+				<h3 class="visible-sm visible-xs">Navigation</h3>
+				<div class="list-group">
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki"><i class="glyphicon glyphicon-globe"></i> Wiki</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Download"><i class="glyphicon glyphicon-download-alt"></i> Download</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Benutzerhandbuch"><i class="glyphicon glyphicon-book"></i> Handbuch</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Neo%20einrichten"><i class="glyphicon glyphicon-floppy-disk"></i> Installation</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Verweise%20auf%20andere%20Projekte"><i class="glyphicon glyphicon-random"></i> ähnliche Projekte</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Presseberichte"><i class="glyphicon glyphicon-volume-up"></i> Presse</a></li>
+				</div>
+			</section>
+
+			<section>
+				<h4>Kontakt</h4>
+				<div class="list-group">
+					<a class="list-group-item" href="//webchat.freenode.net?channels=neo"><i class="glyphicon glyphicon-user"></i> Neo-Chat</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Mailingliste"><i class="glyphicon glyphicon-send"></i> Mailingliste</a>
+					<a class="list-group-item" href="//neo-layout.org/forum"><i class="glyphicon glyphicon-list"></i> Forum</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/newticket"><i class="glyphicon glyphicon-fire"></i> Fehler melden</a>
+					<a class="list-group-item" href="//wiki.neo-layout.org/wiki/Impressum"><i class="glyphicon glyphicon-phone-alt"></i> Impressum</a>
+				</div>
+			</section>
+		</nav>
+	</div>
+
+	<footer>
+		<div class="container">
+			<p class="text-muted text-center">Entwickelt mit <a href="http://getbootstrap.com/">Twitter Bootstrap v3.2.0</a> und dem <a href="http://glyphicons.com/">Glyphicons Halflings set</a>.</p>
+		</div>
+	</footer>
+</div>
 </body>
+
 </html>
