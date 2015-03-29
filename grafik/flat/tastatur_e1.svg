@@ -30,41 +30,10 @@
     </rdf:RDF>
   </metadata>
 <defs id="defs">
-<style type="text/css" id="style46661">
-      text.mod, text.key, text.dead {
-        font-style:normal;
-        font-variant:normal;
-        font-weight:normal;
-        font-stretch:normal;
-        stroke:none;
-        fill:#222;
-        fill-opacity:1;
-        display:inline;
-        font-family:DejaVu Sans;
-        writing-mode:lr-tb;
-      }
-      text.mod {
-        font-size:14px;
-        text-align:start;
-        text-anchor:start;
-      }
-      text.big {
-        font-size:14px;
-      }
-      text.dead {
-        font-size:20px;
-        text-align:center;
-        text-anchor:middle;
-      }
-      text.key {
-        font-size:24px;
-        text-align:center;
-        text-anchor:middle;
-        /*font-family: 'Linux Libertine O', 'Linux Libertine';*/
-        font-family:"Linux Libertine O";
-      }
-      text.nubkey { fill:#eee; }
-    </style></defs><sodipodi:namedview
+<style type="text/css">
+@import url('tastatur.css');
+</style>
+</defs><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"

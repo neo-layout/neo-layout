@@ -33,62 +33,75 @@
 
 <defs id="defs">
 <style type="text/css" id="style46661">
-      text.mod, text.dead {
-        fill:#222;
-        fill-opacity:1;
-        stroke:none;
-        display:inline;
-        font-family:DejaVu Sans;
-        writing-mode:lr-tb;
-      }
-      text.mod {
-        font-size:10px;
-        font-style:normal;
-        font-variant:normal;
-        font-weight:normal;
-        font-stretch:normal;
-        text-align:start;
-        line-height:125%;
-        text-anchor:start;
-      }
-      text.big {
-        font-size:14px;
-      }
-      text.dead {
-        font-size:16px;
-        text-align:center;
-        line-height:125%;
-        text-anchor:middle;
-      }
+text.mod, text.key, text.dead {
+	fill:#111;
+	fill-opacity:1;
+	stroke:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	font-stretch:normal;
+	display:inline;
+	font-family:DejaVu Sans;
+	writing-mode:lr-tb;
+}
 
-      .key {
-        stroke-width:1.25;
-      }
+text.key {
+	font-family:Linux Libertine O,Linux Libertine;
+}
 
-      .grey { fill:#949494; stroke:#696969; }
-      .grey { fill:#9f9f9f; stroke:#747474; }
+text.mod {
+	text-align:start;
+	text-anchor:start;
+}
 
-      /* bootstrap colors */
-      .l2, .r2 { fill:#337ab7; }
-      .l3, .r3 { fill:#5cb85c; }
-      .l4, .r4 { fill:#d9534f; }
-      .l5, .r5 { fill:#f0ad4e; }
+text.deadcircle, text.dead, text.center, text.key {
+	text-align:center;
+	text-anchor:middle;
+}
 
-      /* btn bg hover */
-      .l2, .r2 { stroke:#3071a9; }
-      .l3, .r3 { stroke:#449d44; }
-      .l4, .r4 { stroke:#c9302c; }
-      .l5, .r5 { stroke:#ec971f; }
+text.key { font-size:20px; }
+text.dead { font-size:20px; }
+text.deadcircle { font-size:16px; }
+text.mod { font-size:10px; }
+text.big { font-size:14px; }
 
-      /* btn border hover */
-      .l2, .r2 { stroke:#204d74; }
-      .l3, .r3 { stroke:#398439; }
-      .l4, .r4 { stroke:#ac2925; }
-      .l5, .r5 { stroke:#d58512; }
+.key {
+	stroke-width:1.25;
+}
+
+.grey { fill:#949494; stroke:#696969; }
+.grey { fill:#9f9f9f; stroke:#747474; }
+
+/* bootstrap colors */
+.l2, .r2 { fill:#337ab7; }
+.l3, .r3 { fill:#5cb85c; }
+.l4, .r4 { fill:#d9534f; }
+.l5, .r5 { fill:#f0ad4e; }
+
+/* btn bg hover, unused */
+.l2, .r2 { stroke:#3071a9; }
+.l3, .r3 { stroke:#449d44; }
+.l4, .r4 { stroke:#c9302c; }
+.l5, .r5 { stroke:#ec971f; }
+
+/* btn border hover */
+.l2, .r2 { stroke:#204d74; }
+.l3, .r3 { stroke:#398439; }
+.l4, .r4 { stroke:#ac2925; }
+.l5, .r5 { stroke:#d58512; }
+
+text.nubkey { fill:#eee; }
+
+.pressed {
+	opacity:0.5;
+	fill:#555;
+}
     </style>
 
     <g id="basekey">
         <rect width="32" height="32" rx="4" class="key" />
+	<!--rect width="20" height="20" x="6" y="6" /-->
         <!--rect width="2" height="2" fill="#000" x="15" y="15" /-->
     </g>
 
@@ -205,7 +218,7 @@
      id="return"
      class="key grey"/>
 
-<rect y="99" x="181" width="14" height="2" rx="1" id="nub" style="fill:#eee;" />
+<rect y="101" x="181" width="14" height="1" rx="1" id="nub" style="fill:#eee;" />
 <use y="0" x="108" xlink:href="#nub" />
 </g>
 
@@ -214,10 +227,10 @@
 <text y="133" x="10" class="mod big" id="shiftltxt">⇧</text>
 <text y="168" x="10" class="mod" id="ctrlltxt">Strg</text>
 
-<text y="132" x="54" class="mod" id="m4ltxt">M4</text>
+<text y="132" x="56" class="mod" id="m4ltxt">M4</text>
 <text y="168" x="135" class="mod" id="altltxt">Alt</text>
 
-<text y="96" x="470" class="mod" id="m3rtxt">M3</text>
+<text y="96" x="472" class="mod" id="m3rtxt">M3</text>
 <text y="133" x="450" class="mod big" id="shiftrtxt">⇧</text>
 <text y="168" x="490" class="mod" id="ctrlrtxt">Strg</text>
 <text y="168" x="357" class="mod" id="m4rtxt">Mod4</text>
@@ -225,7 +238,7 @@
 <text y="62" x="495" class="mod big" id="returntxt">↲</text>
 <text y="23" x="480" class="mod" id="backspacetxt">⌫</text>
 
-<text y="25" x="20" class="dead" id="deadcircletxt">◌</text>
+<text y="25" x="20" class="deadcircle" id="deadcircletxt">◌</text>
 <use y="0" x="432" xlink:href="#deadcircletxt" id="t2" />
 <use y="36" x="450" xlink:href="#deadcircletxt" id="t3" />
 </g>

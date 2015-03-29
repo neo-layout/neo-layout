@@ -11,28 +11,25 @@ text.mod, text.key, text.dead {
 	writing-mode:lr-tb;
 }
 
+text.key {
+	font-family:Linux Libertine O,Linux Libertine;
+}
+
+text.mod {
+	text-align:start;
+	text-anchor:start;
+}
+
 text.deadcircle, text.dead, text.center, text.key {
 	text-align:center;
 	text-anchor:middle;
 }
 
-text.key {
-	font-size:20px;
-	font-family:Linux Libertine O,Linux Libertine;
-}
-
+text.key { font-size:22px; }
 text.dead { font-size:20px; }
-text.deadcircle { font-size:16px; }
-
-text.big {
-	font-size:14px;
-}
-
-text.mod {
-	font-size:10px;
-	text-align:start;
-	text-anchor:start;
-}
+text.deadcircle { font-size:14px; }
+text.mod { font-size:10px; }
+text.big { font-size:14px; }
 
 .key {
 	stroke-width:1.25;
