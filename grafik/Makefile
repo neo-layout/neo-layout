@@ -8,7 +8,7 @@ EBENENPNG=$(addsuffix .png,$(basename ${EBENENSVG} ${HAUPT} ${ZIFFERN} ${HAUPTZI
 
 SVGFILES=$(filter-out ./tastatur3d/tastatur_neo_%.svg, $(shell find -name "*.svg")) ref2svg/ref2svg.svg
 PDFFILES=$(filter-out ./promotion-material/Flyer-fs/neo_logo.pdf, $(addsuffix .pdf,$(basename ${SVGFILES})))
-PNGFILES=$(addsuffix .png,$(basename ${SVGFILES})) 
+PNGFILES=$(addsuffix .png,$(basename ${SVGFILES}))
 
 default: svg pdf png
 ref2svg/ref2svg.svg: ref2svg/ref2svg.pl ../A-REFERENZ-A/neo20.txt
@@ -66,6 +66,15 @@ tastatur3d/haupt_ziffern_feld/%.png: tastatur3d/hauptfeld/%.png tastatur3d/ziffe
 %.png: %.svg
 	inkscape --without-gui --export-png=$@ -w1000 $<
 	optipng $@
+
+FLATPNGS:=$(patsubst %.svg,%.png,$(wildcard flat/tastatur_e*.svg))
+
+$(FLATPNGS): flat/tastatur.css flat/tastatur_base.svg
+$(FLATPNGS): %.png: %.svg
+	sed -e "/^@import url('tastatur.css');$$/{r flat/tastatur.css" -e 'd;}' "$<" > "$<.imported.svg"
+	inkscape --without-gui --export-png="$@" "$<.imported.svg"
+	optipng "$@"
+	rm "$<.imported.svg"
 
 
 .PHONY: default clean \
