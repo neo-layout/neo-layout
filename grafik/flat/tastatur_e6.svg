@@ -134,7 +134,7 @@
 	<text x="324" class="key">Θ</text>
 </g>
 
-<text x="264.5" y="168" class="mod center" id="spacetxt">schmales gesch. Leerz. ⍽</text>
+<text x="264.5" y="168" class="mod center" id="spacetxt">schmales gesch. Leerz. ␣</text>
 <use xlink:href="#padlock" class="grey" x="324" y="156" />
 
 <text x="28" y="28" class="dead" id="t1"> ̣   </text>
