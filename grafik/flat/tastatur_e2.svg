@@ -62,7 +62,7 @@
         text-anchor:middle;
         font-family:Linux Libertine O,Linux Libertine;
       }
-      text.nubkey { fill:#cccccc; }
+      text.nubkey { fill:#eee; }
 
       .pressed {
         opacity:0.5;
