@@ -10,16 +10,17 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Ebene_1"
-   width="1560"
-   height="520"
-   viewBox="0 0 1560 520"
-   enable-background="new 0 0 1560 520"
+   width="535"
+   height="183"
+   viewBox="0 0 535 183"
+   enable-background="new 0 0 535 183"
    xml:space="preserve"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="tastatur_e1.svg"
    inkscape:export-filename="/home/knittl/git/svn/neo/www/tastatur_base.png"
-   inkscape:export-xdpi="34.619999"
-   inkscape:export-ydpi="34.619999">
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+
   <metadata id="metadata135">
     <rdf:RDF>
       <cc:Work rdf:about="">
@@ -29,6 +30,7 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+
 <defs id="defs">
 <style type="text/css" id="style46661">
       text.mod, text.dead {
@@ -40,7 +42,7 @@
         writing-mode:lr-tb;
       }
       text.mod {
-        font-size:30px;
+        font-size:10px;
         font-style:normal;
         font-variant:normal;
         font-weight:normal;
@@ -50,17 +52,17 @@
         text-anchor:start;
       }
       text.big {
-        font-size:45px;
+        font-size:14px;
       }
       text.dead {
-        font-size:40px;
+        font-size:16px;
         text-align:center;
         line-height:125%;
         text-anchor:middle;
       }
 
       .key {
-        stroke-width:4;
+        stroke-width:1.25;
       }
 
       .grey { fill:#949494; stroke:#696969; }
@@ -84,7 +86,12 @@
       .l4, .r4 { stroke:#ac2925; }
       .l5, .r5 { stroke:#d58512; }
     </style>
-    <rect id="basekey" width="94" height="94" rx="10" class="key" />
+
+    <g id="basekey">
+        <rect width="32" height="32" rx="4" class="key" />
+        <!--rect width="2" height="2" fill="#000" x="15" y="15" /-->
+    </g>
+
     </defs>
 <sodipodi:namedview
      pagecolor="#ffffff"
@@ -107,119 +114,119 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="Ebene_1" />
 
-<g transform="translate(3,3)">
+<g transform="translate(3.5,3.5)">
 <use xlink:href="#basekey" y="0" x="0" class="l5" />
-<use xlink:href="#basekey" y="0" x="105" class="l5" />
-<use xlink:href="#basekey" y="0" x="210" class="l5" />
-<use xlink:href="#basekey" y="0" x="315" class="l4" />
-<use xlink:href="#basekey" y="0" x="420" class="l3" />
-<use xlink:href="#basekey" y="0" x="525" class="l2" />
-<use xlink:href="#basekey" y="0" x="630" class="l2" />
+<use xlink:href="#basekey" y="0" x="36" class="l5" />
+<use xlink:href="#basekey" y="0" x="72" class="l5" />
+<use xlink:href="#basekey" y="0" x="108" class="l4" />
+<use xlink:href="#basekey" y="0" x="144" class="l3" />
+<use xlink:href="#basekey" y="0" x="180" class="l2" />
+<use xlink:href="#basekey" y="0" x="216" class="l2" />
 
-<use xlink:href="#basekey" y="0" x="735" class="r2" />
-<use xlink:href="#basekey" y="0" x="840" class="r2" />
-<use xlink:href="#basekey" y="0" x="945" class="r3" />
-<use xlink:href="#basekey" y="0" x="1050" class="r4" />
-<use xlink:href="#basekey" y="0" x="1155" class="r5" />
-<use xlink:href="#basekey" y="0" x="1260" class="r5" />
-
-
-<use xlink:href="#basekey" y="105" x="155" class="l5" />
-<use xlink:href="#basekey" y="105" x="260" class="l4" />
-<use xlink:href="#basekey" y="105" x="365" class="l3" />
-<use xlink:href="#basekey" y="105" x="470" class="l2" />
-<use xlink:href="#basekey" y="105" x="575" class="l2" />
-
-<use xlink:href="#basekey" y="105" x="680" class="r2" />
-<use xlink:href="#basekey" y="105" x="785" class="r2" />
-<use xlink:href="#basekey" y="105" x="890" class="r3" />
-<use xlink:href="#basekey" y="105" x="995" class="r4" />
-<use xlink:href="#basekey" y="105" x="1100" class="r5" />
-<use xlink:href="#basekey" y="105" x="1205" class="r5" />
-<use xlink:href="#basekey" y="105" x="1310" class="r5" />
+<use xlink:href="#basekey" y="0" x="252" class="r2" />
+<use xlink:href="#basekey" y="0" x="288" class="r2" />
+<use xlink:href="#basekey" y="0" x="324" class="r3" />
+<use xlink:href="#basekey" y="0" x="360" class="r4" />
+<use xlink:href="#basekey" y="0" x="396" class="r5" />
+<use xlink:href="#basekey" y="0" x="432" class="r5" />
 
 
-<use xlink:href="#basekey" y="210" x="175" class="l5" />
-<use xlink:href="#basekey" y="210" x="280" class="l4" />
-<use xlink:href="#basekey" y="210" x="385" class="l3" />
-<use xlink:href="#basekey" y="210" x="490" class="l2" />
-<use xlink:href="#basekey" y="210" x="595" class="l2" />
+<use xlink:href="#basekey" y="36" x="54" class="l5" />
+<use xlink:href="#basekey" y="36" x="90" class="l4" />
+<use xlink:href="#basekey" y="36" x="126" class="l3" />
+<use xlink:href="#basekey" y="36" x="162" class="l2" />
+<use xlink:href="#basekey" y="36" x="198" class="l2" />
 
-<use xlink:href="#basekey" y="210" x="700" class="r2" />
-<use xlink:href="#basekey" y="210" x="805" class="r2" />
-<use xlink:href="#basekey" y="210" x="910" class="r3" />
-<use xlink:href="#basekey" y="210" x="1015" class="r4" />
-<use xlink:href="#basekey" y="210" x="1120" class="r5" />
-<use xlink:href="#basekey" y="210" x="1225" class="r5" />
-
-
-<use xlink:href="#basekey" y="315" x="240" class="l5" />
-<use xlink:href="#basekey" y="315" x="345" class="l4" />
-<use xlink:href="#basekey" y="315" x="450" class="l3" />
-<use xlink:href="#basekey" y="315" x="555" class="l2" />
-<use xlink:href="#basekey" y="315" x="660" class="l2" />
-
-<use xlink:href="#basekey" y="315" x="765" class="r2" />
-<use xlink:href="#basekey" y="315" x="870" class="r2" />
-<use xlink:href="#basekey" y="315" x="975" class="r3" />
-<use xlink:href="#basekey" y="315" x="1080" class="r4" />
-<use xlink:href="#basekey" y="315" x="1185" class="r5" />
+<use xlink:href="#basekey" y="36" x="234" class="r2" />
+<use xlink:href="#basekey" y="36" x="270" class="r2" />
+<use xlink:href="#basekey" y="36" x="306" class="r3" />
+<use xlink:href="#basekey" y="36" x="342" class="r4" />
+<use xlink:href="#basekey" y="36" x="378" class="r5" />
+<use xlink:href="#basekey" y="36" x="414" class="r5" />
+<use xlink:href="#basekey" y="36" x="450" class="r5" />
 
 
-<rect id="backspace" y="0" x="1365" width="189" height="94" rx="10" class="key grey" />
+<use xlink:href="#basekey" y="72" x="64" class="l5" />
+<use xlink:href="#basekey" y="72" x="100" class="l4" />
+<use xlink:href="#basekey" y="72" x="136" class="l3" />
+<use xlink:href="#basekey" y="72" x="172" class="l2" />
+<use xlink:href="#basekey" y="72" x="208" class="l2" />
 
-<rect id="tab" x="0" y="105" width="144" height="94" rx="10" class="key grey" />
+<use xlink:href="#basekey" y="72" x="244" class="r2" />
+<use xlink:href="#basekey" y="72" x="280" class="r2" />
+<use xlink:href="#basekey" y="72" x="316" class="r3" />
+<use xlink:href="#basekey" y="72" x="352" class="r4" />
+<use xlink:href="#basekey" y="72" x="388" class="r5" />
+<use xlink:href="#basekey" y="72" x="424" class="r5" />
 
-<rect id="m3l" x="0" y="210" width="164" height="94" rx="10" class="key grey" />
-<use id="m3r" xlink:href="#basekey" x="1330" y="210" class="grey" />
 
-<rect id="shiftl" x="0" y="315" width="117" height="94" rx="10" class="key grey" />
-<rect id="m4l" x="128" y="315" width="102" height="94" rx="10" class="key grey" />
-<rect id="shiftr" x="1290" y="315" width="264" height="94" rx="10" class="key grey" />
+<use xlink:href="#basekey" y="108" x="82" class="l5" />
+<use xlink:href="#basekey" y="108" x="118" class="l4" />
+<use xlink:href="#basekey" y="108" x="154" class="l3" />
+<use xlink:href="#basekey" y="108" x="190" class="l2" />
+<use xlink:href="#basekey" y="108" x="226" class="l2" />
 
-<rect id="ctrll" x="0" y="420" width="160" height="94" rx="10" class="key grey" />
-<rect id="altl" x="290" y="420" width="109" height="94" rx="10" class="key grey" />
-<rect id="space" x="410" y="420" width="614" height="94" rx="10" class="key grey" />
-<rect id="m4r" x="1035" y="420" width="120" height="94" rx="10" class="key grey" />
-<rect id="ctrlr" x="1425" y="420" width="129" height="94" rx="10" class="key grey" />
+<use xlink:href="#basekey" y="108" x="262" class="r2" />
+<use xlink:href="#basekey" y="108" x="298" class="r2" />
+<use xlink:href="#basekey" y="108" x="334" class="r3" />
+<use xlink:href="#basekey" y="108" x="370" class="r4" />
+<use xlink:href="#basekey" y="108" x="406" class="r5" />
+
+
+<rect id="backspace" y="0" x="468" width="60" height="32" rx="4" class="key grey" />
+
+<rect id="tab" x="0" y="36" width="50" height="32" rx="4" class="key grey" />
+
+<rect id="m3l" x="0" y="72" width="60" height="32" rx="4" class="key grey" />
+<use id="m3r" xlink:href="#basekey" x="460" y="72" class="grey" />
+
+<rect id="shiftl" x="0" y="108" width="40" height="32" rx="4" class="key grey" />
+<rect id="m4l" x="44" y="108" width="34" height="32" rx="4" class="key grey" />
+<rect id="shiftr" x="442" y="108" width="86" height="32" rx="4" class="key grey" />
+
+<rect id="ctrll" x="0" y="144" width="50" height="32" rx="4" class="key grey" />
+<rect id="altl" x="124" y="144" width="48" height="32" rx="4" class="key grey" />
+<rect id="space" x="176" y="144" width="168" height="32" rx="4" class="key grey" />
+<rect id="m4r" x="348" y="144" width="48" height="32" rx="4" class="key grey" />
+<rect id="ctrlr" x="478" y="144" width="50" height="32" rx="4" class="key grey" />
 
 <path
      fill-rule="evenodd"
      clip-rule="evenodd"
      d="
-     M 25,94
-     l -15,0 a 10,10 0 0 1 -10,-10
-     l 0,-74 a 10,10 0 0 1 10,-10
-     l 119,0 a 10,10 0 0 1 10,10
-     l 0,179 a 10,10 0 0 1 -10,10
-     l -94,0 a 10,10 0 0 1 -10,-10
+     M 10,32
+     l -6,0 a 4,4 0 0 1 -4,-4
+     l 0,-24 a 4,4 0 0 1 4,-4
+     l 34,0 a 4,4 0 0 1 4,4
+     l 0,60 a 4,4 0 0 1 -4,4
+     l -24,0 a 4,4 0 0 1 -4,-4
      z"
-     transform="translate(1415,105)"
+     transform="translate(486,36)"
      id="return"
      class="key grey"/>
+
+<rect y="99" x="181" width="14" height="2" rx="1" id="nub" style="fill:#eee;" />
+<use y="0" x="108" xlink:href="#nub" />
 </g>
 
 <g transform="translate(-0.5,-0.5)">
-<text y="270" x="20" class="mod" id="m3ltxt">Mod3</text>
-<text y="380" x="20" class="mod big" id="shiftltxt">⇧</text>
-<text y="480" x="20" class="mod" id="ctrlltxt">Strg</text>
+<text y="96" x="10" class="mod" id="m3ltxt">Mod3</text>
+<text y="133" x="10" class="mod big" id="shiftltxt">⇧</text>
+<text y="168" x="10" class="mod" id="ctrlltxt">Strg</text>
 
-<text y="375" x="140" class="mod" id="m4ltxt">Mod4</text>
-<text y="480" x="325" class="mod" id="altltxt">Alt</text>
+<text y="132" x="54" class="mod" id="m4ltxt">M4</text>
+<text y="168" x="135" class="mod" id="altltxt">Alt</text>
 
-<text y="270" x="1340" class="mod" id="m3rtxt">Mod3</text>
-<text y="380" x="1310" class="mod big" id="shiftrtxt">⇧</text>
-<text y="480" x="1445" class="mod" id="ctrlrtxt">Strg</text>
-<text y="480" x="1060" class="mod" id="m4rtxt">Mod4</text>
+<text y="96" x="470" class="mod" id="m3rtxt">M3</text>
+<text y="133" x="450" class="mod big" id="shiftrtxt">⇧</text>
+<text y="168" x="490" class="mod" id="ctrlrtxt">Strg</text>
+<text y="168" x="357" class="mod" id="m4rtxt">Mod4</text>
 
-<text y="170" x="1435" class="mod big" id="returntxt">↲</text>
-<text y="60" x="1385" class="mod" id="backspacetxt">⌫</text>
+<text y="62" x="495" class="mod big" id="returntxt">↲</text>
+<text y="23" x="480" class="mod" id="backspacetxt">⌫</text>
 
-<text y="60" x="50" class="dead" id="deadcircletxt">◌</text>
-<use y="0" x="1260" xlink:href="#deadcircletxt" id="t2" />
-<use y="105" x="1310" xlink:href="#deadcircletxt" id="t3" />
-
-<rect y="290" x="520" width="40" height="6" rx="3" id="nub" style="fill:#eee;" />
-<use y="0" x="315" xlink:href="#nub" />
+<text y="25" x="20" class="dead" id="deadcircletxt">◌</text>
+<use y="0" x="432" xlink:href="#deadcircletxt" id="t2" />
+<use y="36" x="450" xlink:href="#deadcircletxt" id="t3" />
 </g>
 </svg>

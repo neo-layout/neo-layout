@@ -10,16 +10,16 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Ebene_1"
-   width="1560"
-   height="520"
-   viewBox="0 0 1560 520"
-   enable-background="new 0 0 1560 520"
+   width="535"
+   height="183"
+   viewBox="0 0 535 183"
+   enable-background="new 0 0 535 183"
    xml:space="preserve"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="tastatur_e1.svg"
    inkscape:export-filename="/home/knittl/git/svn/neo/www/tastatur_e1.png"
-   inkscape:export-xdpi="34.619999"
-   inkscape:export-ydpi="34.619999">
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata id="metadata135">
     <rdf:RDF>
       <cc:Work rdf:about="">
@@ -44,23 +44,24 @@
         writing-mode:lr-tb;
       }
       text.mod {
-        font-size:25px;
+        font-size:14px;
         text-align:start;
         text-anchor:start;
       }
       text.big {
-        font-size:40px;
+        font-size:14px;
       }
       text.dead {
-        font-size:40px;
+        font-size:20px;
         text-align:center;
         text-anchor:middle;
       }
       text.key {
-        font-size:58px;
+        font-size:24px;
         text-align:center;
         text-anchor:middle;
-        font-family:Linux Libertine O,Linux Libertine;
+        /*font-family: 'Linux Libertine O', 'Linux Libertine';*/
+        font-family:"Linux Libertine O";
       }
       text.nubkey { fill:#eee; }
     </style></defs><sodipodi:namedview
@@ -84,66 +85,74 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="Ebene_1" />
 
-<image sodipodi:absref="/home/knittl/git/svn/neo/www/tastatur_base.svg" xlink:href="tastatur_base.svg" height="520" width="1560" y="0" x="0" />
+<image sodipodi:absref="/home/knittl/git/svn/neo/www/tastatur_base.svg" xlink:href="tastatur_base.svg" x="0" y="0" />
 
-<text x="155" y="65" class="key">1</text>
-<text x="260" y="65" class="key">2</text>
-<text x="365" y="65" class="key">3</text>
-<text x="470" y="65" class="key">4</text>
-<text x="575" y="65" class="key">5</text>
+<g transform="translate(55,26)">
+	<text x="0" class="key">1</text>
+	<text x="36" class="key">2</text>
+	<text x="72" class="key">3</text>
+	<text x="108" class="key">4</text>
+	<text x="144" class="key">5</text>
 
-<text x="680" y="65" class="key">6</text>
-<text x="785" y="65" class="key">7</text>
-<text x="890" y="65" class="key">8</text>
-<text x="995" y="65" class="key">9</text>
-<text x="1100" y="65" class="key">0</text>
-<text x="1205" y="65" class="key">-</text>
-
-
-<text x="20" y="165" class="mod big">⇥</text>
-
-<text x="205" y="170" class="key">x</text>
-<text x="310" y="170" class="key">v</text>
-<text x="415" y="170" class="key">l</text>
-<text x="520" y="170" class="key">c</text>
-<text x="625" y="170" class="key">w</text>
-
-<text x="730" y="170" class="key">k</text>
-<text x="835" y="170" class="key">h</text>
-<text x="940" y="170" class="key">g</text>
-<text x="1045" y="170" class="key">f</text>
-<text x="1150" y="170" class="key">q</text>
-<text x="1255" y="170" class="key">ß</text>
+	<text x="180" class="key">6</text>
+	<text x="216" class="key">7</text>
+	<text x="252" class="key">8</text>
+	<text x="288" class="key">9</text>
+	<text x="324" class="key">0</text>
+	<text x="360" class="key">-</text>
+</g>
 
 
-<text x="225" y="275" class="key">u</text>
-<text x="330" y="275" class="key">i</text>
-<text x="435" y="275" class="key">a</text>
-<text x="540" y="275" class="key nubkey">e</text>
-<text x="645" y="275" class="key">o</text>
+<text x="10" y="60" class="mod big">⇥</text>
 
-<text x="750" y="275" class="key">s</text>
-<text x="855" y="275" class="key nubkey">n</text>
-<text x="960" y="275" class="key">r</text>
-<text x="1065" y="275" class="key">t</text>
-<text x="1170" y="275" class="key">d</text>
-<text x="1275" y="275" class="key">y</text>
+<g transform="translate(73,62)">
+	<text x="0" class="key">x</text>
+	<text x="36" class="key">v</text>
+	<text x="72" class="key">l</text>
+	<text x="108" class="key">c</text>
+	<text x="144" class="key">w</text>
+
+	<text x="180" class="key">k</text>
+	<text x="216" class="key">h</text>
+	<text x="252" class="key">g</text>
+	<text x="288" class="key">f</text>
+	<text x="324" class="key">q</text>
+	<text x="360" class="key">ß</text>
+</g>
 
 
-<text x="290" y="380" class="key">ü</text>
-<text x="395" y="380" class="key">ö</text>
-<text x="500" y="380" class="key">ä</text>
-<text x="605" y="380" class="key">p</text>
+<g transform="translate(84,98)">
+	<text x="0" class="key">u</text>
+	<text x="36" class="key">i</text>
+	<text x="72" class="key">a</text>
+	<text x="108" class="key nubkey">e</text>
+	<text x="144" class="key">o</text>
 
-<text x="710" y="380" class="key">z</text>
-<text x="815" y="380" class="key">b</text>
-<text x="920" y="380" class="key">m</text>
-<text x="1025" y="380" class="key">,</text>
-<text x="1130" y="380" class="key">.</text>
-<text x="1235" y="380" class="key">j</text>
+	<text x="180" class="key">s</text>
+	<text x="216" class="key nubkey">n</text>
+	<text x="252" class="key">r</text>
+	<text x="288" class="key">t</text>
+	<text x="324" class="key">d</text>
+	<text x="360" class="key">y</text>
+</g>
 
-<text x="50" y="55" class="dead" id="t1">ˆ</text>
-<text x="1310" y="55" class="dead" id="t2">`</text>
-<text x="1360" y="160" class="dead" id="t3">´</text>
+
+<g transform="translate(101,134)">
+	<text x="0" class="key">ü</text>
+	<text x="36" class="key">ö</text>
+	<text x="72" class="key">ä</text>
+	<text x="108" class="key">p</text>
+
+	<text x="144" class="key">z</text>
+	<text x="180" class="key">b</text>
+	<text x="216" class="key">m</text>
+	<text x="252" class="key">,</text>
+	<text x="288" class="key">.</text>
+	<text x="324" class="key">j</text>
+</g>
+
+<text x="20" y="26" class="dead" id="t1">ˆ</text>
+<text x="452" y="26" class="dead" id="t2">`</text>
+<text x="470" y="62" class="dead" id="t3">´</text>
 
 </svg>

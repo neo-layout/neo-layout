@@ -10,16 +10,16 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Ebene_1"
-   width="1560"
-   height="520"
-   viewBox="0 0 1560 520"
-   enable-background="new 0 0 1560 520"
+   width="535"
+   height="183"
+   viewBox="0 0 535 183"
+   enable-background="new 0 0 535 183"
    xml:space="preserve"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="tastatur_e5.svg"
    inkscape:export-filename="/home/knittl/git/svn/neo/www/tastatur_e5.png"
-   inkscape:export-xdpi="34.619999"
-   inkscape:export-ydpi="34.619999">
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata id="metadata135">
     <rdf:RDF>
       <cc:Work rdf:about="">
@@ -44,20 +44,20 @@
         writing-mode:lr-tb;
       }
       text.mod {
-        font-size:25px;
+        font-size:12px;
         text-align:start;
         text-anchor:start;
       }
       text.big {
-        font-size:40px;
+        font-size:14px;
       }
       text.dead {
-        font-size:42px;
+        font-size:20px;
         text-align:center;
         text-anchor:middle;
       }
       text.key {
-        font-size:58px;
+        font-size:24px;
         font-family:Linux Libertine O,Linux Libertine;
       }
       text.center, text.key {
@@ -78,15 +78,16 @@
 
     <g id="padlock">
       <g>
-        <path d="m 4,1 l 0,-2.5 a 4,4 0 0 0 -8,0 l 0,2.5" style="stroke:#000000; stroke-width:1.6; fill:none;" />
-        <rect width="14" height="12" x="-7" y="0" rx="1.5" style="fill:#000000; stroke:none;" />
+        <path d="m -3,1 l 0,-2 a 3,3 0 1 1 6,0 l 0,2" style="stroke:#000000; stroke-width:1.2; fill:none;" />
+        <rect width="10" height="8" x="-5" y="0" rx="1" style="fill:#000000; stroke:none;" />
       </g>
 
-      <g transform="translate(0,4.5)" style="stroke:none;">
-        <path d="m 0,-1 -2,6 4,0 z" />
-        <path d="m 2,0 a 2,2 0 1 1 -4,0 2,2 0 1 1 4,0 z" />
+      <g transform="translate(0,3)" style="stroke:none;">
+        <path d="m 0,-1 -1.5,4.5 3,0 z" />
+        <path d="m 1.5,0 a 1.5,1.5 0 1 1 -3,0 1.5,1.5 0 1 1 3,0 z" />
       </g>
     </g>
+
     </defs>
     <sodipodi:namedview
      pagecolor="#ffffff"
@@ -109,78 +110,86 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="Ebene_1" />
 
-<image sodipodi:absref="/home/knittl/git/svn/neo/www/tastatur_base.svg" xlink:href="tastatur_base.svg" height="520" width="1560" y="0" x="0" />
+<image sodipodi:absref="/home/knittl/git/svn/neo/www/tastatur_base.svg" xlink:href="tastatur_base.svg" y="0" x="0" />
 
-<text x="155" y="65" class="key">₁</text>
-<text x="260" y="65" class="key">₂</text>
-<text x="365" y="65" class="key">₃</text>
-<text x="470" y="65" class="key">♀</text>
-<text x="575" y="65" class="key">♂</text>
+<g transform="translate(55,26)">
+	<text x="0" class="key">₁</text>
+	<text x="36" class="key">₂</text>
+	<text x="72" class="key">₃</text>
+	<text x="108" class="key">♀</text>
+	<text x="144" class="key">♂</text>
 
-<text x="680" y="65" class="key">⚥</text>
-<text x="785" y="65" class="key">ϰ</text>
-<text x="890" y="65" class="key">⟨</text>
-<text x="995" y="65" class="key">⟩</text>
-<text x="1100" y="65" class="key">₀</text>
-<text x="1205" y="65" class="key">‑</text>
-<use xlink:href="#padlock" class="yellow" x="1205" y="30" />
-
-
-<text x="20" y="165" class="mod big">⇥</text>
-
-<text x="205" y="170" class="key">ξ</text>
-<text x="310" y="170" class="key"></text>
-<text x="415" y="170" class="key">λ</text>
-<text x="520" y="170" class="key">χ</text>
-<text x="625" y="170" class="key">ω</text>
-
-<text x="730" y="170" class="key">κ</text>
-<text x="835" y="170" class="key">ψ</text>
-<text x="940" y="170" class="key">γ</text>
-<text x="1045" y="170" class="key">φ</text>
-<text x="1150" y="170" class="key">ϕ</text>
-<text x="1255" y="170" class="key">ς</text>
+	<text x="180" class="key">⚥</text>
+	<text x="216" class="key">ϰ</text>
+	<text x="252" class="key">⟨</text>
+	<text x="288" class="key">⟩</text>
+	<text x="324" class="key">₀</text>
+	<text x="360" y="3" class="key">‑</text>
+</g>
+<use xlink:href="#padlock" class="yellow" x="415" y="12" />
 
 
-<text x="225" y="275" class="key"></text>
-<text x="330" y="275" class="key">ι</text>
-<text x="435" y="275" class="key">α</text>
-<text x="540" y="275" class="key nubkey">ε</text>
-<text x="645" y="275" class="key">ο</text>
+<text x="10" y="62" class="mod big">⇥</text>
 
-<text x="750" y="275" class="key">σ</text>
-<text x="855" y="275" class="key nubkey">ν</text>
-<text x="960" y="275" class="key">ρ</text>
-<text x="1065" y="275" class="key">τ</text>
-<text x="1170" y="275" class="key">δ</text>
-<text x="1275" y="275" class="key">υ</text>
+<g transform="translate(72,62)">
+	<text x="0" class="key">ξ</text>
+	<text x="36" class="key"></text>
+	<text x="72" class="key">λ</text>
+	<text x="108" class="key">χ</text>
+	<text x="144" class="key">ω</text>
+
+	<text x="180" class="key">κ</text>
+	<text x="216" class="key">ψ</text>
+	<text x="252" class="key">γ</text>
+	<text x="288" class="key">φ</text>
+	<text x="324" class="key">ϕ</text>
+	<text x="360" class="key">ς</text>
+</g>
 
 
-<text x="290" y="380" class="key"></text>
-<text x="395" y="380" class="key">ϵ</text>
-<text x="500" y="380" class="key">η</text>
-<text x="605" y="380" class="key">π</text>
+<g transform="translate(84,98)">
+	<text x="0" class="key"></text>
+	<text x="36" class="key">ι</text>
+	<text x="72" class="key">α</text>
+	<text x="108" class="key nubkey">ε</text>
+	<text x="144" class="key">ο</text>
 
-<text x="710" y="380" class="key">ζ</text>
-<text x="815" y="380" class="key">β</text>
-<text x="920" y="380" class="key">μ</text>
-<text x="1025" y="380" class="key">ϱ</text>
-<text x="1130" y="380" class="key">ϑ</text>
-<text x="1235" y="380" class="key">θ</text>
+	<text x="180" class="key">σ</text>
+	<text x="216" class="key nubkey">ν</text>
+	<text x="252" class="key">ρ</text>
+	<text x="288" class="key">τ</text>
+	<text x="324" class="key">δ</text>
+	<text x="360" class="key">υ</text>
+</g>
 
-<text x="720" y="485" class="mod center" id="spacetxt">geschütztes Leerz. ⍽</text>
-<use xlink:href="#padlock" class="grey" x="840" y="465" />
 
-<text x="67.5" y="55" class="dead" id="t1">˞</text>
-<text x="1310" y="55" class="dead" id="t2">῾</text>
-<text x="1360" y="162.5" class="dead" id="t3">᾿</text>
+<g transform="translate(101,134)">
+	<text x="0" class="key"></text>
+	<text x="36" class="key">ϵ</text>
+	<text x="72" class="key">η</text>
+	<text x="108" class="key">π</text>
+	<text x="144" class="key">ζ</text>
+
+	<text x="180" class="key">β</text>
+	<text x="216" class="key">μ</text>
+	<text x="252" class="key">ϱ</text>
+	<text x="288" class="key">ϑ</text>
+	<text x="324" class="key">θ</text>
+</g>
+
+<text x="264" y="170" class="mod center" id="spacetxt">geschütztes Leerz. ⍽</text>
+<use xlink:href="#padlock" class="grey" x="322" y="158" />
+
+<text x="20" y="20" class="dead" id="t1">˞</text>
+<text x="452" y="26" class="dead" id="t2">῾</text>
+<text x="470" y="62" class="dead" id="t3">᾿</text>
 
 <!-- highlighted mods -->
-<g transform="translate(2.5,2.5)">
-<rect id="m3l" x="0" y="210" width="164" height="94" rx="10" class="pressed" />
-<rect id="m3r" x="1330" y="210" width="94" height="94" rx="10" class="pressed" />
+<g transform="translate(3.5,3.5)">
+<rect id="m3l" x="0" y="72" width="60" height="32" rx="4" class="pressed" />
+<rect id="m3r" x="460" y="72" width="32" height="32" rx="4" class="pressed" />
 
-<rect id="shiftl" x="0" y="315" width="117" height="94" rx="10" class="pressed" />
-<rect id="shiftr" x="1290" y="315" width="264" height="94" rx="10" class="pressed" />
+<rect id="shiftl" x="0" y="108" width="40" height="32" rx="4" class="pressed" />
+<rect id="shiftr" x="442" y="108" width="86" height="32" rx="4" class="pressed" />
 </g>
 </svg>
