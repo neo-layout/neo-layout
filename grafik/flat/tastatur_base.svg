@@ -62,42 +62,27 @@
       .key {
         stroke-width:4;
       }
-      .grey, .grey2 {
-        fill:#9f9f9f;
-        stroke:#858585;
-      }
-      .grey2 { stroke:#747474; }
+
+      .grey { fill:#949494; stroke:#696969; }
+      .grey { fill:#9f9f9f; stroke:#747474; }
 
       /* bootstrap colors */
-      .l2, .r2 { fill:#428bca; }
+      .l2, .r2 { fill:#337ab7; }
       .l3, .r3 { fill:#5cb85c; }
       .l4, .r4 { fill:#d9534f; }
       .l5, .r5 { fill:#f0ad4e; }
 
-/* contextual text colors (too dark) */
-      .l2, .r2 { stroke:#31708f; }
-      .l3, .r3 { stroke:#3c763d; }
-      .l4, .r4 { stroke:#a94442; }
-      .l5, .r5 { stroke:#8a6d3b; }
+      /* btn bg hover */
+      .l2, .r2 { stroke:#3071a9; }
+      .l3, .r3 { stroke:#449d44; }
+      .l4, .r4 { stroke:#c9302c; }
+      .l5, .r5 { stroke:#ec971f; }
 
-/* btn border (too light) */
-      .l2, .r2 { stroke:#357ebd; }
-      .l3, .r3 { stroke:#4cae4c; }
-      .l4, .r4 { stroke:#d43f3a; }
-      .l5, .r5 { stroke:#eea236; }
-
-/* btn bg hover */
-      .l2, .l2 { stroke:#3071a9; }
-      .l3, .l3 { stroke:#449d44; }
-      .l4, .l4 { stroke:#c9302c; }
-      .l5, .l5 { stroke:#ec971f; }
-
-/* btn border hover */
-      .r2, .r2 { stroke:#285e8e; }
-      .r3, .r3 { stroke:#398439; }
-      .r4, .r4 { stroke:#ac2925; }
-      .r5, .r5 { stroke:#d58512; }
-
+      /* btn border hover */
+      .l2, .r2 { stroke:#204d74; }
+      .l3, .r3 { stroke:#398439; }
+      .l4, .r4 { stroke:#ac2925; }
+      .l5, .r5 { stroke:#d58512; }
     </style>
     <rect id="basekey" width="94" height="94" rx="10" class="key" />
     </defs>
@@ -181,22 +166,22 @@
 <use xlink:href="#basekey" y="315" x="1185" class="r5" />
 
 
-<rect id="backspace" y="0" x="1365" width="189" height="94" rx="10" class="key grey2" />
+<rect id="backspace" y="0" x="1365" width="189" height="94" rx="10" class="key grey" />
 
 <rect id="tab" x="0" y="105" width="144" height="94" rx="10" class="key grey" />
 
 <rect id="m3l" x="0" y="210" width="164" height="94" rx="10" class="key grey" />
-<use id="m3r" xlink:href="#basekey" x="1330" y="210" class="grey2" />
+<use id="m3r" xlink:href="#basekey" x="1330" y="210" class="grey" />
 
 <rect id="shiftl" x="0" y="315" width="117" height="94" rx="10" class="key grey" />
 <rect id="m4l" x="128" y="315" width="102" height="94" rx="10" class="key grey" />
-<rect id="shiftr" x="1290" y="315" width="264" height="94" rx="10" class="key grey2" />
+<rect id="shiftr" x="1290" y="315" width="264" height="94" rx="10" class="key grey" />
 
 <rect id="ctrll" x="0" y="420" width="160" height="94" rx="10" class="key grey" />
 <rect id="altl" x="290" y="420" width="109" height="94" rx="10" class="key grey" />
-<rect id="space" x="410" y="420" width="614" height="94" rx="10" class="key grey2" />
-<rect id="m4r" x="1035" y="420" width="120" height="94" rx="10" class="key grey2" />
-<rect id="ctrlr" x="1425" y="420" width="129" height="94" rx="10" class="key grey2" />
+<rect id="space" x="410" y="420" width="614" height="94" rx="10" class="key grey" />
+<rect id="m4r" x="1035" y="420" width="120" height="94" rx="10" class="key grey" />
+<rect id="ctrlr" x="1425" y="420" width="129" height="94" rx="10" class="key grey" />
 
 <path
      fill-rule="evenodd"
@@ -211,7 +196,7 @@
      z"
      transform="translate(1415,105)"
      id="return"
-     class="key grey2"/>
+     class="key grey"/>
 </g>
 
 <g transform="translate(-0.5,-0.5)">

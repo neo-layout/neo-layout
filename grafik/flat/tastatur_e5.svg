@@ -65,7 +65,7 @@
         text-anchor:middle;
         writing-mode:lr-tb;
       }
-      text.nubkey { fill:#cccccc; }
+      text.nubkey { fill:#eee; }
 
       .grey { fill:#788; }
       .yellow { fill:#f0c40a; }
