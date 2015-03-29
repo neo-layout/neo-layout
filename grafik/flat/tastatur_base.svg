@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Ebene_1"
+   width="1560"
+   height="520"
+   viewBox="0 0 1560 520"
+   enable-background="new 0 0 1560 520"
+   xml:space="preserve"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="tastatur_e1.svg"
+   inkscape:export-filename="/home/knittl/git/svn/neo/www/tastatur_base.png"
+   inkscape:export-xdpi="34.619999"
+   inkscape:export-ydpi="34.619999">
+  <metadata id="metadata135">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+<defs id="defs">
+<style type="text/css" id="style46661">
+      text.mod, text.dead {
+        fill:#222;
+        fill-opacity:1;
+        stroke:none;
+        display:inline;
+        font-family:DejaVu Sans;
+        writing-mode:lr-tb;
+      }
+      text.mod {
+        font-size:30px;
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;
+        font-stretch:normal;
+        text-align:start;
+        line-height:125%;
+        text-anchor:start;
+      }
+      text.big {
+        font-size:45px;
+      }
+      text.dead {
+        font-size:40px;
+        text-align:center;
+        line-height:125%;
+        text-anchor:middle;
+      }
+
+      .key {
+        stroke-width:4;
+      }
+      .grey, .grey2 {
+        fill:#9f9f9f;
+        stroke:#858585;
+      }
+      .grey2 { stroke:#747474; }
+
+      /* bootstrap colors */
+      .l2, .r2 { fill:#428bca; }
+      .l3, .r3 { fill:#5cb85c; }
+      .l4, .r4 { fill:#d9534f; }
+      .l5, .r5 { fill:#f0ad4e; }
+
+/* contextual text colors (too dark) */
+      .l2, .r2 { stroke:#31708f; }
+      .l3, .r3 { stroke:#3c763d; }
+      .l4, .r4 { stroke:#a94442; }
+      .l5, .r5 { stroke:#8a6d3b; }
+
+/* btn border (too light) */
+      .l2, .r2 { stroke:#357ebd; }
+      .l3, .r3 { stroke:#4cae4c; }
+      .l4, .r4 { stroke:#d43f3a; }
+      .l5, .r5 { stroke:#eea236; }
+
+/* btn bg hover */
+      .l2, .l2 { stroke:#3071a9; }
+      .l3, .l3 { stroke:#449d44; }
+      .l4, .l4 { stroke:#c9302c; }
+      .l5, .l5 { stroke:#ec971f; }
+
+/* btn border hover */
+      .r2, .r2 { stroke:#285e8e; }
+      .r3, .r3 { stroke:#398439; }
+      .r4, .r4 { stroke:#ac2925; }
+      .r5, .r5 { stroke:#d58512; }
+
+    </style>
+    <rect id="basekey" width="94" height="94" rx="10" class="key" />
+    </defs>
+<sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1614"
+     inkscape:window-height="969"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="0.70961538"
+     inkscape:cx="685.32105"
+     inkscape:cy="241.15395"
+     inkscape:window-x="78"
+     inkscape:window-y="71"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Ebene_1" />
+
+<g transform="translate(3,3)">
+<use xlink:href="#basekey" y="0" x="0" class="l5" />
+<use xlink:href="#basekey" y="0" x="105" class="l5" />
+<use xlink:href="#basekey" y="0" x="210" class="l5" />
+<use xlink:href="#basekey" y="0" x="315" class="l4" />
+<use xlink:href="#basekey" y="0" x="420" class="l3" />
+<use xlink:href="#basekey" y="0" x="525" class="l2" />
+<use xlink:href="#basekey" y="0" x="630" class="l2" />
+
+<use xlink:href="#basekey" y="0" x="735" class="r2" />
+<use xlink:href="#basekey" y="0" x="840" class="r2" />
+<use xlink:href="#basekey" y="0" x="945" class="r3" />
+<use xlink:href="#basekey" y="0" x="1050" class="r4" />
+<use xlink:href="#basekey" y="0" x="1155" class="r5" />
+<use xlink:href="#basekey" y="0" x="1260" class="r5" />
+
+
+<use xlink:href="#basekey" y="105" x="155" class="l5" />
+<use xlink:href="#basekey" y="105" x="260" class="l4" />
+<use xlink:href="#basekey" y="105" x="365" class="l3" />
+<use xlink:href="#basekey" y="105" x="470" class="l2" />
+<use xlink:href="#basekey" y="105" x="575" class="l2" />
+
+<use xlink:href="#basekey" y="105" x="680" class="r2" />
+<use xlink:href="#basekey" y="105" x="785" class="r2" />
+<use xlink:href="#basekey" y="105" x="890" class="r3" />
+<use xlink:href="#basekey" y="105" x="995" class="r4" />
+<use xlink:href="#basekey" y="105" x="1100" class="r5" />
+<use xlink:href="#basekey" y="105" x="1205" class="r5" />
+<use xlink:href="#basekey" y="105" x="1310" class="r5" />
+
+
+<use xlink:href="#basekey" y="210" x="175" class="l5" />
+<use xlink:href="#basekey" y="210" x="280" class="l4" />
+<use xlink:href="#basekey" y="210" x="385" class="l3" />
+<use xlink:href="#basekey" y="210" x="490" class="l2" />
+<use xlink:href="#basekey" y="210" x="595" class="l2" />
+
+<use xlink:href="#basekey" y="210" x="700" class="r2" />
+<use xlink:href="#basekey" y="210" x="805" class="r2" />
+<use xlink:href="#basekey" y="210" x="910" class="r3" />
+<use xlink:href="#basekey" y="210" x="1015" class="r4" />
+<use xlink:href="#basekey" y="210" x="1120" class="r5" />
+<use xlink:href="#basekey" y="210" x="1225" class="r5" />
+
+
+<use xlink:href="#basekey" y="315" x="240" class="l5" />
+<use xlink:href="#basekey" y="315" x="345" class="l4" />
+<use xlink:href="#basekey" y="315" x="450" class="l3" />
+<use xlink:href="#basekey" y="315" x="555" class="l2" />
+<use xlink:href="#basekey" y="315" x="660" class="l2" />
+
+<use xlink:href="#basekey" y="315" x="765" class="r2" />
+<use xlink:href="#basekey" y="315" x="870" class="r2" />
+<use xlink:href="#basekey" y="315" x="975" class="r3" />
+<use xlink:href="#basekey" y="315" x="1080" class="r4" />
+<use xlink:href="#basekey" y="315" x="1185" class="r5" />
+
+
+<rect id="backspace" y="0" x="1365" width="189" height="94" rx="10" class="key grey2" />
+
+<rect id="tab" x="0" y="105" width="144" height="94" rx="10" class="key grey" />
+
+<rect id="m3l" x="0" y="210" width="164" height="94" rx="10" class="key grey" />
+<use id="m3r" xlink:href="#basekey" x="1330" y="210" class="grey2" />
+
+<rect id="shiftl" x="0" y="315" width="117" height="94" rx="10" class="key grey" />
+<rect id="m4l" x="128" y="315" width="102" height="94" rx="10" class="key grey" />
+<rect id="shiftr" x="1290" y="315" width="264" height="94" rx="10" class="key grey2" />
+
+<rect id="ctrll" x="0" y="420" width="160" height="94" rx="10" class="key grey" />
+<rect id="altl" x="290" y="420" width="109" height="94" rx="10" class="key grey" />
+<rect id="space" x="410" y="420" width="614" height="94" rx="10" class="key grey2" />
+<rect id="m4r" x="1035" y="420" width="120" height="94" rx="10" class="key grey2" />
+<rect id="ctrlr" x="1425" y="420" width="129" height="94" rx="10" class="key grey2" />
+
+<path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="
+     M 25,94
+     l -15,0 a 10,10 0 0 1 -10,-10
+     l 0,-74 a 10,10 0 0 1 10,-10
+     l 119,0 a 10,10 0 0 1 10,10
+     l 0,179 a 10,10 0 0 1 -10,10
+     l -94,0 a 10,10 0 0 1 -10,-10
+     z"
+     transform="translate(1415,105)"
+     id="return"
+     class="key grey2"/>
+</g>
+
+<g transform="translate(-0.5,-0.5)">
+<text y="270" x="20" class="mod" id="m3ltxt">Mod3</text>
+<text y="380" x="20" class="mod big" id="shiftltxt">⇧</text>
+<text y="480" x="20" class="mod" id="ctrlltxt">Strg</text>
+
+<text y="375" x="140" class="mod" id="m4ltxt">Mod4</text>
+<text y="480" x="325" class="mod" id="altltxt">Alt</text>
+
+<text y="270" x="1340" class="mod" id="m3rtxt">Mod3</text>
+<text y="380" x="1310" class="mod big" id="shiftrtxt">⇧</text>
+<text y="480" x="1445" class="mod" id="ctrlrtxt">Strg</text>
+<text y="480" x="1060" class="mod" id="m4rtxt">Mod4</text>
+
+<text y="170" x="1435" class="mod big" id="returntxt">↲</text>
+<text y="60" x="1385" class="mod" id="backspacetxt">⌫</text>
+
+<text y="60" x="50" class="dead" id="deadcircletxt">◌</text>
+<use y="0" x="1260" xlink:href="#deadcircletxt" id="t2" />
+<use y="105" x="1310" xlink:href="#deadcircletxt" id="t3" />
+
+<rect y="290" x="520" width="40" height="6" rx="3" id="nub" style="fill:#eee;" />
+<use y="0" x="315" xlink:href="#nub" />
+</g>
+</svg>
