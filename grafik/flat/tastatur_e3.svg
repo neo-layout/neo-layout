@@ -30,45 +30,11 @@
     </rdf:RDF>
   </metadata>
 <defs id="defs">
-<style type="text/css" id="style46661">
-      text.mod, text.key, text.dead {
-        font-style:normal;
-        font-variant:normal;
-        font-weight:normal;
-        font-stretch:normal;
-        stroke:none;
-        fill:#222;
-        fill-opacity:1;
-        display:inline;
-        font-family:DejaVu Sans;
-        writing-mode:lr-tb;
-      }
-      text.mod {
-        font-size:14px;
-        text-align:start;
-        text-anchor:start;
-      }
-      text.big {
-        font-size:14px;
-      }
-      text.dead {
-        font-size:20px;
-        text-align:center;
-        text-anchor:middle;
-      }
-      text.key {
-        font-size:24px;
-        text-align:center;
-        text-anchor:middle;
-        font-family:Linux Libertine O,Linux Libertine;
-      }
-      text.nubkey { fill:#eee; }
-
-      .pressed {
-        opacity:0.5;
-        fill:#555;
-      }
-    </style></defs><sodipodi:namedview
+<style type="text/css">
+@import url('tastatur.css');
+</style>
+</defs>
+<sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -107,7 +73,7 @@
 </g>
 
 
-<text x="10" y="62" class="mod big">♫</text>
+<text x="10" y="60" class="mod big">♫</text>
 
 <g transform="translate(73,62)">
 	<text x="0" class="key">…</text>
@@ -157,7 +123,7 @@
 
 <text x="20" y="28" class="dead" id="t1">↻</text>
 <text x="452" y="26" class="dead" id="t2">˚</text>
-<text x="470" y="62" class="dead" id="t3">/</text>
+<text x="470" y="63" class="dead" id="t3">/</text>
 
 <!-- highlighted mods -->
 <g transform="translate(3.5,3.5)">

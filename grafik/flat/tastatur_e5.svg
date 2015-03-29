@@ -30,51 +30,9 @@
     </rdf:RDF>
   </metadata>
 <defs id="defs">
-<style type="text/css" id="style46661">
-      text.mod, text.key, text.dead {
-        font-style:normal;
-        font-variant:normal;
-        font-weight:normal;
-        font-stretch:normal;
-        stroke:none;
-        fill:#222;
-        fill-opacity:1;
-        display:inline;
-        font-family:DejaVu Sans;
-        writing-mode:lr-tb;
-      }
-      text.mod {
-        font-size:12px;
-        text-align:start;
-        text-anchor:start;
-      }
-      text.big {
-        font-size:14px;
-      }
-      text.dead {
-        font-size:20px;
-        text-align:center;
-        text-anchor:middle;
-      }
-      text.key {
-        font-size:24px;
-        font-family:Linux Libertine O,Linux Libertine;
-      }
-      text.center, text.key {
-        text-align:center;
-        text-anchor:middle;
-        writing-mode:lr-tb;
-      }
-      text.nubkey { fill:#eee; }
-
-      .grey { fill:#788; }
-      .yellow { fill:#f0c40a; }
-
-      .pressed {
-        opacity:0.5;
-        fill:#555;
-      }
-    </style>
+<style type="text/css">
+@import url('tastatur.css');
+</style>
 
     <g id="padlock">
       <g>
@@ -126,10 +84,10 @@
 	<text x="324" class="key">₀</text>
 	<text x="360" y="3" class="key">‑</text>
 </g>
-<use xlink:href="#padlock" class="yellow" x="415" y="12" />
+<use xlink:href="#padlock" class="r5 yellow" x="415" y="12" />
 
 
-<text x="10" y="62" class="mod big">⇥</text>
+<text x="10" y="60" class="mod big">⇥</text>
 
 <g transform="translate(72,62)">
 	<text x="0" class="key">ξ</text>
@@ -177,10 +135,10 @@
 	<text x="324" class="key">θ</text>
 </g>
 
-<text x="264" y="170" class="mod center" id="spacetxt">geschütztes Leerz. ⍽</text>
-<use xlink:href="#padlock" class="grey" x="322" y="158" />
+<text x="264.5" y="168" class="mod center" id="spacetxt">geschütztes Leerz. ⍽</text>
+<use xlink:href="#padlock" class="grey" x="313" y="156" />
 
-<text x="20" y="20" class="dead" id="t1">˞</text>
+<text x="28" y="25" class="dead" id="t1">˞</text>
 <text x="452" y="26" class="dead" id="t2">῾</text>
 <text x="470" y="62" class="dead" id="t3">᾿</text>
 
