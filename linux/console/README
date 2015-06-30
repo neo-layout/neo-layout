@@ -28,15 +28,6 @@ Dennoch kann man mit »loadkeys -d« zur Standardbelegung wechseln, da diese als
 defkeymap.map laut manpage unter /usr/share/keymaps oder
 /usr/src/linux/drivers/char, bei mir aber unter /etc liegt.
 
-Falls das Keypad nicht korrekt funktioniert, dann liegt dies am falschen Status
-von »Num_Lock« (den es unter Neo nicht mehr gibt). Um Num_Lock dennoch
-nachträglich einschalten zu können, muss die Menü-Taste (in der untersten Reihe)
-betätigt werden.
-
-Diese Keymap ist für ein MS Natural Keyboard Elite erstellt worden. Sollten
-andere Tastaturen andere keycodes verwenden (z.B. Laptoptastaturen), sollte dies
-auf der Mailingliste der Neo-Tastaturbelegung gemeldet werden.
-
 
 Ergänzung: die keymaps liegen in folgenden Verzeichnissen:
 OpenSuSe: /usr/share/kbd/keymaps/i386/
@@ -51,11 +42,5 @@ Was schon geht:
 • Die Konsolen-Compose-Kombinationen sind möglich.
 
 Was (noch) nicht geht:
-• Einige Zeichen unterstützt die Konsole überhaupt nicht – z.B. den dead_stroke.
-• Einige Zeichen werden noch nicht automatisch durch Unicode-Nummern ersetzt
-  (das ist aber leicht zu beheben).
-• Bisher funktioniert keiner der Modifier_Lock.
-• Die große Menge an Compose-Kombinationen, die unter X möglich sind, werden
-  längst nicht alle unterstützt.
-• Auch die Compose-Erweiterungen von Neo sind noch nicht verfügbar.
+• Siehe im Quellcode der neo.map
 
