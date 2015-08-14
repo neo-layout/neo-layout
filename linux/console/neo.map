@@ -21,6 +21,7 @@
 # Prelude
 #==========================================================================
 
+#keymaps 0-3,16-19,32-35,64-67,80-83,96-99
 keymaps 0-127
 compose as usual
 strings as usual
@@ -59,41 +60,65 @@ strings as usual
                 keycode  59 = F1
             alt keycode  59 = Console_1
     control alt keycode  59 = Console_1
+         shiftl keycode  59 = F13
+         shiftr keycode  59 = F13
                 keycode  60 = F2
             alt keycode  60 = Console_2
     control alt keycode  60 = Console_2
+         shiftl keycode  60 = F14
+         shiftr keycode  60 = F14
                 keycode  61 = F3
             alt keycode  61 = Console_3
     control alt keycode  61 = Console_3
+         shiftl keycode  61 = F15
+         shiftr keycode  61 = F15
                 keycode  62 = F4
             alt keycode  62 = Console_4
     control alt keycode  62 = Console_4
+         shiftl keycode  62 = F16
+         shiftr keycode  62 = F16
 
                 keycode  63 = F5
             alt keycode  63 = Console_5
     control alt keycode  63 = Console_5
+         shiftl keycode  63 = F17
+         shiftr keycode  63 = F17
                 keycode  64 = F6
             alt keycode  64 = Console_6
     control alt keycode  64 = Console_6
+         shiftl keycode  64 = F18
+         shiftr keycode  64 = F18
                 keycode  65 = F7
             alt keycode  65 = Console_7
     control alt keycode  65 = Console_7
+         shiftl keycode  65 = F19
+         shiftr keycode  65 = F19
                 keycode  66 = F8
             alt keycode  66 = Console_8
     control alt keycode  66 = Console_8
+         shiftl keycode  66 = F20
+         shiftr keycode  66 = F20
 
                 keycode  67 = F9
             alt keycode  67 = Console_9
     control alt keycode  67 = Console_9
+         shiftl keycode  67 = F21
+         shiftr keycode  67 = F21
                 keycode  68 = F10
             alt keycode  68 = Console_10
     control alt keycode  68 = Console_10
+         shiftl keycode  68 = F22
+         shiftr keycode  68 = F22
                 keycode  87 = F11
             alt keycode  87 = Console_11
     control alt keycode  87 = Console_11
+         shiftl keycode  87 = F23
+         shiftr keycode  87 = F23
                 keycode  88 = F12
             alt keycode  88 = Console_12
     control alt keycode  88 = Console_12
+         shiftl keycode  88 = F24
+         shiftr keycode  88 = F24
 
                 keycode 103 = Up
             alt keycode 103 = KeyboardSignal
@@ -125,13 +150,43 @@ strings as usual
             alt keycode  70 = Show_Registers
                 keycode 119 = Pause
 
-# Alternatively:
+## Alternatively:
 #
 #include "linux-keys-bare"
+#
+#         shiftl keycode  59 = F13
+#         shiftr keycode  59 = F13
+#         shiftl keycode  60 = F14
+#         shiftr keycode  60 = F14
+#         shiftl keycode  61 = F15
+#         shiftr keycode  61 = F15
+#         shiftl keycode  62 = F16
+#         shiftr keycode  62 = F16
+#
+#         shiftl keycode  63 = F17
+#         shiftr keycode  63 = F17
+#         shiftl keycode  64 = F18
+#         shiftr keycode  64 = F18
+#         shiftl keycode  65 = F19
+#         shiftr keycode  65 = F19
+#         shiftl keycode  66 = F20
+#         shiftr keycode  66 = F20
+#
+#         shiftl keycode  67 = F21
+#         shiftr keycode  67 = F21
+#         shiftl keycode  68 = F22
+#         shiftr keycode  68 = F22
+#         shiftl keycode  87 = F23
+#         shiftr keycode  87 = F23
+#         shiftl keycode  88 = F24
+#         shiftr keycode  88 = F24
+#
 #         shiftl keycode 104 = Scroll_Backward
 #         shiftr keycode 104 = Scroll_Backward
+#
 #         shiftl keycode 109 = Scroll_Forward
 #         shiftr keycode 109 = Scroll_Forward
+#
 #         shiftl keycode  70 = Show_Memory
 #         shiftr keycode  70 = Show_Memory
 
