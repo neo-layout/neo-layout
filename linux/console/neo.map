@@ -26,7 +26,34 @@ compose as usual
 strings as usual
 
 #==========================================================================
-# Control keys
+# Default Keys (usually not needed)
+#==========================================================================
+
+                keycode   1 = Escape
+            alt keycode   1 = Meta_Escape
+     shiftl alt keycode   1 = Meta_Escape
+     shiftr alt keycode   1 = Meta_Escape
+
+                keycode  14 = Delete
+            alt keycode  14 = Meta_Delete
+     shiftl alt keycode  14 = Meta_Delete
+     shiftr alt keycode  14 = Meta_Delete
+
+                keycode  15 = Tab
+         shiftl keycode  15 = Meta_Tab
+         shiftr keycode  15 = Meta_Tab
+            alt keycode  15 = Meta_Tab
+
+                keycode  28 = Return
+            alt keycode  28 = Meta_Control_m
+
+                keycode  29 = Control
+                keycode  97 = Control
+
+                keycode  56 = Alt
+
+#==========================================================================
+# linux-keys-bare, Control Keys
 #==========================================================================
 
                 keycode  59 = F1
