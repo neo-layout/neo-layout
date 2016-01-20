@@ -1,7 +1,7 @@
 == Hinweise für Entwickler ==
 
 === AutoHotkey herunter laden ===
-Man sollte als erstes das Programm namens »AutoHotkey« (http://www.autohotkey.com/download/AutoHotkeyInstall.exe) herunterlanden. Es wird empfohlen, dieses Programm möglichst in dem vorgeschlagenen Standardverzeichnis zu installieren.
+Man sollte als erstes das Programm namens »AutoHotkey« (http://www.autohotkey.com/download/AutoHotkeyInstall.exe) herunterladen. Es wird empfohlen, dieses Programm möglichst in dem vorgeschlagenen Standardverzeichnis zu installieren.
 Wenn man jedoch über KEINE Administratorrechte verfügt, kann man das Programm beispielsweise auch in das Verzeichnis »Eigene Dateien/Neo«  (oder in ein anderes Verzeichnis, für das man Schreibrechte hat) installieren.
 In diesem Fall muss dann für eine Kompilierung des Skriptes noch die Datei Build-Update.bat lokal entsprechend angepasst werden (diese lokale Änderung der Build-Update.bat aber bitte nicht einchecken, da die allermeisten Entwickler Autohotkey im vorgeschlagenen Standardverzeichnis installiert haben!).
 
