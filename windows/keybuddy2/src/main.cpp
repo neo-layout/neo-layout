@@ -391,7 +391,7 @@ WString KeyBuddy2::buttonLabel(DWORD vkCode){
 		case VK_LSHIFT: case VK_RSHIFT: return WString(0x21e7,1); break;
 		case VK_MOD_31: case VK_MOD_32: return WString("Mod3"); break;
 		case VK_MOD_41: case VK_MOD_42: return WString("Mod4"); break;
-		case VK_RETURN: return WString(0x21b5,1); break;
+		case VK_RETURN: return WString(0x23cE,1); break;
 		case VK_BACK: return WString(0x232b,1); break;
 		case VK_LCONTROL: case VK_RCONTROL: return WString("Strg"); break;
 		case VK_LMENU: return WString("Alt"); break;

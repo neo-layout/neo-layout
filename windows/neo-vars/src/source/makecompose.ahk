@@ -194,7 +194,7 @@ DefineXKBSyms() {
 
 ;  DefineXKBSym("BackSpace","U00232B")
 ;  DefineXKBSym("Tab","U0021E5")
-;  DefineXKBSym("Return","U0021B2")
+;  DefineXKBSym("Return","U0023CE")
 ;  DefineXKBSym("Escape","U002327")
 ;  DefineXKBSym("Delete","U002326")
 ;  DefineXKBSym("Multi_key","U00266B")

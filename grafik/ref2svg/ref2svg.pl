@@ -43,7 +43,7 @@ my %kp_mapping = ( # mapping for keypad, level 4
 	'PgD' => '⇟',
 	'Ins' => '⎀',
 	'Del' => '⌦',
-	'Ent' => '↲',
+	'Ent' => '⏎',
 	'vec' => ' ⃗'
 );
 
