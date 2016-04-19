@@ -261,7 +261,7 @@
   </Key>
   <Key Width="80" X="-570" Y="300" Height="80" FingerKeyIndex="3" Type="NORMAL" >
    <Char Unicode="80" Position="TopLeft" >P</Char>
-   <Char Unicode="8626" Position="TopRight" >↲</Char>
+   <Char Unicode="8626" Position="TopRight" >⏎</Char>
    <Char Unicode="112" Position="BottomLeft" >p</Char>
    <Char Unicode="126" Position="BottomRight" >~</Char>
   </Key>

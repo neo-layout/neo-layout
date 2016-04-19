@@ -81,7 +81,7 @@ NormalKey		115		¿		68		20		110
 NormalKey		252		⌧		23		30		117
 NormalKey		246		⇥		33		30		105
 NormalKey		228		⇟		43		30		97
-NormalKey		112		↲		53		30		101
+NormalKey		112		⏎		53		30		101
 #NormalKey		122		Z		63		30		101
 #NormalKey		98		B		73		30		110
 NormalKey		109		1		83		30		110
@@ -234,7 +234,7 @@ HiddenKey		44		100		100		267		#, redundant
 #HiddenKey		9999		252		117		264		#⌧ nicht abrufbar
 #HiddenKey		9999		246		105		264		#⇥ nicht abrufbar
 #HiddenKey		9999		228		97		264		#⇟ nicht abrufbar
-#HiddenKey		9999		112		101		264		#↲ nicht abrufbar
+#HiddenKey		9999		112		101		264		#⏎ nicht abrufbar
 HiddenKey		49		109		110		267		#1 redundant
 HiddenKey		50		9994		114		267		#2 redundant
 HiddenKey		51		9995		116		267		#3 redundant

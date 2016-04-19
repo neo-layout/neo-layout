@@ -235,7 +235,7 @@ text.nubkey { fill:#eee; }
 <text y="168" x="490" class="mod" id="ctrlrtxt">Strg</text>
 <text y="168" x="357" class="mod" id="m4rtxt">Mod4</text>
 
-<text y="62" x="495" class="mod big" id="returntxt">↲</text>
+<text y="62" x="495" class="mod big" id="returntxt">⏎</text>
 <text y="23" x="480" class="mod" id="backspacetxt">⌫</text>
 
 <text y="25" x="20" class="deadcircle" id="deadcircletxt">◌</text>
