@@ -45,7 +45,7 @@ CharProcQwerts() {
 ActivateQwertz() {
   global
 
-  CP3F6   := "PQwertt"                   ; M3+F6: Aktiviere/Deaktiviere QWERTZ
+  CP3F6   := "PQwertT"                   ; M3+F6: Aktiviere/Deaktiviere QWERTZ
   CP4F6   := "PQwerts"                   ; M4+F6: Speichere QWERTZ
 
   IniRead,isQwertz,%ini%,Global,isQwertz,0
