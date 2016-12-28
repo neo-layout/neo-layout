@@ -129,8 +129,11 @@ EDR(pos,caps,e1,e2,e3,e4,e5,e6,e7="",e8="") {
   if (caps == 0)
     NOC%pos% := 1
   else {
+    NOC%pos% := 0
     if (e1 != "")
       UNSH%e1% := 1 ; unshift wenn caps lock + Shift?
+    else
+      UNSH%e1% := 0
   }
   SetKeyPos("CP1" . pos,e1)
   SetKeyPos("CP2" . pos,e2)
