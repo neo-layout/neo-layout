@@ -26,6 +26,11 @@ CharProcNordTt() {
     CharProcNordT4()
     if (zeigeModusBox)
       TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante K.O`,Y wurde aktiviert. Zum Umschalten`, Mod3+F12 drücken.,10,1
+  }  else if (isNordTast == 4) {
+    isNordTast := 5
+    CharProcNordT5()
+    if (zeigeModusBox)
+      TrayTip,NordTast-Belegungsvariante,Die Belegungsvariante bone wurde aktiviert. Zum Umschalten`, Mod3+F12 drücken.,10,1
   } else {
     isNordTast := 0
     CharProcNordT0()
@@ -54,6 +59,11 @@ CharProcNordT4() {
   Change1256Layout("-k.o,yvgclßzhaeiudtrnsfxqäüöbpwmj")
 }
 
+CharProcNordT5() {
+  ; Tastaturbelegungsvariante bone aktivieren
+  Change1256Layout("-jduaxphlmwßctieobnrsgqfvüäöyz,.k")
+}
+
 CharProcNordT0() {
   ; Tastaturbelegungsvariante deaktivieren
   Change1256LayoutNeo20()
@@ -68,9 +78,9 @@ CharProcNordTs() {
     IniWrite,%isNordTast%,%ini%,Global,isNordTast
 
   if ErrorLevel
-    TrayTip,NordTast-Belegungsvariante,Beim Speichern der Variante ist ein Fehler aufgetreten.,10,1    
+    TrayTip,NordTast-Belegungsvariante,Beim Speichern der Variante ist ein Fehler aufgetreten.,10,1
   else if (zeigeModusBox)
-    TrayTip,NordTast-Belegungsvariante,Variante gespeichert.,10,1    
+    TrayTip,NordTast-Belegungsvariante,Variante gespeichert.,10,1
 }
 
 ActivateNordTast() {
@@ -88,6 +98,8 @@ ActivateNordTast() {
     CharProcNordT3()
   else if (isNordTast == 4)
     CharProcNordT4()
+  else if (isNordTast == 5)
+    CharProcNordT5()
 }
 
 ActivateNordTast()
