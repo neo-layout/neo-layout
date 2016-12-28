@@ -37,6 +37,7 @@ SetWorkingDir, %A_ScriptDir%
 #include    lernmodus.ahk
 #include    qwertz.ahk
 #include    tools.ahk
+#include    programmer.ahk
 
 ; individuelle Einstellungen
 #include *i %A_AppData%\Neo2\custom.ahk
