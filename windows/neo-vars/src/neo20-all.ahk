@@ -38,6 +38,7 @@ SetWorkingDir, %A_ScriptDir%
 #include    source\nordtast.ahk
 #include    source\qwertz.ahk
 #include    source\tools.ahk
+#include    source\programmer.ahk
 
 ; individuelle Einstellungen
 #include *i %A_AppData%\Neo2\custom.ahk
