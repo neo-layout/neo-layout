@@ -180,16 +180,17 @@ BSTOnSize() {
   global
   xSize := BSTlayout_%bstLayout%_width
   ySize := BSTlayout_%bstLayout%_height
-  yPosition := WorkAreaBottom - 30 - Round(A_GuiWidth*ySize/xSize,0)
-  Gui, Show, % "Y" . yPosition . " W" . A_GuiWidth . " H" . Round(A_GuiWidth*ySize/xSize,0) . " NoActivate", Neo-Bildschirmtastatur
-  Gui, Font, % "s" . Round(A_GuiWidth*12/xSize,0) . " bold", % UniFontName
+  guiWidth := A_GuiWidth
+  yPosition := WorkAreaBottom - Round(guiWidth*ySize/xSize,0)
+  Gui, Show, % "Y" . yPosition . " W" . guiWidth . " H" . Round(guiWidth*ySize/xSize,0) . " NoActivate", Neo-Bildschirmtastatur
+  Gui, Font, % "s" . Round(guiWidth*12/xSize,0) . " bold", % UniFontName
   loop,parse,GuiKeyList,`,
   {
     GuiPhysKey := A_LoopField
     GuiControl,Font,GuiKey%GuiPhysKey%
-    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . Round(GuiPosx%GuiPhysKey%*A_GuiWidth/xSize,0) . " y" . Round(GuiPosy%GuiPhysKey%*A_GuiWidth/xSize,0) . " w" . Round(38*A_GuiWidth/xSize,0) . " h" . Round(38*A_GuiWidth/xSize,0)
+    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . Round(GuiPosx%GuiPhysKey%*guiWidth/xSize,0) . " y" . Round(GuiPosy%GuiPhysKey%*guiWidth/xSize,0) . " w" . Round(38*guiWidth/xSize,0) . " h" . Round(38*guiWidth/xSize,0)
   }
-  GuiControl,,Picture0, % "*w" . A_GuiWidth * 1.0 . " *h-1 " . ResourceFolder . "\" . BSTlayout_%bstLayout%_image
+  GuiControl,,Picture0, % "*w" . guiWidth * 1.0 . " *h-1 " . ResourceFolder . "\" . BSTlayout_%bstLayout%_image
 }
 
 CharProc__BST0() {
@@ -425,9 +426,9 @@ CharProc__BST1() {
   SysGet, WorkArea, MonitorWorkArea
   xSize := BSTlayout_%bstLayout%_width
   ySize := BSTlayout_%bstLayout%_height
-  yPosition := WorkAreaBottom - 30 - ySize
+  yPosition := WorkAreaBottom - ySize
   Gui, Color, FFFFFF
-  Gui, Add, Picture,AltSubmit x0   y0  vPicture0, % ResourceFolder . "\" . BSTlayout_%bstLayout%_image
+  Gui, Add, Picture,AltSubmit x0 y0 +BackgroundTrans vPicture0, % ResourceFolder . "\" . BSTlayout_%bstLayout%_image
   Gui, Font, s12 bold, %UniFontName%
   GuiKeyList := ""
 
@@ -438,21 +439,29 @@ CharProc__BST1() {
       BSTergodoxLayout()
   }
 
-  Gui, -DPIScale +AlwaysOnTop +ToolWindow +Resize -MaximizeBox
+  Gui, +AlwaysOnTop +LastFound +Resize +ToolWindow -0x40000 -DPIScale -Caption -MaximizeBox
   Gui, Show, % "y" . yPosition . " w" . xSize . " h" . ySize . " NoActivate", Neo-Bildschirmtastatur
+  WinSet, TransColor, White, Neo-Bildschirmtastatur
   BSTUpdate()
   BSTalwaysOnTop := 1
+  OnMessage(0x201, "WM_LBUTTONDOWN")
   GuiCurrent := "BST"
 }
 
+WM_LBUTTONDOWN()
+{
+  PostMessage, 0xA1, 2
+}
 
 BSTToggleAlwaysOnTop() {
   global
   if (BSTalwaysOnTop) {
     Gui, -AlwaysOnTop
+    WinSet, Style, +0x40000, Neo-Bildschirmtastatur
     BSTalwaysOnTop := 0
   } else {
     Gui, +AlwaysOnTop
+    WinSet, Style, -0x40000, Neo-Bildschirmtastatur
     BSTalwaysOnTop := 1
   }
 }
@@ -464,6 +473,7 @@ BSTToggleKeyboardLayout() {
   } else {
     bstLayout := 0
   }
+  IniWrite,%bstLayout%,%ini%,Global,bstLayout
   CharProc__BST0()
   CharProc__BST1()
 }
