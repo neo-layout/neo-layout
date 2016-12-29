@@ -15,6 +15,14 @@ UniFontLocalFilePath := ApplicationFolder
 UniFontLocalFile := UniFontLocalFilePath . "\" . UniFontFilename
 UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "\ttf\" . UniFontFilename
 
+BSTlayout_0_image := "ebene0.png"
+BSTlayout_0_width := 729
+BSTlayout_0_height := 199
+
+BSTlayout_1_image := "ergodox.png"
+BSTlayout_1_width := 700
+BSTlayout_1_height := 300
+
 Check_BSTUpdate(DoBSTUpdate = 0) {
   global
   if (useDBST) {
@@ -28,7 +36,7 @@ Check_BSTUpdate(DoBSTUpdate = 0) {
       CharProc__BST0()
     }
   }
-  if (useBST 
+  if (useBST
       and (DoBSTUpdate
            or (Comp != BSTLastComp)
            or (EbeneC != BSTLastEbeneC)
@@ -51,7 +59,7 @@ BSTUpdate() {
           if (NOC%GuiPhysKey%==1) {
             GuiEb := EbeneNC
           } else {
-	    GuiEb := EbeneC
+            GuiEb := EbeneC
           }
         } else
           GuiEb := EbeneC
@@ -59,53 +67,53 @@ BSTUpdate() {
           GuiVirtKey := TransformBST%TransformBSTProc%(GuiPhysKey)
         else
           GuiVirtKey := GuiPhysKey
-	CurrentComp := Comp
+        CurrentComp := Comp
         GuiComp := ""
 rerun_bstnupdate:
         GuiComp1 := CurrentComp . CP%GuiEb%%GuiVirtKey%
         if (GSYM%GuiComp1% != "") {
           GuiComp .= GSYM%GuiComp1%
         } else if (CD%GuiComp1% != "") {
-	  G_Sym    := CD%GuiComp1%
-          if (GSYM%G_Sym% != "") 
+          G_Sym    := CD%GuiComp1%
+          if (GSYM%G_Sym% != "")
             GuiComp .= GSYM%G_sym%
           else
             GuiComp .= CD%GuiComp1%
         } else if (CM%GuiComp1% == 1) {
           GuiComp .= "U00002AU00002A"
         } else if (CF%CurrentComp% != "") {
-	  if (IM%GuiVirtKey% != 1)
+          if (IM%GuiVirtKey% != 1)
             GuiComp .= CF%CurrentComp%
-	  CurrentComp := ""
+          CurrentComp := ""
           goto rerun_bstnupdate
         } else if (CurrentComp == "") {
           GuiComp .= GuiComp1
         }
-	GuiPos := 0
+        GuiPos := 0
         loop {
           if (GuiComp=="")
             break
-	  if (SubStr(GuiComp,1,1)=="U") {
+          if (SubStr(GuiComp,1,1)=="U") {
             Charcode := "0x" . Substr(GuiComp,2,6)
-	      if (charCode < 0x10000) {
-	        if (charCode == 0x26) {
-		  ; double any Ampersand (&) to avoid being replaced with
-		  ; underscore (Windows Shortcut Key terminology)
-		  NumPut(CharCode, ptrU, GuiPos, "UShort")
-		  GuiPos := GuiPos + 2
-		}
-		NumPut(CharCode, ptrU, GuiPos, "UShort")
+              if (charCode < 0x10000) {
+                if (charCode == 0x26) {
+                  ; double any Ampersand (&) to avoid being replaced with
+                  ; underscore (Windows Shortcut Key terminology)
+                  NumPut(CharCode, ptrU, GuiPos, "UShort")
+                  GuiPos := GuiPos + 2
+                }
+                NumPut(CharCode, ptrU, GuiPos, "UShort")
               } else {
                 ; surrogates
                 NumPut(0xD800|((charCode-0x10000)/1024) , ptrU, GuiPos, "UShort")
-		GuiPos := GuiPos + 2
+                GuiPos := GuiPos + 2
                 NumPut(0xDC00|((charCode-0x10000)&0x3FF), ptrU, GuiPos, "UShort")
               }
             GuiPos := GuiPos + 2
-	  }
+          }
           GuiComp := SubStr(GuiComp,8)
         }
-        NumPut(0x0   ,ptrU,GuiPos,"UShort") ; End of string	
+        NumPut(0x0   ,ptrU,GuiPos,"UShort") ; End of string
         DllCall("SendMessageW", "UInt",GuiKey%GuiPhysKey%, "UInt",WM_SETTEXT, "UInt",0, "Uint",&ptrU)
       }
     }
@@ -131,8 +139,9 @@ GuiAddKeySN(sc,x,y) {
 
 GuiAddKey(key,x,y) {
   global
-  x:=x-4
-  y:=y-10
+  if (bstLayout == 0) {
+    x:=x-4
+  }
   GuiPosx%key% := x
   GuiPosy%key% := y
   Gui, Add, Text, x%x% y%y% w38 h38 Center 0x200 vGuiKey%key% hwndGuiKey%key% BackgroundTrans
@@ -169,15 +178,18 @@ BSTOnClose() {
 
 BSTOnSize() {
   global
-  Gui, Show, % "Y" . yposition . " W" . A_GuiWidth . " H" . Round(A_GuiWidth*199/729,0) . " NoActivate", Neo-Bildschirmtastatur
-  Gui, Font, % "s" . Round(A_GuiWidth*12/729,0) . " bold", % UniFontName
+  xSize := BSTlayout_%bstLayout%_width
+  ySize := BSTlayout_%bstLayout%_height
+  yPosition := WorkAreaBottom - 30 - Round(A_GuiWidth*ySize/xSize,0)
+  Gui, Show, % "Y" . yPosition . " W" . A_GuiWidth . " H" . Round(A_GuiWidth*ySize/xSize,0) . " NoActivate", Neo-Bildschirmtastatur
+  Gui, Font, % "s" . Round(A_GuiWidth*12/xSize,0) . " bold", % UniFontName
   loop,parse,GuiKeyList,`,
   {
     GuiPhysKey := A_LoopField
     GuiControl,Font,GuiKey%GuiPhysKey%
-    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . Round(GuiPosx%GuiPhysKey%*A_GuiWidth/729,0) . " y" . Round(GuiPosy%GuiPhysKey%*A_GuiWidth/729,0) . " w" . Round(38*A_GuiWidth/729,0) . " h" . Round(38*A_GuiWidth/729,0)
+    GuiControl,Move,GuiKey%GuiPhysKey%, % "x" . Round(GuiPosx%GuiPhysKey%*A_GuiWidth/xSize,0) . " y" . Round(GuiPosy%GuiPhysKey%*A_GuiWidth/xSize,0) . " w" . Round(38*A_GuiWidth/xSize,0) . " h" . Round(38*A_GuiWidth/xSize,0)
   }
-  GuiControl,,Picture0, % "*w" . A_GuiWidth . " *h-1 " . ResourceFolder . "\ebene0.png"
+  GuiControl,,Picture0, % "*w" . A_GuiWidth * 1.0 . " *h-1 " . ResourceFolder . "\" . BSTlayout_%bstLayout%_image
 }
 
 CharProc__BST0() {
@@ -192,13 +204,173 @@ Copy_Async(sourcefile, destpath)
     ComObjCreate("Shell.Application").Namespace(destpath).CopyHere(sourcefile,4|16)
 }
 
+BSTnormalLayout() {
+  global
+  GuiAddKeyS("029",6,0)
+  GuiAddKeyS("002",44,0)
+  GuiAddKeyS("003",82,0)
+  GuiAddKeyS("004",120,0)
+  GuiAddKeyS("005",158,0)
+  GuiAddKeyS("006",196,0)
+  GuiAddKeyS("007",234,0)
+  GuiAddKeyS("008",272,0)
+  GuiAddKeyS("009",310,0)
+  GuiAddKeyS("00A",348,0)
+  GuiAddKeyS("00B",386,0)
+  GuiAddKeyS("00C",424,0)
+  GuiAddKeyS("00D",462,0)
+  GuiAddKey("backspace",510,0)
+
+  GuiAddKey("tab",10,40)
+  GuiAddKeyS("010",58,40)
+  GuiAddKeyS("011",96,40)
+  GuiAddKeyS("012",134,40)
+  GuiAddKeyS("013",172,40)
+  GuiAddKeyS("014",210,40)
+  GuiAddKeyS("015",248,40)
+  GuiAddKeyS("016",286,40)
+  GuiAddKeyS("017",324,40)
+  GuiAddKeyS("018",362,40)
+  GuiAddKeyS("019",400,40)
+  GuiAddKeyS("01A",438,40)
+  GuiAddKeyS("01B",476,40)
+  GuiAddKey("enter",526,60)
+
+  GuiAddKeySM("03A",18,80)
+  GuiAddKeyS("01E",75,80)
+  GuiAddKeyS("01F",113,80)
+  GuiAddKeyS("020",151,80)
+  GuiAddKeyS("021",189,80)
+  GuiAddKeyS("022",227,80)
+  GuiAddKeyS("023",265,80)
+  GuiAddKeyS("024",303,80)
+  GuiAddKeyS("025",341,80)
+  GuiAddKeyS("026",379,80)
+  GuiAddKeyS("027",417,80)
+  GuiAddKeyS("028",455,80)
+  GuiAddKeySM("02B",493,80)
+
+  GuiAddKeySM("02A",8,120)
+  GuiAddKeySM("056",50,120)
+  GuiAddKeyS("02C",88,120)
+  GuiAddKeyS("02D",126,120)
+  GuiAddKeyS("02E",164,120)
+  GuiAddKeyS("02F",202,120)
+  GuiAddKeyS("030",240,120)
+  GuiAddKeyS("031",278,120)
+  GuiAddKeyS("032",316,120)
+  GuiAddKeyS("033",354,120)
+  GuiAddKeyS("034",392,120)
+  GuiAddKeyS("035",430,120)
+  GuiAddKeySM("136",498,120)
+
+  GuiAddKey("space",264,160)
+  GuiAddKeySM("138",430,160)
+
+  GuiAddKeyS("145",582,0)
+  GuiAddKeyS("135",620,0)
+  GuiAddKeyS("037",658,0)
+  GuiAddKeyS("04A",696,0)
+
+  GuiAddKeySN("047",582,40)
+  GuiAddKeySN("048",620,40)
+  GuiAddKeySN("049",658,40)
+  GuiAddKeyS("04E",696,60)
+
+  GuiAddKeySN("04B",582,80)
+  GuiAddKeySN("04C",620,80)
+  GuiAddKeySN("04D",658,80)
+
+  GuiAddKeySN("04F",582,120)
+  GuiAddKeySN("050",620,120)
+  GuiAddKeySN("051",658,120)
+  GuiAddKey("numpadenter",696,140)
+
+  GuiAddKeySN("052",601,160)
+  GuiAddKeySN("053",658,160)
+}
+
+BSTergodoxLayout() {
+  global
+  ;GuiAddKeyS("029",6,9)
+  GuiAddKeyS("001",10,20)
+  GuiAddKeyS("002",60,20)
+  GuiAddKeyS("003",100,10)
+  GuiAddKeyS("004",140,00)
+  GuiAddKeyS("005",180,10)
+  GuiAddKeyS("006",220,20)
+  GuiAddKeySM("029",260,20) ; moved
+  GuiAddKeyS("00D",400,20) ; moved
+  GuiAddKeyS("007",440,20)
+  GuiAddKeyS("008",480,10)
+  GuiAddKeyS("009",520,00)
+  GuiAddKeyS("00A",560,10)
+  GuiAddKeyS("00B",600,20)
+  GuiAddKeyS("00C",650,20)
+  ;GuiAddKeyS("00D",462,9)
+  ;GuiAddKey("backspace",510,9)
+
+  GuiAddKey("tab",10,60)
+  GuiAddKeyS("010",60,60)
+  GuiAddKeyS("011",100,50)
+  GuiAddKeyS("012",140,40)
+  GuiAddKeyS("013",180,50)
+  GuiAddKeyS("014",220,60)
+  GuiAddKeyS("01B",400,70) ; moved
+  GuiAddKeyS("015",440,60)
+  GuiAddKeyS("016",480,50)
+  GuiAddKeyS("017",520,40)
+  GuiAddKeyS("018",560,50)
+  GuiAddKeyS("019",600,60)
+  GuiAddKeyS("01A",650,60)
+  ;GuiAddKeyS("01B",476,48)
+  ;GuiAddKey("enter",526,68)
+
+  GuiAddKeyS("056",10,100) ; moved
+  ;GuiAddKeySM("03A",18,88)
+  GuiAddKeyS("01E",60,100)
+  GuiAddKeyS("01F",100,90)
+  GuiAddKeyS("020",140,80)
+  GuiAddKeyS("021",180,90)
+  GuiAddKeyS("022",220,100)
+  GuiAddKeyS("023",440,100)
+  GuiAddKeyS("024",480,90)
+  GuiAddKeyS("025",520,80)
+  GuiAddKeyS("026",560,90)
+  GuiAddKeyS("027",600,100)
+  GuiAddKeyS("028",650,100)
+  ;GuiAddKeySM("02B",493,88)
+
+  GuiAddKeySM("02A",10,140)
+  ;GuiAddKeySM("056",50,128)
+  GuiAddKeyS("02C",60,140)
+  GuiAddKeyS("02D",100,130)
+  GuiAddKeyS("02E",140,120)
+  GuiAddKeyS("02F",180,130)
+  GuiAddKeyS("030",220,140)
+  GuiAddKeyS("031",440,140)
+  GuiAddKeyS("032",480,130)
+  GuiAddKeyS("033",520,120)
+  GuiAddKeyS("034",560,130)
+  GuiAddKeyS("035",600,140)
+  GuiAddKeySM("136",650,140)
+
+  GuiAddKeySM("03A",180,170) ; moved
+  GuiAddKeySM("02B",480,170)
+
+  GuiAddKey("space",220,240)
+  GuiAddKey("backspace",400,240) ; moved
+  GuiAddKey("enter",440,240) ; moved
+}
+
 CharProc__BST1() {
   global
   if (GuiCurrent!="")
     %GuiCurrent%OnClose()
 
   if (FileExist(ResourceFolder)!="") {
-    FileInstall,ebene0.png,%ResourceFolder%\ebene0.png,1
+    FileInstall,ebene0.png,%ResourceFolder%\%BSTlayout_0_image%,1
+    FileInstall,ergodox.png,%ResourceFolder%\%BSTlayout_1_image%,1
   }
 
   if (FileExist(UniFontLocalFile)=="") {
@@ -251,109 +423,49 @@ CharProc__BST1() {
 
 
   SysGet, WorkArea, MonitorWorkArea
-  yPosition := WorkAreaBottom - 230
+  xSize := BSTlayout_%bstLayout%_width
+  ySize := BSTlayout_%bstLayout%_height
+  yPosition := WorkAreaBottom - 30 - ySize
   Gui, Color, FFFFFF
-  Gui, Add, Picture,AltSubmit x0   y0  vPicture0, % ResourceFolder . "\ebene0.png"
+  Gui, Add, Picture,AltSubmit x0   y0  vPicture0, % ResourceFolder . "\" . BSTlayout_%bstLayout%_image
   Gui, Font, s12 bold, %UniFontName%
   GuiKeyList := ""
-  GuiAddKeyS("029",6,9)
-  GuiAddKeyS("002",44,9)
-  GuiAddKeyS("003",82,9)
-  GuiAddKeyS("004",120,9)
-  GuiAddKeyS("005",158,9)
-  GuiAddKeyS("006",196,9)
-  GuiAddKeyS("007",234,9)
-  GuiAddKeyS("008",272,9)
-  GuiAddKeyS("009",310,9)
-  GuiAddKeyS("00A",348,9)
-  GuiAddKeyS("00B",386,9)
-  GuiAddKeyS("00C",424,9)
-  GuiAddKeyS("00D",462,9)
-  GuiAddKey("backspace",510,9)
 
-  GuiAddKey("tab",10,48)
-  GuiAddKeyS("010",58,48)
-  GuiAddKeyS("011",96,48)
-  GuiAddKeyS("012",134,48)
-  GuiAddKeyS("013",172,48)
-  GuiAddKeyS("014",210,48)
-  GuiAddKeyS("015",248,48)
-  GuiAddKeyS("016",286,48)
-  GuiAddKeyS("017",324,48)
-  GuiAddKeyS("018",362,48)
-  GuiAddKeyS("019",400,48)
-  GuiAddKeyS("01A",438,48)
-  GuiAddKeyS("01B",476,48)
-  GuiAddKey("enter",526,68)
+  if (bstLayout == 0) {
+      BSTnormalLayout()
+  }
+  else {
+      BSTergodoxLayout()
+  }
 
-  GuiAddKeySM("03A",18,88)
-  GuiAddKeyS("01E",75,88)
-  GuiAddKeyS("01F",113,88)
-  GuiAddKeyS("020",151,88)
-  GuiAddKeyS("021",189,88)
-  GuiAddKeyS("022",227,88)
-  GuiAddKeyS("023",265,88)
-  GuiAddKeyS("024",303,88)
-  GuiAddKeyS("025",341,88)
-  GuiAddKeyS("026",379,88)
-  GuiAddKeyS("027",417,88)
-  GuiAddKeyS("028",455,88)
-  GuiAddKeySM("02B",493,88)
-
-  GuiAddKeySM("02A",8,128)
-  GuiAddKeySM("056",50,128)
-  GuiAddKeyS("02C",88,128)
-  GuiAddKeyS("02D",126,128)
-  GuiAddKeyS("02E",164,128)
-  GuiAddKeyS("02F",202,128)
-  GuiAddKeyS("030",240,128)
-  GuiAddKeyS("031",278,128)
-  GuiAddKeyS("032",316,128)
-  GuiAddKeyS("033",354,128)
-  GuiAddKeyS("034",392,128)
-  GuiAddKeyS("035",430,128)
-  GuiAddKeySM("136",498,128)
-
-  GuiAddKey("space",264,168)
-  GuiAddKeySM("138",430,168)
-
-  GuiAddKeyS("145",582,9)
-  GuiAddKeyS("135",620,9)
-  GuiAddKeyS("037",658,9)
-  GuiAddKeyS("04A",696,9)
-
-  GuiAddKeySN("047",582,48)
-  GuiAddKeySN("048",620,48)
-  GuiAddKeySN("049",658,48)
-  GuiAddKeyS("04E",696,68)
-
-  GuiAddKeySN("04B",582,88)
-  GuiAddKeySN("04C",620,88)
-  GuiAddKeySN("04D",658,88)
-
-  GuiAddKeySN("04F",582,128)
-  GuiAddKeySN("050",620,128)
-  GuiAddKeySN("051",658,128)
-  GuiAddKey("numpadenter",696,148)
-
-  GuiAddKeySN("052",601,168)
-  GuiAddKeySN("053",658,168)
-  Gui, +AlwaysOnTop +ToolWindow +Resize -MaximizeBox
-  Gui, Show, y%yposition% w729 h199 NoActivate, Neo-Bildschirmtastatur
+  Gui, -DPIScale +AlwaysOnTop +ToolWindow +Resize -MaximizeBox
+  Gui, Show, % "y" . yPosition . " w" . xSize . " h" . ySize . " NoActivate", Neo-Bildschirmtastatur
   BSTUpdate()
   BSTalwaysOnTop := 1
   GuiCurrent := "BST"
 }
 
+
 BSTToggleAlwaysOnTop() {
   global
   if (BSTalwaysOnTop) {
     Gui, -AlwaysOnTop
-    BSTalwaysOnTop := 0    
+    BSTalwaysOnTop := 0
   } else {
     Gui, +AlwaysOnTop
     BSTalwaysOnTop := 1
   }
+}
+
+BSTToggleKeyboardLayout() {
+  global
+  if (0 == bstLayout) {
+    bstLayout := 1
+  } else {
+    bstLayout := 0
+  }
+  CharProc__BST0()
+  CharProc__BST1()
 }
 
 CharProc__BSTA() {
@@ -361,6 +473,13 @@ CharProc__BSTA() {
   ; Bildschirmtastatur AlwaysOnTop
   if (useBST or useDBST)
     BSTToggleAlwaysOnTop()
+}
+
+CharProc__BSTK() {
+  global
+  ; Bildschirmtastatur Layout
+  if (useBST or useDBST)
+    BSTToggleKeyboardLayout()
 }
 
 GUISYM(sym,chars) {
@@ -467,11 +586,13 @@ BSTSymbols() {
 BSTRegister() {
   global
 
-  CP3F1 := "P__BSTt"
-  CP3F2 := "P__BSTA"
-  CP3F3 := "P_DBSTt"
+  CP3F1 := "P__BSTt" ; toggle on screen keyboard
+  CP4F1 := "P__BSTK" ; toggle keyboard layout
+  CP3F2 := "P__BSTA" ; toggle always on top
+  CP3F3 := "P_DBSTt" ; toggle
   BSTSymbols()
 
+  IniRead,bstLayout,%ini%,Global,bstLayout,0
   IniRead,useBST,%ini%,Global,useBST,0
   if (useBST)
     CharProc__BST1()
