@@ -29,7 +29,7 @@ tt { white-space: pre }
   padding-left:0;
  }
  a.mail-link .icon {
-  background: url(http://wiki.neo-layout.org/chrome/common/envelope.png) left center no-repeat;
+  background: url(//wiki.neo-layout.org/chrome/common/envelope.png) left center no-repeat;
   padding-left: 16px;
  }
 }
@@ -74,13 +74,13 @@ margin-left:-2em;
  font: normal 10pt 'Segoe UI','Bitstream Vera Sans',verdana,helvetica,arial,sans-serif;
  max-width:67em; 
  margin: .66em auto .33em;
- background: #f7f7f7 url(http://wiki.neo-layout.org/chrome/common/topbar_gradient.png) 0 0;
+ background: #f7f7f7 url(//wiki.neo-layout.org/chrome/common/topbar_gradient.png) 0 0;
 }
  
-#mainnav :link, #mainnav :visited { background: url(http://wiki.neo-layout.org/chrome/common/dots.gif) 0 0 no-repeat; }
+#mainnav :link, #mainnav :visited { background: url(//wiki.neo-layout.org/chrome/common/dots.gif) 0 0 no-repeat; }
 
 #mainnav .active :link, #mainnav .active :visited {
- background: #333 url(http://wiki.neo-layout.org/chrome/common/topbar_gradient2.png) 0 0 repeat-x;
+ background: #333 url(//wiki.neo-layout.org/chrome/common/topbar_gradient2.png) 0 0 repeat-x;
 }
 
 .wiki-toc {padding-bottom:1em;}
@@ -119,7 +119,7 @@ margin-left:-2em;
 #altlinks li :link, #altlinks li :visited {
  background-position: 0 -1px;
  }
-#altlinks li a.rss { background-image: url(http://wiki.neo-layout.org/chrome/common/feed.png); padding-left: 24px }
+#altlinks li a.rss { background-image: url(//wiki.neo-layout.org/chrome/common/feed.png); padding-left: 24px }
 
 /* Footer */
 #footer {
@@ -150,7 +150,7 @@ margin-left:-2em;
 
 /* Version information (browser, wiki, attachments) */
 .wikitoolbar :link, .wikitoolbar :visited {
- background: transparent url(http://wiki.neo-layout.org/chrome/common/edit_toolbar.png) no-repeat;
+ background: transparent url(//wiki.neo-layout.org/chrome/common/edit_toolbar.png) no-repeat;
 }
 
 /* Styles for tabular listings such as those used for displaying directory
@@ -161,8 +161,8 @@ table.listing thead th {
 table.listing tbody td, table.listing tbody th {
  padding: .33em .5em;
 }
-table.listing th.asc a { background-image: url(http://wiki.neo-layout.org/chrome/common/asc.png) }
-table.listing th.desc a { background-image: url(http://wiki.neo-layout.org/chrome/common/desc.png) }
+table.listing th.asc a { background-image: url(//wiki.neo-layout.org/chrome/common/asc.png) }
+table.listing th.desc a { background-image: url(//wiki.neo-layout.org/chrome/common/desc.png) }
 
 #dirlist td.name { width: auto }
 #dirlist td.change {   white-space: normal }
