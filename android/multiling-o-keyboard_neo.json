@@ -2,27 +2,27 @@
   "title":"Neo 2.0",
   "onScreen":{
     "main":[
-      "ˆ1234567890-ˋ",
-      "[TAB]xvlcwkhgfqßˊ",
-      "[SYM][]uiaeosnrtdy",
-      "[SHIFT][]üöäpzbm,.j[DEL]",
+      "̂1234567890-̀ ",
+      "[TAB][]xvlcwkhgfqß́",
+      "[SYM][]uiaeosnrtdy ",
+      "[SHIFT][]üöäpzbm,.j[DEL][]",
       "[TOOL][ALTGR][SPACE][][][ENTER]"
     ],
 
     "sym":[
-      "↻¹²³›‹¢¥‚‘’−˚",
-      "♫…_[]^!<>=&ſ̸",
-      "[123][]\\/{}*?()-:@",
-      "[SHIFT][]#$|~`+%\"';[DEL]",
+      " ¹²³›‹¢¥‚‘’−̊ ",
+      "[TAB][]…_[]^!<>=&ſ̸",
+      "[123][]\\/{}*?()-:@ ",
+      "[SHIFT][]#$|~`+%\"';[DEL][]",
       "[LOCK][AltGr][SPACE][][][ENTER]"
     ],
 
     "altGr":[
-      "˞₁₂₃♀♂⚥ϰ⟨⟩₀‑҅",
-      "[TAB]ξ λχωκψγφɸς҆",
-      "[SYM][] ιαεoσνρτδυ",
-      "[SHIFT][] ϵηπζβµϱϑθ[DEL]",
-      "[LOCK]    [ENTER]"
+      "̇ªº№ ‧£¤[TAB]/*-̈ ",
+      "[TAB][][PGUP][DEL][UP][Del→][PGDN]¡789+−̋",
+      "[123][][HOME][LEFT][DOWN][RIGHT][END]¿456,. ",
+      "[SHIFT][][CUT][COPY][PASTE][ENTER][UNDO]:123;[DEL][]",
+      "[LOCK][AltGr]000[ENTER]"
     ],
 
     "num":[
@@ -34,26 +34,26 @@
     ],
 
     "shifted":[
-      "ˇ°§ℓ»«$€„“”—¸",
-      "[TAB]XVLCWKHGFQẞ˜",
-      "[SYM][]UIAEOSNRTDY",
-      "[SHIFT][]ÜÖÄPZBM–•J[DEL]",
+      "̌°§ℓ»«$€„“”—̧ ",
+      "[TAB][]XVLCWKHGFQẞ̃",
+      "[SYM][]UIAEOSNRTDY ",
+      "[SHIFT][]ÜÖÄPZBM–•J[DEL][]",
       "[LOCK][ALTGR][SPACE][][][ENTER]"
     ],
 
     "symShifted":[
-      "˙¨ªº№‧£¤[TAB]/*-̋",
-      "[TAB][][PGUP][DEL][UP][Del→][PGDN]¡789+−",
-      "[123][][HOME][LEFT][DOWN][RIGHT][END]¿456,.",
-      "[SHIFT][][CUT][COPY][PASTE][ENTER][UNDO]:123;[DEL]",
-      "[LOCK][AltGr]000[ENTER]"
+      " ₁₂₃♀♂⚥ϰ⟨⟩₀‑῾ ",
+      "[TAB][]ξ λχωκψγφɸς᾿",
+      "[SYM][] ιαεoσνρτδυ ",
+      "[SHIFT][] ϵηπζβµϱϑθ[DEL][]",
+      "[LOCK]    [ENTER]"
     ],
 
     "altGrShifted":[
-      "̣¬∨∧⊥∡∥→∞∝∅╌¯",
-      "[TAB]Ξ√ΛℂΩ×ΨΓΦℚ∘˘",
-      "[SYM][]⊂∫∀∃∈Σℕℝ∂Δ∇",
-      "[SHIFT][]∪∩ℵΠℤ⇐⇔⇒↦Θ[DEL]",
+      "̣¬∨∧⊥∡∥→∞∝∅╌̄ ",
+      "[TAB][]Ξ√ΛℂΩ×ΨΓΦℚ∘̆",
+      "[SYM][]⊂∫∀∃∈Σℕℝ∂Δ∇ ",
+      "[SHIFT][]∪∩ℵΠℤ⇐⇔⇒↦Θ[DEL][]",
       "[LOCK]    [ENTER]"
     ]
   }
