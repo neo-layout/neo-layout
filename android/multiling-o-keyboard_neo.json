@@ -6,7 +6,7 @@
       "[TAB][]xvlcwkhgfqß́",
       "[SYM][]uiaeosnrtdy ",
       "[SHIFT][]üöäpzbm,.j[DEL][]",
-      "[TOOL][ALTGR][SPACE][][][ENTER]"
+      "[TOOL][][ALTGR][][SPACE][][][][][][][][ENTER][]"
     ],
 
     "sym":[
@@ -14,15 +14,15 @@
       "[TAB][]…_[]^!<>=&ſ̸",
       "[123][]\\/{}*?()-:@ ",
       "[SHIFT][]#$|~`+%\"';[DEL][]",
-      "[LOCK][AltGr][SPACE][][][ENTER]"
+      "[LOCK][][AltGr][][SPACE][][][][][][][][ENTER][]"
     ],
 
     "altGr":[
       "̇ªº№ ‧£¤[TAB]/*-̈ ",
       "[TAB][][PGUP][DEL][UP][Del→][PGDN]¡789+−̋",
-      "[123][][HOME][LEFT][DOWN][RIGHT][END]¿456,. ",
+      "[Sym][][HOME][LEFT][DOWN][RIGHT][END]¿456,. ",
       "[SHIFT][][ESC][TAB][PASTE][ENTER][UNDO]:123;[DEL][]",
-      "[LOCK][AltGr]000[ENTER]"
+      "[LOCK][]  00000000[ENTER][]"
     ],
 
     "num":[
@@ -38,23 +38,23 @@
       "[TAB][]XVLCWKHGFQẞ̃",
       "[SYM][]UIAEOSNRTDY ",
       "[SHIFT][]ÜÖÄPZBM–•J[DEL][]",
-      "[LOCK][ALTGR][SPACE][][][ENTER]"
+      "[LOCK][][ALTGR][][SPACE][][][][][][][][ENTER][]"
     ],
 
     "symShifted":[
-      " ₁₂₃♀♂⚥ϰ⟨⟩₀‑῾ ",
+      "˞₁₂₃♀♂⚥ϰ⟨⟩₀‑῾ ",
       "[TAB][]ξ λχωκψγφɸς᾿",
-      "[SYM][] ιαεoσνρτδυ ",
+      "[123][] ιαεoσνρτδυ ",
       "[SHIFT][] ϵηπζβµϱϑθ[DEL][]",
-      "[LOCK] [SPACE][][][ENTER]"
+      "[LOCK][][ALTGR][]      [ENTER][]"
     ],
 
     "altGrShifted":[
-      "̣¬∨∧⊥∡∥→∞∝∅╌̄ ",
+      "̣¬∨∧⊥∡∥→∞∝∅­̄ ",
       "[TAB][]Ξ√ΛℂΩ×ΨΓΦℚ∘̆",
       "[SYM][]⊂∫∀∃∈Σℕℝ∂Δ∇ ",
       "[SHIFT][]∪∩ℵΠℤ⇐⇔⇒↦Θ[DEL][]",
-      "[LOCK]    [ENTER]"
+      "[LOCK][]          [ENTER][]"
     ]
   }
 }
