@@ -421,14 +421,14 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │ ♦ │ ♥ │ ♠ │   │
 ├───┴───┼───┤   │
-│ ␣     │ . │Ent│ ␣ is a character, not space!
+│ ␣     │ . │Ent│ ␣ ist ein Zeichen, nicht das Leerzeichen
 └───────┴───┴───┘
 
 === Dritte Ebene – Miniatur ===
 ┌───┬───┬───┬───┐
 │ = │ ÷ │ ⋅ │ − │
 ├───┼───┼───┼───┤
-│ ↕ │ ↑ │vec│   │
+│ ↕ │ ↑ │vec│   │ vec steht für U+20D7 COMBINING RIGHT ARROW ABOVE
 ├───┼───┼───┤   │
 │ ← │ : │ → │ ± │
 ├───┼───┼───┼───┤
@@ -443,7 +443,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│ ∓ │ Beg invokes click of the keyboard mouse
+│KP←│Beg│KP→│ ∓ │ Beg erzeugt einen (Tastatur-)Mausklick
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
@@ -482,7 +482,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│   │ Beg invokes click of the keyboard mouse
+│KP←│Beg│KP→│   │ Beg erzeugt einen (Tastatur-)Mausklick
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
