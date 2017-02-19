@@ -23,6 +23,9 @@ TrayAktivieren() {
   menu,tray,default,%disable%
   menu,tray,tip,%name%
 
+  IniRead,startSuspended,%ini%,Global,startSuspended
+  if (startSuspended == 1)
+    Traytogglesuspend()
   return
 
 help:
