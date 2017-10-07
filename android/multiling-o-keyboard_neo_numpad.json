@@ -1,0 +1,52 @@
+{
+"title":"Neo 2.0 Numpad",
+"onScreen":{
+"main":[
+"[SPACE][Tab]/*-",
+"[AltGr]789+",
+"[Sym]456 ",
+"[Shift]123[Del]",
+"[Tool]00,[Enter]"
+],
+
+"sym":[
+"[SPACE]=÷·−",
+"[AltGr]↕↑⃗±",
+" ←:→ ",
+"[Shift]↔↓⇌[Del]",
+"[Lock]%%,[ENTER]"
+],
+
+"altGr":[
+"[SPACE]≈⌀⊙⊖",
+" ≪∩≫⊕",
+"[Sym]⊂⊶⊃ ",
+"[Shift]≤∪≥[Del]",
+"[Lock]‰‰′[ENTER]"
+],
+
+"shifted":[
+"[SPACE][TAB]/*-",
+"[AltGr]✔✘†+",
+"[Sym]♣€‣ ",
+"[SHIFT]♦♥♠[DEL]",
+"[LOCK][Space][].[ENTER]"
+],
+
+"symShifted":[
+"[SPACE]≠∕×\\",
+"[AltGr][Home][Up][PgUp]∓",
+" [Left] [Right] ",
+"[Shift][End][Down][PgDn][Del]",
+"[Lock][Insert][][Del→][Enter]"
+],
+
+"altGrShifted":[
+"[SPACE]≡∣⊗∸",
+" ⌈⋂⌉∔",
+"[Sym]⊆⊷⊇ ",
+"[Shift]⌊∪⌋[Del]",
+"[Lock]□□″[Enter]"
+]
+}
+}			

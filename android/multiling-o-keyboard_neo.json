@@ -1,60 +1,60 @@
 {
-  "title":"Neo 2.0",
-  "onScreen":{
-    "main":[
-      "̂1234567890-̀ ",
-      "[TAB][]xvlcwkhgfqß́",
-      "[SYM][]uiaeosnrtdy ",
-      "[SHIFT][]üöäpzbm,.j[DEL][]",
-      "[TOOL][][ALTGR][][SPACE][][][][][][][][ENTER][]"
-    ],
+"title":"Neo 2.0",
+"onScreen":{
+"main":[
+"̂1234567890-̀ ",
+"[TAB][]xvlcwkhgfqß́",
+"[SYM][]uiaeosnrtdy ",
+"[SHIFT][]üöäpzbm,.j[DEL][]",
+"[TOOL][][ALTGR][][SPACE][][][][][][][][ENTER][]"
+],
 
-    "sym":[
-      " ¹²³›‹¢¥‚‘’−̊ ",
-      "[TAB][]…_[]^!<>=&ſ̸",
-      "[123][]\\/{}*?()-:@ ",
-      "[SHIFT][]#$|~`+%\"';[DEL][]",
-      "[LOCK][][AltGr][][SPACE][][][][][][][][ENTER][]"
-    ],
+"sym":[
+" ¹²³›‹¢¥‚‘’ ̊ ",
+"[TAB][]…_[]^!<>=&ſ̸",
+"[123][]\\/{}*?()-:@ ",
+"[SHIFT][]#$|~`+%\"';[DEL][]",
+"[LOCK][][AltGr][][SPACE][][][][][][][][ENTER][]"
+],
 
-    "altGr":[
-      "̇ªº№ ‧£¤[TAB]/*-̈ ",
-      "[TAB][][PGUP][DEL][UP][Del→][PGDN]¡789+−̋",
-      "[Sym][][HOME][LEFT][DOWN][RIGHT][END]¿456,. ",
-      "[SHIFT][][ESC][TAB][PASTE][ENTER][UNDO]:123;[DEL][]",
-      "[LOCK][]  00000000[ENTER][]"
-    ],
+"altGr":[
+"̇ªº№ ‧£¤[TAB]/*-̈ ",
+"[TAB][][PGUP][DEL][UP][Del→][PGDN]¡789+−̋",
+"[Sym][][HOME][LEFT][DOWN][RIGHT][END]¿456,. ",
+"[SHIFT][][ESC][TAB][PASTE][ENTER][UNDO]:123;[DEL][]",
+"[LOCK][]  00000000[ENTER][]"
+],
 
-    "num":[
-      " [TAB]/*-",
-      " 789+",
-      " 456 ",
-      " 123[Del]",
-      "[Lock]00,[Enter]"
-    ],
+"num":[
+" [TAB]/*-",
+" 789+",
+" 456 ",
+" 123[Del]",
+"[Lock]00,[Enter]"
+],
 
-    "shifted":[
-      "̌°§ℓ»«$€„“”—̧ ",
-      "[TAB][]XVLCWKHGFQẞ̃",
-      "[SYM][]UIAEOSNRTDY ",
-      "[SHIFT][]ÜÖÄPZBM–•J[DEL][]",
-      "[LOCK][][ALTGR][][SPACE][][][][][][][][ENTER][]"
-    ],
+"shifted":[
+"̌°§ℓ»«$€„“”—̧ ",
+"[TAB][]XVLCWKHGFQẞ̃",
+"[SYM][]UIAEOSNRTDY ",
+"[SHIFT][]ÜÖÄPZBM–•J[DEL][]",
+"[LOCK][][ALTGR][][SPACE][][][][][][][][ENTER][]"
+],
 
-    "symShifted":[
-      "˞₁₂₃♀♂⚥ϰ⟨⟩₀‑῾ ",
-      "[TAB][]ξ λχωκψγφɸς᾿",
-      "[123][] ιαεoσνρτδυ ",
-      "[SHIFT][] ϵηπζβµϱϑθ[DEL][]",
-      "[LOCK][][ALTGR][]      [ENTER][]"
-    ],
+"symShifted":[
+"˞₁₂₃♀♂⚥ϰ⟨⟩₀‑῾ ",
+"[TAB][]ξ λχωκψγφɸς᾿",
+"[123][] ιαεoσνρτδυ ",
+"[SHIFT][] ϵηπζβµϱϑθ[DEL][]",
+"[LOCK][][ALTGR][]        [ENTER][]"
+],
 
-    "altGrShifted":[
-      "̣¬∨∧⊥∡∥→∞∝∅­̄ ",
-      "[TAB][]Ξ√ΛℂΩ×ΨΓΦℚ∘̆",
-      "[SYM][]⊂∫∀∃∈Σℕℝ∂Δ∇ ",
-      "[SHIFT][]∪∩ℵΠℤ⇐⇔⇒↦Θ[DEL][]",
-      "[LOCK][]          [ENTER][]"
-    ]
-  }
+"altGrShifted":[
+"̣¬∨∧⊥∡∥→∞∝∅­̄ ",
+"[TAB][]Ξ√ΛℂΩ×ΨΓΦℚ∘̆",
+"[SYM][]⊂∫∀∃∈Σℕℝ∂Δ∇ ",
+"[SHIFT][]∪∩ℵΠℤ⇐⇔⇒↦Θ[DEL][]",
+"[LOCK][]          [ENTER][]"
+]
+}
 }
