@@ -193,24 +193,24 @@ CharOutUp(char) {
 SendBlindShiftFixed(char, theseq) {
   global
   if (UNSH%char%)
-    if (IsShiftLPressed)
-      if (IsShiftRPressed)
+    if (isShiftLPressed)
+      if (isShiftRPressed)
         send % "{blind}{RShift Up}{Shift Up}" . theseq . "{Shift Down}{RShift Down}"
       else
         send % "{blind}{Shift Up}" . theseq . "{Shift Down}"
     else
-      if (IsShiftRPressed)
+      if (isShiftRPressed)
         send % "{blind}{RShift Up}" . theseq . "{RShift Down}"
       else
         send % "{blind}" . theseq
   else if (DOSH%char%)
-    if (IsShiftLPressed)
-      if (IsShiftRPressed)
+    if (isShiftLPressed)
+      if (isShiftRPressed)
         send % "{blind}" . theseq
       else
         send % "{blind}{RShift Down}" . theseq . "{RShift Up}"
     else
-      if (IsShiftRPressed)
+      if (isShiftRPressed)
         send % "{blind}{Shift Down}" . theseq . "{Shift Up}"
       else
         send % "{blind}{Shift Down}" . theseq . "{Shift Up}"
