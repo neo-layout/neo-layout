@@ -126,8 +126,8 @@ CharProc__EHSu() {
   global
   ; Space im Einhandmodus losgelassen
   if (!EHKeyPressed) {
-    AllStar("*EHSpace")
-    AllStar("*EHSpace up")
+    AllStar("EHSpace", True, "*EHSpace")
+    AllStar("EHSpace", False, "*EHSpace up")
   }
   EHKeyPressed := 0
   EHSpacePressed := 0

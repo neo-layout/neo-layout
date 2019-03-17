@@ -277,32 +277,35 @@ Comp := ""
 RSC(sc,vk) {
   global
   vksc%sc% := "VK" . vk . "SC" . sc
-  RKEY(vksc%sc%)
+  RKEY(vk, vksc%sc%)
 }
 
 RSCN(sc,vk1,vk2) {
   global
   vkscn1%sc% := "VK" . vk1 . "SC" . sc
   vkscn2%sc% := "VK" . vk2 . "SC" . sc
-  RKEY(vkscn1%sc%)
-  RKEY(vkscn2%sc%)
+  RKEY(vk1, vkscn1%sc%)
+  RKEY(vk2, vkscn2%sc%)
 }
 
-RKEY(key) {
-  RKEYN("*" . key)
+RKEY(vk, key) {
+  vkey := "*VK" . vk
+  RKEYN(vkey, key)
 }
 
 RKEYS(keys) {
   loop,parse,keys,`,
   {
-    RKEY(A_Loopfield)
+    RKEYN("*" . A_Loopfield, A_Loopfield)
   }
 }
 
-RKEYN(dnkey) {
+RKEYN(dnkey, key) {
   upkey := dnkey . " up"
-  Hotkey,% dnkey,allstarhook
-  Hotkey,% upkey,allstarhook
+  upfn := Func("AllStar").Bind(key, False, upkey)
+  dnfn := Func("AllStar").Bind(key, True, dnkey)
+  Hotkey,% dnkey,% dnfn
+  Hotkey,% upkey,% upfn
 }
 
 Layout00000407() {
@@ -380,9 +383,9 @@ Layout00000407() {
   RKEYS("space,enter,backspace")
   RKEYS("del,ins,home,end,pgup,pgdn,up,down,left,right")
 ; Diverses ohne *
-  RKEYN("tab")
-  RKEYN("esc")
-  RKEYN("numpadenter")
+  RKEYN("tab", "tab")
+  RKEYN("esc", "esc")
+  RKEYN("numpadenter", "numpadenter")
 ; Modifier
   RSC("02A","A0") ; M2L
   RSC("136","A1") ; M2R
@@ -593,9 +596,9 @@ Layout00000807() {
   RKEYS("space,enter,backspace")
   RKEYS("del,ins,home,end,pgup,pgdn,up,down,left,right")
 ; Diverses ohne *
-  RKEYN("tab")
-  RKEYN("esc")
-  RKEYN("numpadenter")
+  RKEYN("tab", "tab")
+  RKEYN("esc", "esc")
+  RKEYN("numpadenter", "numpadenter")
 ; Modifier
   RSC("02A","A0") ; M2L
   RSC("136","A1") ; M2R

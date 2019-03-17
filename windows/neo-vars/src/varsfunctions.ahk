@@ -2,16 +2,9 @@
 
 #NoEnv
 
-AllStar(This_HotKey) {
+AllStar(KeyId, IsDown, This_HotKey) {
   global
-  PhysKey := This_HotKey
-  if (SubStr(PhysKey,1,1) == "*")
-    PhysKey := SubStr(PhysKey,2)
-  if (SubStr(PhysKey,-2) == " up") {
-    PhysKey := SubStr(PhysKey,1,StrLen(PhysKey)-3)
-    IsDown := 0
-  } else
-    IsDown := 1
+  PhysKey := KeyId
   if (TransformProc != "")
     ActKey := Transform%TransformProc%(PhysKey)
   else

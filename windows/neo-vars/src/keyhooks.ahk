@@ -11,10 +11,6 @@ Suspend, Permit
   Traytogglesuspend()
 return
 
-allstarhook:
-  AllStar(A_ThisHotkey)
-return
-
 ; Ein paar andere Hooks kommen hier auch noch. GUIs springen hier her, wenn
 ; sich bei ihnen etwas auf die entsprechende Art tut.
 
