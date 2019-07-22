@@ -1,0 +1,75 @@
+
+# /
+/.project
+/.pydevproject
+
+# /linux/osd/
+/linux/osd/*.pyc
+
+# /linux/osd/develop/xkbtest/
+/linux/osd/develop/xkbtest/xkbtest
+
+# /linux/osd/images/
+/linux/osd/images/Thumbs.db
+
+# /linux/xmodmap/
+/linux/xmodmap/neo_de.xmodmap.bak
+
+# /windows/ahk-auslaufend/
+/windows/ahk-auslaufend/Build-Update - VISTA, LÖSCHBAR.bat
+
+# /windows/ahk-auslaufend/Source/
+/windows/ahk-auslaufend/Source/LangSTastaturStandardmäßigEingeschaltet.ahk
+
+# /windows/kbdneo2/Quelldateien/
+/windows/kbdneo2/Quelldateien/buildchk_win7_amd64.log
+/windows/kbdneo2/Quelldateien/buildchk_win7_x86.log
+
+# /windows/kbdneo2/Treiber/32bit_Windows/
+/windows/kbdneo2/Treiber/32bit_Windows/_objects.mac
+/windows/kbdneo2/Treiber/32bit_Windows/kbdneo2.exp
+/windows/kbdneo2/Treiber/32bit_Windows/kbdneo2.lib
+/windows/kbdneo2/Treiber/32bit_Windows/kbdneo2.obj
+/windows/kbdneo2/Treiber/32bit_Windows/kbdneo2.pdb
+/windows/kbdneo2/Treiber/32bit_Windows/kbdneo2.res
+/windows/kbdneo2/Treiber/32bit_Windows/vc90.pdb
+
+# /windows/kbdneo2/Treiber/64bit_Windows/
+/windows/kbdneo2/Treiber/64bit_Windows/_objects.mac
+/windows/kbdneo2/Treiber/64bit_Windows/kbdneo2.exp
+/windows/kbdneo2/Treiber/64bit_Windows/kbdneo2.lib
+/windows/kbdneo2/Treiber/64bit_Windows/kbdneo2.obj
+/windows/kbdneo2/Treiber/64bit_Windows/kbdneo2.pdb
+/windows/kbdneo2/Treiber/64bit_Windows/kbdneo2.res
+/windows/kbdneo2/Treiber/64bit_Windows/vc90.pdb
+
+# /windows/kbdneo2/Treiber/AHK_für_kbdneo2/
+/windows/kbdneo2/Treiber/AHK_für_kbdneo2/kbdneo_ahk.exe
+
+# /windows/neo-vars/out/
+/windows/neo-vars/out/neo20-custom.exe
+/windows/neo-vars/out/neo20-r*.exe
+
+# /windows/neo-vars/src/
+/windows/neo-vars/src/Kopie von make-build.bat
+/windows/neo-vars/src/Kopie von make-compose.bat
+/windows/neo-vars/src/_local_paths.bat
+/windows/neo-vars/src/ebene1.png
+/windows/neo-vars/src/ebene2.png
+/windows/neo-vars/src/ebene3.png
+/windows/neo-vars/src/ebene4.png
+/windows/neo-vars/src/ebene5.png
+/windows/neo-vars/src/ebene6.png
+/windows/neo-vars/src/neo20-r*.ahk
+/windows/neo-vars/src/z-dh-local-make-build.bat
+/windows/neo-vars/src/z-dh-local-make-compose.bat
+
+# /windows/neo-vars/src/source/
+/windows/neo-vars/src/source/_subwcrev1.bat
+/windows/neo-vars/src/source/_subwcrev1.generated.ahk
+/windows/neo-vars/src/source/_svnversion.generated.txt
+/windows/neo-vars/src/source/_subwcrev2.bat
+/windows/neo-vars/src/source/Compose-tainted.generated.ahk
+
+# /yaml/
+/yaml/.git
