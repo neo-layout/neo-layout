@@ -363,81 +363,64 @@ CharProc__M4RU() {
 }
 
 SendUnicodeChar(charCode){
-  IfWinActive,ahk_class gdkWindowToplevel
-  {
-    StringLower,charCode,charCode
-    send % "^+u" . SubStr(charCode,3) . " "
+  static ki := "#"
+  if (ki =="#") {
+    VarSetCapacity(ki,28*4,0)
+    DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
+    DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
+    DllCall("RtlFillMemory","uint",&ki+2*28+0,"uint",1,"uint",1)
+    DllCall("RtlFillMemory","uint",&ki+3*28+0,"uint",1,"uint",1)
+  }
+  if (charCode < 0x10000) {
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+28+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+    DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
   } else {
-    static ki := "#"
-    if (ki =="#") {
-      VarSetCapacity(ki,28*4,0)
-      DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
-      DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
-      DllCall("RtlFillMemory","uint",&ki+2*28+0,"uint",1,"uint",1)
-      DllCall("RtlFillMemory","uint",&ki+3*28+0,"uint",1,"uint",1)
-    }
-    if (charCode < 0x10000) {
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+28+6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-      DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
-    } else {
-      hi_surrogate := 0xD800|((charCode-0x10000)/1024)
-      lo_surrogate := 0xDC00|((charCode-0x10000)&0x3FF)
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x40000|hi_surrogate) ;KEYEVENTF_UNICODE
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x40000|lo_surrogate) ;KEYEVENTF_UNICODE
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+2*28+6,"uint",4,"uint",0x60000|hi_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+3*28+6,"uint",4,"uint",0x60000|lo_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-      DllCall("SendInput","UInt",4,"UInt",&ki,"Int",28)
-    }
+    hi_surrogate := 0xD800|((charCode-0x10000)/1024)
+    lo_surrogate := 0xDC00|((charCode-0x10000)&0x3FF)
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x40000|hi_surrogate) ;KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x40000|lo_surrogate) ;KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+2*28+6,"uint",4,"uint",0x60000|hi_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+3*28+6,"uint",4,"uint",0x60000|lo_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+    DllCall("SendInput","UInt",4,"UInt",&ki,"Int",28)
   }
 }
 
 SendUnicodeCharDown(charCode){
-  IfWinActive,ahk_class gdkWindowToplevel
-  {
-    StringLower,charCode,charCode
-    send % "^+u" . SubStr(charCode,3) . " "
+  static ki := "#"
+  if (ki =="#") {
+    VarSetCapacity(ki,28*2,0)
+    DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
+    DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
+  }
+  if (charCode < 0x10000) {
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
+    DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
   } else {
-    static ki := "#"
-    if (ki =="#") {
-      VarSetCapacity(ki,28*2,0)
-      DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
-      DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
-    }
-    if (charCode < 0x10000) {
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x40000|charCode) ;KEYEVENTF_UNICODE
-      DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
-    } else {
-      hi_surrogate := 0xD800|((charCode-0x10000)/1024)
-      lo_surrogate := 0xDC00|((charCode-0x10000) & 0x3FF)
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x40000|hi_surrogate) ;KEYEVENTF_UNICODE
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x40000|lo_surrogate) ;KEYEVENTF_UNICODE
-      DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
-    }
+    hi_surrogate := 0xD800|((charCode-0x10000)/1024)
+    lo_surrogate := 0xDC00|((charCode-0x10000) & 0x3FF)
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x40000|hi_surrogate) ;KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x40000|lo_surrogate) ;KEYEVENTF_UNICODE
+    DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
   }
 }
 
 SendUnicodeCharUp(charCode){
-  IfWinActive,ahk_class gdkWindowToplevel
-  {
-    ; nothing
+  static ki := "#"
+  if (ki =="#") {
+    VarSetCapacity(ki,28*2,0)
+    DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
+    DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
+  }
+  if (charCode < 0x10000) {
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+    DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
   } else {
-    static ki := "#"
-    if (ki =="#") {
-      VarSetCapacity(ki,28*2,0)
-      DllCall("RtlFillMemory","uint",&ki+     0,"uint",1,"uint",1)
-      DllCall("RtlFillMemory","uint",&ki+  28+0,"uint",1,"uint",1)
-    }
-    if (charCode < 0x10000) {
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+   6,"uint",4,"uint",0x60000|charCode) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-      DllCall("SendInput","UInt",1,"UInt",&ki,"Int",28)
-    } else {
-      hi_surrogate := 0xD800|((charCode-0x10000)/1024)
-      lo_surrogate := 0xDC00|((charCode-0x10000)&0x3FF)
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x60000|hi_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-      DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x60000|lo_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
-      DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
-    }
+    hi_surrogate := 0xD800|((charCode-0x10000)/1024)
+    lo_surrogate := 0xDC00|((charCode-0x10000)&0x3FF)
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+     6,"uint",4,"uint",0x60000|hi_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+    DllCall("ntdll.dll\RtlFillMemoryUlong","uint",&ki+  28+6,"uint",4,"uint",0x60000|lo_surrogate) ;KEYEVENTF_KEYUP|KEYEVENTF_UNICODE
+    DllCall("SendInput","UInt",2,"UInt",&ki,"Int",28)
   }
 }
 
