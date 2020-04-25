@@ -10,7 +10,7 @@ Neo ist eine *ergonomische* Tastaturbelegung, welche für die deutsche Sprache o
 
 ## Technisches
 
-Das offizielle Code-Repository wird in einer [eigenen Gitea-Instanz](https://gitea.neo.uber.space/neo/neo-layout/) gehostet. Ebenso können Bugs und Featurewünsche hier gemeldet werden. Die Anmeldung erfolgt über einen eventuell vorhandenen Github-Account, oder nach kurzer Registrierung.
+Das offizielle Code-Repository wird in einer [eigenen Gitea-Instanz](https://git.neo-layout.org/neo/neo-layout/) gehostet. Ebenso können Bugs und Featurewünsche hier gemeldet werden. Die Anmeldung erfolgt über einen eventuell vorhandenen Github-Account, oder nach kurzer Registrierung.
 
 **Bitte beachten:** Sollte euer Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz bei neo-layout@qwertfisch.eu melden, um euren alten Account wiederzuerlangen.
 
