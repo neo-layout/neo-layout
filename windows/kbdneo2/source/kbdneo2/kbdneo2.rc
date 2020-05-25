@@ -1,0 +1,35 @@
+#include <windows.h>
+#define VER_USE_OTHER_MAJOR_MINOR_VER
+#define VER_PRODUCTMAJORVERSION    2
+#define VER_PRODUCTMINORVERSION    0
+#define BETA                       1
+
+
+#include <ntverp.h>
+
+#undef VER_PRODUCTBUILD
+#define VER_PRODUCTBUILD            2380
+
+#undef VER_PRODUCTBUILD_QFE
+#define VER_PRODUCTBUILD_QFE        0
+
+#undef VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR         "neo-layout.org"
+#undef VER_PRODUCTNAME_STR
+#define VER_PRODUCTNAME_STR         "Neo 2 Tastaturtreiber"
+#define VER_LEGALCOPYRIGHT_STR      "wiki.neo-layout.org/wiki/Lizenzfragen"
+#undef VER_LEGALTRADEMARKS_STR
+#define VER_LEGALTRADEMARKS_STR     \
+"wiki.neo-layout.org/wiki/Lizenzfragen"
+
+
+#define VER_FILETYPE              VFT_DLL
+#define VER_FILESUBTYPE           VFT2_DRV_KEYBOARD
+#define VER_FILEDESCRIPTION_STR   "Deutsch (Neo 2.0 ergonomisch) Tastaturlayout"
+#define VER_INTERNALNAME_STR      "kbdneo2"
+#define VER_ORIGINALFILENAME_STR  "kbdneo2.dll"
+
+#define VER_LANGNEUTRAL
+
+
+#include "common.ver"

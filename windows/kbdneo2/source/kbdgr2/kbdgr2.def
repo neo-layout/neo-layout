@@ -1,0 +1,4 @@
+LIBRARY KBDGR2
+
+EXPORTS
+    KbdLayerDescriptor @1
