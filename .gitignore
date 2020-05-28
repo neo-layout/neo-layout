@@ -46,13 +46,15 @@
 # /windows/kbdneo2/Treiber/AHK_für_kbdneo2/
 /windows/kbdneo2/Treiber/AHK_für_kbdneo2/kbdneo_ahk.exe
 
-# /windows/neo-vars/out/
-/windows/neo-vars/out/neo20-custom.exe
-/windows/neo-vars/out/neo20-r*.exe
+# /windows/neo-vars/bin/
+/windows/neo-vars/bin/neo20-custom.exe
+/windows/neo-vars/bin/neo20-r*.exe
+
+# /windows/neo-vars/build/
+/windows/neo-vars/build/Kopie von make-build.bat
+/windows/neo-vars/build/Kopie von make-compose.bat
 
 # /windows/neo-vars/src/
-/windows/neo-vars/src/Kopie von make-build.bat
-/windows/neo-vars/src/Kopie von make-compose.bat
 /windows/neo-vars/src/_local_paths.bat
 /windows/neo-vars/src/ebene1.png
 /windows/neo-vars/src/ebene2.png
@@ -61,15 +63,12 @@
 /windows/neo-vars/src/ebene5.png
 /windows/neo-vars/src/ebene6.png
 /windows/neo-vars/src/neo20-r*.ahk
-/windows/neo-vars/src/z-dh-local-make-build.bat
-/windows/neo-vars/src/z-dh-local-make-compose.bat
 
-# /windows/neo-vars/src/source/
-/windows/neo-vars/src/source/_subwcrev1.bat
-/windows/neo-vars/src/source/_subwcrev1.generated.ahk
-/windows/neo-vars/src/source/_svnversion.generated.txt
-/windows/neo-vars/src/source/_subwcrev2.bat
-/windows/neo-vars/src/source/Compose-tainted.generated.ahk
+/windows/neo-vars/src/_subwcrev1.bat
+/windows/neo-vars/src/_subwcrev1.generated.ahk
+/windows/neo-vars/src/_svnversion.generated.txt
+/windows/neo-vars/src/_subwcrev2.bat
+/windows/neo-vars/src/Compose-tainted.generated.ahk
 
 # /yaml/
 /yaml/.git
