@@ -5,7 +5,7 @@ SetWorkingDir, %A_ScriptDir%
 
 
 ; Revision Information (don't moun)
-#include *i _subwcrev1.generated.ahk
+#include *i _gitwcrev.generated.ahk
 
 ; die Compose-Definitionen
 #include *i compose.generated.ahk

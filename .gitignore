@@ -64,11 +64,8 @@
 /windows/neo-vars/src/ebene6.png
 /windows/neo-vars/src/neo20-r*.ahk
 
-/windows/neo-vars/src/_subwcrev1.bat
-/windows/neo-vars/src/_subwcrev1.generated.ahk
-/windows/neo-vars/src/_svnversion.generated.txt
-/windows/neo-vars/src/_subwcrev2.bat
-/windows/neo-vars/src/Compose-tainted.generated.ahk
+/windows/neo-vars/src/_gitwcrev.generated.ahk
+/windows/neo-vars/src/compose-tainted.generated.ahk
 
 # /yaml/
 /yaml/.git
