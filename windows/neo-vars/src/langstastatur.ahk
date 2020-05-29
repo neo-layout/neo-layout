@@ -8,6 +8,12 @@ CP3F11 := "P__LnSt"
 
 CharProc__LnSt() {
   global
+  ; Nur aktivieren, wenn kein Qwertz aktiv ist
+  if (isQwertz) {
+    TrayTip,Lang-S-Tastatur,Die Lang-S-Belegungsvariante kann nicht im QWERTZ-Modus aktiviert werden.,10,1
+    Return
+  }
+  
   ;Lang-s-Tastatur: Toggle
   LangSTastatur := !(LangSTastatur)
   if (LangSTastatur) {
@@ -24,20 +30,25 @@ CharProc__LnSt() {
 CharProc__LnS1() {
   global
   ; Lange-s-Tastatur aktivieren
-  ED("VKBASC01A",1,"U000073","U001E9E","U0000DF",""       ,"U0003C2","U002218") ; ß
-  ED("VK48SC023",1,"U00017F","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
-  NEONumLockLEDState := "On"
-  UpdateNEOLEDS()
+  spos := InStr(layoutstring, "s")
+  eszettpos := InStr(layoutstring, "ß")
+  
+  ; ſ, s und ß zyklisch vertauschen auf den drei Positionen
+  scpos := LOSP%spos%
+  pos := vksc%scpos%
+  SetKeyPos("CP1" . pos, EncodeUniComposeA("ſ"))
+
+  scpos := LOSP%eszettpos%
+  pos := vksc%scpos%
+  SetKeyPos("CP1" . pos, EncodeUniComposeA("s"))
+
+  pos := vksc01A
+  SetKeyPos("CP3" . pos, EncodeUniComposeA("ß"))
 }
 
 CharProc__LnS0() {
   global
   ; Lange-s-Tastatur deaktivieren
-  ED("VKBASC01A",1,"U0000DF","U001E9E","U00017F",""       ,"U0003C2","U002218") ; ß
-  ED("VK48SC023",1,"U000073","U000053","U00003F","U0000BF","U0003C3","U0003A3") ; s
-  NEONumLockLEDState := "Off"
-  UpdateNEOLEDS()
-  if (zeigeModusBox)
-    TrayTip,Lange-s-Tastatur,Die Lange-s-Belegungsvariante wurde aktiviert. Zum Deaktivieren`, Mod3+F11 drücken.,10,1
+  ChangeCustomLayout()
 }
 
