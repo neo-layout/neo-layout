@@ -35,7 +35,6 @@ SetWorkingDir, %A_ScriptDir%
 #include    langstastatur.ahk
 #include    einhandneo.ahk
 #include    lernmodus.ahk
-#include    nordtast.ahk
 #include    qwertz.ahk
 #include    tools.ahk
 
