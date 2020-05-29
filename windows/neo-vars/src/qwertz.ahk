@@ -14,7 +14,7 @@ CharProcQwertT() {
     isQwertz := 0
     CharProcQwerT0()
     if (zeigeModusBox)
-      TrayTip,QWERTZ-Belegungsvariante,Die Belegungsvariante wurde deaktiviert.,10,1
+      TrayTip,Voreingestellte Belegungsvariante,Die voreingestellte Belegungsvariante wurde wieder aktiviert.,10,1
   }
 }
 
@@ -24,8 +24,8 @@ CharProcQwerT1() {
 }
 
 CharProcQwerT0() {
-  ; Tastaturbelegungsvariante deaktivieren
-  Change1256LayoutNeo20()
+  ; Ursprüngliche Belegung wieder aktivieren
+  ChangeCustomLayout()
 }
 
 CharProcQwerts() {
@@ -37,9 +37,9 @@ CharProcQwerts() {
     IniWrite,%isQwertz%,%ini%,Global,isQwertz
 
   if ErrorLevel
-    TrayTip,Qwertz-Belegungsvariante,Beim Speichern der Variante ist ein Fehler aufgetreten.,10,1    
+    TrayTip,QWERTZ-Belegungsvariante,Beim Speichern der Einstellung ist ein Fehler aufgetreten.,10,1    
   else if (zeigeModusBox)
-    TrayTip,Qwertz-Belegungsvariante,Variante gespeichert.,10,1    
+    TrayTip,QWERTZ-Belegungsvariante,Die aktuelle Einstellung wurde gespeichert.,10,1    
 }
 
 ActivateQwertz() {

@@ -50,6 +50,7 @@ IniRead,UseMod4Light,%ini%,Global,UseMod4Light,1
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
 IniRead,NumLockOff,%ini%,Global,NumLockOff,0
+IniRead,customLayout,%ini%,Global,customLayout,%A_Space%
 
 SetNEOLockStates()
 
@@ -135,13 +136,4 @@ if (dynamischesCompose)
 else
   LoadDefaultCompose()
 
-; generischer Layoutwechsel
-CustomLayoutChange() {
-  global
-  IniRead,customLayout,%ini%,Global,customLayout,%A_Space%
-  if (customLayout != "")
-    Change1256Layout(customLayout)
-}
-
-CustomLayoutChange()
-
+ChangeCustomLayout()

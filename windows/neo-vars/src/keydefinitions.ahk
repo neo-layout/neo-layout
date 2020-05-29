@@ -210,6 +210,14 @@ Change1256LayoutNeo20() {
   Change1256Layout(neo20layoutstring)
 }
 
+ChangeCustomLayout() {
+  global
+  if (customLayout != "")
+    Change1256Layout(customLayout)
+  else
+    Change1256LayoutNeo20()
+}
+
 EDNS(scpos,caps,e1a,e2a,e3a,e4a1,e4a2,e5a,e6a,e7a="",e8a="") {
   global
   ED(vkscn1%scpos%,caps,e1a,e2a,e3a,e4a1,e5a,e6a)
