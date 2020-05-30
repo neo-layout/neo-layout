@@ -49,6 +49,18 @@ CharProc__LnS1() {
 CharProc__LnS0() {
   global
   ; Lange-s-Tastatur deaktivieren
-  ChangeCustomLayout()
-}
+  spos := InStr(layoutstring, "s")
+  eszettpos := InStr(layoutstring, "ß")
+  
+  ; ſ, s und ß wieder auf die Originalpositionen setzen
+  scpos := LOSP%spos%
+  pos := vksc%scpos%
+  SetKeyPos("CP1" . pos, EncodeUniComposeA("s"))
 
+  scpos := LOSP%eszettpos%
+  pos := vksc%scpos%
+  SetKeyPos("CP1" . pos, EncodeUniComposeA("ß"))
+
+  pos := vksc01A
+  SetKeyPos("CP3" . pos, EncodeUniComposeA("ſ"))
+}
