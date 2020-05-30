@@ -261,40 +261,40 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'8'			,KANALOK			,'8'		,doublelowquotemark		,singlelowquotemark		,WCH_NONE		,leftanglebracket	,infinity			},	//Kana: '\t' vom AHK übernommen
 {'9'			,KANALOK			,'9'		,leftdoublequotemark	,leftsinglequotemark	,'/'			,rightanglebracket	,variation			},
 {'0'			,KANALOK			,'0'		,rightdoublequotemark	,rightsinglequotemark	,'*'			,zerosubscript		,emptyset			},
-{VK_OEM_MINUS	,KANALOK			,'-'		,emdash					,WCH_NONE				,'-'			,nobreakhyphen		,hyphen				},
 {VK_OEM_2		,0					,WCH_DEAD	,WCH_DEAD				,WCH_DEAD				,WCH_DEAD		,WCH_DEAD			,WCH_DEAD			},	//Tote Taste 2
 {0xff			,0					,grave		,cedilla				,ringabove				,diaeresis		,greek_dasia		,macron				},
 {VK_TAB			,0					,'\t'		,'\t'					,WCH_DEAD				,'\t'			,'\t'				,'\t'				},
 {0xff			,0					,WCH_NONE	,WCH_NONE				,Multi_key				,WCH_NONE		,WCH_NONE			,WCH_NONE			},
-{'X'			,CAPLOK | KANALOK	,'x'		,'X'					,'$'					,WCH_NONE		,Greek_xi			,Greek_XI			},  //WCH_NONE sollte »Seite hoch« sein (AHK?)
-{'V'			,CAPLOK | KANALOK	,'v'		,'V'					,'~'					,WCH_NONE		,WCH_NONE			,radical			},	//Kana: '\b' vom AHK übernommen
-{'L'			,CAPLOK | KANALOK	,'l'		,'L'					,'-'					,'6'			,Greek_lamda		,Greek_LAMDA		},	//WCH_NONE sollte »Pfeil hoch« sein (AHK?)
-{'C'			,CAPLOK | KANALOK	,'c'		,'C'					,'|'					,WCH_NONE		,Greek_chi			,doublestruck_c		},	//WCH_NONE sollte »Entfernen« sein (AHK?)
-{'W'			,CAPLOK | KANALOK	,'w'		,'W'					,'_'					,WCH_NONE		,Greek_omega		,Greek_OMEGA		},	//WCH_NONE sollte »Seite runter« sein (AHK?)
-{'K'			,CAPLOK | KANALOK	,'k'		,'K'					,')'					,'5'			,Greek_kappa		,multiply			},
-{'H'			,CAPLOK | KANALOK	,'h'		,'H'					,'?'					,questiondown	,Greek_psi			,Greek_PSI			},
-{'G'			,CAPLOK | KANALOK	,'g'		,'G'					,'*'					,WCH_NONE		,Greek_gamma		,Greek_GAMMA		},
-{'F'			,CAPLOK | KANALOK	,'f'		,'F'					,'}'					,WCH_NONE		,Greek_phi			,Greek_PHI			},
 {'Q'			,CAPLOK | KANALOK	,'q'		,'Q'					,ellipsis				,WCH_NONE		,scriptphi			,doublestruck_q		},
-{'U'			,CAPLOK | KANALOK	,'u'		,'U'					,'<'					,'7'			,WCH_NONE			,includedin			},	//WCH_NONE sollte »Pos 1« sein (AHK?)
-{'I'			,CAPLOK | KANALOK	,'i'		,'I'					,'>'					,'8'			,Greek_iota			,integral			},	//WCH_NONE sollte »Pfeil links« sein (AHK?)
-{'A'			,CAPLOK | KANALOK	,'a'		,'A'					,backslash				,WCH_NONE		,Greek_alpha		,forall				},	//WCH_NONE sollte »Pfeil runter« sein (AHK?)
+{'W'			,CAPLOK | KANALOK	,'w'		,'W'					,'_'					,WCH_NONE		,Greek_omega		,Greek_OMEGA		},	//WCH_NONE sollte »Seite runter« sein (AHK?)
 {'E'			,CAPLOK | KANALOK	,'e'		,'E'					,'['					,WCH_NONE		,Greek_epsilon		,thereexists		},	//WCH_NONE sollte »Pfeil rechts« sein (AHK?)
-{'O'			,CAPLOK | KANALOK	,'o'		,'O'					,'='					,'9'			,Greek_omicron		,elementof			},	//WCH_NONE sollte »Ende« sein (AHK?)
-{'S'			,CAPLOK | KANALOK	,'s'		,'S'					,'/'					,WCH_NONE		,Greek_sigma		,Greek_SIGMA		},
-{'N'			,CAPLOK | KANALOK	,'n'		,'N'					,'+'					,':'			,Greek_nu			,doublestruck_n		},
 {'R'			,CAPLOK | KANALOK	,'r'		,'R'					,']'					,WCH_NONE		,Greek_rho			,doublestruck_r		},
 {'T'			,CAPLOK | KANALOK	,'t'		,'T'					,asciicircum			,WCH_NONE		,Greek_tau			,partialderivative	},
-{'D'			,CAPLOK | KANALOK	,'d'		,'D'					,'{'					,WCH_NONE		,Greek_delta		,Greek_DELTA		},
+{'Z'			,CAPLOK | KANALOK	,'z'		,'Z'					,'!'					,exclamdown		,Greek_zeta			,doublestruck_z		},  //WCH_NONE sollte »Undo« sein (AHK?)
+{'U'			,CAPLOK | KANALOK	,'u'		,'U'					,'<'					,'7'			,WCH_NONE			,includedin			},	//WCH_NONE sollte »Pos 1« sein (AHK?)
+{'I'			,CAPLOK | KANALOK	,'i'		,'I'					,'>'					,'8'			,Greek_iota			,integral			},	//WCH_NONE sollte »Pfeil links« sein (AHK?)
+{'O'			,CAPLOK | KANALOK	,'o'		,'O'					,'='					,'9'			,Greek_omicron		,elementof			},	//WCH_NONE sollte »Ende« sein (AHK?)
+{'P'			,CAPLOK | KANALOK	,'p'		,'P'					,'&'					,'+'			,Greek_pi			,Greek_PI			},	//Kana: '\r' vom AHK übernommen		
 {VK_OEM_5 /*ü*/ ,CAPLOK | KANALOK	,udiaeresis	,Udiaeresis				,slong					,minussign		,WCH_NONE			,union				},  //WCH_NONE sollte »Esc« sein (AHK?)
+{'A'			,CAPLOK | KANALOK	,'a'		,'A'					,backslash				,WCH_NONE		,Greek_alpha		,forall				},	//WCH_NONE sollte »Pfeil runter« sein (AHK?)
+{'S'			,CAPLOK | KANALOK	,'s'		,'S'					,'/'					,WCH_NONE		,Greek_sigma		,Greek_SIGMA		},
+{'D'			,CAPLOK | KANALOK	,'d'		,'D'					,'{'					,WCH_NONE		,Greek_delta		,Greek_DELTA		},
+{'F'			,CAPLOK | KANALOK	,'f'		,'F'					,'}'					,WCH_NONE		,Greek_phi			,Greek_PHI			},
+{'G'			,CAPLOK | KANALOK	,'g'		,'G'					,'*'					,WCH_NONE		,Greek_gamma		,Greek_GAMMA		},
+{'H'			,CAPLOK | KANALOK	,'h'		,'H'					,'?'					,questiondown	,Greek_psi			,Greek_PSI			},
+{'K'			,CAPLOK | KANALOK	,'k'		,'K'					,')'					,'5'			,Greek_kappa		,multiply			},
+{'L'			,CAPLOK | KANALOK	,'l'		,'L'					,'-'					,'6'			,Greek_lamda		,Greek_LAMDA		},	//WCH_NONE sollte »Pfeil hoch« sein (AHK?)
 {VK_OEM_6 /*ö*/	,CAPLOK | KANALOK	,odiaeresis	,Odiaeresis				,':'					,','			,straightepsilon	,intersection		},	//Kana: '\t' vom AHK übernommen
 {VK_OEM_7 /*ä*/	,CAPLOK | KANALOK	,adiaeresis	,Adiaeresis				,'@'					,'.'			,Greek_eta			,alefsymbol			},	//WCH_NONE sollte »Einfügen« sein (AHK?)
-{'P'			,CAPLOK | KANALOK	,'p'		,'P'					,'&'					,'+'			,Greek_pi			,Greek_PI			},	//Kana: '\r' vom AHK übernommen		
-{'Z'			,CAPLOK | KANALOK	,'z'		,'Z'					,'!'					,exclamdown		,Greek_zeta			,doublestruck_z		},  //WCH_NONE sollte »Undo« sein (AHK?)
+{'X'			,CAPLOK | KANALOK	,'x'		,'X'					,'$'					,WCH_NONE		,Greek_xi			,Greek_XI			},  //WCH_NONE sollte »Seite hoch« sein (AHK?)
+{'C'			,CAPLOK | KANALOK	,'c'		,'C'					,'|'					,WCH_NONE		,Greek_chi			,doublestruck_c		},	//WCH_NONE sollte »Entfernen« sein (AHK?)
+{'V'			,CAPLOK | KANALOK	,'v'		,'V'					,'~'					,WCH_NONE		,WCH_NONE			,radical			},	//Kana: '\b' vom AHK übernommen
 {'B'			,CAPLOK | KANALOK	,'b'		,'B'					,'`'					,WCH_NONE		,Greek_beta			,doublearrowleft	},
+{'N'			,CAPLOK | KANALOK	,'n'		,'N'					,'+'					,':'			,Greek_nu			,doublestruck_n		},
 {'M'			,CAPLOK | KANALOK	,'m'		,'M'					,'%'					,'1'			,Greek_mu			,ifonlyif			},
 {VK_OEM_COMMA	,KANALOK			,','		,endash					,quotedbl				,'2'			,scriptrho			,implies			},
 {VK_OEM_PERIOD	,KANALOK			,'.'		,enfilledcircbullet		,apostrophe				,'3'			,scripttheta		,arrowfrombarright	},
+{VK_OEM_MINUS	,KANALOK			,'-'		,emdash					,WCH_NONE				,'-'			,nobreakhyphen		,hyphen				},
 {0				,0					,0			,0						,0						,0				,0					,0			}
 };	
 

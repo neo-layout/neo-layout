@@ -24,6 +24,7 @@
 # /windows/kbdneo2/source/
 /windows/kbdneo2/source/.vs
 /windows/kbdneo2/source/**/Release
+/windows/kbdneo2/source/**/*.vcxproj.user
 
 # /windows/kbdneo2/AHK-supplement/
 /windows/kbdneo2/AHK-supplement/bone/kbdbone.exe
