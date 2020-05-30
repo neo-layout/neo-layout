@@ -292,7 +292,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'P'			,CAPLOK | KANALOK	,'p'		,'P'					,'&'					,'+'			,Greek_pi			,Greek_PI			},	//Kana: '\r' vom AHK übernommen		
 {'Z'			,CAPLOK | KANALOK	,'z'		,'Z'					,'!'					,exclamdown		,Greek_zeta			,doublestruck_z		},  //WCH_NONE sollte »Undo« sein (AHK?)
 {'B'			,CAPLOK | KANALOK	,'b'		,'B'					,'`'					,WCH_NONE		,Greek_beta			,doublearrowleft	},
-{'M'			,CAPLOK | KANALOK	,'m'		,'M'					,'%'					,'1'			,mu					,ifonlyif			},
+{'M'			,CAPLOK | KANALOK	,'m'		,'M'					,'%'					,'1'			,Greek_mu			,ifonlyif			},
 {VK_OEM_COMMA	,KANALOK			,','		,endash					,quotedbl				,'2'			,scriptrho			,implies			},
 {VK_OEM_PERIOD	,KANALOK			,'.'		,enfilledcircbullet		,apostrophe				,'3'			,scripttheta		,arrowfrombarright	},
 {0				,0					,0			,0						,0						,0				,0					,0			}

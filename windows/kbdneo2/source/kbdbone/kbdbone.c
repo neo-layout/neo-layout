@@ -273,7 +273,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'P'			,CAPLOK | KANALOK	,'p'		,'P'					,'!'					,exclamdown		,Greek_pi			,Greek_PI			},
 {'H'			,CAPLOK | KANALOK	,'h'		,'H'					,'<'					,'7'			,Greek_psi			,Greek_PSI			},
 {'L'			,CAPLOK | KANALOK	,'l'		,'L'					,'>'					,'8'			,Greek_lamda		,Greek_LAMDA		},
-{'M'			,CAPLOK | KANALOK	,'m'		,'M'					,'='					,'9'			,mu					,ifonlyif			},
+{'M'			,CAPLOK | KANALOK	,'m'		,'M'					,'='					,'9'			,Greek_mu			,ifonlyif			},
 {'W'			,CAPLOK | KANALOK	,'w'		,'W'					,'&'					,'+'			,Greek_omega		,Greek_OMEGA		},
 {'Q'			,CAPLOK | KANALOK	,'q'		,'Q'					,'@'					,'.'			,scriptphi			,doublestruck_q		},
 {'C'			,CAPLOK | KANALOK	,'c'		,'C'					,backslash				,WCH_NONE		,Greek_chi			,doublestruck_c		},
