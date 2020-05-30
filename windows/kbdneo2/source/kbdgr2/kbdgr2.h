@@ -9,6 +9,9 @@
 #include "kbd.h"
 #include <dontuse.h>
 
+// Aktivieren für Vertauschung Strichtaste und ß-Taste
+// #define LOW_ESZETT
+
 
 /* **************************************************************************************************************\
 * 
@@ -41,16 +44,24 @@
 #define T0D _EQ(                                       OEM_2                      )
 #undef  T1B//T3
 #define T1B _EQ(                                       OEM_4                      )
-#undef  T0C//qwertz-ß
-#define T0C _EQ(                                       OEM_MINUS                      )
+
+#ifdef LOW_ESZETT
+// T0C ist bereits als OEM_MINUS in kbd.h definiert
 #undef  T35//qwertz-_
 #define T35 _EQ(                                       OEM_3                      )
+#else
+#undef  T0C//qwertz-ß
+#define T0C _EQ(                                       OEM_3                      )
+#undef  T35//qwertz-_
+#define T35 _EQ(                                       OEM_MINUS                  )
+#endif
+
 #undef  T1A//qwertz-ü
 #define T1A _EQ(                                       OEM_5                      )
 #undef  T27//qwertz-ö
 #define T27 _EQ(                                       OEM_6                      )
 #undef  T28//qwertz-ä
-#define T28 _EQ(                                       OEM_7                     )
+#define T28 _EQ(                                       OEM_7                      )
 // Tastenumbelegung für Neo 2.0 ; sonstige Tastenzuordnung siehe kbd.h
 #undef  T2B
 #define T2B _EQ(		 OEM_102	)	// Mod 3

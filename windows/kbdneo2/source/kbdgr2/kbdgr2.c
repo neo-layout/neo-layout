@@ -294,14 +294,22 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {'M'			,CAPLOK | KANALOK	,'m'		,'M'					,'%'					,'1'			,Greek_mu			,ifonlyif			},
 {VK_OEM_COMMA	,KANALOK			,','		,endash					,quotedbl				,'2'			,scriptrho			,implies			},
 {VK_OEM_PERIOD	,KANALOK			,'.'		,enfilledcircbullet		,apostrophe				,'3'			,scripttheta		,arrowfrombarright	},
+#ifdef LOW_ESZETT
 {VK_OEM_MINUS	,KANALOK			,'-'		,emdash					,WCH_NONE				,'-'			,nobreakhyphen		,hyphen				},
+#else
+{VK_OEM_MINUS	,KANALOK			,'-'		,emdash					,';'    				,';'			,nobreakhyphen		,hyphen				},
+#endif
 {0				,0					,0			,0						,0						,0				,0					,0			}
 };	
 
 static ALLOC_SECTION_LDATA VK_TO_WCHARS7 aVkToWch7[] = {
 //				| CapsLock			|			| SHIFT		| NEU		| KANA		|	 NEU+Shift			| KANA+NEU		| Control		|
 //				|===================|===========|===========|===========|===========|=======================|===============|===============|
+#ifdef LOW_ESZETT
 {VK_OEM_3		,CAPLOK | KANALOK	,ssharp		,Ssharp	    ,';'		,';'		,Greek_finalsmallsigma	,jot			,escape			},
+#else
+{VK_OEM_3		,CAPLOK | KANALOK	,ssharp		,Ssharp	    ,WCH_NONE	,'-'		,Greek_finalsmallsigma	,jot			,escape			},
+#endif
 {VK_OEM_4		,0					,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD	,WCH_DEAD				,WCH_DEAD		,infoseparator3	},	//Tote Taste 3
 {0xff			,0					,acute		,'~'		,'-'		,doubleacute,greek_psili			,breve			,WCH_NONE		},
 {'Y'			,CAPLOK | KANALOK	,'y'		,'Y'		,'#'		,WCH_NONE	,Greek_upsilon			,nabla			,infoseparator4	},
