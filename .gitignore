@@ -32,8 +32,7 @@
 /windows/kbdneo2/AHK-supplement/qwertz/kbdqwertz.exe
 
 # /windows/neo-vars/bin/
-/windows/neo-vars/bin/neo20-custom.exe
-/windows/neo-vars/bin/neo20-r*.exe
+/windows/neo-vars/bin/
 
 # /windows/neo-vars/build/
 /windows/neo-vars/build/Kopie von make-build.bat
