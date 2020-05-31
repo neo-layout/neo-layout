@@ -349,7 +349,7 @@ ActivateProgTast() {
   global
 
   CP3F5  := "PProgTt" ; M3+F5: Aktiviere/Deaktiviere Programmer
-  CP3F4  := "PProgTs" ; M3+F4: Speichere Programmer
+  CP4F5  := "PProgTs" ; M4+F5: Speichere Programmer
 
   IniRead,isProgrammer,%ini%,Global,isProgrammer,0
   if (isProgrammer == 1)
