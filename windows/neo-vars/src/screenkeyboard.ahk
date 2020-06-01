@@ -2,14 +2,14 @@
 
 BSTalwaysOnTop := 1
 
-UniFontVersion  := "2.33"
+UniFontVersion  := "2.37"
 UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
 
 UniFontZipFilename   := "dejavu-fonts-ttf-" . UniFontVersion . ".zip"
 UniFontZipLocalFile  := ResourceFolder . "\" . UniFontZipFilename
 
-UniFontZipSourceLink := "http://downloads.sourceforge.net/project/dejavu/dejavu/" . UniFontVersion . "/" . UniFontZipFilename
+UniFontZipSourceLink := "https://downloads.sourceforge.net/project/dejavu/dejavu/" . UniFontVersion . "/" . UniFontZipFilename
 
 UniFontLocalFilePath := ApplicationFolder
 UniFontLocalFile := UniFontLocalFilePath . "\" . UniFontFilename
