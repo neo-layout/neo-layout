@@ -18,6 +18,7 @@ set Revision=%Revision:~0,7%
 
 echo Revision:="%Revision%" > "%ahkrevoutput1%"
 
+if NOT EXIST %bindir% mkdir %bindir%
 set fnexe=%bindir%\neo20.exe
 git diff --exit-code > nul
 if %ERRORLEVEL% EQU 1 (
