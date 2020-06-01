@@ -6,11 +6,9 @@ TrayAktivieren() {
   menu,tray,nostandard
   menu,tray,add,Öffnen,open
     menu,helpmenu,add,About,about
-    menu,helpmenu,add,Autohotkey-Hilfe,help
     menu,helpmenu,add
-    menu,helpmenu,add,http://autohotkey.com/,autohotkey
-    menu,helpmenu,add,http://www.nordtast.org/,nordtast
-    menu,helpmenu,add,http://www.neo-layout.org/,neo
+    menu,helpmenu,add,Zur AutoHotkey-Homepage (autohotkey.com),autohotkey
+    menu,helpmenu,add,Zur Neo-Homepage (neo-layout.org),neo
   menu,tray,add,Hilfe,:helpmenu
   menu,tray,add
   menu,tray,add,%disable%,togglesuspend
@@ -28,10 +26,6 @@ TrayAktivieren() {
     Traytogglesuspend()
   return
 
-help:
-  Run, %A_WinDir%\hh mk:@MSITStore:autohotkey.chm
-return
-
 togglesuspend:
   Traytogglesuspend()
 return
@@ -41,15 +35,11 @@ about:
 return
 
 neo:
-  run http://neo-layout.org/
-return
-
-nordtast:
-  run http://www.nordtast.org/
+  run https://neo-layout.org/
 return
 
 autohotkey:
-  run http://autohotkey.com/
+  run https://autohotkey.com/
 return
 
 open:
