@@ -28,15 +28,15 @@ SetWorkingDir, %A_ScriptDir%
 ; Das Herz von neo20.ahk: die Tasten- und Zeichen-Behandlungsroutinen
 #include    varsfunctions.ahk
 
-; Die Bildschirmtastatur
-#include    screenkeyboard.ahk
-
 ; Mitgelieferte Belegungsvarianten
 #include    langstastatur.ahk
 #include    einhandneo.ahk
 #include    lernmodus.ahk
 #include    qwertz.ahk
 #include    tools.ahk
+
+; Die Bildschirmtastatur
+#include    screenkeyboard.ahk
 
 ; individuelle Einstellungen
 #include *i %A_AppData%\Neo2\custom.ahk

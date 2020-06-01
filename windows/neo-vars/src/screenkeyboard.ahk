@@ -604,10 +604,9 @@ BSTRegister() {
 
   IniRead,bstLayout,%ini%,Global,bstLayout,0
   IniRead,useBST,%ini%,Global,useBST,0
-  if (useBST)
-    CharProc__BST1()
-
   IniRead,useDBST,%ini%,Global,useDBST,0
+  if (useBST and not useDBST)
+    CharProc__BST1()
 }
 
 BSTRegister()
