@@ -28,6 +28,7 @@ IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
 IniRead,NumLockOff,%ini%,Global,NumLockOff,0
 IniRead,customLayout,%ini%,Global,customLayout,%A_Space%
+IniRead,Mod3RAufAe,%ini%,Global,Mod3RAufAe,0
 
 SetNEOLockStates()
 
