@@ -42,7 +42,7 @@ EDSK("024",1,"n","N","(","S__N__4","ν","ℕ") ; n
 EDSK("025",1,"r","R",")","S__N__5","ρ","ℝ") ; r
 EDSK("026",1,"t","T","-","S__N__6","τ","∂") ; t
 EDSK("027",1,"d","D",":","S__NDot","δ","Δ") ; d
-EDSK("028",1,"y","Y","@","."      ,"υ","∇") ; y
+EDSK((Mod3RAufAe ? "02B" : "028"),1,"y","Y","@",".","υ","∇") ; y
 ; Reihe 4
 EDSK("02C",1,"ü","Ü","#","U00001B","" ,"∪") ; ü
 EDSK("02D",1,"ö","Ö","$","U000009","ϵ","∩") ; ö
@@ -108,7 +108,7 @@ ED1("numpadenter","S__NEnt")
 ED1S("02A","P__M2LD") ; Mod2L (ShiftL)
 ED1S("136","P__M2RD") ; Mod2R (ShiftR)
 ED1S("03A","P__M3LD") ; Mod3L (CapsLock)
-ED1S("02B","P__M3RD") ; Mod3R (#')
+ED1S(Mod3RAufAe ? "028" : "02B","P__M3RD") ; Mod3R (#' oder äÄ)
 ED1S("056","P__M4LD") ; Mod4L (<>)
 ED1S("138","P__M4RD") ; Mod4R (AltGr)
 }
