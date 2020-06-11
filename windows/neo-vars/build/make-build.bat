@@ -2,6 +2,7 @@
 
 echo Setting default local path variables
 set  ahkpath=C:\Program Files (x86)\AutoHotkey
+if not exist "%ahkpath%" set ahkpath=C:\Program Files\AutoHotkey
 set  Ahk2Exe=%ahkpath%\Compiler\Ahk2Exe.exe
 
 set srcdir=..\src
