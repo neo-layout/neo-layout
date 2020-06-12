@@ -1,4 +1,4 @@
-# Neo
+# Neo-Tastaturlayout
 Neo ist eine *ergonomische* Tastaturbelegung, welche für die deutsche Sprache optimiert ist.
 
 ## Wichtige Kriterien
@@ -10,11 +10,15 @@ Neo ist eine *ergonomische* Tastaturbelegung, welche für die deutsche Sprache o
 
 ## Technisches
 
-Das offizielle Code-Repository wird in einer [eigenen Gitea-Instanz](https://git.neo-layout.org/neo/neo-layout/) gehostet. Ebenso können Bugs und Featurewünsche hier gemeldet werden. Die Anmeldung erfolgt über einen eventuell vorhandenen Github-Account, oder nach kurzer Registrierung.
+Dies ist das offizielle Code-Repository. Hier können Bugs und Featurewünsche gemeldet werden. Dazu ist entweder eine kurze Registierung notwendig, oder eine Anmeldung direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) mit Registrierung im gleichen Schritt.
 
-**Bitte beachten:** Sollte euer Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz bei neo-layout@qwertfisch.eu melden, um euren alten Account wiederzuerlangen.
+Für die Nutzung von Git (z.B. Fork, Push) wird der _Gitea_-Benutzername mit Passwort benötigt. Anstelle des Passworts lässt sich auch ein Personal Access Token in den Einstellungen generieren.
 
-Auf [Github](https://github.com/neo-layout/neo-layout/) befindet sich ein gespiegeltes Repository.
+Auf [GitHub](https://github.com/neo-layout/neo-layout/) befindet sich ein gespiegeltes Repository.
+
+### Benutzername bereits vergeben?
+Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz bei neo-layout@qwertfisch.eu melden, um deinen alten Account wiederzuerlangen.
+
 
 ## [Videos](https://youtu.be/TJIAOwsWF7Q)
 
