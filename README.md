@@ -8,6 +8,10 @@ Neo ist eine *ergonomische* Tastaturbelegung, welche für die deutsche Sprache o
   - Unicode-Zeichen wie „ “ « » ∫ √ α β … sind direkt einzugeben (alle Ebenen)
   - Navigation mittels Steuerkreuz ←↑↓→ direkt auf der Haupttastatur (Ebene 4)
 
+## Probleme? Vorschläge? Ideen?
+
+Du möchtest ein Problem melden? Oder hast Vorschläge und neue Ideen? Dann melde dich an und eröffne ein [__neues Issue__](https://git.neo-layout.org/neo/neo-layout/issues/new).
+
 ## Technisches
 
 Dies ist das offizielle Code-Repository. Hier können Bugs und Featurewünsche gemeldet werden. Dazu ist entweder eine kurze Registierung notwendig, oder eine Anmeldung direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) mit Registrierung im gleichen Schritt.
