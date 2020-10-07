@@ -42,8 +42,8 @@
 <dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS
 <dead_stroke> <dead_stroke>                : "̷"   U0338 # COMBINING SHORT SOLIDUS OVERLAY
 <dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT
-<dead_dasia> <dead_dasia>                  : "̓"   U0313 # COMBINING COMMA ABOVE
-<dead_psili> <dead_psili>                  : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
+<dead_psili> <dead_psili>                  : "̓"   U0313 # COMBINING COMMA ABOVE
+<dead_dasia> <dead_dasia>                  : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
 <U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U21BB> <dead_doubleacute> <dead_doubleacute>  : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
 <U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
