@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[[ -z $XMODMAP ]] && export XMODMAP=../../xmodmap/neo_de.xmodmap
+
 dumpkeys --long-info > dump || exit 1
 
 cat console.ersetze.vorprogramm > console.ersetze

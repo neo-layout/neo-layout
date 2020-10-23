@@ -1,10 +1,10 @@
 #!/bin/sh
 
-xmodmap=../../xmodmap/neo_de.xmodmap
+[[ -z $XMODMAP ]] && XMODMAP=../../xmodmap/neo_de.xmodmap
 
 echo -e "Schritt 1 von 4: Vorverarbeiten der Xmodmap\c" >&2
 
-grep -A1000 "! main keyboard" $xmodmap | sed 's/keysym/keycode/g' | grep ^keycode | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe1
+grep -A1000 "! main keyboard" $XMODMAP | sed 's/keysym/keycode/g' | grep ^keycode | tr -s [:blank:] ' '| cut -f2 -d = > mach_kurzreferenz.hilfe1
 
 sed -f console.ersetze.vorprogramm mach_kurzreferenz.hilfe1 > mach_kurzreferenz.hilfe2
 
