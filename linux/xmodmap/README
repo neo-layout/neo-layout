@@ -1,23 +1,28 @@
 == Dateien ==
-neo_de.xmodmap              Normale Version für die meisten Benutzer
+neo_de.xmodmap           Normale Version für die meisten Benutzer (für eine normale deutsche
+bone_de.xmodmap          ISO PC-Tastatur entworfen, aber auch mit Variationen verwendbar)
+neoqwertz_de.modmap
 
-neo_de_x-prog.xmodmap       bei älteren Programmen (wie xedit, xpdf,…) kann das
-                            Problem auftreten, dass einige Tastan (4vlcwiaeäp)
-                            nicht funktionieren. Werden solche Programme
-                            verwendet, sollte diese NEO-Datei bevorzugt werden.
+neo_mac.xmodmap          Version für ältere Apple-Tastaturen mit Nichtstandard-Keycodes.
+bone_mac.xmodmmap
+neoqwertz_mac.modmap
 
-neo_de_alternative.xmodmap  falls neo_de.xmodmap nicht geladen werden kann
-                            (z.B. weil dead_stroke dem System unbekannt ist)
-                            sollte diese NEO-Datei verwendet werden
+=== Hinweis ===
+Heutzutage ist es aus einer Vielzahl von Gründen (bessere
+Softwareunterstützung, Hotplugging von Tastaturen, nicht Xorg-spezifisch (quasi
+alle Wayland-Compositors nutzen xkbmaps) weniger Installatinosaufwand für den
+Benutzer) besser, die xkbmaps zu nutzen, die bei den Distributionen bereits
+mitgeliefert werden.
 
+Diese xmodmaps sind primär aus historischen Gründen und ihrer Verwendbarkeit in
+Scripten noch verfügbar.
 
 === Aktivieren ===
 Zu aktivieren mit dem Kommando (im Verzeichnis, in dem sich die Datei befindet):
-	xmodmap neo_de.xmodmap
+	xmodmap <dateiname>
 
 Besser ist jedoch die Verwendung des Skripts ›asdf‹, da so (mögliche) Probleme
 vermieden werden.  Siehe dazu auch die README im Ordner /linux/bin.
-
 
 ==== Automatisch aktivieren ====
 Um die NEO-Tastaturbelegung automatisch zu aktivieren, gibt es mehrere
@@ -32,11 +37,10 @@ Um die NEO-Tastaturbelegung automatisch zu aktivieren, gibt es mehrere
 Der bessere Weg ist jedoch das Skript ›asdf‹ in der Datei ›~/.profile‹
 einzutragen.  Siehe dazu auch die README im Ordner /linux/bin.
 
-
 ==== Automatischen Linux-NEO-USB-Stick erstellen ====
 Diese Datei auf einen USB-Stick kopieren
 
-  cp neo_de.xmodmap /media/<USBSTICK>
+  cp neo.xmodmap /media/<USBSTICK>
 
 Auf dem USB-Stick eine ausführbare Datei mit dem Namen .autorun, autorun oder 
 autorun.sh anlegen, die die Datei automatisch lädt. Dazu zum Beispiel den
