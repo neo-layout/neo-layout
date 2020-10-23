@@ -120,8 +120,8 @@
 <Multi_key> <U2295> <U2295>                : "⨁"   U2A01 # N-ARY CIRCLED PLUS OPERATOR
 <Multi_key> <U2297> <U2297>                : "⨂"   U2A02 # N-ARY CIRCLED TIMES OPERATOR
 <dead_macron> <includedin>                 : "⊆"   U2286 # SUBSET OF OR EQUAL TO
-<Multi_key> <includein> <equal>            : "⊆"   U2286 # SUBSET OF OR EQUAL TO
-<Multi_key> <equal> <includein>            : "⊆"   U2286 # SUBSET OF OR EQUAL TO
+<Multi_key> <includedin> <equal>           : "⊆"   U2286 # SUBSET OF OR EQUAL TO
+<Multi_key> <equal> <includedin>           : "⊆"   U2286 # SUBSET OF OR EQUAL TO
 <dead_macron> <includes>                   : "⊇"   U2287 # SUPERSET OF OR EQUAL TO
 <U21BB> <includedin>                       : "⊃"   includes # SUPERSET OF
 <U21BB> <includes>                         : "⊂"   includedin # SUBSET OF
@@ -132,7 +132,7 @@
 <dead_abovedot> <asciitilde>               : "⩪"   U2A6A # TILDE OPERATOR WITH DOT ABOVE
 <dead_abovedot> <minus>                    : "∸"   U2238 # DOT MINUS
 <dead_circumflex> <approxeq>               : "⩯"   U2A6F # ALMOST EQUAL TO WITH CIRCUMFLEX ACCENT
-<dead_ring> <plus>                         : "⨢"   U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
+<dead_abovering> <plus>                         : "⨢"   U2A22 # PLUS SIGN WITH SMALL CIRCLE ABOVE
 <dead_circumflex> <plus>                   : "⨣"   U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE
 <dead_tilde> <plus>                        : "⨤"   U2A24 # PLUS SIGN WITH TILDE ABOVE
 <dead_abovedot> <plus>                     : "∔"   U2214 # DOT PLUS
@@ -259,7 +259,7 @@
 <dead_stroke> <leftarrow>                                   : "↚"   U219A # LEFTWARDS ARROW WITH STROKE
 <Multi_key> <slash> <leftarrow>                             : "↚"   U219A # LEFTWARDS ARROW WITH STROKE
 <dead_stroke> <rightarrow>                                  : "↛"   U219B # RIGHTWARDS ARROW WITH STROKE
-<Multi_key> <slash> <rightarrow                             : "↛"   U219B # RIGHTWARDS ARROW WITH STROKE
+<Multi_key> <slash> <rightarrow>                            : "↛"   U219B # RIGHTWARDS ARROW WITH STROKE
 <dead_stroke> <U2194>                                       : "↮"   U21AE # LEFT RIGHT ARROW WITH STROKE
 <Multi_key> <slash> <U2194>                                 : "↮"   U21AE # LEFT RIGHT ARROW WITH STROKE
 <Multi_key> <slash> <U2203>                                 : "∄"   U2204 # THERE DOES NOT EXIST
@@ -309,7 +309,7 @@
 <dead_stroke> <Multi_key> <bar> <minus>                     : "⊬"   U22AC # DOES NOT PROVE
 <dead_stroke> <Multi_key> <bar> <equal>                     : "⊭"   U22AD # NOT TRUE
 <dead_stroke> <Multi_key> <bar> <KP_Equal>                  : "⊭"   U22AD # NOT TRUE
-⃗
+
 # arrows
 <Multi_key> <less> <minus>                     : "←"   U2190 # LEFTWARDS ARROW
 <U21BB> <rightarrow>                           : "←"   U2190 # LEFTWARDS ARROW
@@ -410,9 +410,9 @@
 <dead_tilde> <U21BB> <rightarrow>              : "↜"   U219C # LEFTWARDS WAVE ARROW
 <dead_tilde> <rightarrow>                      : "↝"   U219D # RIGHTWARDS WAVE ARROW
 <dead_tilde> <U2194>                           : "↭"   U21AD # LEFT RIGHT WAVE ARROW
-<dead_ring> <leftarrow>                        : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
-<dead_ring> <U21BB> <rightarrow>               : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
-<dead_ring> <rightarrow>                       : "↬"   U21AC # RIGHTWARDS ARROW WITH LOOP
+<dead_abovering> <leftarrow>                        : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
+<dead_abovering> <U21BB> <rightarrow>               : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
+<dead_abovering> <rightarrow>                       : "↬"   U21AC # RIGHTWARDS ARROW WITH LOOP
 <Multi_key> <colon> <rightarrow>               : "⧴"  U29F4 # RULE-DELAYED
 <dead_circumflex> <rightarrow>                 : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
 <dead_circumflex> <greater>                    : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE

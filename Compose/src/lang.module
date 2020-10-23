@@ -119,8 +119,8 @@
 # Collides with standard compose £ and ₤:
 <Multi_key> <minus> <L>                           : "Ƚ" U023D # LATIN CAPITAL LETTER L WITH BAR
 <Multi_key> <minus> <l>                           : "ƚ" U019A # LATIN SMALL LETTER L WITH BAR
-<Multi_key> <equals> <L>                          : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
-<Multi_key> <equals> <l>                          : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
+<Multi_key> <equal> <L>                          : "Ⱡ" U2C60 # LATIN CAPITAL LETTER L WITH DOUBLE BAR
+<Multi_key> <equal> <l>                          : "ⱡ" U2C61 # LATIN SMALL LETTER L WITH DOUBLE BAR
 <Multi_key> <minus> <o>                           : "ɵ" U0275 # LATIN SMALL LETTER BARRED O
 <Multi_key> <minus> <O>                           : "Ɵ" U019F # LATIN CAPITAL LETTER O WITH MIDDLE TILDE
 <dead_stroke> <P>                                 : "Ᵽ" U2C63 # LATIN CAPITAL LETTER P WITH STROKE
@@ -421,7 +421,7 @@
 <Multi_key> <Greek_OMICRON> <Greek_UPSILON>       : "Ȣ" U0222 # LATIN CAPITAL LETTER OU
 <Multi_key> <Greek_omicron> <Greek_upsilon>       : "ȣ" U0223 # LATIN SMALL LETTER OU
 <Multi_key> <g> <u>                               : "ȣ" U0223 # LATIN SMALL LETTER OU
-<U21BB> <propto>                                  : "ȣ" U0223 # LATIN SMALL LETTER OU
+<U21BB> <variation>                                : "ȣ" U0223 # LATIN SMALL LETTER OU
 <Multi_key> <O> <o>                               : "ⱺ" U2C7A # LATIN SMALL LETTER O WITH LOW RING INSIDE
 # need for better Cokos to generate these (analog: ♫i? → ʔ):
 <Multi_key> <X> <question>                        : "Ɂ" U0241 # LATIN CAPITAL LETTER GLOTTAL STOP

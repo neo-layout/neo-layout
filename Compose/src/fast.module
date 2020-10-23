@@ -16,7 +16,7 @@
 <Multi_key> <m> <space>                             : "mit "
 <Multi_key> <c> <space>                             : "sich "
 <Multi_key> <f> <space>                             : "auf "
-<Multi_key> <ü> <space>                             : "für "
+<Multi_key> <udiaeresis> <space>                             : "für "
 <Multi_key> <i> <space>                             : "ist "
 <Multi_key> <n> <space>                             : "nicht "
 <Multi_key> <1> <space>                             : "ein "
