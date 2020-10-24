@@ -638,6 +638,7 @@
 <Multi_key> <bar> <Greek_pi>              : "ℼ"   U0213C # DOUBLE-STRUCK SMALL PI
 <Multi_key> <bar> <Greek_PI>              : "ℿ"   U0213F # DOUBLE-STRUCK CAPITAL PI
 <Multi_key> <bar> <notsign>               : "⫬"   U2AEC  # DOUBLE STROKE NOT SIGN
+<Multi_key> <bar> <Greek_SIGMA>		: "⅀" U2140 # DOUBLE-STRUCK N-ARY SUMMATION
 
 # white brackets (double-struck)
 <Multi_key> <bar> <parenleft>             : "⦅"   U2985 # LEFT WHITE PARENTHESIS
