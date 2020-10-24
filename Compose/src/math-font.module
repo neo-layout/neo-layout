@@ -1,0 +1,786 @@
+#configinfo mathematische Zeichen in festgelegter Schriftart (𝒜 𝐀 𝔸 𝓐 𝔄 𝕬 𝖠 𝗔)
+
+# additional Definitions by Neo keyboard layout - mathematical font symbols
+
+# script letters (♫sc): 𝒜–𝒵𝒶–𝓏
+# overwrites ♫scP → ℘ and ♫scl → ℓ from math.module, note that ♫wp → ℘, ♫ell → ℓ and 3(E2) 
+# are still available and more consistent. 
+# note that the "gaps" are unassigned code points, not missing in this file
+<Multi_key> <s> <c> <A> 		: "𝒜" U0D49C # MATHEMATICAL SCRIPT CAPITAL A
+<Multi_key> <s> <c> <C> 		: "𝒞" U1D49E # MATHEMATICAL SCRIPT CAPITAL C
+<Multi_key> <s> <c> <D> 		: "𝒟" U1D49F # MATHEMATICAL SCRIPT CAPITAL D
+<Multi_key> <s> <c> <G> 		: "𝒢" U1D4A2 # MATHEMATICAL SCRIPT CAPITAL G
+<Multi_key> <s> <c> <J> 		: "𝒥" U1D4A5 # MATHEMATICAL SCRIPT CAPITAL J
+<Multi_key> <s> <c> <K> 		: "𝒦" U1D4A6 # MATHEMATICAL SCRIPT CAPITAL K
+<Multi_key> <s> <c> <N> 		: "𝒩" U1D4A9 # MATHEMATICAL SCRIPT CAPITAL N
+<Multi_key> <s> <c> <O> 		: "𝒪" U1D4AA # MATHEMATICAL SCRIPT CAPITAL O
+<Multi_key> <s> <c> <P> 		: "𝒫" U1D4AB # MATHEMATICAL SCRIPT CAPITAL P
+<Multi_key> <s> <c> <Q> 		: "𝒬" U1D4AC # MATHEMATICAL SCRIPT CAPITAL Q
+<Multi_key> <s> <c> <S> 		: "𝒮" U1D4AE # MATHEMATICAL SCRIPT CAPITAL S
+<Multi_key> <s> <c> <T> 		: "𝒯" U1D4AF # MATHEMATICAL SCRIPT CAPITAL T
+<Multi_key> <s> <c> <U> 		: "𝒰" U1D4B0 # MATHEMATICAL SCRIPT CAPITAL U
+<Multi_key> <s> <c> <V> 		: "𝒱" U1D4B1 # MATHEMATICAL SCRIPT CAPITAL V
+<Multi_key> <s> <c> <W> 		: "𝒲" U1D4B2 # MATHEMATICAL SCRIPT CAPITAL W
+<Multi_key> <s> <c> <X> 		: "𝒳" U1D4B3 # MATHEMATICAL SCRIPT CAPITAL X
+<Multi_key> <s> <c> <Y> 		: "𝒴" U1D4B4 # MATHEMATICAL SCRIPT CAPITAL Y
+<Multi_key> <s> <c> <Z> 		: "𝒵" U1D4B5 # MATHEMATICAL SCRIPT CAPITAL Z
+<Multi_key> <S> <C> <A> 		: "𝒜" U0D49C # MATHEMATICAL SCRIPT CAPITAL A
+<Multi_key> <S> <C> <C> 		: "𝒞" U1D49E # MATHEMATICAL SCRIPT CAPITAL C
+<Multi_key> <S> <C> <D> 		: "𝒟" U1D49F # MATHEMATICAL SCRIPT CAPITAL D
+<Multi_key> <S> <C> <G> 		: "𝒢" U1D4A2 # MATHEMATICAL SCRIPT CAPITAL G
+<Multi_key> <S> <C> <J> 		: "𝒥" U1D4A5 # MATHEMATICAL SCRIPT CAPITAL J
+<Multi_key> <S> <C> <K> 		: "𝒦" U1D4A6 # MATHEMATICAL SCRIPT CAPITAL K
+<Multi_key> <S> <C> <N> 		: "𝒩" U1D4A9 # MATHEMATICAL SCRIPT CAPITAL N
+<Multi_key> <S> <C> <O> 		: "𝒪" U1D4AA # MATHEMATICAL SCRIPT CAPITAL O
+<Multi_key> <S> <C> <P> 		: "𝒫" U1D4AB # MATHEMATICAL SCRIPT CAPITAL P
+<Multi_key> <S> <C> <Q> 		: "𝒬" U1D4AC # MATHEMATICAL SCRIPT CAPITAL Q
+<Multi_key> <S> <C> <S> 		: "𝒮" U1D4AE # MATHEMATICAL SCRIPT CAPITAL S
+<Multi_key> <S> <C> <T> 		: "𝒯" U1D4AF # MATHEMATICAL SCRIPT CAPITAL T
+<Multi_key> <S> <C> <U> 		: "𝒰" U1D4B0 # MATHEMATICAL SCRIPT CAPITAL U
+<Multi_key> <S> <C> <V> 		: "𝒱" U1D4B1 # MATHEMATICAL SCRIPT CAPITAL V
+<Multi_key> <S> <C> <W> 		: "𝒲" U1D4B2 # MATHEMATICAL SCRIPT CAPITAL W
+<Multi_key> <S> <C> <X> 		: "𝒳" U1D4B3 # MATHEMATICAL SCRIPT CAPITAL X
+<Multi_key> <S> <C> <Y> 		: "𝒴" U1D4B4 # MATHEMATICAL SCRIPT CAPITAL Y
+<Multi_key> <S> <C> <Z> 		: "𝒵" U1D4B5 # MATHEMATICAL SCRIPT CAPITAL Z
+<Multi_key> <s> <c> <a> 		: "𝒶" U1D4B6 # MATHEMATICAL SCRIPT SMALL A
+<Multi_key> <s> <c> <b> 		: "𝒷" U1D4B7 # MATHEMATICAL SCRIPT SMALL B
+<Multi_key> <s> <c> <c> 		: "𝒸" U1D4B8 # MATHEMATICAL SCRIPT SMALL C
+<Multi_key> <s> <c> <d> 		: "𝒹" U1D4B9 # MATHEMATICAL SCRIPT SMALL D
+<Multi_key> <s> <c> <f> 		: "𝒻" U1D4BB # MATHEMATICAL SCRIPT SMALL F
+<Multi_key> <s> <c> <h> 		: "𝒽" U1D4BD # MATHEMATICAL SCRIPT SMALL H
+<Multi_key> <s> <c> <i> 		: "𝒾" U1D4BE # MATHEMATICAL SCRIPT SMALL I
+<Multi_key> <s> <c> <j> 		: "𝒿" U1D4BF # MATHEMATICAL SCRIPT SMALL J
+<Multi_key> <s> <c> <k> 		: "𝓀" U1D4C0 # MATHEMATICAL SCRIPT SMALL K
+<Multi_key> <s> <c> <l> 		: "𝓁" U1D4C1 # MATHEMATICAL SCRIPT SMALL L
+<Multi_key> <s> <c> <m> 		: "𝓂" U1D4C2 # MATHEMATICAL SCRIPT SMALL M
+<Multi_key> <s> <c> <n> 		: "𝓃" U1D4C3 # MATHEMATICAL SCRIPT SMALL N
+<Multi_key> <s> <c> <p> 		: "𝓅" U1D4C5 # MATHEMATICAL SCRIPT SMALL P
+<Multi_key> <s> <c> <q> 		: "𝓆" U1D4C6 # MATHEMATICAL SCRIPT SMALL Q
+<Multi_key> <s> <c> <r> 		: "𝓇" U1D4C7 # MATHEMATICAL SCRIPT SMALL R
+<Multi_key> <s> <c> <s> 		: "𝓈" U1D4C8 # MATHEMATICAL SCRIPT SMALL S
+<Multi_key> <s> <c> <t> 		: "𝓉" U1D4C9 # MATHEMATICAL SCRIPT SMALL T
+<Multi_key> <s> <c> <u> 		: "𝓊" U1D4CA # MATHEMATICAL SCRIPT SMALL U
+<Multi_key> <s> <c> <v> 		: "𝓋" U1D4CB # MATHEMATICAL SCRIPT SMALL V
+<Multi_key> <s> <c> <w> 		: "𝓌" U1D4CC # MATHEMATICAL SCRIPT SMALL W
+<Multi_key> <s> <c> <x> 		: "𝓍" U1D4CD # MATHEMATICAL SCRIPT SMALL X
+<Multi_key> <s> <c> <y> 		: "𝓎" U1D4CE # MATHEMATICAL SCRIPT SMALL Y
+<Multi_key> <s> <c> <z> 		: "𝓏" U1D4CF # MATHEMATICAL SCRIPT SMALL Z
+
+# bold letters (♫bd): 𝐀–𝐙𝐚–𝐳, 𝟎–𝟗, 𝚨–𝛀𝛂–𝛚, 𝛠𝛝𝛜𝛟𝛞𝛡 𝛛𝛁 𝟊𝟋
+<Multi_key> <b> <d> <A> 		: "𝐀" U1D400 # MATHEMATICAL BOLD CAPITAL A
+<Multi_key> <b> <d> <B> 		: "𝐁" U1D401 # MATHEMATICAL BOLD CAPITAL B
+<Multi_key> <b> <d> <C> 		: "𝐂" U1D402 # MATHEMATICAL BOLD CAPITAL C
+<Multi_key> <b> <d> <D> 		: "𝐃" U1D403 # MATHEMATICAL BOLD CAPITAL D
+<Multi_key> <b> <d> <E> 		: "𝐄" U1D404 # MATHEMATICAL BOLD CAPITAL E
+<Multi_key> <b> <d> <F> 		: "𝐅" U1D405 # MATHEMATICAL BOLD CAPITAL F
+<Multi_key> <b> <d> <G> 		: "𝐆" U1D406 # MATHEMATICAL BOLD CAPITAL G
+<Multi_key> <b> <d> <H> 		: "𝐇" U1D407 # MATHEMATICAL BOLD CAPITAL H
+<Multi_key> <b> <d> <I> 		: "𝐈" U1D408 # MATHEMATICAL BOLD CAPITAL I
+<Multi_key> <b> <d> <J> 		: "𝐉" U1D409 # MATHEMATICAL BOLD CAPITAL J
+<Multi_key> <b> <d> <K> 		: "𝐊" U1D40A # MATHEMATICAL BOLD CAPITAL K
+<Multi_key> <b> <d> <L> 		: "𝐋" U1D40B # MATHEMATICAL BOLD CAPITAL L
+<Multi_key> <b> <d> <M> 		: "𝐌" U1D40C # MATHEMATICAL BOLD CAPITAL M
+<Multi_key> <b> <d> <N> 		: "𝐍" U1D40D # MATHEMATICAL BOLD CAPITAL N
+<Multi_key> <b> <d> <O> 		: "𝐎" U1D40E # MATHEMATICAL BOLD CAPITAL O
+<Multi_key> <b> <d> <P> 		: "𝐏" U1D40F # MATHEMATICAL BOLD CAPITAL P
+<Multi_key> <b> <d> <Q> 		: "𝐐" U1D410 # MATHEMATICAL BOLD CAPITAL Q
+<Multi_key> <b> <d> <R> 		: "𝐑" U1D411 # MATHEMATICAL BOLD CAPITAL R
+<Multi_key> <b> <d> <S> 		: "𝐒" U1D412 # MATHEMATICAL BOLD CAPITAL S
+<Multi_key> <b> <d> <T> 		: "𝐓" U1D413 # MATHEMATICAL BOLD CAPITAL T
+<Multi_key> <b> <d> <U> 		: "𝐔" U1D414 # MATHEMATICAL BOLD CAPITAL U
+<Multi_key> <b> <d> <V> 		: "𝐕" U1D415 # MATHEMATICAL BOLD CAPITAL V
+<Multi_key> <b> <d> <W> 		: "𝐖" U1D416 # MATHEMATICAL BOLD CAPITAL W
+<Multi_key> <b> <d> <X> 		: "𝐗" U1D417 # MATHEMATICAL BOLD CAPITAL X
+<Multi_key> <b> <d> <Y> 		: "𝐘" U1D418 # MATHEMATICAL BOLD CAPITAL Y
+<Multi_key> <b> <d> <Z> 		: "𝐙" U1D419 # MATHEMATICAL BOLD CAPITAL Z
+<Multi_key> <B> <D> <A> 		: "𝐀" U1D400 # MATHEMATICAL BOLD CAPITAL A
+<Multi_key> <B> <D> <B> 		: "𝐁" U1D401 # MATHEMATICAL BOLD CAPITAL B
+<Multi_key> <B> <D> <C> 		: "𝐂" U1D402 # MATHEMATICAL BOLD CAPITAL C
+<Multi_key> <B> <D> <D> 		: "𝐃" U1D403 # MATHEMATICAL BOLD CAPITAL D
+<Multi_key> <B> <D> <E> 		: "𝐄" U1D404 # MATHEMATICAL BOLD CAPITAL E
+<Multi_key> <B> <D> <F> 		: "𝐅" U1D405 # MATHEMATICAL BOLD CAPITAL F
+<Multi_key> <B> <D> <G> 		: "𝐆" U1D406 # MATHEMATICAL BOLD CAPITAL G
+<Multi_key> <B> <D> <H> 		: "𝐇" U1D407 # MATHEMATICAL BOLD CAPITAL H
+<Multi_key> <B> <D> <I> 		: "𝐈" U1D408 # MATHEMATICAL BOLD CAPITAL I
+<Multi_key> <B> <D> <J> 		: "𝐉" U1D409 # MATHEMATICAL BOLD CAPITAL J
+<Multi_key> <B> <D> <K> 		: "𝐊" U1D40A # MATHEMATICAL BOLD CAPITAL K
+<Multi_key> <B> <D> <L> 		: "𝐋" U1D40B # MATHEMATICAL BOLD CAPITAL L
+<Multi_key> <B> <D> <M> 		: "𝐌" U1D40C # MATHEMATICAL BOLD CAPITAL M
+<Multi_key> <B> <D> <N> 		: "𝐍" U1D40D # MATHEMATICAL BOLD CAPITAL N
+<Multi_key> <B> <D> <O> 		: "𝐎" U1D40E # MATHEMATICAL BOLD CAPITAL O
+<Multi_key> <B> <D> <P> 		: "𝐏" U1D40F # MATHEMATICAL BOLD CAPITAL P
+<Multi_key> <B> <D> <Q> 		: "𝐐" U1D410 # MATHEMATICAL BOLD CAPITAL Q
+<Multi_key> <B> <D> <R> 		: "𝐑" U1D411 # MATHEMATICAL BOLD CAPITAL R
+<Multi_key> <B> <D> <S> 		: "𝐒" U1D412 # MATHEMATICAL BOLD CAPITAL S
+<Multi_key> <B> <D> <T> 		: "𝐓" U1D413 # MATHEMATICAL BOLD CAPITAL T
+<Multi_key> <B> <D> <U> 		: "𝐔" U1D414 # MATHEMATICAL BOLD CAPITAL U
+<Multi_key> <B> <D> <V> 		: "𝐕" U1D415 # MATHEMATICAL BOLD CAPITAL V
+<Multi_key> <B> <D> <W> 		: "𝐖" U1D416 # MATHEMATICAL BOLD CAPITAL W
+<Multi_key> <B> <D> <X> 		: "𝐗" U1D417 # MATHEMATICAL BOLD CAPITAL X
+<Multi_key> <B> <D> <Y> 		: "𝐘" U1D418 # MATHEMATICAL BOLD CAPITAL Y
+<Multi_key> <B> <D> <Z> 		: "𝐙" U1D419 # MATHEMATICAL BOLD CAPITAL Z
+<Multi_key> <b> <d> <a> 		: "𝐚" U1D41A # MATHEMATICAL BOLD SMALL A
+<Multi_key> <b> <d> <b> 		: "𝐛" U1D41B # MATHEMATICAL BOLD SMALL B
+<Multi_key> <b> <d> <c> 		: "𝐜" U1D41C # MATHEMATICAL BOLD SMALL C
+<Multi_key> <b> <d> <d> 		: "𝐝" U1D41D # MATHEMATICAL BOLD SMALL D
+<Multi_key> <b> <d> <e> 		: "𝐞" U1D41E # MATHEMATICAL BOLD SMALL E
+<Multi_key> <b> <d> <f> 		: "𝐟" U1D41F # MATHEMATICAL BOLD SMALL F
+<Multi_key> <b> <d> <g> 		: "𝐠" U1D420 # MATHEMATICAL BOLD SMALL G
+<Multi_key> <b> <d> <h> 		: "𝐡" U1D421 # MATHEMATICAL BOLD SMALL H
+<Multi_key> <b> <d> <i> 		: "𝐢" U1D422 # MATHEMATICAL BOLD SMALL I
+<Multi_key> <b> <d> <j> 		: "𝐣" U1D423 # MATHEMATICAL BOLD SMALL J
+<Multi_key> <b> <d> <k> 		: "𝐤" U1D424 # MATHEMATICAL BOLD SMALL K
+<Multi_key> <b> <d> <l> 		: "𝐥" U1D425 # MATHEMATICAL BOLD SMALL L
+<Multi_key> <b> <d> <m> 		: "𝐦" U1D426 # MATHEMATICAL BOLD SMALL M
+<Multi_key> <b> <d> <n> 		: "𝐧" U1D427 # MATHEMATICAL BOLD SMALL N
+<Multi_key> <b> <d> <o> 		: "𝐨" U1D428 # MATHEMATICAL BOLD SMALL O
+<Multi_key> <b> <d> <p> 		: "𝐩" U1D429 # MATHEMATICAL BOLD SMALL P
+<Multi_key> <b> <d> <q> 		: "𝐪" U1D42A # MATHEMATICAL BOLD SMALL Q
+<Multi_key> <b> <d> <r> 		: "𝐫" U1D42B # MATHEMATICAL BOLD SMALL R
+<Multi_key> <b> <d> <s> 		: "𝐬" U1D42C # MATHEMATICAL BOLD SMALL S
+<Multi_key> <b> <d> <t> 		: "𝐭" U1D42D # MATHEMATICAL BOLD SMALL T
+<Multi_key> <b> <d> <u> 		: "𝐮" U1D42E # MATHEMATICAL BOLD SMALL U
+<Multi_key> <b> <d> <v> 		: "𝐯" U1D42F # MATHEMATICAL BOLD SMALL V
+<Multi_key> <b> <d> <w> 		: "𝐰" U1D430 # MATHEMATICAL BOLD SMALL W
+<Multi_key> <b> <d> <x> 		: "𝐱" U1D431 # MATHEMATICAL BOLD SMALL X
+<Multi_key> <b> <d> <y> 		: "𝐲" U1D432 # MATHEMATICAL BOLD SMALL Y
+<Multi_key> <b> <d> <z> 		: "𝐳" U1D433 # MATHEMATICAL BOLD SMALL Z
+<Multi_key> <b> <d> <0> 		: "𝟎" U1D7CE # MATHEMATICAL BOLD DIGIT ZERO
+<Multi_key> <b> <d> <KP_0> 		: "𝟎" U1D7CE # MATHEMATICAL BOLD DIGIT ZERO
+<Multi_key> <b> <d> <1> 		: "𝟏" U1D7CF # MATHEMATICAL BOLD DIGIT ONE
+<Multi_key> <b> <d> <KP_1> 		: "𝟏" U1D7CF # MATHEMATICAL BOLD DIGIT ONE
+<Multi_key> <b> <d> <2> 		: "𝟐" U1D7D0 # MATHEMATICAL BOLD DIGIT TWO
+<Multi_key> <b> <d> <KP_2> 		: "𝟐" U1D7D0 # MATHEMATICAL BOLD DIGIT TWO
+<Multi_key> <b> <d> <3> 		: "𝟑" U1D7D1 # MATHEMATICAL BOLD DIGIT THREE
+<Multi_key> <b> <d> <KP_3> 		: "𝟑" U1D7D1 # MATHEMATICAL BOLD DIGIT THREE
+<Multi_key> <b> <d> <4> 		: "𝟒" U1D7D2 # MATHEMATICAL BOLD DIGIT FOUR
+<Multi_key> <b> <d> <KP_4> 		: "𝟒" U1D7D2 # MATHEMATICAL BOLD DIGIT FOUR
+<Multi_key> <b> <d> <5> 		: "𝟓" U1D7D3 # MATHEMATICAL BOLD DIGIT FIVE
+<Multi_key> <b> <d> <KP_5> 		: "𝟓" U1D7D3 # MATHEMATICAL BOLD DIGIT FIVE
+<Multi_key> <b> <d> <6> 		: "𝟔" U1D7D4 # MATHEMATICAL BOLD DIGIT SIX
+<Multi_key> <b> <d> <KP_6> 		: "𝟔" U1D7D4 # MATHEMATICAL BOLD DIGIT SIX
+<Multi_key> <b> <d> <7> 		: "𝟕" U1D7D5 # MATHEMATICAL BOLD DIGIT SEVEN
+<Multi_key> <b> <d> <KP_7> 		: "𝟕" U1D7D5 # MATHEMATICAL BOLD DIGIT SEVEN
+<Multi_key> <b> <d> <8> 		: "𝟖" U1D7D6 # MATHEMATICAL BOLD DIGIT EIGHT
+<Multi_key> <b> <d> <KP_8> 		: "𝟖" U1D7D6 # MATHEMATICAL BOLD DIGIT EIGHT
+<Multi_key> <b> <d> <9>			: "𝟗" U1D7D7 # MATHEMATICAL BOLD DIGIT NINE
+<Multi_key> <b> <d> <KP_9>		: "𝟗" U1D7D7 # MATHEMATICAL BOLD DIGIT NINE
+# some of these letters are not on neo-keyboard, except for greek mode, see below for options: 
+<Multi_key> <b> <d> <Greek_ALPHA>	: "𝚨" U1D6A8 # MATHEMATICAL BOLD CAPITAL ALPHA
+<Multi_key> <b> <d> <Greek_BETA>	: "𝚩" U1D6A9 # MATHEMATICAL BOLD CAPITAL BETA
+<Multi_key> <b> <d> <Greek_GAMMA>	: "𝚪" U1D6AA # MATHEMATICAL BOLD CAPITAL GAMMA
+<Multi_key> <b> <d> <Greek_DELTA>	: "𝚫" U1D6AB # MATHEMATICAL BOLD CAPITAL DELTA
+<Multi_key> <b> <d> <Greek_EPSILON>	: "𝚬" U1D6AC # MATHEMATICAL BOLD CAPITAL EPSILON
+<Multi_key> <b> <d> <Greek_ZETA>	: "𝚭" U1D6AD # MATHEMATICAL BOLD CAPITAL ZETA
+<Multi_key> <b> <d> <Greek_ETA>		: "𝚮" U1D6AE # MATHEMATICAL BOLD CAPITAL ETA
+<Multi_key> <b> <d> <Greek_THETA>	: "𝚯" U1D6AF # MATHEMATICAL BOLD CAPITAL THETA
+<Multi_key> <b> <d> <Greek_IOTA>	: "𝚰" U1D6B0 # MATHEMATICAL BOLD CAPITAL IOTA
+<Multi_key> <b> <d> <Greek_KAPPA>	: "𝚱" U1D6B1 # MATHEMATICAL BOLD CAPITAL KAPPA
+<Multi_key> <b> <d> <Greek_LAMBDA>	: "𝚲" U1D6B2 # MATHEMATICAL BOLD CAPITAL LAMBDA
+<Multi_key> <b> <d> <Greek_MU>		: "𝚳" U1D6B3 # MATHEMATICAL BOLD CAPITAL MU
+<Multi_key> <b> <d> <Greek_NU>		: "𝚴" U1D6B4 # MATHEMATICAL BOLD CAPITAL NU
+<Multi_key> <b> <d> <Greek_XI>		: "𝚵" U1D6B5 # MATHEMATICAL BOLD CAPITAL XI
+<Multi_key> <b> <d> <Greek_OMICRON>	: "𝚶" U1D6B6 # MATHEMATICAL BOLD CAPITAL OMICRON
+<Multi_key> <b> <d> <Greek_PI>		: "𝚷" U1D6B7 # MATHEMATICAL BOLD CAPITAL PI
+<Multi_key> <b> <d> <Greek_RHO>		: "𝚸" U1D6B8 # MATHEMATICAL BOLD CAPITAL RHO
+# not included: 𝚹 (U1D6B9), MATHEMATICAL BOLD CAPITAL THETA SYMBOL, there is already another capital theta 
+<Multi_key> <b> <d> <Greek_SIGMA>	: "𝚺" U1D6BA # MATHEMATICAL BOLD CAPITAL SIGMA
+<Multi_key> <b> <d> <Greek_TAU>		: "𝚻" U1D6BB # MATHEMATICAL BOLD CAPITAL TAU
+<Multi_key> <b> <d> <Greek_UPSILON>	: "𝚼" U1D6BC # MATHEMATICAL BOLD CAPITAL UPSILON
+<Multi_key> <b> <d> <Greek_PHI>		: "𝚽" U1D6BD # MATHEMATICAL BOLD CAPITAL PHI
+<Multi_key> <b> <d> <Greek_CHI>		: "𝚾" U1D6BE # MATHEMATICAL BOLD CAPITAL CHI
+<Multi_key> <b> <d> <Greek_PSI>		: "𝚿" U1D6BF # MATHEMATICAL BOLD CAPITAL PSI
+<Multi_key> <b> <d> <Greek_OMEGA>	: "𝛀" U1D6C0 # MATHEMATICAL BOLD CAPITAL OMEGA
+<Multi_key> <b> <d> <Greek_alpha>	: "𝛂" U1D6C2 # MATHEMATICAL BOLD SMALL ALPHA
+<Multi_key> <b> <d> <Greek_beta>	: "𝛃" U1D6C3 # MATHEMATICAL BOLD SMALL BETA
+<Multi_key> <b> <d> <Greek_gamma>	: "𝛄" U1D6C4 # MATHEMATICAL BOLD SMALL GAMMA
+<Multi_key> <b> <d> <Greek_delta>	: "𝛅" U1D6C5 # MATHEMATICAL BOLD SMALL DELTA
+<Multi_key> <b> <d> <Greek_epsilon>	: "𝛆" U1D6C6 # MATHEMATICAL BOLD SMALL EPSILON
+<Multi_key> <b> <d> <Greek_zeta>	: "𝛇" U1D6C7 # MATHEMATICAL BOLD SMALL ZETA
+<Multi_key> <b> <d> <Greek_eta>		: "𝛈" U1D6C8 # MATHEMATICAL BOLD SMALL ETA
+<Multi_key> <b> <d> <Greek_theta>	: "𝛉" U1D6C9 # MATHEMATICAL BOLD SMALL THETA
+<Multi_key> <b> <d> <Greek_iota>	: "𝛊" U1D6CA # MATHEMATICAL BOLD SMALL IOTA
+<Multi_key> <b> <d> <Greek_kappa>	: "𝛋" U1D6CB # MATHEMATICAL BOLD SMALL KAPPA
+<Multi_key> <b> <d> <Greek_lambda>	: "𝛌" U1D6CC # MATHEMATICAL BOLD SMALL LAMBDA
+<Multi_key> <b> <d> <Greek_mu>		: "𝛍" U1D6CD # MATHEMATICAL BOLD SMALL MU
+<Multi_key> <b> <d> <Greek_nu>		: "𝛎" U1D6CE # MATHEMATICAL BOLD SMALL NU
+<Multi_key> <b> <d> <Greek_xi>		: "𝛏" U1D6CF # MATHEMATICAL BOLD SMALL XI
+<Multi_key> <b> <d> <Greek_omicron>	: "𝛐" U1D6D0 # MATHEMATICAL BOLD SMALL OMICRON
+<Multi_key> <b> <d> <Greek_pi>		: "𝛑" U1D6D1 # MATHEMATICAL BOLD SMALL PI
+<Multi_key> <b> <d> <Greek_rho>		: "𝛒" U1D6D2 # MATHEMATICAL BOLD SMALL RHO
+<Multi_key> <b> <d> <Greek_finalsmallsigma> : "𝛓" U1D6D3 # MATHEMATICAL BOLD SMALL FINAL SIGMA
+<Multi_key> <b> <d> <Greek_sigma>	: "𝛔" U1D6D4 # MATHEMATICAL BOLD SMALL SIGMA
+<Multi_key> <b> <d> <Greek_tau>		: "𝛕" U1D6D5 # MATHEMATICAL BOLD SMALL TAU
+<Multi_key> <b> <d> <Greek_upsilon>	: "𝛖" U1D6D6 # MATHEMATICAL BOLD SMALL UPSILON
+<Multi_key> <b> <d> <Greek_phi>		: "𝛗" U1D6D7 # MATHEMATICAL BOLD SMALL PHI
+<Multi_key> <b> <d> <Greek_chi>		: "𝛘" U1D6D8 # MATHEMATICAL BOLD SMALL CHI
+<Multi_key> <b> <d> <Greek_psi>		: "𝛙" U1D6D9 # MATHEMATICAL BOLD SMALL PSI
+<Multi_key> <b> <d> <Greek_omega>	: "𝛚" U1D6DA # MATHEMATICAL BOLD SMALL OMEGA
+<Multi_key> <b> <d> <U03F1>		: "𝛠" U1D6E0 # MATHEMATICAL BOLD RHO SYMBOL
+<Multi_key> <b> <d> <U03D1>		: "𝛝" U1D6DD # MATHEMATICAL BOLD THETA SYMBOL
+<Multi_key> <b> <d> <U03F5>		: "𝛜" U1D6DC # MATHEMATICAL BOLD EPSILON SYMBOL
+<Multi_key> <b> <d> <U03D5>		: "𝛟" U1D6DF # MATHEMATICAL BOLD PHI SYMBOL
+<Multi_key> <b> <d> <U03F0>		: "𝛞" U1D6DE # MATHEMATICAL BOLD KAPPA SYMBOL
+<Multi_key> <b> <d> <U03D6>		: "𝛡" U1D6E1 # MATHEMATICAL BOLD PI SYMBOL
+<Multi_key> <b> <d> <partialderivative>	: "𝛛" U1D6DB # MATHEMATICAL BOLD PARTIAL DIFFERENTIAL
+<Multi_key> <b> <d> <nabla>		: "𝛁" U1D6C1 # MATHEMATICAL BOLD NABLA
+<Multi_key> <s> <b> <U03DC>		: "𝟊" U1D7CA # MATHEMATICAL BOLD CAPITAL DIGAMMA
+<Multi_key> <s> <b> <U03DD>		: "𝟋" U1D7CB # MATHEMATICAL BOLD SMALL DIGAMMA
+
+# optional for greek fonts for not reachable greek capital letters, ♫gb, analog to definitions in greek.module
+<Multi_key> <g> <b> <A>			: "𝚨" U1D6A8 # MATHEMATICAL BOLD CAPITAL ALPHA
+<Multi_key> <G> <B> <A>			: "𝚨" U1D6A8 # MATHEMATICAL BOLD CAPITAL ALPHA
+<Multi_key> <G> <B> <B>			: "𝚩" U1D6A9 # MATHEMATICAL BOLD CAPITAL BETA
+<Multi_key> <g> <b> <B>			: "𝚩" U1D6A9 # MATHEMATICAL BOLD CAPITAL BETA
+<Multi_key> <G> <B> <E>			: "𝚬" U1D6AC # MATHEMATICAL BOLD CAPITAL EPSILON
+<Multi_key> <g> <b> <E>			: "𝚬" U1D6AC # MATHEMATICAL BOLD CAPITAL EPSILON
+<Multi_key> <G> <B> <Z>			: "𝚭" U1D6AD # MATHEMATICAL BOLD CAPITAL ZETA
+<Multi_key> <g> <b> <Z>			: "𝚭" U1D6AD # MATHEMATICAL BOLD CAPITAL ZETA
+<Multi_key> <G> <B> <H>			: "𝚮" U1D6AE # MATHEMATICAL BOLD CAPITAL ETA
+<Multi_key> <g> <b> <H>			: "𝚮" U1D6AE # MATHEMATICAL BOLD CAPITAL ETA
+<Multi_key> <G> <B> <Adiaeresis>	: "𝚮" U1D6AE # MATHEMATICAL BOLD CAPITAL ETA
+<Multi_key> <g> <b> <Adiaeresis>	: "𝚮" U1D6AE # MATHEMATICAL BOLD CAPITAL ETA
+<Multi_key> <G> <B> <I>			: "𝚰" U1D6B0 # MATHEMATICAL BOLD CAPITAL IOTA
+<Multi_key> <g> <b> <I>			: "𝚰" U1D6B0 # MATHEMATICAL BOLD CAPITAL IOTA
+<Multi_key> <G> <B> <K>			: "𝚱" U1D6B1 # MATHEMATICAL BOLD CAPITAL KAPPA
+<Multi_key> <g> <b> <K>			: "𝚱" U1D6B1 # MATHEMATICAL BOLD CAPITAL KAPPA
+<Multi_key> <G> <B> <M>			: "𝚳" U1D6B3 # MATHEMATICAL BOLD CAPITAL MU
+<Multi_key> <g> <b> <M>			: "𝚳" U1D6B3 # MATHEMATICAL BOLD CAPITAL MU
+<Multi_key> <G> <B> <N>			: "𝚴" U1D6B4 # MATHEMATICAL BOLD CAPITAL NU
+<Multi_key> <g> <b> <N>			: "𝚴" U1D6B4 # MATHEMATICAL BOLD CAPITAL NU
+<Multi_key> <G> <B> <O>			: "𝚶" U1D6B6 # MATHEMATICAL BOLD CAPITAL OMICRON
+<Multi_key> <g> <b> <O>			: "𝚶" U1D6B6 # MATHEMATICAL BOLD CAPITAL OMICRON
+<Multi_key> <G> <B> <P>			: "𝚸" U1D6B8 # MATHEMATICAL BOLD CAPITAL RHO
+<Multi_key> <g> <b> <P>			: "𝚸" U1D6B8 # MATHEMATICAL BOLD CAPITAL RHO
+<Multi_key> <G> <B> <R>			: "𝚸" U1D6B8 # MATHEMATICAL BOLD CAPITAL RHO
+<Multi_key> <g> <b> <R>			: "𝚸" U1D6B8 # MATHEMATICAL BOLD CAPITAL RHO
+<Multi_key> <G> <B> <T>			: "𝚻" U1D6BB # MATHEMATICAL BOLD CAPITAL TAU
+<Multi_key> <g> <b> <T>			: "𝚻" U1D6BB # MATHEMATICAL BOLD CAPITAL TAU
+<Multi_key> <G> <B> <Y>			: "𝚼" U1D6BC # MATHEMATICAL BOLD CAPITAL UPSILON
+<Multi_key> <g> <b> <Y>			: "𝚼" U1D6BC # MATHEMATICAL BOLD CAPITAL UPSILON
+<Multi_key> <G> <B> <X>			: "𝚾" U1D6BE # MATHEMATICAL BOLD CAPITAL CHI
+<Multi_key> <g> <b> <X>			: "𝚾" U1D6BE # MATHEMATICAL BOLD CAPITAL CHI
+<Multi_key> <G> <B> <F>			: "𝟊" U1D7CA # MATHEMATICAL BOLD CAPITAL DIGAMMA
+<Multi_key> <g> <b> <F>			: "𝟊" U1D7CA # MATHEMATICAL BOLD CAPITAL DIGAMMA
+<Multi_key> <g> <b> <f>			: "𝟋" U1D7CB # MATHEMATICAL BOLD SMALL DIGAMMA
+# this is not intuitive:
+#<Multi_key> <g> <b> <Greek_pi>		: "𝛡" U1D6E1 # MATHEMATICAL BOLD PI SYMBOL
+
+# bold script letters (♫bs): 𝓐–𝓩𝓪–𝔃
+<Multi_key> <b> <s> <A> 		: "𝓐" U1D4D0 # MATHEMATICAL BOLD SCRIPT CAPITAL A
+<Multi_key> <b> <s> <B> 		: "𝓑" U1D4D1 # MATHEMATICAL BOLD SCRIPT CAPITAL B
+<Multi_key> <b> <s> <C> 		: "𝓒" U1D4D2 # MATHEMATICAL BOLD SCRIPT CAPITAL C
+<Multi_key> <b> <s> <D> 		: "𝓓" U1D4D3 # MATHEMATICAL BOLD SCRIPT CAPITAL D
+<Multi_key> <b> <s> <E> 		: "𝓔" U1D4D4 # MATHEMATICAL BOLD SCRIPT CAPITAL E
+<Multi_key> <b> <s> <F> 		: "𝓕" U1D4D5 # MATHEMATICAL BOLD SCRIPT CAPITAL F
+<Multi_key> <b> <s> <G> 		: "𝓖" U1D4D6 # MATHEMATICAL BOLD SCRIPT CAPITAL G
+<Multi_key> <b> <s> <H> 		: "𝓗" U1D4D7 # MATHEMATICAL BOLD SCRIPT CAPITAL H
+<Multi_key> <b> <s> <I> 		: "𝓘" U1D4D8 # MATHEMATICAL BOLD SCRIPT CAPITAL I
+<Multi_key> <b> <s> <J> 		: "𝓙" U1D4D9 # MATHEMATICAL BOLD SCRIPT CAPITAL J
+<Multi_key> <b> <s> <K> 		: "𝓚" U1D4DA # MATHEMATICAL BOLD SCRIPT CAPITAL K
+<Multi_key> <b> <s> <L> 		: "𝓛" U1D4DB # MATHEMATICAL BOLD SCRIPT CAPITAL L
+<Multi_key> <b> <s> <M> 		: "𝓜" U1D4DC # MATHEMATICAL BOLD SCRIPT CAPITAL M
+<Multi_key> <b> <s> <N> 		: "𝓝" U1D4DD # MATHEMATICAL BOLD SCRIPT CAPITAL N
+<Multi_key> <b> <s> <O> 		: "𝓞" U1D4DE # MATHEMATICAL BOLD SCRIPT CAPITAL O
+<Multi_key> <b> <s> <P> 		: "𝓟" U1D4DF # MATHEMATICAL BOLD SCRIPT CAPITAL P
+<Multi_key> <b> <s> <Q> 		: "𝓠" U1D4E0 # MATHEMATICAL BOLD SCRIPT CAPITAL Q
+<Multi_key> <b> <s> <R> 		: "𝓡" U1D4E1 # MATHEMATICAL BOLD SCRIPT CAPITAL R
+<Multi_key> <b> <s> <S> 		: "𝓢" U1D4E2 # MATHEMATICAL BOLD SCRIPT CAPITAL S
+<Multi_key> <b> <s> <T> 		: "𝓣" U1D4E3 # MATHEMATICAL BOLD SCRIPT CAPITAL T
+<Multi_key> <b> <s> <U> 		: "𝓤" U1D4E4 # MATHEMATICAL BOLD SCRIPT CAPITAL U
+<Multi_key> <b> <s> <V> 		: "𝓥" U1D4E5 # MATHEMATICAL BOLD SCRIPT CAPITAL V
+<Multi_key> <b> <s> <W> 		: "𝓦" U1D4E6 # MATHEMATICAL BOLD SCRIPT CAPITAL W
+<Multi_key> <b> <s> <X> 		: "𝓧" U1D4E7 # MATHEMATICAL BOLD SCRIPT CAPITAL X
+<Multi_key> <b> <s> <Y> 		: "𝓨" U1D4E8 # MATHEMATICAL BOLD SCRIPT CAPITAL Y
+<Multi_key> <b> <s> <Z> 		: "𝓩" U1D4E9 # MATHEMATICAL BOLD SCRIPT CAPITAL Z
+<Multi_key> <B> <S> <A> 		: "𝓐" U1D4D0 # MATHEMATICAL BOLD SCRIPT CAPITAL A
+<Multi_key> <B> <S> <B> 		: "𝓑" U1D4D1 # MATHEMATICAL BOLD SCRIPT CAPITAL B
+<Multi_key> <B> <S> <C> 		: "𝓒" U1D4D2 # MATHEMATICAL BOLD SCRIPT CAPITAL C
+<Multi_key> <B> <S> <D> 		: "𝓓" U1D4D3 # MATHEMATICAL BOLD SCRIPT CAPITAL D
+<Multi_key> <B> <S> <E> 		: "𝓔" U1D4D4 # MATHEMATICAL BOLD SCRIPT CAPITAL E
+<Multi_key> <B> <S> <F> 		: "𝓕" U1D4D5 # MATHEMATICAL BOLD SCRIPT CAPITAL F
+<Multi_key> <B> <S> <G> 		: "𝓖" U1D4D6 # MATHEMATICAL BOLD SCRIPT CAPITAL G
+<Multi_key> <B> <S> <H> 		: "𝓗" U1D4D7 # MATHEMATICAL BOLD SCRIPT CAPITAL H
+<Multi_key> <B> <S> <I> 		: "𝓘" U1D4D8 # MATHEMATICAL BOLD SCRIPT CAPITAL I
+<Multi_key> <B> <S> <J> 		: "𝓙" U1D4D9 # MATHEMATICAL BOLD SCRIPT CAPITAL J
+<Multi_key> <B> <S> <K> 		: "𝓚" U1D4DA # MATHEMATICAL BOLD SCRIPT CAPITAL K
+<Multi_key> <B> <S> <L> 		: "𝓛" U1D4DB # MATHEMATICAL BOLD SCRIPT CAPITAL L
+<Multi_key> <B> <S> <M> 		: "𝓜" U1D4DC # MATHEMATICAL BOLD SCRIPT CAPITAL M
+<Multi_key> <B> <S> <N> 		: "𝓝" U1D4DD # MATHEMATICAL BOLD SCRIPT CAPITAL N
+<Multi_key> <B> <S> <O> 		: "𝓞" U1D4DE # MATHEMATICAL BOLD SCRIPT CAPITAL O
+<Multi_key> <B> <S> <P> 		: "𝓟" U1D4DF # MATHEMATICAL BOLD SCRIPT CAPITAL P
+<Multi_key> <B> <S> <Q> 		: "𝓠" U1D4E0 # MATHEMATICAL BOLD SCRIPT CAPITAL Q
+<Multi_key> <B> <S> <R> 		: "𝓡" U1D4E1 # MATHEMATICAL BOLD SCRIPT CAPITAL R
+<Multi_key> <B> <S> <S> 		: "𝓢" U1D4E2 # MATHEMATICAL BOLD SCRIPT CAPITAL S
+<Multi_key> <B> <S> <T> 		: "𝓣" U1D4E3 # MATHEMATICAL BOLD SCRIPT CAPITAL T
+<Multi_key> <B> <S> <U> 		: "𝓤" U1D4E4 # MATHEMATICAL BOLD SCRIPT CAPITAL U
+<Multi_key> <B> <S> <V> 		: "𝓥" U1D4E5 # MATHEMATICAL BOLD SCRIPT CAPITAL V
+<Multi_key> <B> <S> <W> 		: "𝓦" U1D4E6 # MATHEMATICAL BOLD SCRIPT CAPITAL W
+<Multi_key> <B> <S> <X> 		: "𝓧" U1D4E7 # MATHEMATICAL BOLD SCRIPT CAPITAL X
+<Multi_key> <B> <S> <Y> 		: "𝓨" U1D4E8 # MATHEMATICAL BOLD SCRIPT CAPITAL Y
+<Multi_key> <B> <S> <Z> 		: "𝓩" U1D4E9 # MATHEMATICAL BOLD SCRIPT CAPITAL Z
+<Multi_key> <b> <s> <a> 		: "𝓪" U1D4EA # MATHEMATICAL BOLD SCRIPT SMALL A
+<Multi_key> <b> <s> <b> 		: "𝓫" U1D4EB # MATHEMATICAL BOLD SCRIPT SMALL B
+<Multi_key> <b> <s> <c> 		: "𝓬" U1D4EC # MATHEMATICAL BOLD SCRIPT SMALL C
+<Multi_key> <b> <s> <d> 		: "𝓭" U1D4ED # MATHEMATICAL BOLD SCRIPT SMALL D
+<Multi_key> <b> <s> <e> 		: "𝓮" U1D4EE # MATHEMATICAL BOLD SCRIPT SMALL E
+<Multi_key> <b> <s> <f> 		: "𝓯" U1D4EF # MATHEMATICAL BOLD SCRIPT SMALL F
+<Multi_key> <b> <s> <g> 		: "𝓰" U1D4F0 # MATHEMATICAL BOLD SCRIPT SMALL G
+<Multi_key> <b> <s> <h> 		: "𝓱" U1D4F1 # MATHEMATICAL BOLD SCRIPT SMALL H
+<Multi_key> <b> <s> <i> 		: "𝓲" U1D4F2 # MATHEMATICAL BOLD SCRIPT SMALL I
+<Multi_key> <b> <s> <j> 		: "𝓳" U1D4F3 # MATHEMATICAL BOLD SCRIPT SMALL J
+<Multi_key> <b> <s> <k> 		: "𝓴" U1D4F4 # MATHEMATICAL BOLD SCRIPT SMALL K
+<Multi_key> <b> <s> <l> 		: "𝓵" U1D4F5 # MATHEMATICAL BOLD SCRIPT SMALL L
+<Multi_key> <b> <s> <m> 		: "𝓶" U1D4F6 # MATHEMATICAL BOLD SCRIPT SMALL M
+<Multi_key> <b> <s> <n> 		: "𝓷" U1D4F7 # MATHEMATICAL BOLD SCRIPT SMALL N
+<Multi_key> <b> <s> <o> 		: "𝓸" U1D4F8 # MATHEMATICAL BOLD SCRIPT SMALL O
+<Multi_key> <b> <s> <p> 		: "𝓹" U1D4F9 # MATHEMATICAL BOLD SCRIPT SMALL P
+<Multi_key> <b> <s> <q> 		: "𝓺" U1D4FA # MATHEMATICAL BOLD SCRIPT SMALL Q
+<Multi_key> <b> <s> <r> 		: "𝓻" U1D4FB # MATHEMATICAL BOLD SCRIPT SMALL R
+<Multi_key> <b> <s> <s> 		: "𝓼" U1D4FC # MATHEMATICAL BOLD SCRIPT SMALL S
+<Multi_key> <b> <s> <t> 		: "𝓽" U1D4FD # MATHEMATICAL BOLD SCRIPT SMALL T
+<Multi_key> <b> <s> <u> 		: "𝓾" U1D4FE # MATHEMATICAL BOLD SCRIPT SMALL U
+<Multi_key> <b> <s> <v> 		: "𝓿" U1D4FF # MATHEMATICAL BOLD SCRIPT SMALL V
+<Multi_key> <b> <s> <w> 		: "𝔀" U1D500 # MATHEMATICAL BOLD SCRIPT SMALL W
+<Multi_key> <b> <s> <x> 		: "𝔁" U1D501 # MATHEMATICAL BOLD SCRIPT SMALL X
+<Multi_key> <b> <s> <y> 		: "𝔂" U1D502 # MATHEMATICAL BOLD SCRIPT SMALL Y
+<Multi_key> <b> <s> <z> 		: "𝔃" U1D503 # MATHEMATICAL BOLD SCRIPT SMALL Z
+
+# fraktur letters (♫fr): 𝔄–𝔜𝔞–𝔷
+<Multi_key> <f> <r> <A> 		: "𝔄" U1D504 # MATHEMATICAL FRAKTUR CAPITAL A
+<Multi_key> <f> <r> <B> 		: "𝔅" U1D505 # MATHEMATICAL FRAKTUR CAPITAL B
+<Multi_key> <f> <r> <C> 		: "ℭ" U212D # BLACK-LETTER CAPITAL C
+<Multi_key> <f> <r> <D> 		: "𝔇" U1D507 # MATHEMATICAL FRAKTUR CAPITAL D
+<Multi_key> <f> <r> <E> 		: "𝔈" U1D508 # MATHEMATICAL FRAKTUR CAPITAL E
+<Multi_key> <f> <r> <F> 		: "𝔉" U1D509 # MATHEMATICAL FRAKTUR CAPITAL F
+<Multi_key> <f> <r> <G> 		: "𝔊" U1D50A # MATHEMATICAL FRAKTUR CAPITAL G
+<Multi_key> <f> <r> <H> 		: "ℌ" U210C # BLACK-LETTER CAPITAL H
+<Multi_key> <f> <r> <I> 		: "ℑ" U2111 # BLACK-LETTER CAPITAL I
+<Multi_key> <f> <r> <J> 		: "𝔍" U1D50D # MATHEMATICAL FRAKTUR CAPITAL J
+<Multi_key> <f> <r> <K> 		: "𝔎" U1D50E # MATHEMATICAL FRAKTUR CAPITAL K
+<Multi_key> <f> <r> <L> 		: "𝔏" U1D50F # MATHEMATICAL FRAKTUR CAPITAL L
+<Multi_key> <f> <r> <M> 		: "𝔐" U1D510 # MATHEMATICAL FRAKTUR CAPITAL M
+<Multi_key> <f> <r> <N> 		: "𝔑" U1D511 # MATHEMATICAL FRAKTUR CAPITAL N
+<Multi_key> <f> <r> <O> 		: "𝔒" U1D512 # MATHEMATICAL FRAKTUR CAPITAL O
+<Multi_key> <f> <r> <P> 		: "𝔓" U1D513 # MATHEMATICAL FRAKTUR CAPITAL P
+<Multi_key> <f> <r> <Q> 		: "𝔔" U1D514 # MATHEMATICAL FRAKTUR CAPITAL Q
+<Multi_key> <f> <r> <R> 		: "ℜ" U211C # BLACK-LETTER CAPITAL R
+<Multi_key> <f> <r> <S> 		: "𝔖" U1D516 # MATHEMATICAL FRAKTUR CAPITAL S
+<Multi_key> <f> <r> <T> 		: "𝔗" U1D517 # MATHEMATICAL FRAKTUR CAPITAL T
+<Multi_key> <f> <r> <U> 		: "𝔘" U1D518 # MATHEMATICAL FRAKTUR CAPITAL U
+<Multi_key> <f> <r> <V> 		: "𝔙" U1D519 # MATHEMATICAL FRAKTUR CAPITAL V
+<Multi_key> <f> <r> <W> 		: "𝔚" U1D51A # MATHEMATICAL FRAKTUR CAPITAL W
+<Multi_key> <f> <r> <X> 		: "𝔛" U1D51B # MATHEMATICAL FRAKTUR CAPITAL X
+<Multi_key> <f> <r> <Y> 		: "𝔜" U1D51C # MATHEMATICAL FRAKTUR CAPITAL Y
+<Multi_key> <f> <r> <Z> 		: "ℨ" U2128 # BLACK-LETTER CAPITAL Z
+<Multi_key> <F> <R> <A> 		: "𝔄" U1D504 # MATHEMATICAL FRAKTUR CAPITAL A
+<Multi_key> <F> <R> <B> 		: "𝔅" U1D505 # MATHEMATICAL FRAKTUR CAPITAL B
+<Multi_key> <F> <R> <C> 		: "ℭ" U212D # BLACK-LETTER CAPITAL C
+<Multi_key> <F> <R> <D> 		: "𝔇" U1D507 # MATHEMATICAL FRAKTUR CAPITAL D
+<Multi_key> <F> <R> <E> 		: "𝔈" U1D508 # MATHEMATICAL FRAKTUR CAPITAL E
+<Multi_key> <F> <R> <F> 		: "𝔉" U1D509 # MATHEMATICAL FRAKTUR CAPITAL F
+<Multi_key> <F> <R> <G> 		: "𝔊" U1D50A # MATHEMATICAL FRAKTUR CAPITAL G
+<Multi_key> <F> <R> <H> 		: "ℌ" U210C # BLACK-LETTER CAPITAL H
+<Multi_key> <F> <R> <I> 		: "ℑ" U2111 # BLACK-LETTER CAPITAL I
+<Multi_key> <F> <R> <J> 		: "𝔍" U1D50D # MATHEMATICAL FRAKTUR CAPITAL J
+<Multi_key> <F> <R> <K> 		: "𝔎" U1D50E # MATHEMATICAL FRAKTUR CAPITAL K
+<Multi_key> <F> <R> <L> 		: "𝔏" U1D50F # MATHEMATICAL FRAKTUR CAPITAL L
+<Multi_key> <F> <R> <M> 		: "𝔐" U1D510 # MATHEMATICAL FRAKTUR CAPITAL M
+<Multi_key> <F> <R> <N> 		: "𝔑" U1D511 # MATHEMATICAL FRAKTUR CAPITAL N
+<Multi_key> <F> <R> <O> 		: "𝔒" U1D512 # MATHEMATICAL FRAKTUR CAPITAL O
+<Multi_key> <F> <R> <P> 		: "𝔓" U1D513 # MATHEMATICAL FRAKTUR CAPITAL P
+<Multi_key> <F> <R> <Q> 		: "𝔔" U1D514 # MATHEMATICAL FRAKTUR CAPITAL Q
+<Multi_key> <F> <R> <R> 		: "ℜ" U211C # BLACK-LETTER CAPITAL R
+<Multi_key> <F> <R> <S> 		: "𝔖" U1D516 # MATHEMATICAL FRAKTUR CAPITAL S
+<Multi_key> <F> <R> <T> 		: "𝔗" U1D517 # MATHEMATICAL FRAKTUR CAPITAL T
+<Multi_key> <F> <R> <U> 		: "𝔘" U1D518 # MATHEMATICAL FRAKTUR CAPITAL U
+<Multi_key> <F> <R> <V> 		: "𝔙" U1D519 # MATHEMATICAL FRAKTUR CAPITAL V
+<Multi_key> <F> <R> <W> 		: "𝔚" U1D51A # MATHEMATICAL FRAKTUR CAPITAL W
+<Multi_key> <F> <R> <X> 		: "𝔛" U1D51B # MATHEMATICAL FRAKTUR CAPITAL X
+<Multi_key> <F> <R> <Y> 		: "𝔜" U1D51C # MATHEMATICAL FRAKTUR CAPITAL Y
+<Multi_key> <F> <R> <Z> 		: "ℨ" U2128 # BLACK-LETTER CAPITAL Z
+<Multi_key> <f> <r> <a> 		: "𝔞" U1D51E # MATHEMATICAL FRAKTUR SMALL A
+<Multi_key> <f> <r> <b> 		: "𝔟" U1D51F # MATHEMATICAL FRAKTUR SMALL B
+<Multi_key> <f> <r> <c> 		: "𝔠" U1D520 # MATHEMATICAL FRAKTUR SMALL C
+<Multi_key> <f> <r> <d> 		: "𝔡" U1D521 # MATHEMATICAL FRAKTUR SMALL D
+<Multi_key> <f> <r> <e> 		: "𝔢" U1D522 # MATHEMATICAL FRAKTUR SMALL E
+<Multi_key> <f> <r> <f> 		: "𝔣" U1D523 # MATHEMATICAL FRAKTUR SMALL F
+<Multi_key> <f> <r> <g> 		: "𝔤" U1D524 # MATHEMATICAL FRAKTUR SMALL G
+<Multi_key> <f> <r> <h> 		: "𝔥" U1D525 # MATHEMATICAL FRAKTUR SMALL H
+<Multi_key> <f> <r> <i> 		: "𝔦" U1D526 # MATHEMATICAL FRAKTUR SMALL I
+<Multi_key> <f> <r> <j> 		: "𝔧" U1D527 # MATHEMATICAL FRAKTUR SMALL J
+<Multi_key> <f> <r> <k> 		: "𝔨" U1D528 # MATHEMATICAL FRAKTUR SMALL K
+<Multi_key> <f> <r> <l> 		: "𝔩" U1D529 # MATHEMATICAL FRAKTUR SMALL L
+<Multi_key> <f> <r> <m> 		: "𝔪" U1D52A # MATHEMATICAL FRAKTUR SMALL M
+<Multi_key> <f> <r> <n> 		: "𝔫" U1D52B # MATHEMATICAL FRAKTUR SMALL N
+<Multi_key> <f> <r> <o> 		: "𝔬" U1D52C # MATHEMATICAL FRAKTUR SMALL O
+<Multi_key> <f> <r> <p> 		: "𝔭" U1D52D # MATHEMATICAL FRAKTUR SMALL P
+<Multi_key> <f> <r> <q> 		: "𝔮" U1D52E # MATHEMATICAL FRAKTUR SMALL Q
+<Multi_key> <f> <r> <r> 		: "𝔯" U1D52F # MATHEMATICAL FRAKTUR SMALL R
+<Multi_key> <f> <r> <s> 		: "𝔰" U1D530 # MATHEMATICAL FRAKTUR SMALL S
+<Multi_key> <f> <r> <t> 		: "𝔱" U1D531 # MATHEMATICAL FRAKTUR SMALL T
+<Multi_key> <f> <r> <u> 		: "𝔲" U1D532 # MATHEMATICAL FRAKTUR SMALL U
+<Multi_key> <f> <r> <v> 		: "𝔳" U1D533 # MATHEMATICAL FRAKTUR SMALL V
+<Multi_key> <f> <r> <w> 		: "𝔴" U1D534 # MATHEMATICAL FRAKTUR SMALL W
+<Multi_key> <f> <r> <x> 		: "𝔵" U1D535 # MATHEMATICAL FRAKTUR SMALL X
+<Multi_key> <f> <r> <y> 		: "𝔶" U1D536 # MATHEMATICAL FRAKTUR SMALL Y
+<Multi_key> <f> <r> <z> 		: "𝔷" U1D537 # MATHEMATICAL FRAKTUR SMALL Z
+
+# bold fraktur letters (♫bf): 𝕬–𝖅𝖆–𝖟
+<Multi_key> <b> <f> <A> 		: "𝕬" U1D56C # MATHEMATICAL BOLD FRAKTUR CAPITAL A
+<Multi_key> <b> <f> <B> 		: "𝕭" U1D56D # MATHEMATICAL BOLD FRAKTUR CAPITAL B
+<Multi_key> <b> <f> <C> 		: "𝕮" U1D56E # MATHEMATICAL BOLD FRAKTUR CAPITAL C
+<Multi_key> <b> <f> <D> 		: "𝕯" U1D56F # MATHEMATICAL BOLD FRAKTUR CAPITAL D
+<Multi_key> <b> <f> <E> 		: "𝕰" U1D570 # MATHEMATICAL BOLD FRAKTUR CAPITAL E
+<Multi_key> <b> <f> <F> 		: "𝕱" U1D571 # MATHEMATICAL BOLD FRAKTUR CAPITAL F
+<Multi_key> <b> <f> <G> 		: "𝕲" U1D572 # MATHEMATICAL BOLD FRAKTUR CAPITAL G
+<Multi_key> <b> <f> <H> 		: "𝕳" U1D573 # MATHEMATICAL BOLD FRAKTUR CAPITAL H
+<Multi_key> <b> <f> <I> 		: "𝕴" U1D574 # MATHEMATICAL BOLD FRAKTUR CAPITAL I
+<Multi_key> <b> <f> <J> 		: "𝕵" U1D575 # MATHEMATICAL BOLD FRAKTUR CAPITAL J
+<Multi_key> <b> <f> <K> 		: "𝕶" U1D576 # MATHEMATICAL BOLD FRAKTUR CAPITAL K
+<Multi_key> <b> <f> <L> 		: "𝕷" U1D577 # MATHEMATICAL BOLD FRAKTUR CAPITAL L
+<Multi_key> <b> <f> <M> 		: "𝕸" U1D578 # MATHEMATICAL BOLD FRAKTUR CAPITAL M
+<Multi_key> <b> <f> <N> 		: "𝕹" U1D579 # MATHEMATICAL BOLD FRAKTUR CAPITAL N
+<Multi_key> <b> <f> <O> 		: "𝕺" U1D57A # MATHEMATICAL BOLD FRAKTUR CAPITAL O
+<Multi_key> <b> <f> <P> 		: "𝕻" U1D57B # MATHEMATICAL BOLD FRAKTUR CAPITAL P
+<Multi_key> <b> <f> <Q> 		: "𝕼" U1D57C # MATHEMATICAL BOLD FRAKTUR CAPITAL Q
+<Multi_key> <b> <f> <R> 		: "𝕽" U1D57D # MATHEMATICAL BOLD FRAKTUR CAPITAL R
+<Multi_key> <b> <f> <S> 		: "𝕾" U1D57E # MATHEMATICAL BOLD FRAKTUR CAPITAL S
+<Multi_key> <b> <f> <T> 		: "𝕿" U1D57F # MATHEMATICAL BOLD FRAKTUR CAPITAL T
+<Multi_key> <b> <f> <U> 		: "𝖀" U1D580 # MATHEMATICAL BOLD FRAKTUR CAPITAL U
+<Multi_key> <b> <f> <V> 		: "𝖁" U1D581 # MATHEMATICAL BOLD FRAKTUR CAPITAL V
+<Multi_key> <b> <f> <W> 		: "𝖂" U1D582 # MATHEMATICAL BOLD FRAKTUR CAPITAL W
+<Multi_key> <b> <f> <X> 		: "𝖃" U1D583 # MATHEMATICAL BOLD FRAKTUR CAPITAL X
+<Multi_key> <b> <f> <Y> 		: "𝖄" U1D584 # MATHEMATICAL BOLD FRAKTUR CAPITAL Y
+<Multi_key> <b> <f> <Z> 		: "𝖅" U1D585 # MATHEMATICAL BOLD FRAKTUR CAPITAL Z
+<Multi_key> <B> <F> <A> 		: "𝕬" U1D56C # MATHEMATICAL BOLD FRAKTUR CAPITAL A
+<Multi_key> <B> <F> <B> 		: "𝕭" U1D56D # MATHEMATICAL BOLD FRAKTUR CAPITAL B
+<Multi_key> <B> <F> <C> 		: "𝕮" U1D56E # MATHEMATICAL BOLD FRAKTUR CAPITAL C
+<Multi_key> <B> <F> <D> 		: "𝕯" U1D56F # MATHEMATICAL BOLD FRAKTUR CAPITAL D
+<Multi_key> <B> <F> <E> 		: "𝕰" U1D570 # MATHEMATICAL BOLD FRAKTUR CAPITAL E
+<Multi_key> <B> <F> <F> 		: "𝕱" U1D571 # MATHEMATICAL BOLD FRAKTUR CAPITAL F
+<Multi_key> <B> <F> <G> 		: "𝕲" U1D572 # MATHEMATICAL BOLD FRAKTUR CAPITAL G
+<Multi_key> <B> <F> <H> 		: "𝕳" U1D573 # MATHEMATICAL BOLD FRAKTUR CAPITAL H
+<Multi_key> <B> <F> <I> 		: "𝕴" U1D574 # MATHEMATICAL BOLD FRAKTUR CAPITAL I
+<Multi_key> <B> <F> <J> 		: "𝕵" U1D575 # MATHEMATICAL BOLD FRAKTUR CAPITAL J
+<Multi_key> <B> <F> <K> 		: "𝕶" U1D576 # MATHEMATICAL BOLD FRAKTUR CAPITAL K
+<Multi_key> <B> <F> <L> 		: "𝕷" U1D577 # MATHEMATICAL BOLD FRAKTUR CAPITAL L
+<Multi_key> <B> <F> <M> 		: "𝕸" U1D578 # MATHEMATICAL BOLD FRAKTUR CAPITAL M
+<Multi_key> <B> <F> <N> 		: "𝕹" U1D579 # MATHEMATICAL BOLD FRAKTUR CAPITAL N
+<Multi_key> <B> <F> <O> 		: "𝕺" U1D57A # MATHEMATICAL BOLD FRAKTUR CAPITAL O
+<Multi_key> <B> <F> <P> 		: "𝕻" U1D57B # MATHEMATICAL BOLD FRAKTUR CAPITAL P
+<Multi_key> <B> <F> <Q> 		: "𝕼" U1D57C # MATHEMATICAL BOLD FRAKTUR CAPITAL Q
+<Multi_key> <B> <F> <R> 		: "𝕽" U1D57D # MATHEMATICAL BOLD FRAKTUR CAPITAL R
+<Multi_key> <B> <F> <S> 		: "𝕾" U1D57E # MATHEMATICAL BOLD FRAKTUR CAPITAL S
+<Multi_key> <B> <F> <T> 		: "𝕿" U1D57F # MATHEMATICAL BOLD FRAKTUR CAPITAL T
+<Multi_key> <B> <F> <U> 		: "𝖀" U1D580 # MATHEMATICAL BOLD FRAKTUR CAPITAL U
+<Multi_key> <B> <F> <V> 		: "𝖁" U1D581 # MATHEMATICAL BOLD FRAKTUR CAPITAL V
+<Multi_key> <B> <F> <W> 		: "𝖂" U1D582 # MATHEMATICAL BOLD FRAKTUR CAPITAL W
+<Multi_key> <B> <F> <X> 		: "𝖃" U1D583 # MATHEMATICAL BOLD FRAKTUR CAPITAL X
+<Multi_key> <B> <F> <Y> 		: "𝖄" U1D584 # MATHEMATICAL BOLD FRAKTUR CAPITAL Y
+<Multi_key> <B> <F> <Z> 		: "𝖅" U1D585 # MATHEMATICAL BOLD FRAKTUR CAPITAL Z
+<Multi_key> <b> <f> <a> 		: "𝖆" U1D586 # MATHEMATICAL BOLD FRAKTUR SMALL A
+<Multi_key> <b> <f> <b> 		: "𝖇" U1D587 # MATHEMATICAL BOLD FRAKTUR SMALL B
+<Multi_key> <b> <f> <c> 		: "𝖈" U1D588 # MATHEMATICAL BOLD FRAKTUR SMALL C
+<Multi_key> <b> <f> <d> 		: "𝖉" U1D589 # MATHEMATICAL BOLD FRAKTUR SMALL D
+<Multi_key> <b> <f> <e> 		: "𝖊" U1D58A # MATHEMATICAL BOLD FRAKTUR SMALL E
+<Multi_key> <b> <f> <f> 		: "𝖋" U1D58B # MATHEMATICAL BOLD FRAKTUR SMALL F
+<Multi_key> <b> <f> <g> 		: "𝖌" U1D58C # MATHEMATICAL BOLD FRAKTUR SMALL G
+<Multi_key> <b> <f> <h> 		: "𝖍" U1D58D # MATHEMATICAL BOLD FRAKTUR SMALL H
+<Multi_key> <b> <f> <i> 		: "𝖎" U1D58E # MATHEMATICAL BOLD FRAKTUR SMALL I
+<Multi_key> <b> <f> <j> 		: "𝖏" U1D58F # MATHEMATICAL BOLD FRAKTUR SMALL J
+<Multi_key> <b> <f> <k> 		: "𝖐" U1D590 # MATHEMATICAL BOLD FRAKTUR SMALL K
+<Multi_key> <b> <f> <l> 		: "𝖑" U1D591 # MATHEMATICAL BOLD FRAKTUR SMALL L
+<Multi_key> <b> <f> <m> 		: "𝖒" U1D592 # MATHEMATICAL BOLD FRAKTUR SMALL M
+<Multi_key> <b> <f> <n> 		: "𝖓" U1D593 # MATHEMATICAL BOLD FRAKTUR SMALL N
+<Multi_key> <b> <f> <o> 		: "𝖔" U1D594 # MATHEMATICAL BOLD FRAKTUR SMALL O
+<Multi_key> <b> <f> <p> 		: "𝖕" U1D595 # MATHEMATICAL BOLD FRAKTUR SMALL P
+<Multi_key> <b> <f> <q> 		: "𝖖" U1D596 # MATHEMATICAL BOLD FRAKTUR SMALL Q
+<Multi_key> <b> <f> <r> 		: "𝖗" U1D597 # MATHEMATICAL BOLD FRAKTUR SMALL R
+<Multi_key> <b> <f> <s> 		: "𝖘" U1D598 # MATHEMATICAL BOLD FRAKTUR SMALL S
+<Multi_key> <b> <f> <t> 		: "𝖙" U1D599 # MATHEMATICAL BOLD FRAKTUR SMALL T
+<Multi_key> <b> <f> <u> 		: "𝖚" U1D59A # MATHEMATICAL BOLD FRAKTUR SMALL U
+<Multi_key> <b> <f> <v> 		: "𝖛" U1D59B # MATHEMATICAL BOLD FRAKTUR SMALL V
+<Multi_key> <b> <f> <w> 		: "𝖜" U1D59C # MATHEMATICAL BOLD FRAKTUR SMALL W
+<Multi_key> <b> <f> <x> 		: "𝖝" U1D59D # MATHEMATICAL BOLD FRAKTUR SMALL X
+<Multi_key> <b> <f> <y> 		: "𝖞" U1D59E # MATHEMATICAL BOLD FRAKTUR SMALL Y
+<Multi_key> <b> <f> <z> 		: "𝖟" U1D59F # MATHEMATICAL BOLD FRAKTUR SMALL Z
+
+# sans-serif letters (♫sf): 𝖠–𝖹𝖺–𝗓, 𝟢–𝟫
+<Multi_key> <s> <f> <A> 		: "𝖠" U1D5A0 # MATHEMATICAL SANS-SERIF CAPITAL A
+<Multi_key> <s> <f> <B> 		: "𝖡" U1D5A1 # MATHEMATICAL SANS-SERIF CAPITAL B
+<Multi_key> <s> <f> <C> 		: "𝖢" U1D5A2 # MATHEMATICAL SANS-SERIF CAPITAL C
+<Multi_key> <s> <f> <D> 		: "𝖣" U1D5A3 # MATHEMATICAL SANS-SERIF CAPITAL D
+<Multi_key> <s> <f> <E> 		: "𝖤" U1D5A4 # MATHEMATICAL SANS-SERIF CAPITAL E
+<Multi_key> <s> <f> <F> 		: "𝖥" U1D5A5 # MATHEMATICAL SANS-SERIF CAPITAL F
+<Multi_key> <s> <f> <G> 		: "𝖦" U1D5A6 # MATHEMATICAL SANS-SERIF CAPITAL G
+<Multi_key> <s> <f> <H> 		: "𝖧" U1D5A7 # MATHEMATICAL SANS-SERIF CAPITAL H
+<Multi_key> <s> <f> <I> 		: "𝖨" U1D5A8 # MATHEMATICAL SANS-SERIF CAPITAL I
+<Multi_key> <s> <f> <J> 		: "𝖩" U1D5A9 # MATHEMATICAL SANS-SERIF CAPITAL J
+<Multi_key> <s> <f> <K> 		: "𝖪" U1D5AA # MATHEMATICAL SANS-SERIF CAPITAL K
+<Multi_key> <s> <f> <L> 		: "𝖫" U1D5AB # MATHEMATICAL SANS-SERIF CAPITAL L
+<Multi_key> <s> <f> <M> 		: "𝖬" U1D5AC # MATHEMATICAL SANS-SERIF CAPITAL M
+<Multi_key> <s> <f> <N> 		: "𝖭" U1D5AD # MATHEMATICAL SANS-SERIF CAPITAL N
+<Multi_key> <s> <f> <O> 		: "𝖮" U1D5AE # MATHEMATICAL SANS-SERIF CAPITAL O
+<Multi_key> <s> <f> <P> 		: "𝖯" U1D5AF # MATHEMATICAL SANS-SERIF CAPITAL P
+<Multi_key> <s> <f> <Q> 		: "𝖰" U1D5B0 # MATHEMATICAL SANS-SERIF CAPITAL Q
+<Multi_key> <s> <f> <R> 		: "𝖱" U1D5B1 # MATHEMATICAL SANS-SERIF CAPITAL R
+<Multi_key> <s> <f> <S> 		: "𝖲" U1D5B2 # MATHEMATICAL SANS-SERIF CAPITAL S
+<Multi_key> <s> <f> <T> 		: "𝖳" U1D5B3 # MATHEMATICAL SANS-SERIF CAPITAL T
+<Multi_key> <s> <f> <U> 		: "𝖴" U1D5B4 # MATHEMATICAL SANS-SERIF CAPITAL U
+<Multi_key> <s> <f> <V> 		: "𝖵" U1D5B5 # MATHEMATICAL SANS-SERIF CAPITAL V
+<Multi_key> <s> <f> <W> 		: "𝖶" U1D5B6 # MATHEMATICAL SANS-SERIF CAPITAL W
+<Multi_key> <s> <f> <X> 		: "𝖷" U1D5B7 # MATHEMATICAL SANS-SERIF CAPITAL X
+<Multi_key> <s> <f> <Y> 		: "𝖸" U1D5B8 # MATHEMATICAL SANS-SERIF CAPITAL Y
+<Multi_key> <s> <f> <Z> 		: "𝖹" U1D5B9 # MATHEMATICAL SANS-SERIF CAPITAL Z
+<Multi_key> <S> <F> <A> 		: "𝖠" U1D5A0 # MATHEMATICAL SANS-SERIF CAPITAL A
+<Multi_key> <S> <F> <B> 		: "𝖡" U1D5A1 # MATHEMATICAL SANS-SERIF CAPITAL B
+<Multi_key> <S> <F> <C> 		: "𝖢" U1D5A2 # MATHEMATICAL SANS-SERIF CAPITAL C
+<Multi_key> <S> <F> <D> 		: "𝖣" U1D5A3 # MATHEMATICAL SANS-SERIF CAPITAL D
+<Multi_key> <S> <F> <E> 		: "𝖤" U1D5A4 # MATHEMATICAL SANS-SERIF CAPITAL E
+<Multi_key> <S> <F> <F> 		: "𝖥" U1D5A5 # MATHEMATICAL SANS-SERIF CAPITAL F
+<Multi_key> <S> <F> <G> 		: "𝖦" U1D5A6 # MATHEMATICAL SANS-SERIF CAPITAL G
+<Multi_key> <S> <F> <H> 		: "𝖧" U1D5A7 # MATHEMATICAL SANS-SERIF CAPITAL H
+<Multi_key> <S> <F> <I> 		: "𝖨" U1D5A8 # MATHEMATICAL SANS-SERIF CAPITAL I
+<Multi_key> <S> <F> <J> 		: "𝖩" U1D5A9 # MATHEMATICAL SANS-SERIF CAPITAL J
+<Multi_key> <S> <F> <K> 		: "𝖪" U1D5AA # MATHEMATICAL SANS-SERIF CAPITAL K
+<Multi_key> <S> <F> <L> 		: "𝖫" U1D5AB # MATHEMATICAL SANS-SERIF CAPITAL L
+<Multi_key> <S> <F> <M> 		: "𝖬" U1D5AC # MATHEMATICAL SANS-SERIF CAPITAL M
+<Multi_key> <S> <F> <N> 		: "𝖭" U1D5AD # MATHEMATICAL SANS-SERIF CAPITAL N
+<Multi_key> <S> <F> <O> 		: "𝖮" U1D5AE # MATHEMATICAL SANS-SERIF CAPITAL O
+<Multi_key> <S> <F> <P> 		: "𝖯" U1D5AF # MATHEMATICAL SANS-SERIF CAPITAL P
+<Multi_key> <S> <F> <Q> 		: "𝖰" U1D5B0 # MATHEMATICAL SANS-SERIF CAPITAL Q
+<Multi_key> <S> <F> <R> 		: "𝖱" U1D5B1 # MATHEMATICAL SANS-SERIF CAPITAL R
+<Multi_key> <S> <F> <S> 		: "𝖲" U1D5B2 # MATHEMATICAL SANS-SERIF CAPITAL S
+<Multi_key> <S> <F> <T> 		: "𝖳" U1D5B3 # MATHEMATICAL SANS-SERIF CAPITAL T
+<Multi_key> <S> <F> <U> 		: "𝖴" U1D5B4 # MATHEMATICAL SANS-SERIF CAPITAL U
+<Multi_key> <S> <F> <V> 		: "𝖵" U1D5B5 # MATHEMATICAL SANS-SERIF CAPITAL V
+<Multi_key> <S> <F> <W> 		: "𝖶" U1D5B6 # MATHEMATICAL SANS-SERIF CAPITAL W
+<Multi_key> <S> <F> <X> 		: "𝖷" U1D5B7 # MATHEMATICAL SANS-SERIF CAPITAL X
+<Multi_key> <S> <F> <Y> 		: "𝖸" U1D5B8 # MATHEMATICAL SANS-SERIF CAPITAL Y
+<Multi_key> <S> <F> <Z> 		: "𝖹" U1D5B9 # MATHEMATICAL SANS-SERIF CAPITAL Z
+<Multi_key> <s> <f> <a> 		: "𝖺" U1D5BA # MATHEMATICAL SANS-SERIF SMALL A
+<Multi_key> <s> <f> <b> 		: "𝖻" U1D5BB # MATHEMATICAL SANS-SERIF SMALL B
+<Multi_key> <s> <f> <c> 		: "𝖼" U1D5BC # MATHEMATICAL SANS-SERIF SMALL C
+<Multi_key> <s> <f> <d> 		: "𝖽" U1D5BD # MATHEMATICAL SANS-SERIF SMALL D
+<Multi_key> <s> <f> <e> 		: "𝖾" U1D5BE # MATHEMATICAL SANS-SERIF SMALL E
+<Multi_key> <s> <f> <f> 		: "𝖿" U1D5BF # MATHEMATICAL SANS-SERIF SMALL F
+<Multi_key> <s> <f> <g> 		: "𝗀" U1D5C0 # MATHEMATICAL SANS-SERIF SMALL G
+<Multi_key> <s> <f> <h> 		: "𝗁" U1D5C1 # MATHEMATICAL SANS-SERIF SMALL H
+<Multi_key> <s> <f> <i> 		: "𝗂" U1D5C2 # MATHEMATICAL SANS-SERIF SMALL I
+<Multi_key> <s> <f> <j> 		: "𝗃" U1D5C3 # MATHEMATICAL SANS-SERIF SMALL J
+<Multi_key> <s> <f> <k> 		: "𝗄" U1D5C4 # MATHEMATICAL SANS-SERIF SMALL K
+<Multi_key> <s> <f> <l> 		: "𝗅" U1D5C5 # MATHEMATICAL SANS-SERIF SMALL L
+<Multi_key> <s> <f> <m> 		: "𝗆" U1D5C6 # MATHEMATICAL SANS-SERIF SMALL M
+<Multi_key> <s> <f> <n> 		: "𝗇" U1D5C7 # MATHEMATICAL SANS-SERIF SMALL N
+<Multi_key> <s> <f> <o> 		: "𝗈" U1D5C8 # MATHEMATICAL SANS-SERIF SMALL O
+<Multi_key> <s> <f> <p> 		: "𝗉" U1D5C9 # MATHEMATICAL SANS-SERIF SMALL P
+<Multi_key> <s> <f> <q> 		: "𝗊" U1D5CA # MATHEMATICAL SANS-SERIF SMALL Q
+<Multi_key> <s> <f> <r> 		: "𝗋" U1D5CB # MATHEMATICAL SANS-SERIF SMALL R
+<Multi_key> <s> <f> <s> 		: "𝗌" U1D5CC # MATHEMATICAL SANS-SERIF SMALL S
+<Multi_key> <s> <f> <t> 		: "𝗍" U1D5CD # MATHEMATICAL SANS-SERIF SMALL T
+<Multi_key> <s> <f> <u> 		: "𝗎" U1D5CE # MATHEMATICAL SANS-SERIF SMALL U
+<Multi_key> <s> <f> <v> 		: "𝗏" U1D5CF # MATHEMATICAL SANS-SERIF SMALL V
+<Multi_key> <s> <f> <w> 		: "𝗐" U1D5D0 # MATHEMATICAL SANS-SERIF SMALL W
+<Multi_key> <s> <f> <x> 		: "𝗑" U1D5D1 # MATHEMATICAL SANS-SERIF SMALL X
+<Multi_key> <s> <f> <y> 		: "𝗒" U1D5D2 # MATHEMATICAL SANS-SERIF SMALL Y
+<Multi_key> <s> <f> <z> 		: "𝗓" U1D5D3 # MATHEMATICAL SANS-SERIF SMALL Z
+<Multi_key> <s> <f> <0> 		: "𝟢" U1D7E2 # MATHEMATICAL SANS-SERIF DIGIT ZERO
+<Multi_key> <s> <f> <KP_0> 		: "𝟢" U1D7E2 # MATHEMATICAL SANS-SERIF DIGIT ZERO
+<Multi_key> <s> <f> <1> 		: "𝟣" U1D7E3 # MATHEMATICAL SANS-SERIF DIGIT ONE
+<Multi_key> <s> <f> <KP_1> 		: "𝟣" U1D7E3 # MATHEMATICAL SANS-SERIF DIGIT ONE
+<Multi_key> <s> <f> <2> 		: "𝟤" U1D7E4 # MATHEMATICAL SANS-SERIF DIGIT TWO
+<Multi_key> <s> <f> <KP_2> 		: "𝟤" U1D7E4 # MATHEMATICAL SANS-SERIF DIGIT TWO
+<Multi_key> <s> <f> <3> 		: "𝟥" U1D7E5 # MATHEMATICAL SANS-SERIF DIGIT THREE
+<Multi_key> <s> <f> <KP_3> 		: "𝟥" U1D7E5 # MATHEMATICAL SANS-SERIF DIGIT THREE
+<Multi_key> <s> <f> <4> 		: "𝟦" U1D7E6 # MATHEMATICAL SANS-SERIF DIGIT FOUR
+<Multi_key> <s> <f> <KP_4> 		: "𝟦" U1D7E6 # MATHEMATICAL SANS-SERIF DIGIT FOUR
+<Multi_key> <s> <f> <5> 		: "𝟧" U1D7E7 # MATHEMATICAL SANS-SERIF DIGIT FIVE
+<Multi_key> <s> <f> <KP_5> 		: "𝟧" U1D7E7 # MATHEMATICAL SANS-SERIF DIGIT FIVE
+<Multi_key> <s> <f> <6> 		: "𝟨" U1D7E8 # MATHEMATICAL SANS-SERIF DIGIT SIX
+<Multi_key> <s> <f> <KP_6> 		: "𝟨" U1D7E8 # MATHEMATICAL SANS-SERIF DIGIT SIX
+<Multi_key> <s> <f> <7> 		: "𝟩" U1D7E9 # MATHEMATICAL SANS-SERIF DIGIT SEVEN
+<Multi_key> <s> <f> <KP_7> 		: "𝟩" U1D7E9 # MATHEMATICAL SANS-SERIF DIGIT SEVEN
+<Multi_key> <s> <f> <8> 		: "𝟪" U1D7EA # MATHEMATICAL SANS-SERIF DIGIT EIGHT
+<Multi_key> <s> <f> <KP_8> 		: "𝟪" U1D7EA # MATHEMATICAL SANS-SERIF DIGIT EIGHT
+<Multi_key> <s> <f> <9> 		: "𝟫" U1D7EB # MATHEMATICAL SANS-SERIF DIGIT NINE
+<Multi_key> <s> <f> <KP_9> 		: "𝟫" U1D7EB # MATHEMATICAL SANS-SERIF DIGIT NINE
+
+# sans-serif bold letters (♫sb): 𝗔—𝗭𝗮—𝘇, 𝟬—𝟵, 𝝖—𝝮𝝰—𝞈, 𝝯𝞉𝞊𝞋𝞌𝞍𝞎𝞏 
+<Multi_key> <s> <b> <A> 		: "𝗔" U1D5D4 # MATHEMATICAL SANS-SERIF BOLD CAPITAL A
+<Multi_key> <s> <b> <B> 		: "𝗕" U1D5D5 # MATHEMATICAL SANS-SERIF BOLD CAPITAL B
+<Multi_key> <s> <b> <C> 		: "𝗖" U1D5D6 # MATHEMATICAL SANS-SERIF BOLD CAPITAL C
+<Multi_key> <s> <b> <D> 		: "𝗗" U1D5D7 # MATHEMATICAL SANS-SERIF BOLD CAPITAL D
+<Multi_key> <s> <b> <E> 		: "𝗘" U1D5D8 # MATHEMATICAL SANS-SERIF BOLD CAPITAL E
+<Multi_key> <s> <b> <F> 		: "𝗙" U1D5D9 # MATHEMATICAL SANS-SERIF BOLD CAPITAL F
+<Multi_key> <s> <b> <G> 		: "𝗚" U1D5DA # MATHEMATICAL SANS-SERIF BOLD CAPITAL G
+<Multi_key> <s> <b> <H> 		: "𝗛" U1D5DB # MATHEMATICAL SANS-SERIF BOLD CAPITAL H
+<Multi_key> <s> <b> <I> 		: "𝗜" U1D5DC # MATHEMATICAL SANS-SERIF BOLD CAPITAL I
+<Multi_key> <s> <b> <J> 		: "𝗝" U1D5DD # MATHEMATICAL SANS-SERIF BOLD CAPITAL J
+<Multi_key> <s> <b> <K> 		: "𝗞" U1D5DE # MATHEMATICAL SANS-SERIF BOLD CAPITAL K
+<Multi_key> <s> <b> <L> 		: "𝗟" U1D5DF # MATHEMATICAL SANS-SERIF BOLD CAPITAL L
+<Multi_key> <s> <b> <M> 		: "𝗠" U1D5E0 # MATHEMATICAL SANS-SERIF BOLD CAPITAL M
+<Multi_key> <s> <b> <N> 		: "𝗡" U1D5E1 # MATHEMATICAL SANS-SERIF BOLD CAPITAL N
+<Multi_key> <s> <b> <O> 		: "𝗢" U1D5E2 # MATHEMATICAL SANS-SERIF BOLD CAPITAL O
+<Multi_key> <s> <b> <P> 		: "𝗣" U1D5E3 # MATHEMATICAL SANS-SERIF BOLD CAPITAL P
+<Multi_key> <s> <b> <Q> 		: "𝗤" U1D5E4 # MATHEMATICAL SANS-SERIF BOLD CAPITAL Q
+<Multi_key> <s> <b> <R> 		: "𝗥" U1D5E5 # MATHEMATICAL SANS-SERIF BOLD CAPITAL R
+<Multi_key> <s> <b> <S> 		: "𝗦" U1D5E6 # MATHEMATICAL SANS-SERIF BOLD CAPITAL S
+<Multi_key> <s> <b> <T> 		: "𝗧" U1D5E7 # MATHEMATICAL SANS-SERIF BOLD CAPITAL T
+<Multi_key> <s> <b> <U> 		: "𝗨" U1D5E8 # MATHEMATICAL SANS-SERIF BOLD CAPITAL U
+<Multi_key> <s> <b> <V> 		: "𝗩" U1D5E9 # MATHEMATICAL SANS-SERIF BOLD CAPITAL V
+<Multi_key> <s> <b> <W> 		: "𝗪" U1D5EA # MATHEMATICAL SANS-SERIF BOLD CAPITAL W
+<Multi_key> <s> <b> <X> 		: "𝗫" U1D5EB # MATHEMATICAL SANS-SERIF BOLD CAPITAL X
+<Multi_key> <s> <b> <Y> 		: "𝗬" U1D5EC # MATHEMATICAL SANS-SERIF BOLD CAPITAL Y
+<Multi_key> <s> <b> <Z> 		: "𝗭" U1D5ED # MATHEMATICAL SANS-SERIF BOLD CAPITAL Z
+<Multi_key> <S> <B> <A> 		: "𝗔" U1D5D4 # MATHEMATICAL SANS-SERIF BOLD CAPITAL A
+<Multi_key> <S> <B> <B> 		: "𝗕" U1D5D5 # MATHEMATICAL SANS-SERIF BOLD CAPITAL B
+<Multi_key> <S> <B> <C> 		: "𝗖" U1D5D6 # MATHEMATICAL SANS-SERIF BOLD CAPITAL C
+<Multi_key> <S> <B> <D> 		: "𝗗" U1D5D7 # MATHEMATICAL SANS-SERIF BOLD CAPITAL D
+<Multi_key> <S> <B> <E> 		: "𝗘" U1D5D8 # MATHEMATICAL SANS-SERIF BOLD CAPITAL E
+<Multi_key> <S> <B> <F> 		: "𝗙" U1D5D9 # MATHEMATICAL SANS-SERIF BOLD CAPITAL F
+<Multi_key> <S> <B> <G> 		: "𝗚" U1D5DA # MATHEMATICAL SANS-SERIF BOLD CAPITAL G
+<Multi_key> <S> <B> <H> 		: "𝗛" U1D5DB # MATHEMATICAL SANS-SERIF BOLD CAPITAL H
+<Multi_key> <S> <B> <I> 		: "𝗜" U1D5DC # MATHEMATICAL SANS-SERIF BOLD CAPITAL I
+<Multi_key> <S> <B> <J> 		: "𝗝" U1D5DD # MATHEMATICAL SANS-SERIF BOLD CAPITAL J
+<Multi_key> <S> <B> <K> 		: "𝗞" U1D5DE # MATHEMATICAL SANS-SERIF BOLD CAPITAL K
+<Multi_key> <S> <B> <L> 		: "𝗟" U1D5DF # MATHEMATICAL SANS-SERIF BOLD CAPITAL L
+<Multi_key> <S> <B> <M> 		: "𝗠" U1D5E0 # MATHEMATICAL SANS-SERIF BOLD CAPITAL M
+<Multi_key> <S> <B> <N> 		: "𝗡" U1D5E1 # MATHEMATICAL SANS-SERIF BOLD CAPITAL N
+<Multi_key> <S> <B> <O> 		: "𝗢" U1D5E2 # MATHEMATICAL SANS-SERIF BOLD CAPITAL O
+<Multi_key> <S> <B> <P> 		: "𝗣" U1D5E3 # MATHEMATICAL SANS-SERIF BOLD CAPITAL P
+<Multi_key> <S> <B> <Q> 		: "𝗤" U1D5E4 # MATHEMATICAL SANS-SERIF BOLD CAPITAL Q
+<Multi_key> <S> <B> <R> 		: "𝗥" U1D5E5 # MATHEMATICAL SANS-SERIF BOLD CAPITAL R
+<Multi_key> <S> <B> <S> 		: "𝗦" U1D5E6 # MATHEMATICAL SANS-SERIF BOLD CAPITAL S
+<Multi_key> <S> <B> <T> 		: "𝗧" U1D5E7 # MATHEMATICAL SANS-SERIF BOLD CAPITAL T
+<Multi_key> <S> <B> <U> 		: "𝗨" U1D5E8 # MATHEMATICAL SANS-SERIF BOLD CAPITAL U
+<Multi_key> <S> <B> <V> 		: "𝗩" U1D5E9 # MATHEMATICAL SANS-SERIF BOLD CAPITAL V
+<Multi_key> <S> <B> <W> 		: "𝗪" U1D5EA # MATHEMATICAL SANS-SERIF BOLD CAPITAL W
+<Multi_key> <S> <B> <X> 		: "𝗫" U1D5EB # MATHEMATICAL SANS-SERIF BOLD CAPITAL X
+<Multi_key> <S> <B> <Y> 		: "𝗬" U1D5EC # MATHEMATICAL SANS-SERIF BOLD CAPITAL Y
+<Multi_key> <S> <B> <Z> 		: "𝗭" U1D5ED # MATHEMATICAL SANS-SERIF BOLD CAPITAL Z
+<Multi_key> <s> <b> <a> 		: "𝗮" U1D5EE # MATHEMATICAL SANS-SERIF BOLD SMALL A
+<Multi_key> <s> <b> <b> 		: "𝗯" U1D5EF # MATHEMATICAL SANS-SERIF BOLD SMALL B
+<Multi_key> <s> <b> <c> 		: "𝗰" U1D5F0 # MATHEMATICAL SANS-SERIF BOLD SMALL C
+<Multi_key> <s> <b> <d> 		: "𝗱" U1D5F1 # MATHEMATICAL SANS-SERIF BOLD SMALL D
+<Multi_key> <s> <b> <e> 		: "𝗲" U1D5F2 # MATHEMATICAL SANS-SERIF BOLD SMALL E
+<Multi_key> <s> <b> <f> 		: "𝗳" U1D5F3 # MATHEMATICAL SANS-SERIF BOLD SMALL F
+<Multi_key> <s> <b> <g> 		: "𝗴" U1D5F4 # MATHEMATICAL SANS-SERIF BOLD SMALL G
+<Multi_key> <s> <b> <h> 		: "𝗵" U1D5F5 # MATHEMATICAL SANS-SERIF BOLD SMALL H
+<Multi_key> <s> <b> <i> 		: "𝗶" U1D5F6 # MATHEMATICAL SANS-SERIF BOLD SMALL I
+<Multi_key> <s> <b> <j> 		: "𝗷" U1D5F7 # MATHEMATICAL SANS-SERIF BOLD SMALL J
+<Multi_key> <s> <b> <k> 		: "𝗸" U1D5F8 # MATHEMATICAL SANS-SERIF BOLD SMALL K
+<Multi_key> <s> <b> <l> 		: "𝗹" U1D5F9 # MATHEMATICAL SANS-SERIF BOLD SMALL L
+<Multi_key> <s> <b> <m> 		: "𝗺" U1D5FA # MATHEMATICAL SANS-SERIF BOLD SMALL M
+<Multi_key> <s> <b> <n> 		: "𝗻" U1D5FB # MATHEMATICAL SANS-SERIF BOLD SMALL N
+<Multi_key> <s> <b> <o> 		: "𝗼" U1D5FC # MATHEMATICAL SANS-SERIF BOLD SMALL O
+<Multi_key> <s> <b> <p> 		: "𝗽" U1D5FD # MATHEMATICAL SANS-SERIF BOLD SMALL P
+<Multi_key> <s> <b> <q> 		: "𝗾" U1D5FE # MATHEMATICAL SANS-SERIF BOLD SMALL Q
+<Multi_key> <s> <b> <r> 		: "𝗿" U1D5FF # MATHEMATICAL SANS-SERIF BOLD SMALL R
+<Multi_key> <s> <b> <s> 		: "𝘀" U1D600 # MATHEMATICAL SANS-SERIF BOLD SMALL S
+<Multi_key> <s> <b> <t> 		: "𝘁" U1D601 # MATHEMATICAL SANS-SERIF BOLD SMALL T
+<Multi_key> <s> <b> <u> 		: "𝘂" U1D602 # MATHEMATICAL SANS-SERIF BOLD SMALL U
+<Multi_key> <s> <b> <v> 		: "𝘃" U1D603 # MATHEMATICAL SANS-SERIF BOLD SMALL V
+<Multi_key> <s> <b> <w> 		: "𝘄" U1D604 # MATHEMATICAL SANS-SERIF BOLD SMALL W
+<Multi_key> <s> <b> <x> 		: "𝘅" U1D605 # MATHEMATICAL SANS-SERIF BOLD SMALL X
+<Multi_key> <s> <b> <y> 		: "𝘆" U1D606 # MATHEMATICAL SANS-SERIF BOLD SMALL Y
+<Multi_key> <s> <b> <z> 		: "𝘇" U1D607 # MATHEMATICAL SANS-SERIF BOLD SMALL Z
+<Multi_key> <s> <b> <0> 		: "𝟬" U1D7EC # MATHEMATICAL SANS-SERIF BOLD DIGIT ZERO
+<Multi_key> <s> <b> <KP_0> 		: "𝟬" U1D7EC # MATHEMATICAL SANS-SERIF BOLD DIGIT ZERO
+<Multi_key> <s> <b> <1> 		: "𝟭" U1D7ED # MATHEMATICAL SANS-SERIF BOLD DIGIT ONE
+<Multi_key> <s> <b> <KP_1> 		: "𝟭" U1D7ED # MATHEMATICAL SANS-SERIF BOLD DIGIT ONE
+<Multi_key> <s> <b> <2> 		: "𝟮" U1D7EE # MATHEMATICAL SANS-SERIF BOLD DIGIT TWO
+<Multi_key> <s> <b> <KP_2> 		: "𝟮" U1D7EE # MATHEMATICAL SANS-SERIF BOLD DIGIT TWO
+<Multi_key> <s> <b> <3> 		: "𝟯" U1D7EF # MATHEMATICAL SANS-SERIF BOLD DIGIT THREE
+<Multi_key> <s> <b> <KP_3> 		: "𝟯" U1D7EF # MATHEMATICAL SANS-SERIF BOLD DIGIT THREE
+<Multi_key> <s> <b> <4> 		: "𝟰" U1D7F0 # MATHEMATICAL SANS-SERIF BOLD DIGIT FOUR
+<Multi_key> <s> <b> <KP_4> 		: "𝟰" U1D7F0 # MATHEMATICAL SANS-SERIF BOLD DIGIT FOUR
+<Multi_key> <s> <b> <5> 		: "𝟱" U1D7F1 # MATHEMATICAL SANS-SERIF BOLD DIGIT FIVE
+<Multi_key> <s> <b> <KP_5> 		: "𝟱" U1D7F1 # MATHEMATICAL SANS-SERIF BOLD DIGIT FIVE
+<Multi_key> <s> <b> <6> 		: "𝟲" U1D7F2 # MATHEMATICAL SANS-SERIF BOLD DIGIT SIX
+<Multi_key> <s> <b> <KP_6> 		: "𝟲" U1D7F2 # MATHEMATICAL SANS-SERIF BOLD DIGIT SIX
+<Multi_key> <s> <b> <7> 		: "𝟳" U1D7F3 # MATHEMATICAL SANS-SERIF BOLD DIGIT SEVEN
+<Multi_key> <s> <b> <KP_7> 		: "𝟳" U1D7F3 # MATHEMATICAL SANS-SERIF BOLD DIGIT SEVEN
+<Multi_key> <s> <b> <8> 		: "𝟴" U1D7F4 # MATHEMATICAL SANS-SERIF BOLD DIGIT EIGHT
+<Multi_key> <s> <b> <KP_8> 		: "𝟴" U1D7F4 # MATHEMATICAL SANS-SERIF BOLD DIGIT EIGHT
+<Multi_key> <s> <b> <9> 		: "𝟵" U1D7F5 # MATHEMATICAL SANS-SERIF BOLD DIGIT NINE
+<Multi_key> <s> <b> <KP_9> 		: "𝟵" U1D7F5 # MATHEMATICAL SANS-SERIF BOLD DIGIT NINE
+# some of these not reachable within neo, could include ♫gsA → 𝝖, as above with ♫gb
+<Multi_key> <s> <b> <Greek_ALPHA>	: "𝝖" U1D756 # MATHEMATICAL SANS-SERIF BOLD CAPITAL ALPHA
+<Multi_key> <s> <b> <Greek_BETA>	: "𝝗" U1D757 # MATHEMATICAL SANS-SERIF BOLD CAPITAL BETA
+<Multi_key> <s> <b> <Greek_GAMMA>	: "𝝘" U1D758 # MATHEMATICAL SANS-SERIF BOLD CAPITAL GAMMA
+<Multi_key> <s> <b> <Greek_DELTA>	: "𝝙" U1D759 # MATHEMATICAL SANS-SERIF BOLD CAPITAL DELTA
+<Multi_key> <s> <b> <Greek_EPSILON>	: "𝝚" U1D75A # MATHEMATICAL SANS-SERIF BOLD CAPITAL EPSILON
+<Multi_key> <s> <b> <Greek_ZETA>	: "𝝛" U1D75B # MATHEMATICAL SANS-SERIF BOLD CAPITAL ZETA
+<Multi_key> <s> <b> <Greek_ETA>		: "𝝜" U1D75C # MATHEMATICAL SANS-SERIF BOLD CAPITAL ETA
+<Multi_key> <s> <b> <Greek_THETA>	: "𝝝" U1D75D # MATHEMATICAL SANS-SERIF BOLD CAPITAL THETA
+<Multi_key> <s> <b> <Greek_IOTA>	: "𝝞" U1D75E # MATHEMATICAL SANS-SERIF BOLD CAPITAL IOTA
+<Multi_key> <s> <b> <Greek_KAPPA>	: "𝝟" U1D75F # MATHEMATICAL SANS-SERIF BOLD CAPITAL KAPPA
+<Multi_key> <s> <b> <Greek_LAMBDA>	: "𝝠" U1D760 # MATHEMATICAL SANS-SERIF BOLD CAPITAL LAMBDA
+<Multi_key> <s> <b> <Greek_MU>		: "𝝡" U1D761 # MATHEMATICAL SANS-SERIF BOLD CAPITAL MU
+<Multi_key> <s> <b> <Greek_NU>		: "𝝢" U1D762 # MATHEMATICAL SANS-SERIF BOLD CAPITAL NU
+<Multi_key> <s> <b> <Greek_XI>		: "𝝣" U1D763 # MATHEMATICAL SANS-SERIF BOLD CAPITAL XI
+<Multi_key> <s> <b> <Greek_OMICRON>	: "𝝤" U1D764 # MATHEMATICAL SANS-SERIF BOLD CAPITAL OMICRON
+<Multi_key> <s> <b> <Greek_PI>		: "𝝥" U1D765 # MATHEMATICAL SANS-SERIF BOLD CAPITAL PI
+<Multi_key> <s> <b> <Greek_RHO>		: "𝝦" U1D766 # MATHEMATICAL SANS-SERIF BOLD CAPITAL RHO
+# not included: 𝝧 (U1D767), MATHEMATICAL SANS-SERIF BOLD CAPITAL THETA SYMBOL, there is already another capital theta 
+<Multi_key> <s> <b> <Greek_SIGMA>	: "𝝨" U1D768 # MATHEMATICAL SANS-SERIF BOLD CAPITAL SIGMA
+<Multi_key> <s> <b> <Greek_TAU>		: "𝝩" U1D769 # MATHEMATICAL SANS-SERIF BOLD CAPITAL TAU
+<Multi_key> <s> <b> <Greek_UPSILON>	: "𝝪" U1D76A # MATHEMATICAL SANS-SERIF BOLD CAPITAL UPSILON
+<Multi_key> <s> <b> <Greek_PHI>		: "𝝫" U1D76B # MATHEMATICAL SANS-SERIF BOLD CAPITAL PHI
+<Multi_key> <s> <b> <Greek_CHI>		: "𝝬" U1D76C # MATHEMATICAL SANS-SERIF BOLD CAPITAL CHI
+<Multi_key> <s> <b> <Greek_PSI>		: "𝝭" U1D76D # MATHEMATICAL SANS-SERIF BOLD CAPITAL PSI
+<Multi_key> <s> <b> <Greek_OMEGA>	: "𝝮" U1D76E # MATHEMATICAL SANS-SERIF BOLD CAPITAL OMEGA
+<Multi_key> <s> <b> <Greek_alpha>	: "𝝰" U1D770 # MATHEMATICAL SANS-SERIF BOLD SMALL ALPHA
+<Multi_key> <s> <b> <Greek_beta>	: "𝝱" U1D771 # MATHEMATICAL SANS-SERIF BOLD SMALL BETA
+<Multi_key> <s> <b> <Greek_gamma>	: "𝝲" U1D772 # MATHEMATICAL SANS-SERIF BOLD SMALL GAMMA
+<Multi_key> <s> <b> <Greek_delta>	: "𝝳" U1D773 # MATHEMATICAL SANS-SERIF BOLD SMALL DELTA
+<Multi_key> <s> <b> <Greek_epsilon>	: "𝝴" U1D774 # MATHEMATICAL SANS-SERIF BOLD SMALL EPSILON
+<Multi_key> <s> <b> <Greek_zeta>	: "𝝵" U1D775 # MATHEMATICAL SANS-SERIF BOLD SMALL ZETA
+<Multi_key> <s> <b> <Greek_eta>		: "𝝶" U1D776 # MATHEMATICAL SANS-SERIF BOLD SMALL ETA
+<Multi_key> <s> <b> <Greek_theta>	: "𝝷" U1D777 # MATHEMATICAL SANS-SERIF BOLD SMALL THETA
+<Multi_key> <s> <b> <Greek_iota>	: "𝝸" U1D778 # MATHEMATICAL SANS-SERIF BOLD SMALL IOTA
+<Multi_key> <s> <b> <Greek_kappa>	: "𝝹" U1D779 # MATHEMATICAL SANS-SERIF BOLD SMALL KAPPA
+<Multi_key> <s> <b> <Greek_lambda>	: "𝝺" U1D77A # MATHEMATICAL SANS-SERIF BOLD SMALL LAMBDA
+<Multi_key> <s> <b> <Greek_mu>		: "𝝻" U1D77B # MATHEMATICAL SANS-SERIF BOLD SMALL MU
+<Multi_key> <s> <b> <Greek_nu>		: "𝝼" U1D77C # MATHEMATICAL SANS-SERIF BOLD SMALL NU
+<Multi_key> <s> <b> <Greek_xi>		: "𝝽" U1D77D # MATHEMATICAL SANS-SERIF BOLD SMALL XI
+<Multi_key> <s> <b> <Greek_omicron>	: "𝝾" U1D77E # MATHEMATICAL SANS-SERIF BOLD SMALL OMICRON
+<Multi_key> <s> <b> <Greek_pi>		: "𝝿" U1D77F # MATHEMATICAL SANS-SERIF BOLD SMALL PI
+<Multi_key> <s> <b> <Greek_rho>		: "𝞀" U1D780 # MATHEMATICAL SANS-SERIF BOLD SMALL RHO
+<Multi_key> <s> <b> <Greek_finalsmallsigma> : "𝞁" U1D781 # MATHEMATICAL SANS-SERIF BOLD SMALL FINAL SIGMA
+<Multi_key> <s> <b> <Greek_sigma>	: "𝞂" U1D782 # MATHEMATICAL SANS-SERIF BOLD SMALL SIGMA
+<Multi_key> <s> <b> <Greek_tau>		: "𝞃" U1D783 # MATHEMATICAL SANS-SERIF BOLD SMALL TAU
+<Multi_key> <s> <b> <Greek_upsilon>	: "𝞄" U1D784 # MATHEMATICAL SANS-SERIF BOLD SMALL UPSILON
+<Multi_key> <s> <b> <Greek_phi>		: "𝞅" U1D785 # MATHEMATICAL SANS-SERIF BOLD SMALL PHI
+<Multi_key> <s> <b> <Greek_chi>		: "𝞆" U1D786 # MATHEMATICAL SANS-SERIF BOLD SMALL CHI
+<Multi_key> <s> <b> <Greek_psi>		: "𝞇" U1D787 # MATHEMATICAL SANS-SERIF BOLD SMALL PSI
+<Multi_key> <s> <b> <Greek_omega>	: "𝞈" U1D788 # MATHEMATICAL SANS-SERIF BOLD SMALL OMEGA
+<Multi_key> <s> <b> <U03F1>		: "𝞎" U1D78E # MATHEMATICAL SANS-SERIF BOLD RHO SYMBOL
+<Multi_key> <s> <b> <U03D1>		: "𝞋" U1D78B # MATHEMATICAL SANS-SERIF BOLD THETA SYMBOL
+<Multi_key> <s> <b> <U03F5>		: "𝞊" U1D78A # MATHEMATICAL SANS-SERIF BOLD EPSILON SYMBOL
+<Multi_key> <s> <b> <U03D5>		: "𝞍" U1D78D # MATHEMATICAL SANS-SERIF BOLD PHI SYMBOL
+<Multi_key> <s> <b> <U03F0>		: "𝞌" U1D78C # MATHEMATICAL SANS-SERIF BOLD KAPPA SYMBOL
+<Multi_key> <s> <b> <U03D6>		: "𝞏" U1D78F # MATHEMATICAL SANS-SERIF BOLD PI SYMBOL
+<Multi_key> <s> <b> <partialderivative>	: "𝞉" U1D789 # MATHEMATICAL SANS-SERIF BOLD PARTIAL DIFFERENTIAL
+<Multi_key> <s> <b> <nabla>		: "𝝯" U1D76F # MATHEMATICAL SANS-SERIF BOLD NABLA
+
+# small italic selection (♫it):
+<Multi_key> <i> <t> <h>			: "ℎ" U210E # PLANCK CONSTANT
+<dead_stroke> <Multi_key> <i> <t> <h>	: "ℏ" U210F # PLANCK CONSTANT OVER TWO PI
+# I am not sure, if these are needed: 
+<Multi_key> <i> <t> <dead_abovedot> <i>	: "𝚤" U1D6A4 # MATHEMATICAL ITALIC SMALL DOTLESS I
+<dead_abovedot> <Multi_key> <i> <t> <i>	: "𝚤" U1D6A4 # MATHEMATICAL ITALIC SMALL DOTLESS I
+<Multi_key> <i> <t> <dead_abovedot> <j> : "𝚥" U1D6A5 # MATHEMATICAL ITALIC SMALL DOTLESS J
+<dead_abovedot> <Multi_key> <i> <t> <j> : "𝚥" U1D6A5 # MATHEMATICAL ITALIC SMALL DOTLESS J
+<Multi_key> <i> <t> <bar> <D>		: "ⅅ" U2145 # DOUBLE-STRUCK ITALIC CAPITAL D
+<Multi_key> <i> <t> <bar> <d>		: "ⅆ" U2146 # DOUBLE-STRUCK ITALIC SMALL D
+<Multi_key> <i> <t> <bar> <e>		: "ⅇ" U2147 # DOUBLE-STRUCK ITALIC SMALL E
+<Multi_key> <i> <t> <bar> <i>		: "ⅈ" U2148 # DOUBLE-STRUCK ITALIC SMALL I
+<Multi_key> <i> <t> <bar> <j>		: "ⅉ" U2149 # DOUBLE-STRUCK ITALIC SMALL J
+
+# not included: 𝐴–𝑍𝑎–𝑧𝛢–𝛺𝛼–𝜔 (♫it/♫git), 𝑨–𝒁𝒂–𝒛𝜜–𝜴𝜶–𝝎 (♫ib/♫gib), 𝘈–𝘡𝘢–𝘻 (♫isf), 𝘼–𝙕𝙖–𝙯𝞐–𝞨𝞪–𝟂 (♫isb/♫gisb), 𝙰–𝚉𝚊–𝚣𝟶–𝟿 (♫ms)
+# italic and monospace font combinations do not make sense for maths, as you do not use italicness to distinguish
+# variables. Should be done by general font selection mechanism.
+
+# End of additional Definitions (mathematical font symbols) by Neo keyboard layout
