@@ -101,8 +101,27 @@
 % \section{Implementierung}
 %
 %    \begin{macrocode}
-\RequirePackage{textcomp}
-\RequirePackage{marvosym}
+
+% XeTeX/LuaTex-Code von https://tex.stackexchange.com/a/195460
+% genommen, von egreg geschrieben
+\RequirePackage{ifxetex,ifluatex}
+
+\newif\ifunicode
+\ifxetex\unicodetrue\fi
+\ifluatex\unicodetrue\fi
+
+\ifunicode
+  \RequirePackage{fontspec}
+  \RequirePackage{newunicodechar}
+  \newcommand{\DeclareUnicodeCharacter}[2]{%
+    \begingroup\lccode`|=\string"#1\relax
+    \lowercase{\endgroup\newunicodechar{|}}{#2}%
+  }
+\else
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage{textcomp}
+  \RequirePackage{marvosym}
+\fi
 \RequirePackage{amsmath}
 
 % Griechische Buchstaben:
