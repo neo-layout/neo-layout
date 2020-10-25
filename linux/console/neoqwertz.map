@@ -171,7 +171,7 @@ alt_is_meta
            shiftl  keycode  41 = U+0307                
                    keycode  13 = dead_grave            dead_cedilla          U+030a                VoidSymbol            
            shiftl  keycode  13 = dead_diaeresis        
-   altgr   shiftl  keycode  13 = dead_macron           
+   altgr   shiftl  keycode  13 = macron           
                    keycode  27 = dead_acute            dead_tilde            VoidSymbol            VoidSymbol            
            shiftl  keycode  27 = dead_doubleacute      
    altgr   shiftl  keycode  27 = dead_breve            
