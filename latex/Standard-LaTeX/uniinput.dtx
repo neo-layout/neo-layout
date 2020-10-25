@@ -73,25 +73,32 @@
 %
 % \title{Das Paket \textsf{uniinput}\thanks{Dieses Dokument
 %   bezieht sich auf \textsf{uniinput}~\fileversion mit dem Datum \filedate.}}
-% \author{Benjamin Kellermann, Erik Streb, Arno Trautmann \\ \texttt{ Benjamin.Kellermann@gmx.de, mail@erikstreb.de},\\ \texttt{Arno.Trautmann@gmx.de}}
+% \author{Benjamin Kellermann, Erik Streb, Arno Trautmann \\ \texttt{Benjamin.Kellermann@gmx.de, mail@erikstreb.de},\\ \texttt{Arno.Trautmann@gmx.de}}
 %
 % \maketitle
 %
 % \section{Einleitung}
 % Mit Hilfe dieses Paketes kann eine große Zahl von Sonderzeichen direkt über die Tastatur in \LaTeX\ eingegeben werden, was z.\,B. das Verwenden von ergonomischen Tastaturkonzepten wie Neo deutlich effizienter macht.
-% 
+%
+% Dieses Paket ist mit den drei weit verbreiteten \TeX{}-Engines pdf\TeX{},
+% Lua\TeX{} und Xe\TeX{} kompatibel. Bei letzteren beiden ist es nicht
+% sinnvoll, es mit dem \texttt{unicode-math}-Paket zu kombinieren. Es ist
+% vielmehr eine Alternative dazu.
+%
 % \section{Anwendung}
-
-% Um das Paket verwenden zu können, muss es \emph{nach} dem Paket \texttt{inputenc} geladen werden. Es müssen also die Zeilen\\
-% \verb|\usepackage[utf8]{inputenc}|\\
-% \verb|\usepackage{uniinput}|\\
-% in der Präambel eingefügt werden (statt \verb|\usepackage[latin1]{inputenc}| oder Ähnlichem).\\
+%
+% Einfach \verb|\usepackage{uniinput}| zur Präambel des Dokuments hinzufügen.
+% Dann sind sofort einige Unicode-Zeichen direkt verfügbar.  Für manche Zeichen
+% werden zusätzliche Pakete benötigt, die von \texttt{uniinput} nicht direkt
+% geladen werden. Beispiele hierfür sind beispielsweise \texttt{amsfonts} für
+% die Doublestruck-Zeichen und \texttt{mathrsfs} für die Skript-Zeichen.
+% Automatisch geladen wird jedoch:
 %
 % \DescribeMacro{\RequirePackage\{textcomp\}}
-% \texttt{textcomp} wird geladen, damit viele Sonderzeichen eine schönere Form haben oder überhaupt verfügbar sind.
+% \texttt{textcomp} wird bei pdf\TeX{} geladen, damit viele Sonderzeichen eine schönere Form haben oder überhaupt verfügbar sind.
 % 
 % \DescribeMacro{\RequirePackage\{marvosym\}}
-% Das Paket \texttt{marvosym} wird geladen, damit der Befehl \verb|\EUR| für ein Euro-Zeichen zur Verfügung steht.
+% Das Paket \texttt{marvosym} wird bei pdf\TeX{} geladen, damit der Befehl \verb|\EUR| für ein Euro-Zeichen zur Verfügung steht.
 % 
 % \DescribeMacro{\RequirePackage\{amsmath\}}
 % Für einen schönen Formelsatz, z.\,B. ein gutes Integralzeichen, wird das Paket \texttt{amsmath} geladen.
@@ -298,17 +305,17 @@
 \DeclareUnicodeCharacter{2230}{\ensuremath{\oiiint}}
 \DeclareUnicodeCharacter{33D1}{\ensuremath{\ln}}
 \DeclareUnicodeCharacter{33D2}{\ensuremath{\log}}
-%\DeclareUnicodeCharacter{2308}{}⌈   LEFT CEILING
-%\DeclareUnicodeCharacter{230A}{}⌊   LEFT FLOOR
-%\DeclareUnicodeCharacter{2309}{}⌉   RIGHT CEILING
-%\DeclareUnicodeCharacter{230B}{}⌋   RIGHT FLOOR
-%\DeclareUnicodeCharacter{2234}{}∴   THEREFORE
-%\DeclareUnicodeCharacter{2235}{}∵   BECAUSE
-%\DeclareUnicodeCharacter{2245}{}≅   APPROXIMATELY EQUAL TO
-%\DeclareUnicodeCharacter{2248}{}≈   ALMOST EQUAL TO
-%\DeclareUnicodeCharacter{2257}{}≗   RING EQUAL TO
-%\DeclareUnicodeCharacter{225A}{}≚   EQUIANGULAR TO
-%\DeclareUnicodeCharacter{2259}{}≙   ESTIMATES
+\DeclareUnicodeCharacter{2308}{\ensuremath{\lceil}}
+\DeclareUnicodeCharacter{230A}{\ensuremath{\lfloor}}
+\DeclareUnicodeCharacter{2309}{\ensuremath{\rceil}}
+\DeclareUnicodeCharacter{230B}{\ensuremath{\rfloor}}
+\DeclareUnicodeCharacter{2234}{\ensuremath{\therefore}}
+\DeclareUnicodeCharacter{2235}{\ensuremath{\because}}
+\DeclareUnicodeCharacter{2245}{\ensuremath{\cong}}
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}
+\DeclareUnicodeCharacter{2257}{\ensuremath{\mathring{=}}}
+\DeclareUnicodeCharacter{225A}{\ensuremath{\check{=}}}
+\DeclareUnicodeCharacter{2259}{\ensuremath{\hat{=}}}
 \DeclareUnicodeCharacter{221D}{\propto}
 \DeclareUnicodeCharacter{211C}{\ensuremath{\Re}}
 \DeclareUnicodeCharacter{2111}{\ensuremath{\Im}}
@@ -325,8 +332,8 @@
 \DeclareUnicodeCharacter{2A01}{\ensuremath{\bigoplus}}
 \DeclareUnicodeCharacter{2A02}{\ensuremath{\bigotimes}}
 \DeclareUnicodeCharacter{2261}{\ensuremath{\equiv}}
-\DeclareUnicodeCharacter{2254}{:=}
-\DeclareUnicodeCharacter{2255}{=:}
+\DeclareUnicodeCharacter{2254}{\ensuremath{\coloneqq}}
+\DeclareUnicodeCharacter{2255}{\ensuremath{\eqqcolon}}
 
 % Hoch- und Tiefgestellte Ziffern und Zeichen
 
