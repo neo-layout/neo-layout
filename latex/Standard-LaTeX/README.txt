@@ -29,10 +29,11 @@ in einen von LaTeX durchsuchten Ordner kopieren und danach mit dem Befehl
 mktexlsr die LaTeX-Bibliothek aktualisieren.
 
 === Schritt 3: Einbinden ===
-Außerdem muss man noch die Zeilen
-	\usepackage[utf8]{inputenc} # bewirkt
+Außerdem muss man noch die Zeile
 	\usepackage{uniinput}
-in die Präambel seiner tex-Datei schreiben (statt \usepackage[latin1]{inputenc} oder Ähnlichem).
+in die Präambel seiner tex-Datei schreiben (statt \usepackage[latin1]{inputenc}
+oder Ähnlichem).  Ferner ist zu beachten, dass keine Kombination mit dem
+unicode-math Paket (bei XeTeX oder LuaTex) sinnvoll ist.
 
 === Optional: uniinput selbst erweitern ===
 Um die Datei mit weiteren Zeichen zu ergänzen, muss man weitere Zeilen in die
