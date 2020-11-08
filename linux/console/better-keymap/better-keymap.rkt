@@ -286,7 +286,7 @@
                      [#px"(?:^|\n)[[:blank:]]*(keycode[[:blank:]]+\\d+[[:blank:]]*=[[:blank:]]*[a-z][[:blank:]]*\n)"
                       "\n                \\1shift   shiftl  \\1shift   shiftr  \\1"])))
 
-(define (main tail-file body-file head-file output-file)
+(define (main head-file body-file tail-file output-file)
   (display-to-file (~a (file->string head-file)
                        (myfilter-output (keylist->keymap (convert (keymap->keylist (myfilter-input (file->string body-file))))))
                        (file->string tail-file))
