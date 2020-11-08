@@ -1,0 +1,198 @@
+#==========================================================================
+# Keypad
+#==========================================================================
+
+                keycode  69 = Tab              
+        shiftl  keycode  69 = Tab              
+        shiftr  keycode  69 = Tab              
+        altgr   keycode  69 = equal            
+        ctrll   keycode  69 = U+2260           
+shiftl  ctrll   keycode  69 = U+2260           
+shiftr  ctrll   keycode  69 = U+2260           
+shiftl  altgr   keycode  69 = U+2248           
+shiftr  altgr   keycode  69 = U+2248           
+ctrll   altgr   keycode  69 = U+2261           
+
+                keycode  98 = slash            
+        shiftl  keycode  98 = slash            
+        shiftr  keycode  98 = slash            
+        altgr   keycode  98 = division         
+        ctrll   keycode  98 = U+2044           
+shiftl  ctrll   keycode  98 = U+2044           
+shiftr  ctrll   keycode  98 = U+2044           
+shiftl  altgr   keycode  98 = U+2300           
+shiftr  altgr   keycode  98 = U+2300           
+ctrll   altgr   keycode  98 = U+2223           
+
+                keycode  55 = asterisk         
+        shiftl  keycode  55 = asterisk         
+        shiftr  keycode  55 = asterisk         
+        altgr   keycode  55 = U+22c5           
+        ctrll   keycode  55 = multiply         
+shiftl  ctrll   keycode  55 = multiply         
+shiftr  ctrll   keycode  55 = multiply         
+shiftl  altgr   keycode  55 = U+2299           
+shiftr  altgr   keycode  55 = U+2299           
+ctrll   altgr   keycode  55 = U+2297           
+
+                keycode  74 = minus            
+        shiftl  keycode  74 = minus            
+        shiftr  keycode  74 = minus            
+        altgr   keycode  74 = U+2212           
+        ctrll   keycode  74 = U+2216           
+shiftl  ctrll   keycode  74 = U+2216           
+shiftr  ctrll   keycode  74 = U+2216           
+shiftl  altgr   keycode  74 = U+2296           
+shiftr  altgr   keycode  74 = U+2296           
+ctrll   altgr   keycode  74 = U+2238           
+
+                keycode  71 = seven            
+        shiftl  keycode  71 = U+2714           
+        shiftr  keycode  71 = U+2714           
+        altgr   keycode  71 = U+2195           
+        ctrll   keycode  71 = Home             
+shiftl  ctrll   keycode  71 = Home             
+shiftr  ctrll   keycode  71 = Home             
+shiftl  altgr   keycode  71 = U+226a           
+shiftr  altgr   keycode  71 = U+226a           
+ctrll   altgr   keycode  71 = U+2308           
+
+                keycode  72 = eight            
+        shiftl  keycode  72 = U+2718           
+        shiftr  keycode  72 = U+2718           
+        altgr   keycode  72 = U+2191           
+        ctrll   keycode  72 = Up               
+shiftl  ctrll   keycode  72 = Up               
+shiftr  ctrll   keycode  72 = Up               
+shiftl  altgr   keycode  72 = U+2229           
+shiftr  altgr   keycode  72 = U+2229           
+ctrll   altgr   keycode  72 = U+22c2           
+
+                keycode  73 = nine             
+        shiftl  keycode  73 = U+2020           
+        shiftr  keycode  73 = U+2020           
+        altgr   keycode  73 = VoidSymbol       
+        ctrll   keycode  73 = Prior            
+shiftl  ctrll   keycode  73 = Prior            
+shiftr  ctrll   keycode  73 = Prior            
+shiftl  altgr   keycode  73 = U+226b           
+shiftr  altgr   keycode  73 = U+226b           
+ctrll   altgr   keycode  73 = U+2309           
+
+                keycode  75 = four             
+        shiftl  keycode  75 = U+2663           
+        shiftr  keycode  75 = U+2663           
+        altgr   keycode  75 = U+2190           
+        ctrll   keycode  75 = Left             
+shiftl  ctrll   keycode  75 = Left             
+shiftr  ctrll   keycode  75 = Left             
+shiftl  altgr   keycode  75 = U+2282           
+shiftr  altgr   keycode  75 = U+2282           
+ctrll   altgr   keycode  75 = U+2286           
+
+                keycode  76 = five             
+        shiftl  keycode  76 = U+20ac           
+        shiftr  keycode  76 = U+20ac           
+        altgr   keycode  76 = colon            
+        ctrll   keycode  76 = VoidSymbol       
+shiftl  ctrll   keycode  76 = VoidSymbol       
+shiftr  ctrll   keycode  76 = VoidSymbol       
+shiftl  altgr   keycode  76 = U+22b6           
+shiftr  altgr   keycode  76 = U+22b6           
+ctrll   altgr   keycode  76 = U+22b7           
+
+                keycode  77 = six              
+        shiftl  keycode  77 = U+2023           
+        shiftr  keycode  77 = U+2023           
+        altgr   keycode  77 = U+2192           
+        ctrll   keycode  77 = Right            
+shiftl  ctrll   keycode  77 = Right            
+shiftr  ctrll   keycode  77 = Right            
+shiftl  altgr   keycode  77 = U+2283           
+shiftr  altgr   keycode  77 = U+2283           
+ctrll   altgr   keycode  77 = U+2287           
+
+                keycode  78 = plus             
+        shiftl  keycode  78 = plus             
+        shiftr  keycode  78 = plus             
+        altgr   keycode  78 = plusminus        
+        ctrll   keycode  78 = U+2213           
+shiftl  ctrll   keycode  78 = U+2213           
+shiftr  ctrll   keycode  78 = U+2213           
+shiftl  altgr   keycode  78 = U+2295           
+shiftr  altgr   keycode  78 = U+2295           
+ctrll   altgr   keycode  78 = U+2214           
+
+                keycode  79 = one              
+        shiftl  keycode  79 = U+2666           
+        shiftr  keycode  79 = U+2666           
+        altgr   keycode  79 = U+2194           
+        ctrll   keycode  79 = End              
+shiftl  ctrll   keycode  79 = End              
+shiftr  ctrll   keycode  79 = End              
+shiftl  altgr   keycode  79 = U+2264           
+shiftr  altgr   keycode  79 = U+2264           
+ctrll   altgr   keycode  79 = U+230a           
+
+                keycode  80 = two              
+        shiftl  keycode  80 = U+2665           
+        shiftr  keycode  80 = U+2665           
+        altgr   keycode  80 = U+2193           
+        ctrll   keycode  80 = Down             
+shiftl  ctrll   keycode  80 = Down             
+shiftr  ctrll   keycode  80 = Down             
+shiftl  altgr   keycode  80 = U+222a           
+shiftr  altgr   keycode  80 = U+222a           
+ctrll   altgr   keycode  80 = U+22c3           
+
+                keycode  81 = three            
+        shiftl  keycode  81 = U+2660           
+        shiftr  keycode  81 = U+2660           
+        altgr   keycode  81 = U+21cc           
+        ctrll   keycode  81 = Next             
+shiftl  ctrll   keycode  81 = Next             
+shiftr  ctrll   keycode  81 = Next             
+shiftl  altgr   keycode  81 = U+2265           
+shiftr  altgr   keycode  81 = U+2265           
+ctrll   altgr   keycode  81 = U+230b           
+
+                keycode  82 = zero             
+        shiftl  keycode  82 = U+2423           
+        shiftr  keycode  82 = U+2423           
+        altgr   keycode  82 = percent          
+        ctrll   keycode  82 = Insert           
+shiftl  ctrll   keycode  82 = Insert           
+shiftr  ctrll   keycode  82 = Insert           
+shiftl  altgr   keycode  82 = U+2030           
+shiftr  altgr   keycode  82 = U+2030           
+ctrll   altgr   keycode  82 = U+25a1           
+
+                keycode  83 = comma            
+        shiftl  keycode  83 = period           
+        shiftr  keycode  83 = period           
+        altgr   keycode  83 = comma            
+        ctrll   keycode  83 = Remove           
+shiftl  ctrll   keycode  83 = Remove           
+shiftr  ctrll   keycode  83 = Remove           
+shiftl  altgr   keycode  83 = U+2032           
+shiftr  altgr   keycode  83 = U+2032           
+ctrll   altgr   keycode  83 = U+2033           
+
+                keycode  96 = KP_Enter         
+
+#==========================================================================
+# additional Keys with control function (has to be edited manually!!!!)
+#==========================================================================
+           control keycode  57 = nul
+# for some obscure reason, this is required even when we set alt_is_meta
+   alt     control keycode  57 = Meta_nul
+   control altgr   keycode  30 = Control_backslash
+   control altgr   keycode  19 = Control_bracketright
+   control altgr   keycode  17 = Control_underscore
+   control altgr   keycode  20 = Control_asciicircum
+
+
+#==========================================================================
+# Strings and Compose
+#==========================================================================
+# string F100 = "setleds +num\n"

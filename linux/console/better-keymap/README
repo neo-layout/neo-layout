@@ -1,0 +1,11 @@
+Das Programm better-keymap.rkt konvertiert die keymaps bei denen
+1) CapsLock nicht funktioniert
+2) KP_keysum verwendet wird (keysum wird nur geschrieben, wenn NumLock an ist)
+zu funktionierenden. Meist treten diese Probleme auf, wenn eine keymap von xmodmap kompiliert wird.
+Vor der Verwendung muss die nicht funktionierende keymap gekürzt werden, sodass nur Buchstabentasten, Zahltasten, tote Tasten und das Leerzeichen übrigbleiben (rechtes Mod3 ausgeschlossen). Dann muss eine raco repl geöffnet werden und folgendes eingegeben werden:
+(main "head.map"
+      <input-file>
+      "tail.map"
+      <output-file>)
+
+Dabei sind <input-file> und <output-file> Strings.

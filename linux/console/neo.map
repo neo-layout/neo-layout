@@ -813,9 +813,9 @@ shiftl  altgr   keycode  69 = U+2248           # ≈ [U+2248] ALMOST EQUAL TO
 shiftr  altgr   keycode  69 = U+2248           # ≈ [U+2248] ALMOST EQUAL TO
 ctrll   altgr   keycode  69 = U+2261           # ≡ [U+2261] IDENTICAL TO
 
-                keycode  98 = KP_Divide        # / [U+002F] SOLIDUS
-        shiftl  keycode  98 = KP_Divide        # / [U+002F] SOLIDUS
-        shiftr  keycode  98 = KP_Divide        # / [U+002F] SOLIDUS
+                keycode  98 = slash            # / [U+002F] SOLIDUS
+        shiftl  keycode  98 = slash            # / [U+002F] SOLIDUS
+        shiftr  keycode  98 = slash            # / [U+002F] SOLIDUS
         altgr   keycode  98 = division         # ÷ [U+00F7] DIVISION SIGN
         ctrll   keycode  98 = U+2044           # ⁄ [U+2044] FRACTION SLASH
 shiftl  ctrll   keycode  98 = U+2044           # ⁄ [U+2044] FRACTION SLASH
