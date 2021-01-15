@@ -55,6 +55,8 @@ EDSK("033",0,",","–","""","S__N__2","ϱ","⇒") ; ,
 EDSK("034",0,".","•","'","S__N__3","ϑ","↦") ; .
 EDSK("035",1,"j","J",";",";"      ,"θ","Θ") ; j
 neo20layoutstring := layoutstring
+bonelayoutstring := "-jduaxphlmwßctieobnrsgqfvüäöyz,.k"
+
 ; Numpad
 EDS("145",0,"U000009","U000009","=","≠","≈","≡") ; NumLock
 EDS("135",0,"S__NDiv","S__NDiv","÷","⌀","∣","⁄") ; NumpadDiv
@@ -213,11 +215,17 @@ Change1256LayoutNeo20() {
   Change1256Layout(neo20layoutstring)
 }
 
+Change1256LayoutBone() {
+  global
+  Change1256Layout(bonelayoutstring)
+}
+
 ChangeCustomLayout() {
   global
   if (customLayout != "")
     Change1256Layout(customLayout)
   else
+    ; Tauschen mit Change1256LayoutBone fürs Bone-Layout
     Change1256LayoutNeo20()
 }
 
