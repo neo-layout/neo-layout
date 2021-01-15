@@ -10,14 +10,14 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Ebene_1"
-   width="535"
+   width="690"
    height="183"
-   viewBox="0 0 535 183"
-   enable-background="new 0 0 535 183"
+   viewBox="0 0 690 183"
+   enable-background="new 0 0 690 183"
    xml:space="preserve"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="tastatur_e1.svg"
-   inkscape:export-filename="/home/knittl/git/svn/neo/www/tastatur_base.png"
+
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
 
@@ -73,6 +73,8 @@ text.big { font-size:14px; }
 .grey { fill:#949494; stroke:#696969; }
 .grey { fill:#9f9f9f; stroke:#747474; }
 
+.numpad { fill:#afaa9f; stroke:#747474; }
+
 /* bootstrap colors */
 .l5, .r5 { fill:#06889c; }
 .l4, .r4 { fill:#1b9084; }
@@ -126,6 +128,7 @@ text.nubkey { fill:#eee; }
      inkscape:window-y="71"
      inkscape:window-maximized="0"
      inkscape:current-layer="Ebene_1" />
+
 <g transform="translate(3.5,3.5)">
 <use xlink:href="#basekey" y="0" x="0" class="l5" />
 <use xlink:href="#basekey" y="0" x="36" class="l5" />
@@ -169,7 +172,7 @@ text.nubkey { fill:#eee; }
 <use xlink:href="#basekey" y="72" x="316" class="r3" />
 <use xlink:href="#basekey" y="72" x="352" class="r4" />
 <use xlink:href="#basekey" y="72" x="388" class="r5" />
-<use xlink:href="#basekey" y="72" x="424" class="r5" />
+<use xlink:href="#basekey" y="72" x="460" class="r5" />
 
 
 <use xlink:href="#basekey" y="108" x="82" class="l5" />
@@ -184,13 +187,34 @@ text.nubkey { fill:#eee; }
 <use xlink:href="#basekey" y="108" x="370" class="r4" />
 <use xlink:href="#basekey" y="108" x="406" class="r5" />
 
+<use xlink:href="#basekey" y="0" x="542" class="key numpad" />
+<use xlink:href="#basekey" y="0" x="578" class="key numpad" />
+<use xlink:href="#basekey" y="0" x="614" class="key numpad" />
+<use xlink:href="#basekey" y="0" x="650" class="key numpad" />
+
+<use xlink:href="#basekey" y="36" x="542" class="key numpad" />
+<use xlink:href="#basekey" y="36" x="578" class="key numpad" />
+<use xlink:href="#basekey" y="36" x="614" class="key numpad" />
+<rect id="kpplus" x="650" y="36" width="32" height="68" rx="4" class="key numpad" />
+
+<use xlink:href="#basekey" y="72" x="542" class="key numpad" />
+<use xlink:href="#basekey" y="72" x="578" class="key numpad" />
+<use xlink:href="#basekey" y="72" x="614" class="key numpad" />
+
+<use xlink:href="#basekey" y="108" x="542" class="key numpad" />
+<use xlink:href="#basekey" y="108" x="578" class="key numpad" />
+<use xlink:href="#basekey" y="108" x="614" class="key numpad" />
+<rect id="kppenter" x="650" y="108" width="32" height="68" rx="4" class="key numpad" />
+
+<rect id="kp0" x="542" y="144" width="68" height="32" rx="4" class="key numpad" />
+<use xlink:href="#basekey" y="144" x="614" class="key numpad" />
 
 <rect id="backspace" y="0" x="468" width="60" height="32" rx="4" class="key grey" />
 
 <rect id="tab" x="0" y="36" width="50" height="32" rx="4" class="key grey" />
 
 <rect id="m3l" x="0" y="72" width="60" height="32" rx="4" class="key grey{{ MOD3 }}" />
-<use id="m3r" xlink:href="#basekey" x="460" y="72" class="key grey{{ MOD3 }}" />
+<use id="m3r" xlink:href="#basekey" x="424" y="72" class="key grey{{ MOD3 }}" />
 
 <rect id="shiftl" x="0" y="108" width="40" height="32" rx="4" class="key grey{{ SHIFT }}" />
 <rect id="m4l" x="44" y="108" width="34" height="32" rx="4" class="key grey{{ MOD4 }}" />
@@ -229,7 +253,7 @@ text.nubkey { fill:#eee; }
 <text y="132" x="56" class="mod" id="m4ltxt">M4</text>
 <text y="168" x="135" class="mod" id="altltxt">Alt</text>
 
-<text y="96" x="472" class="mod" id="m3rtxt">M3</text>
+<text y="96" x="436" class="mod" id="m3rtxt">M3</text>
 <text y="133" x="450" class="mod big" id="shiftrtxt">⇧</text>
 <text y="168" x="490" class="mod" id="ctrlrtxt">Strg</text>
 <text y="168" x="357" class="mod" id="m4rtxt">Mod4</text>
@@ -288,22 +312,55 @@ text.nubkey { fill:#eee; }
 	<text x="252" class="key">{{ AC08 }}</text>
 	<text x="288" class="key">{{ AC09 }}</text>
 	<text x="324" class="key">{{ AC10 }}</text>
-    <text x="360" class="key">{{ AC11 }}</text>
+    <text x="396" class="key">{{ BKSL }}</text>
+</g>
+
+<g transform="translate(101,134)">
+    <text x="0" class="key">{{ AB01 }}</text>
+    <text x="36" class="key">{{ AB02 }}</text>
+    <text x="72" class="key">{{ AB03 }}</text>
+    <text x="108" class="key">{{ AB04 }}</text>
+
+    <text x="144" class="key">{{ AB05 }}</text>
+    <text x="180" class="key">{{ AB06 }}</text>
+    <text x="216" class="key">{{ AB07 }}</text>
+    <text x="252" class="key">{{ AB08 }}</text>
+    <text x="288" class="key">{{ AB09 }}</text>
+    <text x="324" class="key">{{ AB10 }}</text>
 </g>
 
 
-<g transform="translate(101,134)">
-	<text x="0" class="key">{{ AB01 }}</text>
-	<text x="36" class="key">{{ AB02 }}</text>
-	<text x="72" class="key">{{ AB03 }}</text>
-	<text x="108" class="key">{{ AB04 }}</text>
+<g transform="translate(561,26)">
+    <text x="0" class="key">{{ NMLK }}</text>
+    <text x="36" class="key">{{ KPDV }}</text>
+    <text x="72" class="key">{{ KPMU }}</text>
+    <text x="108" class="key">{{ KPSU }}</text>
+</g>
+<g transform="translate(561,62)">
+    <text x="0" class="key">{{ KP7 }}</text>
+    <text x="36" class="key">{{ KP8 }}</text>
+    <text x="72" class="key">{{ KP9 }}</text>
+</g>
+<g transform="translate(561,98)">
+    <text x="0" class="key">{{ KP4 }}</text>
+    <text x="36" class="key">{{ KP5 }}</text>
+    <text x="72" class="key">{{ KP6 }}</text>
+</g>
+<g transform="translate(561,134)">
+    <text x="0" class="key">{{ KP1 }}</text>
+    <text x="36" class="key">{{ KP2 }}</text>
+    <text x="72" class="key">{{ KP3 }}</text>
+</g>
+<g transform="translate(561,170)">
+    <text x="18" class="key">{{ KP0 }}</text>
+    <text x="72" class="key">{{ KPDL }}</text>
+</g>
 
-	<text x="144" class="key">{{ AB05 }}</text>
-	<text x="180" class="key">{{ AB06 }}</text>
-	<text x="216" class="key">{{ AB07 }}</text>
-	<text x="252" class="key">{{ AB08 }}</text>
-	<text x="288" class="key">{{ AB09 }}</text>
-	<text x="324" class="key">{{ AB10 }}</text>
+<g transform="translate(561,78)">
+    <text x="108" class="key">{{ KPAD }}</text>
+</g>
+<g transform="translate(561,150)">
+    <text x="108" class="key">⏎</text>
 </g>
 
 <text x="20" y="26" class="dead" id="t1">{{ TLDE }}</text>

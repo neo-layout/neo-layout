@@ -189,17 +189,17 @@ text.nubkey { fill:#eee; }
 
 <rect id="tab" x="0" y="36" width="50" height="32" rx="4" class="key grey" />
 
-<rect id="m3l" x="0" y="72" width="60" height="32" rx="4" class="key grey{{ MOD3 }}" />
-<use id="m3r" xlink:href="#basekey" x="460" y="72" class="key grey{{ MOD3 }}" />
+<rect id="m3l" x="0" y="72" width="60" height="32" rx="4" class="key grey pressed" />
+<use id="m3r" xlink:href="#basekey" x="460" y="72" class="key grey pressed" />
 
-<rect id="shiftl" x="0" y="108" width="40" height="32" rx="4" class="key grey{{ SHIFT }}" />
-<rect id="m4l" x="44" y="108" width="34" height="32" rx="4" class="key grey{{ MOD4 }}" />
-<rect id="shiftr" x="442" y="108" width="86" height="32" rx="4" class="key grey{{ SHIFT }}" />
+<rect id="shiftl" x="0" y="108" width="40" height="32" rx="4" class="key grey pressed" />
+<rect id="m4l" x="44" y="108" width="34" height="32" rx="4" class="key grey" />
+<rect id="shiftr" x="442" y="108" width="86" height="32" rx="4" class="key grey pressed" />
 
 <rect id="ctrll" x="0" y="144" width="50" height="32" rx="4" class="key grey" />
 <rect id="altl" x="124" y="144" width="48" height="32" rx="4" class="key grey" />
 <rect id="space" x="176" y="144" width="168" height="32" rx="4" class="key grey" />
-<rect id="m4r" x="348" y="144" width="48" height="32" rx="4" class="key grey{{ MOD4 }}" />
+<rect id="m4r" x="348" y="144" width="48" height="32" rx="4" class="key grey" />
 <rect id="ctrlr" x="478" y="144" width="50" height="32" rx="4" class="key grey" />
 
 <path
@@ -243,70 +243,70 @@ text.nubkey { fill:#eee; }
 </g>
 
 <g transform="translate(55,26)">
-	<text x="0" class="key">{{ AE01 }}</text>
-	<text x="36" class="key">{{ AE02 }}</text>
-	<text x="72" class="key">{{ AE03 }}</text>
-	<text x="108" class="key">{{ AE04 }}</text>
-	<text x="144" class="key">{{ AE05 }}</text>
+	<text x="0" class="key">₁</text>
+	<text x="36" class="key">₂</text>
+	<text x="72" class="key">₃</text>
+	<text x="108" class="key">♀</text>
+	<text x="144" class="key">♂</text>
 
-	<text x="180" class="key">{{ AE06 }}</text>
-	<text x="216" class="key">{{ AE07 }}</text>
-	<text x="252" class="key">{{ AE08 }}</text>
-	<text x="288" class="key">{{ AE09 }}</text>
-	<text x="324" class="key">{{ AE10 }}</text>
-	<text x="360" class="key">{{ AE11 }}</text>
+	<text x="180" class="key">⚥</text>
+	<text x="216" class="key">ϰ</text>
+	<text x="252" class="key">⟨</text>
+	<text x="288" class="key">⟩</text>
+	<text x="324" class="key">₀</text>
+	<text x="360" class="key">‑</text>
 </g>
 
 
 <text x="10" y="60" class="mod big">⇥</text>
 
 <g transform="translate(73,62)">
-	<text x="0" class="key">{{ AD01 }}</text>
-	<text x="36" class="key">{{ AD02 }}</text>
-	<text x="72" class="key">{{ AD03 }}</text>
-	<text x="108" class="key">{{ AD04 }}</text>
-	<text x="144" class="key">{{ AD05 }}</text>
+	<text x="0" class="key">κ</text>
+	<text x="36" class="key"></text>
+	<text x="72" class="key">λ</text>
+	<text x="108" class="key">ϑ</text>
+	<text x="144" class="key">η</text>
 
-	<text x="180" class="key">{{ AD06 }}</text>
-	<text x="216" class="key">{{ AD07 }}</text>
-	<text x="252" class="key">{{ AD08 }}</text>
-	<text x="288" class="key">{{ AD09 }}</text>
-	<text x="324" class="key">{{ AD10 }}</text>
-	<text x="360" class="key">{{ AD11 }}</text>
+	<text x="180" class="key">κ</text>
+	<text x="216" class="key">γ</text>
+	<text x="252" class="key">χ</text>
+	<text x="288" class="key">λ</text>
+	<text x="324" class="key">θ</text>
+	<text x="360" class="key">φ</text>
 </g>
 
 
 <g transform="translate(84,98)">
-	<text x="0" class="key">{{ AC01 }}</text>
-	<text x="36" class="key">{{ AC02 }}</text>
-	<text x="72" class="key">{{ AC03 }}</text>
-	<text x="108" class="key nubkey">{{ AC04 }}</text>
-	<text x="144" class="key">{{ AC05 }}</text>
+	<text x="0" class="key">ψ</text>
+	<text x="36" class="key">ι</text>
+	<text x="72" class="key">ε</text>
+	<text x="108" class="key nubkey">α</text>
+	<text x="144" class="key">ο</text>
 
-	<text x="180" class="key">{{ AC06 }}</text>
-	<text x="216" class="key nubkey">{{ AC07 }}</text>
-	<text x="252" class="key">{{ AC08 }}</text>
-	<text x="288" class="key">{{ AC09 }}</text>
-	<text x="324" class="key">{{ AC10 }}</text>
-    <text x="360" class="key">{{ AC11 }}</text>
+	<text x="180" class="key">δ</text>
+	<text x="216" class="key nubkey">τ</text>
+	<text x="252" class="key">ρ</text>
+	<text x="288" class="key">ν</text>
+	<text x="324" class="key">σ</text>
+    <text x="360" class="key">ς</text>
 </g>
 
 
 <g transform="translate(101,134)">
-	<text x="0" class="key">{{ AB01 }}</text>
-	<text x="36" class="key">{{ AB02 }}</text>
-	<text x="72" class="key">{{ AB03 }}</text>
-	<text x="108" class="key">{{ AB04 }}</text>
+	<text x="0" class="key">ξ</text>
+	<text x="36" class="key">υ</text>
+	<text x="72" class="key">ϵ</text>
+	<text x="108" class="key">ϱ</text>
 
-	<text x="144" class="key">{{ AB05 }}</text>
-	<text x="180" class="key">{{ AB06 }}</text>
-	<text x="216" class="key">{{ AB07 }}</text>
-	<text x="252" class="key">{{ AB08 }}</text>
-	<text x="288" class="key">{{ AB09 }}</text>
-	<text x="324" class="key">{{ AB10 }}</text>
+	<text x="144" class="key">ϕ</text>
+	<text x="180" class="key">β</text>
+	<text x="216" class="key">π</text>
+	<text x="252" class="key">ω</text>
+	<text x="288" class="key">μ</text>
+	<text x="324" class="key">ζ</text>
 </g>
 
-<text x="20" y="26" class="dead" id="t1">{{ TLDE }}</text>
-<text x="452" y="26" class="dead" id="t2">{{ AE12 }}</text>
-<text x="470" y="62" class="dead" id="t3">{{ AD12 }}</text>
+<text x="20" y="26" class="dead" id="t1"></text><text x="28" y="25" class="dead" id="t1">˞</text>
+<text x="452" y="26" class="dead" id="t2">῾</text>
+<text x="470" y="62" class="dead" id="t3">᾿</text>
 </svg>

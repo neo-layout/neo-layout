@@ -7,10 +7,11 @@ import sys
 import replacements
 
 if len(sys.argv) == 1:
-    print('Usage: ./<this script> "layoutname"')
+    print('Usage: ./<this script> "layoutname" template')
     exit(1)
 
 layout = sys.argv[1]
+templatename = sys.argv[2]
 
 os.system("setxkbmap " + layout + " -print | xkbcomp -xkb - /tmp/keymaptmp 2>/dev/null")
 # TODO: actually write/generate a proper parser for xkbmaps
@@ -49,7 +50,7 @@ with open('/tmp/keymap', 'r') as file:
       for x in modifiers[layer]:
           layerdict[x] = " pressed"
       out = open(layout + " ebene " + layernames[layer] + ".svg", "w")
-      with open('base.svg.template') as templatefile:
+      with open(templatename) as templatefile:
           template = Template(templatefile.read())
       out.write(template.render(layerdict))
       out.close()

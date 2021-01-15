@@ -126,6 +126,7 @@ text.nubkey { fill:#eee; }
      inkscape:window-y="71"
      inkscape:window-maximized="0"
      inkscape:current-layer="Ebene_1" />
+
 <g transform="translate(3.5,3.5)">
 <use xlink:href="#basekey" y="0" x="0" class="l5" />
 <use xlink:href="#basekey" y="0" x="36" class="l5" />
@@ -169,7 +170,7 @@ text.nubkey { fill:#eee; }
 <use xlink:href="#basekey" y="72" x="316" class="r3" />
 <use xlink:href="#basekey" y="72" x="352" class="r4" />
 <use xlink:href="#basekey" y="72" x="388" class="r5" />
-<use xlink:href="#basekey" y="72" x="424" class="r5" />
+<use xlink:href="#basekey" y="72" x="460" class="r5" />
 
 
 <use xlink:href="#basekey" y="108" x="82" class="l5" />
@@ -190,7 +191,7 @@ text.nubkey { fill:#eee; }
 <rect id="tab" x="0" y="36" width="50" height="32" rx="4" class="key grey" />
 
 <rect id="m3l" x="0" y="72" width="60" height="32" rx="4" class="key grey{{ MOD3 }}" />
-<use id="m3r" xlink:href="#basekey" x="460" y="72" class="key grey{{ MOD3 }}" />
+<use id="m3r" xlink:href="#basekey" x="424" y="72" class="key grey{{ MOD3 }}" />
 
 <rect id="shiftl" x="0" y="108" width="40" height="32" rx="4" class="key grey{{ SHIFT }}" />
 <rect id="m4l" x="44" y="108" width="34" height="32" rx="4" class="key grey{{ MOD4 }}" />
@@ -229,7 +230,7 @@ text.nubkey { fill:#eee; }
 <text y="132" x="56" class="mod" id="m4ltxt">M4</text>
 <text y="168" x="135" class="mod" id="altltxt">Alt</text>
 
-<text y="96" x="472" class="mod" id="m3rtxt">M3</text>
+<text y="96" x="436" class="mod" id="m3rtxt">M3</text>
 <text y="133" x="450" class="mod big" id="shiftrtxt">⇧</text>
 <text y="168" x="490" class="mod" id="ctrlrtxt">Strg</text>
 <text y="168" x="357" class="mod" id="m4rtxt">Mod4</text>
@@ -288,7 +289,7 @@ text.nubkey { fill:#eee; }
 	<text x="252" class="key">{{ AC08 }}</text>
 	<text x="288" class="key">{{ AC09 }}</text>
 	<text x="324" class="key">{{ AC10 }}</text>
-    <text x="360" class="key">{{ AC11 }}</text>
+    <text x="396" class="key">{{ BKSL }}</text>
 </g>
 
 

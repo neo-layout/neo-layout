@@ -74,10 +74,10 @@ text.big { font-size:14px; }
 .grey { fill:#9f9f9f; stroke:#747474; }
 
 /* bootstrap colors */
-.l5, .r5 { fill:#06889c; }
-.l4, .r4 { fill:#1b9084; }
-.l3, .r3 { fill:#369c63; }
-.l2, .r2 { fill:#4aa44a; }
+.l2, .r2 { fill:#337ab7; }
+.l3, .r3 { fill:#5cb85c; }
+.l4, .r4 { fill:#d9534f; }
+.l5, .r5 { fill:#f0ad4e; }
 
 /* btn bg hover, unused */
 .l2, .r2 { stroke:#3071a9; }
@@ -87,9 +87,9 @@ text.big { font-size:14px; }
 
 /* btn border hover */
 .l2, .r2 { stroke:#204d74; }
-.l3, .r3 { stroke:#204d74; }
-.l4, .r4 { stroke:#204d74; }
-.l5, .r5 { stroke:#204d74; }
+.l3, .r3 { stroke:#398439; }
+.l4, .r4 { stroke:#ac2925; }
+.l5, .r5 { stroke:#d58512; }
 
 text.nubkey { fill:#eee; }
 
@@ -126,6 +126,7 @@ text.nubkey { fill:#eee; }
      inkscape:window-y="71"
      inkscape:window-maximized="0"
      inkscape:current-layer="Ebene_1" />
+
 <g transform="translate(3.5,3.5)">
 <use xlink:href="#basekey" y="0" x="0" class="l5" />
 <use xlink:href="#basekey" y="0" x="36" class="l5" />
@@ -288,7 +289,7 @@ text.nubkey { fill:#eee; }
 	<text x="252" class="key">{{ AC08 }}</text>
 	<text x="288" class="key">{{ AC09 }}</text>
 	<text x="324" class="key">{{ AC10 }}</text>
-    <text x="360" class="key">{{ AC11 }}</text>
+	<text x="360" class="key">{{ AC11 }}</text>
 </g>
 
 
