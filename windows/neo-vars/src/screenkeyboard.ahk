@@ -2,18 +2,9 @@
 
 BSTalwaysOnTop := 1
 
-UniFontVersion  := "2.37"
 UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
-
-UniFontZipFilename   := "dejavu-fonts-ttf-" . UniFontVersion . ".zip"
-UniFontZipLocalFile  := ResourceFolder . "\" . UniFontZipFilename
-
-UniFontZipSourceLink := "https://downloads.sourceforge.net/project/dejavu/dejavu/" . UniFontVersion . "/" . UniFontZipFilename
-
-UniFontLocalFilePath := ApplicationFolder
-UniFontLocalFile := UniFontLocalFilePath . "\" . UniFontFilename
-UniFontZipFontPath := "dejavu-fonts-ttf-" . UniFontVersion . "\ttf\" . UniFontFilename
+UniFontLocalFile := ResourceFolder . "\" . UniFontFilename
 
 BSTlayout_0_image := "ebene0.png"
 BSTlayout_0_width := 729
@@ -372,52 +363,7 @@ CharProc__BST1() {
   if (FileExist(ResourceFolder)!="") {
     FileInstall,ebene0.png,%ResourceFolder%\%BSTlayout_0_image%,1
     FileInstall,ergodox.png,%ResourceFolder%\%BSTlayout_1_image%,1
-  }
-
-  if (FileExist(UniFontLocalFile)=="") {
-    Msgbox, 4, NeoVars-Bildschirmtastatur, Wollen Sie die für die Bildschirmtastatur notwendigen Dateien herunterladen?
-    ifMsgBox, No
-      Return
-
-    Progress,0,Herunterladen der gepackten Font-Datei ...
-    if (FileExist(UniFontZipLocalFile)=="") {
-      UrlDownloadToFile,%UniFontZipSourceLink%,%UniFontZipLocalFile%
-    }
-
-    if (FileExist(UniFontZipLocalFile)=="") {
-      Progress,100,Fehler. Konnte gepackte Font-Datei nicht herunterladen.
-      return
-    }
-
-    Progress,50,Entpacken des Archivs ...
-    Copy_Async(UniFontZipLocalFile . "\" . UniFontZipFontPath, UniFontLocalFilePath)
-    i := 0
-    loop {
-      Progress,% 50+i,Entpacken des Archivs ...
-      sleep 200
-      if (FileExist(UniFontLocalFile)!="") {
-        Progress,75,Fertig
-        break
-      }
-      i := i+1
-      if (i > 20) {
-        Progress,100,Fehler
-        sleep 500
-        break
-      }
-    }
-    ; 4 Sekunden sollten reichen. Wenn nicht, Abbruch.
-    if (FileExist(UniFontLocalFile)=="") {
-      Progress,OFF
-      MsgBox,Font-Datei %UniFontLocalFile% existiert nicht. Abbruch.
-      return
-    }
-    Progress,90,Entferne Archiv-Datei ...
-    FileDelete,%UniFontZipLocalFile%
-    Sleep,200
-    Progress,100,Fertig!
-    Sleep,2000
-    Progress,OFF
+    FileInstall,DejaVuSans-Bold.ttf,%ResourceFolder%\DejaVuSans-Bold.ttf,1
   }
 
   DllCall( "GDI32.DLL\AddFontResourceEx", Str, UniFontLocalFile ,UInt,(FR_PRIVATE:=0x10), Int,0)
