@@ -17,9 +17,15 @@ NEOCapsLockLEDState   := "Off"
 NEOScrollLockLEDState := "Off"
 OnExit, exitprogram
 
-ApplicationFolder := A_AppData . "\Neo2"
-FileCreateDir, %ApplicationFolder%
+ApplicationFolder := A_WorkingDir
 ini := ApplicationFolder . "\Neo2.ini"
+
+; Wenn es keine Neo2.ini im Arbeitsverzeichnis (portable Version) gibt, wird die benutzerspezifische verwendet.
+if not FileExist(ini) {
+  ApplicationFolder := A_AppData . "\Neo2"
+  FileCreateDir, %ApplicationFolder%
+  ini := ApplicationFolder . "\Neo2.ini"
+}
 
 IniRead,zeigeLockBox,%ini%,Global,zeigeLockBox,1
 IniRead,zeigeModusBox,%ini%,Global,zeigeModusBox,1
