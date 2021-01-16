@@ -74,10 +74,11 @@ text.big { font-size:14px; }
 .grey { fill:#9f9f9f; stroke:#747474; }
 
 /* bootstrap colors */
-.l5, .r5 { fill:#06889c; }
-.l4, .r4 { fill:#1b9084; }
-.l3, .r3 { fill:#369c63; }
+.l5, .r5 { fill:#93CCEA; }
+.l4, .r4 { fill:#7abeb3; }
+.l3, .r3 { fill:#63b280; }
 .l2, .r2 { fill:#4aa44a; }
+
 
 /* btn bg hover, unused */
 .l2, .r2 { stroke:#3071a9; }

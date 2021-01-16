@@ -15,4 +15,4 @@ done;
 ./generate-graphics.py "de vou" vou-numpad.svg.template;
 mv *.svg osterblau-with-numpad
 
-inkscape -T --export-plain-svg osterblau-*-numpad/*.svg
+#inkscape -T --export-overwrite osterblau-*-numpad/*.svg

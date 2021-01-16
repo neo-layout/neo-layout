@@ -36,28 +36,28 @@
 text.mod, text.key, text.dead {
 	fill:#111;
 	fill-opacity:1;
-	stroke:none;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	font-stretch:normal;
-	display:inline;
-	font-family:DejaVu Sans;
-	writing-mode:lr-tb;
+stroke:none;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+font-stretch:normal;
+display:inline;
+font-family:DejaVu Sans;
+writing-mode:lr-tb;
 }
 
 text.key {
-	font-family:Linux Libertine;
+font-family:Linux Libertine;
 }
 
 text.mod {
-	text-align:start;
-	text-anchor:start;
+text-align:start;
+text-anchor:start;
 }
 
 text.deadcircle, text.dead, text.center, text.key {
-	text-align:center;
-	text-anchor:middle;
+text-align:center;
+text-anchor:middle;
 }
 
 text.key { font-size:20px; }
@@ -67,7 +67,7 @@ text.mod { font-size:10px; }
 text.big { font-size:14px; }
 
 .key {
-	stroke-width:1.25;
+stroke-width:1.25;
 }
 
 .grey { fill:#949494; stroke:#696969; }
@@ -76,9 +76,9 @@ text.big { font-size:14px; }
 .numpad { fill:#afaa9f; stroke:#747474; }
 
 /* bootstrap colors */
-.l5, .r5 { fill:#06889c; }
-.l4, .r4 { fill:#1b9084; }
-.l3, .r3 { fill:#369c63; }
+.l5, .r5 { fill:#93CCEA; }
+.l4, .r4 { fill:#7abeb3; }
+.l3, .r3 { fill:#63b280; }
 .l2, .r2 { fill:#4aa44a; }
 
 /* btn bg hover, unused */

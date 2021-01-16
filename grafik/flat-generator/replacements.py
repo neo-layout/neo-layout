@@ -42,6 +42,7 @@ replacements = {
 "KP_Prior":"⇞",
 "BackSpace":"⌫",
 "KP_Up":"⇡",
+"Up":"⇡",
 "Delete":"⌦",
 "KP_Delete":"⌦",
 "Next":"⇟",
