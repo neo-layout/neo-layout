@@ -40,7 +40,7 @@ if exist "%customahk%" (
 )
 
 echo Compiling the new driver using AutoHotkey
-"%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico"
+"%Ahk2Exe%" /in "%fnahk%" /out "%fnexe%" /icon "%srcdir%\neo_enabled.ico" /bin "%ahkpath%\Compiler\Unicode 32-bit.bin"
 
 if exist "%customahkbuild%" (
   move "%customahkbuild%" "%customahk%"
