@@ -1,0 +1,85 @@
+# Dies ist eine Sammlung kaum verwendeter oder problematischer Compose-Definitionen, die aber (eventuell)
+# für einzelne Anwender interessant sein könnten.
+# Um eine gewünschte Definition zu verwenden, muss die gesamte Zeile einfach in eine Datei user.module in diesem
+# Verzeichnis geschrieben werden. Anschließend muss compose_gui.sh oder make config aufgerufen werden.
+
+# ligatures
+<Multi_key> <f> <b>                      : ""   UE030 # LATIN SMALL LIGATURE FB
+<Multi_key> <F> <b>                      : ""   UE031 # LATIN SMALL LIGATURE FFB
+<Multi_key> <F> <h>                      : ""   UE032 # LATIN SMALL LIGATURE FFH
+<Multi_key> <F> <j>                      : ""   UE033 # LATIN SMALL LIGATURE FFJ
+<Multi_key> <F> <k>                      : ""   UE034 # LATIN SMALL LIGATURE FFK
+<Multi_key> <F> <t>                      : ""   UE035 # LATIN SMALL LIGATURE FFT
+<Multi_key> <f> <h>                      : ""   UE036 # LATIN SMALL LIGATURE FH
+<Multi_key> <f> <j>                      : ""   UE037 # LATIN SMALL LIGATURE FJ
+<Multi_key> <f> <k>                      : ""   UE038 # LATIN SMALL LIGATURE FK
+<Multi_key> <f> <t>                      : ""   UE039 # LATIN SMALL LIGATURE FT
+<Multi_key> <l> <c> <k>                  : ""   UE03A # LATIN SMALL LIGATURE CK
+<Multi_key> <l> <c> <h>                  : ""   UE03B # LATIN SMALL LIGATURE CH
+<Multi_key> <t> <t>                      : ""   UE03C # LATIN SMALL LIGATURE TT
+<Multi_key> <l> <c> <t>                  : ""   UE03D # LATIN SMALL LIGATURE CT
+<Multi_key> <U017F> <i>                  : ""   UE03E # LATIN SMALL LIGATURE LONG S I
+<Multi_key> <U017F> <U017F>              : ""   UE03F # LATIN SMALL LIGATURE LONG S LONG S
+<Multi_key> <U017F> <l>                  : ""   UE043 # LATIN SMALL LIGATURE LONG S L
+<Multi_key> <S> <i>                      : ""   UE044 # LATIN SMALL LIGATURE LONG S LONG S I
+<Multi_key> <U017F> <s>                  : ""   UE045 # LATIN SMALL LIGATURE LONG S S (GLYPH VARIANT OF SHARP S)
+<Multi_key> <t> <z>                      : ""   UE04A # LATIN SMALL LIGATURE TZ (ALSO: UE04F)
+<Multi_key> <Q> <u>                      : ""   UE048 # LATIN CAPITAL LETTER Q WITH SMALL LETTER U
+<Multi_key> <T> <h>                      : ""   UE049 # LATIN CAPITAL LETTER T WITH SMALL LETTER H
+
+
+# physical square units and log
+<Multi_key> <l> <n>                       : "㏑"   U33D1 # SQUARE LN
+<Multi_key> <l> <o> <g>                   : "㏒"   U33D2 # SQUARE LOG
+<Multi_key> <Greek_mu> <l>                : "㎕"   U3395 # SQUARE MU L
+<Multi_key> <Greek_mu> <U2113>            : "㎕"   U3395 # SQUARE MU L
+<Multi_key> <m> <l>                       : "㎖"   U3396 # SQUARE ML
+<Multi_key> <m> <U2113>                   : "㎖"   U3396 # SQUARE ML
+<Multi_key> <d> <l>                       : "㎗"   U3397 # SQUARE DL
+<Multi_key> <d> <U2113>                   : "㎗"   U3397 # SQUARE DL
+<Multi_key> <k> <l>                       : "㎘"   U3398 # SQUARE KL
+<Multi_key> <k> <U2113>                   : "㎘"   U3398 # SQUARE KL
+<Multi_key> <f> <m>                       : "㎙"   U3399 # SQUARE FM
+<Multi_key> <n> <m>                       : "㎚"   U339A # SQUARE NM
+<Multi_key> <Greek_mu> <m>                : "㎛"   U339B # SQUARE MU M
+<Multi_key> <m> <m>                       : "㎜"   U339C # SQUARE MM
+<Multi_key> <c> <m>                       : "㎝"   U339D # SQUARE CM
+<Multi_key> <k> <m>                       : "㎞"   U339E # SQUARE KM
+<Multi_key> <Greek_mu> <g>                : "㎍"   U338D # SQUARE MU G
+<Multi_key> <m> <g>                       : "㎎"   U338E # SQUARE MG
+<Multi_key> <k> <g>                       : "㎏"   U338F # SQUARE KG
+<Multi_key> <H> <z>                       : "㎐"   U3390 # SQUARE HZ
+<Multi_key> <k> <H> <z>                   : "㎑"   U3391 # SQUARE KHZ
+<Multi_key> <M> <H> <z>                   : "㎒"   U3392 # SQUARE MHZ
+<Multi_key> <2> <m> <m>                   : "㎟"   U339F # SQUARE MM SQUARED
+<Multi_key> <2> <c> <m>                   : "㎠"   U33A0 # SQUARE CM SQUARED
+<Multi_key> <2> <m> <space>               : "㎡"   U33A1 # SQUARE M SQUARED
+<Multi_key> <2> <k> <m>                   : "㎢"   U33A2 # SQUARE KM SQUARED
+<Multi_key> <KP_2> <m> <m>                : "㎟"   U339F # SQUARE MM SQUARED
+<Multi_key> <KP_2> <c> <m>                : "㎠"   U33A0 # SQUARE CM SQUARED
+<Multi_key> <KP_2> <m> <space>            : "㎡"   U33A1 # SQUARE M SQUARED
+<Multi_key> <KP_2> <k> <m>                : "㎢"   U33A2 # SQUARE KM SQUARED
+<Multi_key> <3> <m> <m>                   : "㎣"   U33A3 # SQUARE MM CUBED
+<Multi_key> <3> <c> <m>                   : "㎤"   U33A4 # SQUARE CM CUBED
+<Multi_key> <3> <m> <space>               : "㎥"   U33A5 # SQUARE M CUBED
+<Multi_key> <3> <k> <m>                   : "㎦"   U33A6 # SQUARE KM CUBED
+<Multi_key> <KP_3> <m> <m>                : "㎣"   U33A3 # SQUARE MM CUBED
+<Multi_key> <KP_3> <c> <m>                : "㎤"   U33A4 # SQUARE CM CUBED
+<Multi_key> <KP_3> <m> <space>            : "㎥"   U33A5 # SQUARE M CUBED
+<Multi_key> <KP_3> <k> <m>                : "㎦"   U33A6 # SQUARE KM CUBED
+<Multi_key> <m> <s>                       : "㎧"   U33A7 # SQUARE M OVER S
+<Multi_key> <m> <2> <s>                   : "㎨"   U33A8 # SQUARE M OVER S SQUARED
+<Multi_key> <m> <KP_2> <s>                : "㎨"   U33A8 # SQUARE M OVER S SQUARED
+<Multi_key> <m> <o> <l>                   : "㏖"   U33D6 # SQUARE MOL
+
+
+# box drawings
+<Multi_key> <x> <1> <1>      : "┌──────────┐\n│          │\n└──────────┘\n"
+<Multi_key> <x> <2> <1>  : "┌──────────┬──────────┐\n│          │          │\n└──────────┴──────────┘\n"
+<Multi_key> <x> <3> <1>  : "┌──────────┬──────────┬──────────┐\n│          │          │          │\n└──────────┴──────────┴──────────┘\n"
+<Multi_key> <x> <1> <2>  : "┌──────────┐\n│          │\n├──────────┤\n│          │\n└──────────┘\n"
+<Multi_key> <x> <2> <2>  : "┌──────────┬──────────┐\n│          │          │\n├──────────┼──────────┤\n│          │          │\n└──────────┴──────────┘\n"
+<Multi_key> <x> <3> <2>  : "┌──────────┬──────────┬──────────┐\n│          │          │          │\n├──────────┼──────────┼──────────┤\n│          │          │          │\n└──────────┴──────────┴──────────┘\n"
+<Multi_key> <x> <1> <3>  : "┌──────────┐\n│          │\n├──────────┤\n│          │\n├──────────┤\n│          │\n└──────────┘\n"
+<Multi_key> <x> <2> <3>  : "┌──────────┬──────────┐\n│          │          │\n├──────────┼──────────┤\n│          │          │\n├──────────┼──────────┤\n│          │          │\n└──────────┴──────────┘\n"
+<Multi_key> <x> <3> <3>  : "┌──────────┬──────────┬──────────┐\n│          │          │          │\n├──────────┼──────────┼──────────┤\n│          │          │          │\n├──────────┼──────────┼──────────┤\n│          │          │          │\n└──────────┴──────────┴──────────┘\n"
