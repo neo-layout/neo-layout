@@ -80,11 +80,22 @@ DefineXKBSyms() {
   DefineXKBSym("U21BB"             ,"T__turn")
   DefineXKBSym("dead_dasia"        ,"T_dasia")
   DefineXKBSym("dead_psili"        ,"T_psili")
+  DefineXKBSym("dead_belowbreve"   ,"T_bbrve")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_belowcircumflex","T_bcflx")  ; not assigned a dead key in NEO
+  DefineXKBSym("dead_belowcomma"   ,"T_bcoma")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_belowdiaeresis","T_bdrss")   ; not assigned a dead key in NEO
+  DefineXKBSym("dead_belowmacron"  ,"T_bmcrn")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_belowring"    ,"T_bring")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_belowtilde"   ,"T_btlde")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_currency"     ,"T_curnc")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_doublegrave"  ,"T_dgrav")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_greek"        ,"T_greek")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_hook"         ,"T__hook")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_horn"         ,"T__horn")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_invertedbreve","T_ibrve")    ; not assigned a dead key in NEO
   DefineXKBSym("dead_iota"         ,"T__iota")    ; not assigned a dead key in NEO
   DefineXKBSym("dead_voiced_sound" ,"T__vsnd")    ; not assigned a dead key in NEO
-  DefineXKBSym("dead_semivoiced_sound","T__ssnd") ; not assigned a dead key in NEO
-  DefineXKBSym("dead_horn"         ,"T__horn")    ; not assigned a dead key in NEO
-  DefineXKBSym("dead_hook"         ,"T__hook")    ; not assigned a dead key in NEO
+  DefineXKBSym("dead_semivoiced_sound","T_svsnd") ; not assigned a dead key in NEO
   DefineXKBSym("combining_grave"   ,"T__Cgrv")    ; not assigned a dead key in NEO
   DefineXKBSym("combining_acute"   ,"T__Cact")    ; not assigned a dead key in NEO
   DefineXKBSym("combining_belowdot","T__Cbdt")    ; not assigned a dead key in NEO
@@ -189,6 +200,8 @@ DefineXKBSyms() {
   DefineXKBSym("braceright"        ,"U00007D")
   DefineXKBSym("asciitilde"        ,"U00007E")
   DefineXKBSym("ſ"                 ,"U00017F")
+  DefineXKBSym("EZH"               ,"U0001B7")
+  DefineXKBSym("ezh"               ,"U000292")
 
 ; following codes are auto-generated from keysymdef.h (manually disabled if already defined or override)
 
