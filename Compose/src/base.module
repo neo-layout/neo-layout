@@ -248,7 +248,6 @@
 <Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
 <U21BB> <colon>                                  : "‥"   U2025 # TWO DOT LEADER
 <U21BB> <ellipsis>                               : "⋮"   U22EE # VERTICAL ELLIPSIS
-<Multi_key> <ellipsis> <bar>                     : "⋮"   U22EE # VERTICAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
 <Multi_key> <7> <7>                              : "⁊"   U204A # TIRONIAN SIGN ET
 <Multi_key> <KP_7> <KP_7>                        : "⁊"   U204A # TIRONIAN SIGN ET

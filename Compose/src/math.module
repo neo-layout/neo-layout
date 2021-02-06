@@ -669,7 +669,6 @@
 <Multi_key> <x> <braceleft> <5>           : "⎧⎫\n⎪⎪\n⎨⎬\n⎪⎪\n⎩⎭"
 
 # dots for vectors and matrices
-<Multi_key> <ellipsis> <bar>              : "⋮" U22EE # VERTICAL ELLIPSIS
 <Multi_key> <ellipsis> <slash>            : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <ellipsis> <backslash>        : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <ellipsis> <emdash>           : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS
