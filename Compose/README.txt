@@ -11,6 +11,10 @@ src/*.module
   Enthält die Quelldateien für verschiedene Module der Compose-Datei.
   Die Gliederung ist thematisch.
 
+src/*.remove
+  Enthält Konflikte mit anderen Modulen. Der Inhalt dieser Dateien wird beim
+  Laden des entsprechenden Moduls gelöscht.
+
 Makefile
   Erstellt aus den Modulen eine oder mehrere lauffähige
   XCompose-Dateien.
