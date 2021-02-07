@@ -1,0 +1,20 @@
+# Konflikt bei Sequenz <dead_belowdot> <space>. Unsere Sequenz »<dead_belowdot> <space>                    : "."   U002E # FULL STOP« überschreibt die folgende Sequenz aus enUS.module
+<dead_belowdot> <space> 	      : "̣"   U0323   # COMBINING DOT BELOW
+# Konflikt bei Sequenz <dead_cedilla> <E>. Unsere Sequenz »<dead_cedilla> <E>                           : "Ę"   U0118 # LATIN CAPITAL LETTER E WITH OGONEK« überschreibt die folgende Sequenz aus enUS.module
+<dead_cedilla> <E>               	: "Ȩ"   U0228 # LATIN CAPITAL LETTER E WITH CEDILLA
+# Konflikt bei Sequenz <dead_cedilla> <e>. Unsere Sequenz »<dead_cedilla> <e>                           : "ę"   U0119 # LATIN SMALL LETTER E WITH OGONEK« überschreibt die folgende Sequenz aus enUS.module
+<dead_cedilla> <e>               	: "ȩ"   U0229 # LATIN SMALL LETTER E WITH CEDILLA
+# Konflikt bei Sequenz <Multi_key> <S> <comma>. Unsere Sequenz »<Multi_key> <S> <comma>                  : "Ș"   U0218 # LATIN CAPITAL LETTER S WITH COMMA BELOW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <S> <comma> 		: "Ş"   U015E # LATIN CAPITAL LETTER S WITH CEDILLA
+# Konflikt bei Sequenz <Multi_key> <s> <comma>. Unsere Sequenz »<Multi_key> <s> <comma>                  : "ș"   U0219 # LATIN SMALL LETTER S WITH COMMA BELOW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <s> <comma> 		: "ş"   U015F # LATIN SMALL LETTER S WITH CEDILLA
+# Konflikt bei Sequenz <Multi_key> <T> <comma>. Unsere Sequenz »<Multi_key> <T> <comma>                  : "Ț"   U021A # LATIN CAPITAL LETTER T WITH COMMA BELOW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <T> <comma>          	: "Ţ"   U0162 # LATIN CAPITAL LETTER T WITH CEDILLA
+# Konflikt bei Sequenz <Multi_key> <t> <comma>. Unsere Sequenz »<Multi_key> <t> <comma>                  : "ț"   U021B # LATIN SMALL LETTER T WITH COMMA BELOW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <t> <comma>          	: "ţ"   U0163 # LATIN SMALL LETTER T WITH CEDILLA
+# Konflikt bei Sequenz <Multi_key> <exclam> <question>. Unsere Sequenz »<Multi_key> <exclam> <question>                  : "⁉"   U2049 # EXCLAMATION QUESTION MARK« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <exclam> <question>         : "‽"   U203D # INTERROBANG
+# Konflikt bei Sequenz <Multi_key> <bracketleft> <bracketright>. Unsere Sequenz »<Multi_key> <bracketleft> <bracketright>   : "□"   U25A1 # WHITE SQUARE« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <bracketleft> <bracketright>        : "⌷"   U2337   # [ ] APL FUNCTIONAL SYMBOL SQUISH QUAD
+# Konflikt bei Sequenz <Multi_key <question> <exclam>. Unsere Sequenz »<Multi_key> <question> <exclam>                  : "⁈"   U2048 # QUESTION EXCLAMATION MARK« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <question> <exclam>         : "⸘"   U2E18 # INVERTED INTERROBANG

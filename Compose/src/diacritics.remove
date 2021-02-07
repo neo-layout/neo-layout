@@ -1,0 +1,56 @@
+# Konflikt bei Sequenz <dead_circumflex> <nobreakspace>. Unsere Sequenz »<dead_circumflex> <nobreakspace>           : "ˆ"   U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <nobreakspace>      : "̂"   U0302               # COMBINING CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_caron> <nobreakspace>. Unsere Sequenz »<dead_caron> <nobreakspace>                : "ˇ"   U02C7 # CARON« überschreibt die folgende Sequenz aus enUS.module
+<dead_caron> <nobreakspace> 	      : "̌"   U030C               # COMBINING CARON
+# Konflikt bei Sequenz <dead_breve> <nobreakspace>. Unsere Sequenz »<dead_breve> <nobreakspace>                : "˘"   U02D8 # BREVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_breve> <nobreakspace> 	      : "̆"   U0306                # COMBINING BREVE
+# Konflikt bei Sequenz <dead_acute> <nobreakspace>. Unsere Sequenz »<dead_acute> <nobreakspace>                : "´"   U00B4 # ACUTE ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_acute> <nobreakspace> 	      : "́"   U0301      # COMBINING ACUTE ACCENT
+# Konflikt bei Sequenz <dead_grave> <nobreakspace>. Unsere Sequenz »<dead_grave> <nobreakspace>                : "`"   U0060 # GRAVE ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_grave> <nobreakspace> 	      : "̀"   U0300      # COMBINING GRAVE ACCENT
+# Konflikt bei Sequenz <dead_cedilla> <nobreakspace>. Unsere Sequenz »<dead_cedilla> <nobreakspace>              : "¸"   U00B8 # CEDILLA« überschreibt die folgende Sequenz aus enUS.module
+<dead_cedilla> <nobreakspace> 	      : "̧"   U0327               # COMBINING CEDILLA
+# Konflikt bei Sequenz <dead_abovedot> <nobreakspace>. Unsere Sequenz »<dead_abovedot> <nobreakspace>             : "˙"   U02D9 # DOT ABOVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_abovedot> <nobreakspace> 	      : "̇"   U0307                #  COMBINING DOT ABOVE
+# Konflikt bei Sequenz <dead_abovering> <nobreakspace>. Unsere Sequenz »<dead_abovering> <nobreakspace>            : "˚"   U02DA # RING ABOVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_abovering> <nobreakspace>       : "̊"   U030A                # COMBINING RING ABOVE
+# Konflikt bei Sequenz <dead_tilde> <nobreakspace>. Unsere Sequenz »<dead_tilde> <nobreakspace>                : "˜"   U02DC # SMALL TILDE« überschreibt die folgende Sequenz aus enUS.module
+<dead_tilde> <nobreakspace> 	      : "̃"   U0303      # COMBINING TILDE
+# Konflikt bei Sequenz <dead_macron> <nobreakspace>. Unsere Sequenz »<dead_macron> <nobreakspace>               : "¯"   U00AF # MACRON« überschreibt die folgende Sequenz aus enUS.module
+<dead_macron> <nobreakspace> 	      : "̄"   U0304                # COMBINING MACRON
+# Konflikt bei Sequenz <dead_diaeresis> <nobreakspace>. Unsere Sequenz »<dead_diaeresis> <nobreakspace>            : "¨"   U00A8 # DIAERESIS« überschreibt die folgende Sequenz aus enUS.module
+<dead_diaeresis> <nobreakspace>       : "̈"   U0308                # COMBINING DIAERESIS
+# Konflikt bei Sequenz <dead_stroke> <nobreakspace>. Unsere Sequenz »<dead_stroke> <nobreakspace>               : "/"   U002F # SOLIDUS« überschreibt die folgende Sequenz aus enUS.module
+<dead_stroke> <nobreakspace> 	      : "̸"   U0338                # COMBINING LONG SOLIDUS OVERLAY
+# Konflikt bei Sequenz <dead_doubleacute> <nobreakspace>. Unsere Sequenz »<dead_doubleacute> <nobreakspace>          : "˝"   U02DD # DOUBLE ACUTE ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_doubleacute> <nobreakspace>     : "̋"   U030B                # COMBINING DOUBLE ACUTE ACCENT
+# Konflikt bei Sequenz <dead_belowdot> <nobreakspace>. Unsere Sequenz »<dead_belowdot> <nobreakspace>             : "."   U002E # FULL STOP« überschreibt die folgende Sequenz aus enUS.module
+<dead_belowdot> <nobreakspace> 	      : "̣"   U0323   # COMBINING DOT BELOW
+# Konflikt bei Sequenz <dead_circumflex> <dead_circumflex>. Unsere Sequenz »<dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <dead_circumflex> 	: "^"   asciicircum # CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_caron> <dead_caron>. Unsere Sequenz »<dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON« überschreibt die folgende Sequenz aus enUS.module
+<dead_caron> <dead_caron>        	: "ˇ"   caron # CARON
+# Konflikt bei Sequenz <dead_breve> <dead_breve>. Unsere Sequenz »<dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_breve> <dead_breve>        	: "˘"   breve # BREVE
+# Konflikt bei Sequenz <dead_acute> <dead_acute>. Unsere Sequenz »<dead_acute> <dead_acute>                  : "́"   U0301 # COMBINING ACUTE ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_acute> <dead_acute>        	: "´"   acute # ACUTE ACCENT
+# Konflikt bei Sequenz <dead_grave> <dead_grave>. Unsere Sequenz »<dead_grave> <dead_grave>                  : "̀"   U0300 # COMBINING GRAVE ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_grave> <dead_grave>        	: "`"   grave # GRAVE ACCENT
+# Konflikt bei Sequenz <dead_cedilla> <dead_cedilla>. Unsere Sequenz »<dead_cedilla> <dead_cedilla>              : "̧"   U0327 # COMBINING CEDILLA« überschreibt die folgende Sequenz aus enUS.module
+<dead_cedilla> <dead_cedilla>    	: "¸"   cedilla # CEDILLA
+# Konflikt bei Sequenz <dead_abovedot> <dead_abovedot>. Unsere Sequenz »<dead_abovedot> <dead_abovedot>            : "̇"   U0307 # COMBINING DOT ABOVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_abovedot> <dead_abovedot>  	: "˙"   abovedot # DOT ABOVE
+# Konflikt bei Sequenz <dead_abovering> <dead_abovering>. Unsere Sequenz »<dead_abovering> <dead_abovering>          : "̊"   U030A # COMBINING RING ABOVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_abovering> <dead_abovering> 	: "°"   degree # DEGREE SIGN
+# Konflikt bei Sequenz <dead_tilde> <dead_tilde>. Unsere Sequenz »<dead_tilde> <dead_tilde>                  : "̃"   U0303 # COMBINING TILDE« überschreibt die folgende Sequenz aus enUS.module
+<dead_tilde> <dead_tilde>        	: "~"   asciitilde # TILDE
+# Konflikt bei Sequenz <dead_macron> <dead_macron>. Unsere Sequenz »<dead_macron> <dead_macron>                : "̄"   U0304 # COMBINING MACRON« überschreibt die folgende Sequenz aus enUS.module
+<dead_macron> <dead_macron>      	: "¯"   macron # MACRON
+# Konflikt bei Sequenz <dead_diaeresis> <dead_diaeresis>. Unsere Sequenz »<dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS« überschreibt die folgende Sequenz aus enUS.module
+<dead_diaeresis> <dead_diaeresis> 	: "¨"   diaeresis # DIAERESIS
+# Konflikt bei Sequenz <dead_stroke> <dead_stroke>. Unsere Sequenz »<dead_stroke> <dead_stroke>                : "̷"   U0337 # COMBINING SHORT SOLIDUS OVERLAY« überschreibt die folgende Sequenz aus enUS.module
+<dead_stroke> <dead_stroke> 	      : "/"   slash               # SOLIDUS
+# Konflikt bei Sequenz <dead_doubleacute> <dead_doubleacute>. Unsere Sequenz »<dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT« überschreibt die folgende Sequenz aus enUS.module
+<dead_doubleacute> <dead_doubleacute> 	: "˝"   U2dd # DOUBLE ACUTE ACCENT
+# Konflikt bei Sequenz <Multi_key> <underscore> <underscore>. Unsere Sequenz »<Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <underscore> <underscore> 	: "¯"   macron # MACRON

@@ -1,0 +1,118 @@
+# Konflikt bei Sequenz <dead_tilde> <equal>. Unsere Sequenz »<dead_tilde> <equal>                       : "≅"   U2245 # APPROXIMATELY EQUAL TO« überschreibt die folgende Sequenz aus enUS.module
+<dead_tilde> <equal> 		      : "≃"   similarequal        # ASYMPTOTICALLY EQUAL TO
+# Konflikt bei Sequenz <Multi_key> <equal> <greater>. Unsere Sequenz »<Multi_key> <equal> <greater>              : "≥"   U2265 # GREATER-THAN OR EQUAL TO« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <equal> <greater> 	: "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+# Konflikt bei Sequenz <dead_caron> <equal>. Unsere Sequenz »<dead_caron> <equal>                       : "≚"   U225A # EQUIANGULAR TO« überschreibt die folgende Sequenz aus enUS.module
+<dead_caron> <equal> 		      : "₌"   U208C               # SUBSCRIPT EQUALS SIGN
+# Konflikt bei Sequenz <dead_circumflex> <equal>. Unsere Sequenz »<dead_circumflex> <equal>                  : "≙"   U2259 # ESTIMATES« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <equal>        	: "⁼"   U207C # SUPERSCRIPT EQUALS SIGN
+# Konflikt bei Sequenz <Multi_key> <minus> <plus>. Unsere Sequenz »<Multi_key> <minus> <plus>                 : "∓"   U2213 # MINUS-OR-PLUS SIGN« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <minus> <plus> 		: "±"   plusminus # PLUS-MINUS SIGN
+# Konflikt bei Sequenz <dead_circumflex> <plus>. Unsere Sequenz »<dead_circumflex> <plus>                   : "⨣"   U2A23 # PLUS SIGN WITH CIRCUMFLEX ACCENT ABOVE« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <plus>         	: "⁺"   U207A # SUPERSCRIPT PLUS SIGN
+# Konflikt bei Sequenz <Multi_key> <greater> <greater>. Unsere Sequenz »<Multi_key> <greater> <greater>            : "≫"  U226B # MUCH GREATER-THAN« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <greater> <greater>  	: "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+# Konflikt bei Sequenz <Multi_key> <less> <less>. Unsere Sequenz »<Multi_key> <less> <less>                  : "≪"  U226A # MUCH LESS-THAN« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <less> <less>        	: "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+# Konflikt bei Sequenz <Multi_key> <o> <minus>. Unsere Sequenz »<Multi_key> <o> <minus>                    : "⊖"   U2296 # CIRCLED MINUS« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <o> <minus>         	: "ō"   U014D # LATIN SMALL LETTER O WITH MACRON
+# Konflikt bei Sequenz <Multi_key> <o> <slash>. Unsere Sequenz »<Multi_key> <o> <slash>                    : "⊘"   U2298 # CIRCLED DIVISION SLASH« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <o> <slash>		   	: "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
+# Konflikt bei Sequenz <Multi_key> <o> <greater>. Unsere Sequenz »<Multi_key> <o> <greater>                  : "⧁"   U29C1 # CIRCLED GREATER-THAN« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <o> <greater> 		: "ô"   ocircumflex # LATIN SMALL LETTER O WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <minus> <colon>. Unsere Sequenz »<Multi_key> <minus> <colon>                : "∹"   U2239 # EXCESS« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <minus> <colon>      	: "÷"   division # DIVISION SIGN
+# Konflikt bei Sequenz <Multi_key> <less> <greater>. Unsere Sequenz »<Multi_key> <less> <greater>                                : "≠"   U2260 # NOT EQUAL TO« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <less> <greater>                    : "⋄"   U22c4   # < > DIAMOND OPERATOR
+# Konflikt bei Sequenz <Multi_key> <slash> <less>. Unsere Sequenz »<Multi_key> <slash> <less>                                  : "≮"   U226E # NOT LESS-THAN« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <slash> <less>       	: "\\"   backslash # REVERSE SOLIDUS
+# Konflikt bei Sequenz <Multi_key> <slash> <asciicircum>. Unsere Sequenz »<Multi_key> <slash> <asciicircum>              : "↗"   U2197 # NORTH EAST ARROW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <slash> <asciicircum> 	: "|"   bar # VERTICAL LINE
+# Konflikt bei Sequenz <Multi_key> <slash> <v>. Unsere Sequenz »<Multi_key> <slash> <v>                        : "↙"   U2199 # SOUTH WEST ARROW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <slash> <v>                         : "√"   U221a   # / v SQUARE ROOT
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <minus>. Unsere Sequenz »<Multi_key> <asciicircum> <minus>          : "⁻"   U207B # SUPERSCRIPT MINUS« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <minus> 	: "¯"   macron # MACRON
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <a>. Unsere Sequenz »<Multi_key> <asciicircum> <a>              : "ᵃ"   U1D43 # MODIFIER LETTER SMALL A« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <a>    	: "â"   acircumflex # LATIN SMALL LETTER A WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <c>. Unsere Sequenz »<Multi_key> <asciicircum> <c>              : "ᶜ"   U1D9C # MODIFIER LETTER SMALL C« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <c>    	: "ĉ"   U0109 # LATIN SMALL LETTER C WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <e>. Unsere Sequenz »<Multi_key> <asciicircum> <e>              : "ᵉ"   U1D49 # MODIFIER LETTER SMALL E« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <e>    	: "ê"   ecircumflex # LATIN SMALL LETTER E WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <g>. Unsere Sequenz »<Multi_key> <asciicircum> <g>              : "ᵍ"   U1D4D # MODIFIER LETTER SMALL G« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <g>    	: "ĝ"   U011D # LATIN SMALL LETTER G WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <h>. Unsere Sequenz »<Multi_key> <asciicircum> <h>              : "ʰ"   U02B0 # MODIFIER LETTER SMALL H« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <h>    	: "ĥ"   U0125 # LATIN SMALL LETTER H WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <i>. Unsere Sequenz »<Multi_key> <asciicircum> <i>              : "ⁱ"   U2071 # SUPERSCRIPT LATIN SMALL LETTER I« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <i>    	: "î"   icircumflex # LATIN SMALL LETTER I WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <j>. Unsere Sequenz »<Multi_key> <asciicircum> <j>              : "ʲ"   U02B2 # MODIFIER LETTER SMALL J« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <j>    	: "ĵ"   U0135 # LATIN SMALL LETTER J WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <o>. Unsere Sequenz »<Multi_key> <asciicircum> <o>              : "ᵒ"   U1D52 # MODIFIER LETTER SMALL O« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <o>    	: "ô"   ocircumflex # LATIN SMALL LETTER O WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <s>. Unsere Sequenz »<Multi_key> <asciicircum> <s>              : "ˢ"   U02E2 # MODIFIER LETTER SMALL S« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <s>    	: "ŝ"   U015D # LATIN SMALL LETTER S WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <u>. Unsere Sequenz »<Multi_key> <asciicircum> <u>              : "ᵘ"   U1D58 # MODIFIER LETTER SMALL U« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <u>    	: "û"   ucircumflex # LATIN SMALL LETTER U WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <w>. Unsere Sequenz »<Multi_key> <asciicircum> <w>              : "ʷ"   U02B7 # MODIFIER LETTER SMALL W« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <w>    	: "ŵ"   U0175 # LATIN SMALL LETTER W WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <y>. Unsere Sequenz »<Multi_key> <asciicircum> <y>              : "ʸ"   U02B8 # MODIFIER LETTER SMALL Y« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <y>    	: "ŷ"   U0177 # LATIN SMALL LETTER Y WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <z>. Unsere Sequenz »<Multi_key> <asciicircum> <z>              : "ᶻ"   U1DBB # MODIFIER LETTER SMALL Z« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <z>    	: "ẑ"   U1E91 # LATIN SMALL LETTER Z WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <A>. Unsere Sequenz »<Multi_key> <asciicircum> <A>              : "ᴬ"   U1D2C # MODIFIER LETTER CAPITAL A« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <A>    	: "Â"   Acircumflex # LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <E>. Unsere Sequenz »<Multi_key> <asciicircum> <E>              : "ᴱ"   U1D31 # MODIFIER LETTER CAPITAL E« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <E>    	: "Ê"   Ecircumflex # LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <G>. Unsere Sequenz »<Multi_key> <asciicircum> <G>              : "ᴳ"   U1D33 # MODIFIER LETTER CAPITAL G« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <G>    	: "Ĝ"   U011C # LATIN CAPITAL LETTER G WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <H>. Unsere Sequenz »<Multi_key> <asciicircum> <H>              : "ᴴ"   U1D34 # MODIFIER LETTER CAPITAL H« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <H>    	: "Ĥ"   U0124 # LATIN CAPITAL LETTER H WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <I>. Unsere Sequenz »<Multi_key> <asciicircum> <I>              : "ᴵ"   U1D35 # MODIFIER LETTER CAPITAL I« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <I>    	: "Î"   Icircumflex # LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <J>. Unsere Sequenz »<Multi_key> <asciicircum> <J>              : "ᴶ"   U1D36 # MODIFIER LETTER CAPITAL J« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <J>    	: "Ĵ"   U0134 # LATIN CAPITAL LETTER J WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <O>. Unsere Sequenz »<Multi_key> <asciicircum> <O>              : "ᴼ"   U1D3C # MODIFIER LETTER CAPITAL O« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <O>    	: "Ô"   Ocircumflex # LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <U>. Unsere Sequenz »<Multi_key> <asciicircum> <U>              : "ᵁ"   U1D41 # MODIFIER LETTER CAPITAL U« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <U>    	: "Û"   Ucircumflex # LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <W>. Unsere Sequenz »<Multi_key> <asciicircum> <W>              : "ᵂ"   U1D42 # MODIFIER LETTER CAPITAL W« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <W>    	: "Ŵ"   U0174 # LATIN CAPITAL LETTER W WITH CIRCUMFLEX
+# Konflikt bei Sequenz <Multi_key> <underscore> <a>. Unsere Sequenz »<Multi_key> <underscore> <a>               : "ₐ"   U2090 # LATIN SUBSCRIPT SMALL LETTER A« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <underscore> <a>     	: "ā"   U0101 # LATIN SMALL LETTER A WITH MACRON
+# Konflikt bei Sequenz <Multi_key> <underscore> <e>. Unsere Sequenz »<Multi_key> <underscore> <e>               : "ₑ"   U2091 # LATIN SUBSCRIPT SMALL LETTER E« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <underscore> <e>     	: "ē"   U0113 # LATIN SMALL LETTER E WITH MACRON
+# Konflikt bei Sequenz <Multi_key> <underscore> <i>. Unsere Sequenz »<Multi_key> <underscore> <i>               : "ᵢ"   U1D62 # LATIN SUBSCRIPT SMALL LETTER I« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <underscore> <i>     	: "ī"   U012B # LATIN SMALL LETTER I WITH MACRON
+# Konflikt bei Sequenz <Multi_key> <underscore> <m>. Unsere Sequenz »<Multi_key> <underscore> <m>               : "ₘ"   U2098 # LATIN SUBSCRIPT SMALL LETTER M« überschreibt die folgende Sequenz aus lang.module
+<Multi_key> <underscore> <m>                      : "̼" U033C # COMBINING SEAGULL BELOW
+# Konflikt bei Sequenz <Multi_key> <underscore> <o>. Unsere Sequenz »<Multi_key> <underscore> <o>               : "ₒ"   U2092 # LATIN SUBSCRIPT SMALL LETTER O« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <underscore> <o>     	: "ō"   U014D # LATIN SMALL LETTER O WITH MACRON
+# Konflikt bei Sequenz <Multi_key> <underscore> <u>. Unsere Sequenz »<Multi_key> <underscore> <u>               : "ᵤ"   U1D64 # LATIN SUBSCRIPT SMALL LETTER U« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <underscore> <u>     	: "ū"   U016B # LATIN SMALL LETTER U WITH MACRON
+# Konflikt bei Sequenz <Multi_key> <bar> <C>. Unsere Sequenz »<Multi_key> <bar> <C>                     : "ℂ"   U02102 # DOUBLE-STRUCK CAPITAL C« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <bar> <C>			: "¢"   cent # CENT SIGN
+# Konflikt bei Sequenz <Multi_key> <bar> <c>. Unsere Sequenz »<Multi_key> <bar> <c>                     : "𝕔"   U1D554 # MATHEMATICAL DOUBLE-STRUCK SMALL C« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <bar> <c>			: "¢"   cent # CENT SIGN
+# Konflikt bei Sequenz <Multi_key> <bar> <v>. Unsere Sequenz »<Multi_key> <bar> <v>                     : "𝕧"   U1D567 # MATHEMATICAL DOUBLE-STRUCK SMALL V« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <bar> <v>           : "↓" U2193 # DOWNWARDS ARROW
+# Konflikt bei Sequenz <Multi_key> <parenleft> <parenleft>. Unsere Sequenz »<Multi_key> <parenleft> <parenleft>       : "⦅"   U2985 # LEFT WHITE PARENTHESIS« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <parenleft> <parenleft> 	: "["   bracketleft # LEFT SQUARE BRACKET
+# Konflikt bei Sequenz <Multi_key> <parenright> <parenright>. Unsere Sequenz »<Multi_key> <parenright> <parenright>     : "⦆"   U2986 # RIGHT WHITE PARENTHESIS« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <parenright> <parenright> 	: "]"   bracketright # RIGHT SQUARE BRACKET
+# Konflikt bei Sequenz <Multi_key> <equal> <bar>. Unsere Sequenz »<Multi_key> <equal> <bar> <less>           : "⊴"   U22B4 # NORMAL SUBGROUP OF OR EQUAL TO« überschreibt die folgende Sequenz aus lang.module
+<Multi_key> <equal> <bar>                         : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+# Konflikt bei Sequenz <Multi_key> <KP_Equal> <bar>. Unsere Sequenz »<Multi_key> <KP_Equal> <bar> <less>        : "⊴"   U22B4 # NORMAL SUBGROUP OF OR EQUAL TO« überschreibt die folgende Sequenz aus lang.module
+<Multi_key> <KP_Equal> <bar>                      : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+# Konflikt bei Sequenz <Multi_key> <equal> <bar>. Unsere Sequenz »<Multi_key> <equal> <bar> <less>           : "⊴"   U22B4 # NORMAL SUBGROUP OF OR EQUAL TO« überschreibt die folgende Sequenz aus lang.module
+<Multi_key> <equal> <bar>                         : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+# Konflikt bei Sequenz <Multi_key> <KP_Equal> <bar>. Unsere Sequenz »<Multi_key> <KP_Equal> <bar> <less>        : "⊴"   U22B4 # NORMAL SUBGROUP OF OR EQUAL TO« überschreibt die folgende Sequenz aus lang.module
+<Multi_key> <KP_Equal> <bar>                      : "ǂ" U01C2 # LATIN LETTER ALVEOLAR CLICK
+# Konflikt bei Sequenz <Multi_key> <asciicircum> <bar>. Unsere Sequenz »<Multi_key> <asciicircum> <bar> <v>            : "↕"   U2195 # UP DOWN ARROW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <asciicircum> <bar> : "↑" U2191 # UPWARDS ARROW
+# Konflikt bei Sequenz <Multi_key> <v> <slash>. Unsere Sequenz »<Multi_key> <v> <slash> <asciicircum>          : "⤢"   U2922 # NORTH EAST AND SOUTH WEST ARROW« überschreibt die folgende Sequenz aus enUS.module
+<Multi_key> <v> <slash>                         : "√"   U221a   # v / SQUARE ROOT
+# Konflikt bei Sequenz <Multi_key> <minus> <p>. Unsere Sequenz »<Multi_key> <minus> <p> <h>               : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI« überschreibt die folgende Sequenz aus lang.module
+<Multi_key> <minus> <p>                           : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
+# Konflikt bei Sequenz <dead_stroke> <p>. Unsere Sequenz »<dead_stroke> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI« überschreibt die folgende Sequenz aus enUS.module
+<dead_stroke> <p> 		      : "ᵽ"   U1D7D               # LATIN SMALL LETTER P WITH STROKE
+# Konflikt bei Sequenz <dead_stroke> <p>. Unsere Sequenz »<dead_stroke> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI« überschreibt die folgende Sequenz aus lang.module
+<dead_stroke> <p>                                 : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE

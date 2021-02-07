@@ -1,0 +1,48 @@
+# Konflikt bei Sequenz <Multi_key> <r> <1> <0>. Unsere Sequenz »<Multi_key> <r> <1> <0> <space> : "ⅹ" # SMALL ROMAN NUMERAL 10« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <1> <0>                  : "ⅹ"   U2179 # SMALL ROMAN NUMERAL TEN
+# Konflikt bei Sequenz <Multi_key> <R> <1> <0>. Unsere Sequenz »<Multi_key> <R> <1> <0> <space> : "Ⅹ" # ROMAN NUMERAL 10« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <1> <0>                  : "Ⅹ"   U2169 # ROMAN NUMERAL TEN
+# Konflikt bei Sequenz <Multi_key> <r> <1> <1>. Unsere Sequenz »<Multi_key> <r> <1> <1> <space> : "ⅹⅰ" # SMALL ROMAN NUMERAL 11« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <1> <1>                  : "ⅺ"   U217A # SMALL ROMAN NUMERAL ELEVEN
+# Konflikt bei Sequenz <Multi_key> <R> <1> <1>. Unsere Sequenz »<Multi_key> <R> <1> <1> <space> : "ⅩⅠ" # ROMAN NUMERAL 11« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <1> <1>                  : "Ⅺ"   U216A # ROMAN NUMERAL ELEVEN
+# Konflikt bei Sequenz <Multi_key> <r> <1> <2>. Unsere Sequenz »<Multi_key> <r> <1> <2> <space> : "ⅹⅰⅰ" # SMALL ROMAN NUMERAL 12« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <1> <2>                  : "ⅻ"   U217B # SMALL ROMAN NUMERAL TWELVE
+# Konflikt bei Sequenz <Multi_key> <R> <1> <2>. Unsere Sequenz »<Multi_key> <R> <1> <2> <space> : "ⅩⅠⅠ" # ROMAN NUMERAL 12« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <1> <2>                  : "Ⅻ"   U216B # ROMAN NUMERAL TWELVE
+# Konflikt bei Sequenz <Multi_key> <r> <2>. Unsere Sequenz »<Multi_key> <r> <2> <space> : "ⅰⅰ" # SMALL ROMAN NUMERAL 2« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <2>                      : "ⅱ"   U2171 # SMALL ROMAN NUMERAL TWO
+# Konflikt bei Sequenz <Multi_key> <R> <2>. Unsere Sequenz »<Multi_key> <R> <2> <space> : "ⅠⅠ" # ROMAN NUMERAL 2« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <2>                      : "Ⅱ"   U2161 # ROMAN NUMERAL TWO
+# Konflikt bei Sequenz <Multi_key> <r> <3>. Unsere Sequenz »<Multi_key> <r> <3> <space> : "ⅰⅰⅰ" # SMALL ROMAN NUMERAL 3« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <3>                      : "ⅲ"   U2172 # SMALL ROMAN NUMERAL THREE
+# Konflikt bei Sequenz <Multi_key> <R> <3>. Unsere Sequenz »<Multi_key> <R> <3> <space> : "ⅠⅠⅠ" # ROMAN NUMERAL 3« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <3>                      : "Ⅲ"   U2162 # ROMAN NUMERAL THREE
+# Konflikt bei Sequenz <Multi_key> <r> <4>. Unsere Sequenz »<Multi_key> <r> <4> <space> : "ⅰⅴ" # SMALL ROMAN NUMERAL 4« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <4>                      : "ⅳ"   U2173 # SMALL ROMAN NUMERAL FOUR
+# Konflikt bei Sequenz <Multi_key> <R> <4>. Unsere Sequenz »<Multi_key> <R> <4> <space> : "ⅠⅤ" # ROMAN NUMERAL 4« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <4>                      : "Ⅳ"   U2163 # ROMAN NUMERAL FOUR
+# Konflikt bei Sequenz <Multi_key> <r> <5>. Unsere Sequenz »<Multi_key> <r> <5> <space> : "ⅴ" # SMALL ROMAN NUMERAL 5« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <5>                      : "ⅴ"   U2174 # SMALL ROMAN NUMERAL FIVE
+# Konflikt bei Sequenz <Multi_key> <R> <5>. Unsere Sequenz »<Multi_key> <R> <5> <space> : "Ⅴ" # ROMAN NUMERAL 5« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <5>                      : "Ⅴ"   U2164 # ROMAN NUMERAL FIVE
+# Konflikt bei Sequenz <Multi_key> <r> <6>. Unsere Sequenz »<Multi_key> <r> <6> <space> : "ⅴⅰ" # SMALL ROMAN NUMERAL 6« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <6>                      : "ⅵ"   U2175 # SMALL ROMAN NUMERAL SIX
+# Konflikt bei Sequenz <Multi_key> <R> <6>. Unsere Sequenz »<Multi_key> <R> <6> <space> : "ⅤⅠ" # ROMAN NUMERAL 6« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <6>                      : "Ⅵ"   U2165 # ROMAN NUMERAL SIX
+# Konflikt bei Sequenz <Multi_key> <r> <7>. Unsere Sequenz »<Multi_key> <r> <7> <space> : "ⅴⅰⅰ" # SMALL ROMAN NUMERAL 7« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <7>                      : "ⅶ"   U2176 # SMALL ROMAN NUMERAL SEVEN
+# Konflikt bei Sequenz <Multi_key> <R> <7>. Unsere Sequenz »<Multi_key> <R> <7> <space> : "ⅤⅠⅠ" # ROMAN NUMERAL 7« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <7>                      : "Ⅶ"   U2166 # ROMAN NUMERAL SEVEN
+# Konflikt bei Sequenz <Multi_key> <r> <8>. Unsere Sequenz »<Multi_key> <r> <8> <space> : "ⅴⅰⅰⅰ" # SMALL ROMAN NUMERAL 8« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <8>                      : "ⅷ"   U2177 # SMALL ROMAN NUMERAL EIGHT
+# Konflikt bei Sequenz <Multi_key> <R> <8>. Unsere Sequenz »<Multi_key> <R> <8> <space> : "ⅤⅠⅠⅠ" # ROMAN NUMERAL 8« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <8>                      : "Ⅷ"   U2167 # ROMAN NUMERAL EIGHT
+# Konflikt bei Sequenz <Multi_key> <r> <9>. Unsere Sequenz »<Multi_key> <r> <9> <space> : "ⅰⅹ" # SMALL ROMAN NUMERAL 9« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <9>                      : "ⅸ"   U2178 # SMALL ROMAN NUMERAL NINE
+# Konflikt bei Sequenz <Multi_key> <R> <9>. Unsere Sequenz »<Multi_key> <R> <9> <space> : "ⅠⅩ" # ROMAN NUMERAL 9« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <9>                      : "Ⅸ"   U2168 # ROMAN NUMERAL NINE
+# Konflikt bei Sequenz <Multi_key> <R> <1> <space>. Unsere Sequenz »<Multi_key> <R> <1> <space> : "Ⅰ" # ROMAN NUMERAL 1 überschreibt die folgende Sequenz aus base.module
+<Multi_key> <R> <1> <space>              : "Ⅰ"   U2160 # ROMAN NUMERAL ONE
+# Konflikt bei Sequenz <Multi_key> <r> <1> <space>. Unsere Sequenz »<Multi_key> <r> <1> <space> : "Ⅰ" # SMALL ROMAN NUMERAL 1« überschreibt die folgende Sequenz aus base.module
+<Multi_key> <r> <1>  <space>             : "ⅰ"   U2170 # SMALL ROMAN NUMERAL ONE
