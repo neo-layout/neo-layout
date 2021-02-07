@@ -1,0 +1,40 @@
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <A>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <A>                                        : "Ά"   U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <A>                                   : "Ά"   U0386 # GREEK CAPITAL LETTER ALPHA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <A>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <A>                                        : "Ά"   U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <A>                                   : "Ά"   U0386 # GREEK CAPITAL LETTER ALPHA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <E>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <E>                                        : "Έ"   U1FC9 # GREEK CAPITAL LETTER EPSILON WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <E>                                   : "Έ"   U0388 # GREEK CAPITAL LETTER EPSILON WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <E>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <E>                                        : "Έ"   U1FC9 # GREEK CAPITAL LETTER EPSILON WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <E>                                   : "Έ"   U0388 # GREEK CAPITAL LETTER EPSILON WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <H>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <H>                                        : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <H>                                   : "Ή"   U0389 # GREEK CAPITAL LETTER ETA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <H>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <H>                                        : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <H>                                   : "Ή"   U0389 # GREEK CAPITAL LETTER ETA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <Adiaeresis>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <Adiaeresis>                               : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <Adiaeresis>                          : "Ή"   U0389 # GREEK CAPITAL LETTER ETA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <Adiaeresis>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <Adiaeresis>                               : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <Adiaeresis>                          : "Ή"   U0389 # GREEK CAPITAL LETTER ETA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <I>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <I>                                        : "Ί"   U1FDB # GREEK CAPITAL LETTER IOTA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <I>                                   : "Ί"   U038A # GREEK CAPITAL LETTER IOTA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <I>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <I>                                        : "Ί"   U1FDB # GREEK CAPITAL LETTER IOTA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <I>                                   : "Ί"   U038A # GREEK CAPITAL LETTER IOTA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <Y>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <Y>                                        : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <Y>                                   : "Ύ"   U038E # GREEK CAPITAL LETTER UPSILON WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <Y>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <Y>                                        : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <Y>                                   : "Ύ"   U038E # GREEK CAPITAL LETTER UPSILON WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <g> <O>. Unsere Sequenz »<dead_acute> <Multi_key> <g> <O>                                        : "Ό"   U1FF9 # GREEK CAPITAL LETTER OMICRON WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <g> <O>                                   : "Ό"   U038C # GREEK CAPITAL LETTER OMICRON WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Multi_key> <G> <O>. Unsere Sequenz »<dead_acute> <Multi_key> <G> <O>                                        : "Ό"   U1FF9 # GREEK CAPITAL LETTER OMICRON WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Multi_key> <G> <O>                                   : "Ό"   U038C # GREEK CAPITAL LETTER OMICRON WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Greek_OMEGA>. Unsere Sequenz »<dead_acute> <Greek_OMEGA>                                              : "Ώ"   U1FFB # GREEK CAPITAL LETTER OMEGA WITH OXIA« überschreibt die folgende Sequenz aus greek.module
+<dead_acute> <Greek_OMEGA>                                         : "Ώ"   U038F # GREEK CAPITAL LETTER OMEGA WITH TONOS
+# Konflikt bei Sequenz <dead_acute> <Greek_OMEGA>. Unsere Sequenz »<dead_acute> <Greek_OMEGA>                                              : "Ώ"   U1FFB # GREEK CAPITAL LETTER OMEGA WITH OXIA« überschreibt die folgende Sequenz aus enUS.module
+<dead_acute> <Greek_OMEGA>       	: "Ώ"   U038F # GREEK CAPITAL LETTER OMEGA WITH TONOS
+# Konflikt bei Sequenz <dead_diaeresis> <dead_acute> <Greek_iota>. Unsere Sequenz »<dead_diaeresis> <dead_acute> <Greek_iota>               : "ΐ"   U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA« überschreibt die folgende Sequenz aus enUS.module
+<dead_diaeresis> <dead_acute> <Greek_iota> 	: "ΐ"   U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+# Konflikt bei Sequenz <dead_acute> <dead_diaeresis> <Greek_iota>. Unsere Sequenz »<dead_acute> <dead_diaeresis> <Greek_iota>               : "ΐ"   U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA« überschreibt die folgende Sequenz aus enUS.module
+<dead_acute> <dead_diaeresis> <Greek_iota> 	: "ΐ"   U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+# Konflikt bei Sequenz <dead_acute> <dead_diaeresis> <Greek_upsilon>. Unsere Sequenz »<dead_acute> <dead_diaeresis> <Greek_upsilon>            : "ΰ"   U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA« überschreibt die folgende Sequenz aus enUS.module
+<dead_acute> <dead_diaeresis> <Greek_upsilon> 	: "ΰ"   U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+# Konflikt bei Sequenz <dead_diaeresis> <dead_acute> <Greek_upsilon>. Unsere Sequenz »<dead_diaeresis> <dead_acute> <Greek_upsilon>            : "ΰ"   U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA« überschreibt die folgende Sequenz aus enUS.module
+<dead_diaeresis> <dead_acute> <Greek_upsilon> 		: "ΰ"   U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS

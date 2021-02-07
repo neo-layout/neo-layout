@@ -1,0 +1,21 @@
+#configinfo Oxia statt oxia für griechisch
+
+<dead_acute> <Multi_key> <g> <A>                                        : "Ά"   U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA
+<dead_acute> <Multi_key> <G> <A>                                        : "Ά"   U1FBB # GREEK CAPITAL LETTER ALPHA WITH OXIA
+<dead_acute> <Multi_key> <g> <E>                                        : "Έ"   U1FC9 # GREEK CAPITAL LETTER EPSILON WITH OXIA
+<dead_acute> <Multi_key> <G> <E>                                        : "Έ"   U1FC9 # GREEK CAPITAL LETTER EPSILON WITH OXIA
+<dead_acute> <Multi_key> <g> <H>                                        : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA
+<dead_acute> <Multi_key> <G> <H>                                        : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA
+<dead_acute> <Multi_key> <g> <Adiaeresis>                               : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA
+<dead_acute> <Multi_key> <G> <Adiaeresis>                               : "Ή"   U1FCB # GREEK CAPITAL LETTER ETA WITH OXIA
+<dead_acute> <Multi_key> <g> <I>                                        : "Ί"   U1FDB # GREEK CAPITAL LETTER IOTA WITH OXIA
+<dead_acute> <Multi_key> <G> <I>                                        : "Ί"   U1FDB # GREEK CAPITAL LETTER IOTA WITH OXIA
+<dead_acute> <Multi_key> <g> <Y>                                        : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA
+<dead_acute> <Multi_key> <G> <Y>                                        : "Ύ"   U1FEB # GREEK CAPITAL LETTER UPSILON WITH OXIA
+<dead_acute> <Multi_key> <g> <O>                                        : "Ό"   U1FF9 # GREEK CAPITAL LETTER OMICRON WITH OXIA
+<dead_acute> <Multi_key> <G> <O>                                        : "Ό"   U1FF9 # GREEK CAPITAL LETTER OMICRON WITH OXIA
+<dead_acute> <Greek_OMEGA>                                              : "Ώ"   U1FFB # GREEK CAPITAL LETTER OMEGA WITH OXIA
+<dead_diaeresis> <dead_acute> <Greek_iota>               : "ΐ"   U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+<dead_acute> <dead_diaeresis> <Greek_iota>               : "ΐ"   U1FD3 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND OXIA
+<dead_acute> <dead_diaeresis> <Greek_upsilon>            : "ΰ"   U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
+<dead_diaeresis> <dead_acute> <Greek_upsilon>            : "ΰ"   U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA
