@@ -52,7 +52,7 @@
 <Multi_key> <asciitilde> <equal>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
 <Multi_key> <equal> <asciitilde>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
 <dead_tilde> <equal>                       : "≅"   U2245 # APPROXIMATELY EQUAL TO
-<Multi_key> <asciitilde> <asciitilde>      : "≈"   U2248 # ALMOST EQUAL TO
+<Multi_key> <asciitilde> <asciitilde>      : "≈"   U2248 # ~ ~ ALMOST EQUAL TO
 <dead_tilde> <asciitilde>                  : "≈"   U2248 # ALMOST EQUAL TO
 <dead_macron> <asciitilde>                 : "≃"   U2243 # ASYMPTOTICALLY EQUAL TO
 <dead_tilde> <minus>                       : "≃"   U2243 # ASYMPTOTICALLY EQUAL TO
@@ -244,12 +244,12 @@
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <equal>                                       : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <equal> <dead_stroke> <dead_stroke>             : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_Divide> <KP_Equal>                          : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <KP_Equal>                                    : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_Equal> <dead_stroke> <dead_stroke>          : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <less> <greater>                                : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <equal>                                       : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <equal> <dead_stroke> <dead_stroke>             : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <KP_Divide> <KP_Equal>                          : "≠"   notequal # NOT EQUAL TO
+<dead_stroke> <KP_Equal>                                    : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <KP_Equal> <dead_stroke> <dead_stroke>          : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <less> <greater>                                : "≠"   notequal # NOT EQUAL TO
 <dead_stroke> <U21D2>                                       : "⇏"   U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
 <Multi_key> <slash> <U21D2>                                 : "⇏"   U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
 <dead_stroke> <U21D0>                                       : "⇍"   U21CD # LEFTWARDS DOUBLE ARROW WITH STROKE
