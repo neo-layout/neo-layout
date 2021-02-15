@@ -52,7 +52,7 @@
 <Multi_key> <asciitilde> <equal>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
 <Multi_key> <equal> <asciitilde>           : "≅"   U2245 # APPROXIMATELY EQUAL TO
 <dead_tilde> <equal>                       : "≅"   U2245 # APPROXIMATELY EQUAL TO
-<Multi_key> <asciitilde> <asciitilde>      : "≈"   U2248 # ALMOST EQUAL TO
+<Multi_key> <asciitilde> <asciitilde>      : "≈"   U2248 # ~ ~ ALMOST EQUAL TO
 <dead_tilde> <asciitilde>                  : "≈"   U2248 # ALMOST EQUAL TO
 <dead_macron> <asciitilde>                 : "≃"   U2243 # ASYMPTOTICALLY EQUAL TO
 <dead_tilde> <minus>                       : "≃"   U2243 # ASYMPTOTICALLY EQUAL TO
@@ -244,12 +244,12 @@
 
 # mathematical negations
 <Multi_key> <slash> <equal>                                 : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <equal>                                       : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <equal> <dead_stroke> <dead_stroke>             : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_Divide> <KP_Equal>                          : "≠"   U2260 # NOT EQUAL TO
-<dead_stroke> <KP_Equal>                                    : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <KP_Equal> <dead_stroke> <dead_stroke>          : "≠"   U2260 # NOT EQUAL TO
-<Multi_key> <less> <greater>                                : "≠"   U2260 # NOT EQUAL TO
+<dead_stroke> <equal>                                       : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <equal> <dead_stroke> <dead_stroke>             : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <KP_Divide> <KP_Equal>                          : "≠"   notequal # NOT EQUAL TO
+<dead_stroke> <KP_Equal>                                    : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <KP_Equal> <dead_stroke> <dead_stroke>          : "≠"   notequal # NOT EQUAL TO
+<Multi_key> <less> <greater>                                : "≠"   notequal # NOT EQUAL TO
 <dead_stroke> <U21D2>                                       : "⇏"   U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
 <Multi_key> <slash> <U21D2>                                 : "⇏"   U21CF # RIGHTWARDS DOUBLE ARROW WITH STROKE
 <dead_stroke> <U21D0>                                       : "⇍"   U21CD # LEFTWARDS DOUBLE ARROW WITH STROKE
@@ -414,13 +414,10 @@
 <dead_abovering> <U21BB> <rightarrow>               : "↫"   U21AB # LEFTWARDS ARROW WITH LOOP
 <dead_abovering> <rightarrow>                       : "↬"   U21AC # RIGHTWARDS ARROW WITH LOOP
 <Multi_key> <colon> <rightarrow>               : "⧴"  U29F4 # RULE-DELAYED
-<dead_circumflex> <rightarrow>                 : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
 <dead_circumflex> <greater>                    : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key> <asciicircum> <greater>            : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
 <Multi_key> <asciicircum> <rightarrow>         : "⃗"    U20D7 # COMBINING RIGHT ARROW ABOVE
 <U21BB> <U20D7>                                : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
-<dead_circumflex> <leftarrow>                  : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
-<dead_circumflex> <U21BB> <rightarrow>         : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
 <dead_circumflex> <less>                       : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
 <Multi_key> <asciicircum> <less>               : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
 <Multi_key> <asciicircum> <leftarrow>          : "⃖"    U20D6 # COMBINING LEFT ARROW ABOVE
@@ -669,7 +666,6 @@
 <Multi_key> <x> <braceleft> <5>           : "⎧⎫\n⎪⎪\n⎨⎬\n⎪⎪\n⎩⎭"
 
 # dots for vectors and matrices
-<Multi_key> <ellipsis> <bar>              : "⋮" U22EE # VERTICAL ELLIPSIS
 <Multi_key> <ellipsis> <slash>            : "⋰" U22F0 # UP RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <ellipsis> <backslash>        : "⋱" U22F1 # DOWN RIGHT DIAGONAL ELLIPSIS
 <Multi_key> <ellipsis> <emdash>           : "⋯" U22EF # MIDLINE HORIZONTAL ELLIPSIS

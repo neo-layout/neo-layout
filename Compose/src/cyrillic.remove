@@ -1,0 +1,12 @@
+# Konflikt bei Sequenz <dead_circumflex> <Cyrillic_O>. Unsere Sequenz »<dead_circumflex> <Cyrillic_O>                    : "Ю" U042E # CYRILLIC CAPITAL LETTER YU« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <Cyrillic_O>			: "О̂"		# CYRILLIC CAPITAL LETTER O WITH COMBINING CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_circumflex> <Cyrillic_o>. Unsere Sequenz »<dead_circumflex> <Cyrillic_o>                    : "ю" U044E # CYRILLIC SMALL LETTER YU« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <Cyrillic_o>			: "о̂"		# CYRILLIC SMALL LETTER O WITH COMBINING CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_circumflex> <Cyrillic_A>. Unsere Sequenz »<dead_circumflex> <Cyrillic_A>                    : "Я" U042F # CYRILLIC CAPITAL LETTER YA« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <Cyrillic_A>			: "А̂"		# CYRILLIC CAPITAL LETTER A WITH COMBINING CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_circumflex> <Cyrillic_a>. Unsere Sequenz »<dead_circumflex> <Cyrillic_a>                    : "я" U044F # CYRILLIC SMALL LETTER YA« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <Cyrillic_a>			: "а̂"		# CYRILLIC SMALL LETTER A WITH COMBINING CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_circumflex> <Cyrillic_IE>. Unsere Sequenz »<dead_circumflex> <Cyrillic_IE>                   : "Є" U0404 # CYRILLIC CAPITAL LETTER UKRAINIAN IE« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <Cyrillic_IE>			: "Е̂"		# CYRILLIC CAPITAL LETTER IE WITH COMBINING CIRCUMFLEX ACCENT
+# Konflikt bei Sequenz <dead_circumflex> <Cyrillic_ie>. Unsere Sequenz »<dead_circumflex> <Cyrillic_ie>                   : "є" U0454 # CYRILLIC SMALL LETTER UKRAINIAN IE« überschreibt die folgende Sequenz aus enUS.module
+<dead_circumflex> <Cyrillic_ie>			: "е̂"		# CYRILLIC SMALL LETTER IE WITH COMBINING CIRCUMFLEX ACCENT

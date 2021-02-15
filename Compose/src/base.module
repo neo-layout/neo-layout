@@ -1,59 +1,20 @@
 #configinfo Standard-Erweiterung der Compose-Definitionen
 # standard Definitions by Neo keyboard layout
 
-# diacritical marks
-<dead_circumflex> <nobreakspace>           : "ˆ"   U02C6 # MODIFIER LETTER CIRCUMFLEX ACCENT
-<dead_caron> <nobreakspace>                : "ˇ"   U02C7 # CARON
-<dead_breve> <nobreakspace>                : "˘"   U02D8 # BREVE
-<dead_acute> <nobreakspace>                : "´"   U00B4 # ACUTE ACCENT
-<dead_grave> <nobreakspace>                : "`"   U0060 # GRAVE ACCENT
-<dead_cedilla> <nobreakspace>              : "¸"   U00B8 # CEDILLA
 <U21BB> <dead_cedilla> <nobreakspace>      : "˛"   U02DB # OGONEK
-<dead_abovedot> <nobreakspace>             : "˙"   U02D9 # DOT ABOVE
-<dead_abovering> <nobreakspace>            : "˚"   U02DA # RING ABOVE
-<dead_tilde> <nobreakspace>                : "˜"   U02DC # SMALL TILDE
-<dead_macron> <nobreakspace>               : "¯"   U00AF # MACRON
-<dead_diaeresis> <nobreakspace>            : "¨"   U00A8 # DIAERESIS
-<dead_stroke> <nobreakspace>               : "/"   U002F # SOLIDUS
-<dead_doubleacute> <nobreakspace>          : "˝"   U02DD # DOUBLE ACUTE ACCENT
-<dead_psili> <nobreakspace>                : "᾿"   U1FBF # GREEK PSILI
-<dead_dasia> <nobreakspace>                : "῾"   U1FFE # GREEK DASIA
 <U02F5> <nobreakspace>                     : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <dead_doubleacute> <nobreakspace>  : "˵"   U02F5 # MODIFIER LETTER MIDDLE DOUBLE GRAVE ACCENT
 <U21BB> <nobreakspace>                     : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
 <U02DE> <nobreakspace>                     : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
-<dead_belowdot> <nobreakspace>             : "."   U002E # FULL STOP
 
-# combining characters
+<U21BB> <dead_breve> <dead_breve>          : "̑"   U0311 # COMBINING INVERTED BREVE
+<U21BB> <dead_cedilla> <dead_cedilla>      : "̨"   U0328 # COMBINING OGONEK
+<U21BB> <dead_doubleacute> <dead_doubleacute>  : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
+<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 <Multi_key> <o> <space>                    : "◌"   U25CC # DOTTED CIRCLE
 <Multi_key> <ellipsis> <o>                 : "◌"   U25CC # DOTTED CIRCLE
-<dead_circumflex> <dead_circumflex>        : "̂"   U0302 # COMBINING CIRCUMFLEX ACCENT
-<dead_caron> <dead_caron>                  : "̌"   U030c # COMBINING CARON
-<dead_breve> <dead_breve>                  : "̆"   U0306 # COMBINING BREVE
-<U21BB> <dead_breve> <dead_breve>          : "̑"   U0311 # COMBINING INVERTED BREVE
-<dead_acute> <dead_acute>                  : "́"   U0301 # COMBINING ACUTE ACCENT
-<dead_grave> <dead_grave>                  : "̀"   U0300 # COMBINING GRAVE ACCENT
-<dead_cedilla> <dead_cedilla>              : "̧"   U0327 # COMBINING CEDILLA
-<U21BB> <dead_cedilla> <dead_cedilla>      : "̨"   U0328 # COMBINING OGONEK
-<dead_abovedot> <dead_abovedot>            : "̇"   U0307 # COMBINING DOT ABOVE
-<dead_abovering> <dead_abovering>          : "̊"   U030A # COMBINING RING ABOVE
-<dead_tilde> <dead_tilde>                  : "̃"   U0303 # COMBINING TILDE
-<dead_macron> <dead_macron>                : "̄"   U0304 # COMBINING MACRON
-<dead_diaeresis> <dead_diaeresis>          : "̈"   U0308 # COMBINING DIAERESIS
-<dead_stroke> <dead_stroke>                : "̷"   U0337 # COMBINING SHORT SOLIDUS OVERLAY
-<dead_doubleacute> <dead_doubleacute>      : "̋"   U030B # COMBINING DOUBLE ACUTE ACCENT
-<dead_psili> <dead_psili>                  : "̓"   U0313 # COMBINING COMMA ABOVE
-<dead_dasia> <dead_dasia>                  : "̔"   U0314 # COMBINING REVERSED COMMA ABOVE
-<U02F5> <U02F5>                            : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
-<U21BB> <dead_doubleacute> <dead_doubleacute>  : "̏"   U030F # COMBINING DOUBLE GRAVE ACCENT
-<U02DE> <U02DE>                            : "˞"   U02DE # MODIFIER LETTER RHOTIC HOOK
-<dead_belowdot> <dead_belowdot>            : "̣"   U0323 # COMBINING DOT BELOW
-<Multi_key> <underscore> <underscore>      : "̲"   U0332 # COMBINING LOW LINE
-<Multi_key> <rightsinglequotemark> <rightsinglequotemark> : "ʼ" U02BC # MODIFIER LETTER APOSTROPHE
 
 # in standard Compose missing dead keys with spaces
-<dead_stroke> <space>                      : "‐"   U2010 # HYPHEN
-<dead_doubleacute> <space>                 : "˝"   U02DD # DOUBLE ACUTE ACCENT
 <dead_psili> <space>                       : "᾿"   U1FBF # GREEK PSILI
 <dead_dasia> <space>                       : "῾"   U1FFE # GREEK DASIA
 <U21BB> <space>                            : "↻"   U21BB # CLOCKWISE OPEN CIRCLE ARROW
@@ -100,14 +61,14 @@
 # letters with stroke
 <dead_stroke> <D>                        : "Đ"   Dstroke # LATIN CAPITAL LETTER D WITH STROKE
 <dead_stroke> <d>                        : "đ"   dstroke # LATIN SMALL LETTER D WITH STROKE
-<dead_stroke> <H>                        : "Ħ"   Hstroke # LATIN CAPITAL LETTER H WITH STROKE
+<dead_stroke> <H>                        : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
 <Multi_key> <minus> <H>                  : "Ħ"   U0126 # LATIN CAPITAL LETTER H WITH STROKE
-<dead_stroke> <h>                        : "ħ"   hstroke # LATIN SMALL LETTER H WITH STROKE
+<dead_stroke> <h>                        : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
 <Multi_key> <minus> <h>                  : "ħ"   U0127 # LATIN SMALL LETTER H WITH STROKE
-<dead_stroke> <L>                        : "Ł"   Lstroke # LATIN CAPITAL LETTER L WITH STROKE
-<dead_stroke> <l>                        : "ł"   lstroke # LATIN SMALL LETTER L WITH STROKE
-<dead_stroke> <O>                        : "Ø"   Ooblique # LATIN CAPITAL LETTER O WITH STROKE
-<dead_stroke> <o>                        : "ø"   oslash  # LATIN SMALL LETTER O WITH STROKE
+<dead_stroke> <L>                        : "Ł"   U0141 # LATIN CAPITAL LETTER L WITH STROKE
+<dead_stroke> <l>                        : "ł"   U0142 # LATIN SMALL LETTER L WITH STROKE
+<dead_stroke> <O>                        : "Ø"   Oslash # LATIN CAPITAL LETTER O WITH STROKE
+<dead_stroke> <o>                        : "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
 <dead_acute> <dead_stroke> <O>           : "Ǿ"   U01FE # LATIN CAPITAL LETTER O WITH STROKE AND ACUTE
 <dead_acute> <dead_stroke> <o>           : "ǿ"   U01FF # LATIN SMALL LETTER O WITH STROKE AND ACUTE
 
@@ -183,11 +144,11 @@
 <Multi_key> <z> <z>                      : "ʒ"   U0292 # LATIN SMALL LETTER EZH
 
 # ligatures
-<Multi_key> <f> <f>                      : "ﬀ"   UFB00 # LATIN SMALL LIGATURE FF
-<Multi_key> <f> <i>                      : "ﬁ"   UFB01 # LATIN SMALL LIGATURE FI
-<Multi_key> <f> <l>                      : "ﬂ"   UFB02 # LATIN SMALL LIGATURE FL
-<Multi_key> <F> <i>                      : "ﬃ"   UFB03 # LATIN SMALL LIGATURE FFI
-<Multi_key> <F> <l>                      : "ﬄ"   UFB04 # LATIN SMALL LIGATURE FFL
+<Multi_key> <f> <f>                      : "ﬀ"   Ufb00 # LATIN SMALL LIGATURE FF
+<Multi_key> <f> <i>                      : "ﬁ"   Ufb01 # LATIN SMALL LIGATURE FI
+<Multi_key> <f> <l>                      : "ﬂ"   Ufb02 # LATIN SMALL LIGATURE FL
+<Multi_key> <F> <i>                      : "ﬃ"   Ufb03 # LATIN SMALL LIGATURE FFI
+<Multi_key> <F> <l>                      : "ﬄ"   Ufb04 # LATIN SMALL LIGATURE FFL
 <Multi_key> <U017F> <t>                  : "ﬅ"   UFB05 # LATIN SMALL LIGATURE LONG S T
 <Multi_key> <s> <t>                      : "ﬆ"   UFB06 # LATIN SMALL LIGATURE ST
 <Multi_key> <I> <J>                      : "Ĳ"   U0132 # LATIN CAPITAL LIGATURE IJ
@@ -205,26 +166,27 @@
 <Multi_key> <N> <j>                      : "ǋ"   U01CB # LATIN CAPITAL LETTER N WITH SMALL LETTER J
 <Multi_key> <n> <j>                      : "ǌ"   U01CC # LATIN SMALL LETTER NJ
 
-<dead_caron> <0>                         : "₀"   U2080 # SUBSCRIPT ZERO
-<dead_caron> <KP_0>                      : "₀"   U2080 # SUBSCRIPT ZERO
-<dead_caron> <1>                         : "₁"   U2081 # SUBSCRIPT ONE
-<dead_caron> <KP_1>                      : "₁"   U2081 # SUBSCRIPT ONE
-<dead_caron> <2>                         : "₂"   U2082 # SUBSCRIPT TWO
-<dead_caron> <KP_2>                      : "₂"   U2082 # SUBSCRIPT TWO
-<dead_caron> <3>                         : "₃"   U2083 # SUBSCRIPT THREE
-<dead_caron> <KP_3>                      : "₃"   U2083 # SUBSCRIPT THREE
-<dead_caron> <4>                         : "₄"   U2084 # SUBSCRIPT FOUR
-<dead_caron> <KP_4>                      : "₄"   U2084 # SUBSCRIPT FOUR
-<dead_caron> <5>                         : "₅"   U2085 # SUBSCRIPT FIVE
-<dead_caron> <KP_5>                      : "₅"   U2085 # SUBSCRIPT FIVE
-<dead_caron> <6>                         : "₆"   U2086 # SUBSCRIPT SIX
-<dead_caron> <KP_6>                      : "₆"   U2086 # SUBSCRIPT SIX
-<dead_caron> <7>                         : "₇"   U2087 # SUBSCRIPT SEVEN
-<dead_caron> <KP_7>                      : "₇"   U2087 # SUBSCRIPT SEVEN
-<dead_caron> <8>                         : "₈"   U2088 # SUBSCRIPT EIGHT
-<dead_caron> <KP_8>                      : "₈"   U2088 # SUBSCRIPT EIGHT
-<dead_caron> <9>                         : "₉"   U2089 # SUBSCRIPT NINE
-<dead_caron> <KP_9>                      : "₉"   U2089 # SUBSCRIPT NINE
+<dead_caron> <0>    : "₀" zerosubscript # SUBSCRIPT ZERO
+<dead_caron> <KP_0> : "₀"   U2080 # SUBSCRIPT ZERO
+<dead_caron> <1>    : "₁" onesubscript # SUBSCRIPT ONE
+<dead_caron> <KP_1> : "₁"   U2081 # SUBSCRIPT ONE
+<dead_caron> <2>    : "₂" twosubscript # SUBSCRIPT TWO
+<dead_caron> <KP_2> : "₂"   U2082 # SUBSCRIPT TWO
+<dead_caron> <3>    : "₃" threesubscript # SUBSCRIPT THREE
+<dead_caron> <KP_3> : "₃"   U2083 # SUBSCRIPT THREE
+<dead_caron> <4>    : "₄" foursubscript # SUBSCRIPT FOUR
+<dead_caron> <KP_4> : "₄"   U2084 # SUBSCRIPT FOUR
+<dead_caron> <5>    : "₅" fivesubscript # SUBSCRIPT FIVE
+<dead_caron> <KP_5> : "₅"   U2085 # SUBSCRIPT FIVE
+<dead_caron> <6>    : "₆" sixsubscript # SUBSCRIPT SIX
+<dead_caron> <KP_6> : "₆"   U2086 # SUBSCRIPT SIX
+<dead_caron> <7>    : "₇" sevensubscript # SUBSCRIPT SEVEN
+<dead_caron> <KP_7> : "₇"   U2087 # SUBSCRIPT SEVEN
+<dead_caron> <8>    : "₈" eightsubscript # SUBSCRIPT EIGHT
+<dead_caron> <KP_8> : "₈"   U2088 # SUBSCRIPT EIGHT
+<dead_caron> <9>    : "₉" ninesubscript # SUBSCRIPT NINE
+<dead_caron> <KP_9> : "₉"   U2089 # SUBSCRIPT NINE
+
 
 # interpunctation
 <Multi_key> <2> <exclam>                         : "‼"   U203C # DOUBLE EXCLAMATION MARK
@@ -248,7 +210,6 @@
 <Multi_key> <dagger> <dagger>                    : "‡"   U2021 # DOUBLE DAGGER
 <U21BB> <colon>                                  : "‥"   U2025 # TWO DOT LEADER
 <U21BB> <ellipsis>                               : "⋮"   U22EE # VERTICAL ELLIPSIS
-<Multi_key> <ellipsis> <bar>                     : "⋮"   U22EE # VERTICAL ELLIPSIS
 <Multi_key> <nobreakspace> <nobreakspace>        : "-"   minus # HYPHEN-MINUS
 <Multi_key> <7> <7>                              : "⁊"   U204A # TIRONIAN SIGN ET
 <Multi_key> <KP_7> <KP_7>                        : "⁊"   U204A # TIRONIAN SIGN ET
@@ -359,7 +320,7 @@
 # other symbols
 <Multi_key> <colon> <parenright>           : "☺"   U263A # WHITE SMILING FACE
 <Multi_key> <colon> <parenleft>            : "☹"   U2639 # WHITE FROWNING FACE
-<Multi_key> <t> <m>                        : "™"   trademark # TRADE MARK SIGN
+<Multi_key> <t> <m>                        : "™"   U2122 # TRADE MARK SIGN
 <Multi_key> <c> <KP_Divide> <o>            : "℅"   U2105 # CARE OF
 <Multi_key> <femalesymbol> <femalesymbol>  : "⚢"   U26A2 # DOUBLED FEMALE SIGN
 <Multi_key> <malesymbol> <malesymbol>      : "⚣"   U26A3 # DOUBLED MALE SIGN

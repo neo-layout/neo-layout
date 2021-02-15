@@ -6936,7 +6936,7 @@
 <Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <KP_6> <space> : "…" U2026 # HORIZONTAL ELLIPSIS
 <Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <KP_7> <space> : "‧" U2027 # HYPHENATION POINT
 <Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <KP_8> <space> : " " U2028 # LINE SEPARATOR
-<Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <KP_9> <space> : U2029 # PARAGRAPH SEPARATOR
+<Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <KP_9> <space> : " " U2029 # PARAGRAPH SEPARATOR
 <Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <a> <space> : "‪" U202a # LEFT-TO-RIGHT EMBEDDING
 <Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <b> <space> : "‫" U202b # RIGHT-TO-LEFT EMBEDDING
 <Multi_key> <u> <u> <KP_2> <KP_0> <KP_2> <c> <space> : "‬" U202c # POP DIRECTIONAL FORMATTING

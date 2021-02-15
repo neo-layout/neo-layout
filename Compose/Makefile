@@ -6,7 +6,7 @@
 #
 SRC = ./src
 PSEUDO_MODULES_FILES = $(SRC)/enUS.module
-MODULES_FILES = $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module)
+MODULES_FILES = $(PSEUDO_MODULES_FILES) $(wildcard $(SRC)/*.module) $(wildcard $(SRC)/*.remove)
 
 # Gewünschte Build-Reihenfolge der Module.  Die in den Listen
 # genannten Dateien werden (falls Module dieses Namens existieren) in
@@ -25,17 +25,6 @@ MODULES += $(foreach i, $(MODULE_ORDER_TAIL), $(findstring $(i),$(M)))
 $(if $(findstring _,$(M)), \
   $(error Unterstrich in Dateinamen $(SRC)/*.module nicht erlaubt))
 
-# Liste von Demofiles, werden bei 'make all' erzeugt.
-# Im Grunde ist dies seit 'make config' überflüssig.
-#
-DEMOFILES = \
-	XCompose_enUS_base \
-	XCompose_enUS_base_math \
-	XCompose_enUS_base_math_greek_lang \
-	XCompose_enUS_base_greek_lang \
-	XCompose_enUS_base_roman \
-	XCompose_enUS_base_math_greek_lang_cyrillic 
-
 # Hilfsprogramme
 #
 CHECKCOMPOSE = ./check-compose.pl
@@ -46,13 +35,13 @@ CONFIGURE = /bin/bash ./configure.sh
 # Defaultwert, falls .config noch nicht existiert.
 #
 -include $(wildcard .config)
-USER_XCOMPOSE ?= XCompose_enUS_base_math
+USER_XCOMPOSE ?= XCompose_enUS_base_cyrillic_diacritics_lang_greek_math_math-font
 
 #
 # 'make' bzw. 'make all' erzeugt die Datei XCompose ohne Installation
 #
 
-all : XCompose $(DEMOFILES)
+all : XCompose
 
 #
 # 'make config' führt interaktive Abfrage der Konfiguration durch 
@@ -68,14 +57,28 @@ config : $(PSEUDO_MODULES_FILES) .config
 #
 # 'make XCompose_foo_bar_baz' erzeugt Datei aus Modulen foo bar baz
 #
-
-XCompose_% : $(MODULES_FILES) 
+#
+XCompose_% : remove_% joined_%
+# Entferne Zeilen aus remove_%
+# Entferne Leerzeilen und Kommentarzeilen
+# Entferne alles ab dem zweiten "
+# Normalisiere Whitespace außerhalb von " "
+# Sortiere und Entferne Duplikate
 	@echo "Erzeuge $@."
-	@echo "#" >$@ 
-	@echo "# Automatically generated file $@.  Do not edit." >>$@ 
-	@echo "#" >>$@ 
+	@grep -Fvxf $^ | \
+		grep -v -e '^#' -e '^\s*$$' | \
+		perl -pe 's/(.*".*").*/\1/' | \
+		perl -pe 's{("[^"]*"|[^"\t ]+)|\s+}{$$1 // " "}ge' | \
+		sort -u > $@
+
+
+joined_% : $(MODULES_FILES)
+	@echo "Erzeuge $@."
+	@echo "#" >$@
+	@echo "# Automatically generated file $@.  Do not edit." >>$@
+	@echo "#" >>$@
 	@for i in \
-	`echo $@ | sed -e 's/XCompose//;s/_/ /g'` ;\
+	`echo $@ | sed -e 's/joined_//;s/_/ /g'` ;\
 	do \
 	   fn=$(SRC)/$$i.module ;\
 	   if [ -e $$fn ]; then \
@@ -84,6 +87,20 @@ XCompose_% : $(MODULES_FILES)
 	      echo "# end include module $$i" >>$@ ;\
 	   else \
 	      echo "*** Warnung: Datei $$fn kann nicht eingebunden werden" ;\
+	   fi \
+	done
+
+remove_% : $(MODULES_FILES) 
+	@echo "Erzeuge $@."
+	@echo "#" >$@ 
+	@echo "# Automatically generated file $@.  Do not edit." >>$@ 
+	@echo "#" >>$@ 
+	@for i in \
+	`echo $@ | sed -e 's/remove_//;s/_/ /g'` ;\
+	do \
+	   fn=$(SRC)/$$i.remove ;\
+	   if [ -e $$fn ]; then \
+	      cat $$fn >>$@ ;\
 	   fi \
 	done
 
