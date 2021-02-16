@@ -1,30 +1,31 @@
-xmodmap2tastenaufkleber.sh 
---------------------------
-Autor: Martin Engel
-Die Benutzung erfolgt auf eigene Gefahr! 
-==========================
+# xmodmap2tastenaufkleber.sh 
 
-Dieses Skript generiert aus einer xmodmap-Datei eine SVG-Datei, die Tastenaufkleber für die Tastaturbelegung Neo¹ erzeugt.
+Autor: Martin Engel  
+__Die Benutzung erfolgt auf eigene Gefahr!__
+
+
+Dieses Skript generiert aus einer xmodmap-Datei eine SVG-Datei, die Tastenaufkleber für die Tastaturbelegung Neo[^1] erzeugt.
 Alternativ gibt es für Neo auch einen Aufsteller, der die Tasten darstellt, und eine Einführung, die die ersten Ebenen über Eselsbrücken einprägt. Beides ist auf der Neo-Seite zu finden.
 
 
-Abhängigkeiten:
----------------
+## Abhängigkeiten
 
-awk
-sed
-bash
+- awk
+- sed
+- bash
 
 
-Anwendung:
-----------
+## Anwendung
+
 
 Man entpacke das Archiv in ein Verzeichnis und wechsele in das Verzeichnis mit der xmodmap2tastenaufkleber.sh-Datei. Zum Erzeugen der SVG-Datei benutze man das folgende Kommando, falls die xmodmap-Datei »neo_de.xmodmap« heißt:
 
+```
 bash ./xmodmap2tastenaufkleber.sh neo_de.xmodmap
+```
 
 Bei erfolgreicher Beendigung des Programmes befindet sich danach eine SVG-Datei mit dem Namen der xmodmap-Datei und angehängtem Suffix ».svg«, in unserem Beispiel also »neo_de.xmodmap.svg«, im selbigen Verzeihnis.
-Ein Programm, das mit SVG-Dateien umgehen kann ist Inkscape². Mit diesem kann auch in eine PDF-Datei exportiert werden. 
+Ein Programm, das mit SVG-Dateien umgehen kann ist Inkscape[^2]. Mit diesem kann auch in eine PDF-Datei exportiert werden. 
 
 Der Druck erfolgt am besten mit einem Laserdrucker, da dann scharfe Ausdrucke entstehen. Es gibt Papier zu erwerben, das auf der Unterseite schon eine Klebefläche aufweist. Es bietet sich an, darauf eine Lage durchsichtige Klebefolie anzubringen, um Abnutzungserscheinungen zu unterdrücken.
 Eine billigere Möglichkeit ist das Ausdrucken auf Normalpapier und Fixierung auf der Taste durch Klebestreifen. Man sollte sich davor vergewissern, wie breit der Kleberstreifen sein muss, damit nacher nichts übersteht. Weil die Tasten meistens eine nach innen weisende Form in waagerechter Richtung aufweisen, bietet es sich an, die Klebestreifen senkrecht anzubringen. Bei normalen Tastaturen sollte man die einzelnen Tasten heraushebeln können, ohne sie zu beschädigen. Das erleichtert die Arbeit (Manchmal unterscheiden sich die Tasten minimal in ihrer Form. So ist darauf zu achten, wo welche Taste genau war).
@@ -32,19 +33,13 @@ Eine billigere Möglichkeit ist das Ausdrucken auf Normalpapier und Fixierung au
 Viel Spaß mit Neo!
 
 
-¹: http://www.neo-layout.org
-²: http://www.inkscape.org
+[^1]: http://www.neo-layout.org
+[^2]: http://www.inkscape.org
 
 
+## Rechtliches
 
-
-
-
-
-Rechtliches:
-
-Für keysymdef.h:
-----------------
+### Für keysymdef.h
 
 Copyright 1987, 1994, 1998  The Open Group
 
@@ -90,4 +85,3 @@ ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
 WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
 ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 SOFTWARE.
-

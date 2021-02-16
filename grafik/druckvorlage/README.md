@@ -1,15 +1,14 @@
+## Dateien
 
-Dateien:
+neo-druckvorlage.svg
+:  Zum Erstellen der Tastaturaufkleber
 
-   neo-druckvorlage.svg
-     Zum Erstellen der Tastaturaufkleber
-
-   neo-druckvorlage-hc.svg
-     Eine inhaltlich veraltete Version, die aber die Modifiertasten
-     farblich überarbeitet.
+neo-druckvorlage-hc.svg
+:  Eine inhaltlich veraltete Version, die aber die Modifiertasten
+   farblich überarbeitet.
 
 
-Begründung gegen das aktuelle Farbkonzept:
+### Begründung gegen das aktuelle Farbkonzept
 
 - die blau-rot-gestrichelten Rähmchen erschließen sich auch bei 
   längerem Nachdenken nur schwer
@@ -21,5 +20,3 @@ Begründung gegen das aktuelle Farbkonzept:
   Farbpalette der normalen Tasten
 
 - die dicken Rahmen gehen beim Ausschneiden/Stanzen ohnehin verloren
-
-- 
