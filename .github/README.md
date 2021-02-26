@@ -8,7 +8,8 @@ Du bist auf einem gespiegelten Repository des Neo-Projekts gelandet. Das offizie
 
 Wenn du ein Issue melden möchtest oder einen Verbesserungsvorschlag hast, dort geht’s weiter. Du kannst dich auch direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) einloggen und im selben Zug registrieren.
 
-**Hinweis:** Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem bisherigen Issuetracker (Trac) liegen. In diesem Fall bitte kurz bei neo-layout@qwertfisch.eu melden, um deinen alten Account wiederzuerlangen.
+### Hinweis
+Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem bisherigen Issuetracker (Trac) liegen. In diesem Fall bitte kurz beim Neo-Team [im Chat](https://neo-layout.org/Kontakt/community/) melden, um deinen alten Account wiederzuerlangen.
 
 ----
 

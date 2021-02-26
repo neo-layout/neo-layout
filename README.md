@@ -21,7 +21,7 @@ Für die Nutzung von Git (z.B. Fork, Push) wird der _Gitea_-Benutzername mit Pas
 Auf [GitHub](https://github.com/neo-layout/neo-layout/) befindet sich ein gespiegeltes Repository.
 
 ### Benutzername bereits vergeben?
-Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz bei neo-layout@qwertfisch.eu melden, um deinen alten Account wiederzuerlangen.
+Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz beim Neo-Team [im Chat](https://neo-layout.org/Kontakt/community/) melden, um deinen alten Account wiederzuerlangen.
 
 
 ## [Videos](https://youtu.be/TJIAOwsWF7Q)
