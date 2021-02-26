@@ -8,20 +8,22 @@ Neo ist eine *ergonomische* Tastaturbelegung, welche für die deutsche Sprache o
   - Unicode-Zeichen wie „ “ « » ∫ √ α β … sind direkt einzugeben (alle Ebenen)
   - Navigation mittels Steuerkreuz ←↑↓→ direkt auf der Haupttastatur (Ebene 4)
 
+## Homepage
+
+Downloads, Anleitungen zur Installation, das Benutzerhandbuch und vieles Interessante mehr ist auf der **[Projekt-Homepage](https://neo-layout.org/)** zu finden.
+
 ## Probleme? Vorschläge? Ideen?
 
 Du möchtest ein Problem melden? Oder hast Vorschläge und neue Ideen? Dann melde dich an und eröffne ein [__neues Issue__](https://git.neo-layout.org/neo/neo-layout/issues/new).
 
 ## Technisches
 
-Dies ist das offizielle Code-Repository. Hier können Bugs und Featurewünsche gemeldet werden. Dazu ist entweder eine kurze Registierung notwendig, oder eine Anmeldung direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) mit Registrierung im gleichen Schritt.
-
-Für die Nutzung von Git (z.B. Fork, Push) wird der _Gitea_-Benutzername mit Passwort benötigt. Anstelle des Passworts lässt sich auch ein Personal Access Token in den Einstellungen generieren.
-
-Auf [GitHub](https://github.com/neo-layout/neo-layout/) befindet sich ein gespiegeltes Repository.
+Dies ist das offizielle Code-Repository. Hier können Bugs und Featurewünsche gemeldet werden. Dazu ist entweder eine kurze Registierung notwendig, oder eine Anmeldung direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) mit Registrierung im gleichen Schritt. **Achtung!** Die kombinierte Anmeldung und Registrierung über einen Github-Account ist zur Zeit nicht möglich. Bitte zunächst normal mit einem Benutzernamen registrieren. Diesen kann man nachträglich mit einem vorhandenen Github-Account verknüpfen.
 
 ### Benutzername bereits vergeben?
 Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz beim Neo-Team [im Chat](https://neo-layout.org/Kontakt/community/) melden, um deinen alten Account wiederzuerlangen.
+
+Auf [GitHub](https://github.com/neo-layout/neo-layout/) befindet sich ein gespiegeltes Repository.
 
 
 ## [Videos](https://youtu.be/TJIAOwsWF7Q)
