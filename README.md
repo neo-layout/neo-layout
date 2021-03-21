@@ -18,7 +18,7 @@ Du möchtest ein Problem melden? Oder hast Vorschläge und neue Ideen? Dann meld
 
 ## Technisches
 
-Dies ist das offizielle Code-Repository. Hier können Bugs und Featurewünsche gemeldet werden. Dazu ist entweder eine kurze Registierung notwendig, oder eine Anmeldung direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) mit Registrierung im gleichen Schritt. **Achtung!** Die kombinierte Anmeldung und Registrierung über einen Github-Account ist zur Zeit nicht möglich. Bitte zunächst normal mit einem Benutzernamen registrieren. Diesen kann man nachträglich mit einem vorhandenen Github-Account verknüpfen.
+Dies ist das offizielle Code-Repository. Hier können Bugs und Featurewünsche gemeldet werden. Dazu ist entweder eine kurze Registierung notwendig, oder eine Anmeldung direkt [über GitHub](https://git.neo-layout.org/user/oauth2/github) mit Registrierung im gleichen Schritt.
 
 ### Benutzername bereits vergeben?
 Sollte dein Benutzername bereits vergeben sein, kann dies an der Migration der Accounts aus dem früheren Issuetracker (Trac) liegen. In diesem Fall bitte kurz beim Neo-Team [im Chat](https://neo-layout.org/Kontakt/community/) melden, um deinen alten Account wiederzuerlangen.
