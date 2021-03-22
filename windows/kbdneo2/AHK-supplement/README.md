@@ -1,6 +1,6 @@
 # AHK-Ergänzung für kbd-Layout
 
-Das AHK-Skript »kbd*.ahk« (* steht für neo2, bone oder qwertz) schließt die letzten Lücken vom jeweils nativen Treiber (kbd*)
+Das AHK-Skript »kbd*.ahk« (* steht für neo, bone oder qwertz) schließt die letzten Lücken vom jeweils nativen Treiber (kbd*)
 
 ## Erweiterungen
 ### Caps- und ModLock
