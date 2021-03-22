@@ -4,7 +4,7 @@ Für die weitergehende Entwicklung und Kompilierung der Treiberlayout-DLLs unter
 1. Über Visual Studio
 2. Über ein manuelles Buildskript
 
-Die erste Variante ist einfacher und dient auch der Entwicklung. Die zweite Variante benötigt kein Visual Studio und kein Windows Driver Kit.
+Die erste Variante ist einfacher und dient auch der Entwicklung. Die zweite Variante benötigt kein Visual Studio und insbesondere kein Windows Driver Kit.
 
 
 ## Regulärer Build mit Visual Studio
@@ -47,12 +47,12 @@ Nach der Installation stehen im Startmenü im Ordner Visual Studio 2019 verschie
 * ins `build`-Verzeichnis unterhalb von kbdneo wechseln
 * `build_x64` ausführen
 
-Dies baut die x64-Varianten der DLLs. Für die x86-Varianten (für SysWOW64) lautet es:
+Dies baut die x64-Varianten der DLLs. Für die x86-Varianten (für 32 Bit bzw. SysWOW64) lautet es:
 * x86 Native Tools Command Prompt for VS 2019 starten
 * ins `build`-Verzeichnis unterhalb von kbdneo wechseln
 * `build_x86` ausführen
 
-Die erzeugten DLLs sind anschließend in den Unterverzeichnissen `x64` und x86` der jeweiligen Layoutvarianten zu finden.
+Die erzeugten DLLs sind anschließend in den Unterverzeichnissen `x64`, `x86` und `x86-wow64` der jeweiligen Layoutvarianten zu finden.
 
 
 ## kbdqwertz mit „ß“ unten
