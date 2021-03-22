@@ -1,23 +1,38 @@
-# AHK-Ergänzung für kbd-Layout
+# AHK-ErgÃ¤nzung fÃ¼r kbd-Layout
 
-Das AHK-Skript »kbd*.ahk« (* steht für neo, bone oder qwertz) schließt die letzten Lücken vom jeweils nativen Treiber (kbd*)
+Das AHK-Skript Â»kbd*.ahkÂ« (* steht fÃ¼r neo, bone oder qwertz) schlieÃŸt die letzten LÃ¼cken vom jeweils nativen Treiber (kbd*)
 
 ## Erweiterungen
+
 ### Caps- und ModLock
 * CapsLock durch Shift+Shift
 * Mod4Lock durch Mod4+Mod4
 
 
 ### Funktionstasten
-| Funktionstaste | Ebene 4 |
-| -------------- | ------- |
-| »Bild auf«     | Mod4+4
-| »Pfeil hoch«   | Mod4+L
-| »Entfernen«    | Mod4+C
-| »Einfügen«     | Mod4+W
-| »Pos 1«        | Mod4+U
-| »Pfeil links«  | Mod4+I
-| »Pfeil runter« | Mod4+A
-| »Pfeil rechts« | Mod4+E
-| »Ende«         | Mod4+O
-| »Bild runter«  | Mod4+Ä
+| Funktionstaste | Ebene 4 (Neo) | Ebene 4 (Bone) | Ebene 4 (Qwertz) |
+| -------------- | ------ | ------ | ------ |
+| Â»Bild aufÂ«     | Mod4+X | Mod4+J | Mod4+Q |
+| Â»LÃ¶schenÂ«      | Mod4+V | Mod4+D | Mod4+W |
+| Â»Pfeil hochÂ«   | Mod4+L | Mod4+U | Mod4+E |
+| Â»EntfernenÂ«    | Mod4+C | Mod4+A | Mod4+R |
+| Â»Bild runterÂ«  | Mod4+W | Mod4+X | Mod4+T |
+
+| Â»Pos 1Â«        | Mod4+U | Mod4+C | Mod4+A |
+| Â»Pfeil linksÂ«  | Mod4+I | Mod4+T | Mod4+S |
+| Â»Pfeil runterÂ« | Mod4+A | Mod4+I | Mod4+D |
+| Â»Pfeil rechtsÂ« | Mod4+E | Mod4+E | Mod4+F |
+| Â»EndeÂ«         | Mod4+O | Mod4+O | Mod4+G |
+
+| Â»EscapeÂ«       | Mod4+Ãœ | Mod4+F | Mod4+Y |
+| Â»Shift+TabÂ«    | Mod4+Ã– | Mod4+V | Mod4+X |
+| Â»EinfÃ¼genÂ«     | Mod4+Ã„ | Mod4+Ãœ | Mod4+C |
+| Â»EnterÂ«        | Mod4+P | Mod4+Ã„ | Mod4+V |
+| Â»UndoÂ«         | Mod4+Z | Mod4+Ã– | Mod4+B |
+
+## Kompilieren
+
+- ggf. Dateipfad fÃ¼r AutoHotkey in `make-build.bat` anpassen
+- `make-build.bat`ausfÃ¼hren
+
+AnschlieÃŸend liegen im \bin-Order die drei kbd*-Skripte.
