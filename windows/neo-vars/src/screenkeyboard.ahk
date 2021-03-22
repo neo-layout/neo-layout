@@ -1,6 +1,7 @@
 ﻿; -*- encoding:utf-8 -*-
 
 BSTalwaysOnTop := 1
+BSTresizable := 0
 
 UniFontFilename := "DejaVuSans-Bold.ttf"
 UniFontName     := "DejaVu Sans"
@@ -385,11 +386,13 @@ CharProc__BST1() {
       BSTergodoxLayout()
   }
 
+  ; -0x40000 entfernt den Fensterrand und verhindert somit auch Resizing, unabhängig von der +Resize-Option
   Gui, +AlwaysOnTop +LastFound +Resize +ToolWindow -0x40000 -DPIScale -Caption -MaximizeBox
   Gui, Show, % "y" . yPosition . " w" . xSize . " h" . ySize . " NoActivate", Neo-Bildschirmtastatur
   WinSet, TransColor, White, Neo-Bildschirmtastatur
   BSTUpdate()
   BSTalwaysOnTop := 1
+  BSTresizable := 0
   OnMessage(0x201, "WM_LBUTTONDOWN")
   GuiCurrent := "BST"
 }
@@ -403,12 +406,21 @@ BSTToggleAlwaysOnTop() {
   global
   if (BSTalwaysOnTop) {
     Gui, -AlwaysOnTop
-    WinSet, Style, +0x40000, Neo-Bildschirmtastatur
     BSTalwaysOnTop := 0
   } else {
     Gui, +AlwaysOnTop
-    WinSet, Style, -0x40000, Neo-Bildschirmtastatur
     BSTalwaysOnTop := 1
+  }
+}
+
+BSTToggleResizable() {
+  global
+  if (BSTresizable) {
+    WinSet, Style, -0x40000, Neo-Bildschirmtastatur
+    BSTresizable := 0
+  } else {
+    WinSet, Style, +0x40000, Neo-Bildschirmtastatur
+    BSTresizable := 1
   }
 }
 
@@ -436,6 +448,13 @@ CharProc__BSTK() {
   ; Bildschirmtastatur Layout
   if (useBST or useDBST)
     BSTToggleKeyboardLayout()
+}
+
+CharProc_BSTRe() {
+  global
+  ; Bildschirmtastatur Resizable
+  if (useBST or useDBST)
+    BSTToggleResizable()
 }
 
 GUISYM(sym,chars) {
@@ -542,10 +561,11 @@ BSTSymbols() {
 BSTRegister() {
   global
 
-  CP3F1 := "P__BSTt" ; toggle on screen keyboard
-  CP4F1 := "P__BSTK" ; toggle keyboard layout
-  CP3F2 := "P__BSTA" ; toggle always on top
-  CP3F3 := "P_DBSTt" ; toggle
+  CP3F1 := "P__BSTt" ; An/Abschalten der Bildschirmtastatur
+  CP4F1 := "P__BSTK" ; Wechseln des physischen Layouts
+  CP3F2 := "P__BSTA" ; Wechseln ob immer im Vordergrund
+  CP3F3 := "P_DBSTt" ; Wechseln zwischen dynamischer und normaler BST
+  CP3F4 := "P_BSTRe" ; Wechseln ob größenänderbar (inklusive Fensterrahmen)
   BSTSymbols()
 
   IniRead,bstLayout,%ini%,Global,bstLayout,0
