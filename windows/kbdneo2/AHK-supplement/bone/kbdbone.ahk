@@ -495,10 +495,10 @@ guiModeToggled:
     }
 return
 
-*F7::
-    if (isMod4Pressed && zeigeBildschirmTastatur)
+*F1::
+    if (isMod3Pressed && zeigeBildschirmTastatur)
         goto Show
-    else send {blind}{F7}
+    else send {blind}{F1}
 return
 
 Show:
