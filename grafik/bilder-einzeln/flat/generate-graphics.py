@@ -53,7 +53,7 @@ with open('/tmp/keymap', 'r') as file:
       layerdict["numpad"] = numpad
       layerdict["swap_m3r_ä"] = swap_m3r_ä
       versionstring = "-numpad" if numpad else "-tkl"
-      out = open(layout + "-Ebene-" + layernames[layer] + versionstring + ".svg", "w")
+      out = open(layout + "-" + layernames[layer] + versionstring + ".svg", "w")
       with open(templatename) as templatefile:
           template = Template(templatefile.read())
       out.write(template.render(layerdict))

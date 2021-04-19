@@ -1,3 +1,127 @@
+#!/usr/bin/env php
+<?php
+/* Dieser Textabschnitt befand sich vorher (etwa bei Commit 705fac448a0d0562e4e1bc16bf0b6cadbe235771)
+in einer separaten Datei "neo_basierend_auf_wikipedias_KB_Germany.txt".
+Ich denke, er bezieht sich auf das Template, das hier weiter unten geinlint ist
+und habe ihn mal in diese Datei eingefügt, damit er nicht verloren geht.
+  -- hrnz
+
+== Quelle ==
+Die Datei  wurde vom Wikipedia-Bild „KB_Germany.svg“ mit Inkscape angepasst.
+Quelle: http://upload.wikimedia.org/wikipedia/commons/3/36/KB_Germany.svg
+Stand: Januar 2007
+Angepasst von Erik Streb (mail at erikstreb dot de)
+
+== Dokumenteneinstellungen  ==
+=== Einrasten ===
+- Umrandungsboxen am Gitter einrasten
+- Einrastempfindlichkeit ca. 10
+
+=== Gitter/Führungslinien ===
+Die Tasten sind auf einem Raster von 60 mal 60 Pixeln erstellt. Daher Abstand
+X und Abstand Y = 60.
+
+Die Startpositionen des Rasters (Ursprung X und Ursprung Y) für die Beschriftung der
+einzelnen Tasten sind unten angegeben als Ux und Uy.
+
+Immer (außer bei Ausnahmen) muss die Beschriftung von oben rechts aus
+angepasst werden.
+
+== Schrift ==
+Was		Schrift			Größe		Fett
+Buchstaben	DejaVu LGC Sans		22		Ja
+Modifikatoren	DejaVu LGC Sans		14		Ja
+
+== Gitterursprung ==
+=== Für die einzelnen Reihen und Ebenen ===
+Tastatur Position	Ebene	Zeichen		Ux	Uy	Ax	Ay
+0. Reihe		1.	X		9	7	60	60
+1. Reihe		1.	X		39	7	60	60
+3. Reihe		1.	X		24	7	60	60
+
+0. Reihe		2.	X		9	37	60	60
+1. Reihe		2.	X		39	37	60	60
+2. Reihe		2.	X		54	37	60	60
+3. Reihe		2.	X		24	37	60	60
+
+0. Reihe		3.	X		37	7	60	60
+1. Reihe		3.	X		7	7	60	60
+2. Reihe		3.	X		22	7	60	60
+3. Reihe		3.	X		52	7	60	60
+
+0. Reihe		4.	X		37	37	60	60
+1. Reihe		4.	X		7	37	60	60
+2. Reihe		4.	X		22	37	60	60
+3. Reihe		4.	X		52	37	60	60
+
+=== Für die Modifier ===
+Bei Strg für Positionierung das „g“ wegnehmen und links ausrichten.
+
+Modifier ganz links und auch rechtes Mod3:
+Ux 9
+Uy 25 oder 40 (linkes Shift)
+
+Alt, rechte Strg und Menü:
+Ux 39
+Uy 25
+
+Alt Option:
+Ux 35
+Uy 15
+
+Enter (rechts ausrichten, von oben links anpassen):
+Ux 51
+Uy 40
+
+Backspace (von unten rechts anpassen):
+Ux 9
+Uy 25
+*/
+
+    if ($argc == 1) {
+        echo("Usage: ./neo_svg.php [neo20|bone|neoqwertz]\n");
+        exit(1);
+    }
+
+	# Referenz laden
+    $layout = $argv[1];
+    $reference = file_get_contents('http://neo-layout.org/git/A-REFERENZ-A/' . $layout . ".txt");
+
+    # Haupttastatur finden
+    preg_match('/┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────┐\n(.*)\n└──────┴──────┴──────┴──────────────────────────────────────┴──────┴──────┴──────┴──────┘/s', $reference, $found);
+    # Tastaturreihen aufspalten
+    $rows = preg_split('/\n├.*\n/', $found[1]);
+
+    $n = 1;
+    # Für jede Reihe:
+    foreach ($rows as $row) {
+        $sub_rows = preg_split('/\n/', $row);
+
+        # Finde Zeichen in beiden Zeilen.
+        # U030F ist ein combining-character und tritt zusammen mit einem Leerzeichen auf, damit es angezeigt wird
+        preg_match_all('/│(.) (\x{030F} |.) (.)(?=│)/u', $sub_rows[0], $r1);
+        preg_match_all('/│(.) (.) (.)(?=│)/u', $sub_rows[1], $r2);
+
+        # Für jede Taste:
+        for ($i = 0; $i < count($r1[0]); $i++) {
+            # Überspringe Enter-Taste, die nicht dazugehört
+            if ($r1[2][$i] == "⏎" && $i == 11) {
+                $n--;
+                continue;
+            }
+            # Lade die Zeichen der beiden Zeilen in das Array, geordnet nach ihrer Ebene
+            $key[$n+$i.'_1'] = $r2[1][$i];
+            $key[$n+$i.'_2'] = $r1[1][$i];
+            $key[$n+$i.'_3'] = $r2[2][$i];
+            $key[$n+$i.'_4'] = $r1[2][$i];
+            $key[$n+$i.'_5'] = $r2[3][$i];
+            $key[$n+$i.'_6'] = $r1[3][$i];
+        }
+        $n += $i;
+    }
+
+    # Lade das "rohe" SVG
+    $svg = <<<EOF
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg
@@ -3339,3 +3463,14 @@
          y="239.62675">{46_6}</tspan></text>
   </g>
 </svg>
+EOF;
+
+    # Ersetze die Platzhalter mit den Zeichen aus dem Array
+    foreach ($key as $search => $replace) {
+        # Die Zeichen werden in HTML-NCRs (numeric character references) umgewandelt, damit sie nicht falsch interpretiert werden.
+        $svg = preg_replace('/{'.preg_quote($search).'}/', mb_encode_numericentity ($replace, array (0x0, 0xffff, 0, 0xffff), 'UTF-8'), $svg);
+    }
+
+    # Speichern und Fertig
+    file_put_contents($layout . '-grau-123456.svg', $svg);
+?>

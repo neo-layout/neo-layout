@@ -1,4 +1,4 @@
-#!/usr/bin/perl -wT
+#!/usr/bin/env -S perl -wT
 
 use strict;
 use warnings;
@@ -63,7 +63,7 @@ exit;
 # parse reference and return multi-array
 sub parse_ref {
 	my @letters;
-	open REF, "../../A-REFERENZ-A/neo20.txt"
+	open REF, $ARGV[0]
 		or die 'Error opening reference: '.$!;
 	while (<REF>) {
 		my @layer;
