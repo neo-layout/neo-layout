@@ -1,18 +1,26 @@
-LAYOUTS = neo neoqwertz bone
-ICOFILES = $(addsuffix -icon.ico, ${LAYOUTS})
-ICNSFILES = $(addsuffix -icon.ico, ${LAYOUTS})
+LAYOUTS=neo neoqwertz bone
+ICOFILES=$(addsuffix .ico, ${LAYOUTS})
+ICNSFILES = $(addsuffix .icns, ${LAYOUTS})
+ICONSIZES=16 32 48 128 256
+SMALLICONPNGS=$(foreach layout, ${LAYOUTS}, $(foreach size, ${ICONSIZES}, ${layout}-smallicon-${size}.png))
 
-EXTRACLEAN = ${ICOFILES} ${ICNSFILES}
+EXTRACLEAN = ${ICOFILES} ${ICNSFILES} ${SMALLICONPNGS}
 
-all: default ico
-
+all: default ico icns
 ico: ${ICOFILES}
+icns: ${ICNSFILES}
 
-ico: ${ICNSFILES}
+define GENERATE_RULES
+${1}-smallicon-%.png: ${1}-icon.svg
+	inkscape --export-filename=$$@ --export-height=$$* $$<
 
-%.ico: %.png
-	convert $< -define icon:auto-resize=16,32,48,128,256 $@
+${1}.ico: $(foreach size, ${ICONSIZES}, ${1}-smallicon-${size}.png)
+	convert $$^ $$@
 
-# TODO: find a way to generate icns icons a normal loonix machine
+${1}.icns: $(foreach size, ${ICONSIZES}, ${1}-smallicon-${size}.png)
+	png2icns $$@ $$^
+endef
+
+$(foreach layout, ${LAYOUTS}, $(eval $(call GENERATE_RULES, ${layout})))
 
 include ../common.mk
