@@ -5,7 +5,7 @@ Damit diese Datei ordentlich dargestellt wird, ist im Browser oder Texteditor
 • eine dicktengleiche (fixed width, monospaced) Schrift zu wählen und
 • die Zeichenkodierung auf Unicode/UTF-8 zu setzen.
 
-Empfohlen wird die Schrift DejaVu Sans Mono, http://dejavu.sourceforge.net/.
+Empfohlen wird die Schrift DejaVu Sans Mono, https://dejavu-fonts.github.io/.
 Diese wird z.B. bei OpenOffice automatisch installiert.
 -------------------------------------------------------------------------------
 
@@ -111,8 +111,8 @@ und allen Tastaturbelegungen (Neo, QWERTZ, QWERTY, …) identisch.
 === Akzenttasten ===
 Zu den Akzenten siehe auch
  • http://unicode.e-workers.de/
- • http://de.wikipedia.org/wiki/Diakritisches_Zeichen
- • http://de.wikipedia.org/wiki/Liste_lateinisch-basierter_Alphabete
+ • https://de.wikipedia.org/wiki/Diakritisches_Zeichen
+ • https://de.wikipedia.org/wiki/Liste_lateinischer_Alphabete
 
 T1 („Tote Taste 1“: Taste links neben der 1)
 ┌─────┐ 1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
@@ -153,9 +153,8 @@ Beispiele: „T1 Shift+Mod3+Space“ ergibt „ˆ“, aber „T1 Space“ ergibt
 
 === Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
- • https://wiki.neo-layout.org/wiki/Striche
- • http://www.matthias-kammerer.de/SonsTypo3.htm
- • http://de.wikipedia.org/wiki/Weicher_Trennstrich
+ • https://neo-layout.org/Typografie/Striche/
+ • https://de.wikipedia.org/wiki/Bedingter_Trennstrich
 
 Taste rechts neben der 0
 ┌─────┐ 1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
@@ -172,7 +171,7 @@ Außerdem gibt es noch
  • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) auf „Mod3+t“.
 
 === Anführungszeichen ===
-Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
+Siehe auch https://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┌─────┐
 │»   ⊥│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
