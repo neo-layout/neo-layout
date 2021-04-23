@@ -1,13 +1,9 @@
 # directories to recursively 
 SUBDIRS=\
-	aufkleber \
-	aufsteller \
-	bilder-einzeln \
-	bilder-uebersicht \
-	handbuch-cover \
-	heatmap \
-	logos \
-	maskottchen 
+	3d \
+	bunt-einfach \
+	flat \
+	grau
 
 default_rule: all
 
