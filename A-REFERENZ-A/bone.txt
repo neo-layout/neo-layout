@@ -5,7 +5,7 @@ Damit diese Datei ordentlich dargestellt wird, ist im Browser oder Texteditor
 • eine dicktengleiche (fixed width, monospaced) Schrift zu wählen und
 • die Zeichenkodierung auf Unicode/UTF-8 zu setzen.
 
-Empfohlen wird die Schrift DejaVu Sans Mono, http://dejavu.sourceforge.net/.
+Empfohlen wird die Schrift DejaVu Sans Mono, https://dejavu-fonts.github.io/.
 Diese wird z.B. bei OpenOffice automatisch installiert.
 -------------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ Diese wird z.B. bei OpenOffice automatisch installiert.
   
 • Tasten auf höheren Ebenen können auch durch die Angabe des Namens der Taste
   gefolgt von der Ebenennummer in runden Klammern bezeichnet werden.  Beispiel:
-  „a(3)“ wird durch „Mod3+a“ eingegeben und ergibt „{“.  Diese Notation ist
+  „i(3)“ wird durch „Mod3+i“ eingegeben und ergibt „{“.  Diese Notation ist
   insbesondere für Ebenen 5/6 sinnvoll, die keine exklusiven Umschalttasten
   besitzen.
 
@@ -66,9 +66,9 @@ Diese wird z.B. bei OpenOffice automatisch installiert.
 Zum Lösen der Feststellung ist jeweils nochmals die gleiche Kombination einzugeben.
 
 === Tastaturmaussteuerung ===
-Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 ein und ebenso wieder
-aus. Mit dieser kann man den Mauszeiger über die Tastatur steuern. Dies kann
-sinnvoll sein, falls die Maus oder das Touchpad streikt oder keine solches
+Die Tastaturmaussteuerung schaltet man über Shift+Mod4+T1 oder Shift+Mod4+Numlock ein
+und ebenso wieder aus. Mit dieser kann man den Mauszeiger über die Tastatur steuern.
+Dies kann sinnvoll sein, falls die Maus oder das Touchpad streikt oder keine solches
 Medium vorhanden ist. Die Bedienung kann wahlweise über die Ebene 1 des
 Keypads oder die rechte Hälfte der Ebene 4 erfolgen; dabei müssen vom Treiber jedoch
 stets die KP_-Varianten gesendet werden, da sonst die Tastaturmaussteuerung
@@ -111,8 +111,8 @@ und allen Tastaturbelegungen (Neo, QWERTZ, QWERTY, …) identisch.
 === Akzenttasten ===
 Zu den Akzenten siehe auch
  • http://unicode.e-workers.de/
- • http://de.wikipedia.org/wiki/Diakritisches_Zeichen
- • http://de.wikipedia.org/wiki/Liste_lateinisch-basierter_Alphabete
+ • https://de.wikipedia.org/wiki/Diakritisches_Zeichen
+ • https://de.wikipedia.org/wiki/Liste_lateinischer_Alphabete
 
 T1 („Tote Taste 1“: Taste links neben der 1)
 ┌─────┐ 1 … Toter Zirkumflex (sieht aus wie U+02C6 MODIFIER LETTER CIRCUMFLEX ACCENT)
@@ -143,8 +143,8 @@ nachfolgend eingegebenen Zeichens. Beispiele: „T3 e“ ergibt „é“, „T3(
 
 TIPP: Der Tote Zirkumflex gefolgt von einer Ziffer stellt diese hoch, Beispiel: „T1 2“ ergibt „²“.
 Andere Zeichen werden durch Composesequenzen hoch- oder tiefgestellt, Beispiele:
-„♫^x“ (genauer „Mod3+Tab Mod3+w x“) ergibt „ˣ“ und
-„♫_+“ (genauer „Mod3+Tab Mod3+v Mod3+b“) ergibt „₊“.
+„♫^x“ (genauer „Mod3+Tab Mod3+x x“) ergibt „ˣ“ und
+„♫_+“ (genauer „Mod3+Tab Mod3+d Mod3+y“) ergibt „₊“.
 
 Eine Darstellung eines toten Zeichens (Diakritika) selbst wird erreicht, indem ihm das
 geschützte Leerzeichen (Shift+Mod3+Space) nachgestellt wird; ein folgendes normales
@@ -153,9 +153,8 @@ Beispiele: „T1 Shift+Mod3+Space“ ergibt „ˆ“, aber „T1 Space“ ergibt
 
 === Taste mit Bindestrichen, Gedankenstrich usw. ===
 Zu den Gedankenstrichen usw. siehe
- • https://wiki.neo-layout.org/wiki/Striche
- • http://www.matthias-kammerer.de/SonsTypo3.htm
- • http://de.wikipedia.org/wiki/Weicher_Trennstrich
+ • https://neo-layout.org/Typografie/Striche/
+ • https://de.wikipedia.org/wiki/Bedingter_Trennstrich
 
 Taste rechts neben der 0
 ┌─────┐ 1 … - Bindestrich/Minusersatz (U+002D HYPHEN-MINUS)
@@ -166,13 +165,12 @@ Taste rechts neben der 0
         6 … ╌ Weicher Trennstrich (U+00AD SOFT HYPHEN) Achtung: Falsches Zeichen in der Grafik!
 
 Außerdem gibt es noch
- • den (echten) Hyphen (U+2010 HYPHEN) auf „Mod3+T3 Space“
- • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf „Mod3+KP_-“,
- • den (deutschen) Gedankenstrich (U+2013 EN DASH) auf „Umschalt+Komma“
- • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) auf „Mod3+t“.
+ • das (echte) Minuszeichen (U+2212 MINUS SIGN) auf „Mod3+KP_-“ und „Mod4+ß“,
+ • den (deutschen) Gedankenstrich (U+2013 EN DASH) auf „Umschalt+Komma“,
+ • den Bindestrich/Minusersatz (U+002D HYPHEN-MINUS) auf „Mod3+s“.
 
 === Anführungszeichen ===
-Siehe auch http://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
+Siehe auch https://de.wikipedia.org/wiki/Anf%C3%BChrungszeichen
 
 ┌─────┐
 │»   ⊥│ 2 … » öffnendes doppeltes Guillemet (U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK)
@@ -443,7 +441,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│ ∓ │ Beg erzeugt einen (Tastatur-)Mausklick
+│KP←│Beg│KP→│ ∓ │ Beg entspricht der Standardbelegung (KP_Begin bzw. VK_CLEAR)
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
@@ -471,7 +469,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┤   │
 │ ⊆ │ ⊷ │ ⊇ │ ∔ │
 ├───┼───┼───┼───┤
-│ ⌊ │ ∪ │ ⌋ │   │
+│ ⌊ │ ⋃ │ ⌋ │   │
 ├───┴───┼───┤   │
 │ □     │ ″ │Ent│
 └───────┴───┴───┘
@@ -482,7 +480,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│   │ Beg erzeugt einen (Tastatur-)Mausklick
+│KP←│Beg│KP→│   │ Beg entspricht der Standardbelegung (KP_Begin bzw. VK_CLEAR)
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
