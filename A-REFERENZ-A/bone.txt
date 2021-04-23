@@ -441,7 +441,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│ ∓ │ Beg entspricht KP_Begin
+│KP←│Beg│KP→│ ∓ │ Beg entspricht der Standardbelegung (KP_Begin bzw. VK_CLEAR)
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
@@ -480,7 +480,7 @@ vielen Programmen nicht die erwartete Funktionalität erbringen.
 ├───┼───┼───┼───┤
 │Hom│KP↑│PgU│   │
 ├───┼───┼───┤   │
-│KP←│Beg│KP→│   │ Beg entspricht KP_Begin
+│KP←│Beg│KP→│   │ Beg entspricht der Standardbelegung (KP_Begin bzw. VK_CLEAR)
 ├───┼───┼───┼───┤
 │End│KP↓│PgD│   │
 ├───┴───┼───┤   │
