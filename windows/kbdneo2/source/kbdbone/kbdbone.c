@@ -322,31 +322,37 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 {0				,0					,0			,0			,0			,0			,0					,0			,0			,0}
 };
 
-// Numpad-Belegung muss zum Schluss kommen
-// Entgegen der neo20.txt vorgesehene Belegung 1,2,3,4,5,6 ist hier 1,4,3,2 umgesetzt, Num ist nicht belegt:
+// Aufgrund der Eigenheit, dass Shift bei aktiviertem Numlock den Cursorblock aktiviert (entspricht Ebene 4)
+// wurden für die Tasten 0-9 und Komma die Ebenen 2 und 4 getauscht. Dies gilt nicht für die Tasten
+// VK_ADD, VK_DIVIDE, VK_MULTIPLY and VK_SUBTRACT. Ebenen 5 und 6 fehlen, Num ist nicht belegt.
 static ALLOC_SECTION_LDATA VK_TO_WCHARS4 aVkToWch4[] = {
-//				| CapsLock	|			|	 SHIFT		|	 KANA				|	 NEU			|
+//				| CapsLock	|			|	 SHIFT		|	 NEU				|	 KANA			|
 //				|===========|===========|===============|=======================|===================|
-{VK_ADD			,0			,'+'		,minusorplus	,plusminus				,'+'				},
-{VK_DIVIDE		,0			,'/'		,fractionslash	,division				,'/'				},
-{VK_MULTIPLY	,0			,'*'		,multiply		,dotoperator			,'*'				},
-{VK_SUBTRACT	,0			,'-'		,setminus		,minussign				,'-'				},
-{VK_DECIMAL		,0			,','		,','			,','					,'.'				},
-{VK_NUMPAD0		,0			,'0'		,'0'			,percent				,signifblank		},
-{VK_NUMPAD1		,0			,'1'		,'1'			,leftrightarrow			,diamond			},
-{VK_NUMPAD2		,0			,'2'		,'2'			,downarrow				,heart				},
-{VK_NUMPAD3		,0			,'3'		,'3'			,rightoverleftharpoon	,wordjoiner			},
-{VK_NUMPAD4		,0			,'4'		,'4'			,leftarrow				,club				},
-{VK_NUMPAD5		,0			,'5'		,'5'			,':'					,EuroSign			},
-{VK_NUMPAD6		,0			,'6'		,'6'			,rightarrow				,triangularbullets	},
-{VK_NUMPAD7		,0			,'7'		,'7'			,updownarrow			,heavycheckmark		},
-{VK_NUMPAD8		,0			,'8'		,'8'			,uparrow				,heavyballotx		},
-{VK_NUMPAD9		,0			,'9'		,'9'			,circledtimes			,dagger				},
+// Originalbelegung 1, 2, 3, 4
+{VK_ADD			,0			,'+'		,'+'	        ,plusminus				,minusorplus		},
+{VK_DIVIDE		,0			,'/'		,'/'        	,division				,fractionslash		},
+{VK_MULTIPLY	,0			,'*'		,'*'		    ,dotoperator			,multiply			},
+{VK_SUBTRACT	,0			,'-'		,'-'	    	,minussign				,setminus			},
+// Belegung  1, 4, 3, 2 (Windows verwendet bei Shift automatisch den Cursorblock)
+{VK_DECIMAL		,0			,','		,WCH_NONE		,','					,'.'				},
+{VK_NUMPAD0		,0			,'0'		,WCH_NONE		,percent				,signifblank		},
+{VK_NUMPAD1		,0			,'1'		,WCH_NONE		,leftrightarrow			,diamond			},
+{VK_NUMPAD2		,0			,'2'		,WCH_NONE		,downarrow				,heart				},
+{VK_NUMPAD3		,0			,'3'		,WCH_NONE		,rightoverleftharpoon	,wordjoiner			},
+{VK_NUMPAD4		,0			,'4'		,WCH_NONE		,leftarrow				,club				},
+{VK_NUMPAD5		,0			,'5'		,WCH_NONE		,':'					,EuroSign			},
+{VK_NUMPAD6		,0			,'6'		,WCH_NONE		,rightarrow				,triangularbullets	},
+{VK_NUMPAD7		,0			,'7'		,WCH_NONE		,updownarrow			,heavycheckmark		},
+{VK_NUMPAD8		,0			,'8'		,WCH_NONE		,uparrow				,heavyballotx		},
+{VK_NUMPAD9		,0			,'9'		,WCH_NONE		,circledtimes			,dagger				},
 {0				,0			,0			,0				,0						,0					}
 };
 
 
 // Hier müssen die verwendeten WChar_Tables vorkommen; Numpad MUSS letzte Zeile sein.
+// Die Funktion VkKeyScan() versucht, zu einem Zeichen den zugehörigen Virtual Key
+// und Modifier zu finden. Die Numpad-Definition muss zum Schluss kommen, damit Zeichen
+// wie '0' als vom Hauptfeld kommend interpretiert werden, falls dort vorhanden.
 static ALLOC_SECTION_LDATA VK_TO_WCHAR_TABLE aVkToWcharTable[] = {
     {  (PVK_TO_WCHARS1)aVkToWch6, 6, sizeof(aVkToWch6[0]) },
     {  (PVK_TO_WCHARS1)aVkToWch7, 7, sizeof(aVkToWch7[0]) },
