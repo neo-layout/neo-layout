@@ -1,3 +1,5 @@
+#you can use this line if you have vou and mine installed (not included with xkeyboard-config)
+#VARIANTS=neo bone neo_qwertz neo_qwerty koy adnw vou mine
 VARIANTS=neo bone neo_qwertz neo_qwerty koy adnw
 LAYERS=1 2 3 4 5 6 Pseudoebene
 VERSIONS=numpad tkl

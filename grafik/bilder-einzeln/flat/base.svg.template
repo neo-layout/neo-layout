@@ -332,8 +332,9 @@ text.nubkey { fill:#eee; }
 	<text x="252" class="key">{{ AC08 }}</text>
 	<text x="288" class="key">{{ AC09 }}</text>
 	<text x="324" class="key">{{ AC10 }}</text>
-{% if swap_m3r_ä %}
+{% if vou %}
     <text x="396" class="key">{{ BKSL }}</text>
+{% elif mine %}
 {% else %}
     <text x="360" class="key">{{ AC11 }}</text>
 {% endif %}
@@ -389,5 +390,10 @@ text.nubkey { fill:#eee; }
 
 <text x="20" y="26" class="dead" id="t1">{{ TLDE }}</text>
 <text x="452" y="26" class="dead" id="t2">{{ AE12 }}</text>
+{% if mine %}
+<text x="480" y="98" class="dead" id="t3">{{ BKSL }}</text>
+<text x="470" y="62" class="key" id="t3">{{ AD12 }}</text>
+{% else %}
 <text x="470" y="62" class="dead" id="t3">{{ AD12 }}</text>
+{% endif %}
 </svg>

@@ -13,7 +13,9 @@ if len(sys.argv) == 1:
 layout = sys.argv[1]
 templatename = "base.svg.template"
 numpad = True if len(sys.argv) == 3 and sys.argv[2] == "numpad" else False
-swap_m3r_ä = True if layout == "de vou" else False
+swap_m3r_ä = True if layout == "vou" or layout == "mine" else False
+vou = True if layout == "vou" else False
+mine = True if layout == "mine" else False
 
 os.system("setxkbmap de " + layout + " -print | xkbcomp -xkb - /tmp/keymaptmp 2>/dev/null")
 # TODO: actually write/generate a proper parser for xkbmaps
@@ -52,6 +54,8 @@ with open('/tmp/keymap', 'r') as file:
           layerdict[x] = " pressed"
       layerdict["numpad"] = numpad
       layerdict["swap_m3r_ä"] = swap_m3r_ä
+      layerdict["vou"] = vou
+      layerdict["mine"] = mine
       versionstring = "-numpad" if numpad else "-tkl"
       out = open(layout + "-" + layernames[layer] + versionstring + ".svg", "w")
       with open(templatename) as templatefile:
