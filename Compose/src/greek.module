@@ -788,6 +788,11 @@
 <dead_acute> <Multi_key> <g> <Y>                                   : "Ύ"   U038E # GREEK CAPITAL LETTER UPSILON WITH TONOS
 <dead_acute> <Multi_key> <G> <Y>                                   : "Ύ"   U038E # GREEK CAPITAL LETTER UPSILON WITH TONOS
 <dead_acute> <Greek_OMEGA>                                         : "Ώ"   U038F # GREEK CAPITAL LETTER OMEGA WITH TONOS
+<dead_acute> <dead_diaeresis> <Greek_iota>                         : "ΐ"   U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+<dead_diaeresis> <dead_acute> <Greek_iota>                         : "ΐ"   U0390 # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+<dead_acute> <dead_diaeresis> <Greek_upsilon>                      : "ΰ"   U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+<dead_acute> <Multi_key> <quotedbl> <Greek_upsilon>                : "ΰ"   U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+
 
 # additional greek symbols
 # Greek ampersand symbols

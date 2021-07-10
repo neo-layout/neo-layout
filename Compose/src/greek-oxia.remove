@@ -38,3 +38,12 @@
 <dead_acute> <dead_diaeresis> <Greek_upsilon> 	: "ΰ"   U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
 # Konflikt bei Sequenz <dead_diaeresis> <dead_acute> <Greek_upsilon>. Unsere Sequenz »<dead_diaeresis> <dead_acute> <Greek_upsilon>            : "ΰ"   U1FE3 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND OXIA« überschreibt die folgende Sequenz aus enUS.module
 <dead_diaeresis> <dead_acute> <Greek_upsilon> 		: "ΰ"   U03B0 # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS
+
+
+<dead_acute> <Greek_alpha>                                         : "ά"   U03AC # GREEK SMALL LETTER ALPHA WITH TONOS
+<dead_acute> <Greek_epsilon>                                       : "έ"   U03AD # GREEK SMALL LETTER EPSILON WITH TONOS
+<dead_acute> <Greek_eta>                                           : "ή"   U03AE # GREEK SMALL LETTER ETA WITH TONOS
+<dead_acute> <Greek_iota>                                          : "ί"   U03AF # GREEK SMALL LETTER IOTA WITH TONOS
+<dead_acute> <Greek_omicron>                                       : "ό"   U03CC # GREEK SMALL LETTER OMICRON WITH TONOS
+<dead_acute> <Greek_upsilon>                                       : "ύ"   U03CD # GREEK SMALL LETTER UPSILON WITH TONOS
+<dead_acute> <Greek_omega>                                         : "ώ"   U03CE # GREEK SMALL LETTER OMEGA WITH TONOS
