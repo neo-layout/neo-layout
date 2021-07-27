@@ -17,7 +17,8 @@ swap_m3r_ä = True if layout == "vou" or layout == "mine" else False
 vou = True if layout == "vou" else False
 mine = True if layout == "mine" else False
 
-os.system("setxkbmap de " + layout + " -print | xkbcomp -xkb - /tmp/keymaptmp 2>/dev/null")
+#os.system("setxkbmap de " + layout + " -print | xkbcomp -I ~/.config/xkb -xkb - /tmp/keymaptmp 2>/dev/null")
+os.system("xkbcli compile-keymap --layout de --variant " + layout + " >/tmp/keymaptmp")
 # TODO: actually write/generate a proper parser for xkbmaps
 os.system(r'''sed -n '/xkb_symbols/,/xkb_geometry/p' /tmp/keymaptmp | tail -n +2 | grep -e 'key' -e symbols -e '}' | sed 's/symbols\[Group1]=//' | paste -sd "" - | sed 's/\;/&\n/g' | grep -v 'modifier_map' | sed -r 's/\s//g' | sed -r 's/key<(.*)>\{\[/\1=/g' | sed -r 's/\]?,?\}\;//' | grep -v '^$' > /tmp/keymap''')
 
