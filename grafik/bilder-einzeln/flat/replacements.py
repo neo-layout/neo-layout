@@ -1325,7 +1325,7 @@ replacements = {
 "dintegral":"U222C",
 "tintegral":"U222D",
 "because":"U2235",
-"approxeq":"U2245",
+"approxeq":"U2248",
 "notapproxeq":"U2247",
 "notidentical":"U2262",
 "stricteq":"U2263",
