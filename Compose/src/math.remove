@@ -110,9 +110,3 @@
 <Multi_key> <asciicircum> <bar> : "↑" U2191 # UPWARDS ARROW
 # Konflikt bei Sequenz <Multi_key> <v> <slash>. Unsere Sequenz »<Multi_key> <v> <slash> <asciicircum>          : "⤢"   U2922 # NORTH EAST AND SOUTH WEST ARROW« überschreibt die folgende Sequenz aus enUS.module
 <Multi_key> <v> <slash>                         : "√"   U221a   # v / SQUARE ROOT
-# Konflikt bei Sequenz <Multi_key> <minus> <p>. Unsere Sequenz »<Multi_key> <minus> <p> <h>               : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI« überschreibt die folgende Sequenz aus lang.module
-<Multi_key> <minus> <p>                           : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE
-# Konflikt bei Sequenz <dead_stroke> <p>. Unsere Sequenz »<dead_stroke> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI« überschreibt die folgende Sequenz aus enUS.module
-<dead_stroke> <p> 		      : "ᵽ"   U1D7D               # LATIN SMALL LETTER P WITH STROKE
-# Konflikt bei Sequenz <dead_stroke> <p>. Unsere Sequenz »<dead_stroke> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI« überschreibt die folgende Sequenz aus lang.module
-<dead_stroke> <p>                                 : "ᵽ" U1D7D # LATIN SMALL LETTER P WITH STROKE

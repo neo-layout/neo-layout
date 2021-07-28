@@ -676,12 +676,11 @@
 # physical symbols
 # physical constants
 <Multi_key> <p> <h> <space>               : "ℎ"   U210E # PLANCK CONSTANT
-<Multi_key> <minus> <p> <h>               : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key> <p> <h> <minus>               : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<Multi_key> <KP_Subtract> <p> <h>         : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <Multi_key> <p> <h> <KP_Subtract>         : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key> <slash> <p> <h>               : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
+<Multi_key> <p> <h> <slash>               : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 <dead_macron> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
-<dead_stroke> <p> <h>                     : "ℏ"   U210F # PLANCK CONSTANT OVER TWO PI
 
 # physical units
 <Multi_key> <m> <i> <c> <r> <o>           : "µ"   U00B5 # MICRO SIGN
