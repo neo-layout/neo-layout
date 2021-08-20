@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.4.0.300 on 2021-08-19 at 15:34 (CEST)-->
-<keyboard group="126" id="-7884" name="Deutsch (Bone 2)" maxout="3">
+<!--Last edited by Ukelele version 3.4.0.300 on 2021-08-20 at 17:09 (CEST)-->
+<keyboard group="126" id="-11493" name="Deutsch (Bone 2)" maxout="3">
     <layouts>
         <layout first="0" last="0" mapSet="138" modifiers="30"/>
     </layouts>
@@ -207,14 +207,30 @@
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
             <key code="64" output="&#x0010;"/>
+            <key code="65" output=""/>
             <key code="66" output="*"/>
+            <key code="67" output=""/>
+            <key code="69" output=""/>
             <key code="70" output="+"/>
             <key code="71" output="&#x001B;"/>
             <key code="72" output="="/>
+            <key code="75" output=""/>
             <key code="76" output="&#x0003;"/>
             <key code="77" output="/"/>
+            <key code="78" output=""/>
             <key code="79" output="&#x0010;"/>
             <key code="80" output="&#x0010;"/>
+            <key code="81" output=""/>
+            <key code="82" output=""/>
+            <key code="83" output=""/>
+            <key code="84" output=""/>
+            <key code="85" output=""/>
+            <key code="86" output=""/>
+            <key code="87" output=""/>
+            <key code="88" output=""/>
+            <key code="89" output=""/>
+            <key code="91" output=""/>
+            <key code="92" output=""/>
             <key code="96" output="&#x0010;"/>
             <key code="97" output="&#x0010;"/>
             <key code="98" output="&#x0010;"/>
@@ -313,18 +329,34 @@
             <key code="62" output=""/>
             <key code="63" output=""/>
             <key code="64" output=""/>
+            <key code="65" output=""/>
             <key code="66" output="&#x001D;"/>
+            <key code="67" output=""/>
             <key code="68" output=""/>
+            <key code="69" output=""/>
             <key code="70" output="&#x001C;"/>
             <key code="71" output="&#x001B;"/>
             <key code="72" output="&#x001F;"/>
             <key code="73" output=""/>
             <key code="74" output=""/>
+            <key code="75" output=""/>
             <key code="76" output="&#x0003;"/>
             <key code="77" output="&#x001E;"/>
+            <key code="78" output=""/>
             <key code="79" output=""/>
             <key code="80" output=""/>
+            <key code="81" output=""/>
+            <key code="82" output=""/>
+            <key code="83" output=""/>
+            <key code="84" output=""/>
+            <key code="85" output=""/>
+            <key code="86" output=""/>
+            <key code="87" output=""/>
+            <key code="88" output=""/>
+            <key code="89" output=""/>
             <key code="90" output=""/>
+            <key code="91" output=""/>
+            <key code="92" output=""/>
             <key code="96" output="&#x0010;"/>
             <key code="97" output="&#x0010;"/>
             <key code="98" output="&#x0010;"/>
@@ -414,14 +446,30 @@
             <key code="53" output="&#x001B;"/>
             <key code="57" output=""/>
             <key code="64" output="&#x0010;"/>
+            <key code="65" output=""/>
             <key code="66" output="*"/>
+            <key code="67" output=""/>
+            <key code="69" output=""/>
             <key code="70" output="+"/>
             <key code="71" output="&#x001B;"/>
             <key code="72" output="="/>
+            <key code="75" output=""/>
             <key code="76" output="&#x0003;"/>
             <key code="77" output="/"/>
+            <key code="78" output=""/>
             <key code="79" output="&#x0010;"/>
             <key code="80" output="&#x0010;"/>
+            <key code="81" output=""/>
+            <key code="82" output=""/>
+            <key code="83" output=""/>
+            <key code="84" output=""/>
+            <key code="85" output=""/>
+            <key code="86" output=""/>
+            <key code="87" output=""/>
+            <key code="88" output=""/>
+            <key code="89" output=""/>
+            <key code="91" output=""/>
+            <key code="92" output=""/>
             <key code="96" output="&#x0010;"/>
             <key code="97" output="&#x0010;"/>
             <key code="98" output="&#x0010;"/>
@@ -575,13 +623,13 @@
             <key code="5" action="ο"/>
             <key code="6" action="φ"/>
             <key code="7" action="action 1"/>
-            <key code="8" action="Ebene 4 und 6"/>
+            <key code="8" action="Ebene 4 und 8"/>
             <key code="9" action="η"/>
             <key code="10" action="59"/>
             <key code="11" action="74"/>
             <key code="12" action="θ"/>
             <key code="13" action="δ"/>
-            <key code="14" action="action"/>
+            <key code="14" action="action 2"/>
             <key code="15" action="α"/>
             <key code="16" action="π"/>
             <key code="17" action="ξ"/>
@@ -624,14 +672,30 @@
             <key code="55" output=""/>
             <key code="58" output=""/>
             <key code="64" output="&#x0010;"/>
+            <key code="65" output=""/>
             <key code="66" output="*"/>
+            <key code="67" output=""/>
+            <key code="69" output=""/>
             <key code="70" output="+"/>
             <key code="71" output="&#x001B;"/>
             <key code="72" output="="/>
+            <key code="75" output=""/>
             <key code="76" output="&#x0003;"/>
             <key code="77" output="/"/>
+            <key code="78" output=""/>
             <key code="79" output="&#x0010;"/>
             <key code="80" output="&#x0010;"/>
+            <key code="81" output=""/>
+            <key code="82" output=""/>
+            <key code="83" action="Ebene 4 und 6 1"/>
+            <key code="84" action="Bugfixes"/>
+            <key code="85" output=""/>
+            <key code="86" output=""/>
+            <key code="87" output=""/>
+            <key code="88" output=""/>
+            <key code="89" output=""/>
+            <key code="91" output=""/>
+            <key code="92" output=""/>
             <key code="96" output="&#x0010;"/>
             <key code="97" output="&#x0010;"/>
             <key code="98" output="&#x0010;"/>
@@ -720,14 +784,30 @@
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
             <key code="64" output="&#x0010;"/>
+            <key code="65" output=""/>
             <key code="66" output="&#x001D;"/>
+            <key code="67" output=""/>
+            <key code="69" output=""/>
             <key code="70" output="&#x001C;"/>
             <key code="71" output="&#x001B;"/>
             <key code="72" output="&#x001F;"/>
+            <key code="75" output=""/>
             <key code="76" output="&#x0003;"/>
             <key code="77" output="&#x001E;"/>
+            <key code="78" output=""/>
             <key code="79" output="&#x0010;"/>
             <key code="80" output="&#x0010;"/>
+            <key code="81" output=""/>
+            <key code="82" output=""/>
+            <key code="83" output=""/>
+            <key code="84" output=""/>
+            <key code="85" output=""/>
+            <key code="86" output=""/>
+            <key code="87" output=""/>
+            <key code="88" output=""/>
+            <key code="89" output=""/>
+            <key code="91" output=""/>
+            <key code="92" output=""/>
             <key code="96" output="&#x0010;"/>
             <key code="97" output="&#x0010;"/>
             <key code="98" output="&#x0010;"/>
@@ -762,23 +842,23 @@
         </keyMap>
         <keyMap index="7">
             <key code="0" action="61"/>
-            <key code="1" output="i"/>
-            <key code="2" output="a"/>
+            <key code="1" output="t"/>
+            <key code="2" output="i"/>
             <key code="3" output="e"/>
-            <key code="4" output="s"/>
+            <key code="4" output="b"/>
             <key code="5" output="o"/>
             <key code="6" action="93"/>
-            <key code="7" output="ö"/>
-            <key code="8" output="ä"/>
-            <key code="9" output="p"/>
+            <key code="7" output="v"/>
+            <key code="8" output="ü"/>
+            <key code="9" output="ä"/>
             <key code="10" output="^"/>
-            <key code="11" output="z"/>
-            <key code="12" output="x"/>
-            <key code="13" output="v"/>
+            <key code="11" output="ö"/>
+            <key code="12" output="j"/>
+            <key code="13" output="d"/>
             <key code="14" action="86"/>
-            <key code="15" output="c"/>
+            <key code="15" output="a"/>
             <key code="16" action="87"/>
-            <key code="17" output="w"/>
+            <key code="17" output="x"/>
             <key code="18" output="1"/>
             <key code="19" output="2"/>
             <key code="20" output="3"/>
@@ -796,18 +876,18 @@
             <key code="32" action="84"/>
             <key code="33" output="ß"/>
             <key code="34" action="89"/>
-            <key code="35" output="q"/>
+            <key code="35" output="w"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" action="91"/>
             <key code="38" output="n"/>
             <key code="39" action="94"/>
             <key code="40" output="r"/>
-            <key code="41" output="d"/>
+            <key code="41" output="g"/>
             <key code="42" output=""/>
             <key code="43" output=","/>
-            <key code="44" output="j"/>
+            <key code="44" output="k"/>
             <key code="45" action="88"/>
-            <key code="46" output="m"/>
+            <key code="46" output="z"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="73"/>
@@ -1137,7 +1217,7 @@
         </action>
         <action id="101">
             <when state="none" output="d"/>
-            <when state="Bugfixes" output=":"/>
+            <when state="Bugfixes" output="_"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ď"/>
             <when state="Ebene 2 T2 Cedille" output="ḑ"/>
             <when state="Ebene 3 T1 Drehen" output="p"/>
@@ -1164,7 +1244,7 @@
         </action>
         <action id="103">
             <when state="none" output="f"/>
-            <when state="Bugfixes" output="="/>
+            <when state="Bugfixes" output="#"/>
             <when state="Ebene 3 T1 Drehen" output="ɟ"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ḟ"/>
             <when state="Ebene 5 T1 Haken" output="ƒ"/>
@@ -1173,7 +1253,7 @@
         </action>
         <action id="104">
             <when state="none" output="g"/>
-            <when state="Bugfixes" output="&#x003E;"/>
+            <when state="Bugfixes" output=":"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ĝ"/>
             <when state="Ebene 1 T3 Akut" output="ǵ"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ǧ"/>
@@ -1212,7 +1292,7 @@
         </action>
         <action id="106">
             <when state="none" output="j"/>
-            <when state="Bugfixes" output=";"/>
+            <when state="Bugfixes" output="…"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ĵ"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ǰ"/>
             <when state="Ebene 3 T1 Drehen" output="ɾ"/>
@@ -1226,7 +1306,7 @@
         </action>
         <action id="107">
             <when state="none" output="k"/>
-            <when state="Bugfixes" output="!"/>
+            <when state="Bugfixes" output=";"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ǩ"/>
             <when state="Ebene 2 T2 Cedille" output="ķ"/>
             <when state="Ebene 3 T1 Drehen" output="ʞ"/>
@@ -1236,7 +1316,7 @@
         </action>
         <action id="108">
             <when state="none" output="m"/>
-            <when state="Bugfixes" output="%"/>
+            <when state="Bugfixes" output="="/>
             <when state="Ebene 3 T1 Drehen" output="ɯ"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ṁ"/>
             <when state="Ebene 5 T1 Haken" output="ɱ"/>
@@ -1258,7 +1338,7 @@
         </action>
         <action id="110">
             <when state="none" output="q"/>
-            <when state="Bugfixes" output="&#x0026;"/>
+            <when state="Bugfixes" output="@"/>
             <when state="Ebene 3 T1 Drehen" output="b"/>
         </action>
         <action id="111">
@@ -1280,7 +1360,7 @@
         </action>
         <action id="112">
             <when state="none" output="s"/>
-            <when state="Bugfixes" output="?"/>
+            <when state="Bugfixes" output="-"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ŝ"/>
             <when state="Ebene 1 T3 Akut" output="ś"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="š"/>
@@ -1293,7 +1373,7 @@
         </action>
         <action id="113">
             <when state="none" output="t"/>
-            <when state="Bugfixes" output="-"/>
+            <when state="Bugfixes" output="/"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ť"/>
             <when state="Ebene 2 T2 Cedille" output="ţ"/>
             <when state="Ebene 3 T1 Drehen" output="ʇ"/>
@@ -1307,7 +1387,7 @@
         </action>
         <action id="114">
             <when state="none" output="v"/>
-            <when state="Bugfixes" output="_"/>
+            <when state="Bugfixes" output="$"/>
             <when state="Ebene 2 T3 Tilde" output="ṽ"/>
             <when state="Ebene 3 T1 Drehen" output="ʌ"/>
             <when state="Ebene 5 T1 Haken" output="ⱱ"/>
@@ -1315,7 +1395,7 @@
         </action>
         <action id="115">
             <when state="none" output="w"/>
-            <when state="Bugfixes" output="^"/>
+            <when state="Bugfixes" output="&#x0026;"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ŵ"/>
             <when state="Ebene 1 T2 Gravis" output="ẁ"/>
             <when state="Ebene 1 T3 Akut" output="ẃ"/>
@@ -1330,7 +1410,7 @@
         </action>
         <action id="116">
             <when state="none" output="x"/>
-            <when state="Bugfixes" output="…"/>
+            <when state="Bugfixes" output="^"/>
             <when state="Ebene 1 T3 Akut" output="ź"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ǯ"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ẋ"/>
@@ -1352,7 +1432,7 @@
         </action>
         <action id="12">
             <when state="none" output="ä"/>
-            <when state="Bugfixes" output="|"/>
+            <when state="Bugfixes" output="~"/>
             <when state="Ebene 4 T2 Trema Diaeresis" output="ä"/>
             <when state="Ebene 5 Spiritus lenis" output="ἠ"/>
             <when state="Ebene 5 T2 Spiritus asper" output="ἡ"/>
@@ -1370,12 +1450,12 @@
         </action>
         <action id="123">
             <when state="none" output="ö"/>
-            <when state="Bugfixes" output="$"/>
+            <when state="Bugfixes" output="`"/>
             <when state="Ebene 4 T2 Trema Diaeresis" output="ö"/>
         </action>
         <action id="124">
             <when state="none" output="ü"/>
-            <when state="Bugfixes" output="#"/>
+            <when state="Bugfixes" output="|"/>
             <when state="Ebene 1 T3 Akut" output="ǘ"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ǚ"/>
             <when state="Ebene 4 T2 Trema Diaeresis" output="ü"/>
@@ -1423,7 +1503,7 @@
         </action>
         <action id="135">
             <when state="none" output="p"/>
-            <when state="Bugfixes" output="~"/>
+            <when state="Bugfixes" output="!"/>
             <when state="Ebene 3 T1 Drehen" output="d"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ṗ"/>
             <when state="Ebene 5 T1 Haken" output="ƥ"/>
@@ -2492,7 +2572,7 @@
             <when state="Ebene 4 und 6" next="Ebene 4 T3 Doppelakut"/>
         </action>
         <action id="61">
-            <when state="none" output="u"/>
+            <when state="none" output="c"/>
             <when state="Ebene 1 T1 Zirkumflex" output="â"/>
             <when state="Ebene 1 T2 Gravis" output="à"/>
             <when state="Ebene 1 T3 Akut" output="á"/>
@@ -2596,7 +2676,7 @@
         </action>
         <action id="67">
             <when state="none" output="i"/>
-            <when state="Bugfixes" output="/"/>
+            <when state="Bugfixes" output="{"/>
             <when state="Ebene 1 T1 Zirkumflex" output="î"/>
             <when state="Ebene 1 T2 Gravis" output="ì"/>
             <when state="Ebene 1 T3 Akut" output="í"/>
@@ -2816,7 +2896,7 @@
         </action>
         <action id="80">
             <when state="none" output="l"/>
-            <when state="Bugfixes" output="["/>
+            <when state="Bugfixes" output="&#x003E;"/>
             <when state="Ebene 1 T3 Akut" output="ĺ"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ľ"/>
             <when state="Ebene 2 T2 Cedille" output="ļ"/>
@@ -2840,7 +2920,7 @@
         </action>
         <action id="82">
             <when state="none" output="z"/>
-            <when state="Bugfixes" output="`"/>
+            <when state="Bugfixes" output="%"/>
             <when state="Ebene 1 T3 Akut" output="ź"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="ž"/>
             <when state="Ebene 3 T2 Ring" output="ʑ"/>
@@ -2858,7 +2938,7 @@
         </action>
         <action id="83">
             <when state="none" output="u"/>
-            <when state="Bugfixes" output="\"/>
+            <when state="Bugfixes" output="["/>
             <when state="Ebene 1 T1 Zirkumflex" output="û"/>
             <when state="Ebene 1 T2 Gravis" output="ù"/>
             <when state="Ebene 1 T3 Akut" output="ú"/>
@@ -2891,7 +2971,7 @@
         </action>
         <action id="85">
             <when state="none" output="a"/>
-            <when state="Bugfixes" output="{"/>
+            <when state="Bugfixes" output="]"/>
             <when state="Ebene 1 T1 Zirkumflex" output="â"/>
             <when state="Ebene 1 T2 Gravis" output="à"/>
             <when state="Ebene 1 T3 Akut" output="á"/>
@@ -2912,7 +2992,7 @@
             <when state="compose d" next="compose d a"/>
         </action>
         <action id="86">
-            <when state="none" output="l"/>
+            <when state="none" output="u"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ê"/>
             <when state="Ebene 1 T2 Gravis" output="è"/>
             <when state="Ebene 1 T3 Akut" output="é"/>
@@ -2928,7 +3008,7 @@
             <when state="compose f" output="ﬂ"/>
         </action>
         <action id="87">
-            <when state="none" output="k"/>
+            <when state="none" output="p"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ŷ"/>
             <when state="Ebene 1 T2 Gravis" output="ỳ"/>
             <when state="Ebene 1 T3 Akut" output="ý"/>
@@ -2937,7 +3017,7 @@
             <when state="Ebene 5 Spiritus lenis" output="ý"/>
         </action>
         <action id="88">
-            <when state="none" output="b"/>
+            <when state="none" output="y"/>
             <when state="Ebene 1 T2 Gravis" output="ǹ"/>
             <when state="Ebene 1 T3 Akut" output="ń"/>
             <when state="Ebene 2 T2 Cedille" output="ņ"/>
@@ -2945,7 +3025,7 @@
             <when state="Ebene 5 T1 Haken" output="ñ"/>
         </action>
         <action id="89">
-            <when state="none" output="g"/>
+            <when state="none" output="l"/>
             <when state="Ebene 1 T1 Zirkumflex" output="î"/>
             <when state="Ebene 1 T2 Gravis" output="ì"/>
             <when state="Ebene 1 T3 Akut" output="í"/>
@@ -2961,7 +3041,7 @@
             <when state="Ebene 5 T2 Spiritus asper" output="Ἡ"/>
         </action>
         <action id="90">
-            <when state="none" output="f"/>
+            <when state="none" output="m"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ô"/>
             <when state="Ebene 1 T2 Gravis" output="ò"/>
             <when state="Ebene 1 T3 Akut" output="ó"/>
@@ -2977,7 +3057,7 @@
             <when state="compose p" output="₰"/>
         </action>
         <action id="91">
-            <when state="none" output="t"/>
+            <when state="none" output="s"/>
             <when state="Ebene 1 T3 Akut" output="ĺ"/>
             <when state="Ebene 2 T2 Cedille" output="ļ"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ŀ"/>
@@ -2990,7 +3070,7 @@
         </action>
         <action id="92">
             <when state="none" output="y"/>
-            <when state="Bugfixes" output="@"/>
+            <when state="Bugfixes" output="+"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ŷ"/>
             <when state="Ebene 1 T2 Gravis" output="ỳ"/>
             <when state="Ebene 1 T3 Akut" output="ý"/>
@@ -3006,11 +3086,11 @@
             <when state="Ebene 6 T2 Macron" output="ȳ"/>
         </action>
         <action id="93">
-            <when state="none" output="ü"/>
+            <when state="none" output="f"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ż"/>
         </action>
         <action id="94">
-            <when state="none" output="y"/>
+            <when state="none" output="q"/>
             <when state="Ebene 4 T1 Punkt darüber" output="…"/>
             <when state="Ebene 4 T3 Doppelakut" output="‚"/>
         </action>
@@ -3044,7 +3124,7 @@
         </action>
         <action id="98">
             <when state="none" output="b"/>
-            <when state="Bugfixes" output="+"/>
+            <when state="Bugfixes" output="?"/>
             <when state="Ebene 3 T1 Drehen" output="q"/>
             <when state="Ebene 3 T3 Schrägstrich" output="ƀ"/>
             <when state="Ebene 4 T1 Punkt darüber" output="ḃ"/>
@@ -3054,7 +3134,7 @@
         </action>
         <action id="99">
             <when state="none" output="c"/>
-            <when state="Bugfixes" output="]"/>
+            <when state="Bugfixes" output="\"/>
             <when state="Ebene 1 T1 Zirkumflex" output="ĉ"/>
             <when state="Ebene 1 T3 Akut" output="ć"/>
             <when state="Ebene 2 T1 Caron Hatschek" output="č"/>
@@ -3092,8 +3172,22 @@
             <when state="compose ~" output="≳"/>
             <when state="compso greater" output="≫"/>
         </action>
+        <action id="Bugfixes">
+            <when state="none" next="Bugfixes"/>
+        </action>
         <action id="Ebene 4 und 6">
+            <when state="none" output=" "/>
+            <when state="Ebene 4 und 6" output="∪"/>
+        </action>
+        <action id="Ebene 4 und 6 1">
             <when state="none" next="Ebene 4 und 6"/>
+        </action>
+        <action id="Ebene 4 und 7">
+            <when state="none" next="Ebene 4 und 6"/>
+            <when state="Ebene 4 und 6" output="∪"/>
+        </action>
+        <action id="Ebene 4 und 8">
+            <when state="none" output=""/>
             <when state="Ebene 4 und 6" output="∪"/>
         </action>
         <action id="`">
@@ -3103,12 +3197,16 @@
             <when state="none" next="Ebene 1 T2 Gravis"/>
         </action>
         <action id="action">
-            <when state="none" next="Bugfixes"/>
+            <when state="none" output=" "/>
             <when state="Ebene 4 und 6" output="⊂"/>
         </action>
         <action id="action 1">
             <when state="none" output=""/>
             <when state="Ebene 4 und 6" output="√"/>
+        </action>
+        <action id="action 2">
+            <when state="none" output=""/>
+            <when state="Ebene 4 und 6" output="⊂"/>
         </action>
         <action id="compose">
             <when state="none" next="compose"/>
