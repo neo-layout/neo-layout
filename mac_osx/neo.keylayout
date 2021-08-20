@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 3.3.0.249 on 2019-08-16 at 17:12 (CEST)-->
+<!--Last edited by Ukelele version 3.4.0.300 on 2021-08-19 at 15:34 (CEST)-->
 <keyboard group="126" id="-7884" name="Deutsch (Neo 2)" maxout="3">
     <layouts>
         <layout first="0" last="0" mapSet="138" modifiers="30"/>
@@ -2449,7 +2449,7 @@
             <when state="Ebene 5 T1 Haken" output="Ɣ"/>
         </action>
         <action id="5">
-            <when state="none" output="&#x003C;"/>
+            <when state="none" next="Ebene 1 T1 Zirkumflex"/>
         </action>
         <action id="50">
             <when state="none" output="X"/>
