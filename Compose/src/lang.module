@@ -230,7 +230,7 @@
 <Multi_key> <apostrophe> <apostrophe>             : "ˈ" U02C8 # MODIFIER LETTER VERTICAL LINE
 <Multi_key> <underscore> <apostrophe>             : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
 <U21BB> <Multi_key> <apostrophe> <apostrophe>     : "ˌ" U02CC # MODIFIER LETTER LOW VERTICAL LINE
-<U21BB> <parenright>                              : "‿" U203F # UNDERTIE
+<U21BB> <parenright>                              : "͜" U035C # COMBINING DOUBLE BREVE BELOW
 <U21BB> <parenleft>                               : "͡" U0361 # COMBINING DOUBLE INVERTED BREVE
 
 # tone letters (t) and Standard Mandarin tones
