@@ -211,21 +211,34 @@ fi
 
 
 #=== Erstelle KTouch-Lektion ===
+courseid=$(uuidgen)
 echo -n "Erstelle KTouch-Lektion \"$fileKTouch\"..."
-echo -e "<KTouchLecture>\n"\
-		"<Title>Deutsch (Neo2 Sortierte Wörter)</Title>\n"\
-		"<Comment>`date -I` - Neo2 - Mit \"$0\" automatisch generierte Datei</Comment>\n"\
-		"<FontSuggestions>Monospace</FontSuggestions>\n"\
-		"<Levels>" > $fileKTouch	
-sed -e 's/^===/  <Level>\n   <NewCharacters>/' \
-	-e 's/===$/<\/NewCharacters>/' \
-	-e '/^ /! s/$/<\/Line>/' -e '/^ /! s/^/   <Line>/' \
-	-e '/^  <Level>/ i\  <\/Level>' \
-	$fileOut >> $fileKTouch
-sed -e '6d' $fileKTouch > $fileKTouch.tmp #Entferne die erste zu viel eingefügte "  </Level>" Zeile
-rm $fileKTouch
-mv $fileKTouch.tmp $fileKTouch
-echo -e "  </Level>\n </Levels>\n</KTouchLecture>" >> $fileKTouch
+echo -e "<?xml version=\"1.0\"?>\n<course>\n"\
+		"<id>{$courseid}</id>\n"\
+		"<title>Deutsch (Neo2 Sortierte Wörter)</title>\n"\
+		"<description>`date -I` - Neo2 - Mit \"$0\" automatisch generierte Datei</description>\n"\
+		"<keyboardLayout>de(neo)</keyboardLayout>\n"\
+		"<lessons>" > $fileKTouch
+while read -r line
+do
+	case "$line" in
+	===*===)
+		keys=${line%===}
+		keys=${keys#===}
+		printf '</text>\n  </lesson>\n' >> "$fileKTouch"
+		printf '  <lesson>\n   <id>{%s}</id>\n   <title>Keys: %s</title>\n   <newCharacters>%s</newCharacters>\n   <text>' "$(uuidgen)" "$keys" "$keys" >> "$fileKTouch"
+		read -r line
+		printf '%s' "$line" >> "$fileKTouch"
+		;;
+	*)
+		printf '\n%s' "$line" >> "$fileKTouch"
+		;;
+	esac
+done < "$fileOut"
+printf '</text>\n  </lesson>\n </lessons>\n</course>\n' >> "$fileKTouch"
+
+
+printf "8d\n8d\nwq\n" |ed "$fileKTouch"
 echo "OK"
 
 
