@@ -12,6 +12,9 @@ BASENAMES ::= $(foreach variant, ${VARIANTS}, \
 		$(foreach layer, ${LAYERS}, \
 		  $(foreach version, ${VERSIONS}, \
 		    ${variant}${suffix}-${layer}-${version})))
+BASENAMES += $(foreach variant, ${VARIANTS}, \
+		  $(foreach version, ${VERSIONS}, \
+		    ${variant}${suffix}-leer-${version}))
 
 SVG_TARGETS=$(addsuffix .svg, ${BASENAMES})
 SVG_PATH_TARGETS=$(addsuffix .path.svg, ${BASENAMES})

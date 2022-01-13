@@ -110,3 +110,7 @@ for layer in range(7):  # 7 because the last layer is empty
     filename = f'{layout}-{LAYERNAMES[layer]}-{version}.svg'
     with open(filename, 'w') as out:
         out.write(template.render(layerdict))
+
+# - "leer" image
+
+write_image('leer', {})
