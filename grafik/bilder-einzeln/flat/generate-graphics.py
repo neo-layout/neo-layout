@@ -1,38 +1,28 @@
 #!/usr/bin/env python
-from jinja2 import Template
-import os
+
 import sys
 import re
 import subprocess
 
+from jinja2 import Template
+
 import replacements
 
-if len(sys.argv) == 1:
-    print('Usage: ./<this script> variantname [numpad]')
-    exit(1)
-
-layout = sys.argv[1]
-templatename = "base.svg.template"
-numpad = True if len(sys.argv) == 3 and sys.argv[2] == "numpad" else False
-swap_m3r_ä = True if layout == "vou" or layout == "mine" else False
-vou = True if layout == "vou" else False
-mine = True if layout == "mine" else False
-
-
+TEMPLATENAME = "base.svg.template"
 
 # modifiers for layers in order as in keymap
-modifiers=[
+MODIFIERS = [
         [],
         ["SHIFT"],
         ["MOD3"],
-        ["MOD3","SHIFT"],
+        ["MOD3", "SHIFT"],
         ["MOD4"],
-        ["MOD4","SHIFT"],
-        ["MOD3","MOD4"],
+        ["MOD4", "SHIFT"],
+        ["MOD3", "MOD4"],
         []
         ]
 
-layernames = ["1","2","3","5","4","Pseudoebene","6",""]
+LAYERNAMES = ["1", "2", "3", "5", "4", "Pseudoebene", "6", ""]
 
 
 def keymap_to_keys(text):
@@ -63,7 +53,6 @@ def keymap_to_keys(text):
             print("currious key:", name, symbols)
 
         symbols = [s.strip() for s in symbols[0].split(',')]
-        #print(name, symbols)
         # replace keynames with the symbol they produce
         symbols = [replacements.f(s) for s in symbols]
         # Some keys aren't layered, hence the list is too short.
@@ -72,25 +61,52 @@ def keymap_to_keys(text):
         yield name, symbols
 
 
-text = subprocess.check_output(
+# --- argument handling ---
+
+if len(sys.argv) not in (2, 3):
+    raise SystemExit('Usage: ./<this script> variantname [numpad]')
+
+layout = sys.argv[1]
+numpad = (len(sys.argv) == 3 and sys.argv[2] == "numpad")
+
+swap_m3r_ä = (layout == "vou" or layout == "mine")
+vou = (layout == "vou")
+mine = (layout == "mine")
+version = "numpad" if numpad else "tkl"
+
+# - read data and template
+
+keymap = subprocess.check_output(
     ["xkbcli", "compile-keymap", "--layout", "de", "--variant", layout],
     text=True)
-keymap = dict(keymap_to_keys(text))
+keymap = dict(keymap_to_keys(keymap))
+
+with open(TEMPLATENAME) as templatefile:
+    template = Template(templatefile.read())
 
 
-for layer in range(0,7): # 7 because the last layer is empty
-      # create a dict with the replacements from repalcements.py
-      layerdict = {a: b[layer] for a,b in keymap.items()}
-      # color modifiers accordingly
-      for x in modifiers[layer]:
-          layerdict[x] = " pressed"
-      layerdict["numpad"] = numpad
-      layerdict["swap_m3r_ä"] = swap_m3r_ä
-      layerdict["vou"] = vou
-      layerdict["mine"] = mine
-      versionstring = "-numpad" if numpad else "-tkl"
-      out = open(layout + "-" + layernames[layer] + versionstring + ".svg", "w")
-      with open(templatename) as templatefile:
-          template = Template(templatefile.read())
-      out.write(template.render(layerdict))
-      out.close()
+# --- generate files ---
+
+def write_image(layername, layerdict):
+    layerdict["numpad"] = numpad
+    layerdict["swap_m3r_ä"] = swap_m3r_ä
+    layerdict["vou"] = vou
+    layerdict["mine"] = mine
+
+    with open(f'{layout}-{layername}-{version}.svg', 'w') as out:
+        out.write(template.render(layerdict))
+
+
+# - main layers
+
+for layer in range(7):  # 7 because the last layer is empty
+    # create a dict with the replacements from replacements.py
+    layerdict = {a: b[layer] for a, b in keymap.items()}
+    # color modifiers accordingly
+    for x in MODIFIERS[layer]:
+        layerdict[x] = " pressed"
+    write_image(LAYERNAMES[layer], layerdict)
+
+    filename = f'{layout}-{LAYERNAMES[layer]}-{version}.svg'
+    with open(filename, 'w') as out:
+        out.write(template.render(layerdict))
