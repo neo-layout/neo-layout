@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-import more_itertools as mit
 from jinja2 import Template
 import os
 import sys
+import re
+import subprocess
 
 import replacements
 
@@ -17,10 +18,6 @@ swap_m3r_ä = True if layout == "vou" or layout == "mine" else False
 vou = True if layout == "vou" else False
 mine = True if layout == "mine" else False
 
-#os.system("setxkbmap de " + layout + " -print | xkbcomp -I ~/.config/xkb -xkb - /tmp/keymaptmp 2>/dev/null")
-os.system("xkbcli compile-keymap --layout de --variant " + layout + " >/tmp/keymaptmp")
-# TODO: actually write/generate a proper parser for xkbmaps
-os.system(r'''sed -n '/xkb_symbols/,/xkb_geometry/p' /tmp/keymaptmp | tail -n +2 | grep -e 'key' -e symbols -e '}' | sed 's/symbols\[Group1]=//' | paste -sd "" - | sed 's/\;/&\n/g' | grep -v 'modifier_map' | sed -r 's/\s//g' | sed -r 's/key<(.*)>\{\[/\1=/g' | sed -r 's/\]?,?\}\;//' | grep -v '^$' > /tmp/keymap''')
 
 
 # modifiers for layers in order as in keymap
@@ -37,17 +34,51 @@ modifiers=[
 
 layernames = ["1","2","3","5","4","Pseudoebene","6",""]
 
-with open('/tmp/keymap', 'r') as file:
-  data = file.readlines()
 
-  # read the keymap into a dict
-  keymap = {x.split('=')[0]: x.split('=')[1].strip('\n').split(',') for x in data}
-  # some keys arent layered, hence the list is too short. pad them with the first entry.
-  keymap = {a: list(mit.padded(b, b[0], 9)) for a,b in keymap.items()}
-  # replace keynames with the symbol they produce
-  keymap = {a: list(map(replacements.f, b)) for a,b in keymap.items()}
+def keymap_to_keys(text):
+    # simple and dump parser for xkb keymap files
+    #
+    # It simply searches all "key { … };" parts and splits them.
+    # A more advanced version would parts "xkb_symbols { … }" first
+    # and only search in this part.
 
-  for layer in range(0,7): # 7 because the last layer is empty
+    assert text.startswith("xkb_keymap")
+
+    KEY_PATTERN = r'\s key \s .+? \s { [^}]+? };'
+    SYMBOLS_PATTERN = r'\[ (.+?) \]'
+
+    text = text.split('xkb_symbols', 1)[1]
+    # FIXME: assumes the next section (if there is one) is
+    # xkb_geometry
+    text = text.split('xkb_geometry', 1)[0]
+
+    for k in re.findall(KEY_PATTERN, text, re.M+re.X):
+        _, name, text = k.split(None, 2)
+        name = name.strip('<').rstrip('>')
+        text = text.replace('symbols[Group1]', '')
+        symbols = re.findall(SYMBOLS_PATTERN, text, re.M+re.X)
+        if not symbols:
+            raise SystemExit(f"{name} did not match: {text!r}")
+        if len(symbols) != 1:
+            print("currious key:", name, symbols)
+
+        symbols = [s.strip() for s in symbols[0].split(',')]
+        #print(name, symbols)
+        # replace keynames with the symbol they produce
+        symbols = [replacements.f(s) for s in symbols]
+        # Some keys aren't layered, hence the list is too short.
+        # pad them with the first entry.
+        symbols = (symbols + symbols[:1]*9)[:9]
+        yield name, symbols
+
+
+text = subprocess.check_output(
+    ["xkbcli", "compile-keymap", "--layout", "de", "--variant", layout],
+    text=True)
+keymap = dict(keymap_to_keys(text))
+
+
+for layer in range(0,7): # 7 because the last layer is empty
       # create a dict with the replacements from repalcements.py
       layerdict = {a: b[layer] for a,b in keymap.items()}
       # color modifiers accordingly
