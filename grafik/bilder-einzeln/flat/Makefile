@@ -5,7 +5,7 @@ VARIANTS := neo bone neo_qwertz neo_qwerty koy adnw
 # included with xkeyboard-config)
 #VARIANTS += vou mine
 
-LAYERS = 1 2 3 4 5 6 Pseudoebene
+LAYERS = 1 2 3 4 5 6 Pseudoebene 1caps 2caps
 VERSIONS = numpad tkl
 
 BASENAMES ::= $(foreach variant, ${VARIANTS}, \
