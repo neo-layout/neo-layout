@@ -1,14 +1,27 @@
-#you can use this line if you have vou and mine installed (not included with xkeyboard-config)
-#VARIANTS=neo bone neo_qwertz neo_qwerty koy adnw vou mine
-VARIANTS=neo bone neo_qwertz neo_qwerty koy adnw
-LAYERS=1 2 3 4 5 6 Pseudoebene
-VERSIONS=numpad tkl
-SUFFIXES=$(foreach version, ${VERSIONS}, $(foreach layer, ${LAYERS}, -${layer}-${version}.svg))
-SVG_TARGETS=$(foreach suffix, ${SUFFIXES}, $(foreach variant, ${VARIANTS}, ${variant}${suffix}))
-SVG_PATH_TARGETS=$(addsuffix .path.svg,$(basename ${SVG_TARGETS}))
-PDF_TARGETS=$(addsuffix .pdf,$(basename ${SVG_TARGETS}))
-PNG_TARGETS=$(addsuffix .png,$(basename ${SVG_TARGETS}))
-SOURCES=generate-graphics.py replacements.py base.svg.template
+
+VARIANTS := neo bone neo_qwertz neo_qwerty koy adnw
+
+# You can use this line if you have vou and mine installed (not
+# included with xkeyboard-config)
+#VARIANTS += vou mine
+
+LAYERS = 1 2 3 4 5 6 Pseudoebene 1caps 2caps
+VERSIONS = numpad tkl
+
+BASENAMES ::= $(foreach variant, ${VARIANTS}, \
+		$(foreach layer, ${LAYERS}, \
+		  $(foreach version, ${VERSIONS}, \
+		    ${variant}${suffix}-${layer}-${version})))
+BASENAMES += $(foreach variant, ${VARIANTS}, \
+		  $(foreach version, ${VERSIONS}, \
+		    ${variant}${suffix}-leer-${version}))
+
+SVG_TARGETS=$(addsuffix .svg, ${BASENAMES})
+SVG_PATH_TARGETS=$(addsuffix .path.svg, ${BASENAMES})
+PDF_TARGETS=$(addsuffix .pdf, ${BASENAMES})
+PNG_TARGETS=$(addsuffix .png, ${BASENAMES})
+
+SOURCES = generate-graphics.py replacements.py base.svg.template
 
 default: all cleansvg cleanpycache
 
@@ -17,10 +30,15 @@ svg: ${SVG_TARGETS}
 pdf: ${PDF_TARGETS}
 png: ${PNG_TARGETS}
 
-$(foreach suffix, ${SUFFIXES}, %${suffix}) &: ${SOURCES}
-	@echo "Erzeuge $@."
-	./generate-graphics.py `echo $@ | cut -d - -f 1` numpad
-	./generate-graphics.py `echo $@ | cut -d - -f 1`
+%-tkl.svg: variant=$(shell echo $@ | cut -d - -f 1)
+%-tkl.svg: ${SOURCES}
+	@echo "Erzeuge $(variant) Hauptfeld."
+	./generate-graphics.py $(variant)
+
+%-numpad.svg: variant=$(shell echo $@ | cut -d - -f 1)
+%-numpad.svg: ${SOURCES}
+	@echo "Erzeuge $(variant) Numpad."
+	./generate-graphics.py $(variant) numpad
 
 %.path.svg: %.svg
 	inkscape --export-filename=$@ -T $<

@@ -1,65 +1,142 @@
 #!/usr/bin/env python
-import more_itertools as mit
-from jinja2 import Template
-import os
+
 import sys
+import re
+import subprocess
+
+from jinja2 import Template
 
 import replacements
 
-if len(sys.argv) == 1:
-    print('Usage: ./<this script> variantname [numpad]')
-    exit(1)
-
-layout = sys.argv[1]
-templatename = "base.svg.template"
-numpad = True if len(sys.argv) == 3 and sys.argv[2] == "numpad" else False
-swap_m3r_ä = True if layout == "vou" or layout == "mine" else False
-vou = True if layout == "vou" else False
-mine = True if layout == "mine" else False
-
-#os.system("setxkbmap de " + layout + " -print | xkbcomp -I ~/.config/xkb -xkb - /tmp/keymaptmp 2>/dev/null")
-os.system("xkbcli compile-keymap --layout de --variant " + layout + " >/tmp/keymaptmp")
-# TODO: actually write/generate a proper parser for xkbmaps
-os.system(r'''sed -n '/xkb_symbols/,/xkb_geometry/p' /tmp/keymaptmp | tail -n +2 | grep -e 'key' -e symbols -e '}' | sed 's/symbols\[Group1]=//' | paste -sd "" - | sed 's/\;/&\n/g' | grep -v 'modifier_map' | sed -r 's/\s//g' | sed -r 's/key<(.*)>\{\[/\1=/g' | sed -r 's/\]?,?\}\;//' | grep -v '^$' > /tmp/keymap''')
-
+TEMPLATENAME = "base.svg.template"
 
 # modifiers for layers in order as in keymap
-modifiers=[
+MODIFIERS = [
         [],
         ["SHIFT"],
         ["MOD3"],
-        ["MOD3","SHIFT"],
+        ["MOD3", "SHIFT"],
         ["MOD4"],
-        ["MOD4","SHIFT"],
-        ["MOD3","MOD4"],
+        ["MOD4", "SHIFT"],
+        ["MOD3", "MOD4"],
         []
         ]
 
-layernames = ["1","2","3","5","4","Pseudoebene","6",""]
+LAYERNAMES = ["1", "2", "3", "5", "4", "Pseudoebene", "6", ""]
 
-with open('/tmp/keymap', 'r') as file:
-  data = file.readlines()
+# 1E9E = Latin Capital Letter Sharp S
+upper_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ\u1e9e'
+lower_chars = 'abcdefghijklmnopqrstuvwxyzäöüß'
+CAPS_MAP = str.maketrans(dict(zip(upper_chars + lower_chars,
+                                  lower_chars + upper_chars)))
+assert len(lower_chars) == len(upper_chars) == 30
+assert len(CAPS_MAP) == len(lower_chars) + len(upper_chars)
 
-  # read the keymap into a dict
-  keymap = {x.split('=')[0]: x.split('=')[1].strip('\n').split(',') for x in data}
-  # some keys arent layered, hence the list is too short. pad them with the first entry.
-  keymap = {a: list(mit.padded(b, b[0], 9)) for a,b in keymap.items()}
-  # replace keynames with the symbol they produce
-  keymap = {a: list(map(replacements.f, b)) for a,b in keymap.items()}
 
-  for layer in range(0,7): # 7 because the last layer is empty
-      # create a dict with the replacements from repalcements.py
-      layerdict = {a: b[layer] for a,b in keymap.items()}
-      # color modifiers accordingly
-      for x in modifiers[layer]:
-          layerdict[x] = " pressed"
-      layerdict["numpad"] = numpad
-      layerdict["swap_m3r_ä"] = swap_m3r_ä
-      layerdict["vou"] = vou
-      layerdict["mine"] = mine
-      versionstring = "-numpad" if numpad else "-tkl"
-      out = open(layout + "-" + layernames[layer] + versionstring + ".svg", "w")
-      with open(templatename) as templatefile:
-          template = Template(templatefile.read())
-      out.write(template.render(layerdict))
-      out.close()
+def keymap_to_keys(text):
+    # simple and dump parser for xkb keymap files
+    #
+    # It simply searches all "key { … };" parts and splits them.
+    # A more advanced version would parts "xkb_symbols { … }" first
+    # and only search in this part.
+
+    assert text.startswith("xkb_keymap")
+
+    KEY_PATTERN = r'\s key \s .+? \s { [^}]+? };'
+    SYMBOLS_PATTERN = r'\[ (.+?) \]'
+
+    text = text.split('xkb_symbols', 1)[1]
+    # FIXME: assumes the next section (if there is one) is
+    # xkb_geometry
+    text = text.split('xkb_geometry', 1)[0]
+
+    for k in re.findall(KEY_PATTERN, text, re.M+re.X):
+        _, name, text = k.split(None, 2)
+        name = name.strip('<').rstrip('>')
+        text = text.replace('symbols[Group1]', '')
+        symbols = re.findall(SYMBOLS_PATTERN, text, re.M+re.X)
+        if not symbols:
+            raise SystemExit(f"{name} did not match: {text!r}")
+        if len(symbols) != 1:
+            print("currious key:", name, symbols)
+
+        symbols = [s.strip() for s in symbols[0].split(',')]
+        # replace keynames with the symbol they produce
+        symbols = [replacements.f(s) for s in symbols]
+        # Some keys aren't layered, hence the list is too short.
+        # pad them with the first entry.
+        symbols = (symbols + symbols[:1]*9)[:9]
+        yield name, symbols
+
+
+# --- argument handling ---
+
+if len(sys.argv) not in (2, 3):
+    raise SystemExit('Usage: ./<this script> variantname [numpad]')
+
+layout = sys.argv[1]
+numpad = (len(sys.argv) == 3 and sys.argv[2] == "numpad")
+
+swap_m3r_ä = (layout == "vou" or layout == "mine")
+vou = (layout == "vou")
+mine = (layout == "mine")
+version = "numpad" if numpad else "tkl"
+
+# - read data and template
+
+keymap = subprocess.check_output(
+    ["xkbcli", "compile-keymap", "--layout", "de", "--variant", layout],
+    text=True)
+keymap = dict(keymap_to_keys(keymap))
+
+with open(TEMPLATENAME) as templatefile:
+    template = Template(templatefile.read())
+
+
+# --- generate files ---
+
+def write_image(layername, layerdict):
+    layerdict["numpad"] = numpad
+    layerdict["swap_m3r_ä"] = swap_m3r_ä
+    layerdict["vou"] = vou
+    layerdict["mine"] = mine
+
+    with open(f'{layout}-{layername}-{version}.svg', 'w') as out:
+        out.write(template.render(layerdict))
+
+
+def make_caps_lock(text):
+    if len(text) == 1:
+        return text.translate(CAPS_MAP)
+    else:
+        return text
+
+
+# - main layers
+
+for layer in range(7):  # 7 because the last layer is empty
+    # create a dict with the replacements from replacements.py
+    layerdict = {a: b[layer] for a, b in keymap.items()}
+    # color modifiers accordingly
+    for x in MODIFIERS[layer]:
+        layerdict[x] = " pressed"
+    write_image(LAYERNAMES[layer], layerdict)
+
+    filename = f'{layout}-{LAYERNAMES[layer]}-{version}.svg'
+    with open(filename, 'w') as out:
+        out.write(template.render(layerdict))
+
+# - caps-lock images
+
+for layer in 0, 1:
+    # create a dict with the replacements from replacements.py
+    layerdict = {a: make_caps_lock(b[layer]) for a, b in keymap.items()}
+    # color modifiers accordingly
+    for x in MODIFIERS[layer]:
+        layerdict[x] = " pressed"
+    write_image(LAYERNAMES[layer] + 'caps', layerdict)
+
+
+# - "leer" image
+
+write_image('leer', {})

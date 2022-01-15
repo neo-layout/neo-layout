@@ -2,6 +2,7 @@
 # /
 /.project
 /.pydevproject
+__pycache__
 
 # /linux/osd/
 /linux/osd/*.pyc
