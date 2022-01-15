@@ -1,2 +1,2 @@
-Siehe Wiki:
-    http://wiki.neo-layout.org/wiki/SortWords
+Siehe Webseite:
+    https://neo-layout.org/Lernen/SortWords/
