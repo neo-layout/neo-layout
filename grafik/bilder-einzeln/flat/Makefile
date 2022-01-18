@@ -23,7 +23,8 @@ PNG_TARGETS=$(addsuffix .png, ${BASENAMES})
 
 SOURCES = generate-graphics.py replacements.py base.svg.template
 
-default: all cleansvg cleanpycache
+default: all cleanpycache
+all: svg-path svg pdf png
 
 svg-path: ${SVG_PATH_TARGETS}
 svg: ${SVG_TARGETS}
@@ -49,8 +50,6 @@ png: ${PNG_TARGETS}
 %.png: %.svg
 	inkscape --export-filename=$@ --export-height=183 $<
 	optipng $@
-
-all: svg-path svg pdf png
 
 cleansvgpath:
 	rm -f ${SVG_PATH_TARGETS}
