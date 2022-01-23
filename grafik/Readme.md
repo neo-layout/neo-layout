@@ -21,8 +21,7 @@ Um alle Bilder erzeugen können, benötigt man eine Vielzahl an Abhängigkeiten:
  - sed
  - ed
  - libxkbcommon (xkbcli)
- - python mit jinja2, more-itertools, numpy, pandas, matplotlib und seaborn
- - perl mit XML::Writer
+ - python mit jinja2, numpy, pandas, matplotlib, seaborn und lxml
  - php
  - Linux Libertine
  - Gentium Plus Compact

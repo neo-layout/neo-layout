@@ -14,8 +14,7 @@ pkgs.mkShell {
     python3Packages.seaborn
     python3Packages.more-itertools
     python3Packages.jinja2
-    perl
-    perlPackages.XMLWriter
+    python3Packages.lxml
     php
   ];
 
