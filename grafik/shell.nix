@@ -15,7 +15,6 @@ pkgs.mkShell {
     python3Packages.more-itertools
     python3Packages.jinja2
     python3Packages.lxml
-    php
   ];
 
   # You also need to install the fonts (libertine gentium dejavu ... )

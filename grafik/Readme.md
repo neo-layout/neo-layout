@@ -22,7 +22,6 @@ Um alle Bilder erzeugen können, benötigt man eine Vielzahl an Abhängigkeiten:
  - ed
  - libxkbcommon (xkbcli)
  - python mit jinja2, numpy, pandas, matplotlib, seaborn und lxml
- - php
  - Linux Libertine
  - Gentium Plus Compact
  - DejaVu Sans Mono
