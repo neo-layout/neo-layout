@@ -7,13 +7,13 @@ neo-bunt-123456.png: neo-bunt-123456.ods
 	 libreoffice --convert-to png $<
 
 neo20-grau-123456.svg: 
-	 ./all-grau-123456.php neo20
+	 ./all-grau-123456.py neo20
 
 bone-grau-123456.svg: 
-	 ./all-grau-123456.php bone
+	 ./all-grau-123456.py bone
 
 neoqwertz-grau-123456.svg: 
-	 ./all-grau-123456.php neoqwertz
+	 ./all-grau-123456.py neoqwertz
 
 EXTRASVG=\
 	neo20-grau-123456.svg \

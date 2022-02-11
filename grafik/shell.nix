@@ -14,9 +14,7 @@ pkgs.mkShell {
     python3Packages.seaborn
     python3Packages.more-itertools
     python3Packages.jinja2
-    perl
-    perlPackages.XMLWriter
-    php
+    python3Packages.lxml
   ];
 
   # You also need to install the fonts (libertine gentium dejavu ... )
