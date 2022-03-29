@@ -16,8 +16,8 @@
 #undef VER_COMPANYNAME_STR
 #define VER_COMPANYNAME_STR         "neo-layout.org"
 #undef VER_PRODUCTNAME_STR
-#define VER_PRODUCTNAME_STR         "Deutsch 2 Tastaturtreiber"
-#define VER_LEGALCOPYRIGHT_STR      "wiki.neo-layout.org/wiki/Lizenzfragen"
+#define VER_PRODUCTNAME_STR         "Bone Tastaturtreiber"
+#define VER_LEGALCOPYRIGHT_STR      "https://neo-layout.org/Beitragen/Lizenzfragen/"
 #undef VER_LEGALTRADEMARKS_STR
 #define VER_LEGALTRADEMARKS_STR     \
 "wiki.neo-layout.org/wiki/Lizenzfragen"
@@ -25,7 +25,7 @@
 
 #define VER_FILETYPE              VFT_DLL
 #define VER_FILESUBTYPE           VFT2_DRV_KEYBOARD
-#define VER_FILEDESCRIPTION_STR   "Deutsch 2.0 (Bone)"
+#define VER_FILEDESCRIPTION_STR   "Deutsch (Bone) Tastaturlayout"
 #define VER_INTERNALNAME_STR      "kbdbone"
 #define VER_ORIGINALFILENAME_STR  "kbdbone.dll"
 

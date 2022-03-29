@@ -189,7 +189,7 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 	&aVkToBits[0],
-	25, //Anzahl der verwendeten Ebenen (inklusive der INVALIDen!)
+	24, // Maximaler Wert, den die Modifier-Bitmaske annehmen kann
 	{
 	//  Modifier NEO 
 	//  Ebene 0 - nix

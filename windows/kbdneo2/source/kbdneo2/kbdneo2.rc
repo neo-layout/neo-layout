@@ -17,7 +17,7 @@
 #define VER_COMPANYNAME_STR         "neo-layout.org"
 #undef VER_PRODUCTNAME_STR
 #define VER_PRODUCTNAME_STR         "Neo 2 Tastaturtreiber"
-#define VER_LEGALCOPYRIGHT_STR      "wiki.neo-layout.org/wiki/Lizenzfragen"
+#define VER_LEGALCOPYRIGHT_STR      "https://neo-layout.org/Beitragen/Lizenzfragen/"
 #undef VER_LEGALTRADEMARKS_STR
 #define VER_LEGALTRADEMARKS_STR     \
 "wiki.neo-layout.org/wiki/Lizenzfragen"

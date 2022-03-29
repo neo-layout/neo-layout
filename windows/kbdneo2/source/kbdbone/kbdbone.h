@@ -28,7 +28,7 @@
 *       +---------------------------------------------------------+   +--------------+   +---------------+   
 */
 
-// Tastenumbelegung für Neo 2.0 ; sonstige Tastenzuordnung siehe kbd.h
+// Tastenumbelegung für Bone ; sonstige Tastenzuordnung siehe kbd.h
 #undef  T0D
 #define T0D _EQ(		 OEM_2		)	// T2
 #undef  T10

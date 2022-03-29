@@ -43,11 +43,11 @@
 *       +---------------------------------------------------------+   +--------------+   +---------------+   
 *       |T1 ¦1  ¦2  ¦3  ¦4  ¦5  ¦6  ¦7  ¦8  ¦9  ¦0  ¦-  ¦T2 ¦Back |   |Einf¦Pos1¦PgUp|   ¦Num¦ / ¦ * ¦ - ¦   
 *       |---------------------------------------------------------|   |--------------|   +---+---+---+---¦   
-*       |Tab¦x  ¦v  ¦l  ¦c  ¦w  ¦k  ¦h  ¦g  ¦f  ¦q  ¦ß  ¦T3 ¦ Ret |   |Entf¦Ende¦PgDn|   ¦ 7 ¦ 8 ¦ 9 ¦   ¦   
+*       |Tab¦j  ¦d  ¦u  ¦a  ¦x  ¦p  ¦h  ¦l  ¦m  ¦w  ¦ß  ¦T3 ¦ Ret |   |Entf¦Ende¦PgDn|   ¦ 7 ¦ 8 ¦ 9 ¦   ¦   
 *       |-----------------------------------------------------+   |   +--------------+   +---+---+---¦   ¦   
-*       | M3  ¦u  ¦i  ¦a  ¦e  ¦o  ¦s  ¦n  ¦r  ¦t  ¦d  ¦y  ¦M3 ¦   |                      ¦ 4 ¦ 5 ¦ 6 ¦ + ¦   
+*       | M3  ¦c  ¦t  ¦i  ¦e  ¦o  ¦b  ¦n  ¦r  ¦s  ¦g  ¦q  ¦M3 ¦   |                      ¦ 4 ¦ 5 ¦ 6 ¦ + ¦   
 *       |---------------------------------------------------------|        +----+        +---+---+---+---¦   
-*       |Ums ¦M4 ¦ü  ¦ö  ¦ä  ¦p  ¦z  ¦b  ¦m  ¦,  ¦.  ¦j  ¦ Umsch  |        | Up |        ¦ 1 ¦ 2 ¦ 3 ¦   ¦   
+*       |Ums ¦M4 ¦f  ¦v  ¦ü  ¦ä  ¦ö  ¦y  ¦z  ¦,  ¦.  ¦k  ¦ Umsch  |        | Up |        ¦ 1 ¦ 2 ¦ 3 ¦   ¦   
 *       |---------------------------------------------------------|   +----+----+----+   +-------+---¦   ¦   
 *       | Str ¦ Fe ¦ Al ¦     Leerzeichen    ¦ M4 ¦ Fe ¦ Me ¦ Str |   |Left¦Down¦ Re.¦   ¦ 0     ¦ , ¦Ent¦   
 *       +---------------------------------------------------------+   +--------------+   +---------------+  
@@ -189,7 +189,7 @@ static ALLOC_SECTION_LDATA VK_TO_BIT aVkToBits[] = {
 
 static ALLOC_SECTION_LDATA MODIFIERS CharModifiers = {
 	&aVkToBits[0],
-	25, //Anzahl der verwendeten Ebenen (inklusive der INVALIDen!)
+	24, // Maximaler Wert, den die Modifier-Bitmaske annehmen kann
 	{
 	//  Modifier NEO 
 	//  Ebene 0 - nix
