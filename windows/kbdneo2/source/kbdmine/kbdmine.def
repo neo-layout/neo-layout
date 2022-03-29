@@ -1,0 +1,4 @@
+LIBRARY KBDMINE
+
+EXPORTS
+    KbdLayerDescriptor @1
