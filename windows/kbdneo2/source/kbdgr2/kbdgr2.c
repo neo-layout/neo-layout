@@ -5,8 +5,8 @@
 
 #include <windows.h>
 #include "kbd.h"
-#include "kbd_mod.h"
-#include "keysym4utf16.h"
+#include "../kbd_mod.h"
+#include "../keysym4utf16.h"
 #include "kbdgr2.h"
 
 #if defined(_M_IA64)
