@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-04-24 at 10:32 (GMT+2)-->
+<!--Last edited by Ukelele version 346 on 2022-06-19 at 16:37 (CEST)-->
 <keyboard group="126" id="-15581" name="Deutsch (Neo 2)" maxout="3">
     <layouts>
         <layout first="0" last="0" mapSet="138" modifiers="30"/>
@@ -955,7 +955,7 @@
             <key code="46" output="&#x000D;"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="5"/>
+            <key code="49" output=" "/>
             <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -1131,15 +1131,15 @@
         </keyMap>
     </keyMapSet>
     <actions>
+        <action id="&#x0009;">
+            <when state="none" output="&#x0009;"/>
+            <when state="Ebene 4 und 6" output="≠"/>
+        </action>
         <action id="&#x000B;">
             <when state="none" next="Bugfixes"/>
         </action>
         <action id="&#x000C;">
             <when state="none" next="Ebene 4 und 6"/>
-        </action>
-        <action id="&#x0009;">
-            <when state="none" output="&#x0009;"/>
-            <when state="Ebene 4 und 6" output="≠"/>
         </action>
         <action id="&#x0027;">
             <when state="none" output="&#x0027;"/>

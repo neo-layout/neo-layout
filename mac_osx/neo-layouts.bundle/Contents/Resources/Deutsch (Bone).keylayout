@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-04-24 at 14:24 (GMT+2)-->
+<!--Last edited by Ukelele version 346 on 2022-06-19 at 16:37 (CEST)-->
 <keyboard group="126" id="-14683" name="Deutsch (Bone)" maxout="3">
     <layouts>
         <layout first="0" last="0" mapSet="138" modifiers="30"/>
@@ -1002,7 +1002,7 @@
             <key code="46" output="&#x000D;"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="5"/>
+            <key code="49" output=" "/>
             <key code="50" output="&#x003C;"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
