@@ -28,7 +28,7 @@ $(if $(findstring _,$(M)), \
 # Hilfsprogramme
 #
 CHECKCOMPOSE = ./check-compose.pl
-CONFIGURE = /bin/bash ./configure.sh
+CONFIGURE = bash ./configure.sh
 
 # Nutzerkonfiguration für Zusammenstellung der Datei XCompose.
 # Datei .config wird von 'make config' interaktiv geschrieben.

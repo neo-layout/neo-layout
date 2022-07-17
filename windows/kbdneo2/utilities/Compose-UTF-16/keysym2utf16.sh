@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Konvertiert die Compose-Definitionen für
 # den kbdneo-Treiber ins UTF-16-Format

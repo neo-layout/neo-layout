@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Verzeichnis muss eventuell an den Ort der Compose angepasst werden:
 COMPOSE=/usr/share/X11/locale/en_US.UTF-8/Compose

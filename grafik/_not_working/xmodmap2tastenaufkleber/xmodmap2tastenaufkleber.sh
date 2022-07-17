@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # BENUTZUNG AUF EIGENE GEFAHR!
 #

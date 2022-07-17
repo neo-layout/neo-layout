@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Autor: Adam Taras <www.adam-taras.de/opensource>
 # Datum: 20.06.2009
 
