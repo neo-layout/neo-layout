@@ -43,7 +43,7 @@
 *       +---------------------------------------------------------+   +--------------+   +---------------+   
 *       |T1 ¦1  ¦2  ¦3  ¦4  ¦5  ¦6  ¦7  ¦8  ¦9  ¦0  ¦-  ¦T2 ¦Back |   |Einf¦Pos1¦PgUp|   ¦Num¦ / ¦ * ¦ - ¦   
 *       |---------------------------------------------------------|   |--------------|   +---+---+---+---¦   
-*       |Tab¦z  ¦l  ¦u  ¦a  ¦j  ¦w  ¦b  ¦d  ¦g  ¦y  ¦q  ¦ß  ¦ Ret |   |Entf¦Ende¦PgDn|   ¦ 7 ¦ 8 ¦ 9 ¦   ¦   
+*       |Tab¦j  ¦l  ¦u  ¦a  ¦q  ¦w  ¦b  ¦d  ¦g  ¦y  ¦z  ¦ß  ¦ Ret |   |Entf¦Ende¦PgDn|   ¦ 7 ¦ 8 ¦ 9 ¦   ¦   
 *       |-----------------------------------------------------+   |   +--------------+   +---+---+---¦   ¦   
 *       | M3  ¦c  ¦r  ¦i  ¦e  ¦o  ¦m  ¦n  ¦t  ¦s  ¦h  ¦M3 ¦T3 ¦   |                      ¦ 4 ¦ 5 ¦ 6 ¦ + ¦   
 *       |---------------------------------------------------------|        +----+        +---+---+---+---¦   
@@ -266,15 +266,15 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS6 aVkToWch6[] = {
 {0xff			,0					,grave		,cedilla				,ringabove				,diaeresis		,greek_dasia		,macron				},
 {VK_TAB			,0					,'\t'		,'\t'					,WCH_DEAD				,'\t'			,'\t'				,'\t'				},
 {0xff			,0					,WCH_NONE	,WCH_NONE				,Multi_key				,WCH_NONE		,WCH_NONE			,WCH_NONE			},
-{'Z'			,CAPLOK | KANALOK	,'z'		,'Z'					,ellipsis	            ,WCH_NONE	    ,Greek_zeta			,doublestruck_z		},
 {'L'			,CAPLOK | KANALOK	,'l'		,'L'					,'_'					,WCH_NONE		,Greek_lamda		,Greek_LAMDA		},
 {'U'			,CAPLOK | KANALOK	,'u'		,'U'					,'['					,WCH_NONE		,WCH_NONE			,includedin			},
 {'A'			,CAPLOK | KANALOK	,'a'		,'A'					,']'					,WCH_NONE		,Greek_alpha		,forall				},
+{'Q'			,CAPLOK | KANALOK	,'q'		,'Q'					,asciicircum			,WCH_NONE		,scriptphi			,doublestruck_q		},
 {'W'			,CAPLOK | KANALOK	,'w'		,'W'					,'!'					,exclamdown		,Greek_omega		,Greek_OMEGA		},
 {'B'			,CAPLOK | KANALOK	,'b'		,'B'					,'<'					,'7'			,Greek_beta			,doublearrowleft	},
 {'D'			,CAPLOK | KANALOK	,'d'		,'D'					,'>'					,'8'			,Greek_delta		,Greek_DELTA		},
 {'G'			,CAPLOK | KANALOK	,'g'		,'G'					,'='					,'9'			,Greek_gamma		,Greek_GAMMA		},
-{'Q'			,CAPLOK | KANALOK	,'q'		,'Q'					,'@'					,'.'			,scriptphi			,doublestruck_q		},
+{'Z'			,CAPLOK | KANALOK	,'z'		,'Z'					,'@'					,'.'			,Greek_zeta			,doublestruck_z		},
 {'C'			,CAPLOK | KANALOK	,'c'		,'C'					,backslash				,WCH_NONE		,Greek_chi			,doublestruck_c		},
 {'R'			,CAPLOK | KANALOK	,'r'		,'R'					,'/'					,WCH_NONE		,Greek_rho			,doublestruck_r		},
 {'I'			,CAPLOK | KANALOK	,'i'		,'I'					,'{'					,WCH_NONE		,Greek_iota			,integral			},
@@ -318,7 +318,7 @@ static ALLOC_SECTION_LDATA VK_TO_WCHARS8 aVkToWch8[] = {
 //				|===================|===========|===========|===========|===========|===================|===============|===========|===============|
 {'2'			,KANALOK			,'2'		,section	,twosuperior,masculine	,twosubscript		,logicalor	,WCH_NONE	,0x0000			},
 {'6'			,KANALOK			,'6'		,dollar		,cent		,sterling	,maleandfemalesign	,parallelto	,WCH_NONE	,infoseparator2	},
-{'J'			,CAPLOK | KANALOK	,'j'		,'J'		,asciicircum,WCH_NONE	,Greek_theta		,Greek_THETA,WCH_NONE	,infoseparator1	},
+{'J'			,CAPLOK | KANALOK	,'j'		,'J'		,ellipsis	,WCH_NONE	,Greek_theta		,Greek_THETA,WCH_NONE	,infoseparator1	},
 {0				,0					,0			,0			,0			,0			,0					,0			,0			,0}
 };
 

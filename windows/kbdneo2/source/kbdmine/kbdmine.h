@@ -32,7 +32,7 @@
 #undef  T0D
 #define T0D _EQ(		 OEM_2		)	// T2
 #undef  T10
-#define T10 _EQ(		 'Z'		)
+#define T10 _EQ(		 'J'		)
 #undef  T11
 #define T11 _EQ(		 'L'		)
 #undef  T12
@@ -40,7 +40,7 @@
 #undef  T13
 #define T13 _EQ(		 'A'		)
 #undef  T14
-#define T14 _EQ(		 'J'		)
+#define T14 _EQ(		 'Q'		)
 #undef  T15
 #define T15 _EQ(		 'W'		)
 #undef  T16
@@ -52,7 +52,7 @@
 #undef  T19
 #define T19 _EQ(		 'Y'		)
 #undef  T1A
-#define T1A _EQ(		 'Q'        )
+#define T1A _EQ(		 'Z'        )
 #undef  T1B
 #define T1B _EQ(		 OEM_3		)	// qwertz-ß
 #undef  T1E
